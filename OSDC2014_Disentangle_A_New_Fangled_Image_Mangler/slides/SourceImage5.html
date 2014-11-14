@@ -1,0 +1,25 @@
+<section>
+
+<h1>How to make *all* the wallpaper</h1>
+
+<p align="center">
+<img src="pictures/999.jpg" width="250">
+<img src="pictures/1000.jpg" width="250">
+<img src="pictures/1001.jpg" width="250">
+</p>
+<pre>
+...
+https://{id}.cloudfront.net/products/<b>999</b>/768x768design_01.jpg
+https://{id}.cloudfront.net/products/<b>1000</b>/768x768design_01.jpg
+https://{id}.cloudfront.net/products/<b>1001</b>/768x768design_01.jpg
+...</pre>
+
+<pre>
+for i in $(ls); do ./gyprock $i 1024x768; done
+</pre>
+<p align="center">
+<img src="pictures/999_1024x768.jpg" width="250">
+<img src="pictures/1000_1024x768.jpg" width="250">
+<img src="pictures/1001_1024x768.jpg" width="250">
+</p>
+</section>

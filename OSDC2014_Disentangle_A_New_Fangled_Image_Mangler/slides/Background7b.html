@@ -1,0 +1,15 @@
+<section>
+
+<h1>How to get the background colour </h1>
+
+<ul>
+
+</ul>
+<pre>
+<span class="prompt"></span> convert rhino.jpg -colors 16 -format "%c" \
+	histogram:info: | sort -nr | head -1 | \
+        tr -s ' ' | cut -d' ' -f7
+
+    #090B31
+</pre>
+</section>

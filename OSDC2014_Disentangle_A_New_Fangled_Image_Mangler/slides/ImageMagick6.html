@@ -1,0 +1,21 @@
+<section>
+
+<h1>How to make a wallpaper, with ImageMagick</h1>
+<ul>
+<li> Resize image
+<li> Move image on canvas
+<li> Fill background </ul>
+
+<div style="position:absolute; top: 300px">
+<pre style="z-index: 1000">
+convert -extent 800x600 -resize 800x600  \
+	-gravity SouthEast               \
+	-background "#090B31"    <font style="color: green"># magic</font> \
+	rhino.jpg rhino_background.jpg
+</pre>
+</div>
+<div style="position: absolute; left: 200px; bottom: 10px; z-index: -1000">
+<img style="display:inline-block;" src="pictures/rhino_small.jpg" width="192" height="192"/> 
+<font size="30"> &rightarrow; </font>
+<img src="pictures/rhino_background.jpg" width="400" height="300"/>
+</section>

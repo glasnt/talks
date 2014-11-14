@@ -1,0 +1,41 @@
+<section class="black">
+	<h1>Metric Data </h1>
+	<table style="width: 100%">
+		<tr>
+			<td ><h3>Data Store</h3></td>
+			<td></td>
+			<td><h3>$Store#get_metric</h3></td>
+			<td></td>
+			<td><h3>Unified Data Format</h3></td>
+	</tr>
+	<tr><td>Database
+	</td>
+		<td><i class="right"></i></td>
+		<td>
+<pre>require 'pg'
+PG.connect(dbname:'10g')
+...</pre>
+		</td>
+		<td><i class="right"></i></td>
+
+		<td><pre>{ x: α, y: β }</pre></td>
+
+		</tr>
+
+		<tr><td>REST API</td>
+		<td><i class="right"></i></td>
+		<td>
+<pre>require 'open-uri'
+open("http://myapi/...")
+...
+
+</pre>
+		</td>
+		<td><i class="right"></i></td>
+		<td><pre>{ x: δ, y: λ }</pre></td>
+		</td>
+	</tr>
+	</table>
+
+</section>
+

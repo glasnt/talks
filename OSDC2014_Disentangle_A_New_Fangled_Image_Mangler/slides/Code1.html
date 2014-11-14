@@ -1,0 +1,28 @@
+<section>
+
+<h1>How to make a wallpaper, in a shell</h1>
+<pre>
+<span class="prompt"></span> vim gyprock
+
+<code class="bash hljs"><span class="hljs-shebang">#!/bin/bash</span>
+FILE=<span class="hljs-variable">$1</span>; DIM=<span class="hljs-variable">$2</span>; OUT_FOLDER=<span class="hljs-variable">$3</span>
+
+hex=`convert <span class="hljs-variable">$FILE</span> -colors <span class="hljs-number">16</span> -format <span class="hljs-string">"%c"</span> histogram:info:|\
+       sort -nr | head -<span class="hljs-number">1</span> | tr <span class="hljs-operator">-s</span> <span class="hljs-string">' '</span> | cut <span class="hljs-operator">-d</span><span class="hljs-string">' '</span> <span class="hljs-operator">-f</span>7`
+
+new=<span class="hljs-variable">$OUT_FOLDER</span>/`sed <span class="hljs-operator">-e</span> <span class="hljs-string">"s/\./_<span class="hljs-variable">$DIM</span>\./g"</span> &lt;&lt;&lt; <span class="hljs-string">"<span class="hljs-variable">$FILE</span>"</span>`
+
+cp <span class="hljs-variable">$FILE</span> <span class="hljs-variable">$new</span>
+
+convert -extent <span class="hljs-variable">$DIM</span> -resize <span class="hljs-variable">$DIM</span> -gravity SouthEast \
+        -background <span class="hljs-string">"<span class="hljs-variable">$hex</span>"</span> <span class="hljs-variable">$FILE $new</span> 
+
+<span class="hljs-built_in">echo</span> <span class="hljs-string">"Image created, saved to <span class="hljs-variable">$new</span>"</span>
+</code>
+</pre>
+<pre><span class="prompt"></span> ./gyprock rhino.jpg 1024x768 processed
+
+Image created, saved to processed/rhino_1024x768.jpg
+
+</pre>
+</section>
