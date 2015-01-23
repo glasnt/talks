@@ -1,0 +1,14 @@
+<section>
+	<h1>Query String - Level 4</h1>
+	<div class="querystring">?metric[]=FOO~bar&metric[]=FOO~baz&graph[0][]=area&graph[0][]=stacked&graph[1][]=line
+	</div>
+	<div class="response">
+		<div class="human bad">..</div>
+		<div class="machine">Nested variables. </div>
+	</div>
+	<div class="result">
+		{metric: ["FOO~bar", "FOO~baz"], graph: {"0": ["area", "stacked"], "1": ["line"]} 
+	</div>
+	<div class="points">
+		<div class="con">Human hurt itself in the confusion!</div></div>
+</section>

@@ -1,0 +1,13 @@
+<section>
+	<h1>Query String - Level 2</h1>
+	<div class="querystring">?metric=FOO~bar&metric=FOO~baz
+	</div>
+	<div class="response">
+		<div class="human">We have two metrics from Foo, Bar and Baz.</div>
+		<div class="machine bad">One metric variable. Beep. </div>
+	</div>
+	<div class="result">
+                { metric: "FOO~bar" }
+	</div>
+	<div class="points"><div class="con">Machine ignores second variable</div></div>
+</section>

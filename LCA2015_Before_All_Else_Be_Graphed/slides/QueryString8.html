@@ -1,0 +1,15 @@
+<section>
+	<h1>Query String - Level 4</h1>
+	<div class="querystring">?metric[]=FOO~bar&metric[]=FOO~baz&graph[0][]=area&graph[0][]=stacked&graph[1][]=line&graph[]=fancy
+	</div>
+	<div class="response">
+		<div class="human bad">..</div>
+		<div class="machine bad">*exploded* </div>
+	</div>
+	<div class="result">
+		ERROR. Invalid query paramters: expected Array (got Rack::Utils::KeySpaceConstrainedParams)
+        </div> 
+	</div>
+	<div class="points">
+		<div class="con">Rails 4 doesn't conform to "standard" (javascript does)</div></div>
+</section>

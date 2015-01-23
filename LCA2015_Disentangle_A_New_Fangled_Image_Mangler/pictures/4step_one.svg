@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="801.64697"
+   height="468.39566"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.48.4 r9939"
+   sodipodi:docname="4step_one.svg">
+  <defs
+     id="defs4" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.175"
+     inkscape:cx="445.04434"
+     inkscape:cy="-202.42132"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     showguides="true"
+     inkscape:guide-bbox="true"
+     inkscape:window-width="914"
+     inkscape:window-height="848"
+     inkscape:window-x="0"
+     inkscape:window-y="24"
+     inkscape:window-maximized="0"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0" />
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:groupmode="layer"
+     id="layer2"
+     inkscape:label="Background"
+     style="display:inline"
+     sodipodi:insensitive="true"
+     transform="translate(55.811434,-14.637708)">
+    <rect
+       style="fill:#000000;fill-opacity:1;display:inline"
+       id="rect3010"
+       width="1125.7144"
+       height="782.85712"
+       x="-91.428612"
+       y="-77.142845" />
+  </g>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(55.811434,-466.99989)">
+    <text
+       xml:space="preserve"
+       style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#ffff00;fill-opacity:1;stroke:none;font-family:Sans"
+       x="654.28571"
+       y="55.714287"
+       id="text3798"
+       sodipodi:linespacing="125%"
+       transform="translate(0,452.36218)"><tspan
+         sodipodi:role="line"
+         id="tspan3800"
+         x="654.28571"
+         y="55.714287" /></text>
+    <text
+       xml:space="preserve"
+       style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="597.14288"
+       y="102.85714"
+       id="text3802"
+       sodipodi:linespacing="125%"
+       transform="translate(0,452.36218)"><tspan
+         sodipodi:role="line"
+         id="tspan3804"
+         x="597.14288"
+         y="102.85714" /></text>
+    <g
+       id="g3869"
+       transform="matrix(0.73206927,0,0,0.73206927,-14.953598,101.51743)">
+      <text
+         sodipodi:linespacing="125%"
+         id="text2991"
+         y="705.56042"
+         x="-60.571434"
+         style="font-size:56px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;font-family:PT Sans;-inkscape-font-specification:PT Sans"
+         xml:space="preserve"><tspan
+           y="705.56042"
+           x="-60.571434"
+           id="tspan2993"
+           sodipodi:role="line">Resize Image</tspan><tspan
+           id="tspan2995"
+           y="775.56042"
+           x="-60.571434"
+           sodipodi:role="line" /></text>
+      <text
+         sodipodi:linespacing="125%"
+         id="text3806"
+         y="704.17242"
+         x="340.28574"
+         style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#faffff;fill-opacity:1;stroke:none;font-family:Monospace;-inkscape-font-specification:Monospace"
+         xml:space="preserve"><tspan
+           y="704.17242"
+           x="340.28574"
+           id="tspan3808"
+           sodipodi:role="line">convert -extent WxH \  </tspan><tspan
+           y="754.17242"
+           x="340.28574"
+           sodipodi:role="line"
+           id="tspan3895">        -resize WxH \ </tspan></text>
+    </g>
+    <g
+       id="g3833"
+       transform="matrix(0.73206927,0,0,0.73206927,-14.953598,147.08943)">
+      <text
+         sodipodi:linespacing="125%"
+         id="text2997"
+         y="809.52814"
+         x="-60.571434"
+         style="font-size:56px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;font-family:PT Sans;-inkscape-font-specification:PT Sans"
+         xml:space="preserve"><tspan
+           id="tspan3001"
+           y="809.52814"
+           x="-60.571434"
+           sodipodi:role="line">Move Image </tspan><tspan
+           id="tspan3822"
+           y="879.52814"
+           x="-60.571434"
+           sodipodi:role="line" /></text>
+      <text
+         sodipodi:linespacing="125%"
+         id="text3810"
+         y="800.93359"
+         x="341.41855"
+         style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#faffff;fill-opacity:1;stroke:none;font-family:Monospace;-inkscape-font-specification:Monospace"
+         xml:space="preserve"><tspan
+           id="tspan3824"
+           y="800.93359"
+           x="341.41855"
+           sodipodi:role="line">        -gravity SouthEast \  </tspan></text>
+    </g>
+    <g
+       id="g3841"
+       transform="matrix(0.73206927,0,0,0.73206927,-19.136852,146.03989)">
+      <text
+         sodipodi:linespacing="125%"
+         id="text3005"
+         y="978.07648"
+         x="-54.857147"
+         style="font-size:56px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;font-family:PT Sans;-inkscape-font-specification:PT Sans"
+         xml:space="preserve"><tspan
+           y="978.07648"
+           x="-54.857147"
+           id="tspan3007"
+           sodipodi:role="line">Fill Background</tspan></text>
+      <text
+         sodipodi:linespacing="125%"
+         id="text3814"
+         y="968.81909"
+         x="335.09042"
+         style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#faffff;fill-opacity:1;stroke:none;font-family:Monospace;-inkscape-font-specification:Monospace"
+         xml:space="preserve"><tspan
+           id="tspan3820"
+           y="968.81909"
+           x="335.09042"
+           sodipodi:role="line">        -background &quot;#....&quot;</tspan><tspan
+           y="1018.8191"
+           x="335.09042"
+           sodipodi:role="line"
+           id="tspan3906" /><tspan
+           y="1068.8191"
+           x="335.09042"
+           sodipodi:role="line"
+           id="tspan3908">image.jpg new_image.jpg</tspan><tspan
+           y="1118.8191"
+           x="335.09042"
+           sodipodi:role="line"
+           id="tspan3904" /></text>
+    </g>
+    <g
+       id="g3862"
+       transform="matrix(0.73206927,0,0,0.73206927,-14.953598,66.558079)">
+      <text
+         sodipodi:linespacing="125%"
+         id="text2985"
+         y="586.64789"
+         x="-60.571434"
+         style="font-size:56px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;font-family:PT Sans;-inkscape-font-specification:PT Sans"
+         xml:space="preserve"><tspan
+           y="586.64789"
+           x="-60.571434"
+           id="tspan2987"
+           sodipodi:role="line">Find Image</tspan><tspan
+           id="tspan2989"
+           y="656.64789"
+           x="-60.571434"
+           sodipodi:role="line" /></text>
+      <text
+         sodipodi:linespacing="125%"
+         id="text3854"
+         y="581.68958"
+         x="328.73495"
+         style="font-size:144px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#fdffff;fill-opacity:1;stroke:none;font-family:Sans"
+         xml:space="preserve"><tspan
+           y="581.68958"
+           x="328.73495"
+           id="tspan3856"
+           sodipodi:role="line">...</tspan></text>
+    </g>
+  </g>
+</svg>

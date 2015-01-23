@@ -1,0 +1,14 @@
+<section>
+	<h1>Query String - Level 3</h1>
+	<div class="querystring">?metric[0][origin]=FOO&metric[0][name]=bar&metric[1][origin]=FOO&metric[1][name]=baz
+	</div>
+	<div class="response">
+		<div class="human">I.. don't ... even... wha?</div>
+		<div class="machine">Nested variables. </div>
+	</div>
+	<div class="result">
+		{ metric: {"0": {origin: "FOO", name: "bar"}, "1": {origin: "FOO", name: "baz"} }
+	</div>
+	<div class="points">
+		<div class="con">Human got confused!</div></div>
+</section>

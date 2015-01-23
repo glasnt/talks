@@ -1,0 +1,15 @@
+<section>
+	<h1>Query String - Level 2</h1>
+	<div class="querystring">?metric[]=FOO~bar&metric[]=FOO~baz
+	</div>
+	<div class="response">
+		<div class="human">We have two.. weird..  metrics from Foo, Bar and Baz.</div>
+		<div class="machine">One metric variable. </div>
+	</div>
+	<div class="result">
+		{ metric: ["FOO~bar", "FOO~baz"] } 
+	</div>
+	<div class="points">
+<div class="pro">Server accepts an array of metrics</div>
+<div class="con">Human getting confused</div></div>
+</section>
