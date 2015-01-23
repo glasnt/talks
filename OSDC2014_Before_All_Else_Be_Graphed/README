@@ -1,10 +1,2 @@
-Slides use glasnt/projection. See repo for full usage documentation
+http://2014.osdc.com.au/presentation/481-all-else-be-graphed
 
-TL;DR:
- 
-```
-git clone https://github.com/glasnt/talks
-cd talks/OSDC2014_Before_All_Else_Be_Graphed/
-python -m SimpleHTTPServer 1337
-chromium http://localhost:1337
-````
