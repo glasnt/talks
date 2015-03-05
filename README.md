@@ -1,8 +1,12 @@
 I do speaking things. 
 
-Here are the slides. 
+You can view these online at https://glasnt.github.io/talks/ 
 
-----
+or
+
+You can follow the `projection` steps 
+
+## Local `projection`
 
 Presentation Engine -> https://github.com/glasnt/projection 
 
