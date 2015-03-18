@@ -1,0 +1,17 @@
+slides/TitleSlide.html
+slides/QuestionMark.html
+slides/pnp4nagios.html
+slides/nagios.html
+slides/sources.html
+slides/allthethings.html
+slides/Machiavelli1.html
+slides/MetricList.html
+slides/MetricData.html
+slides/MachiavelliConfig3.html
+slides/lines.html
+slides/stacked.html
+slides/horizon.html
+slides/tealeaves_update.html
+slides/Stateless1.html
+slides/pnp4integrate.html
+slides/End.html

@@ -1,0 +1,26 @@
+<section class="black">
+	<pre style="left: 100px">
+$ git clone https://github.com/anchor/machiavelli.git
+$ cd machiavelli
+$ vim config/settings.yml
+
+origins: 
+
+   "Nagios": {  
+     store:  "RRD",
+     source: "Nagios", 
+     title:  "My Nagios",
+     store_settings: { ... }
+   } 
+
+   "Weather": { 
+     store:  "IDN", 
+     source: "BOM", 
+     title:  "Bureau Of Meteorology"
+     store_settings: { ... }
+   }
+
+$ bundle install
+$ bundle exec rails server
+	</pre>
+</section>

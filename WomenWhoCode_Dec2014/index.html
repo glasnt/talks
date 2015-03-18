@@ -1,0 +1,246 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Machiavelli</title>
+
+		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+		<meta name="author" content="Hakim El Hattab">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="css/reveal.min.css">
+		<link rel="stylesheet" href="css/theme/anchor.css" id="theme">
+
+		<!-- For syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- If the query includes 'print-pdf', include the PDF print sheet -->
+		<script>
+			if( window.location.search.match( /print-pdf/gi ) ) {
+				var link = document.createElement( 'link' );
+				link.rel = 'stylesheet';
+				link.type = 'text/css';
+				link.href = 'css/print/pdf.css';
+				document.getElementsByTagName( 'head' )[0].appendChild( link );
+			}
+		</script>
+
+<style>
+#wrap { width: 1500px; height: 1000px; padding: 0; overflow: hidden; }
+#frame { width: 1500px; height: 1000px; border: 1px solid black; }
+#frame {
+-ms-zoom: 0.75;
+-moz-transform: scale(0.75);
+-moz-transform-origin: 0 0;
+-o-transform: scale(0.75);
+-o-transform-origin: 0 0;
+-webkit-transform: scale(0.75);
+-webkit-transform-origin: 0 0;
+}
+</style>
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<div class="slides">
+				<section>
+					<br/>
+					<h1 style="text-transform: none">Machiavelli</h1>
+					<br/>
+					<h3>Before all else, be graphed</h3>
+					<br/>
+					<img src="assets/anchor_engineering.svg">
+					<p>
+						<small>katie@glasnt.com / anchor.com.au </small>
+					</p>
+				</section>
+
+				<section data-transition="none">
+					<section>
+					<h2>The problem</h2>
+					Visualizations are hard.
+					<aside class="notes">
+						Go down!
+					</aside>
+					</section>
+					<section>
+						<h2> Infographics are shiny,<br/> but expensive</h2>
+					<img src="assets/CoffeeFilterSmall.png">
+					<br/>
+					<small><a href="http://lzma.so/COFFEE">lzma.so/COFFEE</a></small>
+
+					</section>
+					<section>
+						<h2>Excel is quick, <br/>but dirty</h2>
+						<img src="assets/UglyChart.png">
+						<small><a href="http://www.pcmag.com/article2/0,2817,1966179,00.asp">
+								http://www.pcmag.com/article2/0,2817,1966179,00.asp</a></small>
+					</section>
+					<section><br><br><br><h2>Quick, or Shiny</br><br/>Choose one</h2>
+					</section>
+					<section>
+					<img src="assets/whynotboth.gif" style="width: 75%">
+					</section>
+				</section>
+				<section id="fragments">
+					<h2>Machiavelli</h2>
+					<h4>github.com/anchor/machiavelli</h4>
+					<ul>
+						<li class="fragment">Quick to create</li>
+						<li class="fragment">Not completely hideous</li>
+						<li class="fragment">Interactive</li>
+						<li class="fragment">Source-driven data</li>
+						<li class="fragment">Supports live updates</li>
+						<li class="fragment">Shareable</li>
+						<li class="fragment">Stateless</li>
+					</ul>
+					<aside class="notes">
+						Fragments: Quick, Not Yucky, Interactive, Source Driven, LIve Updates, Shareable, Stateless
+					</aside>
+
+				</section>
+
+				<section>
+					<h2>Tech Stack</h2>
+					<ul>
+						<li>Server - Ruby on Rails</li>
+						<li>API - RESTful Ruby</li>
+						<li>Visualizations
+						<ul>
+							<li>Rickshaw</li>
+							<li>D3</li>
+							<li>Horizon</li>
+							<li><i>Highly customized</i></li>
+						</ul>
+					</section>
+					<section>
+
+						<h2>Data Stores</h2>
+						<ul>
+							<li>REST API</li>
+							<li>JSON</li>
+							<li>Flat Files</li>
+							<li>Anything you like!</li>
+						</ul>
+						<br/><br/>
+						<h2>Data Sources</h2>
+						<ul>
+							<li>Nagios</li>
+							<li>BOM</li>
+							<li>Anything you like!</li>
+						</ul>
+						<br/>
+						<br/>
+					</ul>
+				</section>
+
+				<section>
+					<h2>Demo</h2>
+				<br/>
+				<br/>
+				<p>
+				<pre style="box-shadow:none; width: 80%; font-size: 30px">
+http://demo.machiavelli.anchor.net.au/
+  ?metric=BOM~Campbelltown-air_temp
+  &metric=BOM~Gosford-air_temp
+  &metric=BOM~Holsworthy-air_temp
+  &metric=BOM~TerreyHills-air_temp
+  &start=1416779586
+  &stop=1417384386
+  &graph=stacked&time=absolute
+</pre>
+</p>
+				<br/>
+					<a href="http://lzma.so/MVDEMO" target="_blank">lzma.so/MVDEMO</a></small>
+				<br/>
+				<br/>
+					<small><a href="assets/demoreel.ogv" target="_blank">(Break in case of demo issues)</a></small>
+				</section>
+
+				<section data-background="#fdf6e3" class="solarized">
+					<h2>Want to see more?</h2>
+					<p>
+						See Machiavelli at Linux Conf Australia, January 2015, Auckland
+						<br/>
+						<br/>
+						<img src="assets/lcalogo.png">
+						<br/>
+						Fact: around 1 in 5 speakers at LCA2015 are female
+						<br/>
+						<br/>
+						<h3>linux.conf.au</h3>
+					</p>
+				</section>
+
+				<section data-background="#fdf6e3" class="solarized">
+					<h2>Want to #BeMore?</h2>
+					<p>
+						Apply for the InternetNZ Diversity Program! Assistance with:
+						<ul>
+						<li>conference ticket</li>
+						<li>accommodation</li>
+						<li>airfare and travel assistance</li>
+						</ul>
+						<br/>
+						<br/>
+						<img src="assets/internetnz.png" width="500px">
+						<br/>
+						<br/>
+						<h3>linux.conf.au</h3>
+						<h4>applications close Monday 9th December <b>(6 days!)</b></h4>
+					</p>
+				</section>
+
+				<section>
+					<br/>
+					<br/>
+					<br/>
+					<br/>
+					<h3>fin</h3>
+					<br/>
+					<br/>
+					<p>github.com/anchor/machiavelli</p>
+				</section>
+
+			</div>
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.min.js"></script>
+
+		<script>
+
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: false,
+
+
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>

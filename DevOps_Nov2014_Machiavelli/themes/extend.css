@@ -1,0 +1,166 @@
+/*
+ * Part 6 chapter theme
+ */
+.slide section.part6:before {
+	left: 15px;
+        bottom: 10px;
+        width: 69px;
+        height: 50px;
+        background-image: url(Anchor-white-shadow.svg);
+        background-size: 69px 50px;
+        z-index: 1;
+}
+
+
+section.part6 {
+	background: #333366;
+	color: white;
+}
+
+section.part6 h1 {
+	color: white;
+	text-align: center;
+}
+
+section.part6 h2 {
+	color: white;
+	text-align: center;
+}
+
+section.part6 h3 {
+	color: white;
+	font-size: 72px;
+	text-align: center;
+	padding: 0;
+	margin: 0;
+}
+
+section.part6 p {
+	color: #dddddd;
+	font-size: 32px;
+	font-style: italic;
+	text-align: center;
+}
+
+/*
+ * Black chapter theme
+ */
+
+section.black {
+	background: black;
+	color: white;
+}
+
+/*
+ * Bubble for explanatory details about specific elements and classes used to
+ * create a given slide
+ */
+
+.slide section .detail {
+	position: absolute;
+	right: 50px;
+	bottom: 10px;
+	background: black;
+	color: white;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-left: 20px;
+	padding-right: 20px;
+	margin-bottom: 35px;
+	font-family: 'DejaVu Sans Mono', 'Droid Sans Mono', monospace;
+	font-size: 16px;
+	width: 400px;
+}
+
+.footnote {
+	color: #000;
+          font-weight: normal;
+          font-size: 14px;
+          position: absolute;
+          left: 100px;
+          bottom: 30px; 
+} 
+
+.image_attribution { 
+	color: #fff;
+	font-weight: normal;
+	font-size: 14px;
+	position: absolute;
+	left: 170px; 
+	bottom: 30px;
+ }
+
+.sup { 
+	vertical-align: super; 
+	font-size: 16px
+}
+
+.cn { 
+	color: #0174A7
+} 
+
+.large { 
+	font-size: 48px;
+}
+
+.background { 
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	width: 100%;
+	z-index: -1;
+}
+.mute { 
+	-webkit-filter: brightness(0.75);
+	-webkit-filter: grayscale(75%);
+}
+
+
+.gh:before {
+	font-family: FontAwesome;
+	content:"\f092";
+	font-style: normal;
+
+} 
+.no:before { 
+	font-family: FontAwesome;
+	content:"\f00d"; /* OMNOM!*/
+	font-style:normal; 
+	color: #c00;
+} 
+.yes:before { 
+	color: #0c0;
+	font-family: FontAwesome;
+	content:"\f00c";
+	font-style:normal; 
+}
+.maybe:before { 
+	color: #c0c;
+	font-family: FontAwesome;
+	content:"\f128";
+	font-style:normal; 
+}
+.cat:before{ 
+	font-family: FontAwesome;
+	content:"\f1b0";
+	font-style:normal; 
+}
+.right:before{ 
+	font-family: FontAwesome;
+	content:"\f061";
+	font-style:normal; 
+	padding-left:10px;
+	padding-right: 10px;
+	 } 
+.down:before{ 
+	font-family: FontAwesome;
+	content:"\f063";
+	font-style:normal; 
+}
+.image { 
+	width: 100%;
+	height: 100%; 
+	position: absolute;
+	top: 0px;
+	left: 0px;
+}
