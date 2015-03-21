@@ -1,0 +1,213 @@
+/*
+ * Anchor Managed Hosting in-house presentation theme
+ *
+ * Copyright © 2010-2011 Vadim Makeev
+ * Copyright © 2012-2013 Operational Dynamics Consulting, Pty Ltd
+ * Copyright © 2013-     Anchor Systems, Pty Ltd
+ */
+
+@import url(fonts.css);
+body {
+	font:24px 'PT Sans', sans-serif;
+}
+
+/*
+ * Place the company logo, bottom left. This is done using the :before
+ * pseudo-class, which is a bit voodoo, but saves you having to dynamically
+ * insert a <div> in the DOM.
+ */
+
+.slide section:before {
+	content: "";
+	position: absolute;
+	left: 15px;
+	bottom: 10px;
+	background-image: url(Anchor_Icon_grey.svg);
+	width: 69px;
+	height: 50px;
+	background-size: 69px 50px;
+	z-index: 1;
+}
+
+.slide section:before { 
+/*.slide section.black:before { */
+	left: 15px;
+	bottom: 10px;
+	width: 69px;
+	height: 50px;
+	background-image: url(Anchor_Icon.svg);
+	background-size: 69px 50px;
+	z-index: 1;
+}
+
+.slide section {
+/*.slide section.black {*/
+        background-color: black;
+        color: white;
+}
+
+.slide section h1 { 
+/*.slide section.black h1 { */
+	color: rgb(97, 97, 216);
+} 
+
+.slide section.nologo:before {
+    display: none;
+}
+
+
+h1 {
+	margin-top: 0px;
+	margin-bottom: 20px;
+	color: #fff;
+	font: bold 48px/1.13 'PT Sans Narrow', sans-serif;
+}
+h2 {
+	margin-top: 0px;
+	margin-bottom: 16px;
+	color: #fff;
+	font: bold 36px/1.13 'PT Sans Narrow', sans-serif;
+}
+
+
+/*
+ * Finally, some general styling for visual presentation elements.
+ */
+
+section p {
+	color: #fff;
+	margin-top: 16px;
+	margin-bottom: 16px;
+	line-height: 1.3;
+}
+
+section p:first-child {
+	margin-top: 0px;
+}
+
+a {
+	color: #0174A7;
+	text-decoration: none;
+}
+
+/*
+ * Quotations
+ */
+
+blockquote {
+	font-style: italic;
+}
+
+/*
+ * Alternating colours in a list gives at least some chance of the visual 
+ * not being thunderingly boring.
+ */
+
+ol,
+ul {
+    margin: 0 0 45px;
+    counter-reset: list;
+}
+ul ul,
+ol ul,
+ol ol,
+ul ol {
+    margin: 0 0 0 38px;
+}
+ul.alternate > li:nth-child(even) {
+    color: #4e9a06;
+}
+ul.alternate > li:nth-child(odd) {
+    color: #8f5902;
+}
+
+/*
+ * Source code and fixed width
+ */
+
+kbd,
+code {
+	-webkit-tab-size: 4;
+	-moz-tab-size: 4;
+	-o-tab-size: 4;
+	tab-size: 4;
+	font-family: 'DejaVu Sans Mono', 'Droid Sans Mono', monospace;
+	font-size: 20px;
+}
+
+pre {
+	margin-top: 10px;
+	margin-bottom: 20px;
+}
+
+pre code {
+	display: inline;
+	background: none;
+	white-space: pre;
+	background-color: white;
+	padding-top: 0px;
+	padding-bottom: 1em;
+	padding-left: 0px;
+	font-size: 22px;
+}
+
+/*
+ * After I've given a live presentation, I tend to go back and add comment
+ * slides with some notes about what I might have been talking about during
+ * various sequences. This <section> class takes the slide to a different
+ * background colour to differentiate them visually. You can use the same
+ * technique to apply a different theme for different sections of a talk.
+ */
+
+.slide section.comment {
+	background-image: url("comment-stripe.png");
+	background-repeat: repeat-y;
+	background-size: 60px;
+	background-color: #d3d7cf;
+}
+
+/*.slide section h1 { color: #dddddd; }
+.slide section h2 { color: #dddddd; }
+.slide section p  { color: #dddddd; }
+.slide section a  { color: #dddddd; }*/
+
+/*
+ * Tango colour palette
+ */
+
+.butter1        { color: #fce94f; }
+.butter2        { color: #edd400; }
+.butter3        { color: #c4a000; }
+.chameleon1     { color: #8ae234; }
+.chameleon2     { color: #73d216; }
+.chameleon3     { color: #4e9a06; }
+.orange1        { color: #fcaf3e; }
+.orange2        { color: #f57900; }
+.orange3        { color: #ce5c00; }
+.skyblue1       { color: #729fcf; }
+.skyblue2       { color: #3465a4; }
+.skyblue3       { color: #204a87; }
+.plum1          { color: #ad7fa8; }
+.plum2          { color: #75507b; }
+.plum3          { color: #5c3566; }
+.chocolate1     { color: #e9b96e; }
+.chocolate2     { color: #c17d11; }
+.chocolate3     { color: #8f5902; }
+.scarletred1    { color: #ef2929; }
+.scarletred2    { color: #cc0000; }
+.scarletred3    { color: #a40000; }
+.aluminium1     { color: #eeeeec; }
+.aluminium2     { color: #d3d7cf; }
+.aluminium3     { color: #babdb6; }
+.aluminium4     { color: #888a85; }
+.aluminium5     { color: #555753; }
+.aluminium6     { color: #2e3436; }
+ul li { font-size: 150% }
+
+prompt:before {
+	content: "~ $ ";
+}
+prompt { 
+	color: #ff0000
+}
+

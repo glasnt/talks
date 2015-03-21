@@ -1,0 +1,28 @@
+<section>
+<div class="header">Method 3: ImageMagick Command Line</div>
+        <div class="fourby">
+                <i class="fa fa-search"></i>
+                <i class="fa fa-expand"></i>
+                <i class="fa fa-arrows"></i>
+                <i class="fa fa-eyedropper four-active"></i>
+        </div>
+<div class="code">
+<pre>
+convert rhino.jpg -colors 16 -format "%c" \
+	histogram:info: | sort -nr
+
+
+    108950: (  9, 11, 49) #090B31 srgb(9,11,49)
+     10439: (124,159,199) #7C9FC7 srgb(124,159,199)
+     10372: ( 33, 60,121) #213C79 srgb(33,60,121)
+      4287: (124,160,199) #7CA0C7 srgb(124,160,199)
+      3538: (243,244,246) #F3F4F6 srgb(243,244,246)
+      1909: (  5,  6, 35) #050623 srgb(5,6,35)
+      1609: ( 19, 34, 79) #13224F srgb(19,34,79)
+      1539: ( 29, 56,115) #1D3873 srgb(29,56,115)
+       722: (116,143,181) #748FB5 srgb(116,143,181)
+       716: ( 74, 85,116) #4A5574 srgb(74,85,116)
+    ...
+
+</pre>
+</section>
