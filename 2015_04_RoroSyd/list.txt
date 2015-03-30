@@ -60,13 +60,14 @@ slides/Gyprock3.html
 slides/Gyprock4.html
 slides/Gyprock4a.html
 slides/Gyprock5.html
+slides/PlaceKitten0.html
 slides/PlaceKitten.html
+slides/PlaceKitten1.html
+slides/PlaceKitten2.html
 slides/Api1.html
-slides/Api2.html
-slides/Final0.html
-slides/Final1.html
 slides/Final2a.html
 slides/Final2b.html
 slides/Final2.html
+slides/Final0.html
 slides/Penultimate.html
 slides/TheEnd.html
