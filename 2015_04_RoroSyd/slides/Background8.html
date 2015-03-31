@@ -6,12 +6,10 @@
                 <i class="fa fa-arrows"></i>
                 <i class="fa fa-eyedropper four-active"></i>
         </div>
-<div class="code">
-<pre>
-convert rhino.jpg -colors 16 -format "%c" \
+<div class="code"><pre>
+<div class="p">~ $ convert rhino.jpg -colors 16 -format "%c" \
         histogram:info: | sort -nr | head -1 | \
-        tr -s ' ' | cut -d' ' -f7
-
+        tr -s ' ' | cut -d' ' -f7</div>
     #090B31
 </pre>
 

@@ -5,7 +5,7 @@
                 <i class="fa fa-search"></i>
                 <i class="fa fa-expand four-active"></i>
                 <i class="fa fa-arrows four-active"></i>
-                <i class="fa fa-eyedropper four-active"></i>
+                <i class="fa fa-eyedropper"></i>
         </div>
 <div class="code" style="font-size: 22px"><pre>
 <div class="p">~ $ vim gyprock</div>
@@ -17,8 +17,8 @@ hex=`convert $FILE -colors 16 -format "%c" histogram:info:|\
 
 cp $FILE $OUT/$FILE
 
-convert -extent $RES -resize $RES -gravity SouthEast \
-        -background "$hex" $OUT/$FILE $new 
+<span class="highlight">convert -extent $RES -resize $RES -gravity SouthEast \
+        -background "$hex" $OUT/$FILE $new </span>
 
 echo "Image created, saved to $OUT/FILE"
 
