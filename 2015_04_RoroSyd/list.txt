@@ -14,6 +14,7 @@ slides/Process1.html
 slides/Process2.html
 slides/Process3.html
 slides/Process4.html
+slides/MSPaint-keyboard0.html
 slides/MSPaint-keyboard.html
 slides/Process1-keyboard.html
 slides/Process2-keyboard.html
@@ -38,6 +39,7 @@ slides/Background7.html
 slides/Background7b.html
 slides/Background8.html
 slides/Code0.html
+slides/Code0a.html
 slides/Code1.html
 slides/Code1a.html
 slides/Code1b.html
