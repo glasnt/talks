@@ -1,0 +1,34 @@
+
+<section>
+<div class="header">Method 4: Itty Bitty Shell Script</div>
+        <div class="fourby">
+                <i class="fa fa-search"></i>
+                <i class="fa fa-expand four-active"></i>
+                <i class="fa fa-arrows four-active"></i>
+                <i class="fa fa-eyedropper four-active"></i>
+        </div>
+<div class="code" style="font-size: 22px"><pre>
+<prompt/>vim gyprock
+
+#!/bin/bash
+FILE=$1; DIM=$2; OUT_FOLDER=$3
+
+hex=`convert $FILE -colors 16 -format "%c" histogram:info:|\
+       sort -nr | head -1 | tr -s ' ' | cut -d' ' -f7`
+
+new=$OUT_FOLDER/`sed -e "s/\./_$DIM\./g" <<< "$FILE"`
+
+cp $FILE $new
+
+convert -extent $DIM -resize $DIM -gravity SouthEast \
+        -background "$hex" $FILE $new 
+
+echo "Image created, saved to $new"
+
+</code></pre>
+<pre><prompt/>./gyprock rhino.jpg 1024x768 processed
+
+Image created, saved to processed/rhino_1024x768.jpg
+
+</pre>
+</section>

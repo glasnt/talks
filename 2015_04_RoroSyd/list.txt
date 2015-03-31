@@ -38,11 +38,11 @@ slides/Background6.html
 slides/Background7.html
 slides/Background7b.html
 slides/Background8.html
+slides/Shell0.html
+slides/Shell1.html
+slides/Shell2.html
 slides/Code0.html
-slides/Code0a.html
 slides/Code1.html
-slides/Code1a.html
-slides/Code1b.html
 slides/Code2.html
 slides/Code2b.html
 slides/Code2c.html
