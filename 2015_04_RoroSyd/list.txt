@@ -20,6 +20,8 @@ slides/Process1-keyboard.html
 slides/Process2-keyboard.html
 slides/Process4-keyboard.html
 slides/ManyMonthslater.html
+slides/ManualImage0.html
+slides/ManualImage1.html
 slides/ImageMagick0.html
 slides/ImageMagick1.html
 slides/ImageMagick2.html
@@ -55,6 +57,9 @@ slides/Oops1.html
 slides/Oops2.html
 slides/Oops3.html
 slides/Oops4.html
+slides/Oops4a.html
+slides/Oops4b.html
+slides/Oops5.html
 slides/SourceImage0.html
 slides/SourceImage0a.html
 slides/SourceImage1.html
@@ -77,4 +82,5 @@ slides/Final2b.html
 slides/Final2.html
 slides/Final0.html
 slides/Penultimate.html
+slides/Penultimate1.html
 slides/TheEnd.html

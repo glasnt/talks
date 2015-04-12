@@ -6,13 +6,12 @@
                 <i class="fa fa-arrows four-active"></i>
                 <i class="fa fa-eyedropper"></i>
         </div>
-<div class="code">
-<pre>
- convert -extent 800x600 	\
-	-resize 800x600   	\
-	-gravity SouthEast 	\
-	rhino.jpg rhino_extent_resize.jpg
-</pre>
+<div class="code"><pre><div class="p">
+~ $ convert -extent 800x600               \
+            -resize 800x600               \
+            <span class="highlight">-gravity SouthEast</span>            \
+            rhino.jpg rhino_background.jpg
+</pre></div>
 </div>
 <div class="rhino">
 <img style="display:inline-block;" src="pictures/rhino_small.jpg" width="192" height="192"/> 
