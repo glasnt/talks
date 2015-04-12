@@ -245,5 +245,29 @@ position: absolute; left: 150px; bottom: 50px;
 	font-family: monospace;
 	font-size: 30px;
 } 
- .comment { color: green }
- .p { color: yellow }
+ .comment { color: #7f9f7f }
+ .p { color: #f0dfaf}
+
+.p1 { background-color: #7f9f7f}
+.p2 { background-color: #808080}
+.p3 { background-color: #cc9393 }
+
+
+
+.title {
+text-align: right; color: white; text-shadow: 6px 6px 0.1em black; font:128px 'Mission Script'
+}
+.text {
+        position: absolute;
+        bottom: 100px;
+        font: 48px 'PT Sans Narrow';
+        z-index: 1;
+        color: #fff;
+        text-shadow: 3px 3px 0.1em black;
+        display:inline-block;
+        line-height: 0px;
+}
+.author {
+        font-size: 64px;
+        right: 80px;
+}

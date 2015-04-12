@@ -46,6 +46,9 @@ slides/Shell2.html
 slides/Shell2_1.html
 slides/Shell2_2.html
 slides/Shell2_3.html
+slides/Shell2_p1.html
+slides/Shell2_p2.html
+slides/Shell2_p3.html
 slides/Code0.html
 slides/Code1.html
 slides/Code2.html
@@ -68,6 +71,8 @@ slides/SourceImage5.html
 slides/Gyprock1.html
 slides/Gyprock2.html
 slides/Gyprock3.html
+slides/Nokogiri.html
+slides/Gyprock3a.html
 slides/Gyprock4.html
 slides/Gyprock4a.html
 slides/Gyprock5.html

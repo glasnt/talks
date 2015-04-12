@@ -1,0 +1,34 @@
+
+<section>
+<div class="header">Method 6: Pregenerate ALL the Things</div>
+        <div class="fourby">
+                <i class="fa fa-search four-active" ></i>
+                <i class="fa fa-expand"></i>
+                <i class="fa fa-arrows"></i>
+                <i class="fa fa-eyedropper"></i>
+        </div>
+<div class="code" style="font-size: 22px"><pre>
+<div class="p">~ $ vim attributes.rb</div>
+require 'nokogiri'
+require 'open-uri'
+
+base = "http://threadless.com/product/"
+
+(1..5500).each do |num|
+  begin
+    blob = Nokogiri::HTML(open("#{base}#{num}"))
+      .css('div.product_identity').text()
+      .encode('UTF-8', 'binary', invalid: :replace,
+               undef: :replace, replace: '?')
+      .strip().gsub(/\s+/," ")
+
+    name, designer = blob.split(" Design by ")
+    puts "Num: #{num}, Name: #{name}, Designer: #{designer}"
+  rescue => error
+    puts "ERROR #{num} -- #{error}\n#{blob}\n#{error.backtrace}"
+  end
+end
+
+</pre>
+</div>
+</section>

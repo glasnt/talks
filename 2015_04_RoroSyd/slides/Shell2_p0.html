@@ -1,0 +1,30 @@
+
+<section>
+<div class="header">Method 4: Itty Bitty Shell Script</div>
+        <div class="fourby">
+                <i class="fa fa-search"></i>
+                <i class="fa fa-expand four-active"></i>
+                <i class="fa fa-arrows four-active"></i>
+                <i class="fa fa-eyedropper four-active"></i>
+        </div>
+<div class="code" style="font-size: 22px"><pre>
+<div class="p">~ $ vim gyprock</div>
+#!/bin/bash
+<span class="p1">FILE</span>=$1; <span class="p2">RES</span>=$2; <span class="p3">OUT</span>=$3
+
+hex=`convert <span class="p1">$FILE</span> -colors 16 -format "%c" histogram:info:|\
+       sort -nr | head -1 | tr -s ' ' | cut -d' ' -f7`
+
+cp <span class="p1">$FILE</span> <span class="p3">$OUT</span>/<span class="p1">$FILE</span>
+
+convert -extent <span class="p2">$RES</span> -resize <span class="p2">$RES</span> -gravity SouthEast \
+        -background "$hex" <span class="p3">$OUT</span>/<span class="p1">$FILE</span> $new 
+
+echo "Image created, saved to <span class="p3">$OUT</span>/FILE"
+
+</code></pre>
+<pre><div class="p">~ $ ./gyprock <span class="p1">rhino.jpg</span> <span class="p2">1024x768</span> <span class="p3">processed</span></div>
+Image created, saved to processed/rhino_1024x768.jpg
+
+</pre>
+</section>
