@@ -38,6 +38,7 @@ slides/Background4b.html
 slides/Background5.html
 slides/Background6.html
 slides/Background7.html
+slides/Background7a.html
 slides/Background7b.html
 slides/Background8.html
 slides/Shell0.html
@@ -46,9 +47,7 @@ slides/Shell2.html
 slides/Shell2_1.html
 slides/Shell2_2.html
 slides/Shell2_3.html
-slides/Shell2_p1.html
-slides/Shell2_p2.html
-slides/Shell2_p3.html
+slides/Shell2.html
 slides/Code0.html
 slides/Code1.html
 slides/Code2.html
@@ -62,7 +61,6 @@ slides/Oops3.html
 slides/Oops4.html
 slides/Oops4a.html
 slides/Oops4b.html
-slides/Oops5.html
 slides/SourceImage0.html
 slides/SourceImage0a.html
 slides/SourceImage1.html
@@ -71,8 +69,6 @@ slides/SourceImage5.html
 slides/Gyprock1.html
 slides/Gyprock2.html
 slides/Gyprock3.html
-slides/Nokogiri.html
-slides/Gyprock3a.html
 slides/Gyprock4.html
 slides/Gyprock4a.html
 slides/Gyprock5.html

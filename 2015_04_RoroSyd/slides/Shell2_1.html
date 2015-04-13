@@ -13,7 +13,7 @@
 FILE=$1; RES=$2; OUT=$3
 
 hex=`<span class="highlight">convert $FILE -colors 16 -format "%c" histogram:info:|\
-       sort -nr | head -1 | tr -s ' ' | cut -d' ' -f7</span>`
+       sort -nr | head -1 | tr -s ' ' | cut -d' ' -f6</span>`
 
 cp $FILE $OUT/$FILE
 
