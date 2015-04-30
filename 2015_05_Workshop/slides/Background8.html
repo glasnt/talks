@@ -1,0 +1,27 @@
+<section>
+<div class="header">Method 3: ImageMagick Command Line</div>
+        <div class="fourby">
+                <i class="fa fa-search"></i>
+                <i class="fa fa-expand"></i>
+                <i class="fa fa-arrows"></i>
+                <i class="fa fa-eyedropper four-active"></i>
+        </div>
+<div class="code"><pre>
+<div class="p">~ $ convert rhino.jpg -colors 16 -format "%c" \
+        histogram:info: | sort -nr | head -1 | \
+        tr -s ' ' <span class="highlight">| cut -d' ' -f6</span></div>
+    #090B31
+</pre>
+
+<p align="center">
+
+<canvas id="bg" width="384px" height="384px" style="background-color:#090B31"/>
+</canvas>
+<script>
+var c = document.getElementById("bg").getContext("2d");
+c.font="36px PTSans"
+c.fillStyle="white"
+c.fillText("#090B31",120,300)
+</script>
+<img src="pictures/rhino_small.jpg">
+</section>

@@ -1,0 +1,26 @@
+<section>
+<div class="header">Method 3: ImageMagick Command Line</div>
+        <div class="fourby">
+                <i class="fa fa-search"></i>
+                <i class="fa fa-expand"></i>
+                <i class="fa fa-arrows"></i>
+                <i class="fa fa-eyedropper four-active"></i>
+        </div>
+<div class="code">
+<pre>
+<div class="p">~ $ convert rhino.jpg <span class="highlight">-format "%c"</span> histogram:info:</div>
+
+
+	 1: (  0,  0, 26) #00001A srgb(0,0,26)
+         2: (  0,  0, 28) #00001C srgb(0,0,28)
+         2: (  0,  0, 29) #00001D srgb(0,0,29)
+        12: (  0,  0, 30) #00001E srgb(0,0,30)
+         2: (  0,  0, 31) #00001F srgb(0,0,31)
+         1: (  0,  0, 33) #000021 srgb(0,0,33)
+         1: (  0,  1, 26) #00011A srgb(0,1,26)
+	...
+
+<div class="p">~ $ !! | wc -l</div>
+5825
+</pre>
+</section>

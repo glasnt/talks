@@ -1,0 +1,25 @@
+<section>
+<div class="header">Method 6: Pregenerate ALL the Things</div>
+<div class="fourby">
+        <i class="fa fa-search four-active"></i>
+        <i class="fa fa-expand four-active"></i>
+        <i class="fa fa-arrows four-active"></i>
+        <i class="fa fa-eyedropper four-active"></i>
+</div>
+<footer>
+<a href="https://en.wikipedia.org/wiki/List_of_common_resolutions">https://en.wikipedia.org/wiki/List_of_common_resolutions</a>
+</footer>
+<br/>
+<br/>
+<div class="code"><pre>
+for i in $(ls); do for j in ( echo \
+ 1024x768  \
+ 1280x800  \
+ 1366x768  \
+ 1440x900  \ 
+ 1600x900  \
+ 1600x1050 \ 
+ 1920x1080 \ 
+ 2540x1440
+); do ./gyprock.rb $j $i; done; done</pre></div>
+</section>
