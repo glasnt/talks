@@ -1,0 +1,15 @@
+<section>
+<div class="embiggen">
+<pre>
+answer = ""; <comment>//global</comment>
+function question() { 
+  <del>var</del> answer = 42; <comment>//global</comment>
+  return answer;
+}
+
+console(answer);     > ""
+console(question()); > 42
+console(answer);     > 42
+</pre>
+</div>
+</section>
