@@ -62,5 +62,18 @@ slides/equal_09.html
 
 slides/frus_04.html
 
+slides/compile_00.html
+slides/compile_01.html
+slides/compile_02.html
+slides/compile_03.html
+slides/compile_04.html
+slides/compile_05.html
+slides/compile_06.html
+slides/compile_07.html
+slides/compile_08.html
+slides/compile_09.html
+slides/compile_10.html
+slides/compile_11.html
+
 slides/frus_05.html
 slides/TheEnd.html

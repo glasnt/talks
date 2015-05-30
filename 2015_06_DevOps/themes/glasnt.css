@@ -302,9 +302,9 @@ comment { color: green; font-weight: bold; }
 }
 
 
-.tweet { font-weight: normal; color: white; font-size: 60px; display:block; padding-top: 150px;} 
+.tweet { font-weight: normal; color: white; font-size: 60px; display:block; padding-top: 100px;} 
 
-.tweet .avatar { display:inline; float: left; padding: 30px }
+.tweet .avatar { display:inline; float: left; padding: 30px 30px 30px 10px }
 .tweet .avatar img { height: 100px; }
 
 .tweet .handle { color: #55acee; font-weight: bold; display:block; font-size: 40px; }
