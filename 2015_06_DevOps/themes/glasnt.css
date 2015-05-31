@@ -310,6 +310,6 @@ comment { color: green; font-weight: bold; }
 .tweet .handle { color: #55acee; font-weight: bold; display:block; font-size: 40px; }
 
 .tweet .name { display: inline-block }
-.tweet .date { font-size: 30px; color: #ddd }
+.tweet .date { display: none; font-size: 30px; color: #ddd }
 
-.tweet .content { font-size: 40px; padding-top: 50px; padding-bottom: 50px  }
+.tweet .content { font-size: 50px; padding-top: 50px; padding-bottom: 50px  }

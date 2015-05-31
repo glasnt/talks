@@ -45,7 +45,7 @@ slides/equal_07.html
 slides/equal_08.html
 slides/equal_09.html
 slides/frus_04.html
-slides/frus_03.html
+slides/check_000.html
 slides/check_00.html
 slides/check_01.html
 slides/check_02.html
