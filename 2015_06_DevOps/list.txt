@@ -57,4 +57,15 @@ slides/frus_00.html
 slides/frus_01.html
 slides/frus_02.html
 slides/frus_05.html
+slides/xkcd_00.html
+slides/xkcd_01.html
+slides/xkcd_02.html
+slides/xkcd_03.html
+slides/xkcd_04.html
+slides/xkcd_05.html
+slides/xkcd_06.html
+slides/xkcd_07.html
+slides/xkcd_08.html
+slides/xkcd_a1.html
+slides/xkcd_a2.html
 slides/TheEnd.html
