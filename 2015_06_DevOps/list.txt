@@ -34,6 +34,14 @@ slides/wat_06.html
 slides/wat_07.html
 slides/wat_08.html
 slides/wat_09.html
+slides/array2_00.html
+slides/array2_01.html
+slides/array2_02.html
+slides/array2_03.html
+slides/array2_04.html
+slides/array2_05.html
+slides/array3_00.html
+slides/array3_01.html
 slides/equal_00.html
 slides/equal_01.html
 slides/equal_02.html
