@@ -42,6 +42,12 @@ slides/array2_04.html
 slides/array2_05.html
 slides/array3_00.html
 slides/array3_01.html
+slides/array4_00.html
+slides/array4_01.html
+slides/array4_02.html
+slides/array4_03.html
+slides/array4_04.html
+slides/array4_05.html
 slides/equal_00.html
 slides/equal_01.html
 slides/equal_02.html
