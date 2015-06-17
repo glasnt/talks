@@ -98,11 +98,6 @@ code {
 	font-size: 20px;
 }
 
-pre {
-	margin-top: 10px;
-	margin-bottom: 20px;
-}
-
 pre code {
 	display: inline;
 	background: none;
@@ -114,94 +109,6 @@ pre code {
 	font-size: 22px;
 }
 
-/*
- * After I've given a live presentation, I tend to go back and add comment
- * slides with some notes about what I might have been talking about during
- * various sequences. This <section> class takes the slide to a different
- * background colour to differentiate them visually. You can use the same
- * technique to apply a different theme for different sections of a talk.
- */
-
-.slide section.comment {
-	background-image: url("comment-stripe.png");
-	background-repeat: repeat-y;
-	background-size: 60px;
-	background-color: #d3d7cf;
-}
-
-.watermark { 
-	color: rgba(211,211,211,0.44);
-        position: absolute;
-        bottom: 0px;
-        right: 0px;
-        width: 100%;
-        z-index: -1;
-}
-.watermark i { 
-	float:right;
-	padding-right: 10%;
-	padding-bottom: 10%;
-	font-size: 500px;
-}
-.four { 
-	background: red;
-}  
-.four .h1 { 
-	font: 120px 'Mission Script', sans;
-	width: 75%;
-	padding-left: 10%;
-	padding-top: 10%
-}
-.header { 
-	font: 64px 'Mission Script', sans;
-	padding-bottom: 20px;
-	margin-left: -50px;
-
-}
-
-
-.twotwoby { 
-	font-size: 84px;
-	position:absolute;
-	right: 0px;
-	top: 100px;
-	color: #fff
-	align: center;
-	z-index: 1000;
-	background: rgba(0,0,0,0.5);
-} 
-.twotwoby i { 
-/*	display:block; */
-	padding: 20px
-	float: right
-}
-
-
-.twotwoby .label { 
-	right: 0px;
-	display:block; 
-} 
-
-.fourby { 
-	font-size: 84px;
-	position:absolute;
-	right: 0px;
-	top: 100px;
-	color: #555;
-	align: center;
-	z-index: 1000;
-	background: rgba(0,0,0,0.5);
-} 
-.fourby i { 
-	display:block;
-	padding: 20px
-}
-.fourby .four-active { 
-	color: #fff
-}
-.image-inlay .height img { 
-	height: 100%;
-}
 .image-inlay { 
 	position: absolute;
 	right: 20px;
@@ -276,7 +183,7 @@ position: absolute; left: 150px; bottom: 50px;
 }
 footer.pagenumber { display:none}
 
-comment { color: lightgreen;}
+comment { color: lightgreen; font-weight: bold;}
 
 
 .embiggen { color: white; font-style:normal; font-size: 80px; }
@@ -294,6 +201,7 @@ comment { color: lightgreen;}
 .embiggen pre del { 
   color: red;
   text-decoration: line-through;
+  font-weight: bold;
 
 } 
 .embiggen pre.c { 
@@ -314,4 +222,4 @@ comment { color: lightgreen;}
 .tweet .content { font-size: 50px; padding-top: 50px; padding-bottom: 50px  }
 
 
-pre g { color: grey; }
+pre g { color: grey; font-weight: bold}
