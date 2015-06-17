@@ -1,15 +1,18 @@
 <section>
 <div class="embiggen">
 <pre>
-answer = ""; <comment>//global</comment>
-function question() { 
-  var answer = 42; <comment>//local</comment>
-  return answer;
-}
+> ans = ""; <comment>//global</comment>
+> function q() { 
+>   var ans = 42; <comment>//local</comment>
+>   return ans;
+> }
 
-console.log(answer);     <g>> ""</g>
-console.log(question()); <g>> 42</g>
-console.log(answer);     <g>> ""</g>
+> console.log(ans); 
+<g>""</g>
+> console.log(q()); 
+<g>42</g>
+> console.log(ans); 
+<g>""</g>
 </pre>
 </div>
 </section>

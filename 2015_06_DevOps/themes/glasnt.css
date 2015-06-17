@@ -244,7 +244,6 @@ position: absolute; left: 150px; bottom: 50px;
 	font-family: monospace;
 	font-size: 30px;
 } 
- .comment { color: #7f9f7f }
  .p { color: #f0dfaf}
 
 .p1 { background-color: #7f9f7f}
@@ -277,7 +276,7 @@ position: absolute; left: 150px; bottom: 50px;
 }
 footer.pagenumber { display:none}
 
-comment { color: green; font-weight: bold; }
+comment { color: lightgreen;}
 
 
 .embiggen { color: white; font-style:normal; font-size: 80px; }
@@ -288,8 +287,8 @@ comment { color: green; font-weight: bold; }
   color: lightgreen;
 } 
 .embiggen pre {  
-  padding-top: 50px;
-  font-size: 60px;
+/*  padding-top: 50px; */
+  font-size: 50px;
 	text-align: left; 
 }
 .embiggen pre del { 
@@ -300,16 +299,16 @@ comment { color: green; font-weight: bold; }
 .embiggen pre.c { 
         text-align: center; padding-left: auto;
 }
+/*sml { font-size: 30px }*/
 
+.tweet { font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-weight: normal; color: white; font-size: 60px; display:block; padding-top: 100px;} 
 
-.tweet { font-weight: normal; color: white; font-size: 60px; display:block; padding-top: 100px;} 
-
-.tweet .avatar { display:inline; float: left; padding: 30px 30px 30px 10px }
+.tweet .avatar { display:inline; float: left; padding: 10px 10px 30px 10px }
 .tweet .avatar img { height: 100px; }
 
-.tweet .handle { color: #55acee; font-weight: bold; display:block; font-size: 40px; }
+.tweet .handle { color: #55acee;  display:block; font-size: 40px; }
 
-.tweet .name { display: inline-block }
+.tweet .name { display: inline-block; font-weight: bold }
 .tweet .date { display: none; font-size: 30px; color: #ddd }
 
 .tweet .content { font-size: 50px; padding-top: 50px; padding-bottom: 50px  }
