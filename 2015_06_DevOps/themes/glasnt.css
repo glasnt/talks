@@ -166,7 +166,7 @@ position: absolute; left: 150px; bottom: 50px;
 	font:128px 'Mission Script'
 }
 .title_alt { 
-  color: white; padding-top: 25%; text-align: center;
+  color: black; padding-top: 25%; text-align: center;
 	font-weight: bold;
   font: 150px;
 }
@@ -183,33 +183,28 @@ position: absolute; left: 150px; bottom: 50px;
 }
 footer.pagenumber { display:none}
 
-comment { color: lightgreen; font-weight: bold;}
+comment { color: green; font-weight: bold;}
 
 
-.embiggen { color: white; font-style:normal; font-size: 80px; }
 
 .default { text-align: center; padding-top: 20% }
 
 .embiggen pre b { 
   color: lightgreen;
 } 
-.embiggen pre {  
-/*  padding-top: 50px; */
-  font-size: 50px;
-	text-align: left; 
-}
-.embiggen pre del { 
+
+.embiggen pre { font-size: 60px;text-align: left;}
+.embiggen {font-style:normal; font-size: 80px; }
+.embiggen2 { font-style:normal; font-size: 80px; margin-top: -50px }
+.embiggen2 pre { font-size: 50px;text-align: left; }
+pre del { 
   color: red;
   text-decoration: line-through;
   font-weight: bold;
 
 } 
-.embiggen pre.c { 
-        text-align: center; padding-left: auto;
-}
-/*sml { font-size: 30px }*/
 
-.tweet { font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-weight: normal; color: white; font-size: 60px; display:block; padding-top: 100px;} 
+.tweet { font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-weight: normal; font-size: 60px; display:block; padding-top: 100px;} 
 
 .tweet .avatar { display:inline; float: left; padding: 10px 10px 30px 10px }
 .tweet .avatar img { height: 100px; }
@@ -221,5 +216,4 @@ comment { color: lightgreen; font-weight: bold;}
 
 .tweet .content { font-size: 50px; padding-top: 50px; padding-bottom: 50px  }
 
-
-pre g { color: grey; font-weight: bold}
+/* pre g { color: darkgrey; font-weight: bold}*/
