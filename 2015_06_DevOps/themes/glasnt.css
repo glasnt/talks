@@ -193,8 +193,8 @@ comment { color: green; font-weight: bold;}
   color: lightgreen;
 } 
 
-.embiggen pre { font-size: 60px;text-align: left;}
-.embiggen {font-style:normal; font-size: 80px; }
+.embiggen pre { font-size: 60px;text-align: left; margin-top:0px; margin-left: -10px}
+.embiggen {font-style:normal; font-size: 100px; }
 .embiggen2 { font-style:normal; font-size: 80px; margin-top: -50px }
 .embiggen2 pre { font-size: 50px;text-align: left; }
 pre del { 
@@ -214,6 +214,4 @@ pre del {
 .tweet .name { display: inline-block; font-weight: bold }
 .tweet .date { display: none; font-size: 30px; color: #ddd }
 
-.tweet .content { font-size: 50px; padding-top: 50px; padding-bottom: 50px  }
-
-/* pre g { color: darkgrey; font-weight: bold}*/
+.tweet .content { font-size: 60px; padding-top: 50px; padding-bottom: 50px  }
