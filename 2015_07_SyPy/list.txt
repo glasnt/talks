@@ -1,0 +1,15 @@
+slides/Title.html
+slides/HatRack.html
+slides/Question.html
+slides/Github.html
+slides/Question.html
+slides/Concern.html
+slides/Meeting.html
+slides/Solution_0.html
+slides/Solution_1.html
+slides/Solution_2.html
+slides/Solution_4.html
+slides/Solution_L.html
+slides/Yay.html
+slides/TheEnd.html
+slides/TheEnd1.html
