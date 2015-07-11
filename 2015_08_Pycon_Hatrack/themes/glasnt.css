@@ -1,14 +1,14 @@
-.title { font:100px 'PT Sans'; }
-.author { font: 40px 'PT Sans'; }
 
+section div { font: 72px 'PT Sans' }
+
+.title  { font:100px  }
+.author { font: 40px  }
+.header { font: 60px}
 .center { text-align: center }
 
 footer.pagenumber { display:none}
-
 
 .embed img { width: 100%; }
 .main { margin-top: 150px; text-align: center}
 
 
-section div { font: 72px 'PT Sans' }
-se
