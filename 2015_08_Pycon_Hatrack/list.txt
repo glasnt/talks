@@ -57,6 +57,10 @@ slides/Contrib_n2.html
 slides/Contrib_n1.html
 slides/Contrib_final.html
 slides/Contrib_final2.html
+slides/Contrib_0X.html
+slides/Contrib_0X2.html
+slides/Contrib_0X3.html
+slides/Contrib_0X4.html
 slides/Contrib_0Y.html
 slides/Contrib_0Z.html
 slides/NonCodeContrib_00.html

@@ -6,4 +6,13 @@ slides/blank.html
 slides/Ah.html
 slides/blank.html
 slides/NowWhat.html
+slides/blank.html
+slides/Problems_1.html
+slides/Problems_2.html
+slides/Problems_3.html
+slides/Problems_4.html
+slides/Problems_5.html
+slides/Problems_6.html
+slides/GH_Fork_01.html
+slides/GH_Fork_02.html
 slides/TheEnd.html
