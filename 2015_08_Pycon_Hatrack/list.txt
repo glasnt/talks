@@ -65,4 +65,9 @@ slides/Contrib_0Y.html
 slides/Contrib_0Z.html
 slides/NonCodeContrib_00.html
 slides/NonCodeContrib_01.html
+slides/NonCodeContrib_02.html
+slides/NonCodeContrib_03.html
+slides/NonCodeContrib_04.html
+slides/NonCodeContrib_05.html
+slides/NonCodeContrib_06.html
 slides/TheEnd.html
