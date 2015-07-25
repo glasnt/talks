@@ -70,4 +70,6 @@ slides/NonCodeContrib_03.html
 slides/NonCodeContrib_04.html
 slides/NonCodeContrib_05.html
 slides/NonCodeContrib_06.html
-slides/TheEnd.html
+slides/NonCodeContrib_07.html
+slides/NonCodeContrib_08.html
+slides/Thanks.html
