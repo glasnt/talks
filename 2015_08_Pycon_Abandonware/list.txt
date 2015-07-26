@@ -48,6 +48,7 @@ slides/WhyDoYouCare_01.html
 slides/ThatsMyStory_01.html
 slides/ThatsMyStory_02.html
 slides/ThatsMyStory_03.html
+slides/ResponsibleAb_01.html
 slides/ResponsibleAb_00.html
 slides/ResponsibleAb_01.html
 slides/ResponsibleAb_02.html
