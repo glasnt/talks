@@ -67,6 +67,12 @@ slides/Contrib_0A1.html
 slides/Contrib_0A2.html
 slides/Contrib_0A3.html
 slides/Contrib_0A4.html
+slides/EverythingElse_01.html
+slides/EverythingElse_02.html
+slides/EverythingElse_03.html
+slides/EverythingElse_04.html
+slides/EverythingElse_05.html
+slides/EverythingElse_06.html
 slides/NonCodeContrib_00.html
 slides/NonCodeContrib_00a.html
 slides/NonCodeContrib_01.html
