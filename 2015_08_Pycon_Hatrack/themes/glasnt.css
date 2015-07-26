@@ -12,6 +12,9 @@ footer.pagenumber { display:none}
 .main { margin-top: 150px; text-align: center}
 
 code { font: 38px 'PT Mono' }
-
 .point { font: 100px; text-align: center; margin-top: 100px; margin-bottom: 20px; }
 .attr { font:28px 'PT Sans'; }
+.octohat code { text-align: left; font-size: 48px; }
+.octohat { margin-left: 30px; }
+.rockstar code { font-size: 40px }
+.slide footer { font: 30px 'PT Mono'; margin-bottom: 50px }

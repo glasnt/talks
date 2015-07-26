@@ -63,7 +63,12 @@ slides/Contrib_0X3.html
 slides/Contrib_0X4.html
 slides/Contrib_0Y.html
 slides/Contrib_0Z.html
+slides/Contrib_0A1.html
+slides/Contrib_0A2.html
+slides/Contrib_0A3.html
+slides/Contrib_0A4.html
 slides/NonCodeContrib_00.html
+slides/NonCodeContrib_00a.html
 slides/NonCodeContrib_01.html
 slides/NonCodeContrib_02.html
 slides/NonCodeContrib_03.html
