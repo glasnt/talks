@@ -1,5 +1,6 @@
 slides/Title.html
 slides/About.html
+slides/About2.html
 slides/OpenStack_1.html
 slides/OpenStack_2.html
 slides/OpenStack_3.html
