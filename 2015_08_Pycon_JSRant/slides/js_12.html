@@ -1,0 +1,17 @@
+<section>
+<div class="embiggen2">
+<pre>
+> ans = ""; <comment>//global</comment>
+> function q() { 
+>   <del>var</del> ans = 42; <comment>//global</comment>
+>   return ans;
+> }
+> console.log(ans); <g>
+""</g>
+> console.log(q()); 
+<g>42</g>
+> console.log(ans); 
+<g>42</g>
+</pre>
+</div>
+</section>
