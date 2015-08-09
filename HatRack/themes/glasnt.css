@@ -1,0 +1,14 @@
+
+
+.title {
+font:128px 'PT Sans';
+}
+
+.center { text-align: center }
+
+footer.pagenumber { display:none}
+
+
+section div  { text-align: center}
+.embed img { width: 100%; }
+.main { margin-top: 150px; text-align: center}
