@@ -13,4 +13,3 @@ slides/Solution_L.html
 slides/Yay.html
 slides/Rack.html
 slides/TheEnd.html
-slides/TheEnd1.html
