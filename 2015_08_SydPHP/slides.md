@@ -75,7 +75,7 @@ Note: Tldr - yay opensource!
 
 
 # BSD3 - Cannot: <!-- .element: style="margin-bottom: 1em" -->
-## Use trademark <!-- .element: class="fragment" -->
+## Use Trademark <!-- .element: class="fragment" -->
 ## Hold Liable <!-- .element: class="fragment" -->
 Note: Fair Enough
 
@@ -110,28 +110,46 @@ Note: If the source upstream is dead, then that's an inhibitor of innovation
 
 
 
-# Ask. <!-- .slide: class="center" -->
+# Ask. <!-- .slide: class="center" --> <!-- .element style="font-size: 4em" --> 
 Note: This is totally what I did. Because this happened to me. Saddest of Panda
 
 
 
-# So what could they do? <!-- .element: style="margin-bottom: 1em" -->
-## Transfer ownership <!-- .element: class="fragment" -->
+# So what could they do? <!-- .slide: class="center" -->
 
 
-# Transferring of GitHub Repos <!-- .element: style="margin-bottom: 1em" -->
+
+# Transfer ownership <!-- .slide: class="center" -->
+
+
+
+# Transfer ownership <!-- .element: style="margin-bottom: 1em" -->
 ## Create a new organisation <!-- .element: class="fragment" -->
-## Add Admin from their organisation <!-- .element: class="fragment" -->
-## They transfer repo into your organisation <!-- .element: class="fragment" -->
-## Remove them from your organisation <!-- .element: class="fragment" -->
+## Add new admin <!-- .element: class="fragment" -->
+## Transfer repo <!-- .element: class="fragment" -->
+## Remove new admin <!-- .element: class="fragment" -->
+
+Note: You create a new organisation
+
+Then, you add someone w/transfer rights into your new group, as an admin
+
+Then, they transfer the repo between two organisations that they have the rights to do so with
+
+Then, you remove them, before they can do anything else :)
+
+
 
 
 
 # Resulting State <!-- .element: style="margin-bottom: 1em" -->
 ## All the PRs, Issues, Commits stay <!-- .element: class="fragment" -->
-## Automatic 301 Redirect to new location <!-- .element: class="fragment" -->
-## You now have the commit bit :D <!-- .element: class="fragment" -->
+## 301 Redirects to new URL <!-- .element: class="fragment" -->
+## You get the commit bit :D <!-- .element: class="fragment" -->
 
+
+Note: the 301 is very nice, it will automatically users to the new repo based on the old URL
+
+This may break if you attempt to overload the old namespace, however.
 
 
 

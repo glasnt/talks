@@ -110,28 +110,46 @@ Note: If the source upstream is dead, then that's an inhibitor of innovation
 
 
 
-#= Ask.
+!#= Ask.
 Note: This is totally what I did. Because this happened to me. Saddest of Panda
 
 
 
-# So what could they do?
-##- Transfer ownership
+#= So what could they do?
 
 
-# Transferring of GitHub Repos
+
+#= Transfer ownership
+
+
+
+# Transfer ownership
 ##- Create a new organisation
-##- Add Admin from their organisation
-##- They transfer repo into your organisation
-##- Remove them from your organisation
+##- Add new admin
+##- Transfer repo
+##- Remove new admin
+
+Note: You create a new organisation
+
+Then, you add someone w/transfer rights into your new group, as an admin
+
+Then, they transfer the repo between two organisations that they have the rights to do so with
+
+Then, you remove them, before they can do anything else :)
+
+
 
 
 
 # Resulting State
 ##- All the PRs, Issues, Commits stay
-##- Automatic 301 Redirect to new location
-##- You now have the commit bit :D
+##- 301 Redirects to new URL
+##- You get the commit bit :D
 
+
+Note: the 301 is very nice, it will automatically users to the new repo based on the old URL
+
+This may break if you attempt to overload the old namespace, however. 
 
 
 
