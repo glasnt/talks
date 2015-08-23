@@ -2,68 +2,94 @@
 ## How to handle abandoned projects
 <img src="pictures/footer.svg">
 
-
+---
 
 #= Hi!
 
 Note: This is totally based on a true story. It happened to a friend of a friend of mine.
 
-
+---
 
 # &nbsp;
 
+Note: Say you have a project
 
+You find a cool widget on GitHub
+
+You want to use it.
+
+But..
+
+It hasn't been updated in 4 years
+
+---
 
 
 #= "Just fork it!"
 ##- Well, it's not that simple
 
+---
 
+#= GitHub doesn't do Forking
+
+Note: They don't implement the traditional forking methodology
+
+---
+
+#= Plus, there's more issues.
+
+---
 
 ##=- GitHub Forking
 ##- Licencing
 ##- 'Competitor' Code
 ##- Dead Source
 
-
+---
 
 # GitHub Forking
 ##- <img src="pictures/github_forking.gif">
 Note: Github's forking != Traditional Forking
 
-
-
+---
 
 # Limitations
-#
 ##- Parent Lock-in
 ##- Default Pull Requests
 ##- No Issue Logging
 ##- Commits Don't Count
 
 Note: Parent - perma link to source
+
 PR - defaults to parent, accidently attempt to merge upstream
+
 Issues - physical limitation on workflow
+
 Commits - you can work your butt off and your green graph doesn't fill up
 
+
+---
 
 
 # Licencing
 #- BSD
 
 
-
+---
 # Licencing
 # BSD?
 
-Note: 
- * "Redistribution and use in source and binary forms, with or without modification, are permitted"
-  - well, yay! I can just have at it!
- * "provided that the following conditions are met: "
-  - ah, the caveats
+Note:
+ 
+"Redistribution and use in source and binary forms, with or without modification, are permitted"
 
+well, yay! I can just have at it!
 
+"provided that the following conditions are met: "
 
+ah, the caveats
+
+---
 
 # BSD3 - Can:
 ##- Commercially Use
@@ -72,56 +98,83 @@ Note:
 ##- Place Warranty
 Note: Tldr - yay opensource!
 
-
+---
 
 # BSD3 - Cannot:
 ##- Use Trademark
 ##- Hold Liable
 Note: Fair Enough
 
-
+---
 
 # BSD3 - Must:
 ##- Include Copyright
 ##- <img src="pictures/awkward.gif">
-Note: Follows onto the next slide
 
-
-
-
+---
 # 'Competitor' Code
 ##- &copy; Their Company 2014
 ##- &copy; Your Company 2015
 
 Note: having copyrights with other company's copyright is kinda a weird thing, amiright?
 
-
-
+---
 
 # Dead Source
 ##- <img src="pictures/tumbleweed.gif"> 
 
 Note: If the source upstream is dead, then that's an inhibitor of innovation
 
-
+---
 
 
 #= So what could you do?
-
-
+---
 
 !#= Ask.
+
 Note: This is totally what I did. Because this happened to me. Saddest of Panda
 
+---
 
+#= So why do you care?
 
-#= So what could they do?
+---
 
+!#= PHP 7
 
+Note: PHP5 will die. PHP4 shuold already be dead.
 
-#= Transfer ownership
+When everyone upgrades, the old code needs to come along, or it'll be lost.
 
+---
 
+#= So what can you do?
+##- Abandon Responsibly
+##- Restore Dead Code
+
+Note: If you have a project vs if you see a project
+
+---
+
+# Abandon Responsibly
+##- Update your README
+##- Mark as Inactive
+##- Link to a better solution
+##- Leave a forwarding address
+##- Assign a New Maintainer
+
+Note: Documentation is your friend
+
+You don't want people coming across your stuff when there's something better
+
+---
+
+#= On the transfer of ownership
+
+Note: Here's how you move things in GitHub
+
+---
 
 # Transfer ownership
 ##- Create a new organisation
@@ -137,9 +190,7 @@ Then, they transfer the repo between two organisations that they have the rights
 
 Then, you remove them, before they can do anything else :)
 
-
-
-
+---
 
 # Resulting State
 ##- All the PRs, Issues, Commits stay
@@ -151,33 +202,7 @@ Note: the 301 is very nice, it will automatically users to the new repo based on
 
 This may break if you attempt to overload the old namespace, however. 
 
-
-
-#= So why do you care?
-
-
-
-
-!#= PHP 7
-
-
-
-
-#= So what can you do?
-## Abandon Responsibly
-## Restore Dead Code
-
-
-
-
-# Abandon Responsibly
-##- Update your README
-##- Mark as Inactive
-##- Link to a better solution
-##- Assign a New Maintainer
-
-
-
+---
 
 
 # Restore Dead Code
@@ -185,8 +210,7 @@ This may break if you attempt to overload the old namespace, however.
 ##- <img src="pictures/notdeadyet.gif">
 
 
-
-
+---
 
 # Restore Dead Code
 ## Check their README
@@ -194,6 +218,28 @@ This may break if you attempt to overload the old namespace, however.
 ##- Is there a better solution?
 ##- Can you be the new maintainer?
 
+---
 
+#= There's probably more factors in play
+
+Note: It's never just that simple.
+
+Politics
+
+Friendships
+
+Pet Projects
+
+---
+
+#= Go to rule: There's nothing wrong with being nice. 
+
+Note: the ability to openly communicate is one facet of opensource that makes it amazing
+
+---
+
+#= Thanks!
+
+<img src="pictures/footer.svg">
 
 
