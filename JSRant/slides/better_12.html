@@ -1,0 +1,15 @@
+<section>
+<div class="embiggen">
+<pre><comment>// ECMAScript 6</comment>
+function add(<highlight>...</highlight>vals) {
+   let sum = 0;
+   for (var v of vals) {
+      sum += v;
+   }
+   return sum;
+}
+add(10, 14, 9, 7, 2)
+> 42
+</pre>
+</div>
+</section>

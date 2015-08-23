@@ -203,8 +203,8 @@ pre del {
   font-weight: bold;
 
 } 
-highlight {font-weight: bold; color: blue; } 
-.tweet { font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-weight: normal; font-size: 60px; display:block; padding-top: 100px;} 
+highlight {font-weight: bold; color: yellow; } 
+.tweet { font-weight: normal; font-size: 60px; display:block; padding-top: 100px;} 
 
 .tweet .avatar { display:inline; float: left; padding: 10px 10px 30px 10px }
 .tweet .avatar img { height: 100px; }
