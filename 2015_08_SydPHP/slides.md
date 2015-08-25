@@ -168,6 +168,10 @@ Note: Documentation is your friend
 
 You don't want people coming across your stuff when there's something better
 
+Google Code problems - Read Only
+
+What if GitHub goes away?
+
 ---
 
 # On the transfer of ownership <!-- .slide: class="center" -->
