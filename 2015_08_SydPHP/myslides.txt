@@ -72,12 +72,12 @@ Commits - you can work your butt off and your green graph doesn't fill up
 
 
 # Licencing
-#- BSD
+!#- BSD
 
 
 ---
 # Licencing
-# BSD?
+!# BSD?
 
 Note:
  

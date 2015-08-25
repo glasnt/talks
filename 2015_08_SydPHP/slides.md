@@ -72,12 +72,12 @@ Commits - you can work your butt off and your green graph doesn't fill up
 
 
 # Licencing <!-- .element: style="margin-bottom: 1em" -->
-# BSD <!-- .element: style="margin-bottom: 1em" -->
+# BSD <!-- .element: class="fragment" --> <!-- .element style="font-size: 4em" --> 
 
 
 ---
 # Licencing <!-- .element: style="margin-bottom: 1em" -->
-# BSD? <!-- .element: style="margin-bottom: 1em" -->
+# BSD? <!-- .element style="font-size: 4em" --> 
 
 Note: 
 
