@@ -51,7 +51,7 @@ We'll get to that
 ---
 
 ## GitHub Forking <!-- .slide: class="center" -->
-## Licencing <!-- .element: class="fragment" -->
+## Licensing <!-- .element: class="fragment" -->
 ## 'Competitor' Code <!-- .element: class="fragment" -->
 ## Dead Source <!-- .element: class="fragment" -->
 
@@ -64,6 +64,9 @@ Note: We'll discuss all these things
 ## <img src="pictures/github_forking.gif"> <!-- .element: class="fragment" -->
 Note: Github's forking != Traditional Forking
 
+It's your copy for branches and PR merges.
+
+It's not a full working copy of a code base
 ---
 
 # Limitations <!-- .element: style="margin-bottom: 1em" -->
@@ -72,7 +75,7 @@ Note: Github's forking != Traditional Forking
 ## No Issue Logging <!-- .element: class="fragment" -->
 ## Commits Don't Count <!-- .element: class="fragment" -->
 
-Note: Parent - perma link to source
+Note: Parent - perma link to source. Network Graph
 
 PR - defaults to parent, accidently attempt to merge upstream
 
@@ -84,19 +87,20 @@ Commits - you can work your butt off and your green graph doesn't fill up
 ---
 
 
-# Licencing <!-- .element: style="margin-bottom: 1em" -->
-# BSD <!-- .element: class="fragment" --> <!-- .element style="font-size: 4em" --> 
+# Licensing <!-- .element: style="margin-bottom: 1em" -->
+# BSD-3 <!-- .element: class="fragment" --> <!-- .element style="font-size: 4em" --> 
 
-Note: Licencing is fun. If you have no licence, it defaults to All Rights Reserved
+Note: Licensing is fun. If you have no licence, it defaults to All Rights Reserved
 
 ARR means you own the copyright, and noone else can have it
 
 So, that's no fun. Let's use BSD as an example
 
+Berkeley Software Distribution 3 Clause License
 
 ---
-# Licencing <!-- .element: style="margin-bottom: 1em" -->
-# BSD? <!-- .element style="font-size: 4em" --> 
+# Licensing <!-- .element: style="margin-bottom: 1em" -->
+# BSD-3? <!-- .element style="font-size: 4em" --> 
 
 Note: What does this even mean?
 
@@ -138,14 +142,14 @@ Note: Holy Wall Of Text, BatMan!
 ---
 
 # What this actually means <!-- .slide: class="center" -->
-## (This is not legal advise)
+## (This is not legal advice)
 
 ---
 
-# BSD3 - Can: <!-- .element: style="margin-bottom: 1em" -->
+# BSD-3 - Can: <!-- .element: style="margin-bottom: 1em" -->
 ## Commercially Use <!-- .element: class="fragment" -->
-## Modifiy & Distribute <!-- .element: class="fragment" -->
-## Sublicence <!-- .element: class="fragment" -->
+## Modifiy <!-- .element: class="fragment" -->
+## Distribute <!-- .element: class="fragment" -->
 ## Place Warranty <!-- .element: class="fragment" -->
 
 
@@ -156,7 +160,7 @@ From https://tldrlegal.com/
 
 Commercial Use, can use software for
 
-Modify uhe software and create derivatives.
+Modify the software and create derivatives.
 
 Distribute original or modified (derivative) works.
 
@@ -164,7 +168,7 @@ Place Warranty on the software licensed.
 
 ---
 
-# BSD3 - Cannot: <!-- .element: style="margin-bottom: 1em" -->
+# BSD-3 - Cannot: <!-- .element: style="margin-bottom: 1em" -->
 ## Use Trademark <!-- .element: class="fragment" -->
 ## Hold Liable <!-- .element: class="fragment" -->
 
@@ -180,7 +184,7 @@ Describes the warranty and if the software/license owner can be charged for dama
 
 ---
 
-# BSD3 - Must: <!-- .element: style="margin-bottom: 1em" -->
+# BSD-3 - Must: <!-- .element: style="margin-bottom: 1em" -->
 ## Include License <!-- .element: class="fragment" -->
 ## Include Copyright <!-- .element: class="fragment" -->
 ## <img src="pictures/awkward.gif"> <!-- .element: class="fragment" -->
@@ -210,6 +214,8 @@ Note: having copyrights with other company's copyright is kinda a weird thing, a
 
 Note: If the source upstream is dead, then that's an inhibitor of innovation
 
+
+No merges ever, no changes. Nerfed fork, very limited play
 ---
 
 
@@ -220,9 +226,12 @@ Note: If the source upstream is dead, then that's an inhibitor of innovation
 
 Note: This is totally what I did. Because this happened to me. Saddest of Panda
 
+
+Possible solutions: transfer of ownership, proper copy fork with attribution, many other
+
 ---
 
-# So why do you care? <!-- .slide: class="center" -->
+# So why should<br>you care? <!-- .slide: class="center" -->
 
 ---
 
@@ -232,11 +241,7 @@ Note: PHP5 will die. PHP4 shuold already be dead.
 
 When everyone upgrades, the old code needs to come along, or it'll be lost.
 
-
-
----
-
-# Also <!-- .slide: class="center" -->
+Not just PHP
 
 ---
 
@@ -290,9 +295,9 @@ Had a few months, but now anything on there is R/O
 
 ---
 
-# Source Forge <!-- .slide: class="center" -->
+# SourceForge <!-- .slide: class="center" -->
 
-Note: VLC binaries 'abandoned', being updated w/out concent, with spyware
+Note: VLC binaries 'abandoned', being updated w/out consent, with spyware
 
 Also, small two week outage in there
 
@@ -321,10 +326,10 @@ Note: If you have a project vs if you see a project
 
 # Abandon Responsibly <!-- .element: style="margin-bottom: 1em" -->
 ## Update your README <!-- .element: class="fragment" -->
-## Mark as Inactive <!-- .element: class="fragment" -->
+## Mark as inactive <!-- .element: class="fragment" -->
 ## Link to a better solution <!-- .element: class="fragment" -->
 ## Leave a forwarding address <!-- .element: class="fragment" -->
-## Assign a New Maintainer <!-- .element: class="fragment" -->
+## Assign a new maintainer <!-- .element: class="fragment" -->
 
 Note: Documentation is your friend
 
@@ -372,6 +377,18 @@ This may break if you attempt to overload the old namespace, however.
 ## Is there a better solution? <!-- .element: class="fragment" -->
 ## Can you be the new maintainer? <!-- .element: class="fragment" -->
 
+Note: check the history.
+
+Check if the latest release was stable.
+
+Check if they've mentioned anything in the latest notes
+
+Check if they suggest anything more in their read me
+
+See if they are looking for someone
+
+Do they have an IRC channel? A mailing list?
+
 ---
 
 # There's probably<br>more factors in play <!-- .slide: class="center" -->
@@ -399,3 +416,6 @@ Help make their solution timeless.
 # Thanks! <!-- .slide: class="center" -->
 
 <img src="pictures/footer.svg">
+
+
+Note: :D

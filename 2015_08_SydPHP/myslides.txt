@@ -51,7 +51,7 @@ We'll get to that
 ---
 
 ##=- GitHub Forking
-##- Licencing
+##- Licensing
 ##- 'Competitor' Code
 ##- Dead Source
 
@@ -64,6 +64,9 @@ Note: We'll discuss all these things
 ##- <img src="pictures/github_forking.gif">
 Note: Github's forking != Traditional Forking
 
+It's your copy for branches and PR merges. 
+
+It's not a full working copy of a code base
 ---
 
 # Limitations
@@ -72,7 +75,7 @@ Note: Github's forking != Traditional Forking
 ##- No Issue Logging
 ##- Commits Don't Count
 
-Note: Parent - perma link to source
+Note: Parent - perma link to source. Network Graph
 
 PR - defaults to parent, accidently attempt to merge upstream
 
@@ -84,19 +87,20 @@ Commits - you can work your butt off and your green graph doesn't fill up
 ---
 
 
-# Licencing
-!#- BSD
+# Licensing
+!#- BSD-3
 
-Note: Licencing is fun. If you have no licence, it defaults to All Rights Reserved
+Note: Licensing is fun. If you have no licence, it defaults to All Rights Reserved
 
 ARR means you own the copyright, and noone else can have it
 
 So, that's no fun. Let's use BSD as an example
 
+Berkeley Software Distribution 3 Clause License
 
 ---
-# Licencing
-!# BSD?
+# Licensing
+!# BSD-3?
 
 Note: What does this even mean?
 
@@ -138,14 +142,14 @@ Note: Holy Wall Of Text, BatMan!
 ---
 
 #= What this actually means
-## (This is not legal advise)
+## (This is not legal advice)
 
 ---
 
-# BSD3 - Can:
+# BSD-3 - Can:
 ##- Commercially Use
-##- Modifiy & Distribute
-##- Sublicence
+##- Modifiy
+##- Distribute
 ##- Place Warranty
 
 
@@ -156,7 +160,7 @@ From https://tldrlegal.com/
 
 Commercial Use, can use software for 
 
-Modify uhe software and create derivatives.
+Modify the software and create derivatives.
 
 Distribute original or modified (derivative) works.
 
@@ -164,7 +168,7 @@ Place Warranty on the software licensed.
 
 ---
 
-# BSD3 - Cannot:
+# BSD-3 - Cannot:
 ##- Use Trademark
 ##- Hold Liable
 
@@ -180,7 +184,7 @@ Describes the warranty and if the software/license owner can be charged for dama
 
 ---
 
-# BSD3 - Must:
+# BSD-3 - Must:
 ##- Include License
 ##- Include Copyright
 ##- <img src="pictures/awkward.gif">
@@ -210,6 +214,8 @@ Note: having copyrights with other company's copyright is kinda a weird thing, a
 
 Note: If the source upstream is dead, then that's an inhibitor of innovation
 
+
+No merges ever, no changes. Nerfed fork, very limited play
 ---
 
 
@@ -220,9 +226,12 @@ Note: If the source upstream is dead, then that's an inhibitor of innovation
 
 Note: This is totally what I did. Because this happened to me. Saddest of Panda
 
+
+Possible solutions: transfer of ownership, proper copy fork with attribution, many other
+
 ---
 
-#= So why do you care?
+#= So why should<br>you care?
 
 ---
 
@@ -232,11 +241,7 @@ Note: PHP5 will die. PHP4 shuold already be dead.
 
 When everyone upgrades, the old code needs to come along, or it'll be lost.
 
-
-
----
-
-#= Also
+Not just PHP
 
 ---
 
@@ -290,9 +295,9 @@ Had a few months, but now anything on there is R/O
 
 --- 
 
-#= Source Forge
+#= SourceForge
 
-Note: VLC binaries 'abandoned', being updated w/out concent, with spyware
+Note: VLC binaries 'abandoned', being updated w/out consent, with spyware
 
 Also, small two week outage in there
 
@@ -321,10 +326,10 @@ Note: If you have a project vs if you see a project
 
 # Abandon Responsibly
 ##- Update your README
-##- Mark as Inactive
+##- Mark as inactive
 ##- Link to a better solution
 ##- Leave a forwarding address
-##- Assign a New Maintainer
+##- Assign a new maintainer
 
 Note: Documentation is your friend
 
@@ -372,6 +377,18 @@ This may break if you attempt to overload the old namespace, however.
 ##- Is there a better solution?
 ##- Can you be the new maintainer?
 
+Note: check the history. 
+
+Check if the latest release was stable. 
+
+Check if they've mentioned anything in the latest notes
+
+Check if they suggest anything more in their read me
+
+See if they are looking for someone
+
+Do they have an IRC channel? A mailing list?
+
 ---
 
 #= There's probably<br>more factors in play
@@ -400,4 +417,6 @@ Help make their solution timeless.
 
 <img src="pictures/footer.svg">
 
+
+Note: :D
 
