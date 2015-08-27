@@ -30,9 +30,11 @@ It hasn't been updated in 4 years
 
 ---
 
-# GitHub doesn't do Forking <!-- .slide: class="center" -->
+# GitHub doesn't<br>do "Forking" <!-- .slide: class="center" -->
 
 Note: They don't implement the traditional forking methodology
+
+We'll get to that
 
 ---
 
@@ -147,6 +149,83 @@ Note: PHP5 will die. PHP4 shuold already be dead.
 
 When everyone upgrades, the old code needs to come along, or it'll be lost.
 
+
+
+---
+
+# Also <!-- .slide: class="center" -->
+
+---
+
+# Ruby 1.8, 1.9.3 EOL <!-- .slide: class="center" -->
+## <p> Example: <code>pry-debugger</code></p> <!-- .element: class="fragment" -->
+
+Note: EOL languages. Things have migrated on
+
+pry-debugger - only works with 1.x
+
+Was the go to debugger now not so much
+
+Top of README says: 2.0? use byebug
+
+you shouldn't be using 1.8, 1.9.3 anyway, EOL
+
+---
+
+# Python 3 <!-- .slide: class="center" -->
+
+## Supported in < 10% of packages <!-- .element: class="fragment" -->
+
+Note: Per PyCon US Guido keynote
+
+Once 2.7 goes EOL, then projects can't be used any more.
+
+No satisfaction in just porting it
+
+long tail of dependencies prohibit porting
+
+There are automated tools for this
+
+---
+
+# Non-Language Dependent Factors <!-- .slide: class="center" -->
+
+Note: There's other things that could happen
+
+---
+
+# Google Code <!-- .slide: class="center" -->
+## Read Only <!-- .element: class="fragment" -->
+
+Note: Not accepting new projects as of January.
+
+
+Read Only as of Aug 24 (Tuesday ish Australia time)
+
+Had a few months, but now anything on there is R/O
+
+
+---
+
+# Source Forge <!-- .slide: class="center" -->
+
+Note: VLC binaries 'abandoned', being updated w/out concent, with spyware
+
+Also, small two week outage in there
+
+
+---
+
+
+# Every active project is going to need love <!-- .slide: class="center" -->
+
+
+Note: 'active' meaning someone's using it, who's moving to the new structure
+
+The maintainer may be off growing grapes
+
+Hostile Forks Don't Help
+
 ---
 
 # So what can you do? <!-- .slide: class="center" -->
@@ -168,35 +247,23 @@ Note: Documentation is your friend
 
 You don't want people coming across your stuff when there's something better
 
-Google Code problems - Read Only
-
-What if GitHub goes away?
+You really don't want people using code that has deps with known vuls
 
 ---
 
-# On the transfer of ownership <!-- .slide: class="center" -->
+# GitHub Ownership Transfer <!-- .slide: class="center" -->
 
-Note: Here's how you move things in GitHub
+Note: Create a new/existing organisation
 
----
+Add the admin from the otehr one in (shared rights)
 
-# Transfer ownership <!-- .element: style="margin-bottom: 1em" -->
-## Create a new organisation <!-- .element: class="fragment" -->
-## Add new admin <!-- .element: class="fragment" -->
-## Transfer repo <!-- .element: class="fragment" -->
-## Remove new admin <!-- .element: class="fragment" -->
+Transfer 
 
-Note: You create a new organisation
-
-Then, you add someone w/transfer rights into your new group, as an admin
-
-Then, they transfer the repo between two organisations that they have the rights to do so with
-
-Then, you remove them, before they can do anything else :)
+Remove new admin
 
 ---
 
-# Resulting State <!-- .element: style="margin-bottom: 1em" -->
+# Benefits <!-- .element: style="margin-bottom: 1em" -->
 ## All the PRs, Issues, Commits stay <!-- .element: class="fragment" -->
 ## 301 Redirects to new URL <!-- .element: class="fragment" -->
 ## You get the commit bit :D <!-- .element: class="fragment" -->
@@ -239,6 +306,10 @@ Pet Projects
 # Go to rule: There's nothing wrong with being nice. <!-- .slide: class="center" -->
 
 Note: the ability to openly communicate is one facet of opensource that makes it amazing
+
+They've put in the effort to make a solution that's usefulness is expiring
+
+Help make their solution timeless.
 
 ---
 

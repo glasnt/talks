@@ -30,9 +30,11 @@ It hasn't been updated in 4 years
 
 ---
 
-#= GitHub doesn't do Forking
+#= GitHub doesn't<br>do "Forking"
 
 Note: They don't implement the traditional forking methodology
+
+We'll get to that
 
 ---
 
@@ -147,6 +149,83 @@ Note: PHP5 will die. PHP4 shuold already be dead.
 
 When everyone upgrades, the old code needs to come along, or it'll be lost.
 
+
+
+---
+
+#= Also
+
+---
+
+#= Ruby 1.8, 1.9.3 EOL
+##- <p> Example: <code>pry-debugger</code></p>
+
+Note: EOL languages. Things have migrated on
+
+pry-debugger - only works with 1.x
+
+Was the go to debugger now not so much
+
+Top of README says: 2.0? use byebug
+
+you shouldn't be using 1.8, 1.9.3 anyway, EOL
+
+---
+
+#= Python 3 
+
+##- Supported in < 10% of packages
+
+Note:  Per PyCon US Guido keynote
+
+Once 2.7 goes EOL, then projects can't be used any more.
+
+No satisfaction in just porting it
+
+long tail of dependencies prohibit porting
+
+There are automated tools for this
+
+---
+
+#= Non-Language Dependent Factors
+
+Note: There's other things that could happen
+
+---
+
+#= Google Code
+##- Read Only
+
+Note: Not accepting new projects as of January. 
+
+
+Read Only as of Aug 24 (Tuesday ish Australia time)
+
+Had a few months, but now anything on there is R/O
+
+
+--- 
+
+#= Source Forge
+
+Note: VLC binaries 'abandoned', being updated w/out concent, with spyware
+
+Also, small two week outage in there
+
+
+---
+
+
+#= Every active project is going to need love
+
+
+Note: 'active' meaning someone's using it, who's moving to the new structure
+
+The maintainer may be off growing grapes
+
+Hostile Forks Don't Help
+
 ---
 
 #= So what can you do?
@@ -168,35 +247,23 @@ Note: Documentation is your friend
 
 You don't want people coming across your stuff when there's something better
 
-Google Code problems - Read Only
-
-What if GitHub goes away?
+You really don't want people using code that has deps with known vuls
 
 ---
 
-#= On the transfer of ownership
+#= GitHub Ownership Transfer
 
-Note: Here's how you move things in GitHub
+Note: Create a new/existing organisation
 
----
+Add the admin from the otehr one in (shared rights)
 
-# Transfer ownership
-##- Create a new organisation
-##- Add new admin
-##- Transfer repo
-##- Remove new admin
+Transfer
 
-Note: You create a new organisation
-
-Then, you add someone w/transfer rights into your new group, as an admin
-
-Then, they transfer the repo between two organisations that they have the rights to do so with
-
-Then, you remove them, before they can do anything else :)
+Remove new admin
 
 ---
 
-# Resulting State
+# Benefits
 ##- All the PRs, Issues, Commits stay
 ##- 301 Redirects to new URL
 ##- You get the commit bit :D
@@ -239,6 +306,10 @@ Pet Projects
 #= Go to rule: There's nothing wrong with being nice. 
 
 Note: the ability to openly communicate is one facet of opensource that makes it amazing
+
+They've put in the effort to make a solution that's usefulness is expiring
+
+Help make their solution timeless.
 
 ---
 
