@@ -1,0 +1,123 @@
+#= Hat Rack
+@ footer.svg
+---
+
+#= DÅLIGORDLEK
+
+@ hatrack.svg
+
+Note: Don't worry about the fake Ikea name, it's a play on words. 
+
+No, seriously, it's "Word Play" in Swedish
+---
+
+@ question.svg
+
+Note: We do a lot of code stuff
+
+How can we get the statistics to quantity ths?
+
+---
+
+@ github.svg
+
+Note: Github has Commit Data, Green Graphs, but it's not a lot
+
+---
+
+@ question.svg
+
+Note: what the other stuff we do that's not code?
+
+---
+
+@ help.svg
+
+Note: How can we track that
+
+---
+
+@ meeting.svg
+
+Note: let me tell you a story about Leslie and Deb
+
+--- 
+
+@ Solution_0.svg
+
+Note: Here's the five point plan
+
+---
+
+@ Solution_1.svg
+
+Note: Make a list
+
+---
+
+@ Solution_2.svg
+
+Note: Send the list
+
+---
+
+@ Solution_3.svg
+
+Note: Gravy - tweet about it
+
+---
+
+@ Solution_4.svg
+
+Note: Gravy 2 - Recommend them on linked in 
+
+NOT an endorsement
+
+---
+
+@ Solution_L.svg
+
+
+Note: All the gravy - Do it for someone not like you
+
+---
+
+@ yay.svg
+
+Note: Share the love
+
+---
+
+@ help.svg
+
+Note: Not sure who to thank?
+
+---
+
+@ github.svg
+
+Note: There's an app for that for GitHub
+
+---
+
+#= Octohat
+
+## github.com/glasnt/octohat
+
+Note: Non-code contributions against repos - comments, bugs, etc
+
+---
+
+#=
+@ hatrack.svg
+
+Note: Live Hat Rack Example
+
+---
+
+#= #LABHR
+## bit.do/LABHR
+
+## github.com/glasnt/octohat
+
+Note: Linkies
