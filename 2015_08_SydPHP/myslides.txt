@@ -2,6 +2,8 @@
 ## How to handle abandoned projects
 <img src="pictures/footer.svg">
 
+Note: Breathe. Slow.
+
 ---
 
 #= Hi!
@@ -21,6 +23,12 @@ You want to use it.
 But..
 
 It hasn't been updated in 4 years
+
+There's cobwebs all over it
+
+It should do what you want
+
+But it needs changes
 
 ---
 
@@ -46,6 +54,9 @@ We'll get to that
 ##- Licencing
 ##- 'Competitor' Code
 ##- Dead Source
+
+
+Note: We'll discuss all these things
 
 ---
 
@@ -76,20 +87,58 @@ Commits - you can work your butt off and your green graph doesn't fill up
 # Licencing
 !#- BSD
 
+Note: Licencing is fun. If you have no licence, it defaults to All Rights Reserved
+
+ARR means you own the copyright, and noone else can have it
+
+So, that's no fun. Let's use BSD as an example
+
 
 ---
 # Licencing
 !# BSD?
 
-Note:
- 
-"Redistribution and use in source and binary forms, with or without modification, are permitted"
+Note: What does this even mean?
 
-well, yay! I can just have at it!
+---
 
-"provided that the following conditions are met: "
 
-ah, the caveats
+<pre style="top: -20px">
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions
+are met:
+
+* Redistributions of source code must retain the above copyright
+notice, this list of conditions and the following disclaimer.
+
+* Redistributions in binary form must reproduce the above copyright
+notice, this list of conditions and the following disclaimer in the
+documentation and/or other materials provided with the distribution.
+
+* Neither the name of the organization nor the names of its
+contributors may be used to endorse or promote products derived 
+from this software without specific prior written permission.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+"AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS
+FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE
+COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, 
+INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES
+(INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)
+HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT,
+STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) 
+ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED
+OF THE POSSIBILITY OF SUCH DAMAGE.
+</pre>
+
+Note: Holy Wall Of Text, BatMan!
+
+---
+
+#= What this actually means
+## (This is not legal advise)
 
 ---
 
@@ -98,20 +147,54 @@ ah, the caveats
 ##- Modifiy & Distribute
 ##- Sublicence
 ##- Place Warranty
-Note: Tldr - yay opensource!
+
+
+Note: 
+
+From https://tldrlegal.com/
+
+
+Commercial Use, can use software for 
+
+Modify uhe software and create derivatives.
+
+Distribute original or modified (derivative) works.
+
+Place Warranty on the software licensed.
 
 ---
 
 # BSD3 - Cannot:
 ##- Use Trademark
 ##- Hold Liable
-Note: Fair Enough
+
+Note: 
+
+Use Trademark
+ 
+You may not use the names of the original company or its members to endorse derived products.
+
+Hold Liable 
+
+Describes the warranty and if the software/license owner can be charged for damages.
 
 ---
 
 # BSD3 - Must:
+##- Include License
 ##- Include Copyright
 ##- <img src="pictures/awkward.gif">
+
+
+Note:
+
+Include License 
+
+Including the full text of license in source or object code copies.
+
+Include Copyright 
+
+Describes whether the original copyright must be retained.
 
 ---
 # 'Competitor' Code
@@ -291,7 +374,7 @@ This may break if you attempt to overload the old namespace, however.
 
 ---
 
-#= There's probably more factors in play
+#= There's probably<br>more factors in play
 
 Note: It's never just that simple.
 
@@ -303,7 +386,7 @@ Pet Projects
 
 ---
 
-#= Go to rule: There's nothing wrong with being nice. 
+#= Go to rule:<br>There's nothing wrong<br>with being nice. 
 
 Note: the ability to openly communicate is one facet of opensource that makes it amazing
 
