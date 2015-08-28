@@ -43,6 +43,12 @@ Note: let me tell you a story about Leslie and Deb
 
 --- 
 
+
+#= #LABHR
+##= bit.do/LABHR
+
+
+---
 @ Solution_0.svg
 
 Note: Here's the five point plan
