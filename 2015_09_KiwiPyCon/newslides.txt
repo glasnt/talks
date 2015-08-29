@@ -1,0 +1,338 @@
+#= Build a Better <br>Hat Rack
+## All Contributions Welcome
+
+@ footer.svg
+
+Note: These are my speaker notes. 
+
+There are many like them, but these ones are mine
+
+---
+
+#= Hi
+
+Note: Hi! I'm Katie, and I'm a software developer. 
+
+I use all the languages. 
+
+Just in the last year I've used Ruby, Perl, JavaScript, Haskell, and Python in production
+
+---
+
+@ openstack_docker.png
+
+Note: I do OSS contributions
+
+Docker have paid me for my contributions
+
+I am also an Active Technical Contributor for Open Stack
+
+Want to know what my contribution to OpenStack was?
+
+---
+
+# ATC in -6+3 characters
+
+@ OpenStackDiff.png
+
+Note: an inline documentation change. It's a Python file, yo
+
+---
+
+@= SummitToyko.png
+
+Note: Commit to Liberty, go to Tokyo
+
+Incentive :D
+
+---
+
+@ question.svg
+
+Note: But how do we track all these contributions that we make
+
+---
+
+@ github.svg
+
+Note: GitHub gives us some of this functionality
+
+Pretty graphs and the like
+
+---
+
+@ github-a.svg
+
+Note: but it's not exactly perfect
+
+And it only include itself
+
+---
+
+@ OtherSources.svg
+
+Note: For OpenStack, there's context specific tools
+
+There are tools that have come out of the GitHub data hack days. 
+
+---
+
+@ question.svg
+
+Note: But what about everything else?
+
+Code Review
+
+Documentation
+
+Testing
+
+Design
+
+UAT
+
+Promotion
+
+User Groups
+
+Presentations
+
+---
+
+@ straw_poll.png
+
+Note: Who here has: 
+
+used a community developed python framework?
+
+taught that to their colleges?
+
+volunteered at an event
+
+spoken at a meetup?
+
+spoken at a conference?
+
+attendened a conference? (ALL HANDS)
+
+---
+
+@ thumbsup.png
+
+Note: These are all contributions
+
+Not even including all the aspects of the SDLC that go unattributed
+
+Community, yo
+
+---
+
+@ help.svg
+
+Note: So, how can we track and record and acknowledge all this?
+
+--- 
+
+@ leslie.png
+
+Note: Let me tell you about Leslie
+
+Amazing human being
+
+
+---
+
+#= #LABHR
+## bit.do/LABHR
+
+Note: She started this hashtag, and wrote a blog post about it
+
+---
+
+@ ikea_manual.jpg
+
+Note: Which I've turned into a easy to read manual to try and spread the message
+
+---
+
+# DÅLIGORDLEK
+@ hatrack.svg
+
+
+---
+
+@ meeting.svg
+
+Note: Leslie and Deb meet over coffee
+
+"It gives me a place to hang my hat"
+
+---
+
+@ Solution_0.svg
+
+Note: So Leslie + Blog = 5 steps
+
+---
+
+@ Solution_1.svg
+
+Note: write the list
+
+---
+
+@ Solution_2.svg
+
+Note: send the list
+
+---
+
+@ Solution_3.svg
+
+Note: GRAVY
+
+Tweet about it
+
+---
+
+@ Solution_4.svg
+
+Note: GRAVY #2
+
+Linked in Recommendations
+
+NOT endorsements
+
+See later
+
+
+---
+
+@ Solution_L.svg
+
+
+Note: GRAVY #3
+
+Do it for someone not like you
+
+---
+ 
+@ yay.svg
+
+Note: Simple! Nice! Helpful!
+
+---
+
+@ halp.svg
+
+Note: But it didn't get that much traction
+
+There was only ~a dozen ratified linked in recommendations in the first month
+
+Small spikes on twitter when I mention things
+
+More if I refuse to get off stage unless people tweet
+
+LIVE DEMO
+
+---
+
+#= How to<br>be nice
+##= [demo]
+
+Note: Live demo, lets hope this works
+
+Live Hat Rack someone
+
+---
+
+#= How to<br>say thank you
+##= [demo]
+
+Note: ask hatrack-ee to respond
+
+Ensure repeated for mic
+
+THIS DIDNT HAPPEN LAST TIME
+
+---
+
+@ tweet_1.png
+
+Note: Chris was a little bit upset last time this happened
+
+--- 
+
+@ tweet_2.png
+
+Note: And not just him.
+
+--- 
+
+@ tweet_3.png
+
+Note: It took a third party to actually confirm they did good.
+
+I've seen this before, not only in the #LABHR
+
+---
+
+#= Why can't we take a compliment?
+
+---
+
+#= Minimisation
+
+Note: Antonym of exagguration
+
+"She'll be right, no worries"
+
+
+---
+
+#= Acknowledging our own achievements
+
+---
+
+@ donut.jpg
+
+Note: Lara Hogan, Donut Manifesto
+
+This donut = draft of a book
+
+Giving ourselves a little celebration if noone else will
+
+---
+
+#= About Me
+
+Note: Why can't we use our about me?
+
+---
+
+@ linkedin.svg
+
+---
+
+#= TODO linkedin recommendations vs endorsements
+
+
+---
+
+#= TODO #THANKAMENTOR
+
+---
+
+#= Stack Overflow 10m
+
+---
+
+#= TODO GITHUB THINGS
+
+---
+
+#= OCTOHAT
+
+---
+
+#= THE END
