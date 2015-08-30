@@ -576,7 +576,7 @@ Note: Non-code has gone down.
 <p style="font-size: 60%">
 Non-code contributors to this talk: 
 <br>
-<br>Donna&nbsp;Benjamin, Robert Collins, Nick Coghlan, Steve Cooper, Ben Dechrai, Tom Eastman, Leslie&nbsp;Hawthorn, Lindsay Holmwood, Christopher Neugebauer, Christopher Pitt, Davey Shafik, Aurynn Shaw, Jack Skinner
+<br>Donna&nbsp;Benjamin, Nick Coghlan, Steve Cooper, Ben Dechrai, Tom Eastman, Paul&nbsp;Fenwick, Leslie&nbsp;Hawthorn, Lindsay Holmwood, Christopher Neugebauer, Davey Shafik, Jack Skinner
 <br>
 <br>
 Thank You <3</p>
