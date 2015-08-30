@@ -1,4 +1,4 @@
-# Build a Better <br>Hat Rack <!-- .slide: class="center" -->
+# Build a Better<br>Hat Rack <!-- .slide: class="center" -->
 ## All Contributions Welcome
 
  <img src="pictures/footer.svg" />
@@ -376,7 +376,7 @@ You can thank them by giving them something extremely useful
 
 ---
 
- <img src="pictures/b_linked.png" />
+ <img src="pictures/b_linked.png" style="margin-top: -50px" />
 
 Note: This is the new age resume. Publically accessible. We can thank people who would otherwise be unrecognised
 
@@ -424,7 +424,7 @@ LIST IT AS SUCH
 
 ---
 
- <img src="pictures/b_github.png" />
+ <img src="pictures/b_github.png" style="margin-top: -50px" />
 
 ---
 

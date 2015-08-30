@@ -1,4 +1,4 @@
-#= Build a Better <br>Hat Rack
+#= Build a Better<br>Hat Rack
 ## All Contributions Welcome
 
 @ footer.svg
@@ -376,7 +376,7 @@ You can thank them by giving them something extremely useful
 
 ---
 
-@ b_linked.png
+@^ b_linked.png
 
 Note: This is the new age resume. Publically accessible. We can thank people who would otherwise be unrecognised
 
@@ -424,7 +424,7 @@ LIST IT AS SUCH
 
 ---
 
-@ b_github.png
+@^ b_github.png
 
 ---
 
