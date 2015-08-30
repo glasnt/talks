@@ -117,7 +117,7 @@ attendened a conference? (ALL HANDS)
 
 ---
 
-@ thumbsup.png
+ <img src="pictures/youre-awesome.gif" style="width: 250%">
 
 Note: These are all contributions
 
@@ -263,9 +263,6 @@ THIS DIDNT HAPPEN LAST TIME
 
 ---
 
-#= How not<br>to respond
-##= &nbsp;
----
 
 @ tweet_1.png
 
@@ -354,6 +351,20 @@ You might have a standalone SO instance for your Q&A
 
 @ so2.png
 
+
+Note:
+
+If a dev found a solution just half of those times, and it saved them just 30 minutes, that's nearly 1.85 billion hours saved.
+
+It's enough to read all of Wikipedia. 12,000 times.
+
+8 million developers come here every day.
+
+It'd be a bigger country than more than half the world's nations.
+
+There are about 51,000 developers on the site at any given second. This is what 51,000 people looks like.
+
+Together, we've built a place where every 12 seconds a developer posts an answer that helps fellow coders.
 ---
 
 #=
@@ -382,9 +393,13 @@ Note: Two main ways to add content to someone's linkedin profile
 
 @^ linked_in_sections.svg
 
+Note: Here's all the different sections that you can fill on your profile
+
 ---
 
 @^ linked_in_sections_recommendable.svg
+
+Note: But here are the only ones that are able to be recommendable
 
 ---
 
@@ -394,6 +409,9 @@ Note: Two main ways to add content to someone's linkedin profile
 
 @^ Linked_in_EE_only.svg
 
+Note: Running a conf, volenteering as a thing, is **experience** 
+
+LIST IT AS SUCH
 
 ---
 
@@ -411,6 +429,10 @@ Note: Two main ways to add content to someone's linkedin profile
 ---
 
 @^ glasnt_public_profile.svg
+
+Note: No idea how the 'Repositories contributed to' works
+
+I've done Rails, Rubocop, Docker, OpenStack, Pybee... they arent there
 
 ---
 
