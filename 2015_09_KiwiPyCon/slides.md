@@ -376,6 +376,43 @@ You can thank them by giving them something extremely useful
 
 ---
 
+# But why say thank you? <!-- .slide: class="center" -->
+
+Note: Apart from it being a nice thing todo.
+
+---
+
+# It's nice thing to do <!-- .slide: class="center" -->
+
+Note: Not getting acknowedgement suck
+
+Burnout 
+
+Plight of the organiser
+---
+
+# Encourage continued engagement <!-- .slide: class="center" -->
+
+Note: They have done a thing once, they will do it again.
+
+Edge case
+
+---
+
+# Voluntold <!-- .slide: class="center" -->
+
+Note: I'm super encourageable. I think half the stuff i do is average until validated
+
+Which which is why i'm here
+
+---
+
+
+# Nurture the seed <!-- .slide: class="center" -->
+
+Note: with a bit of influence, these people can grow into awesome
+
+---
  <img src="pictures/b_linked.png" style="margin-top: -50px" />
 
 Note: This is the new age resume. Publically accessible. We can thank people who would otherwise be unrecognised
