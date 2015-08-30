@@ -622,7 +622,7 @@ Note: And it's only the top 100
 
 #= avinassh/rockstar
 ##- Code Contributors: 30
-##- Non-Code Contributors: 11
+##- Non-Code Contributors: 36
 
 Note: Non-code has gone down. 
 

@@ -622,7 +622,7 @@ Note: And it's only the top 100
 
 # avinassh/rockstar <!-- .slide: class="center" -->
 ## Code Contributors: 30 <!-- .element: class="fragment" -->
-## Non-Code Contributors: 11 <!-- .element: class="fragment" -->
+## Non-Code Contributors: 36 <!-- .element: class="fragment" -->
 
 Note: Non-code has gone down.
 
