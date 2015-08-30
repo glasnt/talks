@@ -448,9 +448,9 @@ I've done Rails, Rubocop, Docker, OpenStack, Pybee... they arent there
 
 #= What counts?
 ##- Issues and Pull Requests
-##- (in the past year)
+###- in the past year
 ##- Commits
-##- <p>(against <code>master</code> or <code>gh-pages</code>)</p>
+###- <p>(against <code>master</code> or <code>gh-pages</code>)</p>
 
 
 ---
@@ -458,10 +458,10 @@ I've done Rails, Rubocop, Docker, OpenStack, Pybee... they arent there
 #= But only if...
 
 ##- you own the repo
-##- you're a collaborator
-##- you're in the owner organisation
-##- you forked the repo
-##- .. but commits don't count on forks
+##- or, you're a collaborator
+##- or, you're in the owner organisation
+##- or, you forked the repo
+###- ... but commits don't count on forks
 
 ---
 

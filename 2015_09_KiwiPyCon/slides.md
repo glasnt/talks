@@ -448,9 +448,9 @@ I've done Rails, Rubocop, Docker, OpenStack, Pybee... they arent there
 
 # What counts? <!-- .slide: class="center" -->
 ## Issues and Pull Requests <!-- .element: class="fragment" -->
-## (in the past year) <!-- .element: class="fragment" -->
+### in the past year <!-- .element: class="fragment" -->
 ## Commits <!-- .element: class="fragment" -->
-## <p>(against <code>master</code> or <code>gh-pages</code>)</p> <!-- .element: class="fragment" -->
+### <p>(against <code>master</code> or <code>gh-pages</code>)</p> <!-- .element: class="fragment" -->
 
 
 ---
@@ -458,10 +458,10 @@ I've done Rails, Rubocop, Docker, OpenStack, Pybee... they arent there
 # But only if... <!-- .slide: class="center" -->
 
 ## you own the repo <!-- .element: class="fragment" -->
-## you're a collaborator <!-- .element: class="fragment" -->
-## you're in the owner organisation <!-- .element: class="fragment" -->
-## you forked the repo <!-- .element: class="fragment" -->
-## .. but commits don't count on forks <!-- .element: class="fragment" -->
+## or, you're a collaborator <!-- .element: class="fragment" -->
+## or, you're in the owner organisation <!-- .element: class="fragment" -->
+## or, you forked the repo <!-- .element: class="fragment" -->
+### ... but commits don't count on forks <!-- .element: class="fragment" -->
 
 ---
 
