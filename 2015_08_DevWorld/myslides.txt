@@ -1,3 +1,9 @@
+@ TitleSlide.png
+
+---
+
+
+
 #= Build a Better<br>Hat Rack
 ## All Contributions Welcome
 
@@ -127,7 +133,7 @@ Community, yo
 
 ---
 
-@ help.svg
+@^ help.svg
 
 Note: So, how can we track and record and acknowledge all this?
 
@@ -223,7 +229,7 @@ Note: Simple! Nice! Helpful!
 
 ---
 
-@ halp.svg
+@^ halp.svg
 
 Note: But it didn't get that much traction
 

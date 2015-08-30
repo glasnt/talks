@@ -1,3 +1,9 @@
+ <img src="pictures/TitleSlide.png" />
+
+---
+
+
+
 # Build a Better<br>Hat Rack <!-- .slide: class="center" -->
 ## All Contributions Welcome
 
@@ -127,7 +133,7 @@ Community, yo
 
 ---
 
- <img src="pictures/help.svg" />
+ <img src="pictures/help.svg" style="margin-top: -50px" />
 
 Note: So, how can we track and record and acknowledge all this?
 
@@ -223,7 +229,7 @@ Note: Simple! Nice! Helpful!
 
 ---
 
- <img src="pictures/halp.svg" />
+ <img src="pictures/halp.svg" style="margin-top: -50px" />
 
 Note: But it didn't get that much traction
 
