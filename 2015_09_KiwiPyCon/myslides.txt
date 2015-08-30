@@ -39,7 +39,7 @@ Note: an inline documentation change. It's a Python file, yo
 
 ---
 
-@= SummitToyko.png
+@^ SummitToyko.png
 
 Note: Commit to Liberty, go to Tokyo
 
@@ -69,7 +69,7 @@ And it only include itself
 
 ---
 
-@ OtherSources.svg
+@^ OtherSources.svg
 
 Note: For OpenStack, there's context specific tools
 
@@ -99,7 +99,7 @@ Presentations
 
 ---
 
-@ straw_poll.png
+@^ straw_poll.png
 
 Note: Who here has: 
 
@@ -133,7 +133,7 @@ Note: So, how can we track and record and acknowledge all this?
 
 --- 
 
-@ leslie.png
+@^ leslie.png
 
 Note: Let me tell you about Leslie
 
@@ -149,7 +149,7 @@ Note: She started this hashtag, and wrote a blog post about it
 
 ---
 
-@ ikea_manual.jpg
+@^ ikea_manual.jpg
 
 Note: Which I've turned into a easy to read manual to try and spread the message
 
@@ -264,7 +264,7 @@ THIS DIDNT HAPPEN LAST TIME
 ---
 
 #= How not<br>to respond
-
+##= &nbsp;
 ---
 
 @ tweet_1.png
@@ -356,51 +356,53 @@ You might have a standalone SO instance for your Q&A
 
 ---
 
+#=
 @ so3.png
 
 Note: Your community advocates need your thanks
+
+You can thank them by giving them something extremely useful
 
 ---
 
 @ b_linked.png
 
+Note: This is the new age resume. Publically accessible. We can thank people who would otherwise be unrecognised
+
 ---
 
+#= Recommendations<br>vs<br>Endorsements
+
+Note: Two main ways to add content to someone's linkedin profile
+
+---
 #= Recommendations
 
 ---
 
-@ linked_in_sections.svg
+@^ linked_in_sections.svg
 
 ---
 
-@ linked_in_sections_recommendable.svg
+@^ linked_in_sections_recommendable.svg
 
 ---
 
-@ Linked_in_EE.svg
+@^ Linked_in_EE.svg
 
 ---
 
-@ Linked_in_EE_only.svg
+@^ Linked_in_EE_only.svg
 
 
 ---
 
 #= Endorsements
-
-
----
-
-@ skills.svg
+##- possibly not as helpful
 
 ---
 
-@ skills_fold.svg
-
----
-
-@ skills_fold_blir.svg
+@^ SkillsNew.png
 
 ---
 
@@ -408,18 +410,18 @@ Note: Your community advocates need your thanks
 
 ---
 
-@ glasnt_public_profile.svg
+@^ glasnt_public_profile.svg
 
 ---
 
-@ glasnt_public_contrib.svg
+@^ glasnt_public_contrib.svg
 
 ---
 
-@ glasnt_private_contrib.svg
+@^ glasnt_private_contrib.svg
 
 ---
-@ glasnt_private_contrib_highlight.svg
+@^ glasnt_private_contrib_highlight.svg
 ---
 
 #= What counts?
@@ -462,21 +464,17 @@ $ python
 
 ---
 
-## ozh.org/contributions
+##= ozh.org/contributions
 
 @ contrib_graph_hack.png
 
 ---
 
-@ githubshirts_2.jpg
+@^ githubshirts_2.jpg
 
 ---
 
-#= If GitHub won't do this by default
-
----
-
-#= Can we get this info outself?
+#= Can we get this information?
 
 ---
 
@@ -486,10 +484,7 @@ $ python
 ---
 
 ##= github.com/glasnt/octohat
-
----
-
-<code>pip install octohat</code>
+##- <code>pip install octohat</code>
 
 ---
 
@@ -519,8 +514,10 @@ Note: Non-code has gone down.
 ## bit.do/LABHR
 ## github.com/glasnt/octohat
 <br>
-<p style="font-size: 75%">
+<p style="font-size: 60%">
 Non-code contributors to this talk: 
-<br><br>Donna Benjamin, Robert Collins, Nick Coghlan, Steve Cooper, Ben Dechrai, Tom Eastman, Leslie Hawthorn, Lindsay Holmwood, Christopher Neugebauer, Christopher Pitt, Davey Shafik, Aurynn Shaw, Jack Skinner
-<br><br>
+<br>
+<br>Donna&nbsp;Benjamin, Robert Collins, Nick Coghlan, Steve Cooper, Ben Dechrai, Tom Eastman, Leslie&nbsp;Hawthorn, Lindsay Holmwood, Christopher Neugebauer, Christopher Pitt, Davey Shafik, Aurynn Shaw, Jack Skinner
+<br>
+<br>
 Thank You <3</p>

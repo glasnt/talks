@@ -39,7 +39,7 @@ Note: an inline documentation change. It's a Python file, yo
 
 ---
 
- <img src="pictures/SummitToyko.png" styl="top: -100px" />
+ <img src="pictures/SummitToyko.png" style="margin-top: -50px" />
 
 Note: Commit to Liberty, go to Tokyo
 
@@ -69,7 +69,7 @@ And it only include itself
 
 ---
 
- <img src="pictures/OtherSources.svg" />
+ <img src="pictures/OtherSources.svg" style="margin-top: -50px" />
 
 Note: For OpenStack, there's context specific tools
 
@@ -99,7 +99,7 @@ Presentations
 
 ---
 
- <img src="pictures/straw_poll.png" />
+ <img src="pictures/straw_poll.png" style="margin-top: -50px" />
 
 Note: Who here has:
 
@@ -133,7 +133,7 @@ Note: So, how can we track and record and acknowledge all this?
 
 ---
 
- <img src="pictures/leslie.png" />
+ <img src="pictures/leslie.png" style="margin-top: -50px" />
 
 Note: Let me tell you about Leslie
 
@@ -149,7 +149,7 @@ Note: She started this hashtag, and wrote a blog post about it
 
 ---
 
- <img src="pictures/ikea_manual.jpg" />
+ <img src="pictures/ikea_manual.jpg" style="margin-top: -50px" />
 
 Note: Which I've turned into a easy to read manual to try and spread the message
 
@@ -264,7 +264,7 @@ THIS DIDNT HAPPEN LAST TIME
 ---
 
 # How not<br>to respond <!-- .slide: class="center" -->
-
+## &nbsp; <!-- .slide: class="center" -->
 ---
 
  <img src="pictures/tweet_1.png" />
@@ -356,51 +356,53 @@ You might have a standalone SO instance for your Q&A
 
 ---
 
+#  <!-- .slide: class="center" -->
  <img src="pictures/so3.png" />
 
 Note: Your community advocates need your thanks
+
+You can thank them by giving them something extremely useful
 
 ---
 
  <img src="pictures/b_linked.png" />
 
+Note: This is the new age resume. Publically accessible. We can thank people who would otherwise be unrecognised
+
 ---
 
+# Recommendations<br>vs<br>Endorsements <!-- .slide: class="center" -->
+
+Note: Two main ways to add content to someone's linkedin profile
+
+---
 # Recommendations <!-- .slide: class="center" -->
 
 ---
 
- <img src="pictures/linked_in_sections.svg" />
+ <img src="pictures/linked_in_sections.svg" style="margin-top: -50px" />
 
 ---
 
- <img src="pictures/linked_in_sections_recommendable.svg" />
+ <img src="pictures/linked_in_sections_recommendable.svg" style="margin-top: -50px" />
 
 ---
 
- <img src="pictures/Linked_in_EE.svg" />
+ <img src="pictures/Linked_in_EE.svg" style="margin-top: -50px" />
 
 ---
 
- <img src="pictures/Linked_in_EE_only.svg" />
+ <img src="pictures/Linked_in_EE_only.svg" style="margin-top: -50px" />
 
 
 ---
 
 # Endorsements <!-- .slide: class="center" -->
-
-
----
-
- <img src="pictures/skills.svg" />
+## possibly not as helpful <!-- .element: class="fragment" -->
 
 ---
 
- <img src="pictures/skills_fold.svg" />
-
----
-
- <img src="pictures/skills_fold_blir.svg" />
+ <img src="pictures/SkillsNew.png" style="margin-top: -50px" />
 
 ---
 
@@ -408,18 +410,18 @@ Note: Your community advocates need your thanks
 
 ---
 
- <img src="pictures/glasnt_public_profile.svg" />
+ <img src="pictures/glasnt_public_profile.svg" style="margin-top: -50px" />
 
 ---
 
- <img src="pictures/glasnt_public_contrib.svg" />
+ <img src="pictures/glasnt_public_contrib.svg" style="margin-top: -50px" />
 
 ---
 
- <img src="pictures/glasnt_private_contrib.svg" />
+ <img src="pictures/glasnt_private_contrib.svg" style="margin-top: -50px" />
 
 ---
- <img src="pictures/glasnt_private_contrib_highlight.svg" />
+ <img src="pictures/glasnt_private_contrib_highlight.svg" style="margin-top: -50px" />
 ---
 
 # What counts? <!-- .slide: class="center" -->
@@ -462,21 +464,17 @@ $ python
 
 ---
 
-## ozh.org/contributions
+## ozh.org/contributions <!-- .slide: class="center" -->
 
  <img src="pictures/contrib_graph_hack.png" />
 
 ---
 
- <img src="pictures/githubshirts_2.jpg" />
+ <img src="pictures/githubshirts_2.jpg" style="margin-top: -50px" />
 
 ---
 
-# If GitHub won't do this by default <!-- .slide: class="center" -->
-
----
-
-# Can we get this info outself? <!-- .slide: class="center" -->
+# Can we get this information? <!-- .slide: class="center" -->
 
 ---
 
@@ -486,10 +484,7 @@ $ python
 ---
 
 ## github.com/glasnt/octohat <!-- .slide: class="center" -->
-
----
-
-<code>pip install octohat</code>
+## <code>pip install octohat</code> <!-- .element: class="fragment" -->
 
 ---
 
@@ -519,8 +514,10 @@ Note: Non-code has gone down.
 ## bit.do/LABHR
 ## github.com/glasnt/octohat
 <br> 
-<p style="font-size: 75%">
+<p style="font-size: 60%">
 Non-code contributors to this talk:
-<br><br>Donna Benjamin, Robert Collins, Nick Coghlan, Steve Cooper, Ben Dechrai, Tom Eastman, Leslie Hawthorn, Lindsay Holmwood, Christopher Neugebauer, Christopher Pitt, Davey Shafik, Aurynn Shaw, Jack Skinner
-<br><br> 
+<br> 
+<br>Donna&nbsp;Benjamin, Robert Collins, Nick Coghlan, Steve Cooper, Ben Dechrai, Tom Eastman, Leslie&nbsp;Hawthorn, Lindsay Holmwood, Christopher Neugebauer, Christopher Pitt, Davey Shafik, Aurynn Shaw, Jack Skinner
+<br> 
+<br> 
 Thank You <3</p>
