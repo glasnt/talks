@@ -376,11 +376,12 @@ You can thank them by giving them something extremely useful
 
 ---
 
-#= But why say thank you?
+#= But why say<br>thank you?
 
 Note: Apart from it being a nice thing todo. 
 
 ---
+
 
 #= It's nice thing to do
 
@@ -407,10 +408,13 @@ Which which is why i'm here
 
 ---
 
-
 #= Nurture the seed
 
 Note: with a bit of influence, these people can grow into awesome
+
+
+ Cython for distributed-multiprocess steganographic md5sum-collision generation.
+
 
 ---
 @^ b_linked.png
@@ -464,6 +468,10 @@ LIST IT AS SUCH
 @^ b_github.png
 
 ---
+#= User Contributions
+
+---
+
 
 @^ glasnt_public_profile.svg
 
@@ -523,13 +531,65 @@ $ python
 
 ---
 
-##= ozh.org/contributions
+<pre><code style="font-size: 90%">#!/usr/env/python
 
-@ contrib_graph_hack.png
+from rockstar import RockStar
+
+swift_code = "println('Hello world')"
+rock_it_bro = RockStar(days=1900,file_name='hello.swift',code=swift_code)
+rock_it_bro.make_me_a_rockstar()
+</code></pre>
+
+- <img src="pictures/theGuyWhoCreatedSwift.png">
+---
+
+##= ozh.org/contribution
+
+@ contrib_graph_hack_android.png
 
 ---
 
 @^ githubshirts_2.jpg
+
+---
+#= Project Contributions
+
+---
+
+@ revealjs.png
+
+Note: Looking at any github project page we can see all the contributors right?
+
+THere's a button right at the top and everything
+
+---
+
+@ revealjs2.png
+
+Note: But if we click it, then we don't actually get the contributors
+
+We get the top ones, with a graph, ranked by lines of code
+
+---
+@^ revealjs2a.png
+<p style="margin-top: -50px">...</p>
+@ revealjs3.png
+
+Note: And it's only the top 100
+
+---
+
+#= This is only some of the contributions
+
+---
+
+#= What about<br>everything else?
+##- Logged Issues
+##- Unmerged Pull Requests
+##- Code Reviews
+##- Feature Discussions
+##- Feature Voting
+
 
 ---
 
@@ -538,7 +598,7 @@ $ python
 ---
 
 #= Of course!
-# They have an API...
+## They have an API...
 
 ---
 
@@ -547,24 +607,34 @@ $ python
 
 ---
 
+#= hakimel/reveal.js
+##- Code Contributors: 142
+##- Non-Code Contributors: 435
+
+---
+
 #= kennethreitz/requests
-##- 350 Code Contributors
-##- 1264 Non-Code Contributors
+##- Code Contributors: 350
+##- Non-Code Contributors: 1264
 
 
 ---
 
 #= avinassh/rockstar
-##- 30 Code Contributors
-##- 11 Non-Code Contributors
+##- Code Contributors: 30
+##- Non-Code Contributors: 11
 
 Note: Non-code has gone down. 
 
 ---
 
 #= glasnt/octohat
-##- 3 Code Contributors
-##- 1 Non-Code Contributor
+##- Code Contributors: 3
+##- Non-Code Contributor: 1
+
+Note:  Code was David Besley and KrokCode with packaging and python3, respectivelyy
+
+Noncode wa Nick Coghlan from Red Hat, a CPython Code Dev, helping me debug pip dependences
 
 ---
 

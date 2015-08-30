@@ -376,11 +376,12 @@ You can thank them by giving them something extremely useful
 
 ---
 
-# But why say thank you? <!-- .slide: class="center" -->
+# But why say<br>thank you? <!-- .slide: class="center" -->
 
 Note: Apart from it being a nice thing todo.
 
 ---
+
 
 # It's nice thing to do <!-- .slide: class="center" -->
 
@@ -407,10 +408,13 @@ Which which is why i'm here
 
 ---
 
-
 # Nurture the seed <!-- .slide: class="center" -->
 
 Note: with a bit of influence, these people can grow into awesome
+
+
+Cython for distributed-multiprocess steganographic md5sum-collision generation.
+
 
 ---
  <img src="pictures/b_linked.png" style="margin-top: -50px" />
@@ -464,6 +468,10 @@ LIST IT AS SUCH
  <img src="pictures/b_github.png" style="margin-top: -50px" />
 
 ---
+# User Contributions <!-- .slide: class="center" -->
+
+---
+
 
  <img src="pictures/glasnt_public_profile.svg" style="margin-top: -50px" />
 
@@ -523,13 +531,65 @@ $ python
 
 ---
 
-## ozh.org/contributions <!-- .slide: class="center" -->
+<pre><code style="font-size: 90%">#!/usr/env/python
 
- <img src="pictures/contrib_graph_hack.png" />
+from rockstar import RockStar
+
+swift_code = "println('Hello world')"
+rock_it_bro = RockStar(days=1900,file_name='hello.swift',code=swift_code)
+rock_it_bro.make_me_a_rockstar() 
+</code></pre> 
+
+ <img src="pictures/theGuyWhoCreatedSwift.png"> <!-- .element: class="fragment" -->
+---
+
+## ozh.org/contribution <!-- .slide: class="center" -->
+
+ <img src="pictures/contrib_graph_hack_android.png" />
 
 ---
 
  <img src="pictures/githubshirts_2.jpg" style="margin-top: -50px" />
+
+---
+# Project Contributions <!-- .slide: class="center" -->
+
+---
+
+ <img src="pictures/revealjs.png" />
+
+Note: Looking at any github project page we can see all the contributors right?
+
+THere's a button right at the top and everything
+
+---
+
+ <img src="pictures/revealjs2.png" />
+
+Note: But if we click it, then we don't actually get the contributors
+
+We get the top ones, with a graph, ranked by lines of code
+
+---
+ <img src="pictures/revealjs2a.png" style="margin-top: -50px" />
+<p style="margin-top: -50px">...</p>
+ <img src="pictures/revealjs3.png" />
+
+Note: And it's only the top 100
+
+---
+
+# This is only some of the contributions <!-- .slide: class="center" -->
+
+---
+
+# What about<br>everything else? <!-- .slide: class="center" -->
+## Logged Issues <!-- .element: class="fragment" -->
+## Unmerged Pull Requests <!-- .element: class="fragment" -->
+## Code Reviews <!-- .element: class="fragment" -->
+## Feature Discussions <!-- .element: class="fragment" -->
+## Feature Voting <!-- .element: class="fragment" -->
+
 
 ---
 
@@ -538,7 +598,7 @@ $ python
 ---
 
 # Of course! <!-- .slide: class="center" -->
-# They have an API... <!-- .element: style="margin-bottom: 1em" -->
+## They have an API...
 
 ---
 
@@ -547,24 +607,34 @@ $ python
 
 ---
 
+# hakimel/reveal.js <!-- .slide: class="center" -->
+## Code Contributors: 142 <!-- .element: class="fragment" -->
+## Non-Code Contributors: 435 <!-- .element: class="fragment" -->
+
+---
+
 # kennethreitz/requests <!-- .slide: class="center" -->
-## 350 Code Contributors <!-- .element: class="fragment" -->
-## 1264 Non-Code Contributors <!-- .element: class="fragment" -->
+## Code Contributors: 350 <!-- .element: class="fragment" -->
+## Non-Code Contributors: 1264 <!-- .element: class="fragment" -->
 
 
 ---
 
 # avinassh/rockstar <!-- .slide: class="center" -->
-## 30 Code Contributors <!-- .element: class="fragment" -->
-## 11 Non-Code Contributors <!-- .element: class="fragment" -->
+## Code Contributors: 30 <!-- .element: class="fragment" -->
+## Non-Code Contributors: 11 <!-- .element: class="fragment" -->
 
 Note: Non-code has gone down.
 
 ---
 
 # glasnt/octohat <!-- .slide: class="center" -->
-## 3 Code Contributors <!-- .element: class="fragment" -->
-## 1 Non-Code Contributor <!-- .element: class="fragment" -->
+## Code Contributors: 3 <!-- .element: class="fragment" -->
+## Non-Code Contributor: 1 <!-- .element: class="fragment" -->
+
+Note: Code was David Besley and KrokCode with packaging and python3, respectivelyy
+
+Noncode wa Nick Coghlan from Red Hat, a CPython Code Dev, helping me debug pip dependences
 
 ---
 
