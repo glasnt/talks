@@ -13,7 +13,7 @@ There are many like them, but these ones are mine
 
 Note: Hi! I'm Katie, and I'm a software developer.
 
-I use all the languages.
+I wear many hats. I use all the languages.
 
 Just in the last year I've used Ruby, Perl, JavaScript, Haskell, and Python in production
 
@@ -117,7 +117,7 @@ attendened a conference? (ALL HANDS)
 
 ---
 
-<img src="pictures/youre-awesome.gif" style="width: 250%">
+<img src="pictures/youre-awesome.gif" style="width: 250%; margin-top: -50px">
 
 Note: These are all contributions
 
