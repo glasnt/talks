@@ -167,7 +167,7 @@ Note: Which I've turned into a easy to read manual to try and spread the message
 
 ---
 
- <img src="pictures/meeting.svg" />
+ <img src="pictures/meeting.svg" style="margin-top: -50px" />
 
 Note: Leslie and Deb meet over coffee
 
@@ -402,7 +402,9 @@ Plight of the organiser
 
 Note: They have done a thing once, they will do it again.
 
-Edge case
+Such as why I'm here
+
+They needed someone because a speaker had to pull out
 
 ---
 
@@ -418,9 +420,11 @@ Which which is why i'm here
 
 Note: with a bit of influence, these people can grow into awesome
 
-
 Cython for distributed-multiprocess steganographic md5sum-collision generation.
 
+---
+
+# Give your helpers something to show for their work <!-- .slide: class="center" -->
 
 ---
  <img src="pictures/b_linked.png" style="margin-top: -50px" />
@@ -468,6 +472,10 @@ LIST IT AS SUCH
 ---
 
  <img src="pictures/SkillsNew.png" style="margin-top: -50px" />
+
+---
+
+ <img src="pictures/also.png" />
 
 ---
 
@@ -539,6 +547,8 @@ $ python
 
 <pre><code style="font-size: 90%">#!/usr/env/python
 
+// Give me 5 years of Swift experience
+
 from rockstar import RockStar
 
 swift_code = "println('Hello world')"
@@ -551,7 +561,7 @@ rock_it_bro.make_me_a_rockstar()
 
 ## ozh.org/contribution <!-- .slide: class="center" -->
 
- <img src="pictures/contrib_graph_hack_android.png" />
+ <img src="pictures/contrib_graph_hack_android.png"> <!-- .element: class="fragment" -->
 
 ---
 
@@ -615,7 +625,7 @@ Note: And it's only the top 100
 
 # hakimel/reveal.js <!-- .slide: class="center" -->
 ## Code Contributors: 142 <!-- .element: class="fragment" -->
-## Non-Code Contributors: 836 <!-- .element: class="fragment" -->
+## Non-Code Contributors: 435 <!-- .element: class="fragment" -->
 
 ---
 
