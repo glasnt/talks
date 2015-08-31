@@ -1,13 +1,4 @@
-@ TitleSlide.png
-
----
-
-
-
-#= Build a Better<br>Hat Rack
-## All Contributions Welcome
-
-@ footer.svg
+@ BetterTitleSlide.svg
 
 Note: These are my speaker notes. 
 

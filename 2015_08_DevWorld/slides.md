@@ -1,13 +1,4 @@
- <img src="pictures/TitleSlide.png" />
-
----
-
-
-
-# Build a Better<br>Hat Rack <!-- .slide: class="center" -->
-## All Contributions Welcome
-
- <img src="pictures/footer.svg" />
+ <img src="pictures/BetterTitleSlide.svg" />
 
 Note: These are my speaker notes.
 
