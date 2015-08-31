@@ -615,7 +615,7 @@ Note: And it's only the top 100
 
 # hakimel/reveal.js <!-- .slide: class="center" -->
 ## Code Contributors: 142 <!-- .element: class="fragment" -->
-## Non-Code Contributors: 435 <!-- .element: class="fragment" -->
+## Non-Code Contributors: 836 <!-- .element: class="fragment" -->
 
 ---
 

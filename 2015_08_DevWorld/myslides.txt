@@ -615,7 +615,7 @@ Note: And it's only the top 100
 
 #= hakimel/reveal.js
 ##- Code Contributors: 142
-##- Non-Code Contributors: 435
+##- Non-Code Contributors: 836
 
 ---
 
