@@ -309,10 +309,18 @@ Understating
 
 Note: We are reluctant to allow ourselves to be elevated in front of our peers, lest we be cut down.
 
+And of course, everyone's favourite
 
 ---
 
-# Acknowledging our own achievements <!-- .slide: class="center" -->
+# Impostor Syndrome <!-- .slide: class="center" -->
+
+
+Note: If we get thanked, we tend not to think it actually applies, because all the problems
+
+---
+
+# Acknowledging our *own* achievements <!-- .slide: class="center" -->
 
 Note: one way to break this is to start to acknowledge our own achievements
 
