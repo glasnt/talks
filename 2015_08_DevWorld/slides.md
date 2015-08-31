@@ -2,7 +2,7 @@
 
 ---
 
-# Hi <!-- .slide: class="center" -->
+# Oh hi! <!-- .slide: class="center" -->
 
  <img src="pictures/footer.svg" />
 
@@ -39,6 +39,8 @@ Note: an inline documentation change. It's a Python file, yo
 Note: Commit to Liberty, go to Tokyo
 
 Incentive :D
+
+There are many reasons to help with the bigger projects
 
 ---
 
@@ -88,9 +90,7 @@ UAT
 
 Promotion 
 
-User Groups
-
-Presentations 
+User Groups / Presentations
 
 ---
 
@@ -160,7 +160,19 @@ Note: Which I've turned into a easy to read manual to try and spread the message
 
 Note: Leslie and Deb meet over coffee
 
-"It gives me a place to hang my hat"
+Leslie of Google / Elastic
+
+Deb of Open Innovation Network
+
+Sahana Software Foundation
+
+“No, this is great. This gives me one of those places to hang your hat.
+
+You know, something you can list on your LinkedIn profile instead of just a project that you work on for free because you love it.
+
+But no one really knows about it or notices.”
+
+
 
 ---
 
@@ -224,15 +236,15 @@ Note: But it didn't get that much traction
 
 Leslie reported ~30 known LinkedIn recommendation
 
-I've done talks for: Python, PHP, iOS, Ops
+I've done talks for: Python, PHP, Ops
 
-I've done talks in: Sydney, Brisbane, Melbourne, Wellington; all the major locations
+I've done talks in multiple different cities
 
 It's always the same, one or two after the talk
 
 (PyConAU exception - because I refused to get off stage until 10 tweets happened)
+(This did result in some residiual activity during the sprints)
 
-(This did result in some residiual activity during the sprints
 
 Maybe y'all need a LIVE DEMO
 
@@ -289,6 +301,8 @@ Note: Antonym of exagguration
 
 "She'll be right, no worries"
 
+Understating 
+
 ---
 
 # Tall Poppy Syndrome <!-- .slide: class="center" -->
@@ -329,7 +343,8 @@ Note: sometimes it's the little things that add up onto something big
 
 Note: How many people go onto stackoverflow to ask
 
-How many to answer
+Does anyone know how many questions there have been answered on SO?
+
 
 ---
 
@@ -495,11 +510,12 @@ I've done Rails, Rubocop, Docker, OpenStack, Pybee... they arent there
 ---
 
 # What counts? <!-- .slide: class="center" -->
-## Issues and Pull Requests <!-- .element: class="fragment" -->
-### in the past year <!-- .element: class="fragment" -->
 ## Commits <!-- .element: class="fragment" -->
 ### <p>(against <code>master</code> or <code>gh-pages</code>)</p> <!-- .element: class="fragment" -->
+## Issues and Pull Requests <!-- .element: class="fragment" -->
+### (opened, in the past year) <!-- .element: class="fragment" -->
 
+Note: Continued discussions on a PR only counts as one
 
 ---
 
@@ -516,6 +532,8 @@ I've done Rails, Rubocop, Docker, OpenStack, Pybee... they arent there
 # What counts? <!-- .slide: class="center" -->
 ## Only some of your work. <!-- .element: class="fragment" -->
 
+
+Note: But what if you really want that full green graph
 ---
 
 # Sound too hard? <!-- .slide: class="center" -->
@@ -531,6 +549,12 @@ $ python
 </code></pre> 
 
  <img src="pictures/greensgreensgreens.png"> <!-- .element: class="fragment" -->
+
+
+Note: By default - one hello world in c++ everyday for as many days as you specify
+
+
+But you are Apple people
 
 ---
 
@@ -647,7 +671,18 @@ Note: Non-code has gone down.
 
 Note: Code was David Besley and KrokCode with packaging and python3, respectivelyy
 
-Noncode wa Nick Coghlan from Red Hat, a CPython Code Dev, helping me debug pip dependences
+Noncode was Nick Coghlan from Red Hat, a CPython Code Dev, helping me debug pip dependences
+
+---
+
+# TL;DR: <!-- .slide: class="center" -->
+## There's nothing wrong <br>with being nice <!-- .element: class="fragment" -->
+
+Note: Thank people that have already done so much
+
+Encourge them to do more
+
+Do more you self
 
 ---
 
