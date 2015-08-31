@@ -627,6 +627,14 @@ Note: And it's only the top 100
 
 ---
 
+#= KSP-CKAN/CKAN
+##- Code Contributors: 48
+##- Non-Code Contributors: 283
+
+Note: Totally awesome Kerbel Space Program App thing that you might have heard of
+
+---
+
 #= avinassh/rockstar
 ##- Code Contributors: 30
 ##- Non-Code Contributors: 36
