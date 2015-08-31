@@ -1,12 +1,10 @@
-@ BetterTitleSlide.svg
-
-Note: These are my speaker notes. 
-
-There are many like them, but these ones are mine
+<section data-background="pictures/BetterTitleSlide.svg"></section>
 
 ---
 
 #= Hi
+
+@ footer.svg
 
 Note: Hi! I'm Katie, and I'm a software developer. 
 

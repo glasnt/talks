@@ -1,12 +1,10 @@
- <img src="pictures/BetterTitleSlide.svg" />
-
-Note: These are my speaker notes.
-
-There are many like them, but these ones are mine
+<section data-background="pictures/BetterTitleSlide.svg"></section>
 
 ---
 
 # Hi <!-- .slide: class="center" -->
+
+ <img src="pictures/footer.svg" />
 
 Note: Hi! I'm Katie, and I'm a software developer.
 
