@@ -758,14 +758,16 @@ Note: Non-code has gone down.
 ---
 
 # glasnt/octohat <!-- .slide: class="center" -->
-## Code Contributors: 3 <!-- .element: class="fragment" -->
-## Non-Code Contributor: 3 <!-- .element: class="fragment" -->
+## Code Contributors: 4 <!-- .element: class="fragment" -->
+## Non-Code Contributor: 2 <!-- .element: class="fragment" -->
 
 Note: Code was David Besley and KrokCode with packaging and python3, respectivelyy
 
 Noncode was Nick Coghlan from Red Hat, a CPython Code Dev, helping me debug pip dependences
 
 Plus, feature requests from Tim GW and Stewart Smith
+
+Tim's code was merged this morning, so he's gone from a non-code to a code contrib! I hope he adds more things~
 
 ---
 
