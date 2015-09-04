@@ -660,21 +660,76 @@ Note: And it's only the top 100
 ## Feature Discussions <!-- .element: class="fragment" -->
 ## Feature Voting <!-- .element: class="fragment" -->
 
+---
+
+# What if... <!-- .slide: class="center" -->
+
+
+Note: What if these contributions counted
 
 ---
 
-# Can we get this information? <!-- .slide: class="center" -->
+# <img src="pictures/Emoji_u1f44f.svg"> <!-- .slide: class="center" -->
+
+
+Note: What if these contributions were accolates
+---
+ <img src="pictures/gh_start.png" />
+
+
+Note: you have a profile
+---
+ <img src="pictures/gh_start1.png" />
+
+
+Note: What if you could change your profile
+---
+ <img src="pictures/gh_start2.png" />
+
+Note: What if you could curate a list of repositories you were proud to have worked on
 
 ---
+ <img src="pictures/gh_start3a.png" />
 
-# Of course! <!-- .slide: class="center" -->
-## They have an API...
+Note: And add ones that would otherwise fall off the end because they don't have enough stars?
+---
+ <img src="pictures/gh_start3.png" />
+
+Note: What if your contributions outside your namespace could be curated?
 
 ---
+ <img src="pictures/gh_start4.png" />
 
+Note: What if you could list what you were proud to have worked on
+
+---
+ <img src="pictures/gh_start5.png" />
+
+Note: What if you could add things that you had interacted with, but not committed code to
+
+---
+ <img src="pictures/gh_start6.png" />
+
+
+Note: What if you could display that the owners of the project had given you accolades for your work?
+
+What if, as a project owner, you could give props to community members
+
+What if the gamification goal was community help, not a full green graph
+---
+
+ <img src="pictures/question.svg" />
+
+Note: But how can you find who in your project community to give props to?
+
+The customisation of the github profile may not exist, but the data for who could be given props does
+
+---
 ## github.com/glasnt/octohat <!-- .slide: class="center" -->
 ## <code>pip install octohat</code> <!-- .element: class="fragment" -->
 
+
+Note: introducing octohat
 ---
 
 # hakimel/reveal.js <!-- .slide: class="center" -->
