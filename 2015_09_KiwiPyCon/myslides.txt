@@ -715,7 +715,11 @@ Note: What if you could display that the owners of the project had given you acc
 
 What if, as a project owner, you could give props to community members
 
-What if the gamification goal was community help, not a full green graph
+---
+
+@ gh_start7.png
+
+Note: What if the gamification goal was community help, not a full green graph
 ---
 
 @ question.svg
