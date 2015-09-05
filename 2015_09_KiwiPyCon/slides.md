@@ -751,7 +751,7 @@ Note: introducing octohat
 
 # avinassh/rockstar <!-- .slide: class="center" -->
 ## Code Contributors: 30 <!-- .element: class="fragment" -->
-## Non-Code Contributors: 36 <!-- .element: class="fragment" -->
+## Non-Code Contributors: 38 <!-- .element: class="fragment" -->
 
 Note: Non-code has gone down.
 
