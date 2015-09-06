@@ -37,6 +37,7 @@ slides/array2_00.html
 slides/array2_01.html
 slides/array2_02.html
 slides/array2_03.html
+slides/array2_03b.html
 slides/array2_04.html
 slides/array2_05.html
 slides/array3_00.html
