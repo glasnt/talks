@@ -328,7 +328,7 @@ And of course, everyone's favourite
 
 ---
 
-# Impostor Syndrome <!-- .slide: class="center" -->
+# Imposter Syndrome <!-- .slide: class="center" -->
 
 
 Note: If we get thanked, we tend not to think it actually applies, because all the problems
@@ -790,7 +790,7 @@ Do more you self
 <p style="font-size: 60%">
 Non-code contributors to this talk:
 <br> 
-<br>Donna&nbsp;Benjamin, Nick Coghlan, Steve Cooper, Ben Dechrai, Tom Eastman, Paul&nbsp;Fenwick, Leslie&nbsp;Hawthorn, Lindsay Holmwood, Deb Nicholson, Christopher Neugebauer, Chris Pitt, Davey&nbsp;Shafik, Aurynn Shaw, Jack&nbsp;Skinner
+<br>Donna&nbsp;Benjamin, Nick Coghlan, Robert Collins, Ben Dechrai, Tom Eastman, Paul&nbsp;Fenwick, Leslie&nbsp;Hawthorn, Lindsay Holmwood, Deb Nicholson, Christopher Neugebauer, Chris Pitt, Davey&nbsp;Shafik, Aurynn Shaw, Jack&nbsp;Skinner
 <br> 
 <br> 
 Thank You <3</p>
