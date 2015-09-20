@@ -72,14 +72,15 @@ It's not a full working copy of a code base
 # Limitations
 ##- Parent Lock-in
 ##- Default Pull Requests
-##- No Issue Logging
+##- No Issue Logging by Default
 ##- Commits Don't Count
 
 Note: Parent - perma link to source. Network Graph
 
 PR - defaults to parent, accidently attempt to merge upstream
 
-Issues - physical limitation on workflow
+
+Issues - CORRECTION - issues are disabled by default, but can be enabled.
 
 Commits - you can work your butt off and your green graph doesn't fill up
 

@@ -72,14 +72,14 @@ It's not a full working copy of a code base
 # Limitations <!-- .element: style="margin-bottom: 1em" -->
 ## Parent Lock-in <!-- .element: class="fragment" -->
 ## Default Pull Requests <!-- .element: class="fragment" -->
-## No Issue Logging <!-- .element: class="fragment" -->
+## No Issue Logging By Default<!-- .element: class="fragment" -->
 ## Commits Don't Count <!-- .element: class="fragment" -->
 
 Note: Parent - perma link to source. Network Graph
 
 PR - defaults to parent, accidently attempt to merge upstream
 
-Issues - physical limitation on workflow
+Issues - CORRECTION - issues are disabled by default, but can be enabled.
 
 Commits - you can work your butt off and your green graph doesn't fill up
 
