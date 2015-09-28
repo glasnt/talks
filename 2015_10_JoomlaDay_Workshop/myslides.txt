@@ -1,0 +1,110 @@
+#= Main Screen Turn On
+---
+#= Hack the Planet
+---
+#= Introductions
+---
+#= And what about you?
+## (not your employer)
+---
+#= What's your flavour?
+##- Joomla, presumably.
+##- Anything else?
+
+Note: Take note of any other stacks, and adlib appropriately.
+---
+#= What the CVE?
+---
+# CVE
+## **C**ommon **V**ulnerabilities and **E**xploits
+##- Uniquely identified
+##- <pre>CVE-YYYY-NNNN</pre> < 2014
+##- `CVE-YYYY-NNNNNNN` 2015 <
+---
+#= OWASP
+## **O**pen **W**eb **A**pplication **S**ecurity **P**roject
+## https://www.oswap.org
+##- OWASP Top 10<br>Most common attack vectors for the web
+---
+## &nbsp;
+<p align="center">
+<span class="n"> Injection</span>
+<span class="n"> Broken Authentication and Session Management</span>
+<span class="n"> Cross-Site Scripting (XSS)</span>
+<span class="n"> Insecure Direct Object References</span>
+<span class="n"> Security Misconfiguration</span>
+<span class="n"> Sensitive Data Exposure</span>
+<span class="n"> Missing Function Level Access Control</span>
+<span class="n"> Cross-Site Request Forgery (CSRF)</span>
+<span class="n"> Using Components with Known Vulnerabilities</span>
+<span class="n"> Unvalidated Redirects and Forwards</span>
+</p>
+---
+## The Big Three
+<p align="center">
+<span class="X"> Injection</span>
+<span class="n"> Broken Authentication and Session Management</span>
+<span class="X"> Cross-Site Scripting (XSS)</span>
+<span class="n"> Insecure Direct Object References</span>
+<span class="n"> Security Misconfiguration</span>
+<span class="n"> Sensitive Data Exposure</span>
+<span class="n"> Missing Function Level Access Control</span>
+<span class="X"> Cross-Site Request Forgery (CSRF)</span>
+<span class="n"> Using Components with Known Vulnerabilities</span>
+<span class="n"> Unvalidated Redirects and Forwards</span>
+</p>
+---
+## Poor Authentication
+<p align="center">
+<span class="n"> Injection</span>
+<span class="X"> Broken Authentication and Session Management</span>
+<span class="n"> Cross-Site Scripting (XSS)</span>
+<span class="X"> Insecure Direct Object References</span>
+<span class="n"> Security Misconfiguration</span>
+<span class="n"> Sensitive Data Exposure</span>
+<span class="n"> Missing Function Level Access Control</span>
+<span class="n"> Cross-Site Request Forgery (CSRF)</span>
+<span class="n"> Using Components with Known Vulnerabilities</span>
+<span class="X"> Unvalidated Redirects and Forwards</span>
+</p>
+---
+## Poor Authorisation
+<p align="center">
+<span class="n"> Injection</span>
+<span class="n"> Broken Authentication and Session Management</span>
+<span class="n"> Cross-Site Scripting (XSS)</span>
+<span class="n"> Insecure Direct Object References</span>
+<span class="X"> Security Misconfiguration</span>
+<span class="X"> Sensitive Data Exposure</span>
+<span class="X"> Missing Function Level Access Control</span>
+<span class="n"> Cross-Site Request Forgery (CSRF)</span>
+<span class="n"> Using Components with Known Vulnerabilities</span>
+<span class="n"> Unvalidated Redirects and Forwards</span>
+</p>
+---
+## The cause of much sadness
+<p align="center">
+<span class="n"> Injection</span>
+<span class="n"> Broken Authentication and Session Management</span>
+<span class="n"> Cross-Site Scripting (XSS)</span>
+<span class="n"> Insecure Direct Object References</span>
+<span class="n"> Security Misconfiguration</span>
+<span class="n"> Sensitive Data Exposure</span>
+<span class="n"> Missing Function Level Access Control</span>
+<span class="n"> Cross-Site Request Forgery (CSRF)</span>
+<span class="X"> Using Components with Known Vulnerabilities</span>
+<span class="n"> Unvalidated Redirects and Forwards</span>
+</p>
+---
+#= With CVEs come patches
+## Free fixes!
+---
+#= How long has it been since you last patched?
+---
+# In the last 9 months...
+## Content Management System CVEs
+### Drupal 172
+### Wordpress 107
+### Magento 7
+###- Joomla 1
+##

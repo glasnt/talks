@@ -1,0 +1,3 @@
+#= Skeleton Theme
+<img src="pictures/footer.svg">
+
