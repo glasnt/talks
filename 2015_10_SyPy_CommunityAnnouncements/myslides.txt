@@ -1,0 +1,34 @@
+#= SyPy Community Annoucements
+
+---
+# OSDC 2015
+## osdc.com.au
+@ osdc.png
+
+### October 26 - 28 2015
+### Tickets Available
+---
+# BuzzConf
+## buzzconf.io
+@ buzzconf.png
+
+### November 14 - 15 2015
+### Tickets Available
+---
+
+# Linux Conf Australia
+## linux.conf.au
+@ linuxconfau.png
+
+### February 1 - 5 2016
+### Tickets opening Real Soon Now
+---
+
+# Linux Conf Australia
+## Functional Programming MiniConf
+
+### &nbsp;
+### Call for Papers Open Now
+### &nbsp;
+### bfpg.github.io/fp-miniconf
+### katie@glasnt.com
