@@ -18,6 +18,8 @@ I wear many hats. I use all the languages.
 
 ---
 
+@ openstack_docker_nolabel.png
+---
 @ openstack_docker.png
 
 Note: I do OSS contributions
@@ -308,7 +310,7 @@ Understating
 
 ---
 
-#= Tall Poppy Syndrome
+#= Tall Poppy<br>Syndrome
 
 Note: We are reluctant to allow ourselves to be elevated in front of our peers, lest we be cut down.
 
@@ -316,7 +318,7 @@ And of course, everyone's favourite
 
 ---
 
-#= Imposter Syndrome
+#= Imposter<br>Syndrome
 
 
 Note: If we get thanked, we tend not to think it actually applies, because all the problems
@@ -561,11 +563,11 @@ I've done Rails, Rubocop, Docker, OpenStack, Pybee... they arent there
 
 ---
 
-@^ public_contrib.png
+@ public_contrib.png
 
 ---
 
-@^ private_contrib.png
+@ private_contrib.png
 
 ---
 
@@ -729,7 +731,6 @@ The customisation of the github profile may not exist, but the data for who coul
 ---
 ##= github.com/glasnt/octohat
 ##- <code>pip install octohat</code>
-##- <code>gem install octohat</code>
 
 
 Note: introducing octohat
@@ -789,7 +790,7 @@ Do more you self
 <p style="font-size: 60%">
 Non-code contributors to this talk: 
 <br>
-<br>Donna&nbsp;Benjamin, Nick&nbsp;Coghlan, Robert&nbsp;Collins, Ben Dechrai, Tom Eastman, Paul&nbsp;Fenwick, Leslie&nbsp;Hawthorn, Lindsay Holmwood, Russell Keith-Magee, Deb&nbsp;Nicholson, Christopher&nbsp;Neugebauer, Chris Pitt, Davey&nbsp;Shafik, Aurynn Shaw, Jack&nbsp;Skinner
+<br>Donna&nbsp;Benjamin, Nick&nbsp;Coghlan, Robert&nbsp;Collins, Ben Dechrai, Tom Eastman, Paul&nbsp;Fenwick, Leslie&nbsp;Hawthorn, Lindsay Holmwood, Russell Keith-Magee, Deb&nbsp;Nicholson, Christopher&nbsp;Neugebauer, Christopher Pitt, Davey&nbsp;Shafik, Aurynn Shaw, Jack&nbsp;Skinner
 <br>
 <br>
 Thank You <3</p>

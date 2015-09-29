@@ -1,5 +1,5 @@
 
-# AA Build a Better<br>Hat Rack <!-- .slide: class="center" -->
+# Build a Better<br>Hat Rack <!-- .slide: class="center" -->
 ## All Contributions Welcome
 
  <img src="pictures/footer.svg" />
@@ -18,6 +18,8 @@ I wear many hats. I use all the languages.
 
 ---
 
+ <img src="pictures/openstack_docker_nolabel.png" />
+---
  <img src="pictures/openstack_docker.png" />
 
 Note: I do OSS contributions
@@ -143,7 +145,7 @@ Note: Which I've turned into a easy to read manual to try and spread the message
 
 ---
 
-# DÅLIGORDLEK <!-- .element: style="margin-bottom: 1em" -->
+# DÅLIGORDLEK
  <img src="pictures/hatrack.svg" />
 
 
@@ -308,7 +310,7 @@ Understating
 
 ---
 
-# Tall Poppy Syndrome <!-- .slide: class="center" -->
+# Tall Poppy<br>Syndrome <!-- .slide: class="center" -->
 
 Note: We are reluctant to allow ourselves to be elevated in front of our peers, lest we be cut down.
 
@@ -316,7 +318,7 @@ And of course, everyone's favourite
 
 ---
 
-# Imposter Syndrome <!-- .slide: class="center" -->
+# Imposter<br>Syndrome <!-- .slide: class="center" -->
 
 
 Note: If we get thanked, we tend not to think it actually applies, because all the problems
@@ -561,11 +563,11 @@ I've done Rails, Rubocop, Docker, OpenStack, Pybee... they arent there
 
 ---
 
- <img src="pictures/public_contrib.png" style="margin-top: -50px" />
+ <img src="pictures/public_contrib.png" />
 
 ---
 
- <img src="pictures/private_contrib.png" style="margin-top: -50px" />
+ <img src="pictures/private_contrib.png" />
 
 ---
 
@@ -789,7 +791,7 @@ Do more you self
 <p style="font-size: 60%">
 Non-code contributors to this talk:
 <br> 
-<br>Donna&nbsp;Benjamin, Nick&nbsp;Coghlan, Robert&nbsp;Collins, Ben Dechrai, Tom Eastman, Paul&nbsp;Fenwick, Leslie&nbsp;Hawthorn, Lindsay Holmwood, Russell Keith-Magee, Deb&nbsp;Nicholson, Christopher&nbsp;Neugebauer, Chris Pitt, Davey&nbsp;Shafik, Aurynn Shaw, Jack&nbsp;Skinner
+<br>Donna&nbsp;Benjamin, Nick&nbsp;Coghlan, Robert&nbsp;Collins, Ben Dechrai, Tom Eastman, Paul&nbsp;Fenwick, Leslie&nbsp;Hawthorn, Lindsay Holmwood, Russell Keith-Magee, Deb&nbsp;Nicholson, Christopher&nbsp;Neugebauer, Christopher Pitt, Davey&nbsp;Shafik, Aurynn Shaw, Jack&nbsp;Skinner
 <br> 
 <br> 
 Thank You <3</p>
