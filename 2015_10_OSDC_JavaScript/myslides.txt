@@ -1,3 +1,17 @@
+<p></p>
+#> <c>// If you can read this, yay!
+#> <s>123456789 123456789 123456789 12</s>
+#> > console.log("Hello World");
+#> Hello World
+#> <h>!#/usr/bin/env ruby</h>
+#> > (0..3).each {|c| puts c}
+#> 0
+#> 1
+#> 2
+#> 3
+#> => 0..3  <c>// Console is 11x32 </c>
+---
+
 #= JavaScript is Awe-ful
 @ footer.svg
 ---
@@ -8,7 +22,9 @@ Note: Tapestry and Cooking and Yelling
 
 ---
 
-#>  > ans = ""
+#= Global Variables
+---
+#>  > ans = "";
 #>- > function q() {<br>> &nbsp; var ans = 42;<br>> &nbsp; return ans;<br>> }
 #>- > console.log(ans);
 #>- ""
@@ -16,6 +32,128 @@ Note: Tapestry and Cooking and Yelling
 #>- 42
 #>- > console.log(ans);
 #>- ""
+---
+<p></p>
+#> > ans = ""; <c>//global</c>
+#> > function q() {<br>> &nbsp; var ans = 42; <c>//local</c><br>> &nbsp; return ans;<br>> }
+#> > console.log(ans);
+#> ""
+#> > console.log(q());
+#> 42
+#> > console.log(ans);
+#> ""
+---
+<p></p>
+#> > ans = ""; <c>//global</c>
+#> > function q() {<br>> &nbsp; <s>var</s> ans = 42; <c>//global</c><br>> &nbsp; return ans;<br>> }
+#> > console.log(ans);
+#> ""
+#> > console.log(q());
+#> 42
+#> > console.log(ans);
+#> 42
+---
+#> <c>//ruby</c>
+#> <h>@</h>ans = 42;
+#>
+#> <c>//python</c>
+#> <h>global</h> ans = 42;
+#> 
+#> <c>//java
+#> <h>public</h> static ans = 42;
+Note: Because every other language has locals by default
+---
+#= Duck Typing
+###- Quack
 
+Note: if it looks like a duck and sounds like a duck, it's a duck.
+---
+#>  > 4 + 2 
+#>- 6
+#>- > 4 - 2
+#>- 2
+#>- > "4" - 2 
+#>- 2 
+#>- > "4" + 2
+#>- "42"
+---
+<p></p>
+#>  > 4 + 2 
+#> 6
+#> > 4 - 2
+#> 2
+#> > "4" - 2 
+#> 2 <c>&nbsp;&nbsp; // type -> integer</c>
+#> > "4" + 2
+#> "42"<c> // type -> string</c>
 
- 
+Note: Automatic Type Co-ersion
+
+Higher order type wins 
+---
+#= Arrays and Objects
+---
+#> > [] + []
+#>- ""
+#>- > [] + {}
+#>- [object Object]
+#>- > {} + []
+#>- 0
+#>- > {} + {}
+#>- NaN
+
+Note: Associativity? Pfft!
+---
+<p></p>
+#> > [] + []
+#> ""
+#> > [] + {}
+#> [object Object]
+#> > {} + []
+#> 0
+#> > {} + {}
+#> NaN <c>// wat</c>
+---
+#= Arrays != Objects
+---
+#>  > var arr = ['a', 'b', 'c']
+#>- > arr
+#>- ["a", "b", "c"]
+#>- > arr.hello = "world"
+#>- "world"
+---
+#> > arr
+#>- ["a", "b", "c"]
+#>- > for (var k in arr) {<br>>&nbsp;&nbsp; console.log(k);<br>> }
+#>- 0<br>1<br>2<br>hello
+---
+#>  > arr.push("append")
+#>- 4
+#>- > c = 0
+#>- > for(var k in arr){ c++ }
+#>- > c
+#>- 5
+#>- > arr.length
+#>- 4
+---
+#= Equality
+---
+#>  > 0 ==  false  
+#>- true
+#>- > 0 === false  
+#>- false
+#>- > 1 ==  "1"
+#>- true 
+#>- > 1 === "1"
+#>- false
+---
+<p></p>
+#> > 0 ==  false  
+#> true
+#> > 0 === false  
+#> false
+#> > 1 ==  "1" <c> // equality</c> 
+#> true 
+#> > 1 === "1" <c>// equality without</c>
+#> false &nbsp; &nbsp; &nbsp; <c>//type coersion</c>
+---
