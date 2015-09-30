@@ -258,7 +258,9 @@ Maybe y'all need a LIVE DEMO
 Note: Live demo, lets hope this works
 
 Hat Rack
+---
 
+# Hi, Jack! <!-- .slide: class="center" -->
 ---
 
 # How to<br>say thank you <!-- .slide: class="center" -->
@@ -448,10 +450,11 @@ Note: I'm super encourageable. I think half the stuff i do is average until vali
 
 ---
 
-# "Fear, Uncertainty<br>and Dopamine" <!-- .slide: class="center" -->
-## Paul Fenwick
+# "Foot in the Door" <!-- .slide: class="center" -->
 
-Note: Amazing talk about a few different issues about hacking brains
+Note: "Fear, Uncertainty<br>and Dopamine" - Paul Fenwick
+
+Amazing talk about a few different issues about hacking brains
 
 Brilliant riff about making contrubutors stick
 
@@ -470,9 +473,10 @@ Little things = seed, -> improvement over time
 
 ---
 
-# "It makes them feel valued" <!-- .slide: class="center" -->
+# Change self image <!-- .slide: class="center" -->
 
 Note: 
+it makes them feel valued
 
 self image change, they feel included in the project, and it makes them feel good
 
@@ -481,10 +485,15 @@ but it also binds their fate to yours
 if your project fails, it reflects badly on them, because they are now involed in your project
 
 
+---
+
+ <img src="pictures/question.svg" />
+
+Note: But just how can we say thank you
 
 ---
 
-# Communication within your project <!-- .slide: class="center" -->
+# Communication<br>within<br>your project <!-- .slide: class="center" -->
 
 Note: Mentioning things in your release notes is a good thing. MediaGolbin does this
 
@@ -493,7 +502,9 @@ But the scope of this communication is only within your existing community.
 You need to extend to more general communications
 
 ---
+# Communication<br>outside<br>your project <!-- .slide: class="center" -->
 
+---
 # Give your helpers something to show for their work <!-- .slide: class="center" -->
 
 ---
@@ -539,7 +550,7 @@ LIST IT AS SUCH
 ---
 
 # Endorsements <!-- .slide: class="center" -->
-## possibly not as helpful <!-- .element: class="fragment" -->
+## ... possibly not as helpful <!-- .element: class="fragment" -->
 
 ---
 
@@ -550,7 +561,7 @@ LIST IT AS SUCH
  <img src="pictures/b_github.png" style="margin-top: -50px" />
 
 ---
-# User Contributions <!-- .slide: class="center" -->
+# User<br>Contributions <!-- .slide: class="center" -->
 
 ---
 
@@ -562,13 +573,10 @@ Note: No idea how the 'Repositories contributed to' works
 I've done Rails, Rubocop, Docker, OpenStack, Pybee... they arent there
 
 ---
-
+<br><br> 
  <img src="pictures/public_contrib.png" />
 
----
-
- <img src="pictures/private_contrib.png" />
-
+Note: focus on this graph. So much focus
 ---
 
 # What counts? <!-- .slide: class="center" -->
@@ -622,7 +630,7 @@ Note: By default - one hello world in c++ everyday for as many days as you speci
  <img src="pictures/githubshirts_2.jpg" style="margin-top: -50px" />
 
 ---
-# Project Contributions <!-- .slide: class="center" -->
+# Project<br>Contributions <!-- .slide: class="center" -->
 
 ---
 
@@ -731,7 +739,6 @@ The customisation of the github profile may not exist, but the data for who coul
 ---
 ## github.com/glasnt/octohat <!-- .slide: class="center" -->
 ## <code>pip install octohat</code> <!-- .element: class="fragment" -->
-## <code>gem install octohat</code> <!-- .element: class="fragment" -->
 
 
 Note: introducing octohat
