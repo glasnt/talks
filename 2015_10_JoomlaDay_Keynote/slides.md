@@ -752,14 +752,12 @@ Note: introducing octohat
 
 # joomla/joomla-cms <!-- .slide: class="center" -->
 ## Code Contributors: 352 <!-- .element: class="fragment" -->
-## Non-Code Contributors: 53<br>in the last 100 Issue/PRs <!-- .element: class="fragment" -->
+## Non-Code Contributors: 266* <!-- .element: class="fragment" -->
+### * Since June 2015, ~700 issues/PRs <!-- .element: class="fragment" -->
 
 Note: Joomla is *massive*
 
-I couldn't get all the data without capping out
-
-Last 100 commits is from 7813 - 7913 in the **last fortnight**
-
+I could only get this many before my GitHub token ratelimited.
 ---
 
 # avinassh/rockstar <!-- .slide: class="center" -->
@@ -770,12 +768,11 @@ Last 100 commits is from 7813 - 7913 in the **last fortnight**
 
 # glasnt/octohat <!-- .slide: class="center" -->
 ## Code Contributors: 6 <!-- .element: class="fragment" -->
-## Non-Code Contributor: 2 <!-- .element: class="fragment" -->
+## Non-Code Contributor: 3 <!-- .element: class="fragment" -->
 
 
 Note: So many conversions!
-
-When I presented this on Sept 1, just 6 weeks ago, there was just me, and one non-code that helped with packaging
+TODO update moar stats
 
 ---
 
