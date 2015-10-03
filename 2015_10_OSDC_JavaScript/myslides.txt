@@ -25,10 +25,10 @@ Note: Tapestry and Cooking and Yelling
 #= Global Variables
 ---
 #>  > ans = "";
-#>- > function q() {<br>> &nbsp; var ans = 42;<br>> &nbsp; return ans;<br>> }
+#>- > function question() {<br>> &nbsp; var ans = 42;<br>> &nbsp; return ans;<br>> }
 #>- > console.log(ans);
 #>- ""
-#>- > console.log(q());
+#>- > console.log(question());
 #>- 42
 #>- > console.log(ans);
 #>- ""
@@ -38,7 +38,7 @@ Note: Tapestry and Cooking and Yelling
 #> > function q() {<br>> &nbsp; var ans = 42; <c>//local</c><br>> &nbsp; return ans;<br>> }
 #> > console.log(ans);
 #> ""
-#> > console.log(q());
+#> > console.log(question());
 #> 42
 #> > console.log(ans);
 #> ""
@@ -48,7 +48,7 @@ Note: Tapestry and Cooking and Yelling
 #> > function q() {<br>> &nbsp; <s>var</s> ans = 42; <c>//global</c><br>> &nbsp; return ans;<br>> }
 #> > console.log(ans);
 #> ""
-#> > console.log(q());
+#> > console.log(question());
 #> 42
 #> > console.log(ans);
 #> 42
@@ -155,5 +155,60 @@ Note: Associativity? Pfft!
 #> > 1 ==  "1" <c> // equality</c> 
 #> true 
 #> > 1 === "1" <c>// equality without</c>
-#> false &nbsp; &nbsp; &nbsp; <c>//type coersion</c>
+#> false &nbsp; &nbsp; &nbsp; <c>// type co-ersion</c>
 ---
+
+<br><br>
+> The fact that === exists in languages like php and js is a sign that those languages are ridiculously broken.
+>
+>  -- @TheColonial
+
+---
+
+#= JavaScript: A History
+##- ~~ wavey time passing lines ~~
+
+---
+
+# JavaScript isn't the only language that has wats
+
+---
+
+# Let's talk about Python
+---
+
+#> >>> ans = 42
+#>- >>> def question(): 
+#>- ... &nbsp; &nbsp; return ans
+#>- >>> question() 
+#>- 42
+
+---
+
+#> >>> ans = 42
+#>- >>> def question(): 
+#>- ... &nbsp; &nbsp; ans += 1
+#>- ... &nbsp; &nbsp; return ans
+#>- >>> question() 
+#>- Traceback (most recent call last):<br> &nbsp;File "<stdin>", line 1, in <module><br> &nbsp;File "<stdin>", line 2, in question<br>  UnboundLocalError: local variable 'ans' referenced before assignment
+
+---
+#> >>> a = 256
+#>- >>> b = 256
+#>- >>> a **is** b
+#>- True
+---
+#> >>> a = 257
+#>- >>> b = 257
+#>- >>> a **is** b
+#>- False
+#>- <br>>>> a = 257; b = 257
+#>- >>> a **is** b
+#>- True
+
+---
+#= Wat
+
+---
+### Wat - Gary Bernhardt, CodeMash 2012
+### Investigating Python Wats - Amy Hanlon, Python 2015 

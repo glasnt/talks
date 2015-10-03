@@ -752,7 +752,7 @@ Note: introducing octohat
 
 #= joomla/joomla-cms
 ##- Code Contributors: 352
-##- Non-Code Contributors: 53<br>in the last 100 Issue/PRs
+##- Non-Code Contributors: 153<br>in the last ~300 Issue/PRs
 
 Note: Joomla is *massive*
 

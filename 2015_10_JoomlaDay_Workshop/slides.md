@@ -16,15 +16,15 @@ Note: Take note of any other stacks, and adlib appropriately.
 ---
 # What the CVE? <!-- .slide: class="center" -->
 ---
-# CVE
-## **C**ommon<br>**V**ulnerabilities and **E**xploits <!-- .element: class="fragment" -->
+# CVE <!-- .element: style="margin-bottom: 1em" -->
+## Common<br>Vulnerabilities and Exploits <!-- .element: class="fragment" -->
 ## &nbsp;
 ### Uniquely identified <!-- .element: class="fragment" -->
 ### <p><code>CVE-YYYY-NNNN</code></p> <!-- .element: class="fragment" -->
 ### <p><code>CVE-YYYY-NNNNNNN</code></p> <!-- .element: class="fragment" -->
 ---
 # OWASP <!-- .slide: class="center" -->
-## **O**pen **W**eb **A**pplication<br>**S**ecurity **P**roject <!-- .element: class="fragment" -->
+## Open Web Application<br>Security Project <!-- .element: class="fragment" -->
 ## https://www.oswap.org <!-- .element: class="fragment" -->
 
 Note: they made the OWASP Top 10
@@ -104,7 +104,7 @@ Note: they made the OWASP Top 10
 ---
 # How long has it been since you last patched? <!-- .slide: class="center" -->
 ---
-# In the last 9 months...
+# In the last 9 months... <!-- .element: style="margin-bottom: 1em" -->
 ## Content Management System CVEs
 #### &nbsp;
 ### Drupal - 172 <!-- .element: class="fragment" -->
@@ -114,7 +114,7 @@ Note: they made the OWASP Top 10
 ---
 # But it's not just<br>your CMS <!-- .slide: class="center" -->
 ---
-# In the last 9 months...
+# In the last 9 months... <!-- .element: style="margin-bottom: 1em" -->
 ## Framework CVEs
 #### &nbsp;
 ### Django - 14 <!-- .element: class="fragment" -->
@@ -123,7 +123,7 @@ Note: they made the OWASP Top 10
 ---
 # But it's not just<br>your framework <!-- .slide: class="center" -->
 ---
-# In the last 9 months...
+# In the last 9 months... <!-- .element: style="margin-bottom: 1em" -->
 ## Language CVEs
 #### &nbsp;
 ### PHP - 133 <!-- .element: class="fragment" -->
@@ -133,18 +133,18 @@ Note: they made the OWASP Top 10
 ---
 # But it's not just<br>your language <!-- .slide: class="center" -->
 ---
-# In the last 12 months...
+# In the last 12 months... <!-- .element: style="margin-bottom: 1em" -->
 ## Operating System CVEs
 #### &nbsp;
 ### CVE-2014-6271<br>CVE-2015-0204<br>CVE-2015-3456 <!-- .element: class="fragment" -->
 ---
-# CVE-2014-6271
- <img src="pictures/ghost-2.png" />
+# CVE-2014-6271 <!-- .element: style="margin-bottom: 1em" -->
+ <img src="pictures/ghost.png" />
 ---
-# CVE-2015-0204
- <img src="pictures/venom2.png" />
+# CVE-2015-0204 <!-- .element: style="margin-bottom: 1em" -->
+ <img src="pictures/venom.png" />
 ---
-# CVE-2015-3456
+# CVE-2015-3456 <!-- .element: style="margin-bottom: 1em" -->
  <img src="pictures/shellshock.png" />
 ---
 # Logos bring recognition <!-- .slide: class="center" -->
@@ -154,7 +154,7 @@ Note: they made the OWASP Top 10
 ---
 # But it's not just<br>your application stack <!-- .slide: class="center" -->
 ---
-# CVEs recorded against:
+# CVEs recorded against: <!-- .element: style="margin-bottom: 1em" -->
 ## &nbsp;
 ## Nginx
 ## IIS
@@ -162,7 +162,7 @@ Note: they made the OWASP Top 10
 ---
 # But it's not just<br>your entire website <!-- .slide: class="center" -->
 ---
-# CVEs recorded against:
+# CVEs recorded against: <!-- .element: style="margin-bottom: 1em" -->
 ## JIRA
 ## Request Tracker
 ## Confluence
@@ -249,19 +249,27 @@ http://blog.ircmaxell.com/2014/12/php-install-statistics.html
 
 # "That won't<br>happen to me!" <!-- .slide: class="center" -->
 ---
+# Patreon <!-- .slide: class="center" -->
+Note: production data on dev website, open to the internet, with a public debugger
+---
 
-## eBay
-## Sony
-## Apple iCloud
-## Tinder
-## Snapchat
-## Microsoft
-## US Department of Personnel Management <!-- .element: class="fragment" -->
+# David Jones <!-- .slide: class="center" -->
+Note: extracted limited information, exploited a vulnerability
+---
+
+# KMart <!-- .slide: class="center" -->
+Note: extracted limited information, exploited a vulnerability
+---
+## ... all within in the past 10 days. <!-- .slide: class="center" -->
 ---
 # "I'm not big enough to be a target" <!-- .slide: class="center" -->
 ---
 # You don't have to be <!-- .slide: class="center" -->
 Note: automatic attacks, not even targetted ones
+
+Port scanning
+Rainbow Tables
+
 ---
 # So what can you do? <!-- .slide: class="center" -->
 ---
@@ -272,6 +280,7 @@ Note: automatic attacks, not even targetted ones
 # ... and ... <!-- .slide: class="center" -->
 ---
 # Know your enemy. <!-- .slide: class="center" -->
+Note: You need to know what your customisations are doing to your system
 ---
 <section data-background="#ffffff"><h1>
 <br> 
@@ -324,4 +333,4 @@ Let's do some hacking!
 ---
 <section data-background="#ffffff"><h1>
 <br><br> 
-PLACEHOLDER<br>Wifi Information</h1></section>
+PLACEHOLDER<br>Wifi Information ETC</h1></section>

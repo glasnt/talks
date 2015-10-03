@@ -145,7 +145,7 @@ Note: Which I've turned into a easy to read manual to try and spread the message
 
 ---
 
-# DÅLIGORDLEK
+# DÅLIGORDLEK <!-- .element: style="margin-bottom: 1em" -->
  <img src="pictures/hatrack.svg" />
 
 

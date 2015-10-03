@@ -17,14 +17,14 @@ Note: Take note of any other stacks, and adlib appropriately.
 #= What the CVE?
 ---
 # CVE
-##- **C**ommon<br>**V**ulnerabilities and **E**xploits
+##- Common<br>Vulnerabilities and Exploits
 ## &nbsp;
 ###- Uniquely identified
 ###- <p><code>CVE-YYYY-NNNN</code></p>
 ###- <p><code>CVE-YYYY-NNNNNNN</code></p>
 ---
 #= OWASP
-##- **O**pen **W**eb **A**pplication<br>**S**ecurity **P**roject
+##- Open Web Application<br>Security Project
 ##- https://www.oswap.org
 
 Note: they made the OWASP Top 10
@@ -139,10 +139,10 @@ Note: they made the OWASP Top 10
 ###- CVE-2014-6271<br>CVE-2015-0204<br>CVE-2015-3456
 ---
 # CVE-2014-6271
-@ ghost-2.png
+@ ghost.png
 ---
 # CVE-2015-0204
-@ venom2.png
+@ venom.png
 ---
 # CVE-2015-3456
 @ shellshock.png
@@ -249,19 +249,27 @@ http://blog.ircmaxell.com/2014/12/php-install-statistics.html
 
 #= "That won't<br>happen to me!"
 ---
+#= Patreon
+Note: production data on dev website, open to the internet, with a public debugger
+---
 
-## eBay
-## Sony
-## Apple iCloud
-## Tinder
-## Snapchat
-## Microsoft
-##- US Department of Personnel Management
+#= David Jones
+Note: extracted limited information, exploited a vulnerability
+---
+
+#= KMart
+Note: extracted limited information, exploited a vulnerability
+---
+##= ... all within in the past 10 days. 
 ---
 #= "I'm not big enough to be a target"
 ---
 #= You don't have to be
 Note: automatic attacks, not even targetted ones
+
+Port scanning
+Rainbow Tables
+
 ---
 #= So what can you do?
 ---
@@ -272,6 +280,7 @@ Note: automatic attacks, not even targetted ones
 #= ... and ...
 ---
 #= Know your enemy.
+Note: You need to know what your customisations are doing to your system
 ---
 <section data-background="#ffffff"><h1>
 <br>
@@ -324,4 +333,4 @@ Let's do some hacking!
 ---
 <section data-background="#ffffff"><h1>
 <br><br>
-PLACEHOLDER<br>Wifi Information</h1></section>
+PLACEHOLDER<br>Wifi Information ETC</h1></section>
