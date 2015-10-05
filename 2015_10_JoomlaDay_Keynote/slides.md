@@ -261,6 +261,14 @@ Hat Rack
 ---
 
 # Hi, Jack! <!-- .slide: class="center" -->
+
+
+---
+
+ <img src="pictures/tweet_davey.png" />
+
+Note: Jack is a force of good for the community - Davey
+
 ---
 
 # How to<br>say thank you <!-- .slide: class="center" -->
@@ -270,11 +278,17 @@ Note:
 Repeat for mic, if required.
 
 
+
+---
+# How not to<br>react <!-- .slide: class="center" -->
+
+Note: 
+
 This didn't happen last time. Ref Chris.
 
 ---
 
- <img src="pictures/tweet_1.png" />
+ <img src="pictures/tweet_chris.png" />
 
 Note: Chris was a little bit upset last time this happened
 
@@ -282,13 +296,13 @@ Ref Tom
 
 ---
 
- <img src="pictures/tweet_2.png" />
+ <img src="pictures/tweet_tom.png" />
 
 Note: And not just him.
 
 ---
 
- <img src="pictures/tweet_3.png" />
+ <img src="pictures/tweet_russ.png" />
 
 Note: It took a third party to actually confirm they did good.
 
@@ -302,9 +316,9 @@ I've seen this before, not only in the #LABHR
 
 ---
 
-# Minimisation <!-- .slide: class="center" -->
+## Minimisation <!-- .slide: class="center" -->
 
-Note: Antonym of exagguration
+Note: Antonym of exaggeration
 
 "She'll be right, no worries"
 
@@ -312,7 +326,7 @@ Understating
 
 ---
 
-# Tall Poppy<br>Syndrome <!-- .slide: class="center" -->
+## Tall Poppy<br>Syndrome <!-- .slide: class="center" -->
 
 Note: We are reluctant to allow ourselves to be elevated in front of our peers, lest we be cut down.
 
@@ -320,18 +334,16 @@ And of course, everyone's favourite
 
 ---
 
-# Imposter<br>Syndrome <!-- .slide: class="center" -->
+## Imposter<br>Syndrome <!-- .slide: class="center" -->
 
 
 Note: If we get thanked, we tend not to think it actually applies, because all the problems
 
 ---
 
-# Acknowledging how splendid we are <!-- .slide: class="center" -->
+# Acknowledging just how splendid we are <!-- .slide: class="center" -->
 
 Note: We are amazing. We are splendid. We need to ack that.
----
-# Community Awards <!-- .slide: class="center" -->
 
 Note: The fact that I didn't know half of these existed is a problem in itself.
 
@@ -382,9 +394,6 @@ Nick Coghlan
  <img src="pictures/oreilly_awards.png" />
 ---
 
-# We don't always need a parade <!-- .slide: class="center" -->
-
----
 # Acknowledging our *own* achievements <!-- .slide: class="center" -->
 
 Note: one way to break this is to start to acknowledge our own achievements
@@ -555,10 +564,11 @@ Note: But just how can we say thank you
 
 Note: Mentioning things in your release notes is a good thing. MediaGolbin does this
 
+Drupal concatenates thread commentors into git commit message
+
 But the scope of this communication is only within your existing community.
 
 You need to extend to more general communications
-
 ---
 # Communication<br>outside<br>your project <!-- .slide: class="center" -->
 
