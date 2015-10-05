@@ -327,6 +327,64 @@ Note: If we get thanked, we tend not to think it actually applies, because all t
 
 ---
 
+# Acknowledging how splendid we are <!-- .slide: class="center" -->
+
+Note: We are amazing. We are splendid. We need to ack that.
+---
+# Community Awards <!-- .slide: class="center" -->
+
+Note: The fact that I didn't know half of these existed is a problem in itself.
+
+---
+
+ <img src="pictures/ruby_heroes.png" />
+
+
+Note: can be dev or community or combination of both
+
+Sarah Mei
+
+Sam Saffron
+
+---
+<BR><BR> 
+ <img src="pictures/white_camel.png" />
+
+Note: Perl White Camel
+
+* User Groups
+
+* Advocacy
+
+* Community
+
+Tim O'Reilly
+
+Paul Fenwick
+
+---
+
+<BR><BR> 
+ <img src="pictures/python_awards.png" />
+
+Note: Python Software Foundation awards
+
+Community Service
+
+Distinguished Service
+
+
+Nick Coghlan
+
+
+---
+
+ <img src="pictures/oreilly_awards.png" />
+---
+
+# We don't always need a parade <!-- .slide: class="center" -->
+
+---
 # Acknowledging our *own* achievements <!-- .slide: class="center" -->
 
 Note: one way to break this is to start to acknowledge our own achievements
