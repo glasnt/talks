@@ -18,10 +18,9 @@ Note: Take note of any other stacks, and adlib appropriately.
 ---
 # CVE <!-- .element: style="margin-bottom: 1em" -->
 ## Common<br>Vulnerabilities and Exploits <!-- .element: class="fragment" -->
-## &nbsp;
 ### Uniquely identified <!-- .element: class="fragment" -->
 ### <p><code>CVE-YYYY-NNNN</code></p> <!-- .element: class="fragment" -->
-### <p><code>CVE-YYYY-NNNNNNN</code></p> <!-- .element: class="fragment" -->
+### <p><code>+NNN</code></p> <!-- .element: class="fragment" -->
 ---
 # OWASP <!-- .slide: class="center" -->
 ## Open Web Application<br>Security Project <!-- .element: class="fragment" -->
@@ -139,13 +138,13 @@ Note: they made the OWASP Top 10
 ### CVE-2014-6271<br>CVE-2015-0204<br>CVE-2015-3456 <!-- .element: class="fragment" -->
 ---
 # CVE-2014-6271 <!-- .element: style="margin-bottom: 1em" -->
- <img src="pictures/ghost.png" />
+ <img src="pictures/ghost.png"> <!-- .element: class="fragment" -->
 ---
 # CVE-2015-0204 <!-- .element: style="margin-bottom: 1em" -->
- <img src="pictures/venom.png" />
+ <img src="pictures/venom.png"> <!-- .element: class="fragment" -->
 ---
 # CVE-2015-3456 <!-- .element: style="margin-bottom: 1em" -->
- <img src="pictures/shellshock.png" />
+ <img src="pictures/shellshock.png"> <!-- .element: class="fragment" -->
 ---
 # Logos bring recognition <!-- .slide: class="center" -->
 ---
@@ -167,7 +166,6 @@ Note: they made the OWASP Top 10
 ## Request Tracker
 ## Confluence
 ## SugarCRM
-## &nbsp;
 ## and many, *many* more...
 ---
 # But wait! That's not all! <!-- .slide: class="center" -->
@@ -249,16 +247,14 @@ http://blog.ircmaxell.com/2014/12/php-install-statistics.html
 
 # "That won't<br>happen to me!" <!-- .slide: class="center" -->
 ---
-# Patreon <!-- .slide: class="center" -->
-Note: production data on dev website, open to the internet, with a public debugger
+# KMart <!-- .slide: class="center" -->
+Note: extracted limited information, exploited a vulnerability
 ---
-
 # David Jones <!-- .slide: class="center" -->
 Note: extracted limited information, exploited a vulnerability
 ---
-
-# KMart <!-- .slide: class="center" -->
-Note: extracted limited information, exploited a vulnerability
+# Patreon <!-- .slide: class="center" -->
+Note: production data on dev website, open to the internet, with a public debugger
 ---
 ## ... all within in the past 10 days. <!-- .slide: class="center" -->
 ---

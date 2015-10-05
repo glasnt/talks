@@ -18,10 +18,9 @@ Note: Take note of any other stacks, and adlib appropriately.
 ---
 # CVE
 ##- Common<br>Vulnerabilities and Exploits
-## &nbsp;
 ###- Uniquely identified
 ###- <p><code>CVE-YYYY-NNNN</code></p>
-###- <p><code>CVE-YYYY-NNNNNNN</code></p>
+###- <p><code>+NNN</code></p>
 ---
 #= OWASP
 ##- Open Web Application<br>Security Project
@@ -139,13 +138,13 @@ Note: they made the OWASP Top 10
 ###- CVE-2014-6271<br>CVE-2015-0204<br>CVE-2015-3456
 ---
 # CVE-2014-6271
-@ ghost.png
+- <img src="pictures/ghost.png">
 ---
 # CVE-2015-0204
-@ venom.png
+- <img src="pictures/venom.png">
 ---
 # CVE-2015-3456
-@ shellshock.png
+- <img src="pictures/shellshock.png">
 ---
 #= Logos bring recognition
 ---
@@ -167,7 +166,6 @@ Note: they made the OWASP Top 10
 ## Request Tracker
 ## Confluence
 ## SugarCRM
-## &nbsp;
 ## and many, *many* more...
 ---
 #= But wait! That's not all!
@@ -249,16 +247,14 @@ http://blog.ircmaxell.com/2014/12/php-install-statistics.html
 
 #= "That won't<br>happen to me!"
 ---
-#= Patreon
-Note: production data on dev website, open to the internet, with a public debugger
+#= KMart
+Note: extracted limited information, exploited a vulnerability
 ---
-
 #= David Jones
 Note: extracted limited information, exploited a vulnerability
 ---
-
-#= KMart
-Note: extracted limited information, exploited a vulnerability
+#= Patreon
+Note: production data on dev website, open to the internet, with a public debugger
 ---
 ##= ... all within in the past 10 days. 
 ---
