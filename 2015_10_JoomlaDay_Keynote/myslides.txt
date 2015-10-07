@@ -509,6 +509,7 @@ Plight of the organiser
 
 Note: They have done a thing once, they will do it again.
 
+Charelle's story from Compcon - first commit, hand held from Russell
 ---
 
 #= Voluntold
