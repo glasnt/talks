@@ -145,7 +145,7 @@ Note: Which I've turned into a easy to read manual to try and spread the message
 
 ---
 
-# DÅLIGORDLEK <!-- .element: style="margin-bottom: 1em" -->
+# DÅLIGORDLEK
  <img src="pictures/hatrack.svg" />
 
 
@@ -316,7 +316,7 @@ I've seen this before, not only in the #LABHR
 
 ---
 
-## Minimisation <!-- .slide: class="center" -->
+# Minimisation <!-- .slide: class="center" -->
 
 Note: Antonym of exaggeration
 
@@ -325,8 +325,7 @@ Note: Antonym of exaggeration
 Understating 
 
 ---
-
-## Tall Poppy<br>Syndrome <!-- .slide: class="center" -->
+# Tall Poppy<br>Syndrome <!-- .slide: class="center" -->
 
 Note: We are reluctant to allow ourselves to be elevated in front of our peers, lest we be cut down.
 
@@ -334,8 +333,7 @@ And of course, everyone's favourite
 
 ---
 
-## Imposter<br>Syndrome <!-- .slide: class="center" -->
-
+# Imposter<br>Syndrome <!-- .slide: class="center" -->
 
 Note: If we get thanked, we tend not to think it actually applies, because all the problems
 
@@ -345,7 +343,7 @@ Note: If we get thanked, we tend not to think it actually applies, because all t
 
 Note: We are amazing. We are splendid. We need to ack that.
 
-Note: The fact that I didn't know half of these existed is a problem in itself.
+The fact that I didn't know half of these existed is a problem in itself.
 
 ---
 
@@ -399,7 +397,8 @@ Nick Coghlan
 Note: one way to break this is to start to acknowledge our own achievements
 
 ---
-
+<br> 
+<br> 
  <img src="pictures/donut.jpg" />
 
 Note: Lara Hogan, Donut Manifesto
@@ -415,7 +414,7 @@ Piggybacking on a picture of a donut (instagram makes this OK).
 
 ---
 
- <img src="pictures/MyDonut.jpg" style="margin-top: -50px" />
+ <img src="pictures/MyDonut.jpg" />
 
 Note: I like the idea of donuts. This is one I did the other day.
 

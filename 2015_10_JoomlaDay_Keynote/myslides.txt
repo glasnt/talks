@@ -316,7 +316,7 @@ I've seen this before, not only in the #LABHR
 
 ---
 
-##= Minimisation
+#= Minimisation
 
 Note: Antonym of exaggeration
 
@@ -325,8 +325,7 @@ Note: Antonym of exaggeration
 Understating
 
 ---
-
-##= Tall Poppy<br>Syndrome
+#= Tall Poppy<br>Syndrome
 
 Note: We are reluctant to allow ourselves to be elevated in front of our peers, lest we be cut down.
 
@@ -334,8 +333,7 @@ And of course, everyone's favourite
 
 ---
 
-##= Imposter<br>Syndrome
-
+#= Imposter<br>Syndrome
 
 Note: If we get thanked, we tend not to think it actually applies, because all the problems
 
@@ -345,7 +343,7 @@ Note: If we get thanked, we tend not to think it actually applies, because all t
 
 Note: We are amazing. We are splendid. We need to ack that. 
 
-Note: The fact that I didn't know half of these existed is a problem in itself.
+The fact that I didn't know half of these existed is a problem in itself.
 
 ---
 
@@ -399,7 +397,8 @@ Nick Coghlan
 Note: one way to break this is to start to acknowledge our own achievements
 
 ---
-
+<br>
+<br>
 @ donut.jpg
 
 Note: Lara Hogan, Donut Manifesto
@@ -415,7 +414,7 @@ Piggybacking on a picture of a donut (instagram makes this OK).
 
 ---
 
-@^ MyDonut.jpg
+@ MyDonut.jpg
 
 Note: I like the idea of donuts. This is one I did the other day.
 
