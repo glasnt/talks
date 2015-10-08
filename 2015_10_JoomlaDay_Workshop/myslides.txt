@@ -155,9 +155,6 @@ Drupal the same, but they also have had Drupal 8
 ###- Ruby - 2
 
 <span class="dasfoot"><a href="https://cve.mitre.org">https://cve.mitre.org</a></span>
-Note: Hard to get an exact number for PHP
-At one time, research says it was as high as 25% of all vulns
-http://www.coelho.net/php_cve.html
 ---
 
 #= PHP
@@ -167,6 +164,9 @@ http://www.coelho.net/php_cve.html
 @ PHPChart_NoLabels.png
 ---
 @ PHPChart_Labels.png
+<span class="dasfoot"><a href="http://www.coelho.net/php_cve.html">coelho.net/php_cve.html</a></span>
+Note: Hard to get an exact number for PHP
+At one time, research says it was as high as 25% of all vulns
 
 ---
 #= But it's not just<br>your language
