@@ -21,12 +21,18 @@ Note: Take note of any other stacks, and adlib appropriately.
 ###- Uniquely identified
 ###- <p><code>CVE-YYYY-NNNN</code></p>
 ###- <p><code>+NNN</code></p>
+Note: up to 10,000 p/a up until last year
+Now 7 N's -> 10,000,000  
+
+Only when required in a calendar year
+
+Highest CVE number so far == 76xx-ish
 ---
 #= OWASP
 ##- Open Web Application<br>Security Project
 ##- https://www.oswap.org
 
-Note: they made the OWASP Top 10
+Note: they make the OWASP Top 10
 ---
 ## OWASP Top 10
 <p align="left">
@@ -59,15 +65,15 @@ Note: they made the OWASP Top 10
 ## Poor Authentication
 <p align="left">
 <span class="n"> Injection</span>
-<span class="X"> Broken Authentication and Session Management</span>
+<span class="Y"> Broken Authentication and Session Management</span>
 <span class="n"> Cross-Site Scripting (XSS)</span>
-<span class="X"> Insecure Direct Object References</span>
+<span class="Y"> Insecure Direct Object References</span>
 <span class="n"> Security Misconfiguration</span>
 <span class="n"> Sensitive Data Exposure</span>
 <span class="n"> Missing Function Level Access Control</span>
 <span class="n"> Cross-Site Request Forgery (CSRF)</span>
 <span class="n"> Using Components with Known Vulnerabilities</span>
-<span class="X"> Unvalidated Redirects and Forwards</span>
+<span class="Y"> Unvalidated Redirects and Forwards</span>
 </p>
 ---
 ## Poor Authorisation
@@ -76,9 +82,9 @@ Note: they made the OWASP Top 10
 <span class="n"> Broken Authentication and Session Management</span>
 <span class="n"> Cross-Site Scripting (XSS)</span>
 <span class="n"> Insecure Direct Object References</span>
-<span class="X"> Security Misconfiguration</span>
-<span class="X"> Sensitive Data Exposure</span>
-<span class="X"> Missing Function Level Access Control</span>
+<span class="Z"> Security Misconfiguration</span>
+<span class="Z"> Sensitive Data Exposure</span>
+<span class="Z"> Missing Function Level Access Control</span>
 <span class="n"> Cross-Site Request Forgery (CSRF)</span>
 <span class="n"> Using Components with Known Vulnerabilities</span>
 <span class="n"> Unvalidated Redirects and Forwards</span>
@@ -94,22 +100,34 @@ Note: they made the OWASP Top 10
 <span class="n"> Sensitive Data Exposure</span>
 <span class="n"> Missing Function Level Access Control</span>
 <span class="n"> Cross-Site Request Forgery (CSRF)</span>
-<span class="X"> Using Components with Known Vulnerabilities</span>
+<span class="C"> Using Components with Known Vulnerabilities</span>
 <span class="n"> Unvalidated Redirects and Forwards</span>
 </p>
 ---
 #= CVEs -> Patches
 ## Free fixes!
+
+
+Note: Applying things like Windows Updates is **super important**
 ---
 #= How long has it been since you last patched?
+
+Note: in the last month?
+
+year?
+
+... ever?
 ---
 # In the last 9 months...
 ## Content Management System CVEs
 #### &nbsp;
-###- Drupal - 172
-###- Wordpress - 107
+###- Wordpress - 78
+###- Drupal - 67
 ###- Magento - 7
-###- Joomla - 1
+###- Joomla - 4
+
+<span class="dasfoot"><a href="https://cve.mitre.org">https://cve.mitre.org</a></span>
+Note: Numbers for Wordpress/Drupal may be slightly out, because of modules vs main app
 ---
 #= But it's not just<br>your CMS
 ---
@@ -119,16 +137,21 @@ Note: they made the OWASP Top 10
 ###- Django - 14
 ###- Ruby on Rails - 5
 ###- Symfony - 2
+<span class="dasfoot"><a href="https://cve.mitre.org">https://cve.mitre.org</a></span>
 ---
 #= But it's not just<br>your framework
 ---
 # In the last 9 months...
 ## Language CVEs
 #### &nbsp;
-###- PHP - 133
+###- PHP - > 50
 ###- Perl - 6
 ###- Python - 4
 ###- Ruby - 2
+
+<span class="dasfoot"><a href="https://cve.mitre.org">https://cve.mitre.org</a></span>
+---
+Note: Hard to get an exact number
 ---
 #= But it's not just<br>your language
 ---
@@ -158,6 +181,7 @@ Note: they made the OWASP Top 10
 ## Nginx
 ## IIS
 ## Apache
+<span class="dasfoot"><a href="https://cve.mitre.org">https://cve.mitre.org</a></span>
 ---
 #= But it's not just<br>your entire website
 ---
@@ -167,6 +191,7 @@ Note: they made the OWASP Top 10
 ## Confluence
 ## SugarCRM
 ## and many, *many* more...
+<span class="dasfoot"><a href="https://cve.mitre.org">https://cve.mitre.org</a></span>
 ---
 #= But wait! That's not all!
 ---
@@ -185,27 +210,35 @@ Doesn't include bad actors
 ---
 #= PHP 5.0?
 ##- Upgrade. Unmaintained. 
+<span class="dasfootc"><a href="http://php.net/eol">https://php.net/eol</a></span>
 ---
 #= PHP 5.1?
 ##- Upgrade. Unmaintained. 
+<span class="dasfootc"><a href="http://php.net/eol">https://php.net/eol</a></span>
 ---
 #= PHP 5.2?
 ##- Upgrade. Unmaintained. 
+<span class="dasfootc"><a href="http://php.net/eol">https://php.net/eol</a></span>
 ---
 #= PHP 5.3?
 ##- Upgrade. Unmaintained. 
+<span class="dasfootc"><a href="http://php.net/eol">https://php.net/eol</a></span>
 ---
 #= PHP 5.4?
 ##- Upgrade. Unmaintained. 
+<span class="dasfootc"><a href="http://php.net/eol">https://php.net/eol</a></span>
 ---
 #= PHP 5.5?
 ##- Keep your patches up to date.
+<span class="dasfootc"><a href="http://php.net/eol">https://php.net/eol</a></span>
 ---
 #= PHP 5.6?
 ##- Keep your patches up to date.
+<span class="dasfootc"><a href="http://php.net/eol">https://php.net/eol</a></span>
 ---
 #= PHP 7?
 ##- ...
+<span class="dasfootc"><a href="http://php.net/eol">https://php.net/eol</a></span>
 Note: PHP 7.0.0 RC3 2015-09-17. If in production...
 ---
 #= So just how much *don't* we patch?
@@ -223,15 +256,8 @@ Note: PHP 7.0.0 RC3 2015-09-17. If in production...
 ## Drupal 55%
 ## Wordpress 40%
 
-<footer>
-<small>
-<br>
-<br>
-<br>
-Data from w3techs correlated by known linux distribution numbers<br>
-http://blog.ircmaxell.com/2014/12/php-install-statistics.html
-</small>
-</footer>
+<span class="dasfoot">http://blog.ircmaxell.com/2014/12/php-install-statistics.html
+</span>
 ---
 
 #= But, but, but...

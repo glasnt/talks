@@ -16,17 +16,23 @@ Note: Take note of any other stacks, and adlib appropriately.
 ---
 # What the CVE? <!-- .slide: class="center" -->
 ---
-# CVE <!-- .element: style="margin-bottom: 1em" -->
+# CVE
 ## Common<br>Vulnerabilities and Exploits <!-- .element: class="fragment" -->
 ### Uniquely identified <!-- .element: class="fragment" -->
 ### <p><code>CVE-YYYY-NNNN</code></p> <!-- .element: class="fragment" -->
 ### <p><code>+NNN</code></p> <!-- .element: class="fragment" -->
+Note: up to 10,000 p/a up until last year
+Now 7 N's -> 10,000,000
+
+Only when required in a calendar year
+
+Highest CVE number so far == 76xx-ish
 ---
 # OWASP <!-- .slide: class="center" -->
 ## Open Web Application<br>Security Project <!-- .element: class="fragment" -->
 ## https://www.oswap.org <!-- .element: class="fragment" -->
 
-Note: they made the OWASP Top 10
+Note: they make the OWASP Top 10
 ---
 ## OWASP Top 10
 <p align="left">
@@ -59,15 +65,15 @@ Note: they made the OWASP Top 10
 ## Poor Authentication
 <p align="left">
 <span class="n"> Injection</span>
-<span class="X"> Broken Authentication and Session Management</span>
+<span class="Y"> Broken Authentication and Session Management</span>
 <span class="n"> Cross-Site Scripting (XSS)</span>
-<span class="X"> Insecure Direct Object References</span>
+<span class="Y"> Insecure Direct Object References</span>
 <span class="n"> Security Misconfiguration</span>
 <span class="n"> Sensitive Data Exposure</span>
 <span class="n"> Missing Function Level Access Control</span>
 <span class="n"> Cross-Site Request Forgery (CSRF)</span>
 <span class="n"> Using Components with Known Vulnerabilities</span>
-<span class="X"> Unvalidated Redirects and Forwards</span>
+<span class="Y"> Unvalidated Redirects and Forwards</span>
 </p> 
 ---
 ## Poor Authorisation
@@ -76,9 +82,9 @@ Note: they made the OWASP Top 10
 <span class="n"> Broken Authentication and Session Management</span>
 <span class="n"> Cross-Site Scripting (XSS)</span>
 <span class="n"> Insecure Direct Object References</span>
-<span class="X"> Security Misconfiguration</span>
-<span class="X"> Sensitive Data Exposure</span>
-<span class="X"> Missing Function Level Access Control</span>
+<span class="Z"> Security Misconfiguration</span>
+<span class="Z"> Sensitive Data Exposure</span>
+<span class="Z"> Missing Function Level Access Control</span>
 <span class="n"> Cross-Site Request Forgery (CSRF)</span>
 <span class="n"> Using Components with Known Vulnerabilities</span>
 <span class="n"> Unvalidated Redirects and Forwards</span>
@@ -94,56 +100,73 @@ Note: they made the OWASP Top 10
 <span class="n"> Sensitive Data Exposure</span>
 <span class="n"> Missing Function Level Access Control</span>
 <span class="n"> Cross-Site Request Forgery (CSRF)</span>
-<span class="X"> Using Components with Known Vulnerabilities</span>
+<span class="C"> Using Components with Known Vulnerabilities</span>
 <span class="n"> Unvalidated Redirects and Forwards</span>
 </p> 
 ---
 # CVEs -> Patches <!-- .slide: class="center" -->
 ## Free fixes!
+
+
+Note: Applying things like Windows Updates is **super important**
 ---
 # How long has it been since you last patched? <!-- .slide: class="center" -->
+
+Note: in the last month?
+
+year? 
+
+... ever?
 ---
-# In the last 9 months... <!-- .element: style="margin-bottom: 1em" -->
+# In the last 9 months...
 ## Content Management System CVEs
 #### &nbsp;
-### Drupal - 172 <!-- .element: class="fragment" -->
-### Wordpress - 107 <!-- .element: class="fragment" -->
+### Wordpress - 78 <!-- .element: class="fragment" -->
+### Drupal - 67 <!-- .element: class="fragment" -->
 ### Magento - 7 <!-- .element: class="fragment" -->
-### Joomla - 1 <!-- .element: class="fragment" -->
+### Joomla - 4 <!-- .element: class="fragment" -->
+
+<span class="dasfoot"><a href="https://cve.mitre.org">https://cve.mitre.org</a></span>
+Note: Numbers for Wordpress/Drupal may be slightly out, because of modules vs main app
 ---
 # But it's not just<br>your CMS <!-- .slide: class="center" -->
 ---
-# In the last 9 months... <!-- .element: style="margin-bottom: 1em" -->
+# In the last 9 months...
 ## Framework CVEs
 #### &nbsp;
 ### Django - 14 <!-- .element: class="fragment" -->
 ### Ruby on Rails - 5 <!-- .element: class="fragment" -->
 ### Symfony - 2 <!-- .element: class="fragment" -->
+<span class="dasfoot"><a href="https://cve.mitre.org">https://cve.mitre.org</a></span>
 ---
 # But it's not just<br>your framework <!-- .slide: class="center" -->
 ---
-# In the last 9 months... <!-- .element: style="margin-bottom: 1em" -->
+# In the last 9 months...
 ## Language CVEs
 #### &nbsp;
-### PHP - 133 <!-- .element: class="fragment" -->
+### PHP - > 50 <!-- .element: class="fragment" -->
 ### Perl - 6 <!-- .element: class="fragment" -->
 ### Python - 4 <!-- .element: class="fragment" -->
 ### Ruby - 2 <!-- .element: class="fragment" -->
+
+<span class="dasfoot"><a href="https://cve.mitre.org">https://cve.mitre.org</a></span>
+---
+Note: Hard to get an exact number
 ---
 # But it's not just<br>your language <!-- .slide: class="center" -->
 ---
-# In the last 12 months... <!-- .element: style="margin-bottom: 1em" -->
+# In the last 12 months...
 ## Operating System CVEs
 #### &nbsp;
 ### CVE-2014-6271<br>CVE-2015-0204<br>CVE-2015-3456 <!-- .element: class="fragment" -->
 ---
-# CVE-2014-6271 <!-- .element: style="margin-bottom: 1em" -->
+# CVE-2014-6271
  <img src="pictures/ghost.png"> <!-- .element: class="fragment" -->
 ---
-# CVE-2015-0204 <!-- .element: style="margin-bottom: 1em" -->
+# CVE-2015-0204
  <img src="pictures/venom.png"> <!-- .element: class="fragment" -->
 ---
-# CVE-2015-3456 <!-- .element: style="margin-bottom: 1em" -->
+# CVE-2015-3456
  <img src="pictures/shellshock.png"> <!-- .element: class="fragment" -->
 ---
 # Logos bring recognition <!-- .slide: class="center" -->
@@ -153,20 +176,22 @@ Note: they made the OWASP Top 10
 ---
 # But it's not just<br>your application stack <!-- .slide: class="center" -->
 ---
-# CVEs recorded against: <!-- .element: style="margin-bottom: 1em" -->
+# CVEs recorded against:
 ## &nbsp;
 ## Nginx
 ## IIS
 ## Apache
+<span class="dasfoot"><a href="https://cve.mitre.org">https://cve.mitre.org</a></span>
 ---
 # But it's not just<br>your entire website <!-- .slide: class="center" -->
 ---
-# CVEs recorded against: <!-- .element: style="margin-bottom: 1em" -->
+# CVEs recorded against:
 ## JIRA
 ## Request Tracker
 ## Confluence
 ## SugarCRM
 ## and many, *many* more...
+<span class="dasfoot"><a href="https://cve.mitre.org">https://cve.mitre.org</a></span>
 ---
 # But wait! That's not all! <!-- .slide: class="center" -->
 ---
@@ -185,27 +210,35 @@ Doesn't include bad actors
 ---
 # PHP 5.0? <!-- .slide: class="center" -->
 ## Upgrade. Unmaintained. <!-- .element: class="fragment" -->
+<span class="dasfootc"><a href="http://php.net/eol">https://php.net/eol</a></span>
 ---
 # PHP 5.1? <!-- .slide: class="center" -->
 ## Upgrade. Unmaintained. <!-- .element: class="fragment" -->
+<span class="dasfootc"><a href="http://php.net/eol">https://php.net/eol</a></span>
 ---
 # PHP 5.2? <!-- .slide: class="center" -->
 ## Upgrade. Unmaintained. <!-- .element: class="fragment" -->
+<span class="dasfootc"><a href="http://php.net/eol">https://php.net/eol</a></span>
 ---
 # PHP 5.3? <!-- .slide: class="center" -->
 ## Upgrade. Unmaintained. <!-- .element: class="fragment" -->
+<span class="dasfootc"><a href="http://php.net/eol">https://php.net/eol</a></span>
 ---
 # PHP 5.4? <!-- .slide: class="center" -->
 ## Upgrade. Unmaintained. <!-- .element: class="fragment" -->
+<span class="dasfootc"><a href="http://php.net/eol">https://php.net/eol</a></span>
 ---
 # PHP 5.5? <!-- .slide: class="center" -->
 ## Keep your patches up to date. <!-- .element: class="fragment" -->
+<span class="dasfootc"><a href="http://php.net/eol">https://php.net/eol</a></span>
 ---
 # PHP 5.6? <!-- .slide: class="center" -->
 ## Keep your patches up to date. <!-- .element: class="fragment" -->
+<span class="dasfootc"><a href="http://php.net/eol">https://php.net/eol</a></span>
 ---
 # PHP 7? <!-- .slide: class="center" -->
 ## ... <!-- .element: class="fragment" -->
+<span class="dasfootc"><a href="http://php.net/eol">https://php.net/eol</a></span>
 Note: PHP 7.0.0 RC3 2015-09-17. If in production...
 ---
 # So just how much *don't* we patch? <!-- .slide: class="center" -->
@@ -223,15 +256,8 @@ Note: PHP 7.0.0 RC3 2015-09-17. If in production...
 ## Drupal 55%
 ## Wordpress 40%
 
-<footer> 
-<small> 
-<br> 
-<br> 
-<br> 
-Data from w3techs correlated by known linux distribution numbers<br>
-http://blog.ircmaxell.com/2014/12/php-install-statistics.html 
-</small> 
-</footer> 
+<span class="dasfoot">http://blog.ircmaxell.com/2014/12/php-install-statistics.html
+</span> 
 ---
 
 # But, but, but... <!-- .slide: class="center" -->

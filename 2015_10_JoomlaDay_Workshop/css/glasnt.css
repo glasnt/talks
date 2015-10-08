@@ -4,3 +4,8 @@ span.n {
 } 
 
 span.X { display:block; font-weight: bold; padding: 5px;color: orange }
+span.Y { display:block; font-weight: bold; padding: 5px;color: aqua }
+span.Z { display:block; font-weight: bold; padding: 5px;color: lightgreen }
+span.C { display:block; font-weight: bold; padding: 5px;color: red }
+
+span.dasfoot { position:absolute; top: 670px; right: 1em; font-size: 75% }
