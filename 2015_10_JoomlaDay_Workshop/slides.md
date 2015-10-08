@@ -121,20 +121,26 @@ year?
 # In the last 9 months...
 ## Content Management System CVEs
 #### &nbsp;
-### Wordpress - 78 <!-- .element: class="fragment" -->
-### Drupal - 67 <!-- .element: class="fragment" -->
+### Wordpress - ~100* <!-- .element: class="fragment" -->
+### Drupal - ~100* <!-- .element: class="fragment" -->
 ### Magento - 7 <!-- .element: class="fragment" -->
 ### Joomla - 4 <!-- .element: class="fragment" -->
 
-<span class="dasfoot"><a href="https://cve.mitre.org">https://cve.mitre.org</a></span>
-Note: Numbers for Wordpress/Drupal may be slightly out, because of modules vs main app
+<span class="dasfoot">* includes plugins<br><a href="https://cve.mitre.org">https://cve.mitre.org</a></span>
+Note: 
+Drupal/Wordpress are ESTIMATES
+
+Wordpress probably include splugins, also Wordpress 4 within the last year, so lots of movement
+
+Drupal the same, but they also have had Drupal 8
+
 ---
 # But it's not just<br>your CMS <!-- .slide: class="center" -->
 ---
 # In the last 9 months...
 ## Framework CVEs
 #### &nbsp;
-### Django - 14 <!-- .element: class="fragment" -->
+### Django - 13 <!-- .element: class="fragment" -->
 ### Ruby on Rails - 5 <!-- .element: class="fragment" -->
 ### Symfony - 2 <!-- .element: class="fragment" -->
 <span class="dasfoot"><a href="https://cve.mitre.org">https://cve.mitre.org</a></span>
@@ -144,14 +150,24 @@ Note: Numbers for Wordpress/Drupal may be slightly out, because of modules vs ma
 # In the last 9 months...
 ## Language CVEs
 #### &nbsp;
-### PHP - > 50 <!-- .element: class="fragment" -->
 ### Perl - 6 <!-- .element: class="fragment" -->
-### Python - 4 <!-- .element: class="fragment" -->
+### Python - 8 <!-- .element: class="fragment" -->
 ### Ruby - 2 <!-- .element: class="fragment" -->
 
 <span class="dasfoot"><a href="https://cve.mitre.org">https://cve.mitre.org</a></span>
+Note: Hard to get an exact number for PHP
+At one time, research says it was as high as 25% of all vulns
+http://www.coelho.net/php_cve.html 
 ---
-Note: Hard to get an exact number
+
+# PHP <!-- .slide: class="center" -->
+## ... <!-- .element: class="fragment" -->
+---
+
+ <img src="pictures/PHPChart_NoLabels.png" />
+---
+ <img src="pictures/PHPChart_Labels.png" />
+
 ---
 # But it's not just<br>your language <!-- .slide: class="center" -->
 ---
@@ -207,6 +223,10 @@ Doesn't include bad actors
 ---
 # PHP <!-- .slide: class="center" -->
 ## What version are you running? <!-- .element: class="fragment" -->
+---
+# PHP < 5.0? <!-- .slide: class="center" -->
+## Go upgrade. Now. <!-- .element: class="fragment" -->
+<span class="dasfootc"><a href="http://php.net/eol">https://php.net/eol</a></span>
 ---
 # PHP 5.0? <!-- .slide: class="center" -->
 ## Upgrade. Unmaintained. <!-- .element: class="fragment" -->
