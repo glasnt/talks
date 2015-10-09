@@ -29,8 +29,7 @@ Only when required in a calendar year
 Highest CVE number so far == 76xx-ish
 ---
 # OWASP <!-- .slide: class="center" -->
-## Open Web Application<br>Security Project <!-- .element: class="fragment" -->
-## https://www.oswap.org <!-- .element: class="fragment" -->
+## <p>Open Web Application<br>Security Project<br><a href="https://owasp.org">oswap.org</a></p> <!-- .element: class="fragment" -->
 
 Note: they make the OWASP Top 10
 ---
@@ -126,7 +125,7 @@ year?
 ### Magento - 7 <!-- .element: class="fragment" -->
 ### Joomla - 4 <!-- .element: class="fragment" -->
 
-<span class="dasfoot">* includes plugins<br><a href="https://cve.mitre.org">https://cve.mitre.org</a></span>
+<span class="dasfoot"><a href="https://cve.mitre.org">cve.mitre.org</a></span>
 Note: 
 Drupal/Wordpress are ESTIMATES
 
@@ -143,7 +142,7 @@ Drupal the same, but they also have had Drupal 8
 ### Django - 13 <!-- .element: class="fragment" -->
 ### Ruby on Rails - 5 <!-- .element: class="fragment" -->
 ### Symfony - 2 <!-- .element: class="fragment" -->
-<span class="dasfoot"><a href="https://cve.mitre.org">https://cve.mitre.org</a></span>
+<span class="dasfoot"><a href="https://cve.mitre.org">cve.mitre.org</a></span>
 ---
 # But it's not just<br>your framework <!-- .slide: class="center" -->
 ---
@@ -154,7 +153,7 @@ Drupal the same, but they also have had Drupal 8
 ### Python - 8 <!-- .element: class="fragment" -->
 ### Ruby - 2 <!-- .element: class="fragment" -->
 
-<span class="dasfoot"><a href="https://cve.mitre.org">https://cve.mitre.org</a></span>
+<span class="dasfoot"><a href="https://cve.mitre.org">cve.mitre.org</a></span>
 ---
 
 # PHP <!-- .slide: class="center" -->
@@ -221,7 +220,7 @@ Note: Bufferoverflow on openSSL
 ## Nginx
 ## IIS
 ## Apache
-<span class="dasfoot"><a href="https://cve.mitre.org">https://cve.mitre.org</a></span>
+<span class="dasfoot"><a href="https://cve.mitre.org">cve.mitre.org</a></span>
 ---
 # But it's not just<br>your entire website <!-- .slide: class="center" -->
 ---
@@ -231,7 +230,7 @@ Note: Bufferoverflow on openSSL
 ## Confluence
 ## SugarCRM
 ## and many, *many* more...
-<span class="dasfoot"><a href="https://cve.mitre.org">https://cve.mitre.org</a></span>
+<span class="dasfoot"><a href="https://cve.mitre.org">cve.mitre.org</a></span>
 ---
 # But wait! That's not all! <!-- .slide: class="center" -->
 ---
@@ -322,6 +321,9 @@ Note: PHP 7.0.0 RC3 2015-09-17. If in production...
 ---
 
 # "That won't<br>happen to me!" <!-- .slide: class="center" -->
+---
+# Wall Street Journal <!-- .slide: class="center" -->
+Note: Advisary note sent to customers 2015-10-08
 ---
 # KMart <!-- .slide: class="center" -->
 Note: extracted limited information, exploited a vulnerability
