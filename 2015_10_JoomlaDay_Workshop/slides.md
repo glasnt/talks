@@ -407,4 +407,7 @@ Let's do some hacking!
 ---
 <section data-background="#ffffff"><h1>
 <br><br> 
-PLACEHOLDER<br>Wifi Information ETC</h1></section>
+Wireless: sqlwireless
+Password: none
+</h1> 
+</section> 
