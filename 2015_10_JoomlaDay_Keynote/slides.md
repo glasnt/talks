@@ -238,16 +238,12 @@ Note: But it didn't get that much traction
 
 Leslie reported ~30 known LinkedIn recommendation
 
-I've done talks for: Python, PHP, Ops
-
-I've done talks in multiple different cities
+I've done talks in multiple different cities/languages
 
 It's always the same, one or two after the talk
 
 (PyConAU exception - because I refused to get off stage until 10 tweets happened)
 (This did result in some residiual activity during the sprints)
-
-
 Maybe y'all need a LIVE DEMO
 
 ---
@@ -702,7 +698,7 @@ Note: By default - one hello world in c++ everyday for as many days as you speci
 
 ---
 
- <img src="pictures/revealjs.png" />
+ <img src="pictures/reveal_01.png" />
 
 Note: Looking at any github project page we can see all the contributors right?
 
@@ -710,22 +706,24 @@ THere's a button right at the top and everything
 
 ---
 
- <img src="pictures/revealjs2.png" />
+ <img src="pictures/reveal_02.png" />
 
 Note: But if we click it, then we don't actually get the contributors
 
 We get the top ones, with a graph, ranked by lines of code
 
 ---
- <img src="pictures/revealjs2a.png" style="margin-top: -50px" />
-<p style="margin-top: -50px">...</p>
- <img src="pictures/revealjs3.png" />
+ <img src="pictures/reveal_03.png" />
 
 Note: And it's only the top 100
 
 ---
 
+# This is only some of the contributors <!-- .slide: class="center" -->
+Note: Not even all the code commiters are listed!
+---
 # This is only some of the contributions <!-- .slide: class="center" -->
+Note: What about everything else
 
 ---
 
