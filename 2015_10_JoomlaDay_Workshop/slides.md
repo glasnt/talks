@@ -178,17 +178,41 @@ At one time, research says it was as high as 25% of all vulns
 ---
 # CVE-2014-6271
  <img src="pictures/ghost.png"> <!-- .element: class="fragment" -->
+Note: GHOST - 27 JAN 2015 -
+
+gethostbyname() buffer overflow - get IPv4 addr by hostname
+
+Surcuri say PHP vuln. because of gethostbyname wrapped in function “wp_http_validate_url()” et a link
+
+
 ---
 # CVE-2015-0204
  <img src="pictures/venom.png"> <!-- .element: class="fragment" -->
+Note: VENOM May 2015
+
+QEMU Virt floppy drive vuln for escaping encapsulation
+
+
 ---
 # CVE-2015-3456
  <img src="pictures/shellshock.png"> <!-- .element: class="fragment" -->
+
+Note: ShellShock - SEP 2014
+
+Bash issue possibly existing since v1.03 Sept 1989
+
+`() { :;};` - environment variable should never be exec, string tricks system
+
+env x='() { :;}; echo vulnerable' bash -c "echo this is a test"
+
+
 ---
 # Logos bring recognition <!-- .slide: class="center" -->
 ---
 # &nbsp; <!-- .slide: class="center" -->
  <img src="pictures/heartbleed.png" />
+
+Note: Bufferoverflow on openSSL
 ---
 # But it's not just<br>your application stack <!-- .slide: class="center" -->
 ---
@@ -227,26 +251,32 @@ Doesn't include bad actors
 # PHP < 5.0? <!-- .slide: class="center" -->
 ## Go upgrade. Now. <!-- .element: class="fragment" -->
 <span class="dasfootc"><a href="http://php.net/eol">https://php.net/eol</a></span>
+Note: 4.4 was EOL 2008
 ---
 # PHP 5.0? <!-- .slide: class="center" -->
 ## Upgrade. Unmaintained. <!-- .element: class="fragment" -->
 <span class="dasfootc"><a href="http://php.net/eol">https://php.net/eol</a></span>
+Note: EOL 5 Sep 2005 10 years ago
 ---
 # PHP 5.1? <!-- .slide: class="center" -->
 ## Upgrade. Unmaintained. <!-- .element: class="fragment" -->
 <span class="dasfootc"><a href="http://php.net/eol">https://php.net/eol</a></span>
+Note: EOL 24 Aug 2006 9 years, 1 month ago
 ---
 # PHP 5.2? <!-- .slide: class="center" -->
 ## Upgrade. Unmaintained. <!-- .element: class="fragment" -->
 <span class="dasfootc"><a href="http://php.net/eol">https://php.net/eol</a></span>
+Note: EOL 6 Jan 2011 4 years, 9 months ago
 ---
 # PHP 5.3? <!-- .slide: class="center" -->
 ## Upgrade. Unmaintained. <!-- .element: class="fragment" -->
 <span class="dasfootc"><a href="http://php.net/eol">https://php.net/eol</a></span>
+Note: EOL 14 Aug 2014 1 year, 1 month ago
 ---
 # PHP 5.4? <!-- .slide: class="center" -->
 ## Upgrade. Unmaintained. <!-- .element: class="fragment" -->
 <span class="dasfootc"><a href="http://php.net/eol">https://php.net/eol</a></span>
+Note: EOL 3 Sep 2015 1 month ago
 ---
 # PHP 5.5? <!-- .slide: class="center" -->
 ## Keep your patches up to date. <!-- .element: class="fragment" -->
