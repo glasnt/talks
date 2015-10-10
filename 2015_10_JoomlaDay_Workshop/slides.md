@@ -249,45 +249,45 @@ Doesn't include bad actors
 ---
 # PHP < 5.0? <!-- .slide: class="center" -->
 ## Go upgrade. Now. <!-- .element: class="fragment" -->
-<span class="dasfootc"><a href="http://php.net/eol">https://php.net/eol</a></span>
+<span class="dasfootc"><a href="http://php.net/eol">php.net/eol</a></span>
 Note: 4.4 was EOL 2008
 ---
 # PHP 5.0? <!-- .slide: class="center" -->
 ## Upgrade. Unmaintained. <!-- .element: class="fragment" -->
-<span class="dasfootc"><a href="http://php.net/eol">https://php.net/eol</a></span>
+<span class="dasfootc"><a href="http://php.net/eol">php.net/eol</a></span>
 Note: EOL 5 Sep 2005 10 years ago
 ---
 # PHP 5.1? <!-- .slide: class="center" -->
 ## Upgrade. Unmaintained. <!-- .element: class="fragment" -->
-<span class="dasfootc"><a href="http://php.net/eol">https://php.net/eol</a></span>
+<span class="dasfootc"><a href="http://php.net/eol">php.net/eol</a></span>
 Note: EOL 24 Aug 2006 9 years, 1 month ago
 ---
 # PHP 5.2? <!-- .slide: class="center" -->
 ## Upgrade. Unmaintained. <!-- .element: class="fragment" -->
-<span class="dasfootc"><a href="http://php.net/eol">https://php.net/eol</a></span>
+<span class="dasfootc"><a href="http://php.net/eol">php.net/eol</a></span>
 Note: EOL 6 Jan 2011 4 years, 9 months ago
 ---
 # PHP 5.3? <!-- .slide: class="center" -->
 ## Upgrade. Unmaintained. <!-- .element: class="fragment" -->
-<span class="dasfootc"><a href="http://php.net/eol">https://php.net/eol</a></span>
+<span class="dasfootc"><a href="http://php.net/eol">php.net/eol</a></span>
 Note: EOL 14 Aug 2014 1 year, 1 month ago
 ---
 # PHP 5.4? <!-- .slide: class="center" -->
 ## Upgrade. Unmaintained. <!-- .element: class="fragment" -->
-<span class="dasfootc"><a href="http://php.net/eol">https://php.net/eol</a></span>
+<span class="dasfootc"><a href="http://php.net/eol">php.net/eol</a></span>
 Note: EOL 3 Sep 2015 1 month ago
 ---
 # PHP 5.5? <!-- .slide: class="center" -->
 ## Keep your patches up to date. <!-- .element: class="fragment" -->
-<span class="dasfootc"><a href="http://php.net/eol">https://php.net/eol</a></span>
+<span class="dasfootc"><a href="http://php.net/eol">php.net/eol</a></span>
 ---
 # PHP 5.6? <!-- .slide: class="center" -->
 ## Keep your patches up to date. <!-- .element: class="fragment" -->
-<span class="dasfootc"><a href="http://php.net/eol">https://php.net/eol</a></span>
+<span class="dasfootc"><a href="http://php.net/eol">php.net/eol</a></span>
 ---
 # PHP 7? <!-- .slide: class="center" -->
 ## ... <!-- .element: class="fragment" -->
-<span class="dasfootc"><a href="http://php.net/eol">https://php.net/eol</a></span>
+<span class="dasfootc"><a href="http://php.net/eol">php.net/eol</a></span>
 Note: PHP 7.0.0 RC3 2015-09-17. If in production...
 ---
 # So just how much *don't* we patch? <!-- .slide: class="center" -->
