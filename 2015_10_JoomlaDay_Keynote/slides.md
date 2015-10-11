@@ -148,13 +148,14 @@ Note: Which I've turned into a easy to read manual to try and spread the message
 # DÅLIGORDLEK
  <img src="pictures/hatrack.svg" />
 
-
+<span class="dasfoot">#LABHR</span>
 Note: It's a bad pun
 
 ---
 
  <img src="pictures/meeting.svg" style="margin-top: -50px" />
 
+<span class="dasfoot">#LABHR</span>
 Note: Leslie and Deb meet over coffee
 
 Leslie of Google / Elastic
@@ -180,24 +181,28 @@ But no one really knows about it or notices.”
 
  <img src="pictures/Solution_0.svg" />
 
+<span class="dasfoot">#LABHR</span>
 Note: So Leslie + Blog = 5 steps
 
 ---
 
  <img src="pictures/Solution_1.svg" />
 
+<span class="dasfoot">#LABHR</span>
 Note: write the list
 
 ---
 
  <img src="pictures/Solution_2.svg" />
 
+<span class="dasfoot">#LABHR</span>
 Note: send the list
 
 ---
 
  <img src="pictures/Solution_3.svg" />
 
+<span class="dasfoot">#LABHR</span>
 Note: GRAVY
 
 Tweet about it
@@ -206,6 +211,7 @@ Tweet about it
 
  <img src="pictures/Solution_4.svg" />
 
+<span class="dasfoot">#LABHR</span>
 Note: GRAVY #2
 
 Linked in Recommendations
@@ -219,6 +225,7 @@ See later
 
  <img src="pictures/Solution_L.svg" />
 
+<span class="dasfoot">#LABHR</span>
 
 Note: GRAVY #3
 
@@ -228,6 +235,7 @@ Do it for someone not like you
 
  <img src="pictures/yay.svg" />
 
+<span class="dasfoot">#LABHR</span>
 Note: Simple! Nice! Helpful!
 
 ---
