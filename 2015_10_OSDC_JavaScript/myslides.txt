@@ -138,31 +138,34 @@ Note: Associativity? Pfft!
 ---
 #= Equality
 ---
-#>  > 0 ==  false  
+#>  > 0 ==&nbsp; false  
 #>- true
 #>- > 0 === false  
 #>- false
-#>- > 1 ==  "1"
+#>- > 1 == &nbsp;"1"
 #>- true 
 #>- > 1 === "1"
 #>- false
 ---
 <p></p>
-#> > 0 ==  false  
+#> > 0 ==&nbsp; false  
 #> true
 #> > 0 === false  
 #> false
-#> > 1 ==  "1" <c> // equality</c> 
+#> > 1 == &nbsp;"1" <c> // equality</c> 
 #> true 
 #> > 1 === "1" <c>// equality without</c>
 #> false &nbsp; &nbsp; &nbsp; <c>// type co-ersion</c>
 ---
 
 <br><br>
-> The fact that === exists in languages like php and js is a sign that those languages are ridiculously broken.
+> The fact that === exists in languages like PHP and JavaScript is a sign that those languages are ridiculously broken.
 >
 >  -- @TheColonial
 
+---
+
+# But, why is it so?
 ---
 
 #= JavaScript: A History
@@ -170,7 +173,7 @@ Note: Associativity? Pfft!
 
 ---
 
-# JavaScript isn't the only language that has wats
+## JavaScript isn't the only language that has wats
 
 ---
 
