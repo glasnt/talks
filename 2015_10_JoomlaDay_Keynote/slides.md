@@ -825,7 +825,7 @@ Note: introducing octohat
 ---
 
 # joomla/joomla-cms <!-- .slide: class="center" -->
-## Code Contributors: 352 <!-- .element: class="fragment" -->
+## Code Contributors: 414 <!-- .element: class="fragment" -->
 ## Non-Code Contributors: 266* <!-- .element: class="fragment" -->
 ### * Since June 2015, ~700 issues/PRs <!-- .element: class="fragment" -->
 

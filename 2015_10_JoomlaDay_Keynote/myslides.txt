@@ -825,7 +825,7 @@ Note: introducing octohat
 ---
 
 #= joomla/joomla-cms
-##- Code Contributors: 352
+##- Code Contributors: 414
 ##- Non-Code Contributors: 266*
 ###- * Since June 2015, ~700 issues/PRs
 
