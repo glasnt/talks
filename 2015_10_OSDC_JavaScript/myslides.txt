@@ -35,7 +35,7 @@ Note: Tapestry and Cooking and Yelling
 ---
 <p></p>
 #> > ans = ""; <c>//global</c>
-#> > function q() {<br>> &nbsp; var ans = 42; <c>//local</c><br>> &nbsp; return ans;<br>> }
+#> > function question() {<br>> &nbsp; var ans = 42; <c>//local</c><br>> &nbsp; return ans;<br>> }
 #> > console.log(ans);
 #> ""
 #> > console.log(question());
@@ -45,7 +45,7 @@ Note: Tapestry and Cooking and Yelling
 ---
 <p></p>
 #> > ans = ""; <c>//global</c>
-#> > function q() {<br>> &nbsp; <s>var</s> ans = 42; <c>//global</c><br>> &nbsp; return ans;<br>> }
+#> > function question() {<br>> &nbsp; <s>var</s> ans = 42; <c>//global</c><br>> &nbsp; return ans;<br>> }
 #> > console.log(ans);
 #> ""
 #> > console.log(question());
@@ -165,52 +165,112 @@ Note: Associativity? Pfft!
 
 ---
 
-# But, why is it so?
+#= Why is<br>JavaScript<br>so awful?
 ---
 
-#= JavaScript: A History
-##- ~~ wavey time passing lines ~~
+##= ~~ wavey time passing lines ~~
 
 ---
-
-## JavaScript isn't the only language that has wats
+## things to add here
+### History
+### 10 days
+### flash e.g. copypaste buffer
+### java applets
+### node.js - metal
+### asm.js - compile down
+### cross compilers
+### into JS - batavia, typescript, coffeescript
+### out of JS - node.js, cinnamon, other things
 
 ---
+#= JavaScript isn't awful
+---
+#= JavaScript is awe-ful
+Note: It's amazing that we can take something so broken and made so much
 
-# Let's talk about Python
+The devil you know
 ---
 
+#= But just remember...
+---
+
+##= JavaScript isn't the only language that has wats
+
+---
+#= <pre>#!/usr/bin/env python</pre>
+---
 #> >>> ans = 42
 #>- >>> def question(): 
 #>- ... &nbsp; &nbsp; return ans
 #>- >>> question() 
-#>- 42
+#>- ???
+---
+<p></p>
+#> >>> ans = 42
+#> >>> def question(): 
+#> ... &nbsp; &nbsp; return ans
+#> >>> question() 
+#> 42
+
+Note: undefined answer within scope of the function
+
+but it still works
 
 ---
-
 #> >>> ans = 42
 #>- >>> def question(): 
 #>- ... &nbsp; &nbsp; ans += 1
 #>- ... &nbsp; &nbsp; return ans
 #>- >>> question() 
-#>- Traceback (most recent call last):<br> &nbsp;File "<stdin>", line 1, in <module><br> &nbsp;File "<stdin>", line 2, in question<br>  UnboundLocalError: local variable 'ans' referenced before assignment
+#>- ???
+---
+<p></p>
+#> >>> ans = 42
+#> >>> def question(): 
+#> ... &nbsp; &nbsp; ans += 1
+#> ... &nbsp; &nbsp; return ans
+#> >>> question() 
+#> Traceback (most recent call last):<br> &nbsp;File "<stdin>", line 1, in <module><br> &nbsp;File "<stdin>", line 2, in question<br>  UnboundLocalError: local variable 'ans' referenced before assignment
 
+Note: manipulation of variable within the scope
 ---
 #> >>> a = 256
 #>- >>> b = 256
 #>- >>> a **is** b
-#>- True
+#>- ???
 ---
-#> >>> a = 257
-#>- >>> b = 257
-#>- >>> a **is** b
-#>- False
-#>- <br>>>> a = 257; b = 257
-#>- >>> a **is** b
-#>- True
+<p></p>
+#> >>> a = 256
+#> >>> b = 256
+#> >>> a **is** b
+#> True
 
 ---
-#= Wat
+#>  >>> a = 257
+#>- >>> b = 257
+#>- >>> a **is** b
+#>- ???
+---
+<p></p>
+#> >>> a = 257
+#> >>> b = 257
+#> >>> a **is** b
+#> False
+#>- <br>>>> a = 257; b = 257
+#>- >>> a **is** b
+#>- ???
+---
+<p></p>
+#> >>> a = 257
+#> >>> b = 257
+#> >>> a **is** b
+#> False
+#> <br>>>> a = 257; b = 257
+#> >>> a **is** b
+#> True
+
+---
+#= wat
 
 ---
 ### Wat - Gary Bernhardt, CodeMash 2012
