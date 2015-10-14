@@ -1,4 +1,3 @@
-<p></p> 
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%"><c>// If you can read this, yay!</code></pre></div>
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%"><s>123456789 123456789 123456789 12</s></code></pre></div>
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> console.log("Hello World");</code></pre></div>
@@ -169,18 +168,130 @@ Note: Associativity? Pfft!
 ---
 
 ## ~~ wavey time passing lines ~~ <!-- .slide: class="center" -->
+---
+
+# 1995 <!-- .slide: class="center" -->
+---
+ <img src="pictures/needanimage.png" />
+
+Note: The year is 1995. The documentary Hackers has been released, and people are burning through the data with their 28.8K BAUD modems
 
 ---
-## things to add here
-### History
-### 10 days
-### flash e.g. copypaste buffer
-### java applets
-### node.js - metal
-### asm.js - compile down
-### cross compilers
-### into JS - batavia, typescript, coffeescript
-### out of JS - node.js, cinnamon, other things
+
+ <img src="pictures/needanimage.png" />
+Note: Brendan Eich wanted to do fancy things
+
+Made JavaScript in 10 days
+
+Only took 6 to create the world
+
+Waterfall software development cycle estimages
+
+---
+
+ <img src="pictures/needanimage.png" />
+
+Note: Netscape view of javascript
+
+Features: marquee title text
+
+(only include the basic stuff)
+
+---
+ <img src="pictures/needanimage.png" />
+
+Note: Lock-in. what could we do
+
+Applets 
+
+Flash 
+---
+
+<p></p> 
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">alert("My value = " + value);</code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">// alert based debugging</code></pre></div>
+
+ <img src="pictures/consolealert.png" />
+
+---
+
+# ~~ fast forward ~~ <!-- .slide: class="center" -->
+---
+
+# 2000 <!-- .slide: class="center" -->
+
+---
+
+ <img src="pictures/image.png" />
+
+Note: big names in dotcomboom etc
+
+---
+
+ <img src="pictures/bubbleburst.png" />
+
+Note: pop
+
+---
+# ~~ fast forward ~~ <!-- .slide: class="center" -->
+---
+# 2005 <!-- .slide: class="center" -->
+---
+
+ <img src="pictures/needanimage.png" />
+
+Note: Things getting back together again
+
+---
+
+# 2006 <!-- .slide: class="center" -->
+---
+
+ <img src="pictures/firebug.png" />
+
+Note: FIREBUG OMG
+---
+
+ <img src="pictures/mootools.png" />
+---
+
+ <img src="pictures/jquery.png" />
+---
+
+ <img src="pictures/rise of the framworks.png" />
+
+Note: Why write javascript when you can use nice things that other people have written?
+---
+
+# 2009 <!-- .slide: class="center" -->
+---
+
+ <img src="pictures/node.js" />
+
+---
+
+## But I don't want to write<br>JavaScript<br>;_; <!-- .slide: class="center" -->
+
+---
+
+ <img src="pictures/coffeescirpt.png" />
+## Not-shite JS -> JavaScript
+---
+
+ <img src="pictures/typescript.png" />
+## Functional* -> JavaScript
+
+---
+
+ <img src="pictures/batavia.png" />
+## Python -> JavaScript
+
+---
+
+## But I don't want to write<br>anything *other* than<br>JavaScript <!-- .slide: class="center" -->
+---
+
+Note: crosscompilers
 
 ---
 # JavaScript isn't awful <!-- .slide: class="center" -->
@@ -191,13 +302,34 @@ Note: It's amazing that we can take something so broken and made so much
 The devil you know
 ---
 
+# R.I.P<br>Java Applets <!-- .slide: class="center" -->
+### &nbsp;
+---
+# R.I.P<br>Flash <!-- .slide: class="center" -->
+### (mostly)
+---
+# JavaScript is awesome. <!-- .slide: class="center" -->
+---
 # But just remember... <!-- .slide: class="center" -->
+## other languages have wats <!-- .slide: class="center" -->
 ---
 
-## JavaScript isn't the only language that has wats <!-- .slide: class="center" -->
+# <pre>#!/usr/bin/env java</pre> <!-- .slide: class="center" -->
+
+Note: Let's about about Java
+
+---
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">/&#42;&#42; read from a file &#42;&#42;/</code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">filename = "myfile.txt"</code></pre></div> <!-- .element: class="fragment" -->
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">f = new FileInputStream(filename);</code></pre></div> <!-- .element: class="fragment" -->
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">i = new InputStreamReader(fis);</code></pre></div> <!-- .element: class="fragment" -->
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">r = new BufferedReader(isr);</code></pre></div> <!-- .element: class="fragment" -->
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">String line = rdr.readLine();</code></pre></div> <!-- .element: class="fragment" -->
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">while(line != null){<br>&nbsp;&nbsp;/&#42; stuff &#42;/<br>&nbsp;&nbsp;line = rdr.readLine();<br>}</code></pre></div> <!-- .element: class="fragment" -->
 
 ---
 # <pre>#!/usr/bin/env python</pre> <!-- .slide: class="center" -->
+Note: Let's talk about Python
 ---
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">>>> ans = 42</code></pre></div>
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">>>> def question():</code></pre></div> <!-- .element: class="fragment" -->

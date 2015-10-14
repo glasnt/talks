@@ -1,4 +1,3 @@
-<p></p>
 #> <c>// If you can read this, yay!
 #> <s>123456789 123456789 123456789 12</s>
 #> > console.log("Hello World");
@@ -169,18 +168,130 @@ Note: Associativity? Pfft!
 ---
 
 ##= ~~ wavey time passing lines ~~
+---
+
+#= 1995
+---
+@ needanimage.png
+
+Note: The year is 1995. The documentary Hackers has been released, and people are burning through the data with their 28.8K BAUD modems
 
 ---
-## things to add here
-### History
-### 10 days
-### flash e.g. copypaste buffer
-### java applets
-### node.js - metal
-### asm.js - compile down
-### cross compilers
-### into JS - batavia, typescript, coffeescript
-### out of JS - node.js, cinnamon, other things
+
+@ needanimage.png
+Note: Brendan Eich wanted to do fancy things
+
+Made JavaScript in 10 days
+
+Only took 6 to create the world
+
+Waterfall software development cycle estimages
+
+---
+
+@ needanimage.png
+
+Note: Netscape view of javascript
+
+Features: marquee title text
+
+(only include the basic stuff)
+
+---
+@ needanimage.png
+
+Note: Lock-in. what could we do
+
+Applets
+
+Flash
+---
+
+<p></p>
+#> alert("My value = " + value);
+#> // alert based debugging
+
+@ consolealert.png
+
+---
+
+#= ~~ fast forward ~~
+---
+
+#= 2000
+
+---
+
+@ image.png
+
+Note: big names in dotcomboom etc
+
+---
+
+@ bubbleburst.png
+
+Note: pop
+
+---
+#= ~~ fast forward ~~
+---
+#= 2005
+---
+
+@ needanimage.png
+
+Note: Things getting back together again
+
+---
+
+#= 2006
+---
+
+@ firebug.png
+
+Note: FIREBUG OMG
+---
+
+@ mootools.png
+---
+
+@ jquery.png
+---
+
+@ rise of the framworks.png
+
+Note: Why write javascript when you can use nice things that other people have written?
+---
+
+#= 2009
+---
+
+@ node.js
+
+---
+
+##= But I don't want to write<br>JavaScript<br>;_;
+
+---
+
+@ coffeescirpt.png
+## Not-shite JS -> JavaScript
+---
+
+@ typescript.png
+## Functional* -> JavaScript
+
+---
+
+@ batavia.png
+## Python -> JavaScript
+
+---
+
+##= But I don't want to write<br>anything *other* than<br>JavaScript
+---
+
+Note: crosscompilers
 
 ---
 #= JavaScript isn't awful
@@ -191,13 +302,34 @@ Note: It's amazing that we can take something so broken and made so much
 The devil you know
 ---
 
+#= R.I.P<br>Java Applets
+### &nbsp;
+---
+#= R.I.P<br>Flash
+### (mostly)
+---
+#= JavaScript is awesome.
+---
 #= But just remember...
+##= other languages have wats
 ---
 
-##= JavaScript isn't the only language that has wats
+#= <pre>#!/usr/bin/env java</pre>
+
+Note: Let's about about Java
+
+---
+#> /&#42;&#42; read from a file &#42;&#42;/
+#>- filename = "myfile.txt"
+#>- f = new FileInputStream(filename);
+#>- i = new InputStreamReader(fis);
+#>- r = new BufferedReader(isr);
+#>- String line = rdr.readLine();
+#>- while(line != null){<br>&nbsp;&nbsp;/&#42; stuff &#42;/<br>&nbsp;&nbsp;line = rdr.readLine();<br>}
 
 ---
 #= <pre>#!/usr/bin/env python</pre>
+Note: Let's talk about Python
 ---
 #> >>> ans = 42
 #>- >>> def question(): 
