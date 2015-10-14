@@ -11,7 +11,10 @@
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">=> 0..3 <c>// Console is 11x32 </c></code></pre></div>
 ---
 
-# JavaScript is Awe-ful <!-- .slide: class="center" -->
+<br> 
+<br> 
+# JavaScript is Awe-ful
+<br> 
  <img src="pictures/footer.svg" />
 ---
 
@@ -22,6 +25,9 @@ Note: Tapestry and Cooking and Yelling
 ---
 
 # Global Variables <!-- .slide: class="center" -->
+---
+<p></p> 
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> ans</code></pre></div>
 ---
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> ans = "";</code></pre></div>
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> function question() {<br>> &nbsp; var ans = 42;<br>> &nbsp; return ans;<br>> }</code></pre></div> <!-- .element: class="fragment" -->
@@ -126,10 +132,10 @@ Note: Associativity? Pfft!
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> for (var k in arr) {<br>>&nbsp;&nbsp; console.log(k);<br>> }</code></pre></div> <!-- .element: class="fragment" -->
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">0<br>1<br>2<br>hello</code></pre></div> <!-- .element: class="fragment" -->
 ---
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> arr.push("append")</code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> arr.push("append");</code></pre></div>
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">4</code></pre></div> <!-- .element: class="fragment" -->
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> c = 0</code></pre></div> <!-- .element: class="fragment" -->
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> for(var k in arr){ c++ }</code></pre></div> <!-- .element: class="fragment" -->
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> c = 0;</code></pre></div> <!-- .element: class="fragment" -->
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> for (var k in arr) {<br>>&nbsp; &nbsp; c = c + 1; <br>> }</code></pre></div> <!-- .element: class="fragment" -->
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> c</code></pre></div> <!-- .element: class="fragment" -->
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">5</code></pre></div> <!-- .element: class="fragment" -->
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> arr.length</code></pre></div> <!-- .element: class="fragment" -->
@@ -170,15 +176,48 @@ Note: Associativity? Pfft!
 ## ~~ wavey time passing lines ~~ <!-- .slide: class="center" -->
 ---
 
-# 1995 <!-- .slide: class="center" -->
+# 1993 <!-- .slide: class="center" -->
 ---
- <img src="pictures/needanimage.png" />
 
+<pre><code> 
+&nbsp; Hypertext Markup Language (HTML)&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Tim Berners-Lee, CERN
+&nbsp; Internet Draft&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Daniel Connolly, Atrium
+&nbsp; IIIR Working Group&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; June 1993
+
+
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Hypertext Markup Language (HTML)
+
+&nbsp; &nbsp; &nbsp; A Representation of Textual Information and MetaInformation
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; for Retrieval and Interchange
+</pre></code> 
+... 
+<pre><code> 
+&nbsp; This is version 1.2 of this draft. This document is available in
+&nbsp; hypertext on the World-Wide Web as
+&nbsp; http://info.cern.ch/hypertext/WWW/MarkUp/HTML.html
+</pre></code> 
+
+<span class="dasfoot"><a href="http://www.w3.org/MarkUp/draft-ietf-iiir-html-01.txt">http://www.w3.org/MarkUp/draft-ietf-iiir-html-01.txt</a></span>
+---
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">&lt;!-- 1995 HTML --></code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">&lt;HTML></code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">&lt;TITLE>My Page&lt;/TITLE></code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">&lt;BODY></code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">&nbsp; &nbsp; &lt;P>Hello World Wide Web&lt;/P></code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">&lt;/BODY></code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">&lt;/HTML></code></pre></div>
+
+Note: YELLING TAGS
+
+
+---
+# 1995 <!-- .slide: class="center" -->
 Note: The year is 1995. The documentary Hackers has been released, and people are burning through the data with their 28.8K BAUD modems
 
 ---
 
- <img src="pictures/needanimage.png" />
+# <img src="pictures/javascript_1995.png"> <!-- .slide: class="center" -->
+
 Note: Brendan Eich wanted to do fancy things
 
 Made JavaScript in 10 days
@@ -186,16 +225,6 @@ Made JavaScript in 10 days
 Only took 6 to create the world
 
 Waterfall software development cycle estimages
-
----
-
- <img src="pictures/needanimage.png" />
-
-Note: Netscape view of javascript
-
-Features: marquee title text
-
-(only include the basic stuff)
 
 ---
  <img src="pictures/needanimage.png" />
@@ -222,13 +251,13 @@ Flash
 
 ---
 
- <img src="pictures/image.png" />
+@ image.png <!-- .slide: class="center" -->
 
 Note: big names in dotcomboom etc
 
 ---
 
- <img src="pictures/bubbleburst.png" />
+@ bubbleburst.png <!-- .slide: class="center" -->
 
 Note: pop
 
@@ -247,18 +276,18 @@ Note: Things getting back together again
 # 2006 <!-- .slide: class="center" -->
 ---
 
- <img src="pictures/firebug.png" />
+@ firebug.png <!-- .slide: class="center" -->
 
 Note: FIREBUG OMG
 ---
 
- <img src="pictures/mootools.png" />
+@ mootools.png <!-- .slide: class="center" -->
 ---
 
- <img src="pictures/jquery.png" />
+@ jquery.png <!-- .slide: class="center" -->
 ---
 
- <img src="pictures/rise of the framworks.png" />
+@ rise of the framworks.png <!-- .slide: class="center" -->
 
 Note: Why write javascript when you can use nice things that other people have written?
 ---
@@ -266,7 +295,7 @@ Note: Why write javascript when you can use nice things that other people have w
 # 2009 <!-- .slide: class="center" -->
 ---
 
- <img src="pictures/node.js" />
+@ node.js <!-- .slide: class="center" -->
 
 ---
 
@@ -291,6 +320,7 @@ Note: Why write javascript when you can use nice things that other people have w
 ## But I don't want to write<br>anything *other* than<br>JavaScript <!-- .slide: class="center" -->
 ---
 
+@ crosscompiler.png <!-- .slide: class="center" -->
 Note: crosscompilers
 
 ---
@@ -310,8 +340,13 @@ The devil you know
 ---
 # JavaScript is awesome. <!-- .slide: class="center" -->
 ---
+<br><br> 
+> ... when that's the glue of the modern day web it's minor miracle that society even functions
+> 
+> -- @NamTaf
+---
 # But just remember... <!-- .slide: class="center" -->
-## other languages have wats <!-- .slide: class="center" -->
+## other languages have wats <!-- .element: class="fragment" -->
 ---
 
 # <pre>#!/usr/bin/env java</pre> <!-- .slide: class="center" -->
@@ -319,13 +354,13 @@ The devil you know
 Note: Let's about about Java
 
 ---
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">/&#42;&#42; read from a file &#42;&#42;/</code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%"><c>/&#42;&#42; read from a file &#42;&#42;/</c></code></pre></div>
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">filename = "myfile.txt"</code></pre></div> <!-- .element: class="fragment" -->
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">f = new FileInputStream(filename);</code></pre></div> <!-- .element: class="fragment" -->
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">i = new InputStreamReader(fis);</code></pre></div> <!-- .element: class="fragment" -->
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">r = new BufferedReader(isr);</code></pre></div> <!-- .element: class="fragment" -->
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">String line = rdr.readLine();</code></pre></div> <!-- .element: class="fragment" -->
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">while(line != null){<br>&nbsp;&nbsp;/&#42; stuff &#42;/<br>&nbsp;&nbsp;line = rdr.readLine();<br>}</code></pre></div> <!-- .element: class="fragment" -->
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">while(line != null){<br>&nbsp;&nbsp;<c>/&#42; actual processing &#42;/</c><br>&nbsp;&nbsp;line = rdr.readLine();<br>}</code></pre></div> <!-- .element: class="fragment" -->
 
 ---
 # <pre>#!/usr/bin/env python</pre> <!-- .slide: class="center" -->
@@ -403,7 +438,10 @@ Note: manipulation of variable within the scope
 
 ---
 # wat <!-- .slide: class="center" -->
-
 ---
-### Wat - Gary Bernhardt, CodeMash 2012
-### Investigating Python Wats - Amy Hanlon, Python 2015
+<br><br> 
+<br><br> 
+<br><br> 
+<h4>Sources of some wats</h4>
+<h4> Wat - Gary Bernhardt, CodeMash 2012</h4>
+<h4> Investigating Python Wats - Amy Hanlon, Python 2015 </h4>

@@ -11,7 +11,10 @@
 #> => 0..3  <c>// Console is 11x32 </c>
 ---
 
-#= JavaScript is Awe-ful
+<br>
+<br>
+# JavaScript is Awe-ful
+<br>
 @ footer.svg
 ---
 
@@ -22,6 +25,9 @@ Note: Tapestry and Cooking and Yelling
 ---
 
 #= Global Variables
+---
+<p></p>
+#> > ans
 ---
 #>  > ans = "";
 #>- > function question() {<br>> &nbsp; var ans = 42;<br>> &nbsp; return ans;<br>> }
@@ -126,10 +132,10 @@ Note: Associativity? Pfft!
 #>- > for (var k in arr) {<br>>&nbsp;&nbsp; console.log(k);<br>> }
 #>- 0<br>1<br>2<br>hello
 ---
-#>  > arr.push("append")
+#>  > arr.push("append");
 #>- 4
-#>- > c = 0
-#>- > for(var k in arr){ c++ }
+#>- > c = 0;
+#>- > for (var k in arr) {<br>>&nbsp; &nbsp; c = c + 1; <br>> }
 #>- > c
 #>- 5
 #>- > arr.length
@@ -170,15 +176,48 @@ Note: Associativity? Pfft!
 ##= ~~ wavey time passing lines ~~
 ---
 
-#= 1995
+#= 1993
 ---
-@ needanimage.png
 
+<pre><code>
+&nbsp;  Hypertext Markup Language (HTML)&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Tim Berners-Lee, CERN
+&nbsp;  Internet Draft&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Daniel Connolly, Atrium
+&nbsp;  IIIR Working Group&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; June 1993
+   
+   
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  Hypertext Markup Language (HTML)
+                   
+&nbsp; &nbsp; &nbsp; A Representation of Textual Information and MetaInformation
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; for Retrieval and Interchange
+</pre></code>
+...
+<pre><code>
+&nbsp;  This is version 1.2 of this draft. This document is available in
+&nbsp;  hypertext on the World-Wide Web as
+&nbsp;  http://info.cern.ch/hypertext/WWW/MarkUp/HTML.html
+</pre></code>
+
+<span class="dasfoot"><a href="http://www.w3.org/MarkUp/draft-ietf-iiir-html-01.txt">http://www.w3.org/MarkUp/draft-ietf-iiir-html-01.txt</a></span>
+---
+#> &lt;!-- 1995 HTML -->
+#> &lt;HTML>
+#> &lt;TITLE>My Page&lt;/TITLE>
+#> &lt;BODY>
+#> &nbsp; &nbsp; &lt;P>Hello World Wide Web&lt;/P>
+#> &lt;/BODY>
+#> &lt;/HTML>
+
+Note: YELLING TAGS
+
+
+---
+#= 1995
 Note: The year is 1995. The documentary Hackers has been released, and people are burning through the data with their 28.8K BAUD modems
 
 ---
 
-@ needanimage.png
+#= <img src="pictures/javascript_1995.png">
+
 Note: Brendan Eich wanted to do fancy things
 
 Made JavaScript in 10 days
@@ -186,16 +225,6 @@ Made JavaScript in 10 days
 Only took 6 to create the world
 
 Waterfall software development cycle estimages
-
----
-
-@ needanimage.png
-
-Note: Netscape view of javascript
-
-Features: marquee title text
-
-(only include the basic stuff)
 
 ---
 @ needanimage.png
@@ -222,13 +251,13 @@ Flash
 
 ---
 
-@ image.png
+=@ image.png
 
 Note: big names in dotcomboom etc
 
 ---
 
-@ bubbleburst.png
+=@ bubbleburst.png
 
 Note: pop
 
@@ -247,18 +276,18 @@ Note: Things getting back together again
 #= 2006
 ---
 
-@ firebug.png
+=@ firebug.png
 
 Note: FIREBUG OMG
 ---
 
-@ mootools.png
+=@ mootools.png
 ---
 
-@ jquery.png
+=@ jquery.png
 ---
 
-@ rise of the framworks.png
+=@ rise of the framworks.png
 
 Note: Why write javascript when you can use nice things that other people have written?
 ---
@@ -266,7 +295,7 @@ Note: Why write javascript when you can use nice things that other people have w
 #= 2009
 ---
 
-@ node.js
+=@ node.js
 
 ---
 
@@ -291,6 +320,7 @@ Note: Why write javascript when you can use nice things that other people have w
 ##= But I don't want to write<br>anything *other* than<br>JavaScript
 ---
 
+=@ crosscompiler.png
 Note: crosscompilers
 
 ---
@@ -310,8 +340,13 @@ The devil you know
 ---
 #= JavaScript is awesome.
 ---
+<br><br>
+> ... when that's the glue of the modern day web it's minor miracle that society even functions
+>
+>  -- @NamTaf
+---
 #= But just remember...
-##= other languages have wats
+##- other languages have wats
 ---
 
 #= <pre>#!/usr/bin/env java</pre>
@@ -319,13 +354,13 @@ The devil you know
 Note: Let's about about Java
 
 ---
-#> /&#42;&#42; read from a file &#42;&#42;/
+#> <c>/&#42;&#42; read from a file &#42;&#42;/</c>
 #>- filename = "myfile.txt"
 #>- f = new FileInputStream(filename);
 #>- i = new InputStreamReader(fis);
 #>- r = new BufferedReader(isr);
 #>- String line = rdr.readLine();
-#>- while(line != null){<br>&nbsp;&nbsp;/&#42; stuff &#42;/<br>&nbsp;&nbsp;line = rdr.readLine();<br>}
+#>- while(line != null){<br>&nbsp;&nbsp;<c>/&#42; actual processing &#42;/</c><br>&nbsp;&nbsp;line = rdr.readLine();<br>}
 
 ---
 #= <pre>#!/usr/bin/env python</pre>
@@ -403,7 +438,10 @@ Note: manipulation of variable within the scope
 
 ---
 #= wat
-
 ---
-### Wat - Gary Bernhardt, CodeMash 2012
-### Investigating Python Wats - Amy Hanlon, Python 2015 
+<br><br>
+<br><br>
+<br><br>
+<h4>Sources of some wats</h4>
+<h4> Wat - Gary Bernhardt, CodeMash 2012</h4>
+<h4> Investigating Python Wats - Amy Hanlon, Python 2015 </h4>
