@@ -169,8 +169,8 @@ Note: Associativity? Pfft!
 >  -- @TheColonial
 
 ---
-
-#= Why is<br>JavaScript<br>so awful?
+#= But, why?
+Note: why is javascript so awful
 ---
 
 ##= ~~ wavey time passing lines ~~
@@ -178,7 +178,7 @@ Note: Associativity? Pfft!
 
 #= 1993
 ---
-
+<br><br>
 <pre><code>
 &nbsp;  Hypertext Markup Language (HTML)&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Tim Berners-Lee, CERN
 &nbsp;  Internet Draft&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Daniel Connolly, Atrium
@@ -190,16 +190,11 @@ Note: Associativity? Pfft!
 &nbsp; &nbsp; &nbsp; A Representation of Textual Information and MetaInformation
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; for Retrieval and Interchange
 </pre></code>
-...
-<pre><code>
-&nbsp;  This is version 1.2 of this draft. This document is available in
-&nbsp;  hypertext on the World-Wide Web as
-&nbsp;  http://info.cern.ch/hypertext/WWW/MarkUp/HTML.html
-</pre></code>
 
 <span class="dasfoot"><a href="http://www.w3.org/MarkUp/draft-ietf-iiir-html-01.txt">http://www.w3.org/MarkUp/draft-ietf-iiir-html-01.txt</a></span>
 ---
-#> &lt;!-- 1995 HTML -->
+## The Original HTML
+<br>
 #> &lt;HTML>
 #> &lt;TITLE>My Page&lt;/TITLE>
 #> &lt;BODY>
@@ -208,15 +203,49 @@ Note: Associativity? Pfft!
 #> &lt;/HTML>
 
 Note: YELLING TAGS
-
-
+---
+##= Anchor Tags
+<br>
+#>- &lt;<h>A</h> HREF="index.html">My Page&lt;/<h>A</h>>
+---
+##= Glossary or Definition List
+<pre><code>
+&nbsp; &lt;H1>Dictionary&lt;/H1>
+&nbsp; <h>&lt;DT></h>pun<h>&lt;/DT></h>
+&nbsp; <h>&lt;DD></h>a joke exploiting the different possible meanings of 
+&nbsp; a word or the fact that there are words that sound alike 
+&nbsp; but have different meanings. <h>&lt;/DD></h><br>
+</code></pre>
+- <img src="pictures/dt.png" width="60%">
+---
+<br>
+#= <img src="pictures/static.jpg">
+---
+#= ~~ wavey lines ~~
 ---
 #= 1995
 Note: The year is 1995. The documentary Hackers has been released, and people are burning through the data with their 28.8K BAUD modems
 
 ---
 
-#= <img src="pictures/javascript_1995.png">
+#= <img src="pictures/netscape-navigator.jpg" width="40%">
+
+---
+#> > (define hello-world
+#> >&nbsp; (lambda ()
+#> >&nbsp; &nbsp; (begin
+#> >&nbsp; &nbsp; &nbsp; (write ‘Hello-World)
+#> >&nbsp; &nbsp; ) 
+#> >&nbsp; )
+#> > )
+#> > 
+#> > (hello-world)
+#> Hello-World
+#> 
+</pre></code>
+
+---
+#= <img src="pictures/javascript_1995.png" width="40%">
 
 Note: Brendan Eich wanted to do fancy things
 
@@ -227,20 +256,11 @@ Only took 6 to create the world
 Waterfall software development cycle estimages
 
 ---
-@ needanimage.png
-
-Note: Lock-in. what could we do
-
-Applets
-
-Flash
----
-
 <p></p>
-#> alert("My value = " + value);
 #> // alert based debugging
+#> alert(my_date);
 
-@ consolealert.png
+#= <img src="pictures/alert-debugging.gif" width="40%">
 
 ---
 
@@ -322,6 +342,30 @@ Note: Why write javascript when you can use nice things that other people have w
 
 =@ crosscompiler.png
 Note: crosscompilers
+
+
+
+---
+
+## Debugging
+#
+#> console.log()
+
+
+---
+
+#> window.console = typeof window.console === 'undefined' 
+#> &nbsp; &nbsp; ? {log:function(str){ alert(str) }} 
+#> &nbsp; &nbsp; : window.console;
+#> <br>console.log("oh good god.");
+
+
+Note: console.log isn't defined in any ECMA standard, therefore it doesn't have to exist. 
+
+---
+
+facebook console css
+
 
 ---
 #= JavaScript isn't awful

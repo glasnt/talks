@@ -169,8 +169,8 @@ Note: Associativity? Pfft!
 > -- @TheColonial
 
 ---
-
-# Why is<br>JavaScript<br>so awful? <!-- .slide: class="center" -->
+# But, why? <!-- .slide: class="center" -->
+Note: why is javascript so awful
 ---
 
 ## ~~ wavey time passing lines ~~ <!-- .slide: class="center" -->
@@ -178,7 +178,7 @@ Note: Associativity? Pfft!
 
 # 1993 <!-- .slide: class="center" -->
 ---
-
+<br><br> 
 <pre><code> 
 &nbsp; Hypertext Markup Language (HTML)&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Tim Berners-Lee, CERN
 &nbsp; Internet Draft&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Daniel Connolly, Atrium
@@ -190,16 +190,11 @@ Note: Associativity? Pfft!
 &nbsp; &nbsp; &nbsp; A Representation of Textual Information and MetaInformation
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; for Retrieval and Interchange
 </pre></code> 
-... 
-<pre><code> 
-&nbsp; This is version 1.2 of this draft. This document is available in
-&nbsp; hypertext on the World-Wide Web as
-&nbsp; http://info.cern.ch/hypertext/WWW/MarkUp/HTML.html
-</pre></code> 
 
 <span class="dasfoot"><a href="http://www.w3.org/MarkUp/draft-ietf-iiir-html-01.txt">http://www.w3.org/MarkUp/draft-ietf-iiir-html-01.txt</a></span>
 ---
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">&lt;!-- 1995 HTML --></code></pre></div>
+## The Original HTML
+<br> 
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">&lt;HTML></code></pre></div>
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">&lt;TITLE>My Page&lt;/TITLE></code></pre></div>
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">&lt;BODY></code></pre></div>
@@ -208,15 +203,49 @@ Note: Associativity? Pfft!
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">&lt;/HTML></code></pre></div>
 
 Note: YELLING TAGS
-
-
+---
+## Anchor Tags <!-- .slide: class="center" -->
+<br> 
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">&lt;<h>A</h> HREF="index.html">My Page&lt;/<h>A</h>></code></pre></div> <!-- .element: class="fragment" -->
+---
+## Glossary or Definition List <!-- .slide: class="center" -->
+<pre><code> 
+&nbsp; &lt;H1>Dictionary&lt;/H1>
+&nbsp; <h>&lt;DT></h>pun<h>&lt;/DT></h>
+&nbsp; <h>&lt;DD></h>a joke exploiting the different possible meanings of
+&nbsp; a word or the fact that there are words that sound alike
+&nbsp; but have different meanings. <h>&lt;/DD></h><br>
+</code></pre> 
+ <img src="pictures/dt.png" width="60%"> <!-- .element: class="fragment" -->
+---
+<br> 
+# <img src="pictures/static.jpg"> <!-- .slide: class="center" -->
+---
+# ~~ wavey lines ~~ <!-- .slide: class="center" -->
 ---
 # 1995 <!-- .slide: class="center" -->
 Note: The year is 1995. The documentary Hackers has been released, and people are burning through the data with their 28.8K BAUD modems
 
 ---
 
-# <img src="pictures/javascript_1995.png"> <!-- .slide: class="center" -->
+# <img src="pictures/netscape-navigator.jpg" width="40%"> <!-- .slide: class="center" -->
+
+---
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> (define hello-world</code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">>&nbsp; (lambda ()</code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">>&nbsp; &nbsp; (begin</code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">>&nbsp; &nbsp; &nbsp; (write ‘Hello-World)</code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">>&nbsp; &nbsp; )</code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">>&nbsp; )</code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> )</code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">></code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> (hello-world)</code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">Hello-World</code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%"></code></pre></div>
+</pre></code> 
+
+---
+# <img src="pictures/javascript_1995.png" width="40%"> <!-- .slide: class="center" -->
 
 Note: Brendan Eich wanted to do fancy things
 
@@ -227,20 +256,11 @@ Only took 6 to create the world
 Waterfall software development cycle estimages
 
 ---
- <img src="pictures/needanimage.png" />
-
-Note: Lock-in. what could we do
-
-Applets 
-
-Flash 
----
-
 <p></p> 
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">alert("My value = " + value);</code></pre></div>
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">// alert based debugging</code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">alert(my_date);</code></pre></div>
 
- <img src="pictures/consolealert.png" />
+# <img src="pictures/alert-debugging.gif" width="40%"> <!-- .slide: class="center" -->
 
 ---
 
@@ -322,6 +342,30 @@ Note: Why write javascript when you can use nice things that other people have w
 
 @ crosscompiler.png <!-- .slide: class="center" -->
 Note: crosscompilers
+
+
+
+---
+
+## Debugging
+# 
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">console.log()</code></pre></div>
+
+
+---
+
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">window.console = typeof window.console === 'undefined'</code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">&nbsp; &nbsp; ? {log:function(str){ alert(str) }}</code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">&nbsp; &nbsp; : window.console;</code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%"><br>console.log("oh good god.");</code></pre></div>
+
+
+Note: console.log isn't defined in any ECMA standard, therefore it doesn't have to exist.
+
+---
+
+facebook console css
+
 
 ---
 # JavaScript isn't awful <!-- .slide: class="center" -->

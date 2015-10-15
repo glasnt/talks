@@ -1,4 +1,4 @@
 c { color: green; font-weight:bold; }
 s { color: red }
 h { color: aqua; font-weight: bold;}
-span.dasfoot { position:absolute; top: 670px; right: 1em; font-size: 75% }
+span.dasfoot { position:absolute; top: 670px; right: 1em; font-size: 50%; color: grey}
