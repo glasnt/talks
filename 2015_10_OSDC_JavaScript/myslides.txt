@@ -363,21 +363,82 @@ Note: Let's about about Java
 #>- while(line != null){<br>&nbsp;&nbsp;<c>/&#42; actual processing &#42;/</c><br>&nbsp;&nbsp;line = rdr.readLine();<br>}
 
 ---
+#= <pre>#!/usr/bin/env ruby</pre>
+Note: Let's talk about ruby
+---
+#> BAR = "outer"
+#> module A
+#> &nbsp;  FOO = nil; BAR = "inner"
+#> &nbsp;  module B
+#> &nbsp; &nbsp;  puts A::FOO::BAR
+#> &nbsp;  end
+#> end
+#> puts A::FOO::BAR
+#>- <br>???
+
+Note: https://twitter.com/charliesome/status/654190206547968000
+---
+<p></p>
+#> BAR = "outer"
+#> module A
+#> &nbsp;  FOO = nil; BAR = "inner"
+#> &nbsp;  module B
+#> &nbsp; &nbsp;  puts A::FOO::BAR
+#> &nbsp;  end
+#> end
+#> puts A::FOO::BAR
+#> <br>inner
+#> outer
+---
+#> TODO Barewords
+Note: Method Missing
+---
+
+#= <pre>ghci</pre>
+Note: Let's talk about Haskell
+---
+
+#>  λ&gt; length []
+#>- 0
+#>- λ&gt; length [1]
+#>- 1
+#>- λ&gt; length [1,2]
+#>- 2
+#>- λ> :type [1,2]
+#>- [1,2] :: Num t => [t]
+
+Note: Type of List
+---
+
+#> λ> :type (1,2)
+#>- (1,2) :: (Num t, Num t1)=>(t, t1)
+#>- λ> length (1,2)
+#>- 1
+
+Note: because foldable, fMap fun
+---
+
+#> λ> length (Left 0)
+#>- 0
+#>- λ> length (Right 0)
+#>- 1
+
+---
+#> λ> let a = 2 + 2
+#>- λ> a
+#>- 4
+#>- λ> let b = 2 + 2 where 2 + 2 = 5
+#>- λ> wat
+#>- 5
+
+---
 #= <pre>#!/usr/bin/env python</pre>
 Note: Let's talk about Python
 ---
 #> >>> ans = 42
-#>- >>> def question(): 
-#>- ... &nbsp; &nbsp; return ans
+#>- >>> def question(): <br>... &nbsp; &nbsp; return ans
 #>- >>> question() 
-#>- ???
----
-<p></p>
-#> >>> ans = 42
-#> >>> def question(): 
-#> ... &nbsp; &nbsp; return ans
-#> >>> question() 
-#> 42
+#>- 42
 
 Note: undefined answer within scope of the function
 
@@ -389,15 +450,7 @@ but it still works
 #>- ... &nbsp; &nbsp; ans += 1
 #>- ... &nbsp; &nbsp; return ans
 #>- >>> question() 
-#>- ???
----
-<p></p>
-#> >>> ans = 42
-#> >>> def question(): 
-#> ... &nbsp; &nbsp; ans += 1
-#> ... &nbsp; &nbsp; return ans
-#> >>> question() 
-#> Traceback (most recent call last):<br> &nbsp;File "<stdin>", line 1, in <module><br> &nbsp;File "<stdin>", line 2, in question<br>  UnboundLocalError: local variable 'ans' referenced before assignment
+#>- Traceback (most recent call last):<br> &nbsp;File "<stdin>", line 1, in <module><br> &nbsp;File "<stdin>", line 2, in question<br>  UnboundLocalError: local variable 'ans' referenced before assignment
 
 Note: manipulation of variable within the scope
 ---
@@ -444,4 +497,5 @@ Note: manipulation of variable within the scope
 <br><br>
 <h4>Sources of some wats</h4>
 <h4> Wat - Gary Bernhardt, CodeMash 2012</h4>
+https://github.com/puffnfresh/wat-collection
 <h4> Investigating Python Wats - Amy Hanlon, Python 2015 </h4>
