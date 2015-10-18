@@ -155,6 +155,8 @@ Check out the YUI Theatre series
 ### by Brendan Eich for Netscape
 ### to offer a lightweight version of Java
 ### in order to compete for users with Microsoft
+
+Note: Let's step through that
 ---
 
 
@@ -164,6 +166,7 @@ Check out the YUI Theatre series
 ### &nbsp;
 Note: awfully short development time
 
+just by that alone could explain things.
 ---
 ###= JavaScript was developed in 10 days
 ### by Brendan Eich for Netscape
@@ -174,7 +177,7 @@ Eich originally wanted to make scheme
 
 Sure, they said
 
-Oh wait, that's scheme
+Oh wait, that's scheme, that's gross, don't do that.
 ---
 #> > (define hello-world
 #> >&nbsp; (lambda ()
@@ -187,6 +190,7 @@ Oh wait, that's scheme
 #> > (hello-world)
 #> Hello-World
 #> 
+Note: We could have written in the browser like this
 ---
 ###= JavaScript was developed in 10 days
 ### by Brendan Eich for Netscape
@@ -209,6 +213,11 @@ Originally called LiveScript. Changed to JavaScript because it was kinda based o
 But Sun owned the trademark, so Sun owned the JavaScript trademark
 
 Which is now owned by Oracle
+
+
+Java could have been the language of the web
+
+Java Applets
 
 ---
 
@@ -262,11 +271,183 @@ Note:
 Note: Things you can shoot yourself with in the foot
 
 ---
-#> window.console = typeof window.console === 'undefined' 
+
+#= Global Name Space
+---
+
+<p></p>
+#> > ans = "";
+#> > function question() {<br>> &nbsp; var ans = 42; <br>> &nbsp; return ans;<br>> }
+#> > console.log(ans);
+#> ""
+#> > console.log(question());
+#> 42
+#> > console.log(ans);
+#> 42
+---
+<p></p>
+#> > ans = ""; <c>// global
+#> > function question() {<br>> &nbsp; var ans = 42; <c> // local</c> <br>> &nbsp; return ans;<br>> }
+#> > console.log(ans);
+#> ""
+#> > console.log(question());
+#> 42
+#> > console.log(ans);
+#> 42
+---
+#> <c>//ruby</c>
+#> <h>@</h>ans = 42;
+#>
+#> <c>//python</c>
+#> <h>global</h> ans = 42;
+#> 
+#> <c>//java
+#> <h>public</h> static ans = 42;
+Note: Because every other language has locals by default
+---
+#= Overloaded `+` operand
+---
+<p></p>
+#>  > 4 + 2 
+#> 6
+#> > 4 - 2
+#> 2
+#> > "4" - 2 
+#> 2 
+#> > "4" + 2
+#> "42"
+---
+<p></p>
+#>  > 4 + 2 
+#> 6
+#> > 4 - 2
+#> 2
+#> > "4" - 2 
+#> 2 <c>&nbsp;&nbsp; // type -> integer</c>
+#> > "4" + 2
+#> "42"<c> // type -> string</c>
+Note: `+` for both additon and concatenation
+---
+
+#= Equality and Coersion
+---
+<p></p>
+#> > 0 ==&nbsp; false  
+#> true
+#> > 0 === false  
+#> false
+#> > 1 == &nbsp;"1"
+#> true 
+#> > 1 === "1" 
+#> false
+---
+<p></p>
+#> > 0 ==&nbsp; false  
+#> true
+#> > 0 === false  
+#> false
+#> > 1 == &nbsp;"1" <c> // equality</c> 
+#> true 
+#> > 1 === "1" <c>// equality without</c>
+#> false &nbsp; &nbsp; &nbsp; <c>// type co-ersion</c>
+
+Note: This was picked up v. early by Brendan Eich
+
+But because legacy, the standards committee didn't accept the change to `==`
+
+forced creation of `===`
+
+even JScript dutifully reverse engineered this error
+
+---
+
+#= Bad Parts
+---
+
+#= Misc wats
+---
+
+#= Security
+---
+
+##= (╯°□°）╯︵ sʇɐʍ ʎɔɐƃǝl
+---
+
+#= Frameworks
+
+---
+
+##= (╯°□°）╯︵ ʇdᴉɹɔsɐʌɐɾ
+---
+
+#= Use a new language
+
+---
+
+#= CoffeeScript
+
+---
+#= TypeScript
+---
+#= PureScript
+
+---
+
+#= Pick a language
+#= Any Language
+
+
+---
+
+#= Batavia
+
+---
+
+#= JavaScript outside<br>the Browser
+---
+
+#= node.js
+
+---
+
+#= Electron
+
+Note: not the first time JS has been used on the desktop
+---
+
+#= Google Gadgets
+---
+
+##= Many more uses
+
+Note: NginScript, Cinnamon
+
+---
+
+#= JavaScript<br>is improving
+
+---
+
+#= ECMAScript 5
+
+---
+
+#= ECMAScript 6
+---
+
+#= Non-standard Standards
+
+---
+
+#= <pre>console.log</pre>
+---
+
+
+#> window.console =
+#>  typeof window.console === 'undefined' 
 #> &nbsp; &nbsp; ? {log:function(str){ alert(str) }} 
 #> &nbsp; &nbsp; : window.console;
 #> <br>console.log("oh good god.");
-
 
 ---
 #= JavaScript isn't awful
