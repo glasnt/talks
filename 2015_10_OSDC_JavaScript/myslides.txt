@@ -39,38 +39,16 @@ Note: Tapestry and Cooking and Yelling
 #>- ""
 ---
 <p></p>
-#> > ans = ""; <c>//global</c>
-#> > function question() {<br>> &nbsp; var ans = 42; <c>//local</c><br>> &nbsp; return ans;<br>> }
-#> > console.log(ans);
-#> ""
-#> > console.log(question());
-#> 42
-#> > console.log(ans);
-#> ""
----
-<p></p>
-#> > ans = ""; <c>//global</c>
-#> > function question() {<br>> &nbsp; <s>var</s> ans = 42; <c>//global</c><br>> &nbsp; return ans;<br>> }
+#> > ans = "";
+#> > function question() {<br>> &nbsp; <s>var</s> ans = 42; <br>> &nbsp; return ans;<br>> }
 #> > console.log(ans);
 #> ""
 #> > console.log(question());
 #> 42
 #> > console.log(ans);
 #> 42
----
-#> <c>//ruby</c>
-#> <h>@</h>ans = 42;
-#>
-#> <c>//python</c>
-#> <h>global</h> ans = 42;
-#> 
-#> <c>//java
-#> <h>public</h> static ans = 42;
-Note: Because every other language has locals by default
 ---
 #= Duck Typing
-###- Quack
-
 Note: if it looks like a duck and sounds like a duck, it's a duck.
 ---
 #>  > 4 + 2 
@@ -81,20 +59,6 @@ Note: if it looks like a duck and sounds like a duck, it's a duck.
 #>- 2 
 #>- > "4" + 2
 #>- "42"
----
-<p></p>
-#>  > 4 + 2 
-#> 6
-#> > 4 - 2
-#> 2
-#> > "4" - 2 
-#> 2 <c>&nbsp;&nbsp; // type -> integer</c>
-#> > "4" + 2
-#> "42"<c> // type -> string</c>
-
-Note: Automatic Type Co-ersion
-
-Higher order type wins 
 ---
 #= Arrays and Objects
 ---
@@ -107,18 +71,9 @@ Higher order type wins
 #>- > {} + {}
 #>- NaN
 
-Note: Associativity? Pfft!
+Note: Associativity? Pfft! Transativity? Hahahah
 ---
-<p></p>
-#> > [] + []
-#> ""
-#> > [] + {}
-#> [object Object]
-#> > {} + []
-#> 0
-#> > {} + {}
-#> NaN <c>// wat</c>
----
+
 #= Arrays != Objects
 ---
 #>  > var arr = ['a', 'b', 'c']
@@ -126,10 +81,10 @@ Note: Associativity? Pfft!
 #>- ["a", "b", "c"]
 #>- > arr.hello = "world"
 #>- "world"
----
-#> > arr
+#>- > arr
 #>- ["a", "b", "c"]
-#>- > for (var k in arr) {<br>>&nbsp;&nbsp; console.log(k);<br>> }
+---
+#> > for (var k in arr) {<br>>&nbsp;&nbsp; console.log(k);<br>> }
 #>- 0<br>1<br>2<br>hello
 ---
 #>  > arr.push("append");
@@ -145,91 +100,81 @@ Note: Associativity? Pfft!
 ---
 #>  > 0 ==&nbsp; false  
 #>- true
-#>- > 0 === false  
-#>- false
 #>- > 1 == &nbsp;"1"
 #>- true 
+#>- > 0 === false  
+#>- false
 #>- > 1 === "1"
 #>- false
 ---
-<p></p>
-#> > 0 ==&nbsp; false  
-#> true
-#> > 0 === false  
-#> false
-#> > 1 == &nbsp;"1" <c> // equality</c> 
-#> true 
-#> > 1 === "1" <c>// equality without</c>
-#> false &nbsp; &nbsp; &nbsp; <c>// type co-ersion</c>
+#= Developers get a bit<br>upset at JavaScript
+---
+=> "... please don't hire me for my JS abilities. i'm proficient enough to loath the language intensely"
+Note: experienced developers get frustrated with it
 ---
 
-<br><br>
-> The fact that === exists in languages like PHP and JavaScript is a sign that those languages are ridiculously broken.
+=> "... I have been around him when he hacks JS. Let's just say Satan himself would blush."
+Note: people near to javascript developers hear them swear.  A lot.
+---
+
+=> Have to modify some JavaScript<br>I did over a year ago. 
+> 
+> 'What is this?'
 >
->  -- @TheColonial
+> 'Why did I ...?'
+>
+> 'What sort of name is that!'"
+
+Note: confusing syntax, hard to come back to 
 
 ---
-#= But, why?
+
+=> "I hate writing JavaScript.
+>
+> I know, I'll write some JavaScript to fix it."
+>
+> This is how Angular happens.
+
+Note: Pot shots at the Language
+---
+#= ...
+---
+#= Why?
 Note: why is javascript so awful
 ---
 
-##= ~~ wavey time passing lines ~~
----
+#= History.zip
+##- See "Crockford on JavaScript"
+Note: I don't have time to tell the entire history of javascript
 
-#= 1993
----
-<br><br>
-<pre><code>
-&nbsp;  Hypertext Markup Language (HTML)&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Tim Berners-Lee, CERN
-&nbsp;  Internet Draft&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Daniel Connolly, Atrium
-&nbsp;  IIIR Working Group&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; June 1993
-   
-   
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  Hypertext Markup Language (HTML)
-                   
-&nbsp; &nbsp; &nbsp; A Representation of Textual Information and MetaInformation
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; for Retrieval and Interchange
-</pre></code>
-
-<span class="dasfoot"><a href="http://www.w3.org/MarkUp/draft-ietf-iiir-html-01.txt">http://www.w3.org/MarkUp/draft-ietf-iiir-html-01.txt</a></span>
----
-## The Original HTML
-<br>
-#> &lt;HTML>
-#> &lt;TITLE>My Page&lt;/TITLE>
-#> &lt;BODY>
-#> &nbsp; &nbsp; &lt;P>Hello World Wide Web&lt;/P>
-#> &lt;/BODY>
-#> &lt;/HTML>
-
-Note: YELLING TAGS
----
-##= Anchor Tags
-<br>
-#>- &lt;<h>A</h> HREF="index.html">My Page&lt;/<h>A</h>>
----
-##= Glossary or Definition List
-<pre><code>
-&nbsp; &lt;H1>Dictionary&lt;/H1>
-&nbsp; <h>&lt;DT></h>pun<h>&lt;/DT></h>
-&nbsp; <h>&lt;DD></h>a joke exploiting the different possible meanings of 
-&nbsp; a word or the fact that there are words that sound alike 
-&nbsp; but have different meanings. <h>&lt;/DD></h><br>
-</code></pre>
-- <img src="pictures/dt.png" width="60%">
----
-<br>
-#= <img src="pictures/static.jpg">
----
-#= ~~ wavey lines ~~
----
-#= 1995
-Note: The year is 1995. The documentary Hackers has been released, and people are burning through the data with their 28.8K BAUD modems
+Check out the YUI Theatre series 
 
 ---
 
-#= <img src="pictures/netscape-navigator.jpg" width="40%">
+###= JavaScript was developed in 10 days
+### by Brendan Eich for Netscape
+### to offer a lightweight version of Java
+### in order to compete for users with Microsoft
+---
 
+
+###= JavaScript was developed in 10 days
+### &nbsp;
+### &nbsp;
+### &nbsp;
+Note: awfully short development time
+
+---
+###= JavaScript was developed in 10 days
+### by Brendan Eich for Netscape
+### &nbsp;
+### &nbsp;
+Note: 
+Eich originally wanted to make scheme
+
+Sure, they said
+
+Oh wait, that's scheme
 ---
 #> > (define hello-world
 #> >&nbsp; (lambda ()
@@ -242,129 +187,85 @@ Note: The year is 1995. The documentary Hackers has been released, and people ar
 #> > (hello-world)
 #> Hello-World
 #> 
-</pre></code>
-
 ---
-#= <img src="pictures/javascript_1995.png" width="40%">
+###= JavaScript was developed in 10 days
+### by Brendan Eich for Netscape
+### &nbsp;
+### &nbsp;
 
-Note: Brendan Eich wanted to do fancy things
-
-Made JavaScript in 10 days
-
-Only took 6 to create the world
-
-Waterfall software development cycle estimages
-
----
-<p></p>
-#> // alert based debugging
-#> alert(my_date);
-
-#= <img src="pictures/alert-debugging.gif" width="40%">
-
+Note: For user adoption, maybe it wasn't the best
 ---
 
-#= ~~ fast forward ~~
----
+###= JavaScript was developed in 10 days
+### by Brendan Eich for Netscape
+### to offer a lightweight version of Java
+### &nbsp;
 
-#= 2000
+
+Note: so Eich made it look like Java, basing it a bit on Scheme and Self as well
+
+Originally called LiveScript. Changed to JavaScript because it was kinda based on int
+
+But Sun owned the trademark, so Sun owned the JavaScript trademark
+
+Which is now owned by Oracle
 
 ---
 
-=@ image.png
+###= JavaScript was developed in 10 days
+### by Brendan Eich for Netscape
+### to offer a lightweight version of Java
+### in order to compete for users with Microsoft
 
-Note: big names in dotcomboom etc
+Note: Mosaic split into NetScape in SpyGlass
 
----
+Netscape says: "we're going to wipe out MS!"
 
-=@ bubbleburst.png
+MS says: "whoops, buying spyglass"
 
-Note: pop
+race was on to develop the scriting language to make the web better
 
----
-#= ~~ fast forward ~~
----
-#= 2005
----
-
-@ needanimage.png
-
-Note: Things getting back together again
-
----
-
-#= 2006
----
-
-=@ firebug.png
-
-Note: FIREBUG OMG
----
-
-=@ mootools.png
----
-
-=@ jquery.png
----
-
-=@ rise of the framworks.png
-
-Note: Why write javascript when you can use nice things that other people have written?
----
-
-#= 2009
----
-
-=@ node.js
-
----
-
-##= But I don't want to write<br>JavaScript<br>;_;
-
----
-
-@ coffeescirpt.png
-## Not-shite JS -> JavaScript
----
-
-@ typescript.png
-## Functional* -> JavaScript
-
----
-
-@ batavia.png
-## Python -> JavaScript
-
----
-
-##= But I don't want to write<br>anything *other* than<br>JavaScript
----
-
-=@ crosscompiler.png
-Note: crosscompilers
-
+Because trademark, MS reverse engineered JS, called it JScript
 
 
 ---
 
-## Debugging
-#
-#> console.log()
+##= ECMAScript Standard
+
+Note: Because of some fun issues, Tim Berners Lee and W3C wouldn't do the standard
+ 
+TBL was apparently upset that Netscape took his simple design and made it silly
+
+with things like images and formatting
+
+
+
+They ended up at the
+
+European Computer Manufacturers Association
+
+They couldn't think of a better name
+
+Working title: ECMA Script (ecc-ma)
 
 
 ---
 
+##= JavaScript™
+
+<span class="dasfoot"><a href="http://tsdr.uspto.gov/#caseNumber=75026640&caseType=SERIAL_NO&searchType=statusSearch">US Trademark &#35;75026640</a></span>
+Note: 
+---
+
+#= Foot Guns
+
+Note: Things you can shoot yourself with in the foot
+
+---
 #> window.console = typeof window.console === 'undefined' 
 #> &nbsp; &nbsp; ? {log:function(str){ alert(str) }} 
 #> &nbsp; &nbsp; : window.console;
 #> <br>console.log("oh good god.");
-
-
-Note: console.log isn't defined in any ECMA standard, therefore it doesn't have to exist. 
-
----
-
-facebook console css
 
 
 ---
@@ -374,15 +275,6 @@ facebook console css
 Note: It's amazing that we can take something so broken and made so much
 
 The devil you know
----
-
-#= R.I.P<br>Java Applets
-### &nbsp;
----
-#= R.I.P<br>Flash
-### (mostly)
----
-#= JavaScript is awesome.
 ---
 <br><br>
 > ... when that's the glue of the modern day web it's minor miracle that society even functions
@@ -400,146 +292,122 @@ Note: Let's about about Java
 ---
 #> <c>/&#42;&#42; read from a file &#42;&#42;/</c>
 #>- filename = "myfile.txt"
-#>- f = new FileInputStream(filename);
-#>- i = new InputStreamReader(fis);
-#>- r = new BufferedReader(isr);
-#>- String line = rdr.readLine();
-#>- while(line != null){<br>&nbsp;&nbsp;<c>/&#42; actual processing &#42;/</c><br>&nbsp;&nbsp;line = rdr.readLine();<br>}
-
+#>- BufferedReader reader = <br>&nbsp; &nbsp; &nbsp; new BufferedReader( <br>&nbsp; &nbsp; &nbsp; &nbsp;  new InputStreamReader( <br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  new FileInputStream(<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  filename<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  )<br>&nbsp; &nbsp; &nbsp; &nbsp;  )<br>&nbsp; &nbsp; &nbsp; );<br>&nbsp;
 ---
-#= <pre>#!/usr/bin/env ruby</pre>
+#= <pre>/usr/bin/ruby</pre>
 Note: Let's talk about ruby
 ---
-#> BAR = "outer"
-#> module A
-#> &nbsp;  FOO = nil; BAR = "inner"
-#> &nbsp;  module B
-#> &nbsp; &nbsp;  puts A::FOO::BAR
-#> &nbsp;  end
-#> end
-#> puts A::FOO::BAR
-#>- <br>???
-
-Note: https://twitter.com/charliesome/status/654190206547968000
----
-<p></p>
-#> BAR = "outer"
-#> module A
-#> &nbsp;  FOO = nil; BAR = "inner"
-#> &nbsp;  module B
-#> &nbsp; &nbsp;  puts A::FOO::BAR
-#> &nbsp;  end
-#> end
-#> puts A::FOO::BAR
-#> <br>inner
-#> outer
----
-#> TODO Barewords
-Note: Method Missing
+#>  irb> open source rocks
+#>- NameError: undefined local<br>variable or method `rocks'
+#>- irb> def method_missing(@args)<br> &nbsp; &nbsp; &nbsp;  args.join(" ")<br> &nbsp; &nbsp; end
+#>- irb> open source rocks
+#>- "open source rocks"
+Note: Method Missing is evil monkey patching
 ---
 
-#= <pre>ghci</pre>
+#= <pre>/usr/local/bin/ghci</pre>
 Note: Let's talk about Haskell
 ---
 
-#>  λ&gt; length []
-#>- 0
-#>- λ&gt; length [1]
-#>- 1
+#>  λ> :type [1,2]
+#>- [1,2] :: Num t => [t]
 #>- λ&gt; length [1,2]
 #>- 2
-#>- λ> :type [1,2]
-#>- [1,2] :: Num t => [t]
-
-Note: Type of List
----
-
-#> λ> :type (1,2)
-#>- (1,2) :: (Num t, Num t1)=>(t, t1)
+#>- λ> :type (1,2)
+#>- (1,2) :: (Num t, Num t1) => (t, t1)
 #>- λ> length (1,2)
 #>- 1
 
 Note: because foldable, fMap fun
 ---
 
-#> λ> length (Left 0)
-#>- 0
-#>- λ> length (Right 0)
-#>- 1
-
+#= <pre>/usr/local/bin/ghci</pre>
+Note: Let's talk about Haskell
 ---
 #> λ> let a = 2 + 2
 #>- λ> a
 #>- 4
 #>- λ> let b = 2 + 2 where 2 + 2 = 5
-#>- λ> wat
+#>- λ> b
 #>- 5
 
 ---
-#= <pre>#!/usr/bin/env python</pre>
+#= <pre>/usr/local/bin python</pre>
 Note: Let's talk about Python
----
-#> >>> ans = 42
-#>- >>> def question(): <br>... &nbsp; &nbsp; return ans
-#>- >>> question() 
-#>- 42
-
-Note: undefined answer within scope of the function
-
-but it still works
-
----
-#> >>> ans = 42
-#>- >>> def question(): 
-#>- ... &nbsp; &nbsp; ans += 1
-#>- ... &nbsp; &nbsp; return ans
-#>- >>> question() 
-#>- Traceback (most recent call last):<br> &nbsp;File "<stdin>", line 1, in <module><br> &nbsp;File "<stdin>", line 2, in question<br>  UnboundLocalError: local variable 'ans' referenced before assignment
-
-Note: manipulation of variable within the scope
 ---
 #> >>> a = 256
 #>- >>> b = 256
 #>- >>> a **is** b
-#>- ???
----
-<p></p>
-#> >>> a = 256
-#> >>> b = 256
-#> >>> a **is** b
-#> True
+#>- True
 
+<span class="dasfoot"><a href="www.youtube.com/watch?v=sH4XF6pKKmk">Investigating Python Wats</a></span>
 ---
 #>  >>> a = 257
 #>- >>> b = 257
 #>- >>> a **is** b
-#>- ???
----
-<p></p>
-#> >>> a = 257
-#> >>> b = 257
-#> >>> a **is** b
-#> False
+#>- False
 #>- <br>>>> a = 257; b = 257
 #>- >>> a **is** b
-#>- ???
+#>- True
+
+<span class="dasfoot"><a href="www.youtube.com/watch?v=sH4XF6pKKmk">Investigating Python Wats</a></span>
 ---
-<p></p>
-#> >>> a = 257
-#> >>> b = 257
-#> >>> a **is** b
-#> False
-#> <br>>>> a = 257; b = 257
-#> >>> a **is** b
-#> True
+
+#= <pre>/usr/bin/env perl -de1</pre>
+Note: Let's talk about Perl
 
 ---
-#= wat
+
+#> DB&lt;1> if ("foo" == "bar") <br> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; { print "true" }<br> &nbsp;&nbsp; &nbsp; else { print "false" }
+#>- true
+<span class="dasfoot"><a href="http://stackoverflow.com/a/14046720/124019">http://stackoverflow.com/a/14046720/124019</a></span>
+Note: Reason is `==` is for number comparing
+
+eq is for string comparing
+
+a new programmer won't know this. 
+---
+
+
+#= <pre>/usr/bin/php -a</pre>
+
+Note: Let's talk about PHP
+---
+#> php>  $a = INF;
+#>- $b = array(); 
+#>- $c = (object)array();
+#>- var_dump( $a < $b );
+#>- true 
+#>- var_dump( $b < $c );
+#>- true 
+#>- var_dump( $c < $a );
+#>- true 
+
+Note: cyclic truthiness. Totally a thing. 
+
+<span class="dasfoot"><a href="http://phpsadness.com/sad/52">http://phpsadness.com/sad/52</a></span>
+Note: 
+
+
+---
+
+#= <pre>C:\> powershell</pre>
+
+Note: Let's talk about powershell
+
+---
+
+#> PS> if (2 > 1) { "true" }<br>&nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; else { "false" }
+#>-  true
+#>- <br>PS> if (2 < 1) { "true" }<br>&nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; else { "false" }
+#>- The '<' operator is reserved<br>for future use.
+
+<span class="dasfoot"><a href="http://fuckpowershell.tumblr.com/">F Powershell</a></span>
+---
+
+#= All lanauges are<br>pretty terrible.
 ---
 <br><br>
+##= Cheers!
 <br><br>
-<br><br>
-<h4>Sources of some wats</h4>
-<h4> Wat - Gary Bernhardt, CodeMash 2012</h4>
-https://github.com/puffnfresh/wat-collection
-<h4> Investigating Python Wats - Amy Hanlon, Python 2015 </h4>
+@ footer.svg
