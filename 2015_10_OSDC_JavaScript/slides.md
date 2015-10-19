@@ -405,58 +405,6 @@ Note: even JScript dutifully reverse engineered this error
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">["<img src="pictures/rabbit.svg" class="e" style="margin: 0">","<img src="pictures/cat.svg" style="margin: 0" class="e">"]</code></pre></div> <!-- .element: class="fragment" -->
 ---
 
-## Function Optimisation <!-- .slide: class="center" -->
----
-<pre><code>'use strict';
-
-function add(x, y) {
-<c style="font-weight:normal">&nbsp; // I am the very model of a modern Major-General
-&nbsp; // I've information vegetable, animal, and mineral
-&nbsp; // I know the kings of England, and I quote the fights historical
-&nbsp; // From Marathon to Waterloo, in order categorical
-&nbsp; // I'm very well acquainted, too, with matters mathematical
-&nbsp; // I understand equations, both the simple and quadratical
-&nbsp; // About binomial theorem I'm teeming with a lot o' news
-&nbsp; // With many cheerful facts about the square of the hypotenuse
-&nbsp; // I'm very good at integral and differential calculus
-&nbsp; // I know the scientific names of beings animalculous
-</c> 
-&nbsp; return(x + y);
-} 
-</code></pre><pre style="margin-top: -1em;"><code>for(let i = 0; i < 500000000; i++) {
-&nbsp; if (add(i, i++) < 5) {
-&nbsp; &nbsp; <c>//</c>
-&nbsp; }
-} 
-</code></pre> 
-
- <pre><code>$ time -p node general.js</code></pre><br><pre style="margin-top:-1em"><code>real 1.68</code></pre> <!-- .element: class="fragment" -->
----
-<pre><code>'use strict';
-
-function add(x, y) {
-<c style="font-weight:normal">&nbsp; // I am the very model of a modern Major-General
-&nbsp; // I've information vegetable, animal, and mineral
-&nbsp; // I know the kings of England, and I quote the fights historical
-&nbsp; // From Marathon to Waterloo, in order categorical
-&nbsp; // I'm very well acquainted, too, with matters mathematical
-&nbsp; // I understand equations, both the simple and quadratical
-&nbsp; // About binomial theorem I'm teeming with a lot o' news
-&nbsp; // With many cheerful facts about the square of the hypotenuse
-&nbsp; // I'm very good at integral and differential calculus
-&nbsp; //
-</c> 
-&nbsp; return(x + y);
-} 
-</code></pre><pre style="margin-top: -1em;"><code>for(let i = 0; i < 500000000; i++) {
-&nbsp; if (add(i, i++) < 5) {
-&nbsp; &nbsp; <c>//</c>
-&nbsp; }
-} 
-</code></pre> 
-
- <pre><code>$ time -p node general.js</code></pre><br><pre style="margin-top:-1em"><code>real 0.67</code></pre> <!-- .element: class="fragment" -->
----
 ## This thing <!-- .slide: class="center" -->
 ## `++[[]][+[]]+[+[]]` <!-- .slide: class="center" -->
 
@@ -585,8 +533,64 @@ Note: iGoogle and Google Desktop widget - scripting by javascript on the desktop
 ## As a scripting language <!-- .slide: class="center" -->
 
 Note: NginScript, Cinnamon
-
 ---
+
+## Even more gotchas <!-- .slide: class="center" -->
+---
+
+## Function Optimisation <!-- .slide: class="center" -->
+---
+<pre><code>'use strict';
+
+function add(x, y) {
+<c style="font-weight:normal">&nbsp; // I am the very model of a modern Major-General
+&nbsp; // I've information vegetable, animal, and mineral
+&nbsp; // I know the kings of England, and I quote the fights historical
+&nbsp; // From Marathon to Waterloo, in order categorical
+&nbsp; // I'm very well acquainted, too, with matters mathematical
+&nbsp; // I understand equations, both the simple and quadratical
+&nbsp; // About binomial theorem I'm teeming with a lot o' news
+&nbsp; // With many cheerful facts about the square of the hypotenuse
+&nbsp; // I'm very good at integral and differential calculus
+&nbsp; // I know the scientific names of beings animalculous
+</c> 
+&nbsp; return(x + y);
+} 
+</code></pre><pre style="margin-top: -1em;"><code>for(let i = 0; i < 500000000; i++) {
+&nbsp; if (add(i, i++) < 5) {
+&nbsp; &nbsp; <c>//</c>
+&nbsp; }
+} 
+</code></pre> 
+
+ <pre><code>$ time -p node general.js</code></pre><br><pre style="margin-top:-1em"><code>real 1.68</code></pre> <!-- .element: class="fragment" -->
+---
+<pre><code>'use strict';
+
+function add(x, y) {
+<c style="font-weight:normal">&nbsp; // I am the very model of a modern Major-General
+&nbsp; // I've information vegetable, animal, and mineral
+&nbsp; // I know the kings of England, and I quote the fights historical
+&nbsp; // From Marathon to Waterloo, in order categorical
+&nbsp; // I'm very well acquainted, too, with matters mathematical
+&nbsp; // I understand equations, both the simple and quadratical
+&nbsp; // About binomial theorem I'm teeming with a lot o' news
+&nbsp; // With many cheerful facts about the square of the hypotenuse
+&nbsp; // I'm very good at integral and differential calculus
+&nbsp; //
+</c> 
+&nbsp; return(x + y);
+} 
+</code></pre><pre style="margin-top: -1em;"><code>for(let i = 0; i < 500000000; i++) {
+&nbsp; if (add(i, i++) < 5) {
+&nbsp; &nbsp; <c>//</c>
+&nbsp; }
+} 
+</code></pre> 
+
+ <pre><code>$ time -p node general.js</code></pre><br><pre style="margin-top:-1em"><code>real 0.67</code></pre> <!-- .element: class="fragment" -->
+---
+
 # JavaScript<br>is improving <!-- .slide: class="center" -->
 
 ---
@@ -618,22 +622,19 @@ Supply radix to be cross compatible.
 ## kangax.github.io/compat-table/es5/ <!-- .slide: class="center" -->
 ## kangax.github.io/compat-table/es6/ <!-- .slide: class="center" -->
 ---
-# Want it now? <!-- .slide: class="center" -->
+# Non-standard 'Standards' <!-- .slide: class="center" -->
+---
+## `console.log` <!-- .slide: class="center" -->
+Note: Not actually a standard :D TODO `%c`
 ---
 # Polyfill <!-- .slide: class="center" -->
 Note: Adding new funcionality in JS to JS by adding more JS
 ---
-# Non-standard 'Standards' <!-- .slide: class="center" -->
+# Want it now? <!-- .slide: class="center" -->
 ---
-## `console.log` <!-- .slide: class="center" -->
-Note: Not actually a standard :D
----
-## `%c` <!-- .slide: class="center" -->
----
-
 ## Polyfill `console.log` <!-- .slide: class="center" -->
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">window.console =<br> &nbsp;typeof window.console<br>&nbsp; &nbsp; === 'undefined' <br>&nbsp; &nbsp;? {log:function(str){<br> &nbsp; &nbsp; alert(str) }} <br>&nbsp; &nbsp;: window.console;<br></code></pre></div> <!-- .element: class="fragment" -->
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">console.log("oh good god.");<br></code></pre></div> <!-- .element: class="fragment" -->
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">console.log("oh goodness.");<br></code></pre></div> <!-- .element: class="fragment" -->
 
 ---
 # JavaScript isn't awful <!-- .slide: class="center" -->

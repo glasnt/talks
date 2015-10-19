@@ -405,58 +405,6 @@ Note: even JScript dutifully reverse engineered this error
 #>- ["<img src="pictures/rabbit.svg" class="e" style="margin: 0">","<img src="pictures/cat.svg" style="margin: 0" class="e">"]
 ---
 
-##= Function Optimisation
----
-<pre><code>'use strict';
-
-function add(x, y) {
-<c style="font-weight:normal">&nbsp; // I am the very model of a modern Major-General
-&nbsp; // I've information vegetable, animal, and mineral
-&nbsp;  // I know the kings of England, and I quote the fights historical
-&nbsp;  // From Marathon to Waterloo, in order categorical
-&nbsp;  // I'm very well acquainted, too, with matters mathematical
-&nbsp;  // I understand equations, both the simple and quadratical
-&nbsp;  // About binomial theorem I'm teeming with a lot o' news
-&nbsp;  // With many cheerful facts about the square of the hypotenuse
-&nbsp;  // I'm very good at integral and differential calculus
-&nbsp;  // I know the scientific names of beings animalculous
-</c>
-&nbsp;  return(x + y);
-}
-</code></pre><pre style="margin-top: -1em;"><code>for(let i = 0; i < 500000000; i++) {
-&nbsp; if (add(i, i++) < 5) {
-&nbsp; &nbsp;  <c>//</c>
-&nbsp; }
-}
-</code></pre>
-
-- <pre><code>$ time -p node general.js</code></pre><br><pre style="margin-top:-1em"><code>real 1.68</code></pre>
----
-<pre><code>'use strict';
-
-function add(x, y) {
-<c style="font-weight:normal">&nbsp; // I am the very model of a modern Major-General
-&nbsp; // I've information vegetable, animal, and mineral
-&nbsp;  // I know the kings of England, and I quote the fights historical
-&nbsp;  // From Marathon to Waterloo, in order categorical
-&nbsp;  // I'm very well acquainted, too, with matters mathematical
-&nbsp;  // I understand equations, both the simple and quadratical
-&nbsp;  // About binomial theorem I'm teeming with a lot o' news
-&nbsp;  // With many cheerful facts about the square of the hypotenuse
-&nbsp;  // I'm very good at integral and differential calculus
-&nbsp;  // 
-</c>
-&nbsp;  return(x + y);
-}
-</code></pre><pre style="margin-top: -1em;"><code>for(let i = 0; i < 500000000; i++) {
-&nbsp; if (add(i, i++) < 5) {
-&nbsp; &nbsp;  <c>//</c>
-&nbsp; }
-}
-</code></pre>
-
-- <pre><code>$ time -p node general.js</code></pre><br><pre style="margin-top:-1em"><code>real 0.67</code></pre>
----
 ##= This thing
 ##= `++[[]][+[]]+[+[]]`
 
@@ -585,8 +533,64 @@ Note: iGoogle and Google Desktop widget - scripting by javascript on the desktop
 ##= As a scripting language
 
 Note: NginScript, Cinnamon
-
 ---
+
+##= Even more gotchas
+---
+
+##= Function Optimisation
+---
+<pre><code>'use strict';
+
+function add(x, y) {
+<c style="font-weight:normal">&nbsp; // I am the very model of a modern Major-General
+&nbsp; // I've information vegetable, animal, and mineral
+&nbsp;  // I know the kings of England, and I quote the fights historical
+&nbsp;  // From Marathon to Waterloo, in order categorical
+&nbsp;  // I'm very well acquainted, too, with matters mathematical
+&nbsp;  // I understand equations, both the simple and quadratical
+&nbsp;  // About binomial theorem I'm teeming with a lot o' news
+&nbsp;  // With many cheerful facts about the square of the hypotenuse
+&nbsp;  // I'm very good at integral and differential calculus
+&nbsp;  // I know the scientific names of beings animalculous
+</c>
+&nbsp;  return(x + y);
+}
+</code></pre><pre style="margin-top: -1em;"><code>for(let i = 0; i < 500000000; i++) {
+&nbsp; if (add(i, i++) < 5) {
+&nbsp; &nbsp;  <c>//</c>
+&nbsp; }
+}
+</code></pre>
+
+- <pre><code>$ time -p node general.js</code></pre><br><pre style="margin-top:-1em"><code>real 1.68</code></pre>
+---
+<pre><code>'use strict';
+
+function add(x, y) {
+<c style="font-weight:normal">&nbsp; // I am the very model of a modern Major-General
+&nbsp; // I've information vegetable, animal, and mineral
+&nbsp;  // I know the kings of England, and I quote the fights historical
+&nbsp;  // From Marathon to Waterloo, in order categorical
+&nbsp;  // I'm very well acquainted, too, with matters mathematical
+&nbsp;  // I understand equations, both the simple and quadratical
+&nbsp;  // About binomial theorem I'm teeming with a lot o' news
+&nbsp;  // With many cheerful facts about the square of the hypotenuse
+&nbsp;  // I'm very good at integral and differential calculus
+&nbsp;  // 
+</c>
+&nbsp;  return(x + y);
+}
+</code></pre><pre style="margin-top: -1em;"><code>for(let i = 0; i < 500000000; i++) {
+&nbsp; if (add(i, i++) < 5) {
+&nbsp; &nbsp;  <c>//</c>
+&nbsp; }
+}
+</code></pre>
+
+- <pre><code>$ time -p node general.js</code></pre><br><pre style="margin-top:-1em"><code>real 0.67</code></pre>
+---
+
 #= JavaScript<br>is improving
 
 ---
@@ -618,22 +622,19 @@ Supply radix to be cross compatible.
 ##= kangax.github.io/compat-table/es5/
 ##= kangax.github.io/compat-table/es6/
 ---
-#= Want it now?
+#= Non-standard 'Standards'
+---
+##= `console.log`
+Note: Not actually a standard :D TODO `%c`
 ---
 #= Polyfill
 Note: Adding new funcionality in JS to JS by adding more JS
 ---
-#= Non-standard 'Standards'
+#= Want it now?
 ---
-##= `console.log`
-Note: Not actually a standard :D
----
-##= `%c`
----
-
 ##= Polyfill `console.log`
 #>- window.console =<br> &nbsp;typeof window.console<br>&nbsp; &nbsp; === 'undefined' <br>&nbsp; &nbsp;? {log:function(str){<br> &nbsp; &nbsp; alert(str) }} <br>&nbsp; &nbsp;: window.console;<br> 
-#>- console.log("oh good god.");<br>
+#>- console.log("oh goodness.");<br>
 
 ---
 #= JavaScript isn't awful
