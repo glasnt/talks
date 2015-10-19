@@ -272,7 +272,8 @@ Note: Things you can shoot yourself with in the foot
 
 ---
 
-#= Global Name Space
+#= Global Variables
+Note: Incidently, first listing in The Good Parts - Appendix A - The Awful Parts
 ---
 
 <p></p>
@@ -329,7 +330,7 @@ Note: Because every other language has locals by default
 Note: `+` for both additon and concatenation
 ---
 
-#= Equality and Coersion
+#= Equality<br>and<br>Coersion
 ---
 <p></p>
 #> > 0 ==&nbsp; false  
@@ -357,52 +358,223 @@ But because legacy, the standards committee didn't accept the change to `==`
 
 forced creation of `===`
 
-even JScript dutifully reverse engineered this error
 
 ---
 
-#= Bad Parts
+#= More Gotchas
+---
+##= `typeof`
+---
+#> > typeof Object()
+#>- "object"
+#>- > typeof String()
+#>- "string"
+#>- > typeof Number()
+#>- "number"
+#>- > typeof null
+#>- "object"
+#>- > typeof NaN
+#>- "number"
+Note: even JScript dutifully reverse engineered this error
+---
+##= `NaN`
+---
+#> > typeof NaN
+#> number
+#>- > NaN === NaN
+#>- false
+#>- > NaN !== NaN
+#>- true
+#>- > isFinite(NaN)
+#>- false
+---
+##= `parseInt`
+---
+#> > parseInt("123")
+#>- 123
+#>- > parseInt("123 bunnies")
+#>- 123
+#>- > parseInt("04")
+#>- 4
+#>- > parseInt("08")
+#>- 0 
+---
+##= Extended Character Set
+---
+#> > "abc".split("")
+#>- ["a","b","c"]
+#>- > "<img src="pictures/rabbit.svg" class="e" style="margin: 0"><img src="pictures/cat.svg" style="margin: 0" class="e">".split("")
+#>- ["�","�","�","�"]
+#>- > Array.from("<img src="pictures/rabbit.svg" class="e" style="margin: 0"><img src="pictures/cat.svg" style="margin: 0" class="e">")
+#>- ["<img src="pictures/rabbit.svg" class="e" style="margin: 0">","<img src="pictures/cat.svg" style="margin: 0" class="e">"]
 ---
 
-#= Misc wats
+##= V8 function optimisation
+---
+<pre><code>'use strict';
+
+function add(x, y) {
+<c style="font-weight:normal">&nbsp; // I am the very model of a modern Major-General
+&nbsp; // I've information vegetable, animal, and mineral
+&nbsp;  // I know the kings of England, and I quote the fights historical
+&nbsp;  // From Marathon to Waterloo, in order categorical
+&nbsp;  // I'm very well acquainted, too, with matters mathematical
+&nbsp;  // I understand equations, both the simple and quadratical
+&nbsp;  // About binomial theorem I'm teeming with a lot o' news
+&nbsp;  // With many cheerful facts about the square of the hypotenuse
+&nbsp;  // I'm very good at integral and differential calculus
+&nbsp;  // I know the scientific names of beings animalculous
+</c>
+&nbsp;  return(x + y);
+}
+</code></pre><pre style="margin-top: -1em;"><code>for(let i = 0; i < 500000000; i++) {
+&nbsp; if (add(i, i++) < 5) {
+&nbsp; &nbsp;  <c>//</c>
+&nbsp; }
+}
+</code></pre>
+
+- <pre><code>$ time -p node general.js</code></pre>
+- <pre style="margin-top:-1em"><code>real 1.68</code></pre>
+---
+<pre><code>'use strict';
+
+function add(x, y) {
+<c style="font-weight:normal">&nbsp; // I am the very model of a modern Major-General
+&nbsp; // I've information vegetable, animal, and mineral
+&nbsp;  // I know the kings of England, and I quote the fights historical
+&nbsp;  // From Marathon to Waterloo, in order categorical
+&nbsp;  // I'm very well acquainted, too, with matters mathematical
+&nbsp;  // I understand equations, both the simple and quadratical
+&nbsp;  // About binomial theorem I'm teeming with a lot o' news
+&nbsp;  // With many cheerful facts about the square of the hypotenuse
+&nbsp;  // I'm very good at integral and differential calculus
+&nbsp;  // 
+</c>
+&nbsp;  return(x + y);
+}
+</code></pre><pre style="margin-top: -1em;"><code>for(let i = 0; i < 500000000; i++) {
+&nbsp; if (add(i, i++) < 5) {
+&nbsp; &nbsp;  <c>//</c>
+&nbsp; }
+}
+</code></pre>
+
+- <pre><code>$ time -p node general.js</code></pre>
+- <pre style="margin-top:-1em"><code>real 0.67</code></pre>
+---
+##= This thing
+##= `++[[]][+[]]+[+[]]`
+
+---
+#> > ++[[]][+[]]+[+[]]
+#>- 10
+#>- > []
+#>- ""
+#>- > +[]
+#>- 0
+---
+#> > [[]][+[]]
+#>- ""
+#>- > +[[]][+[]]
+#>- 0
+#>- > ++[[]][+[]]
+#>- 1
+#>- > ++[[]][+[]] + [+[]]
+#>- 10
+
 ---
 
 #= Security
 ---
+##= `eval`
 
+Note: executing arbitary code. 
+
+We can create not easily readable code
+
+
+---
+
+##= Cross Site Scripting
+TODO
+---
+##= Cross Site Request Forgery
+TODO
+---
+#= See: Hack the Planet
+## Tutorial, 10am Wednesday
+##- (will not be recorded)
+---
+#= ...
+Note: so,that's what javascript can do. what if you say
+---
 ##= (╯°□°）╯︵ sʇɐʍ ʎɔɐƃǝl
+Note: I dont want to deal with all that stuff
 ---
 
 #= Frameworks
+---
+
+##= MooTools
+Note: MooTools was a really good thing back in the day
+---
+
+##= jQuery
+---
+##= `$ = jQuery`
+
+Note: machines should only be using dollar
+---
+
+##= BootStrap
+Note: more than JS; CSS, HTML
 
 ---
 
+#= Super Shiny
+---
+
+##= Meteor
+---
+##= React
+---
+##= Angular
+---
+#= ...
+Note: but what if you sasy
+---
 ##= (╯°□°）╯︵ ʇdᴉɹɔsɐʌɐɾ
+Note: stuff javascript all together
 ---
 
 #= Use a new language
 
 ---
 
-#= CoffeeScript
+##= CoffeeScript
 
 ---
-#= TypeScript
+##= TypeScript
 ---
-#= PureScript
+##= PureScript
 
 ---
-
+##= (╯°□°）╯︵ TODO learningupsitedown
+Note: I want to work in my favourite language, and still work in the browser
+---
 #= Pick a language
 #= Any Language
-
-
 ---
-
+##= TODO list of things
+---
 #= Batavia
-
+@ pybee.png
 ---
-
+#= ...
+---
+##= TODO table back for javascript
+---
 #= JavaScript outside<br>the Browser
 ---
 
@@ -410,12 +582,13 @@ even JScript dutifully reverse engineered this error
 
 ---
 
-#= Electron
+##= Electron
 
 Note: not the first time JS has been used on the desktop
 ---
 
-#= Google Gadgets
+##= Google Gadgets
+Note: iGoogle and Google Desktop widget - scripting by javascript on the desktop
 ---
 
 ##= Many more uses
@@ -432,20 +605,33 @@ Note: NginScript, Cinnamon
 
 ---
 
+#>- > parseInt("08") 
+#>- 8 <c>// ECMAScript 5 </c>
+Note: assumed to be octal unless you have ECMAScript 5. 
+---
 #= ECMAScript 6
 ---
+##= Fixing Global Variables
+---
 
+
+
+---
 #= Non-standard Standards
 
 ---
 
-#= <pre>console.log</pre>
+##= `console.log`
+---
+##= Facebook's Console
+---
+##= `%c`
 ---
 
 
 #> window.console =
 #>  typeof window.console === 'undefined' 
-#> &nbsp; &nbsp; ? {log:function(str){ alert(str) }} 
+#> &nbsp; &nbsp; ? {log:function(str){<br>alert(str) }} 
 #> &nbsp; &nbsp; : window.console;
 #> <br>console.log("oh good god.");
 

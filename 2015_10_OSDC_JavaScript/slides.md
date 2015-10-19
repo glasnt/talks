@@ -272,7 +272,8 @@ Note: Things you can shoot yourself with in the foot
 
 ---
 
-# Global Name Space <!-- .slide: class="center" -->
+# Global Variables <!-- .slide: class="center" -->
+Note: Incidently, first listing in The Good Parts - Appendix A - The Awful Parts
 ---
 
 <p></p> 
@@ -329,7 +330,7 @@ Note: Because every other language has locals by default
 Note: `+` for both additon and concatenation
 ---
 
-# Equality and Coersion <!-- .slide: class="center" -->
+# Equality<br>and<br>Coersion <!-- .slide: class="center" -->
 ---
 <p></p> 
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> 0 ==&nbsp; false</code></pre></div>
@@ -357,52 +358,223 @@ But because legacy, the standards committee didn't accept the change to `==`
 
 forced creation of `===`
 
-even JScript dutifully reverse engineered this error
 
 ---
 
-# Bad Parts <!-- .slide: class="center" -->
+# More Gotchas <!-- .slide: class="center" -->
+---
+## `typeof` <!-- .slide: class="center" -->
+---
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> typeof Object()</code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">"object"</code></pre></div> <!-- .element: class="fragment" -->
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> typeof String()</code></pre></div> <!-- .element: class="fragment" -->
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">"string"</code></pre></div> <!-- .element: class="fragment" -->
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> typeof Number()</code></pre></div> <!-- .element: class="fragment" -->
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">"number"</code></pre></div> <!-- .element: class="fragment" -->
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> typeof null</code></pre></div> <!-- .element: class="fragment" -->
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">"object"</code></pre></div> <!-- .element: class="fragment" -->
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> typeof NaN</code></pre></div> <!-- .element: class="fragment" -->
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">"number"</code></pre></div> <!-- .element: class="fragment" -->
+Note: even JScript dutifully reverse engineered this error
+---
+## `NaN` <!-- .slide: class="center" -->
+---
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> typeof NaN</code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">number</code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> NaN === NaN</code></pre></div> <!-- .element: class="fragment" -->
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">false</code></pre></div> <!-- .element: class="fragment" -->
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> NaN !== NaN</code></pre></div> <!-- .element: class="fragment" -->
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">true</code></pre></div> <!-- .element: class="fragment" -->
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> isFinite(NaN)</code></pre></div> <!-- .element: class="fragment" -->
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">false</code></pre></div> <!-- .element: class="fragment" -->
+---
+## `parseInt` <!-- .slide: class="center" -->
+---
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> parseInt("123")</code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">123</code></pre></div> <!-- .element: class="fragment" -->
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> parseInt("123 bunnies")</code></pre></div> <!-- .element: class="fragment" -->
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">123</code></pre></div> <!-- .element: class="fragment" -->
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> parseInt("04")</code></pre></div> <!-- .element: class="fragment" -->
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">4</code></pre></div> <!-- .element: class="fragment" -->
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> parseInt("08")</code></pre></div> <!-- .element: class="fragment" -->
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">0</code></pre></div> <!-- .element: class="fragment" -->
+---
+## Extended Character Set <!-- .slide: class="center" -->
+---
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> "abc".split("")</code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">["a","b","c"]</code></pre></div> <!-- .element: class="fragment" -->
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> "<img src="pictures/rabbit.svg" class="e" style="margin: 0"><img src="pictures/cat.svg" style="margin: 0" class="e">".split("")</code></pre></div> <!-- .element: class="fragment" -->
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">["�","�","�","�"]</code></pre></div> <!-- .element: class="fragment" -->
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> Array.from("<img src="pictures/rabbit.svg" class="e" style="margin: 0"><img src="pictures/cat.svg" style="margin: 0" class="e">")</code></pre></div> <!-- .element: class="fragment" -->
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">["<img src="pictures/rabbit.svg" class="e" style="margin: 0">","<img src="pictures/cat.svg" style="margin: 0" class="e">"]</code></pre></div> <!-- .element: class="fragment" -->
 ---
 
-# Misc wats <!-- .slide: class="center" -->
+## V8 function optimisation <!-- .slide: class="center" -->
+---
+<pre><code>'use strict';
+
+function add(x, y) {
+<c style="font-weight:normal">&nbsp; // I am the very model of a modern Major-General
+&nbsp; // I've information vegetable, animal, and mineral
+&nbsp; // I know the kings of England, and I quote the fights historical
+&nbsp; // From Marathon to Waterloo, in order categorical
+&nbsp; // I'm very well acquainted, too, with matters mathematical
+&nbsp; // I understand equations, both the simple and quadratical
+&nbsp; // About binomial theorem I'm teeming with a lot o' news
+&nbsp; // With many cheerful facts about the square of the hypotenuse
+&nbsp; // I'm very good at integral and differential calculus
+&nbsp; // I know the scientific names of beings animalculous
+</c> 
+&nbsp; return(x + y);
+} 
+</code></pre><pre style="margin-top: -1em;"><code>for(let i = 0; i < 500000000; i++) {
+&nbsp; if (add(i, i++) < 5) {
+&nbsp; &nbsp; <c>//</c>
+&nbsp; }
+} 
+</code></pre> 
+
+ <pre><code>$ time -p node general.js</code></pre> <!-- .element: class="fragment" -->
+ <pre style="margin-top:-1em"><code>real 1.68</code></pre> <!-- .element: class="fragment" -->
+---
+<pre><code>'use strict';
+
+function add(x, y) {
+<c style="font-weight:normal">&nbsp; // I am the very model of a modern Major-General
+&nbsp; // I've information vegetable, animal, and mineral
+&nbsp; // I know the kings of England, and I quote the fights historical
+&nbsp; // From Marathon to Waterloo, in order categorical
+&nbsp; // I'm very well acquainted, too, with matters mathematical
+&nbsp; // I understand equations, both the simple and quadratical
+&nbsp; // About binomial theorem I'm teeming with a lot o' news
+&nbsp; // With many cheerful facts about the square of the hypotenuse
+&nbsp; // I'm very good at integral and differential calculus
+&nbsp; //
+</c> 
+&nbsp; return(x + y);
+} 
+</code></pre><pre style="margin-top: -1em;"><code>for(let i = 0; i < 500000000; i++) {
+&nbsp; if (add(i, i++) < 5) {
+&nbsp; &nbsp; <c>//</c>
+&nbsp; }
+} 
+</code></pre> 
+
+ <pre><code>$ time -p node general.js</code></pre> <!-- .element: class="fragment" -->
+ <pre style="margin-top:-1em"><code>real 0.67</code></pre> <!-- .element: class="fragment" -->
+---
+## This thing <!-- .slide: class="center" -->
+## `++[[]][+[]]+[+[]]` <!-- .slide: class="center" -->
+
+---
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> ++[[]][+[]]+[+[]]</code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">10</code></pre></div> <!-- .element: class="fragment" -->
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> []</code></pre></div> <!-- .element: class="fragment" -->
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">""</code></pre></div> <!-- .element: class="fragment" -->
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> +[]</code></pre></div> <!-- .element: class="fragment" -->
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">0</code></pre></div> <!-- .element: class="fragment" -->
+---
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> [[]][+[]]</code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">""</code></pre></div> <!-- .element: class="fragment" -->
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> +[[]][+[]]</code></pre></div> <!-- .element: class="fragment" -->
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">0</code></pre></div> <!-- .element: class="fragment" -->
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> ++[[]][+[]]</code></pre></div> <!-- .element: class="fragment" -->
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">1</code></pre></div> <!-- .element: class="fragment" -->
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> ++[[]][+[]] + [+[]]</code></pre></div> <!-- .element: class="fragment" -->
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">10</code></pre></div> <!-- .element: class="fragment" -->
+
 ---
 
 # Security <!-- .slide: class="center" -->
 ---
+## `eval` <!-- .slide: class="center" -->
 
+Note: executing arbitary code.
+
+We can create not easily readable code
+
+
+---
+
+## Cross Site Scripting <!-- .slide: class="center" -->
+TODO 
+---
+## Cross Site Request Forgery <!-- .slide: class="center" -->
+TODO 
+---
+# See: Hack the Planet <!-- .slide: class="center" -->
+## Tutorial, 10am Wednesday
+## (will not be recorded) <!-- .element: class="fragment" -->
+---
+# ... <!-- .slide: class="center" -->
+Note: so,that's what javascript can do. what if you say
+---
 ## (╯°□°）╯︵ sʇɐʍ ʎɔɐƃǝl <!-- .slide: class="center" -->
+Note: I dont want to deal with all that stuff
 ---
 
 # Frameworks <!-- .slide: class="center" -->
+---
+
+## MooTools <!-- .slide: class="center" -->
+Note: MooTools was a really good thing back in the day
+---
+
+## jQuery <!-- .slide: class="center" -->
+---
+## `$ = jQuery` <!-- .slide: class="center" -->
+
+Note: machines should only be using dollar
+---
+
+## BootStrap <!-- .slide: class="center" -->
+Note: more than JS; CSS, HTML
 
 ---
 
+# Super Shiny <!-- .slide: class="center" -->
+---
+
+## Meteor <!-- .slide: class="center" -->
+---
+## React <!-- .slide: class="center" -->
+---
+## Angular <!-- .slide: class="center" -->
+---
+# ... <!-- .slide: class="center" -->
+Note: but what if you sasy
+---
 ## (╯°□°）╯︵ ʇdᴉɹɔsɐʌɐɾ <!-- .slide: class="center" -->
+Note: stuff javascript all together
 ---
 
 # Use a new language <!-- .slide: class="center" -->
 
 ---
 
-# CoffeeScript <!-- .slide: class="center" -->
+## CoffeeScript <!-- .slide: class="center" -->
 
 ---
-# TypeScript <!-- .slide: class="center" -->
+## TypeScript <!-- .slide: class="center" -->
 ---
-# PureScript <!-- .slide: class="center" -->
+## PureScript <!-- .slide: class="center" -->
 
 ---
-
+## (╯°□°）╯︵ TODO learningupsitedown <!-- .slide: class="center" -->
+Note: I want to work in my favourite language, and still work in the browser
+---
 # Pick a language <!-- .slide: class="center" -->
 # Any Language <!-- .slide: class="center" -->
-
-
 ---
-
+## TODO list of things <!-- .slide: class="center" -->
+---
 # Batavia <!-- .slide: class="center" -->
-
+ <img src="pictures/pybee.png" />
 ---
-
+# ... <!-- .slide: class="center" -->
+---
+## TODO table back for javascript <!-- .slide: class="center" -->
+---
 # JavaScript outside<br>the Browser <!-- .slide: class="center" -->
 ---
 
@@ -410,12 +582,13 @@ even JScript dutifully reverse engineered this error
 
 ---
 
-# Electron <!-- .slide: class="center" -->
+## Electron <!-- .slide: class="center" -->
 
 Note: not the first time JS has been used on the desktop
 ---
 
-# Google Gadgets <!-- .slide: class="center" -->
+## Google Gadgets <!-- .slide: class="center" -->
+Note: iGoogle and Google Desktop widget - scripting by javascript on the desktop
 ---
 
 ## Many more uses <!-- .slide: class="center" -->
@@ -432,20 +605,33 @@ Note: NginScript, Cinnamon
 
 ---
 
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> parseInt("08")</code></pre></div> <!-- .element: class="fragment" -->
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">8 <c>// ECMAScript 5 </c></code></pre></div> <!-- .element: class="fragment" -->
+Note: assumed to be octal unless you have ECMAScript 5.
+---
 # ECMAScript 6 <!-- .slide: class="center" -->
 ---
+## Fixing Global Variables <!-- .slide: class="center" -->
+---
 
+
+
+---
 # Non-standard Standards <!-- .slide: class="center" -->
 
 ---
 
-# <pre>console.log</pre> <!-- .slide: class="center" -->
+## `console.log` <!-- .slide: class="center" -->
+---
+## Facebook's Console <!-- .slide: class="center" -->
+---
+## `%c` <!-- .slide: class="center" -->
 ---
 
 
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">window.console =</code></pre></div>
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">typeof window.console === 'undefined'</code></pre></div>
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">&nbsp; &nbsp; ? {log:function(str){ alert(str) }}</code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">&nbsp; &nbsp; ? {log:function(str){<br>alert(str) }}</code></pre></div>
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">&nbsp; &nbsp; : window.console;</code></pre></div>
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%"><br>console.log("oh good god.");</code></pre></div>
 

@@ -293,21 +293,47 @@ Note: PHP 7.0.0 RC3 2015-09-17. If in production...
 ---
 # Ruby 1.9.3? <!-- .slide: class="center" -->
 ## Upgrade. Unmaintained. <!-- .element: class="fragment" -->
-Note: EOL Date TODO
+Note: EOL Date Feb 2015
 ---
 
-# Ruby 2.0? <!-- .slide: class="center" -->
-## TODO <!-- .element: class="fragment" -->
+# Ruby 2.x? <!-- .slide: class="center" -->
+## Keep your patches up to date <!-- .element: class="fragment" -->
+Note: I cannot find proper canonical information about this :(
 ---
 
 # Python <!-- .slide: class="center" -->
 ## What version are you running? <!-- .element: class="fragment" -->
-## TODO <!-- .element: class="fragment" -->
 ---
-
+# Python <= 2.5 <!-- .slide: class="center" -->
+## ... <!-- .element: class="fragment" -->
+---
+# Python 2.6? <!-- .slide: class="center" -->
+## Upgrade. Unmaintained. <!-- .element: class="fragment" -->
+<span class="dasfootc"><a href="https://www.python.org/dev/peps/pep-0361/">PEP-0361</a></span>
+---
+# Python 2.7? <!-- .slide: class="center" -->
+## Keep your patches up to date <!-- .element: class="fragment" -->
+<span class="dasfootc"><a href="https://www.python.org/dev/peps/pep-0373/">PEP-0373</a></span>
+---
+# Python 3.1? <!-- .slide: class="center" -->
+## Upgrade. Unmaintained. <!-- .element: class="fragment" -->
+<span class="dasfootc"><a href="https://www.python.org/dev/peps/pep-0375/">PEP-0375</a></span>
+---
+# Python 3.2? <!-- .slide: class="center" -->
+## Source updates til Feb 2016 <!-- .element: class="fragment" -->
+<span class="dasfootc"><a href="https://www.python.org/dev/peps/pep-0392/">PEP-0392</a></span>
+---
+# Python >= 3.3 ? <!-- .slide: class="center" -->
+## Keep your patches up to date <!-- .element: class="fragment" -->
+<span class="dasfootc"><a href="http://bugs.python.org/issue25296">Issue 25292 - EOL Guide</a></span>
+---
 # Perl <!-- .slide: class="center" -->
 ## What version are you running? <!-- .element: class="fragment" -->
-## TODO <!-- .element: class="fragment" -->
+---
+# Perl <= 5.10? <!-- .slide: class="center" -->
+## ... <!-- .slide: class="center" -->
+---
+# Perl 5.12? <!-- .slide: class="center" -->
 ---
 # So just how much *don't* we patch? <!-- .slide: class="center" -->
 ## Surely it's not that bad, right? <!-- .element: class="fragment" -->
@@ -337,6 +363,8 @@ Note: EOL Date TODO
 
 # No, it's not. <!-- .slide: class="center" -->
 ## It's easier than losing your business. <!-- .element: class="fragment" -->
+
+Note: Severity of patching - major issue - ASAP. Keep distro packages up to date.
 ---
 
 # "That won't<br>happen to me!" <!-- .slide: class="center" -->

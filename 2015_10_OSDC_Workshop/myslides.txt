@@ -293,21 +293,47 @@ Note: PHP 7.0.0 RC3 2015-09-17. If in production...
 ---
 #= Ruby 1.9.3?
 ##- Upgrade. Unmaintained. 
-Note: EOL Date TODO
+Note: EOL Date Feb 2015
 ---
 
-#= Ruby 2.0?
-##- TODO
+#= Ruby 2.x?
+##- Keep your patches up to date
+Note: I cannot find proper canonical information about this :(
 ---
 
 #= Python
 ##- What version are you running?
-##- TODO
 ---
-
+#= Python <= 2.5
+##- ...
+---
+#= Python 2.6?
+##- Upgrade. Unmaintained.
+<span class="dasfootc"><a href="https://www.python.org/dev/peps/pep-0361/">PEP-0361</a></span>
+---
+#= Python 2.7?
+##- Keep your patches up to date
+<span class="dasfootc"><a href="https://www.python.org/dev/peps/pep-0373/">PEP-0373</a></span>
+---
+#= Python 3.1?
+##- Upgrade. Unmaintained.
+<span class="dasfootc"><a href="https://www.python.org/dev/peps/pep-0375/">PEP-0375</a></span>
+---
+#= Python 3.2?
+##- Source updates til Feb 2016
+<span class="dasfootc"><a href="https://www.python.org/dev/peps/pep-0392/">PEP-0392</a></span>
+---
+#= Python >= 3.3 ?
+##- Keep your patches up to date
+<span class="dasfootc"><a href="http://bugs.python.org/issue25296">Issue 25292 - EOL Guide</a></span>
+---
 #= Perl
 ##- What version are you running?
-##- TODO
+---
+#= Perl <= 5.10?
+##= ...
+---
+#= Perl 5.12?
 ---
 #= So just how much *don't* we patch?
 ##- Surely it's not that bad, right?
@@ -337,6 +363,8 @@ Note: EOL Date TODO
 
 #= No, it's not.
 ##- It's easier than losing your business.
+
+Note: Severity of patching - major issue - ASAP. Keep distro packages up to date. 
 ---
 
 #= "That won't<br>happen to me!"
