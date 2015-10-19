@@ -89,9 +89,7 @@ Note: Associativity? Pfft! Transativity? Hahahah
 ---
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> arr.push("append");</code></pre></div>
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">4</code></pre></div> <!-- .element: class="fragment" -->
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> c = 0;</code></pre></div> <!-- .element: class="fragment" -->
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> for (var k in arr) {<br>>&nbsp; &nbsp; c = c + 1; <br>> }</code></pre></div> <!-- .element: class="fragment" -->
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> c</code></pre></div> <!-- .element: class="fragment" -->
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> c = 0;<br>> for (var k in arr) {<br>>&nbsp; &nbsp; c = c + 1; <br>> }<br>> c</code></pre></div> <!-- .element: class="fragment" -->
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">5</code></pre></div> <!-- .element: class="fragment" -->
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> arr.length</code></pre></div> <!-- .element: class="fragment" -->
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">4</code></pre></div> <!-- .element: class="fragment" -->
@@ -107,33 +105,30 @@ Note: Associativity? Pfft! Transativity? Hahahah
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> 1 === "1"</code></pre></div> <!-- .element: class="fragment" -->
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">false</code></pre></div> <!-- .element: class="fragment" -->
 ---
-# Developers get a bit<br>upset at JavaScript <!-- .slide: class="center" -->
+# Developers can get<br>just a little bit<br>upset at JavaScript <!-- .slide: class="center" -->
 ---
-> "... please don't hire me for my JS abilities. i'm proficient enough to loath the language intensely" <!-- .slide: class="center" -->
+> "[A]: Please don't hire me for my JS abilities. I'm proficient enough to<br>loath the language intensely" <!-- .slide: class="center" -->
 Note: experienced developers get frustrated with it
 ---
 
-> "... I have been around him when he hacks JS. Let's just say Satan himself would blush." <!-- .slide: class="center" -->
+> "[B]: I have been around [A]<br>when they hack JS.<br>Let's just say Satan himself would blush." <!-- .slide: class="center" -->
 Note: people near to javascript developers hear them swear. A lot.
 ---
 
-> Have to modify some JavaScript<br>I did over a year ago. <!-- .slide: class="center" -->
+> "[C]: Have to modify some JavaScript<br>I did over a year ago. <!-- .slide: class="center" -->
 > 
-> 'What is this?'
-> 
-> 'Why did I ...?'
-> 
+> 'What is this?'<br>
+> 'Why did I ...?'<br>
 > 'What sort of name is that!'"
 
 Note: confusing syntax, hard to come back to
 
 ---
 
-> "I hate writing JavaScript. <!-- .slide: class="center" -->
+> "[D]: 'I hate writing JavaScript.<br> <!-- .slide: class="center" -->
+> I know, I'll write some JavaScript to fix it.'
 > 
-> I know, I'll write some JavaScript to fix it."
-> 
-> This is how Angular happens.
+> This is how Angular happens."
 
 Note: Pot shots at the Language
 ---
@@ -143,8 +138,8 @@ Note: Pot shots at the Language
 Note: why is javascript so awful
 ---
 
-# History.zip <!-- .slide: class="center" -->
-## See "Crockford on JavaScript" <!-- .element: class="fragment" -->
+# JavaScript History<br>in 30 words or less <!-- .slide: class="center" -->
+### For more, see "Crockford on JavaScript" <!-- .element: class="fragment" -->
 Note: I don't have time to tell the entire history of javascript
 
 Check out the YUI Theatre series
@@ -236,10 +231,16 @@ race was on to develop the scriting language to make the web better
 
 Because trademark, MS reverse engineered JS, called it JScript
 
+---
+
+## JavaScript™ <!-- .slide: class="center" -->
+
+<span class="dasfoot"><a href="http://tsdr.uspto.gov/#caseNumber=75026640&caseType=SERIAL_NO&searchType=statusSearch">US Trademark &#35;75026640</a></span>
+Note: 
 
 ---
 
-## ECMAScript Standard <!-- .slide: class="center" -->
+## ECMAScript <!-- .slide: class="center" -->
 
 Note: Because of some fun issues, Tim Berners Lee and W3C wouldn't do the standard
 
@@ -258,12 +259,6 @@ They couldn't think of a better name
 Working title: ECMA Script (ecc-ma)
 
 
----
-
-## JavaScript™ <!-- .slide: class="center" -->
-
-<span class="dasfoot"><a href="http://tsdr.uspto.gov/#caseNumber=75026640&caseType=SERIAL_NO&searchType=statusSearch">US Trademark &#35;75026640</a></span>
-Note: 
 ---
 
 # Foot Guns <!-- .slide: class="center" -->
@@ -306,7 +301,7 @@ Note: Incidently, first listing in The Good Parts - Appendix A - The Awful Parts
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%"><h>public</h> static ans = 42;</code></pre></div>
 Note: Because every other language has locals by default
 ---
-# Overloaded `+` operand <!-- .slide: class="center" -->
+# Overloaded<br>`+` operand <!-- .slide: class="center" -->
 ---
 <p></p> 
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> 4 + 2</code></pre></div>
@@ -330,7 +325,7 @@ Note: Because every other language has locals by default
 Note: `+` for both additon and concatenation
 ---
 
-# Equality<br>and<br>Coersion <!-- .slide: class="center" -->
+# Equality<br>and<br>Type Coersion <!-- .slide: class="center" -->
 ---
 <p></p> 
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> 0 ==&nbsp; false</code></pre></div>
@@ -350,7 +345,7 @@ Note: `+` for both additon and concatenation
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> 1 == &nbsp;"1" <c> // equality</c></code></pre></div>
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">true</code></pre></div>
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> 1 === "1" <c>// equality without</c></code></pre></div>
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">false &nbsp; &nbsp; &nbsp; <c>// type co-ersion</c></code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">false &nbsp; &nbsp; &nbsp; <c>// type coersion</c></code></pre></div>
 
 Note: This was picked up v. early by Brendan Eich
 
@@ -362,6 +357,7 @@ forced creation of `===`
 ---
 
 # More Gotchas <!-- .slide: class="center" -->
+Note: Combination of original 'Bad Parts', 'Awful Parts', and some new Fun
 ---
 ## `typeof` <!-- .slide: class="center" -->
 ---
@@ -372,15 +368,15 @@ forced creation of `===`
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> typeof Number()</code></pre></div> <!-- .element: class="fragment" -->
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">"number"</code></pre></div> <!-- .element: class="fragment" -->
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> typeof null</code></pre></div> <!-- .element: class="fragment" -->
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">"object"</code></pre></div> <!-- .element: class="fragment" -->
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">"object" <r>// ;&#95;;</r></code></pre></div> <!-- .element: class="fragment" -->
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> typeof NaN</code></pre></div> <!-- .element: class="fragment" -->
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">"number"</code></pre></div> <!-- .element: class="fragment" -->
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">"number" <r>// ;&#95;;</r></code></pre></div> <!-- .element: class="fragment" -->
 Note: even JScript dutifully reverse engineered this error
 ---
 ## `NaN` <!-- .slide: class="center" -->
 ---
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> typeof NaN</code></pre></div>
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">number</code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">"number"</code></pre></div>
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> NaN === NaN</code></pre></div> <!-- .element: class="fragment" -->
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">false</code></pre></div> <!-- .element: class="fragment" -->
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> NaN !== NaN</code></pre></div> <!-- .element: class="fragment" -->
@@ -409,7 +405,7 @@ Note: even JScript dutifully reverse engineered this error
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">["<img src="pictures/rabbit.svg" class="e" style="margin: 0">","<img src="pictures/cat.svg" style="margin: 0" class="e">"]</code></pre></div> <!-- .element: class="fragment" -->
 ---
 
-## V8 function optimisation <!-- .slide: class="center" -->
+## Function Optimisation <!-- .slide: class="center" -->
 ---
 <pre><code>'use strict';
 
@@ -434,8 +430,7 @@ function add(x, y) {
 } 
 </code></pre> 
 
- <pre><code>$ time -p node general.js</code></pre> <!-- .element: class="fragment" -->
- <pre style="margin-top:-1em"><code>real 1.68</code></pre> <!-- .element: class="fragment" -->
+ <pre><code>$ time -p node general.js</code></pre><br><pre style="margin-top:-1em"><code>real 1.68</code></pre> <!-- .element: class="fragment" -->
 ---
 <pre><code>'use strict';
 
@@ -460,8 +455,7 @@ function add(x, y) {
 } 
 </code></pre> 
 
- <pre><code>$ time -p node general.js</code></pre> <!-- .element: class="fragment" -->
- <pre style="margin-top:-1em"><code>real 0.67</code></pre> <!-- .element: class="fragment" -->
+ <pre><code>$ time -p node general.js</code></pre><br><pre style="margin-top:-1em"><code>real 0.67</code></pre> <!-- .element: class="fragment" -->
 ---
 ## This thing <!-- .slide: class="center" -->
 ## `++[[]][+[]]+[+[]]` <!-- .slide: class="center" -->
@@ -497,14 +491,14 @@ We can create not easily readable code
 ---
 
 ## Cross Site Scripting <!-- .slide: class="center" -->
-TODO 
+Note: 
 ---
 ## Cross Site Request Forgery <!-- .slide: class="center" -->
-TODO 
+Note: 
 ---
-# See: Hack the Planet <!-- .slide: class="center" -->
-## Tutorial, 10am Wednesday
-## (will not be recorded) <!-- .element: class="fragment" -->
+## See: Hack the Planet <!-- .slide: class="center" -->
+### Tutorial, 10am Wednesday
+### (will not be recorded) <!-- .element: class="fragment" -->
 ---
 # ... <!-- .slide: class="center" -->
 Note: so,that's what javascript can do. what if you say
@@ -518,27 +512,27 @@ Note: I dont want to deal with all that stuff
 
 ## MooTools <!-- .slide: class="center" -->
 Note: MooTools was a really good thing back in the day
+
+I've only come across it when I tasked to remove it
 ---
 
 ## jQuery <!-- .slide: class="center" -->
----
-## `$ = jQuery` <!-- .slide: class="center" -->
+Note: so much extension
 
-Note: machines should only be using dollar
+at one point ~90% of websites had it
 ---
 
 ## BootStrap <!-- .slide: class="center" -->
 Note: more than JS; CSS, HTML
+Adding more functionality so you dont have to worry about responsive websites
 
+But you can spot a bootstraped wbesite from a mile away
 ---
 
-# Super Shiny <!-- .slide: class="center" -->
+# The new Hotness <!-- .slide: class="center" -->
 ---
-
 ## Meteor <!-- .slide: class="center" -->
----
 ## React <!-- .slide: class="center" -->
----
 ## Angular <!-- .slide: class="center" -->
 ---
 # ... <!-- .slide: class="center" -->
@@ -548,55 +542,51 @@ Note: but what if you sasy
 Note: stuff javascript all together
 ---
 
-# Use a new language <!-- .slide: class="center" -->
-
----
-
 ## CoffeeScript <!-- .slide: class="center" -->
-
+Note: CoffeeScript is a little language that compiles into JavaScript. Underneath that awkward Java-esque patina, JavaScript has always had a gorgeous heart.
 ---
 ## TypeScript <!-- .slide: class="center" -->
+Note: TypeScript lets you write JavaScript the way you really want to. TypeScript is a typed superset of JavaScript that compiles to plain JavaScript
+
+See Typehints in JS talk from PyCon AU 2015
 ---
 ## PureScript <!-- .slide: class="center" -->
-
+Note: 
 ---
-## (╯°□°）╯︵ TODO learningupsitedown <!-- .slide: class="center" -->
+## (╯°□°）╯︵ ƃuᴉuɹɐǝl <!-- .slide: class="center" -->
 Note: I want to work in my favourite language, and still work in the browser
 ---
-# Pick a language <!-- .slide: class="center" -->
-# Any Language <!-- .slide: class="center" -->
+## Pick a language. <!-- .slide: class="center" -->
+## Any language. <!-- .slide: class="center" -->
+
+Note: 
+
 ---
-## TODO list of things <!-- .slide: class="center" -->
+### github.com/jashkenas/coffeescript/wiki/<br>List-of-languages-that-compile-to-JS <!-- .slide: class="center" -->
 ---
 # Batavia <!-- .slide: class="center" -->
  <img src="pictures/pybee.png" />
 ---
 # ... <!-- .slide: class="center" -->
 ---
-## TODO table back for javascript <!-- .slide: class="center" -->
+## ┬javascript┬ ノ( ゜-゜ノ) <!-- .slide: class="center" -->
 ---
-# JavaScript outside<br>the Browser <!-- .slide: class="center" -->
+## JavaScript outside<br>the browser <!-- .slide: class="center" -->
 ---
-
-# node.js <!-- .slide: class="center" -->
-
+## node.js <!-- .slide: class="center" -->
+Note: serverside js
 ---
-
 ## Electron <!-- .slide: class="center" -->
-
 Note: not the first time JS has been used on the desktop
 ---
-
 ## Google Gadgets <!-- .slide: class="center" -->
 Note: iGoogle and Google Desktop widget - scripting by javascript on the desktop
 ---
-
-## Many more uses <!-- .slide: class="center" -->
+## As a scripting language <!-- .slide: class="center" -->
 
 Note: NginScript, Cinnamon
 
 ---
-
 # JavaScript<br>is improving <!-- .slide: class="center" -->
 
 ---
@@ -605,35 +595,45 @@ Note: NginScript, Cinnamon
 
 ---
 
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> parseInt("08")</code></pre></div> <!-- .element: class="fragment" -->
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">8 <c>// ECMAScript 5 </c></code></pre></div> <!-- .element: class="fragment" -->
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">ES3> parseInt("08")</code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">0</code></pre></div> <!-- .element: class="fragment" -->
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">ES5> parseInt("08")</code></pre></div> <!-- .element: class="fragment" -->
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">8</code></pre></div> <!-- .element: class="fragment" -->
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">ESx> parseInt("08",10) <c>//base 10</c></code></pre></div> <!-- .element: class="fragment" -->
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">8</code></pre></div> <!-- .element: class="fragment" -->
 Note: assumed to be octal unless you have ECMAScript 5.
+Supply radix to be cross compatible.
 ---
 # ECMAScript 6 <!-- .slide: class="center" -->
 ---
 ## Fixing Global Variables <!-- .slide: class="center" -->
 ---
-
-
+## `let` <!-- .slide: class="center" -->
+---
+## Modules <!-- .slide: class="center" -->
 
 ---
-# Non-standard Standards <!-- .slide: class="center" -->
-
+# ECMAScript 5/6 Adpotion <!-- .slide: class="center" -->
 ---
-
+## kangax.github.io/compat-table/es5/ <!-- .slide: class="center" -->
+## kangax.github.io/compat-table/es6/ <!-- .slide: class="center" -->
+---
+# Want it now? <!-- .slide: class="center" -->
+---
+# Polyfill <!-- .slide: class="center" -->
+Note: Adding new funcionality in JS to JS by adding more JS
+---
+# Non-standard 'Standards' <!-- .slide: class="center" -->
+---
 ## `console.log` <!-- .slide: class="center" -->
----
-## Facebook's Console <!-- .slide: class="center" -->
+Note: Not actually a standard :D
 ---
 ## `%c` <!-- .slide: class="center" -->
 ---
 
-
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">window.console =</code></pre></div>
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">typeof window.console === 'undefined'</code></pre></div>
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">&nbsp; &nbsp; ? {log:function(str){<br>alert(str) }}</code></pre></div>
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">&nbsp; &nbsp; : window.console;</code></pre></div>
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%"><br>console.log("oh good god.");</code></pre></div>
+## Polyfill `console.log` <!-- .slide: class="center" -->
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">window.console =<br> &nbsp;typeof window.console<br>&nbsp; &nbsp; === 'undefined' <br>&nbsp; &nbsp;? {log:function(str){<br> &nbsp; &nbsp; alert(str) }} <br>&nbsp; &nbsp;: window.console;<br></code></pre></div> <!-- .element: class="fragment" -->
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">console.log("oh good god.");<br></code></pre></div> <!-- .element: class="fragment" -->
 
 ---
 # JavaScript isn't awful <!-- .slide: class="center" -->
@@ -643,10 +643,7 @@ Note: It's amazing that we can take something so broken and made so much
 
 The devil you know
 ---
-<br><br> 
 > ... when that's the glue of the modern day web it's minor miracle that society even functions
-> 
-> -- @NamTaf
 ---
 # But just remember... <!-- .slide: class="center" -->
 ## other languages have wats <!-- .element: class="fragment" -->

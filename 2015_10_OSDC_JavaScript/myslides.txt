@@ -89,9 +89,7 @@ Note: Associativity? Pfft! Transativity? Hahahah
 ---
 #>  > arr.push("append");
 #>- 4
-#>- > c = 0;
-#>- > for (var k in arr) {<br>>&nbsp; &nbsp; c = c + 1; <br>> }
-#>- > c
+#>- > c = 0;<br>> for (var k in arr) {<br>>&nbsp; &nbsp; c = c + 1; <br>> }<br>> c
 #>- 5
 #>- > arr.length
 #>- 4
@@ -107,33 +105,30 @@ Note: Associativity? Pfft! Transativity? Hahahah
 #>- > 1 === "1"
 #>- false
 ---
-#= Developers get a bit<br>upset at JavaScript
+#= Developers can get<br>just a little bit<br>upset at JavaScript
 ---
-=> "... please don't hire me for my JS abilities. i'm proficient enough to loath the language intensely"
+=> "[A]: Please don't hire me for my JS abilities. I'm proficient enough to<br>loath the language intensely"
 Note: experienced developers get frustrated with it
 ---
 
-=> "... I have been around him when he hacks JS. Let's just say Satan himself would blush."
+=> "[B]: I have been around [A]<br>when they hack JS.<br>Let's just say Satan himself would blush."
 Note: people near to javascript developers hear them swear.  A lot.
 ---
 
-=> Have to modify some JavaScript<br>I did over a year ago. 
+=> "[C]: Have to modify some JavaScript<br>I did over a year ago. 
 > 
-> 'What is this?'
->
-> 'Why did I ...?'
->
+> 'What is this?'<br>
+> 'Why did I ...?'<br>
 > 'What sort of name is that!'"
 
 Note: confusing syntax, hard to come back to 
 
 ---
 
-=> "I hate writing JavaScript.
+=> "[D]: 'I hate writing JavaScript.<br>
+> I know, I'll write some JavaScript to fix it.'
 >
-> I know, I'll write some JavaScript to fix it."
->
-> This is how Angular happens.
+> This is how Angular happens."
 
 Note: Pot shots at the Language
 ---
@@ -143,8 +138,8 @@ Note: Pot shots at the Language
 Note: why is javascript so awful
 ---
 
-#= History.zip
-##- See "Crockford on JavaScript"
+#= JavaScript History<br>in 30 words or less
+###- For more, see "Crockford on JavaScript"
 Note: I don't have time to tell the entire history of javascript
 
 Check out the YUI Theatre series 
@@ -236,10 +231,16 @@ race was on to develop the scriting language to make the web better
 
 Because trademark, MS reverse engineered JS, called it JScript
 
+---
+
+##= JavaScript™
+
+<span class="dasfoot"><a href="http://tsdr.uspto.gov/#caseNumber=75026640&caseType=SERIAL_NO&searchType=statusSearch">US Trademark &#35;75026640</a></span>
+Note: 
 
 ---
 
-##= ECMAScript Standard
+##= ECMAScript
 
 Note: Because of some fun issues, Tim Berners Lee and W3C wouldn't do the standard
  
@@ -258,12 +259,6 @@ They couldn't think of a better name
 Working title: ECMA Script (ecc-ma)
 
 
----
-
-##= JavaScript™
-
-<span class="dasfoot"><a href="http://tsdr.uspto.gov/#caseNumber=75026640&caseType=SERIAL_NO&searchType=statusSearch">US Trademark &#35;75026640</a></span>
-Note: 
 ---
 
 #= Foot Guns
@@ -306,7 +301,7 @@ Note: Incidently, first listing in The Good Parts - Appendix A - The Awful Parts
 #> <h>public</h> static ans = 42;
 Note: Because every other language has locals by default
 ---
-#= Overloaded `+` operand
+#= Overloaded<br>`+` operand
 ---
 <p></p>
 #>  > 4 + 2 
@@ -330,7 +325,7 @@ Note: Because every other language has locals by default
 Note: `+` for both additon and concatenation
 ---
 
-#= Equality<br>and<br>Coersion
+#= Equality<br>and<br>Type Coersion
 ---
 <p></p>
 #> > 0 ==&nbsp; false  
@@ -350,7 +345,7 @@ Note: `+` for both additon and concatenation
 #> > 1 == &nbsp;"1" <c> // equality</c> 
 #> true 
 #> > 1 === "1" <c>// equality without</c>
-#> false &nbsp; &nbsp; &nbsp; <c>// type co-ersion</c>
+#> false &nbsp; &nbsp; &nbsp; <c>// type coersion</c>
 
 Note: This was picked up v. early by Brendan Eich
 
@@ -362,6 +357,7 @@ forced creation of `===`
 ---
 
 #= More Gotchas
+Note: Combination of original 'Bad Parts', 'Awful Parts', and some new Fun
 ---
 ##= `typeof`
 ---
@@ -372,15 +368,15 @@ forced creation of `===`
 #>- > typeof Number()
 #>- "number"
 #>- > typeof null
-#>- "object"
+#>- "object"  <r>// ;&#95;;</r>
 #>- > typeof NaN
-#>- "number"
+#>- "number" <r>// ;&#95;;</r>
 Note: even JScript dutifully reverse engineered this error
 ---
 ##= `NaN`
 ---
 #> > typeof NaN
-#> number
+#> "number"
 #>- > NaN === NaN
 #>- false
 #>- > NaN !== NaN
@@ -409,7 +405,7 @@ Note: even JScript dutifully reverse engineered this error
 #>- ["<img src="pictures/rabbit.svg" class="e" style="margin: 0">","<img src="pictures/cat.svg" style="margin: 0" class="e">"]
 ---
 
-##= V8 function optimisation
+##= Function Optimisation
 ---
 <pre><code>'use strict';
 
@@ -434,8 +430,7 @@ function add(x, y) {
 }
 </code></pre>
 
-- <pre><code>$ time -p node general.js</code></pre>
-- <pre style="margin-top:-1em"><code>real 1.68</code></pre>
+- <pre><code>$ time -p node general.js</code></pre><br><pre style="margin-top:-1em"><code>real 1.68</code></pre>
 ---
 <pre><code>'use strict';
 
@@ -460,8 +455,7 @@ function add(x, y) {
 }
 </code></pre>
 
-- <pre><code>$ time -p node general.js</code></pre>
-- <pre style="margin-top:-1em"><code>real 0.67</code></pre>
+- <pre><code>$ time -p node general.js</code></pre><br><pre style="margin-top:-1em"><code>real 0.67</code></pre>
 ---
 ##= This thing
 ##= `++[[]][+[]]+[+[]]`
@@ -497,14 +491,14 @@ We can create not easily readable code
 ---
 
 ##= Cross Site Scripting
-TODO
+Note: 
 ---
 ##= Cross Site Request Forgery
-TODO
+Note: 
 ---
-#= See: Hack the Planet
-## Tutorial, 10am Wednesday
-##- (will not be recorded)
+##= See: Hack the Planet
+### Tutorial, 10am Wednesday
+###- (will not be recorded)
 ---
 #= ...
 Note: so,that's what javascript can do. what if you say
@@ -518,27 +512,27 @@ Note: I dont want to deal with all that stuff
 
 ##= MooTools
 Note: MooTools was a really good thing back in the day
+
+I've only come across it when I tasked to remove it
 ---
 
 ##= jQuery
----
-##= `$ = jQuery`
+Note: so much extension 
 
-Note: machines should only be using dollar
+at one point ~90% of websites had it
 ---
 
 ##= BootStrap
 Note: more than JS; CSS, HTML
+Adding more functionality so you dont have to worry about responsive websites
 
+But you can spot a bootstraped wbesite from a mile away
 ---
 
-#= Super Shiny
+#= The new Hotness
 ---
-
 ##= Meteor
----
 ##= React
----
 ##= Angular
 ---
 #= ...
@@ -548,55 +542,51 @@ Note: but what if you sasy
 Note: stuff javascript all together
 ---
 
-#= Use a new language
-
----
-
 ##= CoffeeScript
-
+Note: CoffeeScript is a little language that compiles into JavaScript. Underneath that awkward Java-esque patina, JavaScript has always had a gorgeous heart.
 ---
 ##= TypeScript
+Note: TypeScript lets you write JavaScript the way you really want to. TypeScript is a typed superset of JavaScript that compiles to plain JavaScript
+
+See Typehints in JS talk from PyCon AU 2015
 ---
 ##= PureScript
-
+Note: 
 ---
-##= (╯°□°）╯︵ TODO learningupsitedown
+##= (╯°□°）╯︵ ƃuᴉuɹɐǝl
 Note: I want to work in my favourite language, and still work in the browser
 ---
-#= Pick a language
-#= Any Language
+##= Pick a language.
+##= Any language.
+
+Note: 
+
 ---
-##= TODO list of things
+###= github.com/jashkenas/coffeescript/wiki/<br>List-of-languages-that-compile-to-JS
 ---
 #= Batavia
 @ pybee.png
 ---
 #= ...
 ---
-##= TODO table back for javascript
+##= ┬javascript┬ ノ( ゜-゜ノ) 
 ---
-#= JavaScript outside<br>the Browser
+##= JavaScript outside<br>the browser
 ---
-
-#= node.js
-
+##= node.js
+Note: serverside js
 ---
-
 ##= Electron
-
 Note: not the first time JS has been used on the desktop
 ---
-
 ##= Google Gadgets
 Note: iGoogle and Google Desktop widget - scripting by javascript on the desktop
 ---
-
-##= Many more uses
+##= As a scripting language
 
 Note: NginScript, Cinnamon
 
 ---
-
 #= JavaScript<br>is improving
 
 ---
@@ -605,35 +595,45 @@ Note: NginScript, Cinnamon
 
 ---
 
-#>- > parseInt("08") 
-#>- 8 <c>// ECMAScript 5 </c>
+#>  ES3> parseInt("08") 
+#>- 0 
+#>- ES5> parseInt("08") 
+#>- 8 
+#>- ESx> parseInt("08",10) <c>//base 10</c>
+#>- 8
 Note: assumed to be octal unless you have ECMAScript 5. 
+Supply radix to be cross compatible. 
 ---
 #= ECMAScript 6
 ---
 ##= Fixing Global Variables
 ---
-
-
+##= `let`
+---
+##= Modules
 
 ---
-#= Non-standard Standards
-
+#= ECMAScript 5/6 Adpotion
 ---
-
+##= kangax.github.io/compat-table/es5/
+##= kangax.github.io/compat-table/es6/
+---
+#= Want it now?
+---
+#= Polyfill
+Note: Adding new funcionality in JS to JS by adding more JS
+---
+#= Non-standard 'Standards'
+---
 ##= `console.log`
----
-##= Facebook's Console
+Note: Not actually a standard :D
 ---
 ##= `%c`
 ---
 
-
-#> window.console =
-#>  typeof window.console === 'undefined' 
-#> &nbsp; &nbsp; ? {log:function(str){<br>alert(str) }} 
-#> &nbsp; &nbsp; : window.console;
-#> <br>console.log("oh good god.");
+##= Polyfill `console.log`
+#>- window.console =<br> &nbsp;typeof window.console<br>&nbsp; &nbsp; === 'undefined' <br>&nbsp; &nbsp;? {log:function(str){<br> &nbsp; &nbsp; alert(str) }} <br>&nbsp; &nbsp;: window.console;<br> 
+#>- console.log("oh good god.");<br>
 
 ---
 #= JavaScript isn't awful
@@ -643,10 +643,7 @@ Note: It's amazing that we can take something so broken and made so much
 
 The devil you know
 ---
-<br><br>
 > ... when that's the glue of the modern day web it's minor miracle that society even functions
->
->  -- @NamTaf
 ---
 #= But just remember...
 ##- other languages have wats
