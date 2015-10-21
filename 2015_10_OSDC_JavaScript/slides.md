@@ -139,10 +139,11 @@ Note: why is javascript so awful
 ---
 
 # JavaScript History<br>in 30 words or less <!-- .slide: class="center" -->
-### For more, see "Crockford on JavaScript" <!-- .element: class="fragment" -->
 Note: I don't have time to tell the entire history of javascript
 
 Check out the YUI Theatre series
+
+For more, see "Crockford on JavaScript"
 
 ---
 
@@ -279,7 +280,7 @@ Note: Incidently, first listing in The Good Parts - Appendix A - The Awful Parts
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> console.log(question());</code></pre></div>
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">42</code></pre></div>
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> console.log(ans);</code></pre></div>
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">42</code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">""</code></pre></div>
 ---
 <p></p> 
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> ans = ""; <c>// global</code></pre></div>
@@ -289,7 +290,7 @@ Note: Incidently, first listing in The Good Parts - Appendix A - The Awful Parts
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> console.log(question());</code></pre></div>
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">42</code></pre></div>
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> console.log(ans);</code></pre></div>
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">42</code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">""</code></pre></div>
 ---
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%"><c>//ruby</c></code></pre></div>
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%"><h>@</h>ans = 42;</code></pre></div>
@@ -397,9 +398,16 @@ Note: even JScript dutifully reverse engineered this error
 ---
 ## `Number` <!-- .slide: class="center" -->
 ---
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%"></code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> 4 + 2</code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">6</code></pre></div> <!-- .element: class="fragment" -->
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> 40 + 20</code></pre></div> <!-- .element: class="fragment" -->
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">60</code></pre></div> <!-- .element: class="fragment" -->
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> 0.4 + 0.2</code></pre></div> <!-- .element: class="fragment" -->
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">0.6000000000000001</code></pre></div> <!-- .element: class="fragment" -->
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%"><c>// All Number in JavaScript<br>// are IEEE-754 floats</c></code></pre></div> <!-- .element: class="fragment" -->
 Note: All numbers are IEEE 754 floats
-TODO float example
+
+Fix this by dealing with 'round' numbers. Money - work in cents
 ---
 ## Extended Character Set <!-- .slide: class="center" -->
 ---
@@ -409,6 +417,12 @@ TODO float example
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">["�","�","�","�"]</code></pre></div> <!-- .element: class="fragment" -->
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> Array.from("<img src="pictures/rabbit.svg" class="e" style="margin: 0"><img src="pictures/cat.svg" style="margin: 0" class="e">")</code></pre></div> <!-- .element: class="fragment" -->
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">["<img src="pictures/rabbit.svg" class="e" style="margin: 0">","<img src="pictures/cat.svg" style="margin: 0" class="e">"]</code></pre></div> <!-- .element: class="fragment" -->
+
+Note: Unicode extended characterset
+
+Javascript was created before unicode was super popular, so some parts don't understand extended characters
+
+split doesn't but array.from does (polyfill?)
 ---
 
 ## This thing <!-- .slide: class="center" -->
@@ -419,18 +433,20 @@ TODO float example
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">10</code></pre></div> <!-- .element: class="fragment" -->
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> []</code></pre></div> <!-- .element: class="fragment" -->
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">""</code></pre></div> <!-- .element: class="fragment" -->
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> +[]</code></pre></div> <!-- .element: class="fragment" -->
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> +[] <c>// +""</c></code></pre></div> <!-- .element: class="fragment" -->
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">0</code></pre></div> <!-- .element: class="fragment" -->
+Note: uniary operand casts to number
 ---
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> [[]][+[]]</code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> [[]][+[]] <c> &nbsp;// [""][0]</c></code></pre></div>
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">""</code></pre></div> <!-- .element: class="fragment" -->
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> +[[]][+[]]</code></pre></div> <!-- .element: class="fragment" -->
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> +[[]][+[]] <c> // +""</code></pre></div> <!-- .element: class="fragment" -->
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">0</code></pre></div> <!-- .element: class="fragment" -->
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> ++[[]][+[]]</code></pre></div> <!-- .element: class="fragment" -->
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> ++[[]][+[]] <c>// ++0 </c></code></pre></div> <!-- .element: class="fragment" -->
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">1</code></pre></div> <!-- .element: class="fragment" -->
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> ++[[]][+[]] + [+[]]</code></pre></div> <!-- .element: class="fragment" -->
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> ++[[]][+[]] <h>+</h> [+[]]</code></pre></div> <!-- .element: class="fragment" -->
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">10</code></pre></div> <!-- .element: class="fragment" -->
 
+Note: pre-increment only works on some objects, not directly on number literals
 ---
 
 # Security <!-- .slide: class="center" -->
@@ -441,14 +457,18 @@ Note: executing arbitary code.
 
 We can create not easily readable code
 
+As we just saw
 
+TODO Example
 ---
 
 ## Cross Site Scripting <!-- .slide: class="center" -->
 Note: Javascript can be used for other evil things
+
+Can take data from your site onto others and other such fun:
 ---
-## See: Hack the Planet <!-- .slide: class="center" -->
-### Tutorial, 10am Wednesday
+## Learn More: Security Tutorial <!-- .slide: class="center" -->
+### 'Hack the Planet', Tomorrow Morning
 ---
 # ... <!-- .slide: class="center" -->
 Note: so,that's what javascript can do. what if you say
@@ -458,11 +478,12 @@ Note: I dont want to deal with all that stuff
 ---
 
 # Frameworks <!-- .slide: class="center" -->
+Note: pre rolled goodness and wrappers and and and
 ---
 
 ## MooTools <!-- .slide: class="center" -->
 ## jQuery <!-- .slide: class="center" -->
-## BootStrap <!-- .slide: class="center" -->
+## Bootstrap <!-- .slide: class="center" -->
 Note: MooTools was a really good thing back in the day
 
 I've only come across it when I tasked to remove it
@@ -492,15 +513,15 @@ Note: stuff javascript all together
 ---
 
 ## CoffeeScript <!-- .slide: class="center" -->
-Note: CoffeeScript is a little language that compiles into JavaScript. Underneath that awkward Java-esque patina, JavaScript has always had a gorgeous heart.
----
 ## TypeScript <!-- .slide: class="center" -->
-Note: TypeScript lets you write JavaScript the way you really want to. TypeScript is a typed superset of JavaScript that compiles to plain JavaScript
+## PureScript <!-- .slide: class="center" -->
+Note: CoffeeScript is a little language that compiles into JavaScript. Underneath that awkward Java-esque patina, JavaScript has always had a gorgeous heart.
+
+TypeScript lets you write JavaScript the way you really want to. TypeScript is a typed superset of JavaScript that compiles to plain JavaScript
 
 See Typehints in JS talk from PyCon AU 2015
 ---
-## PureScript <!-- .slide: class="center" -->
-Note: 
+# ... <!-- .slide: class="center" -->
 ---
 ## (╯°□°）╯︵ ƃuᴉuɹɐǝl <!-- .slide: class="center" -->
 Note: I want to work in my favourite language, and still work in the browser

@@ -139,10 +139,11 @@ Note: why is javascript so awful
 ---
 
 #= JavaScript History<br>in 30 words or less
-###- For more, see "Crockford on JavaScript"
 Note: I don't have time to tell the entire history of javascript
 
 Check out the YUI Theatre series 
+
+For more, see "Crockford on JavaScript"
 
 ---
 
@@ -279,7 +280,7 @@ Note: Incidently, first listing in The Good Parts - Appendix A - The Awful Parts
 #> > console.log(question());
 #> 42
 #> > console.log(ans);
-#> 42
+#> ""
 ---
 <p></p>
 #> > ans = ""; <c>// global
@@ -289,7 +290,7 @@ Note: Incidently, first listing in The Good Parts - Appendix A - The Awful Parts
 #> > console.log(question());
 #> 42
 #> > console.log(ans);
-#> 42
+#> ""
 ---
 #> <c>//ruby</c>
 #> <h>@</h>ans = 42;
@@ -397,9 +398,16 @@ Note: even JScript dutifully reverse engineered this error
 ---
 ##= `Number`
 ---
-#> 
+#> > 4 + 2
+#>- 6
+#>- > 40 + 20 
+#>- 60
+#>- > 0.4 + 0.2
+#>- 0.6000000000000001
+#>- <c>// All Number in JavaScript<br>// are IEEE-754 floats</c>
 Note: All numbers are IEEE 754 floats
-TODO float example
+
+Fix this by dealing with 'round' numbers. Money - work in cents
 ---
 ##= Extended Character Set
 ---
@@ -409,6 +417,12 @@ TODO float example
 #>- ["�","�","�","�"]
 #>- > Array.from("<img src="pictures/rabbit.svg" class="e" style="margin: 0"><img src="pictures/cat.svg" style="margin: 0" class="e">")
 #>- ["<img src="pictures/rabbit.svg" class="e" style="margin: 0">","<img src="pictures/cat.svg" style="margin: 0" class="e">"]
+
+Note: Unicode extended characterset
+
+Javascript was created before unicode was super popular, so some parts don't understand extended characters
+
+split doesn't but array.from does (polyfill?)
 ---
 
 ##= This thing
@@ -419,18 +433,20 @@ TODO float example
 #>- 10
 #>- > []
 #>- ""
-#>- > +[]
+#>- > +[] <c>// +""</c>
 #>- 0
+Note: uniary operand casts to number
 ---
-#> > [[]][+[]]
+#> > [[]][+[]] <c> &nbsp;// [""][0]</c>
 #>- ""
-#>- > +[[]][+[]]
+#>- > +[[]][+[]] <c> // +""
 #>- 0
-#>- > ++[[]][+[]]
+#>- > ++[[]][+[]] <c>// ++0 </c>
 #>- 1
-#>- > ++[[]][+[]] + [+[]]
+#>- > ++[[]][+[]] <h>+</h> [+[]]
 #>- 10
 
+Note: pre-increment only works on some objects, not directly on number literals
 ---
 
 #= Security
@@ -441,14 +457,18 @@ Note: executing arbitary code.
 
 We can create not easily readable code
 
+As we just saw
 
+TODO Example
 ---
 
 ##= Cross Site Scripting
 Note:  Javascript can be used for other evil things
+
+Can take data from your site onto others and other such fun:
 ---
-##= See: Hack the Planet
-### Tutorial, 10am Wednesday
+##= Learn More: Security Tutorial
+### 'Hack the Planet', Tomorrow Morning
 ---
 #= ...
 Note: so,that's what javascript can do. what if you say
@@ -458,11 +478,12 @@ Note: I dont want to deal with all that stuff
 ---
 
 #= Frameworks
+Note: pre rolled goodness and wrappers and and and 
 ---
 
 ##= MooTools
 ##= jQuery
-##= BootStrap
+##= Bootstrap
 Note: MooTools was a really good thing back in the day
 
 I've only come across it when I tasked to remove it
@@ -492,15 +513,15 @@ Note: stuff javascript all together
 ---
 
 ##= CoffeeScript
-Note: CoffeeScript is a little language that compiles into JavaScript. Underneath that awkward Java-esque patina, JavaScript has always had a gorgeous heart.
----
 ##= TypeScript
-Note: TypeScript lets you write JavaScript the way you really want to. TypeScript is a typed superset of JavaScript that compiles to plain JavaScript
+##= PureScript
+Note: CoffeeScript is a little language that compiles into JavaScript. Underneath that awkward Java-esque patina, JavaScript has always had a gorgeous heart.
+
+TypeScript lets you write JavaScript the way you really want to. TypeScript is a typed superset of JavaScript that compiles to plain JavaScript
 
 See Typehints in JS talk from PyCon AU 2015
 ---
-##= PureScript
-Note: 
+#= ...
 ---
 ##= (╯°□°）╯︵ ƃuᴉuɹɐǝl
 Note: I want to work in my favourite language, and still work in the browser
