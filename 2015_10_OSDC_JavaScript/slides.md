@@ -364,15 +364,54 @@ Note: Combination of original 'Bad Parts', 'Awful Parts', and some new Fun
 ---
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> typeof Object()</code></pre></div>
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">"object"</code></pre></div> <!-- .element: class="fragment" -->
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> typeof String()</code></pre></div> <!-- .element: class="fragment" -->
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">"string"</code></pre></div> <!-- .element: class="fragment" -->
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> typeof Number()</code></pre></div> <!-- .element: class="fragment" -->
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">"number"</code></pre></div> <!-- .element: class="fragment" -->
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> typeof String()</code></pre></div> <!-- .element: class="fragment" -->
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">"string"</code></pre></div> <!-- .element: class="fragment" -->
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> typeof Boolean()</code></pre></div> <!-- .element: class="fragment" -->
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">"boolean"</code></pre></div> <!-- .element: class="fragment" -->
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> typeof null</code></pre></div> <!-- .element: class="fragment" -->
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">"object" <r>// ;&#95;;</r></code></pre></div> <!-- .element: class="fragment" -->
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> typeof NaN</code></pre></div> <!-- .element: class="fragment" -->
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">"number" <r>// ;&#95;;</r></code></pre></div> <!-- .element: class="fragment" -->
 Note: even JScript dutifully reverse engineered this error
+
+It's a bug
+---
+<p></p> 
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> typeof Object() <h>// Value tags</h></code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">"object" <c> // 000</c></code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> typeof Number()</code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">"number"</code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> typeof String()</code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">"string" <c> // 100</c></code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> typeof Boolean()</code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">"boolean" <c>// 110</c></code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> typeof null</code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">"object" <h>// 000 </h></code></pre></div>
+
+---
+<pre><code><h>// source/js/src/jsapi.c</h><br>
+JS_TypeOfValue(JSContext *cx, jsval v) {
+&nbsp; &nbsp; if (JSVAL_IS_VOID(v)) {
+&nbsp; &nbsp; &nbsp; &nbsp; type = JSTYPE_VOID;
+&nbsp; &nbsp; } else if (JSVAL_IS_OBJECT(v)) {
+&nbsp; &nbsp; &nbsp; &nbsp; if (...) {
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; type = JSTYPE_FUNCTION;
+&nbsp; &nbsp; &nbsp; &nbsp; } else {
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; type = JSTYPE_OBJECT;
+&nbsp; &nbsp; &nbsp; &nbsp; }
+&nbsp; &nbsp; } else if (JSVAL_IS_NUMBER(v)) {
+&nbsp; &nbsp; &nbsp; &nbsp; type = JSTYPE_NUMBER;
+&nbsp; &nbsp; } else if (JSVAL_IS_STRING(v)) {
+&nbsp; &nbsp; &nbsp; &nbsp; type = JSTYPE_STRING;
+&nbsp; &nbsp; } else if (JSVAL_IS_BOOLEAN(v)) {
+&nbsp; &nbsp; &nbsp; &nbsp; type = JSTYPE_BOOLEAN;
+&nbsp; &nbsp; }
+&nbsp; &nbsp; return type;
+} 
+</pre></code> 
+
+
+<span class="dasfoot"><a href="http://mxr.mozilla.org/classic/source/js/src/jsapi.h">Source Code</a></span>
 ---
 ## `NaN` <!-- .slide: class="center" -->
 ---
@@ -689,10 +728,14 @@ Still very much not adpoted.
 ## Fixing Global Variables <!-- .slide: class="center" -->
 ---
 ## `let` <!-- .slide: class="center" -->
+# TODO
 Note: proper block scope
 ---
 ## Modules <!-- .slide: class="center" -->
-
+# TODO
+---
+## Symbols <!-- .slide: class="center" -->
+# TODO
 ---
 # ECMAScript 5/6 Adpotion <!-- .slide: class="center" -->
 ---
@@ -702,7 +745,7 @@ Note: proper block scope
 # Non-standard 'Standards' <!-- .slide: class="center" -->
 ---
 ## `console.log` <!-- .slide: class="center" -->
-Note: Not actually a standard :D TODO `%c`
+Note: Not actually a standard :D
 ---
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> a = 42</code></pre></div>
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> console.log("a is: " + a);</code></pre></div> <!-- .element: class="fragment" -->
@@ -894,12 +937,13 @@ Note: Let's talk about powershell
 <span class="dasfoot"><a href="http://fuckpowershell.tumblr.com/">F Powershell</a></span>
 ---
 
-# All lanauges are<br>pretty terrible. <!-- .slide: class="center" -->
+# All lanauges have quirks. <!-- .slide: class="center" -->
 ---
-# TODO Feel Good ending
+#  <!-- .slide: class="center" -->
 Note: TODO XKCD http://xkcd.com/1537/ ??
 ---
 <br><br> 
-# Cheers! <!-- .slide: class="center" -->
+# Danke! <!-- .slide: class="center" -->
 <br><br> 
+### joind.in link here <!-- .slide: class="center" -->
  <img src="pictures/footer.svg" />

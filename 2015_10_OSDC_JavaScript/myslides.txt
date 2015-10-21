@@ -364,15 +364,54 @@ Note: Combination of original 'Bad Parts', 'Awful Parts', and some new Fun
 ---
 #> > typeof Object()
 #>- "object"
-#>- > typeof String()
-#>- "string"
 #>- > typeof Number()
 #>- "number"
+#>- > typeof String()
+#>- "string"
+#>- > typeof Boolean()
+#>- "boolean"
 #>- > typeof null
 #>- "object"  <r>// ;&#95;;</r>
-#>- > typeof NaN
-#>- "number" <r>// ;&#95;;</r>
 Note: even JScript dutifully reverse engineered this error
+
+It's a bug
+---
+<p></p>
+#> > typeof Object() <h>// Value tags</h>
+#> "object"  <c> // 000</c>
+#> > typeof Number()
+#> "number"
+#> > typeof String()
+#> "string" <c> // 100</c>
+#> > typeof Boolean()
+#> "boolean" <c>// 110</c>
+#> > typeof null 
+#> "object"  <h>// 000  </h>
+
+---
+<pre><code><h>// source/js/src/jsapi.c</h><br>
+JS_TypeOfValue(JSContext *cx, jsval v) {
+&nbsp; &nbsp; if (JSVAL_IS_VOID(v)) {
+&nbsp; &nbsp; &nbsp; &nbsp; type = JSTYPE_VOID;
+&nbsp; &nbsp; } else if (JSVAL_IS_OBJECT(v)) {
+&nbsp; &nbsp; &nbsp; &nbsp; if (...) {
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; type = JSTYPE_FUNCTION;
+&nbsp; &nbsp; &nbsp; &nbsp; } else {
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; type = JSTYPE_OBJECT;
+&nbsp; &nbsp; &nbsp; &nbsp; }
+&nbsp; &nbsp; } else if (JSVAL_IS_NUMBER(v)) {
+&nbsp; &nbsp; &nbsp; &nbsp; type = JSTYPE_NUMBER;
+&nbsp; &nbsp; } else if (JSVAL_IS_STRING(v)) {
+&nbsp; &nbsp; &nbsp; &nbsp; type = JSTYPE_STRING;
+&nbsp; &nbsp; } else if (JSVAL_IS_BOOLEAN(v)) {
+&nbsp; &nbsp; &nbsp; &nbsp; type = JSTYPE_BOOLEAN;
+&nbsp; &nbsp; }
+&nbsp; &nbsp; return type;
+}
+</pre></code>
+
+
+<span class="dasfoot"><a href="http://mxr.mozilla.org/classic/source/js/src/jsapi.h">Source Code</a></span>
 ---
 ##= `NaN`
 ---
@@ -689,10 +728,14 @@ Still very much not adpoted.
 ##= Fixing Global Variables
 ---
 ##= `let`
+# TODO
 Note: proper block scope
 ---
 ##= Modules
-
+# TODO
+---
+##= Symbols
+# TODO
 ---
 #= ECMAScript 5/6 Adpotion
 ---
@@ -702,7 +745,7 @@ Note: proper block scope
 #= Non-standard 'Standards'
 ---
 ##= `console.log`
-Note: Not actually a standard :D TODO `%c`
+Note: Not actually a standard :D 
 ---
 #> > a = 42
 #>- > console.log("a is: " + a);
@@ -894,12 +937,13 @@ Note: Let's talk about powershell
 <span class="dasfoot"><a href="http://fuckpowershell.tumblr.com/">F Powershell</a></span>
 ---
 
-#= All lanauges are<br>pretty terrible.
+#= All lanauges have quirks.
 ---
-# TODO Feel Good ending
+#= 
 Note: TODO XKCD http://xkcd.com/1537/ ??
 ---
 <br><br>
-#= Cheers!
+#= Danke!
 <br><br>
+###= joind.in link here
 @ footer.svg
