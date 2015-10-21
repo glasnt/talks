@@ -146,16 +146,16 @@ Check out the YUI Theatre series
 
 ---
 
-###= JavaScript was developed in 10 days
+###= In 1995, JavaScript was developed in 10 days
 ### by Brendan Eich for Netscape
 ### to offer a lightweight version of Java
-### in order to compete for users with Microsoft
+### in order to compete for users with Microsoft.
 
 Note: Let's step through that
 ---
 
 
-###= JavaScript was developed in 10 days
+###= In 1995, JavaScript was developed in 10 days
 ### &nbsp;
 ### &nbsp;
 ### &nbsp;
@@ -163,7 +163,7 @@ Note: awfully short development time
 
 just by that alone could explain things.
 ---
-###= JavaScript was developed in 10 days
+###= In 1995, JavaScript was developed in 10 days
 ### by Brendan Eich for Netscape
 ### &nbsp;
 ### &nbsp;
@@ -187,7 +187,7 @@ Oh wait, that's scheme, that's gross, don't do that.
 #> 
 Note: We could have written in the browser like this
 ---
-###= JavaScript was developed in 10 days
+###= In 1995, JavaScript was developed in 10 days
 ### by Brendan Eich for Netscape
 ### &nbsp;
 ### &nbsp;
@@ -195,7 +195,7 @@ Note: We could have written in the browser like this
 Note: For user adoption, maybe it wasn't the best
 ---
 
-###= JavaScript was developed in 10 days
+###= In 1995, JavaScript was developed in 10 days
 ### by Brendan Eich for Netscape
 ### to offer a lightweight version of Java
 ### &nbsp;
@@ -216,10 +216,10 @@ Java Applets
 
 ---
 
-###= JavaScript was developed in 10 days
+###= In 1995, JavaScript was developed in 10 days
 ### by Brendan Eich for Netscape
 ### to offer a lightweight version of Java
-### in order to compete for users with Microsoft
+### in order to compete for users with Microsoft.
 
 Note: Mosaic split into NetScape in SpyGlass
 
@@ -395,6 +395,12 @@ Note: even JScript dutifully reverse engineered this error
 #>- > parseInt("08")
 #>- 0 
 ---
+##= `Number`
+---
+#> 
+Note: All numbers are IEEE 754 floats
+TODO float example
+---
 ##= Extended Character Set
 ---
 #> > "abc".split("")
@@ -439,14 +445,10 @@ We can create not easily readable code
 ---
 
 ##= Cross Site Scripting
-Note: 
----
-##= Cross Site Request Forgery
-Note: 
+Note:  Javascript can be used for other evil things
 ---
 ##= See: Hack the Planet
 ### Tutorial, 10am Wednesday
-###- (will not be recorded)
 ---
 #= ...
 Note: so,that's what javascript can do. what if you say
@@ -459,25 +461,24 @@ Note: I dont want to deal with all that stuff
 ---
 
 ##= MooTools
+##= jQuery
+##= BootStrap
 Note: MooTools was a really good thing back in the day
 
 I've only come across it when I tasked to remove it
----
 
-##= jQuery
-Note: so much extension 
+ ... 
+
+JQuery so much extension 
+
 
 at one point ~90% of websites had it
----
 
-##= BootStrap
-Note: more than JS; CSS, HTML
+ ...
+more than JS; CSS, HTML
 Adding more functionality so you dont have to worry about responsive websites
 
 But you can spot a bootstraped wbesite from a mile away
----
-
-#= The new Hotness
 ---
 ##= Meteor
 ##= React
@@ -512,30 +513,46 @@ Note:
 ---
 ###= github.com/jashkenas/coffeescript/wiki/<br>List-of-languages-that-compile-to-JS
 ---
-#= Batavia
+##= Batavia
 @ pybee.png
+---
+##= asm.js
+##= emscripten
+Note: C into JS
+
+Faster than Light Osmos - Humble Bundle Mozilla
+
+Unreal Tornatment
+
+DosBox
+---
+= <img src="pictures/win95.png">
+
 ---
 #= ...
 ---
 ##= ┬javascript┬ ノ( ゜-゜ノ) 
+Note: OK, JS is neat, I want some of that. But outside the browser
 ---
-##= JavaScript outside<br>the browser
+#= JavaScript<br>outside the browser
 ---
-##= node.js
-Note: serverside js
----
-##= Electron
-Note: not the first time JS has been used on the desktop
+##= As a scripting language
+Note: NginScript, Cinnamon
 ---
 ##= Google Gadgets
 Note: iGoogle and Google Desktop widget - scripting by javascript on the desktop
 ---
-##= As a scripting language
+##= Electron
+Note: 
 
-Note: NginScript, Cinnamon
+GitHub's framework. Atom. Github Desktop
+not the first time JS has been used on the desktop
+---
+##= node.js
+Note: serverside js
 ---
 
-##= Even more gotchas
+##= More Gotchas
 ---
 
 ##= Function Optimisation
@@ -556,14 +573,42 @@ function add(x, y) {
 </c>
 &nbsp;  return(x + y);
 }
-</code></pre><pre style="margin-top: -1em;"><code>for(let i = 0; i < 500000000; i++) {
+
+for(let i = 0; i < 500000000; i++) {
 &nbsp; if (add(i, i++) < 5) {
 &nbsp; &nbsp;  <c>//</c>
 &nbsp; }
 }
 </code></pre>
 
-- <pre><code>$ time -p node general.js</code></pre><br><pre style="margin-top:-1em"><code>real 1.68</code></pre>
+- <pre><code>$ time -p node general.js<br>real 1.71</code></pre>
+---
+<pre><code>'use strict';
+
+function add(x, y) {
+<c style="font-weight:normal">&nbsp; // I am the very model of a modern Major-General
+&nbsp; // I've information vegetable, animal, and mineral
+&nbsp;  // I know the kings of England, and I quote the fights historical
+&nbsp;  // From Marathon to Waterloo, in order categorical
+&nbsp;  // I'm very well acquainted, too, with matters mathematical
+&nbsp;  // I understand equations, both the simple and quadratical
+&nbsp;  // About binomial theorem I'm teeming with a lot o' news
+&nbsp;  // With many cheerful facts about the square of the hypotenuse
+&nbsp;  // I'm very good at integral and differential calculus
+&nbsp;  // I know the scientific names of beings animalculous
+</c>
+&nbsp;  return(x + y);
+}
+
+for(let i = 0; i < 500000000; i++) {
+&nbsp; if (add(i, i++) < 5) {
+&nbsp; &nbsp;  <c>//</c>
+&nbsp; }
+}
+</code></pre>
+
+Note: blank for flicking
+
 ---
 <pre><code>'use strict';
 
@@ -581,14 +626,15 @@ function add(x, y) {
 </c>
 &nbsp;  return(x + y);
 }
-</code></pre><pre style="margin-top: -1em;"><code>for(let i = 0; i < 500000000; i++) {
+
+for(let i = 0; i < 500000000; i++) {
 &nbsp; if (add(i, i++) < 5) {
 &nbsp; &nbsp;  <c>//</c>
 &nbsp; }
 }
 </code></pre>
 
-- <pre><code>$ time -p node general.js</code></pre><br><pre style="margin-top:-1em"><code>real 0.67</code></pre>
+- <pre><code>$ time -p node general.js<br>real 0.67</code></pre>
 ---
 
 #= JavaScript<br>is improving
@@ -596,7 +642,9 @@ function add(x, y) {
 ---
 
 #= ECMAScript 5
+Note: std intro'd in 2009
 
+Mostly adpoted
 ---
 
 #>  ES3> parseInt("08") 
@@ -608,11 +656,19 @@ function add(x, y) {
 Note: assumed to be octal unless you have ECMAScript 5. 
 Supply radix to be cross compatible. 
 ---
+##= `trim`
+
+Note: JS didn't ahve a trim command til ES5
+---
 #= ECMAScript 6
+Note: approved in June 2015 (a few months ago)
+
+Still very much not adpoted.
 ---
 ##= Fixing Global Variables
 ---
 ##= `let`
+Note: proper block scope
 ---
 ##= Modules
 
@@ -627,27 +683,77 @@ Supply radix to be cross compatible.
 ##= `console.log`
 Note: Not actually a standard :D TODO `%c`
 ---
+#> > a = 42
+#>- > console.log("a is: " + a);
+#>- "a is 42" 
+#>- > console.time("Do the thing")
+#>- > <c>// ... the thing</c>
+#>- > console.timeEnd("Do the thing")
+#>- "Time to do the thing: 1337ms" 
+#>- > console.log("%cHello world!",<br>&nbsp;"color: red; font-size: 40px");
+#>- <span style="color: red; font-size: 80px">Hello world!</span>
+Note: try autocompleting for more, including grouping 
+---
+ TODO Facebook's Warning message 
+---
+#= Extending JavaScript
+---
 #= Polyfill
 Note: Adding new funcionality in JS to JS by adding more JS
 ---
-#= Want it now?
+##= `supplant`
 ---
-##= Polyfill `console.log`
-#>- window.console =<br> &nbsp;typeof window.console<br>&nbsp; &nbsp; === 'undefined' <br>&nbsp; &nbsp;? {log:function(str){<br> &nbsp; &nbsp; alert(str) }} <br>&nbsp; &nbsp;: window.console;<br> 
-#>- console.log("oh goodness.");<br>
+#> > s = "Hi, my name is {name}"
+#>- > t = { name: "Katie" }
+#>- > s.supplant(t)
+#>- "Hi, my name is Katie"
+---
 
+##= `supplant` polyfill 
+<pre><code>
+if (!String.prototype.supplant) {
+&nbsp; String.prototype.supplant = function (o) {
+&nbsp; &nbsp; return this.replace(<h>/\{([^{}]*)\}/</h>g,
+&nbsp; &nbsp; &nbsp; function (a, b) {
+&nbsp; &nbsp; &nbsp; var r = o[b];
+&nbsp; &nbsp; &nbsp; return typeof r === 'string' || 
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;typeof r === 'number' ? r : a;
+&nbsp; &nbsp;&nbsp;});
+ &nbsp; };
+}
+</code></pre>
+Note: Create function if it doesn't exist
+
+Doesn't handle multiple-level definitions
+
+Didn't make it into es6, but totes useful
+---
+##= `console.log` polyfill
+- <pre><code>
+window.console = 
+&nbsp; typeof window.console === 'undefined' 
+&nbsp; &nbsp;  ? { log: function (str){ alert(str) }}
+&nbsp; &nbsp;  : window.console;
+&nbsp;</pre></code>
+- <pre><code>
+console.log("oh goodness.");
+&nbsp;</pre></code>
 ---
 #= JavaScript isn't awful
 ---
 #= JavaScript is awe-ful
-Note: It's amazing that we can take something so broken and made so much
+Note: 
+Full of Awe
+
+It's amazing that we can take something so broken and made so much
 
 The devil you know
 ---
-> ... when that's the glue of the modern day web it's minor miracle that society even functions
+=> When that's the glue<br>of the modern day web,<br>it's a minor miracle<br>that society even functions
 ---
-#= But just remember...
-##- other languages have wats
+##= Just keep in mind...
+---
+##= Other languages have wats
 ---
 
 #= <pre>#!/usr/bin/env java</pre>
@@ -695,7 +801,7 @@ Note: Let's talk about Haskell
 #>- λ> let b = 2 + 2 where 2 + 2 = 5
 #>- λ> b
 #>- 5
-
+Note: Because haskell
 ---
 #= <pre>/usr/local/bin python</pre>
 Note: Let's talk about Python
@@ -739,20 +845,17 @@ a new programmer won't know this.
 Note: Let's talk about PHP
 ---
 #> php>  $a = INF;
-#>- $b = array(); 
-#>- $c = (object)array();
-#>- var_dump( $a < $b );
+#>- php> $b = array(); 
+#>- php> $c = (object)array();
+#>- php> var_dump( $a < $b );
 #>- true 
-#>- var_dump( $b < $c );
+#>- php> var_dump( $b < $c );
 #>- true 
-#>- var_dump( $c < $a );
+#>- php> var_dump( $c < $a );
 #>- true 
-
-Note: cyclic truthiness. Totally a thing. 
 
 <span class="dasfoot"><a href="http://phpsadness.com/sad/52">http://phpsadness.com/sad/52</a></span>
-Note: 
-
+Note: cyclic truthiness. Totally a thing. 
 
 ---
 
@@ -772,7 +875,10 @@ Note: Let's talk about powershell
 
 #= All lanauges are<br>pretty terrible.
 ---
+# TODO Feel Good ending
+Note: TODO XKCD http://xkcd.com/1537/ ??
+---
 <br><br>
-##= Cheers!
+#= Cheers!
 <br><br>
 @ footer.svg

@@ -146,16 +146,16 @@ Check out the YUI Theatre series
 
 ---
 
-### JavaScript was developed in 10 days <!-- .slide: class="center" -->
+### In 1995, JavaScript was developed in 10 days <!-- .slide: class="center" -->
 ### by Brendan Eich for Netscape
 ### to offer a lightweight version of Java
-### in order to compete for users with Microsoft
+### in order to compete for users with Microsoft.
 
 Note: Let's step through that
 ---
 
 
-### JavaScript was developed in 10 days <!-- .slide: class="center" -->
+### In 1995, JavaScript was developed in 10 days <!-- .slide: class="center" -->
 ### &nbsp;
 ### &nbsp;
 ### &nbsp;
@@ -163,7 +163,7 @@ Note: awfully short development time
 
 just by that alone could explain things.
 ---
-### JavaScript was developed in 10 days <!-- .slide: class="center" -->
+### In 1995, JavaScript was developed in 10 days <!-- .slide: class="center" -->
 ### by Brendan Eich for Netscape
 ### &nbsp;
 ### &nbsp;
@@ -187,7 +187,7 @@ Oh wait, that's scheme, that's gross, don't do that.
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%"></code></pre></div>
 Note: We could have written in the browser like this
 ---
-### JavaScript was developed in 10 days <!-- .slide: class="center" -->
+### In 1995, JavaScript was developed in 10 days <!-- .slide: class="center" -->
 ### by Brendan Eich for Netscape
 ### &nbsp;
 ### &nbsp;
@@ -195,7 +195,7 @@ Note: We could have written in the browser like this
 Note: For user adoption, maybe it wasn't the best
 ---
 
-### JavaScript was developed in 10 days <!-- .slide: class="center" -->
+### In 1995, JavaScript was developed in 10 days <!-- .slide: class="center" -->
 ### by Brendan Eich for Netscape
 ### to offer a lightweight version of Java
 ### &nbsp;
@@ -216,10 +216,10 @@ Java Applets
 
 ---
 
-### JavaScript was developed in 10 days <!-- .slide: class="center" -->
+### In 1995, JavaScript was developed in 10 days <!-- .slide: class="center" -->
 ### by Brendan Eich for Netscape
 ### to offer a lightweight version of Java
-### in order to compete for users with Microsoft
+### in order to compete for users with Microsoft.
 
 Note: Mosaic split into NetScape in SpyGlass
 
@@ -395,6 +395,12 @@ Note: even JScript dutifully reverse engineered this error
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> parseInt("08")</code></pre></div> <!-- .element: class="fragment" -->
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">0</code></pre></div> <!-- .element: class="fragment" -->
 ---
+## `Number` <!-- .slide: class="center" -->
+---
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%"></code></pre></div>
+Note: All numbers are IEEE 754 floats
+TODO float example
+---
 ## Extended Character Set <!-- .slide: class="center" -->
 ---
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> "abc".split("")</code></pre></div>
@@ -439,14 +445,10 @@ We can create not easily readable code
 ---
 
 ## Cross Site Scripting <!-- .slide: class="center" -->
-Note: 
----
-## Cross Site Request Forgery <!-- .slide: class="center" -->
-Note: 
+Note: Javascript can be used for other evil things
 ---
 ## See: Hack the Planet <!-- .slide: class="center" -->
 ### Tutorial, 10am Wednesday
-### (will not be recorded) <!-- .element: class="fragment" -->
 ---
 # ... <!-- .slide: class="center" -->
 Note: so,that's what javascript can do. what if you say
@@ -459,25 +461,24 @@ Note: I dont want to deal with all that stuff
 ---
 
 ## MooTools <!-- .slide: class="center" -->
+## jQuery <!-- .slide: class="center" -->
+## BootStrap <!-- .slide: class="center" -->
 Note: MooTools was a really good thing back in the day
 
 I've only come across it when I tasked to remove it
----
 
-## jQuery <!-- .slide: class="center" -->
-Note: so much extension
+... 
+
+JQuery so much extension
+
 
 at one point ~90% of websites had it
----
 
-## BootStrap <!-- .slide: class="center" -->
-Note: more than JS; CSS, HTML
+... 
+more than JS; CSS, HTML
 Adding more functionality so you dont have to worry about responsive websites
 
 But you can spot a bootstraped wbesite from a mile away
----
-
-# The new Hotness <!-- .slide: class="center" -->
 ---
 ## Meteor <!-- .slide: class="center" -->
 ## React <!-- .slide: class="center" -->
@@ -512,30 +513,46 @@ Note:
 ---
 ### github.com/jashkenas/coffeescript/wiki/<br>List-of-languages-that-compile-to-JS <!-- .slide: class="center" -->
 ---
-# Batavia <!-- .slide: class="center" -->
+## Batavia <!-- .slide: class="center" -->
  <img src="pictures/pybee.png" />
+---
+## asm.js <!-- .slide: class="center" -->
+## emscripten <!-- .slide: class="center" -->
+Note: C into JS
+
+Faster than Light Osmos - Humble Bundle Mozilla
+
+Unreal Tornatment
+
+DosBox 
+---
+ <img src="pictures/win95.png"> <!-- .slide: class="center" -->
+
 ---
 # ... <!-- .slide: class="center" -->
 ---
 ## ┬javascript┬ ノ( ゜-゜ノ) <!-- .slide: class="center" -->
+Note: OK, JS is neat, I want some of that. But outside the browser
 ---
-## JavaScript outside<br>the browser <!-- .slide: class="center" -->
+# JavaScript<br>outside the browser <!-- .slide: class="center" -->
 ---
-## node.js <!-- .slide: class="center" -->
-Note: serverside js
----
-## Electron <!-- .slide: class="center" -->
-Note: not the first time JS has been used on the desktop
+## As a scripting language <!-- .slide: class="center" -->
+Note: NginScript, Cinnamon
 ---
 ## Google Gadgets <!-- .slide: class="center" -->
 Note: iGoogle and Google Desktop widget - scripting by javascript on the desktop
 ---
-## As a scripting language <!-- .slide: class="center" -->
+## Electron <!-- .slide: class="center" -->
+Note: 
 
-Note: NginScript, Cinnamon
+GitHub's framework. Atom. Github Desktop
+not the first time JS has been used on the desktop
+---
+## node.js <!-- .slide: class="center" -->
+Note: serverside js
 ---
 
-## Even more gotchas <!-- .slide: class="center" -->
+## More Gotchas <!-- .slide: class="center" -->
 ---
 
 ## Function Optimisation <!-- .slide: class="center" -->
@@ -556,14 +573,42 @@ function add(x, y) {
 </c> 
 &nbsp; return(x + y);
 } 
-</code></pre><pre style="margin-top: -1em;"><code>for(let i = 0; i < 500000000; i++) {
+
+for(let i = 0; i < 500000000; i++) {
 &nbsp; if (add(i, i++) < 5) {
 &nbsp; &nbsp; <c>//</c>
 &nbsp; }
 } 
 </code></pre> 
 
- <pre><code>$ time -p node general.js</code></pre><br><pre style="margin-top:-1em"><code>real 1.68</code></pre> <!-- .element: class="fragment" -->
+ <pre><code>$ time -p node general.js<br>real 1.71</code></pre> <!-- .element: class="fragment" -->
+---
+<pre><code>'use strict';
+
+function add(x, y) {
+<c style="font-weight:normal">&nbsp; // I am the very model of a modern Major-General
+&nbsp; // I've information vegetable, animal, and mineral
+&nbsp; // I know the kings of England, and I quote the fights historical
+&nbsp; // From Marathon to Waterloo, in order categorical
+&nbsp; // I'm very well acquainted, too, with matters mathematical
+&nbsp; // I understand equations, both the simple and quadratical
+&nbsp; // About binomial theorem I'm teeming with a lot o' news
+&nbsp; // With many cheerful facts about the square of the hypotenuse
+&nbsp; // I'm very good at integral and differential calculus
+&nbsp; // I know the scientific names of beings animalculous
+</c> 
+&nbsp; return(x + y);
+} 
+
+for(let i = 0; i < 500000000; i++) {
+&nbsp; if (add(i, i++) < 5) {
+&nbsp; &nbsp; <c>//</c>
+&nbsp; }
+} 
+</code></pre> 
+
+Note: blank for flicking
+
 ---
 <pre><code>'use strict';
 
@@ -581,14 +626,15 @@ function add(x, y) {
 </c> 
 &nbsp; return(x + y);
 } 
-</code></pre><pre style="margin-top: -1em;"><code>for(let i = 0; i < 500000000; i++) {
+
+for(let i = 0; i < 500000000; i++) {
 &nbsp; if (add(i, i++) < 5) {
 &nbsp; &nbsp; <c>//</c>
 &nbsp; }
 } 
 </code></pre> 
 
- <pre><code>$ time -p node general.js</code></pre><br><pre style="margin-top:-1em"><code>real 0.67</code></pre> <!-- .element: class="fragment" -->
+ <pre><code>$ time -p node general.js<br>real 0.67</code></pre> <!-- .element: class="fragment" -->
 ---
 
 # JavaScript<br>is improving <!-- .slide: class="center" -->
@@ -596,7 +642,9 @@ function add(x, y) {
 ---
 
 # ECMAScript 5 <!-- .slide: class="center" -->
+Note: std intro'd in 2009
 
+Mostly adpoted
 ---
 
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">ES3> parseInt("08")</code></pre></div>
@@ -608,11 +656,19 @@ function add(x, y) {
 Note: assumed to be octal unless you have ECMAScript 5.
 Supply radix to be cross compatible.
 ---
+## `trim` <!-- .slide: class="center" -->
+
+Note: JS didn't ahve a trim command til ES5
+---
 # ECMAScript 6 <!-- .slide: class="center" -->
+Note: approved in June 2015 (a few months ago)
+
+Still very much not adpoted.
 ---
 ## Fixing Global Variables <!-- .slide: class="center" -->
 ---
 ## `let` <!-- .slide: class="center" -->
+Note: proper block scope
 ---
 ## Modules <!-- .slide: class="center" -->
 
@@ -627,27 +683,77 @@ Supply radix to be cross compatible.
 ## `console.log` <!-- .slide: class="center" -->
 Note: Not actually a standard :D TODO `%c`
 ---
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> a = 42</code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> console.log("a is: " + a);</code></pre></div> <!-- .element: class="fragment" -->
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">"a is 42"</code></pre></div> <!-- .element: class="fragment" -->
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> console.time("Do the thing")</code></pre></div> <!-- .element: class="fragment" -->
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> <c>// ... the thing</c></code></pre></div> <!-- .element: class="fragment" -->
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> console.timeEnd("Do the thing")</code></pre></div> <!-- .element: class="fragment" -->
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">"Time to do the thing: 1337ms"</code></pre></div> <!-- .element: class="fragment" -->
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> console.log("%cHello world!",<br>&nbsp;"color: red; font-size: 40px");</code></pre></div> <!-- .element: class="fragment" -->
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%"><span style="color: red; font-size: 80px">Hello world!</span></code></pre></div> <!-- .element: class="fragment" -->
+Note: try autocompleting for more, including grouping
+---
+TODO Facebook's Warning message
+---
+# Extending JavaScript <!-- .slide: class="center" -->
+---
 # Polyfill <!-- .slide: class="center" -->
 Note: Adding new funcionality in JS to JS by adding more JS
 ---
-# Want it now? <!-- .slide: class="center" -->
+## `supplant` <!-- .slide: class="center" -->
 ---
-## Polyfill `console.log` <!-- .slide: class="center" -->
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">window.console =<br> &nbsp;typeof window.console<br>&nbsp; &nbsp; === 'undefined' <br>&nbsp; &nbsp;? {log:function(str){<br> &nbsp; &nbsp; alert(str) }} <br>&nbsp; &nbsp;: window.console;<br></code></pre></div> <!-- .element: class="fragment" -->
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">console.log("oh goodness.");<br></code></pre></div> <!-- .element: class="fragment" -->
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> s = "Hi, my name is {name}"</code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> t = { name: "Katie" }</code></pre></div> <!-- .element: class="fragment" -->
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> s.supplant(t)</code></pre></div> <!-- .element: class="fragment" -->
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">"Hi, my name is Katie"</code></pre></div> <!-- .element: class="fragment" -->
+---
 
+## `supplant` polyfill <!-- .slide: class="center" -->
+<pre><code> 
+if (!String.prototype.supplant) {
+&nbsp; String.prototype.supplant = function (o) {
+&nbsp; &nbsp; return this.replace(<h>/\{([^{}]*)\}/</h>g,
+&nbsp; &nbsp; &nbsp; function (a, b) {
+&nbsp; &nbsp; &nbsp; var r = o[b];
+&nbsp; &nbsp; &nbsp; return typeof r === 'string' ||
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;typeof r === 'number' ? r : a;
+&nbsp; &nbsp;&nbsp;});
+&nbsp; };
+} 
+</code></pre> 
+Note: Create function if it doesn't exist
+
+Doesn't handle multiple-level definitions
+
+Didn't make it into es6, but totes useful
+---
+## `console.log` polyfill <!-- .slide: class="center" -->
+ <pre><code> <!-- .element: class="fragment" -->
+window.console =
+&nbsp; typeof window.console === 'undefined'
+&nbsp; &nbsp; ? { log: function (str){ alert(str) }}
+&nbsp; &nbsp; : window.console;
+&nbsp;</pre></code> 
+ <pre><code> <!-- .element: class="fragment" -->
+console.log("oh goodness.");
+&nbsp;</pre></code> 
 ---
 # JavaScript isn't awful <!-- .slide: class="center" -->
 ---
 # JavaScript is awe-ful <!-- .slide: class="center" -->
-Note: It's amazing that we can take something so broken and made so much
+Note: 
+Full of Awe
+
+It's amazing that we can take something so broken and made so much
 
 The devil you know
 ---
-> ... when that's the glue of the modern day web it's minor miracle that society even functions
+> When that's the glue<br>of the modern day web,<br>it's a minor miracle<br>that society even functions <!-- .slide: class="center" -->
 ---
-# But just remember... <!-- .slide: class="center" -->
-## other languages have wats <!-- .element: class="fragment" -->
+## Just keep in mind... <!-- .slide: class="center" -->
+---
+## Other languages have wats <!-- .slide: class="center" -->
 ---
 
 # <pre>#!/usr/bin/env java</pre> <!-- .slide: class="center" -->
@@ -695,7 +801,7 @@ Note: Let's talk about Haskell
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">λ> let b = 2 + 2 where 2 + 2 = 5</code></pre></div> <!-- .element: class="fragment" -->
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">λ> b</code></pre></div> <!-- .element: class="fragment" -->
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">5</code></pre></div> <!-- .element: class="fragment" -->
-
+Note: Because haskell
 ---
 # <pre>/usr/local/bin python</pre> <!-- .slide: class="center" -->
 Note: Let's talk about Python
@@ -739,20 +845,17 @@ a new programmer won't know this.
 Note: Let's talk about PHP
 ---
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">php> $a = INF;</code></pre></div>
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">$b = array();</code></pre></div> <!-- .element: class="fragment" -->
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">$c = (object)array();</code></pre></div> <!-- .element: class="fragment" -->
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">var_dump( $a < $b );</code></pre></div> <!-- .element: class="fragment" -->
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">php> $b = array();</code></pre></div> <!-- .element: class="fragment" -->
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">php> $c = (object)array();</code></pre></div> <!-- .element: class="fragment" -->
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">php> var_dump( $a < $b );</code></pre></div> <!-- .element: class="fragment" -->
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">true</code></pre></div> <!-- .element: class="fragment" -->
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">var_dump( $b < $c );</code></pre></div> <!-- .element: class="fragment" -->
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">php> var_dump( $b < $c );</code></pre></div> <!-- .element: class="fragment" -->
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">true</code></pre></div> <!-- .element: class="fragment" -->
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">var_dump( $c < $a );</code></pre></div> <!-- .element: class="fragment" -->
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">php> var_dump( $c < $a );</code></pre></div> <!-- .element: class="fragment" -->
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">true</code></pre></div> <!-- .element: class="fragment" -->
-
-Note: cyclic truthiness. Totally a thing.
 
 <span class="dasfoot"><a href="http://phpsadness.com/sad/52">http://phpsadness.com/sad/52</a></span>
-Note: 
-
+Note: cyclic truthiness. Totally a thing.
 
 ---
 
@@ -772,7 +875,10 @@ Note: Let's talk about powershell
 
 # All lanauges are<br>pretty terrible. <!-- .slide: class="center" -->
 ---
+# TODO Feel Good ending
+Note: TODO XKCD http://xkcd.com/1537/ ??
+---
 <br><br> 
-## Cheers! <!-- .slide: class="center" -->
+# Cheers! <!-- .slide: class="center" -->
 <br><br> 
  <img src="pictures/footer.svg" />
