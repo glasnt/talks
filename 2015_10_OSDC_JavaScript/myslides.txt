@@ -51,12 +51,12 @@ Note: Tapestry and Cooking and Yelling
 #= Duck Typing
 Note: if it looks like a duck and sounds like a duck, it's a duck.
 ---
-#>  > 4 + 2 
+#>  > 4 + 2
 #>- 6
 #>- > 4 - 2
 #>- 2
-#>- > "4" - 2 
-#>- 2 
+#>- > "4" - 2
+#>- 2
 #>- > "4" + 2
 #>- "42"
 ---
@@ -96,11 +96,11 @@ Note: Associativity? Pfft! Transativity? Hahahah
 ---
 #= Equality
 ---
-#>  > 0 ==&nbsp; false  
+#>  > 0 ==&nbsp; false
 #>- true
 #>- > 1 == &nbsp;"1"
-#>- true 
-#>- > 0 === false  
+#>- true
+#>- > 0 === false
 #>- false
 #>- > 1 === "1"
 #>- false
@@ -115,13 +115,13 @@ Note: experienced developers get frustrated with it
 Note: people near to javascript developers hear them swear.  A lot.
 ---
 
-=> "[C]: Have to modify some JavaScript<br>I did over a year ago. 
-> 
+=> "[C]: Have to modify some JavaScript<br>I did over a year ago.
+>
 > 'What is this?'<br>
 > 'Why did I ...?'<br>
 > 'What sort of name is that!'"
 
-Note: confusing syntax, hard to come back to 
+Note: confusing syntax, hard to come back to
 
 ---
 
@@ -141,7 +141,7 @@ Note: why is javascript so awful
 #= JavaScript History<br>in 30 words or less
 Note: I don't have time to tell the entire history of javascript
 
-Check out the YUI Theatre series 
+Check out the YUI Theatre series
 
 For more, see "Crockford on JavaScript"
 
@@ -168,7 +168,7 @@ just by that alone could explain things.
 ### by Brendan Eich for Netscape
 ### &nbsp;
 ### &nbsp;
-Note: 
+Note:
 Eich originally wanted to make scheme
 
 Sure, they said
@@ -179,13 +179,13 @@ Oh wait, that's scheme, that's gross, don't do that.
 #> >&nbsp; (lambda ()
 #> >&nbsp; &nbsp; (begin
 #> >&nbsp; &nbsp; &nbsp; (write ‘Hello-World)
-#> >&nbsp; &nbsp; ) 
+#> >&nbsp; &nbsp; )
 #> >&nbsp; )
 #> > )
-#> > 
+#> >
 #> > (hello-world)
 #> Hello-World
-#> 
+#>
 Note: We could have written in the browser like this
 ---
 ###= In 1995, JavaScript was developed in 10 days
@@ -237,14 +237,15 @@ Because trademark, MS reverse engineered JS, called it JScript
 ##= JavaScript™
 
 <span class="dasfoot"><a href="http://tsdr.uspto.gov/#caseNumber=75026640&caseType=SERIAL_NO&searchType=statusSearch">US Trademark &#35;75026640</a></span>
-Note: 
+Note:
 
 ---
 
 ##= ECMAScript
+### A general purpose, cross-platform programming language
 
 Note: Because of some fun issues, Tim Berners Lee and W3C wouldn't do the standard
- 
+
 TBL was apparently upset that Netscape took his simple design and made it silly
 
 with things like images and formatting
@@ -262,6 +263,19 @@ Working title: ECMA Script (ecc-ma)
 
 ---
 
+#= Most popular language ever.
+Note: what percentage of the world uses the internet?
+
+What percentage of the internet uses JS?
+
+I posit that there are more uses of JS than any other lanaguage ever
+
+Givne this user base, there are more developers of JS than any other language
+
+It may also be the most complained about language
+
+because footguns
+---
 #= Foot Guns
 
 Note: Things you can shoot yourself with in the foot
@@ -297,7 +311,7 @@ Note: Incidently, first listing in The Good Parts - Appendix A - The Awful Parts
 #>
 #> <c>//python</c>
 #> <h>global</h> ans = 42;
-#> 
+#>
 #> <c>//java
 #> <h>public</h> static ans = 42;
 Note: Because every other language has locals by default
@@ -305,21 +319,21 @@ Note: Because every other language has locals by default
 #= Overloaded<br>`+` operand
 ---
 <p></p>
-#>  > 4 + 2 
+#>  > 4 + 2
 #> 6
 #> > 4 - 2
 #> 2
-#> > "4" - 2 
-#> 2 
+#> > "4" - 2
+#> 2
 #> > "4" + 2
 #> "42"
 ---
 <p></p>
-#>  > 4 + 2 
+#>  > 4 + 2
 #> 6
 #> > 4 - 2
 #> 2
-#> > "4" - 2 
+#> > "4" - 2
 #> 2 <c>&nbsp;&nbsp; // type -> integer</c>
 #> > "4" + 2
 #> "42"<c> // type -> string</c>
@@ -329,22 +343,22 @@ Note: `+` for both additon and concatenation
 #= Equality<br>and<br>Type Coersion
 ---
 <p></p>
-#> > 0 ==&nbsp; false  
+#> > 0 ==&nbsp; false
 #> true
-#> > 0 === false  
+#> > 0 === false
 #> false
 #> > 1 == &nbsp;"1"
-#> true 
-#> > 1 === "1" 
+#> true
+#> > 1 === "1"
 #> false
 ---
 <p></p>
-#> > 0 ==&nbsp; false  
+#> > 0 ==&nbsp; false
 #> true
-#> > 0 === false  
+#> > 0 === false
 #> false
-#> > 1 == &nbsp;"1" <c> // equality</c> 
-#> true 
+#> > 1 == &nbsp;"1" <c> // equality</c>
+#> true
 #> > 1 === "1" <c>// equality without</c>
 #> false &nbsp; &nbsp; &nbsp; <c>// type coersion</c>
 
@@ -353,67 +367,9 @@ Note: This was picked up v. early by Brendan Eich
 But because legacy, the standards committee didn't accept the change to `==`
 
 forced creation of `===`
-
-
----
-
-#= More Gotchas
-Note: Combination of original 'Bad Parts', 'Awful Parts', and some new Fun
----
-##= `typeof`
----
-#> > typeof Object()
-#>- "object"
-#>- > typeof Number()
-#>- "number"
-#>- > typeof String()
-#>- "string"
-#>- > typeof Boolean()
-#>- "boolean"
-#>- > typeof null
-#>- "object"  <r>// ;&#95;;</r>
-Note: even JScript dutifully reverse engineered this error
-
-It's a bug
----
-<p></p>
-#> > typeof Object() <h>// Value tags</h>
-#> "object"  <c> // 000</c>
-#> > typeof Number()
-#> "number"
-#> > typeof String()
-#> "string" <c> // 100</c>
-#> > typeof Boolean()
-#> "boolean" <c>// 110</c>
-#> > typeof null 
-#> "object"  <h>// 000  </h>
-
----
-<pre><code><h>// source/js/src/jsapi.c</h><br>
-JS_TypeOfValue(JSContext *cx, jsval v) {
-&nbsp; &nbsp; if (JSVAL_IS_VOID(v)) {
-&nbsp; &nbsp; &nbsp; &nbsp; type = JSTYPE_VOID;
-&nbsp; &nbsp; } else if (JSVAL_IS_OBJECT(v)) {
-&nbsp; &nbsp; &nbsp; &nbsp; if (...) {
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; type = JSTYPE_FUNCTION;
-&nbsp; &nbsp; &nbsp; &nbsp; } else {
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; type = JSTYPE_OBJECT;
-&nbsp; &nbsp; &nbsp; &nbsp; }
-&nbsp; &nbsp; } else if (JSVAL_IS_NUMBER(v)) {
-&nbsp; &nbsp; &nbsp; &nbsp; type = JSTYPE_NUMBER;
-&nbsp; &nbsp; } else if (JSVAL_IS_STRING(v)) {
-&nbsp; &nbsp; &nbsp; &nbsp; type = JSTYPE_STRING;
-&nbsp; &nbsp; } else if (JSVAL_IS_BOOLEAN(v)) {
-&nbsp; &nbsp; &nbsp; &nbsp; type = JSTYPE_BOOLEAN;
-&nbsp; &nbsp; }
-&nbsp; &nbsp; return type;
-}
-</pre></code>
-
-
-<span class="dasfoot"><a href="http://mxr.mozilla.org/classic/source/js/src/jsapi.h">Source Code</a></span>
 ---
 ##= `NaN`
+Note: More gotchas, Combination of original 'Bad Parts', 'Awful Parts', and some new Fun
 ---
 #> > typeof NaN
 #> "number"
@@ -433,13 +389,13 @@ JS_TypeOfValue(JSContext *cx, jsval v) {
 #>- > parseInt("04")
 #>- 4
 #>- > parseInt("08")
-#>- 0 
+#>- 0
 ---
 ##= `Number`
 ---
 #> > 4 + 2
 #>- 6
-#>- > 40 + 20 
+#>- > 40 + 20
 #>- 60
 #>- > 0.4 + 0.2
 #>- 0.6000000000000001
@@ -488,11 +444,250 @@ Note: uniary operand casts to number
 Note: pre-increment only works on some objects, not directly on number literals
 ---
 
+##= `typeof`
+---
+#> > typeof Object()
+#>- "object"
+#>- > typeof Number()
+#>- "number"
+#>- > typeof String()
+#>- "string"
+#>- > typeof Boolean()
+#>- "boolean"
+#>- > typeof null
+#>- "object"
+Note: even JScript dutifully reverse engineered this error
+
+It's a bug
+---
+<p></p>
+#> > typeof Object() 
+#> "object"  <h> // JSVAL_OBJECT &nbsp;  0x0</h>
+#> > typeof Number()
+#> "number"
+#> > typeof String()
+#> "string" <h> // JSVAL_STRING &nbsp; 0x4</h>
+#> > typeof Boolean()
+#> "boolean" <h>// JSVAL_BOOLEAN &nbsp;0x6</h>
+#> > typeof null
+#> "object"&nbsp; <c>//  0x00 pointer  </c>
+
+---
+<pre><code><c>// source/js/src/jsapi.c</c><br>
+JS_TypeOfValue(JSContext *cx, jsval v) {
+&nbsp; &nbsp; if (JSVAL_IS_VOID(v)) {
+&nbsp; &nbsp; &nbsp; &nbsp; type = JSTYPE_VOID;
+&nbsp; &nbsp; } else if (JSVAL_IS_OBJECT(v)) {
+&nbsp; &nbsp; &nbsp; &nbsp; if (...) {
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; type = JSTYPE_FUNCTION;
+&nbsp; &nbsp; &nbsp; &nbsp; } else {
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; type = JSTYPE_OBJECT;
+&nbsp; &nbsp; &nbsp; &nbsp; }
+&nbsp; &nbsp; } else if (JSVAL_IS_NUMBER(v)) {
+&nbsp; &nbsp; &nbsp; &nbsp; type = JSTYPE_NUMBER;
+&nbsp; &nbsp; } else if (JSVAL_IS_STRING(v)) {
+&nbsp; &nbsp; &nbsp; &nbsp; type = JSTYPE_STRING;
+&nbsp; &nbsp; } else if (JSVAL_IS_BOOLEAN(v)) {
+&nbsp; &nbsp; &nbsp; &nbsp; type = JSTYPE_BOOLEAN;
+&nbsp; &nbsp; }
+&nbsp; &nbsp; return type;
+}
+</pre></code>
+
+
+<span class="dasfoot"><a href="http://mxr.mozilla.org/classic/source/js/src/jsapi.h">jsapi from October 1996</a></span>
+---
+<pre><code><c>// source/js/src/jsapi.c</c><br>
+JS_TypeOfValue(JSContext *cx, jsval v) {
+&nbsp; &nbsp; <h>if</h> (JSVAL_IS_VOID(v)) {
+&nbsp; &nbsp; &nbsp; &nbsp; type = JSTYPE_VOID;
+&nbsp; &nbsp; } <h>else if</h> (JSVAL_IS_OBJECT(v)) {
+&nbsp; &nbsp; &nbsp; &nbsp; <h>if</h> (...) {
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; type = JSTYPE_FUNCTION;
+&nbsp; &nbsp; &nbsp; &nbsp; } <h>else</h> {
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; type = JSTYPE_OBJECT;
+&nbsp; &nbsp; &nbsp; &nbsp; }
+&nbsp; &nbsp; } <h>else if</h> (JSVAL_IS_NUMBER(v)) {
+&nbsp; &nbsp; &nbsp; &nbsp; type = JSTYPE_NUMBER;
+&nbsp; &nbsp; } <h>else if</h> (JSVAL_IS_STRING(v)) {
+&nbsp; &nbsp; &nbsp; &nbsp; type = JSTYPE_STRING;
+&nbsp; &nbsp; } <h>else if</h> (JSVAL_IS_BOOLEAN(v)) {
+&nbsp; &nbsp; &nbsp; &nbsp; type = JSTYPE_BOOLEAN;
+&nbsp; &nbsp; }
+&nbsp; &nbsp; return type;
+}
+</pre></code>
+
+
+<span class="dasfoot"><a href="http://mxr.mozilla.org/classic/source/js/src/jsapi.h">jsapi from October 1996</a></span>
+---
+<pre><code><c>// source/js/src/jsapi.c</c><br>
+JS_TypeOfValue(JSContext *cx, jsval v) {
+&nbsp; &nbsp; if (<h>JSVAL_IS_VOID(v)</h>) { <h>// v == JSVAL_VOID</h>
+&nbsp; &nbsp; &nbsp; &nbsp; type = JSTYPE_VOID;
+&nbsp; &nbsp; } else if (JSVAL_IS_OBJECT(v)) {
+&nbsp; &nbsp; &nbsp; &nbsp; if (...) {
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; type = JSTYPE_FUNCTION;
+&nbsp; &nbsp; &nbsp; &nbsp; } else {
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; type = JSTYPE_OBJECT;
+&nbsp; &nbsp; &nbsp; &nbsp; }
+&nbsp; &nbsp; } else if (JSVAL_IS_NUMBER(v)) {
+&nbsp; &nbsp; &nbsp; &nbsp; type = JSTYPE_NUMBER;
+&nbsp; &nbsp; } else if (JSVAL_IS_STRING(v)) {
+&nbsp; &nbsp; &nbsp; &nbsp; type = JSTYPE_STRING;
+&nbsp; &nbsp; } else if (JSVAL_IS_BOOLEAN(v)) {
+&nbsp; &nbsp; &nbsp; &nbsp; type = JSTYPE_BOOLEAN;
+&nbsp; &nbsp; }
+&nbsp; &nbsp; return type;
+}
+</pre></code>
+<span class="dasfoot"><a href="http://mxr.mozilla.org/classic/source/js/src/jsapi.h">jsapi from October 1996</a></span>
+---
+<pre><code><c>// source/js/src/jsapi.c</c><br>
+JS_TypeOfValue(JSContext *cx, jsval v) {
+&nbsp; &nbsp; if (JSVAL_IS_VOID(v)) {
+&nbsp; &nbsp; &nbsp; &nbsp; type = JSTYPE_VOID;
+&nbsp; &nbsp; } else if (<h>JSVAL_IS_OBJECT(v)</h>) { <h>// JSVAL_TAG(v) == JSVAL_OBJECT</h>
+&nbsp; &nbsp; &nbsp; &nbsp; if (...) {
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; type = JSTYPE_FUNCTION;
+&nbsp; &nbsp; &nbsp; &nbsp; } else {
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; type = JSTYPE_OBJECT;
+&nbsp; &nbsp; &nbsp; &nbsp; }
+&nbsp; &nbsp; } else if (JSVAL_IS_NUMBER(v)) {
+&nbsp; &nbsp; &nbsp; &nbsp; type = JSTYPE_NUMBER;
+&nbsp; &nbsp; } else if (JSVAL_IS_STRING(v)) {
+&nbsp; &nbsp; &nbsp; &nbsp; type = JSTYPE_STRING;
+&nbsp; &nbsp; } else if (JSVAL_IS_BOOLEAN(v)) {
+&nbsp; &nbsp; &nbsp; &nbsp; type = JSTYPE_BOOLEAN;
+&nbsp; &nbsp; }
+&nbsp; &nbsp; return type;
+}
+</pre></code>
+
+
+<span class="dasfoot"><a href="http://mxr.mozilla.org/classic/source/js/src/jsapi.h">jsapi from October 1996</a></span>
+---
+<pre><code><c>// source/js/src/jsapi.c</c><br>
+JS_TypeOfValue(JSContext *cx, jsval v) {
+&nbsp; &nbsp; if (JSVAL_IS_VOID(v)) {
+&nbsp; &nbsp; &nbsp; &nbsp; type = JSTYPE_VOID;
+&nbsp; &nbsp; } else if (JSVAL_IS_OBJECT(v)) {
+&nbsp; &nbsp; &nbsp; &nbsp; if (...) { <h>// Excuse me, are you a function?</h>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; type = JSTYPE_FUNCTION;
+&nbsp; &nbsp; &nbsp; &nbsp; } else {
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; type = JSTYPE_OBJECT;
+&nbsp; &nbsp; &nbsp; &nbsp; }
+&nbsp; &nbsp; } else if (JSVAL_IS_NUMBER(v)) {
+&nbsp; &nbsp; &nbsp; &nbsp; type = JSTYPE_NUMBER;
+&nbsp; &nbsp; } else if (JSVAL_IS_STRING(v)) {
+&nbsp; &nbsp; &nbsp; &nbsp; type = JSTYPE_STRING;
+&nbsp; &nbsp; } else if (JSVAL_IS_BOOLEAN(v)) {
+&nbsp; &nbsp; &nbsp; &nbsp; type = JSTYPE_BOOLEAN;
+&nbsp; &nbsp; }
+&nbsp; &nbsp; return type;
+}
+</pre></code>
+
+
+<span class="dasfoot"><a href="http://mxr.mozilla.org/classic/source/js/src/jsapi.h">jsapi from October 1996</a></span>
+---
+<pre><code><c>// source/js/src/jsapi.c</c><br>
+JS_TypeOfValue(JSContext *cx, jsval v) {
+&nbsp; &nbsp; if (JSVAL_IS_VOID(v)) {
+&nbsp; &nbsp; &nbsp; &nbsp; type = JSTYPE_VOID;
+&nbsp; &nbsp; } else if (JSVAL_IS_OBJECT(v)) {
+&nbsp; &nbsp; &nbsp; &nbsp; if (...) {
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; type = JSTYPE_FUNCTION;
+&nbsp; &nbsp; &nbsp; &nbsp; } <h>else</h> {
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; type = JSTYPE_OBJECT;
+&nbsp; &nbsp; &nbsp; &nbsp; }
+&nbsp; &nbsp; } else if (JSVAL_IS_NUMBER(v)) {
+&nbsp; &nbsp; &nbsp; &nbsp; type = JSTYPE_NUMBER;
+&nbsp; &nbsp; } else if (JSVAL_IS_STRING(v)) {
+&nbsp; &nbsp; &nbsp; &nbsp; type = JSTYPE_STRING;
+&nbsp; &nbsp; } else if (JSVAL_IS_BOOLEAN(v)) {
+&nbsp; &nbsp; &nbsp; &nbsp; type = JSTYPE_BOOLEAN;
+&nbsp; &nbsp; }
+&nbsp; &nbsp; return type;
+}
+</pre></code>
+
+
+<span class="dasfoot"><a href="http://mxr.mozilla.org/classic/source/js/src/jsapi.h">jsapi from October 1996</a></span>
+---
+<pre><code><c>// source/js/src/jsapi.c</c><br>
+JS_TypeOfValue(JSContext *cx, jsval v) {
+&nbsp; &nbsp; if (JSVAL_IS_VOID(v)) {
+&nbsp; &nbsp; &nbsp; &nbsp; type = JSTYPE_VOID;
+&nbsp; &nbsp; } else if (JSVAL_IS_OBJECT(v)) {
+&nbsp; &nbsp; &nbsp; &nbsp; if (...) {
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; type = JSTYPE_FUNCTION;
+&nbsp; &nbsp; &nbsp; &nbsp; } else {
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <h>type = JSTYPE_OBJECT</h>;
+&nbsp; &nbsp; &nbsp; &nbsp; }
+&nbsp; &nbsp; } else if (JSVAL_IS_NUMBER(v)) {
+&nbsp; &nbsp; &nbsp; &nbsp; type = JSTYPE_NUMBER;
+&nbsp; &nbsp; } else if (JSVAL_IS_STRING(v)) {
+&nbsp; &nbsp; &nbsp; &nbsp; type = JSTYPE_STRING;
+&nbsp; &nbsp; } else if (JSVAL_IS_BOOLEAN(v)) {
+&nbsp; &nbsp; &nbsp; &nbsp; type = JSTYPE_BOOLEAN;
+&nbsp; &nbsp; }
+&nbsp; &nbsp; return type;
+}
+</pre></code>
+
+
+<span class="dasfoot"><a href="http://mxr.mozilla.org/classic/source/js/src/jsapi.h">jsapi from October 1996</a></span>
+
+---
+<pre><code><c>// source/js/src/jsapi.c</c><br>
+JS_TypeOfValue(JSContext *cx, jsval v) {
+&nbsp; &nbsp; if (JSVAL_IS_VOID(v)) {
+&nbsp; &nbsp; &nbsp; &nbsp; type = JSTYPE_VOID;
+&nbsp; &nbsp; } else if (JSVAL_IS_OBJECT(v)) {
+&nbsp; &nbsp; &nbsp; &nbsp; if (...) {
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; type = JSTYPE_FUNCTION;
+&nbsp; &nbsp; &nbsp; &nbsp; } else {
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; type = JSTYPE_OBJECT;
+&nbsp; &nbsp; &nbsp; &nbsp; }
+&nbsp; &nbsp; } else if (JSVAL_IS_NUMBER(v)) {
+&nbsp; &nbsp; &nbsp; &nbsp; type = JSTYPE_NUMBER;
+&nbsp; &nbsp; } else if (JSVAL_IS_STRING(v)) {
+&nbsp; &nbsp; &nbsp; &nbsp; type = JSTYPE_STRING;
+&nbsp; &nbsp; } else if (JSVAL_IS_BOOLEAN(v)) {
+&nbsp; &nbsp; &nbsp; &nbsp; type = JSTYPE_BOOLEAN;
+&nbsp; &nbsp; }
+&nbsp; &nbsp; <h>return type</h>;
+}
+</pre></code>
+<span class="dasfoot"><a href="http://mxr.mozilla.org/classic/source/js/src/jsapi.h">jsapi from October 1996</a></span>
+# TODO Add bitmask trick earlier up??
+---
+##= Yes, this is a bug.
+##- This is a old, known bug.
+---
+##= Backwards Compatibility
+
+Note: JS = most popular language
+
+Most users
+
+Most impact
+
+Biggest user base *ever*. Backward compatibility is not optional
+
+The internet would *break*
+
+And if that's not enough, we have to think about more things
+---
 #= Security
+Note: on top of the things you know JS does
+
+you have to worry about the things that you *really* don't want it to do
 ---
 ##= `eval`
 
-Note: executing arbitary code. 
+Note: executing arbitary code.
 
 We can create not easily readable code
 
@@ -517,7 +712,7 @@ Note: I dont want to deal with all that stuff
 ---
 
 #= Frameworks
-Note: pre rolled goodness and wrappers and and and 
+Note: pre rolled goodness and wrappers and and and
 ---
 
 ##= MooTools
@@ -527,9 +722,9 @@ Note: MooTools was a really good thing back in the day
 
 I've only come across it when I tasked to remove it
 
- ... 
+ ...
 
-JQuery so much extension 
+JQuery so much extension
 
 
 at one point ~90% of websites had it
@@ -568,10 +763,15 @@ Note: I want to work in my favourite language, and still work in the browser
 ##= Pick a language.
 ##= Any language.
 
-Note: 
+Note:
 
 ---
 ###= github.com/jashkenas/coffeescript/wiki/<br>List-of-languages-that-compile-to-JS
+Note: Haskell - GHCJS
+Python - pyjamas
+Ruby - 
+---
+##= Some of my favourites
 ---
 ##= Batavia
 @ pybee.png
@@ -591,28 +791,32 @@ DosBox
 ---
 #= ...
 ---
-##= ┬javascript┬ ノ( ゜-゜ノ) 
-Note: OK, JS is neat, I want some of that. But outside the browser
+##= ┬javascript┬ ノ( ゜-゜ノ)
+Note: OK, JS is pretty freaking neat, I want some of that.
+But what about it's other uses
+
 ---
 #= JavaScript<br>outside the browser
 ---
-##= As a scripting language
-Note: NginScript, Cinnamon
----
-##= Google Gadgets
-Note: iGoogle and Google Desktop widget - scripting by javascript on the desktop
+##= node.js
+Note: serverside js
+
 ---
 ##= Electron
-Note: 
+Note:
 
 GitHub's framework. Atom. Github Desktop
 not the first time JS has been used on the desktop
 ---
-##= node.js
-Note: serverside js
+##= Google Gadgets
+Note: iGoogle and Google Desktop widget - scripting by javascript on the desktop
+TODO Screenshots?
+---
+##= As a scripting language
+Note: NginScript, Cinnamon
 ---
 
-##= More Gotchas
+#= More Gotchas
 ---
 
 ##= Function Optimisation
@@ -641,7 +845,7 @@ for(let i = 0; i < 500000000; i++) {
 }
 </code></pre>
 
-- <pre><code>$ time -p node general.js<br>real 1.71</code></pre>
+- <pre><code>$ time -p node general.js<br>real 1.91</code></pre>
 ---
 <pre><code>'use strict';
 
@@ -682,7 +886,7 @@ function add(x, y) {
 &nbsp;  // About binomial theorem I'm teeming with a lot o' news
 &nbsp;  // With many cheerful facts about the square of the hypotenuse
 &nbsp;  // I'm very good at integral and differential calculus
-&nbsp;  // 
+&nbsp;  //
 </c>
 &nbsp;  return(x + y);
 }
@@ -694,11 +898,12 @@ for(let i = 0; i < 500000000; i++) {
 }
 </code></pre>
 
-- <pre><code>$ time -p node general.js<br>real 0.67</code></pre>
+- <pre><code>$ time -p node general.js<br>real 0.77</code></pre>
+Note: What's going to happen? any change?
+
+More than twice as fast
 ---
-
 #= JavaScript<br>is improving
-
 ---
 
 #= ECMAScript 5
@@ -707,14 +912,14 @@ Note: std intro'd in 2009
 Mostly adpoted
 ---
 
-#>  ES3> parseInt("08") 
-#>- 0 
-#>- ES5> parseInt("08") 
-#>- 8 
+#>  ES3> parseInt("08")
+#>- 0
+#>- ES5> parseInt("08")
+#>- 8
 #>- ESx> parseInt("08",10) <c>//base 10</c>
 #>- 8
-Note: assumed to be octal unless you have ECMAScript 5. 
-Supply radix to be cross compatible. 
+Note: assumed to be octal unless you have ECMAScript 5.
+Supply radix to be cross compatible.
 ---
 ##= `trim`
 
@@ -745,20 +950,20 @@ Note: proper block scope
 #= Non-standard 'Standards'
 ---
 ##= `console.log`
-Note: Not actually a standard :D 
+Note: Not actually a standard :D
 ---
 #> > a = 42
 #>- > console.log("a is: " + a);
-#>- "a is 42" 
+#>- "a is 42"
 #>- > console.time("Do the thing")
 #>- > <c>// ... the thing</c>
 #>- > console.timeEnd("Do the thing")
-#>- "Time to do the thing: 1337ms" 
+#>- "Time to do the thing: 1337ms"
 #>- > console.log("%cHello world!",<br>&nbsp;"color: red; font-size: 40px");
 #>- <span style="color: red; font-size: 80px">Hello world!</span>
-Note: try autocompleting for more, including grouping 
+Note: try autocompleting for more, including grouping
 ---
- TODO Facebook's Warning message 
+ TODO Facebook's Warning message
 ---
 #= Extending JavaScript
 ---
@@ -767,20 +972,20 @@ Note: Adding new funcionality in JS to JS by adding more JS
 ---
 ##= `supplant`
 ---
-#> > s = "Hi, my name is {name}"
-#>- > t = { name: "Katie" }
+#> > s = "{greet} there {name}!"
+#>- > t = { greet: "Oh hello",<br>&nbsp; &nbsp; &nbsp; &nbsp; name: &nbsp;"Katie" }
 #>- > s.supplant(t)
-#>- "Hi, my name is Katie"
+#>- "Oh, hello there Katie!"
 ---
 
-##= `supplant` polyfill 
+##= `supplant` polyfill
 <pre><code>
 if (!String.prototype.supplant) {
 &nbsp; String.prototype.supplant = function (o) {
 &nbsp; &nbsp; return this.replace(<h>/\{([^{}]*)\}/</h>g,
 &nbsp; &nbsp; &nbsp; function (a, b) {
 &nbsp; &nbsp; &nbsp; var r = o[b];
-&nbsp; &nbsp; &nbsp; return typeof r === 'string' || 
+&nbsp; &nbsp; &nbsp; return typeof r === 'string' ||
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;typeof r === 'number' ? r : a;
 &nbsp; &nbsp;&nbsp;});
  &nbsp; };
@@ -794,8 +999,8 @@ Didn't make it into es6, but totes useful
 ---
 ##= `console.log` polyfill
 - <pre><code>
-window.console = 
-&nbsp; typeof window.console === 'undefined' 
+window.console =
+&nbsp; typeof window.console === 'undefined'
 &nbsp; &nbsp;  ? { log: function (str){ alert(str) }}
 &nbsp; &nbsp;  : window.console;
 &nbsp;</pre></code>
@@ -806,7 +1011,7 @@ console.log("oh goodness.");
 #= JavaScript isn't awful
 ---
 #= JavaScript is awe-ful
-Note: 
+Note:
 Full of Awe
 
 It's amazing that we can take something so broken and made so much
@@ -900,7 +1105,7 @@ Note: Reason is `==` is for number comparing
 
 eq is for string comparing
 
-a new programmer won't know this. 
+a new programmer won't know this.
 ---
 
 
@@ -909,17 +1114,17 @@ a new programmer won't know this.
 Note: Let's talk about PHP
 ---
 #> php>  $a = INF;
-#>- php> $b = array(); 
+#>- php> $b = array();
 #>- php> $c = (object)array();
 #>- php> var_dump( $a < $b );
-#>- true 
+#>- true
 #>- php> var_dump( $b < $c );
-#>- true 
+#>- true
 #>- php> var_dump( $c < $a );
-#>- true 
+#>- true
 
 <span class="dasfoot"><a href="http://phpsadness.com/sad/52">http://phpsadness.com/sad/52</a></span>
-Note: cyclic truthiness. Totally a thing. 
+Note: cyclic truthiness. Totally a thing.
 
 ---
 
@@ -937,9 +1142,9 @@ Note: Let's talk about powershell
 <span class="dasfoot"><a href="http://fuckpowershell.tumblr.com/">F Powershell</a></span>
 ---
 
-#= All lanauges have quirks.
+#= All languages have quirks.
 ---
-#= 
+#=
 Note: TODO XKCD http://xkcd.com/1537/ ??
 ---
 <br><br>

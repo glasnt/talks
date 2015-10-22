@@ -242,6 +242,7 @@ Note:
 ---
 
 ## ECMAScript <!-- .slide: class="center" -->
+### A general purpose, cross-platform programming language
 
 Note: Because of some fun issues, Tim Berners Lee and W3C wouldn't do the standard
 
@@ -262,6 +263,19 @@ Working title: ECMA Script (ecc-ma)
 
 ---
 
+# Most popular language ever. <!-- .slide: class="center" -->
+Note: what percentage of the world uses the internet?
+
+What percentage of the internet uses JS?
+
+I posit that there are more uses of JS than any other lanaguage ever
+
+Givne this user base, there are more developers of JS than any other language
+
+It may also be the most complained about language
+
+because footguns
+---
 # Foot Guns <!-- .slide: class="center" -->
 
 Note: Things you can shoot yourself with in the foot
@@ -353,67 +367,9 @@ Note: This was picked up v. early by Brendan Eich
 But because legacy, the standards committee didn't accept the change to `==`
 
 forced creation of `===`
-
-
----
-
-# More Gotchas <!-- .slide: class="center" -->
-Note: Combination of original 'Bad Parts', 'Awful Parts', and some new Fun
----
-## `typeof` <!-- .slide: class="center" -->
----
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> typeof Object()</code></pre></div>
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">"object"</code></pre></div> <!-- .element: class="fragment" -->
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> typeof Number()</code></pre></div> <!-- .element: class="fragment" -->
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">"number"</code></pre></div> <!-- .element: class="fragment" -->
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> typeof String()</code></pre></div> <!-- .element: class="fragment" -->
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">"string"</code></pre></div> <!-- .element: class="fragment" -->
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> typeof Boolean()</code></pre></div> <!-- .element: class="fragment" -->
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">"boolean"</code></pre></div> <!-- .element: class="fragment" -->
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> typeof null</code></pre></div> <!-- .element: class="fragment" -->
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">"object" <r>// ;&#95;;</r></code></pre></div> <!-- .element: class="fragment" -->
-Note: even JScript dutifully reverse engineered this error
-
-It's a bug
----
-<p></p> 
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> typeof Object() <h>// Value tags</h></code></pre></div>
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">"object" <c> // 000</c></code></pre></div>
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> typeof Number()</code></pre></div>
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">"number"</code></pre></div>
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> typeof String()</code></pre></div>
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">"string" <c> // 100</c></code></pre></div>
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> typeof Boolean()</code></pre></div>
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">"boolean" <c>// 110</c></code></pre></div>
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> typeof null</code></pre></div>
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">"object" <h>// 000 </h></code></pre></div>
-
----
-<pre><code><h>// source/js/src/jsapi.c</h><br>
-JS_TypeOfValue(JSContext *cx, jsval v) {
-&nbsp; &nbsp; if (JSVAL_IS_VOID(v)) {
-&nbsp; &nbsp; &nbsp; &nbsp; type = JSTYPE_VOID;
-&nbsp; &nbsp; } else if (JSVAL_IS_OBJECT(v)) {
-&nbsp; &nbsp; &nbsp; &nbsp; if (...) {
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; type = JSTYPE_FUNCTION;
-&nbsp; &nbsp; &nbsp; &nbsp; } else {
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; type = JSTYPE_OBJECT;
-&nbsp; &nbsp; &nbsp; &nbsp; }
-&nbsp; &nbsp; } else if (JSVAL_IS_NUMBER(v)) {
-&nbsp; &nbsp; &nbsp; &nbsp; type = JSTYPE_NUMBER;
-&nbsp; &nbsp; } else if (JSVAL_IS_STRING(v)) {
-&nbsp; &nbsp; &nbsp; &nbsp; type = JSTYPE_STRING;
-&nbsp; &nbsp; } else if (JSVAL_IS_BOOLEAN(v)) {
-&nbsp; &nbsp; &nbsp; &nbsp; type = JSTYPE_BOOLEAN;
-&nbsp; &nbsp; }
-&nbsp; &nbsp; return type;
-} 
-</pre></code> 
-
-
-<span class="dasfoot"><a href="http://mxr.mozilla.org/classic/source/js/src/jsapi.h">Source Code</a></span>
 ---
 ## `NaN` <!-- .slide: class="center" -->
+Note: More gotchas, Combination of original 'Bad Parts', 'Awful Parts', and some new Fun
 ---
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> typeof NaN</code></pre></div>
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">"number"</code></pre></div>
@@ -488,7 +444,246 @@ Note: uniary operand casts to number
 Note: pre-increment only works on some objects, not directly on number literals
 ---
 
+## `typeof` <!-- .slide: class="center" -->
+---
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> typeof Object()</code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">"object"</code></pre></div> <!-- .element: class="fragment" -->
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> typeof Number()</code></pre></div> <!-- .element: class="fragment" -->
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">"number"</code></pre></div> <!-- .element: class="fragment" -->
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> typeof String()</code></pre></div> <!-- .element: class="fragment" -->
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">"string"</code></pre></div> <!-- .element: class="fragment" -->
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> typeof Boolean()</code></pre></div> <!-- .element: class="fragment" -->
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">"boolean"</code></pre></div> <!-- .element: class="fragment" -->
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> typeof null</code></pre></div> <!-- .element: class="fragment" -->
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">"object"</code></pre></div> <!-- .element: class="fragment" -->
+Note: even JScript dutifully reverse engineered this error
+
+It's a bug
+---
+<p></p> 
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> typeof Object()</code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">"object" <h> // JSVAL_OBJECT &nbsp; 0x0</h></code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> typeof Number()</code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">"number"</code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> typeof String()</code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">"string" <h> // JSVAL_STRING &nbsp; 0x4</h></code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> typeof Boolean()</code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">"boolean" <h>// JSVAL_BOOLEAN &nbsp;0x6</h></code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> typeof null</code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">"object"&nbsp; <c>// 0x00 pointer </c></code></pre></div>
+
+---
+<pre><code><c>// source/js/src/jsapi.c</c><br>
+JS_TypeOfValue(JSContext *cx, jsval v) {
+&nbsp; &nbsp; if (JSVAL_IS_VOID(v)) {
+&nbsp; &nbsp; &nbsp; &nbsp; type = JSTYPE_VOID;
+&nbsp; &nbsp; } else if (JSVAL_IS_OBJECT(v)) {
+&nbsp; &nbsp; &nbsp; &nbsp; if (...) {
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; type = JSTYPE_FUNCTION;
+&nbsp; &nbsp; &nbsp; &nbsp; } else {
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; type = JSTYPE_OBJECT;
+&nbsp; &nbsp; &nbsp; &nbsp; }
+&nbsp; &nbsp; } else if (JSVAL_IS_NUMBER(v)) {
+&nbsp; &nbsp; &nbsp; &nbsp; type = JSTYPE_NUMBER;
+&nbsp; &nbsp; } else if (JSVAL_IS_STRING(v)) {
+&nbsp; &nbsp; &nbsp; &nbsp; type = JSTYPE_STRING;
+&nbsp; &nbsp; } else if (JSVAL_IS_BOOLEAN(v)) {
+&nbsp; &nbsp; &nbsp; &nbsp; type = JSTYPE_BOOLEAN;
+&nbsp; &nbsp; }
+&nbsp; &nbsp; return type;
+} 
+</pre></code> 
+
+
+<span class="dasfoot"><a href="http://mxr.mozilla.org/classic/source/js/src/jsapi.h">jsapi from October 1996</a></span>
+---
+<pre><code><c>// source/js/src/jsapi.c</c><br>
+JS_TypeOfValue(JSContext *cx, jsval v) {
+&nbsp; &nbsp; <h>if</h> (JSVAL_IS_VOID(v)) {
+&nbsp; &nbsp; &nbsp; &nbsp; type = JSTYPE_VOID;
+&nbsp; &nbsp; } <h>else if</h> (JSVAL_IS_OBJECT(v)) {
+&nbsp; &nbsp; &nbsp; &nbsp; <h>if</h> (...) {
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; type = JSTYPE_FUNCTION;
+&nbsp; &nbsp; &nbsp; &nbsp; } <h>else</h> {
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; type = JSTYPE_OBJECT;
+&nbsp; &nbsp; &nbsp; &nbsp; }
+&nbsp; &nbsp; } <h>else if</h> (JSVAL_IS_NUMBER(v)) {
+&nbsp; &nbsp; &nbsp; &nbsp; type = JSTYPE_NUMBER;
+&nbsp; &nbsp; } <h>else if</h> (JSVAL_IS_STRING(v)) {
+&nbsp; &nbsp; &nbsp; &nbsp; type = JSTYPE_STRING;
+&nbsp; &nbsp; } <h>else if</h> (JSVAL_IS_BOOLEAN(v)) {
+&nbsp; &nbsp; &nbsp; &nbsp; type = JSTYPE_BOOLEAN;
+&nbsp; &nbsp; }
+&nbsp; &nbsp; return type;
+} 
+</pre></code> 
+
+
+<span class="dasfoot"><a href="http://mxr.mozilla.org/classic/source/js/src/jsapi.h">jsapi from October 1996</a></span>
+---
+<pre><code><c>// source/js/src/jsapi.c</c><br>
+JS_TypeOfValue(JSContext *cx, jsval v) {
+&nbsp; &nbsp; if (<h>JSVAL_IS_VOID(v)</h>) { <h>// v == JSVAL_VOID</h>
+&nbsp; &nbsp; &nbsp; &nbsp; type = JSTYPE_VOID;
+&nbsp; &nbsp; } else if (JSVAL_IS_OBJECT(v)) {
+&nbsp; &nbsp; &nbsp; &nbsp; if (...) {
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; type = JSTYPE_FUNCTION;
+&nbsp; &nbsp; &nbsp; &nbsp; } else {
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; type = JSTYPE_OBJECT;
+&nbsp; &nbsp; &nbsp; &nbsp; }
+&nbsp; &nbsp; } else if (JSVAL_IS_NUMBER(v)) {
+&nbsp; &nbsp; &nbsp; &nbsp; type = JSTYPE_NUMBER;
+&nbsp; &nbsp; } else if (JSVAL_IS_STRING(v)) {
+&nbsp; &nbsp; &nbsp; &nbsp; type = JSTYPE_STRING;
+&nbsp; &nbsp; } else if (JSVAL_IS_BOOLEAN(v)) {
+&nbsp; &nbsp; &nbsp; &nbsp; type = JSTYPE_BOOLEAN;
+&nbsp; &nbsp; }
+&nbsp; &nbsp; return type;
+} 
+</pre></code> 
+<span class="dasfoot"><a href="http://mxr.mozilla.org/classic/source/js/src/jsapi.h">jsapi from October 1996</a></span>
+---
+<pre><code><c>// source/js/src/jsapi.c</c><br>
+JS_TypeOfValue(JSContext *cx, jsval v) {
+&nbsp; &nbsp; if (JSVAL_IS_VOID(v)) {
+&nbsp; &nbsp; &nbsp; &nbsp; type = JSTYPE_VOID;
+&nbsp; &nbsp; } else if (<h>JSVAL_IS_OBJECT(v)</h>) { <h>// JSVAL_TAG(v) == JSVAL_OBJECT</h>
+&nbsp; &nbsp; &nbsp; &nbsp; if (...) {
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; type = JSTYPE_FUNCTION;
+&nbsp; &nbsp; &nbsp; &nbsp; } else {
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; type = JSTYPE_OBJECT;
+&nbsp; &nbsp; &nbsp; &nbsp; }
+&nbsp; &nbsp; } else if (JSVAL_IS_NUMBER(v)) {
+&nbsp; &nbsp; &nbsp; &nbsp; type = JSTYPE_NUMBER;
+&nbsp; &nbsp; } else if (JSVAL_IS_STRING(v)) {
+&nbsp; &nbsp; &nbsp; &nbsp; type = JSTYPE_STRING;
+&nbsp; &nbsp; } else if (JSVAL_IS_BOOLEAN(v)) {
+&nbsp; &nbsp; &nbsp; &nbsp; type = JSTYPE_BOOLEAN;
+&nbsp; &nbsp; }
+&nbsp; &nbsp; return type;
+} 
+</pre></code> 
+
+
+<span class="dasfoot"><a href="http://mxr.mozilla.org/classic/source/js/src/jsapi.h">jsapi from October 1996</a></span>
+---
+<pre><code><c>// source/js/src/jsapi.c</c><br>
+JS_TypeOfValue(JSContext *cx, jsval v) {
+&nbsp; &nbsp; if (JSVAL_IS_VOID(v)) {
+&nbsp; &nbsp; &nbsp; &nbsp; type = JSTYPE_VOID;
+&nbsp; &nbsp; } else if (JSVAL_IS_OBJECT(v)) {
+&nbsp; &nbsp; &nbsp; &nbsp; if (...) { <h>// Excuse me, are you a function?</h>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; type = JSTYPE_FUNCTION;
+&nbsp; &nbsp; &nbsp; &nbsp; } else {
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; type = JSTYPE_OBJECT;
+&nbsp; &nbsp; &nbsp; &nbsp; }
+&nbsp; &nbsp; } else if (JSVAL_IS_NUMBER(v)) {
+&nbsp; &nbsp; &nbsp; &nbsp; type = JSTYPE_NUMBER;
+&nbsp; &nbsp; } else if (JSVAL_IS_STRING(v)) {
+&nbsp; &nbsp; &nbsp; &nbsp; type = JSTYPE_STRING;
+&nbsp; &nbsp; } else if (JSVAL_IS_BOOLEAN(v)) {
+&nbsp; &nbsp; &nbsp; &nbsp; type = JSTYPE_BOOLEAN;
+&nbsp; &nbsp; }
+&nbsp; &nbsp; return type;
+} 
+</pre></code> 
+
+
+<span class="dasfoot"><a href="http://mxr.mozilla.org/classic/source/js/src/jsapi.h">jsapi from October 1996</a></span>
+---
+<pre><code><c>// source/js/src/jsapi.c</c><br>
+JS_TypeOfValue(JSContext *cx, jsval v) {
+&nbsp; &nbsp; if (JSVAL_IS_VOID(v)) {
+&nbsp; &nbsp; &nbsp; &nbsp; type = JSTYPE_VOID;
+&nbsp; &nbsp; } else if (JSVAL_IS_OBJECT(v)) {
+&nbsp; &nbsp; &nbsp; &nbsp; if (...) {
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; type = JSTYPE_FUNCTION;
+&nbsp; &nbsp; &nbsp; &nbsp; } <h>else</h> {
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; type = JSTYPE_OBJECT;
+&nbsp; &nbsp; &nbsp; &nbsp; }
+&nbsp; &nbsp; } else if (JSVAL_IS_NUMBER(v)) {
+&nbsp; &nbsp; &nbsp; &nbsp; type = JSTYPE_NUMBER;
+&nbsp; &nbsp; } else if (JSVAL_IS_STRING(v)) {
+&nbsp; &nbsp; &nbsp; &nbsp; type = JSTYPE_STRING;
+&nbsp; &nbsp; } else if (JSVAL_IS_BOOLEAN(v)) {
+&nbsp; &nbsp; &nbsp; &nbsp; type = JSTYPE_BOOLEAN;
+&nbsp; &nbsp; }
+&nbsp; &nbsp; return type;
+} 
+</pre></code> 
+
+
+<span class="dasfoot"><a href="http://mxr.mozilla.org/classic/source/js/src/jsapi.h">jsapi from October 1996</a></span>
+---
+<pre><code><c>// source/js/src/jsapi.c</c><br>
+JS_TypeOfValue(JSContext *cx, jsval v) {
+&nbsp; &nbsp; if (JSVAL_IS_VOID(v)) {
+&nbsp; &nbsp; &nbsp; &nbsp; type = JSTYPE_VOID;
+&nbsp; &nbsp; } else if (JSVAL_IS_OBJECT(v)) {
+&nbsp; &nbsp; &nbsp; &nbsp; if (...) {
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; type = JSTYPE_FUNCTION;
+&nbsp; &nbsp; &nbsp; &nbsp; } else {
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <h>type = JSTYPE_OBJECT</h>;
+&nbsp; &nbsp; &nbsp; &nbsp; }
+&nbsp; &nbsp; } else if (JSVAL_IS_NUMBER(v)) {
+&nbsp; &nbsp; &nbsp; &nbsp; type = JSTYPE_NUMBER;
+&nbsp; &nbsp; } else if (JSVAL_IS_STRING(v)) {
+&nbsp; &nbsp; &nbsp; &nbsp; type = JSTYPE_STRING;
+&nbsp; &nbsp; } else if (JSVAL_IS_BOOLEAN(v)) {
+&nbsp; &nbsp; &nbsp; &nbsp; type = JSTYPE_BOOLEAN;
+&nbsp; &nbsp; }
+&nbsp; &nbsp; return type;
+} 
+</pre></code> 
+
+
+<span class="dasfoot"><a href="http://mxr.mozilla.org/classic/source/js/src/jsapi.h">jsapi from October 1996</a></span>
+
+---
+<pre><code><c>// source/js/src/jsapi.c</c><br>
+JS_TypeOfValue(JSContext *cx, jsval v) {
+&nbsp; &nbsp; if (JSVAL_IS_VOID(v)) {
+&nbsp; &nbsp; &nbsp; &nbsp; type = JSTYPE_VOID;
+&nbsp; &nbsp; } else if (JSVAL_IS_OBJECT(v)) {
+&nbsp; &nbsp; &nbsp; &nbsp; if (...) {
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; type = JSTYPE_FUNCTION;
+&nbsp; &nbsp; &nbsp; &nbsp; } else {
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; type = JSTYPE_OBJECT;
+&nbsp; &nbsp; &nbsp; &nbsp; }
+&nbsp; &nbsp; } else if (JSVAL_IS_NUMBER(v)) {
+&nbsp; &nbsp; &nbsp; &nbsp; type = JSTYPE_NUMBER;
+&nbsp; &nbsp; } else if (JSVAL_IS_STRING(v)) {
+&nbsp; &nbsp; &nbsp; &nbsp; type = JSTYPE_STRING;
+&nbsp; &nbsp; } else if (JSVAL_IS_BOOLEAN(v)) {
+&nbsp; &nbsp; &nbsp; &nbsp; type = JSTYPE_BOOLEAN;
+&nbsp; &nbsp; }
+&nbsp; &nbsp; <h>return type</h>;
+} 
+</pre></code> 
+<span class="dasfoot"><a href="http://mxr.mozilla.org/classic/source/js/src/jsapi.h">jsapi from October 1996</a></span>
+# TODO Add bitmask trick earlier up??
+---
+## Yes, this is a bug. <!-- .slide: class="center" -->
+## This is a old, known bug. <!-- .element: class="fragment" -->
+---
+## Backwards Compatibility <!-- .slide: class="center" -->
+
+Note: JS = most popular language
+
+Most users
+
+Most impact
+
+Biggest user base *ever*. Backward compatibility is not optional
+
+The internet would *break*
+
+And if that's not enough, we have to think about more things
+---
 # Security <!-- .slide: class="center" -->
+Note: on top of the things you know JS does
+
+you have to worry about the things that you *really* don't want it to do
 ---
 ## `eval` <!-- .slide: class="center" -->
 
@@ -572,6 +767,11 @@ Note:
 
 ---
 ### github.com/jashkenas/coffeescript/wiki/<br>List-of-languages-that-compile-to-JS <!-- .slide: class="center" -->
+Note: Haskell - GHCJS
+Python - pyjamas
+Ruby -
+---
+## Some of my favourites <!-- .slide: class="center" -->
 ---
 ## Batavia <!-- .slide: class="center" -->
  <img src="pictures/pybee.png" />
@@ -592,15 +792,15 @@ DosBox
 # ... <!-- .slide: class="center" -->
 ---
 ## ┬javascript┬ ノ( ゜-゜ノ) <!-- .slide: class="center" -->
-Note: OK, JS is neat, I want some of that. But outside the browser
+Note: OK, JS is pretty freaking neat, I want some of that.
+But what about it's other uses
+
 ---
 # JavaScript<br>outside the browser <!-- .slide: class="center" -->
 ---
-## As a scripting language <!-- .slide: class="center" -->
-Note: NginScript, Cinnamon
----
-## Google Gadgets <!-- .slide: class="center" -->
-Note: iGoogle and Google Desktop widget - scripting by javascript on the desktop
+## node.js <!-- .slide: class="center" -->
+Note: serverside js
+
 ---
 ## Electron <!-- .slide: class="center" -->
 Note: 
@@ -608,11 +808,15 @@ Note:
 GitHub's framework. Atom. Github Desktop
 not the first time JS has been used on the desktop
 ---
-## node.js <!-- .slide: class="center" -->
-Note: serverside js
+## Google Gadgets <!-- .slide: class="center" -->
+Note: iGoogle and Google Desktop widget - scripting by javascript on the desktop
+TODO Screenshots?
+---
+## As a scripting language <!-- .slide: class="center" -->
+Note: NginScript, Cinnamon
 ---
 
-## More Gotchas <!-- .slide: class="center" -->
+# More Gotchas <!-- .slide: class="center" -->
 ---
 
 ## Function Optimisation <!-- .slide: class="center" -->
@@ -641,7 +845,7 @@ for(let i = 0; i < 500000000; i++) {
 } 
 </code></pre> 
 
- <pre><code>$ time -p node general.js<br>real 1.71</code></pre> <!-- .element: class="fragment" -->
+ <pre><code>$ time -p node general.js<br>real 1.91</code></pre> <!-- .element: class="fragment" -->
 ---
 <pre><code>'use strict';
 
@@ -694,11 +898,12 @@ for(let i = 0; i < 500000000; i++) {
 } 
 </code></pre> 
 
- <pre><code>$ time -p node general.js<br>real 0.67</code></pre> <!-- .element: class="fragment" -->
+ <pre><code>$ time -p node general.js<br>real 0.77</code></pre> <!-- .element: class="fragment" -->
+Note: What's going to happen? any change?
+
+More than twice as fast
 ---
-
 # JavaScript<br>is improving <!-- .slide: class="center" -->
-
 ---
 
 # ECMAScript 5 <!-- .slide: class="center" -->
@@ -767,10 +972,10 @@ Note: Adding new funcionality in JS to JS by adding more JS
 ---
 ## `supplant` <!-- .slide: class="center" -->
 ---
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> s = "Hi, my name is {name}"</code></pre></div>
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> t = { name: "Katie" }</code></pre></div> <!-- .element: class="fragment" -->
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> s = "{greet} there {name}!"</code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> t = { greet: "Oh hello",<br>&nbsp; &nbsp; &nbsp; &nbsp; name: &nbsp;"Katie" }</code></pre></div> <!-- .element: class="fragment" -->
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> s.supplant(t)</code></pre></div> <!-- .element: class="fragment" -->
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">"Hi, my name is Katie"</code></pre></div> <!-- .element: class="fragment" -->
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">"Oh, hello there Katie!"</code></pre></div> <!-- .element: class="fragment" -->
 ---
 
 ## `supplant` polyfill <!-- .slide: class="center" -->
@@ -937,7 +1142,7 @@ Note: Let's talk about powershell
 <span class="dasfoot"><a href="http://fuckpowershell.tumblr.com/">F Powershell</a></span>
 ---
 
-# All lanauges have quirks. <!-- .slide: class="center" -->
+# All languages have quirks. <!-- .slide: class="center" -->
 ---
 #  <!-- .slide: class="center" -->
 Note: TODO XKCD http://xkcd.com/1537/ ??
