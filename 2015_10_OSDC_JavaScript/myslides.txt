@@ -661,7 +661,6 @@ JS_TypeOfValue(JSContext *cx, jsval v) {
 }
 </pre></code>
 <span class="dasfoot"><a href="http://mxr.mozilla.org/classic/source/js/src/jsapi.h">jsapi from October 1996</a></span>
-# TODO Add bitmask trick earlier up??
 ---
 ##= Yes, this is a bug.
 ##- This is a old, known bug.
@@ -685,6 +684,14 @@ Note: on top of the things you know JS does
 
 you have to worry about the things that you *really* don't want it to do
 ---
+
+##= Cross Site Scripting
+
+Note:  Javascript can be used for other evil things
+
+Can take data from your site onto others and other such fun:
+---
+
 ##= `eval`
 
 Note: executing arbitary code.
@@ -692,20 +699,17 @@ Note: executing arbitary code.
 We can create not easily readable code
 
 As we just saw
-
-TODO Example
 ---
+<br><br>
+<pre><code style="overflow: hidden; width: 100%; white-space: pre-wrap"><h>eval(</h>function(p,a,c,k,e,d){e&equals;function(c){return c.toString(36)};if(!''.replace(/^/,String)){while(c--){d[c.toString(a)]&equals;k[c]||c.toString(a)}k&equals;[function(e){return
+d[e]}];e&equals;function(){return'\\\\w+'};c&equals;1};while(c--){if(k[c]){p&equals;p.replace(new RegExp('\\\\b'+e(c)+'\\\\b','g'),k[c])}}return p}('f a&equals;["\\\\e\\\\1\\\\7\\\\4\\\\2\\\\3\\\\1\\\\2\\\\3\\\\6\\\\4\\\\2\\\\d\\\\8\\\\c\\\\9\\\\2\\\\3\\\\6\\\\4\\\\2" +"\\\\g\\\\h\\\\8\\\\k\\\\4\\\\3\\\\2\\\\b\\\\1\\\\5\\\\9\\\\l\\\\6\\\\1\\\\i\\\\2\\\\3\\\\1\\\\7\\\\1\\\\5" +"\\\\5\\\\1\\\\b"];j(a[0]);',22,22,'|x6F|x20|x74|x65|x72|x68|x6D|x61|x6B|' +'_0|x77|x63|x48|x43|var|x50|x6C|x70|alert|x6E|x73'.split('|'),0,{})<h>)</h>
+</pre></code>
 
-##= Cross Site Scripting
-Note:  Javascript can be used for other evil things
-
-Can take data from your site onto others and other such fun:
----
-##= Learn More: Security Tutorial
-### 'Hack the Planet', Tomorrow Morning
+#>- alert("Come to the <br> &nbsp; &nbsp; &nbsp; Hack the Planet workshop<br> &nbsp; &nbsp; &nbsp; tomorrow")</code></pre>
 ---
 #= ...
-Note: so,that's what javascript can do. what if you say
+Note: so, that's what javascript can do. it's powerful, and scary. what if you say
+
 ---
 ##= (╯°□°）╯︵ sʇɐʍ ʎɔɐƃǝl
 Note: I dont want to deal with all that stuff
@@ -774,7 +778,7 @@ Ruby -
 ##= Some of my favourites
 ---
 ##= Batavia
-@ pybee.png
+@ pybee.svg
 ---
 ##= asm.js
 ##= emscripten
@@ -810,7 +814,11 @@ not the first time JS has been used on the desktop
 ---
 ##= Google Gadgets
 Note: iGoogle and Google Desktop widget - scripting by javascript on the desktop
-TODO Screenshots?
+---
+@ google_gadgets.jpg
+---
+<br><br>
+@ igoogle.png
 ---
 ##= As a scripting language
 Note: NginScript, Cinnamon
@@ -930,17 +938,41 @@ Note: approved in June 2015 (a few months ago)
 
 Still very much not adpoted.
 ---
-##= Fixing Global Variables
----
 ##= `let`
-# TODO
+###= Fixing Global Variables
+---
+
+#> > ans = "";
+#> > function quest() {<br>> &nbsp; var ans = 42; <br>> &nbsp; return ans;<br>> }
+---
+#> > ans = "";
+#> > function quest() {<br>> &nbsp; <h>let</h> ans = 42; <br>> &nbsp; return ans;<br>> }
+
 Note: proper block scope
+Re-declarations are in error
 ---
-##= Modules
-# TODO
+##= `import`
+###- Oh my goodness, imports!
 ---
-##= Symbols
-# TODO
+#> <c>// life.js</c>
+#> <h>export</h> function quest() { 
+#> <c> /&ast; ... &ast;/</c>
+#> }
+#>- <c>// script.js</c> <br><h>import</h> { quest } from './life';
+---
+##= Spread
+###- Begone, apply(null, arg)!
+---
+#> function add(<h>...</h>vals) {
+#> &nbsp;  let sum = 0;
+#> &nbsp;  for (var v of vals) {
+#> &nbsp; &nbsp; &nbsp; sum += v;
+#> &nbsp;  }
+#> &nbsp;  return sum;
+#>  }
+#>- <br>add(10, 14, 9, 7, 2)
+#>- 42
+
 ---
 #= ECMAScript 5/6 Adpotion
 ---
@@ -955,15 +987,16 @@ Note: Not actually a standard :D
 #> > a = 42
 #>- > console.log("a is: " + a);
 #>- "a is 42"
-#>- > console.time("Do the thing")
-#>- > <c>// ... the thing</c>
-#>- > console.timeEnd("Do the thing")
-#>- "Time to do the thing: 1337ms"
+#>- > console.time("Process")
+#>- > <c>// ... do the thing</c>
+#>- > console.timeEnd("Process")
+#>- "Process: 1337ms"
 #>- > console.log("%cHello world!",<br>&nbsp;"color: red; font-size: 40px");
 #>- <span style="color: red; font-size: 80px">Hello world!</span>
 Note: try autocompleting for more, including grouping
 ---
- TODO Facebook's Warning message
+<br><br>
+@ facebook.png
 ---
 #= Extending JavaScript
 ---

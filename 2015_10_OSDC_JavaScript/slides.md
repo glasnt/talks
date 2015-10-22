@@ -13,7 +13,7 @@
 
 <br> 
 <br> 
-# JavaScript is Awe-ful
+# JavaScript is Awe-ful <!-- .element: style="margin-bottom: 1em" -->
 <br> 
  <img src="pictures/footer.svg" />
 ---
@@ -661,7 +661,6 @@ JS_TypeOfValue(JSContext *cx, jsval v) {
 } 
 </pre></code> 
 <span class="dasfoot"><a href="http://mxr.mozilla.org/classic/source/js/src/jsapi.h">jsapi from October 1996</a></span>
-# TODO Add bitmask trick earlier up??
 ---
 ## Yes, this is a bug. <!-- .slide: class="center" -->
 ## This is a old, known bug. <!-- .element: class="fragment" -->
@@ -685,6 +684,14 @@ Note: on top of the things you know JS does
 
 you have to worry about the things that you *really* don't want it to do
 ---
+
+## Cross Site Scripting <!-- .slide: class="center" -->
+
+Note: Javascript can be used for other evil things
+
+Can take data from your site onto others and other such fun:
+---
+
 ## `eval` <!-- .slide: class="center" -->
 
 Note: executing arbitary code.
@@ -692,20 +699,17 @@ Note: executing arbitary code.
 We can create not easily readable code
 
 As we just saw
-
-TODO Example
 ---
+<br><br> 
+<pre><code style="overflow: hidden; width: 100%; white-space: pre-wrap"><h>eval(</h>function(p,a,c,k,e,d){e&equals;function(c){return c.toString(36)};if(!''.replace(/^/,String)){while(c--){d[c.toString(a)]&equals;k[c]||c.toString(a)}k&equals;[function(e){return
+d[e]}];e&equals;function(){return'\\\\w+'};c&equals;1};while(c--){if(k[c]){p&equals;p.replace(new RegExp('\\\\b'+e(c)+'\\\\b','g'),k[c])}}return p}('f a&equals;["\\\\e\\\\1\\\\7\\\\4\\\\2\\\\3\\\\1\\\\2\\\\3\\\\6\\\\4\\\\2\\\\d\\\\8\\\\c\\\\9\\\\2\\\\3\\\\6\\\\4\\\\2" +"\\\\g\\\\h\\\\8\\\\k\\\\4\\\\3\\\\2\\\\b\\\\1\\\\5\\\\9\\\\l\\\\6\\\\1\\\\i\\\\2\\\\3\\\\1\\\\7\\\\1\\\\5" +"\\\\5\\\\1\\\\b"];j(a[0]);',22,22,'|x6F|x20|x74|x65|x72|x68|x6D|x61|x6B|' +'_0|x77|x63|x48|x43|var|x50|x6C|x70|alert|x6E|x73'.split('|'),0,{})<h>)</h>
+</pre></code> 
 
-## Cross Site Scripting <!-- .slide: class="center" -->
-Note: Javascript can be used for other evil things
-
-Can take data from your site onto others and other such fun:
----
-## Learn More: Security Tutorial <!-- .slide: class="center" -->
-### 'Hack the Planet', Tomorrow Morning
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">alert("Come to the <br> &nbsp; &nbsp; &nbsp; Hack the Planet workshop<br> &nbsp; &nbsp; &nbsp; tomorrow")</code></pre></code></pre></div> <!-- .element: class="fragment" -->
 ---
 # ... <!-- .slide: class="center" -->
-Note: so,that's what javascript can do. what if you say
+Note: so, that's what javascript can do. it's powerful, and scary. what if you say
+
 ---
 ## (╯°□°）╯︵ sʇɐʍ ʎɔɐƃǝl <!-- .slide: class="center" -->
 Note: I dont want to deal with all that stuff
@@ -774,7 +778,7 @@ Ruby -
 ## Some of my favourites <!-- .slide: class="center" -->
 ---
 ## Batavia <!-- .slide: class="center" -->
- <img src="pictures/pybee.png" />
+ <img src="pictures/pybee.svg" />
 ---
 ## asm.js <!-- .slide: class="center" -->
 ## emscripten <!-- .slide: class="center" -->
@@ -810,7 +814,11 @@ not the first time JS has been used on the desktop
 ---
 ## Google Gadgets <!-- .slide: class="center" -->
 Note: iGoogle and Google Desktop widget - scripting by javascript on the desktop
-TODO Screenshots?
+---
+ <img src="pictures/google_gadgets.jpg" />
+---
+<br><br> 
+ <img src="pictures/igoogle.png" />
 ---
 ## As a scripting language <!-- .slide: class="center" -->
 Note: NginScript, Cinnamon
@@ -930,17 +938,41 @@ Note: approved in June 2015 (a few months ago)
 
 Still very much not adpoted.
 ---
-## Fixing Global Variables <!-- .slide: class="center" -->
----
 ## `let` <!-- .slide: class="center" -->
-# TODO
+### Fixing Global Variables <!-- .slide: class="center" -->
+---
+
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> ans = "";</code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> function quest() {<br>> &nbsp; var ans = 42; <br>> &nbsp; return ans;<br>> }</code></pre></div>
+---
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> ans = "";</code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> function quest() {<br>> &nbsp; <h>let</h> ans = 42; <br>> &nbsp; return ans;<br>> }</code></pre></div>
+
 Note: proper block scope
+Re-declarations are in error
 ---
-## Modules <!-- .slide: class="center" -->
-# TODO
+## `import` <!-- .slide: class="center" -->
+### Oh my goodness, imports! <!-- .element: class="fragment" -->
 ---
-## Symbols <!-- .slide: class="center" -->
-# TODO
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%"><c>// life.js</c></code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%"><h>export</h> function quest() {</code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%"><c> /&ast; ... &ast;/</c></code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">}</code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%"><c>// script.js</c> <br><h>import</h> { quest } from './life';</code></pre></div> <!-- .element: class="fragment" -->
+---
+## Spread <!-- .slide: class="center" -->
+### Begone, apply(null, arg)! <!-- .element: class="fragment" -->
+---
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">function add(<h>...</h>vals) {</code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">&nbsp; let sum = 0;</code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">&nbsp; for (var v of vals) {</code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">&nbsp; &nbsp; &nbsp; sum += v;</code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">&nbsp; }</code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">&nbsp; return sum;</code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">}</code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%"><br>add(10, 14, 9, 7, 2)</code></pre></div> <!-- .element: class="fragment" -->
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">42</code></pre></div> <!-- .element: class="fragment" -->
+
 ---
 # ECMAScript 5/6 Adpotion <!-- .slide: class="center" -->
 ---
@@ -955,15 +987,16 @@ Note: Not actually a standard :D
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> a = 42</code></pre></div>
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> console.log("a is: " + a);</code></pre></div> <!-- .element: class="fragment" -->
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">"a is 42"</code></pre></div> <!-- .element: class="fragment" -->
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> console.time("Do the thing")</code></pre></div> <!-- .element: class="fragment" -->
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> <c>// ... the thing</c></code></pre></div> <!-- .element: class="fragment" -->
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> console.timeEnd("Do the thing")</code></pre></div> <!-- .element: class="fragment" -->
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">"Time to do the thing: 1337ms"</code></pre></div> <!-- .element: class="fragment" -->
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> console.time("Process")</code></pre></div> <!-- .element: class="fragment" -->
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> <c>// ... do the thing</c></code></pre></div> <!-- .element: class="fragment" -->
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> console.timeEnd("Process")</code></pre></div> <!-- .element: class="fragment" -->
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">"Process: 1337ms"</code></pre></div> <!-- .element: class="fragment" -->
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> console.log("%cHello world!",<br>&nbsp;"color: red; font-size: 40px");</code></pre></div> <!-- .element: class="fragment" -->
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%"><span style="color: red; font-size: 80px">Hello world!</span></code></pre></div> <!-- .element: class="fragment" -->
 Note: try autocompleting for more, including grouping
 ---
-TODO Facebook's Warning message
+<br><br> 
+ <img src="pictures/facebook.png" />
 ---
 # Extending JavaScript <!-- .slide: class="center" -->
 ---
