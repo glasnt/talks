@@ -234,14 +234,14 @@ Because trademark, MS reverse engineered JS, called it JScript
 
 ---
 
-##= JavaScript™
+#= JavaScript™
 
 <span class="dasfoot"><a href="http://tsdr.uspto.gov/#caseNumber=75026640&caseType=SERIAL_NO&searchType=statusSearch">US Trademark &#35;75026640</a></span>
 Note:
 
 ---
 
-##= ECMAScript
+#= ECMAScript
 ### A general purpose, cross-platform programming language
 
 Note: Because of some fun issues, Tim Berners Lee and W3C wouldn't do the standard
@@ -263,18 +263,26 @@ Working title: ECMA Script (ecc-ma)
 
 ---
 
-#= Most popular language ever.
+#= The most<br>popular language.<br>Ever.
 Note: what percentage of the world uses the internet?
-
-What percentage of the internet uses JS?
 
 I posit that there are more uses of JS than any other lanaguage ever
 
-Givne this user base, there are more developers of JS than any other language
 
-It may also be the most complained about language
+---
+#= Billions of users
 
-because footguns
+Note: What percentage of the internet uses JS?
+
+---
+#= Millions of developers
+Note: Given this user base, there are more developers of JS than any other language
+---
+#= Butt-loads of complaints
+
+Note: It may also be the most complained about language
+But not without some reason
+
 ---
 #= Foot Guns
 
@@ -368,7 +376,7 @@ But because legacy, the standards committee didn't accept the change to `==`
 
 forced creation of `===`
 ---
-##= `NaN`
+#= `NaN`
 Note: More gotchas, Combination of original 'Bad Parts', 'Awful Parts', and some new Fun
 ---
 #> > typeof NaN
@@ -380,7 +388,7 @@ Note: More gotchas, Combination of original 'Bad Parts', 'Awful Parts', and some
 #>- > isFinite(NaN)
 #>- false
 ---
-##= `parseInt`
+#= `parseInt`
 ---
 #> > parseInt("123")
 #>- 123
@@ -391,7 +399,7 @@ Note: More gotchas, Combination of original 'Bad Parts', 'Awful Parts', and some
 #>- > parseInt("08")
 #>- 0
 ---
-##= `Number`
+#= `Number`
 ---
 #> > 4 + 2
 #>- 6
@@ -404,7 +412,7 @@ Note: All numbers are IEEE 754 floats
 
 Fix this by dealing with 'round' numbers. Money - work in cents
 ---
-##= Extended Character Set
+#= Extended Character Set
 ---
 #> > "abc".split("")
 #>- ["a","b","c"]
@@ -420,7 +428,7 @@ Javascript was created before unicode was super popular, so some parts don't und
 split doesn't but array.from does (polyfill?)
 ---
 
-##= This thing
+#= This thing
 ##= `++[[]][+[]]+[+[]]`
 
 ---
@@ -444,7 +452,7 @@ Note: uniary operand casts to number
 Note: pre-increment only works on some objects, not directly on number literals
 ---
 
-##= `typeof`
+#= `typeof`
 ---
 #> > typeof Object()
 #>- "object"
@@ -665,7 +673,7 @@ JS_TypeOfValue(JSContext *cx, jsval v) {
 ##= Yes, this is a bug.
 ##- This is a old, known bug.
 ---
-##= Backwards Compatibility
+#= Backwards<br>Compatibility
 
 Note: JS = most popular language
 
@@ -685,20 +693,21 @@ Note: on top of the things you know JS does
 you have to worry about the things that you *really* don't want it to do
 ---
 
-##= Cross Site Scripting
+#= Cross Site Scripting
+#= XSS
 
 Note:  Javascript can be used for other evil things
 
 Can take data from your site onto others and other such fun:
 ---
 
-##= `eval`
+#= `eval`
 
 Note: executing arbitary code.
 
 We can create not easily readable code
 
-As we just saw
+If you were in Ben's Virus talk, this is havoc in PHP. JS no different
 ---
 <br><br>
 <pre><code style="overflow: hidden; width: 100%; white-space: pre-wrap"><h>eval(</h>function(p,a,c,k,e,d){e&equals;function(c){return c.toString(36)};if(!''.replace(/^/,String)){while(c--){d[c.toString(a)]&equals;k[c]||c.toString(a)}k&equals;[function(e){return
@@ -719,9 +728,9 @@ Note: I dont want to deal with all that stuff
 Note: pre rolled goodness and wrappers and and and
 ---
 
-##= MooTools
-##= jQuery
-##= Bootstrap
+#= MooTools
+#= jQuery
+#= Bootstrap
 Note: MooTools was a really good thing back in the day
 
 I've only come across it when I tasked to remove it
@@ -739,9 +748,9 @@ Adding more functionality so you dont have to worry about responsive websites
 
 But you can spot a bootstraped wbesite from a mile away
 ---
-##= Meteor
-##= React
-##= Angular
+#= Meteor
+#= React
+#= Angular
 ---
 #= ...
 Note: but what if you sasy
@@ -750,9 +759,9 @@ Note: but what if you sasy
 Note: stuff javascript all together
 ---
 
-##= CoffeeScript
-##= TypeScript
-##= PureScript
+#= CoffeeScript
+#= TypeScript
+#= PureScript
 Note: CoffeeScript is a little language that compiles into JavaScript. Underneath that awkward Java-esque patina, JavaScript has always had a gorgeous heart.
 
 TypeScript lets you write JavaScript the way you really want to. TypeScript is a typed superset of JavaScript that compiles to plain JavaScript
@@ -767,31 +776,32 @@ Note: I want to work in my favourite language, and still work in the browser
 ##= Pick a language.
 ##= Any language.
 
-Note:
-
 ---
 ###= github.com/jashkenas/coffeescript/wiki/<br>List-of-languages-that-compile-to-JS
 Note: Haskell - GHCJS
 Python - pyjamas
-Ruby - 
+Ruby - Opal
+
+Listings for perl, erlang, java, scala, c#, f#, lisp, smalltalk, pascal, go, php, sql
 ---
-##= Some of my favourites
+#= Some of my favourites
 ---
-##= Batavia
+#= Batavia
 @ pybee.svg
+Note: Python Bytecode being run by the Jacascript VM
 ---
-##= asm.js
-##= emscripten
+#= asm.js
+#= emscripten
 Note: C into JS
 
 Faster than Light Osmos - Humble Bundle Mozilla
 
-Unreal Tornatment
+Unreal Tornament
 
 DosBox
 ---
 = <img src="pictures/win95.png">
-
+Note: Yes, that's windows 95 running in my browser from 1995
 ---
 #= ...
 ---
@@ -802,17 +812,17 @@ But what about it's other uses
 ---
 #= JavaScript<br>outside the browser
 ---
-##= node.js
+#= node.js
 Note: serverside js
 
 ---
-##= Electron
+#= Electron
 Note:
 
 GitHub's framework. Atom. Github Desktop
 not the first time JS has been used on the desktop
 ---
-##= Google Gadgets
+#= Google Gadgets
 Note: iGoogle and Google Desktop widget - scripting by javascript on the desktop
 ---
 @ google_gadgets.jpg
@@ -820,14 +830,14 @@ Note: iGoogle and Google Desktop widget - scripting by javascript on the desktop
 <br><br>
 @ igoogle.png
 ---
-##= As a scripting language
+#= As a scripting language
 Note: NginScript, Cinnamon
 ---
 
 #= More Gotchas
 ---
 
-##= Function Optimisation
+#= V8 Function<br>Optimisation
 ---
 <pre><code>'use strict';
 
@@ -938,8 +948,7 @@ Note: approved in June 2015 (a few months ago)
 
 Still very much not adpoted.
 ---
-##= `let`
-###= Fixing Global Variables
+#= `let`
 ---
 
 #> > ans = "";
@@ -951,8 +960,7 @@ Still very much not adpoted.
 Note: proper block scope
 Re-declarations are in error
 ---
-##= `import`
-###- Oh my goodness, imports!
+#= `import`
 ---
 #> <c>// life.js</c>
 #> <h>export</h> function quest() { 
@@ -960,8 +968,7 @@ Re-declarations are in error
 #> }
 #>- <c>// script.js</c> <br><h>import</h> { quest } from './life';
 ---
-##= Spread
-###- Begone, apply(null, arg)!
+#= Spread
 ---
 #> function add(<h>...</h>vals) {
 #> &nbsp;  let sum = 0;
@@ -981,7 +988,7 @@ Re-declarations are in error
 ---
 #= Non-standard 'Standards'
 ---
-##= `console.log`
+#= `console.log`
 Note: Not actually a standard :D
 ---
 #> > a = 42
@@ -1003,7 +1010,7 @@ Note: try autocompleting for more, including grouping
 #= Polyfill
 Note: Adding new funcionality in JS to JS by adding more JS
 ---
-##= `supplant`
+#= `supplant`
 ---
 #> > s = "{greet} there {name}!"
 #>- > t = { greet: "Oh hello",<br>&nbsp; &nbsp; &nbsp; &nbsp; name: &nbsp;"Katie" }
@@ -1017,10 +1024,11 @@ if (!String.prototype.supplant) {
 &nbsp; String.prototype.supplant = function (o) {
 &nbsp; &nbsp; return this.replace(<h>/\{([^{}]*)\}/</h>g,
 &nbsp; &nbsp; &nbsp; function (a, b) {
-&nbsp; &nbsp; &nbsp; var r = o[b];
-&nbsp; &nbsp; &nbsp; return typeof r === 'string' ||
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;typeof r === 'number' ? r : a;
-&nbsp; &nbsp;&nbsp;});
+&nbsp; &nbsp; &nbsp; &nbsp; var r = o[b];
+&nbsp; &nbsp; &nbsp; &nbsp; return typeof r === 'string' ||
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;typeof r === 'number' ? r : a;
+&nbsp; &nbsp; &nbsp; }
+&nbsp; &nbsp; );
  &nbsp; };
 }
 </code></pre>
@@ -1175,13 +1183,13 @@ Note: Let's talk about powershell
 <span class="dasfoot"><a href="http://fuckpowershell.tumblr.com/">F Powershell</a></span>
 ---
 
-#= All languages have quirks.
+#= All languages<br>have quirks.
 ---
 #=
-Note: TODO XKCD http://xkcd.com/1537/ ??
+Note: TODO  can you join the working groups for JS? wdcode references, etc.. um.. check and possibly add? opensource yay?
 ---
 <br><br>
 #= Danke!
 <br><br>
-###= joind.in link here
+###= <3 feedback - joind.in
 @ footer.svg

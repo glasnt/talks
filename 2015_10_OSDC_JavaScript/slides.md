@@ -13,7 +13,7 @@
 
 <br> 
 <br> 
-# JavaScript is Awe-ful <!-- .element: style="margin-bottom: 1em" -->
+# JavaScript is Awe-ful
 <br> 
  <img src="pictures/footer.svg" />
 ---
@@ -234,14 +234,14 @@ Because trademark, MS reverse engineered JS, called it JScript
 
 ---
 
-## JavaScript™ <!-- .slide: class="center" -->
+# JavaScript™ <!-- .slide: class="center" -->
 
 <span class="dasfoot"><a href="http://tsdr.uspto.gov/#caseNumber=75026640&caseType=SERIAL_NO&searchType=statusSearch">US Trademark &#35;75026640</a></span>
 Note: 
 
 ---
 
-## ECMAScript <!-- .slide: class="center" -->
+# ECMAScript <!-- .slide: class="center" -->
 ### A general purpose, cross-platform programming language
 
 Note: Because of some fun issues, Tim Berners Lee and W3C wouldn't do the standard
@@ -263,18 +263,26 @@ Working title: ECMA Script (ecc-ma)
 
 ---
 
-# Most popular language ever. <!-- .slide: class="center" -->
+# The most<br>popular language.<br>Ever. <!-- .slide: class="center" -->
 Note: what percentage of the world uses the internet?
-
-What percentage of the internet uses JS?
 
 I posit that there are more uses of JS than any other lanaguage ever
 
-Givne this user base, there are more developers of JS than any other language
 
-It may also be the most complained about language
+---
+# Billions of users <!-- .slide: class="center" -->
 
-because footguns
+Note: What percentage of the internet uses JS?
+
+---
+# Millions of developers <!-- .slide: class="center" -->
+Note: Given this user base, there are more developers of JS than any other language
+---
+# Butt-loads of complaints <!-- .slide: class="center" -->
+
+Note: It may also be the most complained about language
+But not without some reason
+
 ---
 # Foot Guns <!-- .slide: class="center" -->
 
@@ -368,7 +376,7 @@ But because legacy, the standards committee didn't accept the change to `==`
 
 forced creation of `===`
 ---
-## `NaN` <!-- .slide: class="center" -->
+# `NaN` <!-- .slide: class="center" -->
 Note: More gotchas, Combination of original 'Bad Parts', 'Awful Parts', and some new Fun
 ---
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> typeof NaN</code></pre></div>
@@ -380,7 +388,7 @@ Note: More gotchas, Combination of original 'Bad Parts', 'Awful Parts', and some
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> isFinite(NaN)</code></pre></div> <!-- .element: class="fragment" -->
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">false</code></pre></div> <!-- .element: class="fragment" -->
 ---
-## `parseInt` <!-- .slide: class="center" -->
+# `parseInt` <!-- .slide: class="center" -->
 ---
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> parseInt("123")</code></pre></div>
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">123</code></pre></div> <!-- .element: class="fragment" -->
@@ -391,7 +399,7 @@ Note: More gotchas, Combination of original 'Bad Parts', 'Awful Parts', and some
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> parseInt("08")</code></pre></div> <!-- .element: class="fragment" -->
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">0</code></pre></div> <!-- .element: class="fragment" -->
 ---
-## `Number` <!-- .slide: class="center" -->
+# `Number` <!-- .slide: class="center" -->
 ---
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> 4 + 2</code></pre></div>
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">6</code></pre></div> <!-- .element: class="fragment" -->
@@ -404,7 +412,7 @@ Note: All numbers are IEEE 754 floats
 
 Fix this by dealing with 'round' numbers. Money - work in cents
 ---
-## Extended Character Set <!-- .slide: class="center" -->
+# Extended Character Set <!-- .slide: class="center" -->
 ---
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> "abc".split("")</code></pre></div>
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">["a","b","c"]</code></pre></div> <!-- .element: class="fragment" -->
@@ -420,7 +428,7 @@ Javascript was created before unicode was super popular, so some parts don't und
 split doesn't but array.from does (polyfill?)
 ---
 
-## This thing <!-- .slide: class="center" -->
+# This thing <!-- .slide: class="center" -->
 ## `++[[]][+[]]+[+[]]` <!-- .slide: class="center" -->
 
 ---
@@ -444,7 +452,7 @@ Note: uniary operand casts to number
 Note: pre-increment only works on some objects, not directly on number literals
 ---
 
-## `typeof` <!-- .slide: class="center" -->
+# `typeof` <!-- .slide: class="center" -->
 ---
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> typeof Object()</code></pre></div>
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">"object"</code></pre></div> <!-- .element: class="fragment" -->
@@ -665,7 +673,7 @@ JS_TypeOfValue(JSContext *cx, jsval v) {
 ## Yes, this is a bug. <!-- .slide: class="center" -->
 ## This is a old, known bug. <!-- .element: class="fragment" -->
 ---
-## Backwards Compatibility <!-- .slide: class="center" -->
+# Backwards<br>Compatibility <!-- .slide: class="center" -->
 
 Note: JS = most popular language
 
@@ -685,20 +693,21 @@ Note: on top of the things you know JS does
 you have to worry about the things that you *really* don't want it to do
 ---
 
-## Cross Site Scripting <!-- .slide: class="center" -->
+# Cross Site Scripting <!-- .slide: class="center" -->
+# XSS <!-- .slide: class="center" -->
 
 Note: Javascript can be used for other evil things
 
 Can take data from your site onto others and other such fun:
 ---
 
-## `eval` <!-- .slide: class="center" -->
+# `eval` <!-- .slide: class="center" -->
 
 Note: executing arbitary code.
 
 We can create not easily readable code
 
-As we just saw
+If you were in Ben's Virus talk, this is havoc in PHP. JS no different
 ---
 <br><br> 
 <pre><code style="overflow: hidden; width: 100%; white-space: pre-wrap"><h>eval(</h>function(p,a,c,k,e,d){e&equals;function(c){return c.toString(36)};if(!''.replace(/^/,String)){while(c--){d[c.toString(a)]&equals;k[c]||c.toString(a)}k&equals;[function(e){return
@@ -719,9 +728,9 @@ Note: I dont want to deal with all that stuff
 Note: pre rolled goodness and wrappers and and and
 ---
 
-## MooTools <!-- .slide: class="center" -->
-## jQuery <!-- .slide: class="center" -->
-## Bootstrap <!-- .slide: class="center" -->
+# MooTools <!-- .slide: class="center" -->
+# jQuery <!-- .slide: class="center" -->
+# Bootstrap <!-- .slide: class="center" -->
 Note: MooTools was a really good thing back in the day
 
 I've only come across it when I tasked to remove it
@@ -739,9 +748,9 @@ Adding more functionality so you dont have to worry about responsive websites
 
 But you can spot a bootstraped wbesite from a mile away
 ---
-## Meteor <!-- .slide: class="center" -->
-## React <!-- .slide: class="center" -->
-## Angular <!-- .slide: class="center" -->
+# Meteor <!-- .slide: class="center" -->
+# React <!-- .slide: class="center" -->
+# Angular <!-- .slide: class="center" -->
 ---
 # ... <!-- .slide: class="center" -->
 Note: but what if you sasy
@@ -750,9 +759,9 @@ Note: but what if you sasy
 Note: stuff javascript all together
 ---
 
-## CoffeeScript <!-- .slide: class="center" -->
-## TypeScript <!-- .slide: class="center" -->
-## PureScript <!-- .slide: class="center" -->
+# CoffeeScript <!-- .slide: class="center" -->
+# TypeScript <!-- .slide: class="center" -->
+# PureScript <!-- .slide: class="center" -->
 Note: CoffeeScript is a little language that compiles into JavaScript. Underneath that awkward Java-esque patina, JavaScript has always had a gorgeous heart.
 
 TypeScript lets you write JavaScript the way you really want to. TypeScript is a typed superset of JavaScript that compiles to plain JavaScript
@@ -767,31 +776,32 @@ Note: I want to work in my favourite language, and still work in the browser
 ## Pick a language. <!-- .slide: class="center" -->
 ## Any language. <!-- .slide: class="center" -->
 
-Note: 
-
 ---
 ### github.com/jashkenas/coffeescript/wiki/<br>List-of-languages-that-compile-to-JS <!-- .slide: class="center" -->
 Note: Haskell - GHCJS
 Python - pyjamas
-Ruby -
+Ruby - Opal
+
+Listings for perl, erlang, java, scala, c#, f#, lisp, smalltalk, pascal, go, php, sql
 ---
-## Some of my favourites <!-- .slide: class="center" -->
+# Some of my favourites <!-- .slide: class="center" -->
 ---
-## Batavia <!-- .slide: class="center" -->
+# Batavia <!-- .slide: class="center" -->
  <img src="pictures/pybee.svg" />
+Note: Python Bytecode being run by the Jacascript VM
 ---
-## asm.js <!-- .slide: class="center" -->
-## emscripten <!-- .slide: class="center" -->
+# asm.js <!-- .slide: class="center" -->
+# emscripten <!-- .slide: class="center" -->
 Note: C into JS
 
 Faster than Light Osmos - Humble Bundle Mozilla
 
-Unreal Tornatment
+Unreal Tornament
 
 DosBox 
 ---
  <img src="pictures/win95.png"> <!-- .slide: class="center" -->
-
+Note: Yes, that's windows 95 running in my browser from 1995
 ---
 # ... <!-- .slide: class="center" -->
 ---
@@ -802,17 +812,17 @@ But what about it's other uses
 ---
 # JavaScript<br>outside the browser <!-- .slide: class="center" -->
 ---
-## node.js <!-- .slide: class="center" -->
+# node.js <!-- .slide: class="center" -->
 Note: serverside js
 
 ---
-## Electron <!-- .slide: class="center" -->
+# Electron <!-- .slide: class="center" -->
 Note: 
 
 GitHub's framework. Atom. Github Desktop
 not the first time JS has been used on the desktop
 ---
-## Google Gadgets <!-- .slide: class="center" -->
+# Google Gadgets <!-- .slide: class="center" -->
 Note: iGoogle and Google Desktop widget - scripting by javascript on the desktop
 ---
  <img src="pictures/google_gadgets.jpg" />
@@ -820,14 +830,14 @@ Note: iGoogle and Google Desktop widget - scripting by javascript on the desktop
 <br><br> 
  <img src="pictures/igoogle.png" />
 ---
-## As a scripting language <!-- .slide: class="center" -->
+# As a scripting language <!-- .slide: class="center" -->
 Note: NginScript, Cinnamon
 ---
 
 # More Gotchas <!-- .slide: class="center" -->
 ---
 
-## Function Optimisation <!-- .slide: class="center" -->
+# V8 Function<br>Optimisation <!-- .slide: class="center" -->
 ---
 <pre><code>'use strict';
 
@@ -938,8 +948,7 @@ Note: approved in June 2015 (a few months ago)
 
 Still very much not adpoted.
 ---
-## `let` <!-- .slide: class="center" -->
-### Fixing Global Variables <!-- .slide: class="center" -->
+# `let` <!-- .slide: class="center" -->
 ---
 
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> ans = "";</code></pre></div>
@@ -951,8 +960,7 @@ Still very much not adpoted.
 Note: proper block scope
 Re-declarations are in error
 ---
-## `import` <!-- .slide: class="center" -->
-### Oh my goodness, imports! <!-- .element: class="fragment" -->
+# `import` <!-- .slide: class="center" -->
 ---
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%"><c>// life.js</c></code></pre></div>
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%"><h>export</h> function quest() {</code></pre></div>
@@ -960,8 +968,7 @@ Re-declarations are in error
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">}</code></pre></div>
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%"><c>// script.js</c> <br><h>import</h> { quest } from './life';</code></pre></div> <!-- .element: class="fragment" -->
 ---
-## Spread <!-- .slide: class="center" -->
-### Begone, apply(null, arg)! <!-- .element: class="fragment" -->
+# Spread <!-- .slide: class="center" -->
 ---
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">function add(<h>...</h>vals) {</code></pre></div>
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">&nbsp; let sum = 0;</code></pre></div>
@@ -981,7 +988,7 @@ Re-declarations are in error
 ---
 # Non-standard 'Standards' <!-- .slide: class="center" -->
 ---
-## `console.log` <!-- .slide: class="center" -->
+# `console.log` <!-- .slide: class="center" -->
 Note: Not actually a standard :D
 ---
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> a = 42</code></pre></div>
@@ -1003,7 +1010,7 @@ Note: try autocompleting for more, including grouping
 # Polyfill <!-- .slide: class="center" -->
 Note: Adding new funcionality in JS to JS by adding more JS
 ---
-## `supplant` <!-- .slide: class="center" -->
+# `supplant` <!-- .slide: class="center" -->
 ---
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> s = "{greet} there {name}!"</code></pre></div>
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> t = { greet: "Oh hello",<br>&nbsp; &nbsp; &nbsp; &nbsp; name: &nbsp;"Katie" }</code></pre></div> <!-- .element: class="fragment" -->
@@ -1017,10 +1024,11 @@ if (!String.prototype.supplant) {
 &nbsp; String.prototype.supplant = function (o) {
 &nbsp; &nbsp; return this.replace(<h>/\{([^{}]*)\}/</h>g,
 &nbsp; &nbsp; &nbsp; function (a, b) {
-&nbsp; &nbsp; &nbsp; var r = o[b];
-&nbsp; &nbsp; &nbsp; return typeof r === 'string' ||
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;typeof r === 'number' ? r : a;
-&nbsp; &nbsp;&nbsp;});
+&nbsp; &nbsp; &nbsp; &nbsp; var r = o[b];
+&nbsp; &nbsp; &nbsp; &nbsp; return typeof r === 'string' ||
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;typeof r === 'number' ? r : a;
+&nbsp; &nbsp; &nbsp; }
+&nbsp; &nbsp; );
 &nbsp; };
 } 
 </code></pre> 
@@ -1175,13 +1183,13 @@ Note: Let's talk about powershell
 <span class="dasfoot"><a href="http://fuckpowershell.tumblr.com/">F Powershell</a></span>
 ---
 
-# All languages have quirks. <!-- .slide: class="center" -->
+# All languages<br>have quirks. <!-- .slide: class="center" -->
 ---
 #  <!-- .slide: class="center" -->
-Note: TODO XKCD http://xkcd.com/1537/ ??
+Note: TODO can you join the working groups for JS? wdcode references, etc.. um.. check and possibly add? opensource yay?
 ---
 <br><br> 
 # Danke! <!-- .slide: class="center" -->
 <br><br> 
-### joind.in link here <!-- .slide: class="center" -->
+### <3 feedback - joind.in <!-- .slide: class="center" -->
  <img src="pictures/footer.svg" />
