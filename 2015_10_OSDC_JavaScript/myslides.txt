@@ -48,6 +48,16 @@ Note: Tapestry and Cooking and Yelling
 #> > console.log(ans);
 #> 42
 ---
+#> <c>//ruby</c>
+#> <h>@</h>ans = 42;
+#>
+#> <c>//python</c>
+#> <h>global</h> ans = 42;
+#>
+#> <c>//java
+#> <h>public</h> static ans = 42;
+Note: Because every other language has locals by default
+---
 #= Duck Typing
 Note: if it looks like a duck and sounds like a duck, it's a duck.
 ---
@@ -313,16 +323,6 @@ Note: Incidently, first listing in The Good Parts - Appendix A - The Awful Parts
 #> 42
 #> > console.log(ans);
 #> ""
----
-#> <c>//ruby</c>
-#> <h>@</h>ans = 42;
-#>
-#> <c>//python</c>
-#> <h>global</h> ans = 42;
-#>
-#> <c>//java
-#> <h>public</h> static ans = 42;
-Note: Because every other language has locals by default
 ---
 #= Overloaded<br>`+` operand
 ---
@@ -999,7 +999,7 @@ Note: Not actually a standard :D
 #>- > console.timeEnd("Process")
 #>- "Process: 1337ms"
 #>- > console.log("%cHello world!",<br>&nbsp;"color: red; font-size: 40px");
-#>- <span style="color: red; font-size: 80px">Hello world!</span>
+#>- <span style="color: red; font-size: 70px">Hello world!</span>
 Note: try autocompleting for more, including grouping
 ---
 <br><br>
@@ -1041,9 +1041,11 @@ Didn't make it into es6, but totes useful
 ##= `console.log` polyfill
 - <pre><code>
 window.console =
-&nbsp; typeof window.console === 'undefined'
-&nbsp; &nbsp;  ? { log: function (str){ alert(str) }}
-&nbsp; &nbsp;  : window.console;
+&nbsp; &nbsp; typeof window.console === 'undefined' ? {
+&nbsp; &nbsp; &nbsp; &nbsp; log: function(str) {
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; alert(str)
+&nbsp; &nbsp; &nbsp; &nbsp; }
+&nbsp; &nbsp; } : window.console;
 &nbsp;</pre></code>
 - <pre><code>
 console.log("oh goodness.");
@@ -1075,7 +1077,7 @@ Note: Let's about about Java
 #>- filename = "myfile.txt"
 #>- BufferedReader reader = <br>&nbsp; &nbsp; &nbsp; new BufferedReader( <br>&nbsp; &nbsp; &nbsp; &nbsp;  new InputStreamReader( <br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  new FileInputStream(<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  filename<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  )<br>&nbsp; &nbsp; &nbsp; &nbsp;  )<br>&nbsp; &nbsp; &nbsp; );<br>&nbsp;
 ---
-#= <pre>/usr/bin/ruby</pre>
+#= <pre>/usr/bin/irb</pre>
 Note: Let's talk about ruby
 ---
 #>  irb> open source rocks
@@ -1085,17 +1087,28 @@ Note: Let's talk about ruby
 #>- "open source rocks"
 Note: Method Missing is evil monkey patching
 ---
+#= <pre>/usr/bin/irb</pre>
+Note: Let's talk about ruby
+---
+#> irb> not true && false
+#>- false
+#>- irb> not true and false
+#>- true
+
+<span class="dasfoot"><a href="http://whatthefuckruby.tumblr.com/post/70164947137">whatthef&#45;&#45;&#45;ruby.tumblr.com</a></span>
+Note: order of presidence
+
+&& || 
+not
+and or
+---
 
 #= <pre>/usr/local/bin/ghci</pre>
 Note: Let's talk about Haskell
 ---
 
-#>  λ> :type [1,2]
-#>- [1,2] :: Num t => [t]
-#>- λ&gt; length [1,2]
+#> λ&gt; length [1,2]
 #>- 2
-#>- λ> :type (1,2)
-#>- (1,2) :: (Num t, Num t1) => (t, t1)
 #>- λ> length (1,2)
 #>- 1
 
@@ -1180,13 +1193,19 @@ Note: Let's talk about powershell
 #>- <br>PS> if (2 < 1) { "true" }<br>&nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; else { "false" }
 #>- The '<' operator is reserved<br>for future use.
 
-<span class="dasfoot"><a href="http://fuckpowershell.tumblr.com/">F Powershell</a></span>
+<span class="dasfoot"><a href="http://fuckpowershell.tumblr.com/">f&#45;&#45;&#45;powershell.tumblr.com</a></span>
 ---
 
-#= All languages<br>have quirks.
----
-#=
-Note: TODO  can you join the working groups for JS? wdcode references, etc.. um.. check and possibly add? opensource yay?
+#= All languages<br>have quirks
+Note: 
+Yes some have more than others. Some have reasons why they can't be fixed
+
+But that doesn't mean we have to critise those that use them
+
+
+"We are not our tools. Discrimination based on tools is just as bad as discrimination based on race or gender" - Rachel Nabours
+
+Hopefully I've shown just how good JS can be. And it might make someone reconsider before I see the next awful tirade on twitter
 ---
 <br><br>
 #= Danke!
