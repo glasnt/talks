@@ -118,8 +118,8 @@ year?
 #### &nbsp;
 ###- Wordpress - ~100*
 ###- Drupal - ~100*
+###- Joomla - 9
 ###- Magento - 7
-###- Joomla - 4
 
 <span class="dasfoot"><a href="https://cve.mitre.org">cve.mitre.org</a></span>
 Note: 
@@ -135,7 +135,7 @@ Drupal the same, but they also have had Drupal 8
 # In the last 10 months...
 ## Framework CVEs
 #### &nbsp;
-###- Django - 13
+###- Django - 14
 ###- Ruby on Rails - 5
 ###- Symfony - 2
 <span class="dasfoot"><a href="https://cve.mitre.org">cve.mitre.org</a></span>
@@ -331,9 +331,20 @@ Note: I cannot find proper canonical information about this :(
 ##- What version are you running?
 ---
 #= Perl <= 5.10?
-##= ...
+##- ...
 ---
-#= Perl 5.12?
+#= Perl 5.12
+##- Upgrade. Unmaintained.
+---
+#= Perl 5.14
+##- Upgrade. Unmaintained.
+---
+#= Perl 5.16
+##- Upgrade. Unmaintained.
+---
+#= Perl 5.18
+##- Update soon.
+Note: Perl will patch the last two versions only. 
 ---
 #= So just how much *don't* we patch?
 ##- Surely it's not that bad, right?

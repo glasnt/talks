@@ -12,7 +12,7 @@
 ---
 # What the CVE? <!-- .slide: class="center" -->
 ---
-# CVE
+# CVE <!-- .element: style="margin-bottom: 1em" -->
 ## Common<br>Vulnerabilities and Exploits <!-- .element: class="fragment" -->
 ### Uniquely identified <!-- .element: class="fragment" -->
 ### <p><code>CVE-YYYY-NNNN</code></p> <!-- .element: class="fragment" -->
@@ -113,13 +113,13 @@ year?
 
 ... ever?
 ---
-# In the last 10 months...
+# In the last 10 months... <!-- .element: style="margin-bottom: 1em" -->
 ## Content Management System CVEs
 #### &nbsp;
 ### Wordpress - ~100* <!-- .element: class="fragment" -->
 ### Drupal - ~100* <!-- .element: class="fragment" -->
+### Joomla - 9 <!-- .element: class="fragment" -->
 ### Magento - 7 <!-- .element: class="fragment" -->
-### Joomla - 4 <!-- .element: class="fragment" -->
 
 <span class="dasfoot"><a href="https://cve.mitre.org">cve.mitre.org</a></span>
 Note: 
@@ -132,17 +132,17 @@ Drupal the same, but they also have had Drupal 8
 ---
 # But it's not just<br>your CMS <!-- .slide: class="center" -->
 ---
-# In the last 10 months...
+# In the last 10 months... <!-- .element: style="margin-bottom: 1em" -->
 ## Framework CVEs
 #### &nbsp;
-### Django - 13 <!-- .element: class="fragment" -->
+### Django - 14 <!-- .element: class="fragment" -->
 ### Ruby on Rails - 5 <!-- .element: class="fragment" -->
 ### Symfony - 2 <!-- .element: class="fragment" -->
 <span class="dasfoot"><a href="https://cve.mitre.org">cve.mitre.org</a></span>
 ---
 # But it's not just<br>your framework <!-- .slide: class="center" -->
 ---
-# In the last 10 months...
+# In the last 10 months... <!-- .element: style="margin-bottom: 1em" -->
 ## Language CVEs
 #### &nbsp;
 ### Perl - 6 <!-- .element: class="fragment" -->
@@ -165,12 +165,12 @@ At one time, research says it was as high as 25% of all vulns
 ---
 # But it's not just<br>your language <!-- .slide: class="center" -->
 ---
-# In the last 12 months...
+# In the last 12 months... <!-- .element: style="margin-bottom: 1em" -->
 ## Operating System CVEs
 #### &nbsp;
 ### CVE-2014-6271<br>CVE-2015-0204<br>CVE-2015-3456 <!-- .element: class="fragment" -->
 ---
-# CVE-2014-6271
+# CVE-2014-6271 <!-- .element: style="margin-bottom: 1em" -->
  <img src="pictures/ghost.png"> <!-- .element: class="fragment" -->
 Note: GHOST - 27 JAN 2015 -
 
@@ -180,7 +180,7 @@ Surcuri say PHP vuln. because of gethostbyname wrapped in function “wp_http_va
 
 
 ---
-# CVE-2015-0204
+# CVE-2015-0204 <!-- .element: style="margin-bottom: 1em" -->
  <img src="pictures/venom.png"> <!-- .element: class="fragment" -->
 Note: VENOM May 2015
 
@@ -188,7 +188,7 @@ QEMU Virt floppy drive vuln for escaping encapsulation
 
 
 ---
-# CVE-2015-3456
+# CVE-2015-3456 <!-- .element: style="margin-bottom: 1em" -->
  <img src="pictures/shellshock.png"> <!-- .element: class="fragment" -->
 
 Note: ShellShock - SEP 2014
@@ -210,7 +210,7 @@ Note: Bufferoverflow on openSSL
 ---
 # But it's not just<br>your application stack <!-- .slide: class="center" -->
 ---
-# CVEs recorded against:
+# CVEs recorded against: <!-- .element: style="margin-bottom: 1em" -->
 ## &nbsp;
 ## Nginx
 ## IIS
@@ -219,7 +219,7 @@ Note: Bufferoverflow on openSSL
 ---
 # But it's not just<br>your entire website <!-- .slide: class="center" -->
 ---
-# CVEs recorded against:
+# CVEs recorded against: <!-- .element: style="margin-bottom: 1em" -->
 ## JIRA
 ## Request Tracker
 ## Confluence
@@ -331,9 +331,20 @@ Note: I cannot find proper canonical information about this :(
 ## What version are you running? <!-- .element: class="fragment" -->
 ---
 # Perl <= 5.10? <!-- .slide: class="center" -->
-## ... <!-- .slide: class="center" -->
+## ... <!-- .element: class="fragment" -->
 ---
-# Perl 5.12? <!-- .slide: class="center" -->
+# Perl 5.12 <!-- .slide: class="center" -->
+## Upgrade. Unmaintained. <!-- .element: class="fragment" -->
+---
+# Perl 5.14 <!-- .slide: class="center" -->
+## Upgrade. Unmaintained. <!-- .element: class="fragment" -->
+---
+# Perl 5.16 <!-- .slide: class="center" -->
+## Upgrade. Unmaintained. <!-- .element: class="fragment" -->
+---
+# Perl 5.18 <!-- .slide: class="center" -->
+## Update soon. <!-- .element: class="fragment" -->
+Note: Perl will patch the last two versions only.
 ---
 # So just how much *don't* we patch? <!-- .slide: class="center" -->
 ## Surely it's not that bad, right? <!-- .element: class="fragment" -->
