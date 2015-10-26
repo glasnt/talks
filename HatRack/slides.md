@@ -51,29 +51,35 @@ Note: let me tell you a story about Leslie and Deb
 ---
  <img src="pictures/Solution_0.svg" />
 
+<span class="dasfoot">#LABHR</span>
+
 Note: Here's the five point plan
 
 ---
 
  <img src="pictures/Solution_1.svg" />
+<span class="dasfoot">#LABHR</span>
 
 Note: Make a list
 
 ---
 
  <img src="pictures/Solution_2.svg" />
+<span class="dasfoot">#LABHR</span>
 
 Note: Send the list
 
 ---
 
  <img src="pictures/Solution_3.svg" />
+<span class="dasfoot">#LABHR</span>
 
 Note: Gravy - tweet about it
 
 ---
 
  <img src="pictures/Solution_4.svg" />
+<span class="dasfoot">#LABHR</span>
 
 Note: Gravy 2 - Recommend them on linked in
 
@@ -83,6 +89,7 @@ NOT an endorsement
 
  <img src="pictures/Solution_L.svg" />
 
+<span class="dasfoot">#LABHR</span>
 
 Note: All the gravy - Do it for someone not like you
 
