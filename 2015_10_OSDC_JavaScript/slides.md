@@ -19,9 +19,11 @@
 ---
 
  <img src="pictures/javascript_book.png" style="margin-top: -50px" />
+Note: Good parts written by Douglas Crockford
+---
 
+# Hi! <!-- .slide: class="center" -->
 Note: Tapestry and Cooking and Yelling
-
 ---
 
 # Global Variables <!-- .slide: class="center" -->
@@ -47,16 +49,6 @@ Note: Tapestry and Cooking and Yelling
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">42</code></pre></div>
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> console.log(ans);</code></pre></div>
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">42</code></pre></div>
----
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%"><c>//ruby</c></code></pre></div>
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%"><h>@</h>ans = 42;</code></pre></div>
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%"></code></pre></div>
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%"><c>//python</c></code></pre></div>
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%"><h>global</h> ans = 42;</code></pre></div>
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%"></code></pre></div>
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%"><c>//java</code></pre></div>
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%"><h>public</h> static ans = 42;</code></pre></div>
-Note: Because every other language has locals by default
 ---
 # Duck Typing <!-- .slide: class="center" -->
 Note: if it looks like a duck and sounds like a duck, it's a duck.
@@ -117,11 +109,11 @@ Note: Associativity? Pfft! Transativity? Hahahah
 ---
 # Developers can get<br>just a little bit<br>upset at JavaScript <!-- .slide: class="center" -->
 ---
-> "[A]: Please don't hire me for my JS abilities. I'm proficient enough to<br>loath the language intensely" <!-- .slide: class="center" -->
+> "[A]: Please don't hire me<br>for my JS abilities.<br>I'm proficient enough to loath the language intensely" <!-- .slide: class="center" -->
 Note: experienced developers get frustrated with it
 ---
 
-> "[B]: I have been around [A]<br>when they hack JS.<br>Let's just say Satan himself would blush." <!-- .slide: class="center" -->
+> "[B]: I have been around [A]<br>when they hack JS.<br>Let's just say<br>Satan himself would blush." <!-- .slide: class="center" -->
 Note: people near to javascript developers hear them swear. A lot.
 ---
 
@@ -136,7 +128,7 @@ Note: confusing syntax, hard to come back to
 ---
 
 > "[D]: 'I hate writing JavaScript.<br> <!-- .slide: class="center" -->
-> I know, I'll write some JavaScript to fix it.'
+> I know, I'll write some JavaScript<br>to fix it.'
 > 
 > This is how Angular happens."
 
@@ -324,6 +316,16 @@ Note: Incidently, first listing in The Good Parts - Appendix A - The Awful Parts
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> console.log(ans);</code></pre></div>
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">""</code></pre></div>
 ---
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%"><c>//ruby</c></code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%"><h>@</h>ans = 42;</code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%"></code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%"><c>//python</c></code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%"><h>global</h> ans = 42;</code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%"></code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%"><c>//java</code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%"><h>public</h> static ans = 42;</code></pre></div>
+Note: Because every other language has locals by default
+---
 # Overloaded<br>`+` operand <!-- .slide: class="center" -->
 ---
 <p></p> 
@@ -365,10 +367,11 @@ Note: `+` for both additon and concatenation
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">true</code></pre></div>
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> 0 === false</code></pre></div>
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">false</code></pre></div>
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> 1 == &nbsp;"1" <c> // equality</c></code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> 1 == &nbsp;"1" <c>// equality</code></pre></div>
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">true</code></pre></div>
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> 1 === "1" <c>// equality without</c></code></pre></div>
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">false &nbsp; &nbsp; &nbsp; <c>// type coersion</c></code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%"><h>// always use ===</h></code></pre></div> <!-- .element: class="fragment" -->
 
 Note: This was picked up v. early by Brendan Eich
 
@@ -387,6 +390,7 @@ Note: More gotchas, Combination of original 'Bad Parts', 'Awful Parts', and some
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">true</code></pre></div> <!-- .element: class="fragment" -->
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> isFinite(NaN)</code></pre></div> <!-- .element: class="fragment" -->
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">false</code></pre></div> <!-- .element: class="fragment" -->
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%"><h>// if typeof a === "number" <br> &nbsp; &nbsp;&nbsp; && isFinite(a)</h></code></pre></div> <!-- .element: class="fragment" -->
 ---
 # `parseInt` <!-- .slide: class="center" -->
 ---
@@ -711,7 +715,7 @@ If you were in Ben's Virus talk, this is havoc in PHP. JS no different
 ---
 <br><br> 
 <pre><code style="overflow: hidden; width: 100%; white-space: pre-wrap"><h>eval(</h>function(p,a,c,k,e,d){e&equals;function(c){return c.toString(36)};if(!''.replace(/^/,String)){while(c--){d[c.toString(a)]&equals;k[c]||c.toString(a)}k&equals;[function(e){return
-d[e]}];e&equals;function(){return'\\\\w+'};c&equals;1};while(c--){if(k[c]){p&equals;p.replace(new RegExp('\\\\b'+e(c)+'\\\\b','g'),k[c])}}return p}('f a&equals;["\\\\e\\\\1\\\\7\\\\4\\\\2\\\\3\\\\1\\\\2\\\\3\\\\6\\\\4\\\\2\\\\d\\\\8\\\\c\\\\9\\\\2\\\\3\\\\6\\\\4\\\\2" +"\\\\g\\\\h\\\\8\\\\k\\\\4\\\\3\\\\2\\\\b\\\\1\\\\5\\\\9\\\\l\\\\6\\\\1\\\\i\\\\2\\\\3\\\\1\\\\7\\\\1\\\\5" +"\\\\5\\\\1\\\\b"];j(a[0]);',22,22,'|x6F|x20|x74|x65|x72|x68|x6D|x61|x6B|' +'_0|x77|x63|x48|x43|var|x50|x6C|x70|alert|x6E|x73'.split('|'),0,{})<h>)</h>
+d[e]}];e&equals;function(){return'\\\\w+'};c&equals;1};while(c--){if(k[c]){p&equals;p.replace(new RegExp('\\\\b'+e(c)+'\\\\b','g'),k[c])}}return p}('f a&equals;["\\\\e\\\\1\\\\7\\\\4\\\\2\\\\3\\\\1\\\\2\\\\3\\\\6\\\\4\\\\2\\\\d\\\\8\\\\c\\\\9\\\\2\\\\3\\\\6\\\\4\\\\2" +"\\\\g\\\\h\\\\8\\\\k\\\\4\\\\3\\\\2\\\\b\\\\1\\\\5\\\\9\\\\l\\\\6\\\\1\\\\i\\\\2\\\\3\\\\1\\\\7\\\\1\\\\5" +"\\\\5\\\\1\\\\b"];j(a[0]);',22,22,'|x6F|x20|x74|x65|x72|x68|x6D|x61|x6B|'<br>+'_0|x77|x63|x48|x43|var|x50|x6C|x70|alert|x6E|x73'.split('|'),0,{})<h>)</h>
 </pre></code> 
 
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">alert("Come to the <br> &nbsp; &nbsp; &nbsp; Hack the Planet workshop<br> &nbsp; &nbsp; &nbsp; tomorrow")</code></pre></code></pre></div> <!-- .element: class="fragment" -->
@@ -934,7 +938,7 @@ Mostly adpoted
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">0</code></pre></div> <!-- .element: class="fragment" -->
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">ES5> parseInt("08")</code></pre></div> <!-- .element: class="fragment" -->
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">8</code></pre></div> <!-- .element: class="fragment" -->
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">ESx> parseInt("08",10) <c>//base 10</c></code></pre></div> <!-- .element: class="fragment" -->
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">ESx> parseInt("08", 10) <h>// radix</h></code></pre></div> <!-- .element: class="fragment" -->
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">8</code></pre></div> <!-- .element: class="fragment" -->
 Note: assumed to be octal unless you have ECMAScript 5.
 Supply radix to be cross compatible.
@@ -953,9 +957,15 @@ Still very much not adpoted.
 
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> ans = "";</code></pre></div>
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> function quest() {<br>> &nbsp; var ans = 42; <br>> &nbsp; return ans;<br>> }</code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> quest()</code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> console.log(ans);</code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> ""</code></pre></div>
 ---
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> ans = "";</code></pre></div>
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> function quest() {<br>> &nbsp; <h>let</h> ans = 42; <br>> &nbsp; return ans;<br>> }</code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> quest()</code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> console.log(ans);</code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> ""</code></pre></div>
 
 Note: proper block scope
 Re-declarations are in error
@@ -977,7 +987,7 @@ Re-declarations are in error
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">&nbsp; }</code></pre></div>
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">&nbsp; return sum;</code></pre></div>
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">}</code></pre></div>
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%"><br>add(10, 14, 9, 7, 2)</code></pre></div> <!-- .element: class="fragment" -->
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%"><br>> add(10, 14, 9, 7, 2)</code></pre></div> <!-- .element: class="fragment" -->
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">42</code></pre></div> <!-- .element: class="fragment" -->
 
 ---
@@ -1131,17 +1141,17 @@ Note: Let's talk about Python
 ---
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">>>> a = 256</code></pre></div>
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">>>> b = 256</code></pre></div> <!-- .element: class="fragment" -->
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">>>> a **is** b</code></pre></div> <!-- .element: class="fragment" -->
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">>>> a is b</code></pre></div> <!-- .element: class="fragment" -->
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">True</code></pre></div> <!-- .element: class="fragment" -->
 
 <span class="dasfoot"><a href="www.youtube.com/watch?v=sH4XF6pKKmk">Investigating Python Wats</a></span>
 ---
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">>>> a = 257</code></pre></div>
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">>>> b = 257</code></pre></div> <!-- .element: class="fragment" -->
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">>>> a **is** b</code></pre></div> <!-- .element: class="fragment" -->
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">>>> a is b</code></pre></div> <!-- .element: class="fragment" -->
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">False</code></pre></div> <!-- .element: class="fragment" -->
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%"><br>>>> a = 257; b = 257</code></pre></div> <!-- .element: class="fragment" -->
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">>>> a **is** b</code></pre></div> <!-- .element: class="fragment" -->
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">>>> a is b</code></pre></div> <!-- .element: class="fragment" -->
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">True</code></pre></div> <!-- .element: class="fragment" -->
 
 <span class="dasfoot"><a href="www.youtube.com/watch?v=sH4XF6pKKmk">Investigating Python Wats</a></span>
@@ -1182,7 +1192,7 @@ Note: cyclic truthiness. Totally a thing.
 
 ---
 
-# <pre>C:\> powershell</pre> <!-- .slide: class="center" -->
+# <pre>C:&bsol;> powershell</pre> <!-- .slide: class="center" -->
 
 Note: Let's talk about powershell
 
@@ -1202,7 +1212,6 @@ Yes some have more than others. Some have reasons why they can't be fixed
 
 But that doesn't mean we have to critise those that use them
 
-
 "We are not our tools. Discrimination based on tools is just as bad as discrimination based on race or gender" - Rachel Nabours
 
 Hopefully I've shown just how good JS can be. And it might make someone reconsider before I see the next awful tirade on twitter
@@ -1210,5 +1219,5 @@ Hopefully I've shown just how good JS can be. And it might make someone reconsid
 <br><br> 
 # Danke! <!-- .slide: class="center" -->
 <br><br> 
-### <3 feedback - joind.in <!-- .slide: class="center" -->
+### <3 feedback - joind.in/15903 <!-- .slide: class="center" -->
  <img src="pictures/footer.svg" />

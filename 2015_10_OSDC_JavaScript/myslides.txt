@@ -19,9 +19,11 @@
 ---
 
 @^ javascript_book.png
+Note: Good parts written by Douglas Crockford
+---
 
+#= Hi!
 Note: Tapestry and Cooking and Yelling
-
 ---
 
 #= Global Variables
@@ -47,16 +49,6 @@ Note: Tapestry and Cooking and Yelling
 #> 42
 #> > console.log(ans);
 #> 42
----
-#> <c>//ruby</c>
-#> <h>@</h>ans = 42;
-#>
-#> <c>//python</c>
-#> <h>global</h> ans = 42;
-#>
-#> <c>//java
-#> <h>public</h> static ans = 42;
-Note: Because every other language has locals by default
 ---
 #= Duck Typing
 Note: if it looks like a duck and sounds like a duck, it's a duck.
@@ -117,11 +109,11 @@ Note: Associativity? Pfft! Transativity? Hahahah
 ---
 #= Developers can get<br>just a little bit<br>upset at JavaScript
 ---
-=> "[A]: Please don't hire me for my JS abilities. I'm proficient enough to<br>loath the language intensely"
+=> "[A]: Please don't hire me<br>for my JS abilities.<br>I'm proficient enough to loath the language intensely"
 Note: experienced developers get frustrated with it
 ---
 
-=> "[B]: I have been around [A]<br>when they hack JS.<br>Let's just say Satan himself would blush."
+=> "[B]: I have been around [A]<br>when they hack JS.<br>Let's just say<br>Satan himself would blush."
 Note: people near to javascript developers hear them swear.  A lot.
 ---
 
@@ -136,7 +128,7 @@ Note: confusing syntax, hard to come back to
 ---
 
 => "[D]: 'I hate writing JavaScript.<br>
-> I know, I'll write some JavaScript to fix it.'
+> I know, I'll write some JavaScript<br>to fix it.'
 >
 > This is how Angular happens."
 
@@ -324,6 +316,16 @@ Note: Incidently, first listing in The Good Parts - Appendix A - The Awful Parts
 #> > console.log(ans);
 #> ""
 ---
+#> <c>//ruby</c>
+#> <h>@</h>ans = 42;
+#>
+#> <c>//python</c>
+#> <h>global</h> ans = 42;
+#>
+#> <c>//java
+#> <h>public</h> static ans = 42;
+Note: Because every other language has locals by default
+---
 #= Overloaded<br>`+` operand
 ---
 <p></p>
@@ -365,10 +367,11 @@ Note: `+` for both additon and concatenation
 #> true
 #> > 0 === false
 #> false
-#> > 1 == &nbsp;"1" <c> // equality</c>
+#> > 1 == &nbsp;"1" <c>// equality 
 #> true
 #> > 1 === "1" <c>// equality without</c>
 #> false &nbsp; &nbsp; &nbsp; <c>// type coersion</c>
+#>- <h>// always use ===</h>
 
 Note: This was picked up v. early by Brendan Eich
 
@@ -387,6 +390,7 @@ Note: More gotchas, Combination of original 'Bad Parts', 'Awful Parts', and some
 #>- true
 #>- > isFinite(NaN)
 #>- false
+#>- <h>// if typeof a === "number" <br> &nbsp; &nbsp;&nbsp; && isFinite(a)</h>
 ---
 #= `parseInt`
 ---
@@ -711,7 +715,7 @@ If you were in Ben's Virus talk, this is havoc in PHP. JS no different
 ---
 <br><br>
 <pre><code style="overflow: hidden; width: 100%; white-space: pre-wrap"><h>eval(</h>function(p,a,c,k,e,d){e&equals;function(c){return c.toString(36)};if(!''.replace(/^/,String)){while(c--){d[c.toString(a)]&equals;k[c]||c.toString(a)}k&equals;[function(e){return
-d[e]}];e&equals;function(){return'\\\\w+'};c&equals;1};while(c--){if(k[c]){p&equals;p.replace(new RegExp('\\\\b'+e(c)+'\\\\b','g'),k[c])}}return p}('f a&equals;["\\\\e\\\\1\\\\7\\\\4\\\\2\\\\3\\\\1\\\\2\\\\3\\\\6\\\\4\\\\2\\\\d\\\\8\\\\c\\\\9\\\\2\\\\3\\\\6\\\\4\\\\2" +"\\\\g\\\\h\\\\8\\\\k\\\\4\\\\3\\\\2\\\\b\\\\1\\\\5\\\\9\\\\l\\\\6\\\\1\\\\i\\\\2\\\\3\\\\1\\\\7\\\\1\\\\5" +"\\\\5\\\\1\\\\b"];j(a[0]);',22,22,'|x6F|x20|x74|x65|x72|x68|x6D|x61|x6B|' +'_0|x77|x63|x48|x43|var|x50|x6C|x70|alert|x6E|x73'.split('|'),0,{})<h>)</h>
+d[e]}];e&equals;function(){return'\\\\w+'};c&equals;1};while(c--){if(k[c]){p&equals;p.replace(new RegExp('\\\\b'+e(c)+'\\\\b','g'),k[c])}}return p}('f a&equals;["\\\\e\\\\1\\\\7\\\\4\\\\2\\\\3\\\\1\\\\2\\\\3\\\\6\\\\4\\\\2\\\\d\\\\8\\\\c\\\\9\\\\2\\\\3\\\\6\\\\4\\\\2" +"\\\\g\\\\h\\\\8\\\\k\\\\4\\\\3\\\\2\\\\b\\\\1\\\\5\\\\9\\\\l\\\\6\\\\1\\\\i\\\\2\\\\3\\\\1\\\\7\\\\1\\\\5" +"\\\\5\\\\1\\\\b"];j(a[0]);',22,22,'|x6F|x20|x74|x65|x72|x68|x6D|x61|x6B|'<br>+'_0|x77|x63|x48|x43|var|x50|x6C|x70|alert|x6E|x73'.split('|'),0,{})<h>)</h>
 </pre></code>
 
 #>- alert("Come to the <br> &nbsp; &nbsp; &nbsp; Hack the Planet workshop<br> &nbsp; &nbsp; &nbsp; tomorrow")</code></pre>
@@ -934,7 +938,7 @@ Mostly adpoted
 #>- 0
 #>- ES5> parseInt("08")
 #>- 8
-#>- ESx> parseInt("08",10) <c>//base 10</c>
+#>- ESx> parseInt("08", 10) <h>// radix</h>
 #>- 8
 Note: assumed to be octal unless you have ECMAScript 5.
 Supply radix to be cross compatible.
@@ -953,9 +957,15 @@ Still very much not adpoted.
 
 #> > ans = "";
 #> > function quest() {<br>> &nbsp; var ans = 42; <br>> &nbsp; return ans;<br>> }
+#> > quest()
+#> > console.log(ans);
+#> > ""
 ---
 #> > ans = "";
 #> > function quest() {<br>> &nbsp; <h>let</h> ans = 42; <br>> &nbsp; return ans;<br>> }
+#> > quest()
+#> > console.log(ans);
+#> > ""
 
 Note: proper block scope
 Re-declarations are in error
@@ -977,7 +987,7 @@ Re-declarations are in error
 #> &nbsp;  }
 #> &nbsp;  return sum;
 #>  }
-#>- <br>add(10, 14, 9, 7, 2)
+#>- <br>> add(10, 14, 9, 7, 2)
 #>- 42
 
 ---
@@ -1131,17 +1141,17 @@ Note: Let's talk about Python
 ---
 #> >>> a = 256
 #>- >>> b = 256
-#>- >>> a **is** b
+#>- >>> a is b
 #>- True
 
 <span class="dasfoot"><a href="www.youtube.com/watch?v=sH4XF6pKKmk">Investigating Python Wats</a></span>
 ---
 #>  >>> a = 257
 #>- >>> b = 257
-#>- >>> a **is** b
+#>- >>> a is b
 #>- False
 #>- <br>>>> a = 257; b = 257
-#>- >>> a **is** b
+#>- >>> a is b
 #>- True
 
 <span class="dasfoot"><a href="www.youtube.com/watch?v=sH4XF6pKKmk">Investigating Python Wats</a></span>
@@ -1182,7 +1192,7 @@ Note: cyclic truthiness. Totally a thing.
 
 ---
 
-#= <pre>C:\> powershell</pre>
+#= <pre>C:&bsol;> powershell</pre>
 
 Note: Let's talk about powershell
 
@@ -1202,7 +1212,6 @@ Yes some have more than others. Some have reasons why they can't be fixed
 
 But that doesn't mean we have to critise those that use them
 
-
 "We are not our tools. Discrimination based on tools is just as bad as discrimination based on race or gender" - Rachel Nabours
 
 Hopefully I've shown just how good JS can be. And it might make someone reconsider before I see the next awful tirade on twitter
@@ -1210,5 +1219,5 @@ Hopefully I've shown just how good JS can be. And it might make someone reconsid
 <br><br>
 #= Danke!
 <br><br>
-###= <3 feedback - joind.in
+###= <3 feedback - joind.in/15903
 @ footer.svg
