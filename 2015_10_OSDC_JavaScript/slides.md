@@ -456,7 +456,20 @@ Note: uniary operand casts to number
 Note: pre-increment only works on some objects, not directly on number literals
 ---
 
+# Arrays are Objects <!-- .slide: class="center" -->
+## Kinda. <!-- .element: class="fragment" -->
+
+Note: they are special, with integer keys and special sugar.
+See eariler partial working of addressing array keys
+---
+
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> typeof { a: "b"}</code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">"object"</code></pre></div> <!-- .element: class="fragment" -->
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> typeof ["a","b"]</code></pre></div> <!-- .element: class="fragment" -->
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">"object"</code></pre></div> <!-- .element: class="fragment" -->
+---
 # `typeof` <!-- .slide: class="center" -->
+Note: Big typeof
 ---
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> typeof Object()</code></pre></div>
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">"object"</code></pre></div> <!-- .element: class="fragment" -->
@@ -936,16 +949,33 @@ Mostly adpoted
 
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">ES3> parseInt("08")</code></pre></div>
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">0</code></pre></div> <!-- .element: class="fragment" -->
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">ES5> parseInt("08")</code></pre></div> <!-- .element: class="fragment" -->
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">ES<h>5</h>> parseInt("08")</code></pre></div> <!-- .element: class="fragment" -->
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">8</code></pre></div> <!-- .element: class="fragment" -->
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">ESx> parseInt("08", 10) <h>// radix</h></code></pre></div> <!-- .element: class="fragment" -->
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">8</code></pre></div> <!-- .element: class="fragment" -->
 Note: assumed to be octal unless you have ECMAScript 5.
 Supply radix to be cross compatible.
 ---
-## `trim` <!-- .slide: class="center" -->
+# `isArray` <!-- .slide: class="center" -->
+---
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> Array.isArray({ a: "b" })</code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">false</code></pre></div> <!-- .element: class="fragment" -->
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> Array.isArray(["a","b"])</code></pre></div> <!-- .element: class="fragment" -->
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">true</code></pre></div> <!-- .element: class="fragment" -->
+---
+# `trim` <!-- .slide: class="center" -->
 
 Note: JS didn't ahve a trim command til ES5
+it had a `trimLeft` and a `trimRight`
+
+---
+
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> " Hello ".trimLeft()</code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">"Hello "</code></pre></div> <!-- .element: class="fragment" -->
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> " Hello ".trimRight()</code></pre></div> <!-- .element: class="fragment" -->
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">" Hello"</code></pre></div> <!-- .element: class="fragment" -->
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">ES<h>5</h>> " Hello ".trim()</code></pre></div> <!-- .element: class="fragment" -->
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">"Hello"</code></pre></div> <!-- .element: class="fragment" -->
 ---
 # ECMAScript 6 <!-- .slide: class="center" -->
 Note: approved in June 2015 (a few months ago)
@@ -1021,15 +1051,17 @@ Note: try autocompleting for more, including grouping
 Note: Adding new funcionality in JS to JS by adding more JS
 ---
 # `supplant` <!-- .slide: class="center" -->
+Note: allows for native templating
 ---
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> s = "{greet} there {name}!"</code></pre></div>
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> t = { greet: "Oh hello",<br>&nbsp; &nbsp; &nbsp; &nbsp; name: &nbsp;"Katie" }</code></pre></div> <!-- .element: class="fragment" -->
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> s.supplant(t)</code></pre></div> <!-- .element: class="fragment" -->
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">"Oh, hello there Katie!"</code></pre></div> <!-- .element: class="fragment" -->
+Note: Supplant didn't get into ES6. But you can still polyfill it
 ---
 
 ## `supplant` polyfill <!-- .slide: class="center" -->
-<pre><code> 
+ <pre><code> <!-- .element: class="fragment" -->
 if (!String.prototype.supplant) {
 &nbsp; String.prototype.supplant = function (o) {
 &nbsp; &nbsp; return this.replace(<h>/\{([^{}]*)\}/</h>g,
@@ -1047,6 +1079,17 @@ Note: Create function if it doesn't exist
 Doesn't handle multiple-level definitions
 
 Didn't make it into es6, but totes useful
+---
+## `isArray` polyfill <!-- .slide: class="center" -->
+
+ <pre><code> <!-- .element: class="fragment" -->
+if (!Array.isArray) {
+&nbsp; Array.isArray = function(arg) {
+&nbsp; &nbsp; return Object.prototype.toString.call(arg) === '[object Array]';
+&nbsp;}; 
+} 
+</pre></code> 
+Note: Can also polyfil things that may not exist in your browser. but specifically only define it if it's not already defined
 ---
 ## `console.log` polyfill <!-- .slide: class="center" -->
  <pre><code> <!-- .element: class="fragment" -->
@@ -1205,7 +1248,8 @@ Note: Let's talk about powershell
 
 <span class="dasfoot"><a href="http://fuckpowershell.tumblr.com/">f&#45;&#45;&#45;powershell.tumblr.com</a></span>
 ---
-
+# My point is... <!-- .slide: class="center" -->
+---
 # All languages<br>have quirks <!-- .slide: class="center" -->
 Note: 
 Yes some have more than others. Some have reasons why they can't be fixed
@@ -1217,7 +1261,7 @@ But that doesn't mean we have to critise those that use them
 Hopefully I've shown just how good JS can be. And it might make someone reconsider before I see the next awful tirade on twitter
 ---
 <br><br> 
-# Danke! <!-- .slide: class="center" -->
+# Cheers! <!-- .slide: class="center" -->
 <br><br> 
 ### <3 feedback - joind.in/15903 <!-- .slide: class="center" -->
  <img src="pictures/footer.svg" />

@@ -456,7 +456,20 @@ Note: uniary operand casts to number
 Note: pre-increment only works on some objects, not directly on number literals
 ---
 
+#= Arrays are Objects
+##- Kinda.
+
+Note: they are special, with integer keys and special sugar. 
+See eariler partial working of addressing array keys
+---
+
+#> > typeof { a: "b"}
+#>- "object"
+#>- > typeof ["a","b"]
+#>- "object"
+---
 #= `typeof`
+Note: Big typeof
 ---
 #> > typeof Object()
 #>- "object"
@@ -936,16 +949,33 @@ Mostly adpoted
 
 #>  ES3> parseInt("08")
 #>- 0
-#>- ES5> parseInt("08")
+#>- ES<h>5</h>> parseInt("08")
 #>- 8
 #>- ESx> parseInt("08", 10) <h>// radix</h>
 #>- 8
 Note: assumed to be octal unless you have ECMAScript 5.
 Supply radix to be cross compatible.
 ---
-##= `trim`
+#= `isArray`
+---
+#> > Array.isArray({ a: "b" })
+#>- false
+#>- > Array.isArray(["a","b"])
+#>- true
+---
+#= `trim`
 
 Note: JS didn't ahve a trim command til ES5
+it had a `trimLeft` and a `trimRight`
+
+---
+
+#> > " Hello ".trimLeft()
+#>- "Hello "
+#>- > " Hello ".trimRight()
+#>- " Hello"
+#>- ES<h>5</h>> " Hello ".trim()
+#>- "Hello"  
 ---
 #= ECMAScript 6
 Note: approved in June 2015 (a few months ago)
@@ -1021,15 +1051,17 @@ Note: try autocompleting for more, including grouping
 Note: Adding new funcionality in JS to JS by adding more JS
 ---
 #= `supplant`
+Note: allows for native templating
 ---
 #> > s = "{greet} there {name}!"
 #>- > t = { greet: "Oh hello",<br>&nbsp; &nbsp; &nbsp; &nbsp; name: &nbsp;"Katie" }
 #>- > s.supplant(t)
 #>- "Oh, hello there Katie!"
+Note: Supplant didn't get into ES6. But you can still polyfill it
 ---
 
 ##= `supplant` polyfill
-<pre><code>
+- <pre><code>
 if (!String.prototype.supplant) {
 &nbsp; String.prototype.supplant = function (o) {
 &nbsp; &nbsp; return this.replace(<h>/\{([^{}]*)\}/</h>g,
@@ -1047,6 +1079,17 @@ Note: Create function if it doesn't exist
 Doesn't handle multiple-level definitions
 
 Didn't make it into es6, but totes useful
+---
+##= `isArray` polyfill
+
+- <pre><code>
+if (!Array.isArray) {
+ &nbsp; Array.isArray = function(arg) {
+&nbsp; &nbsp; return Object.prototype.toString.call(arg) === '[object Array]';
+ &nbsp;};
+}
+</pre></code>
+Note: Can also polyfil things that may not exist in your browser. but specifically only define it if it's not already defined
 ---
 ##= `console.log` polyfill
 - <pre><code>
@@ -1205,7 +1248,8 @@ Note: Let's talk about powershell
 
 <span class="dasfoot"><a href="http://fuckpowershell.tumblr.com/">f&#45;&#45;&#45;powershell.tumblr.com</a></span>
 ---
-
+#= My point is...
+---
 #= All languages<br>have quirks
 Note: 
 Yes some have more than others. Some have reasons why they can't be fixed
@@ -1217,7 +1261,7 @@ But that doesn't mean we have to critise those that use them
 Hopefully I've shown just how good JS can be. And it might make someone reconsider before I see the next awful tirade on twitter
 ---
 <br><br>
-#= Danke!
+#= Cheers!
 <br><br>
 ###= <3 feedback - joind.in/15903
 @ footer.svg
