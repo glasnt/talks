@@ -732,6 +732,7 @@ d[e]}];e&equals;function(){return'\\\\w+'};c&equals;1};while(c--){if(k[c]){p&equ
 </pre></code> 
 
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">alert("Come to the <br> &nbsp; &nbsp; &nbsp; Hack the Planet workshop<br> &nbsp; &nbsp; &nbsp; tomorrow")</code></pre></code></pre></div> <!-- .element: class="fragment" -->
+Note: base64_encode in php is similar
 ---
 # ... <!-- .slide: class="center" -->
 Note: so, that's what javascript can do. it's powerful, and scary. what if you say
@@ -1044,6 +1045,7 @@ Note: try autocompleting for more, including grouping
 ---
 <br><br> 
  <img src="pictures/facebook.png" />
+Note: from console on facebook
 ---
 # Extending JavaScript <!-- .slide: class="center" -->
 ---

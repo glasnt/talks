@@ -470,7 +470,8 @@ Let's do some hacking!
 ---
 <section data-background="#ffffff"><h1>
 <br><br> 
-Wireless: TODO
-Password: TODO
+Wireless: 
+<br> 
+<h2>Wrest Point Free Wifi</h2>
 </h1> 
 </section> 
