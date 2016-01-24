@@ -6,31 +6,32 @@
 
 ---
 
-## Lambda Jam
+# Lambda Jam <!-- .slide: class="center" -->
 
-### Brisbane
+## Brisbane
 
-### 28 - 29 April 2016
+## 28 - 29 April 2016
 
-### CFP Closes 13 March 2016
+## CFP Closes 13 March 2016
 
-http://lambdajam.yowconference.com.au/call-for-presentations/ 
-
----
-
-## Local Meetups
-
-### Brisbane Functional Programming Group
-### FP-Syd
-### ScalaSyd
-### Melbourne Scala UG
+### http://lambdajam.yowconference.com.au/call-for-presentations/
 
 ---
 
-## Online
 
-#### #bfpg freenode
-#### #haskell-au freenode
+# Local Meetups <!-- .slide: class="center" -->
+
+## Brisbane Functional Programming Group
+## FP-Syd
+## ScalaSyd
+## Melbourne Scala UG
+
+---
+
+# Online <!-- .slide: class="center" -->
+
+## #bfpg freenode
+## #haskell-au freenode
 
 ---
 
@@ -40,23 +41,24 @@ http://lambdajam.yowconference.com.au/call-for-presentations/
 
 ---
 
-## CampJS
-## WebDirections
+# CampJS <!-- .slide: class="center" -->
+# WebDirections <!-- .slide: class="center" -->
 ---
-## Local Web Meetups
+# Local Web Meetups <!-- .slide: class="center" -->
 
-### SydJS
-### SydCSS
-### MelbCSS
-### Port80 (Sydney, Perth)
-### wd42 (Hobart)
+## SydJS
+## SydCSS
+## MelbCSS
+## SydPHP
+## phpMelb
+## wd42 (Hobart)
 
 
 ---
 
-## Online
+# Online <!-- .slide: class="center" -->
 
-#### ViewSource Slack
+## ViewSource Slack
 
 
 
@@ -66,18 +68,17 @@ http://lambdajam.yowconference.com.au/call-for-presentations/
 
 
 ---
+# PyCon AU <!-- .slide: class="center" -->
 
-## PyCon AU
+## Melbourne
+## 12 - 16 August 2016
 
-### Melbourne
-### 12 - 16 August 2016
-
-#### http://2016.pycon-au.org/
+### http://2016.pycon-au.org/
 
 ---
 
 
-## Local Python Meetups
+# Local Python Meetups <!-- .slide: class="center" -->
 
 ## SyPy
 ## PyLadies
@@ -86,9 +87,9 @@ http://lambdajam.yowconference.com.au/call-for-presentations/
 
 ---
 
-## Online
+# Python Online <!-- .slide: class="center" -->
 
-### PyLadies Slack
+## PyLadies Slack
 
 ---
 
@@ -96,7 +97,7 @@ http://lambdajam.yowconference.com.au/call-for-presentations/
 
 ---
 
-# /dev/world/2016
+# /dev/world/2016 <!-- .slide: class="center" -->
 
 
 ## Melbourne
@@ -108,4 +109,4 @@ devworld.com.au
 
 ---
 # ... and probably heaps more <!-- .slide: class="center" -->
-## Just google "<lang> <city>"
+## Just google "[lang] [city] meetup"
