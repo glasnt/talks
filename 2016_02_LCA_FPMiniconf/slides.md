@@ -112,7 +112,7 @@ Do not ask if a language has higher kinded types
 ---
 
 
-# Local Meetups <!-- .slide: class="center" -->
+# FP Meetups <!-- .slide: class="center" -->
 
 ## BFPG
 ## FP-Syd
@@ -121,10 +121,10 @@ Do not ask if a language has higher kinded types
 
 ---
 
-# Online <!-- .slide: class="center" -->
+# FP on freenode <!-- .slide: class="center" -->
 
-## #bfpg freenode
-## #haskell.au freenode
+## #bfpg
+## #haskell.au
 
 ---
 
@@ -199,7 +199,7 @@ devworld.com.au
 # Thank you!
 ## Speakers! <!-- .element: class="fragment" -->
 ### Our Keynotes Katie and Tony <!-- .element: class="fragment" -->
-### Juan, Ken, Nick, Jeb & Paris <!-- .element: class="fragment" -->
+### Juan, Ken, Nick, Jed & Paris <!-- .element: class="fragment" -->
 ---
 #&nbsp; 
 # Thank you!
