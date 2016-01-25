@@ -115,7 +115,7 @@ Note: There's an app for that for GitHub
 
 #= Octohat
 
-## github.com/glasnt/octohat
+## github.com/LABHR/octohatrack
 
 Note: Non-code contributions against repos - comments, bugs, etc
 
