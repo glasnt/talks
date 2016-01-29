@@ -113,9 +113,10 @@ Note: There's an app for that for GitHub
 
 ---
 
-# Octohat <!-- .slide: class="center" -->
-
-## github.com/glasnt/octohat
+# octohatrack <!-- .slide: class="center" -->
+## github.com/LABHR/octohatrack
+## &nbsp;
+### <code>pip install octohatrack</code>
 
 Note: Non-code contributions against repos - comments, bugs, etc
 
@@ -131,6 +132,6 @@ Note: Live Hat Rack Example
 # #LABHR <!-- .slide: class="center" -->
 ## bit.do/LABHR
 
-## github.com/glasnt/octohat
+## github.com/LABHR/octohatrack
 
 Note: Linkies
