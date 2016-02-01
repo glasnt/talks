@@ -56,7 +56,29 @@ Note: Social Media All The things!
 ## (16:15 start)
 
 ---
+## &nbsp;
+### Did you know?
+## &nbsp;
+## There are FP-related talks in the main conference
 
+---
+# &nbsp;
+## Usable formal methods<br> - are we there yet?
+### &nbsp;
+### Stefan Götz
+### &nbsp;
+### Wednesday
+
+---
+
+# &nbsp;
+## Open-Source Software Stack for High-Assurance Autonomous Vehicles
+### Gernot Heiser
+### &nbsp;
+### Thursday
+
+
+---
 # &nbsp;
 # &nbsp;
 # Venue Notices
@@ -79,7 +101,17 @@ Note: We have many languages here today
 
 Do not ask if a language has higher kinded types
 
+No language bashing
+No platform bashing
 
+Ask respectful questions
+
+Unless otherwise mentioned by the speaker, questions (actual questions) at the end
+---
+
+# &nbsp;
+# &nbsp;
+## up first ...
 
 ---
 
@@ -89,9 +121,39 @@ Do not ask if a language has higher kinded types
 
 ---
 
+# <end morning slides>
+---
 #= Closing
 ---
 #= Want to learn more?
+
+---
+## &nbsp;
+### Did you know?
+## &nbsp;
+## There are FP-related talks in the main conference
+
+---
+# &nbsp;
+## Usable formal methods<br> - are we there yet?
+### &nbsp;
+### Stefan Götz
+### &nbsp;
+### Wednesday
+
+---
+
+# &nbsp;
+## Open-Source Software Stack for High-Assurance Autonomous Vehicles
+### Gernot Heiser
+### &nbsp;
+### Thursday
+
+---
+
+# &nbsp;
+
+# Meetups, Conferences and Communities
 
 ---
 
