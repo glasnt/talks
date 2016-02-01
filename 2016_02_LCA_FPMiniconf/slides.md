@@ -9,32 +9,6 @@
 
 Note: Social Media All The things!
 
----
-# &nbsp;
-# Proceedings
-## 12:20 Lunch
-## 1 hour
-## uncatered
----
-# &nbsp;
-# Proceedings
-## 15:00 Afternoon Tea
-## 40 minutes
-##Costa Hall Foyer
-
-
----
-
-# &nbsp;
-# Proceedings
-## 17:05 Lightning Talks!
-
----
-
-# &nbsp;
-# Proceedings
-
-## 18:00 Professional Delegates Networking Session
 
 ---
 
@@ -54,6 +28,92 @@ Note: Social Media All The things!
 ## Afternoon Keynote
 # Katie Miller
 ## (16:15 start)
+
+---
+# &nbsp;
+
+# Programme
+
+---
+## Morning Session
+### 11:00 The Essential Tools of Open-Source: Functional Programming, Parametricity, Types by Tony Morris
+### 11:40 Functional programming in Python with Toolz and fn.py by Juan Nunez-Iglesias
+
+
+---
+# &nbsp;
+# Lunch
+## 12:20 1 hour
+## uncatered
+---
+
+## Early Afternoon Session
+
+### 13:20 Data made out of functions by Ken Scambler
+### 13:55 The Emperor’s New Closure: FP in Javascript by Nick Moore
+
+### 14:30 Practical Functional Architecture by Jed Wesley-Smith
+
+---
+# &nbsp;
+# Afternoon Tea
+## 15:00 40 minutes
+##Costa Hall Foyer
+
+---
+
+## Late Afternoon Session
+###15:40 Swift Functional Programming by Paris Buttfield-Addison
+###16:15 Haskell is Not For Production and Other Tales by Katie Miller
+---
+
+## Lightning Talks
+###17:05 Paul Fenwick - Xmonad window manager
+
+### 17:10 TBD
+
+### 17:15 Miniconf close
+
+---
+
+# &nbsp;
+## 18:00 Professional Delegates Networking Session
+## (Buses from the Main venue, check website)
+---
+## &nbsp;
+### Did you know?
+## &nbsp;
+## There are FP-related talks in the main conference
+
+---
+# &nbsp;
+## Usable formal methods<br> - are we there yet?
+### &nbsp;
+### Stefan Götz
+### &nbsp;
+### Wednesday
+
+---
+
+# &nbsp;
+## Open-Source Software Stack for High-Assurance Autonomous Vehicles
+### Gernot Heiser
+### &nbsp;
+### Thursday
+
+
+---
+# &nbsp;
+# &nbsp;
+# Venue Notices
+
+---
+
+# &nbsp;
+# Code of Conduct
+### This miniconf adheres to the LCA CoC
+#### https://linux.conf.au/register/code_of_conduct
+
 
 ---
 ## &nbsp;
