@@ -1,0 +1,20 @@
+#= Skeleton Theme
+<img src="pictures/footer.svg">
+---
+! g/koala
+---
+! g/soon | g/koala
+---
+! g/rev-heart | t/rev-heart | a/rev-heart
+---
+! g/rev-heart | t/rev-heart | a/rev-heart | g/koala
+---
+! o/broken
+---
+! t/wave
+---
+! g/koala
+---
+! g/penguin
+---
+! o/broken
