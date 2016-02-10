@@ -1,5 +1,5 @@
-#= Skeleton Theme
-<img src="pictures/footer.svg">
+! o/bolt | g/sweat | t/sparkle
+# κλτιε﹫𝔤𝔩𝔞𝔰𝔫𝔱.𝔠𝔬𝔪
 ---
 ! g/koala
 ---
@@ -11,10 +11,28 @@
 ---
 ! o/broken
 ---
-! t/wave
+! g/wave
 ---
 ! g/koala
 ---
 ! g/penguin
 ---
 ! o/broken
+---
+! g/hairy_heart.png | g/yellow_heart
+---
+! t/camel1 | t/camel2
+---
+! t/grinning | t/grimice
+---
+# 💜 ❤️ 💚 💛 💙
+# hearts
+---
+😓
+---
+⚡  😓  ✨
+# Sign
+---
+! o/bolt | g/sweat | t/sparkle
+---
+
