@@ -1,15 +1,30 @@
-! o/bolt | g/sweat | t/sparkle
-# κλτιε﹫𝔤𝔩𝔞𝔰𝔫𝔱.𝔠𝔬𝔪
+## &nbsp; 
+<div style='width: 100%; margin: 0 auto;'><p align='center'><img height='260px' src='pictures/o/bolt.svg'><img height='260px' src='pictures/g/sweat.svg'><img height='260px' src='pictures/t/sparkle.svg'></p></div> <!-- .slide: class="center" -->
+## &nbsp; 
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='80px' src='pictures/g/g.svg'><img height='80px' src='pictures/g/l.svg'><img height='80px' src='pictures/g/a.svg'><img height='80px' src='pictures/g/s.svg'><img height='80px' src='pictures/g/n.svg'><img height='80px' src='pictures/g/t.svg'></p></div> <!-- .slide: class="center" -->
+---
+! g/wave
 ---
 ! g/koala
+Note: I'm from australia
 ---
-! g/soon | g/koala
+! t/guitar | e/no | e/sad
+Note: And i'm not a django dev. I don't use django
 ---
-! g/rev-heart | t/rev-heart | a/rev-heart
+! g/snake | t/laptop | g/thumbsup
+Note: but I am a python dev
 ---
-! g/rev-heart | t/rev-heart | a/rev-heart | g/koala
+! g/snake | g/red_gem | g/coffee | g/hammer | e/burrito 
+Note: I code in a lot of things
+---
+! g/penguin | t/apple | t/paperclip
+Note: I use a lot of platforms
+---
+! t/apple | g/elephant | g/snake | g/penguin | t/laptop
+Note: I've spoken at lot of conferences
 ---
 ! o/broken
+Note: and I love how broken emoji is
 ---
 ! g/wave
 ---
