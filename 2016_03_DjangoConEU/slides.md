@@ -14,14 +14,11 @@ Note: And i'm not a django dev. I don't use django
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='266px' src='pictures/g/snake.svg'><img height='266px' src='pictures/t/laptop.svg'><img height='266px' src='pictures/g/thumbsup.svg'></p></div> <!-- .slide: class="center" -->
 Note: but I am a python dev
 ---
- <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='160px' src='pictures/g/snake.svg'><img height='160px' src='pictures/g/red_gem.svg'><img height='160px' src='pictures/g/coffee.svg'><img height='160px' src='pictures/g/hammer.svg'><img height='160px' src='pictures/e/burrito.svg'></p></div> <!-- .slide: class="center" -->
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='133px' src='pictures/g/snake.svg'><img height='133px' src='pictures/g/red_gem.svg'><img height='133px' src='pictures/g/elephant.svg'><img height='133px' src='pictures/g/coffee.svg'><img height='133px' src='pictures/g/shell.svg'><img height='133px' src='pictures/e/burrito.svg'></p></div> <!-- .slide: class="center" -->
 Note: I code in a lot of things
 ---
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='266px' src='pictures/g/penguin.svg'><img height='266px' src='pictures/t/apple.svg'><img height='266px' src='pictures/t/paperclip.svg'></p></div> <!-- .slide: class="center" -->
 Note: I use a lot of platforms
----
- <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='160px' src='pictures/t/apple.svg'><img height='160px' src='pictures/g/elephant.svg'><img height='160px' src='pictures/g/snake.svg'><img height='160px' src='pictures/g/penguin.svg'><img height='160px' src='pictures/t/laptop.svg'></p></div> <!-- .slide: class="center" -->
-Note: I've spoken at lot of conferences
 ---
  <div style='width: 50%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/o/broken.svg'></p></div> <!-- .slide: class="center" -->
 Note: and I love how broken emoji is

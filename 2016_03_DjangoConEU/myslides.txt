@@ -14,14 +14,11 @@ Note: And i'm not a django dev. I don't use django
 ! g/snake | t/laptop | g/thumbsup
 Note: but I am a python dev
 ---
-! g/snake | g/red_gem | g/coffee | g/hammer | e/burrito 
+! g/snake | g/red_gem | g/elephant | g/coffee | g/shell | e/burrito 
 Note: I code in a lot of things
 ---
 ! g/penguin | t/apple | t/paperclip
 Note: I use a lot of platforms
----
-! t/apple | g/elephant | g/snake | g/penguin | t/laptop
-Note: I've spoken at lot of conferences
 ---
 ! o/broken
 Note: and I love how broken emoji is
