@@ -1,11 +1,8 @@
 ## &nbsp; 
 <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='260px' src='pictures/o/bolt.svg'><img height='260px' src='pictures/g/sweat.svg'><img height='260px' src='pictures/t/sparkle.svg'></p></div> <!-- .slide: class="center" -->
-## &nbsp; 
- <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='80px' src='pictures/g/g.svg'><img height='80px' src='pictures/g/l.svg'><img height='80px' src='pictures/g/a.svg'><img height='80px' src='pictures/g/s.svg'><img height='80px' src='pictures/g/n.svg'><img height='80px' src='pictures/g/t.svg'></p></div> <!-- .slide: class="center" -->
+@ footer.svg
 ---
-! g/wave
----
-! g/koala
+! g/wave | g/koala
 Note: I'm from australia
 ---
 ! t/guitar | e/no | e/sad
@@ -14,37 +11,93 @@ Note: And i'm not a django dev. I don't use django
 ! g/snake | t/laptop | g/thumbsup
 Note: but I am a python dev
 ---
-! g/snake | g/red_gem | g/elephant | g/coffee | g/shell | e/burrito 
+! g/red_gem | g/coffee | g/elephant | t/camel1
+!  g/snake | e/web | g/shell | e/burrito 
 Note: I code in a lot of things
 ---
-! g/penguin | t/apple | t/paperclip
-Note: I use a lot of platforms
+! t/purple_heart
+Note: and I love emoji
 ---
 ! o/broken
 Note: and I love how broken emoji is
+
+Now let me explain. I'm a polyglot programmer. 
+
+windows apple linux
+many languea
 ---
-! g/wave
+! g/bug | g/bug | g/bug
+Note:  And given that, I notice a lot of bugs and other inconscitancies
 ---
-! g/koala
+! o/bolt | g/sweat | t/sparkle
+Note: now, this talk is called Power Responsibily of Unicode Adoption
 ---
-! g/penguin
+! t/no
+
+Note: But it contains absolutely no emoji. 
+
+I'm running Ubuntu, and nothing would work if I did that
 ---
-! o/broken
+
+! t/blue_bird | t/bee | t/shiny
+Note: I ran a poll on twitter asking me to do this in entirely emoji, but i can't
+
+Russell also suggested this might be a bit of fun
+
+So, let's get started with a bit about how uniode got started
+
+the birds and the bees, if you will. *BOOM BOOM *
+---
+
+Note: Unicode History 
+---
+--
+! t/chicken | g/hot_bath
+Note: We're here in hungary. I don't think I need to explain how you most definiately need to be using unicode compatible systems
+
+---
+#> $ python
+#> >>> Sophia = "fantastic"
+#> >>> Sophia 
+#> 'fantastic'
+
+#>- $ python <br>>>> Zsófia = “fantasztikus"<br> File "<stdin>", line 1<br> &nbsp; Zsófia = “fantasztikus"<br> &nbsp; &nbsp;&nbsp;^<br>SyntaxError: invalid syntax
+
+Note: if you wanted to do unicode in python, it won't work for things like variable names with non-ascii characters
+
+---
+
+#> $ python
+#> >>> Sophia = "fantastic"
+#> >>> Sophia 
+#> 'fantastic'
+
+#>- $ python3<br>>>> Zsófia = "fantasztikus"<br>>>> Zsófia<br> 'fantasztikus'
+---
+
+! t/thumb_up
+-
+! g/thinking
+Note: But what about emoji?
+
+---
+! t/japan | 
+Note: japanese history
+---
+Note: emoticon vs emoji
+
+---
+Note: web and wing dings
+---
+Note: msn, yahoo
+---
+
 ---
 ! g/hairy_heart.png | g/yellow_heart
 ---
 ! t/camel1 | t/camel2
 ---
 ! t/grinning | t/grimice
----
-# 💜 ❤️ 💚 💛 💙
-# hearts
----
-😓
----
-⚡  😓  ✨
-# Sign
----
-! o/bolt | g/sweat | t/sparkle
+Note:  Grinning vs Grimace
 ---
 
