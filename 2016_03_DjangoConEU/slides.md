@@ -22,24 +22,21 @@ Note: and I love emoji
 Note: and I love how broken emoji is
 
 Now let me explain. I'm a polyglot programmer.
-
-windows apple linux
-many languea
+I use windows, osx, various linux
 ---
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='266px' src='pictures/g/bug.svg'><img height='266px' src='pictures/g/bug.svg'><img height='266px' src='pictures/g/bug.svg'></p></div> <!-- .slide: class="center" -->
-Note: And given that, I notice a lot of bugs and other inconscitancies
 ---
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='266px' src='pictures/o/bolt.svg'><img height='266px' src='pictures/g/sweat.svg'><img height='266px' src='pictures/t/sparkle.svg'></p></div> <!-- .slide: class="center" -->
 Note: now, this talk is called Power Responsibily of Unicode Adoption
 ---
- <div style='width: 50%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/t/no.svg'></p></div> <!-- .slide: class="center" -->
+ <div style='width: 50%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/e/no.svg'></p></div> <!-- .slide: class="center" -->
 
 Note: But it contains absolutely no emoji.
 
 I'm running Ubuntu, and nothing would work if I did that
 ---
 
- <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='266px' src='pictures/t/blue_bird.svg'><img height='266px' src='pictures/t/bee.svg'><img height='266px' src='pictures/t/shiny.svg'></p></div> <!-- .slide: class="center" -->
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='266px' src='pictures/g/blue_bird.svg'><img height='266px' src='pictures/g/bee.svg'><img height='266px' src='pictures/e/shiny.svg'></p></div> <!-- .slide: class="center" -->
 Note: I ran a poll on twitter asking me to do this in entirely emoji, but i can't
 
 Russell also suggested this might be a bit of fun

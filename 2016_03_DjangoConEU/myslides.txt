@@ -22,24 +22,21 @@ Note: and I love emoji
 Note: and I love how broken emoji is
 
 Now let me explain. I'm a polyglot programmer. 
-
-windows apple linux
-many languea
+I use windows, osx, various linux
 ---
 ! g/bug | g/bug | g/bug
-Note:  And given that, I notice a lot of bugs and other inconscitancies
 ---
 ! o/bolt | g/sweat | t/sparkle
 Note: now, this talk is called Power Responsibily of Unicode Adoption
 ---
-! t/no
+! e/no
 
 Note: But it contains absolutely no emoji. 
 
 I'm running Ubuntu, and nothing would work if I did that
 ---
 
-! t/blue_bird | t/bee | t/shiny
+! g/blue_bird | g/bee | e/shiny
 Note: I ran a poll on twitter asking me to do this in entirely emoji, but i can't
 
 Russell also suggested this might be a bit of fun
