@@ -12,8 +12,11 @@ Note: And i'm not a django dev. I don't use django
 Note: but I am a python dev
 ---
 ! g/red_gem | g/coffee | g/elephant | t/camel1
-!  g/snake | e/web | g/shell | e/burrito 
+! g/snake | e/web | g/shell | e/burrito 
 Note: I code in a lot of things
+---
+! g/bug | e/bug | t/bug
+Note: And so I see a whole lot of different kinds of bugs
 ---
 ! t/purple_heart
 Note: and I love emoji
@@ -21,17 +24,16 @@ Note: and I love emoji
 ! o/broken
 Note: and I love how broken emoji is
 
-Now let me explain. I'm a polyglot programmer. 
-I use windows, osx, various linux
----
-! g/bug | g/bug | g/bug
----
-! o/bolt | g/sweat | t/sparkle
-Note: now, this talk is called Power Responsibily of Unicode Adoption
+How broken?
 ---
 ! e/no
 
-Note: But it contains absolutely no emoji. 
+
+
+Note: 
+This talk contains no emoji. 
+
+SVG renders. 
 
 I'm running Ubuntu, and nothing would work if I did that
 ---
@@ -46,51 +48,136 @@ So, let's get started with a bit about how uniode got started
 the birds and the bees, if you will. *BOOM BOOM *
 ---
 
-Note: Unicode History 
+! e/one | e/zero
+Note: Everything in a computer is made of ones and zero
+
+Binary
 ---
---
-! t/chicken | g/hot_bath
-Note: We're here in hungary. I don't think I need to explain how you most definiately need to be using unicode compatible systems
-
+! t/USA
+Note: The amercans worked out that they could make their entire alphabet in 7bits
 ---
-#> $ python
-#> >>> Sophia = "fantastic"
-#> >>> Sophia 
-#> 'fantastic'
+! t/USA | g/A | e/zero | e/one | e/zero | e/zero | e/zero | e/zero | e/zero | e/one
+! t/USA | g/B | e/zero | e/one | e/zero | e/zero | e/zero | e/zero | e/one | e/zero
+! t/USA | g/C | e/zero | e/one | e/zero | e/zero | e/zero | e/zero | e/one | e/one
+Note: So they created ascii
 
-#>- $ python <br>>>> Zsófia = “fantasztikus"<br> File "<stdin>", line 1<br> &nbsp; Zsófia = “fantasztikus"<br> &nbsp; &nbsp;&nbsp;^<br>SyntaxError: invalid syntax
+American Standard Code for Information Interchange
 
-Note: if you wanted to do unicode in python, it won't work for things like variable names with non-ascii characters
-
+7 bits needed encode 127 characters
 ---
+! g/germany | g/france
 
-#> $ python
-#> >>> Sophia = "fantastic"
-#> >>> Sophia 
-#> 'fantastic'
+Note: But then how do you encode languages where they have more fancy characters/
+---
+! t/USA | g/A | e/zero | e/one | e/zero | e/zero | e/zero | e/zero | e/zero | e/one
+! g/france | g/ea | e/one | e/one | e/zero | e/zero | e/one | e/zero | e/zero | e/zero
+! g/germany | g/um | e/one | e/one |e/zero |e/one |e/one |e/one |e/zero | e/zero
+Note: Well, you extend your encoding set!
 
-#>- $ python3<br>>>> Zsófia = "fantasztikus"<br>>>> Zsófia<br> 'fantasztikus'
----
+use 8 bits!
 
-! t/thumb_up
--
-! g/thinking
-Note: But what about emoji?
+And think of a really creative name for it
 
----
-! t/japan | 
-Note: japanese history
----
-Note: emoticon vs emoji
-
----
-Note: web and wing dings
----
-Note: msn, yahoo
+Like, extended ascii 
 ---
 
+! g/china | g/japan
+Note: But then you want to add characters from asian langauges
+And all these differnet files need to be interchangeable because of this thing called the internet
+
 ---
-! g/hairy_heart.png | g/yellow_heart
+! g/china | g/a_1 | e/qcap | e/qcap | e/qcap | e/qcap | e/qcap | e/qcap | e/qcap | e/qcap
+! g/japan | g/a_2 | e/qcap | e/qcap | e/qcap | e/qcap | e/qcap | e/qcap | e/qcap | e/qcap
+---
+
+@ unicode.png
+---
+! g/U | g/T | g/F | g/dash | e/3 | e/2
+! g/U | g/T | g/F | g/dash | e/1 | e/6
+! g/U | g/T | g/F | g/dash | e/8 | space
+
+---
+! g/U | g/T | g/F | g/dash | e/3 | e/2
+! g/triangle
+---
+! g/A 
+!  g/U | g/T | g/F | g/dash| e/3 | e/2
+---
+! e/zero | e/zero | e/zero | e/zero | e/zero | e/zero | e/zero | e/zero
+! e/zero | e/zero | e/zero | e/zero | e/zero | e/zero | e/zero | e/zero
+! e/zero | e/zero | e/zero | e/zero | e/zero | e/zero | e/zero | e/zero
+! e/zero | e/one | e/zero | e/zero | e/zero | e/zero | e/zero | e/one
+---
+
+! j/A
+! g/U | g/T | g/F | g/dash |  e/3 | e/2
+---
+! e/zero | e/zero | e/zero | e/zero | e/zero | e/zero | e/zero | e/zero
+! e/zero | e/zero | e/zero | e/zero | e/zero | e/zero | e/zero | e/zero
+! e/zero | e/zero | e/one | e/one | e/zero | e/zero | e/zero | e/zero
+! e/zero | e/one | e/zero | e/zero | e/zero | e/zero | e/one | e/zero
+---
+
+! g/U | g/T | g/F | g/dash | e/8
+! e/flex
+---
+! g/A | space |  g/U | g/T | g/F | g/dash | e/8
+! e/zero | e/one | e/zero | e/zero | e/zero | e/zero | e/zero | e/one
+---
+! j/A | space |  g/U | g/T | g/F | g/dash |  e/8
+! e/one | e/one | e/one | e/zero | e/zero | e/zero | e/one | e/one
+! e/one | e/zero | e/zero | e/zero | e/zero | e/zero | e/zero | e/one
+! e/one | e/zero | e/zero | e/zero | e/zero | e/zero | e/one | e/zero
+---
+! g/slashu
+---
+! g/A | space | g/slashu | e/0 | e/0 | e/4 | e/1
+! j/A | space | g/slashu | e/3 | e/0 | e/4 | e/2
+---
+! FDFA.png | space | g/slashu | e/Fcap | e/Dcap | e/Fcap | e/Acap
+! 2C22.png | space | g/slashu | e/2 | e/Ccap | e/2 | e/2
+
+---
+! g/US | g/UK | g/france | g/germany | g/china
+! space | t/smile | space 
+---
+
+! g/japan | t/worry | g/question
+---
+
+! g/japan | a/smile | g/phone
+---
+TODO
+
+Note: Emoji history
+---
+
+! g/claps | space | g/slashu | e/1 | e/Fcap | e/4 | e/4 | e/Fcap
+
+Note: CLAPPING HANDS SIGN
+
+---
+
+! a/Microscope
+---
+
+! g/dash
+
+---
+! t/yellow | space | g/slashu | e/1 | e/Fcap | e/4 | e/9 | e/Bcap
+
+Note: 
+1F49B
+---
+
+! t/yellow | e/yellow | a/yellow
+---
+! space | g/hairy_heart.png | space
+---
+
+! g/hairy_heart.png | g/old_green.png | g/old_blue.png | g/old_purple.png
+! g/yellow | g/green | g/blue | g/purple
+
 ---
 ! t/camel1 | t/camel2
 ---
@@ -98,3 +185,4 @@ Note: msn, yahoo
 Note:  Grinning vs Grimace
 ---
 
+! a/boy_60.png | a/boy_91.png

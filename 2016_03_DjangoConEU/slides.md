@@ -15,23 +15,25 @@ Note: but I am a python dev
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='200px' src='pictures/g/snake.svg'><img height='200px' src='pictures/e/web.svg'><img height='200px' src='pictures/g/shell.svg'><img height='200px' src='pictures/e/burrito.svg'></p></div> <!-- .slide: class="center" -->
 Note: I code in a lot of things
 ---
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='266px' src='pictures/g/bug.svg'><img height='266px' src='pictures/e/bug.svg'><img height='266px' src='pictures/t/bug.svg'></p></div> <!-- .slide: class="center" -->
+Note: And so I see a whole lot of different kinds of bugs
+---
  <div style='width: 50%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/t/purple_heart.svg'></p></div> <!-- .slide: class="center" -->
 Note: and I love emoji
 ---
  <div style='width: 50%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/o/broken.svg'></p></div> <!-- .slide: class="center" -->
 Note: and I love how broken emoji is
 
-Now let me explain. I'm a polyglot programmer.
-I use windows, osx, various linux
----
- <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='266px' src='pictures/g/bug.svg'><img height='266px' src='pictures/g/bug.svg'><img height='266px' src='pictures/g/bug.svg'></p></div> <!-- .slide: class="center" -->
----
- <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='266px' src='pictures/o/bolt.svg'><img height='266px' src='pictures/g/sweat.svg'><img height='266px' src='pictures/t/sparkle.svg'></p></div> <!-- .slide: class="center" -->
-Note: now, this talk is called Power Responsibily of Unicode Adoption
+How broken?
 ---
  <div style='width: 50%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/e/no.svg'></p></div> <!-- .slide: class="center" -->
 
-Note: But it contains absolutely no emoji.
+
+
+Note: 
+This talk contains no emoji.
+
+SVG renders.
 
 I'm running Ubuntu, and nothing would work if I did that
 ---
@@ -46,54 +48,141 @@ So, let's get started with a bit about how uniode got started
 the birds and the bees, if you will. *BOOM BOOM *
 ---
 
-Note: Unicode History
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/e/one.svg'><img height='400px' src='pictures/e/zero.svg'></p></div> <!-- .slide: class="center" -->
+Note: Everything in a computer is made of ones and zero
+
+Binary 
 ---
-  <!-- .element: class="fragment" -->
- <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/t/chicken.svg'><img height='400px' src='pictures/g/hot_bath.svg'></p></div> <!-- .slide: class="center" -->
-Note: We're here in hungary. I don't think I need to explain how you most definiately need to be using unicode compatible systems
-
+ <div style='width: 50%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/t/USA.svg'></p></div> <!-- .slide: class="center" -->
+Note: The amercans worked out that they could make their entire alphabet in 7bits
 ---
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">$ python</code></pre></div>
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">>>> Sophia = "fantastic"</code></pre></div>
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">>>> Sophia</code></pre></div>
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">'fantastic'</code></pre></div>
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='80px' src='pictures/t/USA.svg'><img height='80px' src='pictures/g/A.svg'><img height='80px' src='pictures/e/zero.svg'><img height='80px' src='pictures/e/one.svg'><img height='80px' src='pictures/e/zero.svg'><img height='80px' src='pictures/e/zero.svg'><img height='80px' src='pictures/e/zero.svg'><img height='80px' src='pictures/e/zero.svg'><img height='80px' src='pictures/e/zero.svg'><img height='80px' src='pictures/e/one.svg'></p></div> <!-- .slide: class="center" -->
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='80px' src='pictures/t/USA.svg'><img height='80px' src='pictures/g/B.svg'><img height='80px' src='pictures/e/zero.svg'><img height='80px' src='pictures/e/one.svg'><img height='80px' src='pictures/e/zero.svg'><img height='80px' src='pictures/e/zero.svg'><img height='80px' src='pictures/e/zero.svg'><img height='80px' src='pictures/e/zero.svg'><img height='80px' src='pictures/e/one.svg'><img height='80px' src='pictures/e/zero.svg'></p></div> <!-- .slide: class="center" -->
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='80px' src='pictures/t/USA.svg'><img height='80px' src='pictures/g/C.svg'><img height='80px' src='pictures/e/zero.svg'><img height='80px' src='pictures/e/one.svg'><img height='80px' src='pictures/e/zero.svg'><img height='80px' src='pictures/e/zero.svg'><img height='80px' src='pictures/e/zero.svg'><img height='80px' src='pictures/e/zero.svg'><img height='80px' src='pictures/e/one.svg'><img height='80px' src='pictures/e/one.svg'></p></div> <!-- .slide: class="center" -->
+Note: So they created ascii
 
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">$ python <br>>>> Zsófia = “fantasztikus"<br> File "<stdin>", line 1<br> &nbsp; Zsófia = “fantasztikus"<br> &nbsp; &nbsp;&nbsp;^<br>SyntaxError: invalid syntax</code></pre></div> <!-- .element: class="fragment" -->
+American Standard Code for Information Interchange
 
-Note: if you wanted to do unicode in python, it won't work for things like variable names with non-ascii characters
-
+7 bits needed encode 127 characters
 ---
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/g/germany.svg'><img height='400px' src='pictures/g/france.svg'></p></div> <!-- .slide: class="center" -->
 
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">$ python</code></pre></div>
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">>>> Sophia = "fantastic"</code></pre></div>
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">>>> Sophia</code></pre></div>
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">'fantastic'</code></pre></div>
+Note: But then how do you encode languages where they have more fancy characters/
+---
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='80px' src='pictures/t/USA.svg'><img height='80px' src='pictures/g/A.svg'><img height='80px' src='pictures/e/zero.svg'><img height='80px' src='pictures/e/one.svg'><img height='80px' src='pictures/e/zero.svg'><img height='80px' src='pictures/e/zero.svg'><img height='80px' src='pictures/e/zero.svg'><img height='80px' src='pictures/e/zero.svg'><img height='80px' src='pictures/e/zero.svg'><img height='80px' src='pictures/e/one.svg'></p></div> <!-- .slide: class="center" -->
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='80px' src='pictures/g/france.svg'><img height='80px' src='pictures/g/ea.svg'><img height='80px' src='pictures/e/one.svg'><img height='80px' src='pictures/e/one.svg'><img height='80px' src='pictures/e/zero.svg'><img height='80px' src='pictures/e/zero.svg'><img height='80px' src='pictures/e/one.svg'><img height='80px' src='pictures/e/zero.svg'><img height='80px' src='pictures/e/zero.svg'><img height='80px' src='pictures/e/zero.svg'></p></div> <!-- .slide: class="center" -->
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='80px' src='pictures/g/germany.svg'><img height='80px' src='pictures/g/um.svg'><img height='80px' src='pictures/e/one.svg'><img height='80px' src='pictures/e/one.svg'><img height='80px' src='pictures/e/zero.svg'><img height='80px' src='pictures/e/one.svg'><img height='80px' src='pictures/e/one.svg'><img height='80px' src='pictures/e/one.svg'><img height='80px' src='pictures/e/zero.svg'><img height='80px' src='pictures/e/zero.svg'></p></div> <!-- .slide: class="center" -->
+Note: Well, you extend your encoding set!
 
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">$ python3<br>>>> Zsófia = "fantasztikus"<br>>>> Zsófia<br> 'fantasztikus'</code></pre></div> <!-- .element: class="fragment" -->
----
+use 8 bits!
 
- <div style='width: 50%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/t/thumb_up.svg'></p></div> <!-- .slide: class="center" -->
-  <!-- .element: class="fragment" -->
- <div style='width: 50%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/g/thinking.svg'></p></div> <!-- .slide: class="center" -->
-Note: But what about emoji?
+And think of a really creative name for it
 
----
- <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='800px' src='pictures/t/japan.svg'></p></div> <!-- .slide: class="center" -->
-Note: japanese history
----
-Note: emoticon vs emoji
-
----
-Note: web and wing dings
----
-Note: msn, yahoo
+Like, extended ascii
 ---
 
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/g/china.svg'><img height='400px' src='pictures/g/japan.svg'></p></div> <!-- .slide: class="center" -->
+Note: But then you want to add characters from asian langauges
+And all these differnet files need to be interchangeable because of this thing called the internet
+
 ---
- <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/g/hairy_heart.png'><img height='400px' src='pictures/g/yellow_heart.svg'></p></div> <!-- .slide: class="center" -->
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='80px' src='pictures/g/china.svg'><img height='80px' src='pictures/g/a_1.svg'><img height='80px' src='pictures/e/qcap.svg'><img height='80px' src='pictures/e/qcap.svg'><img height='80px' src='pictures/e/qcap.svg'><img height='80px' src='pictures/e/qcap.svg'><img height='80px' src='pictures/e/qcap.svg'><img height='80px' src='pictures/e/qcap.svg'><img height='80px' src='pictures/e/qcap.svg'><img height='80px' src='pictures/e/qcap.svg'></p></div> <!-- .slide: class="center" -->
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='80px' src='pictures/g/japan.svg'><img height='80px' src='pictures/g/a_2.svg'><img height='80px' src='pictures/e/qcap.svg'><img height='80px' src='pictures/e/qcap.svg'><img height='80px' src='pictures/e/qcap.svg'><img height='80px' src='pictures/e/qcap.svg'><img height='80px' src='pictures/e/qcap.svg'><img height='80px' src='pictures/e/qcap.svg'><img height='80px' src='pictures/e/qcap.svg'><img height='80px' src='pictures/e/qcap.svg'></p></div> <!-- .slide: class="center" -->
+---
+
+ <img src="pictures/unicode.png" />
+---
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='133px' src='pictures/g/U.svg'><img height='133px' src='pictures/g/T.svg'><img height='133px' src='pictures/g/F.svg'><img height='133px' src='pictures/g/dash.svg'><img height='133px' src='pictures/e/3.svg'><img height='133px' src='pictures/e/2.svg'></p></div> <!-- .slide: class="center" -->
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='133px' src='pictures/g/U.svg'><img height='133px' src='pictures/g/T.svg'><img height='133px' src='pictures/g/F.svg'><img height='133px' src='pictures/g/dash.svg'><img height='133px' src='pictures/e/1.svg'><img height='133px' src='pictures/e/6.svg'></p></div> <!-- .slide: class="center" -->
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='133px' src='pictures/g/U.svg'><img height='133px' src='pictures/g/T.svg'><img height='133px' src='pictures/g/F.svg'><img height='133px' src='pictures/g/dash.svg'><img height='133px' src='pictures/e/8.svg'><img height='133px' src='pictures/space.svg'></p></div> <!-- .slide: class="center" -->
+
+---
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='133px' src='pictures/g/U.svg'><img height='133px' src='pictures/g/T.svg'><img height='133px' src='pictures/g/F.svg'><img height='133px' src='pictures/g/dash.svg'><img height='133px' src='pictures/e/3.svg'><img height='133px' src='pictures/e/2.svg'></p></div> <!-- .slide: class="center" -->
+ <div style='width: 50%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/g/triangle.svg'></p></div> <!-- .slide: class="center" -->
+---
+ <div style='width: 50%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/g/A.svg'></p></div> <!-- .slide: class="center" -->
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='133px' src='pictures/g/U.svg'><img height='133px' src='pictures/g/T.svg'><img height='133px' src='pictures/g/F.svg'><img height='133px' src='pictures/g/dash.svg'><img height='133px' src='pictures/e/3.svg'><img height='133px' src='pictures/e/2.svg'></p></div> <!-- .slide: class="center" -->
+---
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'></p></div> <!-- .slide: class="center" -->
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'></p></div> <!-- .slide: class="center" -->
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'></p></div> <!-- .slide: class="center" -->
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/one.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/one.svg'></p></div> <!-- .slide: class="center" -->
+---
+
+ <div style='width: 50%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/j/A.svg'></p></div> <!-- .slide: class="center" -->
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='133px' src='pictures/g/U.svg'><img height='133px' src='pictures/g/T.svg'><img height='133px' src='pictures/g/F.svg'><img height='133px' src='pictures/g/dash.svg'><img height='133px' src='pictures/e/3.svg'><img height='133px' src='pictures/e/2.svg'></p></div> <!-- .slide: class="center" -->
+---
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'></p></div> <!-- .slide: class="center" -->
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'></p></div> <!-- .slide: class="center" -->
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/one.svg'><img height='100px' src='pictures/e/one.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'></p></div> <!-- .slide: class="center" -->
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/one.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/one.svg'><img height='100px' src='pictures/e/zero.svg'></p></div> <!-- .slide: class="center" -->
+---
+
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='160px' src='pictures/g/U.svg'><img height='160px' src='pictures/g/T.svg'><img height='160px' src='pictures/g/F.svg'><img height='160px' src='pictures/g/dash.svg'><img height='160px' src='pictures/e/8.svg'></p></div> <!-- .slide: class="center" -->
+ <div style='width: 50%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/e/flex.svg'></p></div> <!-- .slide: class="center" -->
+---
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='114px' src='pictures/g/A.svg'><img height='114px' src='pictures/space.svg'><img height='114px' src='pictures/g/U.svg'><img height='114px' src='pictures/g/T.svg'><img height='114px' src='pictures/g/F.svg'><img height='114px' src='pictures/g/dash.svg'><img height='114px' src='pictures/e/8.svg'></p></div> <!-- .slide: class="center" -->
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/one.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/one.svg'></p></div> <!-- .slide: class="center" -->
+---
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='114px' src='pictures/j/A.svg'><img height='114px' src='pictures/space.svg'><img height='114px' src='pictures/g/U.svg'><img height='114px' src='pictures/g/T.svg'><img height='114px' src='pictures/g/F.svg'><img height='114px' src='pictures/g/dash.svg'><img height='114px' src='pictures/e/8.svg'></p></div> <!-- .slide: class="center" -->
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='100px' src='pictures/e/one.svg'><img height='100px' src='pictures/e/one.svg'><img height='100px' src='pictures/e/one.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/one.svg'><img height='100px' src='pictures/e/one.svg'></p></div> <!-- .slide: class="center" -->
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='100px' src='pictures/e/one.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/one.svg'></p></div> <!-- .slide: class="center" -->
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='100px' src='pictures/e/one.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/one.svg'><img height='100px' src='pictures/e/zero.svg'></p></div> <!-- .slide: class="center" -->
+---
+ <div style='width: 50%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/g/slashu.svg'></p></div> <!-- .slide: class="center" -->
+---
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='114px' src='pictures/g/A.svg'><img height='114px' src='pictures/space.svg'><img height='114px' src='pictures/g/slashu.svg'><img height='114px' src='pictures/e/0.svg'><img height='114px' src='pictures/e/0.svg'><img height='114px' src='pictures/e/4.svg'><img height='114px' src='pictures/e/1.svg'></p></div> <!-- .slide: class="center" -->
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='114px' src='pictures/j/A.svg'><img height='114px' src='pictures/space.svg'><img height='114px' src='pictures/g/slashu.svg'><img height='114px' src='pictures/e/3.svg'><img height='114px' src='pictures/e/0.svg'><img height='114px' src='pictures/e/4.svg'><img height='114px' src='pictures/e/2.svg'></p></div> <!-- .slide: class="center" -->
+---
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='114px' src='pictures/FDFA.png'><img height='114px' src='pictures/space.svg'><img height='114px' src='pictures/g/slashu.svg'><img height='114px' src='pictures/e/Fcap.svg'><img height='114px' src='pictures/e/Dcap.svg'><img height='114px' src='pictures/e/Fcap.svg'><img height='114px' src='pictures/e/Acap.svg'></p></div> <!-- .slide: class="center" -->
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='114px' src='pictures/2C22.png'><img height='114px' src='pictures/space.svg'><img height='114px' src='pictures/g/slashu.svg'><img height='114px' src='pictures/e/2.svg'><img height='114px' src='pictures/e/Ccap.svg'><img height='114px' src='pictures/e/2.svg'><img height='114px' src='pictures/e/2.svg'></p></div> <!-- .slide: class="center" -->
+
+---
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='160px' src='pictures/g/US.svg'><img height='160px' src='pictures/g/UK.svg'><img height='160px' src='pictures/g/france.svg'><img height='160px' src='pictures/g/germany.svg'><img height='160px' src='pictures/g/china.svg'></p></div> <!-- .slide: class="center" -->
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='266px' src='pictures/space.svg'><img height='266px' src='pictures/t/smile.svg'><img height='266px' src='pictures/space.svg'></p></div> <!-- .slide: class="center" -->
+---
+
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='266px' src='pictures/g/japan.svg'><img height='266px' src='pictures/t/worry.svg'><img height='266px' src='pictures/g/question.svg'></p></div> <!-- .slide: class="center" -->
+---
+
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='266px' src='pictures/g/japan.svg'><img height='266px' src='pictures/a/smile.svg'><img height='266px' src='pictures/g/phone.svg'></p></div> <!-- .slide: class="center" -->
+---
+TODO 
+
+Note: Emoji history
+---
+
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='100px' src='pictures/g/claps.svg'><img height='100px' src='pictures/space.svg'><img height='100px' src='pictures/g/slashu.svg'><img height='100px' src='pictures/e/1.svg'><img height='100px' src='pictures/e/Fcap.svg'><img height='100px' src='pictures/e/4.svg'><img height='100px' src='pictures/e/4.svg'><img height='100px' src='pictures/e/Fcap.svg'></p></div> <!-- .slide: class="center" -->
+
+Note: CLAPPING HANDS SIGN
+
+---
+
+ <div style='width: 50%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/a/Microscope.svg'></p></div> <!-- .slide: class="center" -->
+---
+
+ <div style='width: 50%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/g/dash.svg'></p></div> <!-- .slide: class="center" -->
+
+---
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='100px' src='pictures/t/yellow.svg'><img height='100px' src='pictures/space.svg'><img height='100px' src='pictures/g/slashu.svg'><img height='100px' src='pictures/e/1.svg'><img height='100px' src='pictures/e/Fcap.svg'><img height='100px' src='pictures/e/4.svg'><img height='100px' src='pictures/e/9.svg'><img height='100px' src='pictures/e/Bcap.svg'></p></div> <!-- .slide: class="center" -->
+
+Note: 
+1F49B 
+---
+
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='266px' src='pictures/t/yellow.svg'><img height='266px' src='pictures/e/yellow.svg'><img height='266px' src='pictures/a/yellow.svg'></p></div> <!-- .slide: class="center" -->
+---
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='266px' src='pictures/space.svg'><img height='266px' src='pictures/g/hairy_heart.png'><img height='266px' src='pictures/space.svg'></p></div> <!-- .slide: class="center" -->
+---
+
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='200px' src='pictures/g/hairy_heart.png'><img height='200px' src='pictures/g/old_green.png'><img height='200px' src='pictures/g/old_blue.png'><img height='200px' src='pictures/g/old_purple.png'></p></div> <!-- .slide: class="center" -->
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='200px' src='pictures/g/yellow.svg'><img height='200px' src='pictures/g/green.svg'><img height='200px' src='pictures/g/blue.svg'><img height='200px' src='pictures/g/purple.svg'></p></div> <!-- .slide: class="center" -->
+
 ---
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/t/camel1.svg'><img height='400px' src='pictures/t/camel2.svg'></p></div> <!-- .slide: class="center" -->
 ---
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/t/grinning.svg'><img height='400px' src='pictures/t/grimice.svg'></p></div> <!-- .slide: class="center" -->
 Note: Grinning vs Grimace
 ---
+
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/a/boy_60.png'><img height='400px' src='pictures/a/boy_91.png'></p></div> <!-- .slide: class="center" -->
