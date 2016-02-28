@@ -92,16 +92,16 @@ And all these differnet files need to be interchangeable because of this thing c
 
 @ unicode.png
 ---
-! g/U | g/T | g/F | g/dash | e/3 | e/2
-! g/U | g/T | g/F | g/dash | e/1 | e/6
-! g/U | g/T | g/F | g/dash | e/8 | space
+! g/U | g/T | g/F | g/hyphen | e/3 | e/2
+! g/U | g/T | g/F | g/hyphen | e/1 | e/6
+! g/U | g/T | g/F | g/hyphen | e/8 | space
 
 ---
-! g/U | g/T | g/F | g/dash | e/3 | e/2
+! g/U | g/T | g/F | g/hyphen | e/3 | e/2
 ! g/triangle
 ---
 ! g/A 
-!  g/U | g/T | g/F | g/dash| e/3 | e/2
+!  g/U | g/T | g/F | g/hyphen| e/3 | e/2
 ---
 ! e/zero | e/zero | e/zero | e/zero | e/zero | e/zero | e/zero | e/zero
 ! e/zero | e/zero | e/zero | e/zero | e/zero | e/zero | e/zero | e/zero
@@ -110,7 +110,7 @@ And all these differnet files need to be interchangeable because of this thing c
 ---
 
 ! j/A
-! g/U | g/T | g/F | g/dash |  e/3 | e/2
+! g/U | g/T | g/F | g/hyphen |  e/3 | e/2
 ---
 ! e/zero | e/zero | e/zero | e/zero | e/zero | e/zero | e/zero | e/zero
 ! e/zero | e/zero | e/zero | e/zero | e/zero | e/zero | e/zero | e/zero
@@ -118,13 +118,13 @@ And all these differnet files need to be interchangeable because of this thing c
 ! e/zero | e/one | e/zero | e/zero | e/zero | e/zero | e/one | e/zero
 ---
 
-! g/U | g/T | g/F | g/dash | e/8
+! g/U | g/T | g/F | g/hyphen | e/8
 ! e/flex
 ---
-! g/A | space |  g/U | g/T | g/F | g/dash | e/8
+! g/A | space |  g/U | g/T | g/F | g/hyphen | e/8
 ! e/zero | e/one | e/zero | e/zero | e/zero | e/zero | e/zero | e/one
 ---
-! j/A | space |  g/U | g/T | g/F | g/dash |  e/8
+! j/A | space |  g/U | g/T | g/F | g/hyphen |  e/8
 ! e/one | e/one | e/one | e/zero | e/zero | e/zero | e/one | e/one
 ! e/one | e/zero | e/zero | e/zero | e/zero | e/zero | e/zero | e/one
 ! e/one | e/zero | e/zero | e/zero | e/zero | e/zero | e/one | e/zero
@@ -172,17 +172,62 @@ Note:
 
 ! t/yellow | e/yellow | a/yellow
 ---
-! space | g/hairy_heart.png | space
+<img src="pictures/g/hairy_heart_v.png" height="75%" width="75%"> 
 ---
 
 ! g/hairy_heart.png | g/old_green.png | g/old_blue.png | g/old_purple.png
 ! g/yellow | g/green | g/blue | g/purple
+---
 
+! g/claps | m/clap_new.png
+---
+! a/hugs.png | g/hugs.png | t/hugs.png | e/hugs.png
+---
+! g/sheep | g/ram
+Note: sheep vs ram
+---
+! g/ox | g/buffalo
+Note: Sheep vs buffalo
+---
+! g/rat | g/mouse
+Note: rat vs mouse
+---
+! t/weary | t/tired 
+Note: weary vs tired
+---
+! t/disappointed | t/cold_sweat | t/relieved | t/open_cold_sweat
+Note: disappointed
+face with cold sweat
+relieved
+face with open mouth and cold sweat
+---
+! t/grinning | t/grimice
+Note: grinning vs grimmace
+---
+! a/bow | a/information | a/nogood | a/ok
+Note: Person bowing deeply 
+information desk
+No good
+OK
+---
+! t/bento | t/tempura | t/dango | t/fishcake
+! t/riceball | t/curry | t/sushi | t/noodles
+---
+! t/minidisc | t/floppy | t/fax | t/cardindex 
 ---
 ! t/camel1 | t/camel2
 ---
-! t/grinning | t/grimice
-Note:  Grinning vs Grimace
+! t/sparkles | t/popper | t/confetti
+Note: TODO MORE CUTE
+---
+! t/sax | t/leg | t/bath
+---
+! e/levi
+---
+! t/eggplant | t/over18 | g/bunnywoman | t/lovehotel
+---
+! t/poo |g/poo | e/poo
 ---
 
+---
 ! a/boy_60.png | a/boy_91.png

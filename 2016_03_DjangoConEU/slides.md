@@ -92,16 +92,16 @@ And all these differnet files need to be interchangeable because of this thing c
 
  <img src="pictures/unicode.png" />
 ---
- <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='133px' src='pictures/g/U.svg'><img height='133px' src='pictures/g/T.svg'><img height='133px' src='pictures/g/F.svg'><img height='133px' src='pictures/g/dash.svg'><img height='133px' src='pictures/e/3.svg'><img height='133px' src='pictures/e/2.svg'></p></div> <!-- .slide: class="center" -->
- <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='133px' src='pictures/g/U.svg'><img height='133px' src='pictures/g/T.svg'><img height='133px' src='pictures/g/F.svg'><img height='133px' src='pictures/g/dash.svg'><img height='133px' src='pictures/e/1.svg'><img height='133px' src='pictures/e/6.svg'></p></div> <!-- .slide: class="center" -->
- <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='133px' src='pictures/g/U.svg'><img height='133px' src='pictures/g/T.svg'><img height='133px' src='pictures/g/F.svg'><img height='133px' src='pictures/g/dash.svg'><img height='133px' src='pictures/e/8.svg'><img height='133px' src='pictures/space.svg'></p></div> <!-- .slide: class="center" -->
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='133px' src='pictures/g/U.svg'><img height='133px' src='pictures/g/T.svg'><img height='133px' src='pictures/g/F.svg'><img height='133px' src='pictures/g/hyphen.svg'><img height='133px' src='pictures/e/3.svg'><img height='133px' src='pictures/e/2.svg'></p></div> <!-- .slide: class="center" -->
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='133px' src='pictures/g/U.svg'><img height='133px' src='pictures/g/T.svg'><img height='133px' src='pictures/g/F.svg'><img height='133px' src='pictures/g/hyphen.svg'><img height='133px' src='pictures/e/1.svg'><img height='133px' src='pictures/e/6.svg'></p></div> <!-- .slide: class="center" -->
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='133px' src='pictures/g/U.svg'><img height='133px' src='pictures/g/T.svg'><img height='133px' src='pictures/g/F.svg'><img height='133px' src='pictures/g/hyphen.svg'><img height='133px' src='pictures/e/8.svg'><img height='133px' src='pictures/space.svg'></p></div> <!-- .slide: class="center" -->
 
 ---
- <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='133px' src='pictures/g/U.svg'><img height='133px' src='pictures/g/T.svg'><img height='133px' src='pictures/g/F.svg'><img height='133px' src='pictures/g/dash.svg'><img height='133px' src='pictures/e/3.svg'><img height='133px' src='pictures/e/2.svg'></p></div> <!-- .slide: class="center" -->
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='133px' src='pictures/g/U.svg'><img height='133px' src='pictures/g/T.svg'><img height='133px' src='pictures/g/F.svg'><img height='133px' src='pictures/g/hyphen.svg'><img height='133px' src='pictures/e/3.svg'><img height='133px' src='pictures/e/2.svg'></p></div> <!-- .slide: class="center" -->
  <div style='width: 50%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/g/triangle.svg'></p></div> <!-- .slide: class="center" -->
 ---
  <div style='width: 50%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/g/A.svg'></p></div> <!-- .slide: class="center" -->
- <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='133px' src='pictures/g/U.svg'><img height='133px' src='pictures/g/T.svg'><img height='133px' src='pictures/g/F.svg'><img height='133px' src='pictures/g/dash.svg'><img height='133px' src='pictures/e/3.svg'><img height='133px' src='pictures/e/2.svg'></p></div> <!-- .slide: class="center" -->
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='133px' src='pictures/g/U.svg'><img height='133px' src='pictures/g/T.svg'><img height='133px' src='pictures/g/F.svg'><img height='133px' src='pictures/g/hyphen.svg'><img height='133px' src='pictures/e/3.svg'><img height='133px' src='pictures/e/2.svg'></p></div> <!-- .slide: class="center" -->
 ---
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'></p></div> <!-- .slide: class="center" -->
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'></p></div> <!-- .slide: class="center" -->
@@ -110,7 +110,7 @@ And all these differnet files need to be interchangeable because of this thing c
 ---
 
  <div style='width: 50%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/j/A.svg'></p></div> <!-- .slide: class="center" -->
- <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='133px' src='pictures/g/U.svg'><img height='133px' src='pictures/g/T.svg'><img height='133px' src='pictures/g/F.svg'><img height='133px' src='pictures/g/dash.svg'><img height='133px' src='pictures/e/3.svg'><img height='133px' src='pictures/e/2.svg'></p></div> <!-- .slide: class="center" -->
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='133px' src='pictures/g/U.svg'><img height='133px' src='pictures/g/T.svg'><img height='133px' src='pictures/g/F.svg'><img height='133px' src='pictures/g/hyphen.svg'><img height='133px' src='pictures/e/3.svg'><img height='133px' src='pictures/e/2.svg'></p></div> <!-- .slide: class="center" -->
 ---
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'></p></div> <!-- .slide: class="center" -->
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'></p></div> <!-- .slide: class="center" -->
@@ -118,13 +118,13 @@ And all these differnet files need to be interchangeable because of this thing c
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/one.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/one.svg'><img height='100px' src='pictures/e/zero.svg'></p></div> <!-- .slide: class="center" -->
 ---
 
- <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='160px' src='pictures/g/U.svg'><img height='160px' src='pictures/g/T.svg'><img height='160px' src='pictures/g/F.svg'><img height='160px' src='pictures/g/dash.svg'><img height='160px' src='pictures/e/8.svg'></p></div> <!-- .slide: class="center" -->
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='160px' src='pictures/g/U.svg'><img height='160px' src='pictures/g/T.svg'><img height='160px' src='pictures/g/F.svg'><img height='160px' src='pictures/g/hyphen.svg'><img height='160px' src='pictures/e/8.svg'></p></div> <!-- .slide: class="center" -->
  <div style='width: 50%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/e/flex.svg'></p></div> <!-- .slide: class="center" -->
 ---
- <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='114px' src='pictures/g/A.svg'><img height='114px' src='pictures/space.svg'><img height='114px' src='pictures/g/U.svg'><img height='114px' src='pictures/g/T.svg'><img height='114px' src='pictures/g/F.svg'><img height='114px' src='pictures/g/dash.svg'><img height='114px' src='pictures/e/8.svg'></p></div> <!-- .slide: class="center" -->
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='114px' src='pictures/g/A.svg'><img height='114px' src='pictures/space.svg'><img height='114px' src='pictures/g/U.svg'><img height='114px' src='pictures/g/T.svg'><img height='114px' src='pictures/g/F.svg'><img height='114px' src='pictures/g/hyphen.svg'><img height='114px' src='pictures/e/8.svg'></p></div> <!-- .slide: class="center" -->
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/one.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/one.svg'></p></div> <!-- .slide: class="center" -->
 ---
- <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='114px' src='pictures/j/A.svg'><img height='114px' src='pictures/space.svg'><img height='114px' src='pictures/g/U.svg'><img height='114px' src='pictures/g/T.svg'><img height='114px' src='pictures/g/F.svg'><img height='114px' src='pictures/g/dash.svg'><img height='114px' src='pictures/e/8.svg'></p></div> <!-- .slide: class="center" -->
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='114px' src='pictures/j/A.svg'><img height='114px' src='pictures/space.svg'><img height='114px' src='pictures/g/U.svg'><img height='114px' src='pictures/g/T.svg'><img height='114px' src='pictures/g/F.svg'><img height='114px' src='pictures/g/hyphen.svg'><img height='114px' src='pictures/e/8.svg'></p></div> <!-- .slide: class="center" -->
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='100px' src='pictures/e/one.svg'><img height='100px' src='pictures/e/one.svg'><img height='100px' src='pictures/e/one.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/one.svg'><img height='100px' src='pictures/e/one.svg'></p></div> <!-- .slide: class="center" -->
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='100px' src='pictures/e/one.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/one.svg'></p></div> <!-- .slide: class="center" -->
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='100px' src='pictures/e/one.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/one.svg'><img height='100px' src='pictures/e/zero.svg'></p></div> <!-- .slide: class="center" -->
@@ -172,17 +172,62 @@ Note:
 
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='266px' src='pictures/t/yellow.svg'><img height='266px' src='pictures/e/yellow.svg'><img height='266px' src='pictures/a/yellow.svg'></p></div> <!-- .slide: class="center" -->
 ---
- <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='266px' src='pictures/space.svg'><img height='266px' src='pictures/g/hairy_heart.png'><img height='266px' src='pictures/space.svg'></p></div> <!-- .slide: class="center" -->
+<img src="pictures/g/hairy_heart_v.png" height="75%" width="75%">
 ---
 
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='200px' src='pictures/g/hairy_heart.png'><img height='200px' src='pictures/g/old_green.png'><img height='200px' src='pictures/g/old_blue.png'><img height='200px' src='pictures/g/old_purple.png'></p></div> <!-- .slide: class="center" -->
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='200px' src='pictures/g/yellow.svg'><img height='200px' src='pictures/g/green.svg'><img height='200px' src='pictures/g/blue.svg'><img height='200px' src='pictures/g/purple.svg'></p></div> <!-- .slide: class="center" -->
+---
 
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/g/claps.svg'><img height='400px' src='pictures/m/clap_new.png'></p></div> <!-- .slide: class="center" -->
+---
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='200px' src='pictures/a/hugs.png'><img height='200px' src='pictures/g/hugs.png'><img height='200px' src='pictures/t/hugs.png'><img height='200px' src='pictures/e/hugs.png'></p></div> <!-- .slide: class="center" -->
+---
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/g/sheep.svg'><img height='400px' src='pictures/g/ram.svg'></p></div> <!-- .slide: class="center" -->
+Note: sheep vs ram
+---
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/g/ox.svg'><img height='400px' src='pictures/g/buffalo.svg'></p></div> <!-- .slide: class="center" -->
+Note: Sheep vs buffalo
+---
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/g/rat.svg'><img height='400px' src='pictures/g/mouse.svg'></p></div> <!-- .slide: class="center" -->
+Note: rat vs mouse
+---
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/t/weary.svg'><img height='400px' src='pictures/t/tired.svg'></p></div> <!-- .slide: class="center" -->
+Note: weary vs tired
+---
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='200px' src='pictures/t/disappointed.svg'><img height='200px' src='pictures/t/cold_sweat.svg'><img height='200px' src='pictures/t/relieved.svg'><img height='200px' src='pictures/t/open_cold_sweat.svg'></p></div> <!-- .slide: class="center" -->
+Note: disappointed
+face with cold sweat
+relieved 
+face with open mouth and cold sweat
+---
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/t/grinning.svg'><img height='400px' src='pictures/t/grimice.svg'></p></div> <!-- .slide: class="center" -->
+Note: grinning vs grimmace
+---
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='200px' src='pictures/a/bow.svg'><img height='200px' src='pictures/a/information.svg'><img height='200px' src='pictures/a/nogood.svg'><img height='200px' src='pictures/a/ok.svg'></p></div> <!-- .slide: class="center" -->
+Note: Person bowing deeply
+information desk
+No good
+OK 
+---
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='200px' src='pictures/t/bento.svg'><img height='200px' src='pictures/t/tempura.svg'><img height='200px' src='pictures/t/dango.svg'><img height='200px' src='pictures/t/fishcake.svg'></p></div> <!-- .slide: class="center" -->
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='200px' src='pictures/t/riceball.svg'><img height='200px' src='pictures/t/curry.svg'><img height='200px' src='pictures/t/sushi.svg'><img height='200px' src='pictures/t/noodles.svg'></p></div> <!-- .slide: class="center" -->
+---
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='200px' src='pictures/t/minidisc.svg'><img height='200px' src='pictures/t/floppy.svg'><img height='200px' src='pictures/t/fax.svg'><img height='200px' src='pictures/t/cardindex.svg'></p></div> <!-- .slide: class="center" -->
 ---
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/t/camel1.svg'><img height='400px' src='pictures/t/camel2.svg'></p></div> <!-- .slide: class="center" -->
 ---
- <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/t/grinning.svg'><img height='400px' src='pictures/t/grimice.svg'></p></div> <!-- .slide: class="center" -->
-Note: Grinning vs Grimace
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='266px' src='pictures/t/sparkles.svg'><img height='266px' src='pictures/t/popper.svg'><img height='266px' src='pictures/t/confetti.svg'></p></div> <!-- .slide: class="center" -->
+Note: TODO MORE CUTE
+---
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='266px' src='pictures/t/sax.svg'><img height='266px' src='pictures/t/leg.svg'><img height='266px' src='pictures/t/bath.svg'></p></div> <!-- .slide: class="center" -->
+---
+ <div style='width: 50%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/e/levi.svg'></p></div> <!-- .slide: class="center" -->
+---
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='200px' src='pictures/t/eggplant.svg'><img height='200px' src='pictures/t/over18.svg'><img height='200px' src='pictures/g/bunnywoman.svg'><img height='200px' src='pictures/t/lovehotel.svg'></p></div> <!-- .slide: class="center" -->
+---
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='266px' src='pictures/t/poo.svg'><img height='266px' src='pictures/g/poo.svg'><img height='266px' src='pictures/e/poo.svg'></p></div> <!-- .slide: class="center" -->
 ---
 
+---
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/a/boy_60.png'><img height='400px' src='pictures/a/boy_91.png'></p></div> <!-- .slide: class="center" -->
