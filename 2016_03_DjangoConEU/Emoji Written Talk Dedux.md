@@ -427,7 +427,7 @@ You may not think this is a problem, but think about Accessibility
 * Context searchable data entry
 
 * Failover graphic, alt-text the codepoint, title the description
-
+* SVGS FOR THE LOVE OF GOD
 So, a combination of the apple/slack search, and twitter failover.
 
 Turns out, this is what the UC also want :D
@@ -465,6 +465,8 @@ Hearing a Q&A they did about the *fun* they had with things like push notificati
 ### Approved New Glyphs
 
 http://unicode.org/emoji/charts/emoji-released.html
+
+New Western Food~ TODO NEW
 
 ### Emoji under consideration
 

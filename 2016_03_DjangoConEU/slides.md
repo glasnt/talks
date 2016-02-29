@@ -1,5 +1,5 @@
 ## &nbsp;
-<div style='width: 100%; margin: 0 auto;'><p align='center'><img height='260px' src='pictures/o/bolt.svg'><img height='260px' src='pictures/g/sweat.svg'><img height='260px' src='pictures/t/sparkle.svg'></p></div> <!-- .slide: class="center" -->
+<div style='width: 100%; margin: 0 auto;'><p align='center'><img height='260px' src='pictures/o/bolt.svg'><img height='260px' src='pictures/g/sweat.svg'><img height='260px' src='pictures/t/sparkles.svg'></p></div> <!-- .slide: class="center" -->
  <img src="pictures/footer.svg" />
 ---
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/g/wave.svg'><img height='400px' src='pictures/g/koala.svg'></p></div> <!-- .slide: class="center" -->
@@ -228,6 +228,82 @@ Note: TODO MORE CUTE
 ---
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='266px' src='pictures/t/poo.svg'><img height='266px' src='pictures/g/poo.svg'><img height='266px' src='pictures/e/poo.svg'></p></div> <!-- .slide: class="center" -->
 ---
+ <div style='width: 50%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/e/thinking.svg'></p></div> <!-- .slide: class="center" -->
+---
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='200px' src='pictures/space.svg'><img height='200px' src='pictures/e/5.svg'><img height='200px' src='pictures/e/tick.svg'><img height='200px' src='pictures/space.svg'></p></div> <!-- .slide: class="center" -->
+---
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='266px' src='pictures/y/happy-0.png'><img height='266px' src='pictures/y/sad-0.png'><img height='266px' src='pictures/y/cowboy.png'></p></div> <!-- .slide: class="center" -->
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='266px' src='pictures/t/slight.svg'><img height='266px' src='pictures/t/sad.svg'><img height='266px' src='pictures/e/qcap.svg'></p></div> <!-- .slide: class="center" -->
+
+Note: Compatibility - Cowboy added to compat with Yahoo messenger
+---
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='266px' src='pictures/t/hamburger.svg'><img height='266px' src='pictures/t/fries.svg'><img height='266px' src='pictures/e/qcap.svg'></p></div> <!-- .slide: class="center" -->
+
+Note: Frequency. Hamburger for scale
+
+---
+
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='266px' src='pictures/t/noodles.svg'><img height='266px' src='pictures/t/spaghetti.svg'><img height='266px' src='pictures/e/qcap.svg'></p></div> <!-- .slide: class="center" -->
+
+Note: Distintiveness
+
+Probbably don't need some for udon and ramen and lingine
+---
+
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='266px' src='pictures/t/libra.svg'><img height='266px' src='pictures/t/cancer.svg'><img height='266px' src='pictures/e/qcap.svg'></p></div> <!-- .slide: class="center" -->
+
+Note: Completeness - they didnt have the full zodiac set until 8.0 when 5 were added (including scorpio)
+---
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='266px' src='pictures/e/taco.svg'><img height='266px' src='pictures/e/unicorn.svg'><img height='266px' src='pictures/e/qcap.svg'></p></div> <!-- .slide: class="center" -->
+
+Note: Frequently requested
+
+---
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='200px' src='pictures/space.svg'><img height='200px' src='pictures/e/5.svg'><img height='200px' src='pictures/e/cross.svg'><img height='200px' src='pictures/space.svg'></p></div> <!-- .slide: class="center" -->
+
+---
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='200px' src='pictures/t/wine.svg'><img height='200px' src='pictures/t/cocktail.svg'><img height='200px' src='pictures/t/tropical.svg'><img height='200px' src='pictures/e/cross.svg'></p></div> <!-- .slide: class="center" -->
+Note: Overly specific
+
+Don't need a manhattan in there
+---
+
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='200px' src='pictures/t/construction.svg'><img height='200px' src='pictures/t/policeman.svg'><img height='200px' src='pictures/t/guard.svg'><img height='200px' src='pictures/e/cross.svg'></p></div> <!-- .slide: class="center" -->
+
+Note: open ended - don't need all the professions
+
+---
+
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='200px' src='pictures/t/jack.svg'><img height='200px' src='pictures/t/cry.svg'><img height='200px' src='pictures/t/baby.svg'><img height='200px' src='pictures/e/cross.svg'></p></div> <!-- .slide: class="center" -->
+Note: Already represented
+
+Try and use a combination
+---
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='200px' src='pictures/ap/watch.png'><img height='200px' src='pictures/ap/headphones.png'><img height='200px' src='pictures/ap/desktop.png'><img height='200px' src='pictures/e/cross.svg'></p></div> <!-- .slide: class="center" -->
+Note: no logos or brands
+
+But these are a watch, headphones, a mobile and a desktop
+
+and in no way
+
+an iWatch, Earbuds, an iPhone and an iMac.
+
+Nope. 
+---
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='200px' src='pictures/t/watch.svg'><img height='200px' src='pictures/t/clock.svg'><img height='200px' src='pictures/e/mantelpiece.svg'><img height='200px' src='pictures/e/cross.svg'></p></div> <!-- .slide: class="center" -->
+Note: fads, memes, etc.
+---
+ <div style='width: 50%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/t/memo.svg'></p></div> <!-- .slide: class="center" -->
+---
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='266px' src='pictures/space.svg'><img height='266px' src='pictures/tumbler.png'><img height='266px' src='pictures/space.svg'></p></div> <!-- .slide: class="center" -->
+---
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/e/oldkey.svg'><img height='400px' src='pictures/e/newkey.svg'></p></div> <!-- .slide: class="center" -->
+---
+ <div style='width: 50%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/o/broken.svg'></p></div> <!-- .slide: class="center" -->
+---
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='200px' src='pictures/e/newkey.svg'><img height='200px' src='pictures/e/unicorn.svg'><img height='200px' src='pictures/e/upsidedown.svg'><img height='200px' src='pictures/e/taco.svg'></p></div> <!-- .slide: class="center" -->
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='200px' src='pictures/e/oldkey.svg'><img height='200px' src='pictures/o/broken.svg'><img height='200px' src='pictures/space.svg'><img height='200px' src='pictures/o/rectangle.svg'></p></div> <!-- .slide: class="center" -->
+
 
 ---
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/a/boy_60.png'><img height='400px' src='pictures/a/boy_91.png'></p></div> <!-- .slide: class="center" -->

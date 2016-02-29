@@ -1,5 +1,5 @@
 ## &nbsp; 
-<div style='width: 100%; margin: 0 auto;'><p align='center'><img height='260px' src='pictures/o/bolt.svg'><img height='260px' src='pictures/g/sweat.svg'><img height='260px' src='pictures/t/sparkle.svg'></p></div> <!-- .slide: class="center" -->
+<div style='width: 100%; margin: 0 auto;'><p align='center'><img height='260px' src='pictures/o/bolt.svg'><img height='260px' src='pictures/g/sweat.svg'><img height='260px' src='pictures/t/sparkles.svg'></p></div> <!-- .slide: class="center" -->
 @ footer.svg
 ---
 ! g/wave | g/koala
@@ -228,6 +228,82 @@ Note: TODO MORE CUTE
 ---
 ! t/poo |g/poo | e/poo
 ---
+! e/thinking
+---
+! space | e/5 | e/tick | space
+---
+! y/happy-0.png | y/sad-0.png | y/cowboy.png
+! t/slight | t/sad | e/qcap
+
+Note: Compatibility - Cowboy added to compat with Yahoo messenger
+---
+! t/hamburger | t/fries | e/qcap
+
+Note: Frequency. Hamburger for scale 
+
+---
+
+! t/noodles | t/spaghetti | e/qcap
+
+Note: Distintiveness
+
+Probbably don't need some for udon and ramen and lingine
+---
+
+! t/libra | t/cancer | e/qcap
+
+Note: Completeness - they didnt have the full zodiac set until 8.0 when 5 were added (including scorpio)
+---
+! e/taco |  e/unicorn | e/qcap
+
+Note: Frequently requested
+
+---
+! space | e/5 | e/cross | space
+
+---
+! t/wine | t/cocktail | t/tropical | e/cross
+Note: Overly specific
+
+Don't need a manhattan in there
+---
+
+! t/construction | t/policeman | t/guard | e/cross 
+
+Note: open ended - don't need all the professions
+
+---
+
+! t/jack | t/cry | t/baby | e/cross
+Note: Already represented
+
+Try and use a combination
+---
+! ap/watch.png | ap/headphones.png | ap/desktop.png | e/cross
+Note: no logos or brands
+
+But these are a watch, headphones, a mobile and a desktop 
+
+and in no way
+
+an iWatch, Earbuds, an iPhone and an iMac.
+
+Nope.
+---
+! t/watch | t/clock | e/mantelpiece | e/cross
+Note: fads, memes, etc.
+---
+! t/memo
+---
+! space | tumbler.png | space
+---
+! e/oldkey | e/newkey
+---
+! o/broken
+---
+! e/newkey | e/unicorn | e/upsidedown | e/taco
+! e/oldkey | o/broken | space | o/rectangle
+
 
 ---
 ! a/boy_60.png | a/boy_91.png
