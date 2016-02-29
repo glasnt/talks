@@ -279,7 +279,7 @@ Note: Already represented
 
 Try and use a combination
 ---
- <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='200px' src='pictures/ap/watch.png'><img height='200px' src='pictures/ap/headphones.png'><img height='200px' src='pictures/ap/desktop.png'><img height='200px' src='pictures/e/cross.svg'></p></div> <!-- .slide: class="center" -->
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='200px' src='pictures/ap/watch.png'><img height='200px' src='pictures/ap/headphones.png'><img height='200px' src='pictures/ap/laptop.png'><img height='200px' src='pictures/e/cross.svg'></p></div> <!-- .slide: class="center" -->
 Note: no logos or brands
 
 But these are a watch, headphones, a mobile and a desktop

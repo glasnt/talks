@@ -279,7 +279,7 @@ Note: Already represented
 
 Try and use a combination
 ---
-! ap/watch.png | ap/headphones.png | ap/desktop.png | e/cross
+! ap/watch.png | ap/headphones.png | ap/laptop.png | e/cross
 Note: no logos or brands
 
 But these are a watch, headphones, a mobile and a desktop 
