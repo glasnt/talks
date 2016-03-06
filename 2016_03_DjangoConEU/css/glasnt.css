@@ -1,3 +1,8 @@
 div.big {
 	font-size: 120px;
 }
+
+img.inline_emoji {
+    height: 60px;
+    margin: 15px 0px 0px;
+} 

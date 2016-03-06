@@ -145,9 +145,20 @@ And all these differnet files need to be interchangeable because of this thing c
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='266px' src='pictures/g/japan.svg'><img height='266px' src='pictures/t/worry.svg'><img height='266px' src='pictures/g/question.svg'></p></div> <!-- .slide: class="center" -->
 ---
 
- <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='266px' src='pictures/g/japan.svg'><img height='266px' src='pictures/a/smile.svg'><img height='266px' src='pictures/g/phone.svg'></p></div> <!-- .slide: class="center" -->
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='266px' src='pictures/g/japan.svg'><img height='266px' src='pictures/a/hearteyes.png'><img height='266px' src='pictures/m/mobile.png'></p></div> <!-- .slide: class="center" -->
 ---
-TODO 
+ <img src="pictures/docomolarge.png" />
+---
+
+ <img src="pictures/dingbats.png" />
+
+---
+
+ <img src="pictures/wingdings.png" />
+
+---
+
+ <img src="pictures/webdings.png" />
 
 Note: Emoji history
 ---
@@ -156,9 +167,13 @@ Note: Emoji history
 
 Note: CLAPPING HANDS SIGN
 
+TODO: FIX TEXT
+
 ---
 
- <div style='width: 50%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/a/Microscope.svg'></p></div> <!-- .slide: class="center" -->
+ <div style='width: 50%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/e/microscope.svg'></p></div> <!-- .slide: class="center" -->
+
+Note: I'm going to make a scientific hypothsis
 ---
 
  <div style='width: 50%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/g/dash.svg'></p></div> <!-- .slide: class="center" -->
@@ -170,24 +185,39 @@ Note:
 1F49B 
 ---
 
- <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='266px' src='pictures/t/yellow.svg'><img height='266px' src='pictures/e/yellow.svg'><img height='266px' src='pictures/a/yellow.svg'></p></div> <!-- .slide: class="center" -->
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='266px' src='pictures/t/yellow.svg'><img height='266px' src='pictures/e/yellow.svg'><img height='266px' src='pictures/a/yellow.png'></p></div> <!-- .slide: class="center" -->
 ---
 <img src="pictures/g/hairy_heart_v.png" height="75%" width="75%">
 ---
 
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='200px' src='pictures/g/hairy_heart.png'><img height='200px' src='pictures/g/old_green.png'><img height='200px' src='pictures/g/old_blue.png'><img height='200px' src='pictures/g/old_purple.png'></p></div> <!-- .slide: class="center" -->
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='200px' src='pictures/g/yellow.svg'><img height='200px' src='pictures/g/green.svg'><img height='200px' src='pictures/g/blue.svg'><img height='200px' src='pictures/g/purple.svg'></p></div> <!-- .slide: class="center" -->
+
+Note: 
+
+Yellow green blue purple BLACK
 ---
 
- <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/g/claps.svg'><img height='400px' src='pictures/m/clap_new.png'></p></div> <!-- .slide: class="center" -->
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/g/redheart.svg'><img height='400px' src='pictures/g/blackstar.svg'></p></div> <!-- .slide: class="center" -->
+
+Note: Black referrs to filled
+White refers to unfilled.
+
+---
+
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/g/claps.svg'><img height='400px' src='pictures/m/claps.png'></p></div> <!-- .slide: class="center" -->
 ---
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='200px' src='pictures/a/hugs.png'><img height='200px' src='pictures/g/hugs.png'><img height='200px' src='pictures/t/hugs.png'><img height='200px' src='pictures/e/hugs.png'></p></div> <!-- .slide: class="center" -->
+---
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='200px' src='pictures/g/blonde.svg'><img height='200px' src='pictures/t/blonde.svg'><img height='200px' src='pictures/e/blonde.svg'><img height='200px' src='pictures/m/blonde.svg'></p></div> <!-- .slide: class="center" -->
+
+Note: Blonde
 ---
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/g/sheep.svg'><img height='400px' src='pictures/g/ram.svg'></p></div> <!-- .slide: class="center" -->
 Note: sheep vs ram
 ---
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/g/ox.svg'><img height='400px' src='pictures/g/buffalo.svg'></p></div> <!-- .slide: class="center" -->
-Note: Sheep vs buffalo
+Note: OX vs buffalo
 ---
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/g/rat.svg'><img height='400px' src='pictures/g/mouse.svg'></p></div> <!-- .slide: class="center" -->
 Note: rat vs mouse
@@ -197,17 +227,29 @@ Note: weary vs tired
 ---
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='200px' src='pictures/t/disappointed.svg'><img height='200px' src='pictures/t/cold_sweat.svg'><img height='200px' src='pictures/t/relieved.svg'><img height='200px' src='pictures/t/open_cold_sweat.svg'></p></div> <!-- .slide: class="center" -->
 Note: disappointed
+
 face with cold sweat
+
 relieved 
+
 face with open mouth and cold sweat
+
 ---
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/t/grinning.svg'><img height='400px' src='pictures/t/grimice.svg'></p></div> <!-- .slide: class="center" -->
 Note: grinning vs grimmace
 ---
- <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='200px' src='pictures/a/bow.svg'><img height='200px' src='pictures/a/information.svg'><img height='200px' src='pictures/a/nogood.svg'><img height='200px' src='pictures/a/ok.svg'></p></div> <!-- .slide: class="center" -->
-Note: Person bowing deeply
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/t/camel1.svg'><img height='400px' src='pictures/t/camel2.svg'></p></div> <!-- .slide: class="center" -->
+---
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='200px' src='pictures/a/bow.png'><img height='200px' src='pictures/a/information.png'><img height='200px' src='pictures/a/nogood.png'><img height='200px' src='pictures/a/ok.png'></p></div> <!-- .slide: class="center" -->
+Note: 
+
+Person bowing deeply
+
+
 information desk
+
 No good
+
 OK 
 ---
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='200px' src='pictures/t/bento.svg'><img height='200px' src='pictures/t/tempura.svg'><img height='200px' src='pictures/t/dango.svg'><img height='200px' src='pictures/t/fishcake.svg'></p></div> <!-- .slide: class="center" -->
@@ -215,12 +257,17 @@ OK
 ---
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='200px' src='pictures/t/minidisc.svg'><img height='200px' src='pictures/t/floppy.svg'><img height='200px' src='pictures/t/fax.svg'><img height='200px' src='pictures/t/cardindex.svg'></p></div> <!-- .slide: class="center" -->
 ---
- <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/t/camel1.svg'><img height='400px' src='pictures/t/camel2.svg'></p></div> <!-- .slide: class="center" -->
----
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='266px' src='pictures/t/sparkles.svg'><img height='266px' src='pictures/t/popper.svg'><img height='266px' src='pictures/t/confetti.svg'></p></div> <!-- .slide: class="center" -->
 Note: TODO MORE CUTE
 ---
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='266px' src='pictures/t/globe_a.svg'><img height='266px' src='pictures/t/globe_e.svg'><img height='266px' src='pictures/t/globe_o.svg'></p></div> <!-- .slide: class="center" -->
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='266px' src='pictures/e/globe_a.svg'><img height='266px' src='pictures/e/globe_e.svg'><img height='266px' src='pictures/e/globe_o.svg'></p></div> <!-- .slide: class="center" -->
+---
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='266px' src='pictures/t/sax.svg'><img height='266px' src='pictures/t/leg.svg'><img height='266px' src='pictures/t/bath.svg'></p></div> <!-- .slide: class="center" -->
+---
+ <div style='width: 50%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/m/kissing.svg'></p></div> <!-- .slide: class="center" -->
+
+Note: Terrifying out of context
 ---
  <div style='width: 50%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/e/levi.svg'></p></div> <!-- .slide: class="center" -->
 ---
@@ -297,13 +344,237 @@ Note: fads, memes, etc.
 ---
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='266px' src='pictures/space.svg'><img height='266px' src='pictures/tumbler.png'><img height='266px' src='pictures/space.svg'></p></div> <!-- .slide: class="center" -->
 ---
- <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/e/oldkey.svg'><img height='400px' src='pictures/e/newkey.svg'></p></div> <!-- .slide: class="center" -->
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/t/oldkey.png'><img height='400px' src='pictures/t/newkey.svg'></p></div> <!-- .slide: class="center" -->
 ---
  <div style='width: 50%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/o/broken.svg'></p></div> <!-- .slide: class="center" -->
 ---
- <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='200px' src='pictures/e/newkey.svg'><img height='200px' src='pictures/e/unicorn.svg'><img height='200px' src='pictures/e/upsidedown.svg'><img height='200px' src='pictures/e/taco.svg'></p></div> <!-- .slide: class="center" -->
- <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='200px' src='pictures/e/oldkey.svg'><img height='200px' src='pictures/o/broken.svg'><img height='200px' src='pictures/space.svg'><img height='200px' src='pictures/o/rectangle.svg'></p></div> <!-- .slide: class="center" -->
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='200px' src='pictures/t/newkey.svg'><img height='200px' src='pictures/e/unicorn.svg'><img height='200px' src='pictures/e/upsidedown.svg'><img height='200px' src='pictures/e/thinking.svg'></p></div> <!-- .slide: class="center" -->
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='200px' src='pictures/t/oldkey.png'><img height='200px' src='pictures/o/broken.svg'><img height='200px' src='pictures/space.svg'><img height='200px' src='pictures/o/rectangle.svg'></p></div> <!-- .slide: class="center" -->
+
+Note: Thinking Face in my Talk Summary
+---
+
+ <div style='width: 50%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/e/keyboard.svg'></p></div> <!-- .slide: class="center" -->
+
+Note: So how do you get the input in?
+
+---
+# <div style="white-space: nowrap"><img src="pictures/e/command.svg" height="200px"><img height="200px" src="pictures/e/option.svg"><img height="200px" src="pictures/e/space.svg"></div> <!-- .slide: class="center" -->
+
+
+Note: Apple input Control CMD Space
+
+Not universal
+
+Some apps don't like it
+
+Sourced from Swedish camping map
+
+Place of intereste
+
+---
+
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='100px' src='pictures/space.svg'><img height='100px' src='pictures/g/keyboard/time.svg'><img height='100px' src='pictures/space.svg'><img height='100px' src='pictures/g/keyboard/p0.svg'><img height='100px' src='pictures/g/keyboard/p1.svg'><img height='100px' src='pictures/g/keyboard/p2.svg'><img height='100px' src='pictures/g/keyboard/p3.svg'><img height='100px' src='pictures/space.svg'></p></div> <!-- .slide: class="center" -->
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='100px' src='pictures/space.svg'><img height='100px' src='pictures/g/keyboard/1.svg'><img height='100px' src='pictures/g/keyboard/2.svg'><img height='100px' src='pictures/g/keyboard/3.svg'><img height='100px' src='pictures/g/keyboard/4.svg'><img height='100px' src='pictures/g/keyboard/2.svg'><img height='100px' src='pictures/g/keyboard/6.svg'><img height='100px' src='pictures/space.svg'></p></div> <!-- .slide: class="center" -->
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='100px' src='pictures/space.svg'><img height='100px' src='pictures/g/keyboard/7.svg'><img height='100px' src='pictures/g/keyboard/8.svg'><img height='100px' src='pictures/g/keyboard/9.svg'><img height='100px' src='pictures/g/keyboard/10.svg'><img height='100px' src='pictures/g/keyboard/11.svg'><img height='100px' src='pictures/g/keyboard/12.svg'><img height='100px' src='pictures/space.svg'></p></div> <!-- .slide: class="center" -->
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='114px' src='pictures/space.svg'><img height='114px' src='pictures/g/keyboard/in.svg'><img height='114px' src='pictures/g/keyboard/c1.svg'><img height='114px' src='pictures/g/keyboard/c2.svg'><img height='114px' src='pictures/g/keyboard/c3.svg'><img height='114px' src='pictures/g/keyboard/back.svg'><img height='114px' src='pictures/space.svg'></p></div> <!-- .slide: class="center" -->
+
+
+Note: Mobile device input
+
+ <img src="pictures/ap/swiftkey.png" />
+
+++New platforms have at least an option fr input
+
+Not universal
+
+---
+
+ <div style='width: 50%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/e/web.svg'></p></div> <!-- .slide: class="center" -->
+
+Note: Browser: input fields vs text on page
+
+Microsoft - uncoloured in input, coluored on page
+
+Apple - ungrouped in input, groupings on page,
+
+FB - 20 hidden behind stickers, more on messenger
+Twitter: 5
+Gmail: hidden in the edit bar
+
+Normally shortcut to reading format, except for Gmail - weird intermediate
+
+Basptiste reports this also happens in Google Slides edit mode
 
 
 ---
- <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/a/boy_60.png'><img height='400px' src='pictures/a/boy_91.png'></p></div> <!-- .slide: class="center" -->
+ <div style='width: 50%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/t/shortcake.svg'></p></div> <!-- .slide: class="center" -->
+
+Note: workaround for having a visual input mechanism is shortcodes
+
+This are bad
+
+But they're a psudostandard
+
+GitHub: colon shortsuggestions
+Hipchat: bracket, long form suggestions (but brackets are more common in speech
+
+Slack does this really well
+
+---
+
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='200px' src='pictures/t/slack.svg'><img height='200px' src='pictures/space.svg'><img height='200px' src='pictures/t/octopus.svg'><img height='200px' src='pictures/t/cat.svg'></p></div> <!-- .slide: class="center" -->
+---
+
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='200px' src='pictures/space.svg'><img height='200px' src='pictures/e/peace.svg'><img height='200px' src='pictures/t/chat.svg'><img height='200px' src='pictures/space.svg'></p></div> <!-- .slide: class="center" -->
+---
+## &nbsp;
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">$ python</code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">>>> if (x < y):</code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">>>> &nbsp; &nbsp; return True</code></pre></div>
+
+<br> 
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">>>> if <img src="pictures/t/XD.svg" class="inline_emoji" style="margin:0"> < y <img src="pictures/t/sad.svg" class="inline_emoji" style="margin:0"> <br>>>> &nbsp; &nbsp; return True</code></pre></div> <!-- .element: class="fragment" -->
+
+---
+ <div style='width: 50%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/e/eyeglasses.svg'></p></div> <!-- .slide: class="center" -->
+Note: Reading things back again
+
+Platform level
+
+Web based flexibility
+
+Twitter wins this
+---
+
+ <div style='width: 50%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/e/control.svg'></p></div> <!-- .slide: class="center" -->
+
+Note: you have control
+
+You can do things with failover graphs and all the stuff
+---
+
+ <div style='width: 50%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/m/suggestion.svg'></p></div> <!-- .slide: class="center" -->
+Note: 
+Failover graphic, copy
+---
+ <div style='width: 50%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/t/wheelchair.svg'></p></div> <!-- .slide: class="center" -->
+
+Note: a
+
+accessibility 
+alt text important
+
+You can't see what the things are!
+
+SVGS FOR THE LOVE OF GOD
+
+APPLE DOESN'T DO THIS
+---
+
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/g/mouse.svg'><img height='400px' src='pictures/t/over.svg'></p></div> <!-- .slide: class="center" -->
+---
+
+ <div style='width: 50%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/g/twisted.svg'></p></div> <!-- .slide: class="center" -->
+
+
+
+Note: 
+twist things around
+
+why don't we just have a hardware solution?
+
+---
+# &nbsp; <!-- .slide: data-background="pictures/emoji_keyboard.jpg" data-background-transition="none" -->
+
+
+Note: Tom Scott, Emojli
+
+---
+
+ <div style='width: 50%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/e/atom.svg'></p></div> <!-- .slide: class="center" -->
+
+Note: The future
+
+---
+
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='200px' src='pictures/e/unicorn.svg'><img height='200px' src='pictures/e/robot.svg'><img height='200px' src='pictures/e/nerd.svg'><img height='200px' src='pictures/e/turkey.svg'></p></div> <!-- .slide: class="center" -->
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='200px' src='pictures/e/upsidedown.svg'><img height='200px' src='pictures/e/thinkingface.svg'><img height='200px' src='pictures/e/taco.svg'><img height='200px' src='pictures/e/cricket.svg'></p></div> <!-- .slide: class="center" -->
+
+Note: Unicode 9.0
+
+---
+
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='200px' src='pictures/ap/avocado.png'><img height='200px' src='pictures/ap/duck.png'><img height='200px' src='pictures/ap/owl.png'><img height='200px' src='pictures/ap/spoon.png'></p></div> <!-- .slide: class="center" -->
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='200px' src='pictures/ap/selfie.png'><img height='200px' src='pictures/ap/shrug.png'><img height='200px' src='pictures/ap/facepalm.png'><img height='200px' src='pictures/ap/egg.png'></p></div> <!-- .slide: class="center" -->
+
+Note: Chicken in Unicode 6.0
+
+Egg provisionally in 9.0
+
+
+Now you know which came first
+---
+<p style=" margin: 0; " margin="0"><img src="pictures/g/a6_1.png" margin="0"><br><img src="pictures/g/a6_2.png" margin="0"><br><img margin="0" src="pictures/g/a6_3.png"></p>
+
+Note: Android have updated their images AGAIN
+
+matching ios more
+---
+
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='266px' src='pictures/e/vulcan_1.svg'><img height='266px' src='pictures/e/vulcan_2.svg'><img height='266px' src='pictures/e/vulcan_3.svg'></p></div> <!-- .slide: class="center" -->
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='266px' src='pictures/e/vulcan_4.svg'><img height='266px' src='pictures/e/vulcan_5.svg'><img height='266px' src='pictures/e/vulcan_6.svg'></p></div> <!-- .slide: class="center" -->
+
+Note: Fitzpatrick Scale
+
+Skin Tones
+
+Not implemented in a lot of places
+
+Slack yes, Facebook No, Google not a lot at all ("gender neutral")
+---
+
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/e/vulcan_1.svg'><img height='400px' src='pictures/e/fitz_4.svg'></p></div> <!-- .slide: class="center" -->
+---
+
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='266px' src='pictures/g/couple_2.svg'><img height='266px' src='pictures/g/couple_1.svg'><img height='266px' src='pictures/g/couple_3.svg'></p></div> <!-- .slide: class="center" -->
+
+Note: These are specific emoji, not groupings
+
+Zero space character allows for groupings
+
+---
+
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='160px' src='pictures/ap/woman.png'><img height='160px' src='pictures/ap/heart.png'><img height='160px' src='pictures/ap/woman.png'><img height='160px' src='pictures/space.svg'><img height='160px' src='pictures/ap/ww.png'></p></div> <!-- .slide: class="center" -->
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='160px' src='pictures/ap/man.png'><img height='160px' src='pictures/ap/heart.png'><img height='160px' src='pictures/ap/man.png'><img height='160px' src='pictures/space.svg'><img height='160px' src='pictures/ap/mm.png'></p></div> <!-- .slide: class="center" -->
+
+---
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='266px' src='pictures/e/m0.svg'><img height='266px' src='pictures/e/m1.svg'><img height='266px' src='pictures/e/m2.svg'></p></div> <!-- .slide: class="center" -->
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='266px' src='pictures/e/m3.svg'><img height='266px' src='pictures/e/m4.svg'><img height='266px' src='pictures/e/m5.svg'></p></div> <!-- .slide: class="center" -->
+---
+
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='160px' src='pictures/g/T.svg'><img height='160px' src='pictures/g/R.svg'><img height='160px' src='pictures/ap/hash.png'><img height='160px' src='pictures/ap/num5.png'><img height='160px' src='pictures/ap/num2.png'></p></div> <!-- .slide: class="center" -->
+
+Note: Technical Standard #52
+
+Closes early May, open for public feedback
+---
+
+ <div style='width: 50%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/t/speech.svg'></p></div> <!-- .slide: class="center" -->
+
+---
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='200px' src='pictures/space.svg'><img height='200px' src='pictures/t/soon.svg'><img height='200px' src='pictures/t/sea.svg'><img height='200px' src='pictures/space.svg'></p></div> <!-- .slide: class="center" -->
+
+---
+
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='266px' src='pictures/space.svg'><img height='266px' src='pictures/t/wheelchair.svg'><img height='266px' src='pictures/space.svg'></p></div> <!-- .slide: class="center" -->
+
+---
+
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='266px' src='pictures/space.svg'><img height='266px' src='pictures/t/popper.svg'><img height='266px' src='pictures/space.svg'></p></div> <!-- .slide: class="center" -->
+
+---
+
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/g/claps.svg'><img height='400px' src='pictures/t/sax.svg'></p></div> <!-- .slide: class="center" -->
+
+### glasnt.com/talks

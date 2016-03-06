@@ -360,6 +360,10 @@ Personally, I’m not a fan of shortcodes. I mean, yes they have a place, but on
 
 I see people all the time using the ‘wrong’ shortcode in different places. e.g. slack/github shortcodes in hipchat
 
+NEW: Slack engineers using codes in Medium posts: https://slack.engineering/distributed-security-alerting-c89414c992d6#.4u9lpew5k
+Hipchat codes in Github, Github codes in Hipchat
+
+
 Also, why is :cake: shortcake? why isn’t it brithdaycake? 
 
 Some platforms take it too far, and try and reverse from emoticons to emoji, but fail
@@ -537,6 +541,11 @@ Technical issues [http://www.unicode.org/L2/L2015/15319-emoji-zwj-seq-harmful.pd
 Social issues http://time.com/4218922/indonesia-facebook-whatsapp-gay-lgbt-emoji-stickers/
 
 #### Better Gender fixing
+
+http://www.unicode.org/review/pri321/
+
+Underpublic review
+http://blog.emojipedia.org/custom-emoji-a-summary/
 
 ## TLDR
 

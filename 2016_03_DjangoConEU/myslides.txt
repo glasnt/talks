@@ -145,9 +145,20 @@ And all these differnet files need to be interchangeable because of this thing c
 ! g/japan | t/worry | g/question
 ---
 
-! g/japan | a/smile | g/phone
+! g/japan | a/hearteyes.png | m/mobile.png
 ---
-TODO
+@ docomolarge.png
+---
+
+@ dingbats.png
+
+---
+
+@ wingdings.png
+
+---
+
+@ webdings.png
 
 Note: Emoji history
 ---
@@ -156,9 +167,13 @@ Note: Emoji history
 
 Note: CLAPPING HANDS SIGN
 
+TODO: FIX TEXT
+
 ---
 
-! a/Microscope
+! e/microscope
+
+Note: I'm going to make a scientific hypothsis
 ---
 
 ! g/dash
@@ -170,24 +185,39 @@ Note:
 1F49B
 ---
 
-! t/yellow | e/yellow | a/yellow
+! t/yellow | e/yellow | a/yellow.png
 ---
 <img src="pictures/g/hairy_heart_v.png" height="75%" width="75%"> 
 ---
 
 ! g/hairy_heart.png | g/old_green.png | g/old_blue.png | g/old_purple.png
-! g/yellow | g/green | g/blue | g/purple
+! g/yellow | g/green | g/blue | g/purple 
+
+Note:
+
+Yellow green blue purple BLACK
 ---
 
-! g/claps | m/clap_new.png
+! g/redheart | g/blackstar 
+
+Note: Black referrs to filled
+White refers to unfilled.
+
+---
+
+! g/claps | m/claps.png
 ---
 ! a/hugs.png | g/hugs.png | t/hugs.png | e/hugs.png
+---
+! g/blonde | t/blonde | e/blonde | m/blonde 
+
+Note: Blonde
 ---
 ! g/sheep | g/ram
 Note: sheep vs ram
 ---
 ! g/ox | g/buffalo
-Note: Sheep vs buffalo
+Note: OX vs buffalo
 ---
 ! g/rat | g/mouse
 Note: rat vs mouse
@@ -197,17 +227,29 @@ Note: weary vs tired
 ---
 ! t/disappointed | t/cold_sweat | t/relieved | t/open_cold_sweat
 Note: disappointed
+
 face with cold sweat
+
 relieved
+
 face with open mouth and cold sweat
+
 ---
 ! t/grinning | t/grimice
 Note: grinning vs grimmace
 ---
-! a/bow | a/information | a/nogood | a/ok
-Note: Person bowing deeply 
+! t/camel1 | t/camel2
+---
+! a/bow.png | a/information.png | a/nogood.png | a/ok.png
+Note: 
+
+Person bowing deeply 
+
+
 information desk
+
 No good
+
 OK
 ---
 ! t/bento | t/tempura | t/dango | t/fishcake
@@ -215,12 +257,17 @@ OK
 ---
 ! t/minidisc | t/floppy | t/fax | t/cardindex 
 ---
-! t/camel1 | t/camel2
----
 ! t/sparkles | t/popper | t/confetti
 Note: TODO MORE CUTE
 ---
+! t/globe_a | t/globe_e | t/globe_o
+! e/globe_a | e/globe_e | e/globe_o
+---
 ! t/sax | t/leg | t/bath
+---
+! m/kissing
+
+Note: Terrifying out of context
 ---
 ! e/levi
 ---
@@ -297,13 +344,237 @@ Note: fads, memes, etc.
 ---
 ! space | tumbler.png | space
 ---
-! e/oldkey | e/newkey
+! t/oldkey.png | t/newkey
 ---
 ! o/broken
 ---
-! e/newkey | e/unicorn | e/upsidedown | e/taco
-! e/oldkey | o/broken | space | o/rectangle
+! t/newkey | e/unicorn | e/upsidedown | e/thinking
+! t/oldkey.png | o/broken | space | o/rectangle
 
+Note: Thinking Face in my Talk Summary
+---
+
+! e/keyboard
+
+Note: So how do you get the input in?
 
 ---
-! a/boy_60.png | a/boy_91.png
+#= <div style="white-space: nowrap"><img src="pictures/e/command.svg" height="200px"><img height="200px" src="pictures/e/option.svg"><img height="200px" src="pictures/e/space.svg"></div>
+
+
+Note: Apple input Control CMD Space
+
+Not universal
+
+Some apps don't like it
+
+Sourced from Swedish camping map
+
+Place of intereste
+
+---
+
+! space | g/keyboard/time | space | g/keyboard/p0  | g/keyboard/p1 | g/keyboard/p2 | g/keyboard/p3 | space
+! space | g/keyboard/1 | g/keyboard/2  | g/keyboard/3  | g/keyboard/4  | g/keyboard/2 | g/keyboard/6 | space
+! space | g/keyboard/7 | g/keyboard/8  | g/keyboard/9  | g/keyboard/10  | g/keyboard/11 | g/keyboard/12 | space
+! space | g/keyboard/in | g/keyboard/c1 | g/keyboard/c2 | g/keyboard/c3 | g/keyboard/back | space 
+
+
+Note: Mobile device input
+
+@ ap/swiftkey.png
+
+++New platforms have at least an option fr input
+
+Not universal
+
+---
+
+! e/web
+
+Note: Browser: input fields vs text on page 
+
+Microsoft - uncoloured in input, coluored on page
+
+Apple - ungrouped in input,  groupings on page, 
+
+FB - 20 hidden behind stickers, more on messenger
+Twitter: 5
+Gmail: hidden in the edit bar 
+
+Normally shortcut to reading format, except for Gmail - weird intermediate
+
+Basptiste reports this also happens in Google Slides edit mode
+ 
+
+---
+! t/shortcake
+
+Note: workaround for having a visual input mechanism is shortcodes
+
+This are bad
+
+But they're a psudostandard
+
+GitHub: colon shortsuggestions
+Hipchat: bracket, long form suggestions (but brackets are more common in speech
+
+Slack does this really well
+
+---
+
+! t/slack | space | t/octopus | t/cat
+---
+
+! space | e/peace | t/chat | space
+---
+## &nbsp;
+#> $ python
+#> >>> if (x < y):
+#> >>> &nbsp; &nbsp; return True
+
+<br>
+#>- >>> if <img src="pictures/t/XD.svg" class="inline_emoji" style="margin:0"> < y <img src="pictures/t/sad.svg" class="inline_emoji" style="margin:0"> <br>>>> &nbsp; &nbsp; return True
+
+---
+! e/eyeglasses
+Note: Reading things back again
+
+Platform level
+
+Web based flexibility
+
+Twitter wins this 
+---
+
+! e/control
+
+Note: you have control
+
+You can do things with failover graphs and all the stuff
+---
+
+! m/suggestion
+Note: 
+Failover graphic, copy
+---
+! t/wheelchair
+
+Note: a
+
+accessibility
+ alt text important
+
+You can't see what the things are!
+
+SVGS FOR THE LOVE OF GOD
+
+APPLE DOESN'T DO THIS
+---
+
+! g/mouse | t/over
+---
+
+! g/twisted
+
+
+
+Note: 
+twist things around
+
+why don't we just have a hardware solution?
+
+---
+# &nbsp; <!-- .slide: data-background="pictures/emoji_keyboard.jpg" data-background-transition="none" -->
+
+
+Note: Tom Scott, Emojli
+
+---
+
+! e/atom
+
+Note: The future
+
+---
+
+! e/unicorn | e/robot | e/nerd | e/turkey
+! e/upsidedown | e/thinkingface | e/taco | e/cricket
+
+Note: Unicode 9.0
+
+---
+
+! ap/avocado.png | ap/duck.png | ap/owl.png | ap/spoon.png
+! ap/selfie.png | ap/shrug.png | ap/facepalm.png | ap/egg.png
+
+Note: Chicken in Unicode 6.0
+
+Egg provisionally in 9.0
+
+
+Now you know which came first
+---
+<p style=" margin: 0; " margin="0"><img src="pictures/g/a6_1.png" margin="0"><br><img src="pictures/g/a6_2.png" margin="0"><br><img margin="0" src="pictures/g/a6_3.png"></p>
+
+Note: Android have updated their images AGAIN
+
+matching ios more
+---
+
+! e/vulcan_1 | e/vulcan_2 |  e/vulcan_3 
+! e/vulcan_4 | e/vulcan_5 | e/vulcan_6
+
+Note: Fitzpatrick Scale
+
+Skin Tones
+
+Not implemented in a lot of places
+
+Slack yes, Facebook No, Google not a lot at all ("gender neutral")
+---
+
+! e/vulcan_1 | e/fitz_4
+---
+
+! g/couple_2 | g/couple_1 | g/couple_3
+
+Note: These are specific emoji, not groupings
+
+Zero space character allows for groupings
+
+---
+
+! ap/woman.png | ap/heart.png | ap/woman.png | space | ap/ww.png
+! ap/man.png | ap/heart.png | ap/man.png | space | ap/mm.png
+
+---
+! e/m0 | e/m1 | e/m2
+! e/m3 | e/m4 | e/m5
+---
+
+! g/T | g/R | ap/hash.png | ap/num5.png | ap/num2.png
+
+Note: Technical Standard #52
+
+Closes early May, open for public feedback
+---
+
+! t/speech
+
+---
+! space | t/soon | t/sea | space
+
+---
+
+! space | t/wheelchair | space
+
+---
+
+! space | t/popper | space
+
+---
+
+! g/claps | t/sax
+
+### glasnt.com/talks
