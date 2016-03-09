@@ -312,6 +312,16 @@ Note: hugs or jazzhands
 Note: Guess -- Blonde
 
 Google Twitter EmojiOne Mozilla
+
+---
+
+! a/flushed.png | g/flushed | t/flushed | e/flushed
+
+Note: Differences across platforms. Your version may not match receipant
+
+e.g. Google version (#2) diff Twitter (#3)
+
+Humbleblush vs shock embarrased
 ---
 ! g/sheep | g/ram
 Note: sheep vs ram
@@ -686,6 +696,12 @@ Note: Android have updated their images AGAIN
 matching ios more
 ---
 
+! a/flushed.png | g/flushed | g/flushed-new.png
+Note: TODO
+
+Google Updating Flushed as well, PHEW
+---
+
 ! e/vulcan_1 | e/vulcan_2 |  e/vulcan_3 
 ! e/vulcan_4 | e/vulcan_5 | e/vulcan_6
 
@@ -750,6 +766,6 @@ Note: Think about accessibility
 Note: have a bit of fun, tho
 ---
 
-! g/claps | t/
+! space | g/claps | space
 
 ### glasnt.com/talks

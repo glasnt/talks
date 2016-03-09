@@ -312,6 +312,16 @@ Note: hugs or jazzhands
 Note: Guess -- Blonde
 
 Google Twitter EmojiOne Mozilla
+
+---
+
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='200px' src='pictures/a/flushed.png'><img height='200px' src='pictures/g/flushed.svg'><img height='200px' src='pictures/t/flushed.svg'><img height='200px' src='pictures/e/flushed.svg'></p></div> <!-- .slide: class="center" -->
+
+Note: Differences across platforms. Your version may not match receipant
+
+e.g. Google version (#2) diff Twitter (#3)
+
+Humbleblush vs shock embarrased
 ---
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/g/sheep.svg'><img height='400px' src='pictures/g/ram.svg'></p></div> <!-- .slide: class="center" -->
 Note: sheep vs ram
@@ -686,6 +696,12 @@ Note: Android have updated their images AGAIN
 matching ios more
 ---
 
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='266px' src='pictures/a/flushed.png'><img height='266px' src='pictures/g/flushed.svg'><img height='266px' src='pictures/g/flushed-new.png'></p></div> <!-- .slide: class="center" -->
+Note: TODO
+
+Google Updating Flushed as well, PHEW
+---
+
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='266px' src='pictures/e/vulcan_1.svg'><img height='266px' src='pictures/e/vulcan_2.svg'><img height='266px' src='pictures/e/vulcan_3.svg'></p></div> <!-- .slide: class="center" -->
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='266px' src='pictures/e/vulcan_4.svg'><img height='266px' src='pictures/e/vulcan_5.svg'><img height='266px' src='pictures/e/vulcan_6.svg'></p></div> <!-- .slide: class="center" -->
 
@@ -750,6 +766,6 @@ Note: Think about accessibility
 Note: have a bit of fun, tho
 ---
 
- <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/g/claps.svg'><img height='400px' src='pictures/t/.svg'></p></div> <!-- .slide: class="center" -->
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='266px' src='pictures/space.svg'><img height='266px' src='pictures/g/claps.svg'><img height='266px' src='pictures/space.svg'></p></div> <!-- .slide: class="center" -->
 
 ### glasnt.com/talks
