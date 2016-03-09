@@ -1,0 +1,20 @@
+<svg width="128" height="64" xmlns="http://www.w3.org/2000/svg">
+ <g>
+  <title>background</title>
+  <rect x="-1" y="-1" width="130" height="66" id="canvas_background" fill="none"/>
+ </g>
+
+ <g>
+  <title>Layer 1</title>
+  <text xml:space="preserve" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="43" id="svg_5" y="46.791656" x="4.520864" stroke-width="0" fill="#9aa0a5"/>
+  <text xml:space="preserve" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="43" id="svg_6" y="45.333323" x="10.083364" stroke-width="0" fill="#9aa0a5">⌘</text>
+  <path fill="#d0d0d0" d="m125.50026,52.0625c0,5.523 -4.478,10 -10,10l-40,0c-5.522,0 -10,-4.477 -10,-10l0,-40c0,-5.523 4.478,-10 10,-10l40,0c5.522,0 10,4.477 10,10l0,40" id="svg_3"/>
+  <path fill="#d0d0d0" d="m62,52.0625c0,5.523 -4.478,10 -10,10l-40,0c-5.522,0 -10,-4.477 -10,-10l0,-40c0,-5.523 4.478,-10 10,-10l40,0c5.522,0 10,4.477 10,10l0,40" id="svg_1"/>
+  <path fill="#d0d0d0" d="m94.625132,52.187501c0,5.523 -4.478,10 -10,10l-40,0c-5.522,0 -10,-4.477 -10,-10l0,-40c0,-5.523 4.478,-10 10,-10l40,0c5.522,0 10,4.477 10,10l0,40" id="svg_9"/>
+  <path fill="#fff" d="m120.50026,45.791001c0,4.604 -3.731,8.334 -8.333,8.334l-33.334,0c-4.602,0 -8.333,-3.73 -8.333,-8.334l0,-33.332c0,-4.604 3.731,-8.334 8.333,-8.334l33.334,0c4.602,0 8.333,3.73 8.333,8.334l0,33.332z" id="svg_4"/>
+  <path fill="#fff" d="m57,45.791001c0,4.604 -3.731,8.334 -8.333,8.334l-33.334,0c-4.602,0 -8.333,-3.73 -8.333,-8.334l0,-33.332c0,-4.604 3.731,-8.334 8.333,-8.334l33.334,0c4.602,0 8.333,3.73 8.333,8.334l0,33.332z" id="svg_2"/>
+  <path fill="#fff" d="m89.625132,45.791001c0,4.604 -3.731,8.334 -8.333,8.334l-33.334,0c-4.602,0 -8.333,-3.73 -8.333,-8.334l0,-33.332c0,-4.604 3.731,-8.334 8.333,-8.334l33.334,0c4.602,0 8.333,3.73 8.333,8.334l0,33.332z" id="svg_10"/>
+  <text xml:space="preserve" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="23" id="svg_12" y="-139.499013" x="-279.247623" fill-opacity="null" stroke-opacity="null" stroke-width="0" stroke="null" fill="#9aa0a5">space</text>
+  <text xml:space="preserve" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="23" id="svg_13" y="44.031314" x="33.335829" fill-opacity="null" stroke-opacity="null" stroke-width="0" stroke="null" fill="#9aa0a5">space</text>
+ </g>
+</svg>
