@@ -269,9 +269,9 @@ Note: I think that the unicode adoption, particularly the graphics and implement
 Note: 
 1F49B 
 Yellow Heart
----
 
- <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='266px' src='pictures/t/yellow.svg'><img height='266px' src='pictures/e/yellow.svg'><img height='266px' src='pictures/a/yellow.png'></p></div> <!-- .slide: class="center" -->
+---
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='200px' src='pictures/a/yellow.png'><img height='200px' src='pictures/e/qcap.svg'><img height='200px' src='pictures/t/yellow.svg'><img height='200px' src='pictures/e/yellow.svg'></p></div> <!-- .slide: class="center" -->
 Note: Twitter, EmojiOne, Apple
 ---
 <img src="pictures/g/hairy_heart_v.png" height="75%" width="75%">
@@ -287,23 +287,24 @@ Yellow green blue purple
 
 4.4 vs 5
 ---
-
- <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/g/redheart.svg'><img height='400px' src='pictures/g/blackstar.svg'></p></div> <!-- .slide: class="center" -->
-
-Note: 
-
-Heavy Black Heart
-Eight Pointed Black Star
-
-Black referrs to filled
-White refers to unfilled.
-
----
-
- <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/g/claps.svg'><img height='400px' src='pictures/m/claps.png'></p></div> <!-- .slide: class="center" -->
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='200px' src='pictures/space.svg'><img height='200px' src='pictures/g/claps.svg'><img height='200px' src='pictures/m/claps.png'><img height='200px' src='pictures/space.svg'></p></div> <!-- .slide: class="center" -->
 
 Note: Clapping thumbs
 ---
+
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='200px' src='pictures/a/flushed.png'><img height='200px' src='pictures/g/flushed.svg'><img height='200px' src='pictures/t/flushed.svg'><img height='200px' src='pictures/e/flushed.svg'></p></div> <!-- .slide: class="center" -->
+
+Note: Differences across platforms. Your version may not match receipant
+
+Google Twitter EmojiOne Mozilla
+
+e.g. Google version (#2) diff Twitter (#3)
+
+Humbleblush vs shock embarrased
+
+One at the end is Emoji One - used in Discourse, an option in Slack
+---
+
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='200px' src='pictures/a/hugs.png'><img height='200px' src='pictures/g/hugs.png'><img height='200px' src='pictures/t/hugs.png'><img height='200px' src='pictures/e/hugs.png'></p></div> <!-- .slide: class="center" -->
 Note: hugs or jazzhands
 ---
@@ -311,17 +312,7 @@ Note: hugs or jazzhands
 
 Note: Guess -- Blonde
 
-Google Twitter EmojiOne Mozilla
 
----
-
- <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='200px' src='pictures/a/flushed.png'><img height='200px' src='pictures/g/flushed.svg'><img height='200px' src='pictures/t/flushed.svg'><img height='200px' src='pictures/e/flushed.svg'></p></div> <!-- .slide: class="center" -->
-
-Note: Differences across platforms. Your version may not match receipant
-
-e.g. Google version (#2) diff Twitter (#3)
-
-Humbleblush vs shock embarrased
 ---
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/g/sheep.svg'><img height='400px' src='pictures/g/ram.svg'></p></div> <!-- .slide: class="center" -->
 Note: sheep vs ram
@@ -348,7 +339,19 @@ face with open mouth and cold sweat
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/t/grinning.svg'><img height='400px' src='pictures/t/grimice.svg'></p></div> <!-- .slide: class="center" -->
 Note: grinning vs grimmace
 ---
- <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/t/camel1.svg'><img height='400px' src='pictures/t/camel2.svg'></p></div> <!-- .slide: class="center" -->
+
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/g/redheart.svg'><img height='400px' src='pictures/g/blackstar.svg'></p></div> <!-- .slide: class="center" -->
+
+Note: 
+
+Standard weird ness
+
+Heavy Black Heart
+Eight Pointed Black Star
+
+Black referrs to filled
+White refers to unfilled.
+
 ---
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='200px' src='pictures/a/bow.png'><img height='200px' src='pictures/a/information.png'><img height='200px' src='pictures/a/nogood.png'><img height='200px' src='pictures/a/ok.png'></p></div> <!-- .slide: class="center" -->
 Note: 
@@ -555,7 +558,9 @@ Slack does this really well
 
 ---
 
- <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='200px' src='pictures/t/slack.svg'><img height='200px' src='pictures/space.svg'><img height='200px' src='pictures/t/octopus.svg'><img height='200px' src='pictures/t/cat.svg'></p></div> <!-- .slide: class="center" -->
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='133px' src='pictures/g/colon.svg'><img height='133px' src='pictures/g/C.svg'><img height='133px' src='pictures/g/A.svg'><img height='133px' src='pictures/g/K.svg'><img height='133px' src='pictures/g/E.svg'><img height='133px' src='pictures/g/colon.svg'></p></div> <!-- .slide: class="center" -->
+ <img src="pictures/a/cake.png"> <!-- .element: class="fragment" -->
+
 Note: Shortcodes
 
 Slack: Searchable if they are native
@@ -564,7 +569,8 @@ auto convert from emoji codepoints to emoticons
 Github: shortcodes, no search, autocomplete only.
 ---
 
- <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='200px' src='pictures/space.svg'><img height='200px' src='pictures/e/peace.svg'><img height='200px' src='pictures/t/chat.svg'><img height='200px' src='pictures/space.svg'></p></div> <!-- .slide: class="center" -->
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='133px' src='pictures/g/lbrack.svg'><img height='133px' src='pictures/g/C.svg'><img height='133px' src='pictures/g/A.svg'><img height='133px' src='pictures/g/K.svg'><img height='133px' src='pictures/g/E.svg'><img height='133px' src='pictures/g/rbrack.svg'></p></div> <!-- .slide: class="center" -->
+ <img src="pictures/a/birthdaycake.png"> <!-- .element: class="fragment" -->
 
 Note: HipChat
 
@@ -574,7 +580,21 @@ Interetinsg to see when slack codes go into hipchat
 
 Also, slack engineering using slack codes in medium
 
+---
+
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='266px' src='pictures/a/cake.png'><img height='266px' src='pictures/g/notequal.svg'><img height='266px' src='pictures/a/birthdaycake.png'></p></div> <!-- .slide: class="center" -->
+
+Note: 
+
 Cross-platform incompatibility
+
+---
+
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/g/automobile.svg'><img height='400px' src='pictures/e/tick.svg'></p></div> <!-- .slide: class="center" -->
+
+Note: on that note, please make automatically changing arbitaary text to emoji optional
+
+please let me disable autocorrect
 
 ---
 ## &nbsp;
@@ -663,8 +683,8 @@ Note: The future
 
 ---
 
- <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='200px' src='pictures/e/unicorn.svg'><img height='200px' src='pictures/e/robot.svg'><img height='200px' src='pictures/e/nerd.svg'><img height='200px' src='pictures/e/turkey.svg'></p></div> <!-- .slide: class="center" -->
- <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='200px' src='pictures/e/upsidedown.svg'><img height='200px' src='pictures/e/thinkingface.svg'><img height='200px' src='pictures/e/taco.svg'><img height='200px' src='pictures/e/cricket.svg'></p></div> <!-- .slide: class="center" -->
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='200px' src='pictures/e/unicorn.svg'><img height='200px' src='pictures/e/robot.svg'><img height='200px' src='pictures/e/taco.svg'><img height='200px' src='pictures/e/turkey.svg'></p></div> <!-- .slide: class="center" -->
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='200px' src='pictures/e/upsidedown.svg'><img height='200px' src='pictures/e/thinkingface.svg'><img height='200px' src='pictures/e/nerd.svg'><img height='200px' src='pictures/e/moneyface.svg'></p></div> <!-- .slide: class="center" -->
 
 Note: Unicode 9.0
 

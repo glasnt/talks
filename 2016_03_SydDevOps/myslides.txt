@@ -269,9 +269,9 @@ Note: I think that the unicode adoption, particularly the graphics and implement
 Note: 
 1F49B
 Yellow Heart
----
 
-! t/yellow | e/yellow | a/yellow.png
+---
+! a/yellow.png | e/qcap | t/yellow | e/yellow
 Note: Twitter, EmojiOne, Apple
 ---
 <img src="pictures/g/hairy_heart_v.png" height="75%" width="75%"> 
@@ -287,23 +287,24 @@ Yellow green blue purple
 
 4.4 vs 5
 ---
-
-! g/redheart | g/blackstar 
-
-Note: 
-
-Heavy Black Heart
-Eight Pointed Black Star
-
-Black referrs to filled
-White refers to unfilled.
-
----
-
-! g/claps | m/claps.png
+! space | g/claps | m/claps.png | space
 
 Note: Clapping thumbs
 ---
+
+! a/flushed.png | g/flushed | t/flushed | e/flushed
+
+Note: Differences across platforms. Your version may not match receipant
+
+Google Twitter EmojiOne Mozilla
+
+e.g. Google version (#2) diff Twitter (#3)
+
+Humbleblush vs shock embarrased
+
+One at the end is Emoji One - used in Discourse, an option in Slack
+---
+
 ! a/hugs.png | g/hugs.png | t/hugs.png | e/hugs.png
 Note: hugs or jazzhands
 ---
@@ -311,17 +312,7 @@ Note: hugs or jazzhands
 
 Note: Guess -- Blonde
 
-Google Twitter EmojiOne Mozilla
 
----
-
-! a/flushed.png | g/flushed | t/flushed | e/flushed
-
-Note: Differences across platforms. Your version may not match receipant
-
-e.g. Google version (#2) diff Twitter (#3)
-
-Humbleblush vs shock embarrased
 ---
 ! g/sheep | g/ram
 Note: sheep vs ram
@@ -348,7 +339,19 @@ face with open mouth and cold sweat
 ! t/grinning | t/grimice
 Note: grinning vs grimmace
 ---
-! t/camel1 | t/camel2
+
+! g/redheart | g/blackstar 
+
+Note: 
+
+Standard weird ness
+
+Heavy Black Heart
+Eight Pointed Black Star
+
+Black referrs to filled
+White refers to unfilled.
+
 ---
 ! a/bow.png | a/information.png | a/nogood.png | a/ok.png
 Note: 
@@ -555,7 +558,9 @@ Slack does this really well
 
 ---
 
-! t/slack | space | t/octopus | t/cat
+! g/colon | g/C | g/A | g/K | g/E | g/colon
+- <img src="pictures/a/cake.png">
+
 Note: Shortcodes
 
 Slack: Searchable if they are native
@@ -564,7 +569,8 @@ auto convert from emoji codepoints to emoticons
 Github: shortcodes, no search, autocomplete only.
 ---
 
-! space | e/peace | t/chat | space
+! g/lbrack | g/C | g/A | g/K | g/E | g/rbrack
+- <img src="pictures/a/birthdaycake.png">
 
 Note: HipChat
 
@@ -574,7 +580,21 @@ Interetinsg to see when slack codes go into hipchat
 
 Also, slack engineering using slack codes in medium
 
+---
+
+! a/cake.png | g/notequal | a/birthdaycake.png
+
+Note: 
+
 Cross-platform incompatibility
+
+---
+
+! g/automobile | e/tick
+
+Note: on that note, please make automatically changing arbitaary text to emoji optional
+
+please let me disable autocorrect
 
 ---
 ## &nbsp;
@@ -663,8 +683,8 @@ Note: The future
 
 ---
 
-! e/unicorn | e/robot | e/nerd | e/turkey
-! e/upsidedown | e/thinkingface | e/taco | e/cricket
+! e/unicorn | e/robot | e/taco| e/turkey
+! e/upsidedown | e/thinkingface | e/nerd | e/moneyface
 
 Note: Unicode 9.0
 
