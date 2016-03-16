@@ -339,19 +339,22 @@ face with open mouth and cold sweat
 ! t/grinning | t/grimice
 Note: grinning vs grimmace
 ---
+! t/camel1 | t/camel2
+
+Note: but some have super important differences
+---
 
 ! g/redheart | g/blackstar 
 
 Note: 
 
-Standard weird ness
+Standard weirdness
 
 Heavy Black Heart
 Eight Pointed Black Star
 
 Black referrs to filled
 White refers to unfilled.
-
 ---
 ! a/bow.png | a/information.png | a/nogood.png | a/ok.png
 Note: 
@@ -464,7 +467,7 @@ Try and use a combination
 ! ap/watch.png | ap/headphones.png | ap/laptop.png | e/cross
 Note: no logos or brands
 
-But these are a watch, headphones, a mobile and a desktop 
+But these are a watch, headphones, a mobile and a desktop
 
 and in no way
 
@@ -489,6 +492,18 @@ Note: fads, memes, etc.
 Note: Thinking Face in my Talk Summary
 ---
 
+! a/thumbsup.png | a/thumbsdown.png | a/laugh.png | a/thinking.png | a/heart.png | a/tada.png
+
+Note: Current example. Github Reactions
+
+---
+
+! a/thumbsup.png | a/thumbsdown.png | a/laugh.png | o/rectangle | a/heart.png | a/tada.png
+---
+
+! o/rectangle | o/rectangle | o/text_laughing | o/rectangle | o/text_heart | o/rectangle
+Note: TODO Add ubuntu(?) fonts for smile heart
+---
 ! e/keyboard
 
 Note: So how do you get the input in?
@@ -517,17 +532,15 @@ Place of intereste
 
 Note: Mobile device input
 
-@ ap/swiftkey.png
 
 ++New platforms have at least an option fr input
 
 Not universal
 
 ---
-
 ! e/web
 
-Note: Browser: input fields vs text on page 
+Note: Browser input fields vs text on page 
 
 Microsoft - uncoloured in input, coluored on page
 
@@ -535,9 +548,11 @@ Apple - ungrouped in input,  groupings on page,
 
 FB - 20 hidden behind stickers, more on messenger
 Twitter: 5
-Gmail: hidden in the edit bar 
 
-Normally shortcut to reading format, except for Gmail - weird intermediate
+
+Gmail: hidden in the edit bar, plus 
+Normally shortcut to reading format
+   except for Gmail - weird intermediate
 
 Basptiste reports this also happens in Google Slides edit mode
  
@@ -551,8 +566,6 @@ This are bad
 
 But they're a psudostandard
 
-GitHub: colon shortsuggestions
-Hipchat: bracket, long form suggestions (but brackets are more common in speech
 
 Slack does this really well
 
@@ -579,6 +592,8 @@ uses brackets instead
 Interetinsg to see when slack codes go into hipchat
 
 Also, slack engineering using slack codes in medium
+
+Also, hipchat api calls - slash commands are broken in 4.0 clients, but emoticons still work -__
 
 ---
 
@@ -624,7 +639,6 @@ Twitter wins this
 
 Note: you have control
 
-You can do things with failover graphs and all the stuff
 ---
 
 ! m/suggestion
@@ -657,7 +671,17 @@ Note: Alt - Highlight
 Have the unicode character as the alt
 
 Allows copy and pasting
+---
 
+! g/fall | t/back
+Note: Fall Back
+
+
+And if that all fails, use Fall Back
+
+gh emoji do this - the reasctions on windows fallback to working
+
+Some post fixes. possibly. Original reports when the thinking face
 ---
 
 ! g/twisted

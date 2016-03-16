@@ -339,19 +339,22 @@ face with open mouth and cold sweat
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/t/grinning.svg'><img height='400px' src='pictures/t/grimice.svg'></p></div> <!-- .slide: class="center" -->
 Note: grinning vs grimmace
 ---
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/t/camel1.svg'><img height='400px' src='pictures/t/camel2.svg'></p></div> <!-- .slide: class="center" -->
+
+Note: but some have super important differences
+---
 
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/g/redheart.svg'><img height='400px' src='pictures/g/blackstar.svg'></p></div> <!-- .slide: class="center" -->
 
 Note: 
 
-Standard weird ness
+Standard weirdness
 
 Heavy Black Heart
 Eight Pointed Black Star
 
 Black referrs to filled
 White refers to unfilled.
-
 ---
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='200px' src='pictures/a/bow.png'><img height='200px' src='pictures/a/information.png'><img height='200px' src='pictures/a/nogood.png'><img height='200px' src='pictures/a/ok.png'></p></div> <!-- .slide: class="center" -->
 Note: 
@@ -489,6 +492,18 @@ Note: fads, memes, etc.
 Note: Thinking Face in my Talk Summary
 ---
 
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='133px' src='pictures/a/thumbsup.png'><img height='133px' src='pictures/a/thumbsdown.png'><img height='133px' src='pictures/a/laugh.png'><img height='133px' src='pictures/a/thinking.png'><img height='133px' src='pictures/a/heart.png'><img height='133px' src='pictures/a/tada.png'></p></div> <!-- .slide: class="center" -->
+
+Note: Current example. Github Reactions
+
+---
+
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='133px' src='pictures/a/thumbsup.png'><img height='133px' src='pictures/a/thumbsdown.png'><img height='133px' src='pictures/a/laugh.png'><img height='133px' src='pictures/o/rectangle.svg'><img height='133px' src='pictures/a/heart.png'><img height='133px' src='pictures/a/tada.png'></p></div> <!-- .slide: class="center" -->
+---
+
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='133px' src='pictures/o/rectangle.svg'><img height='133px' src='pictures/o/rectangle.svg'><img height='133px' src='pictures/o/text_laughing.svg'><img height='133px' src='pictures/o/rectangle.svg'><img height='133px' src='pictures/o/text_heart.svg'><img height='133px' src='pictures/o/rectangle.svg'></p></div> <!-- .slide: class="center" -->
+Note: TODO Add ubuntu(?) fonts for smile heart
+---
  <div style='width: 50%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/e/keyboard.svg'></p></div> <!-- .slide: class="center" -->
 
 Note: So how do you get the input in?
@@ -517,17 +532,15 @@ Place of intereste
 
 Note: Mobile device input
 
- <img src="pictures/ap/swiftkey.png" />
 
 ++New platforms have at least an option fr input
 
 Not universal
 
 ---
-
  <div style='width: 50%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/e/web.svg'></p></div> <!-- .slide: class="center" -->
 
-Note: Browser: input fields vs text on page
+Note: Browser input fields vs text on page
 
 Microsoft - uncoloured in input, coluored on page
 
@@ -535,9 +548,11 @@ Apple - ungrouped in input, groupings on page,
 
 FB - 20 hidden behind stickers, more on messenger
 Twitter: 5
-Gmail: hidden in the edit bar
 
-Normally shortcut to reading format, except for Gmail - weird intermediate
+
+Gmail: hidden in the edit bar, plus
+Normally shortcut to reading format
+except for Gmail - weird intermediate
 
 Basptiste reports this also happens in Google Slides edit mode
 
@@ -551,8 +566,6 @@ This are bad
 
 But they're a psudostandard
 
-GitHub: colon shortsuggestions
-Hipchat: bracket, long form suggestions (but brackets are more common in speech
 
 Slack does this really well
 
@@ -579,6 +592,8 @@ uses brackets instead
 Interetinsg to see when slack codes go into hipchat
 
 Also, slack engineering using slack codes in medium
+
+Also, hipchat api calls - slash commands are broken in 4.0 clients, but emoticons still work -__
 
 ---
 
@@ -624,7 +639,6 @@ Twitter wins this
 
 Note: you have control
 
-You can do things with failover graphs and all the stuff
 ---
 
  <div style='width: 50%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/m/suggestion.svg'></p></div> <!-- .slide: class="center" -->
@@ -657,7 +671,17 @@ Note: Alt - Highlight
 Have the unicode character as the alt
 
 Allows copy and pasting
+---
 
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/g/fall.svg'><img height='400px' src='pictures/t/back.svg'></p></div> <!-- .slide: class="center" -->
+Note: Fall Back
+
+
+And if that all fails, use Fall Back
+
+gh emoji do this - the reasctions on windows fallback to working
+
+Some post fixes. possibly. Original reports when the thinking face
 ---
 
  <div style='width: 50%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/g/twisted.svg'></p></div> <!-- .slide: class="center" -->
