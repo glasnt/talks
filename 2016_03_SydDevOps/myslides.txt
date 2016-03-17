@@ -32,10 +32,20 @@ This talk contains no emoji.
 SVG renders. 
 
 I'm running Ubuntu, and nothing would work if I did that
+
+OR
+
+I'm running OSX Yosemite. It was released in June 2014, the same time as Unicode 7.0. 
+
+The only 7.0 emoji it supports natively is the vulcan salute
+
+Yes, the vulcan salute is an emoji.
+
+So, I could only show Apple-flavour 6.0 emoji, which is nearly 6 years out of date.
+
 ---
 
 ! g/blue_bird | g/bee | e/shiny
-Note: I ran a poll on twitter asking me to do this in entirely emoji, but i can't
 
 So, let's get started with a bit about how uniode got started
 
@@ -251,9 +261,6 @@ Python Code
 
 Much work to get unicode integrated into systems
 
-
-TODO: FIX KEYCAPS
-
 ---
 
 ! e/microscope
@@ -374,7 +381,6 @@ OK
 ! t/minidisc | t/floppy | t/fax | t/cardindex 
 ---
 ! t/sparkles | t/popper | t/confetti
-Note: TODO MORE CUTE
 ---
 ! t/globe_a | t/globe_e | t/globe_o
 ! e/globe_a | e/globe_e | e/globe_o
@@ -502,7 +508,6 @@ Note: Current example. Github Reactions
 ---
 
 ! o/rectangle | o/rectangle | o/text_laughing | o/rectangle | o/text_heart | o/rectangle
-Note: TODO Add ubuntu(?) fonts for smile heart
 ---
 ! e/keyboard
 
@@ -653,6 +658,10 @@ accessibility
  alt text important
 
 You can't see what the things are!
+
+Twitter DM (AND NOW SLACK) make emoji-only messages larger in size - THIS HELPS
+
+Slack change as of March 17
 
 SVGS FOR THE LOVE OF GOD
 

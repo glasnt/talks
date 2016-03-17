@@ -32,10 +32,20 @@ This talk contains no emoji.
 SVG renders.
 
 I'm running Ubuntu, and nothing would work if I did that
+
+OR 
+
+I'm running OSX Yosemite. It was released in June 2014, the same time as Unicode 7.0.
+
+The only 7.0 emoji it supports natively is the vulcan salute
+
+Yes, the vulcan salute is an emoji.
+
+So, I could only show Apple-flavour 6.0 emoji, which is nearly 6 years out of date.
+
 ---
 
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='266px' src='pictures/g/blue_bird.svg'><img height='266px' src='pictures/g/bee.svg'><img height='266px' src='pictures/e/shiny.svg'></p></div> <!-- .slide: class="center" -->
-Note: I ran a poll on twitter asking me to do this in entirely emoji, but i can't
 
 So, let's get started with a bit about how uniode got started
 
@@ -251,9 +261,6 @@ Python Code
 
 Much work to get unicode integrated into systems
 
-
-TODO: FIX KEYCAPS
-
 ---
 
  <div style='width: 50%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/e/microscope.svg'></p></div> <!-- .slide: class="center" -->
@@ -374,7 +381,6 @@ OK
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='200px' src='pictures/t/minidisc.svg'><img height='200px' src='pictures/t/floppy.svg'><img height='200px' src='pictures/t/fax.svg'><img height='200px' src='pictures/t/cardindex.svg'></p></div> <!-- .slide: class="center" -->
 ---
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='266px' src='pictures/t/sparkles.svg'><img height='266px' src='pictures/t/popper.svg'><img height='266px' src='pictures/t/confetti.svg'></p></div> <!-- .slide: class="center" -->
-Note: TODO MORE CUTE
 ---
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='266px' src='pictures/t/globe_a.svg'><img height='266px' src='pictures/t/globe_e.svg'><img height='266px' src='pictures/t/globe_o.svg'></p></div> <!-- .slide: class="center" -->
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='266px' src='pictures/e/globe_a.svg'><img height='266px' src='pictures/e/globe_e.svg'><img height='266px' src='pictures/e/globe_o.svg'></p></div> <!-- .slide: class="center" -->
@@ -502,7 +508,6 @@ Note: Current example. Github Reactions
 ---
 
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='133px' src='pictures/o/rectangle.svg'><img height='133px' src='pictures/o/rectangle.svg'><img height='133px' src='pictures/o/text_laughing.svg'><img height='133px' src='pictures/o/rectangle.svg'><img height='133px' src='pictures/o/text_heart.svg'><img height='133px' src='pictures/o/rectangle.svg'></p></div> <!-- .slide: class="center" -->
-Note: TODO Add ubuntu(?) fonts for smile heart
 ---
  <div style='width: 50%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/e/keyboard.svg'></p></div> <!-- .slide: class="center" -->
 
@@ -653,6 +658,10 @@ accessibility
 alt text important
 
 You can't see what the things are!
+
+Twitter DM (AND NOW SLACK) make emoji-only messages larger in size - THIS HELPS
+
+Slack change as of March 17
 
 SVGS FOR THE LOVE OF GOD
 
