@@ -47,6 +47,7 @@ So, I could only show Apple-flavour 6.0 emoji, which is nearly 6 years out of da
 
 ! g/blue_bird | g/bee | e/shiny
 
+Note:
 So, let's get started with a bit about how uniode got started
 
 the birds and the bees, if you will. *BOOM BOOM *
@@ -379,8 +380,6 @@ OK
 ! t/riceball | t/curry | t/sushi | t/noodles
 ---
 ! t/minidisc | t/floppy | t/fax | t/cardindex 
----
-! t/sparkles | t/popper | t/confetti
 ---
 ! t/globe_a | t/globe_e | t/globe_o
 ! e/globe_a | e/globe_e | e/globe_o
