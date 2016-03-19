@@ -5,15 +5,11 @@
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/g/koala.svg'><img height='400px' src='pictures/g/wave.svg'></p></div> <!-- .slide: class="center" -->
 Note: Guitar
 ---
- <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/t/guitar.svg'><img height='400px' src='pictures/g/claps.svg'></p></div> <!-- .slide: class="center" -->
-Note: 
 
-Thank the DSF for their sponsorship
-I'm not a django dev or contributors.. yet. There are sprints.
-But this isn't my first djangocon
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='266px' src='pictures/t/guitar.svg'><img height='266px' src='pictures/e/no.svg'><img height='266px' src='pictures/t/sad.svg'></p></div> <!-- .slide: class="center" -->
 ---
- <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/g/snake.svg'><img height='400px' src='pictures/g/thumbsup.svg'></p></div> <!-- .slide: class="center" -->
-Note: but I am a python dev
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='266px' src='pictures/g/snake.svg'><img height='266px' src='pictures/g/laptop.svg'><img height='266px' src='pictures/g/thumbsup.svg'></p></div> <!-- .slide: class="center" -->
+Note: I'm a developer
 ---
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='200px' src='pictures/g/red_gem.svg'><img height='200px' src='pictures/g/coffee.svg'><img height='200px' src='pictures/g/elephant.svg'><img height='200px' src='pictures/t/camel1.svg'></p></div> <!-- .slide: class="center" -->
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='200px' src='pictures/g/snake.svg'><img height='200px' src='pictures/e/web.svg'><img height='200px' src='pictures/g/shell.svg'><img height='200px' src='pictures/e/burrito.svg'></p></div> <!-- .slide: class="center" -->
@@ -33,20 +29,28 @@ How broken?
  <div style='width: 50%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/e/no.svg'></p></div> <!-- .slide: class="center" -->
 
 
-
 Note: 
 This talk contains no emoji.
 
 SVG renders.
 
 I'm running Ubuntu, and nothing would work if I did that
+
+OR 
+
+I'm running OSX Yosemite. It was released in June 2014, the same time as Unicode 7.0.
+
+The only 7.0 emoji it supports natively is the vulcan salute
+
+Yes, the vulcan salute is an emoji.
+
+So, I could only show Apple-flavour 6.0 emoji, which is nearly 6 years out of date.
+
 ---
 
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='266px' src='pictures/g/blue_bird.svg'><img height='266px' src='pictures/g/bee.svg'><img height='266px' src='pictures/e/shiny.svg'></p></div> <!-- .slide: class="center" -->
-Note: I ran a poll on twitter asking me to do this in entirely emoji, but i can't
 
-Russell also suggested this might be a bit of fun
-
+Note: 
 So, let's get started with a bit about how uniode got started
 
 the birds and the bees, if you will. *BOOM BOOM *
@@ -177,6 +181,26 @@ arabic ligature sallallahou alayhe wasallam
 
 glagolitic capital letter spidery ha
 ---
+
+
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='114px' src='pictures/g/e_only.svg'><img height='114px' src='pictures/space.svg'><img height='114px' src='pictures/g/slashu.svg'><img height='114px' src='pictures/e/0.svg'><img height='114px' src='pictures/e/0.svg'><img height='114px' src='pictures/e/4.svg'><img height='114px' src='pictures/e/5.svg'></p></div> <!-- .slide: class="center" -->
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='114px' src='pictures/g/accent_only_new.svg'><img height='114px' src='pictures/space.svg'><img height='114px' src='pictures/g/slashu.svg'><img height='114px' src='pictures/e/0.svg'><img height='114px' src='pictures/e/3.svg'><img height='114px' src='pictures/e/0.svg'><img height='114px' src='pictures/e/1.svg'></p></div> <!-- .slide: class="center" -->
+<br> 
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='114px' src='pictures/g/ea.svg'><img height='30px' src='pictures/space.svg'><img height='66px' src='pictures/g/slashu.svg'><img height='66px' src='pictures/e/0.svg'><img height='66px' src='pictures/e/0.svg'><img height='66px' src='pictures/e/4.svg'><img height='66px' src='pictures/e/5.svg'><img height='66px' src='pictures/g/slashu.svg'><img height='66px' src='pictures/e/0.svg'><img height='66px' src='pictures/e/3.svg'><img height='66px' src='pictures/e/0.svg'><img height='66px' src='pictures/e/1.svg'></p></div> <!-- .slide: class="center" --> <!-- .element: class="fragment" -->
+
+Note: Combination marks
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='66px' src='pictures/g/ea.svg'><img height='66px' src='pictures/space.svg'><img height='66px' src='pictures/g/slashu.svg'><img height='66px' src='pictures/e/0.svg'><img height='66px' src='pictures/e/0.svg'><img height='66px' src='pictures/e/6.svg'><img height='66px' src='pictures/e/5.svg'><img height='66px' src='pictures/g/slashu.svg'><img height='66px' src='pictures/e/0.svg'><img height='66px' src='pictures/e/3.svg'><img height='66px' src='pictures/e/0.svg'><img height='66px' src='pictures/e/1.svg'></p></div> <!-- .slide: class="center" -->
+
+\u0065 \u0301
+---
+
+#D̞͚͈̖̲̙̅̎ͨ̾͊j̗̺̝̩̓̄ͣ̅̆́̉̐a̻̯̦͎̝ͮ̆̏ͦ̌ͣͅǹ̰̬̽̾̆̑͊̔ͨg̭̲̼̞͇̻ͬ̍̋̇͒͒̿̈o͇̞͍̫͍ͭ̓  <!-- .slide: class="center" -->
+
+
+
+
+Note: Zalgo
+---
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='160px' src='pictures/g/US.svg'><img height='160px' src='pictures/g/UK.svg'><img height='160px' src='pictures/g/france.svg'><img height='160px' src='pictures/g/germany.svg'><img height='160px' src='pictures/g/china.svg'></p></div> <!-- .slide: class="center" -->
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='266px' src='pictures/space.svg'><img height='266px' src='pictures/t/smile.svg'><img height='266px' src='pictures/space.svg'></p></div> <!-- .slide: class="center" -->
 Note: So, with this, people are happy ,characters can be encoded.
@@ -243,9 +267,6 @@ Python Code
 
 Much work to get unicode integrated into systems
 
-
-TODO: FIX KEYCAPS
-
 ---
 
  <div style='width: 50%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/e/microscope.svg'></p></div> <!-- .slide: class="center" -->
@@ -261,9 +282,9 @@ Note: I think that the unicode adoption, particularly the graphics and implement
 Note: 
 1F49B 
 Yellow Heart
----
 
- <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='266px' src='pictures/t/yellow.svg'><img height='266px' src='pictures/e/yellow.svg'><img height='266px' src='pictures/a/yellow.png'></p></div> <!-- .slide: class="center" -->
+---
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='200px' src='pictures/a/yellow.png'><img height='200px' src='pictures/e/qcap.svg'><img height='200px' src='pictures/t/yellow.svg'><img height='200px' src='pictures/e/yellow.svg'></p></div> <!-- .slide: class="center" -->
 Note: Twitter, EmojiOne, Apple
 ---
 <img src="pictures/g/hairy_heart_v.png" height="75%" width="75%">
@@ -279,23 +300,24 @@ Yellow green blue purple
 
 4.4 vs 5
 ---
-
- <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/g/redheart.svg'><img height='400px' src='pictures/g/blackstar.svg'></p></div> <!-- .slide: class="center" -->
-
-Note: 
-
-Heavy Black Heart
-Eight Pointed Black Star
-
-Black referrs to filled
-White refers to unfilled.
-
----
-
- <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/g/claps.svg'><img height='400px' src='pictures/m/claps.png'></p></div> <!-- .slide: class="center" -->
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='200px' src='pictures/space.svg'><img height='200px' src='pictures/g/claps.svg'><img height='200px' src='pictures/m/claps.png'><img height='200px' src='pictures/space.svg'></p></div> <!-- .slide: class="center" -->
 
 Note: Clapping thumbs
 ---
+
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='200px' src='pictures/a/flushed.png'><img height='200px' src='pictures/g/flushed.svg'><img height='200px' src='pictures/t/flushed.svg'><img height='200px' src='pictures/e/flushed.svg'></p></div> <!-- .slide: class="center" -->
+
+Note: Differences across platforms. Your version may not match receipant
+
+Google Twitter EmojiOne Mozilla
+
+e.g. Google version (#2) diff Twitter (#3)
+
+Humbleblush vs shock embarrased
+
+One at the end is Emoji One - used in Discourse, an option in Slack
+---
+
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='200px' src='pictures/a/hugs.png'><img height='200px' src='pictures/g/hugs.png'><img height='200px' src='pictures/t/hugs.png'><img height='200px' src='pictures/e/hugs.png'></p></div> <!-- .slide: class="center" -->
 Note: hugs or jazzhands
 ---
@@ -303,13 +325,10 @@ Note: hugs or jazzhands
 
 Note: Guess -- Blonde
 
-Google Twitter EmojiOne Mozilla
+
 ---
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/g/sheep.svg'><img height='400px' src='pictures/g/ram.svg'></p></div> <!-- .slide: class="center" -->
 Note: sheep vs ram
----
- <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/g/ox.svg'><img height='400px' src='pictures/g/buffalo.svg'></p></div> <!-- .slide: class="center" -->
-Note: OX vs buffalo
 ---
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/g/rat.svg'><img height='400px' src='pictures/g/mouse.svg'></p></div> <!-- .slide: class="center" -->
 Note: rat vs mouse
@@ -331,6 +350,24 @@ face with open mouth and cold sweat
 Note: grinning vs grimmace
 ---
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/t/camel1.svg'><img height='400px' src='pictures/t/camel2.svg'></p></div> <!-- .slide: class="center" -->
+
+Note: but some have super important differences
+---
+
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/g/redheart.svg'><img height='400px' src='pictures/g/blackstar.svg'></p></div> <!-- .slide: class="center" -->
+
+Note: 
+
+Standard weirdness
+
+Heavy Black Heart
+Eight Pointed Black Star
+
+Black referrs to filled
+White refers to unfilled.
+---
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='266px' src='pictures/t/sax.svg'><img height='266px' src='pictures/t/leg.svg'><img height='266px' src='pictures/t/bath.svg'></p></div> <!-- .slide: class="center" -->
+
 ---
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='200px' src='pictures/a/bow.png'><img height='200px' src='pictures/a/information.png'><img height='200px' src='pictures/a/nogood.png'><img height='200px' src='pictures/a/ok.png'></p></div> <!-- .slide: class="center" -->
 Note: 
@@ -349,14 +386,9 @@ OK
 ---
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='200px' src='pictures/t/minidisc.svg'><img height='200px' src='pictures/t/floppy.svg'><img height='200px' src='pictures/t/fax.svg'><img height='200px' src='pictures/t/cardindex.svg'></p></div> <!-- .slide: class="center" -->
 ---
- <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='266px' src='pictures/t/sparkles.svg'><img height='266px' src='pictures/t/popper.svg'><img height='266px' src='pictures/t/confetti.svg'></p></div> <!-- .slide: class="center" -->
-Note: TODO MORE CUTE
----
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='266px' src='pictures/t/globe_a.svg'><img height='266px' src='pictures/t/globe_e.svg'><img height='266px' src='pictures/t/globe_o.svg'></p></div> <!-- .slide: class="center" -->
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='266px' src='pictures/e/globe_a.svg'><img height='266px' src='pictures/e/globe_e.svg'><img height='266px' src='pictures/e/globe_o.svg'></p></div> <!-- .slide: class="center" -->
 Note: Twitter vs emojione
----
- <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='266px' src='pictures/t/sax.svg'><img height='266px' src='pictures/t/leg.svg'><img height='266px' src='pictures/t/bath.svg'></p></div> <!-- .slide: class="center" -->
 ---
  <div style='width: 50%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/m/kissing.svg'></p></div> <!-- .slide: class="center" -->
 
@@ -470,6 +502,17 @@ Note: fads, memes, etc.
 Note: Thinking Face in my Talk Summary
 ---
 
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='133px' src='pictures/a/thumbsup.png'><img height='133px' src='pictures/a/thumbsdown.png'><img height='133px' src='pictures/a/laugh.png'><img height='133px' src='pictures/a/thinking.png'><img height='133px' src='pictures/a/heart.png'><img height='133px' src='pictures/a/tada.png'></p></div> <!-- .slide: class="center" -->
+
+Note: Current example. Github Reactions
+
+---
+
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='133px' src='pictures/a/thumbsup.png'><img height='133px' src='pictures/a/thumbsdown.png'><img height='133px' src='pictures/a/laugh.png'><img height='133px' src='pictures/o/rectangle.svg'><img height='133px' src='pictures/a/heart.png'><img height='133px' src='pictures/a/tada.png'></p></div> <!-- .slide: class="center" -->
+---
+
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='133px' src='pictures/o/rectangle.svg'><img height='133px' src='pictures/o/rectangle.svg'><img height='133px' src='pictures/o/text_laughing.svg'><img height='133px' src='pictures/o/rectangle.svg'><img height='133px' src='pictures/o/text_heart.svg'><img height='133px' src='pictures/o/rectangle.svg'></p></div> <!-- .slide: class="center" -->
+---
  <div style='width: 50%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/e/keyboard.svg'></p></div> <!-- .slide: class="center" -->
 
 Note: So how do you get the input in?
@@ -498,17 +541,15 @@ Place of intereste
 
 Note: Mobile device input
 
- <img src="pictures/ap/swiftkey.png" />
 
 ++New platforms have at least an option fr input
 
 Not universal
 
 ---
-
  <div style='width: 50%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/e/web.svg'></p></div> <!-- .slide: class="center" -->
 
-Note: Browser: input fields vs text on page
+Note: Browser input fields vs text on page
 
 Microsoft - uncoloured in input, coluored on page
 
@@ -516,9 +557,11 @@ Apple - ungrouped in input, groupings on page,
 
 FB - 20 hidden behind stickers, more on messenger
 Twitter: 5
-Gmail: hidden in the edit bar
 
-Normally shortcut to reading format, except for Gmail - weird intermediate
+
+Gmail: hidden in the edit bar, plus
+Normally shortcut to reading format
+except for Gmail - weird intermediate
 
 Basptiste reports this also happens in Google Slides edit mode
 
@@ -532,14 +575,14 @@ This are bad
 
 But they're a psudostandard
 
-GitHub: colon shortsuggestions
-Hipchat: bracket, long form suggestions (but brackets are more common in speech
 
 Slack does this really well
 
 ---
 
- <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='200px' src='pictures/t/slack.svg'><img height='200px' src='pictures/space.svg'><img height='200px' src='pictures/t/octopus.svg'><img height='200px' src='pictures/t/cat.svg'></p></div> <!-- .slide: class="center" -->
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='133px' src='pictures/g/colon.svg'><img height='133px' src='pictures/g/C.svg'><img height='133px' src='pictures/g/A.svg'><img height='133px' src='pictures/g/K.svg'><img height='133px' src='pictures/g/E.svg'><img height='133px' src='pictures/g/colon.svg'></p></div> <!-- .slide: class="center" -->
+ <img src="pictures/a/cake.png"> <!-- .element: class="fragment" -->
+
 Note: Shortcodes
 
 Slack: Searchable if they are native
@@ -548,7 +591,8 @@ auto convert from emoji codepoints to emoticons
 Github: shortcodes, no search, autocomplete only.
 ---
 
- <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='200px' src='pictures/space.svg'><img height='200px' src='pictures/e/peace.svg'><img height='200px' src='pictures/t/chat.svg'><img height='200px' src='pictures/space.svg'></p></div> <!-- .slide: class="center" -->
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='133px' src='pictures/g/lbrack.svg'><img height='133px' src='pictures/g/C.svg'><img height='133px' src='pictures/g/A.svg'><img height='133px' src='pictures/g/K.svg'><img height='133px' src='pictures/g/E.svg'><img height='133px' src='pictures/g/rbrack.svg'></p></div> <!-- .slide: class="center" -->
+ <img src="pictures/a/birthdaycake.png"> <!-- .element: class="fragment" -->
 
 Note: HipChat
 
@@ -558,7 +602,23 @@ Interetinsg to see when slack codes go into hipchat
 
 Also, slack engineering using slack codes in medium
 
+Also, hipchat api calls - slash commands are broken in 4.0 clients, but emoticons still work -__
+
+---
+
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='266px' src='pictures/a/cake.png'><img height='266px' src='pictures/g/notequal.svg'><img height='266px' src='pictures/a/birthdaycake.png'></p></div> <!-- .slide: class="center" -->
+
+Note: 
+
 Cross-platform incompatibility
+
+---
+
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/g/automobile.svg'><img height='400px' src='pictures/e/tick.svg'></p></div> <!-- .slide: class="center" -->
+
+Note: on that note, please make automatically changing arbitaary text to emoji optional
+
+please let me disable autocorrect
 
 ---
 ## &nbsp;
@@ -588,7 +648,6 @@ Twitter wins this
 
 Note: you have control
 
-You can do things with failover graphs and all the stuff
 ---
 
  <div style='width: 50%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/m/suggestion.svg'></p></div> <!-- .slide: class="center" -->
@@ -603,6 +662,10 @@ accessibility
 alt text important
 
 You can't see what the things are!
+
+Twitter DM (AND NOW SLACK) make emoji-only messages larger in size - THIS HELPS
+
+Slack change as of March 17
 
 SVGS FOR THE LOVE OF GOD
 
@@ -621,7 +684,17 @@ Note: Alt - Highlight
 Have the unicode character as the alt
 
 Allows copy and pasting
+---
 
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/g/fall.svg'><img height='400px' src='pictures/t/back.svg'></p></div> <!-- .slide: class="center" -->
+Note: Fall Back
+
+
+And if that all fails, use Fall Back
+
+gh emoji do this - the reasctions on windows fallback to working
+
+Some post fixes. possibly. Original reports when the thinking face
 ---
 
  <div style='width: 50%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/g/twisted.svg'></p></div> <!-- .slide: class="center" -->
@@ -647,8 +720,8 @@ Note: The future
 
 ---
 
- <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='200px' src='pictures/e/unicorn.svg'><img height='200px' src='pictures/e/robot.svg'><img height='200px' src='pictures/e/nerd.svg'><img height='200px' src='pictures/e/turkey.svg'></p></div> <!-- .slide: class="center" -->
- <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='200px' src='pictures/e/upsidedown.svg'><img height='200px' src='pictures/e/thinkingface.svg'><img height='200px' src='pictures/e/taco.svg'><img height='200px' src='pictures/e/cricket.svg'></p></div> <!-- .slide: class="center" -->
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='200px' src='pictures/e/unicorn.svg'><img height='200px' src='pictures/e/robot.svg'><img height='200px' src='pictures/e/taco.svg'><img height='200px' src='pictures/e/turkey.svg'></p></div> <!-- .slide: class="center" -->
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='200px' src='pictures/e/upsidedown.svg'><img height='200px' src='pictures/e/thinkingface.svg'><img height='200px' src='pictures/e/nerd.svg'><img height='200px' src='pictures/e/moneyface.svg'></p></div> <!-- .slide: class="center" -->
 
 Note: Unicode 9.0
 
@@ -680,6 +753,12 @@ Note: Android have updated their images AGAIN
 matching ios more
 ---
 
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='266px' src='pictures/a/flushed.png'><img height='266px' src='pictures/g/flushed.svg'><img height='266px' src='pictures/g/flushed-new.png'></p></div> <!-- .slide: class="center" -->
+Note: TODO
+
+Google Updating Flushed as well, PHEW
+---
+
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='266px' src='pictures/e/vulcan_1.svg'><img height='266px' src='pictures/e/vulcan_2.svg'><img height='266px' src='pictures/e/vulcan_3.svg'></p></div> <!-- .slide: class="center" -->
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='266px' src='pictures/e/vulcan_4.svg'><img height='266px' src='pictures/e/vulcan_5.svg'><img height='266px' src='pictures/e/vulcan_6.svg'></p></div> <!-- .slide: class="center" -->
 
@@ -709,6 +788,13 @@ Zero space character allows for groupings
 ---
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='266px' src='pictures/e/m0.svg'><img height='266px' src='pictures/e/m1.svg'><img height='266px' src='pictures/e/m2.svg'></p></div> <!-- .slide: class="center" -->
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='266px' src='pictures/e/m3.svg'><img height='266px' src='pictures/e/m4.svg'><img height='266px' src='pictures/e/m5.svg'></p></div> <!-- .slide: class="center" -->
+Note: New proposal TR52
+
+Combination of colours and hair colours
+
+like the combination characters from earlier
+
+The technology exists...
 ---
 
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='160px' src='pictures/g/T.svg'><img height='160px' src='pictures/g/R.svg'><img height='160px' src='pictures/ap/hash.png'><img height='160px' src='pictures/ap/num5.png'><img height='160px' src='pictures/ap/num2.png'></p></div> <!-- .slide: class="center" -->
@@ -719,7 +805,7 @@ Closes early May, open for public feedback
 ---
 
  <img src="pictures/ap/takeaway.png" />
-
+Note: the takeaways
 ---
  <div style='width: 50%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/t/speech.svg'></p></div> <!-- .slide: class="center" -->
 
@@ -737,6 +823,6 @@ Note: Think about accessibility
 Note: have a bit of fun, tho
 ---
 
- <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/g/claps.svg'><img height='400px' src='pictures/t/sax.svg'></p></div> <!-- .slide: class="center" -->
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='266px' src='pictures/space.svg'><img height='266px' src='pictures/g/claps.svg'><img height='266px' src='pictures/space.svg'></p></div> <!-- .slide: class="center" -->
 
 ### glasnt.com/talks
