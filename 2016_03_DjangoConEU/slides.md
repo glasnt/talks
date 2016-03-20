@@ -6,9 +6,10 @@
 Note: Guitar
 ---
 
- <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='266px' src='pictures/t/guitar.svg'><img height='266px' src='pictures/e/no.svg'><img height='266px' src='pictures/t/sad.svg'></p></div> <!-- .slide: class="center" -->
+
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/t/guitar.svg'><img height='400px' src='pictures/g/claps.svg'></p></div> <!-- .slide: class="center" -->
 ---
- <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='266px' src='pictures/g/snake.svg'><img height='266px' src='pictures/g/laptop.svg'><img height='266px' src='pictures/g/thumbsup.svg'></p></div> <!-- .slide: class="center" -->
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/g/snake.svg'><img height='400px' src='pictures/g/thumbsup.svg'></p></div> <!-- .slide: class="center" -->
 Note: I'm a developer
 ---
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='200px' src='pictures/g/red_gem.svg'><img height='200px' src='pictures/g/coffee.svg'><img height='200px' src='pictures/g/elephant.svg'><img height='200px' src='pictures/t/camel1.svg'></p></div> <!-- .slide: class="center" -->
@@ -238,25 +239,18 @@ And then everyone rampted up
 
 ---
 
- <img src="pictures/dingbats.png" />
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='266px' src='pictures/o/peace.png'><img height='266px' src='pictures/o/smile.png'><img height='266px' src='pictures/o/lev.png'></p></div> <!-- .slide: class="center" -->
 
 Note: Not the first time symbols were in unicode
 
 Zapf Dingbats - creased 1978 Added in Uncide 1.0 in 1991
 
+Microsoft Wingdings - created 1990 added Unicde 7.0, 2014
+
+with such important symbols as the Cancer Ribbon, No Piracy, and Leviating Business Man
+
 
 ---
-
- <img src="pictures/wingdings.png" />
-Note: Microsoft Wingdings - created 1990 added Unicde 7.0, 2014
----
-
- <img src="pictures/webdings.png" />
-
-Note: Also webdings - with such important symbols as the Cancer Ribbon, No Piracy, and Leviating Business Man
-
----
-
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='100px' src='pictures/g/claps.svg'><img height='100px' src='pictures/space.svg'><img height='100px' src='pictures/g/slashu.svg'><img height='100px' src='pictures/e/1.svg'><img height='100px' src='pictures/e/Fcap.svg'><img height='100px' src='pictures/e/4.svg'><img height='100px' src='pictures/e/4.svg'><img height='100px' src='pictures/e/Fcap.svg'></p></div> <!-- .slide: class="center" -->
 
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">$ python3<br>>>> import unicodedata<br>>>> unicode_data.name("<img src="pictures/g/claps.svg" style="margin: 0" margin="0" height="40px">")<br>>>> 'CLAPPING HANDS SIGN'</code></pre></div> <!-- .element: class="fragment" -->
@@ -266,6 +260,19 @@ Note: CLAPPING HANDS SIGN
 Python Code
 
 Much work to get unicode integrated into systems
+
+---
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/t/apple.svg'><img height='400px' src='pictures/ap/mobile.png'></p></div> <!-- .slide: class="center" -->
+
+Note: Apple implemented emoji when they etered the japanese market
+
+Didn't add to US iPhones for years, ~2010
+
+---
+
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/e/robot.svg'><img height='400px' src='pictures/g/mobile.svg'></p></div> <!-- .slide: class="center" -->
+
+Note: Sending SMS apple to apple works, but then you get cross compatibility issues
 
 ---
 

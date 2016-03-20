@@ -6,9 +6,10 @@
 Note: Guitar
 ---
 
-! t/guitar | e/no | t/sad
+
+! t/guitar | g/claps
 ---
-! g/snake | g/laptop | g/thumbsup 
+! g/snake | g/thumbsup 
 Note: I'm a developer
 ---
 ! g/red_gem | g/coffee | g/elephant | t/camel1
@@ -238,25 +239,18 @@ And then everyone rampted up
 
 ---
 
-@ dingbats.png
+! o/peace.png | o/smile.png | o/lev.png
 
 Note: Not the first time symbols were in unicode
 
 Zapf Dingbats - creased 1978 Added in Uncide 1.0 in 1991
 
+Microsoft Wingdings - created 1990 added Unicde 7.0, 2014
+
+with such important symbols as the Cancer Ribbon, No Piracy, and Leviating Business Man
+
 
 ---
-
-@ wingdings.png
-Note: Microsoft Wingdings - created 1990 added Unicde 7.0, 2014
----
-
-@ webdings.png
-
-Note: Also webdings - with such important symbols as the Cancer Ribbon, No Piracy, and Leviating Business Man
-
----
-
 ! g/claps | space | g/slashu | e/1 | e/Fcap | e/4 | e/4 | e/Fcap
 
 #>- $ python3<br>>>> import unicodedata<br>>>> unicode_data.name("<img src="pictures/g/claps.svg" style="margin: 0" margin="0" height="40px">")<br>>>> 'CLAPPING HANDS SIGN'
@@ -266,6 +260,19 @@ Note: CLAPPING HANDS SIGN
 Python Code
 
 Much work to get unicode integrated into systems
+
+---
+! t/apple | ap/mobile.png
+
+Note: Apple implemented emoji when they etered the japanese market
+
+Didn't add to US iPhones for years, ~2010
+
+---
+
+!  e/robot | g/mobile 
+
+Note: Sending SMS apple to apple works, but then you get cross compatibility issues
 
 ---
 
