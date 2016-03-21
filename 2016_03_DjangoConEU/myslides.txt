@@ -3,18 +3,20 @@
 @ footer.svg
 ---
 ! g/koala | g/wave 
-Note: Guitar
+Note: Gday
 ---
-
-
 ! t/guitar | g/claps
+Note: I want to start out by thanking the DSF for their scholarship
 ---
 ! g/snake | g/thumbsup 
-Note: I'm a developer
+Note: I'm a developer. At the moment I'm doing a lot of Python
 ---
 ! g/red_gem | g/coffee | g/elephant | t/camel1
-! g/snake | e/web | g/shell | e/burrito 
-Note: I code in a lot of things
+! g/snake | e/web | g/shell | e/burrito
+Note: But I also code a lot of different things
+
+Ruby JavaScript PHP Perl
+Python Web Shell Python
 ---
 ! g/bug | e/bug | t/bug
 Note: And so I see a whole lot of different kinds of bugs
@@ -33,15 +35,14 @@ How broken?
 Note: 
 This talk contains no emoji. 
 
-SVG renders. 
+SVG renders only
 
-I'm running Ubuntu, and nothing would work if I did that
+I'm running Ubuntu, and emoji don't work on ubuntu by default
 
-OR
 
-I'm running OSX Yosemite. It was released in June 2014, the same time as Unicode 7.0. 
+I also have a Mac! Yosemite - Unicode 6.0 only.
 
-The only 7.0 emoji it supports natively is the vulcan salute
+The only Unicode 7.0 emoji it supports natively is the vulcan salute
 
 Yes, the vulcan salute is an emoji.
 
@@ -52,6 +53,7 @@ So, I could only show Apple-flavour 6.0 emoji, which is nearly 6 years out of da
 ! g/blue_bird | g/bee | e/shiny
 
 Note:
+
 So, let's get started with a bit about how uniode got started
 
 the birds and the bees, if you will. *BOOM BOOM *
@@ -120,26 +122,20 @@ Note: Fixed, or set. Always 32 bits
 ! g/A 
 !  g/U | g/T | g/F | g/hyphen| e/3 | e/2
 Note: If you want to encode in UTF-32, you have to us 32 bits
-
 ---
-! e/zero | e/zero | e/zero | e/zero | e/zero | e/zero | e/zero | e/zero
-! e/zero | e/zero | e/zero | e/zero | e/zero | e/zero | e/zero | e/zero
-! e/zero | e/zero | e/zero | e/zero | e/zero | e/zero | e/zero | e/zero
-! e/zero | e/one | e/zero | e/zero | e/zero | e/zero | e/zero | e/one
+! g/A | space |  g/U | g/T | g/F | g/hyphen |  e/3 | e/2
+<p style="margin:0; line-height: 0"><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><br><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><br><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><br><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/one.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/one.svg'></p> <!-- .slide: class="center" -->
 Note: Which means you have a lot of wasted space for characters in ASCII
 ---
-
 ! j/A
 ! g/U | g/T | g/F | g/hyphen |  e/3 | e/2
 Note: but you can encode other things as well
 ---
-! e/zero | e/zero | e/zero | e/zero | e/zero | e/zero | e/zero | e/zero
-! e/zero | e/zero | e/zero | e/zero | e/zero | e/zero | e/zero | e/zero
-! e/zero | e/zero | e/one | e/one | e/zero | e/zero | e/zero | e/zero
-! e/zero | e/one | e/zero | e/zero | e/zero | e/zero | e/one | e/zero
+! j/A | space |  g/U | g/T | g/F | g/hyphen |  e/3 | e/2
+<p style="margin:0; line-height: 0"><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><br><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><br><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/one.svg'><img height='100px' src='pictures/e/one.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><br><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/one.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/one.svg'></p> <!-- .slide: class="center" -->
 Note: but because there's such a big namespace, you still get wasted bits
----
 
+---
 ! g/U | g/T | g/F | g/hyphen | e/8
 ! e/flex
 
@@ -187,7 +183,7 @@ glagolitic capital letter spidery ha
 ! g/e_only | space | g/slashu | e/0 | e/0 | e/4 | e/5
 ! g/accent_only_new | space | g/slashu | e/0 | e/3 | e/0 | e/1
 <br>
-- <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='114px' src='pictures/g/ea.svg'><img height='30px' src='pictures/space.svg'><img height='66px' src='pictures/g/slashu.svg'><img height='66px' src='pictures/e/0.svg'><img height='66px' src='pictures/e/0.svg'><img height='66px' src='pictures/e/4.svg'><img height='66px' src='pictures/e/5.svg'><img height='66px' src='pictures/g/slashu.svg'><img height='66px' src='pictures/e/0.svg'><img height='66px' src='pictures/e/3.svg'><img height='66px' src='pictures/e/0.svg'><img height='66px' src='pictures/e/1.svg'></p></div> <!-- .slide: class="center" -->
+<div style='width: 100%; margin: 0 auto;'><p align='center'><img height='114px' src='pictures/g/ea.svg'><img height='30px' src='pictures/space.svg'><img height='66px' src='pictures/g/slashu.svg'><img height='66px' src='pictures/e/0.svg'><img height='66px' src='pictures/e/0.svg'><img height='66px' src='pictures/e/4.svg'><img height='66px' src='pictures/e/5.svg'><img height='66px' src='pictures/g/slashu.svg'><img height='66px' src='pictures/e/0.svg'><img height='66px' src='pictures/e/3.svg'><img height='66px' src='pictures/e/0.svg'><img height='66px' src='pictures/e/1.svg'></p></div> <!-- .slide: class="center" -->
 
 Note: Combination marks
 ! g/ea | space | g/slashu | e/0 | e/0 | e/6 | e/5 | g/slashu | e/0 | e/3 | e/0 | e/1
@@ -200,9 +196,9 @@ Note: Combination marks
 
 
 
-Note: Zalgo
+Note: Which means that this is comletely valid unicode
 ---
-! g/US | g/UK | g/france | g/germany | g/china
+! g/US | g/france | g/germany | g/china
 ! space | t/smile | space 
 Note: So, with this, people are happy ,characters can be encoded. 
 ---
@@ -213,7 +209,7 @@ Note: But the Japanese were wondering where the rest of their codepoints were
 
 ! g/japan | t/hearteyes | m/mobile.png
 
-Note: "We want our emoji"
+Note: These japanese had mobile phones with these little pictures, and they wanted them in emoji
 ---
 @ docomolarge.png
 
@@ -247,13 +243,32 @@ Zapf Dingbats - creased 1978 Added in Uncide 1.0 in 1991
 
 Microsoft Wingdings - created 1990 added Unicde 7.0, 2014
 
-with such important symbols as the Cancer Ribbon, No Piracy, and Leviating Business Man
+iWebdings with such important symbols as the Cancer Ribbon, No Piracy, and Leviating Business Man
+---
 
+! e/6 | space | e/2 | e/0 | e/1 | e/0 
+! a/tearsjoy.png | a/tada.png | a/catheart.png
+Note: the first verison with emoji
+Unicode 6.0 the versions that are more previlent
+---
+! e/61 | space | e/2 | e/0 | e/1 | e/2 
+! a/grimace.png | a/shock.png | a/sleeping.png
+---
+! e/7 | space | e/2 | e/0 | e/1 | e/4
+! e/vulcan_1 | a/studiomic.png | g/chipmunk.png
+
+Note: Unicode 7 2014
+
+---
+! e/8 | space | e/2 | e/0 | e/1 | e/5
+! e/upsidedown | e/unicorn | e/taco
+
+Note: Unicode 8 2015
 
 ---
 ! g/claps | space | g/slashu | e/1 | e/Fcap | e/4 | e/4 | e/Fcap
 
-#>- $ python3<br>>>> import unicodedata<br>>>> unicode_data.name("<img src="pictures/g/claps.svg" style="margin: 0" margin="0" height="40px">")<br>>>> 'CLAPPING HANDS SIGN'
+#>- $ python3<br>>>> import unicodedata<br>>>> unicodedata.name("<img src="pictures/g/claps.svg" style="margin: 0" margin="0" height="40px">")<br>'CLAPPING HANDS SIGN'
 
 Note: CLAPPING HANDS SIGN
 
@@ -284,15 +299,17 @@ Note: I'm going to make a scientific hypothsis
 ! g/dash
 Note: I think that the unicode adoption, particularly the graphics and implementations was a bit rushed. 
 ---
-! t/yellow | space | g/slashu | e/1 | e/Fcap | e/4 | e/9 | e/Bcap
-
+! a/yellow.png | space | g/slashu | e/1 | e/Fcap | e/4 | e/9 | e/Bcap
+#> >>> unicodedata.name("<img style="margin: 0" height="40px" src="pictures/a/yellow.png">")
+#> 'YELLOW HEART'
 Note: 
-1F49B
+
 Yellow Heart
 
----
-! a/yellow.png | e/qcap | t/yellow | e/yellow
-Note: Twitter, EmojiOne, Apple
+This is the Apple version
+
+Here's what Android went with.
+
 ---
 <img src="pictures/g/hairy_heart_v.png" height="75%" width="75%"> 
 Note: Android 4.4 KitKat
@@ -303,30 +320,38 @@ Note: Android 4.4 KitKat
 
 Note:
 
-Yellow green blue purple 
+Here's their 4.4 vs 5 implementations
 
-4.4 vs 5
+The theory is that the black/white sample was used directly, but that doesn't explain the rest of them.
+---
+
+! a/flushed.png | t/flushed | e/flushed | g/flushed
+
+Note: 
+This isn't the only one that's not exactly the same
+
+Differences across platforms. Your version may not match receipant
+
+The first three: Shock, Flushed face
+
+Last one: bashful d'awww
+
+Completely different
+
 ---
 ! space | g/claps | m/claps.png | space
 
-Note: Clapping thumbs
----
+Note: it's not just google getting it weird
 
-! a/flushed.png | g/flushed | t/flushed | e/flushed
+here's clapping from google vs microsoft
 
-Note: Differences across platforms. Your version may not match receipant
-
-Google Twitter EmojiOne Mozilla
-
-e.g. Google version (#2) diff Twitter (#3)
-
-Humbleblush vs shock embarrased
-
-One at the end is Emoji One - used in Discourse, an option in Slack
+the thumbs!
 ---
 
 ! a/hugs.png | g/hugs.png | t/hugs.png | e/hugs.png
-Note: hugs or jazzhands
+Note: but sometimes the outlier is more correct.
+
+jazzhands vs hugs
 ---
 ! g/blonde | t/blonde | e/blonde | m/blonde 
 
@@ -334,14 +359,14 @@ Note: Guess -- Blonde
 
 
 ---
-! g/sheep | g/ram
-Note: sheep vs ram
----
-! g/rat | g/mouse
+! g/sheep | g/ram | g/rat | g/mouse
 Note: rat vs mouse
 ---
-! t/weary | t/tired 
+! t/weary | t/tired
 Note: weary vs tired
+---
+! t/grinning | t/grimice
+Note: grinning vs grimmace
 ---
 ! t/disappointed | t/cold_sweat | t/relieved | t/open_cold_sweat
 Note: disappointed
@@ -351,17 +376,9 @@ face with cold sweat
 relieved
 
 face with open mouth and cold sweat
-
----
-! t/grinning | t/grimice
-Note: grinning vs grimmace
----
-! t/camel1 | t/camel2
-
-Note: but some have super important differences
 ---
 
-! g/redheart | g/blackstar 
+! half | g/redheart | g/blackstar | half 
 
 Note: 
 
@@ -374,7 +391,11 @@ Black referrs to filled
 White refers to unfilled.
 ---
 ! t/sax | t/leg | t/bath
+Note: but even without the standard, a combination of emoji can be used to reflect sometime in a small group
 
+Such as the Sax is the official emoji of this conf
+
+and this set means 'Django Con Budapest'. Completely self explanitory
 ---
 ! a/bow.png | a/information.png | a/nogood.png | a/ok.png
 Note: 
@@ -388,8 +409,7 @@ No good
 
 OK
 ---
-! t/bento | t/tempura | t/dango | t/fishcake
-! t/riceball | t/curry | t/sushi | t/noodles
+! t/bento | t/tempura | t/sushi | t/noodles
 ---
 ! t/minidisc | t/floppy | t/fax | t/cardindex 
 ---
@@ -503,8 +523,8 @@ Note: fads, memes, etc.
 ---
 ! o/broken
 ---
-! t/newkey | e/unicorn | e/upsidedown | e/thinking
-! t/oldkey.png | o/broken | space | o/rectangle
+! t/newkey | e/unicorn | e/thinking | e/upsidedown
+! t/oldkey.png | o/broken | o/rectangle | space
 
 Note: Thinking Face in my Talk Summary
 ---
@@ -556,7 +576,9 @@ Not universal
 ---
 ! e/web
 
-Note: Browser input fields vs text on page 
+Note: TODO FIX NOTES FROM HERE 
+
+Browser input fields vs text on page 
 
 Microsoft - uncoloured in input, coluored on page
 
@@ -726,12 +748,12 @@ Note: Tom Scott, Emojli
 Note: The future
 
 ---
-
+! e/9 | space | e/2 | e/0 | e/1 | e/6
 ! e/unicorn | e/robot | e/taco| e/turkey
-! e/upsidedown | e/thinkingface | e/nerd | e/moneyface
+! e/upsidedown | e/thinkingface | e/ | e/moneyface
 
 Note: Unicode 9.0
-
+TODO CHANGE
 Popular asked for ones
 
 Fill in backward compat (nerd, thinking)
@@ -739,11 +761,12 @@ Fill in backward compat (nerd, thinking)
 Cricket -- many olympics (might not be in in time though)
 ---
 
+! e/10 | space | e/2 | e/0 | e/1 | e/7
 ! ap/avocado.png | ap/duck.png | ap/owl.png | ap/spoon.png
 ! ap/selfie.png | ap/shrug.png | ap/facepalm.png | ap/egg.png
 
 Note: Candidates -- not yet approved
-
+TODO CONFIRM THESE ARE ACTUALLY RIGHT
 Chicken in Unicode 6.0
 
 Egg provisionally in 9.0

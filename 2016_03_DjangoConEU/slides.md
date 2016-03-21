@@ -3,18 +3,20 @@
  <img src="pictures/footer.svg" />
 ---
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/g/koala.svg'><img height='400px' src='pictures/g/wave.svg'></p></div> <!-- .slide: class="center" -->
-Note: Guitar
+Note: Gday
 ---
-
-
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/t/guitar.svg'><img height='400px' src='pictures/g/claps.svg'></p></div> <!-- .slide: class="center" -->
+Note: I want to start out by thanking the DSF for their scholarship
 ---
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/g/snake.svg'><img height='400px' src='pictures/g/thumbsup.svg'></p></div> <!-- .slide: class="center" -->
-Note: I'm a developer
+Note: I'm a developer. At the moment I'm doing a lot of Python
 ---
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='200px' src='pictures/g/red_gem.svg'><img height='200px' src='pictures/g/coffee.svg'><img height='200px' src='pictures/g/elephant.svg'><img height='200px' src='pictures/t/camel1.svg'></p></div> <!-- .slide: class="center" -->
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='200px' src='pictures/g/snake.svg'><img height='200px' src='pictures/e/web.svg'><img height='200px' src='pictures/g/shell.svg'><img height='200px' src='pictures/e/burrito.svg'></p></div> <!-- .slide: class="center" -->
-Note: I code in a lot of things
+Note: But I also code a lot of different things
+
+Ruby JavaScript PHP Perl
+Python Web Shell Python
 ---
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='266px' src='pictures/g/bug.svg'><img height='266px' src='pictures/e/bug.svg'><img height='266px' src='pictures/t/bug.svg'></p></div> <!-- .slide: class="center" -->
 Note: And so I see a whole lot of different kinds of bugs
@@ -33,15 +35,14 @@ How broken?
 Note: 
 This talk contains no emoji.
 
-SVG renders.
+SVG renders only
 
-I'm running Ubuntu, and nothing would work if I did that
+I'm running Ubuntu, and emoji don't work on ubuntu by default
 
-OR 
 
-I'm running OSX Yosemite. It was released in June 2014, the same time as Unicode 7.0.
+I also have a Mac! Yosemite - Unicode 6.0 only.
 
-The only 7.0 emoji it supports natively is the vulcan salute
+The only Unicode 7.0 emoji it supports natively is the vulcan salute
 
 Yes, the vulcan salute is an emoji.
 
@@ -52,6 +53,7 @@ So, I could only show Apple-flavour 6.0 emoji, which is nearly 6 years out of da
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='266px' src='pictures/g/blue_bird.svg'><img height='266px' src='pictures/g/bee.svg'><img height='266px' src='pictures/e/shiny.svg'></p></div> <!-- .slide: class="center" -->
 
 Note: 
+
 So, let's get started with a bit about how uniode got started
 
 the birds and the bees, if you will. *BOOM BOOM *
@@ -120,26 +122,20 @@ Note: Fixed, or set. Always 32 bits
  <div style='width: 50%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/g/A.svg'></p></div> <!-- .slide: class="center" -->
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='133px' src='pictures/g/U.svg'><img height='133px' src='pictures/g/T.svg'><img height='133px' src='pictures/g/F.svg'><img height='133px' src='pictures/g/hyphen.svg'><img height='133px' src='pictures/e/3.svg'><img height='133px' src='pictures/e/2.svg'></p></div> <!-- .slide: class="center" -->
 Note: If you want to encode in UTF-32, you have to us 32 bits
-
 ---
- <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'></p></div> <!-- .slide: class="center" -->
- <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'></p></div> <!-- .slide: class="center" -->
- <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'></p></div> <!-- .slide: class="center" -->
- <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/one.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/one.svg'></p></div> <!-- .slide: class="center" -->
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='100px' src='pictures/g/A.svg'><img height='100px' src='pictures/space.svg'><img height='100px' src='pictures/g/U.svg'><img height='100px' src='pictures/g/T.svg'><img height='100px' src='pictures/g/F.svg'><img height='100px' src='pictures/g/hyphen.svg'><img height='100px' src='pictures/e/3.svg'><img height='100px' src='pictures/e/2.svg'></p></div> <!-- .slide: class="center" -->
+<p style="margin:0; line-height: 0"><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><br><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><br><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><br><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/one.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/one.svg'></p> <!-- .slide: class="center" -->
 Note: Which means you have a lot of wasted space for characters in ASCII
 ---
-
  <div style='width: 50%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/j/A.svg'></p></div> <!-- .slide: class="center" -->
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='133px' src='pictures/g/U.svg'><img height='133px' src='pictures/g/T.svg'><img height='133px' src='pictures/g/F.svg'><img height='133px' src='pictures/g/hyphen.svg'><img height='133px' src='pictures/e/3.svg'><img height='133px' src='pictures/e/2.svg'></p></div> <!-- .slide: class="center" -->
 Note: but you can encode other things as well
 ---
- <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'></p></div> <!-- .slide: class="center" -->
- <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'></p></div> <!-- .slide: class="center" -->
- <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/one.svg'><img height='100px' src='pictures/e/one.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'></p></div> <!-- .slide: class="center" -->
- <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/one.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/one.svg'><img height='100px' src='pictures/e/zero.svg'></p></div> <!-- .slide: class="center" -->
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='100px' src='pictures/j/A.svg'><img height='100px' src='pictures/space.svg'><img height='100px' src='pictures/g/U.svg'><img height='100px' src='pictures/g/T.svg'><img height='100px' src='pictures/g/F.svg'><img height='100px' src='pictures/g/hyphen.svg'><img height='100px' src='pictures/e/3.svg'><img height='100px' src='pictures/e/2.svg'></p></div> <!-- .slide: class="center" -->
+<p style="margin:0; line-height: 0"><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><br><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><br><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/one.svg'><img height='100px' src='pictures/e/one.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><br><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/one.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/one.svg'></p> <!-- .slide: class="center" -->
 Note: but because there's such a big namespace, you still get wasted bits
----
 
+---
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='160px' src='pictures/g/U.svg'><img height='160px' src='pictures/g/T.svg'><img height='160px' src='pictures/g/F.svg'><img height='160px' src='pictures/g/hyphen.svg'><img height='160px' src='pictures/e/8.svg'></p></div> <!-- .slide: class="center" -->
  <div style='width: 50%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/e/flex.svg'></p></div> <!-- .slide: class="center" -->
 
@@ -187,7 +183,7 @@ glagolitic capital letter spidery ha
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='114px' src='pictures/g/e_only.svg'><img height='114px' src='pictures/space.svg'><img height='114px' src='pictures/g/slashu.svg'><img height='114px' src='pictures/e/0.svg'><img height='114px' src='pictures/e/0.svg'><img height='114px' src='pictures/e/4.svg'><img height='114px' src='pictures/e/5.svg'></p></div> <!-- .slide: class="center" -->
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='114px' src='pictures/g/accent_only_new.svg'><img height='114px' src='pictures/space.svg'><img height='114px' src='pictures/g/slashu.svg'><img height='114px' src='pictures/e/0.svg'><img height='114px' src='pictures/e/3.svg'><img height='114px' src='pictures/e/0.svg'><img height='114px' src='pictures/e/1.svg'></p></div> <!-- .slide: class="center" -->
 <br> 
- <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='114px' src='pictures/g/ea.svg'><img height='30px' src='pictures/space.svg'><img height='66px' src='pictures/g/slashu.svg'><img height='66px' src='pictures/e/0.svg'><img height='66px' src='pictures/e/0.svg'><img height='66px' src='pictures/e/4.svg'><img height='66px' src='pictures/e/5.svg'><img height='66px' src='pictures/g/slashu.svg'><img height='66px' src='pictures/e/0.svg'><img height='66px' src='pictures/e/3.svg'><img height='66px' src='pictures/e/0.svg'><img height='66px' src='pictures/e/1.svg'></p></div> <!-- .slide: class="center" --> <!-- .element: class="fragment" -->
+<div style='width: 100%; margin: 0 auto;'><p align='center'><img height='114px' src='pictures/g/ea.svg'><img height='30px' src='pictures/space.svg'><img height='66px' src='pictures/g/slashu.svg'><img height='66px' src='pictures/e/0.svg'><img height='66px' src='pictures/e/0.svg'><img height='66px' src='pictures/e/4.svg'><img height='66px' src='pictures/e/5.svg'><img height='66px' src='pictures/g/slashu.svg'><img height='66px' src='pictures/e/0.svg'><img height='66px' src='pictures/e/3.svg'><img height='66px' src='pictures/e/0.svg'><img height='66px' src='pictures/e/1.svg'></p></div> <!-- .slide: class="center" -->
 
 Note: Combination marks
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='66px' src='pictures/g/ea.svg'><img height='66px' src='pictures/space.svg'><img height='66px' src='pictures/g/slashu.svg'><img height='66px' src='pictures/e/0.svg'><img height='66px' src='pictures/e/0.svg'><img height='66px' src='pictures/e/6.svg'><img height='66px' src='pictures/e/5.svg'><img height='66px' src='pictures/g/slashu.svg'><img height='66px' src='pictures/e/0.svg'><img height='66px' src='pictures/e/3.svg'><img height='66px' src='pictures/e/0.svg'><img height='66px' src='pictures/e/1.svg'></p></div> <!-- .slide: class="center" -->
@@ -200,9 +196,9 @@ Note: Combination marks
 
 
 
-Note: Zalgo
+Note: Which means that this is comletely valid unicode
 ---
- <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='160px' src='pictures/g/US.svg'><img height='160px' src='pictures/g/UK.svg'><img height='160px' src='pictures/g/france.svg'><img height='160px' src='pictures/g/germany.svg'><img height='160px' src='pictures/g/china.svg'></p></div> <!-- .slide: class="center" -->
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='200px' src='pictures/g/US.svg'><img height='200px' src='pictures/g/france.svg'><img height='200px' src='pictures/g/germany.svg'><img height='200px' src='pictures/g/china.svg'></p></div> <!-- .slide: class="center" -->
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='266px' src='pictures/space.svg'><img height='266px' src='pictures/t/smile.svg'><img height='266px' src='pictures/space.svg'></p></div> <!-- .slide: class="center" -->
 Note: So, with this, people are happy ,characters can be encoded.
 ---
@@ -213,7 +209,7 @@ Note: But the Japanese were wondering where the rest of their codepoints were
 
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='266px' src='pictures/g/japan.svg'><img height='266px' src='pictures/t/hearteyes.svg'><img height='266px' src='pictures/m/mobile.png'></p></div> <!-- .slide: class="center" -->
 
-Note: "We want our emoji"
+Note: These japanese had mobile phones with these little pictures, and they wanted them in emoji
 ---
  <img src="pictures/docomolarge.png" />
 
@@ -247,13 +243,32 @@ Zapf Dingbats - creased 1978 Added in Uncide 1.0 in 1991
 
 Microsoft Wingdings - created 1990 added Unicde 7.0, 2014
 
-with such important symbols as the Cancer Ribbon, No Piracy, and Leviating Business Man
+iWebdings with such important symbols as the Cancer Ribbon, No Piracy, and Leviating Business Man
+---
 
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='133px' src='pictures/e/6.svg'><img height='133px' src='pictures/space.svg'><img height='133px' src='pictures/e/2.svg'><img height='133px' src='pictures/e/0.svg'><img height='133px' src='pictures/e/1.svg'><img height='133px' src='pictures/e/0.svg'></p></div> <!-- .slide: class="center" -->
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='266px' src='pictures/a/tearsjoy.png'><img height='266px' src='pictures/a/tada.png'><img height='266px' src='pictures/a/catheart.png'></p></div> <!-- .slide: class="center" -->
+Note: the first verison with emoji
+Unicode 6.0 the versions that are more previlent
+---
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='133px' src='pictures/e/61.svg'><img height='133px' src='pictures/space.svg'><img height='133px' src='pictures/e/2.svg'><img height='133px' src='pictures/e/0.svg'><img height='133px' src='pictures/e/1.svg'><img height='133px' src='pictures/e/2.svg'></p></div> <!-- .slide: class="center" -->
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='266px' src='pictures/a/grimace.png'><img height='266px' src='pictures/a/shock.png'><img height='266px' src='pictures/a/sleeping.png'></p></div> <!-- .slide: class="center" -->
+---
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='133px' src='pictures/e/7.svg'><img height='133px' src='pictures/space.svg'><img height='133px' src='pictures/e/2.svg'><img height='133px' src='pictures/e/0.svg'><img height='133px' src='pictures/e/1.svg'><img height='133px' src='pictures/e/4.svg'></p></div> <!-- .slide: class="center" -->
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='266px' src='pictures/e/vulcan_1.svg'><img height='266px' src='pictures/a/studiomic.png'><img height='266px' src='pictures/g/chipmunk.png'></p></div> <!-- .slide: class="center" -->
+
+Note: Unicode 7 2014
+
+---
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='133px' src='pictures/e/8.svg'><img height='133px' src='pictures/space.svg'><img height='133px' src='pictures/e/2.svg'><img height='133px' src='pictures/e/0.svg'><img height='133px' src='pictures/e/1.svg'><img height='133px' src='pictures/e/5.svg'></p></div> <!-- .slide: class="center" -->
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='266px' src='pictures/e/upsidedown.svg'><img height='266px' src='pictures/e/unicorn.svg'><img height='266px' src='pictures/e/taco.svg'></p></div> <!-- .slide: class="center" -->
+
+Note: Unicode 8 2015
 
 ---
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='100px' src='pictures/g/claps.svg'><img height='100px' src='pictures/space.svg'><img height='100px' src='pictures/g/slashu.svg'><img height='100px' src='pictures/e/1.svg'><img height='100px' src='pictures/e/Fcap.svg'><img height='100px' src='pictures/e/4.svg'><img height='100px' src='pictures/e/4.svg'><img height='100px' src='pictures/e/Fcap.svg'></p></div> <!-- .slide: class="center" -->
 
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">$ python3<br>>>> import unicodedata<br>>>> unicode_data.name("<img src="pictures/g/claps.svg" style="margin: 0" margin="0" height="40px">")<br>>>> 'CLAPPING HANDS SIGN'</code></pre></div> <!-- .element: class="fragment" -->
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">$ python3<br>>>> import unicodedata<br>>>> unicodedata.name("<img src="pictures/g/claps.svg" style="margin: 0" margin="0" height="40px">")<br>'CLAPPING HANDS SIGN'</code></pre></div> <!-- .element: class="fragment" -->
 
 Note: CLAPPING HANDS SIGN
 
@@ -284,15 +299,17 @@ Note: I'm going to make a scientific hypothsis
  <div style='width: 50%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/g/dash.svg'></p></div> <!-- .slide: class="center" -->
 Note: I think that the unicode adoption, particularly the graphics and implementations was a bit rushed.
 ---
- <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='100px' src='pictures/t/yellow.svg'><img height='100px' src='pictures/space.svg'><img height='100px' src='pictures/g/slashu.svg'><img height='100px' src='pictures/e/1.svg'><img height='100px' src='pictures/e/Fcap.svg'><img height='100px' src='pictures/e/4.svg'><img height='100px' src='pictures/e/9.svg'><img height='100px' src='pictures/e/Bcap.svg'></p></div> <!-- .slide: class="center" -->
-
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='100px' src='pictures/a/yellow.png'><img height='100px' src='pictures/space.svg'><img height='100px' src='pictures/g/slashu.svg'><img height='100px' src='pictures/e/1.svg'><img height='100px' src='pictures/e/Fcap.svg'><img height='100px' src='pictures/e/4.svg'><img height='100px' src='pictures/e/9.svg'><img height='100px' src='pictures/e/Bcap.svg'></p></div> <!-- .slide: class="center" -->
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">>>> unicodedata.name("<img style="margin: 0" height="40px" src="pictures/a/yellow.png">")</code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">'YELLOW HEART'</code></pre></div>
 Note: 
-1F49B 
+
 Yellow Heart
 
----
- <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='200px' src='pictures/a/yellow.png'><img height='200px' src='pictures/e/qcap.svg'><img height='200px' src='pictures/t/yellow.svg'><img height='200px' src='pictures/e/yellow.svg'></p></div> <!-- .slide: class="center" -->
-Note: Twitter, EmojiOne, Apple
+This is the Apple version
+
+Here's what Android went with.
+
 ---
 <img src="pictures/g/hairy_heart_v.png" height="75%" width="75%">
 Note: Android 4.4 KitKat
@@ -303,30 +320,38 @@ Note: Android 4.4 KitKat
 
 Note: 
 
-Yellow green blue purple
+Here's their 4.4 vs 5 implementations
 
-4.4 vs 5
+The theory is that the black/white sample was used directly, but that doesn't explain the rest of them.
+---
+
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='200px' src='pictures/a/flushed.png'><img height='200px' src='pictures/t/flushed.svg'><img height='200px' src='pictures/e/flushed.svg'><img height='200px' src='pictures/g/flushed.svg'></p></div> <!-- .slide: class="center" -->
+
+Note: 
+This isn't the only one that's not exactly the same
+
+Differences across platforms. Your version may not match receipant
+
+The first three: Shock, Flushed face
+
+Last one: bashful d'awww
+
+Completely different
+
 ---
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='200px' src='pictures/space.svg'><img height='200px' src='pictures/g/claps.svg'><img height='200px' src='pictures/m/claps.png'><img height='200px' src='pictures/space.svg'></p></div> <!-- .slide: class="center" -->
 
-Note: Clapping thumbs
----
+Note: it's not just google getting it weird
 
- <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='200px' src='pictures/a/flushed.png'><img height='200px' src='pictures/g/flushed.svg'><img height='200px' src='pictures/t/flushed.svg'><img height='200px' src='pictures/e/flushed.svg'></p></div> <!-- .slide: class="center" -->
+here's clapping from google vs microsoft
 
-Note: Differences across platforms. Your version may not match receipant
-
-Google Twitter EmojiOne Mozilla
-
-e.g. Google version (#2) diff Twitter (#3)
-
-Humbleblush vs shock embarrased
-
-One at the end is Emoji One - used in Discourse, an option in Slack
+the thumbs!
 ---
 
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='200px' src='pictures/a/hugs.png'><img height='200px' src='pictures/g/hugs.png'><img height='200px' src='pictures/t/hugs.png'><img height='200px' src='pictures/e/hugs.png'></p></div> <!-- .slide: class="center" -->
-Note: hugs or jazzhands
+Note: but sometimes the outlier is more correct.
+
+jazzhands vs hugs
 ---
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='200px' src='pictures/g/blonde.svg'><img height='200px' src='pictures/t/blonde.svg'><img height='200px' src='pictures/e/blonde.svg'><img height='200px' src='pictures/m/blonde.svg'></p></div> <!-- .slide: class="center" -->
 
@@ -334,14 +359,14 @@ Note: Guess -- Blonde
 
 
 ---
- <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/g/sheep.svg'><img height='400px' src='pictures/g/ram.svg'></p></div> <!-- .slide: class="center" -->
-Note: sheep vs ram
----
- <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/g/rat.svg'><img height='400px' src='pictures/g/mouse.svg'></p></div> <!-- .slide: class="center" -->
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='200px' src='pictures/g/sheep.svg'><img height='200px' src='pictures/g/ram.svg'><img height='200px' src='pictures/g/rat.svg'><img height='200px' src='pictures/g/mouse.svg'></p></div> <!-- .slide: class="center" -->
 Note: rat vs mouse
 ---
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/t/weary.svg'><img height='400px' src='pictures/t/tired.svg'></p></div> <!-- .slide: class="center" -->
 Note: weary vs tired
+---
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/t/grinning.svg'><img height='400px' src='pictures/t/grimice.svg'></p></div> <!-- .slide: class="center" -->
+Note: grinning vs grimmace
 ---
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='200px' src='pictures/t/disappointed.svg'><img height='200px' src='pictures/t/cold_sweat.svg'><img height='200px' src='pictures/t/relieved.svg'><img height='200px' src='pictures/t/open_cold_sweat.svg'></p></div> <!-- .slide: class="center" -->
 Note: disappointed
@@ -351,17 +376,9 @@ face with cold sweat
 relieved 
 
 face with open mouth and cold sweat
-
----
- <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/t/grinning.svg'><img height='400px' src='pictures/t/grimice.svg'></p></div> <!-- .slide: class="center" -->
-Note: grinning vs grimmace
----
- <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/t/camel1.svg'><img height='400px' src='pictures/t/camel2.svg'></p></div> <!-- .slide: class="center" -->
-
-Note: but some have super important differences
 ---
 
- <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/g/redheart.svg'><img height='400px' src='pictures/g/blackstar.svg'></p></div> <!-- .slide: class="center" -->
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='266px' src='pictures/half.svg'><img height='266px' src='pictures/g/redheart.svg'><img height='266px' src='pictures/g/blackstar.svg'><img height='266px' src='pictures/half.svg'></p></div> <!-- .slide: class="center" -->
 
 Note: 
 
@@ -374,7 +391,11 @@ Black referrs to filled
 White refers to unfilled.
 ---
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='266px' src='pictures/t/sax.svg'><img height='266px' src='pictures/t/leg.svg'><img height='266px' src='pictures/t/bath.svg'></p></div> <!-- .slide: class="center" -->
+Note: but even without the standard, a combination of emoji can be used to reflect sometime in a small group
 
+Such as the Sax is the official emoji of this conf
+
+and this set means 'Django Con Budapest'. Completely self explanitory
 ---
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='200px' src='pictures/a/bow.png'><img height='200px' src='pictures/a/information.png'><img height='200px' src='pictures/a/nogood.png'><img height='200px' src='pictures/a/ok.png'></p></div> <!-- .slide: class="center" -->
 Note: 
@@ -388,8 +409,7 @@ No good
 
 OK 
 ---
- <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='200px' src='pictures/t/bento.svg'><img height='200px' src='pictures/t/tempura.svg'><img height='200px' src='pictures/t/dango.svg'><img height='200px' src='pictures/t/fishcake.svg'></p></div> <!-- .slide: class="center" -->
- <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='200px' src='pictures/t/riceball.svg'><img height='200px' src='pictures/t/curry.svg'><img height='200px' src='pictures/t/sushi.svg'><img height='200px' src='pictures/t/noodles.svg'></p></div> <!-- .slide: class="center" -->
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='200px' src='pictures/t/bento.svg'><img height='200px' src='pictures/t/tempura.svg'><img height='200px' src='pictures/t/sushi.svg'><img height='200px' src='pictures/t/noodles.svg'></p></div> <!-- .slide: class="center" -->
 ---
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='200px' src='pictures/t/minidisc.svg'><img height='200px' src='pictures/t/floppy.svg'><img height='200px' src='pictures/t/fax.svg'><img height='200px' src='pictures/t/cardindex.svg'></p></div> <!-- .slide: class="center" -->
 ---
@@ -503,8 +523,8 @@ Note: fads, memes, etc.
 ---
  <div style='width: 50%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/o/broken.svg'></p></div> <!-- .slide: class="center" -->
 ---
- <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='200px' src='pictures/t/newkey.svg'><img height='200px' src='pictures/e/unicorn.svg'><img height='200px' src='pictures/e/upsidedown.svg'><img height='200px' src='pictures/e/thinking.svg'></p></div> <!-- .slide: class="center" -->
- <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='200px' src='pictures/t/oldkey.png'><img height='200px' src='pictures/o/broken.svg'><img height='200px' src='pictures/space.svg'><img height='200px' src='pictures/o/rectangle.svg'></p></div> <!-- .slide: class="center" -->
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='200px' src='pictures/t/newkey.svg'><img height='200px' src='pictures/e/unicorn.svg'><img height='200px' src='pictures/e/thinking.svg'><img height='200px' src='pictures/e/upsidedown.svg'></p></div> <!-- .slide: class="center" -->
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='200px' src='pictures/t/oldkey.png'><img height='200px' src='pictures/o/broken.svg'><img height='200px' src='pictures/o/rectangle.svg'><img height='200px' src='pictures/space.svg'></p></div> <!-- .slide: class="center" -->
 
 Note: Thinking Face in my Talk Summary
 ---
@@ -556,7 +576,9 @@ Not universal
 ---
  <div style='width: 50%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/e/web.svg'></p></div> <!-- .slide: class="center" -->
 
-Note: Browser input fields vs text on page
+Note: TODO FIX NOTES FROM HERE
+
+Browser input fields vs text on page
 
 Microsoft - uncoloured in input, coluored on page
 
@@ -726,12 +748,12 @@ Note: Tom Scott, Emojli
 Note: The future
 
 ---
-
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='133px' src='pictures/e/9.svg'><img height='133px' src='pictures/space.svg'><img height='133px' src='pictures/e/2.svg'><img height='133px' src='pictures/e/0.svg'><img height='133px' src='pictures/e/1.svg'><img height='133px' src='pictures/e/6.svg'></p></div> <!-- .slide: class="center" -->
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='200px' src='pictures/e/unicorn.svg'><img height='200px' src='pictures/e/robot.svg'><img height='200px' src='pictures/e/taco.svg'><img height='200px' src='pictures/e/turkey.svg'></p></div> <!-- .slide: class="center" -->
- <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='200px' src='pictures/e/upsidedown.svg'><img height='200px' src='pictures/e/thinkingface.svg'><img height='200px' src='pictures/e/nerd.svg'><img height='200px' src='pictures/e/moneyface.svg'></p></div> <!-- .slide: class="center" -->
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='200px' src='pictures/e/upsidedown.svg'><img height='200px' src='pictures/e/thinkingface.svg'><img height='200px' src='pictures/e/.svg'><img height='200px' src='pictures/e/moneyface.svg'></p></div> <!-- .slide: class="center" -->
 
 Note: Unicode 9.0
-
+TODO CHANGE
 Popular asked for ones
 
 Fill in backward compat (nerd, thinking)
@@ -739,11 +761,12 @@ Fill in backward compat (nerd, thinking)
 Cricket -- many olympics (might not be in in time though)
 ---
 
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='133px' src='pictures/e/10.svg'><img height='133px' src='pictures/space.svg'><img height='133px' src='pictures/e/2.svg'><img height='133px' src='pictures/e/0.svg'><img height='133px' src='pictures/e/1.svg'><img height='133px' src='pictures/e/7.svg'></p></div> <!-- .slide: class="center" -->
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='200px' src='pictures/ap/avocado.png'><img height='200px' src='pictures/ap/duck.png'><img height='200px' src='pictures/ap/owl.png'><img height='200px' src='pictures/ap/spoon.png'></p></div> <!-- .slide: class="center" -->
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='200px' src='pictures/ap/selfie.png'><img height='200px' src='pictures/ap/shrug.png'><img height='200px' src='pictures/ap/facepalm.png'><img height='200px' src='pictures/ap/egg.png'></p></div> <!-- .slide: class="center" -->
 
 Note: Candidates -- not yet approved
-
+TODO CONFIRM THESE ARE ACTUALLY RIGHT
 Chicken in Unicode 6.0
 
 Egg provisionally in 9.0
