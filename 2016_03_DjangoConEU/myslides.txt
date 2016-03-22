@@ -39,15 +39,6 @@ SVG renders only
 
 I'm running Ubuntu, and emoji don't work on ubuntu by default
 
-
-I also have a Mac! Yosemite - Unicode 6.0 only.
-
-The only Unicode 7.0 emoji it supports natively is the vulcan salute
-
-Yes, the vulcan salute is an emoji.
-
-So, I could only show Apple-flavour 6.0 emoji, which is nearly 6 years out of date.
-
 ---
 
 ! g/blue_bird | g/bee | e/shiny
@@ -90,6 +81,8 @@ use 8 bits!
 And think of a really creative name for it
 
 Like, extended ascii 
+
+255 characters
 ---
 
 ! g/china | g/japan
@@ -106,10 +99,10 @@ Note: You can't encode everything in just 8 bits; it's not enough.
 @ unicode.png
 
 Note:  universal encoding
-
+Unicode Consortium
+Space for just over a million different characters
 ---
 ! g/U | g/T | g/F | g/hyphen | e/3 | e/2
-! g/U | g/T | g/F | g/hyphen | e/1 | e/6
 ! g/U | g/T | g/F | g/hyphen | e/8 | space
 Note: Three main encoding types. 
 
@@ -163,6 +156,7 @@ Note: The tags on the top note how many more to expect
 ---
 ! g/slashu
 Note: you might also see encodines described with a slash-u
+These codes relate to specific codepoints, and each is unique
 ---
 ! g/A | space | g/slashu | e/0 | e/0 | e/4 | e/1
 ! j/A | space | g/slashu | e/3 | e/0 | e/4 | e/2
@@ -186,14 +180,11 @@ glagolitic capital letter spidery ha
 <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='114px' src='pictures/g/ea.svg'><img height='30px' src='pictures/space.svg'><img height='66px' src='pictures/g/slashu.svg'><img height='66px' src='pictures/e/0.svg'><img height='66px' src='pictures/e/0.svg'><img height='66px' src='pictures/e/4.svg'><img height='66px' src='pictures/e/5.svg'><img height='66px' src='pictures/g/slashu.svg'><img height='66px' src='pictures/e/0.svg'><img height='66px' src='pictures/e/3.svg'><img height='66px' src='pictures/e/0.svg'><img height='66px' src='pictures/e/1.svg'></p></div> <!-- .slide: class="center" -->
 
 Note: Combination marks
-! g/ea | space | g/slashu | e/0 | e/0 | e/6 | e/5 | g/slashu | e/0 | e/3 | e/0 | e/1
 
 \u0065 \u0301
 ---
 
 #=D̞͚͈̖̲̙̅̎ͨ̾͊j̗̺̝̩̓̄ͣ̅̆́̉̐a̻̯̦͎̝ͮ̆̏ͦ̌ͣͅǹ̰̬̽̾̆̑͊̔ͨg̭̲̼̞͇̻ͬ̍̋̇͒͒̿̈o͇̞͍̫͍ͭ̓
-
-
 
 
 Note: Which means that this is comletely valid unicode
@@ -223,9 +214,7 @@ Introduced in the early 1990s, with a whole lot of turmoil
 
 There's entire essays on the implementatation issues with this
 
-
-Emoji was proposed 2007
-Released 2010 in Unicode 6
+Emoji Added to Unicode 6, 2010
 
 TLDR: Apple implemented the proposed unicode spec with emoji for japan only
 
@@ -243,38 +232,47 @@ Zapf Dingbats - creased 1978 Added in Uncide 1.0 in 1991
 
 Microsoft Wingdings - created 1990 added Unicde 7.0, 2014
 
-iWebdings with such important symbols as the Cancer Ribbon, No Piracy, and Leviating Business Man
+Webdings 1997 with such important symbols as the Cancer Ribbon, No Piracy, and Leviating Business Man
 ---
 
 ! e/6 | space | e/2 | e/0 | e/1 | e/0 
-! a/tearsjoy.png | a/tada.png | a/catheart.png
+! a/thumbsup.png | a/tearsjoy.png | a/tada.png 
 Note: the first verison with emoji
 Unicode 6.0 the versions that are more previlent
 ---
 ! e/61 | space | e/2 | e/0 | e/1 | e/2 
 ! a/grimace.png | a/shock.png | a/sleeping.png
+Note: A small face-only update in 2012
+
+most platforms, if they support emoji at all, will support up to here
 ---
 ! e/7 | space | e/2 | e/0 | e/1 | e/4
-! e/vulcan_1 | a/studiomic.png | g/chipmunk.png
+! e/vulcan_1 | e/sleuth | e/chipmunk.png
 
 Note: Unicode 7 2014
 
 ---
 ! e/8 | space | e/2 | e/0 | e/1 | e/5
-! e/upsidedown | e/unicorn | e/taco
+! e/horns | e/upsidedown | e/taco
 
 Note: Unicode 8 2015
+Taco is now official
+
 
 ---
-! g/claps | space | g/slashu | e/1 | e/Fcap | e/4 | e/4 | e/Fcap
+! o/clapping.png | space | g/slashu | e/1 | e/Fcap | e/4 | e/4 | e/Fcap
 
-#>- $ python3<br>>>> import unicodedata<br>>>> unicodedata.name("<img src="pictures/g/claps.svg" style="margin: 0" margin="0" height="40px">")<br>'CLAPPING HANDS SIGN'
+#>- $ python3<br>>>> import unicodedata<br>>>> unicodedata.name("<img src="pictures/a/claps.png" style="margin: 0" margin="0" height="40px">")<br>'CLAPPING HANDS SIGN'
 
 Note: CLAPPING HANDS SIGN
 
 Python Code
 
 Much work to get unicode integrated into systems
+
+The picture here is the image form the standard
+
+if i run the python code in Apple, i get the apple version
 
 ---
 ! t/apple | ap/mobile.png
@@ -299,7 +297,7 @@ Note: I'm going to make a scientific hypothsis
 ! g/dash
 Note: I think that the unicode adoption, particularly the graphics and implementations was a bit rushed. 
 ---
-! a/yellow.png | space | g/slashu | e/1 | e/Fcap | e/4 | e/9 | e/Bcap
+! o/stdyellow.png | space | g/slashu | e/1 | e/Fcap | e/4 | e/9 | e/Bcap
 #> >>> unicodedata.name("<img style="margin: 0" height="40px" src="pictures/a/yellow.png">")
 #> 'YELLOW HEART'
 Note: 
@@ -314,11 +312,12 @@ Here's what Android went with.
 <img src="pictures/g/hairy_heart_v.png" height="75%" width="75%"> 
 Note: Android 4.4 KitKat
 ---
+<div style='width: 100%; margin: 0 auto;'><p align='center' style="margin: 0"><img style="margin: 0" height='200px' src='pictures/o/stdyellow.png'><img style="margin: 0" height='200px' src='pictures/o/stdgreen.png'><img style="margin: 0" height='200px' src='pictures/o/stdblue.png'><img style="margin: 0" height='200px' src='pictures/o/stdpurple.png'><br><img style="margin: 0" height='200px' src='pictures/g/hairy_heart.png'><img style="margin: 0" height='200px' src='pictures/g/old_green.png'><img style="margin: 0" height='200px' src='pictures/g/old_blue.png'><img style="margin: 0" height='200px' src='pictures/g/old_purple.png'><br><img style="margin: 0" height='200px' src='pictures/g/yellow.svg'><img style="margin: 0" height='200px' src='pictures/g/green.svg'><img style="margin: 0" height='200px' src='pictures/g/blue.svg'><img style="margin: 0" height='200px' src='pictures/g/purple.svg'></p></div> <!-- .slide: class="center" -->
 
-! g/hairy_heart.png | g/old_green.png | g/old_blue.png | g/old_purple.png
-! g/yellow | g/green | g/blue | g/purple 
 
 Note:
+
+Std vs 4.4 vs 5.0 Andoird IMplementations
 
 Here's their 4.4 vs 5 implementations
 
@@ -339,7 +338,7 @@ Last one: bashful d'awww
 Completely different
 
 ---
-! space | g/claps | m/claps.png | space
+! a/claps.png | g/claps | t/claps | m/claps.png
 
 Note: it's not just google getting it weird
 
@@ -362,12 +361,6 @@ Note: Guess -- Blonde
 ! g/sheep | g/ram | g/rat | g/mouse
 Note: rat vs mouse
 ---
-! t/weary | t/tired
-Note: weary vs tired
----
-! t/grinning | t/grimice
-Note: grinning vs grimmace
----
 ! t/disappointed | t/cold_sweat | t/relieved | t/open_cold_sweat
 Note: disappointed
 
@@ -377,26 +370,10 @@ relieved
 
 face with open mouth and cold sweat
 ---
-
-! half | g/redheart | g/blackstar | half 
-
-Note: 
-
-Standard weirdness
-
-Heavy Black Heart
-Eight Pointed Black Star
-
-Black referrs to filled
-White refers to unfilled.
+! t/grinning | t/grimice
+Note: grinning vs grimmace
 ---
-! t/sax | t/leg | t/bath
-Note: but even without the standard, a combination of emoji can be used to reflect sometime in a small group
 
-Such as the Sax is the official emoji of this conf
-
-and this set means 'Django Con Budapest'. Completely self explanitory
----
 ! a/bow.png | a/information.png | a/nogood.png | a/ok.png
 Note: 
 
@@ -413,21 +390,9 @@ OK
 ---
 ! t/minidisc | t/floppy | t/fax | t/cardindex 
 ---
-! t/globe_a | t/globe_e | t/globe_o
-! e/globe_a | e/globe_e | e/globe_o
-Note: Twitter vs emojione
----
 ! m/kissing
 
-
 Note: Terrifying out of context
-
----
-
-! g/kissing
-
-Note: 
-Matthew Garret tweet: stabbed in the face with a heart
 
 ---
 ! e/levi
@@ -440,9 +405,8 @@ No standards for webdings, based on a few people's opinions
 now in unicode for backwards compatibility
 
 ---
-! t/eggplant | t/over18 | g/bunnywoman | t/lovehotel
----
-! t/poo |g/poo | e/poo
+! space | a/poop.png | space
+
 Note: Dr Slump character - poop-boy
 
 ---
@@ -518,15 +482,37 @@ Note: fads, memes, etc.
 ! t/memo
 ---
 ! space | tumbler.png | space
+Note: whisky is coming in with 9.0
+
+many proposals hit some of the inclusion factors
+
+often use google trends or social media trends
+
+one used hamburgr as a relative term to show the usage of different foods
+
+hambuger for scale
 ---
 ! t/oldkey.png | t/newkey
+Note: As new emoji are brought in
+
+older systems will be outdated
 ---
 ! o/broken
+
+Note: Mojibake
 ---
 ! t/newkey | e/unicorn | e/thinking | e/upsidedown
 ! t/oldkey.png | o/broken | o/rectangle | space
 
 Note: Thinking Face in my Talk Summary
+
+Not all systems have emoji
+
+My Android - 5.0.1 OS --> U7.0 if you're lucky
+
+Yosemite - up to 6.1, plus vulcan
+
+Ubuntu - b/w only
 ---
 
 ! a/thumbsup.png | a/thumbsdown.png | a/laugh.png | a/thinking.png | a/heart.png | a/tada.png
@@ -643,7 +629,7 @@ Cross-platform incompatibility
 
 ---
 
-! g/automobile | e/tick
+! e/automobile | e/tick
 
 Note: on that note, please make automatically changing arbitaary text to emoji optional
 
@@ -721,9 +707,10 @@ Note: Fall Back
 
 And if that all fails, use Fall Back
 
-gh emoji do this - the reasctions on windows fallback to working
+Detecting how to fallback is one thing
 
-Some post fixes. possibly. Original reports when the thinking face
+Or Facebook way - fallback to fb versions on known values, and let the system handle others how it will
+
 ---
 
 ! g/twisted
@@ -739,48 +726,38 @@ why don't we just have a hardware solution?
 # &nbsp; <!-- .slide: data-background="pictures/emoji_keyboard.jpg" data-background-transition="none" -->
 
 
-Note: Tom Scott, Emojli
+Note: Tom Scott
 
+
+Hardware keyboard x 14  + LUA script + Autohotkey
+
+Also Emojili - a hack as a joke, but they were approched by VCs
 ---
 
 ! e/atom
 
 Note: The future
+---
 
+<img src="pictures/t/sparkles.svg" height="600px">
 ---
 ! e/9 | space | e/2 | e/0 | e/1 | e/6
-! e/unicorn | e/robot | e/taco| e/turkey
-! e/upsidedown | e/thinkingface | e/ | e/moneyface
+! ap/selfie.png | ap/duck.png | ap/spoon.png
 
 Note: Unicode 9.0
-TODO CHANGE
-Popular asked for ones
 
-Fill in backward compat (nerd, thinking)
-
-Cricket -- many olympics (might not be in in time though)
+Not yet finalised, due for release this year
 ---
 
 ! e/10 | space | e/2 | e/0 | e/1 | e/7
-! ap/avocado.png | ap/duck.png | ap/owl.png | ap/spoon.png
-! ap/selfie.png | ap/shrug.png | ap/facepalm.png | ap/egg.png
+! o/eyebrow.png | ap/takeaway.png | o/fortune.png
+Note: 
 
-Note: Candidates -- not yet approved
-TODO CONFIRM THESE ARE ACTUALLY RIGHT
-Chicken in Unicode 6.0
+These images are from Emojipedia mockups 
 
-Egg provisionally in 9.0
+Only a small handful are on the cards for 10 already
 
-
-Now you know which came first
-
-SPOON
----
-<p style=" margin: 0; " margin="0"><img src="pictures/g/a6_1.png" margin="0"><br><img src="pictures/g/a6_2.png" margin="0"><br><img margin="0" src="pictures/g/a6_3.png"></p>
-
-Note: Android have updated their images AGAIN
-
-matching ios more
+STILL NOT OFFICIAL
 ---
 
 ! a/flushed.png | g/flushed | g/flushed-new.png
@@ -788,7 +765,20 @@ Note: TODO
 
 Google Updating Flushed as well, PHEW
 ---
+<p style=" margin: 0; " margin="0"><img src="pictures/g/a6_1.png" margin="0"><br><img src="pictures/g/a6_2.png" margin="0"><br><img margin="0" src="pictures/g/a6_3.png"></p>
 
+Note: Android have updated their images AGAIN
+iTODO CHANGE
+matching ios more
+---
+
+! ap/woman.png | ap/heart.png | ap/woman.png | space | ap/ww.png
+! ap/man.png | ap/heart.png | ap/man.png | space | ap/mm.png
+Note: Next - New Emoji
+Zero space character allows for groupings
+ Banned in indonesia
+
+---
 ! e/vulcan_1 | e/vulcan_2 |  e/vulcan_3 
 ! e/vulcan_4 | e/vulcan_5 | e/vulcan_6
 
@@ -802,19 +792,6 @@ Slack yes, Facebook No, Google not a lot at all ("gender neutral")
 ---
 
 ! e/vulcan_1 | e/fitz_4
----
-
-! g/couple_2 | g/couple_1 | g/couple_3
-
-Note: These are specific emoji, not groupings
-
-Zero space character allows for groupings
-
----
-
-! ap/woman.png | ap/heart.png | ap/woman.png | space | ap/ww.png
-! ap/man.png | ap/heart.png | ap/man.png | space | ap/mm.png
-
 ---
 ! e/m0 | e/m1 | e/m2
 ! e/m3 | e/m4 | e/m5
