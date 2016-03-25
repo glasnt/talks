@@ -1,10 +1,12 @@
+
+! space  |  t/sax |  g/hungary.png | t/popper | space 
+---
+
 ## &nbsp; 
 ! o/bolt | g/sweat | t/sparkles
 
 @ footer.svg
 
-
-! space | space |  t/sax |  g/hungary.png | t/popper | space | space
 ---
 ! g/koala | g/wave 
 Note: Gday

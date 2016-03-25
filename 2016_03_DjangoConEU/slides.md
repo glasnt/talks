@@ -1,10 +1,12 @@
+
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='160px' src='pictures/space.svg'><img height='160px' src='pictures/t/sax.svg'><img height='160px' src='pictures/g/hungary.png'><img height='160px' src='pictures/t/popper.svg'><img height='160px' src='pictures/space.svg'></p></div> <!-- .slide: class="center" -->
+---
+
 ## &nbsp;
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='266px' src='pictures/o/bolt.svg'><img height='266px' src='pictures/g/sweat.svg'><img height='266px' src='pictures/t/sparkles.svg'></p></div> <!-- .slide: class="center" -->
 
  <img src="pictures/footer.svg" />
 
-
- <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='114px' src='pictures/space.svg'><img height='114px' src='pictures/space.svg'><img height='114px' src='pictures/t/sax.svg'><img height='114px' src='pictures/g/hungary.png'><img height='114px' src='pictures/t/popper.svg'><img height='114px' src='pictures/space.svg'><img height='114px' src='pictures/space.svg'></p></div> <!-- .slide: class="center" -->
 ---
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/g/koala.svg'><img height='400px' src='pictures/g/wave.svg'></p></div> <!-- .slide: class="center" -->
 Note: Gday
