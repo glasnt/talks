@@ -12,17 +12,33 @@
 Note: Gday
 ---
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/t/guitar.svg'><img height='400px' src='pictures/g/claps.svg'></p></div> <!-- .slide: class="center" -->
-Note: I want to start out by thanking the DSF for their scholarship
+Note: I want to start out by thanking the
+
+Django Software Foundation
+
+for their help in getting me here today
 ---
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/g/snake.svg'><img height='400px' src='pictures/g/thumbsup.svg'></p></div> <!-- .slide: class="center" -->
-Note: I'm a developer. At the moment I'm doing a lot of Python
+Note: I'm not a django dev
+
+. At the moment I'm doing a lot of Python
+
+but my trade, i'm an operations engineer
 ---
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='200px' src='pictures/g/red_gem.svg'><img height='200px' src='pictures/g/coffee.svg'><img height='200px' src='pictures/g/elephant.svg'><img height='200px' src='pictures/t/camel1.svg'></p></div> <!-- .slide: class="center" -->
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='200px' src='pictures/g/snake.svg'><img height='200px' src='pictures/e/web.svg'><img height='200px' src='pictures/g/shell.svg'><img height='200px' src='pictures/e/burrito.svg'></p></div> <!-- .slide: class="center" -->
-Note: But I also code a lot of different things
+Note: I write code in a lot of differnet languages
 
 Ruby JavaScript PHP Perl
 Python Web Shell Python
+
+
+I have a macbook, a linux laptop and a windows gaming desktop
+
+I use twitter, slack and hipchat a lot
+
+I use a lot of different operating systems, languages, and software plaforms.
+
 ---
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='266px' src='pictures/g/bug.svg'><img height='266px' src='pictures/e/bug.svg'><img height='266px' src='pictures/t/bug.svg'></p></div> <!-- .slide: class="center" -->
 Note: And so I see a whole lot of different kinds of bugs
@@ -41,7 +57,9 @@ How broken?
 Note: 
 This talk contains no emoji.
 
-SVG renders only
+
+Everythng you're seing here is a vector graphic, or a high reoslution picture
+
 
 I'm running Ubuntu, and emoji don't work on ubuntu by default
 
@@ -106,8 +124,15 @@ Note: You can't encode everything in just 8 bits; it's not enough.
 
 
 Note: universal encoding
+
 Unicode Consortium
+
 Space for just over a million different characters
+---
+
+ <div style='width: 50%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/o/bolt.svg'></p></div> <!-- .slide: class="center" -->
+
+Note: Extremely powerfull
 ---
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='133px' src='pictures/g/U.svg'><img height='133px' src='pictures/g/T.svg'><img height='133px' src='pictures/g/F.svg'><img height='133px' src='pictures/g/hyphen.svg'><img height='133px' src='pictures/e/3.svg'><img height='133px' src='pictures/e/2.svg'></p></div> <!-- .slide: class="center" -->
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='133px' src='pictures/g/U.svg'><img height='133px' src='pictures/g/T.svg'><img height='133px' src='pictures/g/F.svg'><img height='133px' src='pictures/g/hyphen.svg'><img height='133px' src='pictures/e/8.svg'><img height='133px' src='pictures/space.svg'></p></div> <!-- .slide: class="center" -->
@@ -202,7 +227,7 @@ Note: But the Japanese were wondering where the rest of their codepoints were
 
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='266px' src='pictures/g/japan.svg'><img height='266px' src='pictures/t/hearteyes.svg'><img height='266px' src='pictures/m/mobile.png'></p></div> <!-- .slide: class="center" -->
 
-Note: These japanese had mobile phones with these little pictures, and they wanted them in emoji
+Note: These japanese had mobile phones with these little pictures, and they wanted them in unicode
 ---
  <img src="pictures/o/docomo.png" />
 
@@ -303,14 +328,26 @@ Note: Sending SMS apple to apple works, but then you get cross compatibility iss
 
  <div style='width: 50%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/e/microscope.svg'></p></div> <!-- .slide: class="center" -->
 
-Note: I'm going to make a scientific hypothsis
+Note: after inspection and research, I have developed an assertion
 ---
 
  <div style='width: 50%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/g/dash.svg'></p></div> <!-- .slide: class="center" -->
-Note: I think that the unicode adoption, particularly the graphics and implementations was a bit rushed.
+Note: I posit that the unicode adoption, particularly the graphics and implementations was a bit rushed.
+
+and this has been depremental to emoji
+
+
+Especially with the original android adoption
+
+---
+
+ <div style='width: 50%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/g/sweat.svg'></p></div> <!-- .slide: class="center" -->
+
+Note: It's an incredible responsibility, but android got it very wrong in the beginning
 ---
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='100px' src='pictures/o/stdyellow.png'><img height='100px' src='pictures/space.svg'><img height='100px' src='pictures/g/slashu.svg'><img height='100px' src='pictures/e/1.svg'><img height='100px' src='pictures/e/Fcap.svg'><img height='100px' src='pictures/e/4.svg'><img height='100px' src='pictures/e/9.svg'><img height='100px' src='pictures/e/Bcap.svg'></p></div> <!-- .slide: class="center" -->
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">>>> unicodedata.name("<img style="margin: 0" height="40px" src="pictures/a/yellow.png">")</code></pre></div>
+
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">$ python3<br>>>> import unicodedata<br>>>> unicodedata.name("<img style="margin: 0" height="40px" src="pictures/a/yellow.png">")</code></pre></div>
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">'YELLOW HEART'</code></pre></div>
 Note: 
 
@@ -333,7 +370,12 @@ Std vs 4.4 vs 5.0 Andoird IMplementations
 
 Here's their 4.4 vs 5 implementations
 
-The theory is that the black/white sample was used directly, but that doesn't explain the rest of them.
+The theory is that the black/white sample was used directly,
+
+
+assumed to be stubble
+
+but that doesn't explain the rest of them.
 ---
 
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='200px' src='pictures/a/flushed.png'><img height='200px' src='pictures/t/flushed.svg'><img height='200px' src='pictures/e/flushed.svg'><img height='200px' src='pictures/g/flushed.svg'></p></div> <!-- .slide: class="center" -->
@@ -386,8 +428,16 @@ face with open mouth and cold sweat
 Note: grinning vs grimmace
 ---
 
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='200px' src='pictures/t/bento.svg'><img height='200px' src='pictures/t/tempura.svg'><img height='200px' src='pictures/t/sushi.svg'><img height='200px' src='pictures/t/noodles.svg'></p></div> <!-- .slide: class="center" -->
+
+Note: Strong japanese influence
+
+We can relate to some of these
+---
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='200px' src='pictures/a/bow.png'><img height='200px' src='pictures/a/information.png'><img height='200px' src='pictures/a/nogood.png'><img height='200px' src='pictures/a/ok.png'></p></div> <!-- .slide: class="center" -->
 Note: 
+
+But there are cultural emoji that are completely foreign to the western world.
 
 Person bowing deeply
 
@@ -398,13 +448,44 @@ No good
 
 OK 
 ---
- <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='200px' src='pictures/t/bento.svg'><img height='200px' src='pictures/t/tempura.svg'><img height='200px' src='pictures/t/sushi.svg'><img height='200px' src='pictures/t/noodles.svg'></p></div> <!-- .slide: class="center" -->
----
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='200px' src='pictures/t/minidisc.svg'><img height='200px' src='pictures/t/floppy.svg'><img height='200px' src='pictures/t/fax.svg'><img height='200px' src='pictures/t/cardindex.svg'></p></div> <!-- .slide: class="center" -->
+
+Note: Emoji was also created in the early 90s
+
+so there's outdated tech in the standard which is
+
+included for backwarsd compatility
+
+minidisc 
+
+floppy disc
+
+fax machine
+
+rolodex 
+
+COMING UP
+
+terrifying out of context
 ---
  <div style='width: 50%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/m/kissing.svg'></p></div> <!-- .slide: class="center" -->
 
 Note: Terrifying out of context
+
+Mozilla have their own emoi set
+For firefox os
+
+---
+
+
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='266px' src='pictures/a/catgrin.png'><img height='266px' src='pictures/a/catcry.png'><img height='266px' src='pictures/a/catlove.png'></p></div> <!-- .slide: class="center" -->
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='266px' src='pictures/f/foxgrin.svg'><img height='266px' src='pictures/f/foxjoy.svg'><img height='266px' src='pictures/f/foxlove.svg'></p></div> <!-- .slide: class="center" -->
+
+Note: 
+
+
+
+The set of cats are foxes
 
 ---
  <div style='width: 50%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/e/levi.svg'></p></div> <!-- .slide: class="center" -->
@@ -416,11 +497,9 @@ No standards for webdings, based on a few people's opinions
 
 now in unicode for backwards compatibility
 
----
- <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='266px' src='pictures/space.svg'><img height='266px' src='pictures/a/poop.png'><img height='266px' src='pictures/space.svg'></p></div> <!-- .slide: class="center" -->
 
-Note: Dr Slump character - poop-boy
 
+NOTE TO SELF - no more poop emji coming up
 ---
  <div style='width: 50%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/e/thinking.svg'></p></div> <!-- .slide: class="center" -->
 
@@ -708,6 +787,9 @@ You could try and detect if the emoji won't work via the User Agent, or
 Just serve your own emoji graphs
 
 Yes, it's not the best way to get things done, but
+
+
+
 ---
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/g/wave.svg'><img height='400px' src='pictures/g/lightbulb.svg'></p></div> <!-- .slide: class="center" -->
 
@@ -728,6 +810,13 @@ Alt Text does not have the same functionality as Tool Tips
 
 
 You can use this to your own advantage
+
+NEW 
+
+Twitter implements all these on the web
+
+As long as you are using a browser that runs javascript and can display images, Twitter will work every emoji.
+
 ---
 
  <div style='width: 50%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/g/twisted.svg'></p></div> <!-- .slide: class="center" -->
@@ -747,6 +836,12 @@ Note: Tom Scott
 Hardware keyboard x 14 + LUA script + Autohotkey
 
 Also Emojili - a hack as a joke, but they were approched by VCs
+
+
+They had an iphone and android app
+
+Electromagnetic field talk about the fun they had trying to create this bodge
+
 ---
 
  <div style='width: 50%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/e/atom.svg'></p></div> <!-- .slide: class="center" -->
@@ -755,6 +850,8 @@ Note: The future
 ---
 
 <img src="pictures/t/sparkles.svg" height="600px">
+
+Note: We're going to get new Emoji!
 ---
 <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='133px' src='pictures/e/9.svg'><img height='133px' src='pictures/space.svg'><img height='133px' src='pictures/e/2.svg'><img height='133px' src='pictures/e/0.svg'><img height='133px' src='pictures/e/1.svg'><img height='133px' src='pictures/e/6.svg'><br><img height='200px' src='pictures/o/selfie.png'><img height='200px' src='pictures/o/egg.png'><img height='200px' src='pictures/o/spoon.png'><br><img height='200px' src='pictures/o/duck.png'><img height='200px' src='pictures/o/bacon.png'><img height='200px' src='pictures/o/tumbler.png'></p></div> <!-- .slide: class="center" -->
 
@@ -799,6 +896,10 @@ Google Updating Flushed as well, PHEW
 
 Note: Android, and others, are updating their emoji all the time
 
+
+Here's their versions from 4.4, 5, and the new 6
+
+
 New OS version -> new emoji, plus updates to the old ones
 
 If it's an OS, you're going to have multiple different versions still in use
@@ -834,6 +935,10 @@ Note: Fallback should look like this, sometimes the coloured square is a mojibak
 Note: 
 
 Zero space character allows for groupings
+
+Trying to ban these emoji in some countries due to cultural reasons
+
+
 Banned in indonesia
 ---
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='266px' src='pictures/e/m0.svg'><img height='266px' src='pictures/e/m1.svg'><img height='266px' src='pictures/e/m2.svg'></p></div> <!-- .slide: class="center" -->
