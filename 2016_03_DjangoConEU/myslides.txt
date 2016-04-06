@@ -1,22 +1,44 @@
+
+! space  |  t/sax |  g/hungary.png | t/popper | space 
+---
+
 ## &nbsp; 
-<div style='width: 100%; margin: 0 auto;'><p align='center'><img height='260px' src='pictures/o/bolt.svg'><img height='260px' src='pictures/g/sweat.svg'><img height='260px' src='pictures/t/sparkles.svg'></p></div> <!-- .slide: class="center" -->
+! o/bolt | g/sweat | t/sparkles
+
 @ footer.svg
+
 ---
 ! g/koala | g/wave 
 Note: Gday
 ---
 ! t/guitar | g/claps
-Note: I want to start out by thanking the DSF for their scholarship
+Note: I want to start out by thanking the 
+
+Django Software Foundation
+
+ for their help in getting me here today
 ---
 ! g/snake | g/thumbsup 
-Note: I'm a developer. At the moment I'm doing a lot of Python
+Note: I'm not a django dev
+
+. At the moment I'm doing a lot of Python
+
+but my trade, i'm an operations engineer
 ---
 ! g/red_gem | g/coffee | g/elephant | t/camel1
 ! g/snake | e/web | g/shell | e/burrito
-Note: But I also code a lot of different things
+Note: I write code in a lot of differnet languages
 
 Ruby JavaScript PHP Perl
 Python Web Shell Python
+
+
+I have a macbook, a linux laptop and a windows gaming desktop
+
+I use twitter, slack and hipchat a lot
+
+I use a lot of different operating systems, languages, and software plaforms.
+
 ---
 ! g/bug | e/bug | t/bug
 Note: And so I see a whole lot of different kinds of bugs
@@ -35,7 +57,9 @@ How broken?
 Note: 
 This talk contains no emoji. 
 
-SVG renders only
+
+Everythng you're seing here is a vector graphic, or a high reoslution picture
+
 
 I'm running Ubuntu, and emoji don't work on ubuntu by default
 
@@ -98,9 +122,17 @@ Note: You can't encode everything in just 8 bits; it's not enough.
 
 @ unicode.png
 
+
 Note:  universal encoding
+
 Unicode Consortium
+
 Space for just over a million different characters
+---
+
+! o/bolt
+
+Note: Extremely powerfull
 ---
 ! g/U | g/T | g/F | g/hyphen | e/3 | e/2
 ! g/U | g/T | g/F | g/hyphen | e/8 | space
@@ -163,8 +195,8 @@ These codes relate to specific codepoints, and each is unique
 
 Note: here are these codes
 ---
-! FDFA.png | space | g/slashu | e/Fcap | e/Dcap | e/Fcap | e/Acap
-! 2C22.png | space | g/slashu | e/2 | e/Ccap | e/2 | e/2
+! o/FDFA.png | space | g/slashu | e/Fcap | e/Dcap | e/Fcap | e/Acap
+! o/2C22.png | space | g/slashu | e/2 | e/Ccap | e/2 | e/2
 Note: 
 Here are some more awesome unicode codepoints
 
@@ -184,11 +216,6 @@ Note: Combination marks
 \u0065 \u0301
 ---
 
-#=D̞͚͈̖̲̙̅̎ͨ̾͊j̗̺̝̩̓̄ͣ̅̆́̉̐a̻̯̦͎̝ͮ̆̏ͦ̌ͣͅǹ̰̬̽̾̆̑͊̔ͨg̭̲̼̞͇̻ͬ̍̋̇͒͒̿̈o͇̞͍̫͍ͭ̓
-
-
-Note: Which means that this is comletely valid unicode
----
 ! g/US | g/france | g/germany | g/china
 ! space | t/smile | space 
 Note: So, with this, people are happy ,characters can be encoded. 
@@ -200,9 +227,9 @@ Note: But the Japanese were wondering where the rest of their codepoints were
 
 ! g/japan | t/hearteyes | m/mobile.png
 
-Note: These japanese had mobile phones with these little pictures, and they wanted them in emoji
+Note: These japanese had mobile phones with these little pictures, and they wanted them in unicode
 ---
-@ docomolarge.png
+@ o/docomo.png
 
 Note: Shigetaka Kurita
 
@@ -247,13 +274,13 @@ Note: A small face-only update in 2012
 most platforms, if they support emoji at all, will support up to here
 ---
 ! e/7 | space | e/2 | e/0 | e/1 | e/4
-! e/vulcan_1 | e/sleuth | e/chipmunk.png
+! e/vulcan_1 | e/sleuth | e/chipmunk
 
 Note: Unicode 7 2014
 
 ---
 ! e/8 | space | e/2 | e/0 | e/1 | e/5
-! e/horns | e/upsidedown | e/taco
+! e/horns | a/upsidedown.png | e/taco
 
 Note: Unicode 8 2015
 Taco is now official
@@ -275,11 +302,21 @@ The picture here is the image form the standard
 if i run the python code in Apple, i get the apple version
 
 ---
-! t/apple | ap/mobile.png
+! t/apple | a/mobile.png
 
 Note: Apple implemented emoji when they etered the japanese market
 
 Didn't add to US iPhones for years, ~2010
+
+People have used emoji *SO MUCH* since then
+
+All ages
+
+even important people like
+
+Julie Bishop - Australian Minister for Foreign Affairs
+
+Shes done entire interview in emoji
 
 ---
 
@@ -291,14 +328,26 @@ Note: Sending SMS apple to apple works, but then you get cross compatibility iss
 
 ! e/microscope
 
-Note: I'm going to make a scientific hypothsis
+Note: after inspection and research, I have developed an assertion
 ---
 
 ! g/dash
-Note: I think that the unicode adoption, particularly the graphics and implementations was a bit rushed. 
+Note: I posit that the unicode adoption, particularly the graphics and implementations was a bit rushed. 
+
+and this has been depremental to emoji 
+
+
+Especially with the original android adoption
+
+---
+
+! g/sweat
+
+Note: It's an incredible responsibility, but android got it very wrong in the beginning
 ---
 ! o/stdyellow.png | space | g/slashu | e/1 | e/Fcap | e/4 | e/9 | e/Bcap
-#> >>> unicodedata.name("<img style="margin: 0" height="40px" src="pictures/a/yellow.png">")
+
+#> $ python3<br>>>> import unicodedata<br>>>> unicodedata.name("<img style="margin: 0" height="40px" src="pictures/a/yellow.png">")
 #> 'YELLOW HEART'
 Note: 
 
@@ -321,7 +370,12 @@ Std vs 4.4 vs 5.0 Andoird IMplementations
 
 Here's their 4.4 vs 5 implementations
 
-The theory is that the black/white sample was used directly, but that doesn't explain the rest of them.
+The theory is that the black/white sample was used directly,
+
+
+assumed to be stubble
+
+but that doesn't explain the rest of them.
 ---
 
 ! a/flushed.png | t/flushed | e/flushed | g/flushed
@@ -374,8 +428,16 @@ face with open mouth and cold sweat
 Note: grinning vs grimmace
 ---
 
+! t/bento | t/tempura | t/sushi | t/noodles
+
+Note: Strong japanese influence
+
+We can relate to some of these
+---
 ! a/bow.png | a/information.png | a/nogood.png | a/ok.png
 Note: 
+
+But there are cultural emoji that are completely foreign to the western world.
 
 Person bowing deeply 
 
@@ -386,13 +448,44 @@ No good
 
 OK
 ---
-! t/bento | t/tempura | t/sushi | t/noodles
----
 ! t/minidisc | t/floppy | t/fax | t/cardindex 
+
+Note: Emoji was also created in the early 90s
+
+so there's outdated tech in the standard which is 
+
+included for backwarsd compatility
+
+minidisc
+
+floppy disc
+
+fax machine
+
+rolodex
+
+COMING UP
+
+terrifying out of context
 ---
 ! m/kissing
 
 Note: Terrifying out of context
+
+Mozilla have their own emoi set 
+For firefox os
+
+---
+
+
+! a/catgrin.png | a/catcry.png | a/catlove.png
+!  f/foxgrin | f/foxjoy  | f/foxlove
+
+Note: 
+
+
+
+The set of cats are foxes
 
 ---
 ! e/levi
@@ -404,11 +497,9 @@ No standards for webdings, based on a few people's opinions
 
 now in unicode for backwards compatibility
 
----
-! space | a/poop.png | space
 
-Note: Dr Slump character - poop-boy
 
+NOTE TO SELF - no more poop emji coming up
 ---
 ! e/thinking
 
@@ -465,7 +556,7 @@ Note: Already represented
 
 Try and use a combination
 ---
-! ap/watch.png | ap/headphones.png | ap/laptop.png | e/cross
+! a/watch.png | a/headphones.png | a/laptop.png | e/cross
 Note: no logos or brands
 
 But these are a watch, headphones, a mobile and a desktop
@@ -481,7 +572,7 @@ Note: fads, memes, etc.
 ---
 ! t/memo
 ---
-! space | tumbler.png | space
+! space | o/tumbler.png | space
 Note: whisky is coming in with 9.0
 
 many proposals hit some of the inclusion factors
@@ -512,7 +603,7 @@ My Android - 5.0.1 OS --> U7.0 if you're lucky
 
 Yosemite - up to 6.1, plus vulcan
 
-Ubuntu - b/w only
+Linux in general... yeah no.
 ---
 
 ! a/thumbsup.png | a/thumbsdown.png | a/laugh.png | a/thinking.png | a/heart.png | a/tada.png
@@ -562,36 +653,28 @@ Not universal
 ---
 ! e/web
 
-Note: TODO FIX NOTES FROM HERE 
+Note: In the webspace, you have a few options
 
-Browser input fields vs text on page 
+You can have your own input keyboard in the web space
 
-Microsoft - uncoloured in input, coluored on page
+Twitter DMs have a few, facebook has a menu in their webview
 
-Apple - ungrouped in input,  groupings on page, 
+Google and Docs have menus, but their implementation is a bit.. weird
 
-FB - 20 hidden behind stickers, more on messenger
-Twitter: 5
+It's one of the older ones, and it looks like they're using private space
 
+The emoji in your drafts, or in the edit mode, aren't emoji
 
-Gmail: hidden in the edit bar, plus 
-Normally shortcut to reading format
-   except for Gmail - weird intermediate
-
-Basptiste reports this also happens in Google Slides edit mode
- 
+But they're saved as it.
 
 ---
 ! t/shortcake
 
 Note: workaround for having a visual input mechanism is shortcodes
 
-This are bad
-
 But they're a psudostandard
 
 
-Slack does this really well
 
 ---
 
@@ -604,6 +687,11 @@ Slack: Searchable if they are native
 auto convert from emoji codepoints to emoticons
 
 Github: shortcodes, no search, autocomplete only.
+
+
+Django-emoji is an app for Django that reports to do this
+
+
 ---
 
 ! g/lbrack | g/C | g/A | g/K | g/E | g/rbrack
@@ -613,12 +701,6 @@ Note: HipChat
 
 uses brackets instead
 
-Interetinsg to see when slack codes go into hipchat
-
-Also, slack engineering using slack codes in medium
-
-Also, hipchat api calls - slash commands are broken in 4.0 clients, but emoticons still work -__
-
 ---
 
 ! a/cake.png | g/notequal | a/birthdaycake.png
@@ -626,6 +708,11 @@ Also, hipchat api calls - slash commands are broken in 4.0 clients, but emoticon
 Note: 
 
 Cross-platform incompatibility
+Interetinsg to see when slack codes go into hipchat
+
+Also, slack engineering using slack codes in medium
+
+Also, hipchat api calls - slash commands are broken in 4.0 clients, but emoticons still work -__
 
 ---
 
@@ -652,45 +739,57 @@ MAKE IT OPTIONAL
 ! e/eyeglasses
 Note: Reading things back again
 
-Platform level
-
-Web based flexibility
-
-Twitter wins this 
+For mobile you can mostly assume platform emoji, with sme exceptions
 ---
 
 ! e/control
 
-Note: you have control
+Note: On the web,you have complete control
+
+You can control the entire system
+
+You can make it work
+
+You can make it display your own emoji, or use a common one, like Emoji One
 
 ---
 
 ! m/suggestion
-Note: 
-Failover graphic, copy
+Note:
+If i might make a suggestion
+
+if you have to do this kind of thing 
+ 
 ---
 ! t/wheelchair
 
-Note: a
+Note: 
 
-accessibility
- alt text important
+Think of it in terms of web accessibilty
 
-You can't see what the things are!
+At the very least, have images that are distinct and visible
 
-Twitter DM (AND NOW SLACK) make emoji-only messages larger in size - THIS HELPS
+little 12x12 don't work
 
-Slack change as of March 17
+Use vector graphs where possible - Apple doesnt
 
-SVGS FOR THE LOVE OF GOD
+Where you can, allow the images to be bigger
 
-APPLE DOESN'T DO THIS
+Twitter DM and Slack message - if only emoji, they're display bigger
 ---
-! g/mouse | t/over
+! g/fall | t/back
+Note: Fall Back
 
-Note: Tooltip - Mouse Over
+Don't rely on system emoji for the web. It's unreliable, and exclusionary
 
-Have the proper description there
+You could try and detect if the emoji won't work via the User Agent, or
+
+Just serve your own emoji graphs
+
+Yes, it's not the best way to get things done, but 
+
+
+
 ---
 ! g/wave | g/lightbulb
 
@@ -699,23 +798,28 @@ Note: Alt - Highlight
 Have the unicode character as the alt
 
 Allows copy and pasting
+
 ---
+! g/mouse | t/over
 
-! g/fall | t/back
-Note: Fall Back
+Note: Tooltip - Mouse Over
+
+Have the proper description there, the standard
+
+Alt Text does not have the same functionality as Tool Tips 
 
 
-And if that all fails, use Fall Back
+You can use this to your own advantage
 
-Detecting how to fallback is one thing
+NEW
 
-Or Facebook way - fallback to fb versions on known values, and let the system handle others how it will
+Twitter implements all these on the web
+
+As long as you are using a browser that runs javascript and can display images, Twitter will work every emoji.
 
 ---
 
 ! g/twisted
-
-
 
 Note: 
 twist things around
@@ -732,6 +836,12 @@ Note: Tom Scott
 Hardware keyboard x 14  + LUA script + Autohotkey
 
 Also Emojili - a hack as a joke, but they were approched by VCs
+
+
+They had an iphone and android app
+
+Electromagnetic field talk about the fun they had trying to create this bodge
+
 ---
 
 ! e/atom
@@ -740,49 +850,75 @@ Note: The future
 ---
 
 <img src="pictures/t/sparkles.svg" height="600px">
+
+Note: We're going to get new Emoji!
 ---
-! e/9 | space | e/2 | e/0 | e/1 | e/6
-! ap/selfie.png | ap/duck.png | ap/spoon.png
+<div style='width: 100%; margin: 0 auto;'><p align='center'><img height='133px' src='pictures/e/9.svg'><img height='133px' src='pictures/space.svg'><img height='133px' src='pictures/e/2.svg'><img height='133px' src='pictures/e/0.svg'><img height='133px' src='pictures/e/1.svg'><img height='133px' src='pictures/e/6.svg'><br><img height='200px' src='pictures/o/selfie.png'><img height='200px' src='pictures/o/egg.png'><img height='200px' src='pictures/o/spoon.png'><br><img height='200px' src='pictures/o/duck.png'><img height='200px' src='pictures/o/bacon.png'><img height='200px' src='pictures/o/tumbler.png'></p></div> <!-- .slide: class="center" -->
 
 Note: Unicode 9.0
 
 Not yet finalised, due for release this year
 ---
 
-! e/10 | space | e/2 | e/0 | e/1 | e/7
-! o/eyebrow.png | ap/takeaway.png | o/fortune.png
+<div style='width: 100%; margin: 0 auto;'><p align='center'><img height='133px' src='pictures/e/10.svg'><img height='133px' src='pictures/space.svg'><img height='133px' src='pictures/e/2.svg'><img height='133px' src='pictures/e/0.svg'><img height='133px' src='pictures/e/1.svg'><img height='133px' src='pictures/e/7.svg'><br><img height='200px' src='pictures/o/eyebrow.png'><img height='200px' src='pictures/o/takeaway.png'><img height='200px' src='pictures/o/fortune.png'><br><img height='200px' src='pictures/g/question.svg'><img height='200px' src='pictures/o/dumpling.png'><img height='200px' src='pictures/o/chopsticks.png'></p></div> <!-- .slide: class="center" -->
+
+
 Note: 
 
 These images are from Emojipedia mockups 
 
-Only a small handful are on the cards for 10 already
+These are the only ones currently on the list
 
-STILL NOT OFFICIAL
+Very Very tentative
+
+Other popular suggestions that *MIGHT* make it in:
+
+Doctor
+Giraffe
+Dinosaur
+Sandwich
+Milkshake
+Knitting
+Coffee (currently only 'hot beverage')
+Hawaiian Hangtime sign (thumb and pinky)
+
+
 ---
 
-! a/flushed.png | g/flushed | g/flushed-new.png
-Note: TODO
+! space | a/flushed.png | g/flushed  | space
+! space | a/flushed.png | g/flushed-new.png | space
+Note: 
 
 Google Updating Flushed as well, PHEW
 ---
-<p style=" margin: 0; " margin="0"><img src="pictures/g/a6_1.png" margin="0"><br><img src="pictures/g/a6_2.png" margin="0"><br><img margin="0" src="pictures/g/a6_3.png"></p>
 
-Note: Android have updated their images AGAIN
-iTODO CHANGE
-matching ios more
+<div style='width: 100%; margin: 0 auto;'><p align='center' style="margin: 0"><img height='170px' src='pictures/g/4_eyes.png'><img height='170px' src='pictures/g/4_ear.png'><img height='170px' src='pictures/g/4_mouth.png'><img height='170px' src='pictures/g/4_nose.png'><br><img height='170px' src='pictures/g/5_eyes.png'><img height='170px' src='pictures/g/5_ear.png'><img height='170px' src='pictures/g/5_mouth.png'><img height='170px' src='pictures/g/5_nose.png'><br><img height='170px' src='pictures/g/6_eyes.png'><img height='170px' src='pictures/g/6_ear.png'><img height='170px' src='pictures/g/6_mouth.png'><img height='170px' src='pictures/g/6_nose.png'></p></div> <!-- .slide: class="center" -->
+
+Note: Android, and others, are updating their emoji all the time
+
+
+Here's their versions from 4.4, 5, and the new 6
+
+
+New OS version -> new emoji, plus updates to the old ones
+
+If it's an OS, you're going to have multiple different versions still in use
 ---
 
-! ap/woman.png | ap/heart.png | ap/woman.png | space | ap/ww.png
-! ap/man.png | ap/heart.png | ap/man.png | space | ap/mm.png
-Note: Next - New Emoji
-Zero space character allows for groupings
- Banned in indonesia
+! space | g/4_claps.png | g/6_claps.png | space
+Note: They're also changing hands to handle the next feature 
 
+which is  colour tone customisation
 ---
+
 ! e/vulcan_1 | e/vulcan_2 |  e/vulcan_3 
 ! e/vulcan_4 | e/vulcan_5 | e/vulcan_6
 
-Note: Fitzpatrick Scale
+Note: 
+
+Next - New Emoji Technology
+
+Fitzpatrick Scale
 
 Skin Tones
 
@@ -790,8 +926,20 @@ Not implemented in a lot of places
 
 Slack yes, Facebook No, Google not a lot at all ("gender neutral")
 ---
-
 ! e/vulcan_1 | e/fitz_4
+
+Note: Fallback should look like this, sometimes the coloured square is a mojibake though.
+---
+! a/woman.png | a/heart.png | a/woman.png | space | a/ww.png
+! a/man.png | a/heart.png | a/man.png | space | a/mm.png
+Note: 
+
+Zero space character allows for groupings
+
+Trying to ban these emoji in some countries due to cultural reasons
+
+
+Banned in indonesia
 ---
 ! e/m0 | e/m1 | e/m2
 ! e/m3 | e/m4 | e/m5
@@ -804,32 +952,41 @@ like the combination characters from earlier
 The technology exists...
 ---
 
-! g/T | g/R | ap/hash.png | ap/num5.png | ap/num2.png
+! g/T | g/R | a/hash.png | a/num5.png | a/num2.png
 
 Note: Technical Standard #52
 
 Closes early May, open for public feedback
 ---
 
-@ ap/takeaway.png
+@ o/takeaway.png
 Note: the takeaways
 ---
-! t/speech
 
-Note: Emoji are an additional communication
+! o/bolt | t/speech
+
+Note:
+
+There's a lot of power in speech
+
+Emoji are an additional communication
 
 Don't assume others will know what you're talking about without explaination
 ---
 
-! t/wheelchair 
+! g/sweat | t/wheelchair 
 
-Note: Think about accessibility
+Note: Implement responsibly
+
+Think about accessibility
 ---
 
-! t/popper 
-Note: have a bit of fun, tho
+! t/sparkles | t/popper 
+Note: 
+
+And have fun~
 ---
 
-! space | g/claps | space
+! g/claps
 
 ### glasnt.com/talks
