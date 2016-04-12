@@ -191,7 +191,8 @@ Here's where it gets fun
 I think that the unicode adoption, particularly the graphics and implementations was a bit rushed.
 ---
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='100px' src='pictures/o/stdyellow.png'><img height='100px' src='pictures/space.svg'><img height='100px' src='pictures/g/slashu.svg'><img height='100px' src='pictures/e/1.svg'><img height='100px' src='pictures/e/Fcap.svg'><img height='100px' src='pictures/e/4.svg'><img height='100px' src='pictures/e/9.svg'><img height='100px' src='pictures/e/Bcap.svg'></p></div> <!-- .slide: class="center" -->
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">>>> unicodedata.name("<img style="margin: 0" height="40px" src="pictures/a/yellow.png">")</code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">php -a</code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">php > IntlChar::charName('<img style="margin: 0" height="40px" src="pictures/a/yellow.png">')</code></pre></div>
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">'YELLOW HEART'</code></pre></div>
 Note: 
 

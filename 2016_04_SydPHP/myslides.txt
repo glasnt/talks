@@ -191,7 +191,8 @@ Here's where it gets fun
 I think that the unicode adoption, particularly the graphics and implementations was a bit rushed. 
 ---
 ! o/stdyellow.png | space | g/slashu | e/1 | e/Fcap | e/4 | e/9 | e/Bcap
-#> >>> unicodedata.name("<img style="margin: 0" height="40px" src="pictures/a/yellow.png">")
+#> php -a
+#> php > IntlChar::charName('<img style="margin: 0" height="40px" src="pictures/a/yellow.png">')
 #> 'YELLOW HEART'
 Note: 
 
