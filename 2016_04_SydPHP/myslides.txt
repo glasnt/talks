@@ -11,40 +11,28 @@ Note: This is a short talk on emoji
 ---
 ! o/broken
 Note: emoji are broken
-
 ---
-
 ! t/bug 
-Note: ANd full of bugs
 
+Note: ANd full of bugs
 How buggy?
 ---
 ! e/no
 
 Note: 
-This talk contains no emoji. 
-
-SVG renders only
-
-I'm running Ubuntu, and emoji don't work on ubuntu by default
+This talk doesn't contain any
+This is a Mac
 
 ---
-
-! g/blue_bird | g/bee | e/shiny
-
-Note:
-Quick history
+! g/T | g/L | g/D | g/R
+Note: TLDR
 ---
-! e/one | e/zero
-Note: Everything in a computer is made of ones and zero
-
-Binary
+! g/computer
+Note: Because computers
 ---
 @ unicode.png
 
-Note:  universal encoding
-Unicode Consortium
-Space for just over a million different characters
+Note:  We have Unicode and the Unicode Consortium
 ---
 ! g/U | g/T | g/F | g/hyphen | e/3 | e/2
 ! g/U | g/T | g/F | g/hyphen | e/8 | space
@@ -58,6 +46,8 @@ YOu might have heard of these
 Note: Flexible, Variable
 ---
 ! g/A | space |  g/U | g/T | g/F | g/hyphen | e/8
+! space | space | space | space | space | space | space | space
+! space | space | space | space | space | space | space | space
 ! e/zero | e/one | e/zero | e/zero | e/zero | e/zero | e/zero | e/one
 Note: you don't have to use all the other bits
 
@@ -153,7 +143,7 @@ Note: A small face-only update in 2012
 most platforms, if they support emoji at all, will support up to here
 ---
 ! e/7 | space | e/2 | e/0 | e/1 | e/4
-! e/vulcan_1 | e/sleuth | g/chipmunk.png
+! e/vulcan_1 | e/sleuth | e/chipmunk
 
 Note: Unicode 7 2014
 
@@ -164,39 +154,41 @@ Note: Unicode 7 2014
 Note: Unicode 8 2015
 Taco is now official
 
-
----
-! o/clapping.png | space | g/slashu | e/1 | e/Fcap | e/4 | e/4 | e/Fcap
-
-#>- $ python3<br>>>> import unicodedata<br>>>> unicodedata.name("<img src="pictures/a/claps.png" style="margin: 0" margin="0" height="40px">")<br>'CLAPPING HANDS SIGN'
-
-Note: CLAPPING HANDS SIGN
-
-Python Code
-
-Much work to get unicode integrated into systems
-
-The picture here is the image form the standard
-
-if i run the python code in Apple, i get the apple version
-
----
-! t/apple | ap/mobile.png
-
-Note: Apple implemented emoji when they etered the japanese market
-
-Didn't add to US iPhones for years, ~2010
-
 ---
 
-!  e/robot | g/mobile 
+! space | g/elephant | e/7 | space
 
-Note: Sending SMS apple to apple works, but then you get cross compatibility issues
+#> php -a
+#> php > IntlChar::charName('<img style="margin: 0" height="40px" src="pictures/a/claps.png">');
+#> CLAPPING HANDS SIGN
+---
+
+#> <?php
+#>
+#> $<img style="margin: 0" height="40px" src="pictures/g/wave.svg"> = 'Hello';
+#> $<img style="margin: 0" height="40px" src="pictures/e/globe_a.svg"> = 'World';<br><br>
+#> function $<img style="margin: 0" height="40px" src="pictures/g/speech.svg">($<img style="margin: 0" height="40px" src="pictures/g/snake.svg">, $<img style="margin: 0" height="40px" src="pictures/g/sheep.svg">){
+#> &nbsp; &nbsp; echo $<img style="margin: 0" height="40px" src="pictures/g/snake.svg">' '.$<img style="margin: 0" height="40px" src="pictures/g/sheep.svg">
+#> };<br> <br>
+#> <img style="margin: 0" height="40px" src="pictures/g/speech.svg">($<img style="margin: 0" height="40px" src="pictures/g/snake.svg">, $<img style="margin: 0" height="40px" src="pictures/g/sheep.svg">)<br><br>
+#> >> Hello World
+
+Note: You can use emoji in PHP!
+
+
+Output for 4.3.0 - 7.0.5
+and hhvm-3.9.1 - 3.12.0
 
 ---
 
+! e/thinking
+
+---
 ! g/dash
-Note: I think that the unicode adoption, particularly the graphics and implementations was a bit rushed. 
+Note: 
+Here's where it gets fun
+
+I think that the unicode adoption, particularly the graphics and implementations was a bit rushed. 
 ---
 ! o/stdyellow.png | space | g/slashu | e/1 | e/Fcap | e/4 | e/9 | e/Bcap
 #> >>> unicodedata.name("<img style="margin: 0" height="40px" src="pictures/a/yellow.png">")
@@ -248,21 +240,8 @@ here's clapping from google vs microsoft
 the thumbs!
 ---
 
-! a/hugs.png | g/hugs.png | t/hugs.png | e/hugs.png
-Note: but sometimes the outlier is more correct.
-
-jazzhands vs hugs
----
-! g/blonde | t/blonde | e/blonde | m/blonde 
-
-Note: Guess -- Blonde
-
-
----
 ! t/grinning | t/grimice
 Note: grinning vs grimmace
----
-! t/minidisc | t/floppy | t/fax | t/cardindex 
 ---
 ! m/kissing
 
@@ -282,28 +261,17 @@ now in unicode for backwards compatibility
 
 Note: so how do emoji get approved
 ---
-! space | e/5 | e/tick | space
+! space | e/tick | space
 
 Note: 
+
+SELECTIVE LIST BECUASE OF TIME
 ---
 ! o/happy.png | o/sad.png | o/cowboy.png
 ! t/slight | t/sad | e/qcap
 
 Note: Compatibility - Cowboy added to compat with Yahoo messenger
 ---
-! t/hamburger | t/fries | e/qcap
-
-Note: Frequency. Hamburger for scale 
-
----
-
-! t/noodles | t/spaghetti | e/qcap
-
-Note: Distintiveness
-
-Probbably don't need some for udon and ramen and lingine
----
-
 ! t/libra | t/cancer | e/qcap
 
 Note: Completeness - they didnt have the full zodiac set until 8.0 when 5 were added (including scorpio)
@@ -313,7 +281,7 @@ Note: Completeness - they didnt have the full zodiac set until 8.0 when 5 were a
 Note: Frequently requested
 
 ---
-! space | e/5 | e/cross | space
+! space | e/cross | space
 
 ---
 ! t/wine | t/cocktail | t/tropical | e/cross
@@ -322,17 +290,6 @@ Note: Overly specific
 Don't need a manhattan in there
 ---
 
-! t/construction | t/policeman | t/guard | e/cross 
-
-Note: open ended - don't need all the professions
-
----
-
-! t/jack | t/cry | t/baby | e/cross
-Note: Already represented
-
-Try and use a combination
----
 ! ap/watch.png | ap/headphones.png | ap/laptop.png | e/cross
 Note: no logos or brands
 
@@ -553,6 +510,6 @@ Note: Think about accessibility
 Note: have a bit of fun, tho
 ---
 
-! space | g/claps | space
+! g/claps 
 
 ### glasnt.com/talks
