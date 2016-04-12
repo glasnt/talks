@@ -162,15 +162,10 @@ Taco is now official
 #> php > IntlChar::charName('<img style="margin: 0" height="40px" src="pictures/a/claps.png">');
 #> CLAPPING HANDS SIGN
 ---
-
-#> <?php
-#>
-#> $<img style="margin: 0" height="40px" src="pictures/g/wave.svg"> = 'Hello';
-#> $<img style="margin: 0" height="40px" src="pictures/e/globe_a.svg"> = 'World';<br><br>
-#> function $<img style="margin: 0" height="40px" src="pictures/g/speech.svg">($<img style="margin: 0" height="40px" src="pictures/g/snake.svg">, $<img style="margin: 0" height="40px" src="pictures/g/sheep.svg">){
-#> &nbsp; &nbsp; echo $<img style="margin: 0" height="40px" src="pictures/g/snake.svg">' '.$<img style="margin: 0" height="40px" src="pictures/g/sheep.svg">
-#> };<br> <br>
-#> <img style="margin: 0" height="40px" src="pictures/g/speech.svg">($<img style="margin: 0" height="40px" src="pictures/g/snake.svg">, $<img style="margin: 0" height="40px" src="pictures/g/sheep.svg">)<br><br>
+<style> img.inline_e { margin-bottom: 7px !important; height: 40px; vertical-align:bottom } </style>
+#> <?php<br>$<img class="inline_e" src="pictures/a/wave.png"> = 'Hello';<br>$<img class="inline_e" src="pictures/a/globe_a.png"> = 'World';<br><br>function $<img class="inline_e" src="pictures/a/speech.png"`>($<img class="inline_e" src="pictures/a/poop.png">, $<img class="inline_e" src="pictures/a/tada.png">){<br>&nbsp; &nbsp;echo $<img class="inline_e" src="pictures/a/poop.png">' '.$<img class="inline_e" src="pictures/a/tada.png">
+#> };<br>
+#> <img style="margin: 0" height="40px" src="pictures/a/speech.png">($<img style="margin: 0" height="40px" src="pictures/a/poop.png">, $<img style="margin: 0" height="40px" src="pictures/a/tada.png">)<br><br>
 #> >> Hello World
 
 Note: You can use emoji in PHP!
@@ -210,12 +205,14 @@ Note: Android 4.4 KitKat
 
 
 Note:
+Standard vs 4.4 vs 5.0
 
-Std vs 4.4 vs 5.0 Andoird IMplementations
+The hatching is based on the colour system also used for old timey British heraldy shields. The hatches here are for the correct colours. 
 
-Here's their 4.4 vs 5 implementations
+Yellow ~= stubble
 
-The theory is that the black/white sample was used directly, but that doesn't explain the rest of them.
+Doesn't explain the rest
+
 ---
 
 ! a/flushed.png | t/flushed | e/flushed | g/flushed
@@ -243,6 +240,8 @@ the thumbs!
 
 ! t/grinning | t/grimice
 Note: grinning vs grimmace
+
+SCIENTIFIC PAPER PROVING IT"S NOT JUST ME
 ---
 ! m/kissing
 

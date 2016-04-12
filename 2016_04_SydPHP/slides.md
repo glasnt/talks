@@ -162,15 +162,10 @@ Taco is now official
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">php > IntlChar::charName('<img style="margin: 0" height="40px" src="pictures/a/claps.png">');</code></pre></div>
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">CLAPPING HANDS SIGN</code></pre></div>
 ---
-
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%"><?php</code></pre></div>
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%"></code></pre></div>
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">$<img style="margin: 0" height="40px" src="pictures/g/wave.svg"> = 'Hello';</code></pre></div>
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">$<img style="margin: 0" height="40px" src="pictures/e/globe_a.svg"> = 'World';<br><br></code></pre></div>
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">function $<img style="margin: 0" height="40px" src="pictures/g/speech.svg">($<img style="margin: 0" height="40px" src="pictures/g/snake.svg">, $<img style="margin: 0" height="40px" src="pictures/g/sheep.svg">){</code></pre></div>
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">&nbsp; &nbsp; echo $<img style="margin: 0" height="40px" src="pictures/g/snake.svg">' '.$<img style="margin: 0" height="40px" src="pictures/g/sheep.svg"></code></pre></div>
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">};<br> <br></code></pre></div>
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%"><img style="margin: 0" height="40px" src="pictures/g/speech.svg">($<img style="margin: 0" height="40px" src="pictures/g/snake.svg">, $<img style="margin: 0" height="40px" src="pictures/g/sheep.svg">)<br><br></code></pre></div>
+<style> img.inline_e { margin-bottom: 7px !important; height: 40px; vertical-align:bottom } </style>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%"><?php<br>$<img class="inline_e" src="pictures/a/wave.png"> = 'Hello';<br>$<img class="inline_e" src="pictures/a/globe_a.png"> = 'World';<br><br>function $<img class="inline_e" src="pictures/a/speech.png"`>($<img class="inline_e" src="pictures/a/poop.png">, $<img class="inline_e" src="pictures/a/tada.png">){<br>&nbsp; &nbsp;echo $<img class="inline_e" src="pictures/a/poop.png">' '.$<img class="inline_e" src="pictures/a/tada.png"></code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">};<br></code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%"><img style="margin: 0" height="40px" src="pictures/a/speech.png">($<img style="margin: 0" height="40px" src="pictures/a/poop.png">, $<img style="margin: 0" height="40px" src="pictures/a/tada.png">)<br><br></code></pre></div>
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">>> Hello World</code></pre></div>
 
 Note: You can use emoji in PHP!
@@ -210,12 +205,14 @@ Note: Android 4.4 KitKat
 
 
 Note: 
+Standard vs 4.4 vs 5.0
 
-Std vs 4.4 vs 5.0 Andoird IMplementations
+The hatching is based on the colour system also used for old timey British heraldy shields. The hatches here are for the correct colours.
 
-Here's their 4.4 vs 5 implementations
+Yellow ~= stubble
 
-The theory is that the black/white sample was used directly, but that doesn't explain the rest of them.
+Doesn't explain the rest
+
 ---
 
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='200px' src='pictures/a/flushed.png'><img height='200px' src='pictures/t/flushed.svg'><img height='200px' src='pictures/e/flushed.svg'><img height='200px' src='pictures/g/flushed.svg'></p></div> <!-- .slide: class="center" -->
@@ -243,6 +240,8 @@ the thumbs!
 
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/t/grinning.svg'><img height='400px' src='pictures/t/grimice.svg'></p></div> <!-- .slide: class="center" -->
 Note: grinning vs grimmace
+
+SCIENTIFIC PAPER PROVING IT"S NOT JUST ME
 ---
  <div style='width: 50%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/m/kissing.svg'></p></div> <!-- .slide: class="center" -->
 
