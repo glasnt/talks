@@ -1,6 +1,7 @@
 ## &nbsp;
 
-<div style='width: 100%; margin: 0 auto;'><p align='center'><img height='260px' src='pictures/t/clock.svg'><img height='260px' src='pictures/t/sparkles.svg'></p></div> <!-- .slide: class="center" -->
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='266px' src='pictures/t/clock.svg'><img height='266px' src='pictures/t/books.svg'><img height='266px' src='pictures/t/sparkles.svg'></p></div> <!-- .slide: class="center" -->
+
  <img src="pictures/footer.svg" />
 ---
  <div style='width: 50%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/g/wave.svg'></p></div> <!-- .slide: class="center" -->
@@ -459,6 +460,18 @@ These images are from Emojipedia mockups
 Only a small handful are on the cards for 10 already
 
 STILL NOT OFFICIAL
+---
+ <div style='width: 50%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/e/hammerwrench.svg'></p></div> <!-- .slide: class="center" -->
+Note: FUXING THINGS
+---
+
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/m/claps.png'><img height='400px' src='pictures/new_claps.png'></p></div> <!-- .slide: class="center" -->
+Note: emoji windows 10 fix preview
+---
+ <img src="pictures/emoji_cats.png" />
+---
+ <div style='width: 50%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/t/new.svg'></p></div> <!-- .slide: class="center" -->
+Note: NEW
 ---
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='266px' src='pictures/e/vulcan_1.svg'><img height='266px' src='pictures/e/vulcan_2.svg'><img height='266px' src='pictures/e/vulcan_3.svg'></p></div> <!-- .slide: class="center" -->
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='266px' src='pictures/e/vulcan_4.svg'><img height='266px' src='pictures/e/vulcan_5.svg'><img height='266px' src='pictures/e/vulcan_6.svg'></p></div> <!-- .slide: class="center" -->

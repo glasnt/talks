@@ -1,6 +1,7 @@
 ## &nbsp; 
 
-<div style='width: 100%; margin: 0 auto;'><p align='center'><img height='260px' src='pictures/t/clock.svg'><img height='260px' src='pictures/t/sparkles.svg'></p></div> <!-- .slide: class="center" -->
+! t/clock | t/books | t/sparkles
+
 @ footer.svg
 ---
 !  g/wave 
@@ -459,6 +460,18 @@ These images are from Emojipedia mockups
 Only a small handful are on the cards for 10 already
 
 STILL NOT OFFICIAL
+---
+! e/hammerwrench
+Note: FUXING THINGS
+---
+
+! m/claps.png | new_claps.png
+Note: emoji windows 10 fix preview
+---
+@ emoji_cats.png
+---
+! t/new
+Note: NEW
 ---
 ! e/vulcan_1 | e/vulcan_2 |  e/vulcan_3 
 ! e/vulcan_4 | e/vulcan_5 | e/vulcan_6
