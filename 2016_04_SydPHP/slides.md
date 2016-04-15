@@ -16,13 +16,6 @@ Note: emoji are broken
  <div style='width: 50%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/t/bug.svg'></p></div> <!-- .slide: class="center" -->
 
 Note: ANd full of bugs
-How buggy?
----
- <div style='width: 50%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/e/no.svg'></p></div> <!-- .slide: class="center" -->
-
-Note: 
-This talk doesn't contain any
-This is a Mac
 
 ---
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='200px' src='pictures/g/T.svg'><img height='200px' src='pictures/g/L.svg'><img height='200px' src='pictures/g/D.svg'><img height='200px' src='pictures/g/R.svg'></p></div> <!-- .slide: class="center" -->
@@ -477,14 +470,7 @@ Note: NEW
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='266px' src='pictures/e/vulcan_4.svg'><img height='266px' src='pictures/e/vulcan_5.svg'><img height='266px' src='pictures/e/vulcan_6.svg'></p></div> <!-- .slide: class="center" -->
 
 Note: Fitzpatrick Scale
-
-Skin Tones
-
-Not implemented in a lot of places
-
-Slack yes, Facebook No, Google not a lot at all ("gender neutral")
----
- <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/e/vulcan_1.svg'><img height='400px' src='pictures/e/fitz_4.svg'></p></div> <!-- .slide: class="center" -->
+You've heard about these
 ---
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='266px' src='pictures/e/m0.svg'><img height='266px' src='pictures/e/m1.svg'><img height='266px' src='pictures/e/m2.svg'></p></div> <!-- .slide: class="center" -->
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='266px' src='pictures/e/m3.svg'><img height='266px' src='pictures/e/m4.svg'><img height='266px' src='pictures/e/m5.svg'></p></div> <!-- .slide: class="center" -->

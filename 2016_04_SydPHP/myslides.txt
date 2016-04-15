@@ -16,13 +16,6 @@ Note: emoji are broken
 ! t/bug 
 
 Note: ANd full of bugs
-How buggy?
----
-! e/no
-
-Note: 
-This talk doesn't contain any
-This is a Mac
 
 ---
 ! g/T | g/L | g/D | g/R
@@ -477,14 +470,7 @@ Note: NEW
 ! e/vulcan_4 | e/vulcan_5 | e/vulcan_6
 
 Note: Fitzpatrick Scale
-
-Skin Tones
-
-Not implemented in a lot of places
-
-Slack yes, Facebook No, Google not a lot at all ("gender neutral")
----
-! e/vulcan_1 | e/fitz_4
+You've heard about these
 ---
 ! e/m0 | e/m1 | e/m2
 ! e/m3 | e/m4 | e/m5
