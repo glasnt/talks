@@ -1,0 +1,1269 @@
+#> <c>// If you can read this, yay!
+#> <s>123456789 123456789 123456789 12</s>
+#> > console.log("Hello World");
+#> Hello World
+#> <h>!#/usr/bin/env ruby</h>
+#> > (0..3).each {|c| puts c}
+#> 0
+#> 1
+#> 2
+#> 3
+#> => 0..3  <c>// Console is 11x32 </c>
+---
+
+<br>
+<br>
+# JavaScript is Awe-ful
+<br>
+@ footer.svg
+---
+
+@^ javascript_book.png
+Note: Good parts written by Douglas Crockford
+---
+
+#= Hi!
+Note: Tapestry and Cooking and Yelling
+---
+
+#= Global Variables
+---
+<p></p>
+#> > ans
+---
+#>  > ans = "";
+#>- > function question() {<br>> &nbsp; var ans = 42;<br>> &nbsp; return ans;<br>> }
+#>- > console.log(ans);
+#>- ""
+#>- > console.log(question());
+#>- 42
+#>- > console.log(ans);
+#>- ""
+---
+<p></p>
+#> > ans = "";
+#> > function question() {<br>> &nbsp; <s>var</s> ans = 42; <br>> &nbsp; return ans;<br>> }
+#> > console.log(ans);
+#> ""
+#> > console.log(question());
+#> 42
+#> > console.log(ans);
+#> 42
+---
+#= Duck Typing
+Note: if it looks like a duck and sounds like a duck, it's a duck.
+---
+#>  > 4 + 2
+#>- 6
+#>- > 4 - 2
+#>- 2
+#>- > "4" - 2
+#>- 2
+#>- > "4" + 2
+#>- "42"
+---
+#= Arrays and Objects
+---
+#> > [] + []
+#>- ""
+#>- > [] + {}
+#>- [object Object]
+#>- > {} + []
+#>- 0
+#>- > {} + {}
+#>- NaN
+
+Note: Associativity? Pfft! Transativity? Hahahah
+---
+
+#= Arrays != Objects
+---
+#>  > var arr = ['a', 'b', 'c']
+#>- > arr
+#>- ["a", "b", "c"]
+#>- > arr.hello = "world"
+#>- "world"
+#>- > arr
+#>- ["a", "b", "c"]
+---
+#> > for (var k in arr) {<br>>&nbsp;&nbsp; console.log(k);<br>> }
+#>- 0<br>1<br>2<br>hello
+---
+#>  > arr.push("append");
+#>- 4
+#>- > c = 0;<br>> for (var k in arr) {<br>>&nbsp; &nbsp; c = c + 1; <br>> }<br>> c
+#>- 5
+#>- > arr.length
+#>- 4
+---
+#= Equality
+---
+#>  > 0 ==&nbsp; false
+#>- true
+#>- > 1 == &nbsp;"1"
+#>- true
+#>- > 0 === false
+#>- false
+#>- > 1 === "1"
+#>- false
+---
+#= Developers can get<br>just a little bit<br>upset at JavaScript
+---
+=> "[A]: Please don't hire me<br>for my JS abilities.<br>I'm proficient enough to loath the language intensely"
+Note: experienced developers get frustrated with it
+---
+
+=> "[B]: I have been around [A]<br>when they hack JS.<br>Let's just say<br>Satan himself would blush."
+Note: people near to javascript developers hear them swear.  A lot.
+---
+
+=> "[C]: Have to modify some JavaScript<br>I did over a year ago.
+>
+> 'What is this?'<br>
+> 'Why did I ...?'<br>
+> 'What sort of name is that!'"
+
+Note: confusing syntax, hard to come back to
+
+---
+
+=> "[D]: 'I hate writing JavaScript.<br>
+> I know, I'll write some JavaScript<br>to fix it.'
+>
+> This is how Angular happens."
+
+Note: Pot shots at the Language
+---
+#= ...
+---
+#= Why?
+Note: why is javascript so awful
+---
+
+#= JavaScript History<br>in 30 words or less
+Note: I don't have time to tell the entire history of javascript
+
+Check out the YUI Theatre series
+
+For more, see "Crockford on JavaScript"
+
+---
+
+###= In 1995, JavaScript was developed in 10 days
+### by Brendan Eich for Netscape
+### to offer a lightweight version of Java
+### in order to compete for users with Microsoft.
+
+Note: Let's step through that
+---
+
+
+###= In 1995, JavaScript was developed in 10 days
+### &nbsp;
+### &nbsp;
+### &nbsp;
+Note: awfully short development time
+
+just by that alone could explain things.
+---
+###= In 1995, JavaScript was developed in 10 days
+### by Brendan Eich for Netscape
+### &nbsp;
+### &nbsp;
+Note:
+Eich originally wanted to make scheme
+
+Sure, they said
+
+Oh wait, that's scheme, that's gross, don't do that.
+---
+#> > (define hello-world
+#> >&nbsp; (lambda ()
+#> >&nbsp; &nbsp; (begin
+#> >&nbsp; &nbsp; &nbsp; (write ‘Hello-World)
+#> >&nbsp; &nbsp; )
+#> >&nbsp; )
+#> > )
+#> >
+#> > (hello-world)
+#> Hello-World
+#>
+Note: We could have written in the browser like this
+---
+###= In 1995, JavaScript was developed in 10 days
+### by Brendan Eich for Netscape
+### &nbsp;
+### &nbsp;
+
+Note: For user adoption, maybe it wasn't the best
+---
+
+###= In 1995, JavaScript was developed in 10 days
+### by Brendan Eich for Netscape
+### to offer a lightweight version of Java
+### &nbsp;
+
+
+Note: so Eich made it look like Java, basing it a bit on Scheme and Self as well
+
+Originally called LiveScript. Changed to JavaScript because it was kinda based on int
+
+But Sun owned the trademark, so Sun owned the JavaScript trademark
+
+Which is now owned by Oracle
+
+
+Java could have been the language of the web
+
+Java Applets
+
+---
+
+###= In 1995, JavaScript was developed in 10 days
+### by Brendan Eich for Netscape
+### to offer a lightweight version of Java
+### in order to compete for users with Microsoft.
+
+Note: Mosaic split into NetScape in SpyGlass
+
+Netscape says: "we're going to wipe out MS!"
+
+MS says: "whoops, buying spyglass"
+
+race was on to develop the scriting language to make the web better
+
+Because trademark, MS reverse engineered JS, called it JScript
+
+---
+
+#= JavaScript™
+
+<span class="dasfoot"><a href="http://tsdr.uspto.gov/#caseNumber=75026640&caseType=SERIAL_NO&searchType=statusSearch">US Trademark &#35;75026640</a></span>
+Note:
+
+---
+
+#= ECMAScript
+### A general purpose, cross-platform programming language
+
+Note: Because of some fun issues, Tim Berners Lee and W3C wouldn't do the standard
+
+TBL was apparently upset that Netscape took his simple design and made it silly
+
+with things like images and formatting
+
+
+
+They ended up at the
+
+European Computer Manufacturers Association
+
+They couldn't think of a better name
+
+Working title: ECMA Script (ecc-ma)
+
+
+---
+
+#= The most<br>popular language.<br>Ever.
+Note: what percentage of the world uses the internet?
+
+I posit that there are more uses of JS than any other lanaguage ever
+
+
+---
+#= Billions of users
+
+Note: What percentage of the internet uses JS?
+
+---
+#= Millions of developers
+Note: Given this user base, there are more developers of JS than any other language
+---
+#= Butt-loads of complaints
+
+Note: It may also be the most complained about language
+But not without some reason
+
+---
+#= Foot Guns
+
+Note: Things you can shoot yourself with in the foot
+
+---
+
+#= Global Variables
+Note: Incidently, first listing in The Good Parts - Appendix A - The Awful Parts
+---
+
+<p></p>
+#> > ans = "";
+#> > function question() {<br>> &nbsp; var ans = 42; <br>> &nbsp; return ans;<br>> }
+#> > console.log(ans);
+#> ""
+#> > console.log(question());
+#> 42
+#> > console.log(ans);
+#> ""
+---
+<p></p>
+#> > ans = ""; <c>// global
+#> > function question() {<br>> &nbsp; var ans = 42; <c> // local</c> <br>> &nbsp; return ans;<br>> }
+#> > console.log(ans);
+#> ""
+#> > console.log(question());
+#> 42
+#> > console.log(ans);
+#> ""
+---
+#> <c>//ruby</c>
+#> <h>@</h>ans = 42;
+#>
+#> <c>//python</c>
+#> <h>global</h> ans = 42;
+#>
+#> <c>//java
+#> <h>public</h> static ans = 42;
+Note: Because every other language has locals by default
+---
+#= Overloaded<br>`+` operand
+---
+<p></p>
+#>  > 4 + 2
+#> 6
+#> > 4 - 2
+#> 2
+#> > "4" - 2
+#> 2
+#> > "4" + 2
+#> "42"
+---
+<p></p>
+#>  > 4 + 2
+#> 6
+#> > 4 - 2
+#> 2
+#> > "4" - 2
+#> 2 <c>&nbsp;&nbsp; // type -> integer</c>
+#> > "4" + 2
+#> "42"<c> // type -> string</c>
+Note: `+` for both additon and concatenation
+---
+
+#= Equality<br>and<br>Type Coersion
+---
+<p></p>
+#> > 0 ==&nbsp; false
+#> true
+#> > 0 === false
+#> false
+#> > 1 == &nbsp;"1"
+#> true
+#> > 1 === "1"
+#> false
+---
+<p></p>
+#> > 0 ==&nbsp; false
+#> true
+#> > 0 === false
+#> false
+#> > 1 == &nbsp;"1" <c>// equality 
+#> true
+#> > 1 === "1" <c>// equality without</c>
+#> false &nbsp; &nbsp; &nbsp; <c>// type coersion</c>
+#>- <h>// always use ===</h>
+
+Note: This was picked up v. early by Brendan Eich
+
+But because legacy, the standards committee didn't accept the change to `==`
+
+forced creation of `===`
+---
+#= `NaN`
+Note: More gotchas, Combination of original 'Bad Parts', 'Awful Parts', and some new Fun
+---
+#> > typeof NaN
+#> "number"
+#>- > NaN === NaN
+#>- false
+#>- > NaN !== NaN
+#>- true
+#>- > isFinite(NaN)
+#>- false
+#>- <h>// if typeof a === "number" <br> &nbsp; &nbsp;&nbsp; && isFinite(a)</h>
+---
+#= `parseInt`
+---
+#> > parseInt("123")
+#>- 123
+#>- > parseInt("123 bunnies")
+#>- 123
+#>- > parseInt("04")
+#>- 4
+#>- > parseInt("08")
+#>- 0
+---
+#= `Number`
+---
+#> > 4 + 2
+#>- 6
+#>- > 40 + 20
+#>- 60
+#>- > 0.4 + 0.2
+#>- 0.6000000000000001
+#>- <c>// All Number in JavaScript<br>// are IEEE-754 floats</c>
+Note: All numbers are IEEE 754 floats
+
+Fix this by dealing with 'round' numbers. Money - work in cents
+---
+#= Extended Character Set
+---
+#> > "abc".split("")
+#>- ["a","b","c"]
+#>- > "<img src="pictures/rabbit.svg" class="e" style="margin: 0"><img src="pictures/cat.svg" style="margin: 0" class="e">".split("")
+#>- ["�","�","�","�"]
+#>- > Array.from("<img src="pictures/rabbit.svg" class="e" style="margin: 0"><img src="pictures/cat.svg" style="margin: 0" class="e">")
+#>- ["<img src="pictures/rabbit.svg" class="e" style="margin: 0">","<img src="pictures/cat.svg" style="margin: 0" class="e">"]
+
+Note: Unicode extended characterset
+
+Javascript was created before unicode was super popular, so some parts don't understand extended characters
+
+split doesn't but array.from does (polyfill?)
+---
+
+#= This thing
+##= `++[[]][+[]]+[+[]]`
+
+---
+#> > ++[[]][+[]]+[+[]]
+#>- 10
+#>- > []
+#>- ""
+#>- > +[] <c>// +""</c>
+#>- 0
+Note: uniary operand casts to number
+---
+#> > [[]][+[]] <c> &nbsp;// [""][0]</c>
+#>- ""
+#>- > +[[]][+[]] <c> // +""
+#>- 0
+#>- > ++[[]][+[]] <c>// ++0 </c>
+#>- 1
+#>- > ++[[]][+[]] <h>+</h> [+[]]
+#>- 10
+
+Note: pre-increment only works on some objects, not directly on number literals
+---
+
+#= Arrays are Objects
+##- Kinda.
+
+Note: they are special, with integer keys and special sugar. 
+See eariler partial working of addressing array keys
+---
+
+#> > typeof { a: "b"}
+#>- "object"
+#>- > typeof ["a","b"]
+#>- "object"
+---
+#= `typeof`
+Note: Big typeof
+---
+#> > typeof Object()
+#>- "object"
+#>- > typeof Number()
+#>- "number"
+#>- > typeof String()
+#>- "string"
+#>- > typeof Boolean()
+#>- "boolean"
+#>- > typeof null
+#>- "object"
+Note: even JScript dutifully reverse engineered this error
+
+It's a bug
+---
+<p></p>
+#> > typeof Object() 
+#> "object"  <h> // JSVAL_OBJECT &nbsp;  0x0</h>
+#> > typeof Number()
+#> "number"
+#> > typeof String()
+#> "string" <h> // JSVAL_STRING &nbsp; 0x4</h>
+#> > typeof Boolean()
+#> "boolean" <h>// JSVAL_BOOLEAN &nbsp;0x6</h>
+#> > typeof null
+#> "object"&nbsp; <c>//  0x00 pointer  </c>
+
+---
+<pre><code><c>// source/js/src/jsapi.c</c><br>
+JS_TypeOfValue(JSContext *cx, jsval v) {
+&nbsp; &nbsp; if (JSVAL_IS_VOID(v)) {
+&nbsp; &nbsp; &nbsp; &nbsp; type = JSTYPE_VOID;
+&nbsp; &nbsp; } else if (JSVAL_IS_OBJECT(v)) {
+&nbsp; &nbsp; &nbsp; &nbsp; if (...) {
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; type = JSTYPE_FUNCTION;
+&nbsp; &nbsp; &nbsp; &nbsp; } else {
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; type = JSTYPE_OBJECT;
+&nbsp; &nbsp; &nbsp; &nbsp; }
+&nbsp; &nbsp; } else if (JSVAL_IS_NUMBER(v)) {
+&nbsp; &nbsp; &nbsp; &nbsp; type = JSTYPE_NUMBER;
+&nbsp; &nbsp; } else if (JSVAL_IS_STRING(v)) {
+&nbsp; &nbsp; &nbsp; &nbsp; type = JSTYPE_STRING;
+&nbsp; &nbsp; } else if (JSVAL_IS_BOOLEAN(v)) {
+&nbsp; &nbsp; &nbsp; &nbsp; type = JSTYPE_BOOLEAN;
+&nbsp; &nbsp; }
+&nbsp; &nbsp; return type;
+}
+</pre></code>
+
+
+<span class="dasfoot"><a href="http://mxr.mozilla.org/classic/source/js/src/jsapi.h">jsapi from October 1996</a></span>
+---
+<pre><code><c>// source/js/src/jsapi.c</c><br>
+JS_TypeOfValue(JSContext *cx, jsval v) {
+&nbsp; &nbsp; <h>if</h> (JSVAL_IS_VOID(v)) {
+&nbsp; &nbsp; &nbsp; &nbsp; type = JSTYPE_VOID;
+&nbsp; &nbsp; } <h>else if</h> (JSVAL_IS_OBJECT(v)) {
+&nbsp; &nbsp; &nbsp; &nbsp; <h>if</h> (...) {
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; type = JSTYPE_FUNCTION;
+&nbsp; &nbsp; &nbsp; &nbsp; } <h>else</h> {
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; type = JSTYPE_OBJECT;
+&nbsp; &nbsp; &nbsp; &nbsp; }
+&nbsp; &nbsp; } <h>else if</h> (JSVAL_IS_NUMBER(v)) {
+&nbsp; &nbsp; &nbsp; &nbsp; type = JSTYPE_NUMBER;
+&nbsp; &nbsp; } <h>else if</h> (JSVAL_IS_STRING(v)) {
+&nbsp; &nbsp; &nbsp; &nbsp; type = JSTYPE_STRING;
+&nbsp; &nbsp; } <h>else if</h> (JSVAL_IS_BOOLEAN(v)) {
+&nbsp; &nbsp; &nbsp; &nbsp; type = JSTYPE_BOOLEAN;
+&nbsp; &nbsp; }
+&nbsp; &nbsp; return type;
+}
+</pre></code>
+
+
+<span class="dasfoot"><a href="http://mxr.mozilla.org/classic/source/js/src/jsapi.h">jsapi from October 1996</a></span>
+---
+<pre><code><c>// source/js/src/jsapi.c</c><br>
+JS_TypeOfValue(JSContext *cx, jsval v) {
+&nbsp; &nbsp; if (<h>JSVAL_IS_VOID(v)</h>) { <h>// v == JSVAL_VOID</h>
+&nbsp; &nbsp; &nbsp; &nbsp; type = JSTYPE_VOID;
+&nbsp; &nbsp; } else if (JSVAL_IS_OBJECT(v)) {
+&nbsp; &nbsp; &nbsp; &nbsp; if (...) {
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; type = JSTYPE_FUNCTION;
+&nbsp; &nbsp; &nbsp; &nbsp; } else {
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; type = JSTYPE_OBJECT;
+&nbsp; &nbsp; &nbsp; &nbsp; }
+&nbsp; &nbsp; } else if (JSVAL_IS_NUMBER(v)) {
+&nbsp; &nbsp; &nbsp; &nbsp; type = JSTYPE_NUMBER;
+&nbsp; &nbsp; } else if (JSVAL_IS_STRING(v)) {
+&nbsp; &nbsp; &nbsp; &nbsp; type = JSTYPE_STRING;
+&nbsp; &nbsp; } else if (JSVAL_IS_BOOLEAN(v)) {
+&nbsp; &nbsp; &nbsp; &nbsp; type = JSTYPE_BOOLEAN;
+&nbsp; &nbsp; }
+&nbsp; &nbsp; return type;
+}
+</pre></code>
+<span class="dasfoot"><a href="http://mxr.mozilla.org/classic/source/js/src/jsapi.h">jsapi from October 1996</a></span>
+---
+<pre><code><c>// source/js/src/jsapi.c</c><br>
+JS_TypeOfValue(JSContext *cx, jsval v) {
+&nbsp; &nbsp; if (JSVAL_IS_VOID(v)) {
+&nbsp; &nbsp; &nbsp; &nbsp; type = JSTYPE_VOID;
+&nbsp; &nbsp; } else if (<h>JSVAL_IS_OBJECT(v)</h>) { <h>// JSVAL_TAG(v) == JSVAL_OBJECT</h>
+&nbsp; &nbsp; &nbsp; &nbsp; if (...) {
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; type = JSTYPE_FUNCTION;
+&nbsp; &nbsp; &nbsp; &nbsp; } else {
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; type = JSTYPE_OBJECT;
+&nbsp; &nbsp; &nbsp; &nbsp; }
+&nbsp; &nbsp; } else if (JSVAL_IS_NUMBER(v)) {
+&nbsp; &nbsp; &nbsp; &nbsp; type = JSTYPE_NUMBER;
+&nbsp; &nbsp; } else if (JSVAL_IS_STRING(v)) {
+&nbsp; &nbsp; &nbsp; &nbsp; type = JSTYPE_STRING;
+&nbsp; &nbsp; } else if (JSVAL_IS_BOOLEAN(v)) {
+&nbsp; &nbsp; &nbsp; &nbsp; type = JSTYPE_BOOLEAN;
+&nbsp; &nbsp; }
+&nbsp; &nbsp; return type;
+}
+</pre></code>
+
+
+<span class="dasfoot"><a href="http://mxr.mozilla.org/classic/source/js/src/jsapi.h">jsapi from October 1996</a></span>
+---
+<pre><code><c>// source/js/src/jsapi.c</c><br>
+JS_TypeOfValue(JSContext *cx, jsval v) {
+&nbsp; &nbsp; if (JSVAL_IS_VOID(v)) {
+&nbsp; &nbsp; &nbsp; &nbsp; type = JSTYPE_VOID;
+&nbsp; &nbsp; } else if (JSVAL_IS_OBJECT(v)) {
+&nbsp; &nbsp; &nbsp; &nbsp; if (...) { <h>// Excuse me, are you a function?</h>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; type = JSTYPE_FUNCTION;
+&nbsp; &nbsp; &nbsp; &nbsp; } else {
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; type = JSTYPE_OBJECT;
+&nbsp; &nbsp; &nbsp; &nbsp; }
+&nbsp; &nbsp; } else if (JSVAL_IS_NUMBER(v)) {
+&nbsp; &nbsp; &nbsp; &nbsp; type = JSTYPE_NUMBER;
+&nbsp; &nbsp; } else if (JSVAL_IS_STRING(v)) {
+&nbsp; &nbsp; &nbsp; &nbsp; type = JSTYPE_STRING;
+&nbsp; &nbsp; } else if (JSVAL_IS_BOOLEAN(v)) {
+&nbsp; &nbsp; &nbsp; &nbsp; type = JSTYPE_BOOLEAN;
+&nbsp; &nbsp; }
+&nbsp; &nbsp; return type;
+}
+</pre></code>
+
+
+<span class="dasfoot"><a href="http://mxr.mozilla.org/classic/source/js/src/jsapi.h">jsapi from October 1996</a></span>
+---
+<pre><code><c>// source/js/src/jsapi.c</c><br>
+JS_TypeOfValue(JSContext *cx, jsval v) {
+&nbsp; &nbsp; if (JSVAL_IS_VOID(v)) {
+&nbsp; &nbsp; &nbsp; &nbsp; type = JSTYPE_VOID;
+&nbsp; &nbsp; } else if (JSVAL_IS_OBJECT(v)) {
+&nbsp; &nbsp; &nbsp; &nbsp; if (...) {
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; type = JSTYPE_FUNCTION;
+&nbsp; &nbsp; &nbsp; &nbsp; } <h>else</h> {
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; type = JSTYPE_OBJECT;
+&nbsp; &nbsp; &nbsp; &nbsp; }
+&nbsp; &nbsp; } else if (JSVAL_IS_NUMBER(v)) {
+&nbsp; &nbsp; &nbsp; &nbsp; type = JSTYPE_NUMBER;
+&nbsp; &nbsp; } else if (JSVAL_IS_STRING(v)) {
+&nbsp; &nbsp; &nbsp; &nbsp; type = JSTYPE_STRING;
+&nbsp; &nbsp; } else if (JSVAL_IS_BOOLEAN(v)) {
+&nbsp; &nbsp; &nbsp; &nbsp; type = JSTYPE_BOOLEAN;
+&nbsp; &nbsp; }
+&nbsp; &nbsp; return type;
+}
+</pre></code>
+
+
+<span class="dasfoot"><a href="http://mxr.mozilla.org/classic/source/js/src/jsapi.h">jsapi from October 1996</a></span>
+---
+<pre><code><c>// source/js/src/jsapi.c</c><br>
+JS_TypeOfValue(JSContext *cx, jsval v) {
+&nbsp; &nbsp; if (JSVAL_IS_VOID(v)) {
+&nbsp; &nbsp; &nbsp; &nbsp; type = JSTYPE_VOID;
+&nbsp; &nbsp; } else if (JSVAL_IS_OBJECT(v)) {
+&nbsp; &nbsp; &nbsp; &nbsp; if (...) {
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; type = JSTYPE_FUNCTION;
+&nbsp; &nbsp; &nbsp; &nbsp; } else {
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <h>type = JSTYPE_OBJECT</h>;
+&nbsp; &nbsp; &nbsp; &nbsp; }
+&nbsp; &nbsp; } else if (JSVAL_IS_NUMBER(v)) {
+&nbsp; &nbsp; &nbsp; &nbsp; type = JSTYPE_NUMBER;
+&nbsp; &nbsp; } else if (JSVAL_IS_STRING(v)) {
+&nbsp; &nbsp; &nbsp; &nbsp; type = JSTYPE_STRING;
+&nbsp; &nbsp; } else if (JSVAL_IS_BOOLEAN(v)) {
+&nbsp; &nbsp; &nbsp; &nbsp; type = JSTYPE_BOOLEAN;
+&nbsp; &nbsp; }
+&nbsp; &nbsp; return type;
+}
+</pre></code>
+
+
+<span class="dasfoot"><a href="http://mxr.mozilla.org/classic/source/js/src/jsapi.h">jsapi from October 1996</a></span>
+
+---
+<pre><code><c>// source/js/src/jsapi.c</c><br>
+JS_TypeOfValue(JSContext *cx, jsval v) {
+&nbsp; &nbsp; if (JSVAL_IS_VOID(v)) {
+&nbsp; &nbsp; &nbsp; &nbsp; type = JSTYPE_VOID;
+&nbsp; &nbsp; } else if (JSVAL_IS_OBJECT(v)) {
+&nbsp; &nbsp; &nbsp; &nbsp; if (...) {
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; type = JSTYPE_FUNCTION;
+&nbsp; &nbsp; &nbsp; &nbsp; } else {
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; type = JSTYPE_OBJECT;
+&nbsp; &nbsp; &nbsp; &nbsp; }
+&nbsp; &nbsp; } else if (JSVAL_IS_NUMBER(v)) {
+&nbsp; &nbsp; &nbsp; &nbsp; type = JSTYPE_NUMBER;
+&nbsp; &nbsp; } else if (JSVAL_IS_STRING(v)) {
+&nbsp; &nbsp; &nbsp; &nbsp; type = JSTYPE_STRING;
+&nbsp; &nbsp; } else if (JSVAL_IS_BOOLEAN(v)) {
+&nbsp; &nbsp; &nbsp; &nbsp; type = JSTYPE_BOOLEAN;
+&nbsp; &nbsp; }
+&nbsp; &nbsp; <h>return type</h>;
+}
+</pre></code>
+<span class="dasfoot"><a href="http://mxr.mozilla.org/classic/source/js/src/jsapi.h">jsapi from October 1996</a></span>
+---
+##= Yes, this is a bug.
+##- This is a old, known bug.
+---
+#= Backwards<br>Compatibility
+
+Note: JS = most popular language
+
+Most users
+
+Most impact
+
+Biggest user base *ever*. Backward compatibility is not optional
+
+The internet would *break*
+
+And if that's not enough, we have to think about more things
+---
+#= Security
+Note: on top of the things you know JS does
+
+you have to worry about the things that you *really* don't want it to do
+---
+
+#= Cross Site Scripting
+#= XSS
+
+Note:  Javascript can be used for other evil things
+
+Can take data from your site onto others and other such fun:
+---
+
+#= `eval`
+
+Note: executing arbitary code.
+
+We can create not easily readable code
+
+If you were in Ben's Virus talk, this is havoc in PHP. JS no different
+---
+<br><br>
+<pre><code style="overflow: hidden; width: 100%; white-space: pre-wrap"><h>eval(</h>function(p,a,c,k,e,d){e&equals;function(c){return c.toString(36)};if(!''.replace(/^/,String)){while(c--){d[c.toString(a)]&equals;k[c]||c.toString(a)}k&equals;[function(e){return
+d[e]}];e&equals;function(){return'\\\\w+'};c&equals;1};while(c--){if(k[c]){p&equals;p.replace(new RegExp('\\\\b'+e(c)+'\\\\b','g'),k[c])}}return p}('f a&equals;["\\\\e\\\\1\\\\7\\\\4\\\\2\\\\3\\\\1\\\\2\\\\3\\\\6\\\\4\\\\2\\\\d\\\\8\\\\c\\\\9\\\\2\\\\3\\\\6\\\\4\\\\2" +"\\\\g\\\\h\\\\8\\\\k\\\\4\\\\3\\\\2\\\\b\\\\1\\\\5\\\\9\\\\l\\\\6\\\\1\\\\i\\\\2\\\\3\\\\1\\\\7\\\\1\\\\5" +"\\\\5\\\\1\\\\b"];j(a[0]);',22,22,'|x6F|x20|x74|x65|x72|x68|x6D|x61|x6B|'<br>+'_0|x77|x63|x48|x43|var|x50|x6C|x70|alert|x6E|x73'.split('|'),0,{})<h>)</h>
+</pre></code>
+
+#>- alert("Come to the <br> &nbsp; &nbsp; &nbsp; Hack the Planet workshop<br> &nbsp; &nbsp; &nbsp; tomorrow")</code></pre>
+Note: base64_encode in php is similar
+---
+#= ...
+Note: so, that's what javascript can do. it's powerful, and scary. what if you say
+
+---
+##= (╯°□°）╯︵ sʇɐʍ ʎɔɐƃǝl
+Note: I dont want to deal with all that stuff
+---
+
+#= Frameworks
+Note: pre rolled goodness and wrappers and and and
+---
+
+#= MooTools
+#= jQuery
+#= Bootstrap
+Note: MooTools was a really good thing back in the day
+
+I've only come across it when I tasked to remove it
+
+ ...
+
+JQuery so much extension
+
+
+at one point ~90% of websites had it
+
+ ...
+more than JS; CSS, HTML
+Adding more functionality so you dont have to worry about responsive websites
+
+But you can spot a bootstraped wbesite from a mile away
+---
+#= Meteor
+#= React
+#= Angular
+---
+#= ...
+Note: but what if you sasy
+---
+##= (╯°□°）╯︵ ʇdᴉɹɔsɐʌɐɾ
+Note: stuff javascript all together
+---
+
+#= CoffeeScript
+#= TypeScript
+#= PureScript
+Note: CoffeeScript is a little language that compiles into JavaScript. Underneath that awkward Java-esque patina, JavaScript has always had a gorgeous heart.
+
+TypeScript lets you write JavaScript the way you really want to. TypeScript is a typed superset of JavaScript that compiles to plain JavaScript
+
+See Typehints in JS talk from PyCon AU 2015
+---
+#= ...
+---
+##= (╯°□°）╯︵ ƃuᴉuɹɐǝl
+Note: I want to work in my favourite language, and still work in the browser
+---
+##= Pick a language.
+##= Any language.
+
+---
+###= github.com/jashkenas/coffeescript/wiki/<br>List-of-languages-that-compile-to-JS
+Note: Haskell - GHCJS
+Python - pyjamas
+Ruby - Opal
+
+Listings for perl, erlang, java, scala, c#, f#, lisp, smalltalk, pascal, go, php, sql
+---
+#= Some of my favourites
+---
+#= Batavia
+@ pybee.svg
+Note: Python Bytecode being run by the Jacascript VM
+---
+#= asm.js
+#= emscripten
+Note: C into JS
+
+Faster than Light Osmos - Humble Bundle Mozilla
+
+Unreal Tornament
+
+DosBox
+---
+= <img src="pictures/win95.png">
+Note: Yes, that's windows 95 running in my browser from 1995
+---
+#= ...
+---
+##= ┬javascript┬ ノ( ゜-゜ノ)
+Note: OK, JS is pretty freaking neat, I want some of that.
+But what about it's other uses
+
+---
+#= JavaScript<br>outside the browser
+---
+#= node.js
+Note: serverside js
+
+---
+#= Electron
+Note:
+
+GitHub's framework. Atom. Github Desktop
+not the first time JS has been used on the desktop
+---
+#= Google Gadgets
+Note: iGoogle and Google Desktop widget - scripting by javascript on the desktop
+---
+@ google_gadgets.jpg
+---
+<br><br>
+@ igoogle.png
+---
+#= As a scripting language
+Note: NginScript, Cinnamon
+---
+
+#= More Gotchas
+---
+
+#= V8 Function<br>Optimisation
+---
+<pre><code>'use strict';
+
+function add(x, y) {
+<c style="font-weight:normal">&nbsp; // I am the very model of a modern Major-General
+&nbsp; // I've information vegetable, animal, and mineral
+&nbsp;  // I know the kings of England, and I quote the fights historical
+&nbsp;  // From Marathon to Waterloo, in order categorical
+&nbsp;  // I'm very well acquainted, too, with matters mathematical
+&nbsp;  // I understand equations, both the simple and quadratical
+&nbsp;  // About binomial theorem I'm teeming with a lot o' news
+&nbsp;  // With many cheerful facts about the square of the hypotenuse
+&nbsp;  // I'm very good at integral and differential calculus
+&nbsp;  // I know the scientific names of beings animalculous
+</c>
+&nbsp;  return(x + y);
+}
+
+for(let i = 0; i < 500000000; i++) {
+&nbsp; if (add(i, i++) < 5) {
+&nbsp; &nbsp;  <c>//</c>
+&nbsp; }
+}
+</code></pre>
+
+- <pre><code>$ time -p node general.js<br>real 1.91</code></pre>
+---
+<pre><code>'use strict';
+
+function add(x, y) {
+<c style="font-weight:normal">&nbsp; // I am the very model of a modern Major-General
+&nbsp; // I've information vegetable, animal, and mineral
+&nbsp;  // I know the kings of England, and I quote the fights historical
+&nbsp;  // From Marathon to Waterloo, in order categorical
+&nbsp;  // I'm very well acquainted, too, with matters mathematical
+&nbsp;  // I understand equations, both the simple and quadratical
+&nbsp;  // About binomial theorem I'm teeming with a lot o' news
+&nbsp;  // With many cheerful facts about the square of the hypotenuse
+&nbsp;  // I'm very good at integral and differential calculus
+&nbsp;  // I know the scientific names of beings animalculous
+</c>
+&nbsp;  return(x + y);
+}
+
+for(let i = 0; i < 500000000; i++) {
+&nbsp; if (add(i, i++) < 5) {
+&nbsp; &nbsp;  <c>//</c>
+&nbsp; }
+}
+</code></pre>
+
+Note: blank for flicking
+
+---
+<pre><code>'use strict';
+
+function add(x, y) {
+<c style="font-weight:normal">&nbsp; // I am the very model of a modern Major-General
+&nbsp; // I've information vegetable, animal, and mineral
+&nbsp;  // I know the kings of England, and I quote the fights historical
+&nbsp;  // From Marathon to Waterloo, in order categorical
+&nbsp;  // I'm very well acquainted, too, with matters mathematical
+&nbsp;  // I understand equations, both the simple and quadratical
+&nbsp;  // About binomial theorem I'm teeming with a lot o' news
+&nbsp;  // With many cheerful facts about the square of the hypotenuse
+&nbsp;  // I'm very good at integral and differential calculus
+&nbsp;  //
+</c>
+&nbsp;  return(x + y);
+}
+
+for(let i = 0; i < 500000000; i++) {
+&nbsp; if (add(i, i++) < 5) {
+&nbsp; &nbsp;  <c>//</c>
+&nbsp; }
+}
+</code></pre>
+
+- <pre><code>$ time -p node general.js<br>real 0.77</code></pre>
+Note: What's going to happen? any change?
+
+More than twice as fast
+---
+#= JavaScript<br>is improving
+---
+
+#= ECMAScript 5
+Note: std intro'd in 2009
+
+Mostly adpoted
+---
+
+#>  ES3> parseInt("08")
+#>- 0
+#>- ES<h>5</h>> parseInt("08")
+#>- 8
+#>- ESx> parseInt("08", 10) <h>// radix</h>
+#>- 8
+Note: assumed to be octal unless you have ECMAScript 5.
+Supply radix to be cross compatible.
+---
+#= `isArray`
+---
+#> > Array.isArray({ a: "b" })
+#>- false
+#>- > Array.isArray(["a","b"])
+#>- true
+---
+#= `trim`
+
+Note: JS didn't ahve a trim command til ES5
+it had a `trimLeft` and a `trimRight`
+
+---
+
+#> > " Hello ".trimLeft()
+#>- "Hello "
+#>- > " Hello ".trimRight()
+#>- " Hello"
+#>- ES<h>5</h>> " Hello ".trim()
+#>- "Hello"  
+---
+#= ECMAScript 6
+Note: approved in June 2015 (a few months ago)
+
+Still very much not adpoted.
+---
+#= `let`
+---
+
+#> > ans = "";
+#> > function quest() {<br>> &nbsp; var ans = 42; <br>> &nbsp; return ans;<br>> }
+#> > quest()
+#> > console.log(ans);
+#> > ""
+---
+#> > ans = "";
+#> > function quest() {<br>> &nbsp; <h>let</h> ans = 42; <br>> &nbsp; return ans;<br>> }
+#> > quest()
+#> > console.log(ans);
+#> > ""
+
+Note: proper block scope
+Re-declarations are in error
+---
+#= `import`
+---
+#> <c>// life.js</c>
+#> <h>export</h> function quest() { 
+#> <c> /&ast; ... &ast;/</c>
+#> }
+#>- <c>// script.js</c> <br><h>import</h> { quest } from './life';
+---
+#= Spread
+---
+#> function add(<h>...</h>vals) {
+#> &nbsp;  let sum = 0;
+#> &nbsp;  for (var v of vals) {
+#> &nbsp; &nbsp; &nbsp; sum += v;
+#> &nbsp;  }
+#> &nbsp;  return sum;
+#>  }
+#>- <br>> add(10, 14, 9, 7, 2)
+#>- 42
+
+---
+#= ECMAScript 5/6 Adpotion
+---
+##= kangax.github.io/compat-table/es5/
+##= kangax.github.io/compat-table/es6/
+---
+#= Non-standard 'Standards'
+---
+#= `console.log`
+Note: Not actually a standard :D
+---
+#> > a = 42
+#>- > console.log("a is: " + a);
+#>- "a is 42"
+#>- > console.time("Process")
+#>- > <c>// ... do the thing</c>
+#>- > console.timeEnd("Process")
+#>- "Process: 1337ms"
+#>- > console.log("%cHello world!",<br>&nbsp;"color: red; font-size: 40px");
+#>- <span style="color: red; font-size: 70px">Hello world!</span>
+Note: try autocompleting for more, including grouping
+---
+<br><br>
+@ facebook.png
+Note: from console on facebook
+---
+#= Extending JavaScript
+---
+#= Polyfill
+Note: Adding new funcionality in JS to JS by adding more JS
+---
+#= `supplant`
+Note: allows for native templating
+---
+#> > s = "{greet} there {name}!"
+#>- > t = { greet: "Oh hello",<br>&nbsp; &nbsp; &nbsp; &nbsp; name: &nbsp;"Katie" }
+#>- > s.supplant(t)
+#>- "Oh, hello there Katie!"
+Note: Supplant didn't get into ES6. But you can still polyfill it
+---
+
+##= `supplant` polyfill
+- <pre><code>
+if (!String.prototype.supplant) {
+&nbsp; String.prototype.supplant = function (o) {
+&nbsp; &nbsp; return this.replace(<h>/\{([^{}]*)\}/</h>g,
+&nbsp; &nbsp; &nbsp; function (a, b) {
+&nbsp; &nbsp; &nbsp; &nbsp; var r = o[b];
+&nbsp; &nbsp; &nbsp; &nbsp; return typeof r === 'string' ||
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;typeof r === 'number' ? r : a;
+&nbsp; &nbsp; &nbsp; }
+&nbsp; &nbsp; );
+ &nbsp; };
+}
+</code></pre>
+Note: Create function if it doesn't exist
+
+Doesn't handle multiple-level definitions
+
+Didn't make it into es6, but totes useful
+---
+##= `isArray` polyfill
+
+- <pre><code>
+if (!Array.isArray) {
+ &nbsp; Array.isArray = function(arg) {
+&nbsp; &nbsp; return Object.prototype.toString.call(arg) === '[object Array]';
+ &nbsp;};
+}
+</pre></code>
+Note: Can also polyfil things that may not exist in your browser. but specifically only define it if it's not already defined
+---
+##= `console.log` polyfill
+- <pre><code>
+window.console =
+&nbsp; &nbsp; typeof window.console === 'undefined' ? {
+&nbsp; &nbsp; &nbsp; &nbsp; log: function(str) {
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; alert(str)
+&nbsp; &nbsp; &nbsp; &nbsp; }
+&nbsp; &nbsp; } : window.console;
+&nbsp;</pre></code>
+- <pre><code>
+console.log("oh goodness.");
+&nbsp;</pre></code>
+---
+#= JavaScript isn't awful
+---
+#= JavaScript is awe-ful
+Note:
+Full of Awe
+
+It's amazing that we can take something so broken and made so much
+
+The devil you know
+---
+=> When that's the glue<br>of the modern day web,<br>it's a minor miracle<br>that society even functions
+---
+##= Just keep in mind...
+---
+##= Other languages have wats
+---
+
+#= <pre>#!/usr/bin/env java</pre>
+
+Note: Let's about about Java
+
+---
+#> <c>/&#42;&#42; read from a file &#42;&#42;/</c>
+#>- filename = "myfile.txt"
+#>- BufferedReader reader = <br>&nbsp; &nbsp; &nbsp; new BufferedReader( <br>&nbsp; &nbsp; &nbsp; &nbsp;  new InputStreamReader( <br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  new FileInputStream(<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  filename<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  )<br>&nbsp; &nbsp; &nbsp; &nbsp;  )<br>&nbsp; &nbsp; &nbsp; );<br>&nbsp;
+---
+#= <pre>/usr/bin/irb</pre>
+Note: Let's talk about ruby
+---
+#>  irb> open source rocks
+#>- NameError: undefined local<br>variable or method `rocks'
+#>- irb> def method_missing(@args)<br> &nbsp; &nbsp; &nbsp;  args.join(" ")<br> &nbsp; &nbsp; end
+#>- irb> open source rocks
+#>- "open source rocks"
+Note: Method Missing is evil monkey patching
+---
+#= <pre>/usr/bin/irb</pre>
+Note: Let's talk about ruby
+---
+#> irb> not true && false
+#>- false
+#>- irb> not true and false
+#>- true
+
+<span class="dasfoot"><a href="http://whatthefuckruby.tumblr.com/post/70164947137">whatthef&#45;&#45;&#45;ruby.tumblr.com</a></span>
+Note: order of presidence
+
+&& || 
+not
+and or
+---
+
+#= <pre>/usr/local/bin/ghci</pre>
+Note: Let's talk about Haskell
+---
+
+#> λ&gt; length [1,2]
+#>- 2
+#>- λ> length (1,2)
+#>- 1
+
+Note: because foldable, fMap fun
+---
+
+#= <pre>/usr/local/bin/ghci</pre>
+Note: Let's talk about Haskell
+---
+#> λ> let a = 2 + 2
+#>- λ> a
+#>- 4
+#>- λ> let b = 2 + 2 where 2 + 2 = 5
+#>- λ> b
+#>- 5
+Note: Because haskell
+---
+#= <pre>/usr/local/bin python</pre>
+Note: Let's talk about Python
+---
+#> >>> a = 256
+#>- >>> b = 256
+#>- >>> a is b
+#>- True
+
+<span class="dasfoot"><a href="www.youtube.com/watch?v=sH4XF6pKKmk">Investigating Python Wats</a></span>
+---
+#>  >>> a = 257
+#>- >>> b = 257
+#>- >>> a is b
+#>- False
+#>- <br>>>> a = 257; b = 257
+#>- >>> a is b
+#>- True
+
+<span class="dasfoot"><a href="www.youtube.com/watch?v=sH4XF6pKKmk">Investigating Python Wats</a></span>
+---
+
+#= <pre>/usr/bin/env perl -de1</pre>
+Note: Let's talk about Perl
+
+---
+
+#> DB&lt;1> if ("foo" == "bar") <br> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; { print "true" }<br> &nbsp;&nbsp; &nbsp; else { print "false" }
+#>- true
+<span class="dasfoot"><a href="http://stackoverflow.com/a/14046720/124019">http://stackoverflow.com/a/14046720/124019</a></span>
+Note: Reason is `==` is for number comparing
+
+eq is for string comparing
+
+a new programmer won't know this.
+---
+
+
+#= <pre>/usr/bin/php -a</pre>
+
+Note: Let's talk about PHP
+---
+#> php>  $a = INF;
+#>- php> $b = array();
+#>- php> $c = (object)array();
+#>- php> var_dump( $a < $b );
+#>- true
+#>- php> var_dump( $b < $c );
+#>- true
+#>- php> var_dump( $c < $a );
+#>- true
+
+<span class="dasfoot"><a href="http://phpsadness.com/sad/52">http://phpsadness.com/sad/52</a></span>
+Note: cyclic truthiness. Totally a thing.
+
+---
+
+#= <pre>C:&bsol;> powershell</pre>
+
+Note: Let's talk about powershell
+
+---
+
+#> PS> if (2 > 1) { "true" }<br>&nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; else { "false" }
+#>-  true
+#>- <br>PS> if (2 < 1) { "true" }<br>&nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; else { "false" }
+#>- The '<' operator is reserved<br>for future use.
+
+<span class="dasfoot"><a href="http://fuckpowershell.tumblr.com/">f&#45;&#45;&#45;powershell.tumblr.com</a></span>
+---
+#= My point is...
+---
+#= All languages<br>have quirks
+Note: 
+Yes some have more than others. Some have reasons why they can't be fixed
+
+But that doesn't mean we have to critise those that use them
+
+"We are not our tools. Discrimination based on tools is just as bad as discrimination based on race or gender" - Rachel Nabours
+
+Hopefully I've shown just how good JS can be. And it might make someone reconsider before I see the next awful tirade on twitter
+---
+<br><br>
+#= Cheers!
+<br><br>
+###= <3 feedback - joind.in/15903
+@ footer.svg

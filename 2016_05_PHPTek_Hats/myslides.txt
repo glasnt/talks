@@ -1,0 +1,882 @@
+
+#= Build a Better<br>Hat Rack
+## All Contributions Welcome
+
+! footer
+
+Note: These are my speaker notes. 
+
+There are many like them, but these ones are mine
+
+---
+
+#= Hi!
+
+Note: Hi! I'm Katie, and I'm a software developer. 
+
+I wear many hats. I use all the languages. 
+
+---
+
+! openstack_docker_nolabel.png
+---
+! openstack_docker.png
+
+Note: I do OSS contributions
+
+Docker have paid me for my contributions
+
+I am also an Active Technical Contributor for Open Stack
+
+Want to know what my contribution to OpenStack was?
+
+---
+
+! OpenStackDiff.png
+
+Note: an inline documentation change. It's a Python file, yo
+
+---
+
+@ summit-logo.svg
+# <span style="color: white">Barcelona</span>
+### <span style="color: white">October 25-28, 2016</span>
+### &nbsp; <!-- .slide: data-background="pictures/barcelona-bkgd-lrg.jpg" data-background-transition="none" -->
+
+Note: 
+
+If you committed within the window, you got a free ticket to Tokyo
+
+Incentive Driven Code Development
+
+---
+
+! question
+
+Note: But how do we track all these contributions that we make
+
+---
+
+! github
+
+Note: GitHub gives us some of this functionality
+
+Pretty graphs and the like
+
+---
+
+! github-a
+
+Note: but it's not exactly perfect
+
+And it only include itself
+
+There are other ways - project specific, etc
+
+---
+
+! question
+
+Note: But what about everything else?
+
+Code Review
+
+Documentation
+
+Testing
+
+Design
+
+UAT
+
+Promotion
+
+User Groups / Presentations
+
+---
+
+! checklist
+
+Note: Who here:
+
+Who here has committed to PHP Core or a major framework?
+
+Everyone else:
+
+Used the code
+
+Taught
+
+Spoken
+
+Attended
+
+---
+
+! claps
+
+Note: These are all contributions
+
+Not even including all the aspects of the SDLC that go unattributed
+
+Community, yo
+
+---
+
+! help
+
+Note: So, how can we track and record and acknowledge all this?
+
+--- 
+
+@^ leslie.png
+
+Note: Let me tell you about Leslie
+
+Amazing human being
+
+
+---
+
+#= #LABHR
+## bit.do/LABHR
+
+Note: She started this hashtag, and wrote a blog post about it
+
+---
+
+@^ ikea_manual.jpg
+
+Note: Which I've turned into a easy to read manual to try and spread the message
+
+---
+
+# DÅLIGORDLEK
+@ hatrack.svg
+
+<span class="dasfoot">#LABHR</span>
+Note: It's a bad pun
+
+---
+
+@^ meeting.svg
+
+<span class="dasfoot">#LABHR</span>
+Note: Leslie and Deb meet over coffee
+
+Leslie of Google / Elastic
+
+Deb of Open Innovation Network
+
+Sahana Software Foundation
+
+
+Software for developing countries
+
+
+
+“No, this is great. This gives me one of those places to hang your hat. 
+
+You know, something you can list on your LinkedIn profile instead of just a project that you work on for free because you love it.
+
+But no one really knows about it or notices.”
+
+
+
+---
+
+@ Solution_0.svg
+
+<span class="dasfoot">#LABHR</span>
+Note: So Leslie + Blog = 5 steps
+
+---
+
+@ Solution_1.svg
+
+<span class="dasfoot">#LABHR</span>
+Note: write the list
+
+---
+
+@ Solution_2.svg
+
+<span class="dasfoot">#LABHR</span>
+Note: send the list
+
+---
+
+@ Solution_3.svg
+
+<span class="dasfoot">#LABHR</span>
+Note: GRAVY
+
+Tweet about it
+
+---
+
+@ Solution_4.svg
+
+<span class="dasfoot">#LABHR</span>
+Note: GRAVY #2
+
+Linked in Recommendations
+
+NOT endorsements
+
+See later
+
+
+---
+
+@ Solution_L.svg
+
+<span class="dasfoot">#LABHR</span>
+
+Note: GRAVY #3
+
+Do it for someone not like you
+
+---
+ 
+@ yay.svg
+
+<span class="dasfoot">#LABHR</span>
+Note: Simple! Nice! Helpful!
+
+---
+
+@^ halp.svg
+
+Note: But it didn't get that much traction
+
+Leslie reported ~30 known LinkedIn recommendation
+
+I've done talks in multiple different cities/languages
+
+It's always the same, one or two after the talk
+
+(PyConAU exception - because I refused to get off stage until 10 tweets happened)
+(This did result in some residiual activity during the sprints)
+Maybe y'all need a LIVE DEMO
+
+---
+
+#= How to<br>be nice
+##= [demo]
+
+Note: Live demo, lets hope this works
+
+Hat Rack 
+---
+
+#= Hi, Jack!
+
+
+---
+
+@ tweet_davey.png
+
+Note: Jack is a force of good for the community - Davey
+
+---
+
+#= How to<br>say thank you
+##= [demo]
+
+Note: 
+Repeat for mic, if required. 
+
+---
+#= How not to<br>react
+
+Note: 
+
+This didn't happen last time. Ref Chris. 
+
+---
+
+@ tweet_chris.png
+
+Note: Chris was a little bit upset last time this happened
+
+Ref Tom
+
+---
+
+@ tweet_tom.png
+
+Note: And not just him.
+
+--- 
+
+@ tweet_russ.png
+
+Note: It took a third party to actually confirm they did good.
+
+Ref Russell. 
+
+I've seen this before, not only in the #LABHR
+---
+
+<span style="font-family: 'Helvetica Neue'">Russell Keith-Magee<br>
+@freakboy3742<br><br>@tveastman @chrisjrn You both deserve it. Thanks for everything you do for the community.  &#35;LABHR /cc @glasnt
+---
+
+#= Why can't we take a compliment?
+
+---
+
+#= Minimisation
+
+Note: Antonym of exaggeration
+
+"She'll be right, no worries"
+
+Understating
+
+---
+#= Tall Poppy<br>Syndrome
+
+Note: We are reluctant to allow ourselves to be elevated in front of our peers, lest we be cut down.
+
+And of course, everyone's favourite
+
+---
+
+#= Imposter<br>Syndrome
+
+Note: If we get thanked, we tend not to think it actually applies, because all the problems
+
+---
+
+#= Acknowledging just how splendid we are
+
+Note: We are amazing. We are splendid. We need to ack that. 
+
+The fact that I didn't know half of these existed is a problem in itself.
+
+---
+
+@ ruby_heroes.png
+
+
+Note: can be dev or community or combination of both
+
+Sarah Mei
+
+Sam Saffron
+
+---
+<BR><BR>
+@ white_camel.png
+
+Note: Perl White Camel
+
+* User Groups
+
+* Advocacy
+
+* Community
+
+Tim O'Reilly
+
+Paul Fenwick
+
+---
+
+<BR><BR>
+@ python_awards.png
+
+Note: Python Software Foundation awards
+
+Community Service
+
+Distinguished Service
+
+
+Nick Coghlan
+
+
+---
+
+@ oreilly_awards.png
+---
+
+#= Acknowledging our *own* achievements
+
+Note: one way to break this is to start to acknowledge our own achievements
+
+---
+<br>
+<br>
+@ donut.jpg
+
+Note: Lara Hogan, Donut Manifesto
+
+This donut = draft of a book
+
+Giving ourselves a little celebration if noone else will
+
+Tweeting the donut
+
+Piggybacking on a picture of a donut (instagram makes this OK). 
+
+
+---
+
+@ MyDonut.jpg
+
+Note: I like the idea of donuts. This is one I did the other day.
+
+I'm not trying to be self-gratifying, but sometimes, you need to do that.
+
+---
+
+#= Not all contributions are donuts
+
+Note: sometimes it's the little things that add up onto something big
+
+---
+
+#= Stack Overflow
+
+
+---
+
+@ MyStackOverflowProfile.png
+
+Note: The profiles are now really nice!
+
+---
+
+#= Just a drop<br>in the ocean
+
+Note: 
+How many people go onto stackoverflow to ask
+
+Does anyone know how many questions there have been answered on SO?
+
+
+---
+
+@ so1.png
+
+Note: SO recently 10 million questions. 
+
+Go on there and find your project's tag, and thank the people who are answering your things for you
+
+You might have a standalone SO instance for your Q&A
+
+---
+
+
+@ so2.png
+
+
+Note:
+
+If a dev found a solution just half of those times, and it saved them just 30 minutes, that's nearly 1.85 billion hours saved.
+
+It's enough to read all of Wikipedia. 12,000 times.
+
+8 million developers come here every day.
+
+It'd be a bigger country than more than half the world's nations.
+
+There are about 51,000 developers on the site at any given second. This is what 51,000 people looks like.
+
+Together, we've built a place where every 12 seconds a developer posts an answer that helps fellow coders.
+
+---
+
+#=
+@ so3.png
+
+Note: Your community advocates need your thanks
+
+You can thank them by giving them something extremely useful
+
+---
+
+#= But why say<br>thank you?
+
+Note: Apart from it being a nice thing todo. 
+
+---
+
+
+#= It's nice thing to do
+
+Note: Not getting acknowedgement sucks
+
+Burnout
+
+Plight of the organiser
+---
+
+#= Encourage continued engagement
+
+Note: They have done a thing once, they will do it again.
+
+Charelle's story from Compcon - first commit, hand held from Russell
+---
+
+#= Voluntold
+
+Note: I'm super encourageable. I think half the stuff i do is average until validated
+
+---
+
+#= "Foot in the Door"
+
+Note: "Fear, Uncertainty<br>and Dopamine" - Paul Fenwick 
+ 
+Amazing talk about a few different issues about hacking brains 
+
+Brilliant riff about making contrubutors stick
+
+Foot in the Door - Drive Safely sign - 17% baseline, 76% with pre-sticker
+
+Car Bumper Stickers
+
+A tiny little foot in the door
+
+STICKERS
+
+Little things = seed, -> improvement over time
+
+"If you see someone doing something like that - acknowledge them like crazy
+
+
+---
+
+#= Change self image
+
+Note:
+it makes them feel valued
+
+self image change, they feel included in the project, and it makes them feel good
+
+but it also binds their fate to yours
+
+if your project fails, it reflects badly on them, because they are now involed in your project
+
+
+---
+
+@ question.svg
+
+Note: But just how can we say thank you
+
+---
+
+#= Communication<br>within<br>your project
+
+Note: Mentioning things in your release notes is a good thing. MediaGolbin does this
+
+Drupal concatenates thread commentors into git commit message
+
+But the scope of this communication is only within your existing community. 
+
+You need to extend to more general communications 
+---
+#= Communication<br>outside<br>your project
+
+---
+#= Give your helpers something to show for their work
+
+---
+@^ b_linked.png
+
+Note: This is the new age resume. Publically accessible. We can thank people who would otherwise be unrecognised
+
+LinkedIn is pretty awful though. 
+
+---
+
+#= Recommendations<br>vs<br>Endorsements
+
+Note: Two main ways to add content to someone's linkedin profile
+
+---
+#= Recommendations
+
+---
+
+@^ linked_in_sections.svg
+
+Note: Here's all the different sections that you can fill on your profile
+
+---
+
+@^ linked_in_sections_recommendable.svg
+
+Note: But here are the only ones that are able to be recommendable
+
+---
+
+@^ Linked_in_EE.svg
+
+---
+
+@^ Linked_in_EE_only.svg
+
+Note: Running a conf, volenteering as a thing, is **experience** 
+
+LIST IT AS SUCH
+
+---
+
+#= Endorsements
+##- ... possibly not as helpful
+
+---
+
+@^ SkillsNew.png
+
+---
+
+@^ b_github.png
+
+---
+#= User<br>Contributions
+
+---
+
+
+@ gh_start.png
+
+Note: No idea how the 'Repositories contributed to' works
+
+I've done Rails, Rubocop, Docker, OpenStack, Pybee... they arent there
+
+---
+<br><br>
+@ public_contrib.png
+
+Note: focus on this graph. So much focus
+---
+
+#= What counts?
+##- Commits
+###- <p>(against <code>master</code> or <code>gh-pages</code>)</p>
+##- Issues and Pull Requests
+###- (opened, in the past year)
+
+Note: Continued discussions on a PR only counts as one
+
+---
+
+#= But only if...
+
+##- you own the repo
+##- or, you're a collaborator
+##- or, you're in the owner organisation
+##- or, you forked the repo
+###- ... but commits don't count on forks
+
+---
+
+#= What counts?
+##- Only some of your work. 
+
+
+Note: But what if you really want that full green graph
+---
+
+#= Sound too hard?
+##- It's ok, there's a hack for that
+
+---
+##  <pre><code style="font: 'monospace' 150%">$ pip install rockstar</code></pre>
+##- <pre><code style="font: 'monospace' 150%">$ rockstar</code></pre>
+</code></pre>
+
+- <img src="pictures/greensgreensgreens.png">
+
+
+Note: By default - one hello world in c++ everyday for as many days as you specify
+
+---
+
+##= ozh.org/contribution
+
+- <img src="pictures/contrib_graph_hack_drupal.png">
+
+---
+
+@^ githubshirts_2.jpg
+
+---
+#= Project<br>Contributions
+
+---
+
+@ reveal_01.png
+
+Note: Looking at any github project page we can see all the contributors right?
+
+THere's a button right at the top and everything
+
+---
+
+@ reveal_02.png
+
+Note: But if we click it, then we don't actually get the contributors
+
+We get the top ones, with a graph, ranked by lines of code
+
+---
+@ reveal_03.png
+
+Note: And it's only the top 100
+
+---
+
+#= This is only some of the contributors
+Note: Not even all the code commiters are listed!
+---
+#= This is only some of the contributions
+Note: What about everything else
+
+---
+
+#= What about<br>everything else?
+##- Logged Issues
+##- Unmerged Pull Requests
+##- Code Reviews
+##- Feature Discussions
+##- Feature Voting
+
+---
+
+#= What if... 
+
+
+Note: What if these contributions counted
+
+---
+
+#= <img src="pictures/Emoji_u1f44f.svg">
+
+
+Note: What if these contributions were accolates
+---
+@ gh_start.png
+
+
+Note: you have a profile
+---
+@ gh_start1.png
+
+
+Note: What if you could change your profile
+---
+@ gh_start2.png
+
+Note: What if you could curate a list of repositories you were proud to have worked on
+
+---
+@ gh_start3a.png
+
+Note: And add ones that would otherwise fall off the end because they don't have enough stars?
+---
+@ gh_start3.png
+
+Note: What if your contributions outside your namespace could be curated?
+
+---
+@ gh_start4.png
+
+Note: What if you could list what you were proud to have worked on
+
+---
+@ gh_start5.png
+
+Note: What if you could add things that you had interacted with, but not committed code to
+
+---
+@ gh_start6.png
+
+
+Note: What if you could display that the owners of the project had given you accolades for your work?
+
+What if, as a project owner, you could give props to community members
+
+---
+
+@ gh_start7.png
+
+Note: What if the gamification goal was community help, not a full green graph
+---
+
+@ question.svg
+
+Note: But how can you find who in your project community to give props to?
+
+The customisation of the github profile may not exist, but the data for who could be given props does
+
+---
+##= github.com/glasnt/octohat
+##- <code>pip install octohat</code>
+
+
+Note: introducing octohat
+---
+
+#= hakimel/reveal.js
+##- Code Contributors: 142
+##- Non-Code Contributors: 435
+
+---
+
+#= joomla/joomla-cms
+##- Code Contributors: 414
+##- Non-Code Contributors: 266*
+###- * Since June 2015, ~700 issues/PRs
+
+Note: Joomla is *massive*
+
+I could only get this many before my GitHub token ratelimited. 
+---
+
+#= avinassh/rockstar
+##- Code Contributors: 30
+##- Non-Code Contributors: 38
+
+---
+
+#= glasnt/octohat
+##- Code Contributors: 6
+##- Non-Code Contributor: 3
+
+
+Note: So many conversions!
+TODO update moar stats
+
+---
+
+#= TL;DR: 
+##- There's nothing wrong <br>with being nice
+
+Note: Thank people that have already done so much
+
+Encourge them to do more
+
+Do more you self
+
+---
+
+<br>
+#= #LABHR
+## bit.do/LABHR
+## github.com/glasnt/octohat
+<br>
+<p style="font-size: 60%">
+Non-code contributors to this talk: 
+<br>
+<br>Donna&nbsp;Benjamin, Nick&nbsp;Coghlan, Robert&nbsp;Collins, Ben Dechrai, Tom Eastman, Paul&nbsp;Fenwick, Leslie&nbsp;Hawthorn, Lindsay Holmwood, Russell Keith-Magee, Deb&nbsp;Nicholson, Christopher&nbsp;Neugebauer, Christopher Pitt, Davey&nbsp;Shafik, Aurynn Shaw, Jack&nbsp;Skinner
+<br>
+<br>
+Thank You <3</p>
