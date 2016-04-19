@@ -17,10 +17,9 @@ Note: Hi! I'm Katie, and I'm a software developer.
 I wear many hats. I use all the languages.
 
 ---
-
- <div style='width: 50%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/openstack_docker_nolabel.png.svg'></p></div> <!-- .slide: class="center" -->
+ <img src="pictures/openstack_docker_nolabel.png" />
 ---
- <div style='width: 50%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/openstack_docker.png.svg'></p></div> <!-- .slide: class="center" -->
+ <img src="pictures/openstack_docker.png" />
 
 Note: I do OSS contributions
 
@@ -32,12 +31,12 @@ Want to know what my contribution to OpenStack was?
 
 ---
 
- <div style='width: 50%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/OpenStackDiff.png.svg'></p></div> <!-- .slide: class="center" -->
+ <img src="pictures/OpenStackDiff.png" />
 
 Note: an inline documentation change. It's a Python file, yo
 
 ---
-
+## &nbsp;
  <img src="pictures/summit-logo.svg" />
 # <span style="color: white">Barcelona</span>
 ### <span style="color: white">October 25-28, 2016</span>
@@ -130,6 +129,7 @@ Note: So, how can we track and record and acknowledge all this?
 ---
 
  <img src="pictures/leslie.png" style="margin-top: -50px" />
+## &nbsp; <!-- .slide: data-background="pictures/blue_leslie.png" data-background-transition="none" -->
 
 Note: Let me tell you about Leslie
 
@@ -146,6 +146,7 @@ Note: She started this hashtag, and wrote a blog post about it
 ---
 
  <img src="pictures/ikea_manual.jpg" style="margin-top: -50px" />
+## &nbsp; <!-- .slide: data-background="pictures/fade_ikea_manual.jpg.png" data-background-transition="none" -->
 
 Note: Which I've turned into a easy to read manual to try and spread the message
 
@@ -270,17 +271,6 @@ Note: Live demo, lets hope this works
 Hat Rack
 ---
 
-# Hi, Jack! <!-- .slide: class="center" -->
-
-
----
-
- <img src="pictures/tweet_davey.png" />
-
-Note: Jack is a force of good for the community - Davey
-
----
-
 # How to<br>say thank you <!-- .slide: class="center" -->
 ## [demo] <!-- .slide: class="center" -->
 
@@ -288,7 +278,8 @@ Note:
 Repeat for mic, if required.
 
 ---
-# How not to<br>react <!-- .slide: class="center" -->
+# How not<br>to react <!-- .slide: class="center" -->
+## &nbsp; <!-- .slide: class="center" -->
 
 Note: 
 
@@ -296,21 +287,40 @@ This didn't happen last time. Ref Chris.
 
 ---
 
- <img src="pictures/tweet_chris.png" />
+<p align="left">
+<span class="tweet">
+<img src="pictures/mug_chris.png">
+<span class="name">Chris Neugebauer</span>
+<span class="username">@chrisjrn</span>
+<span class="content">
+HALP I AM BEING PUBLICLY EMBARRASSED FROM ON STAGE BY <span class="highlight">@GLASNT</span> :'''''''''''(
+<br><br> 
+<3 <span class="highlight">#pyconau</span>
+</span></p> 
 
 Note: Chris was a little bit upset last time this happened
 
-Ref Tom
 
 ---
+<p align="left">
+<span class="tweet">
+<img src="pictures/mug_tom.png">
+<span class="name">Tom Eastman</span>
+<span class="username">@tveastman</span>
+<span class="content">
+HALP SHE'S DOING IT TO ME NOW TOO <span class="highlight">@chrisjrn @GLASNT #pyconau #LABHR</span>
 
- <img src="pictures/tweet_tom.png" />
-
-Note: And not just him.
+</span></p> 
 
 ---
-
- <img src="pictures/tweet_russ.png" />
+<p align="left">
+<span class="tweet">
+<img src="pictures/mug_russ.png">
+<span class="name">Russell Keith-Magee</span>
+<span class="username">@freakboy3742</span>
+<span class="content">
+<span class="highlight">@tveastman @chrisjrn </span>You both deserve it. Thanks for everything you do for the community. <span class="highlight">&#35;LABHR</span> /cc <span class="highlight">@glasnt</span></span>
+</p> 
 
 Note: It took a third party to actually confirm they did good.
 
@@ -318,11 +328,15 @@ Ref Russell.
 
 I've seen this before, not only in the #LABHR
 ---
-
-<span style="font-family: 'Helvetica Neue'">Russell Keith-Magee<br>
-@freakboy3742<br><br>@tveastman @chrisjrn You both deserve it. Thanks for everything you do for the community. &#35;LABHR /cc @glasnt
+<p align="left">
+<span class="tweet">
+<img src="pictures/mug_chris.png">
+<span class="name">Chris Neugebauer</span>
+<span class="username">@chrisjrn</span>
+<span class="content">
+OH LOOK, FINALLY SOMEONE IS EMBARRASSING <span class="highlight">@GLASNT</span> FROM ON-STAGE. TOOK LONG ENOUGH <3 <span class="highlight">@pjf #osdc15</span>
+</span></p> 
 ---
-
 # Why can't we take a compliment? <!-- .slide: class="center" -->
 
 ---
