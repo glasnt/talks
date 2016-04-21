@@ -17,36 +17,13 @@ Note: Hi! I'm Katie, and I'm a software developer.
 I wear many hats. I use all the languages. 
 
 ---
-@ openstack_docker_nolabel.png
----
-@ openstack_docker.png
+! foss_logo
 
-Note: I do OSS contributions
+Note: Code contributions for profit
 
-Docker have paid me for my contributions
+Openstack Summit Vancouver May 2015 -- Free Ticket
 
-I am also an Active Technical Contributor for Open Stack
-
-Want to know what my contribution to OpenStack was?
-
----
-
-@ OpenStackDiff.png
-
-Note: an inline documentation change. It's a Python file, yo
-
----
-## &nbsp;
-@ summit-logo.svg
-# <span style="color: white">Barcelona</span>
-### <span style="color: white">October 25-28, 2016</span>
-### &nbsp; <!-- .slide: data-background="pictures/barcelona-bkgd-lrg.jpg" data-background-transition="none" -->
-
-Note: 
-
-If you committed within the window, you got a free ticket to Tokyo
-
-Incentive Driven Code Development
+Docker -- Money
 
 ---
 
@@ -146,7 +123,7 @@ Note: She started this hashtag, and wrote a blog post about it
 ---
 
 @^ ikea_manual.jpg
-## &nbsp; <!-- .slide: data-background="pictures/fade_ikea_manual.jpg.png" data-background-transition="none" -->
+## &nbsp; <!-- .slide: data-background="pictures/fade_ikea_manual.jpg" data-background-transition="none" -->
 
 Note: Which I've turned into a easy to read manual to try and spread the message
 
@@ -364,7 +341,7 @@ Note: If we get thanked, we tend not to think it actually applies, because all t
 
 ---
 
-#= Acknowledging just how splendid we are
+#= Acknowledging our local wonders
 
 Note: We are amazing. We are splendid. We need to ack that. 
 
@@ -372,49 +349,26 @@ The fact that I didn't know half of these existed is a problem in itself.
 
 ---
 
-@ ruby_heroes.png
-
+<img src="pictures/ruby_heroes.png" height="150px"><br>
+<img src="pictures/white_camel.png" height="150px"><br>
+<img src="pictures/python_awards.png" height="150px">
 
 Note: can be dev or community or combination of both
 
-Sarah Mei
+Ruby - Sarah Mei; Sam Saffron
 
-Sam Saffron
+Perl - Tim O'Reilly; Paul Fenwick
 
----
-<BR><BR>
-@ white_camel.png
-
-Note: Perl White Camel
-
-* User Groups
-
-* Advocacy
-
-* Community
-
-Tim O'Reilly
-
-Paul Fenwick
-
----
-
-<BR><BR>
-@ python_awards.png
-
-Note: Python Software Foundation awards
-
-Community Service
-
-Distinguished Service
-
-
-Nick Coghlan
+Python - Nick Coghlan
 
 
 ---
 
-@ oreilly_awards.png
+#= Acknowledging the little things
+---
+
+@ happiness_packet.png
+## &nbsp; <!-- .slide: data-background="#f64747" data-background-transition="none" -->
 ---
 
 #= Acknowledging our *own* achievements
@@ -422,9 +376,8 @@ Nick Coghlan
 Note: one way to break this is to start to acknowledge our own achievements
 
 ---
-<br>
-<br>
-@ donut.jpg
+@ MyDonut.jpg
+## &nbsp; <!-- .slide: data-background="pictures/fade_MyDonut.jpg" data-background-transition="none" -->
 
 Note: Lara Hogan, Donut Manifesto
 
@@ -436,12 +389,7 @@ Tweeting the donut
 
 Piggybacking on a picture of a donut (instagram makes this OK). 
 
-
----
-
-@ MyDonut.jpg
-
-Note: I like the idea of donuts. This is one I did the other day.
+I like the idea of donuts. This is one I did the other day.
 
 I'm not trying to be self-gratifying, but sometimes, you need to do that.
 
@@ -579,7 +527,7 @@ if your project fails, it reflects badly on them, because they are now involed i
 
 ---
 
-@ question.svg
+! question
 
 Note: But just how can we say thank you
 
@@ -643,7 +591,7 @@ LIST IT AS SUCH
 ---
 
 #= Endorsements
-##- ... possibly not as helpful
+##- ... 
 
 ---
 
@@ -693,14 +641,15 @@ Note: Continued discussions on a PR only counts as one
 ---
 
 #= What counts?
-##- Only some of your work. 
-
+## &nbsp;
+### &nbsp; 
+##  Only some of your work. 
+### &nbsp;
 
 Note: But what if you really want that full green graph
 ---
 
 #= Sound too hard?
-##- It's ok, there's a hack for that
 
 ---
 ##  <pre><code style="font: 'monospace' 150%">$ pip install rockstar</code></pre>
@@ -714,20 +663,21 @@ Note: By default - one hello world in c++ everyday for as many days as you speci
 
 ---
 
+
+<img src="pictures/contrib_graph_hack_drupal.png">
+
 ##= ozh.org/contribution
-
-- <img src="pictures/contrib_graph_hack_drupal.png">
-
 ---
 
 @^ githubshirts_2.jpg
+## &nbsp; <!-- .slide: data-background="pictures/githubshirts_2.png" data-background-transition="none" -->
 
 ---
 #= Project<br>Contributions
 
 ---
 
-@ reveal_01.png
+@ reveal_repo_01.png
 
 Note: Looking at any github project page we can see all the contributors right?
 
@@ -735,14 +685,14 @@ THere's a button right at the top and everything
 
 ---
 
-@ reveal_02.png
+@ reveal_repo_02.png
 
 Note: But if we click it, then we don't actually get the contributors
 
 We get the top ones, with a graph, ranked by lines of code
 
 ---
-@ reveal_03.png
+@ reveal_repo_03.png
 
 Note: And it's only the top 100
 
@@ -825,18 +775,18 @@ What if, as a project owner, you could give props to community members
 Note: What if the gamification goal was community help, not a full green graph
 ---
 
-@ question.svg
+! question
 
 Note: But how can you find who in your project community to give props to?
 
 The customisation of the github profile may not exist, but the data for who could be given props does
 
 ---
-##= github.com/glasnt/octohat
-##- <code>pip install octohat</code>
+##= github.com/LABHR/octohatrack
+##- <code>pip install octohatrack</code>
 
 
-Note: introducing octohat
+Note: introducing octohatrack
 ---
 
 #= hakimel/reveal.js
@@ -845,25 +795,21 @@ Note: introducing octohat
 
 ---
 
-#= joomla/joomla-cms
-##- Code Contributors: 414
-##- Non-Code Contributors: 266*
-###- * Since June 2015, ~700 issues/PRs
+#= kennethreitz/requests
+##- Code Contributors: PENDING
+##- Non-Code Contributors: PENDING
 
-Note: Joomla is *massive*
-
-I could only get this many before my GitHub token ratelimited. 
 ---
 
 #= avinassh/rockstar
 ##- Code Contributors: 30
-##- Non-Code Contributors: 38
+##- Non-Code Contributors: 45
 
 ---
 
-#= glasnt/octohat
-##- Code Contributors: 6
-##- Non-Code Contributor: 3
+#= LABHR/octohatrack
+##- Code Contributors: 10
+##- Non-Code Contributor: 12
 
 
 Note: So many conversions!
@@ -872,7 +818,7 @@ TODO update moar stats
 ---
 
 #= TL;DR: 
-##- There's nothing wrong <br>with being nice
+##- You're awesome :)
 
 Note: Thank people that have already done so much
 
@@ -885,12 +831,12 @@ Do more you self
 <br>
 #= #LABHR
 ## bit.do/LABHR
-## github.com/glasnt/octohat
+## github.com/LABHR/octohatrack
 <br>
 <p style="font-size: 60%">
 Non-code contributors to this talk: 
 <br>
-<br>Donna&nbsp;Benjamin, Nick&nbsp;Coghlan, Robert&nbsp;Collins, Ben Dechrai, Tom Eastman, Paul&nbsp;Fenwick, Leslie&nbsp;Hawthorn, Lindsay Holmwood, Russell Keith-Magee, Deb&nbsp;Nicholson, Christopher&nbsp;Neugebauer, Christopher Pitt, Davey&nbsp;Shafik, Aurynn Shaw, Jack&nbsp;Skinner
+<br>Donna&nbsp;Benjamin, Ben Dechrai, Tom Eastman, Paul&nbsp;Fenwick, Leslie&nbsp;Hawthorn, Lara Hogan, Lindsay Holmwood, Russell Keith-Magee, Deb&nbsp;Nicholson, Christopher&nbsp;Neugebauer, Jack&nbsp;Skinner
 <br>
 <br>
 Thank You <3</p>
