@@ -13,7 +13,7 @@
 
 <br> 
 <br> 
-# JavaScript is Awe-ful <!-- .element: style="margin-bottom: 1em" -->
+# JavaScript is Awe-ful
 <br> 
  <img src="pictures/footer.svg" />
 ---
@@ -107,34 +107,14 @@ Note: Associativity? Pfft! Transativity? Hahahah
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> 1 === "1"</code></pre></div> <!-- .element: class="fragment" -->
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">false</code></pre></div> <!-- .element: class="fragment" -->
 ---
-# Developers can get<br>just a little bit<br>upset at JavaScript <!-- .slide: class="center" -->
----
-> "[A]: Please don't hire me<br>for my JS abilities.<br>I'm proficient enough to loath the language intensely" <!-- .slide: class="center" -->
-Note: experienced developers get frustrated with it
----
-
-> "[B]: I have been around [A]<br>when they hack JS.<br>Let's just say<br>Satan himself would blush." <!-- .slide: class="center" -->
-Note: people near to javascript developers hear them swear. A lot.
----
-
-> "[C]: Have to modify some JavaScript<br>I did over a year ago. <!-- .slide: class="center" -->
-> 
-> 'What is this?'<br>
-> 'Why did I ...?'<br>
-> 'What sort of name is that!'"
-
-Note: confusing syntax, hard to come back to
+ <img src="pictures/wat.jpg" />
+<span class="dasfoot"><a href="https://www.destroyallsoftware.com/talks/wat">wat</a></span>
 
 ---
 
-> "[D]: 'I hate writing JavaScript.<br> <!-- .slide: class="center" -->
-> I know, I'll write some JavaScript<br>to fix it.'
-> 
-> This is how Angular happens."
+ <img src="pictures/mini_wat.jpg" />
 
-Note: Pot shots at the Language
----
-# ... <!-- .slide: class="center" -->
+<span class="dasfoot"><a href="https://500px.com/photo/140476163/wat-by-edunham">wat, Emily Dunham, CC-BY-SA</a></span>
 ---
 # Why? <!-- .slide: class="center" -->
 Note: why is javascript so awful
@@ -270,25 +250,23 @@ Note: what percentage of the world uses the internet?
 
 I posit that there are more uses of JS than any other lanaguage ever
 
+What percentage of the internet uses JS?
 
----
-# Billions of users <!-- .slide: class="center" -->
+Given this user base, there are more developers of JS than any other language
 
-Note: What percentage of the internet uses JS?
+Butt-loads of complaints
 
----
-# Millions of developers <!-- .slide: class="center" -->
-Note: Given this user base, there are more developers of JS than any other language
----
-# Butt-loads of complaints <!-- .slide: class="center" -->
-
-Note: It may also be the most complained about language
+It may also be the most complained about language
 But not without some reason
 
 ---
-# Foot Guns <!-- .slide: class="center" -->
+# wat <!-- .slide: class="center" -->
 
-Note: Things you can shoot yourself with in the foot
+Note: 
+
+aka footguns
+
+Things you can shoot yourself with in the foot
 
 ---
 
@@ -394,10 +372,10 @@ Note: More gotchas, Combination of original 'Bad Parts', 'Awful Parts', and some
 ---
 # `parseInt` <!-- .slide: class="center" -->
 ---
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> parseInt("123")</code></pre></div>
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">123</code></pre></div> <!-- .element: class="fragment" -->
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> parseInt("123 bunnies")</code></pre></div> <!-- .element: class="fragment" -->
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">123</code></pre></div> <!-- .element: class="fragment" -->
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> parseInt("42")</code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">42</code></pre></div> <!-- .element: class="fragment" -->
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> parseInt("42 Wallaby Way")</code></pre></div> <!-- .element: class="fragment" -->
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">42</code></pre></div> <!-- .element: class="fragment" -->
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> parseInt("04")</code></pre></div> <!-- .element: class="fragment" -->
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">4</code></pre></div> <!-- .element: class="fragment" -->
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> parseInt("08")</code></pre></div> <!-- .element: class="fragment" -->
@@ -416,7 +394,7 @@ Note: All numbers are IEEE 754 floats
 
 Fix this by dealing with 'round' numbers. Money - work in cents
 ---
-# Extended Character Set <!-- .slide: class="center" -->
+# Extended<br>Character Set <!-- .slide: class="center" -->
 ---
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> "abc".split("")</code></pre></div>
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">["a","b","c"]</code></pre></div> <!-- .element: class="fragment" -->
@@ -438,11 +416,14 @@ split doesn't but array.from does (polyfill?)
 ---
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> ++[[]][+[]]+[+[]]</code></pre></div>
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">10</code></pre></div> <!-- .element: class="fragment" -->
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> []</code></pre></div> <!-- .element: class="fragment" -->
+
+---
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> []</code></pre></div>
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">""</code></pre></div> <!-- .element: class="fragment" -->
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> +[] <c>// +""</c></code></pre></div> <!-- .element: class="fragment" -->
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> +[] <c>&nbsp; // +""</c></code></pre></div> <!-- .element: class="fragment" -->
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">0</code></pre></div> <!-- .element: class="fragment" -->
-Note: uniary operand casts to number
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> [[]] <c> // [""] </c></code></pre></div> <!-- .element: class="fragment" -->
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">""</code></pre></div> <!-- .element: class="fragment" -->
 ---
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> [[]][+[]] <c> &nbsp;// [""][0]</c></code></pre></div>
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">""</code></pre></div> <!-- .element: class="fragment" -->
@@ -457,13 +438,13 @@ Note: pre-increment only works on some objects, not directly on number literals
 ---
 
 # Arrays are Objects <!-- .slide: class="center" -->
-## Kinda. <!-- .element: class="fragment" -->
+## Kinda.
 
 Note: they are special, with integer keys and special sugar.
 See eariler partial working of addressing array keys
 ---
 
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> typeof { a: "b"}</code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> typeof { a: "b" }</code></pre></div>
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">"object"</code></pre></div> <!-- .element: class="fragment" -->
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> typeof ["a","b"]</code></pre></div> <!-- .element: class="fragment" -->
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">"object"</code></pre></div> <!-- .element: class="fragment" -->
@@ -703,6 +684,7 @@ Biggest user base *ever*. Backward compatibility is not optional
 The internet would *break*
 
 And if that's not enough, we have to think about more things
+
 ---
 # Security <!-- .slide: class="center" -->
 Note: on top of the things you know JS does
@@ -710,152 +692,74 @@ Note: on top of the things you know JS does
 you have to worry about the things that you *really* don't want it to do
 ---
 
-# Cross Site Scripting <!-- .slide: class="center" -->
-# XSS <!-- .slide: class="center" -->
-
-Note: Javascript can be used for other evil things
-
-Can take data from your site onto others and other such fun:
----
-
 # `eval` <!-- .slide: class="center" -->
 
 Note: executing arbitary code.
 
-We can create not easily readable code
-
-If you were in Ben's Virus talk, this is havoc in PHP. JS no different
 ---
 <br><br> 
-<pre><code style="overflow: hidden; width: 100%; white-space: pre-wrap"><h>eval(</h>function(p,a,c,k,e,d){e&equals;function(c){return c.toString(36)};if(!''.replace(/^/,String)){while(c--){d[c.toString(a)]&equals;k[c]||c.toString(a)}k&equals;[function(e){return
-d[e]}];e&equals;function(){return'\\\\w+'};c&equals;1};while(c--){if(k[c]){p&equals;p.replace(new RegExp('\\\\b'+e(c)+'\\\\b','g'),k[c])}}return p}('f a&equals;["\\\\e\\\\1\\\\7\\\\4\\\\2\\\\3\\\\1\\\\2\\\\3\\\\6\\\\4\\\\2\\\\d\\\\8\\\\c\\\\9\\\\2\\\\3\\\\6\\\\4\\\\2" +"\\\\g\\\\h\\\\8\\\\k\\\\4\\\\3\\\\2\\\\b\\\\1\\\\5\\\\9\\\\l\\\\6\\\\1\\\\i\\\\2\\\\3\\\\1\\\\7\\\\1\\\\5" +"\\\\5\\\\1\\\\b"];j(a[0]);',22,22,'|x6F|x20|x74|x65|x72|x68|x6D|x61|x6B|'<br>+'_0|x77|x63|x48|x43|var|x50|x6C|x70|alert|x6E|x73'.split('|'),0,{})<h>)</h>
+<pre><code style="overflow: hidden; width: 100%; white-space: pre-wrap"><h>eval(</h>function(p,a,c,k,e,d){e&#61;function(c){return c.toString(36)};if(!''.replace(/^/,String)){while(c--){d[c.toString(a)]&#61;k[c]||c.toString(a)}k&#61;[function(e){return d[e]}];e&#61;function(){return'\\w+'};c&#61;1};while(c--){if(k[c]){p&#61;p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c])}}return p}('8 3&#61;["\\7\\1\\6\\4\\2\\1\\2\\5\\9\\a\\4\\2\\b\\1\\d"]c(3[0])',14,14,<br>'|x61|x20|_0xfb59|x65|x6E|x76|x48|var|x69|x63|x64|alert|x79'<br>.split('|'),0,{})<h>)</h>
 </pre></code> 
 
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">alert("Come to the <br> &nbsp; &nbsp; &nbsp; Hack the Planet workshop<br> &nbsp; &nbsp; &nbsp; tomorrow")</code></pre></code></pre></div> <!-- .element: class="fragment" -->
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">alert("Have a nice day")</code></pre></div> <!-- .element: class="fragment" -->
 Note: base64_encode in php is similar
 ---
-# ... <!-- .slide: class="center" -->
-Note: so, that's what javascript can do. it's powerful, and scary. what if you say
-
----
-## (╯°□°）╯︵ sʇɐʍ ʎɔɐƃǝl <!-- .slide: class="center" -->
-Note: I dont want to deal with all that stuff
+# :( <!-- .slide: class="center" -->
+Note: 
+so, that's what javascript can do. it's powerful, and scary. what if you say
 ---
 
-# Frameworks <!-- .slide: class="center" -->
-Note: pre rolled goodness and wrappers and and and
+# Using JavaScript<br>without JavaScript <!-- .slide: class="center" -->
 ---
-
-# MooTools <!-- .slide: class="center" -->
-# jQuery <!-- .slide: class="center" -->
-# Bootstrap <!-- .slide: class="center" -->
-Note: MooTools was a really good thing back in the day
-
-I've only come across it when I tasked to remove it
-
-... 
-
-JQuery so much extension
-
-
-at one point ~90% of websites had it
-
-... 
-more than JS; CSS, HTML
-Adding more functionality so you dont have to worry about responsive websites
-
-But you can spot a bootstraped wbesite from a mile away
----
-# Meteor <!-- .slide: class="center" -->
-# React <!-- .slide: class="center" -->
-# Angular <!-- .slide: class="center" -->
----
-# ... <!-- .slide: class="center" -->
-Note: but what if you sasy
----
-## (╯°□°）╯︵ ʇdᴉɹɔsɐʌɐɾ <!-- .slide: class="center" -->
-Note: stuff javascript all together
----
-
-# CoffeeScript <!-- .slide: class="center" -->
-# TypeScript <!-- .slide: class="center" -->
-# PureScript <!-- .slide: class="center" -->
-Note: CoffeeScript is a little language that compiles into JavaScript. Underneath that awkward Java-esque patina, JavaScript has always had a gorgeous heart.
-
-TypeScript lets you write JavaScript the way you really want to. TypeScript is a typed superset of JavaScript that compiles to plain JavaScript
-
-See Typehints in JS talk from PyCon AU 2015
----
-# ... <!-- .slide: class="center" -->
----
-## (╯°□°）╯︵ ƃuᴉuɹɐǝl <!-- .slide: class="center" -->
-Note: I want to work in my favourite language, and still work in the browser
----
-## Pick a language. <!-- .slide: class="center" -->
-## Any language. <!-- .slide: class="center" -->
+# Pick any language <!-- .slide: class="center" -->
+Note: CoffeeScript wiki has a list of lanagues that compile to js, and it's cool
 
 ---
-### github.com/jashkenas/coffeescript/wiki/<br>List-of-languages-that-compile-to-JS <!-- .slide: class="center" -->
-Note: Haskell - GHCJS
-Python - pyjamas
-Ruby - Opal
+# PHP -> Uniter <!-- .slide: class="center" -->
 
-Listings for perl, erlang, java, scala, c#, f#, lisp, smalltalk, pascal, go, php, sql
+## <a href="https://asmblah.github.io/uniter/demo/interactive.html">Interactive Demo</a> <!-- .slide: class="center" -->
+
 ---
-# Some of my favourites <!-- .slide: class="center" -->
+
+## Other examples: <!-- .slide: class="center" -->
 ---
 # Batavia <!-- .slide: class="center" -->
  <img src="pictures/pybee.svg" />
-Note: Python Bytecode being run by the Jacascript VM
+Note: Python Bytecode being run by the Javascript VM
 ---
-# asm.js <!-- .slide: class="center" -->
 # emscripten <!-- .slide: class="center" -->
-Note: C into JS
+# asm.js
 
-Faster than Light Osmos - Humble Bundle Mozilla
+Note: 
 
-Unreal Tornament
 
-DosBox 
+
 ---
- <img src="pictures/win95.png"> <!-- .slide: class="center" -->
+<video width="720" height="600" controls="controls"><source src="pictures/skifree.mp4" type="video/mp4" /></video>
 Note: Yes, that's windows 95 running in my browser from 1995
----
-# ... <!-- .slide: class="center" -->
----
-## ┬javascript┬ ノ( ゜-゜ノ) <!-- .slide: class="center" -->
-Note: OK, JS is pretty freaking neat, I want some of that.
-But what about it's other uses
-
 ---
 # JavaScript<br>outside the browser <!-- .slide: class="center" -->
 ---
 # node.js <!-- .slide: class="center" -->
 Note: serverside js
 
+runtime environment, not a framework
+
+Allows for
+
 ---
-# Electron <!-- .slide: class="center" -->
+
+# V8<br>JavaScript Engine <!-- .slide: class="center" -->
 Note: 
 
-GitHub's framework. Atom. Github Desktop
-not the first time JS has been used on the desktop
----
-# Google Gadgets <!-- .slide: class="center" -->
-Note: iGoogle and Google Desktop widget - scripting by javascript on the desktop
----
- <img src="pictures/google_gadgets.jpg" />
----
-<br><br> 
- <img src="pictures/igoogle.png" />
----
-# As a scripting language <!-- .slide: class="center" -->
-Note: NginScript, Cinnamon
----
+Chromium Browser engine.
 
-# More Gotchas <!-- .slide: class="center" -->
----
 
-# V8 Function<br>Optimisation <!-- .slide: class="center" -->
+Open source
+
+'Isomorphic JavaScript' slash 'Universal javascript'
+---
+# V8 wat <!-- .slide: class="center" -->
 ---
 <pre><code>'use strict';
 
@@ -874,14 +778,12 @@ function add(x, y) {
 &nbsp; return(x + y);
 } 
 
-for(let i = 0; i < 500000000; i++) {
-&nbsp; if (add(i, i++) < 5) {
-&nbsp; &nbsp; <c>//</c>
-&nbsp; }
+for (let i = 0; i < 500000000; i++) {
+&nbsp; if (add(i, i++) < 5) { <c>/* */</c> }
 } 
 </code></pre> 
 
- <pre><code>$ time -p node general.js<br>real 1.91</code></pre> <!-- .element: class="fragment" -->
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">$ time -p node general.js<br>real 1.91</code></pre></div> <!-- .element: class="fragment" -->
 ---
 <pre><code>'use strict';
 
@@ -900,10 +802,8 @@ function add(x, y) {
 &nbsp; return(x + y);
 } 
 
-for(let i = 0; i < 500000000; i++) {
-&nbsp; if (add(i, i++) < 5) {
-&nbsp; &nbsp; <c>//</c>
-&nbsp; }
+for (let i = 0; i < 500000000; i++) {
+&nbsp; if (add(i, i++) < 5) { <c>/* */</c> }
 } 
 </code></pre> 
 
@@ -927,18 +827,309 @@ function add(x, y) {
 &nbsp; return(x + y);
 } 
 
-for(let i = 0; i < 500000000; i++) {
-&nbsp; if (add(i, i++) < 5) {
-&nbsp; &nbsp; <c>//</c>
-&nbsp; }
+for (let i = 0; i < 500000000; i++) {
+&nbsp; if (add(i, i++) < 5) { <c>/* */</c> }
 } 
 </code></pre> 
 
- <pre><code>$ time -p node general.js<br>real 0.77</code></pre> <!-- .element: class="fragment" -->
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">$ time -p node general.js<br>real 0.77</code></pre></div> <!-- .element: class="fragment" -->
 Note: What's going to happen? any change?
 
 More than twice as fast
 ---
+# Package<br>Management <!-- .slide: class="center" -->
+---
+
+# <img src="pictures/npm.png"> <!-- .slide: class="center" -->
+
+---
+
+# <img src="pictures/wdu.png"> <!-- .slide: class="center" -->
+Note: Wombat Developers Union
+---
+# <img src="pictures/WOMBAT.png" height="700px">
+---
+
+# <img src="pictures/npm.png"> <!-- .slide: class="center" -->
+
+Note: Node package manager
+
+---
+# left-pad <!-- .slide: class="center" -->
+---
+
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">module.exports = leftpad;<br><br>function leftpad (str, len, ch){<br> &nbsp;str = String(str);<br> &nbsp;var i = -1;<br> &nbsp;if (!ch && ch !== 0) ch = ' ';<br> &nbsp;len = len - str.length;<br> &nbsp;while (++i < len) {<br> &nbsp; &nbsp; str = ch + str;<br> &nbsp;}<br> &nbsp;return str;<br>}</code></pre></div>
+---
+<pre><code data-trim data-noescape><highlight><c>//stevemao/left-pad:index.js</c>
+
+module.exports = leftpad;
+
+function leftpad (str, len, ch) {
+&nbsp; &nbsp; str = String(str);
+
+&nbsp; &nbsp; var i = -1;
+
+&nbsp; &nbsp; if (!ch && ch !== 0) ch = ' ';
+
+&nbsp; &nbsp; len = len - str.length;
+
+&nbsp; &nbsp; while (++i < len) {
+&nbsp; &nbsp; &nbsp; &nbsp; str = ch + str;
+&nbsp; &nbsp; }
+
+&nbsp; &nbsp; return str;
+}</highlight> 
+</code></pre> 
+
+---
+<pre><code data-trim data-noescape><highlight><c>//stevemao/left-pad:index.js</c>
+
+<h>module.exports = leftpad; // function to export</h>
+
+function leftpad (str, len, ch) {
+&nbsp; &nbsp; str = String(str);
+
+&nbsp; &nbsp; var i = -1;
+
+&nbsp; &nbsp; if (!ch && ch !== 0) ch = ' ';
+
+&nbsp; &nbsp; len = len - str.length;
+
+&nbsp; &nbsp; while (++i < len) {
+&nbsp; &nbsp; &nbsp; &nbsp; str = ch + str;
+&nbsp; &nbsp; }
+
+&nbsp; &nbsp; return str;
+}</highlight> 
+</code></pre> 
+---
+<pre><code data-trim data-noescape><highlight><c>//stevemao/left-pad:index.js</c>
+
+module.exports = leftpad;
+
+function leftpad (str, len, ch) {
+&nbsp; &nbsp; <h>str = String(str); // casing to String</h>
+
+&nbsp; &nbsp; var i = -1;
+
+&nbsp; &nbsp; if (!ch && ch !== 0) ch = ' ';
+
+&nbsp; &nbsp; len = len - str.length;
+
+&nbsp; &nbsp; while (++i < len) {
+&nbsp; &nbsp; &nbsp; &nbsp; str = ch + str;
+&nbsp; &nbsp; }
+
+&nbsp; &nbsp; return str;
+}</highlight> 
+</code></pre> 
+
+---
+<pre><code data-trim data-noescape><highlight><c>//stevemao/left-pad:index.js</c>
+
+module.exports = leftpad;
+
+function leftpad (str, len, ch) {
+&nbsp; &nbsp; str = String(str);
+
+&nbsp; &nbsp; <h>var i = -1; // variable initalization</h>
+
+&nbsp; &nbsp; if (!ch && ch !== 0) ch = ' ';
+
+&nbsp; &nbsp; len = len - str.length;
+
+&nbsp; &nbsp; while (++i < len) {
+&nbsp; &nbsp; &nbsp; &nbsp; str = ch + str;
+&nbsp; &nbsp; }
+
+&nbsp; &nbsp; return str;
+}</highlight> 
+</code></pre> 
+
+---
+<pre><code data-trim data-noescape><highlight><c>//stevemao/left-pad:index.js</c>
+
+module.exports = leftpad;
+
+function leftpad (str, len, ch) {
+&nbsp; &nbsp; str = String(str);
+
+&nbsp; &nbsp; var i = -1;
+
+&nbsp; &nbsp; <h>if (!ch && ch !== 0) ch = ' '; // variable default</h>
+
+&nbsp; &nbsp; len = len - str.length;
+
+&nbsp; &nbsp; while (++i < len) {
+&nbsp; &nbsp; &nbsp; &nbsp; str = ch + str;
+&nbsp; &nbsp; }
+
+&nbsp; &nbsp; return str;
+}</highlight> 
+</code></pre> 
+---
+
+<pre><code data-trim data-noescape><highlight><c>//stevemao/left-pad:index.js</c>
+
+module.exports = leftpad;
+
+function leftpad (str, len, ch) {
+&nbsp; &nbsp; str = String(str);
+
+&nbsp; &nbsp; var i = -1;
+
+&nbsp; &nbsp; if (!ch && ch !== 0) ch = ' ';
+
+&nbsp; &nbsp; <h>len = len - str.length; // establish loop iteration count</h>
+
+&nbsp; &nbsp; while (++i < len) {
+&nbsp; &nbsp; &nbsp; &nbsp; str = ch + str;
+&nbsp; &nbsp; }
+
+&nbsp; &nbsp; return str;
+}</highlight> 
+</code></pre> 
+
+---
+
+<pre><code data-trim data-noescape><highlight><c>//stevemao/left-pad:index.js</c>
+
+module.exports = leftpad;
+
+function leftpad (str, len, ch) {
+&nbsp; &nbsp; str = String(str);
+
+&nbsp; &nbsp; var i = -1;
+
+&nbsp; &nbsp; if (!ch && ch !== 0) ch = ' ';
+
+&nbsp; &nbsp; len = len - str.length;
+
+&nbsp; &nbsp; while (<h>++i < len</h>) { <h>// will end when i === 0 </h>
+&nbsp; &nbsp; &nbsp; &nbsp; str = ch + str;
+&nbsp; &nbsp; }
+
+&nbsp; &nbsp; return str;
+}</highlight> 
+</code></pre> 
+
+---
+<pre><code data-trim data-noescape><highlight><c>//stevemao/left-pad:index.js</c>
+
+module.exports = leftpad;
+
+function leftpad (str, len, ch) {
+&nbsp; &nbsp; str = String(str);
+
+&nbsp; &nbsp; var i = -1;
+
+&nbsp; &nbsp; if (!ch && ch !== 0) ch = ' ';
+
+&nbsp; &nbsp; len = len - str.length;
+
+&nbsp; &nbsp; while (++i < len) {
+&nbsp; &nbsp; &nbsp; &nbsp;<h> str = ch + str; // actually prepend the character</h>
+&nbsp; &nbsp; }
+
+&nbsp; &nbsp; return str;
+}</highlight> 
+</code></pre> 
+
+---
+<pre><code data-trim data-noescape><highlight><c>//stevemao/left-pad:index.js</c>
+
+module.exports = leftpad;
+
+function leftpad (str, len, ch) {
+&nbsp; &nbsp; str = String(str);
+
+&nbsp; &nbsp; var i = -1;
+
+&nbsp; &nbsp; if (!ch && ch !== 0) ch = ' ';
+
+&nbsp; &nbsp; len = len - str.length;
+
+&nbsp; &nbsp; while (++i < len) {
+&nbsp; &nbsp; &nbsp; &nbsp; str = ch + str;
+&nbsp; &nbsp; }
+
+&nbsp; &nbsp; <h>return str; // and return </h>
+}</highlight> 
+</code></pre> 
+
+
+---
+
+
+<pre><code><c>/* PHP-5.6:ext/standard/string.c</c>
+PHP_FUNCTION(str_pad) 
+{ 
+&nbsp; &nbsp;char *input;
+&nbsp; &nbsp;int input_len;
+&nbsp; &nbsp;long pad_length;
+&nbsp; &nbsp;size_t num_pad_chars;
+
+&nbsp; &nbsp;num_pad_chars = pad_length - input_len;
+&nbsp; &nbsp;result = (char *)emalloc(input_len + num_pad_chars + 1);
+&nbsp; &nbsp;<c>/* ... */</c>
+
+&nbsp; &nbsp;left_pad = num_pad_chars;
+&nbsp; &nbsp;<c>/* ... */</c>
+
+&nbsp; &nbsp;for (i = 0; i < left_pad; i++)
+&nbsp; &nbsp; &nbsp; &nbsp;result[result_len++] = pad_str_val[i % pad_str_len];
+
+&nbsp; &nbsp;memcpy(result + result_len, input, input_len);
+&nbsp; &nbsp;<c>/* ... */</c>
+
+&nbsp; &nbsp;result[result_len] = '\0';
+
+&nbsp; &nbsp;RETURN_STRINGL(result, result_len, 0);
+} 
+
+</code></pre> 
+---
+
+
+<pre><code><c>/* PHP-5.6:ext/standard/string.c</c>
+PHP_FUNCTION(str_pad) 
+{ 
+&nbsp; &nbsp;char *input;
+&nbsp; &nbsp;int input_len;
+&nbsp; &nbsp;long pad_length;
+&nbsp; &nbsp;size_t num_pad_chars;
+
+&nbsp; &nbsp;num_pad_chars = <h>pad_length - input_len</h>; <h>/* iteration count */</h>
+&nbsp; &nbsp;result = (char *)emalloc(input_len + num_pad_chars + 1);
+&nbsp; &nbsp;<c>/* ... */</c>
+
+&nbsp; &nbsp;left_pad = num_pad_chars;
+&nbsp; &nbsp;<c>/* ... */</c>
+
+&nbsp; &nbsp;for (<h>i = 0; i < left_pad; i++</h>) <h>/* loop */</h>
+&nbsp; &nbsp; &nbsp; &nbsp;result[result_len++] = pad_str_val[i % pad_str_len];
+
+&nbsp; &nbsp;memcpy(result + result_len, input, input_len);
+&nbsp; &nbsp;<c>/* ... */</c>
+
+&nbsp; &nbsp;result[result_len] = '\0';
+
+&nbsp; &nbsp;RETURN_STRINGL(<h>result</h>, result_len, 0); <h>/* return */</h>
+} 
+
+</code></pre> 
+
+---
+
+# User-land<br>"standard library" <!-- .slide: class="center" -->
+Note: jquery
+
+left-pad 
+---
+# Design by<br>Committee <!-- .slide: class="center" -->
+
+---
+
 # JavaScript<br>is improving <!-- .slide: class="center" -->
 ---
 
@@ -946,16 +1137,6 @@ More than twice as fast
 Note: std intro'd in 2009
 
 Mostly adpoted
----
-
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">ES3> parseInt("08")</code></pre></div>
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">0</code></pre></div> <!-- .element: class="fragment" -->
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">ES<h>5</h>> parseInt("08")</code></pre></div> <!-- .element: class="fragment" -->
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">8</code></pre></div> <!-- .element: class="fragment" -->
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">ESx> parseInt("08", 10) <h>// radix</h></code></pre></div> <!-- .element: class="fragment" -->
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">8</code></pre></div> <!-- .element: class="fragment" -->
-Note: assumed to be octal unless you have ECMAScript 5.
-Supply radix to be cross compatible.
 ---
 # `isArray` <!-- .slide: class="center" -->
 ---
@@ -977,6 +1158,29 @@ it had a `trimLeft` and a `trimRight`
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">" Hello"</code></pre></div> <!-- .element: class="fragment" -->
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">ES<h>5</h>> " Hello ".trim()</code></pre></div> <!-- .element: class="fragment" -->
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">"Hello"</code></pre></div> <!-- .element: class="fragment" -->
+---
+
+# Improved<br>`parseInt` <!-- .slide: class="center" -->
+
+---
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">ES3> parseInt("08")</code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">0</code></pre></div> <!-- .element: class="fragment" -->
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">ES<h>5</h>> parseInt("08")</code></pre></div> <!-- .element: class="fragment" -->
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">8</code></pre></div> <!-- .element: class="fragment" -->
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">ESx> parseInt("08", 10) <h>// radix</h></code></pre></div> <!-- .element: class="fragment" -->
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">8</code></pre></div> <!-- .element: class="fragment" -->
+Note: assumed to be octal unless you have ECMAScript 5.
+Supply radix to be cross compatible.
+---
+# `map` <!-- .slide: class="center" -->
+---
+
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> [1, 2, 3].map(Math.sqrt)</code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">[1, 4, 9]</code></pre></div> <!-- .element: class="fragment" -->
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%"><c>// [Math.sqrt(1)<br>&nbsp; , Math.sqrt(2)<br>&nbsp; , Math.sqrt(3)]</c></code></pre></div> <!-- .element: class="fragment" -->
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> a = ['10','10','10','10','10']</code></pre></div> <!-- .element: class="fragment" -->
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> a.map(parseInt)</code></pre></div> <!-- .element: class="fragment" -->
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">[10, NaN, 2, 3, 4]</code></pre></div> <!-- .element: class="fragment" -->
 ---
 # ECMAScript 6 <!-- .slide: class="center" -->
 Note: approved in June 2015 (a few months ago)
@@ -1032,22 +1236,30 @@ Re-declarations are in error
 # `console.log` <!-- .slide: class="center" -->
 Note: Not actually a standard :D
 ---
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> a = 42</code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> console.log("a string")</code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">"a string"</code></pre></div> <!-- .element: class="fragment" -->
+
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> a = 42</code></pre></div> <!-- .element: class="fragment" -->
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> console.log("a is: " + a);</code></pre></div> <!-- .element: class="fragment" -->
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">"a is 42"</code></pre></div> <!-- .element: class="fragment" -->
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> console.time("Process")</code></pre></div> <!-- .element: class="fragment" -->
+Note: basics
+---
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> console.time("Process")</code></pre></div>
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> <c>// ... do the thing</c></code></pre></div> <!-- .element: class="fragment" -->
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> console.timeEnd("Process")</code></pre></div> <!-- .element: class="fragment" -->
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">"Process: 1337ms"</code></pre></div> <!-- .element: class="fragment" -->
+
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> console.log("%cHello world!",<br>&nbsp;"color: red; font-size: 40px");</code></pre></div> <!-- .element: class="fragment" -->
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%"><span style="color: red; font-size: 70px">Hello world!</span></code></pre></div> <!-- .element: class="fragment" -->
-Note: try autocompleting for more, including grouping
+Note: fancy extensions
+
+try autocompleting for more, including grouping
 ---
 <br><br> 
  <img src="pictures/facebook.png" />
 Note: from console on facebook
 ---
-# Extending JavaScript <!-- .slide: class="center" -->
+# Extending<br>JavaScript <!-- .slide: class="center" -->
 ---
 # Polyfill <!-- .slide: class="center" -->
 Note: Adding new funcionality in JS to JS by adding more JS
@@ -1130,23 +1342,29 @@ Note: Let's about about Java
 ---
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%"><c>/&#42;&#42; read from a file &#42;&#42;/</c></code></pre></div>
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">filename = "myfile.txt"</code></pre></div> <!-- .element: class="fragment" -->
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">BufferedReader reader = <br>&nbsp; &nbsp; &nbsp; new BufferedReader( <br>&nbsp; &nbsp; &nbsp; &nbsp; new InputStreamReader( <br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; new FileInputStream(<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; filename<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; )<br>&nbsp; &nbsp; &nbsp; &nbsp; )<br>&nbsp; &nbsp; &nbsp; );<br>&nbsp;</code></pre></div> <!-- .element: class="fragment" -->
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">BufferedReader reader = <br>&nbsp; new BufferedReader ( <br>&nbsp; &nbsp; new InputStreamReader ( <br>&nbsp; &nbsp;&nbsp; &nbsp;new FileInputStream (<br>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; filename<br>&nbsp; &nbsp; &nbsp; )<br>&nbsp; &nbsp; )<br>&nbsp; );<br>&nbsp;</code></pre></div> <!-- .element: class="fragment" -->
 ---
 # <pre>/usr/bin/irb</pre> <!-- .slide: class="center" -->
 Note: Let's talk about ruby
 ---
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">irb> open source rocks</code></pre></div>
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">NameError: undefined local<br>variable or method `rocks'</code></pre></div> <!-- .element: class="fragment" -->
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">irb> ruby bare words</code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">NameError: undefined local<br>variable or method `words'</code></pre></div> <!-- .element: class="fragment" -->
+
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">irb> def method_missing(@args)<br> &nbsp; &nbsp; &nbsp; args.join(" ")<br> &nbsp; &nbsp; end</code></pre></div> <!-- .element: class="fragment" -->
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">irb> open source rocks</code></pre></div> <!-- .element: class="fragment" -->
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">"open source rocks"</code></pre></div> <!-- .element: class="fragment" -->
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">irb> ruby bare words</code></pre></div> <!-- .element: class="fragment" -->
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">"ruby bare words"</code></pre></div> <!-- .element: class="fragment" -->
 Note: Method Missing is evil monkey patching
+
+This is how Rails works
+
+find_customer_by_id substring
 ---
 # <pre>/usr/bin/irb</pre> <!-- .slide: class="center" -->
 Note: Let's talk about ruby
 ---
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">irb> not true && false</code></pre></div>
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">false</code></pre></div> <!-- .element: class="fragment" -->
+
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">irb> not true and false</code></pre></div> <!-- .element: class="fragment" -->
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">true</code></pre></div> <!-- .element: class="fragment" -->
 
@@ -1164,6 +1382,7 @@ Note: Let's talk about Haskell
 
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">λ&gt; length [1,2]</code></pre></div>
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">2</code></pre></div> <!-- .element: class="fragment" -->
+
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">λ> length (1,2)</code></pre></div> <!-- .element: class="fragment" -->
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">1</code></pre></div> <!-- .element: class="fragment" -->
 
@@ -1176,10 +1395,31 @@ Note: Let's talk about Haskell
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">λ> let a = 2 + 2</code></pre></div>
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">λ> a</code></pre></div> <!-- .element: class="fragment" -->
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">4</code></pre></div> <!-- .element: class="fragment" -->
+
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">λ> let b = 2 + 2 where 2 + 2 = 5</code></pre></div> <!-- .element: class="fragment" -->
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">λ> b</code></pre></div> <!-- .element: class="fragment" -->
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">5</code></pre></div> <!-- .element: class="fragment" -->
 Note: Because haskell
+---
+
+# <pre>/usr/local/bin/iex</pre> <!-- .slide: class="center" -->
+
+Note: Let's talk about Elixir
+
+---
+
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">iex> Enum.map(1..5,<br>&nbsp; &nbsp; &nbsp; &nbsp; fn(x) -> x*x end )</code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">[1, 4, 9, 16, 25]</code></pre></div> <!-- .element: class="fragment" -->
+
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">iex> Enum.map(6..10,<br>&nbsp; &nbsp; &nbsp; &nbsp; fn(x) -> x*x end )</code></pre></div> <!-- .element: class="fragment" -->
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">'$1@Qd'</code></pre></div> <!-- .element: class="fragment" -->
+Note: 
+
+Elixir is erlang
+
+Strings in erlang are list of integers
+
+and somewhow, elixir is inferring the second is string, not a list of numbers
 ---
 # <pre>/usr/local/bin python</pre> <!-- .slide: class="center" -->
 Note: Let's talk about Python
@@ -1207,7 +1447,12 @@ Note: Let's talk about Perl
 
 ---
 
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">DB&lt;1> if ("foo" == "bar") <br> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; { print "true" }<br> &nbsp;&nbsp; &nbsp; else { print "false" }</code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> if ("foo" == "bar") {</code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> &nbsp; &nbsp; print "true"</code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> } else {</code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> &nbsp; &nbsp; print "false"</code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> }</code></pre></div>
+
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">true</code></pre></div> <!-- .element: class="fragment" -->
 <span class="dasfoot"><a href="http://stackoverflow.com/a/14046720/124019">http://stackoverflow.com/a/14046720/124019</a></span>
 Note: Reason is `==` is for number comparing
@@ -1245,7 +1490,8 @@ Note: Let's talk about powershell
 
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">PS> if (2 > 1) { "true" }<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; else { "false" }</code></pre></div>
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">true</code></pre></div> <!-- .element: class="fragment" -->
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%"><br>PS> if (2 < 1) { "true" }<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; else { "false" }</code></pre></div> <!-- .element: class="fragment" -->
+
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">PS> if (2 < 1) { "true" }<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; else { "false" }</code></pre></div> <!-- .element: class="fragment" -->
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">The '<' operator is reserved<br>for future use.</code></pre></div> <!-- .element: class="fragment" -->
 
 <span class="dasfoot"><a href="http://fuckpowershell.tumblr.com/">f&#45;&#45;&#45;powershell.tumblr.com</a></span>
@@ -1265,5 +1511,4 @@ Hopefully I've shown just how good JS can be. And it might make someone reconsid
 <br><br> 
 # Cheers! <!-- .slide: class="center" -->
 <br><br> 
-### <3 feedback - joind.in/15903 <!-- .slide: class="center" -->
  <img src="pictures/footer.svg" />

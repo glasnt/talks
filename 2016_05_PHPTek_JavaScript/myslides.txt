@@ -107,34 +107,14 @@ Note: Associativity? Pfft! Transativity? Hahahah
 #>- > 1 === "1"
 #>- false
 ---
-#= Developers can get<br>just a little bit<br>upset at JavaScript
----
-=> "[A]: Please don't hire me<br>for my JS abilities.<br>I'm proficient enough to loath the language intensely"
-Note: experienced developers get frustrated with it
----
-
-=> "[B]: I have been around [A]<br>when they hack JS.<br>Let's just say<br>Satan himself would blush."
-Note: people near to javascript developers hear them swear.  A lot.
----
-
-=> "[C]: Have to modify some JavaScript<br>I did over a year ago.
->
-> 'What is this?'<br>
-> 'Why did I ...?'<br>
-> 'What sort of name is that!'"
-
-Note: confusing syntax, hard to come back to
+@ wat.jpg
+<span class="dasfoot"><a href="https://www.destroyallsoftware.com/talks/wat">wat</a></span>
 
 ---
 
-=> "[D]: 'I hate writing JavaScript.<br>
-> I know, I'll write some JavaScript<br>to fix it.'
->
-> This is how Angular happens."
+@ mini_wat.jpg
 
-Note: Pot shots at the Language
----
-#= ...
+<span class="dasfoot"><a href="https://500px.com/photo/140476163/wat-by-edunham">wat, Emily Dunham, CC-BY-SA</a></span>
 ---
 #= Why?
 Note: why is javascript so awful
@@ -270,25 +250,23 @@ Note: what percentage of the world uses the internet?
 
 I posit that there are more uses of JS than any other lanaguage ever
 
+What percentage of the internet uses JS?
 
----
-#= Billions of users
+Given this user base, there are more developers of JS than any other language
 
-Note: What percentage of the internet uses JS?
+Butt-loads of complaints
 
----
-#= Millions of developers
-Note: Given this user base, there are more developers of JS than any other language
----
-#= Butt-loads of complaints
-
-Note: It may also be the most complained about language
+It may also be the most complained about language
 But not without some reason
 
 ---
-#= Foot Guns
+#= wat
 
-Note: Things you can shoot yourself with in the foot
+Note: 
+
+aka footguns
+
+Things you can shoot yourself with in the foot
 
 ---
 
@@ -394,10 +372,10 @@ Note: More gotchas, Combination of original 'Bad Parts', 'Awful Parts', and some
 ---
 #= `parseInt`
 ---
-#> > parseInt("123")
-#>- 123
-#>- > parseInt("123 bunnies")
-#>- 123
+#> > parseInt("42")
+#>- 42
+#>- > parseInt("42 Wallaby Way")
+#>- 42
 #>- > parseInt("04")
 #>- 4
 #>- > parseInt("08")
@@ -416,7 +394,7 @@ Note: All numbers are IEEE 754 floats
 
 Fix this by dealing with 'round' numbers. Money - work in cents
 ---
-#= Extended Character Set
+#= Extended<br>Character Set
 ---
 #> > "abc".split("")
 #>- ["a","b","c"]
@@ -438,11 +416,14 @@ split doesn't but array.from does (polyfill?)
 ---
 #> > ++[[]][+[]]+[+[]]
 #>- 10
-#>- > []
+
+---
+#> > []
 #>- ""
-#>- > +[] <c>// +""</c>
+#>- > +[] <c>&nbsp; // +""</c>
 #>- 0
-Note: uniary operand casts to number
+#>- > [[]] <c> // [""] </c>
+#>- ""
 ---
 #> > [[]][+[]] <c> &nbsp;// [""][0]</c>
 #>- ""
@@ -457,13 +438,13 @@ Note: pre-increment only works on some objects, not directly on number literals
 ---
 
 #= Arrays are Objects
-##- Kinda.
+## Kinda.
 
 Note: they are special, with integer keys and special sugar. 
 See eariler partial working of addressing array keys
 ---
 
-#> > typeof { a: "b"}
+#> > typeof { a: "b" }
 #>- "object"
 #>- > typeof ["a","b"]
 #>- "object"
@@ -703,6 +684,7 @@ Biggest user base *ever*. Backward compatibility is not optional
 The internet would *break*
 
 And if that's not enough, we have to think about more things
+
 ---
 #= Security
 Note: on top of the things you know JS does
@@ -710,152 +692,74 @@ Note: on top of the things you know JS does
 you have to worry about the things that you *really* don't want it to do
 ---
 
-#= Cross Site Scripting
-#= XSS
-
-Note:  Javascript can be used for other evil things
-
-Can take data from your site onto others and other such fun:
----
-
 #= `eval`
 
 Note: executing arbitary code.
 
-We can create not easily readable code
-
-If you were in Ben's Virus talk, this is havoc in PHP. JS no different
 ---
 <br><br>
-<pre><code style="overflow: hidden; width: 100%; white-space: pre-wrap"><h>eval(</h>function(p,a,c,k,e,d){e&equals;function(c){return c.toString(36)};if(!''.replace(/^/,String)){while(c--){d[c.toString(a)]&equals;k[c]||c.toString(a)}k&equals;[function(e){return
-d[e]}];e&equals;function(){return'\\\\w+'};c&equals;1};while(c--){if(k[c]){p&equals;p.replace(new RegExp('\\\\b'+e(c)+'\\\\b','g'),k[c])}}return p}('f a&equals;["\\\\e\\\\1\\\\7\\\\4\\\\2\\\\3\\\\1\\\\2\\\\3\\\\6\\\\4\\\\2\\\\d\\\\8\\\\c\\\\9\\\\2\\\\3\\\\6\\\\4\\\\2" +"\\\\g\\\\h\\\\8\\\\k\\\\4\\\\3\\\\2\\\\b\\\\1\\\\5\\\\9\\\\l\\\\6\\\\1\\\\i\\\\2\\\\3\\\\1\\\\7\\\\1\\\\5" +"\\\\5\\\\1\\\\b"];j(a[0]);',22,22,'|x6F|x20|x74|x65|x72|x68|x6D|x61|x6B|'<br>+'_0|x77|x63|x48|x43|var|x50|x6C|x70|alert|x6E|x73'.split('|'),0,{})<h>)</h>
+<pre><code style="overflow: hidden; width: 100%; white-space: pre-wrap"><h>eval(</h>function(p,a,c,k,e,d){e&#61;function(c){return c.toString(36)};if(!''.replace(/^/,String)){while(c--){d[c.toString(a)]&#61;k[c]||c.toString(a)}k&#61;[function(e){return d[e]}];e&#61;function(){return'\\w+'};c&#61;1};while(c--){if(k[c]){p&#61;p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c])}}return p}('8 3&#61;["\\7\\1\\6\\4\\2\\1\\2\\5\\9\\a\\4\\2\\b\\1\\d"]c(3[0])',14,14,<br>'|x61|x20|_0xfb59|x65|x6E|x76|x48|var|x69|x63|x64|alert|x79'<br>.split('|'),0,{})<h>)</h>
 </pre></code>
 
-#>- alert("Come to the <br> &nbsp; &nbsp; &nbsp; Hack the Planet workshop<br> &nbsp; &nbsp; &nbsp; tomorrow")</code></pre>
+#>- alert("Have a nice day")
 Note: base64_encode in php is similar
 ---
-#= ...
-Note: so, that's what javascript can do. it's powerful, and scary. what if you say
-
----
-##= (╯°□°）╯︵ sʇɐʍ ʎɔɐƃǝl
-Note: I dont want to deal with all that stuff
+#= :(
+Note:
+so, that's what javascript can do. it's powerful, and scary. what if you say
 ---
 
-#= Frameworks
-Note: pre rolled goodness and wrappers and and and
+#= Using JavaScript<br>without JavaScript
 ---
-
-#= MooTools
-#= jQuery
-#= Bootstrap
-Note: MooTools was a really good thing back in the day
-
-I've only come across it when I tasked to remove it
-
- ...
-
-JQuery so much extension
-
-
-at one point ~90% of websites had it
-
- ...
-more than JS; CSS, HTML
-Adding more functionality so you dont have to worry about responsive websites
-
-But you can spot a bootstraped wbesite from a mile away
----
-#= Meteor
-#= React
-#= Angular
----
-#= ...
-Note: but what if you sasy
----
-##= (╯°□°）╯︵ ʇdᴉɹɔsɐʌɐɾ
-Note: stuff javascript all together
----
-
-#= CoffeeScript
-#= TypeScript
-#= PureScript
-Note: CoffeeScript is a little language that compiles into JavaScript. Underneath that awkward Java-esque patina, JavaScript has always had a gorgeous heart.
-
-TypeScript lets you write JavaScript the way you really want to. TypeScript is a typed superset of JavaScript that compiles to plain JavaScript
-
-See Typehints in JS talk from PyCon AU 2015
----
-#= ...
----
-##= (╯°□°）╯︵ ƃuᴉuɹɐǝl
-Note: I want to work in my favourite language, and still work in the browser
----
-##= Pick a language.
-##= Any language.
+#= Pick any language
+Note: CoffeeScript wiki has a list of lanagues that compile to js, and it's cool
 
 ---
-###= github.com/jashkenas/coffeescript/wiki/<br>List-of-languages-that-compile-to-JS
-Note: Haskell - GHCJS
-Python - pyjamas
-Ruby - Opal
+#= PHP -> Uniter
 
-Listings for perl, erlang, java, scala, c#, f#, lisp, smalltalk, pascal, go, php, sql
+##= <a href="https://asmblah.github.io/uniter/demo/interactive.html">Interactive Demo</a>
+
 ---
-#= Some of my favourites
+
+##= Other examples:
 ---
 #= Batavia
 @ pybee.svg
-Note: Python Bytecode being run by the Jacascript VM
+Note: Python Bytecode being run by the Javascript VM
 ---
-#= asm.js
 #= emscripten
-Note: C into JS
+# asm.js 
 
-Faster than Light Osmos - Humble Bundle Mozilla
+Note: 
 
-Unreal Tornament
 
-DosBox
+
 ---
-= <img src="pictures/win95.png">
+<video width="720" height="600" controls="controls"><source src="pictures/skifree.mp4" type="video/mp4" /></video>
 Note: Yes, that's windows 95 running in my browser from 1995
----
-#= ...
----
-##= ┬javascript┬ ノ( ゜-゜ノ)
-Note: OK, JS is pretty freaking neat, I want some of that.
-But what about it's other uses
-
 ---
 #= JavaScript<br>outside the browser
 ---
 #= node.js
 Note: serverside js
 
+runtime environment, not a framework
+
+Allows for 
+
 ---
-#= Electron
+
+#= V8<br>JavaScript Engine
 Note:
 
-GitHub's framework. Atom. Github Desktop
-not the first time JS has been used on the desktop
----
-#= Google Gadgets
-Note: iGoogle and Google Desktop widget - scripting by javascript on the desktop
----
-@ google_gadgets.jpg
----
-<br><br>
-@ igoogle.png
----
-#= As a scripting language
-Note: NginScript, Cinnamon
----
+Chromium Browser engine. 
 
-#= More Gotchas
----
 
-#= V8 Function<br>Optimisation
+Open source
+
+ 'Isomorphic JavaScript' slash 'Universal javascript'
+---
+#= V8 wat
 ---
 <pre><code>'use strict';
 
@@ -874,14 +778,12 @@ function add(x, y) {
 &nbsp;  return(x + y);
 }
 
-for(let i = 0; i < 500000000; i++) {
-&nbsp; if (add(i, i++) < 5) {
-&nbsp; &nbsp;  <c>//</c>
-&nbsp; }
+for (let i = 0; i < 500000000; i++) {
+&nbsp; if (add(i, i++) < 5) { <c>/* */</c> }
 }
 </code></pre>
 
-- <pre><code>$ time -p node general.js<br>real 1.91</code></pre>
+#>- $ time -p node general.js<br>real 1.91
 ---
 <pre><code>'use strict';
 
@@ -900,10 +802,8 @@ function add(x, y) {
 &nbsp;  return(x + y);
 }
 
-for(let i = 0; i < 500000000; i++) {
-&nbsp; if (add(i, i++) < 5) {
-&nbsp; &nbsp;  <c>//</c>
-&nbsp; }
+for (let i = 0; i < 500000000; i++) {
+&nbsp; if (add(i, i++) < 5) { <c>/* */</c> }
 }
 </code></pre>
 
@@ -927,18 +827,309 @@ function add(x, y) {
 &nbsp;  return(x + y);
 }
 
-for(let i = 0; i < 500000000; i++) {
-&nbsp; if (add(i, i++) < 5) {
-&nbsp; &nbsp;  <c>//</c>
-&nbsp; }
+for (let i = 0; i < 500000000; i++) {
+&nbsp; if (add(i, i++) < 5) { <c>/* */</c> }
 }
 </code></pre>
 
-- <pre><code>$ time -p node general.js<br>real 0.77</code></pre>
+#>- $ time -p node general.js<br>real 0.77
 Note: What's going to happen? any change?
 
 More than twice as fast
 ---
+#= Package<br>Management
+---
+
+#= <img src="pictures/npm.png">
+
+---
+
+#= <img src="pictures/wdu.png">
+Note: Wombat Developers Union
+---
+# <img src="pictures/WOMBAT.png" height="700px">
+---
+
+#= <img src="pictures/npm.png">
+
+Note: Node package manager
+
+---
+#= left-pad
+---
+
+#> module.exports = leftpad;<br><br>function leftpad (str, len, ch){<br> &nbsp;str = String(str);<br> &nbsp;var i = -1;<br> &nbsp;if (!ch && ch !== 0) ch = ' ';<br> &nbsp;len = len - str.length;<br> &nbsp;while (++i < len) {<br> &nbsp; &nbsp; str = ch + str;<br> &nbsp;}<br> &nbsp;return str;<br>}
+---
+<pre><code  data-trim data-noescape><highlight><c>//stevemao/left-pad:index.js</c>
+
+module.exports = leftpad;
+
+function leftpad (str, len, ch) {
+&nbsp; &nbsp; str = String(str);
+
+&nbsp; &nbsp; var i = -1;
+
+&nbsp; &nbsp; if (!ch && ch !== 0) ch = ' ';
+
+&nbsp; &nbsp; len = len - str.length;
+
+&nbsp; &nbsp; while (++i < len) {
+&nbsp; &nbsp; &nbsp; &nbsp; str = ch + str;
+&nbsp; &nbsp; }
+
+&nbsp; &nbsp; return str;
+}</highlight>
+</code></pre>
+
+---
+<pre><code  data-trim data-noescape><highlight><c>//stevemao/left-pad:index.js</c>
+
+<h>module.exports = leftpad;  // function to export</h> 
+
+function leftpad (str, len, ch) {
+&nbsp; &nbsp; str = String(str);
+
+&nbsp; &nbsp; var i = -1;
+
+&nbsp; &nbsp; if (!ch && ch !== 0) ch = ' ';
+
+&nbsp; &nbsp; len = len - str.length;
+
+&nbsp; &nbsp; while (++i < len) {
+&nbsp; &nbsp; &nbsp; &nbsp; str = ch + str;
+&nbsp; &nbsp; }
+
+&nbsp; &nbsp; return str;
+}</highlight>
+</code></pre>
+---
+<pre><code  data-trim data-noescape><highlight><c>//stevemao/left-pad:index.js</c>
+
+module.exports = leftpad;
+
+function leftpad (str, len, ch) {
+&nbsp; &nbsp; <h>str = String(str); // casing to String</h>
+
+&nbsp; &nbsp; var i = -1;
+
+&nbsp; &nbsp; if (!ch && ch !== 0) ch = ' ';
+
+&nbsp; &nbsp; len = len - str.length;
+
+&nbsp; &nbsp; while (++i < len) {
+&nbsp; &nbsp; &nbsp; &nbsp; str = ch + str;
+&nbsp; &nbsp; }
+
+&nbsp; &nbsp; return str;
+}</highlight>
+</code></pre>
+
+---
+<pre><code  data-trim data-noescape><highlight><c>//stevemao/left-pad:index.js</c>
+
+module.exports = leftpad;
+
+function leftpad (str, len, ch) {
+&nbsp; &nbsp; str = String(str);
+
+&nbsp; &nbsp; <h>var i = -1;  // variable initalization</h>
+
+&nbsp; &nbsp; if (!ch && ch !== 0) ch = ' ';
+
+&nbsp; &nbsp; len = len - str.length;
+
+&nbsp; &nbsp; while (++i < len) {
+&nbsp; &nbsp; &nbsp; &nbsp; str = ch + str;
+&nbsp; &nbsp; }
+
+&nbsp; &nbsp; return str;
+}</highlight>
+</code></pre>
+
+---
+<pre><code  data-trim data-noescape><highlight><c>//stevemao/left-pad:index.js</c>
+
+module.exports = leftpad;
+
+function leftpad (str, len, ch) {
+&nbsp; &nbsp; str = String(str);
+
+&nbsp; &nbsp; var i = -1;
+
+&nbsp; &nbsp; <h>if (!ch && ch !== 0) ch = ' ';   // variable default</h>
+
+&nbsp; &nbsp; len = len - str.length;
+
+&nbsp; &nbsp; while (++i < len) {
+&nbsp; &nbsp; &nbsp; &nbsp; str = ch + str;
+&nbsp; &nbsp; }
+
+&nbsp; &nbsp; return str;
+}</highlight>
+</code></pre>
+---
+
+<pre><code  data-trim data-noescape><highlight><c>//stevemao/left-pad:index.js</c>
+
+module.exports = leftpad;
+
+function leftpad (str, len, ch) {
+&nbsp; &nbsp; str = String(str);
+
+&nbsp; &nbsp; var i = -1;
+
+&nbsp; &nbsp; if (!ch && ch !== 0) ch = ' ';
+
+&nbsp; &nbsp; <h>len = len - str.length; // establish loop iteration count</h>
+
+&nbsp; &nbsp; while (++i < len) {
+&nbsp; &nbsp; &nbsp; &nbsp; str = ch + str;
+&nbsp; &nbsp; }
+
+&nbsp; &nbsp; return str;
+}</highlight>
+</code></pre>
+
+---
+
+<pre><code  data-trim data-noescape><highlight><c>//stevemao/left-pad:index.js</c>
+
+module.exports = leftpad;
+
+function leftpad (str, len, ch) {
+&nbsp; &nbsp; str = String(str);
+
+&nbsp; &nbsp; var i = -1;
+
+&nbsp; &nbsp; if (!ch && ch !== 0) ch = ' ';
+
+&nbsp; &nbsp; len = len - str.length;
+
+&nbsp; &nbsp; while (<h>++i < len</h>) { <h>// will end when i === 0 </h>
+&nbsp; &nbsp; &nbsp; &nbsp; str = ch + str;
+&nbsp; &nbsp; }
+
+&nbsp; &nbsp; return str;
+}</highlight>
+</code></pre>
+
+---
+<pre><code  data-trim data-noescape><highlight><c>//stevemao/left-pad:index.js</c>
+
+module.exports = leftpad;
+
+function leftpad (str, len, ch) {
+&nbsp; &nbsp; str = String(str);
+
+&nbsp; &nbsp; var i = -1;
+
+&nbsp; &nbsp; if (!ch && ch !== 0) ch = ' ';
+
+&nbsp; &nbsp; len = len - str.length;
+
+&nbsp; &nbsp; while (++i < len) {
+&nbsp; &nbsp; &nbsp; &nbsp;<h> str = ch + str; // actually prepend the character</h> 
+&nbsp; &nbsp; }
+
+&nbsp; &nbsp; return str;
+}</highlight>
+</code></pre>
+
+---
+<pre><code  data-trim data-noescape><highlight><c>//stevemao/left-pad:index.js</c>
+
+module.exports = leftpad;
+
+function leftpad (str, len, ch) {
+&nbsp; &nbsp; str = String(str);
+
+&nbsp; &nbsp; var i = -1;
+
+&nbsp; &nbsp; if (!ch && ch !== 0) ch = ' ';
+
+&nbsp; &nbsp; len = len - str.length;
+
+&nbsp; &nbsp; while (++i < len) {
+&nbsp; &nbsp; &nbsp; &nbsp; str = ch + str;
+&nbsp; &nbsp; }
+
+&nbsp; &nbsp; <h>return str; // and return </h>
+}</highlight>
+</code></pre>
+
+
+---
+
+
+<pre><code><c>/* PHP-5.6:ext/standard/string.c</c>
+PHP_FUNCTION(str_pad)
+{
+ &nbsp; &nbsp;char *input;
+ &nbsp; &nbsp;int  input_len;
+ &nbsp; &nbsp;long pad_length;
+ &nbsp; &nbsp;size_t num_pad_chars;
+
+ &nbsp; &nbsp;num_pad_chars = pad_length - input_len;
+ &nbsp; &nbsp;result = (char *)emalloc(input_len + num_pad_chars + 1);
+ &nbsp; &nbsp;<c>/* ... */</c>
+
+ &nbsp; &nbsp;left_pad = num_pad_chars;
+ &nbsp; &nbsp;<c>/* ... */</c>
+
+ &nbsp; &nbsp;for (i = 0; i < left_pad; i++)
+ &nbsp; &nbsp; &nbsp; &nbsp;result[result_len++] = pad_str_val[i % pad_str_len];
+
+ &nbsp; &nbsp;memcpy(result + result_len, input, input_len);
+ &nbsp; &nbsp;<c>/* ... */</c>
+
+ &nbsp; &nbsp;result[result_len] = '\0';
+
+ &nbsp; &nbsp;RETURN_STRINGL(result, result_len, 0);
+}
+
+</code></pre>
+---
+
+
+<pre><code><c>/* PHP-5.6:ext/standard/string.c</c>
+PHP_FUNCTION(str_pad)
+{
+ &nbsp; &nbsp;char *input;
+ &nbsp; &nbsp;int  input_len;
+ &nbsp; &nbsp;long pad_length;
+ &nbsp; &nbsp;size_t num_pad_chars;
+
+ &nbsp; &nbsp;num_pad_chars = <h>pad_length - input_len</h>; <h>/* iteration count */</h>
+ &nbsp; &nbsp;result = (char *)emalloc(input_len + num_pad_chars + 1);
+ &nbsp; &nbsp;<c>/* ... */</c>
+
+ &nbsp; &nbsp;left_pad = num_pad_chars;
+ &nbsp; &nbsp;<c>/* ... */</c>
+
+ &nbsp; &nbsp;for (<h>i = 0; i < left_pad; i++</h>) <h>/* loop */</h>
+ &nbsp; &nbsp; &nbsp; &nbsp;result[result_len++] = pad_str_val[i % pad_str_len];
+
+ &nbsp; &nbsp;memcpy(result + result_len, input, input_len);
+ &nbsp; &nbsp;<c>/* ... */</c>
+
+ &nbsp; &nbsp;result[result_len] = '\0';
+
+ &nbsp; &nbsp;RETURN_STRINGL(<h>result</h>, result_len, 0); <h>/* return */</h>
+}
+
+</code></pre>
+
+---
+
+#= User-land<br>"standard library"
+Note: jquery
+
+left-pad
+---
+#= Design by<br>Committee
+
+---
+
 #= JavaScript<br>is improving
 ---
 
@@ -946,16 +1137,6 @@ More than twice as fast
 Note: std intro'd in 2009
 
 Mostly adpoted
----
-
-#>  ES3> parseInt("08")
-#>- 0
-#>- ES<h>5</h>> parseInt("08")
-#>- 8
-#>- ESx> parseInt("08", 10) <h>// radix</h>
-#>- 8
-Note: assumed to be octal unless you have ECMAScript 5.
-Supply radix to be cross compatible.
 ---
 #= `isArray`
 ---
@@ -977,6 +1158,29 @@ it had a `trimLeft` and a `trimRight`
 #>- " Hello"
 #>- ES<h>5</h>> " Hello ".trim()
 #>- "Hello"  
+---
+
+#= Improved<br>`parseInt`
+
+---
+#>  ES3> parseInt("08")
+#>- 0
+#>- ES<h>5</h>> parseInt("08")
+#>- 8
+#>- ESx> parseInt("08", 10) <h>// radix</h>
+#>- 8
+Note: assumed to be octal unless you have ECMAScript 5.
+Supply radix to be cross compatible.
+---
+#= `map`
+---
+
+#> > [1, 2, 3].map(Math.sqrt)
+#>- [1, 4, 9]
+#>- <c>// [Math.sqrt(1)<br>&nbsp; , Math.sqrt(2)<br>&nbsp; , Math.sqrt(3)]</c>
+#>- > a = ['10','10','10','10','10']
+#>- > a.map(parseInt)
+#>- [10, NaN, 2, 3, 4]
 ---
 #= ECMAScript 6
 Note: approved in June 2015 (a few months ago)
@@ -1032,22 +1236,30 @@ Re-declarations are in error
 #= `console.log`
 Note: Not actually a standard :D
 ---
-#> > a = 42
+#> > console.log("a string")
+#>- "a string"
+
+#>- > a = 42
 #>- > console.log("a is: " + a);
 #>- "a is 42"
-#>- > console.time("Process")
+Note: basics
+---
+#> > console.time("Process")
 #>- > <c>// ... do the thing</c>
 #>- > console.timeEnd("Process")
 #>- "Process: 1337ms"
+
 #>- > console.log("%cHello world!",<br>&nbsp;"color: red; font-size: 40px");
 #>- <span style="color: red; font-size: 70px">Hello world!</span>
-Note: try autocompleting for more, including grouping
+Note: fancy extensions
+
+try autocompleting for more, including grouping
 ---
 <br><br>
 @ facebook.png
 Note: from console on facebook
 ---
-#= Extending JavaScript
+#= Extending<br>JavaScript
 ---
 #= Polyfill
 Note: Adding new funcionality in JS to JS by adding more JS
@@ -1130,23 +1342,29 @@ Note: Let's about about Java
 ---
 #> <c>/&#42;&#42; read from a file &#42;&#42;/</c>
 #>- filename = "myfile.txt"
-#>- BufferedReader reader = <br>&nbsp; &nbsp; &nbsp; new BufferedReader( <br>&nbsp; &nbsp; &nbsp; &nbsp;  new InputStreamReader( <br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  new FileInputStream(<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  filename<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  )<br>&nbsp; &nbsp; &nbsp; &nbsp;  )<br>&nbsp; &nbsp; &nbsp; );<br>&nbsp;
+#>- BufferedReader reader = <br>&nbsp; new BufferedReader ( <br>&nbsp; &nbsp;   new InputStreamReader ( <br>&nbsp; &nbsp;&nbsp; &nbsp;new FileInputStream (<br>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; filename<br>&nbsp; &nbsp; &nbsp; )<br>&nbsp; &nbsp;  )<br>&nbsp; );<br>&nbsp;
 ---
 #= <pre>/usr/bin/irb</pre>
 Note: Let's talk about ruby
 ---
-#>  irb> open source rocks
-#>- NameError: undefined local<br>variable or method `rocks'
+#>  irb> ruby bare words
+#>- NameError: undefined local<br>variable or method `words'
+
 #>- irb> def method_missing(@args)<br> &nbsp; &nbsp; &nbsp;  args.join(" ")<br> &nbsp; &nbsp; end
-#>- irb> open source rocks
-#>- "open source rocks"
+#>- irb> ruby bare words
+#>- "ruby bare words"
 Note: Method Missing is evil monkey patching
+
+This is how Rails works
+
+find_customer_by_id substring
 ---
 #= <pre>/usr/bin/irb</pre>
 Note: Let's talk about ruby
 ---
 #> irb> not true && false
 #>- false
+
 #>- irb> not true and false
 #>- true
 
@@ -1164,6 +1382,7 @@ Note: Let's talk about Haskell
 
 #> λ&gt; length [1,2]
 #>- 2
+
 #>- λ> length (1,2)
 #>- 1
 
@@ -1176,10 +1395,31 @@ Note: Let's talk about Haskell
 #> λ> let a = 2 + 2
 #>- λ> a
 #>- 4
+
 #>- λ> let b = 2 + 2 where 2 + 2 = 5
 #>- λ> b
 #>- 5
 Note: Because haskell
+---
+
+#= <pre>/usr/local/bin/iex</pre>
+
+Note: Let's talk about Elixir
+
+---
+
+#> iex> Enum.map(1..5,<br>&nbsp; &nbsp; &nbsp; &nbsp; fn(x) -> x*x end )
+#>- [1, 4, 9, 16, 25]
+
+#>- iex> Enum.map(6..10,<br>&nbsp; &nbsp; &nbsp; &nbsp; fn(x) -> x*x end )
+#>- '$1@Qd'
+Note:
+
+Elixir is erlang
+
+Strings in erlang are list of integers
+
+and somewhow, elixir is inferring the second is string, not a list of numbers
 ---
 #= <pre>/usr/local/bin python</pre>
 Note: Let's talk about Python
@@ -1207,7 +1447,12 @@ Note: Let's talk about Perl
 
 ---
 
-#> DB&lt;1> if ("foo" == "bar") <br> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; { print "true" }<br> &nbsp;&nbsp; &nbsp; else { print "false" }
+#> > if ("foo" == "bar") {
+#> > &nbsp; &nbsp; print "true"
+#> > } else {
+#> > &nbsp; &nbsp; print "false"
+#> > }
+
 #>- true
 <span class="dasfoot"><a href="http://stackoverflow.com/a/14046720/124019">http://stackoverflow.com/a/14046720/124019</a></span>
 Note: Reason is `==` is for number comparing
@@ -1245,7 +1490,8 @@ Note: Let's talk about powershell
 
 #> PS> if (2 > 1) { "true" }<br>&nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; else { "false" }
 #>-  true
-#>- <br>PS> if (2 < 1) { "true" }<br>&nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; else { "false" }
+
+#>- PS> if (2 < 1) { "true" }<br>&nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; else { "false" }
 #>- The '<' operator is reserved<br>for future use.
 
 <span class="dasfoot"><a href="http://fuckpowershell.tumblr.com/">f&#45;&#45;&#45;powershell.tumblr.com</a></span>
@@ -1265,5 +1511,4 @@ Hopefully I've shown just how good JS can be. And it might make someone reconsid
 <br><br>
 #= Cheers!
 <br><br>
-###= <3 feedback - joind.in/15903
 @ footer.svg
