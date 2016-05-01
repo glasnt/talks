@@ -652,9 +652,8 @@ Note: But what if you really want that full green graph
 # Sound too hard? <!-- .slide: class="center" -->
 
 ---
-## <pre><code style="font: 'monospace' 150%">$ pip install rockstar</code></pre>
-## <pre><code style="font: 'monospace' 150%">$ rockstar</code></pre> <!-- .element: class="fragment" -->
-</code></pre> 
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">$ pip install rockstar</code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">$ rockstar</code></pre></div> <!-- .element: class="fragment" -->
 
  <img src="pictures/greensgreensgreens.png"> <!-- .element: class="fragment" -->
 
@@ -664,13 +663,35 @@ Note: By default - one hello world in c++ everyday for as many days as you speci
 ---
 
 
-<img src="pictures/contrib_graph_hack_drupal.png">
+<img src="pictures/contrib_graph_hack_ruby.png">
 
 ## ozh.org/contribution <!-- .slide: class="center" -->
 ---
 
  <img src="pictures/githubshirts_2.jpg" style="margin-top: -50px" />
 ## &nbsp; <!-- .slide: data-background="pictures/githubshirts_2.png" data-background-transition="none" -->
+
+---
+# What if... <!-- .slide: class="center" -->
+
+
+Note: What if these contributions counted
+
+---
+
+ <img src="pictures/glasnt_with_graph.png" />
+Note: What if the gamification goal was community help, not a full green graph
+
+---
+
+ <img src="pictures/glasnt_without_graph.png" />
+Note: Remove it.
+
+---
+## <code>github.com<br>##.contributions-tab <br>> .flush.boxed-group</code> <!-- .slide: class="center" -->
+## &nbsp;
+## glasnt.com/block
+Note: But what about the projects?
 
 ---
 # Project<br>Contributions <!-- .slide: class="center" -->
@@ -714,67 +735,6 @@ Note: What about everything else
 ## Feature Voting <!-- .element: class="fragment" -->
 
 ---
-
-# What if... <!-- .slide: class="center" -->
-
-
-Note: What if these contributions counted
-
----
-
-# <img src="pictures/Emoji_u1f44f.svg"> <!-- .slide: class="center" -->
-
-
-Note: What if these contributions were accolates
----
- <img src="pictures/gh_start.png" />
-
-
-Note: you have a profile
----
- <img src="pictures/gh_start1.png" />
-
-
-Note: What if you could change your profile
----
- <img src="pictures/gh_start2.png" />
-
-Note: What if you could curate a list of repositories you were proud to have worked on
-
----
- <img src="pictures/gh_start3a.png" />
-
-Note: And add ones that would otherwise fall off the end because they don't have enough stars?
----
- <img src="pictures/gh_start3.png" />
-
-Note: What if your contributions outside your namespace could be curated?
-
----
- <img src="pictures/gh_start4.png" />
-
-Note: What if you could list what you were proud to have worked on
-
----
- <img src="pictures/gh_start5.png" />
-
-Note: What if you could add things that you had interacted with, but not committed code to
-
----
- <img src="pictures/gh_start6.png" />
-
-
-Note: What if you could display that the owners of the project had given you accolades for your work?
-
-What if, as a project owner, you could give props to community members
-
----
-
- <img src="pictures/gh_start7.png" />
-
-Note: What if the gamification goal was community help, not a full green graph
----
-
  <div style='width: 50%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/question.svg'></p></div> <!-- .slide: class="center" -->
 
 Note: But how can you find who in your project community to give props to?
@@ -789,15 +749,29 @@ The customisation of the github profile may not exist, but the data for who coul
 Note: introducing octohatrack
 ---
 
+## All GitHub 'contributors'
+# Plus: <!-- .element: class="fragment" -->
+## All Issue Creators & Commenters <!-- .element: class="fragment" -->
+## All PR Creators & Commenters <!-- .element: class="fragment" -->
+## All Wiki editors <!-- .element: class="fragment" -->
+## Custom CONTRIBUTORS <!-- .element: class="fragment" -->
+
+Note: TODO get CONTRIBUTORS Done
+---
+
 # hakimel/reveal.js <!-- .slide: class="center" -->
 ## Code Contributors: 142 <!-- .element: class="fragment" -->
-## Non-Code Contributors: 435 <!-- .element: class="fragment" -->
+## Non-Code Contributors: 1272 <!-- .element: class="fragment" -->
 
 ---
 
 # kennethreitz/requests <!-- .slide: class="center" -->
-## Code Contributors: PENDING <!-- .element: class="fragment" -->
-## Non-Code Contributors: PENDING <!-- .element: class="fragment" -->
+## Code Contributors: 396 <!-- .element: class="fragment" -->
+## Non-Code Contributors: 1859 <!-- .element: class="fragment" -->
+
+Note: including at least 3 unique wiki contributors
+
+as at April 29 2016
 
 ---
 
@@ -834,9 +808,9 @@ Do more you self
 ## github.com/LABHR/octohatrack
 <br> 
 <p style="font-size: 60%">
-Non-code contributors to this talk:
+Contributors to this talk:
 <br> 
-<br>Donna&nbsp;Benjamin, Ben Dechrai, Tom Eastman, Paul&nbsp;Fenwick, Leslie&nbsp;Hawthorn, Lara Hogan, Lindsay Holmwood, Russell Keith-Magee, Deb&nbsp;Nicholson, Christopher&nbsp;Neugebauer, Jack&nbsp;Skinner
+<br>Donna&nbsp;Benjamin, Nick&nbsp;Coghlan, Ben&nbsp;Dechrai, Tom&nbsp;Eastman, Paul&nbsp;Fenwick, Leslie&nbsp;Hawthorn, Lara&nbsp;Hogan, Lindsay&nbsp;Holmwood, Russell&nbsp;Keith-Magee, Anna&nbsp;Ossowski, Deb&nbsp;Nicholson, Christopher&nbsp;Neugebauer, Jack&nbsp;Skinner, Lee&nbsp;Symes
 <br> 
 <br> 
 Thank You <3</p>

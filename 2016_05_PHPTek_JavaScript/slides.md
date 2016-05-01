@@ -1430,6 +1430,41 @@ Note: Let's talk about Python
 <span class="dasfoot"><a href="www.youtube.com/watch?v=sH4XF6pKKmk">Investigating Python Wats</a></span>
 ---
 
+# <pre>/usr/bin/xcrun swift</pre> <!-- .slide: class="center" -->
+Note: Let's talk about Swift
+---
+<pre><code>let cat_cafe = [
+&nbsp;"cats": [
+&nbsp; &nbsp;"01": ["nyan": "mew"],
+&nbsp; &nbsp;"02": ["nyan": "mew"],
+&nbsp; &nbsp;"03": ["nyan": "mew"],
+&nbsp; &nbsp;"04": ["nyan": "mew"],
+&nbsp; &nbsp;"05": ["nyan": "mew"],
+&nbsp; &nbsp;"06": ["nyan": "mew"],
+&nbsp; &nbsp;"07": ["nyan": "mew"],
+&nbsp; &nbsp;"08": ["nyan": "mew"],
+&nbsp; &nbsp;"09": ["nyan": "mew"],
+&nbsp; &nbsp;"10": ["nyan": "mew"],
+&nbsp; &nbsp;"11": ["nyan": "mew"],
+&nbsp; &nbsp;"12": ["nyan": "mew"],
+&nbsp; &nbsp;"13": ["nyan": "mew"],
+&nbsp; &nbsp;"14": ["nyan": "mew"],
+&nbsp; &nbsp;"15": ["nyan": "mew"]
+&nbsp;] 
+]</code></pre> 
+ <pre style="margin-top: -20px;"><code>print("Cat count: " + String(cat_cafe["cats"]!.count))</code></pre> <!-- .element: class="fragment" -->
+ <pre><code>$ time -p xcrun swift cats.swift</code></pre> <!-- .element: class="fragment" -->
+ <pre style="margin-top: -20px;"><code>Cat count: 15</code></pre> <!-- .element: class="fragment" -->
+ <pre style="margin-top: -20px;"><code>real 828.78</code></pre> <!-- .element: class="fragment" -->
+
+
+<span class="dasfoot"><a href="https://bugs.swift.org/browse/SR-305">SR-305</a> <a href="https://spin.atomicobject.com/2016/04/26/swift-long-compile-time/">(atomicobject.com)</a></span>
+Note: Swift
+
+Wat isn't the strint dict int concat
+
+Original version of this is 20 iterations, taking 20 - 55 *HOURS*
+---
 # <pre>/usr/bin/env perl -de1</pre> <!-- .slide: class="center" -->
 Note: Let's talk about Perl
 
@@ -1455,19 +1490,32 @@ a new programmer won't know this.
 
 Note: Let's talk about PHP
 ---
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">php> $a = INF;</code></pre></div>
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">php> $b = array();</code></pre></div> <!-- .element: class="fragment" -->
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">php> $c = (object)array();</code></pre></div> <!-- .element: class="fragment" -->
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">php> var_dump( $a < $b );</code></pre></div> <!-- .element: class="fragment" -->
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">true</code></pre></div> <!-- .element: class="fragment" -->
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">php> var_dump( $b < $c );</code></pre></div> <!-- .element: class="fragment" -->
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">true</code></pre></div> <!-- .element: class="fragment" -->
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">php> var_dump( $c < $a );</code></pre></div> <!-- .element: class="fragment" -->
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">true</code></pre></div> <!-- .element: class="fragment" -->
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">php> echo (TRUE ?<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; "True" : "False");</code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">True</code></pre></div> <!-- .element: class="fragment" -->
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">php> echo (FALSE ?<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; "True" : "False");</code></pre></div> <!-- .element: class="fragment" -->
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">False</code></pre></div> <!-- .element: class="fragment" -->
 
-<span class="dasfoot"><a href="http://phpsadness.com/sad/52">phpsadness.com</a></span>
-Note: cyclic truthiness. Totally a thing.
+<span class="dasfoot"><a href="http://phpsadness.com/sad/30">phpsadness.com</a></span>
+Note: short hand for if else if else if
+---
 
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">php> echo (FALSE ? "one"<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;: FALSE ? "two" <br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;: &nbsp; &nbsp; &nbsp; &nbsp; "three");</code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">three</code></pre></div> <!-- .element: class="fragment" -->
+
+<span class="dasfoot"><a href="http://phpsadness.com/sad/30">phpsadness.com</a></span>
+---
+
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">php> echo (FALSE ? "one"<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;: TRUE &nbsp;? "two" <br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;: &nbsp; &nbsp; &nbsp; &nbsp; "three");</code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">two</code></pre></div> <!-- .element: class="fragment" -->
+
+<span class="dasfoot"><a href="http://phpsadness.com/sad/30">phpsadness.com</a></span>
+---
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">php> echo (TRUE &nbsp;? "one"<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;: TRUE &nbsp;? "two" <br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;: &nbsp; &nbsp; &nbsp; &nbsp; "three");</code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">two</code></pre></div> <!-- .element: class="fragment" -->
+
+
+<span class="dasfoot"><a href="http://phpsadness.com/sad/30">phpsadness.com</a></span>
+Note: WRONG
 ---
 
 # <pre>C:&bsol;> powershell</pre> <!-- .slide: class="center" -->
