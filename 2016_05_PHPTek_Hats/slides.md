@@ -760,14 +760,14 @@ Note: TODO get CONTRIBUTORS Done
 ---
 
 # hakimel/reveal.js <!-- .slide: class="center" -->
-## Code Contributors: 142 <!-- .element: class="fragment" -->
-## Non-Code Contributors: 1272 <!-- .element: class="fragment" -->
+## GitHub Contributors: 142 <!-- .element: class="fragment" -->
+## All Contributors: 1414 <!-- .element: class="fragment" -->
 
 ---
 
 # kennethreitz/requests <!-- .slide: class="center" -->
-## Code Contributors: 396 <!-- .element: class="fragment" -->
-## Non-Code Contributors: 1859 <!-- .element: class="fragment" -->
+## GitHub Contributors: 396 <!-- .element: class="fragment" -->
+## All Contributors: 2255 <!-- .element: class="fragment" -->
 
 Note: including at least 3 unique wiki contributors
 
@@ -776,14 +776,14 @@ as at April 29 2016
 ---
 
 # avinassh/rockstar <!-- .slide: class="center" -->
-## Code Contributors: 30 <!-- .element: class="fragment" -->
-## Non-Code Contributors: 45 <!-- .element: class="fragment" -->
+## GitHub Contributors: 30 <!-- .element: class="fragment" -->
+## All Contributors: 45 <!-- .element: class="fragment" -->
 
 ---
 
 # LABHR/octohatrack <!-- .slide: class="center" -->
-## Code Contributors: 10 <!-- .element: class="fragment" -->
-## Non-Code Contributor: 12 <!-- .element: class="fragment" -->
+## GitHub Contributors: 10 <!-- .element: class="fragment" -->
+## All Contributors: 25 <!-- .element: class="fragment" -->
 
 
 Note: So many conversions!

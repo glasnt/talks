@@ -760,14 +760,14 @@ Note: TODO get CONTRIBUTORS Done
 ---
 
 #= hakimel/reveal.js
-##- Code Contributors: 142
-##- Non-Code Contributors: 1272
+##- GitHub Contributors: 142
+##- All Contributors: 1414
 
 ---
 
 #= kennethreitz/requests
-##- Code Contributors: 396
-##- Non-Code Contributors: 1859
+##- GitHub Contributors: 396
+##- All Contributors: 2255
 
 Note: including at least 3 unique wiki contributors
 
@@ -776,14 +776,14 @@ as at April 29 2016
 ---
 
 #= avinassh/rockstar
-##- Code Contributors: 30
-##- Non-Code Contributors: 45
+##- GitHub Contributors: 30
+##- All Contributors: 45
 
 ---
 
 #= LABHR/octohatrack
-##- Code Contributors: 10
-##- Non-Code Contributor: 12
+##- GitHub Contributors: 10
+##- All Contributors: 25
 
 
 Note: So many conversions!
