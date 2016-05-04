@@ -1388,6 +1388,22 @@ Note: Let's talk about Haskell
 Note: Because haskell
 ---
 
+
+#= <pre>/bin/bash</pre>
+
+Note: Let's talk about bash
+---
+
+#> $ 4 + 2
+#>- bash: 4: command not found
+#>- $ $(( 4 + 2 ))
+#>- bash: 6: command not found
+#>- $ echo $(( 4 + 2 ))
+#>- 6
+
+Note: let's do some simple arithmatic in bash
+---
+
 #= <pre>/usr/local/bin/iex</pre>
 
 Note: Let's talk about Elixir

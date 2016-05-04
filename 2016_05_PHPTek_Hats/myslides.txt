@@ -607,7 +607,7 @@ LIST IT AS SUCH
 ---
 
 
-@ gh_start.png
+@ glasnt_graph_original.png
 
 Note: No idea how the 'Repositories contributed to' works
 
@@ -680,7 +680,9 @@ Note: What if these contributions counted
 ---
 
 @ glasnt_with_graph.png
-Note: What if the gamification goal was community help, not a full green graph
+Note: What if you could edit your profile to show the projcets you wanted
+
+What if that green graph? ...
 
 ---
 
@@ -789,6 +791,28 @@ as at April 29 2016
 Note: So many conversions!
 TODO update moar stats
 
+
+---
+
+! claps
+
+Note: This means you can find all your things
+
+but if cli isn't your thing...
+
+---
+<p align="left">
+<span class="tweet">
+<img src="pictures/mug_lee.png">
+<span class="name">Lee Symes</span>
+<span class="username">@leesdolphon</span>
+<span class="content">
+I know it's 1am ... but I really want to build a JS variant on <span class="highlight">#LABHR</span>
+
+</span></p>
+---
+
+# &nbsp; <!-- .slide: data-background="pictures/js-hatrack.png" data-background-transition="none" -->
 ---
 
 #= TL;DR: 
@@ -804,8 +828,7 @@ Do more you self
 
 <br>
 #= #LABHR
-## bit.do/LABHR
-## github.com/LABHR/octohatrack
+## labhr.github.io
 <br>
 <p style="font-size: 60%">
 Contributors to this talk: 
