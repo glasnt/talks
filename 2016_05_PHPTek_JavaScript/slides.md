@@ -843,8 +843,6 @@ Note: Node package manager
 # left-pad <!-- .slide: class="center" -->
 ---
 
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">module.exports = leftpad;<br><br>function leftpad (str, len, ch){<br> &nbsp;str = String(str);<br> &nbsp;var i = -1;<br> &nbsp;if (!ch && ch !== 0) ch = ' ';<br> &nbsp;len = len - str.length;<br> &nbsp;while (++i < len) {<br> &nbsp; &nbsp; str = ch + str;<br> &nbsp;}<br> &nbsp;return str;<br>}</code></pre></div>
----
 <pre><code data-trim data-noescape><highlight><c>//stevemao/left-pad:index.js</c>
 
 module.exports = leftpad;
@@ -869,7 +867,7 @@ function leftpad (str, len, ch) {
 ---
 <pre><code data-trim data-noescape><highlight><c>//stevemao/left-pad:index.js</c>
 
-<h>module.exports = leftpad; // function to export</h>
+module.exports = leftpad;
 
 function leftpad (str, len, ch) {
 &nbsp; &nbsp; str = String(str);
@@ -878,7 +876,7 @@ function leftpad (str, len, ch) {
 
 &nbsp; &nbsp; if (!ch && ch !== 0) ch = ' ';
 
-&nbsp; &nbsp; len = len - str.length;
+&nbsp; &nbsp; len = len - str.length; <h>// iteration count</h>
 
 &nbsp; &nbsp; while (++i < len) {
 &nbsp; &nbsp; &nbsp; &nbsp; str = ch + str;
@@ -893,95 +891,6 @@ function leftpad (str, len, ch) {
 module.exports = leftpad;
 
 function leftpad (str, len, ch) {
-&nbsp; &nbsp; <h>str = String(str); // casing to String</h>
-
-&nbsp; &nbsp; var i = -1;
-
-&nbsp; &nbsp; if (!ch && ch !== 0) ch = ' ';
-
-&nbsp; &nbsp; len = len - str.length;
-
-&nbsp; &nbsp; while (++i < len) {
-&nbsp; &nbsp; &nbsp; &nbsp; str = ch + str;
-&nbsp; &nbsp; }
-
-&nbsp; &nbsp; return str;
-}</highlight> 
-</code></pre> 
-
----
-<pre><code data-trim data-noescape><highlight><c>//stevemao/left-pad:index.js</c>
-
-module.exports = leftpad;
-
-function leftpad (str, len, ch) {
-&nbsp; &nbsp; str = String(str);
-
-&nbsp; &nbsp; <h>var i = -1; // variable initalization</h>
-
-&nbsp; &nbsp; if (!ch && ch !== 0) ch = ' ';
-
-&nbsp; &nbsp; len = len - str.length;
-
-&nbsp; &nbsp; while (++i < len) {
-&nbsp; &nbsp; &nbsp; &nbsp; str = ch + str;
-&nbsp; &nbsp; }
-
-&nbsp; &nbsp; return str;
-}</highlight> 
-</code></pre> 
-
----
-<pre><code data-trim data-noescape><highlight><c>//stevemao/left-pad:index.js</c>
-
-module.exports = leftpad;
-
-function leftpad (str, len, ch) {
-&nbsp; &nbsp; str = String(str);
-
-&nbsp; &nbsp; var i = -1;
-
-&nbsp; &nbsp; <h>if (!ch && ch !== 0) ch = ' '; // variable default</h>
-
-&nbsp; &nbsp; len = len - str.length;
-
-&nbsp; &nbsp; while (++i < len) {
-&nbsp; &nbsp; &nbsp; &nbsp; str = ch + str;
-&nbsp; &nbsp; }
-
-&nbsp; &nbsp; return str;
-}</highlight> 
-</code></pre> 
----
-
-<pre><code data-trim data-noescape><highlight><c>//stevemao/left-pad:index.js</c>
-
-module.exports = leftpad;
-
-function leftpad (str, len, ch) {
-&nbsp; &nbsp; str = String(str);
-
-&nbsp; &nbsp; var i = -1;
-
-&nbsp; &nbsp; if (!ch && ch !== 0) ch = ' ';
-
-&nbsp; &nbsp; <h>len = len - str.length; // establish loop iteration count</h>
-
-&nbsp; &nbsp; while (++i < len) {
-&nbsp; &nbsp; &nbsp; &nbsp; str = ch + str;
-&nbsp; &nbsp; }
-
-&nbsp; &nbsp; return str;
-}</highlight> 
-</code></pre> 
-
----
-
-<pre><code data-trim data-noescape><highlight><c>//stevemao/left-pad:index.js</c>
-
-module.exports = leftpad;
-
-function leftpad (str, len, ch) {
 &nbsp; &nbsp; str = String(str);
 
 &nbsp; &nbsp; var i = -1;
@@ -990,30 +899,8 @@ function leftpad (str, len, ch) {
 
 &nbsp; &nbsp; len = len - str.length;
 
-&nbsp; &nbsp; while (<h>++i < len</h>) { <h>// will end when i === 0 </h>
+&nbsp; &nbsp; while (++i < len) { <h>// loop</h>
 &nbsp; &nbsp; &nbsp; &nbsp; str = ch + str;
-&nbsp; &nbsp; }
-
-&nbsp; &nbsp; return str;
-}</highlight> 
-</code></pre> 
-
----
-<pre><code data-trim data-noescape><highlight><c>//stevemao/left-pad:index.js</c>
-
-module.exports = leftpad;
-
-function leftpad (str, len, ch) {
-&nbsp; &nbsp; str = String(str);
-
-&nbsp; &nbsp; var i = -1;
-
-&nbsp; &nbsp; if (!ch && ch !== 0) ch = ' ';
-
-&nbsp; &nbsp; len = len - str.length;
-
-&nbsp; &nbsp; while (++i < len) {
-&nbsp; &nbsp; &nbsp; &nbsp;<h> str = ch + str; // actually prepend the character</h>
 &nbsp; &nbsp; }
 
 &nbsp; &nbsp; return str;
@@ -1038,10 +925,9 @@ function leftpad (str, len, ch) {
 &nbsp; &nbsp; &nbsp; &nbsp; str = ch + str;
 &nbsp; &nbsp; }
 
-&nbsp; &nbsp; <h>return str; // and return </h>
+&nbsp; &nbsp; return str; <h>// return</h>
 }</highlight> 
 </code></pre> 
-
 
 ---
 
@@ -1211,10 +1097,27 @@ Re-declarations are in error
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">42</code></pre></div> <!-- .element: class="fragment" -->
 
 ---
-# ECMAScript 5/6 Adpotion <!-- .slide: class="center" -->
+# ECMAScript 5/6 Adoption <!-- .slide: class="center" -->
 ---
 ## kangax.github.io/compat-table/es5/ <!-- .slide: class="center" -->
 ## kangax.github.io/compat-table/es6/ <!-- .slide: class="center" -->
+---
+# ECMAScript 2016 <!-- .slide: class="center" -->
+## the first annual release <!-- .element: class="fragment" -->
+---
+
+# `**` <!-- .slide: class="center" -->
+Note: Infix operator for Math.pow
+---
+
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> Math.pow(5,3)</code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">125</code></pre></div> <!-- .element: class="fragment" -->
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> 5 &#42;&#42; 3</code></pre></div> <!-- .element: class="fragment" -->
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">125</code></pre></div> <!-- .element: class="fragment" -->
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> let num = 3<br>num **= 2</code></pre></div> <!-- .element: class="fragment" -->
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> num</code></pre></div> <!-- .element: class="fragment" -->
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">9</code></pre></div> <!-- .element: class="fragment" -->
+
 ---
 # Non-standard 'Standards' <!-- .slide: class="center" -->
 ---
@@ -1243,11 +1146,57 @@ try autocompleting for more, including grouping
 <br><br> 
  <img src="pictures/facebook.png" />
 Note: from console on facebook
+
+
+OK I LIE
+---
+
+# `console.log` <!-- .slide: class="center" -->
+## github.com/whatwg/console <!-- .slide: class="center" -->
+Note: It's slowing getting standardaised :D
+
+... by Web Hypertext Application Technology Working Group
+
+
+their markup parser for standards doc createion is called...
+
+bikeshed 
+
 ---
 # Extending<br>JavaScript <!-- .slide: class="center" -->
 ---
 # Polyfill <!-- .slide: class="center" -->
 Note: Adding new funcionality in JS to JS by adding more JS
+---
+## `padStart` polyfill <!-- .slide: class="center" -->
+
+ <pre><code> <!-- .element: class="fragment" -->
+if (!String.prototype.padStart) {
+&nbsp; &nbsp; String.prototype.padStart = function padStart(maxLength,
+&nbsp; &nbsp; &nbsp; fillString = ' ') {
+&nbsp; &nbsp; &nbsp; &nbsp; const O = RequireObjectCoercible(this);
+&nbsp; &nbsp; &nbsp; &nbsp; const S = String(O);
+&nbsp; &nbsp; &nbsp; &nbsp; const intMaxLength = ToLength(maxLength);
+&nbsp; &nbsp; &nbsp; &nbsp; const stringLength = ToLength(S.length);
+&nbsp; &nbsp; &nbsp; &nbsp; if (intMaxLength <= stringLength) { return S; }
+&nbsp; &nbsp; &nbsp; &nbsp; let filler = typeof fillString === 'undefined' ?
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ' ' : String(fillString);
+&nbsp; &nbsp; &nbsp; &nbsp; if (filler === '') { return S; }
+&nbsp; &nbsp; &nbsp; &nbsp; const fillLen = intMaxLength - stringLength;
+&nbsp; &nbsp; &nbsp; &nbsp; while (filler.length < fillLen) {
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; const fLen = filler.length;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; const remainingCodeUnits = fillLen - fLen;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; if (fLen > remainingCodeUnits) {
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; filler += filler.slice(0, remainingCodeUnits);
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; } else {
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; filler += filler;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }
+&nbsp; &nbsp; &nbsp; &nbsp; }
+&nbsp; &nbsp; &nbsp; &nbsp; const truncatedStringFiller = filler.slice(0, fillLen);
+&nbsp; &nbsp; &nbsp; &nbsp; return truncatedStringFiller + S;
+&nbsp; &nbsp; };
+} 
+</pre></code> 
 ---
 # `supplant` <!-- .slide: class="center" -->
 Note: allows for native templating
@@ -1374,7 +1323,40 @@ Note: Let's talk about Haskell
 
 Note: because foldable, fMap fun
 ---
+# <pre>/usr/bin/local/pascal</pre> <!-- .slide: class="center" -->
+Note: Let's talk about pascal
+---
 
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">Program boop(output);</code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">VAR x: INTEGER;</code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">begin</code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">&nbsp; x := 41;</code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">&nbsp; x += 1;</code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">&nbsp; writeln(x = 42);</code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">end.</code></pre></div>
+<br> 
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">1<br>TRUE</code></pre></div> <!-- .element: class="fragment" -->
+
+
+
+Note: that's all I wanted to point out
+
+an assignment operator that doesn't look like equality; bliss
+---
+
+<p></p> 
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">Program boop(output);</code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">VAR x: INTEGER;</code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">begin</code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">&nbsp; x <c>:=</c> 41; <c> // assignment</c></code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">&nbsp; x += 1;</code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">&nbsp; writeln(x <c>=</c> 42); <c> // equality </c></code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">end.</code></pre></div>
+<br> 
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">1<br>TRUE</code></pre></div>
+
+Note: Let's talk about something completely different
+---
 # <pre>/usr/local/bin/ghci</pre> <!-- .slide: class="center" -->
 Note: Let's talk about Haskell
 ---
@@ -1387,8 +1369,6 @@ Note: Let's talk about Haskell
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">5</code></pre></div> <!-- .element: class="fragment" -->
 Note: Because haskell
 ---
-
-
 # <pre>/bin/bash</pre> <!-- .slide: class="center" -->
 
 Note: Let's talk about bash
@@ -1402,6 +1382,10 @@ Note: Let's talk about bash
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">6</code></pre></div> <!-- .element: class="fragment" -->
 
 Note: let's do some simple arithmatic in bash
+
+I'm just used to a repl that understands integers
+
+shrug 
 ---
 
 # <pre>/usr/local/bin/iex</pre> <!-- .slide: class="center" -->
@@ -1445,7 +1429,15 @@ Note: Let's talk about Python
 
 <span class="dasfoot"><a href="www.youtube.com/watch?v=sH4XF6pKKmk">Investigating Python Wats</a></span>
 ---
+# <pre>/usr/local/bin/scala</pre> <!-- .slide: class="center" -->
+Note: Let's talk about scala
+---
 
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">scala> println({} + "")</code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">()</code></pre></div> <!-- .element: class="fragment" -->
+Note: unlike type concatenation issues, just like JavaScript
+
+---
 # <pre>/usr/bin/xcrun swift</pre> <!-- .slide: class="center" -->
 Note: Let's talk about Swift
 ---
