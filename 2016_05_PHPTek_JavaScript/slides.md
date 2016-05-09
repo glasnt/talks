@@ -1,3 +1,35 @@
+<pre><code>This was a triumph.
+I'm making a note here: HUGE SUCCESS.
+It's hard to overstate my satisfaction.
+
+Aperture Science.
+We do what we must because we can.
+For the good of all of us
+Except the ones who are dead.
+
+But there's no sense crying over every mistake.
+You just keep on trying till you run out of cake.
+And the science gets done and you make a neat gun.
+For the people who are still alive.
+
+<c>// This is a test of the &lt;pre>&lt;code> block size</c>
+<h>// Code will only be shown in this way if space is required,
+// but the specifics of code this small isn't required</h>
+
+Now these points of data make a beautiful line.
+And we're out of beta, we're releasing on time.
+So I'm GLaD I got burned.
+Think of all the things we learned
+For the people who are still alive.
+
+... 
+I feel FANTASTIC and I'm still alive.
+... 
+</code></pre> 
+
+
+
+---
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%"><c>// If you can read this, yay!</code></pre></div>
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%"><s>123456789 123456789 123456789 12</s></code></pre></div>
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> console.log("Hello World");</code></pre></div>
@@ -509,7 +541,7 @@ JS_TypeOfValue(JSContext *cx, jsval v) {
 ---
 <pre><code><c>// source/js/src/jsapi.c</c><br>
 JS_TypeOfValue(JSContext *cx, jsval v) {
-&nbsp; &nbsp; if (<h>JSVAL_IS_VOID(v)</h>) { <h>// v == JSVAL_VOID</h>
+&nbsp; &nbsp; if (<h>JSVAL_IS_VOID(v)</h>) { <c>// v == JSVAL_VOID</c>
 &nbsp; &nbsp; &nbsp; &nbsp; type = JSTYPE_VOID;
 &nbsp; &nbsp; } else if (JSVAL_IS_OBJECT(v)) {
 &nbsp; &nbsp; &nbsp; &nbsp; if (...) {
@@ -533,7 +565,7 @@ JS_TypeOfValue(JSContext *cx, jsval v) {
 JS_TypeOfValue(JSContext *cx, jsval v) {
 &nbsp; &nbsp; if (JSVAL_IS_VOID(v)) {
 &nbsp; &nbsp; &nbsp; &nbsp; type = JSTYPE_VOID;
-&nbsp; &nbsp; } else if (<h>JSVAL_IS_OBJECT(v)</h>) { <h>// JSVAL_TAG(v) == JSVAL_OBJECT</h>
+&nbsp; &nbsp; } else if (<h>JSVAL_IS_OBJECT(v)</h>) { <c>// JSVAL_TAG(v) == JSVAL_OBJECT</c>
 &nbsp; &nbsp; &nbsp; &nbsp; if (...) {
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; type = JSTYPE_FUNCTION;
 &nbsp; &nbsp; &nbsp; &nbsp; } else {
@@ -558,7 +590,7 @@ JS_TypeOfValue(JSContext *cx, jsval v) {
 &nbsp; &nbsp; if (JSVAL_IS_VOID(v)) {
 &nbsp; &nbsp; &nbsp; &nbsp; type = JSTYPE_VOID;
 &nbsp; &nbsp; } else if (JSVAL_IS_OBJECT(v)) {
-&nbsp; &nbsp; &nbsp; &nbsp; if (...) { <h>// Excuse me, are you a function?</h>
+&nbsp; &nbsp; &nbsp; &nbsp; if (...) { <c>// Excuse me, are you a function?</c>
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; type = JSTYPE_FUNCTION;
 &nbsp; &nbsp; &nbsp; &nbsp; } else {
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; type = JSTYPE_OBJECT;
@@ -807,7 +839,7 @@ function add(x, y) {
 &nbsp; // About binomial theorem I'm teeming with a lot o' news
 &nbsp; // With many cheerful facts about the square of the hypotenuse
 &nbsp; // I'm very good at integral and differential calculus
-&nbsp; //
+&nbsp; 
 </c> 
 &nbsp; return(x + y);
 } 
@@ -832,7 +864,7 @@ More than twice as fast
 # <img src="pictures/wdu.png"> <!-- .slide: class="center" -->
 Note: Wombat Developers Union
 ---
-# <img src="pictures/WOMBAT.png" height="700px">
+ <img src="pictures/WOMBAT.png" style="margin-top: -50px" />
 ---
 
 # <img src="pictures/npm.png"> <!-- .slide: class="center" -->
@@ -842,96 +874,57 @@ Note: Node package manager
 ---
 # left-pad <!-- .slide: class="center" -->
 ---
-
-<pre><code data-trim data-noescape><highlight><c>//stevemao/left-pad:index.js</c>
-
-module.exports = leftpad;
-
-function leftpad (str, len, ch) {
-&nbsp; &nbsp; str = String(str);
-
-&nbsp; &nbsp; var i = -1;
-
-&nbsp; &nbsp; if (!ch && ch !== 0) ch = ' ';
-
-&nbsp; &nbsp; len = len - str.length;
-
-&nbsp; &nbsp; while (++i < len) {
-&nbsp; &nbsp; &nbsp; &nbsp; str = ch + str;
-&nbsp; &nbsp; }
-
-&nbsp; &nbsp; return str;
-}</highlight> 
-</code></pre> 
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%"><c>//stevemao/left-pad:index.js</c></code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">module.exports = leftpad;</code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">function leftpad (str, len, ch){</code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">&nbsp; str = String(str);</code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">&nbsp; var i = -1;</code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">&nbsp; if (!ch && ch !== 0) ch = ' ';</code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">&nbsp; len = len - str.length;</code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">&nbsp; while (++i < len) {</code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">&nbsp; &nbsp; &nbsp; str = ch + str; }</code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">&nbsp; return str;</code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">}</code></pre></div>
 
 ---
-<pre><code data-trim data-noescape><highlight><c>//stevemao/left-pad:index.js</c>
-
-module.exports = leftpad;
-
-function leftpad (str, len, ch) {
-&nbsp; &nbsp; str = String(str);
-
-&nbsp; &nbsp; var i = -1;
-
-&nbsp; &nbsp; if (!ch && ch !== 0) ch = ' ';
-
-&nbsp; &nbsp; len = len - str.length; <h>// iteration count</h>
-
-&nbsp; &nbsp; while (++i < len) {
-&nbsp; &nbsp; &nbsp; &nbsp; str = ch + str;
-&nbsp; &nbsp; }
-
-&nbsp; &nbsp; return str;
-}</highlight> 
-</code></pre> 
----
-<pre><code data-trim data-noescape><highlight><c>//stevemao/left-pad:index.js</c>
-
-module.exports = leftpad;
-
-function leftpad (str, len, ch) {
-&nbsp; &nbsp; str = String(str);
-
-&nbsp; &nbsp; var i = -1;
-
-&nbsp; &nbsp; if (!ch && ch !== 0) ch = ' ';
-
-&nbsp; &nbsp; len = len - str.length;
-
-&nbsp; &nbsp; while (++i < len) { <h>// loop</h>
-&nbsp; &nbsp; &nbsp; &nbsp; str = ch + str;
-&nbsp; &nbsp; }
-
-&nbsp; &nbsp; return str;
-}</highlight> 
-</code></pre> 
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%"><c>//stevemao/left-pad:index.js</c></code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">module.exports = leftpad;</code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">function leftpad (str, len, ch){</code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">&nbsp; str = String(str);</code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">&nbsp; var i = -1;</code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">&nbsp; if (<h>!ch && ch !== 0</h>) <h>ch = ' '</h>;</code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">&nbsp; len = len - str.length;</code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">&nbsp; while (++i < len) {</code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">&nbsp; &nbsp; &nbsp; str = ch + str; }</code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">&nbsp; return str;</code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">}</code></pre></div>
 
 ---
-<pre><code data-trim data-noescape><highlight><c>//stevemao/left-pad:index.js</c>
-
-module.exports = leftpad;
-
-function leftpad (str, len, ch) {
-&nbsp; &nbsp; str = String(str);
-
-&nbsp; &nbsp; var i = -1;
-
-&nbsp; &nbsp; if (!ch && ch !== 0) ch = ' ';
-
-&nbsp; &nbsp; len = len - str.length;
-
-&nbsp; &nbsp; while (++i < len) {
-&nbsp; &nbsp; &nbsp; &nbsp; str = ch + str;
-&nbsp; &nbsp; }
-
-&nbsp; &nbsp; return str; <h>// return</h>
-}</highlight> 
-</code></pre> 
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%"><c>//stevemao/left-pad:index.js</c></code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">module.exports = leftpad;</code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">function leftpad (str, len, ch){</code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">&nbsp; str = String(str);</code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">&nbsp; var i = -1;</code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">&nbsp; if (!ch && ch !== 0) ch = ' ';</code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">&nbsp; len = <h>len - str.length</h>;</code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">&nbsp; while (++i < len) {</code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">&nbsp; &nbsp; &nbsp; str = ch + str; }</code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">&nbsp; return str;</code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">}</code></pre></div>
+---
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%"><c>//stevemao/left-pad:index.js</c></code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">module.exports = leftpad;</code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">function leftpad (str, len, ch){</code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">&nbsp; str = String(str);</code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">&nbsp; var i = -1;</code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">&nbsp; if (!ch && ch !== 0) ch = ' ';</code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">&nbsp; len = len - str.length;</code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">&nbsp; while <h>(++i < len)</h> {</code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">&nbsp; &nbsp; &nbsp; str = ch + str; }</code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">&nbsp; return str;</code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">}</code></pre></div>
 
 ---
-
-
 <pre><code><c>/* PHP-5.6:ext/standard/string.c</c>
 PHP_FUNCTION(str_pad) 
 { 
@@ -950,10 +943,7 @@ PHP_FUNCTION(str_pad)
 &nbsp; &nbsp;for (i = 0; i < left_pad; i++)
 &nbsp; &nbsp; &nbsp; &nbsp;result[result_len++] = pad_str_val[i % pad_str_len];
 
-&nbsp; &nbsp;memcpy(result + result_len, input, input_len);
 &nbsp; &nbsp;<c>/* ... */</c>
-
-&nbsp; &nbsp;result[result_len] = '\0';
 
 &nbsp; &nbsp;RETURN_STRINGL(result, result_len, 0);
 } 
@@ -970,22 +960,19 @@ PHP_FUNCTION(str_pad)
 &nbsp; &nbsp;long pad_length;
 &nbsp; &nbsp;size_t num_pad_chars;
 
-&nbsp; &nbsp;num_pad_chars = <h>pad_length - input_len</h>; <h>/* iteration count */</h>
+&nbsp; &nbsp;num_pad_chars = <h>pad_length - input_len</h>;
 &nbsp; &nbsp;result = (char *)emalloc(input_len + num_pad_chars + 1);
 &nbsp; &nbsp;<c>/* ... */</c>
 
 &nbsp; &nbsp;left_pad = num_pad_chars;
 &nbsp; &nbsp;<c>/* ... */</c>
 
-&nbsp; &nbsp;for (<h>i = 0; i < left_pad; i++</h>) <h>/* loop */</h>
+&nbsp; &nbsp;for (<h>i = 0; i < left_pad; i++</h>)
 &nbsp; &nbsp; &nbsp; &nbsp;result[result_len++] = pad_str_val[i % pad_str_len];
 
-&nbsp; &nbsp;memcpy(result + result_len, input, input_len);
 &nbsp; &nbsp;<c>/* ... */</c>
 
-&nbsp; &nbsp;result[result_len] = '\0';
-
-&nbsp; &nbsp;RETURN_STRINGL(<h>result</h>, result_len, 0); <h>/* return */</h>
+&nbsp; &nbsp;RETURN_STRINGL(result, result_len, 0);
 } 
 
 </code></pre> 
@@ -1011,9 +998,9 @@ Mostly adpoted
 ---
 # `isArray` <!-- .slide: class="center" -->
 ---
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> Array.isArray({ a: "b" })</code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">ES5> Array.isArray({ a: "b" })</code></pre></div>
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">false</code></pre></div> <!-- .element: class="fragment" -->
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> Array.isArray(["a","b"])</code></pre></div> <!-- .element: class="fragment" -->
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">ES5> Array.isArray(["a","b"])</code></pre></div> <!-- .element: class="fragment" -->
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">true</code></pre></div> <!-- .element: class="fragment" -->
 ---
 # `trim` <!-- .slide: class="center" -->
@@ -1023,9 +1010,9 @@ it had a `trimLeft` and a `trimRight`
 
 ---
 
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> " Hello ".trimLeft()</code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">ES3> " Hello ".trimLeft()</code></pre></div>
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">"Hello "</code></pre></div> <!-- .element: class="fragment" -->
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> " Hello ".trimRight()</code></pre></div> <!-- .element: class="fragment" -->
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">ES3> " Hello ".trimRight()</code></pre></div> <!-- .element: class="fragment" -->
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">" Hello"</code></pre></div> <!-- .element: class="fragment" -->
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">ES<h>5</h>> " Hello ".trim()</code></pre></div> <!-- .element: class="fragment" -->
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">"Hello"</code></pre></div> <!-- .element: class="fragment" -->
@@ -1046,12 +1033,13 @@ Supply radix to be cross compatible.
 # `map` <!-- .slide: class="center" -->
 ---
 
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> [1, 2, 3].map(Math.sqrt)</code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">ES5> [1, 2, 3].map(Math.sqrt)</code></pre></div>
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">[1, 4, 9]</code></pre></div> <!-- .element: class="fragment" -->
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%"><c>// [Math.sqrt(1)<br>&nbsp; , Math.sqrt(2)<br>&nbsp; , Math.sqrt(3)]</c></code></pre></div> <!-- .element: class="fragment" -->
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> a = ['10','10','10','10','10']</code></pre></div> <!-- .element: class="fragment" -->
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> a.map(parseInt)</code></pre></div> <!-- .element: class="fragment" -->
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">[10, NaN, 2, 3, 4]</code></pre></div> <!-- .element: class="fragment" -->
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">ES5> a = ['10','10','10','10']</code></pre></div> <!-- .element: class="fragment" -->
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">ES5> a.map(parseInt)</code></pre></div> <!-- .element: class="fragment" -->
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">[10, NaN, 2, 3]</code></pre></div> <!-- .element: class="fragment" -->
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%"><c>// Be aware of optional<br>// parameters</c></code></pre></div> <!-- .element: class="fragment" -->
 ---
 # ECMAScript 6 <!-- .slide: class="center" -->
 Note: approved in June 2015 (a few months ago)
@@ -1061,17 +1049,11 @@ Still very much not adpoted.
 # `let` <!-- .slide: class="center" -->
 ---
 
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> ans = "";</code></pre></div>
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> function quest() {<br>> &nbsp; var ans = 42; <br>> &nbsp; return ans;<br>> }</code></pre></div>
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> quest()</code></pre></div>
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> console.log(ans);</code></pre></div>
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> ""</code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%"><c>// life.js</c></code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">function ans() {<br> &nbsp; var answer = 42; <br> &nbsp; return answer;<br>}</code></pre></div>
 ---
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> ans = "";</code></pre></div>
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> function quest() {<br>> &nbsp; <h>let</h> ans = 42; <br>> &nbsp; return ans;<br>> }</code></pre></div>
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> quest()</code></pre></div>
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> console.log(ans);</code></pre></div>
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> ""</code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%"><c>// life.js</c></code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">function ans() {<br> &nbsp; <h>let</h> answer = 42; <br> &nbsp; return answer;<br>}</code></pre></div>
 
 Note: proper block scope
 Re-declarations are in error
@@ -1079,10 +1061,9 @@ Re-declarations are in error
 # `import` <!-- .slide: class="center" -->
 ---
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%"><c>// life.js</c></code></pre></div>
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%"><h>export</h> function quest() {</code></pre></div>
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%"><c> /&ast; ... &ast;/</c></code></pre></div>
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">}</code></pre></div>
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%"><c>// script.js</c> <br><h>import</h> { quest } from './life';</code></pre></div> <!-- .element: class="fragment" -->
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%"><h>export</h> function ans() {<br> &nbsp; let answer = 42; <br> &nbsp; return answer;<br>}</code></pre></div>
+<br> 
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%"><c>// script.js</c> <br><h>import</h> { ans } from './life';</code></pre></div> <!-- .element: class="fragment" -->
 ---
 # Spread <!-- .slide: class="center" -->
 ---
@@ -1169,8 +1150,8 @@ bikeshed
 Note: Adding new funcionality in JS to JS by adding more JS
 ---
 ## `padStart` polyfill <!-- .slide: class="center" -->
-
- <pre><code> <!-- .element: class="fragment" -->
+---
+<pre><code> 
 if (!String.prototype.padStart) {
 &nbsp; &nbsp; String.prototype.padStart = function padStart(maxLength,
 &nbsp; &nbsp; &nbsp; fillString = ' ') {
@@ -1209,8 +1190,9 @@ Note: Supplant didn't get into ES6. But you can still polyfill it
 ---
 
 ## `supplant` polyfill <!-- .slide: class="center" -->
- <pre><code> <!-- .element: class="fragment" -->
-if (!String.prototype.supplant) {
+---
+### &nbsp; <!-- .slide: class="center" -->
+<pre style="font-size: 23pt"><code>if (!String.prototype.supplant) {
 &nbsp; String.prototype.supplant = function (o) {
 &nbsp; &nbsp; return this.replace(<h>/\{([^{}]*)\}/</h>g,
 &nbsp; &nbsp; &nbsp; function (a, b) {
@@ -1229,27 +1211,29 @@ Doesn't handle multiple-level definitions
 Didn't make it into es6, but totes useful
 ---
 ## `isArray` polyfill <!-- .slide: class="center" -->
-
- <pre><code> <!-- .element: class="fragment" -->
-if (!Array.isArray) {
+---
+### &nbsp; <!-- .slide: class="center" -->
+<pre style="font-size: 30px"><code>if (!Array.isArray) {
 &nbsp; Array.isArray = function(arg) {
-&nbsp; &nbsp; return Object.prototype.toString.call(arg) === '[object Array]';
+&nbsp; &nbsp; return Object.prototype.toString.call(arg)
+&nbsp; &nbsp; &nbsp; &nbsp; === '[object Array]';
 &nbsp;}; 
 } 
 </pre></code> 
 Note: Can also polyfil things that may not exist in your browser. but specifically only define it if it's not already defined
 ---
 ## `console.log` polyfill <!-- .slide: class="center" -->
- <pre><code> <!-- .element: class="fragment" -->
-window.console =
+---
+### &nbsp; <!-- .slide: class="center" -->
+<pre style="font-size: 30px"><code>window.console =
 &nbsp; &nbsp; typeof window.console === 'undefined' ? {
 &nbsp; &nbsp; &nbsp; &nbsp; log: function(str) {
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; alert(str)
 &nbsp; &nbsp; &nbsp; &nbsp; }
-&nbsp; &nbsp; } : window.console;
-&nbsp;</pre></code> 
- <pre><code> <!-- .element: class="fragment" -->
-console.log("oh goodness.");
+&nbsp; &nbsp; } : window.console;</pre></code>
+
+ <pre style="font-size: 30px"><code> <!-- .element: class="fragment" -->
+console.log("Viva la Alert-based Debugging");
 &nbsp;</pre></code> 
 ---
 # JavaScript isn't awful <!-- .slide: class="center" -->
