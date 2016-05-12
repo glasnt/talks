@@ -740,7 +740,11 @@ Note: But what about the projects?
 
 Note: Looking at any github project page we can see all the contributors right?
 
-THere's a button right at the top and everything
+
+---
+ <img src="pictures/reveal_repo_01_h.png" />
+
+Note: ttere's a button right at the top and everything
 
 ---
 
@@ -752,6 +756,8 @@ We get the top ones, with a graph, ranked by lines of code
 
 ---
  <img src="pictures/reveal_repo_03.png" />
+---
+ <img src="pictures/reveal_repo_03_h.png" />
 
 Note: And it's only the top 100
 
