@@ -361,11 +361,21 @@ The fact that I didn't know half of these existed is a problem in itself.
 
 Note: can be dev or community or combination of both
 
-Ruby - Sarah Mei; Sam Saffron
-
-Perl - Tim O'Reilly; Paul Fenwick
+Perl - Jacinta Richardson, Paul Fenwick
 
 Python - Nick Coghlan
+---
+
+ <img src="pictures/oreilly.jpg" />
+## Open Source Awards <!-- .slide: class="center" -->
+Note: Including both Leslie and Deb
+
+Jessica McKeller
+
+Valerie Aurora
+
+Sarah Mei
+
 
 
 ---
