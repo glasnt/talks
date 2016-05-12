@@ -275,6 +275,7 @@ HALP I AM BEING PUBLICLY EMBARRASSED FROM ON STAGE BY <span class="highlight">@G
 <3 <span class="highlight">#pyconau</span>
 </span></p> 
 
+<span class="dasfoot"><a href="https://twitter.com/chrisjrn/status/627363232370421760">twitter</a></span>
 Note: Chris was a little bit upset last time this happened
 
 
@@ -288,6 +289,8 @@ Note: Chris was a little bit upset last time this happened
 HALP SHE'S DOING IT TO ME NOW TOO <span class="highlight">@chrisjrn @GLASNT #pyconau #LABHR</span>
 
 </span></p> 
+<span class="dasfoot"><a href="https://twitter.com/tveastman/status/627363893522890752">twitter</a></span>
+
 
 ---
 <p align="left">
@@ -298,6 +301,8 @@ HALP SHE'S DOING IT TO ME NOW TOO <span class="highlight">@chrisjrn @GLASNT #pyc
 <span class="content">
 <span class="highlight">@tveastman @chrisjrn </span>You both deserve it. Thanks for everything you do for the community. <span class="highlight">&#35;LABHR</span> /cc <span class="highlight">@glasnt</span></span>
 </p> 
+
+<span class="dasfoot"><a href="https://twitter.com/freakboy3742/status/627367567481536512">twitter</a></span>
 
 Note: It took a third party to actually confirm they did good.
 
@@ -313,6 +318,7 @@ I've seen this before, not only in the #LABHR
 <span class="content">
 OH LOOK, FINALLY SOMEONE IS EMBARRASSING <span class="highlight">@GLASNT</span> FROM ON-STAGE. TOOK LONG ENOUGH <3 <span class="highlight">@pjf #osdc15</span>
 </span></p> 
+<span class="dasfoot"><a href="https://twitter.com/chrisjrn/status/659180715435659264">twitter</a></span>
 ---
 # Why can't we take a compliment? <!-- .slide: class="center" -->
 
@@ -596,7 +602,25 @@ LIST IT AS SUCH
 ---
 
  <img src="pictures/SkillsNew.png" style="margin-top: -50px" />
+---
 
+<p align="left">
+<span class="tweet">
+<img src="pictures/mug_pjf.jpg">
+<span class="name">Paul Fenwick</span>
+<span class="username">@pjf</span>
+<span class="content">
+&lt;email from recruiter>
+<br> 
+<br> 
+<i>I'd love to find the right fit for you within Google, given your experience in Nyan Cat costumes, system architecture, Perl, and talking like a pirate. </i>
+
+</span></p> 
+
+
+<span class="dasfoot"><a href="https://twitter.com/pjf/status/730215052750381056">twitter</a></span>
+
+Note: Paul
 ---
 
  <img src="pictures/b_github.png" style="margin-top: -50px" />
@@ -607,7 +631,7 @@ LIST IT AS SUCH
 ---
 
 
- <img src="pictures/glasnt_graph_original.png" />
+ <img src="pictures/glasnt_graph_one.png" />
 
 Note: No idea how the 'Repositories contributed to' works
 
@@ -679,14 +703,16 @@ Note: What if these contributions counted
 
 ---
 
- <img src="pictures/glasnt_with_graph.png" />
+ <img src="pictures/glasnt_graph_one.png" />
+---
+ <img src="pictures/glasnt_graph_two.png" />
 Note: What if you could edit your profile to show the projcets you wanted
 
 What if that green graph? ...
 
 ---
 
- <img src="pictures/glasnt_without_graph.png" />
+ <img src="pictures/glasnt_graph_three.png" />
 Note: Remove it.
 
 ---
@@ -785,7 +811,7 @@ as at April 29 2016
 
 # LABHR/octohatrack <!-- .slide: class="center" -->
 ## GitHub Contributors: 10 <!-- .element: class="fragment" -->
-## All Contributors: 25 <!-- .element: class="fragment" -->
+## All Contributors: 24 <!-- .element: class="fragment" -->
 
 
 Note: So many conversions!
@@ -810,9 +836,9 @@ but if cli isn't your thing...
 I know it's 1am ... but I really want to build a JS variant on <span class="highlight">#LABHR</span>
 
 </span></p> 
+<span class="dasfoot"><a href="https://twitter.com/leesdolphin/status/695945537200128000">twitter</a></span>
 ---
-
-# &nbsp; <!-- .slide: data-background="pictures/js-hatrack.png" data-background-transition="none" -->
+ <img src="pictures/js-hatrack.png" style="margin-top: -50px" />
 ---
 
 # TL;DR: <!-- .slide: class="center" -->

@@ -24,11 +24,7 @@ For the people who are still alive.
 
 ...
 I feel FANTASTIC and I'm still alive.
-...
 </code></pre>
-
-
-
 ---
 #> <c>// If you can read this, yay!
 #> <s>123456789 123456789 123456789 12</s>
@@ -985,7 +981,11 @@ Note: jquery
 left-pad
 ---
 #= Design by<br>Committee
+Note: same loveingly maintained word document from version one. 
 
+15, 20 yaers, one word doc
+
+over head
 ---
 
 #= JavaScript<br>is improving
@@ -1151,8 +1151,7 @@ Note: Adding new funcionality in JS to JS by adding more JS
 ---
 ##= `padStart` polyfill
 ---
-<pre><code>
-if (!String.prototype.padStart) {
+<pre><code>if (!String.prototype.padStart) {
 &nbsp; &nbsp; String.prototype.padStart = function padStart(maxLength, 
 &nbsp; &nbsp; &nbsp; fillString = ' ') {
 &nbsp; &nbsp; &nbsp; &nbsp; const O = RequireObjectCoercible(this);
@@ -1246,7 +1245,10 @@ It's amazing that we can take something so broken and made so much
 
 The devil you know
 ---
-=> When that's the glue<br>of the modern day web,<br>it's a minor miracle<br>that society even functions
+
+=> When that's the glue<br>of the modern day web,<br>it's a minor miracle<br>that society even functions<br> - <a href="https://twitter.com/NamTaf/status/590790154991702016">Adam Jones</a>
+---
+=> ... JavaScript is no more weird or broken than any other<br>scripting language<br> - <a href="https://twitter.com/seldo/status/728686963868344320">Laurie Voss, npm</a>
 ---
 ##= Just keep in mind...
 ---
