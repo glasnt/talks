@@ -1,8 +1,7 @@
 
-# Build a Better<br>Hat Rack <!-- .slide: class="center" -->
+# Build a Better<br>Hat Rack
 ## All Contributions Welcome
-
- <div style='width: 50%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/footer.svg'></p></div> <!-- .slide: class="center" -->
+ <img src="pictures/footer.svg" />
 
 Note: These are my speaker notes.
 
@@ -106,7 +105,6 @@ Note: So, how can we track and record and acknowledge all this?
 ---
 
  <img src="pictures/leslie.png" style="margin-top: -50px" />
-## &nbsp; <!-- .slide: data-background="pictures/blue_leslie.png" data-background-transition="none" -->
 
 Note: Let me tell you about Leslie
 
@@ -123,7 +121,6 @@ Note: She started this hashtag, and wrote a blog post about it
 ---
 
  <img src="pictures/ikea_manual.jpg" style="margin-top: -50px" />
-## &nbsp; <!-- .slide: data-background="pictures/fade_ikea_manual.jpg" data-background-transition="none" -->
 
 Note: Which I've turned into a easy to read manual to try and spread the message
 
@@ -268,14 +265,14 @@ This didn't happen last time. Ref Chris.
 <span class="tweet">
 <img src="pictures/mug_chris.png">
 <span class="name">Chris Neugebauer</span>
-<span class="username">@chrisjrn</span>
+<span class="username"><a style="color: #0084b4" href="https://twitter.com/chrisjrn/status/627363232370421760">@chrisjrn</a>
+</span> 
 <span class="content">
 HALP I AM BEING PUBLICLY EMBARRASSED FROM ON STAGE BY <span class="highlight">@GLASNT</span> :'''''''''''(
 <br><br> 
 <3 <span class="highlight">#pyconau</span>
 </span></p> 
 
-<span class="dasfoot"><a href="https://twitter.com/chrisjrn/status/627363232370421760">twitter</a></span>
 Note: Chris was a little bit upset last time this happened
 
 
@@ -284,12 +281,10 @@ Note: Chris was a little bit upset last time this happened
 <span class="tweet">
 <img src="pictures/mug_tom.png">
 <span class="name">Tom Eastman</span>
-<span class="username">@tveastman</span>
+<span class="username"><a style="color: #0084b4" href="https://twitter.com/tveastman/status/627363893522890752">@tveastman</a></span>
 <span class="content">
 HALP SHE'S DOING IT TO ME NOW TOO <span class="highlight">@chrisjrn @GLASNT #pyconau #LABHR</span>
-
 </span></p> 
-<span class="dasfoot"><a href="https://twitter.com/tveastman/status/627363893522890752">twitter</a></span>
 
 
 ---
@@ -297,12 +292,11 @@ HALP SHE'S DOING IT TO ME NOW TOO <span class="highlight">@chrisjrn @GLASNT #pyc
 <span class="tweet">
 <img src="pictures/mug_russ.png">
 <span class="name">Russell Keith-Magee</span>
-<span class="username">@freakboy3742</span>
+<span class="username"><a style="color: #0084b4" href="https://twitter.com/freakboy3742/status/627367567481536512">@freakboy3742</a></span>
 <span class="content">
 <span class="highlight">@tveastman @chrisjrn </span>You both deserve it. Thanks for everything you do for the community. <span class="highlight">&#35;LABHR</span> /cc <span class="highlight">@glasnt</span></span>
 </p> 
 
-<span class="dasfoot"><a href="https://twitter.com/freakboy3742/status/627367567481536512">twitter</a></span>
 
 Note: It took a third party to actually confirm they did good.
 
@@ -314,11 +308,10 @@ I've seen this before, not only in the #LABHR
 <span class="tweet">
 <img src="pictures/mug_chris.png">
 <span class="name">Chris Neugebauer</span>
-<span class="username">@chrisjrn</span>
+<span class="username"><a style="color: #0084b4" href="https://twitter.com/chrisjrn/status/659180715435659264">@chrisjrn</a></span>
 <span class="content">
 OH LOOK, FINALLY SOMEONE IS EMBARRASSING <span class="highlight">@GLASNT</span> FROM ON-STAGE. TOOK LONG ENOUGH <3 <span class="highlight">@pjf #osdc15</span>
 </span></p> 
-<span class="dasfoot"><a href="https://twitter.com/chrisjrn/status/659180715435659264">twitter</a></span>
 ---
 # Why can't we take a compliment? <!-- .slide: class="center" -->
 
@@ -393,7 +386,6 @@ Note: one way to break this is to start to acknowledge our own achievements
 
 ---
  <img src="pictures/MyDonut.jpg" />
-## &nbsp; <!-- .slide: data-background="pictures/fade_MyDonut.jpg" data-background-transition="none" -->
 
 Note: Lara Hogan, Donut Manifesto
 
@@ -618,7 +610,7 @@ LIST IT AS SUCH
 <span class="tweet">
 <img src="pictures/mug_pjf.jpg">
 <span class="name">Paul Fenwick</span>
-<span class="username">@pjf</span>
+<span class="username"><a style="color: #0084b4" href="https://twitter.com/pjf/status/730215052750381056">@pjf</a></span>
 <span class="content">
 &lt;email from recruiter>
 <br> 
@@ -628,7 +620,6 @@ LIST IT AS SUCH
 </span></p> 
 
 
-<span class="dasfoot"><a href="https://twitter.com/pjf/status/730215052750381056">twitter</a></span>
 
 Note: Paul
 ---
@@ -703,7 +694,6 @@ Note: By default - one hello world in c++ everyday for as many days as you speci
 ---
 
  <img src="pictures/githubshirts_2.jpg" style="margin-top: -50px" />
-## &nbsp; <!-- .slide: data-background="pictures/githubshirts_2.png" data-background-transition="none" -->
 
 ---
 # What if... <!-- .slide: class="center" -->
@@ -813,9 +803,9 @@ Note: TODO get CONTRIBUTORS Done
 ## GitHub Contributors: 396 <!-- .element: class="fragment" -->
 ## All Contributors: 2255 <!-- .element: class="fragment" -->
 
-Note: including at least 3 unique wiki contributors
+Note: 
+including at least 3 unique wiki contributors
 
-as at April 29 2016
 
 ---
 
@@ -847,12 +837,11 @@ but if cli isn't your thing...
 <span class="tweet">
 <img src="pictures/mug_lee.png">
 <span class="name">Lee Symes</span>
-<span class="username">@leesdolphon</span>
+<span class="username"><a style="color: #0084b4" href="https://twitter.com/leesdolphin/status/695945537200128000">@leesdolphin</a></span>
 <span class="content">
 I know it's 1am ... but I really want to build a JS variant on <span class="highlight">#LABHR</span>
 
 </span></p> 
-<span class="dasfoot"><a href="https://twitter.com/leesdolphin/status/695945537200128000">twitter</a></span>
 ---
  <img src="pictures/js-hatrack.png" style="margin-top: -50px" />
 ---
