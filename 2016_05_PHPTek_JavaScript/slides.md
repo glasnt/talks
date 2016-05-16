@@ -1254,16 +1254,6 @@ The devil you know
 ---
 ## Other languages have wats <!-- .slide: class="center" -->
 ---
-
-# <pre>#!/usr/bin/env java</pre> <!-- .slide: class="center" -->
-
-Note: Let's about about Java
-
----
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%"><c>/&#42;&#42; read from a file &#42;&#42;/</c></code></pre></div>
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">filename = "myfile.txt"</code></pre></div> <!-- .element: class="fragment" -->
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">BufferedReader reader = <br>&nbsp; new BufferedReader ( <br>&nbsp; &nbsp; new InputStreamReader ( <br>&nbsp; &nbsp;&nbsp; &nbsp;new FileInputStream (<br>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; filename<br>&nbsp; &nbsp; &nbsp; )<br>&nbsp; &nbsp; )<br>&nbsp; );<br>&nbsp;</code></pre></div> <!-- .element: class="fragment" -->
----
 # <pre>/usr/bin/irb</pre> <!-- .slide: class="center" -->
 Note: Let's talk about ruby
 ---
@@ -1395,6 +1385,26 @@ Strings in erlang are list of integers
 
 and somewhow, elixir is inferring the second is string, not a list of numbers
 ---
+
+# <pre>/usr/bin/cpp</pre> <!-- .slide: class="center" -->
+
+Note: lets talk about c plus plus
+---
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> printf("wat??!")</code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">wat|</code></pre></div> <!-- .element: class="fragment" -->
+<br> 
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%"><h>// ??! -> |<br>// ??< -> {<br>// ??> -> }<br>// ??= -> #</h></code></pre></div> <!-- .element: class="fragment" -->
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%"><c>// "Trigraphs"<br>// ISO 646</c></code></pre></div> <!-- .element: class="fragment" -->
+
+
+<span class="dasfoot"><a href="http://stackoverflow.com/questions/1234582/purpose-of-trigraph-sequences-in-c">Stack Overflow</a></span>
+
+Note: disabled in gcc, works in c++11
+
+Trigraphs - used as a work around for a lack of special symbols in ISO 646
+
+ISO 646 nearly identical to ASCII
+---
 # <pre>/usr/local/bin python</pre> <!-- .slide: class="center" -->
 Note: Let's talk about Python
 ---
@@ -1414,6 +1424,27 @@ Note: Let's talk about Python
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">True</code></pre></div> <!-- .element: class="fragment" -->
 
 <span class="dasfoot"><a href="www.youtube.com/watch?v=sH4XF6pKKmk">Investigating Python Wats</a></span>
+---
+
+# <pre>#!/usr/bin/env java</pre> <!-- .slide: class="center" -->
+
+Note: let's talk about java
+---
+
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">java> Integer a = 1024;</code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">java> Integer b = 1024;</code></pre></div> <!-- .element: class="fragment" -->
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">java> a <= b</code></pre></div> <!-- .element: class="fragment" -->
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">true</code></pre></div> <!-- .element: class="fragment" -->
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">java> a >= b</code></pre></div> <!-- .element: class="fragment" -->
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">true</code></pre></div> <!-- .element: class="fragment" -->
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">java> a == b</code></pre></div> <!-- .element: class="fragment" -->
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">false</code></pre></div> <!-- .element: class="fragment" -->
+
+<span class="dasfoot"><a href="http://stackoverflow.com/a/2001861/124019">Stack Overflow</a></span>
+
+Note: integer caching. different objects.
+
+Similar to python, but different.
 ---
 # <pre>/usr/local/bin/scala</pre> <!-- .slide: class="center" -->
 Note: Let's talk about scala
