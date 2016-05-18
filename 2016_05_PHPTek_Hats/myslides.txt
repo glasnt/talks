@@ -1,4 +1,6 @@
+@ sponsors.png
 
+---
 # Build a Better<br>Hat Rack
 ## All Contributions Welcome
 @ footer.svg
@@ -8,17 +10,12 @@ Note: These are my speaker notes.
 There are many like them, but these ones are mine
 
 ---
-
-#= Hi!
-
-Note: Hi! I'm Katie, and I'm a software developer. 
-
-I wear many hats. I use all the languages. 
-
----
 ! foss_logo
 
-Note: Code contributions for profit
+Note: 
+We do a lot of stuff in FOSS
+
+Code contributions for profit
 
 Openstack Summit Vancouver May 2015 -- Free Ticket
 
@@ -726,28 +723,30 @@ Note: But what about the projects?
 
 ---
 
-@ reveal_repo_01.png
+@= reveal_header.png
 
 Note: Looking at any github project page we can see all the contributors right?
 
 
 ---
-@ reveal_repo_01_h.png
+@= reveal_header_h.png
 
 Note: ttere's a button right at the top and everything
 
 ---
 
-@ reveal_repo_02.png
+@= reveal_12.png
 
 Note: But if we click it, then we don't actually get the contributors
 
 We get the top ones, with a graph, ranked by lines of code
 
 ---
-@ reveal_repo_03.png
+@= reveal_12_h.png
 ---
-@ reveal_repo_03_h.png
+@= reveal_100.png
+---
+@= reveal_100_h.png
 
 Note: And it's only the top 100
 
@@ -794,8 +793,8 @@ Note: TODO get CONTRIBUTORS Done
 ---
 
 #= hakimel/reveal.js
-##- GitHub Contributors: 142
-##- All Contributors: 1414
+##- GitHub Contributors: 175
+##- All Contributors: 1524
 
 ---
 

@@ -1,4 +1,6 @@
+ <img src="pictures/sponsors.png" />
 
+---
 # Build a Better<br>Hat Rack
 ## All Contributions Welcome
  <img src="pictures/footer.svg" />
@@ -8,17 +10,12 @@ Note: These are my speaker notes.
 There are many like them, but these ones are mine
 
 ---
-
-# Hi! <!-- .slide: class="center" -->
-
-Note: Hi! I'm Katie, and I'm a software developer.
-
-I wear many hats. I use all the languages.
-
----
  <div style='width: 50%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/foss_logo.svg'></p></div> <!-- .slide: class="center" -->
 
-Note: Code contributions for profit
+Note: 
+We do a lot of stuff in FOSS
+
+Code contributions for profit
 
 Openstack Summit Vancouver May 2015 -- Free Ticket
 
@@ -726,28 +723,30 @@ Note: But what about the projects?
 
 ---
 
- <img src="pictures/reveal_repo_01.png" />
+ <div style='margin: 0 auto;'><p align='center'><img src='pictures/reveal_header.png'></p></div>  <!-- .slide: class="center" -->
 
 Note: Looking at any github project page we can see all the contributors right?
 
 
 ---
- <img src="pictures/reveal_repo_01_h.png" />
+ <div style='margin: 0 auto;'><p align='center'><img src='pictures/reveal_header_h.png'></p></div>  <!-- .slide: class="center" -->
 
 Note: ttere's a button right at the top and everything
 
 ---
 
- <img src="pictures/reveal_repo_02.png" />
+ <div style='margin: 0 auto;'><p align='center'><img src='pictures/reveal_12.png'></p></div>  <!-- .slide: class="center" -->
 
 Note: But if we click it, then we don't actually get the contributors
 
 We get the top ones, with a graph, ranked by lines of code
 
 ---
- <img src="pictures/reveal_repo_03.png" />
+ <div style='margin: 0 auto;'><p align='center'><img src='pictures/reveal_12_h.png'></p></div>  <!-- .slide: class="center" -->
 ---
- <img src="pictures/reveal_repo_03_h.png" />
+ <div style='margin: 0 auto;'><p align='center'><img src='pictures/reveal_100.png'></p></div>  <!-- .slide: class="center" -->
+---
+ <div style='margin: 0 auto;'><p align='center'><img src='pictures/reveal_100_h.png'></p></div>  <!-- .slide: class="center" -->
 
 Note: And it's only the top 100
 
@@ -794,8 +793,8 @@ Note: TODO get CONTRIBUTORS Done
 ---
 
 # hakimel/reveal.js <!-- .slide: class="center" -->
-## GitHub Contributors: 142 <!-- .element: class="fragment" -->
-## All Contributors: 1414 <!-- .element: class="fragment" -->
+## GitHub Contributors: 175 <!-- .element: class="fragment" -->
+## All Contributors: 1524 <!-- .element: class="fragment" -->
 
 ---
 
