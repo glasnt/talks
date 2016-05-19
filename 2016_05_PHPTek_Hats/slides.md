@@ -366,11 +366,38 @@ Valerie Aurora
 
 Sarah Mei
 
+2016 new winners from May 19
 
+Sarah Sharp
+
+Vicky Brasseur
+
+Ricky Endlsey -- Open Source.com
+
+---
+
+ <div style='margin: 0 auto;'><p align='center'><img src='pictures/rustywrench.jpg'></p></div>  <!-- .slide: class="center" -->
+
+<span class="dasfoot"><a href="https://en.wikipedia.org/wiki/Linux_Australia#/media/File:The_Rusty_Wrench_at_Coogee_Beach,_Feb_2013.jpg">CC BY-SA 3.0</a></span>
+
+Note: Linux Australia award
+
+Previous winners
+
+Pia Waugh
+
+Mary Gardiner - Ada Initiative
+
+Donna Benjimin - Drupal
+
+2014 - Andrew Tridgell - rsync + samba
+
+2015 - Steve Walsh - NOC extraordinare
 
 ---
 
 # Acknowledging the little things <!-- .slide: class="center" -->
+Note: you don't have to win an award to be awesome
 ---
 
  <img src="pictures/happiness_packet.png" />
@@ -805,6 +832,7 @@ Note: TODO get CONTRIBUTORS Done
 Note: 
 including at least 3 unique wiki contributors
 
+Python HTTP Requests for Humans
 
 ---
 
