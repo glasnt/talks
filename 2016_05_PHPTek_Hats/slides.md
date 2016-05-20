@@ -1,13 +1,17 @@
  <img src="pictures/sponsors.png" />
 
 ---
-# Build a Better<br>Hat Rack
+# Build a Better<br>Hat Rack <!-- .slide: class="center" -->
 ## All Contributions Welcome
  <img src="pictures/footer.svg" />
 
 Note: These are my speaker notes.
 
 There are many like them, but these ones are mine
+---
+
+# Hi! <!-- .slide: class="center" -->
+
 
 ---
  <div style='width: 50%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/foss_logo.svg'></p></div> <!-- .slide: class="center" -->
@@ -509,7 +513,7 @@ Burnout
 Plight of the organiser
 ---
 
-# Encourage continued engagement <!-- .slide: class="center" -->
+# Encourage<br>continued<br>engagement <!-- .slide: class="center" -->
 
 Note: They have done a thing once, they will do it again.
 
@@ -656,7 +660,11 @@ Note: Paul
 ---
  <img src="pictures/glasnt_graph_public_auto.png" />
 
+Note: Code streaks are gone!!!!!
 
+This is brilliant
+
+http://erik.io/blog/2016/04/01/how-github-contribution-graph-is-harmful/ 
 ---
 
  <img src="pictures/glasnt_graph_public_auto_h.png" />
@@ -683,7 +691,10 @@ private contribs from orgs i'm no longer able to see don't count
 ---
 
  <img src="pictures/glasnt_graph_private_private.png" />
+---
 
+
+ <img src="pictures/glasnt_graph_private_private_hlink.png" />
 Note: so what counts
 ---
 
@@ -704,7 +715,7 @@ Note: Continued discussions on a PR only counts as one
 ### or, you're in the owner organisation <!-- .element: class="fragment" -->
 ### or, you forked the repo <!-- .element: class="fragment" -->
 ### ... but commits don't count on forks <!-- .element: class="fragment" -->
-### private repos now count! <!-- .element: class="fragment" -->
+### New! private repos now count! <!-- .element: class="fragment" -->
 ---
 
 # What counts? <!-- .slide: class="center" -->
@@ -745,6 +756,8 @@ Note: What if these contributions counted
 
 ---
  <img src="pictures/glasnt_graph_public_auto.png" />
+---
+ <img src="pictures/glasnt_graph_public_auto_hswap.png" />
 ---
  <img src="pictures/glasnt_graph_public_custom.png" />
 Note: What if you could edit your profile to show the projcets you wanted

@@ -1,13 +1,17 @@
 @ sponsors.png
 
 ---
-# Build a Better<br>Hat Rack
+#= Build a Better<br>Hat Rack
 ## All Contributions Welcome
 @ footer.svg
 
 Note: These are my speaker notes. 
 
 There are many like them, but these ones are mine
+---
+
+#= Hi!
+
 
 ---
 ! foss_logo
@@ -509,7 +513,7 @@ Burnout
 Plight of the organiser
 ---
 
-#= Encourage continued engagement
+#= Encourage<br>continued<br>engagement
 
 Note: They have done a thing once, they will do it again.
 
@@ -656,7 +660,11 @@ Note: Paul
 ---
 @ glasnt_graph_public_auto.png
 
+Note: Code streaks are gone!!!!!
 
+This is brilliant
+
+http://erik.io/blog/2016/04/01/how-github-contribution-graph-is-harmful/
 ---
 
 @ glasnt_graph_public_auto_h.png
@@ -683,7 +691,10 @@ private contribs from orgs i'm no longer able to see don't count
 ---
 
 @ glasnt_graph_private_private.png
+---
 
+
+@ glasnt_graph_private_private_hlink.png
 Note: so what counts
 ---
 
@@ -704,7 +715,7 @@ Note: Continued discussions on a PR only counts as one
 ###- or, you're in the owner organisation
 ###- or, you forked the repo
 ###- ... but commits don't count on forks
-###- private repos now count!
+###- New! private repos now count!
 ---
 
 #= What counts?
@@ -745,6 +756,8 @@ Note: What if these contributions counted
 
 ---
 @ glasnt_graph_public_auto.png
+---
+@ glasnt_graph_public_auto_hswap.png
 ---
 @ glasnt_graph_public_custom.png
 Note: What if you could edit your profile to show the projcets you wanted
