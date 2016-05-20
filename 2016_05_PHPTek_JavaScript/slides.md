@@ -46,6 +46,7 @@ Sponsored by:
 ---
 
  <img src="pictures/javascript_book.png" style="margin-top: -50px" />
+<span class="dasfoot">Source unknown</span>
 Note: Good parts written by Douglas Crockford
 ---
 
@@ -1310,7 +1311,7 @@ Note: Let's talk about pascal
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">&nbsp; writeln(x = 42);</code></pre></div>
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">end.</code></pre></div>
 <br> 
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">1<br>TRUE</code></pre></div> <!-- .element: class="fragment" -->
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">TRUE</code></pre></div> <!-- .element: class="fragment" -->
 
 
 
@@ -1328,7 +1329,7 @@ an assignment operator that doesn't look like equality; bliss
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">&nbsp; writeln(x <c>=</c> 42); <c> // equality </c></code></pre></div>
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">end.</code></pre></div>
 <br> 
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">1<br>TRUE</code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">TRUE</code></pre></div>
 
 Note: Let's talk about something completely different
 ---
@@ -1568,7 +1569,15 @@ But that doesn't mean we have to critise those that use them
 
 Hopefully I've shown just how good JS can be. And it might make someone reconsider before I see the next awful tirade on twitter
 ---
-<br><br> 
 # Cheers! <!-- .slide: class="center" -->
-<br><br> 
+
  <img src="pictures/footer.svg" />
+---
+# Resources
+### &nbsp;
+#### Check footnotes throughout the slide deck
+
+### &nbsp;
+### Online Interative Development Environments:
+#### <a href="https://repl.it/">repl.it</a>
+#### <a href="http://www.tutorialspoint.com/codingground.htm">TutorialsPoint.com</a>

@@ -46,6 +46,7 @@ Sponsored by:
 ---
 
 @^ javascript_book.png
+<span class="dasfoot">Source unknown</span>
 Note: Good parts written by Douglas Crockford
 ---
 
@@ -1310,7 +1311,7 @@ Note: Let's talk about pascal
 #> &nbsp; writeln(x = 42);
 #> end.
 <br>
-#>- 1<br>TRUE
+#>- TRUE
 
 
 
@@ -1328,7 +1329,7 @@ an assignment operator that doesn't look like equality; bliss
 #> &nbsp; writeln(x <c>=</c> 42); <c> // equality </c>
 #> end.
 <br>
-#> 1<br>TRUE
+#> TRUE
 
 Note: Let's talk about something completely different
 ---
@@ -1568,7 +1569,15 @@ But that doesn't mean we have to critise those that use them
 
 Hopefully I've shown just how good JS can be. And it might make someone reconsider before I see the next awful tirade on twitter
 ---
-<br><br>
 #= Cheers!
-<br><br>
+
 @ footer.svg
+---
+# Resources
+### &nbsp;
+#### Check footnotes throughout the slide deck
+
+### &nbsp;
+### Online Interative Development Environments:
+#### <a href="https://repl.it/">repl.it</a>
+#### <a href="http://www.tutorialspoint.com/codingground.htm">TutorialsPoint.com</a>
