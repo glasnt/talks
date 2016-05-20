@@ -654,19 +654,37 @@ Note: Paul
 #= User<br>Contributions
 
 ---
+@ glasnt_graph_public_auto.png
 
 
-@ glasnt_graph_one.png
+---
 
+@ glasnt_graph_public_auto_h.png
 Note: No idea how the 'Repositories contributed to' works
 
 I've done Rails, Rubocop, Docker, OpenStack, Pybee... they arent there
 
----
-<br><br>
-@ public_contrib.png
 
-Note: focus on this graph. So much focus
+---
+
+@ glasnt_graph_private_private.png
+
+Note: Here's what I see
+All my private contributions
+
+listing of popular private repos, mostly
+
+---
+@ glasnt_graph_private_private_h.png
+
+Note: company change in september
+
+private contribs from orgs i'm no longer able to see don't count
+---
+
+@ glasnt_graph_private_private.png
+
+Note: so what counts
 ---
 
 #= What counts?
@@ -681,12 +699,12 @@ Note: Continued discussions on a PR only counts as one
 
 #= But only if...
 
-##- you own the repo
-##- or, you're a collaborator
-##- or, you're in the owner organisation
-##- or, you forked the repo
+###- you own the repo
+###- or, you're a collaborator
+###- or, you're in the owner organisation
+###- or, you forked the repo
 ###- ... but commits don't count on forks
-
+###- private repos now count!
 ---
 
 #= What counts?
@@ -726,17 +744,19 @@ Note: By default - one hello world in c++ everyday for as many days as you speci
 Note: What if these contributions counted
 
 ---
-
-@ glasnt_graph_one.png
+@ glasnt_graph_public_auto.png
 ---
-@ glasnt_graph_two.png
+@ glasnt_graph_public_custom.png
 Note: What if you could edit your profile to show the projcets you wanted
 
 What if that green graph? ...
-
 ---
 
-@ glasnt_graph_three.png
+@ glasnt_graph_private_custom.png
+Note: As of less than a week ago, you can make it show all your private contributions too
+---
+
+@ glasnt_graph_none_custom.png
 Note: Remove it. 
 
 ---

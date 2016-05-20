@@ -654,19 +654,37 @@ Note: Paul
 # User<br>Contributions <!-- .slide: class="center" -->
 
 ---
+ <img src="pictures/glasnt_graph_public_auto.png" />
 
 
- <img src="pictures/glasnt_graph_one.png" />
+---
 
+ <img src="pictures/glasnt_graph_public_auto_h.png" />
 Note: No idea how the 'Repositories contributed to' works
 
 I've done Rails, Rubocop, Docker, OpenStack, Pybee... they arent there
 
----
-<br><br> 
- <img src="pictures/public_contrib.png" />
 
-Note: focus on this graph. So much focus
+---
+
+ <img src="pictures/glasnt_graph_private_private.png" />
+
+Note: Here's what I see
+All my private contributions
+
+listing of popular private repos, mostly
+
+---
+ <img src="pictures/glasnt_graph_private_private_h.png" />
+
+Note: company change in september
+
+private contribs from orgs i'm no longer able to see don't count
+---
+
+ <img src="pictures/glasnt_graph_private_private.png" />
+
+Note: so what counts
 ---
 
 # What counts? <!-- .slide: class="center" -->
@@ -681,12 +699,12 @@ Note: Continued discussions on a PR only counts as one
 
 # But only if... <!-- .slide: class="center" -->
 
-## you own the repo <!-- .element: class="fragment" -->
-## or, you're a collaborator <!-- .element: class="fragment" -->
-## or, you're in the owner organisation <!-- .element: class="fragment" -->
-## or, you forked the repo <!-- .element: class="fragment" -->
+### you own the repo <!-- .element: class="fragment" -->
+### or, you're a collaborator <!-- .element: class="fragment" -->
+### or, you're in the owner organisation <!-- .element: class="fragment" -->
+### or, you forked the repo <!-- .element: class="fragment" -->
 ### ... but commits don't count on forks <!-- .element: class="fragment" -->
-
+### private repos now count! <!-- .element: class="fragment" -->
 ---
 
 # What counts? <!-- .slide: class="center" -->
@@ -726,17 +744,19 @@ Note: By default - one hello world in c++ everyday for as many days as you speci
 Note: What if these contributions counted
 
 ---
-
- <img src="pictures/glasnt_graph_one.png" />
+ <img src="pictures/glasnt_graph_public_auto.png" />
 ---
- <img src="pictures/glasnt_graph_two.png" />
+ <img src="pictures/glasnt_graph_public_custom.png" />
 Note: What if you could edit your profile to show the projcets you wanted
 
 What if that green graph? ...
-
 ---
 
- <img src="pictures/glasnt_graph_three.png" />
+ <img src="pictures/glasnt_graph_private_custom.png" />
+Note: As of less than a week ago, you can make it show all your private contributions too
+---
+
+ <img src="pictures/glasnt_graph_none_custom.png" />
 Note: Remove it.
 
 ---
