@@ -692,39 +692,40 @@ private contribs from orgs i'm no longer able to see don't count
 
 @ glasnt_graph_private_private.png
 ---
+@ glasnt_graph_private_private_hdrop.png
+Note: new and shiny
 
+you can show your private contributions in public
 
+---
+
+@ glasnt_graph_private_private.png
+---
 @ glasnt_graph_private_private_hlink.png
 Note: so what counts
 ---
 
 #= What counts?
-##- Commits
-###- <p>(against <code>master</code> or <code>gh-pages</code>)</p>
-##- Issues and Pull Requests
-###- (opened, in the past year)
+##- Commits*
+##- Issues&#42; and Pull Requests&#42;
 
-Note: Continued discussions on a PR only counts as one
+Note: 
 
----
+Issues created by you
 
-#= But only if...
+Pull requests created or closed by you
 
-###- you own the repo
-###- or, you're a collaborator
-###- or, you're in the owner organisation
-###- or, you forked the repo
-###- ... but commits don't count on forks
-###- New! private repos now count!
----
+commits to master by you
 
-#= What counts?
-## &nbsp;
-### &nbsp; 
-##  Only some of your work. 
-### &nbsp;
+forks dont count
 
-Note: But what if you really want that full green graph
+comments don't count
+
+has to be linked to email
+
+wiki contribs don't count
+
+
 ---
 
 #= Sound too hard?
@@ -849,7 +850,6 @@ Note: introducing octohatrack
 ##- All Wiki editors
 ##- Custom CONTRIBUTORS
 
-Note: TODO get CONTRIBUTORS Done
 ---
 
 #= hakimel/reveal.js
@@ -857,15 +857,9 @@ Note: TODO get CONTRIBUTORS Done
 ##- All Contributors: 1524
 
 ---
-
-#= kennethreitz/requests
-##- GitHub Contributors: 396
-##- All Contributors: 2255
-
-Note: 
-including at least 3 unique wiki contributors
-
-Python HTTP Requests for Humans
+#= thephpleague/commonmark
+##- GitHub Contributors: 25
+##- All Contributors: 74
 
 ---
 
@@ -881,7 +875,6 @@ Python HTTP Requests for Humans
 
 
 Note: So many conversions!
-TODO update moar stats
 
 
 ---

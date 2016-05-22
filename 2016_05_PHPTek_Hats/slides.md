@@ -692,39 +692,40 @@ private contribs from orgs i'm no longer able to see don't count
 
  <img src="pictures/glasnt_graph_private_private.png" />
 ---
+ <img src="pictures/glasnt_graph_private_private_hdrop.png" />
+Note: new and shiny
 
+you can show your private contributions in public
 
+---
+
+ <img src="pictures/glasnt_graph_private_private.png" />
+---
  <img src="pictures/glasnt_graph_private_private_hlink.png" />
 Note: so what counts
 ---
 
 # What counts? <!-- .slide: class="center" -->
-## Commits <!-- .element: class="fragment" -->
-### <p>(against <code>master</code> or <code>gh-pages</code>)</p> <!-- .element: class="fragment" -->
-## Issues and Pull Requests <!-- .element: class="fragment" -->
-### (opened, in the past year) <!-- .element: class="fragment" -->
+## Commits* <!-- .element: class="fragment" -->
+## Issues&#42; and Pull Requests&#42; <!-- .element: class="fragment" -->
 
-Note: Continued discussions on a PR only counts as one
+Note: 
 
----
+Issues created by you
 
-# But only if... <!-- .slide: class="center" -->
+Pull requests created or closed by you
 
-### you own the repo <!-- .element: class="fragment" -->
-### or, you're a collaborator <!-- .element: class="fragment" -->
-### or, you're in the owner organisation <!-- .element: class="fragment" -->
-### or, you forked the repo <!-- .element: class="fragment" -->
-### ... but commits don't count on forks <!-- .element: class="fragment" -->
-### New! private repos now count! <!-- .element: class="fragment" -->
----
+commits to master by you
 
-# What counts? <!-- .slide: class="center" -->
-## &nbsp;
-### &nbsp;
-## Only some of your work.
-### &nbsp;
+forks dont count
 
-Note: But what if you really want that full green graph
+comments don't count
+
+has to be linked to email
+
+wiki contribs don't count
+
+
 ---
 
 # Sound too hard? <!-- .slide: class="center" -->
@@ -849,7 +850,6 @@ Note: introducing octohatrack
 ## All Wiki editors <!-- .element: class="fragment" -->
 ## Custom CONTRIBUTORS <!-- .element: class="fragment" -->
 
-Note: TODO get CONTRIBUTORS Done
 ---
 
 # hakimel/reveal.js <!-- .slide: class="center" -->
@@ -857,15 +857,9 @@ Note: TODO get CONTRIBUTORS Done
 ## All Contributors: 1524 <!-- .element: class="fragment" -->
 
 ---
-
-# kennethreitz/requests <!-- .slide: class="center" -->
-## GitHub Contributors: 396 <!-- .element: class="fragment" -->
-## All Contributors: 2255 <!-- .element: class="fragment" -->
-
-Note: 
-including at least 3 unique wiki contributors
-
-Python HTTP Requests for Humans
+# thephpleague/commonmark <!-- .slide: class="center" -->
+## GitHub Contributors: 25 <!-- .element: class="fragment" -->
+## All Contributors: 74 <!-- .element: class="fragment" -->
 
 ---
 
@@ -881,7 +875,6 @@ Python HTTP Requests for Humans
 
 
 Note: So many conversions!
-TODO update moar stats
 
 
 ---
