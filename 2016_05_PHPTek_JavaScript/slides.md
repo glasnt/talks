@@ -758,8 +758,7 @@ Note: serverside js
 
 runtime environment, not a framework
 
-Allows for
-
+runs on the V8 engine (next slide)
 ---
 
 # V8<br>JavaScript Engine <!-- .slide: class="center" -->
@@ -1250,8 +1249,6 @@ The devil you know
 ---
 > ... JavaScript is no more weird or broken than any other<br>scripting language<br> - <a href="https://twitter.com/seldo/status/728686963868344320">Laurie Voss, npm</a> <!-- .slide: class="center" -->
 ---
-## Just keep in mind... <!-- .slide: class="center" -->
----
 ## Other languages have wats <!-- .slide: class="center" -->
 ---
 # <pre>/usr/bin/irb</pre> <!-- .slide: class="center" -->
@@ -1299,6 +1296,18 @@ Note: Let's talk about Haskell
 
 Note: because foldable, fMap fun
 ---
+# <pre>/usr/local/bin/ghci</pre> <!-- .slide: class="center" -->
+Note: Let's talk about Haskell
+---
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">λ> let a = 2 + 2</code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">λ> a</code></pre></div> <!-- .element: class="fragment" -->
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">4</code></pre></div> <!-- .element: class="fragment" -->
+
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">λ> let b = 2 + 2 where 2 + 2 = 5</code></pre></div> <!-- .element: class="fragment" -->
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">λ> b</code></pre></div> <!-- .element: class="fragment" -->
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">5</code></pre></div> <!-- .element: class="fragment" -->
+Note: Because haskell
+---
 # <pre>/usr/bin/local/pascal</pre> <!-- .slide: class="center" -->
 Note: Let's talk about pascal
 ---
@@ -1332,18 +1341,6 @@ an assignment operator that doesn't look like equality; bliss
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">TRUE</code></pre></div>
 
 Note: Let's talk about something completely different
----
-# <pre>/usr/local/bin/ghci</pre> <!-- .slide: class="center" -->
-Note: Let's talk about Haskell
----
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">λ> let a = 2 + 2</code></pre></div>
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">λ> a</code></pre></div> <!-- .element: class="fragment" -->
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">4</code></pre></div> <!-- .element: class="fragment" -->
-
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">λ> let b = 2 + 2 where 2 + 2 = 5</code></pre></div> <!-- .element: class="fragment" -->
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">λ> b</code></pre></div> <!-- .element: class="fragment" -->
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">5</code></pre></div> <!-- .element: class="fragment" -->
-Note: Because haskell
 ---
 # <pre>/bin/bash</pre> <!-- .slide: class="center" -->
 

@@ -864,7 +864,7 @@ Note: introducing octohatrack
 ---
 
 #= avinassh/rockstar
-##- GitHub Contributors: 30
+##- GitHub Contributors: 32
 ##- All Contributors: 45
 
 ---
