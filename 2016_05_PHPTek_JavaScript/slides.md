@@ -45,8 +45,27 @@ Sponsored by:
  <img src="pictures/footer.svg" />
 ---
 
+# House Keeping <!-- .slide: class="center" -->
+---
+# "Beginner" <!-- .slide: class="center" -->
+---
+# Audience<br>Participation <!-- .slide: class="center" -->
+---
+<br><br> 
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%"><c>// This is the size most of the</code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%"><c>// code will be shown in</c></code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%"><h>// If you cannot read this,</code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%"><h>// please change seats</h></code></pre></div>
+<br> 
+<pre><code> 
+Some less important code will be shown in this size
+It's optimal you can also read this, but this is not a requirement<br>
+</pre></code> 
+---
+# Let's get started! <!-- .slide: class="center" -->
+---
  <img src="pictures/javascript_book.png" style="margin-top: -50px" />
-<span class="dasfoot">Source unknown</span>
+ <span class='dasfoot'>Source Unknown</span>
 Note: Good parts written by Douglas Crockford
 ---
 
@@ -388,6 +407,16 @@ Note: More gotchas, Combination of original 'Bad Parts', 'Awful Parts', and some
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">4</code></pre></div> <!-- .element: class="fragment" -->
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> parseInt("08")</code></pre></div> <!-- .element: class="fragment" -->
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">0</code></pre></div> <!-- .element: class="fragment" -->
+---
+<p></p> 
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> parseInt("42")</code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">42</code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> parseInt("42 Wallaby Way")</code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">42</code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> parseInt("04") <c>// radix 10</c></code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">4</code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> parseInt("08") <c>// octal</c></code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">0</code></pre></div>
 ---
 # `Number` <!-- .slide: class="center" -->
 ---
@@ -859,6 +888,8 @@ More than twice as fast
 # <img src="pictures/wdu.png"> <!-- .slide: class="center" -->
 Note: Wombat Developers Union
 ---
+# <img src="pictures/wombatlogo.png"> <!-- .slide: class="center" -->
+---
  <img src="pictures/WOMBAT.png" style="margin-top: -50px" />
 ---
 
@@ -920,58 +951,65 @@ Note: Node package manager
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">}</code></pre></div>
 
 ---
-<pre><code><c>/* PHP-5.6:ext/standard/string.c</c>
-PHP_FUNCTION(str_pad) 
-{ 
-&nbsp; &nbsp;char *input;
-&nbsp; &nbsp;int input_len;
-&nbsp; &nbsp;long pad_length;
-&nbsp; &nbsp;size_t num_pad_chars;
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">PHP_FUNCTION(str_pad) {</code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">&nbsp; char &ast;input;</code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">&nbsp; int input_len;</code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">&nbsp; long &nbsp;pad_length;</code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">&nbsp; char &ast;pad_str_val = " ";</code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">&nbsp; <c>/&ast; ... &ast;/</c></code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">&nbsp; num_pad_chars =</code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">&nbsp; &nbsp; &nbsp;pad_length - input_len;</code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">&nbsp; <c>/&ast; ... &ast;/</c></code></pre></div>
 
-&nbsp; &nbsp;num_pad_chars = pad_length - input_len;
-&nbsp; &nbsp;result = (char *)emalloc(input_len + num_pad_chars + 1);
-&nbsp; &nbsp;<c>/* ... */</c>
-
-&nbsp; &nbsp;left_pad = num_pad_chars;
-&nbsp; &nbsp;<c>/* ... */</c>
-
-&nbsp; &nbsp;for (i = 0; i < left_pad; i++)
-&nbsp; &nbsp; &nbsp; &nbsp;result[result_len++] = pad_str_val[i % pad_str_len];
-
-&nbsp; &nbsp;<c>/* ... */</c>
-
-&nbsp; &nbsp;RETURN_STRINGL(result, result_len, 0);
-} 
-
-</code></pre> 
+<span class="dasfoot"><a href="https://github.com/php/php-src/blob/PHP-5.6/ext/standard/string.c">php 5.6 - ext/standard/string.c</a></span>
 ---
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">PHP_FUNCTION(str_pad) {</code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">&nbsp; char &ast;input;</code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">&nbsp; int input_len;</code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">&nbsp; long &nbsp;pad_length;</code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">&nbsp; char <h>&ast;pad_str_val = " ";</h></code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">&nbsp; <c>/&ast; ... &ast;/</c></code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">&nbsp; num_pad_chars =</code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">&nbsp; &nbsp; &nbsp;pad_length - input_len;</code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">&nbsp; <c>/&ast; ... &ast;/</c></code></pre></div>
 
+<span class="dasfoot"><a href="https://github.com/php/php-src/blob/PHP-5.6/ext/standard/string.c">php 5.6 - ext/standard/string.c</a></span>
+---
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">PHP_FUNCTION(str_pad) {</code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">&nbsp; char &ast;input;</code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">&nbsp; int input_len;</code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">&nbsp; long &nbsp;pad_length;</code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">&nbsp; char &ast;pad_str_val = " ";</code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">&nbsp; <c>/&ast; ... &ast;/</c></code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">&nbsp; num_pad_chars =</code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">&nbsp; &nbsp; &nbsp;<h>pad_length - input_len;</h></code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">&nbsp; <c>/&ast; ... &ast;/</c></code></pre></div>
 
-<pre><code><c>/* PHP-5.6:ext/standard/string.c</c>
-PHP_FUNCTION(str_pad) 
-{ 
-&nbsp; &nbsp;char *input;
-&nbsp; &nbsp;int input_len;
-&nbsp; &nbsp;long pad_length;
-&nbsp; &nbsp;size_t num_pad_chars;
+<span class="dasfoot"><a href="https://github.com/php/php-src/blob/PHP-5.6/ext/standard/string.c">php 5.6 - ext/standard/string.c</a></span>
+---
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">&nbsp; <c>/&ast; cont. &ast;/</c></code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">&nbsp;</code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">&nbsp; <c>/&ast; ... &ast;/</c></code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">&nbsp; for (i = 0; i < left_pad; i++)</code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">&nbsp; &nbsp; result[result_len++]</code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">&nbsp; &nbsp; &nbsp; = pad_str_val[i];</code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">&nbsp; <c>/&ast; ... &ast;/</c></code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">&nbsp; return result;</code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">}</code></pre></div>
 
-&nbsp; &nbsp;num_pad_chars = <h>pad_length - input_len</h>;
-&nbsp; &nbsp;result = (char *)emalloc(input_len + num_pad_chars + 1);
-&nbsp; &nbsp;<c>/* ... */</c>
+<span class="dasfoot"><a href="https://github.com/php/php-src/blob/PHP-5.6/ext/standard/string.c">php 5.6 - ext/standard/string.c</a></span>
+---
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">&nbsp; <c>/&ast; cont. &ast;/</c></code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">&nbsp;</code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">&nbsp; <c>/&ast; ... &ast;/</c></code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">&nbsp; <h>for (i = 0; i < left_pad; i++)</h></code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">&nbsp; &nbsp; result[result_len++]</code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">&nbsp; &nbsp; &nbsp; = pad_str_val[i];</code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">&nbsp; <c>/&ast; ... &ast;/</c></code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">&nbsp; return result;</code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">}</code></pre></div>
 
-&nbsp; &nbsp;left_pad = num_pad_chars;
-&nbsp; &nbsp;<c>/* ... */</c>
-
-&nbsp; &nbsp;for (<h>i = 0; i < left_pad; i++</h>)
-&nbsp; &nbsp; &nbsp; &nbsp;result[result_len++] = pad_str_val[i % pad_str_len];
-
-&nbsp; &nbsp;<c>/* ... */</c>
-
-&nbsp; &nbsp;RETURN_STRINGL(result, result_len, 0);
-} 
-
-</code></pre> 
-
+<span class="dasfoot"><a href="https://github.com/php/php-src/blob/PHP-5.6/ext/standard/string.c">php 5.6 - ext/standard/string.c</a></span>
 ---
 
 # User-land<br>"standard library" <!-- .slide: class="center" -->
@@ -986,7 +1024,9 @@ Note: same loveingly maintained word document from version one.
 
 over head
 ---
+# However <!-- .slide: class="center" -->
 
+---
 # JavaScript<br>is improving <!-- .slide: class="center" -->
 ---
 
@@ -1038,7 +1078,7 @@ Supply radix to be cross compatible.
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">ES5> a = ['10','10','10','10']</code></pre></div> <!-- .element: class="fragment" -->
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">ES5> a.map(parseInt)</code></pre></div> <!-- .element: class="fragment" -->
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">[10, NaN, 2, 3]</code></pre></div> <!-- .element: class="fragment" -->
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%"><c>// Be aware of optional<br>// parameters</c></code></pre></div> <!-- .element: class="fragment" -->
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%"><h>// Be aware of optional<br>// parameters</h></code></pre></div> <!-- .element: class="fragment" -->
 ---
 # ECMAScript 6 <!-- .slide: class="center" -->
 Note: approved in June 2015 (a few months ago)
@@ -1059,10 +1099,18 @@ Re-declarations are in error
 ---
 # `import` <!-- .slide: class="center" -->
 ---
+<p></p> 
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%"><c><!&dash;&dash;&dash; old importing --></c></code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">&lt;html></code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">&lt;script src="life.js">&lt;/script></code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">&lt;script src="stuff.js">&lt;/script></code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">...</code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">&lt;html></code></pre></div>
+---
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%"><c>// life.js</c></code></pre></div>
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%"><h>export</h> function ans() {<br> &nbsp; let answer = 42; <br> &nbsp; return answer;<br>}</code></pre></div>
 <br> 
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%"><c>// script.js</c> <br><h>import</h> { ans } from './life';</code></pre></div> <!-- .element: class="fragment" -->
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%"><c>// stuff.js</c> <br><h>import</h> { ans } from './life';</code></pre></div> <!-- .element: class="fragment" -->
 ---
 # Spread <!-- .slide: class="center" -->
 ---
@@ -1209,12 +1257,13 @@ Doesn't handle multiple-level definitions
 Didn't make it into es6, but totes useful
 ---
 ## `isArray` polyfill <!-- .slide: class="center" -->
+Note: you can also polyfill things that exist in ES5 but might not be available
 ---
 ### &nbsp; <!-- .slide: class="center" -->
 <pre style="font-size: 30px"><code>if (!Array.isArray) {
 &nbsp; Array.isArray = function(arg) {
 &nbsp; &nbsp; return Object.prototype.toString.call(arg)
-&nbsp; &nbsp; &nbsp; &nbsp; === '[object Array]';
+&nbsp; &nbsp; &nbsp; &nbsp; <h>=== '[object Array]';</h>
 &nbsp;}; 
 } 
 </pre></code> 
@@ -1266,6 +1315,30 @@ Note: Method Missing is evil monkey patching
 This is how Rails works
 
 find_customer_by_id substring
+---
+<pre><code><c># Customer.find&lowbar;all&lowbar;by&lowbar;last_name(last_name)</c>
+def method&lowbar;missing(method&lowbar;id, &ast;arguments)
+&nbsp; if match = /^<h>find&lowbar;</h>(<h>all&lowbar;by</h>|by)<h>&lowbar;</h>(<h>[&lowbar;a-zA-Z]\w*</h>)$/
+&nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; .match(method&lowbar;id.to&lowbar;s)
+&nbsp; &nbsp; &nbsp; <c># ...</c>
+&nbsp; &nbsp; &nbsp; self.class_eval %{
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; def self.#{method_id}(*args)
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <c># ...</c>
+&nbsp; &nbsp; &nbsp; }, __FILE__, __LINE__
+&nbsp; 
+&nbsp; &nbsp; &nbsp; send(method_id, *arguments)
+&nbsp; 
+&nbsp; elsif match = /^find_or_(initialize|create)_by_([_a-zA-Z]\w*)$/
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; .match(method&lowbar;id.to&lowbar;s)
+&nbsp; &nbsp; &nbsp; <c># ...</c>
+&nbsp; &nbsp; &nbsp; send(method_id, *arguments)
+&nbsp; else
+&nbsp; &nbsp; &nbsp;super
+&nbsp; end
+end 
+</code></pre> 
+
+<span class="dasfoot"><a href="http://apidock.com/rails/v2.0.0/ActiveRecord/Base/method_missing/class">Rails 2.0.0 ActiveRecord/Base/method_missing</a></span>
 ---
 # <pre>/usr/bin/irb</pre> <!-- .slide: class="center" -->
 Note: Let's talk about ruby
@@ -1486,6 +1559,13 @@ Note: Swift
 Wat isn't the strint dict int concat
 
 Original version of this is 20 iterations, taking 20 - 55 *HOURS*
+
+Dics of Dics of Dicts of strings compiler inefficency
+
+Type inference issue
+
+Fixed late April, in dev Snapshot May 9
+just missed 2.2.1, may get into 2.2.2?
 ---
 # <pre>/usr/bin/env perl -de1</pre> <!-- .slide: class="center" -->
 Note: Let's talk about Perl

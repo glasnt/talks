@@ -244,6 +244,10 @@ Maybe y'all need a LIVE DEMO
 Note: Live demo, lets hope this works
 
 Hat Rack
+
+---
+ <img src="pictures/jack.jpg" style="margin-top: -50px" />
+## @developerjack <!-- .slide: class="center" -->
 ---
 
 # How to<br>say thank you <!-- .slide: class="center" -->
@@ -857,14 +861,14 @@ Note: introducing octohatrack
 ## All Contributors: 1524 <!-- .element: class="fragment" -->
 
 ---
-# thephpleague/commonmark <!-- .slide: class="center" -->
+# thephpleague/<br>commonmark <!-- .slide: class="center" -->
 ## GitHub Contributors: 25 <!-- .element: class="fragment" -->
 ## All Contributors: 74 <!-- .element: class="fragment" -->
 
 ---
 
 # avinassh/rockstar <!-- .slide: class="center" -->
-## GitHub Contributors: 30 <!-- .element: class="fragment" -->
+## GitHub Contributors: 32 <!-- .element: class="fragment" -->
 ## All Contributors: 45 <!-- .element: class="fragment" -->
 
 ---

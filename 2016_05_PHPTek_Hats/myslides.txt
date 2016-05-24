@@ -244,6 +244,10 @@ Maybe y'all need a LIVE DEMO
 Note: Live demo, lets hope this works
 
 Hat Rack 
+
+---
+@^ jack.jpg
+##= @developerjack
 ---
 
 #= How to<br>say thank you
@@ -857,7 +861,7 @@ Note: introducing octohatrack
 ##- All Contributors: 1524
 
 ---
-#= thephpleague/commonmark
+#= thephpleague/<br>commonmark
 ##- GitHub Contributors: 25
 ##- All Contributors: 74
 
