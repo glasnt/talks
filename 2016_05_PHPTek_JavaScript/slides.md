@@ -873,7 +873,7 @@ for (let i = 0; i < 500000000; i++) {
 } 
 </code></pre> 
 
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">$ time -p node general.js<br>real 0.77</code></pre></div> <!-- .element: class="fragment" -->
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">$ time -p node general.js<br>real 0.77<c> &nbsp;# vs 1.91</c></code></pre></div> <!-- .element: class="fragment" -->
 Note: What's going to happen? any change?
 
 More than twice as fast

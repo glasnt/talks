@@ -248,6 +248,7 @@ Hat Rack
 ---
 @^ jack.jpg
 ##= @developerjack
+Note: Have you heard about buzzconf?
 ---
 
 #= How to<br>say thank you

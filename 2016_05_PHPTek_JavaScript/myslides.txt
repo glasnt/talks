@@ -873,7 +873,7 @@ for (let i = 0; i < 500000000; i++) {
 }
 </code></pre>
 
-#>- $ time -p node general.js<br>real 0.77
+#>- $ time -p node general.js<br>real 0.77<c> &nbsp;# vs 1.91</c>
 Note: What's going to happen? any change?
 
 More than twice as fast

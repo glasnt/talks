@@ -248,6 +248,7 @@ Hat Rack
 ---
  <img src="pictures/jack.jpg" style="margin-top: -50px" />
 ## @developerjack <!-- .slide: class="center" -->
+Note: Have you heard about buzzconf?
 ---
 
 # How to<br>say thank you <!-- .slide: class="center" -->
