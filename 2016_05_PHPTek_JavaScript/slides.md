@@ -729,6 +729,34 @@ Note: on top of the things you know JS does
 you have to worry about the things that you *really* don't want it to do
 ---
 
+# XSS, CSRF <!-- .slide: class="center" -->
+
+Note: within scope, but not strictly JS
+---
+
+# Emerging APIs <!-- .slide: class="center" -->
+## Audio, Geolocation <!-- .slide: class="center" -->
+Note: your browser can now get your location. not just mobile.
+
+---
+
+### `document.execCommand('copy');` <!-- .slide: class="center" -->
+Note: allows copy of content w/out Flash
+---
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">document.addEventListener(</code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">&nbsp; &nbsp;'keydown', function(event) {</code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">&nbsp; ta = document</code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">&nbsp; &nbsp; .createElement("textarea");</code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">&nbsp; ta.value = <h>"echo evil\n"</h>;</code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">&nbsp; document.body</code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">&nbsp; &nbsp; .appendChild(textArea);</code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">&nbsp; ta.select();</code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">&nbsp; document.execCommand('copy');</code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">}</code></pre></div>
+
+ <span class='dasfoot'><a href="https://github.com/dxa4481/Pastejacking/blob/master/index.html">dxa4481/pastejacking</a></span>
+Note: New line in a terminal will auto execute
+---
 # `eval` <!-- .slide: class="center" -->
 
 Note: executing arbitary code.

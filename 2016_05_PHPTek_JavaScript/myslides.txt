@@ -729,6 +729,34 @@ Note: on top of the things you know JS does
 you have to worry about the things that you *really* don't want it to do
 ---
 
+#= XSS, CSRF
+
+Note: within scope, but not strictly JS
+---
+
+#= Emerging APIs
+##= Audio, Geolocation
+Note: your browser can now get your location. not just mobile. 
+
+---
+
+###= `document.execCommand('copy');`
+Note: allows copy of content w/out Flash
+---
+#> document.addEventListener(
+#> &nbsp; &nbsp;'keydown', function(event) {
+#> &nbsp; ta = document
+#> &nbsp; &nbsp; .createElement("textarea");
+#> &nbsp; ta.value = <h>"echo evil\n"</h>;
+#> &nbsp; document.body
+#> &nbsp; &nbsp; .appendChild(textArea);
+#> &nbsp; ta.select();
+#> &nbsp; document.execCommand('copy');
+#> }
+
+#v <a href="https://github.com/dxa4481/Pastejacking/blob/master/index.html">dxa4481/pastejacking</a>
+Note: New line in a terminal will auto execute
+---
 #= `eval`
 
 Note: executing arbitary code.
