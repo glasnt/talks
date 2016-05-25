@@ -785,20 +785,29 @@ Note: CoffeeScript wiki has a list of lanagues that compile to js, and it's cool
 ## <a href="https://asmblah.github.io/uniter/demo/interactive.html">Interactive Demo</a> <!-- .slide: class="center" -->
 
 ---
-
-## Other examples: <!-- .slide: class="center" -->
----
 # Batavia <!-- .slide: class="center" -->
  <img src="pictures/pybee.svg" />
 Note: Python Bytecode being run by the Javascript VM
+---
+# Atwood's Law <!-- .slide: class="center" -->
+### Any application that can be written in JavaScript, will eventually be written in JavaScript.
+---
+ <img src="pictures/svgeditor.png" style="margin-top: -50px" />
+ <span class='dasfoot'><a href="http://editor.method.ac/">editor.method.ac</a></span>
+---
+ <img src="pictures/c9io.png" style="margin-top: -50px" />
+
+ <span class='dasfoot'>https://c9.io</span>
+
+
 ---
 # emscripten <!-- .slide: class="center" -->
 # asm.js
 
 Note: 
-
-
-
+---
+ <img src="pictures/win95.png" style="margin-top: -50px" />
+ <span class='dasfoot'><a href="https://win95.ajf.me/">https://win95.ajf.me/</a></span>
 ---
 <video width="720" height="600" controls="controls"><source src="pictures/skifree.mp4" type="video/mp4" /></video>
 Note: Yes, that's windows 95 running in my browser from 1995
