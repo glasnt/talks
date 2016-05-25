@@ -810,8 +810,8 @@ Note:
  <span class='dasfoot'><a href="https://win95.ajf.me/">https://win95.ajf.me/</a></span>
 ---
 <video width="720" height="600" controls="controls"><source src="pictures/skifree.mp4" type="video/mp4" /></video>
+ <span class='dasfoot'><a href="https://archive.org/details/win3_WINSKI">https://archive.org/details/win3_WINSKI</a></span>
 Note: Yes, that's windows 95 running in my browser from 1995
-
 ---
 
 # Archive.org <!-- .slide: class="center" -->
@@ -862,6 +862,8 @@ for (let i = 0; i < 500000000; i++) {
 </code></pre> 
 
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">$ time -p node general.js<br>real 1.91</code></pre></div> <!-- .element: class="fragment" -->
+
+ <span class='dasfoot'><a href="https://top.fse.guru/nodejs-a-quick-optimization-advice-7353b820c92e">top.fse.guru</a></span>
 ---
 <pre><code>'use strict';
 
@@ -885,8 +887,10 @@ for (let i = 0; i < 500000000; i++) {
 } 
 </code></pre> 
 
-Note: blank for flicking
+ <span class='dasfoot'><a href="https://top.fse.guru/nodejs-a-quick-optimization-advice-7353b820c92e">top.fse.guru</a></span>
 
+
+Note: blank for flicking
 ---
 <pre><code>'use strict';
 
@@ -911,6 +915,10 @@ for (let i = 0; i < 500000000; i++) {
 </code></pre> 
 
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">$ time -p node general.js<br>real 0.77<c> &nbsp;# vs 1.91</c></code></pre></div> <!-- .element: class="fragment" -->
+
+
+ <span class='dasfoot'><a href="https://top.fse.guru/nodejs-a-quick-optimization-advice-7353b820c92e">top.fse.guru</a></span>
+
 Note: What's going to happen? any change?
 
 More than twice as fast
