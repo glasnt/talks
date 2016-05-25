@@ -1,0 +1,33 @@
+span.dasfoot { position:absolute; top: 670px; right: 1em; font-size: 75%; }
+span.tweet { 
+    font-family: 'Helvetica Neue', Helvetica, Arial ;
+    font-size: 120%;
+}
+
+span.tweet > span.name { 
+    font-weight: bold;
+    display:block;
+    padding-top:20px;
+}
+
+span.tweet > span.username { 
+    font-size: 80%; 
+    display:block;
+    margin-bottom: 40px;
+    color: #0084B4 !important;
+}
+ 
+span.tweet > span.content { 
+    margin-top: 40px;
+    padding-top: 40px;
+} 
+span.tweet > span.content > span.highlight { 
+    color: #0084B4
+}
+span.tweet > img { 
+    float: left;
+    height: 100px; 
+    padding: 20px;
+    padding-left: 0;
+    margin:0;
+}
