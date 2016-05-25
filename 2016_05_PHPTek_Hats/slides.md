@@ -256,13 +256,18 @@ Hat Rack
  <img src="pictures/jack.jpg" style="margin-top: -50px" />
 ## @developerjack <!-- .slide: class="center" -->
 Note: Have you heard about buzzconf?
+sydphp 
+hatrack lightning talk at php australia warmup
+
+mentor and friend
 ---
 
 # How to<br>say thank you <!-- .slide: class="center" -->
 ## [demo] <!-- .slide: class="center" -->
 
 Note: 
-Repeat for mic, if required.
+Squees and blushes
+
 
 ---
 # How not<br>to react <!-- .slide: class="center" -->

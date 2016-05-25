@@ -256,13 +256,18 @@ Hat Rack
 @^ jack.jpg
 ##= @developerjack
 Note: Have you heard about buzzconf?
+ sydphp
+hatrack lightning talk at php australia warmup
+
+mentor and friend
 ---
 
 #= How to<br>say thank you
 ##= [demo]
 
 Note: 
-Repeat for mic, if required. 
+Squees and blushes
+
 
 ---
 #= How not<br>to react
