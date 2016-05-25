@@ -19,6 +19,14 @@ There are many like them, but these ones are mine
 Note: 
 We do a lot of stuff in FOSS
 
+personally, I have commits in rails, docker, openstack
+
+i have public work projects
+
+i have edits on other smaller projects
+
+these are sometimes rewarded
+
 Code contributions for profit
 
 Openstack Summit Vancouver May 2015 -- Free Ticket
@@ -55,19 +63,18 @@ There are other ways - project specific, etc
 
 Note: But what about everything else?
 
-Code Review
+personally, papers ctte, councils, conferences
 
-Documentation 
 
-Testing 
+Code Review / Documentation
 
-Design 
-
-UAT 
+Testing / Design
 
 Promotion 
 
 User Groups / Presentations
+
+conferences 
 
 ---
 
