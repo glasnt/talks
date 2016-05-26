@@ -799,7 +799,11 @@ Note: Python Bytecode being run by the Javascript VM
 
 #v https://c9.io
 
+Note: working terminals
+previews
+containers exposed
 
+vim in the browser :D
 ---
 #= emscripten
 # asm.js 
@@ -1147,10 +1151,10 @@ Re-declarations are in error
 <p></p>
 #> <c><!&dash;&dash;&dash; old importing --></c>
 #> &lt;html>
-#> &lt;script src="life.js">&lt;/script>
-#> &lt;script src="stuff.js">&lt;/script>
+#> &lt;script src="<h>life.js</h>">&lt;/script>
+#> &lt;script src="<h>stuff.js</h>">&lt;/script>
 #> ...
-#> &lt;html>
+#> &lt;/html>
 ---
 #> <c>// life.js</c>
 #> <h>export</h> function ans() {<br> &nbsp; let answer = 42; <br> &nbsp; return answer;<br>}
@@ -1187,9 +1191,10 @@ Note: Infix operator for Math.pow
 #>- 125
 #>- > 5 &#42;&#42; 3
 #>- 125
-#>- > let num = 3<br>num **= 2
+#>- > let num = 5
+#>- > num **= 3
 #>- > num
-#>- 9
+#>- 125
  
 ---
 #= Non-standard 'Standards'
