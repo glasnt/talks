@@ -1,29 +1,4 @@
-<pre><code> 
-<c>// This is a test of the &lt;pre>&lt;code> block size</c>
-<h>// Code will only be shown in this way if space is required,
-// but the specifics of code this small isn't required</h>
-
-php[tek] 2016
-
-Sponsored by:
-
-* Automattic&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;* Aol
-* nexmo&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; * Red|Ventures
-* Microsoft&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; * Triton
-* Stormpath&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; * Jetbrains
-* Classy Llama&nbsp; &nbsp; &nbsp; &nbsp;* Drupal Association
-* Foxy.IO&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; * MySQL
-* Nexcess&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; * mongodb
-* robofirm
-
-<c>// This is a test of the &lt;pre>&lt;code> block size</c>
-<h>// Code will only be shown in this way if space is required,
-// but the specifics of code this small isn't required</h>
-
-<c>// Max length in this mode: ~ 25 lines.
-// Max width &nbsp;in this mode: ~ 64 characters.
-</c> 
-</code></pre> 
+ <img src="pictures/sponsors.png" />
 ---
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%"><c>// If you can read this, yay!</code></pre></div>
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%"><s>123456789 123456789 123456789 12</s></code></pre></div>
@@ -61,6 +36,15 @@ Sponsored by:
 Some less important code will be shown in this size
 It's optimal you can also read this, but this is not a requirement<br>
 </pre></code> 
+---
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> input JavaScript code</code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">output result</code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> input</code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">output</code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> <c>// comments</c></code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> "Some <h>highlights</h>"</code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> <c>// Assume JavaScript unless</c></code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> <c>// otherwise advised</c></code></pre></div>
 ---
 # Let's get started! <!-- .slide: class="center" -->
 ---

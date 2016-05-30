@@ -1,6 +1,3 @@
-@ sponsors.png
-
----
 #= Build a Better<br>Hat Rack
 ## All Contributions Welcome
 @ footer.svg
@@ -528,7 +525,7 @@ Note: They have done a thing once, they will do it again.
 Charelle's story from Compcon - first commit, hand held from Russell
 ---
 
-#= Voluntold
+#= "Voluntold"
 
 Note: I'm super encourageable. I think half the stuff i do is average until validated
 
@@ -557,7 +554,7 @@ Little things = seed, -> improvement over time
 
 ---
 
-#= Change self image
+#= Change<br>self image
 
 Note:
 it makes them feel valued
@@ -587,7 +584,7 @@ But the scope of this communication is only within your existing community.
 
 You need to extend to more general communications 
 ---
-#= Communication<br>outside<br>your project
+#= Communication<br>&ast;outside&ast;<br>your project
 
 ---
 #= Give your helpers something to show for their work
@@ -774,8 +771,11 @@ Note: What if you could edit your profile to show the projcets you wanted
 What if that green graph? ...
 ---
 
-@ glasnt_graph_private_custom.png
+@ glasnt_graph_private_custom_e.png
 Note: As of less than a week ago, you can make it show all your private contributions too
+---
+@ glasnt_graph_private_custom.png
+Note: But it stillnot be good
 ---
 
 @ glasnt_graph_none_custom.png
@@ -830,11 +830,13 @@ Note: What about everything else
 ---
 
 #= What about<br>everything else?
-##- Logged Issues
+---
+##= Logged Issues
 ##- Unmerged Pull Requests
 ##- Code Reviews
 ##- Feature Discussions
 ##- Feature Voting
+##- Wiki editing
 
 ---
 ! question
@@ -845,7 +847,7 @@ The customisation of the github profile may not exist, but the data for who coul
 
 ---
 ##= github.com/LABHR/octohatrack
-##- <code>pip install octohatrack</code>
+## <code>pip install octohatrack</code>
 
 
 Note: introducing octohatrack

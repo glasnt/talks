@@ -1,6 +1,3 @@
- <img src="pictures/sponsors.png" />
-
----
 # Build a Better<br>Hat Rack <!-- .slide: class="center" -->
 ## All Contributions Welcome
  <img src="pictures/footer.svg" />
@@ -251,15 +248,6 @@ Maybe y'all need a LIVE DEMO
 Note: Live demo, lets hope this works
 
 Hat Rack
-
----
- <img src="pictures/jack.jpg" style="margin-top: -50px" />
-## @developerjack <!-- .slide: class="center" -->
-Note: Have you heard about buzzconf?
-sydphp 
-hatrack lightning talk at php australia warmup
-
-mentor and friend
 ---
 
 # How to<br>say thank you <!-- .slide: class="center" -->
@@ -537,7 +525,7 @@ Note: They have done a thing once, they will do it again.
 Charelle's story from Compcon - first commit, hand held from Russell
 ---
 
-# Voluntold <!-- .slide: class="center" -->
+# "Voluntold" <!-- .slide: class="center" -->
 
 Note: I'm super encourageable. I think half the stuff i do is average until validated
 
@@ -566,7 +554,7 @@ Little things = seed, -> improvement over time
 
 ---
 
-# Change self image <!-- .slide: class="center" -->
+# Change<br>self image <!-- .slide: class="center" -->
 
 Note: 
 it makes them feel valued
@@ -596,7 +584,7 @@ But the scope of this communication is only within your existing community.
 
 You need to extend to more general communications
 ---
-# Communication<br>outside<br>your project <!-- .slide: class="center" -->
+# Communication<br>&ast;outside&ast;<br>your project <!-- .slide: class="center" -->
 
 ---
 # Give your helpers something to show for their work <!-- .slide: class="center" -->
@@ -783,8 +771,11 @@ Note: What if you could edit your profile to show the projcets you wanted
 What if that green graph? ...
 ---
 
- <img src="pictures/glasnt_graph_private_custom.png" />
+ <img src="pictures/glasnt_graph_private_custom_e.png" />
 Note: As of less than a week ago, you can make it show all your private contributions too
+---
+ <img src="pictures/glasnt_graph_private_custom.png" />
+Note: But it stillnot be good
 ---
 
  <img src="pictures/glasnt_graph_none_custom.png" />
@@ -839,11 +830,13 @@ Note: What about everything else
 ---
 
 # What about<br>everything else? <!-- .slide: class="center" -->
-## Logged Issues <!-- .element: class="fragment" -->
+---
+## Logged Issues <!-- .slide: class="center" -->
 ## Unmerged Pull Requests <!-- .element: class="fragment" -->
 ## Code Reviews <!-- .element: class="fragment" -->
 ## Feature Discussions <!-- .element: class="fragment" -->
 ## Feature Voting <!-- .element: class="fragment" -->
+## Wiki editing <!-- .element: class="fragment" -->
 
 ---
  <div style='width: 50%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/question.svg'></p></div> <!-- .slide: class="center" -->
@@ -854,7 +847,7 @@ The customisation of the github profile may not exist, but the data for who coul
 
 ---
 ## github.com/LABHR/octohatrack <!-- .slide: class="center" -->
-## <code>pip install octohatrack</code> <!-- .element: class="fragment" -->
+## <code>pip install octohatrack</code>
 
 
 Note: introducing octohatrack
@@ -874,9 +867,18 @@ Note: introducing octohatrack
 ## All Contributors: 1524 <!-- .element: class="fragment" -->
 
 ---
-# thephpleague/<br>commonmark <!-- .slide: class="center" -->
-## GitHub Contributors: 25 <!-- .element: class="fragment" -->
-## All Contributors: 74 <!-- .element: class="fragment" -->
+
+
+# kennethreitz/requests <!-- .slide: class="center" -->
+## GitHub Contributors: 396 <!-- .element: class="fragment" -->
+## All Contributors: 2255 <!-- .element: class="fragment" -->
+
+
+Note: 
+including at least 3 unique wiki contributors
+
+
+Python HTTP Requests for Humans
 
 ---
 
