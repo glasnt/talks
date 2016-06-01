@@ -16,20 +16,9 @@ There are many like them, but these ones are mine
 Note: 
 We do a lot of stuff in FOSS
 
-personally, I have commits in rails, docker, openstack
+languages, operating systems, websutes packages
 
-i have public work projects
-
-i have edits on other smaller projects
-
-these are sometimes rewarded
-
-Code contributions for profit
-
-Openstack Summit Vancouver May 2015 -- Free Ticket
-
-Docker -- Money
-
+entire ecosystems
 ---
 
  <div style='width: 50%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/question.svg'></p></div> <!-- .slide: class="center" -->
@@ -78,10 +67,6 @@ conferences
  <div style='width: 50%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/checklist.svg'></p></div> <!-- .slide: class="center" -->
 
 Note: Who here:
-
-Who here has committed to PHP Core or a major framework?
-
-Everyone else:
 
 Used the code
 
@@ -217,6 +202,12 @@ Note: GRAVY #3
 
 Do it for someone not like you
 
+if you're a coder, for your QA
+
+mentors to mentees
+
+
+
 ---
 
  <img src="pictures/yay.svg" />
@@ -228,17 +219,7 @@ Note: Simple! Nice! Helpful!
 
  <img src="pictures/halp.svg" style="margin-top: -50px" />
 
-Note: But it didn't get that much traction
-
-Leslie reported ~30 known LinkedIn recommendation
-
-I've done talks in multiple different cities/languages
-
-It's always the same, one or two after the talk
-
-(PyConAU exception - because I refused to get off stage until 10 tweets happened)
-(This did result in some residiual activity during the sprints)
-Maybe y'all need a LIVE DEMO
+Note: So, how can you do this in the real world
 
 ---
 
@@ -371,12 +352,6 @@ Note: Including both Leslie and Deb
 
 Jessica McKeller
 
-Valerie Aurora
-
-Sarah Mei
-
-2016 new winners from May 19
-
 Sarah Sharp
 
 Vicky Brasseur
@@ -395,8 +370,6 @@ Previous winners
 
 Pia Waugh
 
-Mary Gardiner - Ada Initiative
-
 Donna Benjimin - Drupal
 
 2014 - Andrew Tridgell - rsync + samba
@@ -411,6 +384,14 @@ Note: you don't have to win an award to be awesome
 
  <img src="pictures/happiness_packet.png" />
 ## &nbsp; <!-- .slide: data-background="#f64747" data-background-transition="none" -->
+
+Note: djangocon europe
+
+happiness packets. io
+
+A nice little message
+
+and privacy settings to share or not share
 ---
 
 # Acknowledging our *own* achievements <!-- .slide: class="center" -->
