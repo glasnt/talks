@@ -1,0 +1,141 @@
+## &nbsp; 
+
+! space | t/cry  | space
+
+@ footer.svg
+---
+! t/purple_heart | o/broken
+Note: emoji are broken
+---
+! g/T | g/L | g/D | g/R
+! g/computer | t/soon |  unicode.png
+Note: Because computers
+---
+! g/US | g/france | g/germany | g/china
+! space | t/smile | space 
+Note: So, with this, people are happy ,characters can be encoded. 
+---
+
+! g/japan | t/worry | g/question
+Note: But the Japanese were wondering where the rest of their codepoints were
+---
+@ docomolarge.png
+
+Note: Shigetaka Kurita
+
+SHI-GE-TA-KA  KU RI TA
+
+12x12 pixels 
+
+Introduced in the early 1990s, with a whole lot of turmoil
+
+There's entire essays on the implementatation issues with this
+
+Emoji Added to Unicode 6, 2010
+
+TLDR: Apple implemented the proposed unicode spec with emoji for japan only
+
+then a couple of versions later, released to the US
+
+And then everyone rampted up
+
+---
+
+! e/6 | space | a/thumbsup.png | a/tearsjoy.png | a/tada.png 
+! e/61 | space | a/grimace.png | a/shock.png | a/sleeping.png
+Note: A small face-only update in 2012
+
+most platforms, if they support emoji at all, will support up to here
+---
+! e/7 | space | e/vulcan_1 | e/sleuth | e/chipmunk
+! e/8 | space | e/horns | e/upsidedown | e/taco
+
+Note: Unicode 8 2015
+Taco is now official
+
+---
+! g/dash
+Note: 
+Here's where it gets fun
+
+I think that the unicode adoption, particularly the graphics and implementations was a bit rushed. 
+---
+! o/stdyellow.png | g/yellow
+
+Note: 
+
+Yellow Heart
+
+This is the Apple version
+
+Here's what Android went with.
+
+---
+! space | g/hairy_heart_v.png | space
+---
+
+! a/flushed.png | t/flushed | e/flushed | g/flushed
+
+Note: 
+This isn't the only one that's not exactly the same
+
+Differences across platforms. Your version may not match receipant
+
+The first three: Shock, Flushed face
+
+Last one: bashful d'awww
+
+Completely different
+
+---
+! a/claps.png | g/claps | t/claps | m/claps.png
+
+Note: it's not just google getting it weird
+
+here's clapping from google vs microsoft
+
+the thumbs!
+---
+! space | t/grinning | t/grimice | space
+Note: grinning vs grimmace
+
+SCIENTIFIC PAPER PROVING IT"S NOT JUST ME
+---
+! t/questionmark | g/questionmark | f/fb_quest2.png
+Note: 
+
+---
+! t/oldkey.png | t/newkey
+Note: As new emoji are brought in
+
+older systems will be outdated
+---
+! t/newkey | e/unicorn | e/thinking | e/upsidedown
+! t/oldkey.png | o/broken | o/rectangle | space
+
+Note: Thinking Face in my Talk Summary
+
+Not all systems have emoji
+
+My Android - 5.0.1 OS --> U7.0 if you're lucky
+
+Yosemite - up to 6.1, plus vulcan
+
+Ubuntu - b/w only
+---
+! t/sparkles
+
+Note: <img src="pictures/t/sparkles.svg" height="600px">
+---
+! e/9 | space | ap/selfie.png | ap/duck.png | ap/spoon.png
+! e/10 | space | o/eyebrow.png | ap/takeaway.png | o/fortune.png
+Note: 
+
+These images are from Emojipedia mockups 
+
+Only a small handful are on the cards for 10 already
+
+STILL NOT OFFICIAL
+---
+! space |  ap/takeaway.png | space
+### glasnt.com/talks
