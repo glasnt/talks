@@ -1,0 +1,14 @@
+<svg width="128" height="128" xmlns="http://www.w3.org/2000/svg">
+
+ <g>
+  <title>background</title>
+  <rect fill="none" id="canvas_background" height="402" width="582" y="-1" x="-1"/>
+ </g>
+ <g>
+  <title>Layer 1</title>
+  <ellipse ry="54" rx="53.5" id="svg_2" cy="64" cx="64" stroke-width="7.5" stroke="#40C0E7" fill="none"/>
+  <ellipse ry="7" rx="7.5" id="svg_3" cy="51" cx="45" stroke-width="7.5" fill="#40C0E7"/>
+  <ellipse ry="7" rx="7.5" id="svg_4" cy="51" cx="81" stroke-width="7.5" fill="#40C0E7"/>
+  <line stroke="#40C0E7" stroke-linecap="null" stroke-linejoin="null" id="svg_5" y2="69" x2="98" y1="99" x1="48" stroke-width="7.5" fill="none"/>
+ </g>
+</svg>
