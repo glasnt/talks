@@ -1,18 +1,11 @@
 ## &nbsp; 
 
-! space | t/cry  | space
-
-@ footer.svg
----
-! t/purple_heart | o/broken
-Note: emoji are broken
+! t/cry 
 ---
 ! g/T | g/L | g/D | g/R
-! g/computer | t/soon |  unicode.png
 Note: Because computers
 ---
-! g/US | g/france | g/germany | g/china
-! space | t/smile | space 
+! t/globe_a | t/smile | g/claps
 Note: So, with this, people are happy ,characters can be encoded. 
 ---
 
@@ -71,10 +64,11 @@ This is the Apple version
 Here's what Android went with.
 
 ---
-! space | g/hairy_heart_v.png | space
+### &nbsp;
+@ g/hairy_heart_s.png 
 ---
 
-! a/flushed.png | t/flushed | e/flushed | g/flushed
+! a/flushed.png | g/flushed | t/flushed | e/flushed
 
 Note: 
 This isn't the only one that's not exactly the same
@@ -86,7 +80,12 @@ The first three: Shock, Flushed face
 Last one: bashful d'awww
 
 Completely different
+---
 
+! a/hugs.png | g/hugs.png | t/hugs.png | e/hugs.png
+Note: but sometimes the outlier is more correct.
+
+jazzhands vs hugs
 ---
 ! a/claps.png | g/claps | t/claps | m/claps.png
 
@@ -96,46 +95,17 @@ here's clapping from google vs microsoft
 
 the thumbs!
 ---
-! space | t/grinning | t/grimice | space
-Note: grinning vs grimmace
-
-SCIENTIFIC PAPER PROVING IT"S NOT JUST ME
+! g/blonde | t/blonde | e/blonde | m/blonde
 ---
 ! t/questionmark | g/questionmark | f/fb_quest2.png
-Note: 
-
 ---
-! t/oldkey.png | t/newkey
-Note: As new emoji are brought in
-
-older systems will be outdated
----
-! t/newkey | e/unicorn | e/thinking | e/upsidedown
-! t/oldkey.png | o/broken | o/rectangle | space
-
-Note: Thinking Face in my Talk Summary
-
-Not all systems have emoji
-
-My Android - 5.0.1 OS --> U7.0 if you're lucky
-
-Yosemite - up to 6.1, plus vulcan
-
-Ubuntu - b/w only
+! a/grin.png | a/grimace.png | a/tearsjoy.png | a/cry.png 
 ---
 ! t/sparkles
-
-Note: <img src="pictures/t/sparkles.svg" height="600px">
+---
+<div style='width: 100%; margin: 0 auto;'><p align='center'><img style="padding: 20px" height='266px' src='pictures/g/flush_44.png'><img style="padding: 20px" height='266px' src='pictures/g/flush_6.png'><img style="padding: 20px" height='266px' src='pictures/g/flush_n.png'></p></div> <!-- .slide: class="center" -->
 ---
 ! e/9 | space | ap/selfie.png | ap/duck.png | ap/spoon.png
 ! e/10 | space | o/eyebrow.png | ap/takeaway.png | o/fortune.png
-Note: 
-
-These images are from Emojipedia mockups 
-
-Only a small handful are on the cards for 10 already
-
-STILL NOT OFFICIAL
 ---
 ! space |  ap/takeaway.png | space
-### glasnt.com/talks
