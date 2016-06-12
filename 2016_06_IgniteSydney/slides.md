@@ -1,6 +1,6 @@
 ## &nbsp;
 
- <div style='width: 50%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/t/cry.svg'></p></div> <!-- .slide: class="center" -->
+ <div style='width: 50%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/g/crying.svg'></p></div> <!-- .slide: class="center" -->
 ---
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='200px' src='pictures/g/T.svg'><img height='200px' src='pictures/g/L.svg'><img height='200px' src='pictures/g/D.svg'><img height='200px' src='pictures/g/R.svg'></p></div> <!-- .slide: class="center" -->
 Note: Because computers
@@ -40,8 +40,8 @@ Note: A small face-only update in 2012
 
 most platforms, if they support emoji at all, will support up to here
 ---
- <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='160px' src='pictures/e/7.svg'><img height='160px' src='pictures/space.svg'><img height='160px' src='pictures/e/vulcan_1.svg'><img height='160px' src='pictures/e/sleuth.svg'><img height='160px' src='pictures/e/chipmunk.svg'></p></div> <!-- .slide: class="center" -->
- <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='160px' src='pictures/e/8.svg'><img height='160px' src='pictures/space.svg'><img height='160px' src='pictures/e/horns.svg'><img height='160px' src='pictures/e/upsidedown.svg'><img height='160px' src='pictures/e/taco.svg'></p></div> <!-- .slide: class="center" -->
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='160px' src='pictures/e/7.svg'><img height='160px' src='pictures/space.svg'><img height='160px' src='pictures/t/vulcan.svg'><img height='160px' src='pictures/t/sleuth.svg'><img height='160px' src='pictures/t/chipmunk.svg'></p></div> <!-- .slide: class="center" -->
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='160px' src='pictures/e/8.svg'><img height='160px' src='pictures/space.svg'><img height='160px' src='pictures/t/horns.svg'><img height='160px' src='pictures/t/upsidedown.svg'><img height='160px' src='pictures/t/taco.svg'></p></div> <!-- .slide: class="center" -->
 
 Note: Unicode 8 2015
 Taco is now official
@@ -95,17 +95,22 @@ here's clapping from google vs microsoft
 
 the thumbs!
 ---
- <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='200px' src='pictures/g/blonde.svg'><img height='200px' src='pictures/t/blonde.svg'><img height='200px' src='pictures/e/blonde.svg'><img height='200px' src='pictures/m/blonde.svg'></p></div> <!-- .slide: class="center" -->
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='160px' src='pictures/a/blonde.png'><img height='160px' src='pictures/g/blonde.svg'><img height='160px' src='pictures/t/blonde.svg'><img height='160px' src='pictures/e/blonde.svg'><img height='160px' src='pictures/m/blonde.svg'></p></div> <!-- .slide: class="center" -->
 ---
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='266px' src='pictures/t/questionmark.svg'><img height='266px' src='pictures/g/questionmark.svg'><img height='266px' src='pictures/f/fb_quest2.png'></p></div> <!-- .slide: class="center" -->
 ---
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='200px' src='pictures/a/grin.png'><img height='200px' src='pictures/a/grimace.png'><img height='200px' src='pictures/a/tearsjoy.png'><img height='200px' src='pictures/a/cry.png'></p></div> <!-- .slide: class="center" -->
 ---
- <div style='width: 50%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/t/sparkles.svg'></p></div> <!-- .slide: class="center" -->
----
-<div style='width: 100%; margin: 0 auto;'><p align='center'><img style="padding: 20px" height='266px' src='pictures/g/flush_44.png'><img style="padding: 20px" height='266px' src='pictures/g/flush_6.png'><img style="padding: 20px" height='266px' src='pictures/g/flush_n.png'></p></div> <!-- .slide: class="center" -->
----
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='160px' src='pictures/e/9.svg'><img height='160px' src='pictures/space.svg'><img height='160px' src='pictures/ap/selfie.png'><img height='160px' src='pictures/ap/duck.png'><img height='160px' src='pictures/ap/spoon.png'></p></div> <!-- .slide: class="center" -->
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='160px' src='pictures/e/10.svg'><img height='160px' src='pictures/space.svg'><img height='160px' src='pictures/o/eyebrow.png'><img height='160px' src='pictures/ap/takeaway.png'><img height='160px' src='pictures/o/fortune.png'></p></div> <!-- .slide: class="center" -->
 ---
- <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='266px' src='pictures/space.svg'><img height='266px' src='pictures/ap/takeaway.png'><img height='266px' src='pictures/space.svg'></p></div> <!-- .slide: class="center" -->
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='160px' src='pictures/f/f1_smiling.png'><img height='160px' src='pictures/f/f1_crying.png'><img height='160px' src='pictures/f/f1_toung.png'><img height='160px' src='pictures/f/f1_throw.png'><img height='160px' src='pictures/f/f1_shock.png'></p></div> <!-- .slide: class="center" -->
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='160px' src='pictures/f/f2_smiling.png'><img height='160px' src='pictures/f/f2_crying.png'><img height='160px' src='pictures/f/f2_toung.png'><img height='160px' src='pictures/f/f2_throw.png'><img height='160px' src='pictures/f/f2_shock.png'></p></div> <!-- .slide: class="center" -->
+Note: redoing of facebook emoji
+
+still doesn't tackle unicode 7+, just a re-do of the existing glyphs
+
+---
+<div style='width: 100%; margin: 0 auto;'><p align='center'><img style="padding: 20px" height='266px' src='pictures/g/blushing.svg'><img style="padding: 20px" height='266px' src='pictures/g/flush_6.png'><img style="padding: 20px" height='266px' src='pictures/g/blush_n.png'></p></div> <!-- .slide: class="center" -->
+---
+ <img src="pictures/ap/takeaway.png" />
