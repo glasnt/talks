@@ -1,6 +1,6 @@
 ## &nbsp; 
 
-! g/crying
+! g/crying 
 ---
 ! g/T | g/L | g/D | g/R
 Note: Because computers
@@ -14,34 +14,16 @@ Note: But the Japanese were wondering where the rest of their codepoints were
 ---
 @ docomolarge.png
 
-Note: Shigetaka Kurita
-
-SHI-GE-TA-KA  KU RI TA
-
-12x12 pixels 
-
-Introduced in the early 1990s, with a whole lot of turmoil
-
-There's entire essays on the implementatation issues with this
-
-Emoji Added to Unicode 6, 2010
-
-TLDR: Apple implemented the proposed unicode spec with emoji for japan only
-
-then a couple of versions later, released to the US
-
-And then everyone rampted up
-
 ---
 
-! e/6 | space | a/thumbsup.png | a/tearsjoy.png | a/tada.png 
-! e/61 | space | a/grimace.png | a/shock.png | a/sleeping.png
+! e/2 | e/0 | e/1 | e/0
+! a/hearteyes.png | a/thumbsup.png | a/tearsjoy.png | a/tada.png |  
 Note: A small face-only update in 2012
 
 most platforms, if they support emoji at all, will support up to here
 ---
-! e/7 | space | t/vulcan | t/sleuth | t/chipmunk
-! e/8 | space | t/horns | t/upsidedown | t/taco
+! e/2 | e/0 | e/1 | e/5
+! t/robot | t/upsidedown | t/hotdog | t/horns
 
 Note: Unicode 8 2015
 Taco is now official
@@ -95,14 +77,14 @@ here's clapping from google vs microsoft
 
 the thumbs!
 ---
-! a/blonde.png | g/blonde | t/blonde | e/blonde | m/blonde 
+!  g/blonde | t/blonde | e/blonde | m/blonde 
 ---
 ! t/questionmark | g/questionmark | f/fb_quest2.png
 ---
 ! a/grin.png | a/grimace.png | a/tearsjoy.png | a/cry.png 
 ---
-! e/9 | space | ap/selfie.png | ap/duck.png | ap/spoon.png
-! e/10 | space | o/eyebrow.png | ap/takeaway.png | o/fortune.png
+! e/2 | e/0 | e/1 | e/6
+! ap/selfie.png | ap/duck.png | a/facepalm.png | ap/egg.png
 ---
 ! f/f1_smiling.png | f/f1_crying.png | f/f1_toung.png |f/f1_throw.png | f/f1_shock.png
 ! f/f2_smiling.png | f/f2_crying.png | f/f2_toung.png | f/f2_throw.png | f/f2_shock.png
@@ -113,4 +95,4 @@ still doesn't tackle unicode 7+, just a re-do of the existing glyphs
 ---
 <div style='width: 100%; margin: 0 auto;'><p align='center'><img style="padding: 20px" height='266px' src='pictures/g/blushing.svg'><img style="padding: 20px" height='266px' src='pictures/g/flush_6.png'><img style="padding: 20px" height='266px' src='pictures/g/blush_n.png'></p></div> <!-- .slide: class="center" -->
 ---
-@ ap/takeaway.png
+! g/sweat

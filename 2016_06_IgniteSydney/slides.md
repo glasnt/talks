@@ -14,34 +14,16 @@ Note: But the Japanese were wondering where the rest of their codepoints were
 ---
  <img src="pictures/docomolarge.png" />
 
-Note: Shigetaka Kurita
-
-SHI-GE-TA-KA KU RI TA
-
-12x12 pixels
-
-Introduced in the early 1990s, with a whole lot of turmoil
-
-There's entire essays on the implementatation issues with this
-
-Emoji Added to Unicode 6, 2010
-
-TLDR: Apple implemented the proposed unicode spec with emoji for japan only
-
-then a couple of versions later, released to the US
-
-And then everyone rampted up
-
 ---
 
- <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='160px' src='pictures/e/6.svg'><img height='160px' src='pictures/space.svg'><img height='160px' src='pictures/a/thumbsup.png'><img height='160px' src='pictures/a/tearsjoy.png'><img height='160px' src='pictures/a/tada.png'></p></div> <!-- .slide: class="center" -->
- <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='160px' src='pictures/e/61.svg'><img height='160px' src='pictures/space.svg'><img height='160px' src='pictures/a/grimace.png'><img height='160px' src='pictures/a/shock.png'><img height='160px' src='pictures/a/sleeping.png'></p></div> <!-- .slide: class="center" -->
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='200px' src='pictures/e/2.svg'><img height='200px' src='pictures/e/0.svg'><img height='200px' src='pictures/e/1.svg'><img height='200px' src='pictures/e/0.svg'></p></div> <!-- .slide: class="center" -->
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='200px' src='pictures/a/hearteyes.png'><img height='200px' src='pictures/a/thumbsup.png'><img height='200px' src='pictures/a/tearsjoy.png'><img height='200px' src='pictures/a/tada.png'></p></div> <!-- .slide: class="center" -->
 Note: A small face-only update in 2012
 
 most platforms, if they support emoji at all, will support up to here
 ---
- <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='160px' src='pictures/e/7.svg'><img height='160px' src='pictures/space.svg'><img height='160px' src='pictures/t/vulcan.svg'><img height='160px' src='pictures/t/sleuth.svg'><img height='160px' src='pictures/t/chipmunk.svg'></p></div> <!-- .slide: class="center" -->
- <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='160px' src='pictures/e/8.svg'><img height='160px' src='pictures/space.svg'><img height='160px' src='pictures/t/horns.svg'><img height='160px' src='pictures/t/upsidedown.svg'><img height='160px' src='pictures/t/taco.svg'></p></div> <!-- .slide: class="center" -->
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='200px' src='pictures/e/2.svg'><img height='200px' src='pictures/e/0.svg'><img height='200px' src='pictures/e/1.svg'><img height='200px' src='pictures/e/5.svg'></p></div> <!-- .slide: class="center" -->
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='200px' src='pictures/t/robot.svg'><img height='200px' src='pictures/t/upsidedown.svg'><img height='200px' src='pictures/t/hotdog.svg'><img height='200px' src='pictures/t/horns.svg'></p></div> <!-- .slide: class="center" -->
 
 Note: Unicode 8 2015
 Taco is now official
@@ -95,14 +77,14 @@ here's clapping from google vs microsoft
 
 the thumbs!
 ---
- <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='160px' src='pictures/a/blonde.png'><img height='160px' src='pictures/g/blonde.svg'><img height='160px' src='pictures/t/blonde.svg'><img height='160px' src='pictures/e/blonde.svg'><img height='160px' src='pictures/m/blonde.svg'></p></div> <!-- .slide: class="center" -->
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='200px' src='pictures/g/blonde.svg'><img height='200px' src='pictures/t/blonde.svg'><img height='200px' src='pictures/e/blonde.svg'><img height='200px' src='pictures/m/blonde.svg'></p></div> <!-- .slide: class="center" -->
 ---
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='266px' src='pictures/t/questionmark.svg'><img height='266px' src='pictures/g/questionmark.svg'><img height='266px' src='pictures/f/fb_quest2.png'></p></div> <!-- .slide: class="center" -->
 ---
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='200px' src='pictures/a/grin.png'><img height='200px' src='pictures/a/grimace.png'><img height='200px' src='pictures/a/tearsjoy.png'><img height='200px' src='pictures/a/cry.png'></p></div> <!-- .slide: class="center" -->
 ---
- <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='160px' src='pictures/e/9.svg'><img height='160px' src='pictures/space.svg'><img height='160px' src='pictures/ap/selfie.png'><img height='160px' src='pictures/ap/duck.png'><img height='160px' src='pictures/ap/spoon.png'></p></div> <!-- .slide: class="center" -->
- <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='160px' src='pictures/e/10.svg'><img height='160px' src='pictures/space.svg'><img height='160px' src='pictures/o/eyebrow.png'><img height='160px' src='pictures/ap/takeaway.png'><img height='160px' src='pictures/o/fortune.png'></p></div> <!-- .slide: class="center" -->
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='200px' src='pictures/e/2.svg'><img height='200px' src='pictures/e/0.svg'><img height='200px' src='pictures/e/1.svg'><img height='200px' src='pictures/e/6.svg'></p></div> <!-- .slide: class="center" -->
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='200px' src='pictures/ap/selfie.png'><img height='200px' src='pictures/ap/duck.png'><img height='200px' src='pictures/a/facepalm.png'><img height='200px' src='pictures/ap/egg.png'></p></div> <!-- .slide: class="center" -->
 ---
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='160px' src='pictures/f/f1_smiling.png'><img height='160px' src='pictures/f/f1_crying.png'><img height='160px' src='pictures/f/f1_toung.png'><img height='160px' src='pictures/f/f1_throw.png'><img height='160px' src='pictures/f/f1_shock.png'></p></div> <!-- .slide: class="center" -->
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='160px' src='pictures/f/f2_smiling.png'><img height='160px' src='pictures/f/f2_crying.png'><img height='160px' src='pictures/f/f2_toung.png'><img height='160px' src='pictures/f/f2_throw.png'><img height='160px' src='pictures/f/f2_shock.png'></p></div> <!-- .slide: class="center" -->
@@ -113,4 +95,4 @@ still doesn't tackle unicode 7+, just a re-do of the existing glyphs
 ---
 <div style='width: 100%; margin: 0 auto;'><p align='center'><img style="padding: 20px" height='266px' src='pictures/g/blushing.svg'><img style="padding: 20px" height='266px' src='pictures/g/flush_6.png'><img style="padding: 20px" height='266px' src='pictures/g/blush_n.png'></p></div> <!-- .slide: class="center" -->
 ---
- <img src="pictures/ap/takeaway.png" />
+ <div style='width: 50%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/g/sweat.svg'></p></div> <!-- .slide: class="center" -->
