@@ -23,7 +23,7 @@ Note: A small face-only update in 2012
 most platforms, if they support emoji at all, will support up to here
 ---
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='200px' src='pictures/e/2.svg'><img height='200px' src='pictures/e/0.svg'><img height='200px' src='pictures/e/1.svg'><img height='200px' src='pictures/e/5.svg'></p></div> <!-- .slide: class="center" -->
- <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='200px' src='pictures/t/robot.svg'><img height='200px' src='pictures/t/upsidedown.svg'><img height='200px' src='pictures/t/hotdog.svg'><img height='200px' src='pictures/t/horns.svg'></p></div> <!-- .slide: class="center" -->
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='200px' src='pictures/t/robot.svg'><img height='200px' src='pictures/e/unicorn.svg'><img height='200px' src='pictures/t/hotdog.svg'><img height='200px' src='pictures/t/horns.svg'></p></div> <!-- .slide: class="center" -->
 
 Note: Unicode 8 2015
 Taco is now official

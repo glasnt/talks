@@ -23,7 +23,7 @@ Note: A small face-only update in 2012
 most platforms, if they support emoji at all, will support up to here
 ---
 ! e/2 | e/0 | e/1 | e/5
-! t/robot | t/upsidedown | t/hotdog | t/horns
+! t/robot | e/unicorn | t/hotdog | t/horns
 
 Note: Unicode 8 2015
 Taco is now official
