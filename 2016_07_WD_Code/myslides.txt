@@ -1,5 +1,5 @@
 
-! space  |  t/sax |  g/hungary.png | t/popper | space 
+! space  |  t/web | t/soon | t/laptop | space 
 ---
 
 ## &nbsp; 
@@ -8,183 +8,19 @@
 @ footer.svg
 
 ---
-! g/koala | g/wave 
-Note: Gday
----
-! t/guitar | g/claps
-Note: I want to start out by thanking the 
-
-Django Software Foundation
-
- for their help in getting me here today
----
-! g/snake | g/thumbsup 
-Note: I'm not a django dev
-
-. At the moment I'm doing a lot of Python
-
-but my trade, i'm an operations engineer
----
-! g/red_gem | g/coffee | g/elephant | t/camel1
-! g/snake | e/web | g/shell | e/burrito
-Note: I write code in a lot of differnet languages
-
-Ruby JavaScript PHP Perl
-Python Web Shell Python
-
-
-I have a macbook, a linux laptop and a windows gaming desktop
-
-I use twitter, slack and hipchat a lot
-
-I use a lot of different operating systems, languages, and software plaforms.
-
----
-! g/bug | e/bug | t/bug
-Note: And so I see a whole lot of different kinds of bugs
+! g/wave 
 ---
 ! t/purple_heart
-Note: and I love emoji
 ---
 ! o/broken
-Note: and I love how broken emoji is
-
-How broken?
 ---
-! e/no
-
-
-Note: 
-This talk contains no emoji. 
-
-
-Everythng you're seing here is a vector graphic, or a high reoslution picture
-
-
-I'm running Ubuntu, and emoji don't work on ubuntu by default
-
+! g/bug
 ---
-
-! g/blue_bird | g/bee | e/shiny
-
-Note:
-
-So, let's get started with a bit about how uniode got started
-
-the birds and the bees, if you will. *BOOM BOOM *
+! g/T | g/L | g/D | g/R
 ---
-
-! e/one | e/zero
-Note: Everything in a computer is made of ones and zero
-
-Binary
----
-! t/USA
-Note: The amercans worked out that they could make their entire alphabet in 7bits
----
-! t/USA | g/A | e/zero | e/one | e/zero | e/zero | e/zero | e/zero | e/zero | e/one
-! t/USA | g/B | e/zero | e/one | e/zero | e/zero | e/zero | e/zero | e/one | e/zero
-! t/USA | g/C | e/zero | e/one | e/zero | e/zero | e/zero | e/zero | e/one | e/one
-Note: So they created ascii
-
-American Standard Code for Information Interchange
-
-7 bits needed encode 127 characters
----
-! g/germany | g/france
-
-Note: But then how do you encode languages where they have more fancy characters/
----
-! t/USA | g/A | e/zero | e/one | e/zero | e/zero | e/zero | e/zero | e/zero | e/one
-! g/france | g/ea | e/one | e/one | e/zero | e/zero | e/one | e/zero | e/zero | e/zero
-! g/germany | g/um | e/one | e/one |e/zero |e/one |e/one |e/one |e/zero | e/zero
-Note: Well, you extend your encoding set!
-
-use 8 bits!
-
-And think of a really creative name for it
-
-Like, extended ascii 
-
-255 characters
----
-
-! g/china | g/japan
-Note: But then you want to add characters from asian langauges
-
-And all these differnet files need to be interchangeable because of this thing called the internet
-
----
-! g/china | g/a_1 | e/qcap | e/qcap | e/qcap | e/qcap | e/qcap | e/qcap | e/qcap | e/qcap
-! g/japan | g/a_2 | e/qcap | e/qcap | e/qcap | e/qcap | e/qcap | e/qcap | e/qcap | e/qcap
-Note: You can't encode everything in just 8 bits; it's not enough.
----
-
-@ unicode.png
-
-
-Note:  universal encoding
-
-Unicode Consortium
-
-Space for just over a million different characters
----
-
 ! o/bolt
 
 Note: Extremely powerfull
----
-! g/U | g/T | g/F | g/hyphen | e/3 | e/2
-! g/U | g/T | g/F | g/hyphen | e/8 | space
-Note: Three main encoding types. 
-
-YOu might have heard of these
----
-! g/U | g/T | g/F | g/hyphen | e/3 | e/2
-! g/triangle
-Note: Fixed, or set. Always 32 bits
----
-! g/A 
-!  g/U | g/T | g/F | g/hyphen| e/3 | e/2
-Note: If you want to encode in UTF-32, you have to us 32 bits
----
-! g/A | space |  g/U | g/T | g/F | g/hyphen |  e/3 | e/2
-<p style="margin:0; line-height: 0"><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><br><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><br><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><br><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/one.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/one.svg'></p> <!-- .slide: class="center" -->
-Note: Which means you have a lot of wasted space for characters in ASCII
----
-! j/A
-! g/U | g/T | g/F | g/hyphen |  e/3 | e/2
-Note: but you can encode other things as well
----
-! j/A | space |  g/U | g/T | g/F | g/hyphen |  e/3 | e/2
-<p style="margin:0; line-height: 0"><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><br><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><br><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/one.svg'><img height='100px' src='pictures/e/one.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><br><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/one.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/one.svg'></p> <!-- .slide: class="center" -->
-Note: but because there's such a big namespace, you still get wasted bits
-
----
-! g/U | g/T | g/F | g/hyphen | e/8
-! e/flex
-
-Note: Flexible, Variable
----
-! g/A | space |  g/U | g/T | g/F | g/hyphen | e/8
-! e/zero | e/one | e/zero | e/zero | e/zero | e/zero | e/zero | e/one
-Note: you don't have to use all the other bits
-
-Added benefit: it's directly compatible with ASCII bit for bit
-
----
-! j/A | space |  g/U | g/T | g/F | g/hyphen |  e/8
-! e/one | e/one | e/one | e/zero | e/zero | e/zero | e/one | e/one
-! e/one | e/zero | e/zero | e/zero | e/zero | e/zero | e/zero | e/one
-! e/one | e/zero | e/zero | e/zero | e/zero | e/zero | e/one | e/zero
-
-Note: The tags on the top note how many more to expect
-
-0 at start is none
-
-11 at start is one more (2 total)
-111 is two more
-
 ---
 ! g/slashu
 Note: you might also see encodines described with a slash-u
@@ -251,16 +87,6 @@ And then everyone rampted up
 
 ---
 
-! o/peace.png | o/smile.png | o/lev.png
-
-Note: Not the first time symbols were in unicode
-
-Zapf Dingbats - creased 1978 Added in Uncide 1.0 in 1991
-
-Microsoft Wingdings - created 1990 added Unicde 7.0, 2014
-
-Webdings 1997 with such important symbols as the Cancer Ribbon, No Piracy, and Leviating Business Man
----
 
 ! e/6 | space | e/2 | e/0 | e/1 | e/0 
 ! a/thumbsup.png | a/tearsjoy.png | a/tada.png 
@@ -274,7 +100,7 @@ Note: A small face-only update in 2012
 most platforms, if they support emoji at all, will support up to here
 ---
 ! e/7 | space | e/2 | e/0 | e/1 | e/4
-! e/vulcan_1 | e/sleuth | e/chipmunk
+! t/robot | e/unicorn | t/horns
 
 Note: Unicode 7 2014
 
@@ -606,17 +432,6 @@ Yosemite - up to 6.1, plus vulcan
 Linux in general... yeah no.
 ---
 
-! a/thumbsup.png | a/thumbsdown.png | a/laugh.png | a/thinking.png | a/heart.png | a/tada.png
-
-Note: Current example. Github Reactions
-
----
-
-! a/thumbsup.png | a/thumbsdown.png | a/laugh.png | o/rectangle | a/heart.png | a/tada.png
----
-
-! o/rectangle | o/rectangle | o/text_laughing | o/rectangle | o/text_heart | o/rectangle
----
 ! e/keyboard
 
 Note: So how do you get the input in?
@@ -637,20 +452,6 @@ Place of intereste
 
 ---
 
-! space | g/keyboard/time | space | g/keyboard/p0  | g/keyboard/p1 | g/keyboard/p2 | g/keyboard/p3 | space
-! space | g/keyboard/1 | g/keyboard/2  | g/keyboard/3  | g/keyboard/4  | g/keyboard/2 | g/keyboard/6 | space
-! space | g/keyboard/7 | g/keyboard/8  | g/keyboard/9  | g/keyboard/10  | g/keyboard/11 | g/keyboard/12 | space
-! space | g/keyboard/in | g/keyboard/c1 | g/keyboard/c2 | g/keyboard/c3 | g/keyboard/back | space 
-
-
-Note: Mobile device input
-
-
-++New platforms have at least an option fr input
-
-Not universal
-
----
 ! e/web
 
 Note: In the webspace, you have a few options

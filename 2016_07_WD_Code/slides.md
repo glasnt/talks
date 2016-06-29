@@ -1,5 +1,5 @@
 
- <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='160px' src='pictures/space.svg'><img height='160px' src='pictures/t/sax.svg'><img height='160px' src='pictures/g/hungary.png'><img height='160px' src='pictures/t/popper.svg'><img height='160px' src='pictures/space.svg'></p></div> <!-- .slide: class="center" -->
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='160px' src='pictures/space.svg'><img height='160px' src='pictures/t/web.svg'><img height='160px' src='pictures/t/soon.svg'><img height='160px' src='pictures/t/laptop.svg'><img height='160px' src='pictures/space.svg'></p></div> <!-- .slide: class="center" -->
 ---
 
 ## &nbsp;
@@ -8,183 +8,19 @@
  <img src="pictures/footer.svg" />
 
 ---
- <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/g/koala.svg'><img height='400px' src='pictures/g/wave.svg'></p></div> <!-- .slide: class="center" -->
-Note: Gday
----
- <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/t/guitar.svg'><img height='400px' src='pictures/g/claps.svg'></p></div> <!-- .slide: class="center" -->
-Note: I want to start out by thanking the
-
-Django Software Foundation
-
-for their help in getting me here today
----
- <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/g/snake.svg'><img height='400px' src='pictures/g/thumbsup.svg'></p></div> <!-- .slide: class="center" -->
-Note: I'm not a django dev
-
-. At the moment I'm doing a lot of Python
-
-but my trade, i'm an operations engineer
----
- <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='200px' src='pictures/g/red_gem.svg'><img height='200px' src='pictures/g/coffee.svg'><img height='200px' src='pictures/g/elephant.svg'><img height='200px' src='pictures/t/camel1.svg'></p></div> <!-- .slide: class="center" -->
- <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='200px' src='pictures/g/snake.svg'><img height='200px' src='pictures/e/web.svg'><img height='200px' src='pictures/g/shell.svg'><img height='200px' src='pictures/e/burrito.svg'></p></div> <!-- .slide: class="center" -->
-Note: I write code in a lot of differnet languages
-
-Ruby JavaScript PHP Perl
-Python Web Shell Python
-
-
-I have a macbook, a linux laptop and a windows gaming desktop
-
-I use twitter, slack and hipchat a lot
-
-I use a lot of different operating systems, languages, and software plaforms.
-
----
- <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='266px' src='pictures/g/bug.svg'><img height='266px' src='pictures/e/bug.svg'><img height='266px' src='pictures/t/bug.svg'></p></div> <!-- .slide: class="center" -->
-Note: And so I see a whole lot of different kinds of bugs
+ <div style='width: 50%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/g/wave.svg'></p></div> <!-- .slide: class="center" -->
 ---
  <div style='width: 50%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/t/purple_heart.svg'></p></div> <!-- .slide: class="center" -->
-Note: and I love emoji
 ---
  <div style='width: 50%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/o/broken.svg'></p></div> <!-- .slide: class="center" -->
-Note: and I love how broken emoji is
-
-How broken?
 ---
- <div style='width: 50%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/e/no.svg'></p></div> <!-- .slide: class="center" -->
-
-
-Note: 
-This talk contains no emoji.
-
-
-Everythng you're seing here is a vector graphic, or a high reoslution picture
-
-
-I'm running Ubuntu, and emoji don't work on ubuntu by default
-
+ <div style='width: 50%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/g/bug.svg'></p></div> <!-- .slide: class="center" -->
 ---
-
- <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='266px' src='pictures/g/blue_bird.svg'><img height='266px' src='pictures/g/bee.svg'><img height='266px' src='pictures/e/shiny.svg'></p></div> <!-- .slide: class="center" -->
-
-Note: 
-
-So, let's get started with a bit about how uniode got started
-
-the birds and the bees, if you will. *BOOM BOOM *
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='200px' src='pictures/g/T.svg'><img height='200px' src='pictures/g/L.svg'><img height='200px' src='pictures/g/D.svg'><img height='200px' src='pictures/g/R.svg'></p></div> <!-- .slide: class="center" -->
 ---
-
- <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/e/one.svg'><img height='400px' src='pictures/e/zero.svg'></p></div> <!-- .slide: class="center" -->
-Note: Everything in a computer is made of ones and zero
-
-Binary 
----
- <div style='width: 50%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/t/USA.svg'></p></div> <!-- .slide: class="center" -->
-Note: The amercans worked out that they could make their entire alphabet in 7bits
----
- <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='80px' src='pictures/t/USA.svg'><img height='80px' src='pictures/g/A.svg'><img height='80px' src='pictures/e/zero.svg'><img height='80px' src='pictures/e/one.svg'><img height='80px' src='pictures/e/zero.svg'><img height='80px' src='pictures/e/zero.svg'><img height='80px' src='pictures/e/zero.svg'><img height='80px' src='pictures/e/zero.svg'><img height='80px' src='pictures/e/zero.svg'><img height='80px' src='pictures/e/one.svg'></p></div> <!-- .slide: class="center" -->
- <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='80px' src='pictures/t/USA.svg'><img height='80px' src='pictures/g/B.svg'><img height='80px' src='pictures/e/zero.svg'><img height='80px' src='pictures/e/one.svg'><img height='80px' src='pictures/e/zero.svg'><img height='80px' src='pictures/e/zero.svg'><img height='80px' src='pictures/e/zero.svg'><img height='80px' src='pictures/e/zero.svg'><img height='80px' src='pictures/e/one.svg'><img height='80px' src='pictures/e/zero.svg'></p></div> <!-- .slide: class="center" -->
- <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='80px' src='pictures/t/USA.svg'><img height='80px' src='pictures/g/C.svg'><img height='80px' src='pictures/e/zero.svg'><img height='80px' src='pictures/e/one.svg'><img height='80px' src='pictures/e/zero.svg'><img height='80px' src='pictures/e/zero.svg'><img height='80px' src='pictures/e/zero.svg'><img height='80px' src='pictures/e/zero.svg'><img height='80px' src='pictures/e/one.svg'><img height='80px' src='pictures/e/one.svg'></p></div> <!-- .slide: class="center" -->
-Note: So they created ascii
-
-American Standard Code for Information Interchange
-
-7 bits needed encode 127 characters
----
- <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/g/germany.svg'><img height='400px' src='pictures/g/france.svg'></p></div> <!-- .slide: class="center" -->
-
-Note: But then how do you encode languages where they have more fancy characters/
----
- <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='80px' src='pictures/t/USA.svg'><img height='80px' src='pictures/g/A.svg'><img height='80px' src='pictures/e/zero.svg'><img height='80px' src='pictures/e/one.svg'><img height='80px' src='pictures/e/zero.svg'><img height='80px' src='pictures/e/zero.svg'><img height='80px' src='pictures/e/zero.svg'><img height='80px' src='pictures/e/zero.svg'><img height='80px' src='pictures/e/zero.svg'><img height='80px' src='pictures/e/one.svg'></p></div> <!-- .slide: class="center" -->
- <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='80px' src='pictures/g/france.svg'><img height='80px' src='pictures/g/ea.svg'><img height='80px' src='pictures/e/one.svg'><img height='80px' src='pictures/e/one.svg'><img height='80px' src='pictures/e/zero.svg'><img height='80px' src='pictures/e/zero.svg'><img height='80px' src='pictures/e/one.svg'><img height='80px' src='pictures/e/zero.svg'><img height='80px' src='pictures/e/zero.svg'><img height='80px' src='pictures/e/zero.svg'></p></div> <!-- .slide: class="center" -->
- <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='80px' src='pictures/g/germany.svg'><img height='80px' src='pictures/g/um.svg'><img height='80px' src='pictures/e/one.svg'><img height='80px' src='pictures/e/one.svg'><img height='80px' src='pictures/e/zero.svg'><img height='80px' src='pictures/e/one.svg'><img height='80px' src='pictures/e/one.svg'><img height='80px' src='pictures/e/one.svg'><img height='80px' src='pictures/e/zero.svg'><img height='80px' src='pictures/e/zero.svg'></p></div> <!-- .slide: class="center" -->
-Note: Well, you extend your encoding set!
-
-use 8 bits!
-
-And think of a really creative name for it
-
-Like, extended ascii
-
-255 characters
----
-
- <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/g/china.svg'><img height='400px' src='pictures/g/japan.svg'></p></div> <!-- .slide: class="center" -->
-Note: But then you want to add characters from asian langauges
-
-And all these differnet files need to be interchangeable because of this thing called the internet
-
----
- <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='80px' src='pictures/g/china.svg'><img height='80px' src='pictures/g/a_1.svg'><img height='80px' src='pictures/e/qcap.svg'><img height='80px' src='pictures/e/qcap.svg'><img height='80px' src='pictures/e/qcap.svg'><img height='80px' src='pictures/e/qcap.svg'><img height='80px' src='pictures/e/qcap.svg'><img height='80px' src='pictures/e/qcap.svg'><img height='80px' src='pictures/e/qcap.svg'><img height='80px' src='pictures/e/qcap.svg'></p></div> <!-- .slide: class="center" -->
- <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='80px' src='pictures/g/japan.svg'><img height='80px' src='pictures/g/a_2.svg'><img height='80px' src='pictures/e/qcap.svg'><img height='80px' src='pictures/e/qcap.svg'><img height='80px' src='pictures/e/qcap.svg'><img height='80px' src='pictures/e/qcap.svg'><img height='80px' src='pictures/e/qcap.svg'><img height='80px' src='pictures/e/qcap.svg'><img height='80px' src='pictures/e/qcap.svg'><img height='80px' src='pictures/e/qcap.svg'></p></div> <!-- .slide: class="center" -->
-Note: You can't encode everything in just 8 bits; it's not enough.
----
-
- <img src="pictures/unicode.png" />
-
-
-Note: universal encoding
-
-Unicode Consortium
-
-Space for just over a million different characters
----
-
  <div style='width: 50%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/o/bolt.svg'></p></div> <!-- .slide: class="center" -->
 
 Note: Extremely powerfull
----
- <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='133px' src='pictures/g/U.svg'><img height='133px' src='pictures/g/T.svg'><img height='133px' src='pictures/g/F.svg'><img height='133px' src='pictures/g/hyphen.svg'><img height='133px' src='pictures/e/3.svg'><img height='133px' src='pictures/e/2.svg'></p></div> <!-- .slide: class="center" -->
- <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='133px' src='pictures/g/U.svg'><img height='133px' src='pictures/g/T.svg'><img height='133px' src='pictures/g/F.svg'><img height='133px' src='pictures/g/hyphen.svg'><img height='133px' src='pictures/e/8.svg'><img height='133px' src='pictures/space.svg'></p></div> <!-- .slide: class="center" -->
-Note: Three main encoding types.
-
-YOu might have heard of these
----
- <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='133px' src='pictures/g/U.svg'><img height='133px' src='pictures/g/T.svg'><img height='133px' src='pictures/g/F.svg'><img height='133px' src='pictures/g/hyphen.svg'><img height='133px' src='pictures/e/3.svg'><img height='133px' src='pictures/e/2.svg'></p></div> <!-- .slide: class="center" -->
- <div style='width: 50%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/g/triangle.svg'></p></div> <!-- .slide: class="center" -->
-Note: Fixed, or set. Always 32 bits
----
- <div style='width: 50%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/g/A.svg'></p></div> <!-- .slide: class="center" -->
- <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='133px' src='pictures/g/U.svg'><img height='133px' src='pictures/g/T.svg'><img height='133px' src='pictures/g/F.svg'><img height='133px' src='pictures/g/hyphen.svg'><img height='133px' src='pictures/e/3.svg'><img height='133px' src='pictures/e/2.svg'></p></div> <!-- .slide: class="center" -->
-Note: If you want to encode in UTF-32, you have to us 32 bits
----
- <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='100px' src='pictures/g/A.svg'><img height='100px' src='pictures/space.svg'><img height='100px' src='pictures/g/U.svg'><img height='100px' src='pictures/g/T.svg'><img height='100px' src='pictures/g/F.svg'><img height='100px' src='pictures/g/hyphen.svg'><img height='100px' src='pictures/e/3.svg'><img height='100px' src='pictures/e/2.svg'></p></div> <!-- .slide: class="center" -->
-<p style="margin:0; line-height: 0"><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><br><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><br><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><br><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/one.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/one.svg'></p> <!-- .slide: class="center" -->
-Note: Which means you have a lot of wasted space for characters in ASCII
----
- <div style='width: 50%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/j/A.svg'></p></div> <!-- .slide: class="center" -->
- <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='133px' src='pictures/g/U.svg'><img height='133px' src='pictures/g/T.svg'><img height='133px' src='pictures/g/F.svg'><img height='133px' src='pictures/g/hyphen.svg'><img height='133px' src='pictures/e/3.svg'><img height='133px' src='pictures/e/2.svg'></p></div> <!-- .slide: class="center" -->
-Note: but you can encode other things as well
----
- <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='100px' src='pictures/j/A.svg'><img height='100px' src='pictures/space.svg'><img height='100px' src='pictures/g/U.svg'><img height='100px' src='pictures/g/T.svg'><img height='100px' src='pictures/g/F.svg'><img height='100px' src='pictures/g/hyphen.svg'><img height='100px' src='pictures/e/3.svg'><img height='100px' src='pictures/e/2.svg'></p></div> <!-- .slide: class="center" -->
-<p style="margin:0; line-height: 0"><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><br><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><br><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/one.svg'><img height='100px' src='pictures/e/one.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><br><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/one.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/one.svg'></p> <!-- .slide: class="center" -->
-Note: but because there's such a big namespace, you still get wasted bits
-
----
- <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='160px' src='pictures/g/U.svg'><img height='160px' src='pictures/g/T.svg'><img height='160px' src='pictures/g/F.svg'><img height='160px' src='pictures/g/hyphen.svg'><img height='160px' src='pictures/e/8.svg'></p></div> <!-- .slide: class="center" -->
- <div style='width: 50%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/e/flex.svg'></p></div> <!-- .slide: class="center" -->
-
-Note: Flexible, Variable
----
- <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='114px' src='pictures/g/A.svg'><img height='114px' src='pictures/space.svg'><img height='114px' src='pictures/g/U.svg'><img height='114px' src='pictures/g/T.svg'><img height='114px' src='pictures/g/F.svg'><img height='114px' src='pictures/g/hyphen.svg'><img height='114px' src='pictures/e/8.svg'></p></div> <!-- .slide: class="center" -->
- <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/one.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/one.svg'></p></div> <!-- .slide: class="center" -->
-Note: you don't have to use all the other bits
-
-Added benefit: it's directly compatible with ASCII bit for bit
-
----
- <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='114px' src='pictures/j/A.svg'><img height='114px' src='pictures/space.svg'><img height='114px' src='pictures/g/U.svg'><img height='114px' src='pictures/g/T.svg'><img height='114px' src='pictures/g/F.svg'><img height='114px' src='pictures/g/hyphen.svg'><img height='114px' src='pictures/e/8.svg'></p></div> <!-- .slide: class="center" -->
- <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='100px' src='pictures/e/one.svg'><img height='100px' src='pictures/e/one.svg'><img height='100px' src='pictures/e/one.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/one.svg'><img height='100px' src='pictures/e/one.svg'></p></div> <!-- .slide: class="center" -->
- <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='100px' src='pictures/e/one.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/one.svg'></p></div> <!-- .slide: class="center" -->
- <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='100px' src='pictures/e/one.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/zero.svg'><img height='100px' src='pictures/e/one.svg'><img height='100px' src='pictures/e/zero.svg'></p></div> <!-- .slide: class="center" -->
-
-Note: The tags on the top note how many more to expect
-
-0 at start is none
-
-11 at start is one more (2 total)
-111 is two more
-
 ---
  <div style='width: 50%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/g/slashu.svg'></p></div> <!-- .slide: class="center" -->
 Note: you might also see encodines described with a slash-u
@@ -251,16 +87,6 @@ And then everyone rampted up
 
 ---
 
- <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='266px' src='pictures/o/peace.png'><img height='266px' src='pictures/o/smile.png'><img height='266px' src='pictures/o/lev.png'></p></div> <!-- .slide: class="center" -->
-
-Note: Not the first time symbols were in unicode
-
-Zapf Dingbats - creased 1978 Added in Uncide 1.0 in 1991
-
-Microsoft Wingdings - created 1990 added Unicde 7.0, 2014
-
-Webdings 1997 with such important symbols as the Cancer Ribbon, No Piracy, and Leviating Business Man
----
 
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='133px' src='pictures/e/6.svg'><img height='133px' src='pictures/space.svg'><img height='133px' src='pictures/e/2.svg'><img height='133px' src='pictures/e/0.svg'><img height='133px' src='pictures/e/1.svg'><img height='133px' src='pictures/e/0.svg'></p></div> <!-- .slide: class="center" -->
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='266px' src='pictures/a/thumbsup.png'><img height='266px' src='pictures/a/tearsjoy.png'><img height='266px' src='pictures/a/tada.png'></p></div> <!-- .slide: class="center" -->
@@ -274,7 +100,7 @@ Note: A small face-only update in 2012
 most platforms, if they support emoji at all, will support up to here
 ---
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='133px' src='pictures/e/7.svg'><img height='133px' src='pictures/space.svg'><img height='133px' src='pictures/e/2.svg'><img height='133px' src='pictures/e/0.svg'><img height='133px' src='pictures/e/1.svg'><img height='133px' src='pictures/e/4.svg'></p></div> <!-- .slide: class="center" -->
- <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='266px' src='pictures/e/vulcan_1.svg'><img height='266px' src='pictures/e/sleuth.svg'><img height='266px' src='pictures/e/chipmunk.svg'></p></div> <!-- .slide: class="center" -->
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='266px' src='pictures/t/robot.svg'><img height='266px' src='pictures/e/unicorn.svg'><img height='266px' src='pictures/t/horns.svg'></p></div> <!-- .slide: class="center" -->
 
 Note: Unicode 7 2014
 
@@ -606,17 +432,6 @@ Yosemite - up to 6.1, plus vulcan
 Linux in general... yeah no.
 ---
 
- <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='133px' src='pictures/a/thumbsup.png'><img height='133px' src='pictures/a/thumbsdown.png'><img height='133px' src='pictures/a/laugh.png'><img height='133px' src='pictures/a/thinking.png'><img height='133px' src='pictures/a/heart.png'><img height='133px' src='pictures/a/tada.png'></p></div> <!-- .slide: class="center" -->
-
-Note: Current example. Github Reactions
-
----
-
- <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='133px' src='pictures/a/thumbsup.png'><img height='133px' src='pictures/a/thumbsdown.png'><img height='133px' src='pictures/a/laugh.png'><img height='133px' src='pictures/o/rectangle.svg'><img height='133px' src='pictures/a/heart.png'><img height='133px' src='pictures/a/tada.png'></p></div> <!-- .slide: class="center" -->
----
-
- <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='133px' src='pictures/o/rectangle.svg'><img height='133px' src='pictures/o/rectangle.svg'><img height='133px' src='pictures/o/text_laughing.svg'><img height='133px' src='pictures/o/rectangle.svg'><img height='133px' src='pictures/o/text_heart.svg'><img height='133px' src='pictures/o/rectangle.svg'></p></div> <!-- .slide: class="center" -->
----
  <div style='width: 50%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/e/keyboard.svg'></p></div> <!-- .slide: class="center" -->
 
 Note: So how do you get the input in?
@@ -637,20 +452,6 @@ Place of intereste
 
 ---
 
- <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='100px' src='pictures/space.svg'><img height='100px' src='pictures/g/keyboard/time.svg'><img height='100px' src='pictures/space.svg'><img height='100px' src='pictures/g/keyboard/p0.svg'><img height='100px' src='pictures/g/keyboard/p1.svg'><img height='100px' src='pictures/g/keyboard/p2.svg'><img height='100px' src='pictures/g/keyboard/p3.svg'><img height='100px' src='pictures/space.svg'></p></div> <!-- .slide: class="center" -->
- <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='100px' src='pictures/space.svg'><img height='100px' src='pictures/g/keyboard/1.svg'><img height='100px' src='pictures/g/keyboard/2.svg'><img height='100px' src='pictures/g/keyboard/3.svg'><img height='100px' src='pictures/g/keyboard/4.svg'><img height='100px' src='pictures/g/keyboard/2.svg'><img height='100px' src='pictures/g/keyboard/6.svg'><img height='100px' src='pictures/space.svg'></p></div> <!-- .slide: class="center" -->
- <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='100px' src='pictures/space.svg'><img height='100px' src='pictures/g/keyboard/7.svg'><img height='100px' src='pictures/g/keyboard/8.svg'><img height='100px' src='pictures/g/keyboard/9.svg'><img height='100px' src='pictures/g/keyboard/10.svg'><img height='100px' src='pictures/g/keyboard/11.svg'><img height='100px' src='pictures/g/keyboard/12.svg'><img height='100px' src='pictures/space.svg'></p></div> <!-- .slide: class="center" -->
- <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='114px' src='pictures/space.svg'><img height='114px' src='pictures/g/keyboard/in.svg'><img height='114px' src='pictures/g/keyboard/c1.svg'><img height='114px' src='pictures/g/keyboard/c2.svg'><img height='114px' src='pictures/g/keyboard/c3.svg'><img height='114px' src='pictures/g/keyboard/back.svg'><img height='114px' src='pictures/space.svg'></p></div> <!-- .slide: class="center" -->
-
-
-Note: Mobile device input
-
-
-++New platforms have at least an option fr input
-
-Not universal
-
----
  <div style='width: 50%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/e/web.svg'></p></div> <!-- .slide: class="center" -->
 
 Note: In the webspace, you have a few options
