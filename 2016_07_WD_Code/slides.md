@@ -1,5 +1,5 @@
 
- <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='160px' src='pictures/space.svg'><img height='160px' src='pictures/t/web.svg'><img height='160px' src='pictures/t/soon.svg'><img height='160px' src='pictures/t/laptop.svg'><img height='160px' src='pictures/space.svg'></p></div> <!-- .slide: class="center" -->
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='160px' src='pictures/space.svg'><img height='160px' src='pictures/t/web.svg'><img height='160px' src='pictures/t/soon.svg'><img height='160px' src='pictures/gp/laptop.png'><img height='160px' src='pictures/space.svg'></p></div> <!-- .slide: class="center" -->
 ---
 
 ## &nbsp;
@@ -21,35 +21,6 @@
  <div style='width: 50%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/o/bolt.svg'></p></div> <!-- .slide: class="center" -->
 
 Note: Extremely powerfull
----
- <div style='width: 50%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/g/slashu.svg'></p></div> <!-- .slide: class="center" -->
-Note: you might also see encodines described with a slash-u
-These codes relate to specific codepoints, and each is unique
----
- <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='114px' src='pictures/g/A.svg'><img height='114px' src='pictures/space.svg'><img height='114px' src='pictures/g/slashu.svg'><img height='114px' src='pictures/e/0.svg'><img height='114px' src='pictures/e/0.svg'><img height='114px' src='pictures/e/4.svg'><img height='114px' src='pictures/e/1.svg'></p></div> <!-- .slide: class="center" -->
- <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='114px' src='pictures/j/A.svg'><img height='114px' src='pictures/space.svg'><img height='114px' src='pictures/g/slashu.svg'><img height='114px' src='pictures/e/3.svg'><img height='114px' src='pictures/e/0.svg'><img height='114px' src='pictures/e/4.svg'><img height='114px' src='pictures/e/2.svg'></p></div> <!-- .slide: class="center" -->
-
-Note: here are these codes
----
- <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='114px' src='pictures/o/FDFA.png'><img height='114px' src='pictures/space.svg'><img height='114px' src='pictures/g/slashu.svg'><img height='114px' src='pictures/e/Fcap.svg'><img height='114px' src='pictures/e/Dcap.svg'><img height='114px' src='pictures/e/Fcap.svg'><img height='114px' src='pictures/e/Acap.svg'></p></div> <!-- .slide: class="center" -->
- <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='114px' src='pictures/o/2C22.png'><img height='114px' src='pictures/space.svg'><img height='114px' src='pictures/g/slashu.svg'><img height='114px' src='pictures/e/2.svg'><img height='114px' src='pictures/e/Ccap.svg'><img height='114px' src='pictures/e/2.svg'><img height='114px' src='pictures/e/2.svg'></p></div> <!-- .slide: class="center" -->
-Note: 
-Here are some more awesome unicode codepoints
-
-arabic ligature sallallahou alayhe wasallam
-
-glagolitic capital letter spidery ha
----
-
-
- <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='114px' src='pictures/g/e_only.svg'><img height='114px' src='pictures/space.svg'><img height='114px' src='pictures/g/slashu.svg'><img height='114px' src='pictures/e/0.svg'><img height='114px' src='pictures/e/0.svg'><img height='114px' src='pictures/e/4.svg'><img height='114px' src='pictures/e/5.svg'></p></div> <!-- .slide: class="center" -->
- <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='114px' src='pictures/g/accent_only_new.svg'><img height='114px' src='pictures/space.svg'><img height='114px' src='pictures/g/slashu.svg'><img height='114px' src='pictures/e/0.svg'><img height='114px' src='pictures/e/3.svg'><img height='114px' src='pictures/e/0.svg'><img height='114px' src='pictures/e/1.svg'></p></div> <!-- .slide: class="center" -->
-<br> 
-<div style='width: 100%; margin: 0 auto;'><p align='center'><img height='114px' src='pictures/g/ea.svg'><img height='30px' src='pictures/space.svg'><img height='66px' src='pictures/g/slashu.svg'><img height='66px' src='pictures/e/0.svg'><img height='66px' src='pictures/e/0.svg'><img height='66px' src='pictures/e/4.svg'><img height='66px' src='pictures/e/5.svg'><img height='66px' src='pictures/g/slashu.svg'><img height='66px' src='pictures/e/0.svg'><img height='66px' src='pictures/e/3.svg'><img height='66px' src='pictures/e/0.svg'><img height='66px' src='pictures/e/1.svg'></p></div> <!-- .slide: class="center" -->
-
-Note: Combination marks
-
-\u0065 \u0301
 ---
 
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='200px' src='pictures/g/US.svg'><img height='200px' src='pictures/g/france.svg'><img height='200px' src='pictures/g/germany.svg'><img height='200px' src='pictures/g/china.svg'></p></div> <!-- .slide: class="center" -->
@@ -100,7 +71,7 @@ Note: A small face-only update in 2012
 most platforms, if they support emoji at all, will support up to here
 ---
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='133px' src='pictures/e/7.svg'><img height='133px' src='pictures/space.svg'><img height='133px' src='pictures/e/2.svg'><img height='133px' src='pictures/e/0.svg'><img height='133px' src='pictures/e/1.svg'><img height='133px' src='pictures/e/4.svg'></p></div> <!-- .slide: class="center" -->
- <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='266px' src='pictures/t/robot.svg'><img height='266px' src='pictures/e/unicorn.svg'><img height='266px' src='pictures/t/horns.svg'></p></div> <!-- .slide: class="center" -->
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='266px' src='pictures/t/robot.svg'><img height='266px' src='pictures/e/unicorn.svg'><img height='266px' src='pictures/t/vulcan.svg'></p></div> <!-- .slide: class="center" -->
 
 Note: Unicode 7 2014
 
@@ -110,51 +81,19 @@ Note: Unicode 7 2014
 
 Note: Unicode 8 2015
 Taco is now official
-
-
 ---
- <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='100px' src='pictures/o/clapping.png'><img height='100px' src='pictures/space.svg'><img height='100px' src='pictures/g/slashu.svg'><img height='100px' src='pictures/e/1.svg'><img height='100px' src='pictures/e/Fcap.svg'><img height='100px' src='pictures/e/4.svg'><img height='100px' src='pictures/e/4.svg'><img height='100px' src='pictures/e/Fcap.svg'></p></div> <!-- .slide: class="center" -->
 
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">$ python3<br>>>> import unicodedata<br>>>> unicodedata.name("<img src="pictures/a/claps.png" style="margin: 0" margin="0" height="40px">")<br>'CLAPPING HANDS SIGN'</code></pre></div> <!-- .element: class="fragment" -->
-
-Note: CLAPPING HANDS SIGN
-
-Python Code
-
-Much work to get unicode integrated into systems
-
-The picture here is the image form the standard
-
-if i run the python code in Apple, i get the apple version
-
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='133px' src='pictures/e/9.svg'><img height='133px' src='pictures/space.svg'><img height='133px' src='pictures/e/2.svg'><img height='133px' src='pictures/e/0.svg'><img height='133px' src='pictures/e/1.svg'><img height='133px' src='pictures/e/6.svg'></p></div> <!-- .slide: class="center" -->
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='266px' src='pictures/o/selfie.png'><img height='266px' src='pictures/o/spoon.png'><img height='266px' src='pictures/o/tumbler.png'></p></div> <!-- .slide: class="center" -->
 ---
- <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/t/apple.svg'><img height='400px' src='pictures/a/mobile.png'></p></div> <!-- .slide: class="center" -->
-
-Note: Apple implemented emoji when they etered the japanese market
-
-Didn't add to US iPhones for years, ~2010
-
-People have used emoji *SO MUCH* since then
-
-All ages
-
-even important people like
-
-Julie Bishop - Australian Minister for Foreign Affairs
-
-Shes done entire interview in emoji
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='133px' src='pictures/e/9.svg'><img height='133px' src='pictures/space.svg'><img height='133px' src='pictures/e/2.svg'><img height='133px' src='pictures/e/0.svg'><img height='133px' src='pictures/e/1.svg'><img height='133px' src='pictures/e/6.svg'></p></div> <!-- .slide: class="center" -->
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='266px' src='pictures/o/duck.png'><img height='266px' src='pictures/o/bacon.png'><img height='266px' src='pictures/o/egg.png'></p></div> <!-- .slide: class="center" -->
 
 ---
 
- <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/e/robot.svg'><img height='400px' src='pictures/g/mobile.svg'></p></div> <!-- .slide: class="center" -->
+ <div style='width: 50%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/g/sweat.svg'></p></div> <!-- .slide: class="center" -->
 
-Note: Sending SMS apple to apple works, but then you get cross compatibility issues
-
----
-
- <div style='width: 50%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/e/microscope.svg'></p></div> <!-- .slide: class="center" -->
-
-Note: after inspection and research, I have developed an assertion
+Note: here's where it gets (more) complicated
 ---
 
  <div style='width: 50%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/g/dash.svg'></p></div> <!-- .slide: class="center" -->
@@ -164,44 +103,19 @@ and this has been depremental to emoji
 
 
 Especially with the original android adoption
-
 ---
-
- <div style='width: 50%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/g/sweat.svg'></p></div> <!-- .slide: class="center" -->
-
-Note: It's an incredible responsibility, but android got it very wrong in the beginning
----
- <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='100px' src='pictures/o/stdyellow.png'><img height='100px' src='pictures/space.svg'><img height='100px' src='pictures/g/slashu.svg'><img height='100px' src='pictures/e/1.svg'><img height='100px' src='pictures/e/Fcap.svg'><img height='100px' src='pictures/e/4.svg'><img height='100px' src='pictures/e/9.svg'><img height='100px' src='pictures/e/Bcap.svg'></p></div> <!-- .slide: class="center" -->
-
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">$ python3<br>>>> import unicodedata<br>>>> unicodedata.name("<img style="margin: 0" height="40px" src="pictures/a/yellow.png">")</code></pre></div>
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">'YELLOW HEART'</code></pre></div>
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/o/stdyellow.png'><img height='400px' src='pictures/g/yellow.svg'></p></div> <!-- .slide: class="center" -->
 Note: 
-
 Yellow Heart
 
 This is the Apple version
 
 Here's what Android went with.
 
+
 ---
-<img src="pictures/g/hairy_heart_v.png" height="75%" width="75%">
-Note: Android 4.4 KitKat
----
-<div style='width: 100%; margin: 0 auto;'><p align='center' style="margin: 0"><img style="margin: 0" height='200px' src='pictures/o/stdyellow.png'><img style="margin: 0" height='200px' src='pictures/o/stdgreen.png'><img style="margin: 0" height='200px' src='pictures/o/stdblue.png'><img style="margin: 0" height='200px' src='pictures/o/stdpurple.png'><br><img style="margin: 0" height='200px' src='pictures/g/hairy_heart.png'><img style="margin: 0" height='200px' src='pictures/g/old_green.png'><img style="margin: 0" height='200px' src='pictures/g/old_blue.png'><img style="margin: 0" height='200px' src='pictures/g/old_purple.png'><br><img style="margin: 0" height='200px' src='pictures/g/yellow.svg'><img style="margin: 0" height='200px' src='pictures/g/green.svg'><img style="margin: 0" height='200px' src='pictures/g/blue.svg'><img style="margin: 0" height='200px' src='pictures/g/purple.svg'></p></div> <!-- .slide: class="center" -->
-
-
-Note: 
-
-Std vs 4.4 vs 5.0 Andoird IMplementations
-
-Here's their 4.4 vs 5 implementations
-
-The theory is that the black/white sample was used directly,
-
-
-assumed to be stubble
-
-but that doesn't explain the rest of them.
+### &nbsp;
+ <img src="pictures/g/hairy_heart_s.png" />
 ---
 
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='200px' src='pictures/a/flushed.png'><img height='200px' src='pictures/t/flushed.svg'><img height='200px' src='pictures/e/flushed.svg'><img height='200px' src='pictures/g/flushed.svg'></p></div> <!-- .slide: class="center" -->
@@ -216,21 +130,12 @@ The first three: Shock, Flushed face
 Last one: bashful d'awww
 
 Completely different
-
----
- <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='200px' src='pictures/a/claps.png'><img height='200px' src='pictures/g/claps.svg'><img height='200px' src='pictures/t/claps.svg'><img height='200px' src='pictures/m/claps.png'></p></div> <!-- .slide: class="center" -->
-
-Note: it's not just google getting it weird
-
-here's clapping from google vs microsoft
-
-the thumbs!
 ---
 
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='200px' src='pictures/a/hugs.png'><img height='200px' src='pictures/g/hugs.png'><img height='200px' src='pictures/t/hugs.png'><img height='200px' src='pictures/e/hugs.png'></p></div> <!-- .slide: class="center" -->
-Note: but sometimes the outlier is more correct.
-
-jazzhands vs hugs
+Note: ** micro services **
+---
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='200px' src='pictures/a/claps.png'><img height='200px' src='pictures/g/claps.svg'><img height='200px' src='pictures/t/claps.svg'><img height='200px' src='pictures/m/claps.png'></p></div> <!-- .slide: class="center" -->
 ---
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='200px' src='pictures/g/blonde.svg'><img height='200px' src='pictures/t/blonde.svg'><img height='200px' src='pictures/e/blonde.svg'><img height='200px' src='pictures/m/blonde.svg'></p></div> <!-- .slide: class="center" -->
 
@@ -238,8 +143,15 @@ Note: Guess -- Blonde
 
 
 ---
- <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='200px' src='pictures/g/sheep.svg'><img height='200px' src='pictures/g/ram.svg'><img height='200px' src='pictures/g/rat.svg'><img height='200px' src='pictures/g/mouse.svg'></p></div> <!-- .slide: class="center" -->
-Note: rat vs mouse
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='266px' src='pictures/t/questionmark.svg'><img height='266px' src='pictures/g/questionmark.svg'><img height='266px' src='pictures/f/fb_quest2.png'></p></div> <!-- .slide: class="center" -->
+---
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/t/grinning.svg'><img height='400px' src='pictures/t/grimice.svg'></p></div> <!-- .slide: class="center" -->
+Note: grinning vs grimmace
+
+Scientific Paper
+“Blissfully happy” or “ready to fight”: Varying Interpretations of Emoji
+University of Minnesota
+
 ---
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='200px' src='pictures/t/disappointed.svg'><img height='200px' src='pictures/t/cold_sweat.svg'><img height='200px' src='pictures/t/relieved.svg'><img height='200px' src='pictures/t/open_cold_sweat.svg'></p></div> <!-- .slide: class="center" -->
 Note: disappointed
@@ -250,29 +162,11 @@ relieved
 
 face with open mouth and cold sweat
 ---
- <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/t/grinning.svg'><img height='400px' src='pictures/t/grimice.svg'></p></div> <!-- .slide: class="center" -->
-Note: grinning vs grimmace
----
-
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='200px' src='pictures/t/bento.svg'><img height='200px' src='pictures/t/tempura.svg'><img height='200px' src='pictures/t/sushi.svg'><img height='200px' src='pictures/t/noodles.svg'></p></div> <!-- .slide: class="center" -->
 
 Note: Strong japanese influence
 
 We can relate to some of these
----
- <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='200px' src='pictures/a/bow.png'><img height='200px' src='pictures/a/information.png'><img height='200px' src='pictures/a/nogood.png'><img height='200px' src='pictures/a/ok.png'></p></div> <!-- .slide: class="center" -->
-Note: 
-
-But there are cultural emoji that are completely foreign to the western world.
-
-Person bowing deeply
-
-
-information desk
-
-No good
-
-OK 
 ---
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='200px' src='pictures/t/minidisc.svg'><img height='200px' src='pictures/t/floppy.svg'><img height='200px' src='pictures/t/fax.svg'><img height='200px' src='pictures/t/cardindex.svg'></p></div> <!-- .slide: class="center" -->
 
@@ -294,44 +188,11 @@ COMING UP
 
 terrifying out of context
 ---
- <div style='width: 50%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/m/kissing.svg'></p></div> <!-- .slide: class="center" -->
-
-Note: Terrifying out of context
-
-Mozilla have their own emoi set
-For firefox os
-
----
-
-
- <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='266px' src='pictures/a/catgrin.png'><img height='266px' src='pictures/a/catcry.png'><img height='266px' src='pictures/a/catlove.png'></p></div> <!-- .slide: class="center" -->
- <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='266px' src='pictures/f/foxgrin.svg'><img height='266px' src='pictures/f/foxjoy.svg'><img height='266px' src='pictures/f/foxlove.svg'></p></div> <!-- .slide: class="center" -->
-
-Note: 
-
-
-
-The set of cats are foxes
-
----
- <div style='width: 50%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/e/levi.svg'></p></div> <!-- .slide: class="center" -->
-Note: webdings character
-
-introduced 7.0 2014
-
-No standards for webdings, based on a few people's opinions
-
-now in unicode for backwards compatibility
-
-
-
-NOTE TO SELF - no more poop emji coming up
----
  <div style='width: 50%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/e/thinking.svg'></p></div> <!-- .slide: class="center" -->
 
 Note: so how do emoji get approved
 ---
- <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='200px' src='pictures/space.svg'><img height='200px' src='pictures/e/5.svg'><img height='200px' src='pictures/e/tick.svg'><img height='200px' src='pictures/space.svg'></p></div> <!-- .slide: class="center" -->
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='266px' src='pictures/space.svg'><img height='266px' src='pictures/e/tick.svg'><img height='266px' src='pictures/space.svg'></p></div> <!-- .slide: class="center" -->
 
 Note: 
 ---
@@ -339,18 +200,6 @@ Note:
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='266px' src='pictures/t/slight.svg'><img height='266px' src='pictures/t/sad.svg'><img height='266px' src='pictures/e/qcap.svg'></p></div> <!-- .slide: class="center" -->
 
 Note: Compatibility - Cowboy added to compat with Yahoo messenger
----
- <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='266px' src='pictures/t/hamburger.svg'><img height='266px' src='pictures/t/fries.svg'><img height='266px' src='pictures/e/qcap.svg'></p></div> <!-- .slide: class="center" -->
-
-Note: Frequency. Hamburger for scale
-
----
-
- <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='266px' src='pictures/t/noodles.svg'><img height='266px' src='pictures/t/spaghetti.svg'><img height='266px' src='pictures/e/qcap.svg'></p></div> <!-- .slide: class="center" -->
-
-Note: Distintiveness
-
-Probbably don't need some for udon and ramen and lingine
 ---
 
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='266px' src='pictures/t/libra.svg'><img height='266px' src='pictures/t/cancer.svg'><img height='266px' src='pictures/e/qcap.svg'></p></div> <!-- .slide: class="center" -->
@@ -362,25 +211,13 @@ Note: Completeness - they didnt have the full zodiac set until 8.0 when 5 were a
 Note: Frequently requested
 
 ---
- <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='200px' src='pictures/space.svg'><img height='200px' src='pictures/e/5.svg'><img height='200px' src='pictures/e/cross.svg'><img height='200px' src='pictures/space.svg'></p></div> <!-- .slide: class="center" -->
-
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='266px' src='pictures/space.svg'><img height='266px' src='pictures/e/cross.svg'><img height='266px' src='pictures/space.svg'></p></div> <!-- .slide: class="center" -->
+Note: some things that don't count
 ---
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='200px' src='pictures/t/wine.svg'><img height='200px' src='pictures/t/cocktail.svg'><img height='200px' src='pictures/t/tropical.svg'><img height='200px' src='pictures/e/cross.svg'></p></div> <!-- .slide: class="center" -->
 Note: Overly specific
 
 Don't need a manhattan in there
----
-
- <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='200px' src='pictures/t/construction.svg'><img height='200px' src='pictures/t/policeman.svg'><img height='200px' src='pictures/t/guard.svg'><img height='200px' src='pictures/e/cross.svg'></p></div> <!-- .slide: class="center" -->
-
-Note: open ended - don't need all the professions
-
----
-
- <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='200px' src='pictures/t/jack.svg'><img height='200px' src='pictures/t/cry.svg'><img height='200px' src='pictures/t/baby.svg'><img height='200px' src='pictures/e/cross.svg'></p></div> <!-- .slide: class="center" -->
-Note: Already represented
-
-Try and use a combination
 ---
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='200px' src='pictures/a/watch.png'><img height='200px' src='pictures/a/headphones.png'><img height='200px' src='pictures/a/laptop.png'><img height='200px' src='pictures/e/cross.svg'></p></div> <!-- .slide: class="center" -->
 Note: no logos or brands
@@ -430,8 +267,19 @@ My Android - 5.0.1 OS --> U7.0 if you're lucky
 Yosemite - up to 6.1, plus vulcan
 
 Linux in general... yeah no.
----
 
+Old systems in general
+---
+# &nbsp; <!-- .slide: data-background="pictures/o/klm_tag.png" data-background-transition="none" -->
+---
+# &nbsp; <!-- .slide: data-background="pictures/o/mjg_cheque.png" data-background-transition="none" -->
+---
+ <div style='margin: 0 auto;'><p align='center'><img src='pictures/o/lukasz_one.png'></p></div>  <!-- .slide: class="center" -->
+---
+ <div style='margin: 0 auto;'><p align='center'><img src='pictures/o/lukasz_two.png'></p></div>  <!-- .slide: class="center" -->
+---
+ <div style='margin: 0 auto;'><p align='center'><img src='pictures/o/lukasz_three.png'></p></div>  <!-- .slide: class="center" -->
+---
  <div style='width: 50%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/e/keyboard.svg'></p></div> <!-- .slide: class="center" -->
 
 Note: So how do you get the input in?
@@ -522,20 +370,10 @@ Also, hipchat api calls - slash commands are broken in 4.0 clients, but emoticon
 Note: on that note, please make automatically changing arbitaary text to emoji optional
 
 please let me disable autocorrect
-
 ---
-## &nbsp;
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">$ python</code></pre></div>
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">>>> if (x < y):</code></pre></div>
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">>>> &nbsp; &nbsp; return True</code></pre></div>
-
-<br> 
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">>>> if <img src="pictures/t/XD.svg" class="inline_emoji" style="margin:0"> < y <img src="pictures/t/sad.svg" class="inline_emoji" style="margin:0"> <br>>>> &nbsp; &nbsp; return True</code></pre></div> <!-- .element: class="fragment" -->
-Note: 
-
-Autoconvert 
-
-MAKE IT OPTIONAL
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='266px' src='pictures/o/text-dollar.svg'><img height='266px' src='pictures/g/notequal.svg'><img height='266px' src='pictures/t/moneymouth.svg'></p></div> <!-- .slide: class="center" -->
+---
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='266px' src='pictures/o/smile.svg'><img height='266px' src='pictures/g/notequal.svg'><img height='266px' src='pictures/a/biggrin.png'></p></div> <!-- .slide: class="center" -->
 ---
  <div style='width: 50%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/e/eyeglasses.svg'></p></div> <!-- .slide: class="center" -->
 Note: Reading things back again
@@ -629,13 +467,16 @@ why don't we just have a hardware solution?
 
 ---
 # &nbsp; <!-- .slide: data-background="pictures/emoji_keyboard.jpg" data-background-transition="none" -->
-
-
 Note: Tom Scott
 
 
 Hardware keyboard x 14 + LUA script + Autohotkey
 
+
+---
+
+# &nbsp; <!-- .slide: data-background="pictures/o/emojli.jpg" data-background-transition="none" -->
+Note: 
 Also Emojili - a hack as a joke, but they were approched by VCs
 
 
@@ -652,15 +493,7 @@ Note: The future
 
 <img src="pictures/t/sparkles.svg" height="600px">
 
-Note: We're going to get new Emoji!
 ---
-<div style='width: 100%; margin: 0 auto;'><p align='center'><img height='133px' src='pictures/e/9.svg'><img height='133px' src='pictures/space.svg'><img height='133px' src='pictures/e/2.svg'><img height='133px' src='pictures/e/0.svg'><img height='133px' src='pictures/e/1.svg'><img height='133px' src='pictures/e/6.svg'><br><img height='200px' src='pictures/o/selfie.png'><img height='200px' src='pictures/o/egg.png'><img height='200px' src='pictures/o/spoon.png'><br><img height='200px' src='pictures/o/duck.png'><img height='200px' src='pictures/o/bacon.png'><img height='200px' src='pictures/o/tumbler.png'></p></div> <!-- .slide: class="center" -->
-
-Note: Unicode 9.0
-
-Not yet finalised, due for release this year
----
-
 <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='133px' src='pictures/e/10.svg'><img height='133px' src='pictures/space.svg'><img height='133px' src='pictures/e/2.svg'><img height='133px' src='pictures/e/0.svg'><img height='133px' src='pictures/e/1.svg'><img height='133px' src='pictures/e/7.svg'><br><img height='200px' src='pictures/o/eyebrow.png'><img height='200px' src='pictures/o/takeaway.png'><img height='200px' src='pictures/o/fortune.png'><br><img height='200px' src='pictures/g/question.svg'><img height='200px' src='pictures/o/dumpling.png'><img height='200px' src='pictures/o/chopsticks.png'></p></div> <!-- .slide: class="center" -->
 
 
@@ -682,89 +515,20 @@ Milkshake
 Knitting 
 Coffee (currently only 'hot beverage')
 Hawaiian Hangtime sign (thumb and pinky)
-
+---
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='160px' src='pictures/f/f1_smiling.png'><img height='160px' src='pictures/f/f1_crying.png'><img height='160px' src='pictures/f/f1_toung.png'><img height='160px' src='pictures/f/f1_throw.png'><img height='160px' src='pictures/f/f1_shock.png'></p></div> <!-- .slide: class="center" -->
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='160px' src='pictures/f/f2_smiling.png'><img height='160px' src='pictures/f/f2_crying.png'><img height='160px' src='pictures/f/f2_toung.png'><img height='160px' src='pictures/f/f2_throw.png'><img height='160px' src='pictures/f/f2_shock.png'></p></div> <!-- .slide: class="center" -->
+Note: redoing of facebook emoji
 
 ---
-
- <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='200px' src='pictures/space.svg'><img height='200px' src='pictures/a/flushed.png'><img height='200px' src='pictures/g/flushed.svg'><img height='200px' src='pictures/space.svg'></p></div> <!-- .slide: class="center" -->
- <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='200px' src='pictures/space.svg'><img height='200px' src='pictures/a/flushed.png'><img height='200px' src='pictures/g/flushed-new.png'><img height='200px' src='pictures/space.svg'></p></div> <!-- .slide: class="center" -->
-Note: 
-
-Google Updating Flushed as well, PHEW
----
-
-<div style='width: 100%; margin: 0 auto;'><p align='center' style="margin: 0"><img height='170px' src='pictures/g/4_eyes.png'><img height='170px' src='pictures/g/4_ear.png'><img height='170px' src='pictures/g/4_mouth.png'><img height='170px' src='pictures/g/4_nose.png'><br><img height='170px' src='pictures/g/5_eyes.png'><img height='170px' src='pictures/g/5_ear.png'><img height='170px' src='pictures/g/5_mouth.png'><img height='170px' src='pictures/g/5_nose.png'><br><img height='170px' src='pictures/g/6_eyes.png'><img height='170px' src='pictures/g/6_ear.png'><img height='170px' src='pictures/g/6_mouth.png'><img height='170px' src='pictures/g/6_nose.png'></p></div> <!-- .slide: class="center" -->
-
-Note: Android, and others, are updating their emoji all the time
-
-
-Here's their versions from 4.4, 5, and the new 6
-
-
-New OS version -> new emoji, plus updates to the old ones
-
-If it's an OS, you're going to have multiple different versions still in use
----
-
- <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='200px' src='pictures/space.svg'><img height='200px' src='pictures/g/4_claps.png'><img height='200px' src='pictures/g/6_claps.png'><img height='200px' src='pictures/space.svg'></p></div> <!-- .slide: class="center" -->
-Note: They're also changing hands to handle the next feature
-
-which is colour tone customisation
----
-
- <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='266px' src='pictures/e/vulcan_1.svg'><img height='266px' src='pictures/e/vulcan_2.svg'><img height='266px' src='pictures/e/vulcan_3.svg'></p></div> <!-- .slide: class="center" -->
- <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='266px' src='pictures/e/vulcan_4.svg'><img height='266px' src='pictures/e/vulcan_5.svg'><img height='266px' src='pictures/e/vulcan_6.svg'></p></div> <!-- .slide: class="center" -->
-
-Note: 
-
-Next - New Emoji Technology
-
-Fitzpatrick Scale
-
-Skin Tones
-
-Not implemented in a lot of places
-
-Slack yes, Facebook No, Google not a lot at all ("gender neutral")
----
- <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/e/vulcan_1.svg'><img height='400px' src='pictures/e/fitz_4.svg'></p></div> <!-- .slide: class="center" -->
-
-Note: Fallback should look like this, sometimes the coloured square is a mojibake though.
----
- <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='160px' src='pictures/a/woman.png'><img height='160px' src='pictures/a/heart.png'><img height='160px' src='pictures/a/woman.png'><img height='160px' src='pictures/space.svg'><img height='160px' src='pictures/a/ww.png'></p></div> <!-- .slide: class="center" -->
- <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='160px' src='pictures/a/man.png'><img height='160px' src='pictures/a/heart.png'><img height='160px' src='pictures/a/man.png'><img height='160px' src='pictures/space.svg'><img height='160px' src='pictures/a/mm.png'></p></div> <!-- .slide: class="center" -->
-Note: 
-
-Zero space character allows for groupings
-
-Trying to ban these emoji in some countries due to cultural reasons
-
-
-Banned in indonesia
----
- <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='266px' src='pictures/e/m0.svg'><img height='266px' src='pictures/e/m1.svg'><img height='266px' src='pictures/e/m2.svg'></p></div> <!-- .slide: class="center" -->
- <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='266px' src='pictures/e/m3.svg'><img height='266px' src='pictures/e/m4.svg'><img height='266px' src='pictures/e/m5.svg'></p></div> <!-- .slide: class="center" -->
-Note: New proposal TR52
-
-Combination of colours and hair colours
-
-like the combination characters from earlier
-
-The technology exists...
----
-
- <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='160px' src='pictures/g/T.svg'><img height='160px' src='pictures/g/R.svg'><img height='160px' src='pictures/a/hash.png'><img height='160px' src='pictures/a/num5.png'><img height='160px' src='pictures/a/num2.png'></p></div> <!-- .slide: class="center" -->
-
-Note: Technical Standard #52
-
-Closes early May, open for public feedback
+<div style='width: 100%; margin: 0 auto;'><p align='center'><img style="padding: 20px" height='266px' src='pictures/g/blushing.svg'><img style="padding: 20px" height='266px' src='pictures/g/flush_6.png'><img style="padding: 20px" height='266px' src='pictures/g/blush_n.png'></p></div> <!-- .slide: class="center" -->
 ---
 
  <img src="pictures/o/takeaway.png" />
 Note: the takeaways
 ---
 
- <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/o/bolt.svg'><img height='400px' src='pictures/t/speech.svg'></p></div> <!-- .slide: class="center" -->
+ <div style='width: 50%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/o/bolt.svg'></p></div> <!-- .slide: class="center" -->
 
 Note: 
 
@@ -775,14 +539,14 @@ Emoji are an additional communication
 Don't assume others will know what you're talking about without explaination
 ---
 
- <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/g/sweat.svg'><img height='400px' src='pictures/t/wheelchair.svg'></p></div> <!-- .slide: class="center" -->
+ <div style='width: 50%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/g/sweat.svg'></p></div> <!-- .slide: class="center" -->
 
 Note: Implement responsibly
 
 Think about accessibility
 ---
 
- <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/t/sparkles.svg'><img height='400px' src='pictures/t/popper.svg'></p></div> <!-- .slide: class="center" -->
+ <div style='width: 50%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/t/sparkles.svg'></p></div> <!-- .slide: class="center" -->
 Note: 
 
 And have fun~
