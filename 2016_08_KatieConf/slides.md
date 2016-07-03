@@ -33,13 +33,6 @@ Nuclear Engineering professor
 ### Poetry
 ### Automation
 ---
-### Open Source Software <!-- .slide: data-background="pictures/soft_header_image.jpg" data-background-transition="none" --> <!-- .slide: class="center" -->
-### Functional Programming
-### Amateur Radio
-### Accessibility
-### Procedural Generation
-### Test Driven Design
----
 # Venue <!-- .slide: class="center" -->
 ### Katherine<br>Northern Territory <!-- .slide: data-background="pictures/soft_header_image.jpg" data-background-transition="none" --> <!-- .slide: class="center" -->
 ---
