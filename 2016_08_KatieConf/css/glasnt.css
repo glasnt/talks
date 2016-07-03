@@ -1,0 +1,12 @@
+div.big {
+	font-size: 120px;
+}
+h1 { 
+  font-family: "Sofia";
+}
+@font-face {
+  font-family: 'Sofia';
+  font-style: normal;
+  font-weight: 300;
+  src: url('Sofia-Regular.otf');
+} 

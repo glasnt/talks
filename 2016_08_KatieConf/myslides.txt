@@ -1,0 +1,78 @@
+#= KatieConf <!-- .slide: data-background="pictures/header_image.jpg" data-background-transition="none" -->
+## 2016
+---
+#= Diversity <!-- .slide: data-background="pictures/soft_header_image.jpg" data-background-transition="none" -->
+##= C or K 
+---
+##= Two Tracks <!-- .slide: data-background="pictures/soft_header_image.jpg" data-background-transition="none" -->
+##= 38 Speakers
+---
+#= Speakers <!-- .slide: data-background="pictures/soft_header_image.jpg" data-background-transition="none" -->
+---
+###= Kathy Reid <!-- .slide: data-background="pictures/soft_header_image.jpg" data-background-transition="none" -->
+### Katie Bell
+### Katie Cunningham
+### Kate Chapman
+---
+###= Katie Mack <!-- .slide: data-background="pictures/soft_header_image.jpg" data-background-transition="none" -->
+###= Katerina Marchán
+###= Katherine Daniels
+### Katy Huff
+
+Note: astrokate
+npm
+beerops
+Nuclear Engineering professor
+---
+#= Topics <!-- .slide: data-background="pictures/soft_header_image.jpg" data-background-transition="none" -->
+---
+###= Robots <!-- .slide: data-background="pictures/soft_header_image.jpg" data-background-transition="none" -->
+### DevOps
+### Security
+### Aliens
+### Poetry
+### Automation
+---
+###= Open Source Software <!-- .slide: data-background="pictures/soft_header_image.jpg" data-background-transition="none" -->
+### Functional Programming
+### Amateur Radio
+### Accessibility
+### Procedural Generation
+### Test Driven Design
+---
+#= Venue
+###= Katherine<br>Northern Territory <!-- .slide: data-background="pictures/soft_header_image.jpg" data-background-transition="none" -->
+---
+##= June 31 2016 <!-- .slide: data-background="pictures/soft_header_image.jpg" data-background-transition="none" -->
+###- ... wait, what? 
+---
+##= #sorrynotsorry<!-- .slide: data-background="pictures/soft_header_image.jpg" data-background-transition="none" -->
+---
+## &nbsp; <!-- .slide: data-background="pictures/soft_header_image.jpg" data-background-transition="none" -->
+---
+#= Broken Dreams<!-- .slide: data-background="pictures/soft_header_image.jpg" data-background-transition="none" -->
+---
+### So it turns out KatieConf is a joke, but Katie's in tech are in fact real. <!-- .slide: data-background="pictures/soft_header_image.jpg" data-background-transition="none" -->
+####= @SwiftOnSecurity
+---
+#= Diversity<!-- .slide: data-background="pictures/soft_header_image.jpg" data-background-transition="none" -->
+---
+##= #allmalepanels<!-- .slide: data-background="pictures/soft_header_image.jpg" data-background-transition="none" -->
+---
+###= "But I just can't find a qualified woman to speak" <!-- .slide: data-background="pictures/soft_header_image.jpg" data-background-transition="none" -->
+###= "Huh. I just found you 33 Katies."
+#### @ArwaM
+---
+#= Real World Effects <!-- .slide: data-background="pictures/soft_header_image.jpg" data-background-transition="none" -->
+---
+##= &nbsp; <!-- .slide: data-background="pictures/pyconuk.png" data-background-transition="none" -->
+---
+##= PyCon UK <!-- .slide: data-background="pictures/soft_pyconuk.png" data-background-transition="none" -->
+## £500 Scholorship 
+---
+#= 2016<!-- .slide: data-background="pictures/soft_header_image.jpg" data-background-transition="none" -->
+---
+#= 2017<!-- .slide: data-background="pictures/soft_2017.jpg" data-background-transition="none" -->
+---
+###= @katieconf <!-- .slide: data-background="pictures/soft_2017.jpg" data-background-transition="none" -->
+###= katieconf.xyz
