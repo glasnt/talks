@@ -233,19 +233,6 @@ Nope.
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='200px' src='pictures/t/watch.svg'><img height='200px' src='pictures/t/clock.svg'><img height='200px' src='pictures/e/mantelpiece.svg'><img height='200px' src='pictures/e/cross.svg'></p></div> <!-- .slide: class="center" -->
 Note: fads, memes, etc.
 ---
- <div style='width: 50%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/t/memo.svg'></p></div> <!-- .slide: class="center" -->
----
- <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='266px' src='pictures/space.svg'><img height='266px' src='pictures/o/tumbler.png'><img height='266px' src='pictures/space.svg'></p></div> <!-- .slide: class="center" -->
-Note: whisky is coming in with 9.0
-
-many proposals hit some of the inclusion factors
-
-often use google trends or social media trends
-
-one used hamburgr as a relative term to show the usage of different foods
-
-hambuger for scale
----
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/t/oldkey.png'><img height='400px' src='pictures/t/newkey.svg'></p></div> <!-- .slide: class="center" -->
 Note: As new emoji are brought in
 
@@ -279,6 +266,8 @@ Old systems in general
  <div style='margin: 0 auto;'><p align='center'><img src='pictures/o/lukasz_two.png'></p></div>  <!-- .slide: class="center" -->
 ---
  <div style='margin: 0 auto;'><p align='center'><img src='pictures/o/lukasz_three.png'></p></div>  <!-- .slide: class="center" -->
+---
+ <div style='width: 50%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/g/passport.svg'></p></div> <!-- .slide: class="center" -->
 ---
  <div style='width: 50%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/e/keyboard.svg'></p></div> <!-- .slide: class="center" -->
 

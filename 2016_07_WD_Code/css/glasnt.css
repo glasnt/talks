@@ -2,6 +2,13 @@ div.big {
 	font-size: 120px;
 }
 
+.tinycode { 
+    font-size: 10px;
+    line-height:1;
+    white-space: pre;
+}   
+
+
 img.inline_emoji {
     height: 60px;
     margin: 15px 0px 0px;
