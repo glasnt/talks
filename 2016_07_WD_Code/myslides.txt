@@ -269,6 +269,9 @@ Old systems in general
 ---
 ! g/passport
 ---
+! o/spoon.ws
+Note: Surprisingly enough, this works
+---
 ! e/keyboard
 
 Note: So how do you get the input in?
