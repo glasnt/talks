@@ -1,5 +1,5 @@
 
-! space  |  t/web | t/soon | gp/laptop.png | space
+! space  |  t/web | t/arrow-up | e/computer | space
 ---
 
 ## &nbsp;
@@ -36,6 +36,7 @@ Note: But the Japanese were wondering where the rest of their codepoints were
 
 Note: These japanese had mobile phones with these little pictures, and they wanted them in unicode
 ---
+! g/japan | space | space | space | space  | space | e/1 | e/9 | e/9 | e/5
 @ o/docomo.png
 
 Note: Shigetaka Kurita
@@ -58,39 +59,30 @@ And then everyone rampted up
 
 ---
 
-
-! e/6 | space | e/2 | e/0 | e/1 | e/0
-! a/thumbsup.png | a/tearsjoy.png | a/tada.png
+! e/6 | space | space | space | space  | space | e/2 | e/0 | e/1 | e/0 
+! a/clover.png | a/tulip.png | a/apple.png | a/maple.png
+! a/chick.png | a/penguin.png | a/horse.png | a/pig.png
 Note: the first verison with emoji
-Unicode 6.0 the versions that are more previlent
----
-! e/61 | space | e/2 | e/0 | e/1 | e/2
-! a/grimace.png | a/shock.png | a/sleeping.png
-Note: A small face-only update in 2012
+If it supports emoji, i'll do this
 
-most platforms, if they support emoji at all, will support up to here
+eAfter this, adoption rates plummet
 ---
-! e/7 | space | e/2 | e/0 | e/1 | e/4
-! t/robot | e/unicorn | t/vulcan
+! e/7 | space | space | space | space  | space | e/2 | e/0 | e/1 | e/4
+! t/chipmunk | t/satellite | t/control | t/vulcan
+! t/paperclip | t/cardbox | t/compression | t/levi
 
-Note: Unicode 7 2014
+Note: Levitating here because webdings
+
+Wingdings and webdings compatitbility because missing data
 
 ---
-! e/8 | space | e/2 | e/0 | e/1 | e/5
-! e/horns | a/upsidedown.png | e/taco
+! e/8 | space | space | space | space  | space | e/2 | e/0 | e/1 | e/5
+! t/lion | t/robot | t/upsidedown | t/unicorn
+! t/popcorn | t/taco | t/burrito | t/horns5
 
 Note: Unicode 8 2015
 Taco is now official
 ---
-
-! e/9 | space | e/2 | e/0 | e/1 | e/6
-! o/selfie.png | o/spoon.png | o/tumbler.png
----
-! e/9 | space | e/2 | e/0 | e/1 | e/6
-! o/duck.png | o/bacon.png | o/egg.png
-
----
-
 ! g/sweat
 
 Note: here's where it gets (more) complicated
@@ -151,42 +143,6 @@ Note: grinning vs grimmace
 Scientific Paper
 “Blissfully happy” or “ready to fight”: Varying Interpretations of Emoji
  University of Minnesota
-
----
-! t/disappointed | t/cold_sweat | t/relieved | t/open_cold_sweat
-Note: disappointed
-
-face with cold sweat
-
-relieved
-
-face with open mouth and cold sweat
----
-! t/bento | t/tempura | t/sushi | t/noodles
-
-Note: Strong japanese influence
-
-We can relate to some of these
----
-! t/minidisc | t/floppy | t/fax | t/cardindex
-
-Note: Emoji was also created in the early 90s
-
-so there's outdated tech in the standard which is
-
-included for backwarsd compatility
-
-minidisc
-
-floppy disc
-
-fax machine
-
-rolodex
-
-COMING UP
-
-terrifying out of context
 ---
 ! e/thinking
 
@@ -257,24 +213,22 @@ Linux in general... yeah no.
 
 Old systems in general
 ---
-# &nbsp; <!-- .slide: data-background="pictures/o/klm_tag.png" data-background-transition="none" -->
----
-# &nbsp; <!-- .slide: data-background="pictures/o/mjg_cheque.png" data-background-transition="none" -->
----
-@= o/lukasz_one.png
----
-@= o/lukasz_two.png
----
-@= o/lukasz_three.png
----
-! g/passport
----
 ! o/spoon.ws
 Note: Surprisingly enough, this works
+---
+! g/R | g/F | g/C | e/3 | e/4 | e/9 | e/2 
+---
+! space | space | o/spoon | space | space 
+# xn--9q9h
 ---
 ! e/keyboard
 
 Note: So how do you get the input in?
+---
+
+@ o/return.png 
+
+<img src="pictures/o/smiling.svg" style="margin-top: -40px" height="240px"> 
 
 ---
 #= <div style="white-space: nowrap"><img src="pictures/e/command.svg" height="200px"><img height="200px" src="pictures/e/option.svg"><img height="200px" src="pictures/e/space.svg"></div>
@@ -289,9 +243,23 @@ Some apps don't like it
 Sourced from Swedish camping map
 
 Place of intereste
+---
+! t/lightbulb
+---
+# &nbsp; <!-- .slide: data-background="pictures/emoji_keyboard.jpg" data-background-transition="none" -->
+Note: Tom Scott
+Hardware keyboard x 14  + LUA script + Autohotkey
+---
+# &nbsp; <!-- .slide: data-background="pictures/o/emojli.jpg" data-background-transition="none" -->
+Note:
+Also Emojili - a hack as a joke, but they were approched by VCs
+
+
+They had an iphone and android app
+
+Electromagnetic field talk about the fun they had trying to create this bodge
 
 ---
-
 ! e/web
 
 Note: In the webspace, you have a few options
@@ -363,9 +331,10 @@ Note: on that note, please make automatically changing arbitaary text to emoji o
 
 please let me disable autocorrect
 ---
-! o/text-dollar | g/notequal | t/moneymouth
----
 ! o/smile | g/notequal | a/biggrin.png
+Note: automatically overexaggerating
+---
+! o/text-dollar | g/notequal | t/moneymouth
 ---
 ! e/eyeglasses
 Note: Reading things back again
@@ -450,44 +419,48 @@ As long as you are using a browser that runs javascript and can display images, 
 
 ---
 
-! g/twisted
+<p style="line-height: 1.5"> `<img src="img/1f943.png" alt="`<img src="pictures/t/whisky.svg" height="40px" style="margin: 0px">`" title="Tumbler glass"` <br>` aria-label="Emoji: Tumbler glass">`
+</p>
 
-Note:
-twist things around
-
-why don't we just have a hardware solution?
-
----
-# &nbsp; <!-- .slide: data-background="pictures/emoji_keyboard.jpg" data-background-transition="none" -->
-Note: Tom Scott
-
-
-Hardware keyboard x 14  + LUA script + Autohotkey
-
-
+<img src="pictures/o/whisky_display.svg" height="400px">
 ---
 
-# &nbsp; <!-- .slide: data-background="pictures/o/emojli.jpg" data-background-transition="none" -->
-Note:
-Also Emojili - a hack as a joke, but they were approched by VCs
+<p style="line-height: 1.5"> `<img src="img/1f943.png" alt="`<img src="pictures/t/whisky.svg" height="40px" style="margin: 0px">`" `<span style="color: red; font-weight: bold"> `title="Tumbler glass"` <br></span> `aria-label="Emoji: Tumbler glass">`
 
+</p>
 
-They had an iphone and android app
-
-Electromagnetic field talk about the fun they had trying to create this bodge
-
+<img src="pictures/o/whisky_mouse.svg" height="400px">
 ---
 
+<p style="line-height: 1.5"> `<img src="img/1f943.png"` <span style="color: red; font-weight: bold">` alt="`<img src="pictures/t/whisky.svg" height="40px" style="margin: 0px">`"` </span> `title="Tumbler glass"`<br> `aria-label="Emoji: Tumbler glass">`
+
+</p>
+
+<img src="pictures/o/whisky_highlight.svg" height="400px">
+---
+<p style="line-height: 1.5"> `<img src="img/1f943.png" alt="`<img src="pictures/t/whisky.svg" height="40px" style="margin: 0px">`" title="Tumbler glass"`<br> <span style="color: red; font-weight: bold">`aria-label="Emoji: Tumbler glass"` </span> `>`
+
+</p>
+<img src="pictures/o/whisky_speaker.svg" height="400px">
+---
 ! e/atom
 
 Note: The future
 ---
 
 <img src="pictures/t/sparkles.svg" height="600px">
+---
+! e/9 | space | space | space | space  | space | e/2 | e/0 | e/1 | e/6
+! t/shrug | t/facepalm | t/cowboy | t/bacon
+! t/whisky | t/owl | o/spoon | t/egg
+
 
 ---
-<div style='width: 100%; margin: 0 auto;'><p align='center'><img height='133px' src='pictures/e/10.svg'><img height='133px' src='pictures/space.svg'><img height='133px' src='pictures/e/2.svg'><img height='133px' src='pictures/e/0.svg'><img height='133px' src='pictures/e/1.svg'><img height='133px' src='pictures/e/7.svg'><br><img height='200px' src='pictures/o/eyebrow.png'><img height='200px' src='pictures/o/takeaway.png'><img height='200px' src='pictures/o/fortune.png'><br><img height='200px' src='pictures/g/question.svg'><img height='200px' src='pictures/o/dumpling.png'><img height='200px' src='pictures/o/chopsticks.png'></p></div> <!-- .slide: class="center" -->
 
+! e/10 | space | space | space | space  | space | e/2 | e/0 | e/1 | e/7
+
+! o/takeaway.png | o/fortune.png | o/dumpling.png | o/chopsticks.png
+! o/eyebrow.png | g/question | g/question | g/question
 
 Note:
 
@@ -507,6 +480,10 @@ Milkshake
 Knitting
 Coffee (currently only 'hot beverage')
 Hawaiian Hangtime sign (thumb and pinky)
+---
+
+! t/up | t/calendar
+
 ---
 ! f/f1_smiling.png | f/f1_crying.png | f/f1_toung.png |f/f1_throw.png | f/f1_shock.png
 ! f/f2_smiling.png | f/f2_crying.png | f/f2_toung.png | f/f2_throw.png | f/f2_shock.png
