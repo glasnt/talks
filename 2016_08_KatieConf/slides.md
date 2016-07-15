@@ -48,8 +48,13 @@ Nuclear Engineering professor
 #### @SwiftOnSecurity <!-- .slide: class="center" -->
 ---
 # Diversity<!-- .slide: data-background="pictures/soft_crayons.jpg" data-background-transition="none" --> <!-- .slide: class="center" -->
+
 ---
 ## #allmalepanels<!-- .slide: data-background="pictures/soft_crayons.jpg" data-background-transition="none" --> <!-- .slide: class="center" -->
+Note: 
+PyCon AU 25% ish
+Pycon US 2016 40% Female
+DjangoCon Europe: 52% Female
 ---
 ### "But I just can't find a qualified woman to speak!" <!-- .slide: data-background="pictures/soft_crayons.jpg" data-background-transition="none" --> <!-- .slide: class="center" -->
 ##### &nbsp;
@@ -59,8 +64,10 @@ Nuclear Engineering professor
 # Real World Effects <!-- .slide: data-background="pictures/soft_effects.jpg" data-background-transition="none" --> <!-- .slide: class="center" -->
 ---
 ## AnaConf? <!-- .slide: data-background="pictures/soft_effects.jpg" data-background-transition="none" --> <!-- .slide: class="center" -->
-## JessConf?
 ## SarahConf?
+---
+# <span style="font-family: 'Seaside'">JessConf</span> <!-- .slide: data-background="pictures/jess.jpg" data-background-transition="none" --> <!-- .slide: class="center" -->
+### November 31, 2016 <!-- .element: class="fragment" -->
 ---
 ## &nbsp; <!-- .slide: data-background="pictures/pyconuk.png" data-background-transition="none" --> <!-- .slide: class="center" -->
 ---

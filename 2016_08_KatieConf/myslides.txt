@@ -64,8 +64,10 @@ DjangoCon Europe: 52% Female
 #= Real World Effects <!-- .slide: data-background="pictures/soft_effects.jpg" data-background-transition="none" -->
 ---
 ##= AnaConf? <!-- .slide: data-background="pictures/soft_effects.jpg" data-background-transition="none" -->
-## JessConf?
 ## SarahConf?
+---
+#= <span style="font-family: 'Seaside'">JessConf</span> <!-- .slide: data-background="pictures/jess.jpg" data-background-transition="none" -->
+###- November 31, 2016
 ---
 ##= &nbsp; <!-- .slide: data-background="pictures/pyconuk.png" data-background-transition="none" -->
 ---
