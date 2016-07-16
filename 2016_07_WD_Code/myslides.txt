@@ -58,7 +58,10 @@ then a couple of versions later, released to the US
 And then everyone rampted up
 
 ---
-
+! unicode.png | space | space | space | space  | space | e/2 | e/0 | e/0 | e/7
+! o/clover.png | o/tulip.png | o/apple.png | o/maple.png
+! o/chick.png | o/penguin.png | o/horse.png | o/pig.png
+---
 ! e/6 | space | space | space | space  | space | e/2 | e/0 | e/1 | e/0 
 ! a/clover.png | a/tulip.png | a/apple.png | a/maple.png
 ! a/chick.png | a/penguin.png | a/horse.png | a/pig.png
@@ -359,23 +362,6 @@ Note:
 If i might make a suggestion
 
 if you have to do this kind of thing
-
----
-! t/wheelchair
-
-Note:
-
-Think of it in terms of web accessibilty
-
-At the very least, have images that are distinct and visible
-
-little 12x12 don't work
-
-Use vector graphs where possible - Apple doesnt
-
-Where you can, allow the images to be bigger
-
-Twitter DM and Slack message - if only emoji, they're display bigger
 ---
 ! g/fall | t/back
 Note: Fall Back
@@ -387,8 +373,18 @@ You could try and detect if the emoji won't work via the User Agent, or
 Just serve your own emoji graphs
 
 Yes, it's not the best way to get things done, but
+---
 
+#= <span style="font-weight: normal">✌ ⁉   ⤴   ⚡   ⚗   🀄   </span>
+# ⛽   😂   😮   🖖   🙃  <span style="font-weight: normal"> 🥝</span>
 
+### glasnt.com/unicode-test
+
+Note: Actual Emoji 
+One from every release of unicode from 1993 - 2016
+
+Chrome, Firefox, Safari evergreen all on el cap
+: none of them look the same
 
 ---
 ! g/wave | g/lightbulb
@@ -417,6 +413,21 @@ Twitter implements all these on the web
 
 As long as you are using a browser that runs javascript and can display images, Twitter will work every emoji.
 
+---
+
+! t/web | t/wheelchair
+Note:
+Think of it in terms of web accessibilty
+
+At the very least, have images that are distinct and visible
+
+little 12x12 don't work
+
+Use vector graphs where possible - Apple doesnt
+
+Where you can, allow the images to be bigger
+
+Twitter DM and Slack message - if only emoji, they're display bigger
 ---
 
 <p style="line-height: 1.5"> `<img src="img/1f943.png" alt="`<img src="pictures/t/whisky.svg" height="40px" style="margin: 0px">`" title="Tumbler glass"` <br>` aria-label="Emoji: Tumbler glass">`
@@ -482,7 +493,8 @@ Coffee (currently only 'hot beverage')
 Hawaiian Hangtime sign (thumb and pinky)
 ---
 
-! t/up | t/calendar
+#= <img height="400px" src="pictures/t/up.svg"> &nbsp; <img height="400px" src="pictures/t/calendar.svg">
+Note: updates 
 
 ---
 ! f/f1_smiling.png | f/f1_crying.png | f/f1_toung.png |f/f1_throw.png | f/f1_shock.png

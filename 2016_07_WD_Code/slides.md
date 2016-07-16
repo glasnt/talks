@@ -58,7 +58,10 @@ then a couple of versions later, released to the US
 And then everyone rampted up
 
 ---
-
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='80px' src='pictures/unicode.png'><img height='80px' src='pictures/space.svg'><img height='80px' src='pictures/space.svg'><img height='80px' src='pictures/space.svg'><img height='80px' src='pictures/space.svg'><img height='80px' src='pictures/space.svg'><img height='80px' src='pictures/e/2.svg'><img height='80px' src='pictures/e/0.svg'><img height='80px' src='pictures/e/0.svg'><img height='80px' src='pictures/e/7.svg'></p></div> <!-- .slide: class="center" -->
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='200px' src='pictures/o/clover.png'><img height='200px' src='pictures/o/tulip.png'><img height='200px' src='pictures/o/apple.png'><img height='200px' src='pictures/o/maple.png'></p></div> <!-- .slide: class="center" -->
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='200px' src='pictures/o/chick.png'><img height='200px' src='pictures/o/penguin.png'><img height='200px' src='pictures/o/horse.png'><img height='200px' src='pictures/o/pig.png'></p></div> <!-- .slide: class="center" -->
+---
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='80px' src='pictures/e/6.svg'><img height='80px' src='pictures/space.svg'><img height='80px' src='pictures/space.svg'><img height='80px' src='pictures/space.svg'><img height='80px' src='pictures/space.svg'><img height='80px' src='pictures/space.svg'><img height='80px' src='pictures/e/2.svg'><img height='80px' src='pictures/e/0.svg'><img height='80px' src='pictures/e/1.svg'><img height='80px' src='pictures/e/0.svg'></p></div> <!-- .slide: class="center" -->
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='200px' src='pictures/a/clover.png'><img height='200px' src='pictures/a/tulip.png'><img height='200px' src='pictures/a/apple.png'><img height='200px' src='pictures/a/maple.png'></p></div> <!-- .slide: class="center" -->
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='200px' src='pictures/a/chick.png'><img height='200px' src='pictures/a/penguin.png'><img height='200px' src='pictures/a/horse.png'><img height='200px' src='pictures/a/pig.png'></p></div> <!-- .slide: class="center" -->
@@ -359,23 +362,6 @@ Note:
 If i might make a suggestion
 
 if you have to do this kind of thing
-
----
- <div style='width: 50%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/t/wheelchair.svg'></p></div> <!-- .slide: class="center" -->
-
-Note: 
-
-Think of it in terms of web accessibilty
-
-At the very least, have images that are distinct and visible
-
-little 12x12 don't work
-
-Use vector graphs where possible - Apple doesnt
-
-Where you can, allow the images to be bigger
-
-Twitter DM and Slack message - if only emoji, they're display bigger
 ---
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/g/fall.svg'><img height='400px' src='pictures/t/back.svg'></p></div> <!-- .slide: class="center" -->
 Note: Fall Back
@@ -387,8 +373,18 @@ You could try and detect if the emoji won't work via the User Agent, or
 Just serve your own emoji graphs
 
 Yes, it's not the best way to get things done, but
+---
 
+# <span style="font-weight: normal">✌ ⁉ ⤴ ⚡ ⚗ 🀄 </span> <!-- .slide: class="center" -->
+# ⛽ 😂 😮 🖖 🙃 <span style="font-weight: normal"> 🥝</span>
 
+### glasnt.com/unicode-test
+
+Note: Actual Emoji
+One from every release of unicode from 1993 - 2016
+
+Chrome, Firefox, Safari evergreen all on el cap
+: none of them look the same
 
 ---
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/g/wave.svg'><img height='400px' src='pictures/g/lightbulb.svg'></p></div> <!-- .slide: class="center" -->
@@ -417,6 +413,21 @@ Twitter implements all these on the web
 
 As long as you are using a browser that runs javascript and can display images, Twitter will work every emoji.
 
+---
+
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/t/web.svg'><img height='400px' src='pictures/t/wheelchair.svg'></p></div> <!-- .slide: class="center" -->
+Note: 
+Think of it in terms of web accessibilty
+
+At the very least, have images that are distinct and visible
+
+little 12x12 don't work
+
+Use vector graphs where possible - Apple doesnt
+
+Where you can, allow the images to be bigger
+
+Twitter DM and Slack message - if only emoji, they're display bigger
 ---
 
 <p style="line-height: 1.5"> `<img src="img/1f943.png" alt="`<img src="pictures/t/whisky.svg" height="40px" style="margin: 0px">`" title="Tumbler glass"` <br>` aria-label="Emoji: Tumbler glass">`
@@ -482,7 +493,8 @@ Coffee (currently only 'hot beverage')
 Hawaiian Hangtime sign (thumb and pinky)
 ---
 
- <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/t/up.svg'><img height='400px' src='pictures/t/calendar.svg'></p></div> <!-- .slide: class="center" -->
+# <img height="400px" src="pictures/t/up.svg"> &nbsp; <img height="400px" src="pictures/t/calendar.svg"> <!-- .slide: class="center" -->
+Note: updates
 
 ---
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='160px' src='pictures/f/f1_smiling.png'><img height='160px' src='pictures/f/f1_crying.png'><img height='160px' src='pictures/f/f1_toung.png'><img height='160px' src='pictures/f/f1_throw.png'><img height='160px' src='pictures/f/f1_shock.png'></p></div> <!-- .slide: class="center" -->
