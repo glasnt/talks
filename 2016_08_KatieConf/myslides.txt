@@ -54,6 +54,7 @@ Nuclear Engineering professor
 Note: 
 PyCon AU 25% ish
 Pycon US 2016 40% Female
+DjangoCon US 40% Female
 DjangoCon Europe: 52% Female
 ---
 ###= "But I just can't find a qualified woman to speak!" <!-- .slide: data-background="pictures/soft_crayons.jpg" data-background-transition="none" -->

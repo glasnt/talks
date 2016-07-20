@@ -130,6 +130,8 @@ Completely different
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='200px' src='pictures/a/hugs.png'><img height='200px' src='pictures/g/hugs.png'><img height='200px' src='pictures/t/hugs.png'><img height='200px' src='pictures/e/hugs.png'></p></div> <!-- .slide: class="center" -->
 Note: ** micro services **
 ---
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/o/bigghug.png'><img height='400px' src='pictures/o/bigghug2.png'></p></div> <!-- .slide: class="center" -->
+---
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='200px' src='pictures/a/claps.png'><img height='200px' src='pictures/g/claps.svg'><img height='200px' src='pictures/t/claps.svg'><img height='200px' src='pictures/m/claps.png'></p></div> <!-- .slide: class="center" -->
 ---
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='200px' src='pictures/g/blonde.svg'><img height='200px' src='pictures/t/blonde.svg'><img height='200px' src='pictures/e/blonde.svg'><img height='200px' src='pictures/m/blonde.svg'></p></div> <!-- .slide: class="center" -->
@@ -458,8 +460,7 @@ Twitter DM and Slack message - if only emoji, they're display bigger
 
 Note: The future
 ---
-
-<img src="pictures/t/sparkles.svg" height="600px">
+ <div style='width: 50%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/t/sparkles.svg'></p></div> <!-- .slide: class="center" -->
 ---
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='80px' src='pictures/e/9.svg'><img height='80px' src='pictures/space.svg'><img height='80px' src='pictures/space.svg'><img height='80px' src='pictures/space.svg'><img height='80px' src='pictures/space.svg'><img height='80px' src='pictures/space.svg'><img height='80px' src='pictures/e/2.svg'><img height='80px' src='pictures/e/0.svg'><img height='80px' src='pictures/e/1.svg'><img height='80px' src='pictures/e/6.svg'></p></div> <!-- .slide: class="center" -->
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='200px' src='pictures/t/shrug.svg'><img height='200px' src='pictures/t/facepalm.svg'><img height='200px' src='pictures/t/cowboy.svg'><img height='200px' src='pictures/t/bacon.svg'></p></div> <!-- .slide: class="center" -->
@@ -493,6 +494,13 @@ Coffee (currently only 'hot beverage')
 Hawaiian Hangtime sign (thumb and pinky)
 ---
 
+ <div style='width: 50%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/t/hammerwrench.svg'></p></div> <!-- .slide: class="center" -->
+---
+
+# <img height="200px" src="pictures/g/whiteflag.png"> <span>+</span> <img height="200px" src="pictures/g/rainbow.svg"> = <img height="200px" src="pictures/g/googlerainbow.png"> <!-- .slide: class="center" -->
+---
+# <img height="200px" src="pictures/g/girl.svg"> <span>+</span> <img height="200px" src="pictures/g/cooking.svg"> = <img height="200px" src="pictures/g/chef.png"> <!-- .slide: class="center" -->
+---
 # <img height="400px" src="pictures/t/up.svg"> &nbsp; <img height="400px" src="pictures/t/calendar.svg"> <!-- .slide: class="center" -->
 Note: updates
 

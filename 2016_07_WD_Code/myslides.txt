@@ -130,6 +130,8 @@ Completely different
 ! a/hugs.png | g/hugs.png | t/hugs.png | e/hugs.png
 Note: ** micro services **
 ---
+! o/bigghug.png | o/bigghug2.png
+---
 ! a/claps.png | g/claps | t/claps | m/claps.png
 ---
 ! g/blonde | t/blonde | e/blonde | m/blonde
@@ -458,8 +460,7 @@ Twitter DM and Slack message - if only emoji, they're display bigger
 
 Note: The future
 ---
-
-<img src="pictures/t/sparkles.svg" height="600px">
+! t/sparkles
 ---
 ! e/9 | space | space | space | space  | space | e/2 | e/0 | e/1 | e/6
 ! t/shrug | t/facepalm | t/cowboy | t/bacon
@@ -493,6 +494,13 @@ Coffee (currently only 'hot beverage')
 Hawaiian Hangtime sign (thumb and pinky)
 ---
 
+! t/hammerwrench
+---
+
+#= <img height="200px" src="pictures/g/whiteflag.png"> <span>+</span> <img height="200px" src="pictures/g/rainbow.svg"> = <img height="200px" src="pictures/g/googlerainbow.png">
+---
+#= <img height="200px" src="pictures/g/girl.svg"> <span>+</span> <img height="200px" src="pictures/g/cooking.svg"> = <img height="200px" src="pictures/g/chef.png">
+---
 #= <img height="400px" src="pictures/t/up.svg"> &nbsp; <img height="400px" src="pictures/t/calendar.svg">
 Note: updates 
 
