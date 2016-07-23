@@ -23,7 +23,7 @@
 Note: Extremely powerfull
 ---
 
- <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='200px' src='pictures/g/US.svg'><img height='200px' src='pictures/g/france.svg'><img height='200px' src='pictures/g/germany.svg'><img height='200px' src='pictures/g/china.svg'></p></div> <!-- .slide: class="center" -->
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='200px' src='pictures/g/US.svg'><img height='200px' src='pictures/g/france.svg'><img height='200px' src='pictures/g/russia.png'><img height='200px' src='pictures/g/china.svg'></p></div> <!-- .slide: class="center" -->
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='266px' src='pictures/space.svg'><img height='266px' src='pictures/t/smile.svg'><img height='266px' src='pictures/space.svg'></p></div> <!-- .slide: class="center" -->
 Note: So, with this, people are happy ,characters can be encoded.
 ---
@@ -58,11 +58,11 @@ then a couple of versions later, released to the US
 And then everyone rampted up
 
 ---
- <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='80px' src='pictures/unicode.png'><img height='80px' src='pictures/space.svg'><img height='80px' src='pictures/space.svg'><img height='80px' src='pictures/space.svg'><img height='80px' src='pictures/space.svg'><img height='80px' src='pictures/space.svg'><img height='80px' src='pictures/e/2.svg'><img height='80px' src='pictures/e/0.svg'><img height='80px' src='pictures/e/0.svg'><img height='80px' src='pictures/e/7.svg'></p></div> <!-- .slide: class="center" -->
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='80px' src='pictures/unicode.png'><img height='80px' src='pictures/e/6.svg'><img height='80px' src='pictures/space.svg'><img height='80px' src='pictures/space.svg'><img height='80px' src='pictures/space.svg'><img height='80px' src='pictures/space.svg'><img height='80px' src='pictures/e/2.svg'><img height='80px' src='pictures/e/0.svg'><img height='80px' src='pictures/e/0.svg'><img height='80px' src='pictures/e/7.svg'></p></div> <!-- .slide: class="center" -->
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='200px' src='pictures/o/clover.png'><img height='200px' src='pictures/o/tulip.png'><img height='200px' src='pictures/o/apple.png'><img height='200px' src='pictures/o/maple.png'></p></div> <!-- .slide: class="center" -->
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='200px' src='pictures/o/chick.png'><img height='200px' src='pictures/o/penguin.png'><img height='200px' src='pictures/o/horse.png'><img height='200px' src='pictures/o/pig.png'></p></div> <!-- .slide: class="center" -->
 ---
- <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='80px' src='pictures/e/6.svg'><img height='80px' src='pictures/space.svg'><img height='80px' src='pictures/space.svg'><img height='80px' src='pictures/space.svg'><img height='80px' src='pictures/space.svg'><img height='80px' src='pictures/space.svg'><img height='80px' src='pictures/e/2.svg'><img height='80px' src='pictures/e/0.svg'><img height='80px' src='pictures/e/1.svg'><img height='80px' src='pictures/e/0.svg'></p></div> <!-- .slide: class="center" -->
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='80px' src='pictures/t/apple.svg'><img height='80px' src='pictures/space.svg'><img height='80px' src='pictures/space.svg'><img height='80px' src='pictures/space.svg'><img height='80px' src='pictures/space.svg'><img height='80px' src='pictures/space.svg'><img height='80px' src='pictures/e/2.svg'><img height='80px' src='pictures/e/0.svg'><img height='80px' src='pictures/e/1.svg'><img height='80px' src='pictures/e/0.svg'></p></div> <!-- .slide: class="center" -->
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='200px' src='pictures/a/clover.png'><img height='200px' src='pictures/a/tulip.png'><img height='200px' src='pictures/a/apple.png'><img height='200px' src='pictures/a/maple.png'></p></div> <!-- .slide: class="center" -->
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='200px' src='pictures/a/chick.png'><img height='200px' src='pictures/a/penguin.png'><img height='200px' src='pictures/a/horse.png'><img height='200px' src='pictures/a/pig.png'></p></div> <!-- .slide: class="center" -->
 Note: the first verison with emoji
@@ -70,7 +70,7 @@ If it supports emoji, i'll do this
 
 eAfter this, adoption rates plummet
 ---
- <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='80px' src='pictures/e/7.svg'><img height='80px' src='pictures/space.svg'><img height='80px' src='pictures/space.svg'><img height='80px' src='pictures/space.svg'><img height='80px' src='pictures/space.svg'><img height='80px' src='pictures/space.svg'><img height='80px' src='pictures/e/2.svg'><img height='80px' src='pictures/e/0.svg'><img height='80px' src='pictures/e/1.svg'><img height='80px' src='pictures/e/4.svg'></p></div> <!-- .slide: class="center" -->
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='80px' src='pictures/unicode.png'><img height='80px' src='pictures/e/7.svg'><img height='80px' src='pictures/space.svg'><img height='80px' src='pictures/space.svg'><img height='80px' src='pictures/space.svg'><img height='80px' src='pictures/space.svg'><img height='80px' src='pictures/e/2.svg'><img height='80px' src='pictures/e/0.svg'><img height='80px' src='pictures/e/1.svg'><img height='80px' src='pictures/e/4.svg'></p></div> <!-- .slide: class="center" -->
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='200px' src='pictures/t/chipmunk.svg'><img height='200px' src='pictures/t/satellite.svg'><img height='200px' src='pictures/t/control.svg'><img height='200px' src='pictures/t/vulcan.svg'></p></div> <!-- .slide: class="center" -->
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='200px' src='pictures/t/paperclip.svg'><img height='200px' src='pictures/t/cardbox.svg'><img height='200px' src='pictures/t/compression.svg'><img height='200px' src='pictures/t/levi.svg'></p></div> <!-- .slide: class="center" -->
 
@@ -79,7 +79,7 @@ Note: Levitating here because webdings
 Wingdings and webdings compatitbility because missing data
 
 ---
- <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='80px' src='pictures/e/8.svg'><img height='80px' src='pictures/space.svg'><img height='80px' src='pictures/space.svg'><img height='80px' src='pictures/space.svg'><img height='80px' src='pictures/space.svg'><img height='80px' src='pictures/space.svg'><img height='80px' src='pictures/e/2.svg'><img height='80px' src='pictures/e/0.svg'><img height='80px' src='pictures/e/1.svg'><img height='80px' src='pictures/e/5.svg'></p></div> <!-- .slide: class="center" -->
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='80px' src='pictures/unicode.png'><img height='80px' src='pictures/e/8.svg'><img height='80px' src='pictures/space.svg'><img height='80px' src='pictures/space.svg'><img height='80px' src='pictures/space.svg'><img height='80px' src='pictures/space.svg'><img height='80px' src='pictures/e/2.svg'><img height='80px' src='pictures/e/0.svg'><img height='80px' src='pictures/e/1.svg'><img height='80px' src='pictures/e/5.svg'></p></div> <!-- .slide: class="center" -->
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='200px' src='pictures/t/lion.svg'><img height='200px' src='pictures/t/robot.svg'><img height='200px' src='pictures/t/upsidedown.svg'><img height='200px' src='pictures/t/unicorn.svg'></p></div> <!-- .slide: class="center" -->
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='200px' src='pictures/t/popcorn.svg'><img height='200px' src='pictures/t/taco.svg'><img height='200px' src='pictures/t/burrito.svg'><img height='200px' src='pictures/t/horns5.svg'></p></div> <!-- .slide: class="center" -->
 
@@ -432,7 +432,7 @@ Where you can, allow the images to be bigger
 Twitter DM and Slack message - if only emoji, they're display bigger
 ---
 
-<p style="line-height: 1.5"> `<img src="img/1f943.png" alt="`<img src="pictures/t/whisky.svg" height="40px" style="margin: 0px">`" title="Tumbler glass"` <br>` aria-label="Emoji: Tumbler glass">`
+<p style="line-height: 1.5"> `<img src=`<span style="padding-right: 10px;;color:red; font-weight: bold">`"img/1f943.png"`</span> `alt="`<img src="pictures/t/whisky.svg" height="40px" style="margin: 0px">`" title="Tumbler glass"` <br>` aria-label="Emoji: Tumbler glass">`
 </p> 
 
 <img src="pictures/o/whisky_display.svg" height="400px">
@@ -445,7 +445,7 @@ Twitter DM and Slack message - if only emoji, they're display bigger
 <img src="pictures/o/whisky_mouse.svg" height="400px">
 ---
 
-<p style="line-height: 1.5"> `<img src="img/1f943.png"` <span style="color: red; font-weight: bold">` alt="`<img src="pictures/t/whisky.svg" height="40px" style="margin: 0px">`"` </span> `title="Tumbler glass"`<br> `aria-label="Emoji: Tumbler glass">`
+<p style="line-height: 1.5"> `<img src="img/1f943.png"` <span style="padding-left: 10px;color: red; font-weight: bold"> `alt="`<img src="pictures/t/whisky.svg" height="40px" style="margin: 0px">`"` </span> `title="Tumbler glass"`<br> `aria-label="Emoji: Tumbler glass">`
 
 </p> 
 
@@ -462,14 +462,14 @@ Note: The future
 ---
  <div style='width: 50%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/t/sparkles.svg'></p></div> <!-- .slide: class="center" -->
 ---
- <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='80px' src='pictures/e/9.svg'><img height='80px' src='pictures/space.svg'><img height='80px' src='pictures/space.svg'><img height='80px' src='pictures/space.svg'><img height='80px' src='pictures/space.svg'><img height='80px' src='pictures/space.svg'><img height='80px' src='pictures/e/2.svg'><img height='80px' src='pictures/e/0.svg'><img height='80px' src='pictures/e/1.svg'><img height='80px' src='pictures/e/6.svg'></p></div> <!-- .slide: class="center" -->
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='80px' src='pictures/unicode.png'><img height='80px' src='pictures/e/9.svg'><img height='80px' src='pictures/space.svg'><img height='80px' src='pictures/space.svg'><img height='80px' src='pictures/space.svg'><img height='80px' src='pictures/space.svg'><img height='80px' src='pictures/e/2.svg'><img height='80px' src='pictures/e/0.svg'><img height='80px' src='pictures/e/1.svg'><img height='80px' src='pictures/e/6.svg'></p></div> <!-- .slide: class="center" -->
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='200px' src='pictures/t/shrug.svg'><img height='200px' src='pictures/t/facepalm.svg'><img height='200px' src='pictures/t/cowboy.svg'><img height='200px' src='pictures/t/bacon.svg'></p></div> <!-- .slide: class="center" -->
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='200px' src='pictures/t/whisky.svg'><img height='200px' src='pictures/t/owl.svg'><img height='200px' src='pictures/o/spoon.svg'><img height='200px' src='pictures/t/egg.svg'></p></div> <!-- .slide: class="center" -->
 
 
 ---
 
- <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='80px' src='pictures/e/10.svg'><img height='80px' src='pictures/space.svg'><img height='80px' src='pictures/space.svg'><img height='80px' src='pictures/space.svg'><img height='80px' src='pictures/space.svg'><img height='80px' src='pictures/space.svg'><img height='80px' src='pictures/e/2.svg'><img height='80px' src='pictures/e/0.svg'><img height='80px' src='pictures/e/1.svg'><img height='80px' src='pictures/e/7.svg'></p></div> <!-- .slide: class="center" -->
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='80px' src='pictures/unicode.png'><img height='80px' src='pictures/e/10.svg'><img height='80px' src='pictures/space.svg'><img height='80px' src='pictures/space.svg'><img height='80px' src='pictures/space.svg'><img height='80px' src='pictures/space.svg'><img height='80px' src='pictures/e/2.svg'><img height='80px' src='pictures/e/0.svg'><img height='80px' src='pictures/e/1.svg'><img height='80px' src='pictures/e/7.svg'></p></div> <!-- .slide: class="center" -->
 
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='200px' src='pictures/o/takeaway.png'><img height='200px' src='pictures/o/fortune.png'><img height='200px' src='pictures/o/dumpling.png'><img height='200px' src='pictures/o/chopsticks.png'></p></div> <!-- .slide: class="center" -->
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='200px' src='pictures/o/eyebrow.png'><img height='200px' src='pictures/g/question.svg'><img height='200px' src='pictures/g/question.svg'><img height='200px' src='pictures/g/question.svg'></p></div> <!-- .slide: class="center" -->
@@ -493,6 +493,23 @@ Knitting
 Coffee (currently only 'hot beverage')
 Hawaiian Hangtime sign (thumb and pinky)
 ---
+# <img height="400px" src="pictures/t/up.svg"> &nbsp; <img height="400px" src="pictures/t/calendar.svg"> <!-- .slide: class="center" -->
+Note: updates
+---
+<div style='width: 100%; margin: 0 auto;'><p align='center'><img style="padding: 20px" height='266px' src='pictures/g/blushing.svg'><img style="padding: 20px" height='266px' src='pictures/g/flush_6.png'><img style="padding: 20px" height='266px' src='pictures/g/blush_n.png'></p></div> <!-- .slide: class="center" -->
+---
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='160px' src='pictures/f/f1_smiling.png'><img height='160px' src='pictures/f/f1_crying.png'><img height='160px' src='pictures/f/f1_toung.png'><img height='160px' src='pictures/f/f1_throw.png'><img height='160px' src='pictures/f/f1_shock.png'></p></div> <!-- .slide: class="center" -->
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='160px' src='pictures/f/f2_smiling.png'><img height='160px' src='pictures/f/f2_crying.png'><img height='160px' src='pictures/f/f2_toung.png'><img height='160px' src='pictures/f/f2_throw.png'><img height='160px' src='pictures/f/f2_shock.png'></p></div> <!-- .slide: class="center" -->
+Note: redoing of facebook emoji
+---
+
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='160px' src='pictures/m/m1_smile.png'><img height='160px' src='pictures/m/m1_cry.png'><img height='160px' src='pictures/m/m1_toung.png'><img height='160px' src='pictures/m/m1_kiss.png'><img height='160px' src='pictures/m/m1_shock.png'></p></div> <!-- .slide: class="center" -->
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='160px' src='pictures/m/m2_smile.png'><img height='160px' src='pictures/m/m2_cry.png'><img height='160px' src='pictures/m/m2_toung.png'><img height='160px' src='pictures/m/m2_kiss.png'><img height='160px' src='pictures/m/m2_shock.png'></p></div> <!-- .slide: class="center" -->
+---
+
+ <img src="pictures/m/ninja_cat.png" />
+---
+
 
  <div style='width: 50%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/t/hammerwrench.svg'></p></div> <!-- .slide: class="center" -->
 ---
@@ -501,18 +518,6 @@ Hawaiian Hangtime sign (thumb and pinky)
 ---
 # <img height="200px" src="pictures/g/girl.svg"> <span>+</span> <img height="200px" src="pictures/g/cooking.svg"> = <img height="200px" src="pictures/g/chef.png"> <!-- .slide: class="center" -->
 ---
-# <img height="400px" src="pictures/t/up.svg"> &nbsp; <img height="400px" src="pictures/t/calendar.svg"> <!-- .slide: class="center" -->
-Note: updates
-
----
- <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='160px' src='pictures/f/f1_smiling.png'><img height='160px' src='pictures/f/f1_crying.png'><img height='160px' src='pictures/f/f1_toung.png'><img height='160px' src='pictures/f/f1_throw.png'><img height='160px' src='pictures/f/f1_shock.png'></p></div> <!-- .slide: class="center" -->
- <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='160px' src='pictures/f/f2_smiling.png'><img height='160px' src='pictures/f/f2_crying.png'><img height='160px' src='pictures/f/f2_toung.png'><img height='160px' src='pictures/f/f2_throw.png'><img height='160px' src='pictures/f/f2_shock.png'></p></div> <!-- .slide: class="center" -->
-Note: redoing of facebook emoji
-
----
-<div style='width: 100%; margin: 0 auto;'><p align='center'><img style="padding: 20px" height='266px' src='pictures/g/blushing.svg'><img style="padding: 20px" height='266px' src='pictures/g/flush_6.png'><img style="padding: 20px" height='266px' src='pictures/g/blush_n.png'></p></div> <!-- .slide: class="center" -->
----
-
  <img src="pictures/o/takeaway.png" />
 Note: the takeaways
 ---

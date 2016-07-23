@@ -23,7 +23,7 @@
 Note: Extremely powerfull
 ---
 
-! g/US | g/france | g/germany | g/china
+! g/US | g/france | g/russia.png | g/china
 ! space | t/smile | space
 Note: So, with this, people are happy ,characters can be encoded.
 ---
@@ -58,11 +58,11 @@ then a couple of versions later, released to the US
 And then everyone rampted up
 
 ---
-! unicode.png | space | space | space | space  | space | e/2 | e/0 | e/0 | e/7
+! unicode.png | e/6 | space | space | space  | space | e/2 | e/0 | e/0 | e/7
 ! o/clover.png | o/tulip.png | o/apple.png | o/maple.png
 ! o/chick.png | o/penguin.png | o/horse.png | o/pig.png
 ---
-! e/6 | space | space | space | space  | space | e/2 | e/0 | e/1 | e/0 
+! t/apple | space | space | space | space  | space | e/2 | e/0 | e/1 | e/0 
 ! a/clover.png | a/tulip.png | a/apple.png | a/maple.png
 ! a/chick.png | a/penguin.png | a/horse.png | a/pig.png
 Note: the first verison with emoji
@@ -70,7 +70,7 @@ If it supports emoji, i'll do this
 
 eAfter this, adoption rates plummet
 ---
-! e/7 | space | space | space | space  | space | e/2 | e/0 | e/1 | e/4
+! unicode.png | e/7 | space | space | space  | space | e/2 | e/0 | e/1 | e/4
 ! t/chipmunk | t/satellite | t/control | t/vulcan
 ! t/paperclip | t/cardbox | t/compression | t/levi
 
@@ -79,7 +79,7 @@ Note: Levitating here because webdings
 Wingdings and webdings compatitbility because missing data
 
 ---
-! e/8 | space | space | space | space  | space | e/2 | e/0 | e/1 | e/5
+! unicode.png | e/8 | space | space | space  | space | e/2 | e/0 | e/1 | e/5
 ! t/lion | t/robot | t/upsidedown | t/unicorn
 ! t/popcorn | t/taco | t/burrito | t/horns5
 
@@ -432,7 +432,7 @@ Where you can, allow the images to be bigger
 Twitter DM and Slack message - if only emoji, they're display bigger
 ---
 
-<p style="line-height: 1.5"> `<img src="img/1f943.png" alt="`<img src="pictures/t/whisky.svg" height="40px" style="margin: 0px">`" title="Tumbler glass"` <br>` aria-label="Emoji: Tumbler glass">`
+<p style="line-height: 1.5"> `<img src=`<span style="padding-right: 10px;;color:red; font-weight: bold">`"img/1f943.png"`</span> `alt="`<img src="pictures/t/whisky.svg" height="40px" style="margin: 0px">`" title="Tumbler glass"` <br>` aria-label="Emoji: Tumbler glass">`
 </p>
 
 <img src="pictures/o/whisky_display.svg" height="400px">
@@ -445,7 +445,7 @@ Twitter DM and Slack message - if only emoji, they're display bigger
 <img src="pictures/o/whisky_mouse.svg" height="400px">
 ---
 
-<p style="line-height: 1.5"> `<img src="img/1f943.png"` <span style="color: red; font-weight: bold">` alt="`<img src="pictures/t/whisky.svg" height="40px" style="margin: 0px">`"` </span> `title="Tumbler glass"`<br> `aria-label="Emoji: Tumbler glass">`
+<p style="line-height: 1.5"> `<img src="img/1f943.png"` <span style="padding-left: 10px;color: red; font-weight: bold"> `alt="`<img src="pictures/t/whisky.svg" height="40px" style="margin: 0px">`"` </span> `title="Tumbler glass"`<br> `aria-label="Emoji: Tumbler glass">`
 
 </p>
 
@@ -462,14 +462,14 @@ Note: The future
 ---
 ! t/sparkles
 ---
-! e/9 | space | space | space | space  | space | e/2 | e/0 | e/1 | e/6
+! unicode.png | e/9 |  space | space | space  | space | e/2 | e/0 | e/1 | e/6
 ! t/shrug | t/facepalm | t/cowboy | t/bacon
 ! t/whisky | t/owl | o/spoon | t/egg
 
 
 ---
 
-! e/10 | space | space | space | space  | space | e/2 | e/0 | e/1 | e/7
+! unicode.png | e/10 | space | space | space  | space | e/2 | e/0 | e/1 | e/7
 
 ! o/takeaway.png | o/fortune.png | o/dumpling.png | o/chopsticks.png
 ! o/eyebrow.png | g/question | g/question | g/question
@@ -493,6 +493,23 @@ Knitting
 Coffee (currently only 'hot beverage')
 Hawaiian Hangtime sign (thumb and pinky)
 ---
+#= <img height="400px" src="pictures/t/up.svg"> &nbsp; <img height="400px" src="pictures/t/calendar.svg">
+Note: updates 
+---
+<div style='width: 100%; margin: 0 auto;'><p align='center'><img style="padding: 20px" height='266px' src='pictures/g/blushing.svg'><img style="padding: 20px" height='266px' src='pictures/g/flush_6.png'><img style="padding: 20px" height='266px' src='pictures/g/blush_n.png'></p></div> <!-- .slide: class="center" -->
+---
+! f/f1_smiling.png | f/f1_crying.png | f/f1_toung.png |f/f1_throw.png | f/f1_shock.png
+! f/f2_smiling.png | f/f2_crying.png | f/f2_toung.png | f/f2_throw.png | f/f2_shock.png
+Note: redoing of facebook emoji
+---
+
+! m/m1_smile.png | m/m1_cry.png | m/m1_toung.png |m/m1_kiss.png | m/m1_shock.png
+! m/m2_smile.png | m/m2_cry.png | m/m2_toung.png | m/m2_kiss.png | m/m2_shock.png
+---
+
+@ m/ninja_cat.png
+---
+
 
 ! t/hammerwrench
 ---
@@ -501,18 +518,6 @@ Hawaiian Hangtime sign (thumb and pinky)
 ---
 #= <img height="200px" src="pictures/g/girl.svg"> <span>+</span> <img height="200px" src="pictures/g/cooking.svg"> = <img height="200px" src="pictures/g/chef.png">
 ---
-#= <img height="400px" src="pictures/t/up.svg"> &nbsp; <img height="400px" src="pictures/t/calendar.svg">
-Note: updates 
-
----
-! f/f1_smiling.png | f/f1_crying.png | f/f1_toung.png |f/f1_throw.png | f/f1_shock.png
-! f/f2_smiling.png | f/f2_crying.png | f/f2_toung.png | f/f2_throw.png | f/f2_shock.png
-Note: redoing of facebook emoji
-
----
-<div style='width: 100%; margin: 0 auto;'><p align='center'><img style="padding: 20px" height='266px' src='pictures/g/blushing.svg'><img style="padding: 20px" height='266px' src='pictures/g/flush_6.png'><img style="padding: 20px" height='266px' src='pictures/g/blush_n.png'></p></div> <!-- .slide: class="center" -->
----
-
 @ o/takeaway.png
 Note: the takeaways
 ---
