@@ -259,6 +259,19 @@ Note: Surprisingly enough, this works
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='160px' src='pictures/space.svg'><img height='160px' src='pictures/space.svg'><img height='160px' src='pictures/o/spoon.svg'><img height='160px' src='pictures/space.svg'><img height='160px' src='pictures/space.svg'></p></div> <!-- .slide: class="center" -->
 # xn--9q9h
 ---
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/t/coffee.svg'><img height='400px' src='pictures/t/scroll.svg'></p></div> <!-- .slide: class="center" -->
+Note: javascript was created around the same time unicode was, so it doesn't handle unicode by default
+---
+# &nbsp;
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">&nbsp;&nbsp; &nbsp; &nbsp;> "abc".split("")</code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">&nbsp; &nbsp;&nbsp; &nbsp;["a","b","c"]</code></pre></div> <!-- .element: class="fragment" -->
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">&nbsp; &nbsp;&nbsp; &nbsp;> "<img src="pictures/t/chicken.svg" class="e" style="margin:0"><img src="pictures/t/chipmunk.svg" class="e" style="margin:0">".split("")</code></pre></div> <!-- .element: class="fragment" -->
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">&nbsp; &nbsp;&nbsp; &nbsp;["�","�","�","�"]</code></pre></div> <!-- .element: class="fragment" -->
+
+Note: ecmascript 5, 6 updates do fix this
+
+and or polyfill
+---
  <div style='width: 50%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/e/keyboard.svg'></p></div> <!-- .slide: class="center" -->
 
 Note: So how do you get the input in?
@@ -489,6 +502,16 @@ Twitter DM and Slack message - if only emoji, they're display bigger
 </p> 
 <img src="pictures/o/whisky_speaker.svg" height="400px">
 ---
+ <div style='width: 50%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/t/lightbulb.svg'></p></div> <!-- .slide: class="center" -->
+
+Note: TIP for general use
+---
+
+## `<meta charset="utf-8">` <!-- .slide: class="center" -->
+Note: 
+By default, html4 does not use unicode
+
+---
  <div style='width: 50%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/e/atom.svg'></p></div> <!-- .slide: class="center" -->
 
 Note: The future
@@ -528,6 +551,7 @@ Milkshake
 Knitting 
 Coffee (currently only 'hot beverage')
 Hawaiian Hangtime sign (thumb and pinky)
+
 ---
 # <img height="400px" src="pictures/t/up.svg"> &nbsp; <img height="400px" src="pictures/t/calendar.svg"> <!-- .slide: class="center" -->
 Note: updates
@@ -542,17 +566,27 @@ Note: redoing of facebook emoji
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='160px' src='pictures/m/m1_smile.png'><img height='160px' src='pictures/m/m1_cry.png'><img height='160px' src='pictures/m/m1_toung.png'><img height='160px' src='pictures/m/m1_kiss.png'><img height='160px' src='pictures/m/m1_shock.png'></p></div> <!-- .slide: class="center" -->
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='160px' src='pictures/m/m2_smile.png'><img height='160px' src='pictures/m/m2_cry.png'><img height='160px' src='pictures/m/m2_toung.png'><img height='160px' src='pictures/m/m2_kiss.png'><img height='160px' src='pictures/m/m2_shock.png'></p></div> <!-- .slide: class="center" -->
 ---
-
  <img src="pictures/m/ninja_cat.png" />
 ---
-
-
  <div style='width: 50%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/t/hammerwrench.svg'></p></div> <!-- .slide: class="center" -->
 ---
 
 # <img height="200px" src="pictures/g/whiteflag.png"> <span>+</span> <img height="200px" src="pictures/g/rainbow.svg"> = <img height="200px" src="pictures/g/googlerainbow.png"> <!-- .slide: class="center" -->
 ---
 # <img height="200px" src="pictures/g/girl.svg"> <span>+</span> <img height="200px" src="pictures/g/cooking.svg"> = <img height="200px" src="pictures/g/chef.png"> <!-- .slide: class="center" -->
+---
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='133px' src='pictures/g/E.svg'><img height='133px' src='pictures/g/C.svg'><img height='133px' src='pictures/g/M.svg'><img height='133px' src='pictures/g/A.svg'><img height='133px' src='pictures/t/scroll.svg'><img height='133px' src='pictures/e/6.svg'></p></div> <!-- .slide: class="center" -->
+Note: unicode compatibiltiy ++
+
+Including a new proposal announced today
+
+---
+# &nbsp;
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">const regex = <r>/^\p{Number}+$/u</r>;</code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">regex.test(<r>'²³¹¼½¾𝟏𝟐𝟑𝟜𝟝𝟞𝟩𝟪𝟫𝟬𝟭𝟮𝟯'</r>);</code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%"><c>// → true</c></code></pre></div>
+<span class="dasfoot">https://mathiasbynens.be/notes/es-unicode-property-escapes</span>
+Note: Kinda cool, uses existing unicode standsards, link on the screen, i'll be retweeting it in a bit
 ---
  <img src="pictures/o/takeaway.png" />
 Note: the takeaways

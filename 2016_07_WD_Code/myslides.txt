@@ -259,6 +259,19 @@ Note: Surprisingly enough, this works
 ! space | space | o/spoon | space | space 
 # xn--9q9h
 ---
+! t/coffee | t/scroll
+Note: javascript was created around the same time unicode was, so it doesn't handle unicode by default
+---
+# &nbsp;
+#> &nbsp;&nbsp; &nbsp; &nbsp;> "abc".split("")
+#>- &nbsp; &nbsp;&nbsp; &nbsp;["a","b","c"]
+#>- &nbsp; &nbsp;&nbsp; &nbsp;> "<img src="pictures/t/chicken.svg" class="e" style="margin:0"><img src="pictures/t/chipmunk.svg" class="e" style="margin:0">".split("")
+#>- &nbsp; &nbsp;&nbsp; &nbsp;["�","�","�","�"]
+
+Note: ecmascript 5, 6 updates do fix this
+
+and or polyfill
+---
 ! e/keyboard
 
 Note: So how do you get the input in?
@@ -489,6 +502,16 @@ Twitter DM and Slack message - if only emoji, they're display bigger
 </p>
 <img src="pictures/o/whisky_speaker.svg" height="400px">
 ---
+! t/lightbulb
+
+Note: TIP for general use
+---
+
+##= `<meta charset="utf-8">`
+Note: 
+By default, html4 does not use unicode
+
+---
 ! e/atom
 
 Note: The future
@@ -528,6 +551,7 @@ Milkshake
 Knitting
 Coffee (currently only 'hot beverage')
 Hawaiian Hangtime sign (thumb and pinky)
+
 ---
 #= <img height="400px" src="pictures/t/up.svg"> &nbsp; <img height="400px" src="pictures/t/calendar.svg">
 Note: updates 
@@ -542,17 +566,27 @@ Note: redoing of facebook emoji
 ! m/m1_smile.png | m/m1_cry.png | m/m1_toung.png |m/m1_kiss.png | m/m1_shock.png
 ! m/m2_smile.png | m/m2_cry.png | m/m2_toung.png | m/m2_kiss.png | m/m2_shock.png
 ---
-
 @ m/ninja_cat.png
 ---
-
-
 ! t/hammerwrench
 ---
 
 #= <img height="200px" src="pictures/g/whiteflag.png"> <span>+</span> <img height="200px" src="pictures/g/rainbow.svg"> = <img height="200px" src="pictures/g/googlerainbow.png">
 ---
 #= <img height="200px" src="pictures/g/girl.svg"> <span>+</span> <img height="200px" src="pictures/g/cooking.svg"> = <img height="200px" src="pictures/g/chef.png">
+---
+! g/E | g/C | g/M | g/A | t/scroll | e/6
+Note: unicode compatibiltiy ++
+
+Including a new proposal announced today 
+
+---
+# &nbsp;
+#> const regex = <r>/^\p{Number}+$/u</r>;
+#> regex.test(<r>'²³¹¼½¾𝟏𝟐𝟑𝟜𝟝𝟞𝟩𝟪𝟫𝟬𝟭𝟮𝟯'</r>);
+#> <c>// → true</c>
+<span class="dasfoot">https://mathiasbynens.be/notes/es-unicode-property-escapes</span>
+Note: Kinda cool, uses existing unicode standsards, link on the screen, i'll be retweeting it in a bit
 ---
 @ o/takeaway.png
 Note: the takeaways
