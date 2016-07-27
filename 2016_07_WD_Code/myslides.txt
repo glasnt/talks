@@ -9,14 +9,24 @@
 
 ---
 ! g/wave
+Note: Hi~
 ---
 ! t/purple_heart
+Note: i love emoji 
 ---
 ! o/broken
+Note: i love how broken it is 
 ---
 ! g/bug
+Note: and how it's full of bugs
 ---
 ! g/T | g/L | g/D | g/R
+Note: basically, because computers, we have 
+
+unicode
+
+universal encoding
+
 ---
 ! o/bolt
 
@@ -25,18 +35,18 @@ Note: Extremely powerfull
 
 ! g/US | g/france | g/russia.png | g/china
 ! space | t/smile | space
-Note: So, with this, people are happy ,characters can be encoded.
+Note: English, Latin-character based languages, cyrliic, chinese
 ---
 
 ! g/japan | t/worry | g/question
-Note: But the Japanese were wondering where the rest of their codepoints were
+Note: But the japense arne't happy
 ---
 
 ! g/japan | t/hearteyes | m/mobile.png
 
 Note: These japanese had mobile phones with these little pictures, and they wanted them in unicode
 ---
-! g/japan | space | space | space | space  | space | e/1 | e/9 | e/9 | e/5
+! g/japan | space | space | space | space  | space | e/1 | e/9 | e/9 | e/9
 @ o/docomo.png
 
 Note: Shigetaka Kurita
@@ -45,7 +55,7 @@ SHI-GE-TA-KA  KU RI TA
 
 12x12 pixels
 
-Introduced in the early 1990s, with a whole lot of turmoil
+Introduced in the late 1990s, with a whole lot of turmoil
 
 There's entire essays on the implementatation issues with this
 
@@ -61,14 +71,31 @@ And then everyone rampted up
 ! unicode.png | e/6 | space | space | space  | space | e/2 | e/0 | e/0 | e/7
 ! o/clover.png | o/tulip.png | o/apple.png | o/maple.png
 ! o/chick.png | o/penguin.png | o/horse.png | o/pig.png
+Note: with help of google
+
+unicode 6 got emoji
+
+and then nothing happened. 
 ---
 ! t/apple | space | space | space | space  | space | e/2 | e/0 | e/1 | e/0 
 ! a/clover.png | a/tulip.png | a/apple.png | a/maple.png
 ! a/chick.png | a/penguin.png | a/horse.png | a/pig.png
-Note: the first verison with emoji
-If it supports emoji, i'll do this
+Note: i
 
-eAfter this, adoption rates plummet
+
+iOS 2, 3 in Japan
+
+Gets emoji
+
+then they have it as an option in the iOS 5 US version
+
+the first verison with emoji
+If it supports emoji,it will support 6
+
+After this, adoption rates plummet
+
+Yosemite won't support anything above 6
+
 ---
 ! unicode.png | e/7 | space | space | space  | space | e/2 | e/0 | e/1 | e/4
 ! t/chipmunk | t/satellite | t/control | t/vulcan
@@ -141,6 +168,12 @@ Note: Guess -- Blonde
 
 ---
 ! t/questionmark | g/questionmark | f/fb_quest2.png
+Note: What's up with that?
+
+NB these are all questionmarks. 
+
+The last one is facebook's questionmark
+
 ---
 ! t/grinning | t/grimice
 Note: grinning vs grimmace
@@ -465,8 +498,11 @@ Note: The future
 ! unicode.png | e/9 |  space | space | space  | space | e/2 | e/0 | e/1 | e/6
 ! t/shrug | t/facepalm | t/cowboy | t/bacon
 ! t/whisky | t/owl | o/spoon | t/egg
+---
 
-
+! unicode.png | e/9 |  space | space | space  | space | e/2 | e/0 | e/1 | e/6
+! t/medal-1 | t/medal-2 | t/medal-3 | t/waterpolo
+! t/wrestlers | t/glove | t/handball | t/canoe
 ---
 
 ! unicode.png | e/10 | space | space | space  | space | e/2 | e/0 | e/1 | e/7

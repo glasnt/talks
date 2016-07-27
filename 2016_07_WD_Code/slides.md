@@ -9,14 +9,24 @@
 
 ---
  <div style='width: 50%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/g/wave.svg'></p></div> <!-- .slide: class="center" -->
+Note: Hi~
 ---
  <div style='width: 50%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/t/purple_heart.svg'></p></div> <!-- .slide: class="center" -->
+Note: i love emoji
 ---
  <div style='width: 50%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/o/broken.svg'></p></div> <!-- .slide: class="center" -->
+Note: i love how broken it is
 ---
  <div style='width: 50%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/g/bug.svg'></p></div> <!-- .slide: class="center" -->
+Note: and how it's full of bugs
 ---
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='200px' src='pictures/g/T.svg'><img height='200px' src='pictures/g/L.svg'><img height='200px' src='pictures/g/D.svg'><img height='200px' src='pictures/g/R.svg'></p></div> <!-- .slide: class="center" -->
+Note: basically, because computers, we have
+
+unicode 
+
+universal encoding
+
 ---
  <div style='width: 50%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/o/bolt.svg'></p></div> <!-- .slide: class="center" -->
 
@@ -25,18 +35,18 @@ Note: Extremely powerfull
 
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='200px' src='pictures/g/US.svg'><img height='200px' src='pictures/g/france.svg'><img height='200px' src='pictures/g/russia.png'><img height='200px' src='pictures/g/china.svg'></p></div> <!-- .slide: class="center" -->
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='266px' src='pictures/space.svg'><img height='266px' src='pictures/t/smile.svg'><img height='266px' src='pictures/space.svg'></p></div> <!-- .slide: class="center" -->
-Note: So, with this, people are happy ,characters can be encoded.
+Note: English, Latin-character based languages, cyrliic, chinese
 ---
 
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='266px' src='pictures/g/japan.svg'><img height='266px' src='pictures/t/worry.svg'><img height='266px' src='pictures/g/question.svg'></p></div> <!-- .slide: class="center" -->
-Note: But the Japanese were wondering where the rest of their codepoints were
+Note: But the japense arne't happy
 ---
 
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='266px' src='pictures/g/japan.svg'><img height='266px' src='pictures/t/hearteyes.svg'><img height='266px' src='pictures/m/mobile.png'></p></div> <!-- .slide: class="center" -->
 
 Note: These japanese had mobile phones with these little pictures, and they wanted them in unicode
 ---
- <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='80px' src='pictures/g/japan.svg'><img height='80px' src='pictures/space.svg'><img height='80px' src='pictures/space.svg'><img height='80px' src='pictures/space.svg'><img height='80px' src='pictures/space.svg'><img height='80px' src='pictures/space.svg'><img height='80px' src='pictures/e/1.svg'><img height='80px' src='pictures/e/9.svg'><img height='80px' src='pictures/e/9.svg'><img height='80px' src='pictures/e/5.svg'></p></div> <!-- .slide: class="center" -->
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='80px' src='pictures/g/japan.svg'><img height='80px' src='pictures/space.svg'><img height='80px' src='pictures/space.svg'><img height='80px' src='pictures/space.svg'><img height='80px' src='pictures/space.svg'><img height='80px' src='pictures/space.svg'><img height='80px' src='pictures/e/1.svg'><img height='80px' src='pictures/e/9.svg'><img height='80px' src='pictures/e/9.svg'><img height='80px' src='pictures/e/9.svg'></p></div> <!-- .slide: class="center" -->
  <img src="pictures/o/docomo.png" />
 
 Note: Shigetaka Kurita
@@ -45,7 +55,7 @@ SHI-GE-TA-KA KU RI TA
 
 12x12 pixels
 
-Introduced in the early 1990s, with a whole lot of turmoil
+Introduced in the late 1990s, with a whole lot of turmoil
 
 There's entire essays on the implementatation issues with this
 
@@ -61,14 +71,31 @@ And then everyone rampted up
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='80px' src='pictures/unicode.png'><img height='80px' src='pictures/e/6.svg'><img height='80px' src='pictures/space.svg'><img height='80px' src='pictures/space.svg'><img height='80px' src='pictures/space.svg'><img height='80px' src='pictures/space.svg'><img height='80px' src='pictures/e/2.svg'><img height='80px' src='pictures/e/0.svg'><img height='80px' src='pictures/e/0.svg'><img height='80px' src='pictures/e/7.svg'></p></div> <!-- .slide: class="center" -->
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='200px' src='pictures/o/clover.png'><img height='200px' src='pictures/o/tulip.png'><img height='200px' src='pictures/o/apple.png'><img height='200px' src='pictures/o/maple.png'></p></div> <!-- .slide: class="center" -->
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='200px' src='pictures/o/chick.png'><img height='200px' src='pictures/o/penguin.png'><img height='200px' src='pictures/o/horse.png'><img height='200px' src='pictures/o/pig.png'></p></div> <!-- .slide: class="center" -->
+Note: with help of google
+
+unicode 6 got emoji
+
+and then nothing happened.
 ---
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='80px' src='pictures/t/apple.svg'><img height='80px' src='pictures/space.svg'><img height='80px' src='pictures/space.svg'><img height='80px' src='pictures/space.svg'><img height='80px' src='pictures/space.svg'><img height='80px' src='pictures/space.svg'><img height='80px' src='pictures/e/2.svg'><img height='80px' src='pictures/e/0.svg'><img height='80px' src='pictures/e/1.svg'><img height='80px' src='pictures/e/0.svg'></p></div> <!-- .slide: class="center" -->
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='200px' src='pictures/a/clover.png'><img height='200px' src='pictures/a/tulip.png'><img height='200px' src='pictures/a/apple.png'><img height='200px' src='pictures/a/maple.png'></p></div> <!-- .slide: class="center" -->
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='200px' src='pictures/a/chick.png'><img height='200px' src='pictures/a/penguin.png'><img height='200px' src='pictures/a/horse.png'><img height='200px' src='pictures/a/pig.png'></p></div> <!-- .slide: class="center" -->
-Note: the first verison with emoji
-If it supports emoji, i'll do this
+Note: i
 
-eAfter this, adoption rates plummet
+
+iOS 2, 3 in Japan
+
+Gets emoji
+
+then they have it as an option in the iOS 5 US version
+
+the first verison with emoji
+If it supports emoji,it will support 6
+
+After this, adoption rates plummet
+
+Yosemite won't support anything above 6
+
 ---
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='80px' src='pictures/unicode.png'><img height='80px' src='pictures/e/7.svg'><img height='80px' src='pictures/space.svg'><img height='80px' src='pictures/space.svg'><img height='80px' src='pictures/space.svg'><img height='80px' src='pictures/space.svg'><img height='80px' src='pictures/e/2.svg'><img height='80px' src='pictures/e/0.svg'><img height='80px' src='pictures/e/1.svg'><img height='80px' src='pictures/e/4.svg'></p></div> <!-- .slide: class="center" -->
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='200px' src='pictures/t/chipmunk.svg'><img height='200px' src='pictures/t/satellite.svg'><img height='200px' src='pictures/t/control.svg'><img height='200px' src='pictures/t/vulcan.svg'></p></div> <!-- .slide: class="center" -->
@@ -141,6 +168,12 @@ Note: Guess -- Blonde
 
 ---
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='266px' src='pictures/t/questionmark.svg'><img height='266px' src='pictures/g/questionmark.svg'><img height='266px' src='pictures/f/fb_quest2.png'></p></div> <!-- .slide: class="center" -->
+Note: What's up with that?
+
+NB these are all questionmarks.
+
+The last one is facebook's questionmark
+
 ---
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/t/grinning.svg'><img height='400px' src='pictures/t/grimice.svg'></p></div> <!-- .slide: class="center" -->
 Note: grinning vs grimmace
@@ -465,8 +498,11 @@ Note: The future
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='80px' src='pictures/unicode.png'><img height='80px' src='pictures/e/9.svg'><img height='80px' src='pictures/space.svg'><img height='80px' src='pictures/space.svg'><img height='80px' src='pictures/space.svg'><img height='80px' src='pictures/space.svg'><img height='80px' src='pictures/e/2.svg'><img height='80px' src='pictures/e/0.svg'><img height='80px' src='pictures/e/1.svg'><img height='80px' src='pictures/e/6.svg'></p></div> <!-- .slide: class="center" -->
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='200px' src='pictures/t/shrug.svg'><img height='200px' src='pictures/t/facepalm.svg'><img height='200px' src='pictures/t/cowboy.svg'><img height='200px' src='pictures/t/bacon.svg'></p></div> <!-- .slide: class="center" -->
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='200px' src='pictures/t/whisky.svg'><img height='200px' src='pictures/t/owl.svg'><img height='200px' src='pictures/o/spoon.svg'><img height='200px' src='pictures/t/egg.svg'></p></div> <!-- .slide: class="center" -->
+---
 
-
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='80px' src='pictures/unicode.png'><img height='80px' src='pictures/e/9.svg'><img height='80px' src='pictures/space.svg'><img height='80px' src='pictures/space.svg'><img height='80px' src='pictures/space.svg'><img height='80px' src='pictures/space.svg'><img height='80px' src='pictures/e/2.svg'><img height='80px' src='pictures/e/0.svg'><img height='80px' src='pictures/e/1.svg'><img height='80px' src='pictures/e/6.svg'></p></div> <!-- .slide: class="center" -->
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='200px' src='pictures/t/medal-1.svg'><img height='200px' src='pictures/t/medal-2.svg'><img height='200px' src='pictures/t/medal-3.svg'><img height='200px' src='pictures/t/waterpolo.svg'></p></div> <!-- .slide: class="center" -->
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='200px' src='pictures/t/wrestlers.svg'><img height='200px' src='pictures/t/glove.svg'><img height='200px' src='pictures/t/handball.svg'><img height='200px' src='pictures/t/canoe.svg'></p></div> <!-- .slide: class="center" -->
 ---
 
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='80px' src='pictures/unicode.png'><img height='80px' src='pictures/e/10.svg'><img height='80px' src='pictures/space.svg'><img height='80px' src='pictures/space.svg'><img height='80px' src='pictures/space.svg'><img height='80px' src='pictures/space.svg'><img height='80px' src='pictures/e/2.svg'><img height='80px' src='pictures/e/0.svg'><img height='80px' src='pictures/e/1.svg'><img height='80px' src='pictures/e/7.svg'></p></div> <!-- .slide: class="center" -->
