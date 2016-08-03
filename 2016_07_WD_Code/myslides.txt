@@ -31,6 +31,10 @@ universal encoding
 ! o/bolt
 
 Note: Extremely powerfull
+
+it allows for completely universal communication between every language
+
+mostly. 
 ---
 
 ! g/US | g/france | g/russia.png | g/china
@@ -521,6 +525,16 @@ Note: The future
 ! unicode.png | e/9 |  space | space | space  | space | e/2 | e/0 | e/1 | e/6
 ! t/shrug | t/facepalm | t/cowboy | t/bacon
 ! t/whisky | t/owl | o/spoon | t/egg
+Note: These work in Twitter, 
+
+not 
+
+Facebook
+Android
+Apple
+Microsoft
+
+Updates coming "this year"
 ---
 
 ! unicode.png | e/9 |  space | space | space  | space | e/2 | e/0 | e/1 | e/6
