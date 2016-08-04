@@ -32,6 +32,20 @@ Note: Extremely powerfull
 it allows for completely universal communication between every language
 
 mostly. 
+
+---
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='114px' src='pictures/g/A.svg'><img height='114px' src='pictures/space.svg'><img height='114px' src='pictures/g/slashu.svg'><img height='114px' src='pictures/e/0.svg'><img height='114px' src='pictures/e/0.svg'><img height='114px' src='pictures/e/4.svg'><img height='114px' src='pictures/e/1.svg'></p></div> <!-- .slide: class="center" -->
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='114px' src='pictures/j/A.svg'><img height='114px' src='pictures/space.svg'><img height='114px' src='pictures/g/slashu.svg'><img height='114px' src='pictures/e/3.svg'><img height='114px' src='pictures/e/0.svg'><img height='114px' src='pictures/e/4.svg'><img height='114px' src='pictures/e/2.svg'></p></div> <!-- .slide: class="center" -->
+---
+
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='114px' src='pictures/g/e_only.svg'><img height='114px' src='pictures/space.svg'><img height='114px' src='pictures/g/slashu.svg'><img height='114px' src='pictures/e/0.svg'><img height='114px' src='pictures/e/0.svg'><img height='114px' src='pictures/e/4.svg'><img height='114px' src='pictures/e/5.svg'></p></div> <!-- .slide: class="center" -->
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='114px' src='pictures/g/accent_only_new.svg'><img height='114px' src='pictures/space.svg'><img height='114px' src='pictures/g/slashu.svg'><img height='114px' src='pictures/e/0.svg'><img height='114px' src='pictures/e/3.svg'><img height='114px' src='pictures/e/0.svg'><img height='114px' src='pictures/e/1.svg'></p></div> <!-- .slide: class="center" -->
+<br> 
+<div style='width: 100%; margin: 0 auto;'><p align='center'><img height='114px' src='pictures/g/ea.svg'><img height='30px' src='pictures/space.svg'><img height='66px' src='pictures/g/slashu.svg'><img height='66px' src='pictures/e/0.svg'><img height='66px' src='pictures/e/0.svg'><img height='66px' src='pictures/e/4.svg'><img height='66px' src='pictures/e/5.svg'><img height='66px' src='pictures/g/slashu.svg'><img height='66px' src='pictures/e/0.svg'><img height='66px' src='pictures/e/3.svg'><img height='66px' src='pictures/e/0.svg'><img height='66px' src='pictures/e/1.svg'></p></div> <!-- .slide: class="center" -->
+
+Note: Combination marks
+
+\u0065 \u0301
 ---
 
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='200px' src='pictures/g/US.svg'><img height='200px' src='pictures/g/france.svg'><img height='200px' src='pictures/g/russia.png'><img height='200px' src='pictures/g/china.svg'></p></div> <!-- .slide: class="center" -->
@@ -105,15 +119,21 @@ Yosemite won't support anything above 6
 Note: Levitating here because webdings
 
 Wingdings and webdings compatitbility because missing data
-
 ---
+
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='80px' src='pictures/unicode.png'><img height='80px' src='pictures/e/8.svg'><img height='80px' src='pictures/space.svg'><img height='80px' src='pictures/space.svg'><img height='80px' src='pictures/space.svg'><img height='80px' src='pictures/space.svg'><img height='80px' src='pictures/e/2.svg'><img height='80px' src='pictures/e/0.svg'><img height='80px' src='pictures/e/1.svg'><img height='80px' src='pictures/e/5.svg'></p></div> <!-- .slide: class="center" -->
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='200px' src='pictures/t/lion.svg'><img height='200px' src='pictures/t/robot.svg'><img height='200px' src='pictures/t/upsidedown.svg'><img height='200px' src='pictures/t/unicorn.svg'></p></div> <!-- .slide: class="center" -->
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='200px' src='pictures/t/popcorn.svg'><img height='200px' src='pictures/t/taco.svg'><img height='200px' src='pictures/t/burrito.svg'><img height='200px' src='pictures/t/horns5.svg'></p></div> <!-- .slide: class="center" -->
 
 Note: Unicode 8 2015
-Taco is now official
 ---
+ <div style='width: 50%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/t/horns5.svg'></p></div> <!-- .slide: class="center" -->
+## `\ud83d\udd96\ud83c\udffe`
+---
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/t/horns.svg'><img height='400px' src='pictures/t/fitz.svg'></p></div> <!-- .slide: class="center" -->
+## `\ud83d\udd96 \ud83c\udffe`
+---
+
  <div style='width: 50%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/g/sweat.svg'></p></div> <!-- .slide: class="center" -->
 
 Note: here's where it gets (more) complicated
@@ -137,10 +157,8 @@ Here's what Android went with.
 
 
 ---
-### &nbsp;
- <img src="pictures/g/hairy_heart_s.png" />
+# <img src="pictures/g/hairy_heart_s.png" height="400px"> <!-- .slide: class="center" -->
 ---
-
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='200px' src='pictures/a/flushed.png'><img height='200px' src='pictures/t/flushed.svg'><img height='200px' src='pictures/e/flushed.svg'><img height='200px' src='pictures/g/flushed.svg'></p></div> <!-- .slide: class="center" -->
 
 Note: 
@@ -284,13 +302,6 @@ Note: So how do you get the input in?
 
 Note: Apple input Control CMD Space
 
-Not universal
-
-Some apps don't like it
-
-Sourced from Swedish camping map
-
-Place of intereste
 ---
 # &nbsp;
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">&nbsp; $ pip install em-keyboard</code></pre></div>
@@ -335,9 +346,6 @@ But they're saved as it.
 Note: workaround for having a visual input mechanism is shortcodes
 
 But they're a psudostandard
-
-
-
 ---
 
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='133px' src='pictures/g/colon.svg'><img height='133px' src='pictures/g/C.svg'><img height='133px' src='pictures/g/A.svg'><img height='133px' src='pictures/g/K.svg'><img height='133px' src='pictures/g/E.svg'><img height='133px' src='pictures/g/colon.svg'></p></div> <!-- .slide: class="center" -->
@@ -352,7 +360,6 @@ Github: shortcodes, no search, autocomplete only.
 
 
 Django-emoji is an app for Django that reports to do this
-
 
 ---
 
@@ -370,12 +377,10 @@ uses brackets instead
 Note: 
 
 Cross-platform incompatibility
-Interetinsg to see when slack codes go into hipchat
 
-Also, slack engineering using slack codes in medium
+partyparrrot is not an emoji
 
-Also, hipchat api calls - slash commands are broken in 4.0 clients, but emoticons still work -__
-
+shipit is not an emoji
 ---
 
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/e/automobile.svg'><img height='400px' src='pictures/e/tick.svg'></p></div> <!-- .slide: class="center" -->
@@ -435,7 +440,9 @@ One from every release of unicode from 1993 - 2016
 
 Chrome, Firefox, Safari evergreen all on el cap
 : none of them look the same
+---
 
+# `twemoji.js` <!-- .slide: class="center" -->
 ---
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/g/wave.svg'><img height='400px' src='pictures/g/lightbulb.svg'></p></div> <!-- .slide: class="center" -->
 
@@ -578,11 +585,17 @@ Note: redoing of facebook emoji
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='160px' src='pictures/m/m1_smile.png'><img height='160px' src='pictures/m/m1_cry.png'><img height='160px' src='pictures/m/m1_toung.png'><img height='160px' src='pictures/m/m1_kiss.png'><img height='160px' src='pictures/m/m1_shock.png'></p></div> <!-- .slide: class="center" -->
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='160px' src='pictures/m/m2_smile.png'><img height='160px' src='pictures/m/m2_cry.png'><img height='160px' src='pictures/m/m2_toung.png'><img height='160px' src='pictures/m/m2_kiss.png'><img height='160px' src='pictures/m/m2_shock.png'></p></div> <!-- .slide: class="center" -->
 ---
- <img src="pictures/m/ninja_cat.png" />
----
  <img src="pictures/emojipedia-new-ios-10-women.png" />
 ---
  <img src="pictures/emojipedia-new-ios-10-men.png" />
+---
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/t/whiteflag.svg'><img height='400px' src='pictures/t/rainbow.svg'></p></div> <!-- .slide: class="center" -->
+### `\ud83c\udff3 \ud83c\udf08`
+### &nbsp;
+---
+ <div style='width: 50%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/t/rainbow_flag.svg'></p></div> <!-- .slide: class="center" -->
+### `\ud83c\udff3 \ud83c\udf08`
+###`\ufe0f\u200d` 
 ---
  <img src="pictures/o/takeaway.png" />
 Note: the takeaways
