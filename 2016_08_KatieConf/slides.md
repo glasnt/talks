@@ -47,15 +47,20 @@ Nuclear Engineering professor
 ### So it turns out KatieConf is a joke, but Katie's in tech are in fact real. <!-- .slide: data-background="pictures/soft_brokendreams.jpg" data-background-transition="none" -->
 #### @SwiftOnSecurity <!-- .slide: class="center" -->
 ---
-# Diversity<!-- .slide: data-background="pictures/soft_crayons.jpg" data-background-transition="none" --> <!-- .slide: class="center" -->
-
----
-## #allmalepanels<!-- .slide: data-background="pictures/soft_crayons.jpg" data-background-transition="none" --> <!-- .slide: class="center" -->
+## &nbsp; <!-- .slide: data-background="pictures/soft_crayons.jpg" data-background-transition="none" --> <!-- .slide: class="center" -->
 Note: 
-PyCon AU 25% ish
-Pycon US 2016 40% Female
-DjangoCon US 40% Female
-DjangoCon Europe: 52% Female
+* PyCon AU 25% ish
+* Pycon US 2016 40% Female
+* DjangoCon US 40% Female
+* DjangoCon Europe: 52% Female
+
+
+I want to see people on stage that look like me
+
+It's not about tokenism.
+
+katieConf is about the fact that I could put together a "Fantasy Football" style line up of capable female speakers that all just happened to be called Katie
+
 ---
 ### "But I just can't find a qualified woman to speak!" <!-- .slide: data-background="pictures/soft_crayons.jpg" data-background-transition="none" --> <!-- .slide: class="center" -->
 ##### &nbsp;
@@ -66,15 +71,19 @@ DjangoCon Europe: 52% Female
 ---
 ## AnaConf? <!-- .slide: data-background="pictures/soft_effects.jpg" data-background-transition="none" --> <!-- .slide: class="center" -->
 ## SarahConf?
+Note: Both have been jokingly proposed
 ---
 # <span style="font-family: 'Seaside'">JessConf</span> <!-- .slide: data-background="pictures/jess.jpg" data-background-transition="none" --> <!-- .slide: class="center" -->
 ### November 31, 2016 <!-- .element: class="fragment" -->
 ---
 ## &nbsp; <!-- .slide: data-background="pictures/pyconuk.png" data-background-transition="none" --> <!-- .slide: class="center" -->
 ---
-## PyCon UK <!-- .slide: data-background="pictures/soft_pyconuk.png" data-background-transition="none" --> <!-- .slide: class="center" -->
+### &nbsp;
+## PyCon UK <!-- .slide: data-background="pictures/soft_pyconuk.png" data-background-transition="none" -->
 ## £500 Scholarship
 ### Django Society UK
+<br> 
+<p style="color: white">2016.pyconuk.org/news/20160630-katieconf</p>
 ---
 # KatieConf<!-- .slide: data-background="pictures/soft_2017.jpg" data-background-transition="none" --> <!-- .slide: class="center" -->
 ## 2017?

@@ -276,7 +276,7 @@ Note: Surprisingly enough, this works
 ! g/R | g/F | g/C | e/3 | e/4 | e/9 | e/2 
 ---
 ! space | space | o/spoon | space | space 
-# xn--9q9h
+# `xn--9q9h`
 ---
 ! g/snake
 ---
@@ -588,6 +588,9 @@ Note: redoing of facebook emoji
 @ emojipedia-new-ios-10-women.png
 ---
 @ emojipedia-new-ios-10-men.png
+---
+
+! a/grin.png | a/grinning_10.png
 ---
 ! t/whiteflag | t/rainbow
 ### `\ud83c\udff3 \ud83c\udf08`
