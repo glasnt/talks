@@ -517,29 +517,21 @@ Where you can, allow the images to be bigger
 
 Twitter DM and Slack message - if only emoji, they're display bigger
 ---
-
-<p style="line-height: 1.5"> `<img src=`<span style="padding-right: 10px;;color:red; font-weight: bold">`"img/1f943.png"`</span> `alt="`<img src="pictures/t/whisky.svg" height="40px" style="margin: 0px">`" title="Tumbler glass"` <br>` aria-label="Emoji: Tumbler glass">`
-</p>
-
+<img src="pictures/o/alt_0.svg" height="250px" style="margin-top: -50px">
+<img src="pictures/o/whisky_display.svg" height="400px">
+---
+<img src="pictures/o/alt_1.svg" height="250px" style="margin-top: -50px">
 <img src="pictures/o/whisky_display.svg" height="400px">
 ---
 
-<p style="line-height: 1.5"> `<img src="img/1f943.png" alt="`<img src="pictures/t/whisky.svg" height="40px" style="margin: 0px">`" `<span style="color: red; font-weight: bold"> `title="Tumbler glass"` <br></span> `aria-label="Emoji: Tumbler glass">`
-
-</p>
-
+<img src="pictures/o/alt_2.svg" height="250px" style="margin-top: -50px">
 <img src="pictures/o/whisky_mouse.svg" height="400px">
 ---
 
-<p style="line-height: 1.5"> `<img src="img/1f943.png"` <span style="padding-left: 10px;color: red; font-weight: bold"> `alt="`<img src="pictures/t/whisky.svg" height="40px" style="margin: 0px">`"` </span> `title="Tumbler glass"`<br> `aria-label="Emoji: Tumbler glass">`
-
-</p>
-
+<img src="pictures/o/alt_3.svg" height="250px" style="margin-top: -50px">
 <img src="pictures/o/whisky_highlight.svg" height="400px">
 ---
-<p style="line-height: 1.5"> `<img src="img/1f943.png" alt="`<img src="pictures/t/whisky.svg" height="40px" style="margin: 0px">`" title="Tumbler glass"`<br> <span style="color: red; font-weight: bold">`aria-label="Emoji: Tumbler glass"` </span> `>`
-
-</p>
+<img src="pictures/o/alt_4.svg" height="250px" style="margin-top: -50px">
 <img src="pictures/o/whisky_speaker.svg" height="400px">
 ---
 ! t/lightbulb
