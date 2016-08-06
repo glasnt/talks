@@ -34,18 +34,26 @@ it allows for completely universal communication between every language
 mostly. 
 
 ---
-! g/A | space | g/slashu | e/0 | e/0 | e/4 | e/1
-! j/A | space | g/slashu | e/3 | e/0 | e/4 | e/2
+! g/A
+# `\u0041`
+---
+! j/A
+
+# `\u3042`
 ---
 
-! g/e_only | space | g/slashu | e/0 | e/0 | e/4 | e/5
-! g/accent_only_new | space | g/slashu | e/0 | e/3 | e/0 | e/1
-<br>
-<div style='width: 100%; margin: 0 auto;'><p align='center'><img height='114px' src='pictures/g/ea.svg'><img height='30px' src='pictures/space.svg'><img height='66px' src='pictures/g/slashu.svg'><img height='66px' src='pictures/e/0.svg'><img height='66px' src='pictures/e/0.svg'><img height='66px' src='pictures/e/4.svg'><img height='66px' src='pictures/e/5.svg'><img height='66px' src='pictures/g/slashu.svg'><img height='66px' src='pictures/e/0.svg'><img height='66px' src='pictures/e/3.svg'><img height='66px' src='pictures/e/0.svg'><img height='66px' src='pictures/e/1.svg'></p></div> <!-- .slide: class="center" -->
+! g/e_only 
+# `\u0045`
 
-Note: Combination marks
+---
 
-\u0065 \u0301
+! g/accent_only_new 
+# `\u0301`
+
+---
+
+! g/ea
+# `\u0045\u0341`
 ---
 
 ! g/US | g/france | g/russia.png | g/china
@@ -128,12 +136,39 @@ Wingdings and webdings compatitbility because missing data
 Note: Unicode 8 2015
 ---
 ! t/horns5
-## `\ud83d\udd96\ud83c\udffe`
+## `\U0001f596\U0001f3fe`
 ---
 ! t/horns | t/fitz
-## `\ud83d\udd96 \ud83c\udffe`
+## `\U0001f596 \U0001f3fe`
+---
+! g/snake
 ---
 
+# &nbsp;
+#> $ python3
+#> >>> "snek \N{SNAKE}"
+#> 'snek <img src="pictures/g/snake.svg" class="e" style="margin:0">'
+
+---
+# &nbsp;
+#> $ python3
+#> >>> import unicodedata
+#> >>> unicodedata.name("<img class="e" src="pictures/g/snake.svg" style="margin:0">")
+#> 'SNAKE'
+---
+
+# &nbsp;
+#> $ python3
+#> >>> "<img class="e" src="pictures/g/snake.svg" style="margin:0">".encode("unicode_escape")
+#> b'\\U0001f40d'
+---
+
+# &nbsp;
+#> $ python3
+#> >>> "\U0001f40d"
+#> '<img class="e" src="pictures/g/snake.svg" style="margin:0">'
+
+---
 ! g/sweat
 
 Note: here's where it gets (more) complicated
@@ -147,15 +182,15 @@ and this has been depremental to emoji
 
 Especially with the original android adoption
 ---
-! o/stdyellow.png | g/yellow
+!  o/stdyellow.png | g/yellow
+#> &nbsp; >>> unicodedata.name("<img class="e" src="pictures/g/yellow.svg" style="margin:0">")
+#> &nbsp; 'YELLOW HEART'
 Note:
 Yellow Heart
 
 This is the Apple version
 
 Here's what Android went with.
-
-
 ---
 #= <img src="pictures/g/hairy_heart_s.png" height="400px">
 ---
@@ -276,16 +311,10 @@ Note: Surprisingly enough, this works
 ! g/R | g/F | g/C | e/3 | e/4 | e/9 | e/2 
 ---
 ! space | space | o/spoon | space | space 
-# `xn--9q9h`
----
-! g/snake
----
-# &nbsp;
-#> &nbsp; $ python3
-#> &nbsp; >>> import unicodedata
-#> &nbsp; >>> unicodedata.name("<img class="e" src="pictures/a/claps.png" style="margin:0">")
-#> &nbsp; 'CLAPPING HANDS SIGN'
-
+#> $ python3
+#> >>> import encodings.idna
+#> >>> encodings.idna.ToASCII("<img src="pictures/o/spoon.svg" class="e" style="margin:0">")
+#> b'xn--9q9h' <c># xn--9q9h.ws</c>
 ---
 ! e/keyboard
 
@@ -305,8 +334,8 @@ Note: Apple input Control CMD Space
 ---
 # &nbsp;
 #> &nbsp; $ pip install em-keyboard
-#>- &nbsp; $ em sparkles cake sparkles
-#>- <p>&nbsp; Copied! <img src="pictures/a/sparkles.png" class="e" style="margin:0"><img src="pictures/a/cake.png" class="e" style="margin:0"><img src="pictures/a/sparkles.png" class="e" style="margin:0"></p>
+#> &nbsp; $ em sparkles cake sparkles
+#> <p>&nbsp; Copied! <img src="pictures/a/sparkles.png" class="e" style="margin:0"><img src="pictures/a/cake.png" class="e" style="margin:0"><img src="pictures/a/sparkles.png" class="e" style="margin:0"></p>
 ---
 ! t/lightbulb
 ---
@@ -443,6 +472,8 @@ Chrome, Firefox, Safari evergreen all on el cap
 ---
 
 #= `twemoji.js`
+Note: Wordpress.com uses this.
+
 ---
 ! g/wave | g/lightbulb
 
@@ -593,12 +624,12 @@ Note: redoing of facebook emoji
 ! a/grin.png | a/grinning_10.png
 ---
 ! t/whiteflag | t/rainbow
-### `\ud83c\udff3 \ud83c\udf08`
+### `\U0001f3f3 \U0001f308`
 ### &nbsp;
 ---
 ! t/rainbow_flag
-### `\ud83c\udff3 \ud83c\udf08`
-###`\ufe0f\u200d`
+### `\U0001f3f3`<r>`\ufe0f\u200d`</r>`\U0001f308`
+### &nbsp;
 ---
 @ o/takeaway.png
 Note: the takeaways

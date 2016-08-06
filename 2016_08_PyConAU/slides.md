@@ -34,18 +34,26 @@ it allows for completely universal communication between every language
 mostly. 
 
 ---
- <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='114px' src='pictures/g/A.svg'><img height='114px' src='pictures/space.svg'><img height='114px' src='pictures/g/slashu.svg'><img height='114px' src='pictures/e/0.svg'><img height='114px' src='pictures/e/0.svg'><img height='114px' src='pictures/e/4.svg'><img height='114px' src='pictures/e/1.svg'></p></div> <!-- .slide: class="center" -->
- <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='114px' src='pictures/j/A.svg'><img height='114px' src='pictures/space.svg'><img height='114px' src='pictures/g/slashu.svg'><img height='114px' src='pictures/e/3.svg'><img height='114px' src='pictures/e/0.svg'><img height='114px' src='pictures/e/4.svg'><img height='114px' src='pictures/e/2.svg'></p></div> <!-- .slide: class="center" -->
+ <div style='width: 50%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/g/A.svg'></p></div> <!-- .slide: class="center" -->
+# `\u0041`
+---
+ <div style='width: 50%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/j/A.svg'></p></div> <!-- .slide: class="center" -->
+
+# `\u3042`
 ---
 
- <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='114px' src='pictures/g/e_only.svg'><img height='114px' src='pictures/space.svg'><img height='114px' src='pictures/g/slashu.svg'><img height='114px' src='pictures/e/0.svg'><img height='114px' src='pictures/e/0.svg'><img height='114px' src='pictures/e/4.svg'><img height='114px' src='pictures/e/5.svg'></p></div> <!-- .slide: class="center" -->
- <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='114px' src='pictures/g/accent_only_new.svg'><img height='114px' src='pictures/space.svg'><img height='114px' src='pictures/g/slashu.svg'><img height='114px' src='pictures/e/0.svg'><img height='114px' src='pictures/e/3.svg'><img height='114px' src='pictures/e/0.svg'><img height='114px' src='pictures/e/1.svg'></p></div> <!-- .slide: class="center" -->
-<br> 
-<div style='width: 100%; margin: 0 auto;'><p align='center'><img height='114px' src='pictures/g/ea.svg'><img height='30px' src='pictures/space.svg'><img height='66px' src='pictures/g/slashu.svg'><img height='66px' src='pictures/e/0.svg'><img height='66px' src='pictures/e/0.svg'><img height='66px' src='pictures/e/4.svg'><img height='66px' src='pictures/e/5.svg'><img height='66px' src='pictures/g/slashu.svg'><img height='66px' src='pictures/e/0.svg'><img height='66px' src='pictures/e/3.svg'><img height='66px' src='pictures/e/0.svg'><img height='66px' src='pictures/e/1.svg'></p></div> <!-- .slide: class="center" -->
+ <div style='width: 50%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/g/e_only.svg'></p></div> <!-- .slide: class="center" -->
+# `\u0045`
 
-Note: Combination marks
+---
 
-\u0065 \u0301
+ <div style='width: 50%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/g/accent_only_new.svg'></p></div> <!-- .slide: class="center" -->
+# `\u0301`
+
+---
+
+ <div style='width: 50%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/g/ea.svg'></p></div> <!-- .slide: class="center" -->
+# `\u0045\u0341`
 ---
 
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='200px' src='pictures/g/US.svg'><img height='200px' src='pictures/g/france.svg'><img height='200px' src='pictures/g/russia.png'><img height='200px' src='pictures/g/china.svg'></p></div> <!-- .slide: class="center" -->
@@ -128,12 +136,39 @@ Wingdings and webdings compatitbility because missing data
 Note: Unicode 8 2015
 ---
  <div style='width: 50%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/t/horns5.svg'></p></div> <!-- .slide: class="center" -->
-## `\ud83d\udd96\ud83c\udffe`
+## `\U0001f596\U0001f3fe`
 ---
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/t/horns.svg'><img height='400px' src='pictures/t/fitz.svg'></p></div> <!-- .slide: class="center" -->
-## `\ud83d\udd96 \ud83c\udffe`
+## `\U0001f596 \U0001f3fe`
+---
+ <div style='width: 50%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/g/snake.svg'></p></div> <!-- .slide: class="center" -->
 ---
 
+# &nbsp;
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">$ python3</code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">>>> "snek \N{SNAKE}"</code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">'snek <img src="pictures/g/snake.svg" class="e" style="margin:0">'</code></pre></div>
+
+---
+# &nbsp;
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">$ python3</code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">>>> import unicodedata</code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">>>> unicodedata.name("<img class="e" src="pictures/g/snake.svg" style="margin:0">")</code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">'SNAKE'</code></pre></div>
+---
+
+# &nbsp;
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">$ python3</code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">>>> "<img class="e" src="pictures/g/snake.svg" style="margin:0">".encode("unicode_escape")</code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">b'\\U0001f40d'</code></pre></div>
+---
+
+# &nbsp;
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">$ python3</code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">>>> "\U0001f40d"</code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">'<img class="e" src="pictures/g/snake.svg" style="margin:0">'</code></pre></div>
+
+---
  <div style='width: 50%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/g/sweat.svg'></p></div> <!-- .slide: class="center" -->
 
 Note: here's where it gets (more) complicated
@@ -148,14 +183,14 @@ and this has been depremental to emoji
 Especially with the original android adoption
 ---
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/o/stdyellow.png'><img height='400px' src='pictures/g/yellow.svg'></p></div> <!-- .slide: class="center" -->
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">&nbsp; >>> unicodedata.name("<img class="e" src="pictures/g/yellow.svg" style="margin:0">")</code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">&nbsp; 'YELLOW HEART'</code></pre></div>
 Note: 
 Yellow Heart
 
 This is the Apple version
 
 Here's what Android went with.
-
-
 ---
 # <img src="pictures/g/hairy_heart_s.png" height="400px"> <!-- .slide: class="center" -->
 ---
@@ -276,16 +311,10 @@ Note: Surprisingly enough, this works
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='114px' src='pictures/g/R.svg'><img height='114px' src='pictures/g/F.svg'><img height='114px' src='pictures/g/C.svg'><img height='114px' src='pictures/e/3.svg'><img height='114px' src='pictures/e/4.svg'><img height='114px' src='pictures/e/9.svg'><img height='114px' src='pictures/e/2.svg'></p></div> <!-- .slide: class="center" -->
 ---
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='160px' src='pictures/space.svg'><img height='160px' src='pictures/space.svg'><img height='160px' src='pictures/o/spoon.svg'><img height='160px' src='pictures/space.svg'><img height='160px' src='pictures/space.svg'></p></div> <!-- .slide: class="center" -->
-# `xn--9q9h`
----
- <div style='width: 50%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/g/snake.svg'></p></div> <!-- .slide: class="center" -->
----
-# &nbsp;
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">&nbsp; $ python3</code></pre></div>
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">&nbsp; >>> import unicodedata</code></pre></div>
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">&nbsp; >>> unicodedata.name("<img class="e" src="pictures/a/claps.png" style="margin:0">")</code></pre></div>
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">&nbsp; 'CLAPPING HANDS SIGN'</code></pre></div>
-
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">$ python3</code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">>>> import encodings.idna</code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">>>> encodings.idna.ToASCII("<img src="pictures/o/spoon.svg" class="e" style="margin:0">")</code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">b'xn--9q9h' <c># xn--9q9h.ws</c></code></pre></div>
 ---
  <div style='width: 50%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/e/keyboard.svg'></p></div> <!-- .slide: class="center" -->
 
@@ -305,8 +334,8 @@ Note: Apple input Control CMD Space
 ---
 # &nbsp;
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">&nbsp; $ pip install em-keyboard</code></pre></div>
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">&nbsp; $ em sparkles cake sparkles</code></pre></div> <!-- .element: class="fragment" -->
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%"><p>&nbsp; Copied! <img src="pictures/a/sparkles.png" class="e" style="margin:0"><img src="pictures/a/cake.png" class="e" style="margin:0"><img src="pictures/a/sparkles.png" class="e" style="margin:0"></p></code></pre></div> <!-- .element: class="fragment" -->
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">&nbsp; $ em sparkles cake sparkles</code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%"><p>&nbsp; Copied! <img src="pictures/a/sparkles.png" class="e" style="margin:0"><img src="pictures/a/cake.png" class="e" style="margin:0"><img src="pictures/a/sparkles.png" class="e" style="margin:0"></p></code></pre></div>
 ---
  <div style='width: 50%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/t/lightbulb.svg'></p></div> <!-- .slide: class="center" -->
 ---
@@ -443,6 +472,8 @@ Chrome, Firefox, Safari evergreen all on el cap
 ---
 
 # `twemoji.js` <!-- .slide: class="center" -->
+Note: Wordpress.com uses this.
+
 ---
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/g/wave.svg'><img height='400px' src='pictures/g/lightbulb.svg'></p></div> <!-- .slide: class="center" -->
 
@@ -593,12 +624,12 @@ Note: redoing of facebook emoji
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/a/grin.png'><img height='400px' src='pictures/a/grinning_10.png'></p></div> <!-- .slide: class="center" -->
 ---
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/t/whiteflag.svg'><img height='400px' src='pictures/t/rainbow.svg'></p></div> <!-- .slide: class="center" -->
-### `\ud83c\udff3 \ud83c\udf08`
+### `\U0001f3f3 \U0001f308`
 ### &nbsp;
 ---
  <div style='width: 50%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/t/rainbow_flag.svg'></p></div> <!-- .slide: class="center" -->
-### `\ud83c\udff3 \ud83c\udf08`
-###`\ufe0f\u200d` 
+### `\U0001f3f3`<r>`\ufe0f\u200d`</r>`\U0001f308`
+### &nbsp;
 ---
  <img src="pictures/o/takeaway.png" />
 Note: the takeaways
