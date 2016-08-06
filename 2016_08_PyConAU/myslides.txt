@@ -314,7 +314,7 @@ Note: Surprisingly enough, this works
 #> $ python3
 #> >>> import encodings.idna
 #> >>> encodings.idna.ToASCII("<img src="pictures/o/spoon.svg" class="e" style="margin:0">")
-#> b'xn--9q9h' <c># xn--9q9h.ws</c>
+#> b'xn--9q9h' <c># http&#58;//xn--9q9h.ws</c>
 ---
 ! e/keyboard
 
@@ -614,6 +614,9 @@ Note: redoing of facebook emoji
 ---
 
 ! a/grin.png | a/grinning_10.png
+---
+! g/Z | g/W | g/J
+
 ---
 ! t/whiteflag | t/rainbow
 ### `\U0001f3f3 \U0001f308`

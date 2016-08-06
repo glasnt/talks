@@ -314,7 +314,7 @@ Note: Surprisingly enough, this works
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">$ python3</code></pre></div>
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">>>> import encodings.idna</code></pre></div>
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">>>> encodings.idna.ToASCII("<img src="pictures/o/spoon.svg" class="e" style="margin:0">")</code></pre></div>
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">b'xn--9q9h' <c># xn--9q9h.ws</c></code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">b'xn--9q9h' <c># http&#58;//xn--9q9h.ws</c></code></pre></div>
 ---
  <div style='width: 50%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/e/keyboard.svg'></p></div> <!-- .slide: class="center" -->
 
@@ -614,6 +614,9 @@ Note: redoing of facebook emoji
 ---
 
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/a/grin.png'><img height='400px' src='pictures/a/grinning_10.png'></p></div> <!-- .slide: class="center" -->
+---
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='266px' src='pictures/g/Z.svg'><img height='266px' src='pictures/g/W.svg'><img height='266px' src='pictures/g/J.svg'></p></div> <!-- .slide: class="center" -->
+
 ---
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/t/whiteflag.svg'><img height='400px' src='pictures/t/rainbow.svg'></p></div> <!-- .slide: class="center" -->
 ### `\U0001f3f3 \U0001f308`
