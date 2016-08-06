@@ -143,18 +143,18 @@ Note: Unicode 8 2015
 ---
 ! g/snake
 ---
+# &nbsp;
+#> $ python3
+#> >>> import unicodedata
+#> >>> unicodedata.name("<img class="e" src="pictures/g/snake.svg" style="margin:0">")
+#> 'SNAKE'
+---
 
 # &nbsp;
 #> $ python3
 #> >>> "snek \N{SNAKE}"
 #> 'snek <img src="pictures/g/snake.svg" class="e" style="margin:0">'
 
----
-# &nbsp;
-#> $ python3
-#> >>> import unicodedata
-#> >>> unicodedata.name("<img class="e" src="pictures/g/snake.svg" style="margin:0">")
-#> 'SNAKE'
 ---
 
 # &nbsp;
@@ -313,7 +313,7 @@ Note: Surprisingly enough, this works
 ! space | space | o/spoon | space | space 
 #> $ python3
 #> >>> import encodings.idna
-#> >>> encodings.idna.ToASCII("<img src="pictures/o/spoon.svg" class="e" style="margin:0">")
+#> >>> encodings.idna.ToASCII("<img src="pictures/o/spoon.svg" alt="🥄" class="e" style="margin:0">")
 #> b'xn--9q9h' <c># http&#58;//xn--9q9h.ws</c>
 ---
 ! e/keyboard
@@ -533,6 +533,8 @@ Twitter DM and Slack message - if only emoji, they're display bigger
 ---
 <img src="pictures/o/alt_4.svg" height="250px" style="margin-top: -50px">
 <img src="pictures/o/whisky_speaker.svg" height="400px">
+---
+##= `gh:glasnt/emojificate`
 ---
 ! t/lightbulb
 
