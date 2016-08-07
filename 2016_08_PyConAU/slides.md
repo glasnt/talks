@@ -534,7 +534,12 @@ Twitter DM and Slack message - if only emoji, they're display bigger
 <img src="pictures/o/alt_4.svg" height="250px" style="margin-top: -50px">
 <img src="pictures/o/whisky_speaker.svg" height="400px">
 ---
-## `gh:glasnt/emojificate` <!-- .slide: class="center" -->
+## `emojificate` <!-- .slide: class="center" -->
+Note: pip installable
+
+runnable module (`python -m emojificate`)
+
+django tag template module (Thanks Russell <3)
 ---
  <div style='width: 50%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/t/lightbulb.svg'></p></div> <!-- .slide: class="center" -->
 
