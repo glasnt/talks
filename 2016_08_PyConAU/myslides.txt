@@ -1,7 +1,9 @@
 
-! space  | g/snake |  t/yellowh | t/greenh  | space
+! t/compression
 ---
+! space  | g/snake |  t/yellowh | t/greenh  | space
 
+---
 ## &nbsp;
 ! o/bolt | g/sweat | t/sparkles
 
@@ -165,6 +167,9 @@ Note: Unicode 8 2015
 #> '<img src="pictures/g/snake.svg" class="e" style="margin:0">'
 
 Note: Escape Sequence, for Named character in unicode database
+
+"Escape Sequences, good for unicode *and* gravitational fields!" -- Jason Yee, gitbiscet
+
 New in python 3.3
 
 ---

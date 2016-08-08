@@ -1,7 +1,9 @@
 
- <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='160px' src='pictures/space.svg'><img height='160px' src='pictures/g/snake.svg'><img height='160px' src='pictures/t/yellowh.svg'><img height='160px' src='pictures/t/greenh.svg'><img height='160px' src='pictures/space.svg'></p></div> <!-- .slide: class="center" -->
+ <div style='width: 50%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/t/compression.svg'></p></div> <!-- .slide: class="center" -->
 ---
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='160px' src='pictures/space.svg'><img height='160px' src='pictures/g/snake.svg'><img height='160px' src='pictures/t/yellowh.svg'><img height='160px' src='pictures/t/greenh.svg'><img height='160px' src='pictures/space.svg'></p></div> <!-- .slide: class="center" -->
 
+---
 ## &nbsp;
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='266px' src='pictures/o/bolt.svg'><img height='266px' src='pictures/g/sweat.svg'><img height='266px' src='pictures/t/sparkles.svg'></p></div> <!-- .slide: class="center" -->
 
@@ -165,6 +167,9 @@ Note: Unicode 8 2015
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">'<img src="pictures/g/snake.svg" class="e" style="margin:0">'</code></pre></div>
 
 Note: Escape Sequence, for Named character in unicode database
+
+"Escape Sequences, good for unicode *and* gravitational fields!" -- Jason Yee, gitbiscet
+
 New in python 3.3
 
 ---
