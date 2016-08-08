@@ -34,6 +34,15 @@ it allows for completely universal communication between every language
 mostly. 
 
 ---
+
+# <c>`\u`</c><span style="font-weight: normal">`xxxx`</span> <!-- .slide: class="center" -->
+###16-bit hex
+
+---
+# <c>`\U`</c><span style="font-weight: normal">`xxxxxxxx`</span> <!-- .slide: class="center" -->
+###32-bit hex
+
+---
  <div style='width: 50%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/g/A.svg'></p></div> <!-- .slide: class="center" -->
 # `\u0041`
 ---
@@ -152,8 +161,11 @@ Note: Unicode 8 2015
 
 # &nbsp;
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">$ python3</code></pre></div>
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">>>> "snek \N{SNAKE}"</code></pre></div>
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">'snek <img src="pictures/g/snake.svg" class="e" style="margin:0">'</code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">>>> "\N{SNAKE}"</code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">'<img src="pictures/g/snake.svg" class="e" style="margin:0">'</code></pre></div>
+
+Note: Escape Sequence, for Named character in unicode database
+New in python 3.3
 
 ---
 
@@ -473,7 +485,9 @@ Chrome, Firefox, Safari evergreen all on el cap
 
 # `twemoji.js` <!-- .slide: class="center" -->
 Note: Wordpress.com uses this.
+---
 
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/t/raise.svg'><img height='400px' src='pictures/t/bar.svg'></p></div> <!-- .slide: class="center" -->
 ---
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/g/wave.svg'><img height='400px' src='pictures/g/lightbulb.svg'></p></div> <!-- .slide: class="center" -->
 
@@ -534,7 +548,7 @@ Twitter DM and Slack message - if only emoji, they're display bigger
 <img src="pictures/o/alt_4.svg" height="250px" style="margin-top: -50px">
 <img src="pictures/o/whisky_speaker.svg" height="400px">
 ---
-## `emojificate` <!-- .slide: class="center" -->
+# `emojificate` <!-- .slide: class="center" -->
 Note: pip installable
 
 runnable module (`python -m emojificate`)
@@ -615,15 +629,9 @@ Note: redoing of facebook emoji
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='160px' src='pictures/m/m1_smile.png'><img height='160px' src='pictures/m/m1_cry.png'><img height='160px' src='pictures/m/m1_toung.png'><img height='160px' src='pictures/m/m1_kiss.png'><img height='160px' src='pictures/m/m1_shock.png'></p></div> <!-- .slide: class="center" -->
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='160px' src='pictures/m/m2_smile.png'><img height='160px' src='pictures/m/m2_cry.png'><img height='160px' src='pictures/m/m2_toung.png'><img height='160px' src='pictures/m/m2_kiss.png'><img height='160px' src='pictures/m/m2_shock.png'></p></div> <!-- .slide: class="center" -->
 ---
- <img src="pictures/emojipedia-new-ios-10-women.png" />
----
- <img src="pictures/emojipedia-new-ios-10-men.png" />
----
-
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/a/grin.png'><img height='400px' src='pictures/a/grinning_10.png'></p></div> <!-- .slide: class="center" -->
 ---
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='266px' src='pictures/g/Z.svg'><img height='266px' src='pictures/g/W.svg'><img height='266px' src='pictures/g/J.svg'></p></div> <!-- .slide: class="center" -->
-
 ---
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/t/whiteflag.svg'><img height='400px' src='pictures/t/rainbow.svg'></p></div> <!-- .slide: class="center" -->
 ### `\U0001f3f3 \U0001f308`
@@ -632,6 +640,10 @@ Note: redoing of facebook emoji
  <div style='width: 50%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/t/rainbow_flag.svg'></p></div> <!-- .slide: class="center" -->
 ### `\U0001f3f3`<r>`\ufe0f\u200d`</r>`\U0001f308`
 ### &nbsp;
+---
+ <img src="pictures/emojipedia-new-ios-10-women.png" />
+---
+ <img src="pictures/emojipedia-new-ios-10-men.png" />
 ---
  <img src="pictures/o/takeaway.png" />
 Note: the takeaways

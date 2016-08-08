@@ -34,6 +34,15 @@ it allows for completely universal communication between every language
 mostly. 
 
 ---
+
+#= <c>`\u`</c><span style="font-weight: normal">`xxxx`</span>
+###16-bit hex
+
+---
+#= <c>`\U`</c><span style="font-weight: normal">`xxxxxxxx`</span>
+###32-bit hex
+
+---
 ! g/A
 # `\u0041`
 ---
@@ -152,8 +161,11 @@ Note: Unicode 8 2015
 
 # &nbsp;
 #> $ python3
-#> >>> "snek \N{SNAKE}"
-#> 'snek <img src="pictures/g/snake.svg" class="e" style="margin:0">'
+#> >>> "\N{SNAKE}"
+#> '<img src="pictures/g/snake.svg" class="e" style="margin:0">'
+
+Note: Escape Sequence, for Named character in unicode database
+New in python 3.3
 
 ---
 
@@ -473,7 +485,9 @@ Chrome, Firefox, Safari evergreen all on el cap
 
 #= `twemoji.js`
 Note: Wordpress.com uses this.
+---
 
+! t/raise | t/bar
 ---
 ! g/wave | g/lightbulb
 
@@ -534,7 +548,7 @@ Twitter DM and Slack message - if only emoji, they're display bigger
 <img src="pictures/o/alt_4.svg" height="250px" style="margin-top: -50px">
 <img src="pictures/o/whisky_speaker.svg" height="400px">
 ---
-##= `emojificate`
+#= `emojificate`
 Note: pip installable
 
 runnable module (`python -m emojificate`)
@@ -615,15 +629,9 @@ Note: redoing of facebook emoji
 ! m/m1_smile.png | m/m1_cry.png | m/m1_toung.png |m/m1_kiss.png | m/m1_shock.png
 ! m/m2_smile.png | m/m2_cry.png | m/m2_toung.png | m/m2_kiss.png | m/m2_shock.png
 ---
-@ emojipedia-new-ios-10-women.png
----
-@ emojipedia-new-ios-10-men.png
----
-
 ! a/grin.png | a/grinning_10.png
 ---
 ! g/Z | g/W | g/J
-
 ---
 ! t/whiteflag | t/rainbow
 ### `\U0001f3f3 \U0001f308`
@@ -632,6 +640,10 @@ Note: redoing of facebook emoji
 ! t/rainbow_flag
 ### `\U0001f3f3`<r>`\ufe0f\u200d`</r>`\U0001f308`
 ### &nbsp;
+---
+@ emojipedia-new-ios-10-women.png
+---
+@ emojipedia-new-ios-10-men.png
 ---
 @ o/takeaway.png
 Note: the takeaways
