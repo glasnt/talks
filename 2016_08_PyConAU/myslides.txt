@@ -541,11 +541,11 @@ Twitter DM and Slack message - if only emoji, they're display bigger
 ---
 
 <img src="pictures/o/alt_2.svg" height="250px" style="margin-top: -50px">
-<img src="pictures/o/whisky_mouse.svg" height="400px">
+<img src="pictures/o/whisky_highlight.svg" height="400px">
 ---
 
 <img src="pictures/o/alt_3.svg" height="250px" style="margin-top: -50px">
-<img src="pictures/o/whisky_highlight.svg" height="400px">
+<img src="pictures/o/whisky_mouse.svg" height="400px">
 ---
 <img src="pictures/o/alt_4.svg" height="250px" style="margin-top: -50px">
 <img src="pictures/o/whisky_speaker.svg" height="400px">
