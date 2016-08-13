@@ -483,6 +483,10 @@ Chrome, Firefox, Safari evergreen all on el cap
 
 # `twemoji.js` <!-- .slide: class="center" -->
 Note: Wordpress.com uses this.
+
+javascript front end change emoji to fallback images only
+
+we can do more
 ---
 
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/t/raise.svg'><img height='400px' src='pictures/t/bar.svg'></p></div> <!-- .slide: class="center" -->
@@ -630,6 +634,9 @@ Note: redoing of facebook emoji
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/a/grin.png'><img height='400px' src='pictures/a/grinning_10.png'></p></div> <!-- .slide: class="center" -->
 ---
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='266px' src='pictures/g/Z.svg'><img height='266px' src='pictures/g/W.svg'><img height='266px' src='pictures/g/J.svg'></p></div> <!-- .slide: class="center" -->
+Note: zero width joiner
+
+Allows for combining existing emoji to make new ones
 ---
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/t/whiteflag.svg'><img height='400px' src='pictures/t/rainbow.svg'></p></div> <!-- .slide: class="center" -->
 ### `\U0001f3f3 \U0001f308`
@@ -638,8 +645,12 @@ Note: redoing of facebook emoji
  <div style='width: 50%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/t/rainbow_flag.svg'></p></div> <!-- .slide: class="center" -->
 ### `\U0001f3f3`<r>`\ufe0f\u200d`</r>`\U0001f308`
 ### &nbsp;
+Note: apple has adopted these by having this as a separate button
+
+ios 10 beta has this as a separate character
 ---
  <img src="pictures/emojipedia-new-ios-10-women.png" />
+Note: screenshots from emojipedia
 ---
  <img src="pictures/emojipedia-new-ios-10-men.png" />
 ---

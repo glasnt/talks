@@ -483,6 +483,10 @@ Chrome, Firefox, Safari evergreen all on el cap
 
 #= `twemoji.js`
 Note: Wordpress.com uses this.
+
+javascript front end change emoji to fallback images only
+
+we can do more
 ---
 
 ! t/raise | t/bar
@@ -630,6 +634,9 @@ Note: redoing of facebook emoji
 ! a/grin.png | a/grinning_10.png
 ---
 ! g/Z | g/W | g/J
+Note: zero width joiner
+
+Allows for combining existing emoji to make new ones
 ---
 ! t/whiteflag | t/rainbow
 ### `\U0001f3f3 \U0001f308`
@@ -638,8 +645,12 @@ Note: redoing of facebook emoji
 ! t/rainbow_flag
 ### `\U0001f3f3`<r>`\ufe0f\u200d`</r>`\U0001f308`
 ### &nbsp;
+Note: apple has adopted these by having this as a separate button
+
+ios 10 beta has this as a separate character
 ---
 @ emojipedia-new-ios-10-women.png
+Note: screenshots from emojipedia
 ---
 @ emojipedia-new-ios-10-men.png
 ---
