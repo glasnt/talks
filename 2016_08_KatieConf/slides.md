@@ -46,26 +46,35 @@ Nuclear Engineering professor
 ---
 ### So it turns out KatieConf is a joke, but Katie's in tech are in fact real. <!-- .slide: data-background="pictures/soft_brokendreams.jpg" data-background-transition="none" -->
 #### @SwiftOnSecurity <!-- .slide: class="center" -->
+Note: including SwiftOnSecurity, and many others
+
+
 ---
 ## &nbsp; <!-- .slide: data-background="pictures/soft_crayons.jpg" data-background-transition="none" --> <!-- .slide: class="center" -->
 Note: 
+
+I also had so many people joking about "Why not have a Dave Conf or a Steve Conf"
+
+Sure, just go to any other conference.
+
+I've been the only female speaker at a conference.
+
+I've attended conferences with zero female speakers, where a female speaker was shoe-horned in at the last minute to improve their image.
+
+That's not the point
+
+Carina C Zona:
+
+People of different genders have very different life experiences, career experiences, perspectives on what they do. Greater range of topics and framing is more valuable for everybody.
+
+
 * PyCon AU 25% ish
 * Pycon US 2016 40% Female
 * DjangoCon US 40% Female
 * DjangoCon Europe: 52% Female
 
+This is awesome. I just wish more conferences did this.
 
-I want to see people on stage that look like me
-
-It's not about tokenism.
-
-katieConf is about the fact that I could put together a "Fantasy Football" style line up of capable female speakers that all just happened to be called Katie
-
----
-### "But I just can't find a qualified woman to speak!" <!-- .slide: data-background="pictures/soft_crayons.jpg" data-background-transition="none" --> <!-- .slide: class="center" -->
-##### &nbsp;
-### "I just found you 33 Katies." <!-- .slide: class="center" -->
-#### @ArwaM
 ---
 # Real World Effects <!-- .slide: data-background="pictures/soft_effects.jpg" data-background-transition="none" --> <!-- .slide: class="center" -->
 ---
@@ -90,3 +99,4 @@ Note: Both have been jokingly proposed
 ---
 ### @katieconf <!-- .slide: data-background="pictures/soft_2017.jpg" data-background-transition="none" --> <!-- .slide: class="center" -->
 ### katieconf.xyz <!-- .slide: class="center" -->
+### @CallBackWomen

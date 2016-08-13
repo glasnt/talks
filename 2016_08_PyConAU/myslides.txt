@@ -312,15 +312,8 @@ Note: Mojibake
 
 Note: Thinking Face in my Talk Summary
 
-Not all systems have emoji
+**MENTION BROKEN SIGNAGE**
 
-My Android - 5.0.1 OS --> U7.0 if you're lucky
-
-Yosemite - up to 6.1, plus vulcan
-
-Linux in general... yeah no.
-
-Old systems in general
 ---
 ! o/spoon.ws
 Note: Surprisingly enough, this works
@@ -577,7 +570,7 @@ Note: The future
 ! t/sparkles
 ---
 ! unicode.png | e/9 |  space | space | space  | space | e/2 | e/0 | e/1 | e/6
-! t/shrug | t/facepalm | t/cowboy | t/bacon
+! t/shrug | t/facepalm | t/cowboy | t/duck
 ! t/whisky | t/owl | o/spoon | t/egg
 Note: These work in Twitter, 
 
