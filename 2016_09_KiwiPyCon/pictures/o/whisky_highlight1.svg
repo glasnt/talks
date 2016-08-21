@@ -1,0 +1,67 @@
+<svg width="149" height="42" xmlns="http://www.w3.org/2000/svg">
+ <metadata id="metadata8">image/svg+xml</metadata>
+ <defs>
+  <clipPath id="clipPath20" clipPathUnits="userSpaceOnUse">
+   <path id="path22" d="m43.2186,40.19999l36,0l0,-36l-36,0l0,36z"/>
+  </clipPath>
+ </defs>
+ <g>
+  <title>background</title>
+  <rect x="-1" y="-1" width="151" height="44" id="canvas_background" fill="none"/>
+ </g>
+ <g>
+  <title>Layer 1</title>
+  <metadata id="svg_8">image/svg+xmlOpenclipart2011-12-20T04:30:04A pixel-art style arrow mouse cursor. Made up of individual squares, for easy manipulationhttps://openclipart.org/detail/166356/mouse-cursor---arrow-by-hellocatfoodhellocatfoodarrowcursormousepixel</metadata>
+  <g transform="matrix(1.25,0,0,-1.25,0,45) " id="g10">
+   <g id="g12">
+    <path id="path14" d="m49.9373,30.21279l1.948,-21.013l18.5,0l2.146,21.719l-22.594,-0.706z" fill-rule="nonzero" fill="#ccd6dd"/>
+   </g>
+   <g id="g16">
+    <g clip-path="url(#clipPath20)" id="g18">
+     <g id="g24">
+      <path id="path26" d="m71.8019,20.97079l-21.477,-0.146c0,0 1.06,-10.875 3.373,-10.875l15.021,0c2.362,0 3.083,11.021 3.083,11.021" fill-rule="nonzero" fill="#e27e00"/>
+     </g>
+     <g id="g28">
+      <path id="path30" d="m61.2025,22.76249c-5.468,0 -9.901,-0.831 -9.901,-1.855c0,-0.028 0.015,-0.055 0.022,-0.082c0.15,-0.643 2.037,-1.199 4.808,-1.51l10.345,0.023c2.661,0.315 4.459,0.86 4.605,1.487c0.007,0.027 0.022,0.054 0.022,0.082c0,1.024 -4.433,1.855 -9.901,1.855" fill-rule="nonzero" fill="#ffb900"/>
+     </g>
+     <g id="g32">
+      <path id="path34" d="m59.6149,19.07769l1.937,-0.961l5.473,0.92l-0.565,0.302c-1.524,-0.181 -3.323,-0.287 -5.257,-0.287c-0.542,0 -1.07,0.01 -1.588,0.026" fill-rule="nonzero" fill="#f4bd61"/>
+     </g>
+     <g id="g36">
+      <path id="path38" d="m62.2186,21.90829l-6.203,-0.833l3.599,-1.998c0.518,-0.015 1.046,-0.026 1.588,-0.026c1.935,0 3.734,0.106 5.257,0.287l-4.241,2.57z" fill-rule="nonzero" fill="#f1f2f2"/>
+     </g>
+     <g id="g40">
+      <path id="path42" d="m61.5181,12.43959l4.439,1.36l1.068,5.237l-5.473,-0.92l-0.034,-5.677z" fill-rule="nonzero" fill="#e9ab61"/>
+     </g>
+     <g id="g44">
+      <path id="path46" d="m59.6149,19.07769c-1.251,0.038 -2.421,0.12 -3.467,0.238l0.464,-5.265l4.906,-1.611l0.034,5.677l-1.937,0.961z" fill-rule="nonzero" fill="#e4973e"/>
+     </g>
+     <g id="g48">
+      <path id="path50" d="m56.0155,21.07499l0.132,-1.76c1.047,-0.117 2.216,-0.199 3.467,-0.237l-3.599,1.997z" fill-rule="nonzero" fill="#d1d3d4"/>
+     </g>
+     <g id="g52">
+      <path id="path54" d="m73.3065,32.37039c-0.649,0.048 -1.217,-0.418 -1.276,-1.064l-1.478,-16.255c-0.57,-3.085 -1.957,-4.851 -6.334,-4.851l-6,0c-4.596,0 -5.896,1.947 -6.414,5.324l-1.435,15.782c-0.059,0.646 -0.624,1.119 -1.276,1.064c-0.646,-0.059 -1.122,-0.63 -1.063,-1.277l2.005,-22.049c0.255,-1.919 1.41,-3.019 3.165,-3.019l16,0c2.535,0 3.022,1.737 3.169,3.068l2,22c0.059,0.647 -0.417,1.218 -1.063,1.277" fill-rule="nonzero" fill="#8899a6"/>
+     </g>
+     <g id="g56">
+      <path id="path58" d="m74.4186,31.20219c0,-1.85 -4.028,-3.35 -13.2,-3.35c-9.172,0 -13.2,1.5 -13.2,3.35c0,1.851 4.028,3.35 13.2,3.35c9.172,0 13.2,-1.499 13.2,-3.35" fill-rule="nonzero" fill="#ccd6dd"/>
+     </g>
+     <g id="g60">
+      <path id="path62" d="m73.7479,31.09749c-0.286,0.471 -0.901,0.621 -1.374,0.336c-2.333,-1.416 -8.814,-1.603 -11.121,-1.546c-0.008,0 -0.015,-0.004 -0.022,-0.004c-0.008,0 -0.014,0.004 -0.022,0.004c-2.299,-0.057 -8.785,0.129 -11.121,1.546c-0.471,0.286 -1.087,0.136 -1.373,-0.336c-0.287,-0.472 -0.136,-1.087 0.336,-1.374c2.796,-1.695 9.322,-1.842 11.495,-1.842c0.371,0 0.608,0.004 0.685,0.006c0.078,-0.002 0.315,-0.006 0.685,-0.006c2.174,0 8.7,0.147 11.495,1.842c0.473,0.287 0.623,0.902 0.337,1.374" fill-rule="nonzero" fill="#ffffff"/>
+     </g>
+    </g>
+   </g>
+  </g>
+  <g id="svg_5" stroke="null">
+   <line fill="none" stroke-width="1.5" x1="96.318199" y1="0" x2="96.568188" y2="39.74838" id="svg_1" stroke-linejoin="undefined" stroke-linecap="undefined" stroke="#000"/>
+   <line fill="none" stroke-width="1.5" stroke-opacity="null" fill-opacity="null" x1="88.936992" y1="0.6153" x2="103.949395" y2="0.6153" id="svg_3" stroke-linejoin="undefined" stroke-linecap="undefined" stroke="#000"/>
+   <line fill="none" stroke-width="1.5" stroke-opacity="null" fill-opacity="null" x1="88.936992" y1="39.256138" x2="103.949395" y2="39.256138" id="svg_4" stroke-linejoin="undefined" stroke-linecap="undefined" stroke="#000"/>
+  </g>
+  <rect fill="#007fff" stroke-width="1.5" fill-opacity="0.5" x="57.063298" y="1.063864" width="38.998407" height="37.49847" id="svg_6"/>
+  <metadata id="svg_58">image/svg+xml</metadata>
+  <defs>
+   <clipPath id="svg_38" clipPathUnits="userSpaceOnUse">
+    <path id="svg_57" d="m-26.493126,75.842568l36,0l0,-36l-36,0l0,36z"/>
+   </clipPath>
+  </defs>
+ </g>
+</svg>
