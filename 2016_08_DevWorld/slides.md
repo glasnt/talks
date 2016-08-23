@@ -255,6 +255,11 @@ and in no way
 an iWatch, Earbuds, an iPhone and an iMac.
 
 Nope. 
+
+---
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='200px' src='pictures/space.svg'><img height='200px' src='pictures/a/mobile_6.png'><img height='200px' src='pictures/a/mobile_8.png'><img height='200px' src='pictures/space.svg'></p></div> <!-- .slide: class="center" -->
+
+Note: apple updated it's mobile emoji in iOS 6 vs iOS 8
 ---
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='200px' src='pictures/t/watch.svg'><img height='200px' src='pictures/t/clock.svg'><img height='200px' src='pictures/e/mantelpiece.svg'><img height='200px' src='pictures/e/cross.svg'></p></div> <!-- .slide: class="center" -->
 Note: fads, memes, etc.
@@ -292,7 +297,14 @@ Note: who knows what this ISO is?
 
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/g/A.svg'><img height='400px' src='pictures/g/U.svg'></p></div> <!-- .slide: class="center" -->
 ### `\U0001f1e6` &nbsp; &nbsp; `\U0001f1fa`
-
+---
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/g/E.svg'><img height='400px' src='pictures/g/S.svg'></p></div> <!-- .slide: class="center" -->
+### `\U0001f1ea` &nbsp; &nbsp; `\U0001f1f8`
+---
+ <div style='width: 50%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/t/spain.svg'></p></div> <!-- .slide: class="center" -->
+### `\U0001f1ea\U0001f1f8`
+---
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/g/E.svg'><img height='400px' src='pictures/g/S.svg'></p></div> <!-- .slide: class="center" -->
 ---
  <div style='width: 50%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/e/keyboard.svg'></p></div> <!-- .slide: class="center" -->
 
@@ -304,10 +316,30 @@ Note: So how do you get the input in?
 <img src="pictures/o/smiling.svg" style="margin-top: -40px" height="240px">
 
 ---
-# <div style="white-space: nowrap"><img src="pictures/e/command.svg" height="200px"><img height="200px" src="pictures/e/option.svg"><img height="200px" src="pictures/e/space.svg"></div> <!-- .slide: class="center" -->
-
+# <div style="white-space: nowrap"><img src="pictures/e/command.svg" height="200px"><img height="200px" src="pictures/e/control.svg"><img height="200px" src="pictures/e/space.svg"></div> <!-- .slide: class="center" -->
 
 Note: Apple input Control CMD Space
+---
+
+# <span style="font-size: 300px; font-weight: normal">⌘</span> <!-- .slide: class="center" -->
+###`\u2318` 
+
+Note: This is valid unicode
+Place of Interest Sign
+
+Also known as St Johns Arms
+
+Found on stonework going back to 400AD
+
+Used in Nordic Countries in the 1960's to denote a place of interest
+
+Adopted by Apple
+---
+ <div style='width: 50%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/e/option.svg'></p></div> <!-- .slide: class="center" -->
+Note: 
+
+Alt + utf16 hex for windows
+Option for Macs (if you enable the unicode hex input as a language)
 ---
  <div style='width: 50%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/t/lightbulb.svg'></p></div> <!-- .slide: class="center" -->
 ---

@@ -255,6 +255,11 @@ and in no way
 an iWatch, Earbuds, an iPhone and an iMac.
 
 Nope.
+
+---
+! space | a/mobile_6.png | a/mobile_8.png | space
+
+Note: apple updated it's mobile emoji in iOS 6 vs iOS 8
 ---
 ! t/watch | t/clock | e/mantelpiece | e/cross
 Note: fads, memes, etc.
@@ -292,7 +297,14 @@ Note: who knows what this ISO is?
 
 ! g/A | g/U
 ### `\U0001f1e6` &nbsp; &nbsp; `\U0001f1fa`
-
+---
+! g/E | g/S
+### `\U0001f1ea` &nbsp; &nbsp; `\U0001f1f8`
+---
+! t/spain
+### `\U0001f1ea\U0001f1f8`
+---
+! g/E | g/S
 ---
 ! e/keyboard
 
@@ -304,10 +316,30 @@ Note: So how do you get the input in?
 <img src="pictures/o/smiling.svg" style="margin-top: -40px" height="240px"> 
 
 ---
-#= <div style="white-space: nowrap"><img src="pictures/e/command.svg" height="200px"><img height="200px" src="pictures/e/option.svg"><img height="200px" src="pictures/e/space.svg"></div>
-
+#= <div style="white-space: nowrap"><img src="pictures/e/command.svg" height="200px"><img height="200px" src="pictures/e/control.svg"><img height="200px" src="pictures/e/space.svg"></div>
 
 Note: Apple input Control CMD Space
+---
+
+#= <span style="font-size: 300px; font-weight: normal">⌘</span>
+###`\u2318`
+
+Note: This is valid unicode
+Place of Interest Sign
+
+Also known as St Johns Arms
+
+Found on stonework going back to 400AD
+
+Used in Nordic Countries in the 1960's to denote a place of interest
+
+Adopted by Apple
+---
+! e/option 
+Note:
+
+Alt + utf16 hex for windows
+Option for Macs (if you enable the unicode hex input as a language)
 ---
 ! t/lightbulb
 ---

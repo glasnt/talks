@@ -9,6 +9,6 @@
   <path id="svg_1" d="m62,52c0,5.523 -4.478,10 -10,10l-40,0c-5.522,0 -10,-4.477 -10,-10l0,-40c0,-5.523 4.478,-10 10,-10l40,0c5.522,0 10,4.477 10,10l0,40" fill="#d0d0d0"/>
   <path id="svg_2" d="m57,45.666c0,4.604 -3.731,8.334 -8.333,8.334l-33.334,0c-4.602,0 -8.333,-3.73 -8.333,-8.334l0,-33.332c0,-4.604 3.731,-8.334 8.333,-8.334l33.334,0c4.602,0 8.333,3.73 8.333,8.334l0,33.332z" fill="#fff"/>
   <text fill="#9aa0a5" stroke-width="0" x="4.520864" y="46.791656" id="svg_5" font-size="43" font-family="Helvetica, Arial, sans-serif" text-anchor="start" xml:space="preserve"/>
-  <text fill="#9aa0a5" stroke-width="0" x="20.416689" y="44.833323" id="svg_6" font-size="43" font-family="Helvetica, Arial, sans-serif" text-anchor="start" xml:space="preserve">^</text>
+  <text fill="#9aa0a5" stroke-width="0" x="10.416689" y="44.833323" id="svg_6" font-size="43" font-family="Helvetica, Arial, sans-serif" text-anchor="start" xml:space="preserve">⌥</text>
  </g>
 </svg>
