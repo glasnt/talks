@@ -1,3 +1,5 @@
+#= &nbsp; <!-- .slide: data-background="pictures/DWTitle.png" data-background-size="contain" data-background-transition="none" -->
+---
 ! space  | t/apple | g/computer | t/globe_a | space
 
 ---
@@ -298,13 +300,16 @@ Note: who knows what this ISO is?
 ! g/A | g/U
 ### `\U0001f1e6` &nbsp; &nbsp; `\U0001f1fa`
 ---
-! g/E | g/S
-### `\U0001f1ea` &nbsp; &nbsp; `\U0001f1f8`
----
-! t/spain
-### `\U0001f1ea\U0001f1f8`
----
-! g/E | g/S
+! g/I | g/S | g/O | e/3 | e/1 | e/6 | e/6 | g/hyphen | e/1
+Note: 
+
+if there's no iso flag, it won't merge. 
+
+that kerning, tho. 
+
+(GOOGLE)
+
+
 ---
 ! e/keyboard
 
@@ -428,14 +433,26 @@ Note: automatically overexaggerating
 ! o/text-dollar | g/notequal | t/moneymouth
 ---
 ! e/eyeglasses
+
 Note: Reading things back again
 
-For mobile you can mostly assume platform emoji, with sme exceptions
+It really depends on what platform you're on
+
+If you update your operating system, you'll get new emoji!
+
+... and security updates
+
 ---
 
-! e/control
+! e/web
 
-Note: On the web,you have complete control
+Note: 
+Things are simpler on the web
+---
+
+! e/controls
+
+Note: 
 
 You can control the entire system
 
@@ -639,7 +656,7 @@ Note: zero width joiner
 Allows for combining existing emoji to make new ones
 ---
 ! t/whiteflag | t/rainbow
-### `\U0001f3f3 \U0001f308`
+### `\U0001f3f3`<span style="color:white">`\ufe0f\u200d`</span>`\U0001f308`
 ### &nbsp;
 ---
 ! t/rainbow_flag

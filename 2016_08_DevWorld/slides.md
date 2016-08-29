@@ -1,3 +1,5 @@
+# &nbsp; <!-- .slide: data-background="pictures/DWTitle.png" data-background-size="contain" data-background-transition="none" --> <!-- .slide: class="center" -->
+---
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='160px' src='pictures/space.svg'><img height='160px' src='pictures/t/apple.svg'><img height='160px' src='pictures/g/computer.svg'><img height='160px' src='pictures/t/globe_a.svg'><img height='160px' src='pictures/space.svg'></p></div> <!-- .slide: class="center" -->
 
 ---
@@ -298,13 +300,16 @@ Note: who knows what this ISO is?
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/g/A.svg'><img height='400px' src='pictures/g/U.svg'></p></div> <!-- .slide: class="center" -->
 ### `\U0001f1e6` &nbsp; &nbsp; `\U0001f1fa`
 ---
- <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/g/E.svg'><img height='400px' src='pictures/g/S.svg'></p></div> <!-- .slide: class="center" -->
-### `\U0001f1ea` &nbsp; &nbsp; `\U0001f1f8`
----
- <div style='width: 50%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/t/spain.svg'></p></div> <!-- .slide: class="center" -->
-### `\U0001f1ea\U0001f1f8`
----
- <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/g/E.svg'><img height='400px' src='pictures/g/S.svg'></p></div> <!-- .slide: class="center" -->
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='88px' src='pictures/g/I.svg'><img height='88px' src='pictures/g/S.svg'><img height='88px' src='pictures/g/O.svg'><img height='88px' src='pictures/e/3.svg'><img height='88px' src='pictures/e/1.svg'><img height='88px' src='pictures/e/6.svg'><img height='88px' src='pictures/e/6.svg'><img height='88px' src='pictures/g/hyphen.svg'><img height='88px' src='pictures/e/1.svg'></p></div> <!-- .slide: class="center" -->
+Note: 
+
+if there's no iso flag, it won't merge.
+
+that kerning, tho.
+
+(GOOGLE) 
+
+
 ---
  <div style='width: 50%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/e/keyboard.svg'></p></div> <!-- .slide: class="center" -->
 
@@ -428,14 +433,26 @@ Note: automatically overexaggerating
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='266px' src='pictures/o/text-dollar.svg'><img height='266px' src='pictures/g/notequal.svg'><img height='266px' src='pictures/t/moneymouth.svg'></p></div> <!-- .slide: class="center" -->
 ---
  <div style='width: 50%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/e/eyeglasses.svg'></p></div> <!-- .slide: class="center" -->
+
 Note: Reading things back again
 
-For mobile you can mostly assume platform emoji, with sme exceptions
+It really depends on what platform you're on
+
+If you update your operating system, you'll get new emoji!
+
+... and security updates
+
 ---
 
- <div style='width: 50%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/e/control.svg'></p></div> <!-- .slide: class="center" -->
+ <div style='width: 50%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/e/web.svg'></p></div> <!-- .slide: class="center" -->
 
-Note: On the web,you have complete control
+Note: 
+Things are simpler on the web
+---
+
+ <div style='width: 50%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/e/controls.svg'></p></div> <!-- .slide: class="center" -->
+
+Note: 
 
 You can control the entire system
 
@@ -639,7 +656,7 @@ Note: zero width joiner
 Allows for combining existing emoji to make new ones
 ---
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/t/whiteflag.svg'><img height='400px' src='pictures/t/rainbow.svg'></p></div> <!-- .slide: class="center" -->
-### `\U0001f3f3 \U0001f308`
+### `\U0001f3f3`<span style="color:white">`\ufe0f\u200d`</span>`\U0001f308`
 ### &nbsp;
 ---
  <div style='width: 50%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/t/rainbow_flag.svg'></p></div> <!-- .slide: class="center" -->

@@ -1,68 +1,69 @@
-<svg width="580" height="113" xmlns="http://www.w3.org/2000/svg">
+<svg width="580" height="112.99999999999999" xmlns="http://www.w3.org/2000/svg">
  <!-- Created with Method Draw - http://github.com/duopixel/Method-Draw/ -->
-
  <g>
   <title>background</title>
-  <rect fill="#fff" id="canvas_background" height="115" width="582" y="-1" x="-1"/>
-  <g display="none" overflow="visible" y="0" x="0" height="100%" width="100%" id="canvasGrid">
-   <rect fill="url(#gridpattern)" stroke-width="0" y="0" x="0" height="100%" width="100%"/>
+  <rect x="-1" y="-1" width="582" height="115" id="canvas_background" fill="#fff"/>
+  <g id="canvasGrid" display="none">
+   <rect id="svg_4" width="100%" height="100%" x="0" y="0" stroke-width="0" fill="url(#gridpattern)"/>
   </g>
  </g>
  <g>
   <title>Layer 1</title>
-  <text style="cursor: move;" font-weight="bold" xml:space="preserve" text-anchor="start" font-family="'Courier New', Courier, monospace" font-size="24" id="svg_2" y="61.999793" x="129.234371" stroke-opacity="null" stroke-width="0" stroke="#000" fill="#000000">title="Tumbler glass"</text>
-  <text font-weight="bold" xml:space="preserve" text-anchor="start" font-family="'Courier New', Courier, monospace" font-size="24" id="svg_3" y="100.499788" x="28.75" stroke-opacity="null" stroke-width="0" stroke="#000" fill="#000000">aria-label="Emoji: Tumbler glass"</text>
-  <metadata transform="matrix(1.3182442410656137,0,0,1.3182442410656137,0,0) " id="svg_63">image/svg+xml</metadata>
+  <text fill="#000000" stroke="#000" stroke-width="0" stroke-opacity="null" x="129.234371" y="61.999793" id="svg_2" font-size="24" font-family="'Courier New', Courier, monospace" text-anchor="start" xml:space="preserve" font-weight="bold">title="Tumbler glass"</text>
+  <text fill="#000000" stroke="#000" stroke-width="0" stroke-opacity="null" x="28.75" y="100.499788" id="svg_3" font-size="24" font-family="'Courier New', Courier, monospace" text-anchor="start" xml:space="preserve" font-weight="bold">aria-label="Emoji: Tumbler glass"</text>
+  <metadata id="svg_63">image/svg+xml</metadata>
   <defs>
-   <clipPath clipPathUnits="userSpaceOnUse" id="svg_39">
-    <path d="m291.585324,48.567322l36,0l0,-36l-36,0l0,36z" id="svg_62"/>
+   <clipPath id="svg_39" clipPathUnits="userSpaceOnUse">
+    <path id="svg_62" d="m291.58532,48.56732l36,0l0,-36l-36,0l0,36z"/>
    </clipPath>
   </defs>
-  <text style="cursor: move;" stroke="#000" font-weight="bold" xml:space="preserve" text-anchor="start" font-family="'Courier New', Courier, monospace" font-size="24" id="svg_1" y="23.234212" x="49.468803" stroke-width="0" fill="#000000">&lt;img src="</text>
-  <g stroke="null" id="svg_65">
-   <g stroke="null" id="svg_36" transform="matrix(0.6525121421909583,0,0,-0.6525121421909583,286.17060039559067,34.501183480411285) ">
-    <g stroke="null" id="svg_60">
-     <path fill="#ccd6dd" fill-rule="nonzero" d="m300.602852,38.580122l1.948,-21.013l18.5,0l2.146,21.719l-22.594,-0.706z" id="svg_61"/>
+  <text fill="#000000" stroke-width="0" x="49.468803" y="23.234212" id="svg_1" font-size="24" font-family="'Courier New', Courier, monospace" text-anchor="start" xml:space="preserve" font-weight="bold" stroke="#000">&lt;img</text>
+  <g id="svg_65" stroke="null">
+   <g transform="matrix(0.6525121421909583,0,0,-0.6525121421909583,286.17060039559067,34.501183480411285) " id="svg_36" stroke="null">
+    <g id="svg_60" stroke="null">
+     <path id="svg_61" d="m300.60285,38.58012l1.948,-21.013l18.5,0l2.146,21.719l-22.594,-0.706z" fill-rule="nonzero" fill="#ccd6dd"/>
     </g>
-    <g stroke="null" id="svg_37">
-     <g stroke="null" id="svg_38" clip-path="url(#svg_39)">
-      <g stroke="null" id="svg_58">
-       <path fill="#e27e00" fill-rule="nonzero" d="m322.467452,29.338121l-21.477,-0.146c0,0 1.06,-10.875 3.373,-10.875l15.021,0c2.362,0 3.083,11.021 3.083,11.021" id="svg_59"/>
+    <g id="svg_37" stroke="null">
+     <g clip-path="url(#svg_39)" id="svg_38" stroke="null">
+      <g id="svg_58" stroke="null">
+       <path id="svg_59" d="m322.46745,29.33812l-21.477,-0.146c0,0 1.06,-10.875 3.373,-10.875l15.021,0c2.362,0 3.083,11.021 3.083,11.021" fill-rule="nonzero" fill="#e27e00"/>
       </g>
-      <g stroke="null" id="svg_56">
-       <path fill="#ffb900" fill-rule="nonzero" d="m311.868052,31.129822c-5.468,0 -9.901,-0.831 -9.901,-1.855c0,-0.028 0.015,-0.055 0.022,-0.082c0.15,-0.643 2.037,-1.199 4.808,-1.51l10.345,0.023c2.661,0.315 4.459,0.86 4.605,1.487c0.007,0.027 0.022,0.054 0.022,0.082c0,1.024 -4.433,1.855 -9.901,1.855" id="svg_57"/>
+      <g id="svg_56" stroke="null">
+       <path id="svg_57" d="m311.86805,31.12982c-5.468,0 -9.901,-0.831 -9.901,-1.855c0,-0.028 0.015,-0.055 0.022,-0.082c0.15,-0.643 2.037,-1.199 4.808,-1.51l10.345,0.023c2.661,0.315 4.459,0.86 4.605,1.487c0.007,0.027 0.022,0.054 0.022,0.082c0,1.024 -4.433,1.855 -9.901,1.855" fill-rule="nonzero" fill="#ffb900"/>
       </g>
-      <g stroke="null" id="svg_54">
-       <path fill="#f4bd61" fill-rule="nonzero" d="m310.280451,27.445022l1.937,-0.961l5.473,0.92l-0.565,0.302c-1.524,-0.181 -3.323,-0.287 -5.257,-0.287c-0.542,0 -1.07,0.01 -1.588,0.026" id="svg_55"/>
+      <g id="svg_54" stroke="null">
+       <path id="svg_55" d="m310.28045,27.44502l1.937,-0.961l5.473,0.92l-0.565,0.302c-1.524,-0.181 -3.323,-0.287 -5.257,-0.287c-0.542,0 -1.07,0.01 -1.588,0.026" fill-rule="nonzero" fill="#f4bd61"/>
       </g>
-      <g stroke="null" id="svg_52">
-       <path fill="#f1f2f2" fill-rule="nonzero" d="m312.884152,30.275621l-6.203,-0.833l3.599,-1.998c0.518,-0.015 1.046,-0.026 1.588,-0.026c1.935,0 3.734,0.106 5.257,0.287l-4.241,2.57z" id="svg_53"/>
+      <g id="svg_52" stroke="null">
+       <path id="svg_53" d="m312.88415,30.27562l-6.203,-0.833l3.599,-1.998c0.518,-0.015 1.046,-0.026 1.588,-0.026c1.935,0 3.734,0.106 5.257,0.287l-4.241,2.57z" fill-rule="nonzero" fill="#f1f2f2"/>
       </g>
-      <g stroke="null" id="svg_50">
-       <path fill="#e9ab61" fill-rule="nonzero" d="m312.183652,20.806922l4.439,1.36l1.068,5.237l-5.473,-0.92l-0.034,-5.677z" id="svg_51"/>
+      <g id="svg_50" stroke="null">
+       <path id="svg_51" d="m312.18365,20.80692l4.439,1.36l1.068,5.237l-5.473,-0.92l-0.034,-5.677z" fill-rule="nonzero" fill="#e9ab61"/>
       </g>
-      <g stroke="null" id="svg_48">
-       <path fill="#e4973e" fill-rule="nonzero" d="m310.280451,27.445022c-1.251,0.038 -2.421,0.12 -3.467,0.238l0.464,-5.265l4.906,-1.611l0.034,5.677l-1.937,0.961z" id="svg_49"/>
+      <g id="svg_48" stroke="null">
+       <path id="svg_49" d="m310.28045,27.44502c-1.251,0.038 -2.421,0.12 -3.467,0.238l0.464,-5.265l4.906,-1.611l0.034,5.677l-1.937,0.961z" fill-rule="nonzero" fill="#e4973e"/>
       </g>
-      <g stroke="null" id="svg_46">
-       <path fill="#d1d3d4" fill-rule="nonzero" d="m306.681052,29.442322l0.132,-1.76c1.047,-0.117 2.216,-0.199 3.467,-0.237l-3.599,1.997z" id="svg_47"/>
+      <g id="svg_46" stroke="null">
+       <path id="svg_47" d="m306.68105,29.44232l0.132,-1.76c1.047,-0.117 2.216,-0.199 3.467,-0.237l-3.599,1.997z" fill-rule="nonzero" fill="#d1d3d4"/>
       </g>
-      <g stroke="null" id="svg_44">
-       <path fill="#8899a6" fill-rule="nonzero" d="m323.972052,40.737722c-0.649,0.048 -1.217,-0.418 -1.276,-1.064l-1.478,-16.255c-0.57,-3.085 -1.957,-4.851 -6.334,-4.851l-6,0c-4.596,0 -5.896,1.947 -6.414,5.324l-1.435,15.782c-0.059,0.646 -0.624,1.119 -1.276,1.064c-0.646,-0.059 -1.122,-0.63 -1.063,-1.277l2.005,-22.049c0.255,-1.919 1.41,-3.019 3.165,-3.019l16,0c2.535,0 3.022,1.737 3.169,3.068l2,22c0.059,0.647 -0.417,1.218 -1.063,1.277" id="svg_45"/>
+      <g id="svg_44" stroke="null">
+       <path id="svg_45" d="m323.97205,40.73772c-0.649,0.048 -1.217,-0.418 -1.276,-1.064l-1.478,-16.255c-0.57,-3.085 -1.957,-4.851 -6.334,-4.851l-6,0c-4.596,0 -5.896,1.947 -6.414,5.324l-1.435,15.782c-0.059,0.646 -0.624,1.119 -1.276,1.064c-0.646,-0.059 -1.122,-0.63 -1.063,-1.277l2.005,-22.049c0.255,-1.919 1.41,-3.019 3.165,-3.019l16,0c2.535,0 3.022,1.737 3.169,3.068l2,22c0.059,0.647 -0.417,1.218 -1.063,1.277" fill-rule="nonzero" fill="#8899a6"/>
       </g>
-      <g stroke="null" id="svg_42">
-       <path fill="#ccd6dd" fill-rule="nonzero" d="m325.084153,39.569521c0,-1.85 -4.028,-3.35 -13.2,-3.35c-9.172,0 -13.2,1.5 -13.2,3.35c0,1.851 4.028,3.35 13.2,3.35c9.172,0 13.2,-1.499 13.2,-3.35" id="svg_43"/>
+      <g id="svg_42" stroke="null">
+       <path id="svg_43" d="m325.08415,39.56952c0,-1.85 -4.028,-3.35 -13.2,-3.35c-9.172,0 -13.2,1.5 -13.2,3.35c0,1.851 4.028,3.35 13.2,3.35c9.172,0 13.2,-1.499 13.2,-3.35" fill-rule="nonzero" fill="#ccd6dd"/>
       </g>
-      <g stroke="null" id="svg_40">
-       <path fill="#ffffff" fill-rule="nonzero" d="m324.413453,39.464821c-0.286,0.471 -0.901,0.621 -1.374,0.336c-2.333,-1.416 -8.814,-1.603 -11.121,-1.546c-0.008,0 -0.015,-0.004 -0.022,-0.004c-0.008,0 -0.014,0.004 -0.022,0.004c-2.299,-0.057 -8.785,0.129 -11.121,1.546c-0.471,0.286 -1.087,0.136 -1.373,-0.336c-0.287,-0.472 -0.136,-1.087 0.336,-1.374c2.796,-1.695 9.322,-1.842 11.495,-1.842c0.371,0 0.608,0.004 0.685,0.006c0.078,-0.002 0.315,-0.006 0.685,-0.006c2.174,0 8.7,0.147 11.495,1.842c0.473,0.287 0.623,0.902 0.337,1.374" id="svg_41"/>
+      <g id="svg_40" stroke="null">
+       <path id="svg_41" d="m324.41345,39.46482c-0.286,0.471 -0.901,0.621 -1.374,0.336c-2.333,-1.416 -8.814,-1.603 -11.121,-1.546c-0.008,0 -0.015,-0.004 -0.022,-0.004c-0.008,0 -0.014,0.004 -0.022,0.004c-2.299,-0.057 -8.785,0.129 -11.121,1.546c-0.471,0.286 -1.087,0.136 -1.373,-0.336c-0.287,-0.472 -0.136,-1.087 0.336,-1.374c2.796,-1.695 9.322,-1.842 11.495,-1.842c0.371,0 0.608,0.004 0.685,0.006c0.078,-0.002 0.315,-0.006 0.685,-0.006c2.174,0 8.7,0.147 11.495,1.842c0.473,0.287 0.623,0.902 0.337,1.374" fill-rule="nonzero" fill="#ffffff"/>
       </g>
      </g>
     </g>
    </g>
   </g>
-  <text style="cursor: move;" font-weight="bold" stroke="#000" xml:space="preserve" text-anchor="start" font-family="'Courier New', Courier, monospace" font-size="24" id="svg_66" y="23.249513" x="403.251016" stroke-opacity="null" stroke-width="0" fill="#000000">alt="  "</text>
-  <text stroke="#000" font-weight="bold" xml:space="preserve" text-anchor="start" font-family="'Courier New', Courier, monospace" font-size="24" id="svg_70" y="23.234198" x="192.470065" stroke-width="0" fill="#ff0000">img/1f943.png</text>
-  <text font-weight="bold" xml:space="preserve" text-anchor="start" font-family="'Courier New', Courier, monospace" font-size="24" id="svg_71" y="23.249419" x="380.736587" fill-opacity="null" stroke-opacity="null" stroke-width="0" stroke="#000" fill="#000000">"</text>
-  <text font-weight="bold" xml:space="preserve" text-anchor="start" font-family="'Courier New', Courier, monospace" font-size="24" id="svg_72" y="100.499788" x="519.254349" fill-opacity="null" stroke-opacity="null" stroke-width="0" stroke="#000" fill="#000000">&gt;</text>
+  <text fill="#000000" stroke-width="0" stroke-opacity="null" x="403.251016" y="23.249513" id="svg_66" font-size="24" font-family="'Courier New', Courier, monospace" text-anchor="start" xml:space="preserve" stroke="#000" font-weight="bold">alt="  "</text>
+  <text fill="#ff0000" stroke-width="0" x="192.470065" y="23.234198" id="svg_70" font-size="24" font-family="'Courier New', Courier, monospace" text-anchor="start" xml:space="preserve" font-weight="bold" stroke="#000">img/1f943.png</text>
+  <text fill="#ff0000" stroke="#000" stroke-width="0" stroke-opacity="null" x="380.736587" y="23.249484" id="svg_71" font-size="24" font-family="'Courier New', Courier, monospace" text-anchor="start" xml:space="preserve" font-weight="bold">"</text>
+  <text fill="#000000" stroke="#000" stroke-width="0" stroke-opacity="null" fill-opacity="null" x="519.254349" y="100.499788" id="svg_72" font-size="24" font-family="'Courier New', Courier, monospace" text-anchor="start" xml:space="preserve" font-weight="bold">&gt;</text>
+  <text fill="#ff0000" stroke-width="0" x="121.468868" y="23.234212" id="svg_5" font-size="24" font-family="'Courier New', Courier, monospace" text-anchor="start" xml:space="preserve" font-weight="bold" stroke="#000">src="</text>
+  <text style="cursor: move;" fill="#000000" stroke-width="0" x="49.468803" y="23.234212" id="svg_6" font-size="24" font-family="'Courier New', Courier, monospace" text-anchor="start" xml:space="preserve" font-weight="bold" stroke="#000">&lt;img</text>
  </g>
 </svg>
