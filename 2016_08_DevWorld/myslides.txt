@@ -1,6 +1,6 @@
 #= &nbsp; <!-- .slide: data-background="pictures/DWTitle.png" data-background-size="contain" data-background-transition="none" -->
 ---
-! space  | t/apple | g/computer | t/globe_a | space
+! space | g/computer | t/globe_a | o/devworld | space
 
 ---
 ## &nbsp;
@@ -266,6 +266,13 @@ Note: apple updated it's mobile emoji in iOS 6 vs iOS 8
 ! t/watch | t/clock | e/mantelpiece | e/cross
 Note: fads, memes, etc.
 ---
+! t/disappointed
+Note: there is no anvil emoji
+
+This could be fixed if someone submitted a proposal
+
+and no, twitter polls or petitions don't count, you need to submit to the Unicode Consortium
+---
 
 ! t/oldkey.png | t/newkey
 Note: As new emoji are brought in
@@ -285,6 +292,8 @@ Note: Thinking Face in my Talk Summary
 
 ---
 ! o/spoon.ws
+---
+#= <span style="font-family: Helvetica; font-weight: normal">xn--9q9h.ws</span>
 Note: Surprisingly enough, this works
 ---
 ! g/R | g/F | g/C | e/3 | e/4 | e/9 | e/2 
@@ -300,11 +309,16 @@ Note: who knows what this ISO is?
 ! g/A | g/U
 ### `\U0001f1e6` &nbsp; &nbsp; `\U0001f1fa`
 ---
-! g/I | g/S | g/O | e/3 | e/1 | e/6 | e/6 | g/hyphen | e/1
+! g/I | g/S | g/O
+
 Note: 
 
 if there's no iso flag, it won't merge. 
+---
 
+! o/letter_i | o/letter_s | o/letter_o
+
+Note: 
 that kerning, tho. 
 
 (GOOGLE)
@@ -491,15 +505,6 @@ One from every release of unicode from 1993 - 2016
 Chrome, Firefox, Safari evergreen all on el cap
 : none of them look the same
 ---
-
-#= `twemoji.js`
-Note: Wordpress.com uses this.
-
-javascript front end change emoji to fallback images only
-
-we can do more
----
-
 ! t/raise | t/bar
 ---
 ! g/wave | g/lightbulb

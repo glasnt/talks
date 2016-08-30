@@ -1,6 +1,6 @@
 # &nbsp; <!-- .slide: data-background="pictures/DWTitle.png" data-background-size="contain" data-background-transition="none" --> <!-- .slide: class="center" -->
 ---
- <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='160px' src='pictures/space.svg'><img height='160px' src='pictures/t/apple.svg'><img height='160px' src='pictures/g/computer.svg'><img height='160px' src='pictures/t/globe_a.svg'><img height='160px' src='pictures/space.svg'></p></div> <!-- .slide: class="center" -->
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='160px' src='pictures/space.svg'><img height='160px' src='pictures/g/computer.svg'><img height='160px' src='pictures/t/globe_a.svg'><img height='160px' src='pictures/o/devworld.svg'><img height='160px' src='pictures/space.svg'></p></div> <!-- .slide: class="center" -->
 
 ---
 ## &nbsp;
@@ -266,6 +266,13 @@ Note: apple updated it's mobile emoji in iOS 6 vs iOS 8
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='200px' src='pictures/t/watch.svg'><img height='200px' src='pictures/t/clock.svg'><img height='200px' src='pictures/e/mantelpiece.svg'><img height='200px' src='pictures/e/cross.svg'></p></div> <!-- .slide: class="center" -->
 Note: fads, memes, etc.
 ---
+ <div style='width: 50%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/t/disappointed.svg'></p></div> <!-- .slide: class="center" -->
+Note: there is no anvil emoji
+
+This could be fixed if someone submitted a proposal
+
+and no, twitter polls or petitions don't count, you need to submit to the Unicode Consortium
+---
 
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/t/oldkey.png'><img height='400px' src='pictures/t/newkey.svg'></p></div> <!-- .slide: class="center" -->
 Note: As new emoji are brought in
@@ -285,6 +292,8 @@ Note: Thinking Face in my Talk Summary
 
 ---
  <div style='width: 50%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/o/spoon.ws.svg'></p></div> <!-- .slide: class="center" -->
+---
+# <span style="font-family: Helvetica; font-weight: normal">xn--9q9h.ws</span> <!-- .slide: class="center" -->
 Note: Surprisingly enough, this works
 ---
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='114px' src='pictures/g/R.svg'><img height='114px' src='pictures/g/F.svg'><img height='114px' src='pictures/g/C.svg'><img height='114px' src='pictures/e/3.svg'><img height='114px' src='pictures/e/4.svg'><img height='114px' src='pictures/e/9.svg'><img height='114px' src='pictures/e/2.svg'></p></div> <!-- .slide: class="center" -->
@@ -300,11 +309,16 @@ Note: who knows what this ISO is?
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/g/A.svg'><img height='400px' src='pictures/g/U.svg'></p></div> <!-- .slide: class="center" -->
 ### `\U0001f1e6` &nbsp; &nbsp; `\U0001f1fa`
 ---
- <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='88px' src='pictures/g/I.svg'><img height='88px' src='pictures/g/S.svg'><img height='88px' src='pictures/g/O.svg'><img height='88px' src='pictures/e/3.svg'><img height='88px' src='pictures/e/1.svg'><img height='88px' src='pictures/e/6.svg'><img height='88px' src='pictures/e/6.svg'><img height='88px' src='pictures/g/hyphen.svg'><img height='88px' src='pictures/e/1.svg'></p></div> <!-- .slide: class="center" -->
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='266px' src='pictures/g/I.svg'><img height='266px' src='pictures/g/S.svg'><img height='266px' src='pictures/g/O.svg'></p></div> <!-- .slide: class="center" -->
+
 Note: 
 
 if there's no iso flag, it won't merge.
+---
 
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='266px' src='pictures/o/letter_i.svg'><img height='266px' src='pictures/o/letter_s.svg'><img height='266px' src='pictures/o/letter_o.svg'></p></div> <!-- .slide: class="center" -->
+
+Note: 
 that kerning, tho.
 
 (GOOGLE) 
@@ -491,15 +505,6 @@ One from every release of unicode from 1993 - 2016
 Chrome, Firefox, Safari evergreen all on el cap
 : none of them look the same
 ---
-
-# `twemoji.js` <!-- .slide: class="center" -->
-Note: Wordpress.com uses this.
-
-javascript front end change emoji to fallback images only
-
-we can do more
----
-
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/t/raise.svg'><img height='400px' src='pictures/t/bar.svg'></p></div> <!-- .slide: class="center" -->
 ---
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/g/wave.svg'><img height='400px' src='pictures/g/lightbulb.svg'></p></div> <!-- .slide: class="center" -->
