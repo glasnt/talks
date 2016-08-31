@@ -581,11 +581,17 @@ Note: Is there an answer for accessible emoji on mobile?
 
 It'd be nice if a long click could show names, i guess
 
+but that's currently the functionality to allow colour selection
+
+An addition?
+
 you can enable speech dictation for selected text, so you could go:
 
-* emoji into a field
-* a single word (limitation as of iOS9)
-* select all -> options > speech
+emoji into a field
+
+a single word (limitation as of iOS9)
+
+select all -> options > speech
 
 I don't have a good answer to this one
 
@@ -599,7 +605,7 @@ Note: The future
 ---
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='80px' src='pictures/unicode.png'><img height='80px' src='pictures/e/9.svg'><img height='80px' src='pictures/space.svg'><img height='80px' src='pictures/space.svg'><img height='80px' src='pictures/space.svg'><img height='80px' src='pictures/space.svg'><img height='80px' src='pictures/e/2.svg'><img height='80px' src='pictures/e/0.svg'><img height='80px' src='pictures/e/1.svg'><img height='80px' src='pictures/e/6.svg'></p></div> <!-- .slide: class="center" -->
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='200px' src='pictures/t/shrug.svg'><img height='200px' src='pictures/t/facepalm.svg'><img height='200px' src='pictures/t/cowboy.svg'><img height='200px' src='pictures/t/duck.svg'></p></div> <!-- .slide: class="center" -->
- <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='200px' src='pictures/t/whisky.svg'><img height='200px' src='pictures/t/owl.svg'><img height='200px' src='pictures/o/spoon.svg'><img height='200px' src='pictures/t/egg.svg'></p></div> <!-- .slide: class="center" -->
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='200px' src='pictures/t/whisky.svg'><img height='200px' src='pictures/t/bacon.svg'><img height='200px' src='pictures/o/spoon.svg'><img height='200px' src='pictures/t/egg.svg'></p></div> <!-- .slide: class="center" -->
 Note: These work in Twitter,
 
 not 
@@ -641,6 +647,7 @@ Hawaiian Hangtime sign (thumb and pinky)
 Note: updates
 ---
 <div style='width: 100%; margin: 0 auto;'><p align='center'><img style="padding: 20px" height='266px' src='pictures/g/blushing.svg'><img style="padding: 20px" height='266px' src='pictures/g/flush_6.png'><img style="padding: 20px" height='266px' src='pictures/g/blush_n.png'></p></div> <!-- .slide: class="center" -->
+Note: Android Nought (7) has updates, and is out now
 ---
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='160px' src='pictures/f/f1_smiling.png'><img height='160px' src='pictures/f/f1_crying.png'><img height='160px' src='pictures/f/f1_toung.png'><img height='160px' src='pictures/f/f1_throw.png'><img height='160px' src='pictures/f/f1_shock.png'></p></div> <!-- .slide: class="center" -->
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='160px' src='pictures/f/f2_smiling.png'><img height='160px' src='pictures/f/f2_crying.png'><img height='160px' src='pictures/f/f2_toung.png'><img height='160px' src='pictures/f/f2_throw.png'><img height='160px' src='pictures/f/f2_shock.png'></p></div> <!-- .slide: class="center" -->
@@ -649,11 +656,15 @@ Note: redoing of facebook emoji
 
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='160px' src='pictures/m/m1_smile.png'><img height='160px' src='pictures/m/m1_cry.png'><img height='160px' src='pictures/m/m1_toung.png'><img height='160px' src='pictures/m/m1_kiss.png'><img height='160px' src='pictures/m/m1_shock.png'></p></div> <!-- .slide: class="center" -->
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='160px' src='pictures/m/m2_smile.png'><img height='160px' src='pictures/m/m2_cry.png'><img height='160px' src='pictures/m/m2_toung.png'><img height='160px' src='pictures/m/m2_kiss.png'><img height='160px' src='pictures/m/m2_shock.png'></p></div> <!-- .slide: class="center" -->
+Note: Windows 10 updates "The Anniversary Edition"
 ---
 ## &nbsp;
  <img src="pictures/o/octo.png" />
 ---
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/a/grin.png'><img height='400px' src='pictures/a/grinning_10.png'></p></div> <!-- .slide: class="center" -->
+Note: ios10 + macOS have some style updates
+
+Unsure if unicode 9 adoption is happening
 ---
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='266px' src='pictures/g/Z.svg'><img height='266px' src='pictures/g/W.svg'><img height='266px' src='pictures/g/J.svg'></p></div> <!-- .slide: class="center" -->
 Note: zero width joiner

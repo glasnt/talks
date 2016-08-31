@@ -581,11 +581,17 @@ Note: Is there an answer for accessible emoji on mobile?
 
 It'd be nice if a long click could show names, i guess
 
+but that's currently the functionality to allow colour selection
+
+An addition?
+
 you can enable speech dictation for selected text, so you could go: 
 
- * emoji into a field
- * a single word (limitation as of iOS9)
- * select all -> options > speech
+emoji into a field
+
+a single word (limitation as of iOS9)
+
+select all -> options > speech
 
 I don't have a good answer to this one
 
@@ -599,7 +605,7 @@ Note: The future
 ---
 ! unicode.png | e/9 |  space | space | space  | space | e/2 | e/0 | e/1 | e/6
 ! t/shrug | t/facepalm | t/cowboy | t/duck
-! t/whisky | t/owl | o/spoon | t/egg
+! t/whisky | t/bacon | o/spoon | t/egg
 Note: These work in Twitter, 
 
 not 
@@ -641,6 +647,7 @@ Hawaiian Hangtime sign (thumb and pinky)
 Note: updates 
 ---
 <div style='width: 100%; margin: 0 auto;'><p align='center'><img style="padding: 20px" height='266px' src='pictures/g/blushing.svg'><img style="padding: 20px" height='266px' src='pictures/g/flush_6.png'><img style="padding: 20px" height='266px' src='pictures/g/blush_n.png'></p></div> <!-- .slide: class="center" -->
+Note: Android Nought (7) has updates, and is out now
 ---
 ! f/f1_smiling.png | f/f1_crying.png | f/f1_toung.png |f/f1_throw.png | f/f1_shock.png
 ! f/f2_smiling.png | f/f2_crying.png | f/f2_toung.png | f/f2_throw.png | f/f2_shock.png
@@ -649,11 +656,15 @@ Note: redoing of facebook emoji
 
 ! m/m1_smile.png | m/m1_cry.png | m/m1_toung.png |m/m1_kiss.png | m/m1_shock.png
 ! m/m2_smile.png | m/m2_cry.png | m/m2_toung.png | m/m2_kiss.png | m/m2_shock.png
+Note: Windows 10 updates "The Anniversary Edition" 
 ---
 ## &nbsp;
 @ o/octo.png
 ---
 ! a/grin.png | a/grinning_10.png
+Note: ios10 + macOS have some style updates
+
+Unsure if unicode 9 adoption is happening
 ---
 ! g/Z | g/W | g/J
 Note: zero width joiner
