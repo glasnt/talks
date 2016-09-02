@@ -1,7 +1,4 @@
-
-! t/compression
----
-! space  | g/snake |  t/yellowh | t/greenh  | space
+! space  | t/kiwifruit | g/snake |  t/blueh | t/yellowh  | space
 
 ---
 ## &nbsp;
@@ -586,11 +583,6 @@ Apple
 Microsoft
 
 Updates coming "this year"
----
-
-! unicode.png | e/9 |  space | space | space  | space | e/2 | e/0 | e/1 | e/6
-! t/medal-1 | t/medal-2 | t/medal-3 | t/waterpolo
-! t/wrestlers | t/glove | t/handball | t/canoe
 ---
 
 ! unicode.png | e/10 | space | space | space  | space | e/2 | e/0 | e/1 | e/7

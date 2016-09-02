@@ -1,7 +1,4 @@
-
- <div style='width: 50%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/t/compression.svg'></p></div> <!-- .slide: class="center" -->
----
- <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='160px' src='pictures/space.svg'><img height='160px' src='pictures/g/snake.svg'><img height='160px' src='pictures/t/yellowh.svg'><img height='160px' src='pictures/t/greenh.svg'><img height='160px' src='pictures/space.svg'></p></div> <!-- .slide: class="center" -->
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='133px' src='pictures/space.svg'><img height='133px' src='pictures/t/kiwifruit.svg'><img height='133px' src='pictures/g/snake.svg'><img height='133px' src='pictures/t/blueh.svg'><img height='133px' src='pictures/t/yellowh.svg'><img height='133px' src='pictures/space.svg'></p></div> <!-- .slide: class="center" -->
 
 ---
 ## &nbsp;
@@ -586,11 +583,6 @@ Apple
 Microsoft 
 
 Updates coming "this year"
----
-
- <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='80px' src='pictures/unicode.png'><img height='80px' src='pictures/e/9.svg'><img height='80px' src='pictures/space.svg'><img height='80px' src='pictures/space.svg'><img height='80px' src='pictures/space.svg'><img height='80px' src='pictures/space.svg'><img height='80px' src='pictures/e/2.svg'><img height='80px' src='pictures/e/0.svg'><img height='80px' src='pictures/e/1.svg'><img height='80px' src='pictures/e/6.svg'></p></div> <!-- .slide: class="center" -->
- <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='200px' src='pictures/t/medal-1.svg'><img height='200px' src='pictures/t/medal-2.svg'><img height='200px' src='pictures/t/medal-3.svg'><img height='200px' src='pictures/t/waterpolo.svg'></p></div> <!-- .slide: class="center" -->
- <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='200px' src='pictures/t/wrestlers.svg'><img height='200px' src='pictures/t/glove.svg'><img height='200px' src='pictures/t/handball.svg'><img height='200px' src='pictures/t/canoe.svg'></p></div> <!-- .slide: class="center" -->
 ---
 
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='80px' src='pictures/unicode.png'><img height='80px' src='pictures/e/10.svg'><img height='80px' src='pictures/space.svg'><img height='80px' src='pictures/space.svg'><img height='80px' src='pictures/space.svg'><img height='80px' src='pictures/space.svg'><img height='80px' src='pictures/e/2.svg'><img height='80px' src='pictures/e/0.svg'><img height='80px' src='pictures/e/1.svg'><img height='80px' src='pictures/e/7.svg'></p></div> <!-- .slide: class="center" -->
