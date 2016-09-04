@@ -1,18 +1,24 @@
-I do speaking things. 
+# talks
 
-You can view these online at https://glasnt.github.io/talks/ 
+This repo contains all of my talks. 
 
-or
+For a webview, go to [glasnt.com/talks](http://glasnt.com/talks)
 
-You can follow the `projection` steps 
+## technical overview
 
-## Local `projection`
+Most of these talks use [reveal.js](http://lab.hakim.se/reveal-js/#/), while some earlier versions use a system called [projection](https://github.com/afcowie/projection). 
 
-Presentation Engine -> https://github.com/glasnt/projection 
+Both are web-based presentation formats, which can be run by invoking a local web server on your system and navigating to the URL. 
 
-To present a `projection` deck: 
+For example, using Python 3: 
+   
+   cd [..]/talks/
+   python3 -m http.server -p 1337
+   open http://localhost:1337
 
-	git clone https://github.com/glasnt/talks
-	cd talks/$TALK
-	python -m SimpleHTTPServer 1337
-	chromium http://localhost:1337
+Speaker notes can be viewed by pressing `[s]`. I use the notes mostly for reminders, and should not be assumed to be of any use to anyone wanting a general review of the talk. 
+
+## talk writeups
+
+If you want to get a TLDR on any of my talks, if there is an associated write-up, it'll be linked on the main [talks](http://glasnt.com/talks) page. 
+
