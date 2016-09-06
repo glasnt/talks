@@ -585,6 +585,31 @@ Microsoft
 Updates coming "this year"
 ---
 
+ <div style='width: 50%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/t/shrug.svg'></p></div> <!-- .slide: class="center" -->
+### `\U0001f937`
+---
+
+# <span style="font-size:150px"> ¯&#x005c;&#x005f;(ツ)_/¯</span> <!-- .slide: class="center" -->
+---
+
+### `\u00AF 'MACRON'` <!-- .slide: class="center" -->
+### `\u005C 'REVERSE SOLIDUS'`
+### `\u005F 'LOW LINE'`
+### `\u0028 'LEFT PARENTHESIS'`
+### `\u30C4 'KATAKANA LETTER TU'`
+### `\u0029 'RIGHT PARENTHESIS'`
+### `\u002F 'SOLIDUS'`
+
+Note: 
+### Basic Latin
+### Latin-1 Supplement
+### Katakana (Japanese)
+---
+
+ <div style='width: 50%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/t/shrug.svg'></p></div> <!-- .slide: class="center" -->
+Note: This one saves precious bytes
+---
+
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='80px' src='pictures/unicode.png'><img height='80px' src='pictures/e/10.svg'><img height='80px' src='pictures/space.svg'><img height='80px' src='pictures/space.svg'><img height='80px' src='pictures/space.svg'><img height='80px' src='pictures/space.svg'><img height='80px' src='pictures/e/2.svg'><img height='80px' src='pictures/e/0.svg'><img height='80px' src='pictures/e/1.svg'><img height='80px' src='pictures/e/7.svg'></p></div> <!-- .slide: class="center" -->
 
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='200px' src='pictures/o/takeaway.png'><img height='200px' src='pictures/o/fortune.png'><img height='200px' src='pictures/o/dumpling.png'><img height='200px' src='pictures/o/chopsticks.png'></p></div> <!-- .slide: class="center" -->

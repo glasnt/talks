@@ -585,6 +585,31 @@ Microsoft
 Updates coming "this year"
 ---
 
+! t/shrug
+### `\U0001f937`
+---
+
+#= <span style="font-size:150px"> ¯&#x005c;&#x005f;(ツ)_/¯</span>
+---
+ 
+###= `\u00AF 'MACRON'`
+### `\u005C 'REVERSE SOLIDUS'`
+### `\u005F 'LOW LINE'`
+### `\u0028 'LEFT PARENTHESIS'`
+### `\u30C4 'KATAKANA LETTER TU'`
+### `\u0029 'RIGHT PARENTHESIS'`
+### `\u002F 'SOLIDUS'`
+
+Note: 
+### Basic Latin
+### Latin-1 Supplement
+### Katakana (Japanese)
+---
+
+! t/shrug
+Note: This one saves precious bytes
+---
+
 ! unicode.png | e/10 | space | space | space  | space | e/2 | e/0 | e/1 | e/7
 
 ! o/takeaway.png | o/fortune.png | o/dumpling.png | o/chopsticks.png
