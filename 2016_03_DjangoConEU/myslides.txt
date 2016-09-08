@@ -729,7 +729,7 @@ please let me disable autocorrect
 #> >>> &nbsp; &nbsp; return True
 
 <br>
-#>- >>> if <img src="pictures/t/XD.svg" class="inline_emoji" style="margin:0"> < y <img src="pictures/t/sad.svg" class="inline_emoji" style="margin:0"> <br>>>> &nbsp; &nbsp; return True
+#>- $ python<br>>>> if <img src="pictures/t/XD.svg" class="inline_emoji" style="margin:0"> < y <img src="pictures/t/sad.svg" class="inline_emoji" style="margin:0"> <br>>>> &nbsp; &nbsp; return True
 Note: 
 
 Autoconvert

@@ -729,7 +729,7 @@ please let me disable autocorrect
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">>>> &nbsp; &nbsp; return True</code></pre></div>
 
 <br> 
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">>>> if <img src="pictures/t/XD.svg" class="inline_emoji" style="margin:0"> < y <img src="pictures/t/sad.svg" class="inline_emoji" style="margin:0"> <br>>>> &nbsp; &nbsp; return True</code></pre></div> <!-- .element: class="fragment" -->
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">$ python<br>>>> if <img src="pictures/t/XD.svg" class="inline_emoji" style="margin:0"> < y <img src="pictures/t/sad.svg" class="inline_emoji" style="margin:0"> <br>>>> &nbsp; &nbsp; return True</code></pre></div> <!-- .element: class="fragment" -->
 Note: 
 
 Autoconvert 
