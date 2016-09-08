@@ -78,7 +78,8 @@ The REALLY smark hackers know about all the features in all the software.
 
 ---
 
-## It's not a bug, it's a feature. <!-- .element: class="center" --> <!-- .slide: class="center" -->
+## It's not a bug, <!-- .slide: class="center" -->
+##it's a feature. <!-- .element: class="center" --> <!-- .slide: class="center" -->
 
 Note: 
 
@@ -122,7 +123,7 @@ All you care about is what's in the file.
 
 ---
 
-## YAML <!-- .element: class="center" --> <!-- .slide: class="center" -->
+# YAML <!-- .element: class="center" --> <!-- .slide: class="center" -->
 
 Note: 
 
@@ -136,7 +137,7 @@ It pretends to be a human readable serialization format.
 
 ## Parsing YAML <!-- .slide: class="center" -->
 
-### POST /yaml <!-- .slide: class="center" -->
+POST /yaml
 
 ```yaml 
 first_name: Tom
@@ -144,7 +145,7 @@ last_name: Eastman
 email_address: tom@catalyst.net.nz
 ``` 
 
-### RESPONSE <!-- .slide: class="center" -->
+RESPONSE 
 
 ```py 
 {'email_address': 'tom@catalyst.net.nz',
@@ -164,7 +165,7 @@ I've got a bunch of examples like this, is everyone with me?
 
 ## Parsing YAML <!-- .slide: class="center" -->
 
-### POST /yaml <!-- .slide: class="center" -->
+POST /yaml
 
 ```yaml 
 'first_name': Tom
@@ -173,7 +174,7 @@ I've got a bunch of examples like this, is everyone with me?
 'birthday': !!python/object/apply:datetime.date [1980, 1, 1]
 ``` 
 
-### RESPONSE <!-- .slide: class="center" -->
+RESPONSE 
 
 ```py 
 {'email_address': 'tom@catalyst.net.nz',
@@ -198,7 +199,7 @@ Did a shiver go down anyone's spine?
 
 ## Parsing YAML <!-- .slide: class="center" -->
 
-### POST /yaml <!-- .slide: class="center" -->
+POST /yaml
 
 ```yaml 
 'first_name': Tom
@@ -207,7 +208,7 @@ Did a shiver go down anyone's spine?
 'contents_of_cwd': !!python/object/apply:subprocess.check_output ['ls']
 ``` 
 
-### RESPONSE <!-- .slide: class="center" -->
+RESPONSE 
 
 ```py 
 {'email_address': 'tom@catalyst.net.nz',
@@ -234,7 +235,7 @@ Famous last words?
 
 ## Parsing YAML <!-- .slide: class="center" -->
 
-### POST /yaml <!-- .slide: class="center" -->
+POST /yaml
 
 ```yaml 
 'first_name': Tom
@@ -244,7 +245,7 @@ Famous last words?
 'contents_of_cwd': !!python/object/apply:subprocess.check_output ['ls']
 ``` 
 
-### RESPONSE <!-- .slide: class="center" -->
+RESPONSE 
 
 ```py 
 {'first_name': 'Tom',
@@ -357,7 +358,7 @@ I was trying to think of something scary like "Fun with XML" or "Dangerous XML",
 
 ## Entities <!-- .slide: class="center" -->
 
-### POST /lxml <!-- .slide: class="center" -->
+POST /lxml
 
 ```xml 
 <?xml version="1.0" encoding="ISO-8859-1"?>
@@ -366,7 +367,7 @@ Yay! Smile! &#9786;
 </foo> 
 ``` 
 
-### RESPONSE <!-- .slide: class="center" -->
+RESPONSE 
 
 ``` 
 Yay! Smile! ☺
@@ -377,7 +378,7 @@ Yay! Smile! ☺
 ## Defining entities <!-- .slide: class="center" -->
 
 
-### POST /lxml <!-- .slide: class="center" -->
+POST /lxml
 
 ```xml 
 <?xml version="1.0" encoding="ISO-8859-1"?>
@@ -389,7 +390,7 @@ Yay! Smile! &smiley;
 </foo> 
 ``` 
 
-### RESPONSE <!-- .slide: class="center" -->
+RESPONSE 
 
 ``` 
 Yay! Smile! ☺
