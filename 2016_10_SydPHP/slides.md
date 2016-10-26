@@ -318,14 +318,6 @@ This extends to just normal characters too, not just emoji
 
 
 JP: mo-ji-ba-ke
-
-Bulgaria: "monkey alphabet"
-
-HU: «Árvíztűrő tükörfúrógép»
-
-Flood-resistant mirror-drilling machine
-
-Uses all accented letters
 ---
 
  <img src="pictures/mojibake_kjm.jpg" />
@@ -345,6 +337,23 @@ Note: HTML encoded emoji
 ---
 
  <div style='width: 50%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/g/passport.svg'></p></div> <!-- .slide: class="center" -->
+
+---
+
+# «Árvíztűrő <!-- .slide: class="center" -->
+# tükörfúrógép»
+
+
+Note: 
+
+HU: «Árvíztűrő tükörfúrógép»
+
+Flood-resistant mirror-drilling machine
+
+Bulgaria: "monkey alphabet"
+
+Uses all accented letters
+
 ---
  <div style='width: 50%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/o/spoon.ws.svg'></p></div> <!-- .slide: class="center" -->
 Note: Surprisingly enough, this works
