@@ -623,6 +623,7 @@ Note: updates
 ---
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='160px' src='pictures/f/f1_smiling.png'><img height='160px' src='pictures/f/f1_crying.png'><img height='160px' src='pictures/f/f1_toung.png'><img height='160px' src='pictures/f/f1_throw.png'><img height='160px' src='pictures/f/f1_shock.png'></p></div> <!-- .slide: class="center" -->
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='160px' src='pictures/f/f2_smiling.png'><img height='160px' src='pictures/f/f2_crying.png'><img height='160px' src='pictures/f/f2_toung.png'><img height='160px' src='pictures/f/f2_throw.png'><img height='160px' src='pictures/f/f2_shock.png'></p></div> <!-- .slide: class="center" -->
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='160px' src='pictures/f/f3_smiling.png'><img height='160px' src='pictures/f/f3_crying.png'><img height='160px' src='pictures/f/f3_toung.png'><img height='160px' src='pictures/f/f3_throw.png'><img height='160px' src='pictures/f/f3_shock.png'></p></div> <!-- .slide: class="center" -->
 Note: redoing of facebook emoji
 ---
 

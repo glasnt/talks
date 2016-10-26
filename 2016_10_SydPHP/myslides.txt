@@ -623,6 +623,7 @@ Note: updates
 ---
 ! f/f1_smiling.png | f/f1_crying.png | f/f1_toung.png |f/f1_throw.png | f/f1_shock.png
 ! f/f2_smiling.png | f/f2_crying.png | f/f2_toung.png | f/f2_throw.png | f/f2_shock.png
+! f/f3_smiling.png | f/f3_crying.png | f/f3_toung.png | f/f3_throw.png | f/f3_shock.png
 Note: redoing of facebook emoji
 ---
 
