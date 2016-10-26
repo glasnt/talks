@@ -327,6 +327,25 @@ Flood-resistant mirror-drilling machine
 
 Uses all accented letters
 ---
+
+ <img src="pictures/mojibake_kjm.jpg" />
+
+---
+
+ <img src="pictures/mojibake_mjg.jpg" />
+
+Note: HTML encoded emoji
+---
+
+# <span style="font-size: 200px; font-weight: normal">Łukasz</span> <!-- .slide: class="center" -->
+---
+# <span style="font-size: 200px; font-weight: normal">Å�ukasz</span> <!-- .slide: class="center" -->
+---
+# <span style="font-size: 200px; font-weight: normal">Aukasz</span> <!-- .slide: class="center" -->
+---
+
+ <div style='width: 50%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/g/passport.svg'></p></div> <!-- .slide: class="center" -->
+---
  <div style='width: 50%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/o/spoon.ws.svg'></p></div> <!-- .slide: class="center" -->
 Note: Surprisingly enough, this works
 ---
