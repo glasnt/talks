@@ -312,10 +312,20 @@ Note: Mojibake
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='200px' src='pictures/t/newkey.svg'><img height='200px' src='pictures/e/unicorn.svg'><img height='200px' src='pictures/e/thinking.svg'><img height='200px' src='pictures/e/upsidedown.svg'></p></div> <!-- .slide: class="center" -->
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='200px' src='pictures/t/oldkey.png'><img height='200px' src='pictures/o/broken.svg'><img height='200px' src='pictures/o/rectangle.svg'><img height='200px' src='pictures/space.svg'></p></div> <!-- .slide: class="center" -->
 
-Note: Thinking Face in my Talk Summary
+Note: 
 
-**MENTION BROKEN SIGNAGE**
+This extends to just normal characters too, not just emoji
 
+
+JP: mo-ji-ba-ke
+
+Bulgaria: "monkey alphabet"
+
+HU: «Árvíztűrő tükörfúrógép»
+
+Flood-resistant mirror-drilling machine
+
+Uses all accented letters
 ---
  <div style='width: 50%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/o/spoon.ws.svg'></p></div> <!-- .slide: class="center" -->
 Note: Surprisingly enough, this works
@@ -599,6 +609,11 @@ Milkshake
 Knitting 
 Coffee (currently only 'hot beverage')
 Hawaiian Hangtime sign (thumb and pinky)
+---
+## &nbsp;
+ <img src="pictures/new-emoji-proposals-q4-2016.jpg" />
+
+Note: to be discussed in the next Unicode Technical Committee meeting Mid November
 
 ---
 # <img height="400px" src="pictures/t/up.svg"> &nbsp; <img height="400px" src="pictures/t/calendar.svg"> <!-- .slide: class="center" -->
@@ -630,6 +645,8 @@ if you see this emoji, RETURN YOUR DEVICE OMG EXPLOSIOTIONS
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='266px' src='pictures/g/Z.svg'><img height='266px' src='pictures/g/W.svg'><img height='266px' src='pictures/g/J.svg'></p></div> <!-- .slide: class="center" -->
 Note: zero width joiner
 
+zwidge 
+
 Allows for combining existing emoji to make new ones
 ---
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/t/whiteflag.svg'><img height='400px' src='pictures/t/rainbow.svg'></p></div> <!-- .slide: class="center" -->
@@ -653,7 +670,17 @@ Note: Andoird 7.1 last few days
 ---
 ## &nbsp;
  <img src="pictures/g/tech.png" />
+---
+### &nbsp;
+ <img src="pictures/emojipedia.png" />
 
+### emojipedia.org
+---
+
+## &nbsp;
+ <img src="pictures/fakeunicode.jpg" />
+
+### @fakeunicode
 ---
  <img src="pictures/o/takeaway.png" />
 Note: the takeaways

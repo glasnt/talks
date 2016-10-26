@@ -312,10 +312,20 @@ Note: Mojibake
 ! t/newkey | e/unicorn | e/thinking | e/upsidedown
 ! t/oldkey.png | o/broken | o/rectangle | space
 
-Note: Thinking Face in my Talk Summary
+Note: 
 
-**MENTION BROKEN SIGNAGE**
+This extends to just normal characters too, not just emoji
 
+
+JP: mo-ji-ba-ke
+
+Bulgaria: "monkey alphabet"
+
+HU: «Árvíztűrő tükörfúrógép»
+
+Flood-resistant mirror-drilling machine
+
+Uses all accented letters
 ---
 ! o/spoon.ws
 Note: Surprisingly enough, this works
@@ -599,6 +609,11 @@ Milkshake
 Knitting
 Coffee (currently only 'hot beverage')
 Hawaiian Hangtime sign (thumb and pinky)
+---
+## &nbsp;
+@ new-emoji-proposals-q4-2016.jpg
+
+Note: to be discussed in the next Unicode Technical Committee meeting Mid November
 
 ---
 #= <img height="400px" src="pictures/t/up.svg"> &nbsp; <img height="400px" src="pictures/t/calendar.svg">
@@ -630,6 +645,8 @@ if you see this emoji, RETURN YOUR DEVICE OMG EXPLOSIOTIONS
 ! g/Z | g/W | g/J
 Note: zero width joiner
 
+zwidge
+
 Allows for combining existing emoji to make new ones
 ---
 ! t/whiteflag | t/rainbow
@@ -653,7 +670,17 @@ Note: Andoird 7.1  last few days
 ---
 ## &nbsp;
 @ g/tech.png
+---
+### &nbsp;
+@ emojipedia.png
 
+### emojipedia.org
+---
+
+## &nbsp;
+@ fakeunicode.jpg
+
+### @fakeunicode
 ---
 @ o/takeaway.png
 Note: the takeaways
