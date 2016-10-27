@@ -359,9 +359,13 @@ HU: «Árvíztűrő tükörfúrógép»
 
 Flood-resistant mirror-drilling machine
 
+Uses all accented letters
+
+pangram 
+
+
 Bulgaria: "monkey alphabet"
 
-Uses all accented letters
 
 ---
  <div style='width: 50%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/o/spoon.ws.svg'></p></div> <!-- .slide: class="center" -->
