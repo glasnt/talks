@@ -110,17 +110,15 @@ SHI-GE-TA-KA KU RI TA
 
 12x12 pixels
 
-Introduced in the late 1990s, with a whole lot of turmoil
+Some original use on pagers
 
-There's entire essays on the implementatation issues with this
+Weather reports
 
-Emoji Added to Unicode 6, 2010
+directions to local business
 
-TLDR: Apple implemented the proposed unicode spec with emoji for japan only
+and selling tickets to things
 
-then a couple of versions later, released to the US
-
-And then everyone rampted up
+BRAND ENGAGEMENT
 
 ---
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='80px' src='pictures/unicode.png'><img height='80px' src='pictures/e/6.svg'><img height='80px' src='pictures/space.svg'><img height='80px' src='pictures/space.svg'><img height='80px' src='pictures/space.svg'><img height='80px' src='pictures/space.svg'><img height='80px' src='pictures/e/2.svg'><img height='80px' src='pictures/e/0.svg'><img height='80px' src='pictures/e/0.svg'><img height='80px' src='pictures/e/7.svg'></p></div> <!-- .slide: class="center" -->
@@ -229,16 +227,23 @@ Note: ** micro services **
 ---
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='200px' src='pictures/a/claps.png'><img height='200px' src='pictures/g/claps.svg'><img height='200px' src='pictures/t/claps.svg'><img height='200px' src='pictures/m/claps.png'></p></div> <!-- .slide: class="center" -->
 ---
-
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='266px' src='pictures/space.svg'><img height='266px' src='pictures/t/pig.svg'><img height='266px' src='pictures/space.svg'></p></div> <!-- .slide: class="center" -->
+Note: duplicate points
 ---
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='266px' src='pictures/space.svg'><img height='266px' src='pictures/t/pigface.svg'><img height='266px' src='pictures/space.svg'></p></div> <!-- .slide: class="center" -->
+Note: moving closer
 ---
  <div style='width: 50%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/t/pignose.svg'></p></div> <!-- .slide: class="center" -->
 ---
  <div style='width: 50%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/t/bacon.svg'></p></div> <!-- .slide: class="center" -->
 ---
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/t/disappointed.svg'><img height='400px' src='pictures/t/pensive.svg'></p></div> <!-- .slide: class="center" -->
+
+Note: Disappoinrted
+
+vs 
+
+Pensive 
 ---
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/t/grinning.svg'><img height='400px' src='pictures/t/grimice.svg'></p></div> <!-- .slide: class="center" -->
 Note: grinning vs grimmace
@@ -330,14 +335,18 @@ Note: HTML encoded emoji
 ---
 
 # <span style="font-size: 200px; font-weight: normal">Łukasz</span> <!-- .slide: class="center" -->
+
+Note: Polish
 ---
 # <span style="font-size: 200px; font-weight: normal">Å�ukasz</span> <!-- .slide: class="center" -->
+Note: encoding error
 ---
 # <span style="font-size: 200px; font-weight: normal">Aukasz</span> <!-- .slide: class="center" -->
+Note: romaniszation
 ---
 
  <div style='width: 50%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/g/passport.svg'></p></div> <!-- .slide: class="center" -->
-
+Note: airport and passport problems.
 ---
 
 # «Árvíztűrő <!-- .slide: class="center" -->

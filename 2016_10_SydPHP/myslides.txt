@@ -110,17 +110,15 @@ SHI-GE-TA-KA  KU RI TA
 
 12x12 pixels
 
-Introduced in the late 1990s, with a whole lot of turmoil
+Some original use on pagers
 
-There's entire essays on the implementatation issues with this
+Weather reports
 
-Emoji Added to Unicode 6, 2010
+directions to local business
 
-TLDR: Apple implemented the proposed unicode spec with emoji for japan only
+and selling tickets to things 
 
-then a couple of versions later, released to the US
-
-And then everyone rampted up
+BRAND ENGAGEMENT
 
 ---
 ! unicode.png | e/6 | space | space | space  | space | e/2 | e/0 | e/0 | e/7
@@ -229,16 +227,23 @@ Note: ** micro services **
 ---
 ! a/claps.png | g/claps | t/claps | m/claps.png
 ---
-
 ! space | t/pig | space
---- 
+Note: duplicate points
+---
 ! space | t/pigface | space
+Note: moving closer
 ---
 ! t/pignose
 ---
 ! t/bacon
 ---
 ! t/disappointed | t/pensive
+
+Note: Disappoinrted
+
+vs
+
+Pensive
 ---
 ! t/grinning | t/grimice
 Note: grinning vs grimmace
@@ -330,14 +335,18 @@ Note: HTML encoded emoji
 ---
 
 #= <span style="font-size: 200px; font-weight: normal">Łukasz</span>
+
+Note: Polish
 ---
 #= <span style="font-size: 200px; font-weight: normal">Å�ukasz</span>
+Note: encoding error
 ---
 #= <span style="font-size: 200px; font-weight: normal">Aukasz</span>
+Note: romaniszation
 ---
 
 ! g/passport
-
+Note: airport and passport problems.
 ---
 
 =# «Árvíztűrő 
