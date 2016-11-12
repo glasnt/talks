@@ -548,6 +548,29 @@ Twitter DM and Slack message - if only emoji, they're display bigger
 <img src="pictures/o/alt_4.svg" height="250px" style="margin-top: -50px">
 <img src="pictures/o/whisky_speaker.svg" height="400px">
 ---
+<pre><code> 
+require 'gemoji' <c># requires gemoji 3.0.0rc2 or higher</c>
+<br>def cdn
+&nbsp; &nbsp; "https&colon;//twemoji.maxcdn.com/36x36"
+end<br> 
+def emojificate(string)
+&nbsp; string.split("").each do |s|
+&nbsp; &nbsp; &nbsp; e = Emoji.find_by_unicode(s)
+&nbsp; &nbsp; &nbsp; if e then
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; u = s.ord.to_s(16) <c># e.g. 1f431</c>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; d = e.description&nbsp; <c># e.g. "cat face"</c>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; img = "&lt;img src='#{cdn}/#{u}.png'" +
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; "alt='#{s}' title='#{d}'" +
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; "aria-label='Emoji: #{d}'>"
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; print img
+&nbsp; &nbsp; &nbsp; else
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; print s
+&nbsp; &nbsp; &nbsp; end
+&nbsp; end
+end 
+</pre></code> 
+
+---
  <div style='width: 50%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/t/lightbulb.svg'></p></div> <!-- .slide: class="center" -->
 
 Note: TIP for general use
