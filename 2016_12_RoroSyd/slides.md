@@ -605,33 +605,23 @@ Updates coming "this year"
 
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='80px' src='pictures/unicode.png'><img height='80px' src='pictures/e/10.svg'><img height='80px' src='pictures/space.svg'><img height='80px' src='pictures/space.svg'><img height='80px' src='pictures/space.svg'><img height='80px' src='pictures/space.svg'><img height='80px' src='pictures/e/2.svg'><img height='80px' src='pictures/e/0.svg'><img height='80px' src='pictures/e/1.svg'><img height='80px' src='pictures/e/7.svg'></p></div> <!-- .slide: class="center" -->
 
- <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='200px' src='pictures/o/takeaway.png'><img height='200px' src='pictures/o/fortune.png'><img height='200px' src='pictures/o/dumpling.png'><img height='200px' src='pictures/o/orangeh.png'></p></div> <!-- .slide: class="center" -->
- <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='200px' src='pictures/o/eyebrow.png'><img height='200px' src='pictures/o/curling.png'><img height='200px' src='pictures/o/sled.png'><img height='200px' src='pictures/g/question.svg'></p></div> <!-- .slide: class="center" -->
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='200px' src='pictures/o/takeaway.png'><img height='200px' src='pictures/hedgehog.png'><img height='200px' src='pictures/o/dumpling.png'><img height='200px' src='pictures/o/orangeh.png'></p></div> <!-- .slide: class="center" -->
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='200px' src='pictures/o/eyebrow.png'><img height='200px' src='pictures/o/curling.png'><img height='200px' src='pictures/dino.png'><img height='200px' src='pictures/brocolli.png'></p></div> <!-- .slide: class="center" -->
 
 Note: 
 
-These images are from Emojipedia mockups
 
-These are the only ones currently on the list
-
-Very Very tentative
-
-Other popular suggestions that *MIGHT* make it in:
-
-Doctor 
-Giraffe 
-Dinosaur 
-Sandwich 
-Milkshake 
-Knitting 
-Coffee (currently only 'hot beverage')
-Hawaiian Hangtime sign (thumb and pinky)
----
-## &nbsp;
- <img src="pictures/new-emoji-proposals-q4-2016.jpg" />
-
-Note: to be discussed in the next Unicode Technical Committee meeting Mid November
-
+Zebra Face
+Fairy 
+Brain 
+Pie 
+Socks 
+Older Adult
+Flying Saucer
+Breast-Feeding 
+Pretzel 
+Billed Cap
+Merperson 
 ---
 # <img height="400px" src="pictures/t/up.svg"> &nbsp; <img height="400px" src="pictures/t/calendar.svg"> <!-- .slide: class="center" -->
 Note: updates

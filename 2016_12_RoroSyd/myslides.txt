@@ -605,33 +605,23 @@ Updates coming "this year"
 
 ! unicode.png | e/10 | space | space | space  | space | e/2 | e/0 | e/1 | e/7
 
-! o/takeaway.png | o/fortune.png | o/dumpling.png | o/orangeh.png
-! o/eyebrow.png | o/curling.png | o/sled.png | g/question
+! o/takeaway.png | hedgehog.png | o/dumpling.png | o/orangeh.png
+! o/eyebrow.png | o/curling.png | dino.png | brocolli.png
 
 Note:
 
-These images are from Emojipedia mockups
 
-These are the only ones currently on the list
-
-Very Very tentative
-
-Other popular suggestions that *MIGHT* make it in:
-
-Doctor
-Giraffe
-Dinosaur
-Sandwich
-Milkshake
-Knitting
-Coffee (currently only 'hot beverage')
-Hawaiian Hangtime sign (thumb and pinky)
----
-## &nbsp;
-@ new-emoji-proposals-q4-2016.jpg
-
-Note: to be discussed in the next Unicode Technical Committee meeting Mid November
-
+Zebra Face
+Fairy
+Brain
+Pie
+Socks
+Older Adult
+Flying Saucer
+Breast-Feeding
+Pretzel
+Billed Cap
+Merperson
 ---
 #= <img height="400px" src="pictures/t/up.svg"> &nbsp; <img height="400px" src="pictures/t/calendar.svg">
 Note: updates 
