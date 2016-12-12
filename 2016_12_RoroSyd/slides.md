@@ -379,8 +379,8 @@ It's one of the older ones, and it looks like they're using private space
 The emoji in your drafts, or in the edit mode, aren't emoji
 
 But they're saved as it.
-
 ---
+
  <div style='width: 50%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/t/shortcake.svg'></p></div> <!-- .slide: class="center" -->
 
 Note: workaround for having a visual input mechanism is shortcodes
@@ -422,7 +422,17 @@ partyparrrot is not an emoji
 
 shipit is not an emoji
 ---
+ <div style='width: 50%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/t/new.svg'></p></div> <!-- .slide: class="center" -->
+---
+ <img src="pictures/birdbirdbird.png" style="margin-top: -50px" />
 
+Note: NEW NEW NEW
+
+Still in A/B (I could not see this at midday 2016-12-12).
+
+---
+ <div style='width: 50%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/t/lightbulb.svg'></p></div> <!-- .slide: class="center" -->
+---
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/e/automobile.svg'><img height='400px' src='pictures/e/tick.svg'></p></div> <!-- .slide: class="center" -->
 
 Note: on that note, please make automatically changing arbitaary text to emoji optional
