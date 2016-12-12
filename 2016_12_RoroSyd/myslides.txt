@@ -1,5 +1,8 @@
 ! space  | t/australia | g/gem | t/redheart  | space
+---
+@^ shitmas.jpg
 
+Note: Just cos I can
 ---
 ## &nbsp;
 ! o/bolt | g/sweat | t/sparkles
@@ -548,7 +551,7 @@ Twitter DM and Slack message - if only emoji, they're display bigger
 <img src="pictures/o/alt_4.svg" height="250px" style="margin-top: -50px">
 <img src="pictures/o/whisky_speaker.svg" height="400px">
 ---
-<pre><code>
+<pre><code><c># github.com/glasnt/emojificiate</c><br>
 require 'gemoji' <c># requires gemoji 3.0.0rc2 or higher</c>
 <br>def cdn
 &nbsp; &nbsp; "https&colon;//twemoji.maxcdn.com/36x36"

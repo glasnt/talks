@@ -1,5 +1,8 @@
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='160px' src='pictures/space.svg'><img height='160px' src='pictures/t/australia.svg'><img height='160px' src='pictures/g/gem.svg'><img height='160px' src='pictures/t/redheart.svg'><img height='160px' src='pictures/space.svg'></p></div> <!-- .slide: class="center" -->
+---
+ <img src="pictures/shitmas.jpg" style="margin-top: -50px" />
 
+Note: Just cos I can
 ---
 ## &nbsp;
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='266px' src='pictures/o/bolt.svg'><img height='266px' src='pictures/g/sweat.svg'><img height='266px' src='pictures/t/sparkles.svg'></p></div> <!-- .slide: class="center" -->
@@ -548,7 +551,7 @@ Twitter DM and Slack message - if only emoji, they're display bigger
 <img src="pictures/o/alt_4.svg" height="250px" style="margin-top: -50px">
 <img src="pictures/o/whisky_speaker.svg" height="400px">
 ---
-<pre><code> 
+<pre><code><c># github.com/glasnt/emojificiate</c><br>
 require 'gemoji' <c># requires gemoji 3.0.0rc2 or higher</c>
 <br>def cdn
 &nbsp; &nbsp; "https&colon;//twemoji.maxcdn.com/36x36"
