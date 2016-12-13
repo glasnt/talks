@@ -234,16 +234,6 @@ Note: ** micro services **
 ---
 ! a/claps.png | g/claps | t/claps | m/claps.png
 ---
-! space | t/pig | space
-Note: duplicate points
----
-! space | t/pigface | space
-Note: moving closer
----
-! t/pignose
----
-! t/bacon
----
 ! t/disappointed | t/pensive
 
 Note: Disappoinrted
@@ -697,11 +687,12 @@ Note: screenshots from emojipedia
 ---
 @ emojipedia-new-ios-10-men.png
 ---
-! g/teach.png | g/farm.png | g/cook.png | g/mech.png
+! g/teach_m6.png | g/mech.png | g/farm.png | g/cook.png 
+! a/teach_m6.png | a/mech_f3.png | a/farmer_f5.png | a/cook_m1.png
 Note: Andoird 7.1  last few days
 ---
 ## &nbsp;
-@ g/tech.png
+@ a/tech_f1.png
 ---
 ### &nbsp;
 @ emojipedia.png

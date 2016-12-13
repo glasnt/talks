@@ -234,16 +234,6 @@ Note: ** micro services **
 ---
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='200px' src='pictures/a/claps.png'><img height='200px' src='pictures/g/claps.svg'><img height='200px' src='pictures/t/claps.svg'><img height='200px' src='pictures/m/claps.png'></p></div> <!-- .slide: class="center" -->
 ---
- <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='266px' src='pictures/space.svg'><img height='266px' src='pictures/t/pig.svg'><img height='266px' src='pictures/space.svg'></p></div> <!-- .slide: class="center" -->
-Note: duplicate points
----
- <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='266px' src='pictures/space.svg'><img height='266px' src='pictures/t/pigface.svg'><img height='266px' src='pictures/space.svg'></p></div> <!-- .slide: class="center" -->
-Note: moving closer
----
- <div style='width: 50%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/t/pignose.svg'></p></div> <!-- .slide: class="center" -->
----
- <div style='width: 50%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/t/bacon.svg'></p></div> <!-- .slide: class="center" -->
----
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/t/disappointed.svg'><img height='400px' src='pictures/t/pensive.svg'></p></div> <!-- .slide: class="center" -->
 
 Note: Disappoinrted
@@ -697,11 +687,12 @@ Note: screenshots from emojipedia
 ---
  <img src="pictures/emojipedia-new-ios-10-men.png" />
 ---
- <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='200px' src='pictures/g/teach.png'><img height='200px' src='pictures/g/farm.png'><img height='200px' src='pictures/g/cook.png'><img height='200px' src='pictures/g/mech.png'></p></div> <!-- .slide: class="center" -->
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='200px' src='pictures/g/teach_m6.png'><img height='200px' src='pictures/g/mech.png'><img height='200px' src='pictures/g/farm.png'><img height='200px' src='pictures/g/cook.png'></p></div> <!-- .slide: class="center" -->
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='200px' src='pictures/a/teach_m6.png'><img height='200px' src='pictures/a/mech_f3.png'><img height='200px' src='pictures/a/farmer_f5.png'><img height='200px' src='pictures/a/cook_m1.png'></p></div> <!-- .slide: class="center" -->
 Note: Andoird 7.1 last few days
 ---
 ## &nbsp;
- <img src="pictures/g/tech.png" />
+ <img src="pictures/a/tech_f1.png" />
 ---
 ### &nbsp;
  <img src="pictures/emojipedia.png" />
