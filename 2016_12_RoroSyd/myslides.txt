@@ -1,8 +1,4 @@
-! space  | t/australia | g/gem | t/redheart  | space
----
-@^ shitmas.jpg
-
-Note: Just cos I can
+! space  | g/gem | t/rails.png |  g/koala | space
 ---
 ## &nbsp;
 ! o/bolt | g/sweat | t/sparkles

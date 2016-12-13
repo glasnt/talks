@@ -1,8 +1,4 @@
- <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='160px' src='pictures/space.svg'><img height='160px' src='pictures/t/australia.svg'><img height='160px' src='pictures/g/gem.svg'><img height='160px' src='pictures/t/redheart.svg'><img height='160px' src='pictures/space.svg'></p></div> <!-- .slide: class="center" -->
----
- <img src="pictures/shitmas.jpg" style="margin-top: -50px" />
-
-Note: Just cos I can
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='160px' src='pictures/space.svg'><img height='160px' src='pictures/g/gem.svg'><img height='160px' src='pictures/t/rails.png'><img height='160px' src='pictures/g/koala.svg'><img height='160px' src='pictures/space.svg'></p></div> <!-- .slide: class="center" -->
 ---
 ## &nbsp;
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='266px' src='pictures/o/bolt.svg'><img height='266px' src='pictures/g/sweat.svg'><img height='266px' src='pictures/t/sparkles.svg'></p></div> <!-- .slide: class="center" -->
