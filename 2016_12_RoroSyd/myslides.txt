@@ -647,14 +647,25 @@ Note: updates
 Note: redoing of facebook emoji
 ---
 
-! m/claps.png | m/newclap.png
----
 
 ! m/m1_smile.png | m/m1_cry.png | m/m1_toung.png |m/m1_kiss.png | m/m1_shock.png
 ! m/m2_smile.png | m/m2_cry.png | m/m2_toung.png | m/m2_kiss.png | m/m2_shock.png
 ---
+! m/claps.png | m/newclap.png
+---
+! a/smile_1.png | a/cry_1.png | a/stick_1.png | a/kiss_1.png | a/fear_1.png
+! a/smile_2.png | a/cry_2.png | a/stick_2.png | a/kiss_2.png | a/fear_2.png
+---
 ! a/grin.png | a/grinning_10.png
 Note: Across a lot of vendors
+---
+! a/shrug.png | a/facepalm.png | a/cowboy.png | a/duck.png
+! a/tumbler.png | a/kiwi.png | o/spoon.png | a/egg.png
+
+---
+
+! a/owl.png | a/shark.png | a/squid.png | a/avo.png
+! a/shrimp.png | a/fox.png | a/gorilla.png | a/bacon.png
 ---
 @ o/g7cross.png
 Note:

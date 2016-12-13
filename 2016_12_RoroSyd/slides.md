@@ -647,14 +647,25 @@ Note: updates
 Note: redoing of facebook emoji
 ---
 
- <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/m/claps.png'><img height='400px' src='pictures/m/newclap.png'></p></div> <!-- .slide: class="center" -->
----
 
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='160px' src='pictures/m/m1_smile.png'><img height='160px' src='pictures/m/m1_cry.png'><img height='160px' src='pictures/m/m1_toung.png'><img height='160px' src='pictures/m/m1_kiss.png'><img height='160px' src='pictures/m/m1_shock.png'></p></div> <!-- .slide: class="center" -->
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='160px' src='pictures/m/m2_smile.png'><img height='160px' src='pictures/m/m2_cry.png'><img height='160px' src='pictures/m/m2_toung.png'><img height='160px' src='pictures/m/m2_kiss.png'><img height='160px' src='pictures/m/m2_shock.png'></p></div> <!-- .slide: class="center" -->
 ---
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/m/claps.png'><img height='400px' src='pictures/m/newclap.png'></p></div> <!-- .slide: class="center" -->
+---
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='160px' src='pictures/a/smile_1.png'><img height='160px' src='pictures/a/cry_1.png'><img height='160px' src='pictures/a/stick_1.png'><img height='160px' src='pictures/a/kiss_1.png'><img height='160px' src='pictures/a/fear_1.png'></p></div> <!-- .slide: class="center" -->
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='160px' src='pictures/a/smile_2.png'><img height='160px' src='pictures/a/cry_2.png'><img height='160px' src='pictures/a/stick_2.png'><img height='160px' src='pictures/a/kiss_2.png'><img height='160px' src='pictures/a/fear_2.png'></p></div> <!-- .slide: class="center" -->
+---
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/a/grin.png'><img height='400px' src='pictures/a/grinning_10.png'></p></div> <!-- .slide: class="center" -->
 Note: Across a lot of vendors
+---
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='200px' src='pictures/a/shrug.png'><img height='200px' src='pictures/a/facepalm.png'><img height='200px' src='pictures/a/cowboy.png'><img height='200px' src='pictures/a/duck.png'></p></div> <!-- .slide: class="center" -->
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='200px' src='pictures/a/tumbler.png'><img height='200px' src='pictures/a/kiwi.png'><img height='200px' src='pictures/o/spoon.png'><img height='200px' src='pictures/a/egg.png'></p></div> <!-- .slide: class="center" -->
+
+---
+
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='200px' src='pictures/a/owl.png'><img height='200px' src='pictures/a/shark.png'><img height='200px' src='pictures/a/squid.png'><img height='200px' src='pictures/a/avo.png'></p></div> <!-- .slide: class="center" -->
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='200px' src='pictures/a/shrimp.png'><img height='200px' src='pictures/a/fox.png'><img height='200px' src='pictures/a/gorilla.png'><img height='200px' src='pictures/a/bacon.png'></p></div> <!-- .slide: class="center" -->
 ---
  <img src="pictures/o/g7cross.png" />
 Note: 
