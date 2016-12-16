@@ -1,0 +1,14 @@
+---
+# &nbsp; <!-- .slide: data-background="pictures/o/klm_tag.png" data-background-transition="none" -->
+---
+# &nbsp; <!-- .slide: data-background="pictures/o/mjg_cheque.png" data-background-transition="none" -->
+---
+@= o/lukasz_one.png
+---
+@= o/lukasz_two.png
+---
+@= o/lukasz_three.png
+---
+! g/passport
+---
+---
