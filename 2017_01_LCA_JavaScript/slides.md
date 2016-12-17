@@ -95,6 +95,17 @@ Note: if it looks like a duck and sounds like a duck, it's a duck.
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> 1 === "1"</code></pre></div> <!-- .element: class="fragment" -->
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">false</code></pre></div> <!-- .element: class="fragment" -->
 ---
+# Commutative Law <!-- .slide: class="center" -->
+---
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> {} || {}</code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">{}</code></pre></div> <!-- .element: class="fragment" -->
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> null || {}</code></pre></div> <!-- .element: class="fragment" -->
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">{}</code></pre></div> <!-- .element: class="fragment" -->
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> {} || null</code></pre></div> <!-- .element: class="fragment" -->
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">Unexpected token ||</code></pre></div> <!-- .element: class="fragment" -->
+
+
+---
 # Arrays and Objects <!-- .slide: class="center" -->
 ---
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> [] + []</code></pre></div>
@@ -106,7 +117,7 @@ Note: if it looks like a duck and sounds like a duck, it's a duck.
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> {} + {}</code></pre></div> <!-- .element: class="fragment" -->
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">NaN</code></pre></div> <!-- .element: class="fragment" -->
 
-Note: Associativity? Pfft! Transativity? Hahahah
+Note: Commutative law
 ---
 
  <img src="pictures/wat.jpg" />
@@ -410,10 +421,10 @@ Fix this by dealing with 'round' numbers. Money - work in cents
 ---
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> "abc".split("")</code></pre></div>
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">["a","b","c"]</code></pre></div> <!-- .element: class="fragment" -->
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> "<img src="pictures/rabbit.svg" class="e" style="margin: 0"><img src="pictures/cat.svg" style="margin: 0" class="e">".split("")</code></pre></div> <!-- .element: class="fragment" -->
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> "<img src="pictures/penguin.svg" class="e" style="margin: 0"><img src="pictures/koala.svg" style="margin: 0" class="e">".split("")</code></pre></div> <!-- .element: class="fragment" -->
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">["�","�","�","�"]</code></pre></div> <!-- .element: class="fragment" -->
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> Array.from("<img src="pictures/rabbit.svg" class="e" style="margin: 0"><img src="pictures/cat.svg" style="margin: 0" class="e">")</code></pre></div> <!-- .element: class="fragment" -->
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">["<img src="pictures/rabbit.svg" class="e" style="margin: 0">","<img src="pictures/cat.svg" style="margin: 0" class="e">"]</code></pre></div> <!-- .element: class="fragment" -->
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> Array.from("<img src="pictures/penguin.svg" class="e" style="margin: 0"><img src="pictures/koala.svg" style="margin: 0" class="e">")</code></pre></div> <!-- .element: class="fragment" -->
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">["<img src="pictures/penguin.svg" class="e" style="margin: 0">","<img src="pictures/koala.svg" style="margin: 0" class="e">"]</code></pre></div> <!-- .element: class="fragment" -->
 
 Note: Unicode extended characterset
 
@@ -449,6 +460,30 @@ split doesn't but array.from does (polyfill?)
 Note: pre-increment only works on some objects, not directly on number literals
 ---
 
+<pre><code> 
+[][(![]+[])[+[]]+([![]]+[][[]])[+!+[]+[+[]]]+(![]+[])[!+[]+!+[]]+( 
+!![]+[])[+[]]+(!![]+[])[!+[]+!+[]+!+[]]+(!![]+[])[+!+[]]][([][(![] 
++[])[+[]]+([![]]+[][[]])[+!+[]+[+[]]]+(![]+[])[!+[]+!+[]]+(!![]+[] 
+)[+[]]+(!![]+[])[!+[]+!+[]+!+[]]+(!![]+[])[+!+[]]]+[])[!+[]+!+[]+! 
++[]]+(!![]+[][(![]+[])[+[]]+([![]]+[][[]])[+!+[]+[+[]]]+(![]+[])[! 
++[]+!+[]]+(!![]+[])[+[]]+(!![]+[])[!+[]+!+[]+!+[]]+(!![]+[])[+!+[] 
+]])[+!+[]+[+[]]]+([][[]]+[])[+!+[]]+(![]+[])[!+[]+!+[]+!+[]]+(!![] 
++[])[+[]]+(!![]+[])[+!+[]]+([][[]]+[])[+[]]+([][(![]+[])[+[]]+([![ 
+]]+[][[]])[+!+[]+[+[]]]+(![]+[])[!+[]+!+[]]+(!![]+[])[+[]]+(!![]+[ 
+])[!+[]+!+[]+!+[]]+(!![]+[])[+!+[]]]+[])[!+[]+!+[]+!+[]]+(!![]+[]) 
+[+[]]+(!![]+[][(![]+[])[+[]]+([![]]+[][[]])[+!+[]+[+[]]]+(![]+[])[ 
+!+[]+!+[]]+(!![]+[])[+[]]+(!![]+[])[!+[]+!+[]+!+[]]+(!![]+[])[+!+[ 
+]]])[+!+[]+[+[]]]+(!![]+[])[+!+[]]]((![]+[])[!+[]+!+[]]+([][(![]+[ 
+])[+[]]+([![]]+[][[]])[+!+[]+[+[]]]+(![]+[])[!+[]+!+[]]+(!![]+[])[ 
++[]]+(!![]+[])[!+[]+!+[]+!+[]]+(!![]+[])[+!+[]]]+[])[!+[]+!+[]+!+[ 
+]]+(![]+[])[+!+[]]+[!+[]+!+[]]+[+[]]+[+!+[]]+[!+[]+!+[]+!+[]+!+[]+ 
+!+[]+!+[]+!+[]])() 
+</code></pre> 
+
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">lca2017</code></pre></div> <!-- .element: class="fragment" -->
+
+<span class="dasfoot"><a href="http://www.jsfuck.com/">esoteric javascript, @aemkei</a></span>
+---
 # Arrays are Objects <!-- .slide: class="center" -->
 ## Kinda.
 
@@ -704,32 +739,20 @@ Note: on top of the things you know JS does
 you have to worry about the things that you *really* don't want it to do
 ---
 
-# XSS, CSRF <!-- .slide: class="center" -->
+## Cross Site Scripting <!-- .slide: class="center" -->
+### XSS <!-- .slide: class="center" -->
+
+---
+
+## Cross Site Request Forgery <!-- .slide: class="center" -->
+### CSRF <!-- .slide: class="center" -->
 
 Note: within scope, but not strictly JS
 ---
 
-# Emerging APIs <!-- .slide: class="center" -->
-## Audio, Geolocation <!-- .slide: class="center" -->
-Note: your browser can now get your location. not just mobile.
-
----
-
 ### `document.execCommand('copy');` <!-- .slide: class="center" -->
-Note: allows copy of content w/out Flash
----
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">document.addEventListener(</code></pre></div>
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">&nbsp; &nbsp;'keydown', function(event) {</code></pre></div>
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">&nbsp; ta = document</code></pre></div>
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">&nbsp; &nbsp; .createElement("textarea");</code></pre></div>
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">&nbsp; ta.value = <h>"echo evil\n"</h>;</code></pre></div>
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">&nbsp; document.body</code></pre></div>
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">&nbsp; &nbsp; .appendChild(textArea);</code></pre></div>
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">&nbsp; ta.select();</code></pre></div>
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">&nbsp; document.execCommand('copy');</code></pre></div>
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">}</code></pre></div>
 
- <span class='dasfoot'><a href="https://github.com/dxa4481/Pastejacking/blob/master/index.html">dxa4481/pastejacking</a></span>
+<span class="dasfoot"><a href="https://github.com/dxa4481/Pastejacking/blob/master/index.html">dxa4481/pastejacking</a></span>
 Note: New line in a terminal will auto execute
 ---
 # `eval` <!-- .slide: class="center" -->
@@ -744,57 +767,47 @@ Note: executing arbitary code.
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">alert("Have a nice day")</code></pre></div> <!-- .element: class="fragment" -->
 Note: base64_encode in php is similar
 ---
-# :( <!-- .slide: class="center" -->
+# 😢 <!-- .slide: class="center" -->
 Note: 
 so, that's what javascript can do. it's powerful, and scary. what if you say
 ---
 
+# So don't use<br>JavaScript <!-- .slide: class="center" -->
+---
+
+### Image Sliders <!-- .slide: class="center" -->
+### Modals
+### Light Boxes
+### Form Validation
+### File Uploads
+### ... all with HTML/CSS only.
+
+<span class="dasfoot"><a href="http://youmightnotneedjs.com/">You Might Not Need JavaScript.com</a></span>
+---
 # Using JavaScript<br>without JavaScript <!-- .slide: class="center" -->
 ---
 # Pick any language <!-- .slide: class="center" -->
-Note: CoffeeScript wiki has a list of lanagues that compile to js, and it's cool
 
+<span class="dasfoot"><a href="https://github.com/jashkenas/coffeescript/wiki/list-of-languages-that-compile-to-js">List of languages that compile to JS</a></span>
 ---
-# PHP -> Uniter <!-- .slide: class="center" -->
 
-## <a href="https://asmblah.github.io/uniter/demo/interactive.html">Interactive Demo</a> <!-- .slide: class="center" -->
-
----
-# Batavia <!-- .slide: class="center" -->
- <img src="pictures/pybee.svg" />
-Note: Python Bytecode being run by the Javascript VM
----
-# Atwood's Law <!-- .slide: class="center" -->
-### Any application that can be written in JavaScript, will eventually be written in JavaScript.
----
- <img src="pictures/svgeditor.png" style="margin-top: -50px" />
- <span class='dasfoot'><a href="http://editor.method.ac/">editor.method.ac</a></span>
----
- <img src="pictures/c9io.png" style="margin-top: -50px" />
-
- <span class='dasfoot'>https://c9.io</span>
-
-Note: working terminals
-previews 
-containers exposed
-
-vim in the browser :D
----
-# emscripten <!-- .slide: class="center" -->
-# asm.js
-
-Note: 
----
- <img src="pictures/win95.png" style="margin-top: -50px" />
- <span class='dasfoot'><a href="https://win95.ajf.me/">https://win95.ajf.me/</a></span>
+### Ruby: Opal, Red, .. <!-- .element: class="fragment" -->
+### Python: Skulpt, Brython, .. <!-- .element: class="fragment" -->
+### Perl: Perlito, p2js, .. <!-- .element: class="fragment" -->
+### Haskell: ghcjs, haste, .. <!-- .element: class="fragment" -->
+### Go: GopherJS, .. <!-- .element: class="fragment" -->
+### PHP: Uniter, phype, .. <!-- .element: class="fragment" -->
+### Cobol: CobolScript <!-- .element: class="fragment" -->
+### C: Emscripten <!-- .element: class="fragment" -->
 ---
 <video width="720" height="600" controls="controls"><source src="pictures/skifree.mp4" type="video/mp4" /></video>
  <span class='dasfoot'><a href="https://archive.org/details/win3_WINSKI">https://archive.org/details/win3_WINSKI</a></span>
 Note: Yes, that's windows 95 running in my browser from 1995
 ---
-
-# Archive.org <!-- .slide: class="center" -->
-## Software Library <!-- .slide: class="center" -->
+# Slightly different approaches <!-- .slide: class="center" -->
+---
+# Batavia <!-- .slide: class="center" -->
+ <img src="pictures/pybee.svg" />
 ---
 # JavaScript<br>outside the browser <!-- .slide: class="center" -->
 ---
@@ -902,11 +915,24 @@ Note: What's going to happen? any change?
 
 More than twice as fast
 ---
+# Server Side Security <!-- .slide: class="center" -->
+---
+
+## "The Little Doctor" <!-- .slide: class="center" -->
+### Proof of Concept cross-platform XSS worm framework
+
+<span class="dasfoot"><a href="https://github.com/infosec-au/little-doctor/">Source Code, GitHub</a> <a href="https://www.youtube.com/watch?v=jMKmPW99TFQ">Video</a></span>
+Note: Demo'd at KiwiCon X
+
+Rocket Chat is all made in Javascript frames in the mobile and desktop app
+
+So the same vulnerability of being able to run the code....
+
+---
 # Package<br>Management <!-- .slide: class="center" -->
 ---
 
 # <img src="pictures/npm.png"> <!-- .slide: class="center" -->
-
 ---
 
 # <img src="pictures/wdu.png"> <!-- .slide: class="center" -->
@@ -1136,41 +1162,10 @@ Re-declarations are in error
 <br> 
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%"><c>// stuff.js</c> <br><h>import</h> { ans } from './life';</code></pre></div> <!-- .element: class="fragment" -->
 ---
-# Spread <!-- .slide: class="center" -->
----
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">function add(<h>...</h>vals) {</code></pre></div>
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">&nbsp; let sum = 0;</code></pre></div>
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">&nbsp; for (var v of vals) {</code></pre></div>
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">&nbsp; &nbsp; &nbsp; sum += v;</code></pre></div>
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">&nbsp; }</code></pre></div>
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">&nbsp; return sum;</code></pre></div>
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">}</code></pre></div>
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%"><br>> add(10, 14, 9, 7, 2)</code></pre></div> <!-- .element: class="fragment" -->
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">42</code></pre></div> <!-- .element: class="fragment" -->
-
----
 # ECMAScript 5/6 Adoption <!-- .slide: class="center" -->
 ---
 ## kangax.github.io/compat-table/es5/ <!-- .slide: class="center" -->
 ## kangax.github.io/compat-table/es6/ <!-- .slide: class="center" -->
----
-# ECMAScript 2016 <!-- .slide: class="center" -->
-## the first annual release <!-- .element: class="fragment" -->
----
-
-# `**` <!-- .slide: class="center" -->
-Note: Infix operator for Math.pow
----
-
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> Math.pow(5,3)</code></pre></div>
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">125</code></pre></div> <!-- .element: class="fragment" -->
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> 5 &#42;&#42; 3</code></pre></div> <!-- .element: class="fragment" -->
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">125</code></pre></div> <!-- .element: class="fragment" -->
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> let num = 5</code></pre></div> <!-- .element: class="fragment" -->
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> num **= 3</code></pre></div> <!-- .element: class="fragment" -->
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> num</code></pre></div> <!-- .element: class="fragment" -->
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">125</code></pre></div> <!-- .element: class="fragment" -->
-
 ---
 # Non-standard 'Standards' <!-- .slide: class="center" -->
 ---
@@ -1249,37 +1244,6 @@ Note: Adding new funcionality in JS to JS by adding more JS
 &nbsp; &nbsp; };
 } 
 </pre></code> 
----
-# `supplant` <!-- .slide: class="center" -->
-Note: allows for native templating
----
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> s = "{greet} there {name}!"</code></pre></div>
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> t = { greet: "Oh hello",<br>&nbsp; &nbsp; &nbsp; &nbsp; name: &nbsp;"Katie" }</code></pre></div> <!-- .element: class="fragment" -->
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> s.supplant(t)</code></pre></div> <!-- .element: class="fragment" -->
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">"Oh, hello there Katie!"</code></pre></div> <!-- .element: class="fragment" -->
-Note: Supplant didn't get into ES6. But you can still polyfill it
----
-
-## `supplant` polyfill <!-- .slide: class="center" -->
----
-### &nbsp; <!-- .slide: class="center" -->
-<pre style="font-size: 23pt"><code>if (!String.prototype.supplant) {
-&nbsp; String.prototype.supplant = function (o) {
-&nbsp; &nbsp; return this.replace(<h>/\{([^{}]*)\}/</h>g,
-&nbsp; &nbsp; &nbsp; function (a, b) {
-&nbsp; &nbsp; &nbsp; &nbsp; var r = o[b];
-&nbsp; &nbsp; &nbsp; &nbsp; return typeof r === 'string' ||
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;typeof r === 'number' ? r : a;
-&nbsp; &nbsp; &nbsp; }
-&nbsp; &nbsp; );
-&nbsp; };
-} 
-</code></pre> 
-Note: Create function if it doesn't exist
-
-Doesn't handle multiple-level definitions
-
-Didn't make it into es6, but totes useful
 ---
 ## `isArray` polyfill <!-- .slide: class="center" -->
 Note: you can also polyfill things that exist in ES5 but might not be available
@@ -1671,7 +1635,8 @@ But that doesn't mean we have to critise those that use them
 
 Hopefully I've shown just how good JS can be. And it might make someone reconsider before I see the next awful tirade on twitter
 ---
-# Cheers! <!-- .slide: class="center" -->
+
+# &nbsp; <!-- .slide: class="center" -->
 
  <img src="pictures/footer.svg" />
 ---

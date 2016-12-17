@@ -95,6 +95,17 @@ Note: if it looks like a duck and sounds like a duck, it's a duck.
 #>- > 1 === "1"
 #>- false
 ---
+#= Commutative Law
+---
+#> > {} || {}
+#>- {}
+#>- > null || {}
+#>- {}
+#>- > {} || null
+#>- Unexpected token ||
+
+
+---
 #= Arrays and Objects
 ---
 #> > [] + []
@@ -106,7 +117,7 @@ Note: if it looks like a duck and sounds like a duck, it's a duck.
 #>- > {} + {}
 #>- NaN
 
-Note: Associativity? Pfft! Transativity? Hahahah
+Note: Commutative law
 ---
 
 @ wat.jpg
@@ -410,10 +421,10 @@ Fix this by dealing with 'round' numbers. Money - work in cents
 ---
 #> > "abc".split("")
 #>- ["a","b","c"]
-#>- > "<img src="pictures/rabbit.svg" class="e" style="margin: 0"><img src="pictures/cat.svg" style="margin: 0" class="e">".split("")
+#>- > "<img src="pictures/penguin.svg" class="e" style="margin: 0"><img src="pictures/koala.svg" style="margin: 0" class="e">".split("")
 #>- ["�","�","�","�"]
-#>- > Array.from("<img src="pictures/rabbit.svg" class="e" style="margin: 0"><img src="pictures/cat.svg" style="margin: 0" class="e">")
-#>- ["<img src="pictures/rabbit.svg" class="e" style="margin: 0">","<img src="pictures/cat.svg" style="margin: 0" class="e">"]
+#>- > Array.from("<img src="pictures/penguin.svg" class="e" style="margin: 0"><img src="pictures/koala.svg" style="margin: 0" class="e">")
+#>- ["<img src="pictures/penguin.svg" class="e" style="margin: 0">","<img src="pictures/koala.svg" style="margin: 0" class="e">"]
 
 Note: Unicode extended characterset
 
@@ -449,6 +460,30 @@ split doesn't but array.from does (polyfill?)
 Note: pre-increment only works on some objects, not directly on number literals
 ---
 
+<pre><code>
+[][(![]+[])[+[]]+([![]]+[][[]])[+!+[]+[+[]]]+(![]+[])[!+[]+!+[]]+(
+!![]+[])[+[]]+(!![]+[])[!+[]+!+[]+!+[]]+(!![]+[])[+!+[]]][([][(![]
++[])[+[]]+([![]]+[][[]])[+!+[]+[+[]]]+(![]+[])[!+[]+!+[]]+(!![]+[]
+)[+[]]+(!![]+[])[!+[]+!+[]+!+[]]+(!![]+[])[+!+[]]]+[])[!+[]+!+[]+!
++[]]+(!![]+[][(![]+[])[+[]]+([![]]+[][[]])[+!+[]+[+[]]]+(![]+[])[!
++[]+!+[]]+(!![]+[])[+[]]+(!![]+[])[!+[]+!+[]+!+[]]+(!![]+[])[+!+[]
+]])[+!+[]+[+[]]]+([][[]]+[])[+!+[]]+(![]+[])[!+[]+!+[]+!+[]]+(!![]
++[])[+[]]+(!![]+[])[+!+[]]+([][[]]+[])[+[]]+([][(![]+[])[+[]]+([![
+]]+[][[]])[+!+[]+[+[]]]+(![]+[])[!+[]+!+[]]+(!![]+[])[+[]]+(!![]+[
+])[!+[]+!+[]+!+[]]+(!![]+[])[+!+[]]]+[])[!+[]+!+[]+!+[]]+(!![]+[])
+[+[]]+(!![]+[][(![]+[])[+[]]+([![]]+[][[]])[+!+[]+[+[]]]+(![]+[])[
+!+[]+!+[]]+(!![]+[])[+[]]+(!![]+[])[!+[]+!+[]+!+[]]+(!![]+[])[+!+[
+]]])[+!+[]+[+[]]]+(!![]+[])[+!+[]]]((![]+[])[!+[]+!+[]]+([][(![]+[
+])[+[]]+([![]]+[][[]])[+!+[]+[+[]]]+(![]+[])[!+[]+!+[]]+(!![]+[])[
++[]]+(!![]+[])[!+[]+!+[]+!+[]]+(!![]+[])[+!+[]]]+[])[!+[]+!+[]+!+[
+]]+(![]+[])[+!+[]]+[!+[]+!+[]]+[+[]]+[+!+[]]+[!+[]+!+[]+!+[]+!+[]+
+!+[]+!+[]+!+[]])()
+</code></pre>
+
+#>- lca2017
+
+<span class="dasfoot"><a href="http://www.jsfuck.com/">esoteric javascript, @aemkei</a></span>
+---
 #= Arrays are Objects
 ## Kinda.
 
@@ -704,32 +739,20 @@ Note: on top of the things you know JS does
 you have to worry about the things that you *really* don't want it to do
 ---
 
-#= XSS, CSRF
+##= Cross Site Scripting
+###= XSS
+
+---
+
+##= Cross Site Request Forgery
+###= CSRF
 
 Note: within scope, but not strictly JS
 ---
 
-#= Emerging APIs
-##= Audio, Geolocation
-Note: your browser can now get your location. not just mobile. 
-
----
-
 ###= `document.execCommand('copy');`
-Note: allows copy of content w/out Flash
----
-#> document.addEventListener(
-#> &nbsp; &nbsp;'keydown', function(event) {
-#> &nbsp; ta = document
-#> &nbsp; &nbsp; .createElement("textarea");
-#> &nbsp; ta.value = <h>"echo evil\n"</h>;
-#> &nbsp; document.body
-#> &nbsp; &nbsp; .appendChild(textArea);
-#> &nbsp; ta.select();
-#> &nbsp; document.execCommand('copy');
-#> }
 
-#v <a href="https://github.com/dxa4481/Pastejacking/blob/master/index.html">dxa4481/pastejacking</a>
+<span class="dasfoot"><a href="https://github.com/dxa4481/Pastejacking/blob/master/index.html">dxa4481/pastejacking</a></span>
 Note: New line in a terminal will auto execute
 ---
 #= `eval`
@@ -744,57 +767,47 @@ Note: executing arbitary code.
 #>- alert("Have a nice day")
 Note: base64_encode in php is similar
 ---
-#= :(
+#= 😢
 Note:
 so, that's what javascript can do. it's powerful, and scary. what if you say
 ---
 
+#= So don't use<br>JavaScript
+---
+
+###= Image Sliders
+### Modals
+### Light Boxes
+### Form Validation
+### File Uploads
+### ... all with HTML/CSS only.
+
+<span class="dasfoot"><a href="http://youmightnotneedjs.com/">You Might Not Need JavaScript.com</a></span>
+---
 #= Using JavaScript<br>without JavaScript
 ---
 #= Pick any language
-Note: CoffeeScript wiki has a list of lanagues that compile to js, and it's cool
 
+<span class="dasfoot"><a href="https://github.com/jashkenas/coffeescript/wiki/list-of-languages-that-compile-to-js">List of languages that compile to JS</a></span>
 ---
-#= PHP -> Uniter
 
-##= <a href="https://asmblah.github.io/uniter/demo/interactive.html">Interactive Demo</a>
-
----
-#= Batavia
-@ pybee.svg
-Note: Python Bytecode being run by the Javascript VM
----
-#= Atwood's Law
-### Any application that can be written in JavaScript, will eventually be written in JavaScript.
----
-@^ svgeditor.png
-#v <a href="http://editor.method.ac/">editor.method.ac</a>
----
-@^ c9io.png
-
-#v https://c9.io
-
-Note: working terminals
-previews
-containers exposed
-
-vim in the browser :D
----
-#= emscripten
-# asm.js 
-
-Note: 
----
-@^ win95.png
-#v <a href="https://win95.ajf.me/">https://win95.ajf.me/</a>
+###- Ruby: Opal, Red, ..
+###- Python: Skulpt, Brython, ..
+###- Perl: Perlito, p2js, ..
+###- Haskell: ghcjs, haste, ..
+###- Go: GopherJS, ..
+###- PHP: Uniter, phype, ..
+###- Cobol: CobolScript
+###- C: Emscripten
 ---
 <video width="720" height="600" controls="controls"><source src="pictures/skifree.mp4" type="video/mp4" /></video>
 #v <a href="https://archive.org/details/win3_WINSKI">https://archive.org/details/win3_WINSKI</a>
 Note: Yes, that's windows 95 running in my browser from 1995
 ---
-
-#= Archive.org
-##= Software Library
+#= Slightly different approaches
+---
+#= Batavia
+@ pybee.svg
 ---
 #= JavaScript<br>outside the browser
 ---
@@ -902,11 +915,24 @@ Note: What's going to happen? any change?
 
 More than twice as fast
 ---
+#= Server Side Security
+---
+
+##= "The Little Doctor"
+### Proof of Concept cross-platform XSS worm framework 
+
+<span class="dasfoot"><a href="https://github.com/infosec-au/little-doctor/">Source Code, GitHub</a> <a href="https://www.youtube.com/watch?v=jMKmPW99TFQ">Video</a></span>
+Note: Demo'd at KiwiCon X
+
+Rocket Chat is all made in Javascript frames in the mobile and desktop app
+
+So the same vulnerability of being able to run the code....
+
+---
 #= Package<br>Management
 ---
 
 #= <img src="pictures/npm.png">
-
 ---
 
 #= <img src="pictures/wdu.png">
@@ -1136,41 +1162,10 @@ Re-declarations are in error
 <br>
 #>- <c>// stuff.js</c> <br><h>import</h> { ans } from './life';
 ---
-#= Spread
----
-#> function add(<h>...</h>vals) {
-#> &nbsp;  let sum = 0;
-#> &nbsp;  for (var v of vals) {
-#> &nbsp; &nbsp; &nbsp; sum += v;
-#> &nbsp;  }
-#> &nbsp;  return sum;
-#>  }
-#>- <br>> add(10, 14, 9, 7, 2)
-#>- 42
-
----
 #= ECMAScript 5/6 Adoption
 ---
 ##= kangax.github.io/compat-table/es5/
 ##= kangax.github.io/compat-table/es6/
----
-#= ECMAScript 2016
-##- the first annual release
----
-
-#= `**`
-Note: Infix operator for Math.pow
----
-
-#>  > Math.pow(5,3)
-#>- 125
-#>- > 5 &#42;&#42; 3
-#>- 125
-#>- > let num = 5
-#>- > num **= 3
-#>- > num
-#>- 125
- 
 ---
 #= Non-standard 'Standards'
 ---
@@ -1249,37 +1244,6 @@ Note: Adding new funcionality in JS to JS by adding more JS
 &nbsp; &nbsp; };
 }
 </pre></code>
----
-#= `supplant`
-Note: allows for native templating
----
-#> > s = "{greet} there {name}!"
-#>- > t = { greet: "Oh hello",<br>&nbsp; &nbsp; &nbsp; &nbsp; name: &nbsp;"Katie" }
-#>- > s.supplant(t)
-#>- "Oh, hello there Katie!"
-Note: Supplant didn't get into ES6. But you can still polyfill it
----
-
-##= `supplant` polyfill
----
-###= &nbsp; 
-<pre style="font-size: 23pt"><code>if (!String.prototype.supplant) {
-&nbsp; String.prototype.supplant = function (o) {
-&nbsp; &nbsp; return this.replace(<h>/\{([^{}]*)\}/</h>g,
-&nbsp; &nbsp; &nbsp; function (a, b) {
-&nbsp; &nbsp; &nbsp; &nbsp; var r = o[b];
-&nbsp; &nbsp; &nbsp; &nbsp; return typeof r === 'string' ||
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;typeof r === 'number' ? r : a;
-&nbsp; &nbsp; &nbsp; }
-&nbsp; &nbsp; );
- &nbsp; };
-}
-</code></pre>
-Note: Create function if it doesn't exist
-
-Doesn't handle multiple-level definitions
-
-Didn't make it into es6, but totes useful
 ---
 ##= `isArray` polyfill
 Note: you can also polyfill things that exist in ES5 but might not be available
@@ -1671,7 +1635,8 @@ But that doesn't mean we have to critise those that use them
 
 Hopefully I've shown just how good JS can be. And it might make someone reconsider before I see the next awful tirade on twitter
 ---
-#= Cheers!
+
+#= &nbsp;
 
 @ footer.svg
 ---
