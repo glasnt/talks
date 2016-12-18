@@ -1125,7 +1125,6 @@ same loveingly maintained word document from version one.
 15, 20 yaers, one word doc
 ---
 # However <!-- .slide: class="center" -->
-
 ---
 # JavaScript<br>is improving <!-- .slide: class="center" -->
 ---

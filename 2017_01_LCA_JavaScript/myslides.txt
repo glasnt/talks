@@ -1125,7 +1125,6 @@ same loveingly maintained word document from version one.
 15, 20 yaers, one word doc
 ---
 #= However
-
 ---
 #= JavaScript<br>is improving
 ---
