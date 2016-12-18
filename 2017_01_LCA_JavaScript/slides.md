@@ -134,20 +134,6 @@ Note: (audience partipation with outputs)
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> 1 === "1"</code></pre></div> <!-- .element: class="fragment" -->
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">false</code></pre></div> <!-- .element: class="fragment" -->
 ---
-# Commutative Law <!-- .slide: class="center" -->
-
-Note: This law refers to how some operands can happen in reverse order and their output isn't changed. For example, 2 + 3 is the same as 3 + 2
----
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> {} || {}</code></pre></div>
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">{}</code></pre></div> <!-- .element: class="fragment" -->
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> null || {}</code></pre></div> <!-- .element: class="fragment" -->
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">{}</code></pre></div> <!-- .element: class="fragment" -->
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> {} || null</code></pre></div> <!-- .element: class="fragment" -->
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">Unexpected token ||</code></pre></div> <!-- .element: class="fragment" -->
-
-
-Note: (audience partipation with outputs)
----
 # Arrays and Objects <!-- .slide: class="center" -->
 ---
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> [] + []</code></pre></div>
@@ -160,6 +146,7 @@ Note: (audience partipation with outputs)
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">NaN</code></pre></div> <!-- .element: class="fragment" -->
 
 Note: (audience partipation with outputs)
+Communitive law
 ---
 
  <img src="pictures/wat.jpg" />
@@ -275,7 +262,7 @@ Because trademark, MS reverse engineered JS, called it JScript
 
 ---
 
-# JavaScript™ <!-- .slide: class="center" -->
+# JavaScript® <!-- .slide: class="center" -->
 
 <span class="bfoot" style="bottom: -280px"><a href="http://tsdr.uspto.gov/#caseNumber=75026640&caseType=SERIAL_NO&searchType=statusSearch">US Trademark &#35;75026640</a></foot>
 Note: Yes, it's trademarked.
@@ -1004,21 +991,6 @@ So the same vulnerability of being able to run the code....
 
 # <img src="pictures/npm.png"> <!-- .slide: class="center" -->
 ---
-
-# <img src="pictures/wdu.png"> <!-- .slide: class="center" -->
-Note: Wombat Developers Union
----
-# <img src="pictures/wombatlogo.png"> <!-- .slide: class="center" -->
----
- <img src="pictures/WOMBAT.png" style="margin-top: -50px" />
-Note: wombats are awesome.
----
-
-# <img src="pictures/npm.png"> <!-- .slide: class="center" -->
-
-Note: Node package manager
-
----
 # left-pad <!-- .slide: class="center" -->
 
 Note: Note well. This is not a cheap joke. I'm mentioning this specifically for a reason.
@@ -1141,11 +1113,16 @@ Note: jquery
 left-pad 
 ---
 # Design by<br>Committee <!-- .slide: class="center" -->
-Note: same loveingly maintained word document from version one.
+Note: 
+javascript isn't open source
+
+browsers implement the javascript standard.
+
+The standard itself
+
+same loveingly maintained word document from version one.
 
 15, 20 yaers, one word doc
-
-over head
 ---
 # However <!-- .slide: class="center" -->
 
@@ -1340,9 +1317,6 @@ Full of Awe
 It's amazing that we can take something so broken and made so much
 
 The devil you know
----
-
-> When that's the glue<br>of the modern day web, it's a minor miracle that society even functions<br> - <a href="https://twitter.com/NamTaf/status/590790154991702016">Adam Jones</a> <!-- .slide: class="center" -->
 ---
 > ... JavaScript is no more weird or broken than any other scripting language<br> - <a href="https://twitter.com/seldo/status/728686963868344320">Laurie Voss, npm</a> <!-- .slide: class="center" -->
 ---
@@ -1695,14 +1669,6 @@ But that doesn't mean we have to critise those that use them
 Hopefully I've shown just how good JS can be. And it might make someone reconsider before I see the next awful tirade on twitter
 ---
 
-# &nbsp; <!-- .slide: class="center" -->
-### glasnt.com/talks
----
-# Resources
-### &nbsp;
-#### Check footnotes throughout the slide deck
+ <div style='width: 50%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/claps.svg'></p></div> <!-- .slide: class="center" -->
 
-### &nbsp;
-### Online Interative Development Environments:
-#### <a href="https://repl.it/">repl.it</a>
-#### <a href="http://www.tutorialspoint.com/codingground.htm">TutorialsPoint.com</a>
+### glasnt.com/talks

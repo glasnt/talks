@@ -1669,6 +1669,14 @@ But that doesn't mean we have to critise those that use them
 Hopefully I've shown just how good JS can be. And it might make someone reconsider before I see the next awful tirade on twitter
 ---
 
-! claps
-
+#= &nbsp;
 ### glasnt.com/talks
+---
+# Resources
+### &nbsp;
+#### Check footnotes throughout the slide deck
+
+### &nbsp;
+### Online Interative Development Environments:
+#### <a href="https://repl.it/">repl.it</a>
+#### <a href="http://www.tutorialspoint.com/codingground.htm">TutorialsPoint.com</a>
