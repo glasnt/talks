@@ -17,10 +17,18 @@
 <br> 
  <img src="pictures/footer.svg" />
 ---
-
 # House Keeping <!-- .slide: class="center" -->
+
+Note: Before we get started, I want to do a bit of house keeping.
 ---
 # Audience<br>Participation <!-- .slide: class="center" -->
+
+Note: During this talk, there will be some audience participation segments. If
+my hand is raised, or I ask a direct question, feel free to call out the
+answer. 
+
+If my hand isn't raised, don't call out. We don't want to spoil the answers for
+anyone else who is playing along.
 ---
 <br><br> 
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%"><c>// This is the size most of the</code></pre></div>
@@ -32,6 +40,10 @@
 Some less important code will be shown in this size
 It's optimal you can also read this, but this is not a requirement<br>
 </pre></code> 
+
+Note: If you can read this code OK, then you're sitting in the right place. We will be going over quite a bit of code in this talk, from multiple languages, so it's essential you can view it properly.
+
+The slides are already online, and I'll link to where they are available at the end.
 ---
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> input JavaScript code</code></pre></div>
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">output result</code></pre></div>
@@ -41,17 +53,29 @@ It's optimal you can also read this, but this is not a requirement<br>
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> "Some <h>highlights</h>"</code></pre></div>
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> <c>// Assume JavaScript unless</c></code></pre></div>
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> <c>// otherwise advised</c></code></pre></div>
+
+Note: As per this slide, while there are many languages that will be referenced, unless otherwise stated, assume JavaScript.
+
+Input will be prefaced with an input prompt, output will not.
+
 ---
 # Let's get started! <!-- .slide: class="center" -->
 ---
 # Hi! <!-- .slide: class="center" -->
-Note: Tapestry and Cooking and Yelling
+Note: Hi, I'm Katie. If you've read my speaker bio it says that when I'm not changing the world, I enjoy making tapestries, cooking, and...
 ---
 
 # Global Variables <!-- .slide: class="center" -->
+Note: yelling at javascript and it's attempts at global variables.
+
+This is because, when I was making my speaker bio many years ago, I was getting frustrated with my own code and my inability to remember how these worked in JavaScript.
 ---
 <p></p> 
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> ans</code></pre></div>
+
+Note: So, say we have a variable called answer.
+
+Remember, this is our input prompt.
 ---
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> ans = "";</code></pre></div>
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> function question() {<br>> &nbsp; var ans = 42;<br>> &nbsp; return ans;<br>> }</code></pre></div> <!-- .element: class="fragment" -->
@@ -61,6 +85,14 @@ Note: Tapestry and Cooking and Yelling
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">42</code></pre></div> <!-- .element: class="fragment" -->
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> console.log(ans);</code></pre></div> <!-- .element: class="fragment" -->
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">""</code></pre></div> <!-- .element: class="fragment" -->
+
+Note: we assign answer to the empty string
+
+We then create a function, queestion, which assigns a variable answer to 42. If we output the value of the variable answer, we get the empty string
+
+If we output the value of the function question we get 42
+
+If we then output the value of ans again, we get the empty string.
 ---
 <p></p> 
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> ans = "";</code></pre></div>
@@ -71,9 +103,14 @@ Note: Tapestry and Cooking and Yelling
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">42</code></pre></div>
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> console.log(ans);</code></pre></div>
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">42</code></pre></div>
+
+Note: the problem is that we weren't declaring our two ans variables with the same scope. if we remove the 'var', then we get the expected output, 42
 ---
 # Duck Typing <!-- .slide: class="center" -->
-Note: if it looks like a duck and sounds like a duck, it's a duck.
+Note: You know what's also frustrating? Duck typing.
+
+
+if it looks like a duck and sounds like a duck, it's a duck.
 ---
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> 4 + 2</code></pre></div>
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">6</code></pre></div> <!-- .element: class="fragment" -->
@@ -83,6 +120,8 @@ Note: if it looks like a duck and sounds like a duck, it's a duck.
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">2</code></pre></div> <!-- .element: class="fragment" -->
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> "4" + 2</code></pre></div> <!-- .element: class="fragment" -->
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">"42"</code></pre></div> <!-- .element: class="fragment" -->
+
+Note: (audience partipation with outputs)
 ---
 # Equality <!-- .slide: class="center" -->
 ---
@@ -96,6 +135,8 @@ Note: if it looks like a duck and sounds like a duck, it's a duck.
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">false</code></pre></div> <!-- .element: class="fragment" -->
 ---
 # Commutative Law <!-- .slide: class="center" -->
+
+Note: This law refers to how some operands can happen in reverse order and their output isn't changed. For example, 2 + 3 is the same as 3 + 2
 ---
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> {} || {}</code></pre></div>
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">{}</code></pre></div> <!-- .element: class="fragment" -->
@@ -105,6 +146,7 @@ Note: if it looks like a duck and sounds like a duck, it's a duck.
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">Unexpected token ||</code></pre></div> <!-- .element: class="fragment" -->
 
 
+Note: (audience partipation with outputs)
 ---
 # Arrays and Objects <!-- .slide: class="center" -->
 ---
@@ -117,20 +159,24 @@ Note: if it looks like a duck and sounds like a duck, it's a duck.
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> {} + {}</code></pre></div> <!-- .element: class="fragment" -->
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">NaN</code></pre></div> <!-- .element: class="fragment" -->
 
-Note: Commutative law
+Note: (audience partipation with outputs)
 ---
 
  <img src="pictures/wat.jpg" />
 <span class="dasfoot"><a href="https://www.destroyallsoftware.com/talks/wat">destroyallsoftware.com</a></span>
+Note: wat.
 
+
+For those of you familiar with Gary Bernhardt's 'wat' talk, this isn't that talk.
 ---
 
  <img src="pictures/mini_wat.jpg" />
 
 <span class="dasfoot"><a href="https://500px.com/photo/140476163/wat-by-edunham">wat, Emily Dunham, CC-BY-SA</a></span>
+Note: what this is, is a talk that describes some of the hidden wats in javascript, and more specifically
 ---
 # Why? <!-- .slide: class="center" -->
-Note: why is javascript so awful
+Note: Why. Why are these basic language constructs so illogical?
 ---
 
 # JavaScript History<br>in 30 words or less <!-- .slide: class="center" -->
@@ -231,8 +277,8 @@ Because trademark, MS reverse engineered JS, called it JScript
 
 # JavaScript™ <!-- .slide: class="center" -->
 
-<span class="dasfoot"><a href="http://tsdr.uspto.gov/#caseNumber=75026640&caseType=SERIAL_NO&searchType=statusSearch">US Trademark &#35;75026640</a></span>
-Note: 
+<span class="bfoot" style="bottom: -280px"><a href="http://tsdr.uspto.gov/#caseNumber=75026640&caseType=SERIAL_NO&searchType=statusSearch">US Trademark &#35;75026640</a></foot>
+Note: Yes, it's trademarked.
 
 ---
 
@@ -335,9 +381,9 @@ Note: Because every other language has locals by default
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> 4 - 2</code></pre></div>
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">2</code></pre></div>
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> "4" - 2</code></pre></div>
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">2 <c>&nbsp;&nbsp; // type -> integer</c></code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">2 <c>&nbsp;&nbsp; // type → integer</c></code></pre></div>
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> "4" + 2</code></pre></div>
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">"42"<c> // type -> string</c></code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">"42"<c> // type → string</c></code></pre></div>
 Note: `+` for both additon and concatenation
 ---
 
@@ -430,12 +476,11 @@ Note: Unicode extended characterset
 
 Javascript was created before unicode was super popular, so some parts don't understand extended characters
 
-split doesn't but array.from does (polyfill?)
 ---
 
 # This thing <!-- .slide: class="center" -->
 ## `++[[]][+[]]+[+[]]` <!-- .slide: class="center" -->
-
+Note: audience participation -- guess
 ---
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> ++[[]][+[]]+[+[]]</code></pre></div>
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">10</code></pre></div> <!-- .element: class="fragment" -->
@@ -720,7 +765,12 @@ JS_TypeOfValue(JSContext *cx, jsval v) {
 ---
 # Backwards<br>Compatibility <!-- .slide: class="center" -->
 
-Note: JS = most popular language
+Note: 
+
+
+JS has no versioning. You can't specify a specific version, like Python, etc.
+
+JS = most popular language
 
 Most users
 
@@ -742,6 +792,7 @@ you have to worry about the things that you *really* don't want it to do
 ## Cross Site Scripting <!-- .slide: class="center" -->
 ### XSS <!-- .slide: class="center" -->
 
+Note: this is one of the big players in the OWASP Top 10. It poses an enourmous security risk
 ---
 
 ## Cross Site Request Forgery <!-- .slide: class="center" -->
@@ -752,12 +803,14 @@ Note: within scope, but not strictly JS
 
 ### `document.execCommand('copy');` <!-- .slide: class="center" -->
 
-<span class="dasfoot"><a href="https://github.com/dxa4481/Pastejacking/blob/master/index.html">dxa4481/pastejacking</a></span>
+<span class="bfoot" style="bottom: -280px"><a href="https://github.com/dxa4481/Pastejacking/blob/master/index.html">dxa4481/pastejacking</a></span>
 Note: New line in a terminal will auto execute
 ---
 # `eval` <!-- .slide: class="center" -->
 
 Note: executing arbitary code.
+
+Because what could possibly go wrong
 
 ---
 <br><br> 
@@ -765,7 +818,9 @@ Note: executing arbitary code.
 </pre></code> 
 
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">alert("Have a nice day")</code></pre></div> <!-- .element: class="fragment" -->
-Note: base64_encode in php is similar
+Note: Would anyone where want to have this code on their systems>
+
+(postreveal) see? nothing malicious, right?
 ---
 # 😢 <!-- .slide: class="center" -->
 Note: 
@@ -782,32 +837,34 @@ so, that's what javascript can do. it's powerful, and scary. what if you say
 ### File Uploads
 ### ... all with HTML/CSS only.
 
-<span class="dasfoot"><a href="http://youmightnotneedjs.com/">You Might Not Need JavaScript.com</a></span>
+<span class="bfoot" style="bottom: -100px"><a href="http://youmightnotneedjs.com/">You Might Not Need JavaScript.com</a></span>
 ---
 # Using JavaScript<br>without JavaScript <!-- .slide: class="center" -->
 ---
 # Pick any language <!-- .slide: class="center" -->
 
-<span class="dasfoot"><a href="https://github.com/jashkenas/coffeescript/wiki/list-of-languages-that-compile-to-js">List of languages that compile to JS</a></span>
+<span class="bfoot" style="bottom: -280px"><a href="https://github.com/jashkenas/coffeescript/wiki/list-of-languages-that-compile-to-js">List of languages that compile to JS</a></span>
 ---
 
-### Ruby: Opal, Red, .. <!-- .element: class="fragment" -->
-### Python: Skulpt, Brython, .. <!-- .element: class="fragment" -->
-### Perl: Perlito, p2js, .. <!-- .element: class="fragment" -->
-### Haskell: ghcjs, haste, .. <!-- .element: class="fragment" -->
-### Go: GopherJS, .. <!-- .element: class="fragment" -->
+### Ruby: Opal, Red, .. <!-- .slide: class="center" -->
 ### PHP: Uniter, phype, .. <!-- .element: class="fragment" -->
+### Perl: Perlito, p2js, .. <!-- .element: class="fragment" -->
+### Go: GopherJS, .. <!-- .element: class="fragment" -->
+### Python: Skulpt, Brython, .. <!-- .element: class="fragment" -->
+---
+# Batavia <!-- .slide: class="center" -->
+ <img src="pictures/pybee.svg" />
+
+Note: throwback
+---
+### Haskell: ghcjs, haste, .. <!-- .slide: class="center" -->
 ### Cobol: CobolScript <!-- .element: class="fragment" -->
 ### C: Emscripten <!-- .element: class="fragment" -->
 ---
 <video width="720" height="600" controls="controls"><source src="pictures/skifree.mp4" type="video/mp4" /></video>
- <span class='dasfoot'><a href="https://archive.org/details/win3_WINSKI">https://archive.org/details/win3_WINSKI</a></span>
-Note: Yes, that's windows 95 running in my browser from 1995
----
-# Slightly different approaches <!-- .slide: class="center" -->
----
-# Batavia <!-- .slide: class="center" -->
- <img src="pictures/pybee.svg" />
+
+<span class="bfoot" style="bottom: -20px"><a href="https://archive.org/details/win3_WINSKI">Internet Archive</a></span>
+Note: Yes, that's windows 95 running in my browser
 ---
 # JavaScript<br>outside the browser <!-- .slide: class="center" -->
 ---
@@ -830,6 +887,7 @@ Open source
 'Isomorphic JavaScript' slash 'Universal javascript'
 ---
 # V8 wat <!-- .slide: class="center" -->
+Note: but even this implementation isn't without it's issue. Consider the following
 ---
 <pre><code>'use strict';
 
@@ -855,7 +913,11 @@ for (let i = 0; i < 500000000; i++) {
 
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">$ time -p node general.js<br>real 1.91</code></pre></div> <!-- .element: class="fragment" -->
 
- <span class='dasfoot'><a href="https://top.fse.guru/nodejs-a-quick-optimization-advice-7353b820c92e">top.fse.guru</a></span>
+<span class="bfoot"><a href="https://top.fse.guru/nodejs-a-quick-optimization-advice-7353b820c92e">top.fse.guru</a></span>
+
+Note: A function that runs a loop for a specific amount of time.
+
+Note the massive comment block.
 ---
 <pre><code>'use strict';
 
@@ -879,10 +941,10 @@ for (let i = 0; i < 500000000; i++) {
 } 
 </code></pre> 
 
- <span class='dasfoot'><a href="https://top.fse.guru/nodejs-a-quick-optimization-advice-7353b820c92e">top.fse.guru</a></span>
+<span class="bfoot" style="bottom: -135px"><a href="https://top.fse.guru/nodejs-a-quick-optimization-advice-7353b820c92e">top.fse.guru</a></span>
 
 
-Note: blank for flicking
+Note: (slide intentionally blank for flicking to the next one)
 ---
 <pre><code>'use strict';
 
@@ -909,17 +971,25 @@ for (let i = 0; i < 500000000; i++) {
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">$ time -p node general.js<br>real 0.77<c> &nbsp;# vs 1.91</c></code></pre></div> <!-- .element: class="fragment" -->
 
 
- <span class='dasfoot'><a href="https://top.fse.guru/nodejs-a-quick-optimization-advice-7353b820c92e">top.fse.guru</a></span>
+<span class="bfoot"><a href="https://top.fse.guru/nodejs-a-quick-optimization-advice-7353b820c92e">top.fse.guru</a></span>
 
 Note: What's going to happen? any change?
 
+
+
 More than twice as fast
+
+
+v8 optimisation handles functions differently if they are under 600 characters
+
+INCLUDING COMMENTS
 ---
 # Server Side Security <!-- .slide: class="center" -->
+Note: 
 ---
 
 ## "The Little Doctor" <!-- .slide: class="center" -->
-### Proof of Concept cross-platform XSS worm framework
+### Cross-platform XSS worm framework
 
 <span class="dasfoot"><a href="https://github.com/infosec-au/little-doctor/">Source Code, GitHub</a> <a href="https://www.youtube.com/watch?v=jMKmPW99TFQ">Video</a></span>
 Note: Demo'd at KiwiCon X
@@ -941,6 +1011,7 @@ Note: Wombat Developers Union
 # <img src="pictures/wombatlogo.png"> <!-- .slide: class="center" -->
 ---
  <img src="pictures/WOMBAT.png" style="margin-top: -50px" />
+Note: wombats are awesome.
 ---
 
 # <img src="pictures/npm.png"> <!-- .slide: class="center" -->
@@ -949,6 +1020,8 @@ Note: Node package manager
 
 ---
 # left-pad <!-- .slide: class="center" -->
+
+Note: Note well. This is not a cheap joke. I'm mentioning this specifically for a reason.
 ---
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%"><c>//stevemao/left-pad:index.js</c></code></pre></div>
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">module.exports = leftpad;</code></pre></div>
@@ -1091,20 +1164,6 @@ Mostly adpoted
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">false</code></pre></div> <!-- .element: class="fragment" -->
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">ES5> Array.isArray(["a","b"])</code></pre></div> <!-- .element: class="fragment" -->
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">true</code></pre></div> <!-- .element: class="fragment" -->
----
-# `trim` <!-- .slide: class="center" -->
-
-Note: JS didn't ahve a trim command til ES5
-it had a `trimLeft` and a `trimRight`
-
----
-
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">ES3> " Hello ".trimLeft()</code></pre></div>
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">"Hello "</code></pre></div> <!-- .element: class="fragment" -->
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">ES3> " Hello ".trimRight()</code></pre></div> <!-- .element: class="fragment" -->
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">" Hello"</code></pre></div> <!-- .element: class="fragment" -->
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">ES<h>5</h>> " Hello ".trim()</code></pre></div> <!-- .element: class="fragment" -->
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">"Hello"</code></pre></div> <!-- .element: class="fragment" -->
 ---
 
 # Improved<br>`parseInt` <!-- .slide: class="center" -->
@@ -1301,7 +1360,7 @@ Note: Let's talk about ruby
 <span class="dasfoot"><a href="https://www.destroyallsoftware.com/talks/wat">destroyallsoftware.com</a></span>
 Note: Method Missing is evil monkey patching
 
-This is how Rails works
+This is how Rails used to work
 
 find_customer_by_id substring
 ---
@@ -1452,7 +1511,7 @@ Note: lets talk about c plus plus
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> printf("wat??!")</code></pre></div>
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">wat|</code></pre></div> <!-- .element: class="fragment" -->
 <br> 
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%"><h>// ??! -> |<br>// ??< -> {<br>// ??> -> }<br>// ??= -> #</h></code></pre></div> <!-- .element: class="fragment" -->
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%"><h>// ??! → |<br>// ??< → {<br>// ??> → }<br>// ??= → #</h></code></pre></div> <!-- .element: class="fragment" -->
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%"><c>// "Trigraphs"<br>// ISO 646</c></code></pre></div> <!-- .element: class="fragment" -->
 
 
@@ -1637,8 +1696,7 @@ Hopefully I've shown just how good JS can be. And it might make someone reconsid
 ---
 
 # &nbsp; <!-- .slide: class="center" -->
-
- <img src="pictures/footer.svg" />
+### glasnt.com/talks
 ---
 # Resources
 ### &nbsp;
