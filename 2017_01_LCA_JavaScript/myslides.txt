@@ -403,19 +403,6 @@ But because legacy, the standards committee didn't accept the change to `==`
 
 forced creation of `===`
 ---
-#= `NaN`
-Note: More gotchas, Combination of original 'Bad Parts', 'Awful Parts', and some new Fun
----
-#> > typeof NaN
-#> "number"
-#>- > NaN === NaN
-#>- false
-#>- > NaN !== NaN
-#>- true
-#>- > isFinite(NaN)
-#>- false
-#>- <h>// if typeof a === "number" <br> &nbsp; &nbsp;&nbsp; && isFinite(a)</h>
----
 #= `parseInt`
 ---
 #> > parseInt("42")
@@ -432,9 +419,9 @@ Note: More gotchas, Combination of original 'Bad Parts', 'Awful Parts', and some
 #> 42
 #> > parseInt("42 Wallaby Way")
 #> 42
-#> > parseInt("04") <c>// radix 10</c>
+#> > parseInt("04") <c>// octal</c>
 #> 4
-#> > parseInt("08") <c>// octal</c> 
+#> > parseInt("08") <c>// invalid</c> 
 #> 0
 ---
 #= `Number`
@@ -516,20 +503,13 @@ Note: pre-increment only works on some objects, not directly on number literals
 
 <span class="dasfoot"><a href="http://www.jsfuck.com/">esoteric javascript, @aemkei</a></span>
 ---
-#= Arrays are Objects
-## Kinda.
-
-Note: they are special, with integer keys and special sugar. 
-See eariler partial working of addressing array keys
+#= `typeof`
+Note: Big typeof
 ---
-
 #> > typeof { a: "b" }
 #>- "object"
 #>- > typeof ["a","b"]
 #>- "object"
----
-#= `typeof`
-Note: Big typeof
 ---
 #> > typeof Object()
 #>- "object"
@@ -971,14 +951,14 @@ v8 optimisation handles functions differently if they are under 600 characters
 
 INCLUDING COMMENTS
 ---
-#= Server Side Security
+#= Cross-Platform Security
 Note: 
 ---
 
 ##= "The Little Doctor"
 ### Cross-platform XSS worm framework 
 
-<span class="dasfoot"><a href="https://github.com/infosec-au/little-doctor/">Source Code, GitHub</a> <a href="https://www.youtube.com/watch?v=jMKmPW99TFQ">Video</a></span>
+<span class="bfoot" style="bottom: -280px"><a href="https://github.com/infosec-au/little-doctor/">Source Code, GitHub</a> <a href="https://www.youtube.com/watch?v=jMKmPW99TFQ">Video</a></span>
 Note: Demo'd at KiwiCon X
 
 Rocket Chat is all made in Javascript frames in the mobile and desktop app
@@ -1174,10 +1154,10 @@ Still very much not adpoted.
 ---
 
 #> <c>// life.js</c>
-#> function ans() {<br> &nbsp; var answer = 42; <br> &nbsp; return answer;<br>}
+#> function question() {<br> &nbsp; var ans = 42; <br> &nbsp; return ans;<br>}
 ---
 #> <c>// life.js</c>
-#> function ans() {<br> &nbsp; <h>let</h> answer = 42; <br> &nbsp; return answer;<br>}
+#> function question() {<br> &nbsp; <h>let</h> ans = 42; <br> &nbsp; return ans;<br>}
 
 Note: proper block scope
 Re-declarations are in error
@@ -1193,14 +1173,13 @@ Re-declarations are in error
 #> &lt;/html>
 ---
 #> <c>// life.js</c>
-#> <h>export</h> function ans() {<br> &nbsp; let answer = 42; <br> &nbsp; return answer;<br>}
+#> <h>export</h> function question() {<br> &nbsp; let ans = 42; <br> &nbsp; return ans;<br>}
 <br>
-#>- <c>// stuff.js</c> <br><h>import</h> { ans } from './life';
+#>- <c>// stuff.js</c> <br><h>import</h> { question } from './life';
 ---
 #= ECMAScript 5/6 Adoption
 ---
-##= kangax.github.io/compat-table/es5/
-##= kangax.github.io/compat-table/es6/
+##= kangax.github.io/compat-table/
 ---
 #= Non-standard 'Standards'
 ---
@@ -1279,6 +1258,8 @@ Note: Adding new funcionality in JS to JS by adding more JS
 &nbsp; &nbsp; };
 }
 </pre></code>
+
+<span class="bfoot"><a href="https://github.com/tc39/proposal-string-pad-start-end">tc39/proposal-string-pad-start-end</a></span>
 ---
 ##= `isArray` polyfill
 Note: you can also polyfill things that exist in ES5 but might not be available
@@ -1442,6 +1423,8 @@ Note: Let's talk about bash
 ---
 
 #> $ 4 + 2
+#>- bash: 4: command not found
+#>- $ $( 4 + 2 )
 #>- bash: 4: command not found
 #>- $ $(( 4 + 2 ))
 #>- bash: 6: command not found
@@ -1663,8 +1646,11 @@ Yes some have more than others. Some have reasons why they can't be fixed
 
 But that doesn't mean we have to critise those that use them
 
-"We are not our tools. Discrimination based on tools is just as bad as discrimination based on race or gender" - Rachel Nabours
+---
 
+>= "We are not our tools. Discrimination based on tools is just as bad as discrimination based on race or gender" - <a href="https://twitter.com/glasnt/status/613963672046583808">Rachel Nabours</a>
+
+Note: 
 Hopefully I've shown just how good JS can be. And it might make someone reconsider before I see the next awful tirade on twitter
 ---
 

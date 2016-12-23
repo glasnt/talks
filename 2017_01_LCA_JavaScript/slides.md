@@ -403,19 +403,6 @@ But because legacy, the standards committee didn't accept the change to `==`
 
 forced creation of `===`
 ---
-# `NaN` <!-- .slide: class="center" -->
-Note: More gotchas, Combination of original 'Bad Parts', 'Awful Parts', and some new Fun
----
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> typeof NaN</code></pre></div>
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">"number"</code></pre></div>
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> NaN === NaN</code></pre></div> <!-- .element: class="fragment" -->
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">false</code></pre></div> <!-- .element: class="fragment" -->
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> NaN !== NaN</code></pre></div> <!-- .element: class="fragment" -->
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">true</code></pre></div> <!-- .element: class="fragment" -->
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> isFinite(NaN)</code></pre></div> <!-- .element: class="fragment" -->
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">false</code></pre></div> <!-- .element: class="fragment" -->
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%"><h>// if typeof a === "number" <br> &nbsp; &nbsp;&nbsp; && isFinite(a)</h></code></pre></div> <!-- .element: class="fragment" -->
----
 # `parseInt` <!-- .slide: class="center" -->
 ---
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> parseInt("42")</code></pre></div>
@@ -432,9 +419,9 @@ Note: More gotchas, Combination of original 'Bad Parts', 'Awful Parts', and some
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">42</code></pre></div>
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> parseInt("42 Wallaby Way")</code></pre></div>
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">42</code></pre></div>
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> parseInt("04") <c>// radix 10</c></code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> parseInt("04") <c>// octal</c></code></pre></div>
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">4</code></pre></div>
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> parseInt("08") <c>// octal</c></code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> parseInt("08") <c>// invalid</c></code></pre></div>
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">0</code></pre></div>
 ---
 # `Number` <!-- .slide: class="center" -->
@@ -516,20 +503,13 @@ Note: pre-increment only works on some objects, not directly on number literals
 
 <span class="dasfoot"><a href="http://www.jsfuck.com/">esoteric javascript, @aemkei</a></span>
 ---
-# Arrays are Objects <!-- .slide: class="center" -->
-## Kinda.
-
-Note: they are special, with integer keys and special sugar.
-See eariler partial working of addressing array keys
+# `typeof` <!-- .slide: class="center" -->
+Note: Big typeof
 ---
-
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> typeof { a: "b" }</code></pre></div>
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">"object"</code></pre></div> <!-- .element: class="fragment" -->
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> typeof ["a","b"]</code></pre></div> <!-- .element: class="fragment" -->
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">"object"</code></pre></div> <!-- .element: class="fragment" -->
----
-# `typeof` <!-- .slide: class="center" -->
-Note: Big typeof
 ---
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> typeof Object()</code></pre></div>
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">"object"</code></pre></div> <!-- .element: class="fragment" -->
@@ -971,14 +951,14 @@ v8 optimisation handles functions differently if they are under 600 characters
 
 INCLUDING COMMENTS
 ---
-# Server Side Security <!-- .slide: class="center" -->
+# Cross-Platform Security <!-- .slide: class="center" -->
 Note: 
 ---
 
 ## "The Little Doctor" <!-- .slide: class="center" -->
 ### Cross-platform XSS worm framework
 
-<span class="dasfoot"><a href="https://github.com/infosec-au/little-doctor/">Source Code, GitHub</a> <a href="https://www.youtube.com/watch?v=jMKmPW99TFQ">Video</a></span>
+<span class="bfoot" style="bottom: -280px"><a href="https://github.com/infosec-au/little-doctor/">Source Code, GitHub</a> <a href="https://www.youtube.com/watch?v=jMKmPW99TFQ">Video</a></span>
 Note: Demo'd at KiwiCon X
 
 Rocket Chat is all made in Javascript frames in the mobile and desktop app
@@ -1174,10 +1154,10 @@ Still very much not adpoted.
 ---
 
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%"><c>// life.js</c></code></pre></div>
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">function ans() {<br> &nbsp; var answer = 42; <br> &nbsp; return answer;<br>}</code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">function question() {<br> &nbsp; var ans = 42; <br> &nbsp; return ans;<br>}</code></pre></div>
 ---
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%"><c>// life.js</c></code></pre></div>
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">function ans() {<br> &nbsp; <h>let</h> answer = 42; <br> &nbsp; return answer;<br>}</code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">function question() {<br> &nbsp; <h>let</h> ans = 42; <br> &nbsp; return ans;<br>}</code></pre></div>
 
 Note: proper block scope
 Re-declarations are in error
@@ -1193,14 +1173,13 @@ Re-declarations are in error
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">&lt;/html></code></pre></div>
 ---
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%"><c>// life.js</c></code></pre></div>
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%"><h>export</h> function ans() {<br> &nbsp; let answer = 42; <br> &nbsp; return answer;<br>}</code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%"><h>export</h> function question() {<br> &nbsp; let ans = 42; <br> &nbsp; return ans;<br>}</code></pre></div>
 <br> 
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%"><c>// stuff.js</c> <br><h>import</h> { ans } from './life';</code></pre></div> <!-- .element: class="fragment" -->
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%"><c>// stuff.js</c> <br><h>import</h> { question } from './life';</code></pre></div> <!-- .element: class="fragment" -->
 ---
 # ECMAScript 5/6 Adoption <!-- .slide: class="center" -->
 ---
-## kangax.github.io/compat-table/es5/ <!-- .slide: class="center" -->
-## kangax.github.io/compat-table/es6/ <!-- .slide: class="center" -->
+## kangax.github.io/compat-table/ <!-- .slide: class="center" -->
 ---
 # Non-standard 'Standards' <!-- .slide: class="center" -->
 ---
@@ -1279,6 +1258,8 @@ Note: Adding new funcionality in JS to JS by adding more JS
 &nbsp; &nbsp; };
 } 
 </pre></code> 
+
+<span class="bfoot"><a href="https://github.com/tc39/proposal-string-pad-start-end">tc39/proposal-string-pad-start-end</a></span>
 ---
 ## `isArray` polyfill <!-- .slide: class="center" -->
 Note: you can also polyfill things that exist in ES5 but might not be available
@@ -1442,6 +1423,8 @@ Note: Let's talk about bash
 ---
 
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">$ 4 + 2</code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">bash: 4: command not found</code></pre></div> <!-- .element: class="fragment" -->
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">$ $( 4 + 2 )</code></pre></div> <!-- .element: class="fragment" -->
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">bash: 4: command not found</code></pre></div> <!-- .element: class="fragment" -->
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">$ $(( 4 + 2 ))</code></pre></div> <!-- .element: class="fragment" -->
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">bash: 6: command not found</code></pre></div> <!-- .element: class="fragment" -->
@@ -1663,8 +1646,11 @@ Yes some have more than others. Some have reasons why they can't be fixed
 
 But that doesn't mean we have to critise those that use them
 
-"We are not our tools. Discrimination based on tools is just as bad as discrimination based on race or gender" - Rachel Nabours
+---
 
+> "We are not our tools. Discrimination based on tools is just as bad as discrimination based on race or gender" - <a href="https://twitter.com/glasnt/status/613963672046583808">Rachel Nabours</a> <!-- .slide: class="center" -->
+
+Note: 
 Hopefully I've shown just how good JS can be. And it might make someone reconsider before I see the next awful tirade on twitter
 ---
 
