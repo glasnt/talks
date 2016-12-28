@@ -1984,6 +1984,35 @@ but if we declare them on he same line
 
 they are
 ---
+#= <pre>/usr/local/bin python</pre>
+Note: Let's talk about Python
+---
+#> >>> x = bytearray(1)
+#>- >>> y = {}
+#>- >>> x % y
+#>- bytearray(b’’)
+
+Note: If we declare x as a byte array of size one
+
+and y as an empty dict
+
+what would a bytearary modulus a dict be?
+
+a bytearray with an empty bytestring
+---
+#> >>> x = bytearray(1)
+#> >>> y = {}
+#> >>> x % y
+#> bytearray(b’’) <c>&nbsp;&nbsp; &nbsp;# Python 3.5</c>
+#>- bytearray(b’\x00’) <c># Python 3.6</c>
+#>- >>> x
+#>- bytearray(b'\x00')
+Note: but this has changed in python 3.6 into the bytearray of a bytestring of a null byte, which is what  x is originally
+
+This is the kind of fun we get when we upgrade the python versions in BeeWare components. Because we are reimplementing things, we find all the edge cases. 
+
+Our CI makes all the pretty colours :)
+---
 
 #= <pre>#!/usr/bin/env java</pre>
 

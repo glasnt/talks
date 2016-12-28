@@ -1984,6 +1984,35 @@ but if we declare them on he same line
 
 they are
 ---
+# <pre>/usr/local/bin python</pre> <!-- .slide: class="center" -->
+Note: Let's talk about Python
+---
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">>>> x = bytearray(1)</code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">>>> y = {}</code></pre></div> <!-- .element: class="fragment" -->
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">>>> x % y</code></pre></div> <!-- .element: class="fragment" -->
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">bytearray(b’’)</code></pre></div> <!-- .element: class="fragment" -->
+
+Note: If we declare x as a byte array of size one
+
+and y as an empty dict
+
+what would a bytearary modulus a dict be?
+
+a bytearray with an empty bytestring
+---
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">>>> x = bytearray(1)</code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">>>> y = {}</code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">>>> x % y</code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">bytearray(b’’) <c>&nbsp;&nbsp; &nbsp;# Python 3.5</c></code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">bytearray(b’\x00’) <c># Python 3.6</c></code></pre></div> <!-- .element: class="fragment" -->
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">>>> x</code></pre></div> <!-- .element: class="fragment" -->
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">bytearray(b'\x00')</code></pre></div> <!-- .element: class="fragment" -->
+Note: but this has changed in python 3.6 into the bytearray of a bytestring of a null byte, which is what x is originally
+
+This is the kind of fun we get when we upgrade the python versions in BeeWare components. Because we are reimplementing things, we find all the edge cases.
+
+Our CI makes all the pretty colours :)
+---
 
 # <pre>#!/usr/bin/env java</pre> <!-- .slide: class="center" -->
 
