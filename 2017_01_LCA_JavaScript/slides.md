@@ -1229,7 +1229,15 @@ this means we can have single-language cross platform worms
 
 <span class="bfoot" style="bottom: -280px"><a href="https://github.com/infosec-au/little-doctor/">Source Code, GitHub</a> <a href="https://www.youtube.com/watch?v=jMKmPW99TFQ">Video</a></span>
 Note: 
-"The little doctor" is a proof of concept of this, which was demonstrated at kiwicon last year. links are in the slides to the video and source code.
+"The little doctor" is a proof of concept of this, which was demonstrated at kiwicon last year.
+
+The demo shows a vulnerability in Rocketjack that allowed arbitary execution of code.
+
+They showed how the same code was able to be used to create a script injection attack, where clicking on a link would perform actions, such as start recording audio, that then sent itself to other users.
+
+That in itself is not all that interesting. What was interesting is that the same code worked on the desktop version of the application, and the iPhone version of the application. Including opening the mic app.
+
+This has since been patched.
 
 ---
 # Package<br>Management <!-- .slide: class="center" -->
@@ -1643,11 +1651,13 @@ Note:
 
 it's awe-ful, full of aw
 
-even with all it's edgecases, it's the devil you know, and it powers a lot of modern society.
+even with all it's edgecases, it's the devil you can't avoid.
+
+you have no alternative in the browser.
 ---
 > ... JavaScript is no more weird or broken than any other scripting language<br> - <a href="https://twitter.com/seldo/status/728686963868344320">Laurie Voss, npm</a> <!-- .slide: class="center" -->
 
-Note: however, javascript is no more weird or broken than any other langue
+Note: however, javascript is no more weird or broken than any other language
 
 ---
 ## Other languages have wats <!-- .slide: class="center" -->
