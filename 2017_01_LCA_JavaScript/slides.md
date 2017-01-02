@@ -243,24 +243,29 @@ Note: more importantly, we're going to discuss why. Why is the language like thi
 # JavaScript® <!-- .slide: class="center" -->
 
 <span class="bfoot" style="bottom: -280px"><a href="http://tsdr.uspto.gov/#caseNumber=75026640&caseType=SERIAL_NO&searchType=statusSearch">US Trademark &#35;75026640</a></foot>
-Note: TODO NOTES
+Note: For starters, JavaScript is a registerd trademark of Oracle
+
+... because it was originally a trademark of Netscape, which got bought by Sun, which then got bought by Oracle.
 
 ---
 
 # ECMAScript <!-- .slide: class="center" -->
 ### A general purpose, cross-platform programming language
 
-Note: TODO NOTES
+Note: the proper name for the lanague is ECMAScript. This was the working name used during the standardisation, but since there was never a nicer name chosen, we still use JavaScript or ECMAScript.
+
+I'm going to be using the two interchangably.
 
 ---
 
 # The most<br>popular language.<br>Ever. <!-- .slide: class="center" -->
-Note: TODO NOTEST
+Note: Regardless of what you call it, it's the most popular language ever. There are more users of javascript than of any other langauge, and more developers of it.
 
+Since it has so many users, of course it's going to seem that there's more noise about it, both good and bad, than say a less popular language.
 ---
 # wat <!-- .slide: class="center" -->
 
-Note: So, let's go back to those examples from earlier, and show why they are the way they are
+Note: Anyway, let's go back to those examples from earlier, and show why they are the way they are
 
 ---
 
@@ -861,20 +866,14 @@ JS_TypeOfValue(JSContext *cx, jsval v) {
 <span class="dasfoot"><a href="http://mxr.mozilla.org/classic/source/js/src/jsapi.h">jsapi from October 1996</a></span>
 Note: which we then return out the bottom
 
----
-## Yes, this is a bug. <!-- .slide: class="center" -->
-## This is a old, known bug. <!-- .element: class="fragment" -->
-
-Note: 
 yes this is a big.
 
 this is a very old, known bug.
 ---
+
 # Backwards<br>Compatibility <!-- .slide: class="center" -->
 
 Note: 
-
-
 
 the problem here is backwards compatibility
 
@@ -885,94 +884,16 @@ you write your code in a script tag, marked as type javascript, and it goes from
 every browser has to implement the same standard
 
 which means that the internet would break if javascript wasn't backwards compatible to day 0.
-
-[context switch]
-
-Now, it's not just the language that you have to worry about
-
-Let's take a bit of a break, and talk about something else
-
-
----
-# Security <!-- .slide: class="center" -->
-Note: 
-Security 
-
-So, I'm only going to give this a brief overview, because there's enough here to fill weeks of talks. If you want a deeper dive into web security, Tom Eastman is giving his User Uploads talk at 3:40pm today.
-
-So 
-
-Who here is familiar with the OWASP Top 10?
-
-The OWASP Top 10 is the list of the most frequent web application security vulenerabilities
-
-And using Javascript as the attack vector is up there
 ---
 
-## Cross Site Scripting <!-- .slide: class="center" -->
-### XSS <!-- .slide: class="center" -->
-
-Note: 
-Cross-site scripting describes exploiting the intepreter in the browser
-
-So things like allowing users to upload comments with embeded javascript, and then letting that be executed.
-
-Also of note:
----
-
-## Cross Site Request Forgery <!-- .slide: class="center" -->
-### CSRF <!-- .slide: class="center" -->
-
-Note: 
-
-cross site request forgery
-
-while not strictly javascript related, it still uses js as a vector
-
-But, there are some wonderful newer things on the block
-
-One of the many nice new things in JS, which we'll cover a bit later, is it's new APIs
-
-Included in those
----
-
-### `document.execCommand('copy');` <!-- .slide: class="center" -->
-
-<span class="bfoot" style="bottom: -280px"><a href="https://github.com/dxa4481/Pastejacking/blob/master/index.html">dxa4481/pastejacking</a></span>
-Note: 
-is the ablity to execute commands directly in client side javascript.
-
-Which allows you do to stuff like create native javascript copy-button!
-
-A user can click a button and get something directly into their clipboard! Lovely!
-
-
-... except when you commendeer the event listener on the page and enter something else into your users's keyboard... and you add a new line on the end so if they paste it into their terminal it automatically gets executed...
-
-There's a link on this slide to a proof of concept, a link to my slides will follow
-
-That's not to say that only the new stuff has the potential for trouble
----
-# `eval` <!-- .slide: class="center" -->
-
-Note: 
-there's still eval
-
-because what could possibly go wrong?
+# JavaScript isn't awful <!-- .slide: class="center" -->
+Note: Javascript isn't awful,
 
 ---
-<br><br> 
-<pre><code style="overflow: hidden; width: 100%; white-space: pre-wrap"><h>eval(</h>function(p,a,c,k,e,d){e&#61;function(c){return c.toString(36)};if(!''.replace(/^/,String)){while(c--){d[c.toString(a)]&#61;k[c]||c.toString(a)}k&#61;[function(e){return d[e]}];e&#61;function(){return'\\w+'};c&#61;1};while(c--){if(k[c]){p&#61;p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c])}}return p}('8 3&#61;["\\7\\1\\6\\4\\2\\1\\2\\5\\9\\a\\4\\2\\b\\1\\d"]c(3[0])',14,14,<br>'|x61|x20|_0xfb59|x65|x6E|x76|x48|var|x69|x63|x64|alert|x79'<br>.split('|'),0,{})<h>)</h>
-</pre></code> 
+# JavaScript is awe-ful <!-- .slide: class="center" -->
+Note: It's awe-ful, full of all.
 
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">alert("Have a nice day")</code></pre></div> <!-- .element: class="fragment" -->
-Note: because if you have the following, you'd want to execute it on your site, right?
-
-why not? it's a nice message :)
----
-# 😢 <!-- .slide: class="center" -->
-Note: 
-so all in all, there's a lot of issues with javascript, and a lot of weird edges around the place
+There's a lot of issues with javascript, and a lot of weird edges around the place
 ---
 
 # So don't use<br>JavaScript <!-- .slide: class="center" -->
@@ -1000,9 +921,35 @@ Also, form validation and file uploads!
 
 Sample implementations for all of these are over at youmightnotneedjavascript.com
 ---
+
+# HTML5 <!-- .slide: class="center" -->
+
+Note: There have also been massive improvements to the web in general with HTML5
+
+With HTML5 a lot of functionality has become native, so you don't need fancy frameworks.
+---
+
+### AppCache <!-- .slide: class="center" -->
+### Events
+### WebSockets
+### Service Workers
+### Web Storage
+### ... all native with HTML5
+<span class="bfoot" style="bottom: -100px"><a href="https://medium.com/@aliafshar/vanilla-is-the-best-flavour-c1765729a06a#.9z6s9ubgb">Vanilla is the best flavour, Ali Afshar</a></span>
+
+Note: AppCache, Events, WebSockers, Service Workers, Web Storage
+
+All these improvements to the HTML spec are making a fast improvement ot the web. And yes, some of these aren't available everywhere... yet.
+
+---
 # Using JavaScript<br>without JavaScript <!-- .slide: class="center" -->
 Note: 
+
 Another way is to use javascript, but dont use javascript
+
+Unfortunately JS is the only language you can use in a browser (thank goodness, otherwise we would have kept ActiveX and Flash).
+
+There are work arounds.
 ---
 # Pick any language <!-- .slide: class="center" -->
 
@@ -1077,590 +1024,20 @@ This was achieved by compiling the original C into javascript.
 
 I just think this is amazing.
 
-TODO: yeti
----
-# JavaScript<br>outside the browser <!-- .slide: class="center" -->
-Note: 
-
-But javascript is no longer just for within the browser any more
-
-server side javascript is now a thing
-
----
-# node.js <!-- .slide: class="center" -->
-
-Note: 
-
-Thanks to node.js, which is a runtime environment that allows for serverside js
-
-it's not a framework in itself
----
-# V8<br>JavaScript Engine <!-- .slide: class="center" -->
-Note: 
-it runs on the v8 engine, which is also the engine that powers chromium
-
-it's entirely open source
-
-because it powers both client and serverside javascript, this is where the term "universal" or "isomorphic" javascript comes from
-
-this makes it quite powerful
-
----
-# V8 wat <!-- .slide: class="center" -->
-Note: but it's not without it's wats
----
-<pre><code>'use strict';
-
-function add(x, y) {
-<c style="font-weight:normal">&nbsp; // I am the very model of a modern Major-General
-&nbsp; // I've information vegetable, animal, and mineral
-&nbsp; // I know the kings of England, and I quote the fights historical
-&nbsp; // From Marathon to Waterloo, in order categorical
-&nbsp; // I'm very well acquainted, too, with matters mathematical
-&nbsp; // I understand equations, both the simple and quadratical
-&nbsp; // About binomial theorem I'm teeming with a lot o' news
-&nbsp; // With many cheerful facts about the square of the hypotenuse
-&nbsp; // I'm very good at integral and differential calculus
-&nbsp; // I know the scientific names of beings animalculous
-</c> 
-&nbsp; return(x + y);
-} 
-
-for (let i = 0; i < 500000000; i++) {
-&nbsp; if (add(i, i++) < 5) { <c>/* */</c> }
-} 
-</code></pre> 
-
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">$ time -p node general.js<br>real 1.91</code></pre></div> <!-- .element: class="fragment" -->
-
-<span class="bfoot"><a href="https://top.fse.guru/nodejs-a-quick-optimization-advice-7353b820c92e">top.fse.guru</a></span>
-
-Note: 
-Here's a snippet of javascript code
-
-Just ignore the giant comment block
-
-What we're doing is a really big loop. That's it.
-
-It'll take just under 2 seconds to run on a server
----
-<pre><code>'use strict';
-
-function add(x, y) {
-<c style="font-weight:normal">&nbsp; // I am the very model of a modern Major-General
-&nbsp; // I've information vegetable, animal, and mineral
-&nbsp; // I know the kings of England, and I quote the fights historical
-&nbsp; // From Marathon to Waterloo, in order categorical
-&nbsp; // I'm very well acquainted, too, with matters mathematical
-&nbsp; // I understand equations, both the simple and quadratical
-&nbsp; // About binomial theorem I'm teeming with a lot o' news
-&nbsp; // With many cheerful facts about the square of the hypotenuse
-&nbsp; // I'm very good at integral and differential calculus
-&nbsp; // I know the scientific names of beings animalculous
-</c> 
-&nbsp; return(x + y);
-} 
-
-for (let i = 0; i < 500000000; i++) {
-&nbsp; if (add(i, i++) < 5) { <c>/* */</c> }
-} 
-
-</code></pre> 
-
-<span class="bfoot" style="bottom: -135px"><a href="https://top.fse.guru/nodejs-a-quick-optimization-advice-7353b820c92e">top.fse.guru</a></span>
-
-
-Note: 
-but let's try this again
-
-remember that giant block comment
----
-<pre><code>'use strict';
-
-function add(x, y) {
-<c style="font-weight:normal">&nbsp; // I am the very model of a modern Major-General
-&nbsp; // I've information vegetable, animal, and mineral
-&nbsp; // I know the kings of England, and I quote the fights historical
-&nbsp; // From Marathon to Waterloo, in order categorical
-&nbsp; // I'm very well acquainted, too, with matters mathematical
-&nbsp; // I understand equations, both the simple and quadratical
-&nbsp; // About binomial theorem I'm teeming with a lot o' news
-&nbsp; // With many cheerful facts about the square of the hypotenuse
-&nbsp; // I'm very good at integral and differential calculus
-&nbsp; 
-</c> 
-&nbsp; return(x + y);
-} 
-
-for (let i = 0; i < 500000000; i++) {
-&nbsp; if (add(i, i++) < 5) { <c>/* */</c> }
-} 
-</code></pre> 
-
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">$ time -p node general.js<br>real 0.77<c> &nbsp;# vs 1.91</c></code></pre></div> <!-- .element: class="fragment" -->
-
-
-<span class="bfoot"><a href="https://top.fse.guru/nodejs-a-quick-optimization-advice-7353b820c92e">top.fse.guru</a></span>
-
-Note: what if we remove the last line
-
-no other changes
-
-it runs in under half the time.
-
-This is because there is an optimization route in V8 that specifically applies to functions under 600 characters long. Including inline comments.
-
----
-# Cross-Platform Security <!-- .slide: class="center" -->
-Note: 
-
-We also need to consider security across these different platforms
-
-We're running javascript in the server, which means if we somehow get user input and then eval, we're in trouble.
-
-But, since we're running the same code on web and on the server, and there is a current vogue in mobile development to embed a web frame as the application
-
-this means we can have single-language cross platform worms
-
+And yes, due to the fact that clockspeeds are faster now than what they were in 1991, the yeti will always get you.
 ---
 
-## "The Little Doctor" <!-- .slide: class="center" -->
-### Cross-platform XSS worm framework
-
-<span class="bfoot" style="bottom: -280px"><a href="https://github.com/infosec-au/little-doctor/">Source Code, GitHub</a> <a href="https://www.youtube.com/watch?v=jMKmPW99TFQ">Video</a></span>
-Note: 
-"The little doctor" is a proof of concept of this, which was demonstrated at kiwicon last year.
-
-The demo shows a vulnerability in Rocketjack that allowed arbitary execution of code.
-
-They showed how the same code was able to be used to create a script injection attack, where clicking on a link would perform actions, such as start recording audio, that then sent itself to other users.
-
-That in itself is not all that interesting. What was interesting is that the same code worked on the desktop version of the application, and the iPhone version of the application. Including opening the mic app.
-
-This has since been patched.
-
----
-# Package<br>Management <!-- .slide: class="center" -->
-Note: 
-let's step out of security and talk about package management
-
-This one needs some special attention, especially pertaining to javascript the language,
+# But <!-- .slide: class="center" -->
 ---
 
-# <img src="pictures/npm.png"> <!-- .slide: class="center" -->
+# Using another language<br>doesn't save you <!-- .slide: class="center" -->
 
-Note: 
-node package manager, or npm, is not unlike rubygems or the cheeseshop; it's where javascript people can upload and share their packages.
+Note: yes, you *could* use another language, but a lot of these cross-compilers generate some knarly javascript.
 
-if you're not familiar with them, you may have only heard about them via
----
-# left-pad <!-- .slide: class="center" -->
-
-Note: 
-
-left-pad 
-
-[wait for grumbles/giggles]
-
-Now, i'm not bringing up left-pad as a cheap joke. I have a point.
-
-For those that don't know the story, left-pad was removed from npm by it's author for reasons that I won't go into here. It was re-instated by npm because it was a dependency of a major package, which caused a bunch of downstream issues.
-
-What is left-pad?
----
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%"><c>//stevemao/left-pad:index.js</c></code></pre></div>
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">module.exports = leftpad;</code></pre></div>
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">function leftpad (str, len, ch){</code></pre></div>
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">&nbsp; str = String(str);</code></pre></div>
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">&nbsp; var i = -1;</code></pre></div>
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">&nbsp; if (!ch && ch !== 0) ch = ' ';</code></pre></div>
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">&nbsp; len = len - str.length;</code></pre></div>
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">&nbsp; while (++i < len) {</code></pre></div>
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">&nbsp; &nbsp; &nbsp; str = ch + str; }</code></pre></div>
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">&nbsp; return str;</code></pre></div>
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">}</code></pre></div>
-
-Note: 
-an 11 line module that pads a string to the left.
-
-and it handles most of what you'd expect of such a function
+But the languages themselves also have their own pitfalls.
 
 ---
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%"><c>//stevemao/left-pad:index.js</c></code></pre></div>
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">module.exports = leftpad;</code></pre></div>
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">function leftpad (str, len, ch){</code></pre></div>
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">&nbsp; str = String(str);</code></pre></div>
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">&nbsp; var i = -1;</code></pre></div>
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">&nbsp; if (<h>!ch && ch !== 0</h>) <h>ch = ' '</h>;</code></pre></div>
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">&nbsp; len = len - str.length;</code></pre></div>
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">&nbsp; while (++i < len) {</code></pre></div>
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">&nbsp; &nbsp; &nbsp; str = ch + str; }</code></pre></div>
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">&nbsp; return str;</code></pre></div>
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">}</code></pre></div>
-
-Note: 
-it handles the case if you don't provide a character to pad, using space as the default
-
----
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%"><c>//stevemao/left-pad:index.js</c></code></pre></div>
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">module.exports = leftpad;</code></pre></div>
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">function leftpad (str, len, ch){</code></pre></div>
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">&nbsp; str = String(str);</code></pre></div>
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">&nbsp; var i = -1;</code></pre></div>
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">&nbsp; if (!ch && ch !== 0) ch = ' ';</code></pre></div>
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">&nbsp; len = <h>len - str.length</h>;</code></pre></div>
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">&nbsp; while (++i < len) {</code></pre></div>
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">&nbsp; &nbsp; &nbsp; str = ch + str; }</code></pre></div>
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">&nbsp; return str;</code></pre></div>
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">}</code></pre></div>
-
-Note: 
-
-it then works out how many characters you'll need to pad
-
----
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%"><c>//stevemao/left-pad:index.js</c></code></pre></div>
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">module.exports = leftpad;</code></pre></div>
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">function leftpad (str, len, ch){</code></pre></div>
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">&nbsp; str = String(str);</code></pre></div>
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">&nbsp; var i = -1;</code></pre></div>
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">&nbsp; if (!ch && ch !== 0) ch = ' ';</code></pre></div>
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">&nbsp; len = len - str.length;</code></pre></div>
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">&nbsp; while <h>(++i < len)</h> {</code></pre></div>
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">&nbsp; &nbsp; &nbsp; str = ch + str; }</code></pre></div>
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">&nbsp; return str;</code></pre></div>
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">}</code></pre></div>
-
-Note: 
-
-and prepends those characters until the length is right.
-
-... 
-
-this implementation is ok
-
-let's take a look at how this might be implemented elsewhere.
-
----
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">PHP_FUNCTION(str_pad) {</code></pre></div>
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">&nbsp; char &ast;input;</code></pre></div>
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">&nbsp; int input_len;</code></pre></div>
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">&nbsp; long &nbsp;pad_length;</code></pre></div>
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">&nbsp; char &ast;pad_str_val = " ";</code></pre></div>
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">&nbsp; <c>/&ast; ... &ast;/</c></code></pre></div>
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">&nbsp; num_pad_chars =</code></pre></div>
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">&nbsp; &nbsp; &nbsp;pad_length - input_len;</code></pre></div>
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">&nbsp; <c>/&ast; ... &ast;/</c></code></pre></div>
-
-<span class="dasfoot"><a href="https://github.com/php/php-src/blob/PHP-5.6/ext/standard/string.c">php 5.6 - ext/standard/string.c</a></span>
-
-Note: 
-This is the PHP 5.6 standard library implementtaion of the same memethod, written in C, truncated for brevity.
-
-It's got the same parts as the left-pad version
-
----
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">PHP_FUNCTION(str_pad) {</code></pre></div>
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">&nbsp; char &ast;input;</code></pre></div>
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">&nbsp; int input_len;</code></pre></div>
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">&nbsp; long &nbsp;pad_length;</code></pre></div>
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">&nbsp; char <h>&ast;pad_str_val = " ";</h></code></pre></div>
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">&nbsp; <c>/&ast; ... &ast;/</c></code></pre></div>
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">&nbsp; num_pad_chars =</code></pre></div>
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">&nbsp; &nbsp; &nbsp;pad_length - input_len;</code></pre></div>
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">&nbsp; <c>/&ast; ... &ast;/</c></code></pre></div>
-
-<span class="dasfoot"><a href="https://github.com/php/php-src/blob/PHP-5.6/ext/standard/string.c">php 5.6 - ext/standard/string.c</a></span>
-
-Note: 
-
-The default value of space
----
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">PHP_FUNCTION(str_pad) {</code></pre></div>
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">&nbsp; char &ast;input;</code></pre></div>
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">&nbsp; int input_len;</code></pre></div>
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">&nbsp; long &nbsp;pad_length;</code></pre></div>
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">&nbsp; char &ast;pad_str_val = " ";</code></pre></div>
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">&nbsp; <c>/&ast; ... &ast;/</c></code></pre></div>
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">&nbsp; num_pad_chars =</code></pre></div>
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">&nbsp; &nbsp; &nbsp;<h>pad_length - input_len;</h></code></pre></div>
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">&nbsp; <c>/&ast; ... &ast;/</c></code></pre></div>
-
-<span class="dasfoot"><a href="https://github.com/php/php-src/blob/PHP-5.6/ext/standard/string.c">php 5.6 - ext/standard/string.c</a></span>
-
-Note: 
-working out the length of the padding
-
----
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">&nbsp; <c>/&ast; cont. &ast;/</c></code></pre></div>
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">&nbsp;</code></pre></div>
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">&nbsp; <c>/&ast; ... &ast;/</c></code></pre></div>
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">&nbsp; for (i = 0; i < left_pad; i++)</code></pre></div>
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">&nbsp; &nbsp; result[result_len++]</code></pre></div>
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">&nbsp; &nbsp; &nbsp; = pad_str_val[i];</code></pre></div>
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">&nbsp; <c>/&ast; ... &ast;/</c></code></pre></div>
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">&nbsp; return result;</code></pre></div>
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">}</code></pre></div>
-
-<span class="dasfoot"><a href="https://github.com/php/php-src/blob/PHP-5.6/ext/standard/string.c">php 5.6 - ext/standard/string.c</a></span>
-Note: and
----
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">&nbsp; <c>/&ast; cont. &ast;/</c></code></pre></div>
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">&nbsp;</code></pre></div>
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">&nbsp; <c>/&ast; ... &ast;/</c></code></pre></div>
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">&nbsp; <h>for (i = 0; i < left_pad; i++)</h></code></pre></div>
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">&nbsp; &nbsp; result[result_len++]</code></pre></div>
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">&nbsp; &nbsp; &nbsp; = pad_str_val[i];</code></pre></div>
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">&nbsp; <c>/&ast; ... &ast;/</c></code></pre></div>
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">&nbsp; return result;</code></pre></div>
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">}</code></pre></div>
-
-<span class="dasfoot"><a href="https://github.com/php/php-src/blob/PHP-5.6/ext/standard/string.c">php 5.6 - ext/standard/string.c</a></span>
-
-Note: 
-
-Looping around until the string is at the right length
-
-The thing is that this is a function within standard PHP.
----
-
-# User-land<br>"standard library" <!-- .slide: class="center" -->
-Note: 
-left-pad is part of the user-land standard library.
-
-Javascript doesn't have a standard library. the functionality a python, ruby or php dev takes for granted isn't ther ein javascript
-
-and so there have been may ways that this has been worked around over the years, including fundamental libraries like jquery
-
-but you can't just add this stuff to javascript
----
-# Design by<br>Committee <!-- .slide: class="center" -->
-Note: 
-
-javascript is a standard that is designed by a committee. The implementation of that is up to the browser, and some of those arne't open sourced, and it's all up to the brwosers to all adhere to those standards
----
-# However <!-- .slide: class="center" -->
-Note: 
-However... in the last few years, that's exactly what's happneed
----
-# JavaScript<br>is improving <!-- .slide: class="center" -->
-Note: 
-javascript is improving
----
-
-# ECMAScript 5 <!-- .slide: class="center" -->
-Note: 
-updates to the ECMAscript standard, starting with version 5 in 2009, introduce much needed updates to javascript that greatly improve things
----
-# `isArray` <!-- .slide: class="center" -->
-Note: 
-
-For example, isArray!
-
-There's now a native way to check if something is an array, which as we saw earlier, wasn't natively possible in a single call
-
----
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">ES5> Array.isArray({ a: "b" })</code></pre></div>
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">false</code></pre></div> <!-- .element: class="fragment" -->
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">ES5> Array.isArray(["a","b"])</code></pre></div> <!-- .element: class="fragment" -->
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">true</code></pre></div> <!-- .element: class="fragment" -->
-Note: 
-
-I'll be using the ECMAScript version prefixed to the input prompt to show the difference between versions
-
-Now, if you use Array.isArray on an object, it's value
-
-but on an array it's true!
----
-
-# Improved<br>`parseInt` <!-- .slide: class="center" -->
-Note: 
-Also, there's improvements to existing functions like parseint
-
-
----
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">ES3> parseInt("08")</code></pre></div>
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">0</code></pre></div> <!-- .element: class="fragment" -->
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">ES<h>5</h>> parseInt("08")</code></pre></div> <!-- .element: class="fragment" -->
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">8</code></pre></div> <!-- .element: class="fragment" -->
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">ESx> parseInt("08", 10) <h>// radix</h></code></pre></div> <!-- .element: class="fragment" -->
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">8</code></pre></div> <!-- .element: class="fragment" -->
-Note: 
-Our original example when using parseInt in ECMAScript 3 returns a 0 in error
-
-However, in ECMAScript 5, it works. This is because the default radix is now 10
----
-# `map` <!-- .slide: class="center" -->
-Note: 
-We also get cool new things in ECMAScript 5 like map!
----
-
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">ES5> [1, 2, 3].map(Math.sqrt)</code></pre></div>
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">[1, 4, 9]</code></pre></div> <!-- .element: class="fragment" -->
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%"><c>// [Math.sqrt(1)<br>&nbsp; , Math.sqrt(2)<br>&nbsp; , Math.sqrt(3)]</c></code></pre></div> <!-- .element: class="fragment" -->
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">ES5> a = ['10','10','10','10']</code></pre></div> <!-- .element: class="fragment" -->
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">ES5> a.map(parseInt)</code></pre></div> <!-- .element: class="fragment" -->
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">[10, NaN, 2, 3]</code></pre></div> <!-- .element: class="fragment" -->
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%"><h>// Be aware of optional<br>// parameters</h></code></pre></div> <!-- .element: class="fragment" -->
-Note: 
-For those unfamiliar, map allows you to operate on every element of an array at once, and returnt he result in an array
-
-So for this array, we apply the Square root function over each element, and get the result
-
-However, be careful of what function you're applying.
-
-Remeber how parseInt has a radix?
-
-Yeah, you get some interesting results if you try and apply a function in map that has optional parameters
----
-# ECMAScript 6 <!-- .slide: class="center" -->
-Note: 
-
-we also have ECMASript 6, which was approved 18 months ago in June 2015, so is mostly adopted
----
-# `let` <!-- .slide: class="center" -->
-Note: 
-With ECMAScript 6, we get some extremely nice features
-
-like let
-
----
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%"><c>// life.js</c></code></pre></div>
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">function question() {<br> &nbsp; var ans = 42; <br> &nbsp; return ans;<br>}</code></pre></div>
-
-Note: 
-
-Before we had a functional which caused us issues because of the ans variable
----
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%"><c>// life.js</c></code></pre></div>
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">function question() {<br> &nbsp; <h>let</h> ans = 42; <br> &nbsp; return ans;<br>}</code></pre></div>
-
-Note: 
-now, we can have proper block scoping.
-
-
-with let, the scope extends only to the block, and we get an error if we try and reclare that variable
----
-# `import` <!-- .slide: class="center" -->
-Note: 
-
-we also have import, which i'm quite excited about
----
-<p></p> 
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%"><c><!&dash;&dash;&dash; old importing --></c></code></pre></div>
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">&lt;html></code></pre></div>
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">&lt;script src="<h>life.js</h>">&lt;/script></code></pre></div>
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">&lt;script src="<h>stuff.js</h>">&lt;/script></code></pre></div>
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">...</code></pre></div>
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">&lt;/html></code></pre></div>
-Note: 
-You used to have to use script tags to pull in every specific javascript file you wanted to use on page.
-
----
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%"><c>// life.js</c></code></pre></div>
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%"><h>export</h> function question() {<br> &nbsp; let ans = 42; <br> &nbsp; return ans;<br>}</code></pre></div>
-<br> 
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%"><c>// stuff.js</c> <br><h>import</h> { question } from './life';</code></pre></div> <!-- .element: class="fragment" -->
-Note: 
-
-But now, for a sufficiently declared exported function
-
-you can import that from another file!
----
-# ECMAScript 5/6 Adoption <!-- .slide: class="center" -->
-Note: 
-Now, the adoption of these new functions is subject to browsers implementing them
----
-## kangax.github.io/compat-table/ <!-- .slide: class="center" -->
-Note: 
-
-but there's a handy compatibility table for working that out!
-
-and sadly import still isn't anywhere yet :(
-
----
-# Extending<br>JavaScript <!-- .slide: class="center" -->
-Note: However, there is a way of extending javascrpit anyway
-
----
-# Polyfill <!-- .slide: class="center" -->
-Note: 
-
-by way of polyfills
----
-## `padStart` polyfill <!-- .slide: class="center" -->
-Note: for example, padStart, a polyfill for leftpad that could be in the ECMA standaard as soon as this year.
-
----
-<pre><code>if (!String.prototype.padStart) {
-&nbsp; &nbsp; String.prototype.padStart = function padStart(maxLength,
-&nbsp; &nbsp; &nbsp; fillString = ' ') {
-&nbsp; &nbsp; &nbsp; &nbsp; const O = RequireObjectCoercible(this);
-&nbsp; &nbsp; &nbsp; &nbsp; const S = String(O);
-&nbsp; &nbsp; &nbsp; &nbsp; const intMaxLength = ToLength(maxLength);
-&nbsp; &nbsp; &nbsp; &nbsp; const stringLength = ToLength(S.length);
-&nbsp; &nbsp; &nbsp; &nbsp; if (intMaxLength <= stringLength) { return S; }
-&nbsp; &nbsp; &nbsp; &nbsp; let filler = typeof fillString === 'undefined' ?
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ' ' : String(fillString);
-&nbsp; &nbsp; &nbsp; &nbsp; if (filler === '') { return S; }
-&nbsp; &nbsp; &nbsp; &nbsp; const fillLen = intMaxLength - stringLength;
-&nbsp; &nbsp; &nbsp; &nbsp; while (filler.length < fillLen) {
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; const fLen = filler.length;
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; const remainingCodeUnits = fillLen - fLen;
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; if (fLen > remainingCodeUnits) {
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; filler += filler.slice(0, remainingCodeUnits);
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; } else {
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; filler += filler;
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }
-&nbsp; &nbsp; &nbsp; &nbsp; }
-&nbsp; &nbsp; &nbsp; &nbsp; const truncatedStringFiller = filler.slice(0, fillLen);
-&nbsp; &nbsp; &nbsp; &nbsp; return truncatedStringFiller + S;
-&nbsp; &nbsp; };
-} 
-</pre></code> 
-
-<span class="bfoot"><a href="https://github.com/tc39/proposal-string-pad-start-end">tc39/proposal-string-pad-start-end</a></span>
-Note: 
-What we do with a polyfill is go:
-
-if the function doesn't already exist, in this case, an extension to the String primative, add the function
-
----
-## `isArray` polyfill <!-- .slide: class="center" -->
-Note: We could also do the same for isArray
-
----
-### &nbsp; <!-- .slide: class="center" -->
-<pre style="font-size: 30px"><code>if (!Array.isArray) {
-&nbsp; Array.isArray = function(arg) {
-&nbsp; &nbsp; return Object.prototype.toString.call(arg)
-&nbsp; &nbsp; &nbsp; &nbsp; <h>=== '[object Array]';</h>
-&nbsp;}; 
-} 
-</pre></code> 
-Note: 
-Which uses the same format, and just returns a truthy value based on matching the output of toString on the object
----
-# JavaScript isn't awful <!-- .slide: class="center" -->
-Note: 
-So, hopefully I've shown that javascript isn't awful
-
----
-# JavaScript is awe-ful <!-- .slide: class="center" -->
-Note: 
-
-it's awe-ful, full of aw
-
-even with all it's edgecases, it's the devil you can't avoid.
-
-you have no alternative in the browser.
----
-> ... JavaScript is no more weird or broken than any other scripting language<br> - <a href="https://twitter.com/seldo/status/728686963868344320">Laurie Voss, npm</a> <!-- .slide: class="center" -->
-
-Note: however, javascript is no more weird or broken than any other language
-
----
-## Other languages have wats <!-- .slide: class="center" -->
+# Other languages<br>have wats <!-- .slide: class="center" -->
 Note: 
 Other lanugages have 'wats'
 
@@ -2231,7 +1608,603 @@ what about the other way around? is two less than one
 
 no, because the less than operator is reserved for future use
 ---
-# My point is... <!-- .slide: class="center" -->
+# ... yeah. <!-- .slide: class="center" -->
+Note: yeah. I could keep going, but I think you get the idea.
+No language is without issue.
+---
+# JavaScript is<br>awe-ful <!-- .slide: class="center" -->
+
+Note: and javascript is no exception.
+
+However 
+---
+
+# JavaScript is<br>evolving <!-- .slide: class="center" -->
+---
+# JavaScript<br>outside the browser <!-- .slide: class="center" -->
+Note: 
+
+But javascript is no longer just for within the browser any more
+
+server side javascript is now a thing
+
+---
+# node.js <!-- .slide: class="center" -->
+
+Note: 
+
+Thanks to node.js, which is a runtime environment that allows for serverside js
+
+it's not a framework in itself
+---
+# V8<br>JavaScript Engine <!-- .slide: class="center" -->
+Note: 
+it runs on the v8 engine, which is also the engine that powers chromium
+
+it's entirely open source
+
+because it powers both client and serverside javascript, this is where the term "universal" or "isomorphic" javascript comes from
+
+this makes it quite powerful
+
+---
+# V8 wat <!-- .slide: class="center" -->
+Note: but it's not without it's wats
+---
+<pre><code>'use strict';
+
+function add(x, y) {
+<c style="font-weight:normal">&nbsp; // I am the very model of a modern Major-General
+&nbsp; // I've information vegetable, animal, and mineral
+&nbsp; // I know the kings of England, and I quote the fights historical
+&nbsp; // From Marathon to Waterloo, in order categorical
+&nbsp; // I'm very well acquainted, too, with matters mathematical
+&nbsp; // I understand equations, both the simple and quadratical
+&nbsp; // About binomial theorem I'm teeming with a lot o' news
+&nbsp; // With many cheerful facts about the square of the hypotenuse
+&nbsp; // I'm very good at integral and differential calculus
+&nbsp; // I know the scientific names of beings animalculous
+</c> 
+&nbsp; return(x + y);
+} 
+
+for (let i = 0; i < 500000000; i++) {
+&nbsp; if (add(i, i++) < 5) { <c>/* */</c> }
+} 
+</code></pre> 
+
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">$ time -p node general.js<br>real 1.91</code></pre></div> <!-- .element: class="fragment" -->
+
+<span class="bfoot"><a href="https://top.fse.guru/nodejs-a-quick-optimization-advice-7353b820c92e">top.fse.guru</a></span>
+
+Note: 
+Here's a snippet of javascript code
+
+Just ignore the giant comment block
+
+What we're doing is a really big loop. That's it.
+
+It'll take just under 2 seconds to run on a server
+---
+<pre><code>'use strict';
+
+function add(x, y) {
+<c style="font-weight:normal">&nbsp; // I am the very model of a modern Major-General
+&nbsp; // I've information vegetable, animal, and mineral
+&nbsp; // I know the kings of England, and I quote the fights historical
+&nbsp; // From Marathon to Waterloo, in order categorical
+&nbsp; // I'm very well acquainted, too, with matters mathematical
+&nbsp; // I understand equations, both the simple and quadratical
+&nbsp; // About binomial theorem I'm teeming with a lot o' news
+&nbsp; // With many cheerful facts about the square of the hypotenuse
+&nbsp; // I'm very good at integral and differential calculus
+&nbsp; // I know the scientific names of beings animalculous
+</c> 
+&nbsp; return(x + y);
+} 
+
+for (let i = 0; i < 500000000; i++) {
+&nbsp; if (add(i, i++) < 5) { <c>/* */</c> }
+} 
+
+</code></pre> 
+
+<span class="bfoot" style="bottom: -135px"><a href="https://top.fse.guru/nodejs-a-quick-optimization-advice-7353b820c92e">top.fse.guru</a></span>
+
+
+Note: 
+but let's try this again
+
+remember that giant block comment
+---
+<pre><code>'use strict';
+
+function add(x, y) {
+<c style="font-weight:normal">&nbsp; // I am the very model of a modern Major-General
+&nbsp; // I've information vegetable, animal, and mineral
+&nbsp; // I know the kings of England, and I quote the fights historical
+&nbsp; // From Marathon to Waterloo, in order categorical
+&nbsp; // I'm very well acquainted, too, with matters mathematical
+&nbsp; // I understand equations, both the simple and quadratical
+&nbsp; // About binomial theorem I'm teeming with a lot o' news
+&nbsp; // With many cheerful facts about the square of the hypotenuse
+&nbsp; // I'm very good at integral and differential calculus
+&nbsp; 
+</c> 
+&nbsp; return(x + y);
+} 
+
+for (let i = 0; i < 500000000; i++) {
+&nbsp; if (add(i, i++) < 5) { <c>/* */</c> }
+} 
+</code></pre> 
+
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">$ time -p node general.js<br>real 0.77<c> &nbsp;# vs 1.91</c></code></pre></div> <!-- .element: class="fragment" -->
+
+
+<span class="bfoot"><a href="https://top.fse.guru/nodejs-a-quick-optimization-advice-7353b820c92e">top.fse.guru</a></span>
+
+Note: what if we remove the last line
+
+no other changes
+
+it runs in under half the time.
+
+This is because there is an optimization route in V8 that specifically applies to functions under 600 characters long. Including inline comments.
+
+---
+# Package<br>Management <!-- .slide: class="center" -->
+Note: 
+let's step out of security and talk about package management
+
+This one needs some special attention, especially pertaining to javascript the language,
+---
+
+# <img src="pictures/npm.png"> <!-- .slide: class="center" -->
+
+Note: 
+node package manager, or npm, is not unlike rubygems or the cheeseshop; it's where javascript people can upload and share their packages.
+
+if you're not familiar with them, you may have only heard about them via
+---
+# left-pad <!-- .slide: class="center" -->
+
+Note: 
+
+left-pad 
+
+[wait for grumbles/giggles]
+
+Now, i'm not bringing up left-pad as a cheap joke. I have a point.
+
+For those that don't know the story, left-pad was removed from npm by it's author for reasons that I won't go into here. It was re-instated by npm because it was a dependency of a major package, which caused a bunch of downstream issues.
+
+What is left-pad?
+---
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%"><c>//stevemao/left-pad:index.js</c></code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">module.exports = leftpad;</code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">function leftpad (str, len, ch){</code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">&nbsp; str = String(str);</code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">&nbsp; var i = -1;</code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">&nbsp; if (!ch && ch !== 0) ch = ' ';</code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">&nbsp; len = len - str.length;</code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">&nbsp; while (++i < len) {</code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">&nbsp; &nbsp; &nbsp; str = ch + str; }</code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">&nbsp; return str;</code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">}</code></pre></div>
+
+Note: 
+an 11 line module that pads a string to the left.
+
+and it handles most of what you'd expect of such a function
+
+---
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%"><c>//stevemao/left-pad:index.js</c></code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">module.exports = leftpad;</code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">function leftpad (str, len, ch){</code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">&nbsp; str = String(str);</code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">&nbsp; var i = -1;</code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">&nbsp; if (<h>!ch && ch !== 0</h>) <h>ch = ' '</h>;</code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">&nbsp; len = len - str.length;</code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">&nbsp; while (++i < len) {</code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">&nbsp; &nbsp; &nbsp; str = ch + str; }</code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">&nbsp; return str;</code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">}</code></pre></div>
+
+Note: 
+it handles the case if you don't provide a character to pad, using space as the default
+
+---
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%"><c>//stevemao/left-pad:index.js</c></code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">module.exports = leftpad;</code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">function leftpad (str, len, ch){</code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">&nbsp; str = String(str);</code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">&nbsp; var i = -1;</code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">&nbsp; if (!ch && ch !== 0) ch = ' ';</code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">&nbsp; len = <h>len - str.length</h>;</code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">&nbsp; while (++i < len) {</code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">&nbsp; &nbsp; &nbsp; str = ch + str; }</code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">&nbsp; return str;</code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">}</code></pre></div>
+
+Note: 
+
+it then works out how many characters you'll need to pad
+
+---
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%"><c>//stevemao/left-pad:index.js</c></code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">module.exports = leftpad;</code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">function leftpad (str, len, ch){</code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">&nbsp; str = String(str);</code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">&nbsp; var i = -1;</code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">&nbsp; if (!ch && ch !== 0) ch = ' ';</code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">&nbsp; len = len - str.length;</code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">&nbsp; while <h>(++i < len)</h> {</code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">&nbsp; &nbsp; &nbsp; str = ch + str; }</code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">&nbsp; return str;</code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">}</code></pre></div>
+
+Note: 
+
+and prepends those characters until the length is right.
+
+... 
+
+this implementation is ok
+
+let's take a look at how this might be implemented elsewhere.
+
+---
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">PHP_FUNCTION(str_pad) {</code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">&nbsp; char &ast;input;</code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">&nbsp; int input_len;</code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">&nbsp; long &nbsp;pad_length;</code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">&nbsp; char &ast;pad_str_val = " ";</code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">&nbsp; <c>/&ast; ... &ast;/</c></code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">&nbsp; num_pad_chars =</code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">&nbsp; &nbsp; &nbsp;pad_length - input_len;</code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">&nbsp; <c>/&ast; ... &ast;/</c></code></pre></div>
+
+<span class="dasfoot"><a href="https://github.com/php/php-src/blob/PHP-5.6/ext/standard/string.c">php 5.6 - ext/standard/string.c</a></span>
+
+Note: 
+This is the PHP 5.6 standard library implementtaion of the same memethod, written in C, truncated for brevity.
+
+It's got the same parts as the left-pad version
+
+---
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">PHP_FUNCTION(str_pad) {</code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">&nbsp; char &ast;input;</code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">&nbsp; int input_len;</code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">&nbsp; long &nbsp;pad_length;</code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">&nbsp; char <h>&ast;pad_str_val = " ";</h></code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">&nbsp; <c>/&ast; ... &ast;/</c></code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">&nbsp; num_pad_chars =</code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">&nbsp; &nbsp; &nbsp;pad_length - input_len;</code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">&nbsp; <c>/&ast; ... &ast;/</c></code></pre></div>
+
+<span class="dasfoot"><a href="https://github.com/php/php-src/blob/PHP-5.6/ext/standard/string.c">php 5.6 - ext/standard/string.c</a></span>
+
+Note: 
+
+The default value of space
+---
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">PHP_FUNCTION(str_pad) {</code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">&nbsp; char &ast;input;</code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">&nbsp; int input_len;</code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">&nbsp; long &nbsp;pad_length;</code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">&nbsp; char &ast;pad_str_val = " ";</code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">&nbsp; <c>/&ast; ... &ast;/</c></code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">&nbsp; num_pad_chars =</code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">&nbsp; &nbsp; &nbsp;<h>pad_length - input_len;</h></code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">&nbsp; <c>/&ast; ... &ast;/</c></code></pre></div>
+
+<span class="dasfoot"><a href="https://github.com/php/php-src/blob/PHP-5.6/ext/standard/string.c">php 5.6 - ext/standard/string.c</a></span>
+
+Note: 
+working out the length of the padding
+
+---
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">&nbsp; <c>/&ast; cont. &ast;/</c></code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">&nbsp;</code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">&nbsp; <c>/&ast; ... &ast;/</c></code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">&nbsp; for (i = 0; i < left_pad; i++)</code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">&nbsp; &nbsp; result[result_len++]</code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">&nbsp; &nbsp; &nbsp; = pad_str_val[i];</code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">&nbsp; <c>/&ast; ... &ast;/</c></code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">&nbsp; return result;</code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">}</code></pre></div>
+
+<span class="dasfoot"><a href="https://github.com/php/php-src/blob/PHP-5.6/ext/standard/string.c">php 5.6 - ext/standard/string.c</a></span>
+Note: and
+---
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">&nbsp; <c>/&ast; cont. &ast;/</c></code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">&nbsp;</code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">&nbsp; <c>/&ast; ... &ast;/</c></code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">&nbsp; <h>for (i = 0; i < left_pad; i++)</h></code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">&nbsp; &nbsp; result[result_len++]</code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">&nbsp; &nbsp; &nbsp; = pad_str_val[i];</code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">&nbsp; <c>/&ast; ... &ast;/</c></code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">&nbsp; return result;</code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">}</code></pre></div>
+
+<span class="dasfoot"><a href="https://github.com/php/php-src/blob/PHP-5.6/ext/standard/string.c">php 5.6 - ext/standard/string.c</a></span>
+
+Note: 
+
+Looping around until the string is at the right length
+
+The thing is that this is a function within standard PHP.
+---
+
+# Work arounds <!-- .slide: class="center" -->
+Note: 
+left-pad is just one of countless thousands of work arounds that have been implemented due to a lack of unctionality in javascript
+
+Javascript doesn't have a standard library. the functionality a python, ruby or php dev takes for granted isn't ther ein javascript
+
+and so there have been may ways that this has been worked around over the years, including fundamental libraries like jquery
+
+---
+# JavaScript<br>is improving <!-- .slide: class="center" -->
+Note: 
+javascript is improving
+---
+
+# ECMAScript 3 <!-- .slide: class="center" -->
+## 1999 <!-- .element: class="fragment" -->
+
+<span class="bfoot" style="bottom: -260px"><a href="http://thenewstack.io/whats-new-es2016/">The New Stack</a></span>
+
+Note: 
+
+A lot of what I've been talking about so far has been functionality that's existed in javascript for many years. Most of it is declared in ECMAScript version 3, which dates back to 1999
+
+1999 
+---
+
+# ECMAScript 4 <!-- .slide: class="center" -->
+## 🏚 <!-- .slide: class="center" -->
+
+Note: updates tried to happen in the form of ECMAScript 4, but for reasons this didn't happen, and it was abandoned.
+
+Now, abandoning an entire version of a language to start again, skipping the number isn't unheard of.
+
+PHP6 was abandoned, and what ever happened to Windows 9?
+
+
+---
+# ECMAScript 5 <!-- .slide: class="center" -->
+## 2009, 2011 <!-- .slide: class="center" -->
+Note: 
+
+Anyway, it was another 10 years until a new version in the standard was created.
+
+10 years between updates is a long time. between 1999 and 2009 a *LOT* happened on the web.
+
+like, the entire dot com bubble and subsequent comeback.
+
+But with ECMAScript 5, the base language of the web starts improving again.
+---
+# `isArray` <!-- .slide: class="center" -->
+Note: 
+
+For example, isArray!
+
+There's now a native way to check if something is an array, which as we saw earlier, wasn't natively possible in a single call
+
+---
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">ES5> Array.isArray({ a: "b" })</code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">false</code></pre></div> <!-- .element: class="fragment" -->
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">ES5> Array.isArray(["a","b"])</code></pre></div> <!-- .element: class="fragment" -->
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">true</code></pre></div> <!-- .element: class="fragment" -->
+Note: 
+
+I'll be using the ECMAScript version prefixed to the input prompt to show the difference between versions
+
+Now, if you use Array.isArray on an object, it's value
+
+but on an array it's true!
+---
+
+# Improved<br>`parseInt` <!-- .slide: class="center" -->
+Note: 
+Also, there's improvements to existing functions like parseint
+
+
+---
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">ES3> parseInt("08")</code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">0</code></pre></div> <!-- .element: class="fragment" -->
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">ES<h>5</h>> parseInt("08")</code></pre></div> <!-- .element: class="fragment" -->
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">8</code></pre></div> <!-- .element: class="fragment" -->
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">ESx> parseInt("08", 10) <h>// radix</h></code></pre></div> <!-- .element: class="fragment" -->
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">8</code></pre></div> <!-- .element: class="fragment" -->
+Note: 
+Our original example when using parseInt in ECMAScript 3 returns a 0 in error
+
+However, in ECMAScript 5, it works. This is because the default radix is now 10
+---
+# `map` <!-- .slide: class="center" -->
+Note: 
+We also get cool new things in ECMAScript 5 like map!
+---
+
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">ES5> [1, 2, 3].map(Math.sqrt)</code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">[1, 4, 9]</code></pre></div> <!-- .element: class="fragment" -->
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%"><c>// [Math.sqrt(1)<br>&nbsp; , Math.sqrt(2)<br>&nbsp; , Math.sqrt(3)]</c></code></pre></div> <!-- .element: class="fragment" -->
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">ES5> a = ['10','10','10','10']</code></pre></div> <!-- .element: class="fragment" -->
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">ES5> a.map(parseInt)</code></pre></div> <!-- .element: class="fragment" -->
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">[10, NaN, 2, 3]</code></pre></div> <!-- .element: class="fragment" -->
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%"><h>// Be aware of optional<br>// parameters</h></code></pre></div> <!-- .element: class="fragment" -->
+Note: 
+For those unfamiliar, map allows you to operate on every element of an array at once, and returnt he result in an array
+
+So for this array, we apply the Square root function over each element, and get the result
+
+However, be careful of what function you're applying.
+
+Remeber how parseInt has a radix?
+
+Yeah, you get some interesting results if you try and apply a function in map that has optional parameters
+---
+# ECMAScript 6 <!-- .slide: class="center" -->
+## 2015 <!-- .slide: class="center" -->
+Note: 
+
+we also have ECMASript 6, which was approved 18 months ago in June 2015, so is mostly adopted
+---
+# `let` <!-- .slide: class="center" -->
+Note: 
+With ECMAScript 6, we get some extremely nice features
+
+like let
+
+---
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%"><c>// life.js</c></code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">function question() {<br> &nbsp; var ans = 42; <br> &nbsp; return ans;<br>}</code></pre></div>
+
+Note: 
+
+Before we had a functional which caused us issues because of the ans variable
+---
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%"><c>// life.js</c></code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">function question() {<br> &nbsp; <h>let</h> ans = 42; <br> &nbsp; return ans;<br>}</code></pre></div>
+
+Note: 
+now, we can have proper block scoping.
+
+
+with let, the scope extends only to the block, and we get an error if we try and reclare that variable
+---
+# `import` <!-- .slide: class="center" -->
+Note: 
+
+we also have import, which i'm quite excited about
+---
+<p></p> 
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%"><c><!&dash;&dash;&dash; old importing --></c></code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">&lt;html></code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">&lt;script src="<h>life.js</h>">&lt;/script></code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">&lt;script src="<h>stuff.js</h>">&lt;/script></code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">...</code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">&lt;/html></code></pre></div>
+Note: 
+You used to have to use script tags to pull in every specific javascript file you wanted to use on page.
+
+---
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%"><c>// life.js</c></code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%"><h>export</h> function question() {<br> &nbsp; let ans = 42; <br> &nbsp; return ans;<br>}</code></pre></div>
+<br> 
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%"><c>// stuff.js</c> <br><h>import</h> { question } from './life';</code></pre></div> <!-- .element: class="fragment" -->
+Note: 
+
+But now, for a sufficiently declared exported function
+
+you can import that from another file!
+
+---
+
+# ECMAScript 7 <!-- .slide: class="center" -->
+
+## "ECMAScript 2016"
+
+<span class="bfoot" style="bottom: -200px"><a href="http://thenewstack.io/whats-new-es2016/">JavaScript Standard Moves to Yearly Release Schedule</a></span>
+
+Note: There's also ECMAScript 7, which while having only some minor features added, is the first annual release of ECMAScript, which is significant because
+
+up until 2016 year the canonical javascript standard document was a "lovingly maintained" Word Document
+
+---
+
+# ECMAScript 8 <!-- .slide: class="center" -->
+Note: And there's also a scheduled release for this year which may include such fancy things like decorators, but this is yet to be finalised.
+
+---
+# ECMAScript Adoption <!-- .slide: class="center" -->
+## kangax.github.io/compat-table/ <!-- .slide: class="center" -->
+Note: 
+
+Now, the adoption of these new functions is subject to browsers implementing them
+but there's a handy compatibility table for working that out!
+
+and sadly import still isn't anywhere yet :(
+
+---
+# Extending<br>JavaScript <!-- .slide: class="center" -->
+Note: However, there is a way of extending javascrpit anyway
+
+---
+# Polyfill <!-- .slide: class="center" -->
+Note: 
+
+by way of polyfills
+---
+## `padStart` polyfill <!-- .slide: class="center" -->
+Note: for example, padStart, a polyfill for leftpad that could be in the ECMA standaard as soon as this year.
+
+---
+<pre><code>if (!String.prototype.padStart) {
+&nbsp; &nbsp; String.prototype.padStart = function padStart(maxLength,
+&nbsp; &nbsp; &nbsp; fillString = ' ') {
+&nbsp; &nbsp; &nbsp; &nbsp; const O = RequireObjectCoercible(this);
+&nbsp; &nbsp; &nbsp; &nbsp; const S = String(O);
+&nbsp; &nbsp; &nbsp; &nbsp; const intMaxLength = ToLength(maxLength);
+&nbsp; &nbsp; &nbsp; &nbsp; const stringLength = ToLength(S.length);
+&nbsp; &nbsp; &nbsp; &nbsp; if (intMaxLength <= stringLength) { return S; }
+&nbsp; &nbsp; &nbsp; &nbsp; let filler = typeof fillString === 'undefined' ?
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ' ' : String(fillString);
+&nbsp; &nbsp; &nbsp; &nbsp; if (filler === '') { return S; }
+&nbsp; &nbsp; &nbsp; &nbsp; const fillLen = intMaxLength - stringLength;
+&nbsp; &nbsp; &nbsp; &nbsp; while (filler.length < fillLen) {
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; const fLen = filler.length;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; const remainingCodeUnits = fillLen - fLen;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; if (fLen > remainingCodeUnits) {
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; filler += filler.slice(0, remainingCodeUnits);
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; } else {
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; filler += filler;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }
+&nbsp; &nbsp; &nbsp; &nbsp; }
+&nbsp; &nbsp; &nbsp; &nbsp; const truncatedStringFiller = filler.slice(0, fillLen);
+&nbsp; &nbsp; &nbsp; &nbsp; return truncatedStringFiller + S;
+&nbsp; &nbsp; };
+} 
+</pre></code> 
+
+<span class="bfoot"><a href="https://github.com/tc39/proposal-string-pad-start-end">tc39/proposal-string-pad-start-end</a></span>
+Note: 
+What we do with a polyfill is go:
+
+if the function doesn't already exist, in this case, an extension to the String primative, add the function
+
+---
+## `isArray` polyfill <!-- .slide: class="center" -->
+Note: We could also do the same for isArray
+
+---
+### &nbsp; <!-- .slide: class="center" -->
+<pre style="font-size: 30px"><code>if (!Array.isArray) {
+&nbsp; Array.isArray = function(arg) {
+&nbsp; &nbsp; return Object.prototype.toString.call(arg)
+&nbsp; &nbsp; &nbsp; &nbsp; <h>=== '[object Array]';</h>
+&nbsp;}; 
+} 
+</pre></code> 
+Note: 
+Which uses the same format, and just returns a truthy value based on matching the output of toString on the object
+---
+# JavaScript isn't<br>awful <!-- .slide: class="center" -->
+Note: 
+So, hopefully I've shown that javascript isn't awful
+
+---
+# JavaScript is<br>awe-ful <!-- .slide: class="center" -->
+Note: 
+
+it's awe-ful, full of aw
+
+even with all it's edgecases, it's the devil you can't avoid.
+
+you have no alternative in the browser.
 ---
 # All languages<br>have quirks <!-- .slide: class="center" -->
 Note: 
@@ -2246,14 +2219,17 @@ Hopefully I've been able to show just why javascript has the quirks it does.
 
 ---
 
-> "We are not our tools. Discrimination based on tools is just as bad as discrimination based on race or gender" - <a href="https://twitter.com/glasnt/status/613963672046583808">Rachel Nabours</a> <!-- .slide: class="center" -->
+> "We are not our tools.<br>Discrimination based on tools is just as bad as discrimination based on race or gender"<br>- <a href="https://twitter.com/glasnt/status/613963672046583808">Rachel Nabours</a> <!-- .slide: class="center" -->
 
 Note: 
 "We are not our tools. Discrimination based on tools is just as bad as discrimination based on race or gender" - Rachel Nabours
 ---
+<br> 
+<br> 
+<br> 
+<br> 
+<img src="pictures/claps.svg" height="100px">
 
- <div style='width: 50%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/claps.svg'></p></div> <!-- .slide: class="center" -->
+#### glasnt.com/talks
 
-### glasnt.com/talks
-
-Note: thank you
+Note: thank you for your time.
