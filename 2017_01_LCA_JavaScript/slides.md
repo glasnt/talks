@@ -1379,6 +1379,7 @@ Note: Let's talk about Python
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">>>> x % y</code></pre></div> <!-- .element: class="fragment" -->
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">bytearray(b’’)</code></pre></div> <!-- .element: class="fragment" -->
 
+<span class="bfoot"><a href="http://bugs.python.org/issue29073">Python Issue 29073</a></span>
 Note: If we declare x as a byte array of size one
 
 and y as an empty dict
@@ -1394,11 +1395,16 @@ a bytearray with an empty bytestring
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">bytearray(b’\x00’) <c># Python 3.6</c></code></pre></div> <!-- .element: class="fragment" -->
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">>>> x</code></pre></div> <!-- .element: class="fragment" -->
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">bytearray(b'\x00')</code></pre></div> <!-- .element: class="fragment" -->
+<span class="bfoot"><a href="http://bugs.python.org/issue29073">Python Issue 29073</a></span>
 Note: but this has changed in python 3.6 into the bytearray of a bytestring of a null byte, which is what x is originally
 
 This is the kind of fun we get when we upgrade the python versions in BeeWare components. Because we are reimplementing things, we find all the edge cases.
 
 Our CI makes all the pretty colours :)
+
+Turns out that the Python 3.6 version is right, the Python 3.5 version is wrong, which has been backported and will be fixed in Python 3.5.3
+
+Ah, the things you find when you iterate over every single permutation.
 ---
 
 # <pre>#!/usr/bin/env java</pre> <!-- .slide: class="center" -->
@@ -2211,12 +2217,9 @@ Note:
 
 all languages have quirks
 
-Yes some have more than others. Some have reasons why they can't be fixed
+some are legitimate bugs in the langauge, some are only 'wats' because we don't know what's going on. And if you don't understand what the language is doing, they can bite you.
 
-But that doesn't mean we have to critise those that use them
-
-Hopefully I've been able to show just why javascript has the quirks it does.
-
+That being said, at the end of the day, they are just tools.
 ---
 
 > "We are not our tools.<br>Discrimination based on tools is just as bad as discrimination based on race or gender"<br>- <a href="https://twitter.com/glasnt/status/613963672046583808">Rachel Nabours</a> <!-- .slide: class="center" -->
