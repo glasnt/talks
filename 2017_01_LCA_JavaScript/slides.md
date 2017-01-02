@@ -1616,7 +1616,13 @@ no, because the less than operator is reserved for future use
 ---
 # ... yeah. <!-- .slide: class="center" -->
 Note: yeah. I could keep going, but I think you get the idea.
-No language is without issue.
+---
+# All languages<br>have quirks <!-- .slide: class="center" -->
+Note: 
+
+all languages have quirks
+
+some are legitimate bugs in the langauge, some are only 'wats' because we don't know what's going on. And if you don't understand what the language is doing, they can bite you.
 ---
 # JavaScript is<br>awe-ful <!-- .slide: class="center" -->
 
@@ -2211,15 +2217,6 @@ it's awe-ful, full of aw
 even with all it's edgecases, it's the devil you can't avoid.
 
 you have no alternative in the browser.
----
-# All languages<br>have quirks <!-- .slide: class="center" -->
-Note: 
-
-all languages have quirks
-
-some are legitimate bugs in the langauge, some are only 'wats' because we don't know what's going on. And if you don't understand what the language is doing, they can bite you.
-
-That being said, at the end of the day, they are just tools.
 ---
 
 > "We are not our tools.<br>Discrimination based on tools is just as bad as discrimination based on race or gender"<br>- <a href="https://twitter.com/glasnt/status/613963672046583808">Rachel Nabours</a> <!-- .slide: class="center" -->
