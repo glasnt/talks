@@ -12,9 +12,9 @@ Both are web-based presentation formats, which can be run by invoking a local we
 
 For example, using Python 3: 
    
-   cd [..]/talks/
-   python3 -m http.server -p 1337
-   open http://localhost:1337
+    cd [../]talks/
+    python3 -m http.server 1337
+    open http://localhost:1337
 
 Speaker notes can be viewed by pressing `[s]`. I use the notes mostly for reminders, and should not be assumed to be of any use to anyone wanting a general review of the talk. 
 
