@@ -2,19 +2,26 @@
 ---
 # Hooray! <!-- .slide: class="center" -->
 ---
-# Code Of Conduct <!-- .slide: class="center" -->
-
+## Code of Conduct <!-- .slide: class="center" -->
+Note: We have one. Katie is a Point of Contact
 ---
-# Agenda <!-- .slide: class="center" -->
+## Miniconf <!-- .slide: class="center" -->
+Note: You can change between them if you want
 ---
-# Breaks <!-- .slide: class="center" -->
-
+<br> 
+## Schedule
+### Check the website <!-- .slide: class="center" -->
+---
+<br> 
+## Breaks
+### Lunch! Afternoon Tea! <!-- .slide: class="center" -->
 ---
 # Keynotes <!-- .slide: class="center" -->
 ---
-## Afternoon Keynote <!-- .slide: class="center" -->
-## Jess Frazzelle
-
+<br> 
+### Afternoon Keynote <!-- .slide: class="center" -->
+## Rikki Endsley
 ---
-## Morning Keynote <!-- .slide: class="center" -->
+<br> 
+### Morning Keynote <!-- .slide: class="center" -->
 ## aurynn shaw <!-- .slide: class="center" -->

@@ -2,19 +2,26 @@
 ---
 #= Hooray!
 ---
-#= Code Of Conduct
-
+##= Code of Conduct
+Note: We have one. Katie is a Point of Contact
 ---
-#= Agenda
+##= Miniconf
+Note: You can change between them if you want
 ---
-#= Breaks
-
+<br>
+## Schedule
+###= Check the website
+---
+<br>
+## Breaks
+###= Lunch! Afternoon Tea!
 ---
 #= Keynotes
 ---
-##= Afternoon Keynote
-## Jess Frazzelle
-
+<br>
+###= Afternoon Keynote
+## Rikki Endsley
 ---
-##= Morning Keynote
+<br>
+###= Morning Keynote
 ##= aurynn shaw

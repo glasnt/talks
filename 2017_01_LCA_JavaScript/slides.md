@@ -247,6 +247,8 @@ Note: For starters, JavaScript is a registerd trademark of Oracle
 
 ... because it was originally a trademark of Netscape, which got bought by Sun, which then got bought by Oracle.
 
+It also had an extremely fast development cycle of just ten days. ... with no versioning.
+
 ---
 
 # ECMAScript <!-- .slide: class="center" -->
@@ -2107,12 +2109,14 @@ You used to have to use script tags to pull in every specific javascript file yo
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%"><c>// life.js</c></code></pre></div>
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%"><h>export</h> function question() {<br> &nbsp; let ans = 42; <br> &nbsp; return ans;<br>}</code></pre></div>
 <br> 
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%"><c>// stuff.js</c> <br><h>import</h> { question } from './life';</code></pre></div> <!-- .element: class="fragment" -->
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%"><c>// stuff.js</c> <br><h>import</h> { question } from './life'</code></pre></div> <!-- .element: class="fragment" -->
 Note: 
 
 But now, for a sufficiently declared exported function
 
 you can import that from another file!
+
+This one isn't quite available yet, but it's now in the candidate stage of the adoption process! Yay!
 
 ---
 
@@ -2139,11 +2143,23 @@ Note:
 Now, the adoption of these new functions is subject to browsers implementing them
 but there's a handy compatibility table for working that out!
 
-and sadly import still isn't anywhere yet :(
+Sadly import is only at the candidate stage, but it is being picked up by some of the engines!
+
+If you don't want to look at a big table of adoptions details
+
+
+---
+ <img src="pictures/mariko.png" style="margin-top: -50px" />
+
+<span class="bfoot" style="bottom: 40px"><a href="https://twitter.com/kosamari/status/819066613538373632">Browser Version Update Schedule</span>
+Note: Mariko Kosaka has this wonderful drawing
+
+You can see that the dev versions get the twitter activity, but most of the major browsers do update at least once or twice a year, so as long as you RUN YOUR UPDATES then you should get all the new shiny :)
+
 
 ---
 # Extending<br>JavaScript <!-- .slide: class="center" -->
-Note: However, there is a way of extending javascrpit anyway
+Note: However, there is a way of extending javascrpit anyway right now, without having to wait
 
 ---
 # Polyfill <!-- .slide: class="center" -->
@@ -2203,6 +2219,14 @@ Note: We could also do the same for isArray
 </pre></code> 
 Note: 
 Which uses the same format, and just returns a truthy value based on matching the output of toString on the object
+---
+# "Polyfills can<br>create problems" <!-- .slide: class="center" -->
+
+<span class="bfoot" style="bottom: -200px"><a href="https://w3ctag.github.io/polyfills/">Polyfills are part of the web - TAG finding</span>
+
+Note: However, a draft document from the w3c technical architecture group states that while polyfills are a part of the web, they can create problems for standardisation efforts
+
+This includes a bunch of recommendations for developers, which include serving only the polyfills your users need, and considering how to serve all users of your website, including those using slower, less capable devices
 ---
 # JavaScript isn't<br>awful <!-- .slide: class="center" -->
 Note: 
