@@ -2,19 +2,21 @@
 ---
 # Hooray! <!-- .slide: class="center" -->
 ---
-## Code of Conduct <!-- .slide: class="center" -->
-Note: We have one. Katie is a Point of Contact
+
+## Quick Notices <!-- .slide: class="center" -->
 ---
-## Miniconf <!-- .slide: class="center" -->
-Note: You can change between them if you want
+## Safety <!-- .slide: class="center" -->
+Note: Code of Conduct. We have one. Katie is a Point of Contact
 ---
 <br> 
 ## Schedule
 ### Check the website <!-- .slide: class="center" -->
+Note: you can go to other miniconfs, you aren't locked here!
 ---
 <br> 
 ## Breaks
 ### Lunch! Afternoon Tea! <!-- .slide: class="center" -->
+Note: All catered, probably up where we just snacked.
 ---
 # Keynotes <!-- .slide: class="center" -->
 ---

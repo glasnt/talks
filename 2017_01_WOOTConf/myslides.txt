@@ -2,19 +2,21 @@
 ---
 #= Hooray!
 ---
-##= Code of Conduct
-Note: We have one. Katie is a Point of Contact
+
+##= Quick Notices
 ---
-##= Miniconf
-Note: You can change between them if you want
+##= Safety
+Note: Code of Conduct. We have one. Katie is a Point of Contact
 ---
 <br>
 ## Schedule
 ###= Check the website
+Note: you can go to other miniconfs, you aren't locked here!
 ---
 <br>
 ## Breaks
 ###= Lunch! Afternoon Tea!
+Note: All catered, probably up where we just snacked.
 ---
 #= Keynotes
 ---

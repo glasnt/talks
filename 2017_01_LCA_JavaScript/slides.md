@@ -508,24 +508,22 @@ Let's step through this.
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">""</code></pre></div> <!-- .element: class="fragment" -->
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> +[] <c>&nbsp; // +""</c></code></pre></div> <!-- .element: class="fragment" -->
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">0</code></pre></div> <!-- .element: class="fragment" -->
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> [[]] <c> // [""] </c></code></pre></div> <!-- .element: class="fragment" -->
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">""</code></pre></div> <!-- .element: class="fragment" -->
 Note: an empty array, like we saw right at the beginning of this talk, is the equivelent of an empty string
 
 if we use a unary addition to cast an array into an integer, because it's an empty string, we get 0
 
-Also, the array of an empty array, or an array of empty string, is just string
 ---
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> [[]][+[]] <c> &nbsp;// [""][0]</c></code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> [[]] <c> // [""] </c></code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">""</code></pre></div> <!-- .element: class="fragment" -->
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> [[]][+[]] <c> &nbsp;// [""][0]</c></code></pre></div> <!-- .element: class="fragment" -->
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">""</code></pre></div> <!-- .element: class="fragment" -->
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> +[[]][+[]] <c> // +""</code></pre></div> <!-- .element: class="fragment" -->
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">0</code></pre></div> <!-- .element: class="fragment" -->
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> ++[[]][+[]] <c>// ++0 </c></code></pre></div> <!-- .element: class="fragment" -->
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">1</code></pre></div> <!-- .element: class="fragment" -->
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> ++[[]][+[]] <h>+</h> [+[]]</code></pre></div> <!-- .element: class="fragment" -->
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">10</code></pre></div> <!-- .element: class="fragment" -->
 
 Note: 
+Also, the array of an empty array, or an array of empty string, is just string
 but 
 
 If we want to get the element at index 0 in an array of an empty string
@@ -537,7 +535,10 @@ however
 that empty string can be cast to an integer
 
 and that integer, can be incremented. so we get a one
-
+---
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> ++[[]][+[]] <h>+</h> [+[]]</code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">10</code></pre></div> <!-- .element: class="fragment" -->
+Note: 
 so then if we string concatenate the one and the zero
 
 we get 10
@@ -618,17 +619,11 @@ Following this pattern, typeof Number is
 
 a number
 
-type of string is..
+type of string is.. a string!
 
-a string!
+type of boolean is.. a boolean!
 
-type of boolean is..
-
-a boolean!
-
-type of null is..
-
-Object. 
+type of null is.. Object.
 
 [possible giggle here]
 
@@ -966,11 +961,11 @@ that language probably has a way to compile it's code down into javsacript
 so you can program in your favourite language, then convert it into javascript, and run that on your browser
 ---
 
-### Ruby: Opal, Red, .. <!-- .slide: class="center" -->
-### PHP: Uniter, phype, .. <!-- .element: class="fragment" -->
-### Perl: Perlito, p2js, .. <!-- .element: class="fragment" -->
-### Go: GopherJS, .. <!-- .element: class="fragment" -->
-### Python: Skulpt, Brython, .. <!-- .element: class="fragment" -->
+### Ruby: Opal, Red, ... <!-- .slide: class="center" -->
+### PHP: Uniter, phype, ... <!-- .element: class="fragment" -->
+### Perl: Perlito, p2js, ... <!-- .element: class="fragment" -->
+### Go: GopherJS, ... <!-- .element: class="fragment" -->
+### Python: Skulpt, Brython, ... <!-- .element: class="fragment" -->
 
 Note: 
 Like Ruby? Try Opal or Red
@@ -994,7 +989,7 @@ Batavia is an implementation of the python virtual machine, in javascript. It's 
 
 But wait, that's not all. There are other languages that can compile down into JS
 ---
-### Haskell: ghcjs, haste, .. <!-- .slide: class="center" -->
+### Haskell: ghcjs, haste, ... <!-- .slide: class="center" -->
 ### Cobol: CobolScript <!-- .element: class="fragment" -->
 ### C: Emscripten <!-- .element: class="fragment" -->
 Note: 
@@ -1381,7 +1376,7 @@ Note: Let's talk about Python
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">>>> x % y</code></pre></div> <!-- .element: class="fragment" -->
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">bytearray(b’’)</code></pre></div> <!-- .element: class="fragment" -->
 
-<span class="bfoot"><a href="http://bugs.python.org/issue29073">Python Issue 29073</a></span>
+<span class="bfoot" style="bottom: -435px"><a href="http://bugs.python.org/issue29073">Python Issue 29073</a></span>
 Note: If we declare x as a byte array of size one
 
 and y as an empty dict
@@ -1397,7 +1392,7 @@ a bytearray with an empty bytestring
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">bytearray(b’\x00’) <c># Python 3.6</c></code></pre></div> <!-- .element: class="fragment" -->
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">>>> x</code></pre></div> <!-- .element: class="fragment" -->
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">bytearray(b'\x00')</code></pre></div> <!-- .element: class="fragment" -->
-<span class="bfoot"><a href="http://bugs.python.org/issue29073">Python Issue 29073</a></span>
+<span class="bfoot" style="bottom: -250px"><a href="http://bugs.python.org/issue29073">Python Issue 29073</a></span>
 Note: but this has changed in python 3.6 into the bytearray of a bytestring of a null byte, which is what x is originally
 
 This is the kind of fun we get when we upgrade the python versions in BeeWare components. Because we are reimplementing things, we find all the edge cases.
@@ -2238,15 +2233,8 @@ Note:
 
 it's awe-ful, full of aw
 
-even with all it's edgecases, it's the devil you can't avoid.
+even with all it's edgecases, it's pretty powerful, it's improving and it's here to stay.
 
-you have no alternative in the browser.
----
-
-> "We are not our tools.<br>Discrimination based on tools is just as bad as discrimination based on race or gender"<br>- <a href="https://twitter.com/glasnt/status/613963672046583808">Rachel Nabours</a> <!-- .slide: class="center" -->
-
-Note: 
-"We are not our tools. Discrimination based on tools is just as bad as discrimination based on race or gender" - Rachel Nabours
 ---
 <br> 
 <br> 
