@@ -2236,6 +2236,22 @@ it's awe-ful,  full of aw
 even with all it's edgecases, it's pretty powerful, it's improving and it's here to stay. 
 
 ---
+
+#= JavaScript is<br>important
+
+Note: And it's important to understand this. Javascript isn't going anywhere. 
+
+And many people will develop in it
+
+And it doesn't make them bad people or lesser people, even with a language with arguably flawed design issues
+
+There's a whole other talk about why we need identify and correct this contempt culture. 
+
+Thankfully Aurynn Shaw already this talk at WOOTConf on Monday. 
+
+I implore you to watch the recording, as she articulates this far better than I ever could. 
+
+---
 <br>
 <br>
 <br>

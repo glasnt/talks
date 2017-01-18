@@ -9,6 +9,10 @@
 Note: Code of Conduct. We have one. Katie is a Point of Contact
 ---
 <br> 
+## Social Media
+### #WOOTConf #lca2017 <!-- .slide: class="center" -->
+---
+<br> 
 ## Schedule
 ### Check the website <!-- .slide: class="center" -->
 Note: you can go to other miniconfs, you aren't locked here!
