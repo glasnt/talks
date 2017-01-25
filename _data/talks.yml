@@ -65,15 +65,14 @@
 - conference:
     link: https://2016.pycon-au.org
     name: PyCon AU 2016
+    date: 2016-08-01
     location: Melbourne
     talks:
       - name: The Power ⚡️ and Responsibility 😓 of Unicode Adoption ✨
-        date: 2016-08-01
         link: https://2016.pycon-au.org/schedule/19/view_talk?day=saturday
         video: https://www.youtube.com/watch?v=HVqbL8Sl4YM"
       - name: Katie Conf - A Post Conference Report
         type: Short Talk
-        date: 2016-08-01
         video: https://youtu.be/xJ1-QdatS9Q?t=1688
         slides: 2016_08_KatieConf
 
@@ -274,6 +273,7 @@
 - conference:
     name: SyPy
     location: Sydney
+    date: 2015-07-01
     link: http://sypy.org
     talks:
       - name: Hat Rack
