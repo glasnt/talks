@@ -1,0 +1,36 @@
+---
+layout: page 
+---
+  <div class="section">
+    <div class="container">
+      <h2>Full talk history</h2>
+        {% for conference in site.data.talks %}
+         
+        <div class="row">
+          <div class="three columns">
+            <a href="{{talk.conference.link}}">{{talk.conference.name}}</a>
+            <br>{{talk.conference.location}}, {{ talk.date | date: "%b %Y" }}
+          </div>
+          <div class="five columns">
+            <a href="{{talk.link}}">{{talk.name}}</a>
+          </div>
+          <div class="two columns">{{talk.type}}</div>
+          <div class="two columns"><a href="{{talk.slides}}">Slides</a>
+                {% if talk.video %} | <a href="{{talk.video}}">Video</a>{% endif %}
+                {% if talk.twitter %} | <a href="{{talk.twitter}}">Twitter</a>{% endif %}
+          </div>
+        </div>
+        {% endfor %}
+        <div class="row">&nbsp;</div>
+        <div class="row">
+        <p>
+All slides are hosted on <a href="https://github.com/glasnt/talks">GitHub</a>. See also: <a href="http://lanyrd.com/profile/glasnt/">Lanyrd profile</a>
+<br>
+        <a href="https://www.flickr.com/photos/135164669@N05/21144018852/in/dateposted/">Header image</a> by <a href="https://www.flickr.com/photos/135164669@N05/">Tobi NZPug</a>, used under <a href="https://creativecommons.org/licenses/by/2.0/">CC BY 2.0</a> | 
+        <a href="https://www.flickr.com/photos/140681500@N07/25783265643/in/dateposted/">Fooer image</a> by <a href="https://www.flickr.com/photos/140681500@N07/">Bartek Pawlik</a>, used under <a href="https://creativecommons.org/licenses/by-nc/2.0/">CC BY-NC 2.0</a>
+   
+    </div>
+  </div>
+    <div class="section intro-header" style="margin-bottom: 0; background-image: url('img/footer_image.jpg')">
+    <div class="container">&nbsp; </div>
+  </div>

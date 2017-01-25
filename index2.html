@@ -1,0 +1,82 @@
+---
+layout: page 
+---
+  
+  <div class="section">
+    <div class="container">
+    <h2>Major Talks and Associated Articles</h2>
+      <div class="row">
+        <h4>Build a better Hat Rack - All Contributions Welcome</h4>
+        <p><i>What about all the other stuff in open source; the stuff that's not code</i></p>
+        Further reading:
+        <ul><li>
+      <a href="https://opensource.com/life/15/10/octohat-github-non-code-contribution-tracker">A tool for tracking non-code GitHub contributions</a> (opensource.com)</li>
+        <li>
+        <a href="https://modelviewculture.com/pieces/acknowledging-non-coding-contributions">Acknowledging Non-Coding Contributions</a> (modelviewculture.com)</li>
+        <li><a href="http://glasnt.com/blog/2015/11/21/goodbye-octohat.html">Goodbye octohat</a> (About the project rename)
+        <li><a href="http://glasnt.com/blog/2015/04/29/hat-racks-and-linkedin.html">Hat Racks and LinkedIn</a>
+        <li><a href="http://crowdcast.io/e/contribute">Getting started contributing to open source</a> (crowdcast.io)
+        <li><a href="http://www.blog.pythonlibrary.org/2016/09/26/pydev-of-the-week-katie-mclaughlin/">PyDev of the Week</a> (pythonlibrary.org)
+    </div>
+      <div class="row">
+        <h4>The Power and Responsibility of Unicode Adoption</h4>
+        <p><i>It's not all sunshine and 🌹</i></p>
+        Further reading:
+        <ul><li><a href="http://glasnt.com/blog/2016/08/06/solve-for-emoji.html">Solve for Emoji</a>
+        <li><a href="http://glasnt.com/blog/2016/04/07/emoji-stuff-i-didnt-get-to.html">Emoji stuff I didn't get to</a> (after the DjangoCon Europe talk)
+        <li><a href="http://glasnt.com/blog/2016/11/25/on-emoji-and-display-issues.html">On emoji and display issues</a>
+
+        </ul>
+        </p>
+      </div>
+      <div class="row">
+
+        <h4>Javascript is Awe-ful</h4>
+        <p><i>A dive into the eccentricities and peculiarities of JavaScript</i></p>
+        Further reading:
+        <li><a href="http://glasnt.com/blog/2015/12/16/on-contempt-culture.html">On contempt culture</a>
+        <li><a href="https://recompilermag.com/issues/issue-4/why-i-love-legacy-devops/">Why I Love Legacy DevOps</a> (recompilermag.com)
+      </div>
+  </div>
+  <hr>
+
+  <div class="section">
+    <div class="container">
+      <h2>Full talk history</h2>
+        {% for c in site.data.talks %} 
+          <div class="row">&nbsp;</div>
+          <div class="row">
+            <div class="eight columns">
+                {% if c.conference.link %}
+                <a href="{{c.conference.link}}">{{c.conference.name}}</a>,
+                {% else %}
+                    {{c.conference.name}},
+                {% endif %}
+                    {{c.conference.location}}, {{c.conference.date | date: "%b %Y"}}</div>
+          </div>
+          {% for talk in c.conference.talks %} 
+          <div class="row">
+            <div class="one column" style="margin-left: 10%; width: 8%">{{talk.type | default: "Talk"}}</div>
+            <div class="six columns">
+                {% if talk.link%}<a href="{{talk.link}}">{{talk.name}}</a>{%else%}{{talk.name}}{%endif%}</div>
+            <div class="three columns">
+                  {% if talk.slides %} <a href="{{talk.slides}}">Slides</a>{% endif %}
+                  {% if talk.video %} <a href="{{talk.video}}">Video</a>{% endif %}
+                  {% if talk.twitter %} <a href="{{talk.twitter}}">Twitter</a>{% endif %}
+            </div>
+          </div>
+        {% endfor %}
+        {% endfor %}
+        <div class="row">&nbsp;</div>
+        <div class="row">
+        <p>
+All slides are hosted on <a href="https://github.com/glasnt/talks">GitHub</a>. See also: <a href="http://lanyrd.com/profile/glasnt/">Lanyrd profile</a>
+<br>
+        <a href="https://www.flickr.com/photos/135164669@N05/21144018852/in/dateposted/">Header image</a> by <a href="https://www.flickr.com/photos/135164669@N05/">Tobi NZPug</a>, used under <a href="https://creativecommons.org/licenses/by/2.0/">CC BY 2.0</a> | 
+        <a href="https://www.flickr.com/photos/140681500@N07/25783265643/in/dateposted/">Fooer image</a> by <a href="https://www.flickr.com/photos/140681500@N07/">Bartek Pawlik</a>, used under <a href="https://creativecommons.org/licenses/by-nc/2.0/">CC BY-NC 2.0</a>
+   
+    </div>
+  </div>
+    <div class="section intro-header" style="margin-bottom: 0; background-image: url('img/footer_image.jpg')">
+    <div class="container">&nbsp; </div>
+  </div>

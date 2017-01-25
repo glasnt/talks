@@ -1,0 +1,411 @@
+- conference:
+    name: linux.conf.au
+    link: https://linux.conf.au
+    date: 2017-01-18
+    location: Hobart
+    talks:
+    - name: JavaScript is Awe-ful
+      type: Talk
+      slides: 2017_01_LCA_JavaScript
+      video: https://www.youtube.com/watch?v=k3brfCZSFiQ
+      twitter: https://twitter.com/callahad/status/821549245354287104
+
+- conference:
+    name: Ruby on Rails Oceania
+    date: 2016-12-13
+    link: https://www.meetup.com/Ruby-On-Rails-Oceania-Sydney/
+    location: Sydney
+    talks:
+      - name: The Power ⚡️ and Responsibility 😓 of Unicode Adoption ✨
+        link: https://www.meetup.com/Ruby-On-Rails-Oceania-Sydney/events/234773812/
+        slides: 2016_12_RoroSyd
+        twitter: https://twitter.com/mobywhale/status/808584125456138240
+
+
+-  conference:
+    name: SydPHP
+    date: 2016-11-24
+    link: https://sydphp.org/
+    location: Sydney
+    talks:
+    - name: The state of web and online communities
+      type: Panel
+      link: https://www.meetup.com/SydPHP/events/235076382/
+      twitter: https://twitter.com/DarrenNolan_/status/801704215156428800
+
+
+- conference:
+      name: Kiwi PyCon
+      link: https://nzpug.org
+      location: Dunedin, NZ
+      date: 2016-09-10
+      talks:
+        - name: The Power ⚡️ and Responsibility 😓 of Unicode Adoption ✨
+          type: Talk
+          link: https://nzpug.org/schedule/presentation/107/
+          slides: 2016_09_KiwiPyCon/
+          video: https://www.youtube.com/watch?v=3afcBEz6CzA
+        - name: Serialization Formats are Not Toys (Cover Version)
+          type: Short Talk
+          slides: 2016_09_Serialization
+          video: https://youtu.be/fOrYeUaOez4?t=611
+
+- conference:
+      link: http://2016.devworld.com.au/
+      name: /dev/world 2016
+      date: 2016-08-01
+      location: Melbourne
+      talks:
+        - name: The Power ⚡️ and Responsibility 😓 of Unicode Adoption ✨
+          type: Talk
+          video: https://www.youtube.com/watch?v=MtHk71z-piQ
+          slides: 2016_08_DevWorld
+
+
+- conference:
+    link: https://2016.pycon-au.org
+    name: PyCon AU 2016
+    location: Melbourne
+    talks:
+      - name: The Power ⚡️ and Responsibility 😓 of Unicode Adoption ✨
+        date: 2016-08-01
+        link: https://2016.pycon-au.org/schedule/19/view_talk?day=saturday
+        video: https://www.youtube.com/watch?v=HVqbL8Sl4YM"
+      - name: Katie Conf - A Post Conference Report
+        type: Short Talk
+        date: 2016-08-01
+        video: https://youtu.be/xJ1-QdatS9Q?t=1688
+        slides: 2016_08_KatieConf
+
+
+- conference:
+      link: http://www.webdirections.org/code16/
+      name: Web Directions Code
+      date: 2016-07-29
+      location: Sydney &amp; Melbourne
+      talks:
+        - name: The Power ⚡️ and Responsibility 😓 of Unicode Adoption ✨
+          link: http://www.webdirections.org/code16/speakers/katie-mclaughin.html
+          slides: 2016_07_WD_Code
+          video: https://www.webdirections.org/blog/video-ristretto-katie-mclaughlin-power-responsibility-unicode-adoption/
+
+- conference:
+      name: Ignite Sydney
+      link: http://ignitesydney.com
+      date: 2016-06-22
+      location: Sydney
+      talks:
+      - name: Emoji are broken 😭
+        link: http://web.archive.org/web/20160622232400/http://www.ignitesydney.com/speakers/
+        type: Short Talk
+        slides: 2016_06_IgniteSydney
+        video: http://www.ignitetalks.io/videos/emoji-are-broken
+
+-   conference:
+      name: PyCon US
+      location: Portland, OR, USA
+      link: https://us.pycon.org/2016/
+      date: 2016-05-30
+      talks:
+      - name: Build a Better Hat Rack - All Contributions Welcome
+        link: https://us.pycon.org/2016/schedule/presentation/1584/
+        video: https://www.youtube.com/watch?v=iAu7Xw9lFt0
+        slides: 2016_05_PyCon_US
+
+- conference:
+      name: php[tek]
+      link: https://tek.phparch.com
+      date: 2016-05-20
+      location: St Louis, MO, USA
+      talks:
+      - name: Build a Better Hat Rack - All Contributions Welcome
+        link: https://tek.phparch.com/speakers/#70644
+        slides: 2016_05_PHPTek_Hats
+      - name: JavaScript is Awe-ful
+        link: https://tek.phparch.com/speakers/#70644
+        slides: 2016_05_PHPTek_JavaScript
+
+-   conference:
+      name: SydPHP
+      link: https://sydphp.org/
+      location: Sydney
+      date: 2016-04-01
+      talks:
+      - name: A short story of emoji
+        type: Short Talk
+        slides: 2016_04_SydPHP
+
+- conference:
+      name: DjangoCon EU
+      link: https://2016.djangocon.eu/
+      location: Budapest, Hungary
+      date: 2016-03-01
+      talks:
+      - name: Hat Rack
+        slides: HatRackExtra
+      - name: The Power ⚡️ and Responsibility 😓 of Unicode Adoption ✨
+        video: https://opbeat.com/events/djangocon-eu-2016/
+        link: https://djangocon.eu/speakers/11
+        slides: 2016_03_DjangoConEU
+
+
+- conference:
+      name: DevOps Sydney
+      location: Sydney
+      date: 2016-03-01
+      link: http://www.meetup.com/devops-sydney/
+      talks:
+      - name: The Power ⚡️ and Responsibility 😓 of Unicode Adoption ✨
+        slides: 2016_03_SydDevOps
+        link: http://www.meetup.com/devops-sydney/events/221906379/
+
+- conference:
+      name: linux.conf.au 2016
+      location: Geelong
+      date: 2016-02-01
+      link: https://linux.conf.au
+      talks:
+      - name: Hat Rack
+        video: https://youtu.be/KERsn72QESE?t=503
+        slides: HatRack/HatRack.pdf
+
+- conference:
+    name: Open Source Developer's Conference
+    location: Hobart
+    date: 2015-10-01
+    link: http://2015.osdc.com.au/
+    talks:
+    - name: Hack the Planet - A practical guide to web application vulnerabilities
+      link: https://2015.osdc.com.au/schedule/presentation/8/
+      type: Workshop
+      slides: 2015_10_OSDC_Workshop
+    - name: JavaScript is Awe-ful
+      video: https://www.youtube.com/watch?v=kK5kp5tjJyc
+      slides: 2015_10_OSDC_JavaScript
+      link: https://2015.osdc.com.au/schedule/presentation/53/
+    - name: Hat Rack
+      slides: HatRack
+      video: https://youtu.be/1xWQ_eUuGmk?t=2211
+    - name: Serialization Formats are Not Toys (Cover Version)
+      type: Short Talk
+      slides: http://s3.eastman.net.nz/serialization/
+      video: https://youtu.be/BXv9KpYrW0w?t=1761
+
+- conference:
+    name: JoomlaDay Australia
+    location: Brisbane
+    link: http://joomladay.org.au
+    date: 2015-10-10
+    talks:
+    - name: Build a Better Hat Rack - All Contributions Welcome
+      link: http://joomladay.org.au/program/schedule
+      slides: 2015_10_JoomlaDay_Keynote
+    - name: Hack the Planet - A practical guide to web application vulnerabilities
+      slides: 2015_10_JoomlaDay_Workshop
+
+
+- conference:
+    name: Kiwi PyCon
+    location: Christchurch, NZ
+    link: https://nzpug.org
+    date: 2015-09-01
+    talks:
+      - name: Build a Better Hat Rack - All Contributions Welcome
+        video: https://www.youtube.com/watch?v=wQxFKxbWcFM
+        slides: 2015_09_KiwiPyCon
+      - name: Yelling at JavaScript and its attempt at global variables
+        slides: 2015_09_KiwiPyCon_Lightning
+        video: https://youtu.be/_35tn0KrVMo?t=2370
+
+- conference:
+    name: PHP Wellington User Group
+    location: Wellington, NZ
+    date: 2015-09-01
+    link: http://2015.phpconference.org.nz/conference-warm-up/
+    talks:
+        - name: Hat Rack
+          slides: 2015_09_PHPWellington
+
+
+- conference:
+    name: /dev/world
+    date: 2015-08-01
+    link: http://2015.devworld.com.au
+    location: Melbourne
+    talks:
+    - name: Build a Better Hat - Rack All Contributions Welcome
+      video: https://www.youtube.com/watch?v=yQGrLrLgT-M
+      slides: 2015_08_DevWorld
+
+
+- conference:
+    name: SydPHP
+    location: Sydney
+    date: 2015-08-27
+    link: https://www.meetup.com/SydPHP
+    talks:
+      - name: Life After Death - How to handle abandoned projects
+        slides: 2015_08_SydPHP
+        link: https://www.meetup.com/SydPHP/events/223175230/
+
+
+- conference:
+    name: PyCon AU
+    date: 2015-08-01
+    location: Brisbane
+    link: http://2015.pycon-au.org
+    talks:
+      - name: Build a Better Hat Rack - All Contributions Welcome
+        link: http://2015.pycon-au.org/schedule/30023/view_talk?day=saturday
+        video: https://www.youtube.com/watch?v=wNWrr19gE0Y
+        slides: 2015_08_PyCon_AU
+
+- conference:
+    name: OpenStack Miniconf
+    location: Brisbane
+    date: 2015-07-31
+    talks:
+      - name: xyz, abc, def
+        type: Short Talk
+        twitter: https://twitter.com/glasnt/status/627020535646412800
+        slides: https://twitter.com/glasnt/status/626897751335309312
+
+
+- conference:
+    name: SyPy
+    location: Sydney
+    link: http://sypy.org
+    talks:
+      - name: Hat Rack
+        slidse: 2015_07_SyPy
+
+- conference:
+    name: DevOpsDays Melbourne
+    location: Melbourne
+    link: http://www.devopsdays.org/events/2015-melbourne/
+    date: 2015-07-01
+    talks:
+      - name: The platform or the road map?
+        type: Panel
+        twitter: https://twitter.com/auxesis/status/621820255241793536
+      - name: Ignite Karaoke
+        type: Short Talk
+        twitter: https://twitter.com/s_mcleod/status/621899282757464064
+
+- conference:
+    name: DevOps Sydney
+    location: Sydney
+    date: 2015-06-01
+    link: http://www.meetup.com/devops-sydney/
+    talks:
+    - name: JavaScript Rant
+      link: http://www.meetup.com/devops-sydney/events/219798291/
+      video: https://www.youtube.com/watch?v=nx0yt0YsDnA
+      slides: 2015_06_DevOps
+
+- conference:
+    name: Port80
+    location: Sydney
+    link: https://www.meetup.com/Port80-Sydney/
+    date: 2015-06-01
+    talks:
+      - name: Introduction to hacking OWASP
+        link: https://www.meetup.com/Port80-Sydney/photos/26186075/#438540149
+        slides: 2015_06_Port80/Workshop.pdf
+        
+
+- conference:
+    name: Ruby on Rails Oceania
+    location: Sydney
+    date: 2015-04-01
+    talks:
+      - name: Disentangle a new fangled image mangler
+        link: https://www.meetup.com/Ruby-On-Rails-Oceania-Sydney/events/219319589/
+        slides: 2015_04_RoroSyd
+
+
+- conference:
+    name: DevOps Sydney
+    location: Sydney
+    date: 2015-03-01
+    link: http://www.meetup.com/devops-sydney/
+    talks:
+      - name: Hat Rack
+        slides: 2015_03_DevOps/HatRack.pdf
+        link: http://www.meetup.com/devops-sydney/events/219798291/
+
+
+- conference:
+    name: PHP Australia Warm-Up
+    date: 2015-03-01
+    location: Sydney
+    link: https://www.meetup.com/SydPHP/events/220312809/
+    talks:
+      - name: Hat Rack
+        type: Short Talk
+        slides: 2015_03_SydPHP/HatRack.pdf
+
+
+- conference:
+    name: PhunConf 5
+    location: Sydney
+    date: 2015-02-05
+    link: http://phunconf.org
+    talks:
+      - name: In ur s3rvs h4k1ng ur c0dez, a Security Tutorial
+        type: Workshop
+        slides: 2015_02_PhunConf/SecurityTutorial.pdf
+
+
+- conference:
+    name: linux.conf.au
+    link: https://lca2015.linux.org.au/
+    location: Auckland, NZ
+    date: 2015-01-01
+    talks:
+      - name: Before All Else, Be Graphed
+        slides: 2015_01_LCA_Machiavelli"
+        link: http://web.archive.org/web/20150310190512/http://linux.conf.au/schedule/30042/view_talk?day=wednesday
+        video: https://www.youtube.com/watch?v=My65wJ-sBVc
+
+      - name: Disentangle a new fangled image mangler
+        video: https://www.youtube.com/watch?v=XedLGMp38xA
+        link: http://web.archive.org/web/20150301094554/http://www.annodex.org/events/lca2015_mmm/index.php/Main/Schedule#km
+        slides: 2015_01_LCA_Gyprock
+
+- conference:
+    name: Women Who Code
+    location: Sydney
+    date: 2014-12-01
+    link: https://www.meetup.com/Women-Who-Code-Sydney
+    talks:
+        - name: Hack and Tell - Machiavelli
+          slides: 2014_12_WomenWhoCode
+          link: https://www.meetup.com/Women-Who-Code-Sydney/events/218747426/
+
+
+- conference:
+    name: DevOps Sydney
+    location: Sydney
+    date: 2014-11-01
+    talks:
+      - name: Integrating Machiavelli and Nagios
+        type: Short Talks
+        slides: 2014_11_DevOps
+        link: http://www.meetup.com/devops-sydney/events/153704752/
+
+
+- conference:
+    name: Open Source Developers Conference
+    location: Gold Coast 
+    date: 2014-10-01
+    link: http://2014.osdc.com.au/
+    talks:
+      - name: Disentangle a new fangled image mangler
+        link: http://2014.osdc.com.au/presentation/12-disentangle-new-fangled-image-mangler
+        video: https://www.youtube.com/watch?v=bQfkXh__vnc
+        slides: 2014_10_OSDC_Gyprock
+      - name: Before All Else, Be Graphed
+        link: http://2014.osdc.com.au/presentation/481-all-else-be-graphed
+        video: https://www.youtube.com/watch?v=6i0kMCOOIaY
+        slides: 2014_10_OSDC_Machiavelli
