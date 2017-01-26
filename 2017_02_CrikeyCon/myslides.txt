@@ -1,0 +1,65 @@
+! t/down | g/koala | t/sparkles
+---
+
+! t/lockkey | t/imp | t/boom
+
+@ footer.svg
+
+---
+
+! g/wave
+
+---
+! t/sparkles
+---
+
+! o/broken
+---
+! t/megaphone
+---
+# 💩
+---
+! g/new_smile
+---
+! g/orig_smile | g/new_smile
+## &nbsp; 
+---
+! g/orig_smile | g/new_smile
+## &nbsp; &nbsp; `U+263A`&nbsp; &nbsp; &nbsp; &nbsp; `U+1F642`
+---
+! g/orig_smile | g/new_smile
+## &nbsp; &nbsp; &nbsp; &nbsp; `\u263A`&nbsp; &nbsp;  &nbsp; `\uD83D\u42DE`
+---
+
+#= `🏳0🌈`
+<span class="bfoot" style="bottom: -280px"><a href="http://thehackernews.com/2017/01/crash-iphone-emoji.html">You Can Crash Anyone's iPhone or iPad With A Simple Emoji Text Message (2017)</a></span>
+---
+
+#= &nbsp; 🏳️‍🌈
+##- `U+1F3F3 U+FE0F U+200D U+1F308`
+#= `🏳0🌈`
+##- `U+1F3F3 U+0030 U+1F308`
+
+---
+<pre style="font-size: 60px"><code>
+effective. 
+Power 
+لُلُصّبُلُلصّبُررً ॣ ॣh ॣ ॣ 
+冗
+</code></pre>
+<span class="bfoot" style="bottom: -250px"><a href="https://www.youtube.com/watch?v=hJLMSllzoLA">The Effective Power Bug (2015)</a></span>
+
+
+---
+###= سمووحخ ̷̴̐خ ̷̴̐خ ̷̴̐خ امارتيخ ̷̴̐خ
+<span class="bfoot" style="bottom: -310px"><a href="https://arstechnica.com/apple/2013/08/rendering-bug-crashes-os-x-and-ios-apps-with-string-of-arabic-characters/">Rendering bug crashes OS X, iOS apps (2013)</a></span>
+---
+
+#🔥👹🔥👹🔥👹🔥👹🔥👹
+# &nbsp; &nbsp;  💀  &nbsp;  😈  &nbsp; 🔥&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+# 🚂🚋 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+#       😈  &nbsp; 👻   &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  
+#🔥👹🔥👹🔥👹🔥👹🔥👹
+<span class="bfoot"><a href="https://twitter.com/choochoobot/status/824119858681892864">@choochoobot</a></span>
+
+---
