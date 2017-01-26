@@ -35,6 +35,16 @@
 
 
 - conference:
+    name: SydPHP
+    date: 2016-10-27
+    link: https://www.meetup.com/SydPHP/
+    talks: 
+      - name: The Power ⚡️ and Responsibility 😓 of Unicode Adoption ✨
+        link: https://www.meetup.com/SydPHP/events/235076361/
+        slides: 2016_10_SydPHP
+        twitter: https://twitter.com/__debo/status/791561677200166912
+
+- conference:
       name: Kiwi PyCon
       link: https://nzpug.org
       location: Dunedin, NZ
