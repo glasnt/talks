@@ -311,7 +311,8 @@ This extends to just normal characters too, not just emoji
 
 JP: mo-ji-ba-ke
 ---
- <div style='width: 50%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/o/spoon.ws.svg'></p></div> <!-- .slide: class="center" -->
+
+<img style="margin-top: 100px" src="pictures/o/spoon.ws.svg" height="300px">
 
 Note: Surprisingly enough, this works
 ---
@@ -532,21 +533,21 @@ Where you can, allow the images to be bigger
 
 Twitter DM and Slack message - if only emoji, they're display bigger
 ---
-<img src="pictures/o/alt_0.svg" height="250px" style="margin-top: -50px">
+<img src="pictures/o/alt_0.svg">
 <img src="pictures/o/whisky_display.svg" height="400px">
 ---
-<img src="pictures/o/alt_1.svg" height="250px" style="margin-top: -50px">
+<img src="pictures/o/alt_1.svg">
 <img src="pictures/o/whisky_display.svg" height="400px">
 ---
 
-<img src="pictures/o/alt_2.svg" height="250px" style="margin-top: -50px">
+<img src="pictures/o/alt_2.svg">
 <img src="pictures/o/whisky_highlight.svg" height="400px">
 ---
 
-<img src="pictures/o/alt_3.svg" height="250px" style="margin-top: -50px">
+<img src="pictures/o/alt_3.svg">
 <img src="pictures/o/whisky_mouse.svg" height="400px">
 ---
-<img src="pictures/o/alt_4.svg" height="250px" style="margin-top: -50px">
+<img src="pictures/o/alt_4.svg">
 <img src="pictures/o/whisky_speaker.svg" height="400px">
 ---
 <pre><code><c># github.com/glasnt/emojificiate</c><br>
