@@ -1,4 +1,4 @@
-! space  | g/gem | t/rails.png |  g/koala | space
+! space  | g/gem | t/megaphone |  g/koala | space
 ---
 ## &nbsp;
 ! o/bolt | g/sweat | t/sparkles
@@ -164,31 +164,34 @@ Wingdings and webdings compatitbility because missing data
 
 Note: Unicode 8 2015
 ---
-! t/horns5
-## `\u{1f596}\u{1f3fe}`
+! unicode.png | e/9 |  space | space | space  | space | e/2 | e/0 | e/1 | e/6
+! t/shrug | t/egg | t/cowboy | t/duck
+! t/whisky | t/kiwifruit | o/spoon | t/facepalm-5 
+Note: These work in Twitter, Apple now, but updates still rolling 
 ---
-! t/horns | t/fitz
-## `\u{1f596} \u{1f3fe}`
+! t/facepalm-5
+## `\u{1f926}\u{1f3fe}`
+---
+! t/facepalm | t/fitz
+## `\u{1f926} \u{1f3fe}`
 ---
 ! g/red_gem
 ---
 
-#> irb
+#> $ irb
 #> > puts "\u{1f48e}"
 #> => <img style="margin: 0" height="40px" src="pictures/g/gem.svg">
 #> > "<img style="margin: 0" height="40px" src="pictures/g/gem.svg">".ord.to_s(16)
 #> => "1f48e"
 ---
 
-#> irb
+#> $ irb
 #> > <img style="margin: 0" height="40px" src="pictures/g/gem.svg"> = "gem"
 #> > puts "You are a " + <img style="margin: 0" height="40px" src="pictures/g/gem.svg"> + "!"
 #> => You are a gem!
 ---
-
-#> gem install gemoji \
-#> &nbsp; &nbsp; --version 3.0.0rc2
-#> irb
+#> $ gem install gemoji
+#> $ irb
 #> > require 'gemoji'
 #> > g = Emoji.find_by_unicode("<img style="margin: 0" height="40px" src="pictures/g/gem.svg">")
 #> > g.description
@@ -331,6 +334,9 @@ Note: So how do you get the input in?
 <img src="pictures/o/smiling.svg" style="margin-top: -40px" height="240px"> 
 
 ---
+@^ birdbirdbird.png
+Note: some websites have panels
+---
 #= <div style="white-space: nowrap"><img src="pictures/e/command.svg" height="200px"><img height="200px" src="pictures/e/option.svg"><img height="200px" src="pictures/e/space.svg"></div>
 
 
@@ -410,15 +416,6 @@ Cross-platform incompatibility
 partyparrrot is not an emoji
 
 shipit is not an emoji
----
-! t/new
----
-@^ birdbirdbird.png
-
-Note: NEW NEW NEW
-
-Still in A/B (I could not see this at midday 2016-12-12). 
-
 ---
 ! t/lightbulb
 ---
@@ -533,25 +530,25 @@ Where you can, allow the images to be bigger
 
 Twitter DM and Slack message - if only emoji, they're display bigger
 ---
-<img src="pictures/o/alt_0.svg">
+<img src="pictures/o/alt_0.svg" style="height:170px; width:840px">
 <img src="pictures/o/whisky_display.svg" height="400px">
 ---
-<img src="pictures/o/alt_1.svg">
+<img src="pictures/o/alt_1.svg" style="height:170px; width:840px">
 <img src="pictures/o/whisky_display.svg" height="400px">
 ---
 
-<img src="pictures/o/alt_2.svg">
+<img src="pictures/o/alt_2.svg" style="height:170px; width:840px">
 <img src="pictures/o/whisky_highlight.svg" height="400px">
 ---
 
-<img src="pictures/o/alt_3.svg">
+<img src="pictures/o/alt_3.svg" style="height:170px; width:840px">
 <img src="pictures/o/whisky_mouse.svg" height="400px">
 ---
-<img src="pictures/o/alt_4.svg">
+<img src="pictures/o/alt_4.svg" style="height:170px; width:840px">
 <img src="pictures/o/whisky_speaker.svg" height="400px">
 ---
 <pre><code><c># github.com/glasnt/emojificiate</c><br>
-require 'gemoji' <c># requires gemoji 3.0.0rc2 or higher</c>
+require 'gemoji'
 <br>def cdn
 &nbsp; &nbsp; "https&colon;//twemoji.maxcdn.com/36x36"
 end<br>
@@ -589,21 +586,6 @@ Note: The future
 ---
 ! t/sparkles
 ---
-! unicode.png | e/9 |  space | space | space  | space | e/2 | e/0 | e/1 | e/6
-! t/shrug | t/facepalm | t/cowboy | t/duck
-! t/whisky | t/kiwifruit | o/spoon | t/egg
-Note: These work in Twitter, 
-
-not 
-
-Facebook
-Android
-Apple
-Microsoft
-
-Updates coming "this year"
----
-
 
 ! unicode.png | e/10 | space | space | space  | space | e/2 | e/0 | e/1 | e/7
 
@@ -642,14 +624,12 @@ Note: redoing of facebook emoji
 ---
 ! m/claps.png | m/newclap.png
 ---
-! a/smile_1.png | a/cry_1.png | a/stick_1.png | a/kiss_1.png | a/fear_1.png
-! a/smile_2.png | a/cry_2.png | a/stick_2.png | a/kiss_2.png | a/fear_2.png
----
 ! a/grin.png | a/grinning_10.png
 Note: Across a lot of vendors
 ---
-! a/shrug.png | a/facepalm.png | a/cowboy.png | a/duck.png
-! a/tumbler.png | a/kiwi.png | o/spoon.png | a/egg.png
+! a/shrug.png | a/egg | a/cowboy.png | a/duck.png
+! a/tumbler.png | a/kiwi.png | o/spoon.png | a/facepalm-5.png
+
 
 ---
 

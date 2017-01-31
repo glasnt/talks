@@ -1,4 +1,4 @@
- <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='160px' src='pictures/space.svg'><img height='160px' src='pictures/g/gem.svg'><img height='160px' src='pictures/t/rails.png'><img height='160px' src='pictures/g/koala.svg'><img height='160px' src='pictures/space.svg'></p></div> <!-- .slide: class="center" -->
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='160px' src='pictures/space.svg'><img height='160px' src='pictures/g/gem.svg'><img height='160px' src='pictures/t/megaphone.svg'><img height='160px' src='pictures/g/koala.svg'><img height='160px' src='pictures/space.svg'></p></div> <!-- .slide: class="center" -->
 ---
 ## &nbsp;
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='266px' src='pictures/o/bolt.svg'><img height='266px' src='pictures/g/sweat.svg'><img height='266px' src='pictures/t/sparkles.svg'></p></div> <!-- .slide: class="center" -->
@@ -164,31 +164,34 @@ Wingdings and webdings compatitbility because missing data
 
 Note: Unicode 8 2015
 ---
- <div style='width: 50%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/t/horns5.svg'></p></div> <!-- .slide: class="center" -->
-## `\u{1f596}\u{1f3fe}`
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='80px' src='pictures/unicode.png'><img height='80px' src='pictures/e/9.svg'><img height='80px' src='pictures/space.svg'><img height='80px' src='pictures/space.svg'><img height='80px' src='pictures/space.svg'><img height='80px' src='pictures/space.svg'><img height='80px' src='pictures/e/2.svg'><img height='80px' src='pictures/e/0.svg'><img height='80px' src='pictures/e/1.svg'><img height='80px' src='pictures/e/6.svg'></p></div> <!-- .slide: class="center" -->
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='200px' src='pictures/t/shrug.svg'><img height='200px' src='pictures/t/egg.svg'><img height='200px' src='pictures/t/cowboy.svg'><img height='200px' src='pictures/t/duck.svg'></p></div> <!-- .slide: class="center" -->
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='200px' src='pictures/t/whisky.svg'><img height='200px' src='pictures/t/kiwifruit.svg'><img height='200px' src='pictures/o/spoon.svg'><img height='200px' src='pictures/t/facepalm-5.svg'></p></div> <!-- .slide: class="center" -->
+Note: These work in Twitter, Apple now, but updates still rolling
 ---
- <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/t/horns.svg'><img height='400px' src='pictures/t/fitz.svg'></p></div> <!-- .slide: class="center" -->
-## `\u{1f596} \u{1f3fe}`
+ <div style='width: 50%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/t/facepalm-5.svg'></p></div> <!-- .slide: class="center" -->
+## `\u{1f926}\u{1f3fe}`
+---
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/t/facepalm.svg'><img height='400px' src='pictures/t/fitz.svg'></p></div> <!-- .slide: class="center" -->
+## `\u{1f926} \u{1f3fe}`
 ---
  <div style='width: 50%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/g/red_gem.svg'></p></div> <!-- .slide: class="center" -->
 ---
 
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">irb</code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">$ irb</code></pre></div>
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> puts "\u{1f48e}"</code></pre></div>
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">=> <img style="margin: 0" height="40px" src="pictures/g/gem.svg"></code></pre></div>
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> "<img style="margin: 0" height="40px" src="pictures/g/gem.svg">".ord.to_s(16)</code></pre></div>
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">=> "1f48e"</code></pre></div>
 ---
 
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">irb</code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">$ irb</code></pre></div>
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> <img style="margin: 0" height="40px" src="pictures/g/gem.svg"> = "gem"</code></pre></div>
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> puts "You are a " + <img style="margin: 0" height="40px" src="pictures/g/gem.svg"> + "!"</code></pre></div>
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">=> You are a gem!</code></pre></div>
 ---
-
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">gem install gemoji \</code></pre></div>
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">&nbsp; &nbsp; --version 3.0.0rc2</code></pre></div>
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">irb</code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">$ gem install gemoji</code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">$ irb</code></pre></div>
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> require 'gemoji'</code></pre></div>
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> g = Emoji.find_by_unicode("<img style="margin: 0" height="40px" src="pictures/g/gem.svg">")</code></pre></div>
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> g.description</code></pre></div>
@@ -331,6 +334,9 @@ Note: So how do you get the input in?
 <img src="pictures/o/smiling.svg" style="margin-top: -40px" height="240px">
 
 ---
+ <img src="pictures/birdbirdbird.png" style="margin-top: -50px" />
+Note: some websites have panels
+---
 # <div style="white-space: nowrap"><img src="pictures/e/command.svg" height="200px"><img height="200px" src="pictures/e/option.svg"><img height="200px" src="pictures/e/space.svg"></div> <!-- .slide: class="center" -->
 
 
@@ -410,15 +416,6 @@ Cross-platform incompatibility
 partyparrrot is not an emoji
 
 shipit is not an emoji
----
- <div style='width: 50%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/t/new.svg'></p></div> <!-- .slide: class="center" -->
----
- <img src="pictures/birdbirdbird.png" style="margin-top: -50px" />
-
-Note: NEW NEW NEW
-
-Still in A/B (I could not see this at midday 2016-12-12).
-
 ---
  <div style='width: 50%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/t/lightbulb.svg'></p></div> <!-- .slide: class="center" -->
 ---
@@ -533,25 +530,25 @@ Where you can, allow the images to be bigger
 
 Twitter DM and Slack message - if only emoji, they're display bigger
 ---
-<img src="pictures/o/alt_0.svg">
+<img src="pictures/o/alt_0.svg" style="height:170px; width:840px">
 <img src="pictures/o/whisky_display.svg" height="400px">
 ---
-<img src="pictures/o/alt_1.svg">
+<img src="pictures/o/alt_1.svg" style="height:170px; width:840px">
 <img src="pictures/o/whisky_display.svg" height="400px">
 ---
 
-<img src="pictures/o/alt_2.svg">
+<img src="pictures/o/alt_2.svg" style="height:170px; width:840px">
 <img src="pictures/o/whisky_highlight.svg" height="400px">
 ---
 
-<img src="pictures/o/alt_3.svg">
+<img src="pictures/o/alt_3.svg" style="height:170px; width:840px">
 <img src="pictures/o/whisky_mouse.svg" height="400px">
 ---
-<img src="pictures/o/alt_4.svg">
+<img src="pictures/o/alt_4.svg" style="height:170px; width:840px">
 <img src="pictures/o/whisky_speaker.svg" height="400px">
 ---
 <pre><code><c># github.com/glasnt/emojificiate</c><br>
-require 'gemoji' <c># requires gemoji 3.0.0rc2 or higher</c>
+require 'gemoji'
 <br>def cdn
 &nbsp; &nbsp; "https&colon;//twemoji.maxcdn.com/36x36"
 end<br> 
@@ -589,21 +586,6 @@ Note: The future
 ---
  <div style='width: 50%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/t/sparkles.svg'></p></div> <!-- .slide: class="center" -->
 ---
- <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='80px' src='pictures/unicode.png'><img height='80px' src='pictures/e/9.svg'><img height='80px' src='pictures/space.svg'><img height='80px' src='pictures/space.svg'><img height='80px' src='pictures/space.svg'><img height='80px' src='pictures/space.svg'><img height='80px' src='pictures/e/2.svg'><img height='80px' src='pictures/e/0.svg'><img height='80px' src='pictures/e/1.svg'><img height='80px' src='pictures/e/6.svg'></p></div> <!-- .slide: class="center" -->
- <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='200px' src='pictures/t/shrug.svg'><img height='200px' src='pictures/t/facepalm.svg'><img height='200px' src='pictures/t/cowboy.svg'><img height='200px' src='pictures/t/duck.svg'></p></div> <!-- .slide: class="center" -->
- <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='200px' src='pictures/t/whisky.svg'><img height='200px' src='pictures/t/kiwifruit.svg'><img height='200px' src='pictures/o/spoon.svg'><img height='200px' src='pictures/t/egg.svg'></p></div> <!-- .slide: class="center" -->
-Note: These work in Twitter,
-
-not 
-
-Facebook 
-Android 
-Apple 
-Microsoft 
-
-Updates coming "this year"
----
-
 
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='80px' src='pictures/unicode.png'><img height='80px' src='pictures/e/10.svg'><img height='80px' src='pictures/space.svg'><img height='80px' src='pictures/space.svg'><img height='80px' src='pictures/space.svg'><img height='80px' src='pictures/space.svg'><img height='80px' src='pictures/e/2.svg'><img height='80px' src='pictures/e/0.svg'><img height='80px' src='pictures/e/1.svg'><img height='80px' src='pictures/e/7.svg'></p></div> <!-- .slide: class="center" -->
 
@@ -642,14 +624,12 @@ Note: redoing of facebook emoji
 ---
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/m/claps.png'><img height='400px' src='pictures/m/newclap.png'></p></div> <!-- .slide: class="center" -->
 ---
- <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='160px' src='pictures/a/smile_1.png'><img height='160px' src='pictures/a/cry_1.png'><img height='160px' src='pictures/a/stick_1.png'><img height='160px' src='pictures/a/kiss_1.png'><img height='160px' src='pictures/a/fear_1.png'></p></div> <!-- .slide: class="center" -->
- <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='160px' src='pictures/a/smile_2.png'><img height='160px' src='pictures/a/cry_2.png'><img height='160px' src='pictures/a/stick_2.png'><img height='160px' src='pictures/a/kiss_2.png'><img height='160px' src='pictures/a/fear_2.png'></p></div> <!-- .slide: class="center" -->
----
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/a/grin.png'><img height='400px' src='pictures/a/grinning_10.png'></p></div> <!-- .slide: class="center" -->
 Note: Across a lot of vendors
 ---
- <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='200px' src='pictures/a/shrug.png'><img height='200px' src='pictures/a/facepalm.png'><img height='200px' src='pictures/a/cowboy.png'><img height='200px' src='pictures/a/duck.png'></p></div> <!-- .slide: class="center" -->
- <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='200px' src='pictures/a/tumbler.png'><img height='200px' src='pictures/a/kiwi.png'><img height='200px' src='pictures/o/spoon.png'><img height='200px' src='pictures/a/egg.png'></p></div> <!-- .slide: class="center" -->
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='200px' src='pictures/a/shrug.png'><img height='200px' src='pictures/a/egg.svg'><img height='200px' src='pictures/a/cowboy.png'><img height='200px' src='pictures/a/duck.png'></p></div> <!-- .slide: class="center" -->
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='200px' src='pictures/a/tumbler.png'><img height='200px' src='pictures/a/kiwi.png'><img height='200px' src='pictures/o/spoon.png'><img height='200px' src='pictures/a/facepalm-5.png'></p></div> <!-- .slide: class="center" -->
+
 
 ---
 
