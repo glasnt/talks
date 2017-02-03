@@ -177,19 +177,20 @@ Note: These work in Twitter, Apple now, but updates still rolling
 ---
 ! g/red_gem
 ---
-
+#> &nbsp;
 #> $ irb
 #> > puts "\u{1f48e}"
 #> => <img style="margin: 0" height="40px" src="pictures/g/gem.svg">
 #> > "<img style="margin: 0" height="40px" src="pictures/g/gem.svg">".ord.to_s(16)
 #> => "1f48e"
 ---
-
+#> &nbsp;
 #> $ irb
 #> > <img style="margin: 0" height="40px" src="pictures/g/gem.svg"> = "gem"
 #> > puts "You are a " + <img style="margin: 0" height="40px" src="pictures/g/gem.svg"> + "!"
 #> => You are a gem!
 ---
+#> &nbsp;
 #> $ gem install gemoji
 #> $ irb
 #> > require 'gemoji'
@@ -587,7 +588,7 @@ Note: The future
 ! t/sparkles
 ---
 
-! unicode.png | e/10 | space | space | space  | space | e/2 | e/0 | e/1 | e/7
+! unicode.png | e/10 | space | space | space  | e/star | e/2 | e/0 | e/1 | e/7
 
 ! o/takeaway.png | hedgehog.png | o/dumpling.png | o/orangeh.png
 ! o/eyebrow.png | o/curling.png | dino.png | brocolli.png
@@ -607,18 +608,22 @@ Pretzel
 Billed Cap
 Merperson
 ---
+! space | space | space | space | space | space | space | space | space | space
+@ o/mindblown.png
+Note: I know right? mind. blown. 
+---
+
+! unicode.png | e/10 | space | space | space  | e/star | e/2 | e/0 | e/1 | e/7
+@ o/mindblown.png
+
+Note:
+which is also a candidate.
+---
 #= <img height="400px" src="pictures/t/up.svg"> &nbsp; <img height="400px" src="pictures/t/calendar.svg">
 Note: updates 
 ---
 <div style='width: 100%; margin: 0 auto;'><p align='center'><img style="padding: 20px" height='266px' src='pictures/g/blushing.svg'><img style="padding: 20px" height='266px' src='pictures/g/flush_6.png'><img style="padding: 20px" height='266px' src='pictures/g/blush_n.png'></p></div> <!-- .slide: class="center" -->
 ---
-! f/f1_smiling.png | f/f1_crying.png | f/f1_toung.png |f/f1_throw.png | f/f1_shock.png
-! f/f2_smiling.png | f/f2_crying.png | f/f2_toung.png | f/f2_throw.png | f/f2_shock.png
-! f/f3_smiling.png | f/f3_crying.png | f/f3_toung.png | f/f3_throw.png | f/f3_shock.png
-Note: redoing of facebook emoji
----
-
-
 ! m/m1_smile.png | m/m1_cry.png | m/m1_toung.png |m/m1_kiss.png | m/m1_shock.png
 ! m/m2_smile.png | m/m2_cry.png | m/m2_toung.png | m/m2_kiss.png | m/m2_shock.png
 ---
@@ -627,9 +632,8 @@ Note: redoing of facebook emoji
 ! a/grin.png | a/grinning_10.png
 Note: Across a lot of vendors
 ---
-! a/shrug.png | a/egg | a/cowboy.png | a/duck.png
+! a/shrug.png | a/egg.png | a/cowboy.png | a/duck.png
 ! a/tumbler.png | a/kiwi.png | o/spoon.png | a/facepalm-5.png
-
 
 ---
 
@@ -661,10 +665,7 @@ Note: apple has adopted these by having this as a separate button
 
 ios 10 beta has this as a separate character
 ---
-@ emojipedia-new-ios-10-women.png
-Note: screenshots from emojipedia
----
-@ emojipedia-new-ios-10-men.png
+@ emojipedia-new-ios-10-gender.png
 ---
 ! g/teach_m6.png | g/mech.png | g/farm.png | g/cook.png 
 ! a/teach_m6.png | a/mech_f3.png | a/farmer_f5.png | a/cook_m1.png
@@ -672,6 +673,11 @@ Note: Andoird 7.1  last few days
 ---
 ## &nbsp;
 @ a/tech_f1.png
+
+---
+@ redhead_1.jpg
+---
+@ redhead_2.jpg
 ---
 ### &nbsp;
 @ emojipedia.png
