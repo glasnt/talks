@@ -277,12 +277,12 @@ Note: Frequently requested
 Note: some things that don't count
 
 ---
-! t/wine | t/cocktail | t/tropical | e/cross
+! t/wine | t/cocktail | t/tropical | t/whisky | e/cross
 Note: Overly specific
 
-Don't need a manhattan in there
+Can't have a manhattan or a long island
 ---
-! a/watch.png | a/headphones.png | a/laptop.png | e/cross
+! ap/desktop.png | a/watch.png | a/headphones.png | a/laptop.png | e/cross
 Note: no logos or brands
 
 But these are a watch, headphones, a mobile and a desktop
@@ -293,7 +293,7 @@ an iWatch, Earbuds, an iPhone and an iMac.
 
 Nope.
 ---
-! t/watch | t/clock | e/mantelpiece | e/cross
+! t/watch | t/clock | e/mantelpiece | t/hourglass | e/cross
 Note: fads, memes, etc.
 ---
 ! t/oldkey.png | t/newkey
@@ -678,6 +678,11 @@ Note: Andoird 7.1  last few days
 @ redhead_1.jpg
 ---
 @ redhead_2.jpg
+---
+
+! t/cocktail | e/fitz_6 | t/cherry 
+---
+! o/manhattan 
 ---
 ### &nbsp;
 @ emojipedia.png

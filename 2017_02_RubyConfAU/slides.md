@@ -277,12 +277,12 @@ Note: Frequently requested
 Note: some things that don't count
 
 ---
- <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='200px' src='pictures/t/wine.svg'><img height='200px' src='pictures/t/cocktail.svg'><img height='200px' src='pictures/t/tropical.svg'><img height='200px' src='pictures/e/cross.svg'></p></div> <!-- .slide: class="center" -->
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='160px' src='pictures/t/wine.svg'><img height='160px' src='pictures/t/cocktail.svg'><img height='160px' src='pictures/t/tropical.svg'><img height='160px' src='pictures/t/whisky.svg'><img height='160px' src='pictures/e/cross.svg'></p></div> <!-- .slide: class="center" -->
 Note: Overly specific
 
-Don't need a manhattan in there
+Can't have a manhattan or a long island
 ---
- <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='200px' src='pictures/a/watch.png'><img height='200px' src='pictures/a/headphones.png'><img height='200px' src='pictures/a/laptop.png'><img height='200px' src='pictures/e/cross.svg'></p></div> <!-- .slide: class="center" -->
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='160px' src='pictures/ap/desktop.png'><img height='160px' src='pictures/a/watch.png'><img height='160px' src='pictures/a/headphones.png'><img height='160px' src='pictures/a/laptop.png'><img height='160px' src='pictures/e/cross.svg'></p></div> <!-- .slide: class="center" -->
 Note: no logos or brands
 
 But these are a watch, headphones, a mobile and a desktop
@@ -293,7 +293,7 @@ an iWatch, Earbuds, an iPhone and an iMac.
 
 Nope. 
 ---
- <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='200px' src='pictures/t/watch.svg'><img height='200px' src='pictures/t/clock.svg'><img height='200px' src='pictures/e/mantelpiece.svg'><img height='200px' src='pictures/e/cross.svg'></p></div> <!-- .slide: class="center" -->
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='160px' src='pictures/t/watch.svg'><img height='160px' src='pictures/t/clock.svg'><img height='160px' src='pictures/e/mantelpiece.svg'><img height='160px' src='pictures/t/hourglass.svg'><img height='160px' src='pictures/e/cross.svg'></p></div> <!-- .slide: class="center" -->
 Note: fads, memes, etc.
 ---
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/t/oldkey.png'><img height='400px' src='pictures/t/newkey.svg'></p></div> <!-- .slide: class="center" -->
@@ -678,6 +678,11 @@ Note: Andoird 7.1 last few days
  <img src="pictures/redhead_1.jpg" />
 ---
  <img src="pictures/redhead_2.jpg" />
+---
+
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='266px' src='pictures/t/cocktail.svg'><img height='266px' src='pictures/e/fitz_6.svg'><img height='266px' src='pictures/t/cherry.svg'></p></div> <!-- .slide: class="center" -->
+---
+ <div style='width: 50%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/o/manhattan.svg'></p></div> <!-- .slide: class="center" -->
 ---
 ### &nbsp;
  <img src="pictures/emojipedia.png" />
