@@ -1,4 +1,13 @@
 - conference:
+    name: RubyConf AU
+    link: http://www.rubyconf.org.au/2017
+    date: 2017-02-09 
+    type: upcoming
+    location: Melbourne
+    talks: 
+      - name: The Power ⚡️ and Responsibility 😓 of Unicode Adoption ✨
+
+- conference:
     name: linux.conf.au
     link: https://linux.conf.au
     date: 2017-01-18
@@ -37,6 +46,7 @@
 - conference:
     name: SydPHP
     date: 2016-10-27
+    location: Sydney
     link: https://www.meetup.com/SydPHP/
     talks: 
       - name: The Power ⚡️ and Responsibility 😓 of Unicode Adoption ✨
@@ -56,7 +66,7 @@
           slides: 2016_09_KiwiPyCon/
           video: https://www.youtube.com/watch?v=3afcBEz6CzA
         - name: Serialization Formats are Not Toys (Cover Version)
-          type: Short Talk
+          type: Lightning Talk
           slides: 2016_09_Serialization
           video: https://youtu.be/fOrYeUaOez4?t=611
 
@@ -81,8 +91,9 @@
       - name: The Power ⚡️ and Responsibility 😓 of Unicode Adoption ✨
         link: https://2016.pycon-au.org/schedule/19/view_talk?day=saturday
         video: https://www.youtube.com/watch?v=HVqbL8Sl4YM"
+        slides: 2016_08_PyConAU
       - name: Katie Conf - A Post Conference Report
-        type: Short Talk
+        type: Lightning Talk
         video: https://youtu.be/xJ1-QdatS9Q?t=1688
         slides: 2016_08_KatieConf
 
@@ -151,6 +162,7 @@
       date: 2016-03-01
       talks:
       - name: Hat Rack
+        type: Lightning Talk
         slides: HatRackExtra
       - name: The Power ⚡️ and Responsibility 😓 of Unicode Adoption ✨
         video: https://opbeat.com/events/djangocon-eu-2016/
@@ -193,10 +205,11 @@
       slides: 2015_10_OSDC_JavaScript
       link: https://2015.osdc.com.au/schedule/presentation/53/
     - name: Hat Rack
+      type: Lightning Talk
       slides: HatRack
       video: https://youtu.be/1xWQ_eUuGmk?t=2211
     - name: Serialization Formats are Not Toys (Cover Version)
-      type: Short Talk
+      type: Lightning Talk
       slides: http://s3.eastman.net.nz/serialization/
       video: https://youtu.be/BXv9KpYrW0w?t=1761
 
@@ -224,6 +237,7 @@
         slides: 2015_09_KiwiPyCon
       - name: Yelling at JavaScript and its attempt at global variables
         slides: 2015_09_KiwiPyCon_Lightning
+        type: Lightning Talk
         video: https://youtu.be/_35tn0KrVMo?t=2370
 
 - conference:
@@ -275,7 +289,7 @@
     date: 2015-07-31
     talks:
       - name: xyz, abc, def
-        type: Short Talk
+        type: Lightning(?) Talk
         twitter: https://twitter.com/glasnt/status/627020535646412800
         slides: https://twitter.com/glasnt/status/626897751335309312
 
@@ -298,8 +312,8 @@
       - name: The platform or the road map?
         type: Panel
         twitter: https://twitter.com/auxesis/status/621820255241793536
-      - name: Ignite Karaoke
-        type: Short Talk
+      - name: Ignite Karaoke (auto-advancing, sight-unseen slides)
+        type: Ignite Karaoke
         twitter: https://twitter.com/s_mcleod/status/621899282757464064
 
 - conference:
@@ -321,6 +335,7 @@
     talks:
       - name: Introduction to hacking OWASP
         link: https://www.meetup.com/Port80-Sydney/photos/26186075/#438540149
+        type: Tutorial
         slides: 2015_06_Port80/Workshop.pdf
         
 

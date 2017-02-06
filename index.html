@@ -56,8 +56,8 @@ layout: page
           </div>
           {% for talk in c.conference.talks %} 
           <div class="row">
-            <div class="one column" style="margin-left: 10%; width: 8%">{{talk.type | default: "Talk"}}</div>
-            <div class="six columns">
+            <div class="one column" style="margin-left: 6%; width: 11%; margin-right: -2%">{{talk.type | default: "Talk"}}</div>
+            <div class="six columns" style="width: 55%">
                 {% if talk.link%}<a href="{{talk.link}}">{{talk.name}}</a>{%else%}{{talk.name}}{%endif%}</div>
             <div class="three columns">
                   {% if talk.slides %} <a href="{{talk.slides}}">Slides</a>{% endif %}
