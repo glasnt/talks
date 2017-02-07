@@ -167,7 +167,9 @@ Note: Unicode 8 2015
 ! unicode.png | e/9 |  space | space | space  | space | e/2 | e/0 | e/1 | e/6
 ! t/shrug | t/egg | t/cowboy | t/duck
 ! t/whisky | t/kiwifruit | o/spoon | t/facepalm-5 
-Note: These work in Twitter, Apple now, but updates still rolling 
+Note: These work in Twitter, Apple 10.2, GitHub since Dec, Facebook(!) since Jan, MICROSOFT(!!)
+
+If you can't see these: Upgrade. You get new emoji ... and security patches
 ---
 ! t/facepalm-5
 ## `\u{1f926}\u{1f3fe}`

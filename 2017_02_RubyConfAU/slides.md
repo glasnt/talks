@@ -167,7 +167,9 @@ Note: Unicode 8 2015
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='80px' src='pictures/unicode.png'><img height='80px' src='pictures/e/9.svg'><img height='80px' src='pictures/space.svg'><img height='80px' src='pictures/space.svg'><img height='80px' src='pictures/space.svg'><img height='80px' src='pictures/space.svg'><img height='80px' src='pictures/e/2.svg'><img height='80px' src='pictures/e/0.svg'><img height='80px' src='pictures/e/1.svg'><img height='80px' src='pictures/e/6.svg'></p></div> <!-- .slide: class="center" -->
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='200px' src='pictures/t/shrug.svg'><img height='200px' src='pictures/t/egg.svg'><img height='200px' src='pictures/t/cowboy.svg'><img height='200px' src='pictures/t/duck.svg'></p></div> <!-- .slide: class="center" -->
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='200px' src='pictures/t/whisky.svg'><img height='200px' src='pictures/t/kiwifruit.svg'><img height='200px' src='pictures/o/spoon.svg'><img height='200px' src='pictures/t/facepalm-5.svg'></p></div> <!-- .slide: class="center" -->
-Note: These work in Twitter, Apple now, but updates still rolling
+Note: These work in Twitter, Apple 10.2, GitHub since Dec, Facebook(!) since Jan, MICROSOFT(!!)
+
+If you can't see these: Upgrade. You get new emoji ... and security patches
 ---
  <div style='width: 50%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/t/facepalm-5.svg'></p></div> <!-- .slide: class="center" -->
 ## `\u{1f926}\u{1f3fe}`
