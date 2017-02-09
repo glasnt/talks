@@ -237,14 +237,6 @@ Note: ** micro services **
 ---
 ! a/claps.png | g/claps | t/claps | m/claps.png
 ---
-! t/disappointed | t/pensive
-
-Note: Disappoinrted
-
-vs
-
-Pensive
----
 ! t/grinning | t/grimice
 Note: grinning vs grimmace
 
@@ -317,6 +309,42 @@ This extends to just normal characters too, not just emoji
 
 JP: mo-ji-ba-ke
 ---
+@^ mcec_large.jpg
+---
+@^ mcec.png
+
+Note: https://twitter.com/robjacoby/status/829474149143769088">Rob Jacoby, twitter
+---
+@^ mcec_a.png
+---
+## &nbsp;
+## &nbsp;
+# `ud83dude0dnn`
+---
+## &nbsp;
+## &nbsp;
+# `\ud83d\ude0dnn`
+---
+## &nbsp;
+## &nbsp;
+# `\ud83d \ude0d nn`
+---
+## &nbsp;
+## &nbsp;
+# `\u1F60D nn`
+---
+
+## &nbsp;
+## &nbsp;
+# <img src="pictures/g/hearts.png" style="width: 90px; margin-bottom: 0px"> `nn`
+---
+
+@^ speaker_tweet.png
+Note: Thanks Rob
+---
+! t/link
+
+---
 
 <img style="margin-top: 100px" src="pictures/o/spoon.ws.svg" height="300px">
 
@@ -336,9 +364,6 @@ Note: So how do you get the input in?
 
 <img src="pictures/o/smiling.svg" style="margin-top: -40px" height="240px"> 
 
----
-@^ birdbirdbird.png
-Note: some websites have panels
 ---
 #= <div style="white-space: nowrap"><img src="pictures/e/command.svg" height="200px"><img height="200px" src="pictures/e/option.svg"><img height="200px" src="pictures/e/space.svg"></div>
 
@@ -366,22 +391,14 @@ Electromagnetic field talk about the fun they had trying to create this bodge
 
 Note: In the webspace, you have a few options
 
-You can have your own input keyboard in the web space
-
-Twitter DMs have a few, facebook has a menu in their webview
-
-Google and Docs have menus, but their implementation is a bit.. weird
-
-It's one of the older ones, and it looks like they're using private space
-
-The emoji in your drafts, or in the edit mode, aren't emoji
-
-But they're saved as it.
+---
+@^ birdbirdbird.png
+Note: some websites have panels
 ---
 
 ! t/shortcake
 
-Note: workaround for having a visual input mechanism is shortcodes
+Note: but  a workaround for having a visual input mechanism is shortcodes
 
 But they're a psudostandard
 ---
@@ -671,7 +688,8 @@ Note: Andoird 7.1  last few days
 ---
 ## &nbsp;
 @ a/tech_f1.png
-
+---
+! e/thinking
 ---
 @ redhead_1.jpg
 ---
@@ -681,6 +699,9 @@ Note: Andoird 7.1  last few days
 ! t/cocktail | e/fitz_6 | t/cherry 
 ---
 ! o/manhattan 
+---
+! g/info
+Note: For more information
 ---
 ### &nbsp;
 @ emojipedia.png

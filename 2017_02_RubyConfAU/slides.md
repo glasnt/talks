@@ -237,14 +237,6 @@ Note: ** micro services **
 ---
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='200px' src='pictures/a/claps.png'><img height='200px' src='pictures/g/claps.svg'><img height='200px' src='pictures/t/claps.svg'><img height='200px' src='pictures/m/claps.png'></p></div> <!-- .slide: class="center" -->
 ---
- <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/t/disappointed.svg'><img height='400px' src='pictures/t/pensive.svg'></p></div> <!-- .slide: class="center" -->
-
-Note: Disappoinrted
-
-vs 
-
-Pensive 
----
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/t/grinning.svg'><img height='400px' src='pictures/t/grimice.svg'></p></div> <!-- .slide: class="center" -->
 Note: grinning vs grimmace
 
@@ -317,6 +309,42 @@ This extends to just normal characters too, not just emoji
 
 JP: mo-ji-ba-ke
 ---
+ <img src="pictures/mcec_large.jpg" style="margin-top: -50px" />
+---
+ <img src="pictures/mcec.png" style="margin-top: -50px" />
+
+Note: https://twitter.com/robjacoby/status/829474149143769088">Rob Jacoby, twitter
+---
+ <img src="pictures/mcec_a.png" style="margin-top: -50px" />
+---
+## &nbsp;
+## &nbsp;
+# `ud83dude0dnn`
+---
+## &nbsp;
+## &nbsp;
+# `\ud83d\ude0dnn`
+---
+## &nbsp;
+## &nbsp;
+# `\ud83d \ude0d nn`
+---
+## &nbsp;
+## &nbsp;
+# `\u1F60D nn`
+---
+
+## &nbsp;
+## &nbsp;
+# <img src="pictures/g/hearts.png" style="width: 90px; margin-bottom: 0px"> `nn`
+---
+
+ <img src="pictures/speaker_tweet.png" style="margin-top: -50px" />
+Note: Thanks Rob
+---
+ <div style='width: 50%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/t/link.svg'></p></div> <!-- .slide: class="center" -->
+
+---
 
 <img style="margin-top: 100px" src="pictures/o/spoon.ws.svg" height="300px">
 
@@ -336,9 +364,6 @@ Note: So how do you get the input in?
 
 <img src="pictures/o/smiling.svg" style="margin-top: -40px" height="240px">
 
----
- <img src="pictures/birdbirdbird.png" style="margin-top: -50px" />
-Note: some websites have panels
 ---
 # <div style="white-space: nowrap"><img src="pictures/e/command.svg" height="200px"><img height="200px" src="pictures/e/option.svg"><img height="200px" src="pictures/e/space.svg"></div> <!-- .slide: class="center" -->
 
@@ -366,22 +391,14 @@ Electromagnetic field talk about the fun they had trying to create this bodge
 
 Note: In the webspace, you have a few options
 
-You can have your own input keyboard in the web space
-
-Twitter DMs have a few, facebook has a menu in their webview
-
-Google and Docs have menus, but their implementation is a bit.. weird
-
-It's one of the older ones, and it looks like they're using private space
-
-The emoji in your drafts, or in the edit mode, aren't emoji
-
-But they're saved as it.
+---
+ <img src="pictures/birdbirdbird.png" style="margin-top: -50px" />
+Note: some websites have panels
 ---
 
  <div style='width: 50%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/t/shortcake.svg'></p></div> <!-- .slide: class="center" -->
 
-Note: workaround for having a visual input mechanism is shortcodes
+Note: but a workaround for having a visual input mechanism is shortcodes
 
 But they're a psudostandard
 ---
@@ -671,7 +688,8 @@ Note: Andoird 7.1 last few days
 ---
 ## &nbsp;
  <img src="pictures/a/tech_f1.png" />
-
+---
+ <div style='width: 50%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/e/thinking.svg'></p></div> <!-- .slide: class="center" -->
 ---
  <img src="pictures/redhead_1.jpg" />
 ---
@@ -681,6 +699,9 @@ Note: Andoird 7.1 last few days
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='266px' src='pictures/t/cocktail.svg'><img height='266px' src='pictures/e/fitz_6.svg'><img height='266px' src='pictures/t/cherry.svg'></p></div> <!-- .slide: class="center" -->
 ---
  <div style='width: 50%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/o/manhattan.svg'></p></div> <!-- .slide: class="center" -->
+---
+ <div style='width: 50%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/g/info.svg'></p></div> <!-- .slide: class="center" -->
+Note: For more information
 ---
 ### &nbsp;
  <img src="pictures/emojipedia.png" />
