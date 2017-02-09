@@ -550,24 +550,20 @@ Twitter DM and Slack message - if only emoji, they're display bigger
 <img src="pictures/o/alt_4.svg" style="height:170px; width:840px">
 <img src="pictures/o/whisky_speaker.svg" height="400px">
 ---
-<pre><code><c># github.com/glasnt/emojificiate</c><br>
-require 'gemoji'
-<br>def cdn
-&nbsp; &nbsp; "https&colon;//twemoji.maxcdn.com/36x36"
-end<br> 
-def emojificate(string)
-&nbsp; string.split("").each do |s|
-&nbsp; &nbsp; &nbsp; e = Emoji.find_by_unicode(s)
-&nbsp; &nbsp; &nbsp; if e then
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; u = s.ord.to_s(16) <c># e.g. 1f431</c>
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; d = e.description&nbsp; <c># e.g. "cat face"</c>
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; img = "&lt;img src='#{cdn}/#{u}.png'" +
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; "alt='#{s}' title='#{d}'" +
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; "aria-label='Emoji: #{d}'>"
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; print img
-&nbsp; &nbsp; &nbsp; else
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; print s
-&nbsp; &nbsp; &nbsp; end
+<pre style="font-size: 28px"><code><c># github.com/glasnt/emojificiate</c><br>
+require 'gemoji'<br>
+def emojificate(str)
+&nbsp; str.split("").each do |s|
+&nbsp; &nbsp; e = Emoji.find_by_unicode(s)
+&nbsp; &nbsp; if e then
+&nbsp; &nbsp; &nbsp; u = s.ord.to_s(16) <c># e.g. 1f431</c>
+&nbsp; &nbsp; &nbsp; d = e.description&nbsp; <c># e.g. "cat face"</c>
+&nbsp; &nbsp; &nbsp; img = "&lt;img src='#{u}.png' <h>alt</h>='#{s}'" +
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; "<h>title</h>='#{d}' <h>aria-label</h>='Emoji: #{d}'>"
+&nbsp; &nbsp; &nbsp; return img
+&nbsp; &nbsp; else
+&nbsp; &nbsp; &nbsp; return s
+&nbsp; &nbsp; end
 &nbsp; end
 end 
 </pre></code> 
