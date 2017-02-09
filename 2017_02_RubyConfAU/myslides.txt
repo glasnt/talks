@@ -1,8 +1,6 @@
 ! space  | g/gem | t/megaphone |  g/koala | space
 ---
-## &nbsp;
 ! o/bolt | g/sweat | t/sparkles
-
 @ footer.svg
 ---
 ! g/wave
