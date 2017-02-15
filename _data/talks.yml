@@ -27,7 +27,15 @@
     talks:
         - name: 🔐 + 😈 => 💥
         
-
+- conference:
+    name: Sydney DevOps
+    link: https://www.meetup.com/devops-sydney/
+    date: 2017-02-16
+    location: Sydney
+    upcoming: true
+    talks: 
+        - name: 🔐 + 😈 => 💥
+          link: https://www.meetup.com/devops-sydney/events/235494979/
 
 - conference:
     name: RubyConf AU

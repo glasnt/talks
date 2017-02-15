@@ -1,13 +1,10 @@
-# TBA <!-- .slide: class="center" -->
-## (Something about hacking
-## with emoji)
-
+# &nbsp;
+# <img style="width: 130px; margin-bottom: 0px" src="pictures/t/lockkey.svg"> + <img style="width: 130px; margin-bottom: 0px" src="pictures/t/imp.svg"> => <img style="width: 130px; margin-bottom: 0px" src="pictures/t/boom.svg"> <!-- .slide: class="center" -->
 
 
  <img src="pictures/footer.svg" />
 
 Note: t/down | g/koala | t/sparkles
-t/lockkey | t/imp | t/boom
 ---
 
  <div style='width: 50%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/g/wave.svg'></p></div> <!-- .slide: class="center" -->
