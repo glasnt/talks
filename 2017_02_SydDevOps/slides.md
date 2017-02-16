@@ -23,6 +23,8 @@ I've been doing this talk about the place called
 Note: 
 "The power and responsibility of UNicode adoption"
 
+I first gave it at this very meetup in March last year.
+
 I know right? It sounds like a proper technical talk, but it's actually me just yelling about emoji and stuff
 
 Thing is, that's not the name
@@ -250,30 +252,30 @@ Wordpress core used some of the ... more interesting features of mysql, so they 
 
 ---
 
- <div style='width: 50%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/g/new_smile.svg'></p></div> <!-- .slide: class="center" -->
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='266px' src='pictures/space.svg'><img height='266px' src='pictures/g/slightly7.png'><img height='266px' src='pictures/space.svg'></p></div> <!-- .slide: class="center" -->
 
 
 Note: This character could break everything.
 ---
 
- <div style='width: 50%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/g/orig_smile.svg'></p></div> <!-- .slide: class="center" -->
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='266px' src='pictures/space.svg'><img height='266px' src='pictures/g/smiling1.png'><img height='266px' src='pictures/space.svg'></p></div> <!-- .slide: class="center" -->
 
 Note: But not this one.
 
 ---
- <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/g/orig_smile.svg'><img height='400px' src='pictures/g/new_smile.svg'></p></div> <!-- .slide: class="center" -->
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/g/smiling1.png'><img height='400px' src='pictures/g/slightly7.png'></p></div> <!-- .slide: class="center" -->
 ## &nbsp;
 
 Note: YOu see, these are two different smiles
 ---
- <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/g/orig_smile.svg'><img height='400px' src='pictures/g/new_smile.svg'></p></div> <!-- .slide: class="center" -->
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/g/smiling1.png'><img height='400px' src='pictures/g/slightly7.png'></p></div> <!-- .slide: class="center" -->
 ## &nbsp; &nbsp; `U+263A`&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; `U+1F642`
 
 Note: one dates back to Unicode 1.1, in 1991, and the latter is a newer emoji.
 
 Hence why the one of the left has a smaller unicode code point
 ---
- <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/g/orig_smile.svg'><img height='400px' src='pictures/g/new_smile.svg'></p></div> <!-- .slide: class="center" -->
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/g/smiling1.png'><img height='400px' src='pictures/g/slightly7.png'></p></div> <!-- .slide: class="center" -->
 ## &nbsp; &nbsp; `E2·98·BA` &nbsp; &nbsp; `F0·9F·98·8A`
 Note: 
 The emoji the right uses four bytes
@@ -282,7 +284,7 @@ And there's a small issue in mysql when strict tables is turned off. If you try 
 
 ---
 
-## `<q cite="Smile 😊">` <!-- .slide: class="center" -->
+## `<q cite="Smile` <img src="pictures/g/slightly7.png" style="width: 50px; margin-bottom: 0px;">`">` <!-- .slide: class="center" -->
 ## `Be Happy</q>`
 
 Note: So, say if you have a Wordpress blog that allows comments, and citations, and you have something like this, which would pass javascript validation because it's a complete tag
@@ -329,6 +331,13 @@ Note: also, make sure you enable strict tables, because yowsa.
 
 ---
 
+ <div style='width: 50%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/t/imp.svg'></p></div> <!-- .slide: class="center" -->
+
+Note: this probably isn't the only thing out there, but it's something to watch out for
+
+
+
+---
  <div style='width: 50%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/g/claps.svg'></p></div> <!-- .slide: class="center" -->
 
 ### glasnt.com/talks

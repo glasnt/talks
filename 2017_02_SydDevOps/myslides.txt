@@ -23,6 +23,8 @@ I've been doing this talk about the place called
 Note: 
 "The power and responsibility of UNicode adoption"
 
+I first gave it at this very meetup in March last year. 
+
 I know right? It sounds like a proper technical talk, but it's actually me just yelling about emoji and stuff
 
 Thing is, that's not the name
@@ -250,30 +252,30 @@ Wordpress core used some of the ... more interesting features of mysql, so they 
 
 ---
 
-! g/new_smile
+! space | g/slightly7.png | space
 
 
 Note: This character could break everything. 
 ---
 
-! g/orig_smile
+! space | g/smiling1.png | space
 
 Note: But not this one. 
 
 ---
-! g/orig_smile | g/new_smile
+! g/smiling1.png | g/slightly7.png
 ## &nbsp;
 
 Note: YOu see, these are two different smiles
 ---
-! g/orig_smile | g/new_smile
+! g/smiling1.png | g/slightly7.png
 ## &nbsp; &nbsp; `U+263A`&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; `U+1F642`
 
 Note: one dates back to Unicode 1.1, in 1991, and the latter is a newer emoji. 
 
 Hence why the one of the left has a smaller unicode code point
 ---
-! g/orig_smile | g/new_smile
+! g/smiling1.png | g/slightly7.png
 ## &nbsp; &nbsp; `E2·98·BA`  &nbsp;  &nbsp; `F0·9F·98·8A`
 Note: 
 The emoji the right uses four bytes
@@ -282,7 +284,7 @@ And there's a small issue in mysql when strict tables is turned off. If you try 
 
 ---
 
-##= `<q cite="Smile 😊">`
+##= `<q cite="Smile` <img src="pictures/g/slightly7.png" style="width: 50px; margin-bottom: 0px;">`">`
 ## `Be Happy</q>`
 
 Note: So, say if you have a Wordpress blog that allows comments, and citations, and you have something like this, which would pass javascript validation because it's a complete tag
@@ -329,6 +331,13 @@ Note: also, make sure you enable strict tables, because yowsa.
 
 ---
 
+! t/imp
+
+Note: this probably isn't the only thing out there, but it's something to watch out for
+
+
+
+---
 ! g/claps
 
 ### glasnt.com/talks
