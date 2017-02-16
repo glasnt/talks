@@ -36,6 +36,7 @@
     talks: 
         - name: 🔐 + 😈 => 💥
           link: https://www.meetup.com/devops-sydney/events/235494979/
+          slides: 2017_02_SydDevOps
 
 - conference:
     name: RubyConf AU
