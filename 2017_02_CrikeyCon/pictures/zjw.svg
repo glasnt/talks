@@ -1,0 +1,12 @@
+<svg width="64" height="64" xmlns="http://www.w3.org/2000/svg">
+
+ <g>
+  <title>background</title>
+  <rect fill="none" id="canvas_background" height="402" width="582" y="-1" x="-1"/>
+ </g>
+ <g>
+  <title>Layer 1</title>
+  <text xml:space="preserve" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="24" id="svg_4" y="40.3125" x="7.34375" fill-opacity="null" stroke-opacity="null" stroke-width="0" stroke="null" fill="#000000">ZJW</text>
+  <rect stroke-dasharray="2,2" id="svg_5" height="54.125" width="59.75" y="4.9375" x="2.125" stroke-width="null" stroke="#000000" fill="none"/>
+ </g>
+</svg>
