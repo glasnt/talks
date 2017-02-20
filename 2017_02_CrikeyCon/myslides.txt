@@ -44,6 +44,16 @@ This has caused me all *sorts* of fun when trying to propose and present at conf
 Note: For example, some conferences can't get the name right, even when it's been entered into their system 
 
 ---
+
+@ easychair.png
+
+Note: Some like some characters, but not others
+
+I had to resubmit this one and remove specific characters
+
+
+
+---
 @ oscon_talk.png
 
 Note: Some won't allow emoji in the talk title, but will in the description (sadface)
