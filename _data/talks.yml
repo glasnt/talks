@@ -1,38 +1,37 @@
-- conference:
-    name: PyCon US
-    link: https://us.pycon.org/2017/
-    date: 2017-05-01
-    upcoming: true
-    location: Portland, OR
-    talks: 
-        - name: Snek in the Browser
-          link: https://us.pycon.org/2017/schedule/presentation/51/
-
-- conference:
-    name: OSCON
-    link: https://conferences.oreilly.com/oscon/oscon-tx
-    upcoming: true
-    date: 2017-05-11
-    location: Austin, TX
-    talks: 
-      - name: The Power ⚡️ and Responsibility 😓 of Unicode Adoption ✨
-        link: https://conferences.oreilly.com/oscon/oscon-tx
-
-- conference:
-    name: CrikeyCon
-    link: https://www.crikeycon.com/
-    date: 2017-02-25
-    upcoming: true
-    location: Brisbane
-    talks:
-        - name: 🔐 + 😈 => 💥
+#- conference:
+#    name: PyCon US
+#    link: https://us.pycon.org/2017/
+#    date: 2017-05-01
+#    upcoming: true
+#    location: Portland, OR
+#    talks: 
+#        - name: Snek in the Browser
+#          link: https://us.pycon.org/2017/schedule/presentation/51/
+#
+#- conference:
+#    name: OSCON
+#    link: https://conferences.oreilly.com/oscon/oscon-tx
+#    upcoming: true
+#    date: 2017-05-11
+#    location: Austin, TX
+#    talks: 
+#     - name: The Power ⚡️ and Responsibility 😓 of Unicode Adoption ✨
+#       link: https://conferences.oreilly.com/oscon/oscon-tx
+#
+#- conference:
+#    name: CrikeyCon
+#    link: https://www.crikeycon.com/
+#    date: 2017-02-25
+#    upcoming: true
+#    location: Brisbane
+#    talks:
+#        - name: 🔐 + 😈 => 💥
         
 - conference:
     name: Sydney DevOps
     link: https://www.meetup.com/devops-sydney/
     date: 2017-02-16
     location: Sydney
-    upcoming: true
     talks: 
         - name: 🔐 + 😈 => 💥
           link: https://www.meetup.com/devops-sydney/events/235494979/

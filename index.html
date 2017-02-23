@@ -60,12 +60,9 @@ layout: page
             <div class="six columns" style="width: 55%">
                 {% if talk.link%}<a href="{{talk.link}}">{{talk.name}}</a>{%else%}{{talk.name}}{%endif%}</div>
             <div class="three columns">
-                  {% if c.conference.upcoming %}<i>Coming soon</i>
-                  {% else %}
                   {% if talk.slides %} <a href="{{talk.slides}}">Slides</a>{% endif %}
                   {% if talk.video %} <a href="{{talk.video}}">Video</a>{% endif %}
                   {% if talk.twitter %} <a href="{{talk.twitter}}">Twitter</a>{% endif %}
-                  {% endif %}
             </div>
           </div>
         {% endfor %}
