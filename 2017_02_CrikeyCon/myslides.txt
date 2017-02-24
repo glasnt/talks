@@ -127,7 +127,7 @@ Note: but then sometimes things break completely.
 ---
 
 
-@^ mcec_large.jpg
+@^ mcec_large.png
 
 Note: Take this signage, from RubyConf just last week in Melbourne
 ---
@@ -192,13 +192,11 @@ These are not emoji
 
 So if, for example, you were to say download an executable claiming to give you an emoji pack for your favourite chat client, that's not hacking. That's you downloading a random executable and getting what's coming to you
 
+What's also not hacking, well, technically, is a Denial of Service attack that was recently fixed by apple.
 ---
 
-! space | apple_c.png | microsoft_c.png | space
-Note: 
+! space | mobile.png | space
 
-Being able to work out what operating system is in use isn't hacking, but it's still gathering information about an enironment.
-What's also not hacking, well, technically, is a Denial of Service attack that was recently fixed by apple.
 ---
 ! t/rainbow_flag
 Note: Who is familiar with the Pride Flag emoji that was just added?
@@ -248,6 +246,12 @@ When this text appeared in a notification popup, the truncation of that message 
 
 but that's not hacking. 
 ---
+
+! web
+
+
+---
+
 <img style="margin-top: 100px" src="pictures/o/spoon.ws.svg" height="300px">
 ---
 ! g/R | g/F | g/C | e/3 | e/4 | e/9 | e/2

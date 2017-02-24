@@ -127,7 +127,7 @@ Note: but then sometimes things break completely.
 ---
 
 
- <img src="pictures/mcec_large.jpg" style="margin-top: -50px" />
+ <img src="pictures/mcec_large.png" style="margin-top: -50px" />
 
 Note: Take this signage, from RubyConf just last week in Melbourne
 ---
@@ -192,13 +192,11 @@ These are not emoji
 
 So if, for example, you were to say download an executable claiming to give you an emoji pack for your favourite chat client, that's not hacking. That's you downloading a random executable and getting what's coming to you
 
+What's also not hacking, well, technically, is a Denial of Service attack that was recently fixed by apple.
 ---
 
- <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='200px' src='pictures/space.svg'><img height='200px' src='pictures/apple_c.png'><img height='200px' src='pictures/microsoft_c.png'><img height='200px' src='pictures/space.svg'></p></div> <!-- .slide: class="center" -->
-Note: 
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='266px' src='pictures/space.svg'><img height='266px' src='pictures/mobile.png'><img height='266px' src='pictures/space.svg'></p></div> <!-- .slide: class="center" -->
 
-Being able to work out what operating system is in use isn't hacking, but it's still gathering information about an enironment.
-What's also not hacking, well, technically, is a Denial of Service attack that was recently fixed by apple.
 ---
  <div style='width: 50%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/t/rainbow_flag.svg'></p></div> <!-- .slide: class="center" -->
 Note: Who is familiar with the Pride Flag emoji that was just added?
@@ -248,6 +246,12 @@ When this text appeared in a notification popup, the truncation of that message 
 
 but that's not hacking.
 ---
+
+ <div style='width: 50%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/web.svg'></p></div> <!-- .slide: class="center" -->
+
+
+---
+
 <img style="margin-top: 100px" src="pictures/o/spoon.ws.svg" height="300px">
 ---
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='114px' src='pictures/g/R.svg'><img height='114px' src='pictures/g/F.svg'><img height='114px' src='pictures/g/C.svg'><img height='114px' src='pictures/e/3.svg'><img height='114px' src='pictures/e/4.svg'><img height='114px' src='pictures/e/9.svg'><img height='114px' src='pictures/e/2.svg'></p></div> <!-- .slide: class="center" -->
