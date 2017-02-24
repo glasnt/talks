@@ -103,7 +103,11 @@ Note: But the best part is when the digital boards work
 Because I can tell you exactly what operating system this is running. Windows 8
 
 ---
+# &nbsp;
+ <img src="pictures/ms_sweat.png" />
 
+Note: This is the emoji
+---
  <img src="pictures/sweat_versions.png" />
 
 Note: 
@@ -320,7 +324,8 @@ Note: So, say if you have a Wordpress blog that allows comments, and citations, 
 But because Mysql...
 ---
 
-## `<q cite="Smile` <!-- .slide: class="center" -->
+## `<q cite="Smile` &nbsp;&nbsp; &nbsp; &nbsp; <span style="color: white">.</span> <!-- .slide: class="center" -->
+## &nbsp;
 
 Note: It'd drop about here
 ---
@@ -345,7 +350,7 @@ sad trombone.
 
 ---
 
-# CVE-2015-3438 <!-- .slide: class="center" -->
+# `CVE-2015-3438` <!-- .slide: class="center" -->
 Note: So that's CVE 2015 3 4 3 8
 
 It's been patched as of WordPress 4.2, so please PATCH YOUR THINGS
