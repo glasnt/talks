@@ -96,7 +96,8 @@ Note: but it's not too bad when the schedule poster on the wall just leave them 
 Note: because they can be corrected
 
 ---
-
+ <img src="pictures/crikey.png" />
+---
  <img src="pictures/pcau_1.jpg" />
 Note: But the best part is when the digital boards work
 
