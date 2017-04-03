@@ -1,0 +1,185 @@
+##= &nbsp; 
+#= Snek in the Browser
+## PyCon US 2017
+@ footer.svg
+
+Note: 
+
+Hi! I'm Katie, and this is Snek in the Browser. We're going to be diving into some
+content in this talk that might be a bit daunting at first, but trust me, we'll get there. 
+
+And like any good talk, we should start with some definitions
+
+
+Let's kick off with the most important definition of all
+
+---
+
+#= What is 'snek'?
+
+Note: 
+
+snek is a very important term that may not be familiar to you, and of course, is the focus of this talk
+---
+
+@ snek.png
+
+Note: 
+
+A snek is comprised of a dangernoodle, with a snoot. snek is very cute
+
+---
+
+@ python_logo.jpg
+
+Note: 
+
+more conventionally, snek is also pronounced "snake", of which Python is an instance. 
+
+Python's logo looks sort of like a snake, I guess?
+
+More more importantly, 
+
+---
+
+#= What is Python?
+
+Note: 
+
+Now, this might be tricky one. Python itself isn't a language. It's a language specification
+
+What you're used to when you type `python` into a terminal and get a nice little interactive
+program to play with is, probably, CPython. i
+
+---
+
+#= What is CPython?
+
+Note: 
+
+
+What is CPython?
+
+This is the most common implementation of the Python language specification
+
+
+---
+
+<pre class="cli"><code>
+$ cat snek.py
+def snek():
+&nbsp; &nbsp; print("🐍")
+</code></pre>
+
+
+Note: 
+
+Say you have a file called snek.py
+
+All it does it print an emoji snek
+
+---
+
+<pre class="cli"><code>
+$ python snek.py
+🐍
+</code></pre>
+
+Note: we can execute this file by asking python to run it. 
+
+And then we get our snek
+
+We don't have to just use the cli
+
+---
+
+<pre class="cli"><code>
+$ python
+Python 3.6.0
+>>> import snek
+🐍</code></pre>
+
+Note: we could also use the interactive python interface
+
+and ask it to import the snek file for us
+
+which gives us snek
+---
+
+<pre class="cli small"><code>$ cd &#95;&#95;pycache&#95;&#95;
+$ cat snek.cpython-36.pyc
+</code></pre>
+Note: after we do that, we see a new folder that's turned up in our file system
+
+it has a file in it that's got the extension pyc instead of just py
+---
+
+<pre class="cli small"><code>$ cd &#95;&#95;pycache&#95;&#95;
+$ cat snek.cpython-36.pyc
+3
+�&�X�@s
+&nbsp; &nbsp; ed�dS)u🐍N)�print�rr�
+/private/tmp/snek.py&lt;module>s
+</code></pre>
+Note: but it looks to be full of a little bit of jibberish
+
+---
+
+
+<pre class="cli small"><code>$ python
+Python 3.6.0
+>>> def snek():
+>>> &nbsp; &nbsp; print("🐍")
+</code></pre>
+
+Note: However, it's not gibberish to the python intepreter. It knows how to read this compiled content
+
+If we run python, define our function
+---
+
+ 
+<pre class="cli small"><code>$ python
+Python 3.6.0
+>>> def snek():
+>>> &nbsp; &nbsp; print("🐍")
+>>> import dis
+>>> dis.dis(snek)
+</code></pre>
+
+Note: but then import a module called 'dis'
+
+and ask it to dis this snek
+
+---
+
+
+<pre class="cli small" style="margin-left: -20px"><code>2&nbsp;0 LOAD_GLOBAL&nbsp; &nbsp; 0 (print)
+ &nbsp;  2 LOAD_CONST &nbsp; &nbsp;  1 ('🐍')
+ &nbsp;  4 CALL_FUNCTION&nbsp; 1
+ &nbsp;  6 POP_TOP
+ &nbsp;  8 LOAD_CONST&nbsp; &nbsp;  &nbsp;0 (None)
+ &nbsp;10 RETURN_VALUE
+</code></pre>
+
+
+Note: and you get this. 
+
+The module 'dis' that we used, that's short for "disassembler"
+
+And what you're seeing here, is raw python bytecode.
+---
+
+
+
+@ beeware_full.png
+
+Note: 
+
+
+
+
+
+---
+! claps
+
+### glasnt.com/talks
