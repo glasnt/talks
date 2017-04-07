@@ -1,0 +1,1150 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Title</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <style>
+/* Don't display the original source */
+#source {
+    display: none;
+}
+    </style>
+    <link rel="stylesheet" href="theme.css" type="text/css" media="screen, print">
+    <style>
+
+/* Overrides for printing */
+
+.remark-slide {
+    -webkit-print-color-adjust: exact;
+}
+
+.remark-container {
+    overflow: visible;
+    background-color: #fff;
+}
+
+.remark-slide-container {
+    display: block;
+    position: relative;
+}
+
+.remark-slide-scaler {
+    position: relative;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+
+    -webkit-transform: none;
+    transform: none;
+    -webkit-transform-origin: none;
+    transform-origin: none;
+}
+
+div.remark-slide-scaler {
+    -webkit-transform: none;
+    transform: none;
+    -webkit-transform-origin: none;
+    transform-origin: none;
+}
+    </style>
+  </head>
+  <body>
+    <textarea id="source">
+class: title
+
+# Python all the things!
+## Dr Russell Keith-Magee
+## @freakboy3742
+## PyCon AU 2016
+
+---
+
+class: title
+
+# Python all the things!
+## Dr Russell Keith-Magee
+## @freakboy3742
+## PyCon AU 2016
+
+???
+
+I checked with Richard, and apparently this wasn't intentional - there's an interesting synergy with yesterday's talk - I'm also an ex-pat of the Physics department. My undergraduate degree is in Physics.
+
+However, unlike Damien, I then formally migrated to Computer Science, where I got my PhD. So, while as a physicist, I also write bad hacky code, as a computer scientist I've been formally *trained* to know it's bad code.
+
+---
+
+class: django logo
+
+![Image goes here](images/django-logo.png)
+
+???
+
+So for those of you who haven't met me before - Hi! My name is Russell Keith-Magee
+I've been I've been a member of the Django core team for almost 11 years, and I was president of the Django Software Foundation from 2010 to the end of 2015.
+
+Django is a big part of the broader Python ecosystem; but it's by no means the only part.
+
+---
+class: logo
+![Image goes here](images/Python-logo.png)
+
+???
+
+There are other web frameworks. There are great tools for data anlysis. There are projects for using Python in education, and on embedded devices.
+
+None of this has happened overnight. Python as a language is 25 years old. It took maybe 10 years for Python to gain significant traction in our industry, and another 10 before it gained really widespread support.
+
+What we see today as the Python community is the result of thousands of hours of largely volunteered effort.
+
+Despite all this effort, Python has really only been available on server or desktop environments - devices that fit a very traditional concept of what a computer is. But over the last 10 years, we've seen the emergence of a new class of computing devices - much smaller, and often portable. Things like phones, tablets, watches, and set top boxes.
+
+---
+class: screenshot
+
+![Image goes here](images/beeware-logo.png)
+
+???
+
+My reading of the tea leaves is what has led me to change the focus of my open source contributions over the last couple of years. These days, I'm spending most of my time not on Django, but on the BeeWare project. For those that haven't come across it before, BeeWare is an open source collection of tools and libraries for creating native user interfaces in Python - for desktop, but also for iOS, Android, single-page webapps, and other new hardware platforms.
+
+---
+class: screenshot
+
+![Image goes here](images/guido-tweet.png)
+
+???
+
+Richard pointed out this tweet yesterday - Guido drawing attention to MicroPython, and the fact that you can run Python on embedded devices. Damien covered this yesterday.
+
+---
+class: screenshot
+
+![Image goes here](images/guido-tweet-2.png)
+
+???
+
+What Guido didn't point out is that we can fill in the other missing box, too - mobile devices. That's what BeeWare is all about.
+
+You'll notice that this makes Python the first language tick *all* the boxes, which mean it is entirely possible to...
+
+---
+
+class: screenshot
+![Image goes here](images/python-all-the-things.jpg)
+
+???
+
+...PYTHON ALL THE THINGS.
+
+If it isn't already clear, I like Python. I think it's an elegant, expressive, and most importantly *readable* language. It's got a great standard library, and an even richer ecosystem of tools around it.
+
+I *love* the minimalist syntax and significant whitespace - to me, that's just enforcing, at a language level, code style guidelines that are just good engineering practice.
+
+I'm not going to claim that Python is perfect, but it's as close to perfect as I've ever come across, and I'm very happy living my life as a Pythonista.
+
+And because of that, I want to be able to run Python on all my devices. And not just some token notion of "running" Python - I want to be able to use Python to deliver a full developer experience. I want to be able to develop and deliver applications for these platforms, not in some "python sandbox", but as fully fledged, first class citizens of their device ecosystems.
+
+Now, if you're here today at PyCon, I probably don't have to convince you of the benefits of Python as a language.
+
+2:30
+
+---
+class: title
+
+# How, and why?
+
+???
+
+What I *may* need to convince you of is that it is, indeed, plausible, or even desirable, to run Python on non-traditional devices - and assuming it *is* possible - that it's worth the effort to try.
+
+That's what I'm going to talk about today - the how, and the why, of Pythoning all the things.
+
+---
+class: title
+
+# How
+
+???
+
+Ok, so first off, lets deal with the how. There's no point getting all philosophical about why you should do something if you can't actually do it - so, lets play a game. You have some fancy new hardware device dropped into your lap. What options do you have for getting Python onto it?
+
+Well, to answer that question, we need to start a little higher up, with a different question...
+
+---
+class: title
+
+# What is Python?
+
+???
+
+We need to start with What. What is Python?
+
+Well, it's a programming language, right? Except that it isn't. Depending on who is talking, Python could be one of two things.
+
+---
+class: title
+
+# Python is a language specification.
+
+???
+
+Python the *language* is an abstract thing. It's a specification of syntax and semantics that describes how a particular sequence of human-readable bytes will be interpreted to make a computer do something interesting.
+
+---
+class: title
+
+# Python is a reference implementation.
+
+???
+
+Then there's Python the interpreter you install and run. When you tell someone to "go to the Python website and download the installer", you're not strictly talking about Python - you're probably talking about...
+
+---
+class: title
+
+# CPython is a reference implementation.
+
+???
+
+... CPython, which is the defacto reference implementation of the Python language standard.
+
+This separation between implementation and specification is valuable, because it means that CPython isn't the only way that Python can be interpreted. There are features of Python as experienced by end users that are features of CPython, not the language itself - the GIL, for example - the Global Interpreter Lock, which is the perpetual bane of Python performance discussions, is *not* an inherent feature (or misfeature) of Python - it's a feature of CPython - a specific reference implementation of the Python language specification. CPython, because of the way it's implemented, has a GIL. Other implementations of the Python language specification - Jython, PyPy, Stackless - don't have a GIL.
+
+This separation means that when we're talking about getting Python running on our fancy new hardware device, there a couple of different possible approaches, depending on the capabilities of the device you're targetting.
+
+
+---
+class: title
+
+## Simplest approach:
+# (Embedded) CPython
+
+???
+
+The easiest approach is to Just Use CPython.
+
+When you start a Python shell, or run a Python script on your laptop, or on your server, chances are this is what you're doing. You're running CPython - effectively, the reference implementation of the Python language standard, written in C.
+
+And one of the side effects of being written in C is that it make it really easy to port to new platforms.
+
+5:00
+
+---
+class: title
+
+# Unix & C
+
+???
+
+In this regard, it follows the tradition laid down by Unix. One of the major reasons for the proliferation of Unix as an operating system is that in the early days of computing, dozens of manufacturers were producing computers - IBM, DEC, UNIVAC, NCR, Honeywell, General Electric, Siemens, Fujitsu, Hitachi, NEC - and technology was advancing so quickly that there would be major shifts in architecture between versions of a device. And each device would come with it's own eclectic operating system.
+
+Then, Ken Thompson, Dennis Richie, Brian Kernighan, and a bunch of other people working at Bell Labs worked something out - if you could define a minimal kernel that could be ported to *any* machine, providing a common API for operations like memory management, process invocation, and IO, then you could use that kernel to bootstrap the rest of an operating system.
+
+They then developed a programming language - C - to make this even easier. The original versions of C were developed to make it easy to port Unix to new platforms - the kernel, which was written in assembly language for a specific machine and architecture, got even smaller, and the "operating" parts of the operating system could be easily ported to the new kernel.
+
+
+---
+class: title
+
+# Porting CPython
+
+???
+
+And that's essentially what CPython looks like when you want to port it, just a level higher of abstraction. It assumes the existence of a C compiler - but as long as you've got a C compiler - which is a pretty safe assumption for most platforms, the CPython core can be compiled, giving you an Python interpreter you can run and a libPython that can be embedded.
+
+---
+class: title
+# A cavelcade of platforms...
+```
+$ ls -d Lib/plat-*
+plat-aix3       plat-freebsd7   plat-next3
+plat-aix4       plat-freebsd8   plat-os2emx
+plat-atheos     plat-generic    plat-riscos
+plat-beos5      plat-irix5      plat-sunos5
+plat-darwin     plat-irix6      plat-unixware7
+plat-freebsd4   plat-linux2
+plat-freebsd5   plat-mac
+plat-freebsd6   plat-netbsd1
+
+```
+
+???
+
+And that's a threshold that most modern devices can support. If you look in the Lib directory of Python 2.7 source tree, this is what you'll find - a list of all the platforms that have explicit support in the Python source tree.
+
+Python 3 pruned a few of these out. os2emx, for example, has been dropped. So has beos5. Anyone here who used either of those two platforms? But hopefully the point is clear - as long as you can compile the kernel - the core CPython implementation, you get the rest of the Python standard library, and the Python ecosystem for free.
+
+7:00
+
+---
+class: title
+
+# Compiling the kernel
+
+???
+
+But even this compilation process gives you some options. If you're using a compiled language like C, the usual approach is to write some code, and use a compiler on the same machine that you intend to run that code. If you're on a desktop or a server machine - that works great, because you almost certainly *have* a C compiler (after all, you had to have one to port Unix).
+
+But on some devices, this isn't plausible - either because a compiler hasn't been ported *to* that platform, or because compilation *on* device isn't plausible. Consider - do you really want to be running a compiler on your watch? Compilation is a CPU intensive process - do you really want your watch turning into a molten ball of slag and burning a hole into the centre of the earth while it's attached to your wrist? I didn't think so.
+
+So - you really need to have a way to compile somewhere else, and get the compiled product *onto* your watch.
+
+---
+class: title
+
+# Cross-compiling the kernel
+
+???
+
+That's what cross-compilation is. A compiler is just a magic box that takes human readable input and makes machine readable output - but there's nothing that says the machine readable output has to be read by the same machine that is *doing* the compilation. It's just bytes at the end of the day.
+
+And yes, it's a little more difficult to set up, and there's plenty of opportunities for things to go wrong - but those are resolvable problems.
+
+And again, Python has this ability to cross compile built into it's build system. This is something you *almost* get for free when you use the GNU Autoconf toolchain - I say almost, because... well.. GNU Autoconf is a very special snowflake - but, at least in principle, the GNU toolchain has been designed to support platform cross compilation. Remember, this is the reasons C compilers exist - to make it easy to port a binary to a new machine.
+
+---
+class: title
+
+# Compiling CPython
+
+???
+
+Ok - so, as long as you have a C compiler that runs on your new hardware device, or you have a C Compiler that can *target* that device, you're set. You can compile the stock CPython sources, and get the same CPython that you use on a server.
+
+That doesn't mean that you necessarily have the same Python experience, though. If you're running on a watch, you can't just open a shell prompt to start a new command. So you have a problem - how do you interact with Python when you haven't got a stdin/stdout? Are you stuck?
+
+---
+class: title
+
+# Embedding CPython
+
+???
+
+The good news is that no, your'e not. CPython is written in C, and while it's certainly designed to invoked from a command line, and provide a prompt, it doesn't *require* that. That command line experience is essentially just a wrapper around a specific collection of setup and teardown tooling. The code for the python executable itself is remarkably simple - it really is just a pipeline for getting keyboard input or file input, and passing it to the real engine - an embedded library that is called, not surprisingly libPython. This library is what implements the actual "Run this python code" piece of the puzzle.
+
+So as long as you can build a binary - any binary - that initializes and invokes some key methods in libPython, you can have Python running on any device you want - and then it's just up to the device to determine how you pipe the Python script into the Python interpreter running *on* that device.
+
+10:00
+
+---
+class: title
+
+# Accessing system libraries
+
+???
+
+Once you've got a running interpreter, you're going to want to access the system native libraries so you can actually interact with the capabilities of the device you're on. Now, if you've got this far, it's because you have a C compiler, which generally means you've got a C library under the hood providing those services. That means that you can use one of the features of the Python standard library - ctypes - to access those services.
+
+---
+class: title
+
+# ctypes & FFI
+
+???
+
+ctypes is a library that exploits the fact that at the assembly language level, the way you invoke a function - what is known as the calling convention - the calling convention used by C compilers is well defined. Since it's well defined, it means you don't have to use a C compiler to generate code that will be interpreted as a function call - any tool that can generate a compatible sequence of assembly language commands can invoke any function in a library, regardless of what language is doing the calling, or what language the library was originally written in.
+
+There is a helper library called FFI - the Foreign Function Interface - that makes this easy to do, and ctypes is Python's builtin wrapper around FFI. Using Ctypes, all you have to do is reference a C library, then describe the prototype of a C method, and you can then invoke that method directly from raw Python, without the need to compile anything.
+
+---
+# ctypes
+
+```python
+from ctypes import *
+
+libc = cdll.LoadLibrary("libc.so.6")
+libc.strchr.argtypes = [c_char_p, c_char]
+libc.strchr.restype = c_char_p
+```
+```python
+>>> print(libc.strchr(b"abcdef", b"d"))
+'def'
+```
+
+???
+
+For example, we could use ctypes to load libc - the standard C library on POSIX boxes - we can tell that library that the function strchr takes a C character pointer (c_char_p) and a C character (c_char), and returns a C character pointer; then you can invoke that method. No need to compile anything - just access the C libraries directly.
+
+So - whatever system libraries your platform provides, you can access them from Python. If you want, you can then write a wrapper library around them to provide a nicer API, but that's up to you and the interface you want to provide.
+
+And, at that point, you have a fully functioning Python on your new hardware device, and full access to all the system libraries.
+
+12:00
+
+---
+class: title
+
+# Where does this work?
+
+???
+
+When this approach works, it's is pretty straight forward to get going.
+
+It's the approach that makes Python available on pretty much every desktop and server that is in production. It's also the approach that I've used to get Python working on iPhones, iPads, AppleTV set top boxes and (in principle) Apple Watches (although I haven't had a chance to really test this). Although Apple hides a lot of the details behind XCode and Objective C (and, more recently Swift), the core of what they're doing is plain old Unix and C. And so, compiling CPython for iOS, tvOS and watchOS is relatively simple, and you can access the native system libriaries using ctypes.
+
+---
+class: title
+
+# Alas, I have no compiler...
+
+???
+
+But what about when it doesn't work? What happens when you don't have a C compiler, or C isn't the native system language - like, for example, Android? Well, then you have to take a different approach.
+
+---
+class: title
+
+# Android, Java and Unix
+
+???
+
+If you read the advertising copy for Android, it sells itself as a "Linux", and then promotes Java as a user-space programming language. The catch is - it's not really either of these things. Yes, it is Linux at some level, but not at any level that is interesting to us as end developers. The kernel is written in C, and you can use a C compiler that will target that kernel - but the C layer only has access to bare-level system services, so you can't really do anything all that interesting from the "Android as a portable computing device" perspective. All of Android's user-space libraries are exposed using Java APIs.
+
+And Android isn't the only platform that does this - Sun, and now Oracle, has spent a lot of money developing the Java(tm) ecosystem - an entire ecosystem based around using the JVM as a runtime platform, abstracting away hardware differences.
+
+Both these platforms do a head feint to the significance of native libraries - Android provides NDK, the native development kit - and both Android and JVM provide JNI, the Java Native Interface - but the focus of the tooling for these platforms is very heavily directed at the use of Java for user-space code.
+
+So - yeah, you can do Python on Android or Python on JVM using CPython as a starting point, but it's also not a "natural" interface to the platform. Your life will be a lot easier if you work a lot closer to what the platform wants you to do.
+
+15:00
+
+---
+class: title
+
+# Platform limitations
+
+???
+
+There are also platforms where it just isn't *practical* to use CPython.
+
+MicroPython, which we heard about yesterday, is a good example of this. CPython is a great implementation of Python as a language specification. But embedded devices have some pretty extreme constraints by comparison to servers and laptops, and CPython is just too big to use in an unmodified state on an embedded microcontroller. So, you have to look at other ways of providing an implementation of Python if you want to use it.
+
+---
+class: title
+
+# Python that isn't CPython
+
+???
+
+So - if you've got one of these platforms, and you want to use Python on it, you effectively need to provide a new implementation of Python - one that is native to the capabilities of that platform.
+
+So how do you do this? Well, there are a couple of ways to tackle the problem.
+
+---
+class: title
+
+# Use a different compiler
+
+???
+
+One option is to use a different compiler. CPython is obviously intended to be compiled using a C compiler - but there are C compilers out there that don't target traditional system binary executables. One such compiler is Emscripten. It's a compiler - strictly, a compiler backend, because it plugs into the parser provided by clang - but rather than outputting a binary that can be executed, it outputs Javascript. Specifically, a subset of javascript called asm.js that is known to run fast on certain javascript implementations. Remember, a compiler is just a box for turning human readable bits into machine readable bits; nothing said those machine readable bits had to be machine language.
+
+---
+class: title
+
+# PyPy.js
+
+???
+
+And if you take this approach, what you get is PyPy.js, a project by Ryan Kelly. PyPy.js takes the PyPy source code, rather than the CPython source code - but what you get at the end is a block of Javascript that will run Python code. And, for suitably selected benchmarks, do so faster than CPython natively on the same machine.
+
+If you're not going to just recompile existing sources, though, you'll need to re-implement CPython. But you don't have to reimplement *all* of CPython.
+
+---
+
+# Inside a Python
+
+* Parser
+* Compiler
+* Eval loop
+* Standard library
+
+???
+
+What do I mean by that? Well, if you pull apart a Python implementation, there are a couple of pieces. The full stack consists of:
+
+a parser, which takes human input and turns it into an in-memory representation of the code.
+
+a compiler, which takes that in-memory representation, and turns it into something that can be executed - in CPython, that's bytecode.
+
+An eval loop, which can read and run the output of the compiler. This is what you experience as the "python" executable.
+
+And then there's the standard library, which is used by the code running through the eval loop. The standard library comes in two pieces - there's are bits written in a native language, and bits written in Python. The bits in native language are either system specific - for example, hitting raw POSIX library calls - or they're done natively for performance reasons.
+
+---
+
+# Implementing a new Python
+
+* Parser
+* Compiler
+* Eval loop
+* Standard library
+
+???
+
+The simple approach - reimplement it all. Rewrite the lot in Java, or C#, whatever other language or runtime you want to target. Those parts of the standard library that are written in Python don't need to be reimplemented; but the rest needs to be ported over.
+
+---
+class: title
+
+# MicroPython
+# Jython
+# IronPython
+# Skulpt
+# Brython
+
+???
+
+This is what MicroPython, Jython, IronPython, Skulpt, Brython and many others do. A wholesale reimplementation of all of CPython, except for the bits of the standard library that are written in Python and can therefore be re-used as-is.
+
+But that's not the only approach you can take.
+
+18:00
+
+---
+
+# Implementing a new Python
+
+* <strike>Parser</strike>
+* Compiler
+* Eval loop
+* Standard library
+
+???
+
+You don't have to throw out the entire CPython stack and start from scratch. CPython provides - not surprisingly - a really good parser for Python code, that outputs a data structure that is a parsed, ready to manipulate version of the code that has been entered by a human. This data structure is called the AST, or Abstract Syntax Tree - and it's a representation that has been designed to be manipulated and converted.
+
+The normal CPython compiler takes that AST, and converts it into bytecode that can be executed by CPython's event loop. However, you can just as easily take that AST, and turn it into any other representation that would be helpful.
+
+For example - Java Bytecode, or .net CLR bytecode.
+
+---
+class: title
+
+# VOC
+
+???
+
+This approach is what VOC does. VOC is effectively a cross-compiler for Python code - it's a compiler, written in Python - so it can be executed by CPython - but it outputs Java bytecode that can run on any JVM instance. When the Java bytecode runs, it's indisdinguishable from code that came from Java source code - but it refers to line numbers in Python source files.
+
+Ok - so we can re-use CPython's parser. Do you have to stop there? Is there any more of CPython that we can re-use in our quest to get Python on a different platform?
+
+---
+
+# Implementing a new Python
+
+* <strike>Parser</strike>
+* <strike>Compiler</strike>
+* Eval loop
+* Standard library
+
+???
+
+Well yes - if you want to, you can re-use CPython's compiler, too. When you run some python code in a .py file through the CPython compiler, it outputs a .pyc file. That .pyc file is the compiled form of the code. Its a binary representation, but not a system binary - it's not executable by itself. It's a Bytecode representation.
+
+Bytecode is a bit like a "high level" assembly code; it's an encoded set of instructions for a stack-based virtual machine, that has basic primitives like pushing and popping onto a stack, setting attributes on an object, handling exceptions and so on.
+
+There's nothing about Python *the language* that specifies Bytecode. It's a runtime format used by the CPython interpreter. The CPython interpreter is what provides the virtual machine that can actually execute the bytecode.
+
+But there's nothing to say that we couldn't create an independent implementation of the CPython virtual machine, capable of running CPython bytecode.
+
+20:00
+
+---
+class: title
+
+# Batavia
+
+???
+
+This is what Batavia does does. Batavia is an implementation of the CPython virtual machine, written in Javascript. And because it's written in Javascript, it can run in the browser.
+
+And while this may seem daunting, it's actually not that hard. After all, CPython Bytecode only has a hundred or so operations - a good chunk of which are basic mathematical primitives - so reimplementing it doesn't actually take that much code.
+
+The biggest complication is that CPython makes no guarantees of compatibility in bytecode versions - and between 3.4, 3.5 and 3.6, there have been several major changes in bytecode formats and interpretations. But you can stay on top of these if you want to; it's not a major problem, just an annoyance.
+
+---
+class: title
+
+# Why not compile to Javascript?
+
+???
+
+Now, whenever I tell people about Batavia, the first reaction is usually "Why not just compile Python code into Javascript code"? And yeah, that is an option. On the surface, it even seems relatively easy. Sure, there are some syntactic differences between Python and Javascript, but at lot of those are cosmetic - using braces, different looping constructs.
+
+However, if you dig deeper, it gets a lot more complex. You don't *just* want a language that *looks* like Python - you want it to *run* like Python as well. And Python's scoping rules are quite different to Javascript.
+
+---
+#Spot the difference
+
+```
+var x = 10;
+function scope_test(y) {
+    x = x * y;
+}
+scope_test(3)
+console.log('x = ' + x);
+```
+
+```
+x = 10
+def scope_test(y):
+    x = x * y
+
+scope_test(3)
+print('x = ', x)
+
+```
+
+???
+
+Lets take this really simple example. These two code snippets are cosmetically the same, modulo a language translation. The only thing that is a bit hairy is the change in the arguments to the print statement.
+
+But - what gets output when you run them? What does the Javascript console output?
+
+30
+
+What about the Python?
+
+UnboundLocalError: local variable 'x' referenced before assignment
+
+Why? Because Javascript scoping rules put x in global scope; Python scoping rules mean x can be accessed for reading, but not for modification.
+
+Now, for the pedants, yes; if you used ES6 "let" in the Javascript version, or "global" in the Python version, you'd get output parity here. This is an intentionally simple example to illustrate a point; the problem gets a whole lot more complex when you have structures like closures involved.
+
+22:00
+
+---
+class: title
+
+# Why not compile to Javascript?
+
+???
+
+So, if you want to preserve Python semantics in Javascript, you can't just do a syntax conversion; you have to actually parse the code and generate Javascript constructs that expose the same lexical scoping as Python expects.
+
+So that means then you've left with three choices:
+
+* Re-implement Python scoping rules in Javascript
+
+* Treat your resulting compiler as a Python-like language - something that looks like Python, but has lots of subtle differences
+
+* Something between the two.
+
+It turns out, it ends up being a lot easier to implement the bytecode machine, because all you have to deal with is a single stack.
+
+---
+class: title
+
+# The missing pieces
+
+???
+
+So, what's the downside to re-using CPython's parser and/or compiler? Well, it means you've made a decision that parts of your stack *won't* be running on your new platform.
+
+If you're re-using CPython's parser and compiler, then obviously that part of the stack will only run where CPython will run. You're effectively cross compiling your Python code; using one platform to produce a "binary" that will work on another platform.
+
+This means your target platform *won't* have the ability to parse or compile code on it's own. This means the one thing you *don't* get on the new platform is a REPL - a Read Eval Print Loop - that is, a Python prompt at which you can interactively type and execute Python code. Having REPL relies on the ability to compile code; if you don't have a native compilation capability, you can't have a REPL.
+
+---
+class: title
+
+# A different development cycle
+
+???
+
+That might seem like a big omission - but the platforms we're targetting aren't natural matches for a REPL. Nobody really wants to be typing Python code into their watch. So, on these devices, Python is really just about being a high productivity programming language, not an interactive one.
+
+You also have to think about the entire development cycle. Remember, one of the reasons we're porting Python is so that the same code can run on multiple devices. You could *develop* your code on a desktop machine, using CPython, a REPL, and some mocking or stub libraries; then, once the core logic of your app is working, ship it to device for final testing.
+
+24:00
+
+---
+
+# Implementing a new Python
+
+* Parser
+* Compiler
+* Eval loop
+* Standard library
+
+???
+
+Ok, so at this point, either by reimplementing or borrowing from CPython, you've got a parser, a compiler, and an eval loop. So you can run Python code. But only the code - there's a big piece still missing. The standard library.
+
+---
+class: title
+
+# The Standard Library
+
+???
+
+The CPython standard library is made up of two parts. There is a pure Python part, and a part written in C.
+
+The bit that is written in pure Python is easy - we can just take that and use it wholesale. It's Python code, so it compiles as Python code the same as everything else. We can compile it to bytecode and run it through our new virtual machine, or cross compile to a new target platform, or just run it on our re-implemented Python - whatever you need.
+
+But the bits written in C are a little bit more complicated.
+
+---
+class: title
+
+# The Standard Library
+
+???
+
+There are a couple of reasons why a module may be written in C. Firstly, there are occasions where what we're doing is talking directly to system services. If you're going to make a POSIX exec call, well, you're going to need to call the C method that implements that call.
+
+There are also modules that are implemented as C modules because they are a wrapper around some library whose implementation is C. Bzip2, for example, is a compression library. The reference implementation is in C. Sure, you *could* rewrite it - but why would you - just interface with libbz2.
+
+Lastly, there are parts of the standard library that are implemented in C for performance reasons.For example, the Decimal module used to be implemented in pure Python. For performance reasons, it was ported to C in Python 3.5.
+
+---
+class: title
+
+# A reference Python standard library?
+
+???
+
+And that's great for CPython as an implementation of Python. Nobody is going to complain about more performance. But if you're looking at CPython as a reference implmeentaiton, it's a bit annoying, because it means that's something you have to re-implement natively.
+
+What is really needed is a reference standard library. An implementation of the Python standard library that is written entirely in pure python, except for a clearly deliniated, minimal interface to system services.
+
+---
+class: title
+
+# Ouroboros
+
+???
+
+That's what Ouroboros is. For those not up on your mythology, Ouroboros is the symbol of a snake eating it's own tail.
+
+Ouroboros is very much a work in progress; but it's an important part of the whole puzzle if we're going to make it easy to bring Python to as many platforms as possible.
+
+27:00
+
+---
+class: title
+
+# Deployment and delivery
+
+???
+
+The last piece of the puzzle is deployment. This is an area where Python really hasn't had a good story.
+
+Even in the web world, which is considered one of Python's strengths, Python's story lags a long way behind languages like PHP. A PHP developer just needs a directory that they can upload their code to, and maybe some details about the host address for a database, and they can deploy their site. A Python web developer needs to know about WSGI, and web server configuration, and mechanisms for activating virtual environments - not too daunting once you know how it all works, but certainly a long way from a one click deployment, and a lot more daunting than first time developers are really ready for.
+
+And hard as it is to believe, the situation is worse for desktop. Want someone with a Windows computer to run your Python script? Good luck with that. Better hope they've got admin access, and know how to find the dialog hidden 3 levels deep in the Control Panel that lets them set their PATH environment variable.
+
+The good news here is that the problem *can* be solved, and moving to platforms like phones and watches will *force* us, as a community, to address them. These devices don't *have* a control panel. If you want to distribute apps for them, you *have* to package them as standalone tools with a simple entry point. And if we have to develop tooling for these new platforms, then it makes sense to look at the tooling for existing platforms while we're at it.
+
+---
+class: title
+
+# Briefcase
+
+???
+
+This is what I've been trying to do with a project called Briefcase. It's a distutils extension that will convert a Python project with a setup.py file into a deployable unit.
+
+Again, it's also early days for briefcase, but it works for macOS, iOS and tvOS, it has preliminary suport for Android. If anyone here has an interest in Windows, I've got some ideas about how the approach used for macOS can be adapted - so, come talk to me.
+
+---
+class: title
+
+# How
+
+???
+
+A lot of the specific tools and libraries that I've spoken about so far have been at very early stages of development; the flipside of that is that there's a lot of very fertile ground for contributions. If you want to get involved, I'm here till the end of the sprints - no matter your level of expertise, come grab me and I'm sure I can find something for you to work on.
+
+And if you do, thanks to MaxCDN, I've got a shiny BeeWare contributors challenge coin for you.
+
+Ok, so that's the how. That's *how* you introduce Python to a new hardware platform.
+
+---
+class: title
+
+# Why?
+
+???
+
+But why? Why is this important? Why have I spent so much time and effort trying to get Python to run in places where it doesn't currently run?
+
+29:00
+
+---
+class: title
+
+# Existential threats
+
+???
+
+For me, It's about evaluating our existential threats as a programming community.
+
+Python is on the crest of a wave at the moment. Over the last 25 years, we've built up a community, and resources, and expertise. As a result, most surveys put Python in the top 4 or 5 programming languages to know, usually only behind Java and C/C++. The growth of PyCon events like this one are a great indication of that success.
+
+---
+class: title
+
+# Quo vadimus
+
+???
+
+So in the midst of our success, it behoves us to look to the future, and consider whether that light at the end of the tunnel is dawning of a bright tomorrow, or a train coming straight for us. We need to ask "Quo Vadimus" - where are we going?
+
+Python has been around for 25 years. It originally found a foothold as a systems integration language on servers. Over time, it found another niche in webservers, resulting in Zope, Django, Pyramid, Plone, and others. The era of Python as a major web platform is maybe 10 years old.
+
+Since that time, Python has found footholds as an education language, and as a data analysis language. It's found these footholds because it's an easy and straightforward language to teach; while retaining the power of a hardcore computer science language.
+
+We've developed a reputation. We developed a community. We've developed a rich ecosystem of tools and libraries around the core of the language.
+
+So - what changes are coming that pose a potential existential threat to all of this?
+
+---
+
+# New platforms
+
+* Phones
+* Tablets
+* Watches
+* Set-top boxes
+* Embedded systems
+
+???
+
+Well, the most obvious threat is the one that I've been addressing directly so far. The last 10 years has seen an explosion in the platforms that people are using for computing, and the types of people that are using these platforms.
+
+Computers aren't just for geeks any more. These devices have very rapidly become an indispensible part of everyone's lives. And that means these new platforms are becoming and increasingly important part of the development landscape. If Python doesn't have a good story on mobile - we run the risk of being left behind.
+
+Servers aren't going anywhere, but they've only ever been used directly by a very small portion of the community, and the growth of services like "serverless" hosting is part of a larger trend to hide even more serverside details. As for desktop machines - Sales trends of desktop machines vs phones and tablets points to a time where desktop machines as we currently think of them either won't exist, or will exist in a radically different form to what we see today.
+
+So if using a general purposes language that can only be used in a tiny portion of computing devices, what hope does the language communtiy as a whole have? I'd say 'not much'.
+
+---
+class: title
+
+# An opportunity
+
+???
+
+But the threat is also an opportunity. Many of the areas where Python has gained traction - in science, in education - these are areas where these new devices have the potential to make a *huge* impact.
+
+Imagine a world where a scientist can knock together a quick UI to put in the hands of experimenters to gather information, or provide an app so that citizen scientists can log local flora, fauna or environmental conditions.
+
+Imagine a world where you can get kids exited in programming because they can build something that runs on their phone and they show their friends.
+
+Imagine a DjangoGirls style event, where students leave the tutorial having not just built a blog, but built a mobile phone app that they can use to upload photos *to* that blog.
+
+Python is a general purpose language. There's no reason it has to be tied to historical platforms - we just have to pay attention to the new platforms that are emerging.
+
+---
+
+# Polylingualism required
+
+* Objective C
+* Swift
+* Java
+* JavaScript
+
+???
+
+So - what are we competing against here? And what advantages does Python bring to the fight?
+
+Well, we're competing against a background environment where polylingualism is required. At present, there isn't a single language that can be used on *every* platform as a native offering. Apple pushes Objective C and Swift as their preferred languages. Android pushes Java. The web requires Javascript.
+
+So - today, if you were a scientist, or a student, and you wanted to write an app that was available on multiple platforms, you'd have to learn several *different* programming languages.
+
+33:00
+
+---
+class: title
+
+# A defence
+# of polylingualism
+
+???
+
+Polylingualism - be it in human languages or computer languages - is a good thing. There are countless studies out there that reinforce the benefits of learning a second spoken language - improvements in perception, memory, decision making and problem solving.
+
+This is also true in programming languages. Learning a second (or third, or fourth) programming language - especially when it uses a completely different programming paradigm - is a great way to encourage your brain to think about problems in different, creative ways.
+
+---
+class: title
+
+# A counterargument
+# to polylingualism
+
+???
+
+And if you're a professional computer scientist or software engineer, I'd absolutely encourage you to learn as many programming languages as you can. But that's not the market we're talking about here.
+
+Unlike spoken languages, there isn't an obvious "first contact" language. If you are born in Melbourne, your first spoken language will amost certainly be English. If you are born in Beijing, it's probably going to be Mandarin.
+
+But in computer languages, there isn't an obvious "first contact" language. There isn't a programming language that everyone in a community speaks. That means there is ground to be won.
+
+---
+class: title
+
+# First contact
+
+???
+
+It's this first contact status that is, to my mind, critical.
+
+Consider the world 20 years ago. Visual Basic was one of the most widespread programming languages in common usage - not because it was an especially powerful programming language, but because it was present on every Windows computer, was accessible for non-expert users, and enabled people to do really powerful things with the Office suite of apps. Visual Basic was their first contact language, and many users never moved beyond it.
+
+There is immense power in being the language people that people use to discover programming. And Python has repeatedly demonstrated that it's a great candidate to be a first contact programming language - from DjangoGirls to university level computer science courses, Python has been used as an introductory programming language. And yet, it's a programming language that is also able to support very sophisticated computer science concepts like generators, asynchronous processing, and so on.
+
+---
+class: screenshot
+
+![Image goes here](images/conversion-funnel.png)
+
+???
+
+When marketing people talk about selling a product, they often talk about conversion funnels. A conversion funnel is the idea that there is an entire world of people out there, but they have to move through your sales process to buy your product. At each step in the process, some loss is inevitable - the funnel narrows - but the goal is to minimize the loss between each step, and end up with a viable output of the funnel at the end of the day.
+
+It can help to think about adoption of software projects in similar terms.
+
+Potential user
+user
+community members
+contributor
+core member
+leader
+
+There are two ways to hack a conversion funnel. You can work on the funnel itself, and minimize losses as people move down the funnel. Or, you can put more into the funnel to start with. Ideally, you do both.
+
+---
+class: title
+
+# Changing perceptions
+
+???
+
+And that's the real opportunity on the table here. We have a world of people out there that look at their computers, phones, tablets, watches, set top boxes as devices that they use to passively consume content, through apps developed by some sweaty white male boffin in a dark room.
+
+We have an opportunity to break that mould. Not just make it easier for experts to develop apps, but introduce a whole new audience to the idea that computing devices can be transformed to do what *they* want them to do. To meet their *own* specific needs.
+
+There will always be a place for experts - but this new audience isn't looking to do a three year degree in software engineering before they get started. They want to learn one language, and have that language be useful wherever they go.
+
+But if we're putting more people in at the top of Python's conversion funnel, we're also going to get more people filtering down to the bottom - that means *more* experts. And, if we play our cards right, a more *diverse* audience of experts - not just sweaty white male boffins in dark rooms. People from a wide range of social, racial and economic backgrounds, with rich and diverse experiences to bring to the discussion that shapes the evolution of the world around us.
+
+36:30
+
+---
+class: title
+
+# Why Python?
+
+???
+
+So why do I think Python has a compelling case to be this "first contact" language?
+
+Well, it would be really easy for me to launch into a blistering technical critique of Javascript, or Swift, or Java, and a defence of Python's technical superiority. But I'm not going to do that.
+
+Firstly, I don't think that adds anything to the discussion. Like it or not, Javascript, Swift, Java all exist, they're in widespread use, and it's implementations are battle tested. No amount of wailing about WATs is going to make Javascript go away. It's here, and it's going to stay.
+
+It's also pointless. History has repeatedly shown us that technical superiority of a technology is rarely enough to guarantee victory. Betamax and VHS. Windows and OS/2. AC and DC electricity. As long as two options meet basic requirements, the social structures and power relationships around a technology are much more important as the technology itself for assuring success.
+
+---
+class: title
+
+# Breadth of technical domains
+
+???
+
+The good news is that Python *has* a compelling story when it comes to these network effects.
+
+Firstly, there's a huge breadth of domain knowledge that is encoded in Python. Through projects like NumPy, SciPy, Jupyter, BioPython, and AstroPy, there is a wealth of scientific expertise in our community. Raspberry Pi and Grok Learning are leaders in the world of education.
+
+This isn't just a "web" community or a "browser" community - we are a true multi-disciplinary community. And it will take a long time for other language communities to develop analogous tooling.
+
+---
+class: title
+
+# Social leadership
+
+???
+
+The Python community also has very strong social credentials. The Python community has been an industry leader in improving participation of women, and people of color, and different ethnic backgrounds into our tech communities. Python and Django were amongst the first programming communities to adopt Codes of Conduct as standard operating procedure; initiatives like PyLadies and DjangoGirls have made amazing contributions to the participation of women in our industry.
+
+---
+class:title
+
+# Accessibility
+
+???
+
+In web design circles, it's taken a long time to convince people that accessibility is something worth paying attention to. But it turns out that if you focus on accessibility, not only can the deaf, blind, neuroatypical access your website - it improves the experience for *everyone else* as well.
+
+There's a direct analog here with the social leadership position that Python has taken. Yes, we have adopted codes of conduct because they are a clear signal to women and minorities that we want our community to be welcoming and friendly. But as a side effect, it makes the community nicer for *everyone*. A Code of Conduct isn't there so that women can punish men. It's there to make sure that *everyone* - including the men - have a pleasant experience in a welcoming, friendly community.
+
+39:00
+
+---
+class: title
+
+# We're doing good.
+
+# We can do better.
+
+???
+
+Before I give myself a sprain from patting us on the back - Don't get me wrong - there's still a long way to go - but if you compare where we are today to where we were 10 or 15 years ago, we've made great strides.
+
+I'd like to draw attention to two closely related areas that I think we need to pay more attention to.
+
+---
+class: title
+
+# Burnout
+
+???
+
+The first is the spectre of Burnout in our community.
+
+I started this talk discussing the fact that the bulk of the work on Python and Django were the result of volunteer efforts. However, I've almost lost count of the number of talented developers around me who have burned out, or come close, under the load imposed by this volunteered effort. I've made no secret that I went through a major depressive episode last year; I'm a lot better now, but I've still got a long way to go.
+
+This isn't a problem with an easy solution. It isn't as simple as just telling someone they don't have to volunteer anymore - because if they're the maintainer of even a moderately successful project, I guarantee their inbox will be filled with "why haven't you fixed my bug" emails - sometimes from people who should know a lot better.
+
+---
+class:title
+
+# Don't assume resources are free
+
+???
+
+The greatest shocks in society occur when something we assume is plentiful and ubiquitous disappaer. Petrol. Electricity. Clean water. If your open source project isn't planning for the day when your biggest contributor steps down, or is unable to continue, then your project has a clock on it.
+
+As a community, we need to institutionalize a minimization of the expectation of free labour. If you've got a project role that is going to take resources - be it materiel, labour, emotional energy - don't just assume those resources will be available forever in boundless quantity. And if you're a free consumer of that resource, be aware of what you're consuming.
+
+If you're a commercial organization who depends on a project, and you aren't taking steps to contribute to projects you use - then I'd argue you're being criminally negligent to your investors, because you haven't secured your supply chain. You haven't mitigated a key risk associated with your technology stack.
+
+41:00
+
+---
+class: title
+
+# Relationship with money
+
+???
+
+But it's not just about finger pointing at bad projects, bad users, or bad companies. As a community, we haven't established the conditions where companies are readily *able* to mitigate these risks.
+
+The "free" software community has spent a lot of time and effort discussing the importance of user freedoms. However, they've been almost silent on the unintended consequences of their position - that when software is free as in freedom, it is almost certainly free as in beer as well - which means the task of making an income off that software is much higher.
+
+I don't want to undersell the importance of user freedom, but to focus on user freedom to the detriment of the mental and physical health of the developers of that software is, in my opinion, incredibly negligent.
+
+How to make money from Free Software isn't a question that has any good answers at the moment. As a community, we need to have a very serious discussion about the economic consequences of our decisions, and how to harness the not insignificant resources that the software community has at it's disposal.
+
+---
+class:title
+
+# A side effect:
+# Enabling Diversity
+
+???
+
+The good news is that there is a possibly unexpected benefit to facing this problem head on. Finding a way to pay for the resources we are consuming certainly helps to stave off burnout; but it has the added benefit that it broadens the list of people who can do the work. Volunteers, by definition, are made up by those who have the time to volunteer. If you've got a family, or children, or a loved one that needs care, those commitments take priority, and limit your ability to volunteer. You want to address diversity? Make sure that you're not just taking from the pool of people who have copious free time - which, broadly speaking, means white, middle to upper class anglo saxon men aged 16-30.
+
+If you're someone who uses open source, don't just take. Give back in tangible ways - either with hard commitments of time, or with cash that organizations like the PSF or DSF can use. And this is *especially* important if you're an large organization that has *extraordinary* resources at their disposal, and who derive *immense* benefit from open source and volunteer projects.
+
+---
+class: title
+
+# The biggest challenges
+# are non-technical
+
+???
+
+You'll notice that in this talk, I've spent almost as much time talking about the "soft" (for want of a much better work) aspects of the problem we face as the "hard" technical problems. The technical aspects of a computing problem almost always get the most attention. But they're also the easiest ones to solve. They either have an answer, or they don't.
+
+But Open source projects are, ultimately, about communities of people with aligned interests, acting collectively. This means issues of communication, collaboration, identity, social justice, inclusivity, funding - these are all intertwined with technical aspects - because without the "soft" aspects, the technical aspects *can't* be solved. And these challenges don't have simple answers. Who would have thought - humans are difficult.
+
+---
+class: title
+
+# The biggest challenges
+# are non-technical
+
+???
+
+This is something that has taken a long time for the tech community to learn. We've still got plenty we still have to learn, and it's going to take a long time to institutionalize best practices. The key is to pay attention to it. Whatever software community (or communities) you are a part of, keep your ears open, and your mouth shut, and look for ways to improve the social aspects around your project.
+
+And part of that means acknowledging any kind of privilege you may have - and when I say that, I don't just mean white men, either. Women can have privilege, too. So can people of color. If you don't believe me - go watch Saron Yitbarek's keynote talk from DjangoCon US a few weeks ago - she gives a much better explanation than I could ever provide.
+
+---
+class: title
+
+# The future
+
+???
+
+So - what does the future hold for Python? Well, I don't know. I've outlined what i see to be the threats and opportunities, but I'm just one voice.
+
+But if we want Python to continue to be a force in the world of computing, I know we can't stand still. We need to prepare for the future, whatever we perceive that to be.
+
+---
+class: screenshot
+
+![Image goes here](images/beeware-logo.png)
+
+???
+
+I'm intending to keep working on BeeWare, the umbrella project covering VOC, Batavia, Ouroboros, Briefcase, and many other tools that are needed to get Python code in the hands of end users, and to enable those users to get involved in writing their own apps.
+
+If any of those projects sounds interesting, and you'd like to get involved, I'd appreciate any help. There's plenty to do. And I've got an open offer to mentor anyone who wants to get involved, even if it's your first time contributing to an open source project.
+
+And, as an added bonus, thanks to MaxCDN, anyone who *does* contribute will receive an exclusive BeeWare Challenge Coin.
+
+---
+class:title
+
+# pybee.org/b/signup
+
+???
+
+Without funding, this is going to continue to be a hobby project. I'd like to see it become a whole lot more. I'd like it to become a model for a new style of financially viable, but also socially responsible open source organization.
+
+I'm exploring options for making this happen. One of these is options to crowdfund; if you'd like to be notified as these plans evolve, I'd encourage you to visit this URL, and signup for the announcement list.
+
+If you're a company with an interest in cross platform mobile, you can sign up for the mailing list, or you can contact me directly. I'm open to the idea of commercial sponsorship, so come talk to me.
+
+---
+class: title
+
+# Fortune favours the prepared mind
+
+???
+
+All this really comes down to the old quote from Pascal:
+
+If you want any project to become successful, or remain successful, you need to plan for that success. It took years for Python to become an overnight success. Django certainly benefitted from some early momentum from being in the right place at the right time, but true success took several years.
+
+I've benefitted from being part of a large and successful project like Django. I'm on the early stages of what I hope will be a similar journey with BeeWare. And both of those projects wouldn't have been possible - or, at least, would have been significantly different - if it wasn't for the groundwork laid out by Python and the Python community.
+
+I'm very keen to make sure that groundwork doesn't go away. It's taken 25 years to develop it. And it would be a shame to have to develop it all over again, simply because we didn't pay attention to the way the world is changing around us.
+
+---
+class: title
+# Thank You!
+# russell@keith-magee.com
+# @freakboy3742
+# pybee.org
+# pybee.org/b/signup
+
+???
+
+I'd like to thank Richard and the rest of the PyCon AU committee for the invitation to speak today. I hope I've given you all some food for thought. And with that, I'm happy to take a few questions.
+
+    </textarea>
+    <script src="remark.js" type="text/javascript">
+    </script>
+    <script type="text/javascript">
+      var slideshow = remark.create({controller: function() {}});
+      slideshow.gotoSlide(1);
+    </script>
+  </body>
+</html>
