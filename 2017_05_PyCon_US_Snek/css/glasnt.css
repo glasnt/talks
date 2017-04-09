@@ -1,4 +1,4 @@
-img.e { width: 40px} 
+img.e { width: 50px; margin: 0 !important; margin-bottom: -10px !important} 
 div.big {
 	font-size: 120px;
 }
@@ -21,7 +21,7 @@ r { color: red }
 h { color: blue; font-weight: bold;}
 
 pre.cli { 
-    font-size: 80px;
+    font-size: 60px;
     line-height: 140%; 
 }
 pre.small { 

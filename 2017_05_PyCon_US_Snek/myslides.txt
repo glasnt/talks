@@ -5,6 +5,13 @@
 
 Note: 
 
+Breathe. You got dis.
+
+---
+
+! wave
+
+Note: 
 Hi! I'm Katie, and this is Snek in the Browser. We're going to be diving into some
 content in this talk that might be a bit daunting at first, but trust me, we'll get there. 
 
@@ -13,24 +20,24 @@ And like any good talk, we should start with some definitions
 
 Let's kick off with the most important definition of all
 
----
 
+---
 #= What is 'snek'?
 
 Note: 
 
-snek is a very important term that may not be familiar to you, and of course, is the focus of this talk
+What is 'snek'? According to the most reliable source of information on the internet, Tumblr.. 
 ---
 
 @ snek.png
 
 Note: 
 
-A snek is comprised of a dangernoodle, with a snoot. snek is very cute
+A snek is comprised of a dangernoodle, with a snoot for booping. snek is very cute
 
 ---
 
-@ python_logo.jpg
+@= python-logo.png
 
 Note: 
 
@@ -65,10 +72,9 @@ This is the most common implementation of the Python language specification
 
 ---
 
-<pre class="cli"><code>
-$ cat snek.py
+<pre class="cli"><code>$ cat snek.py
 def snek():
-&nbsp; &nbsp; print("🐍")
+&nbsp; &nbsp; print("<img class="e" src="s.png">")
 </code></pre>
 
 
@@ -80,9 +86,8 @@ All it does it print an emoji snek
 
 ---
 
-<pre class="cli"><code>
-$ python snek.py
-🐍
+<pre class="cli"><code>$ python snek.py
+<img class="e" src="s.png">
 </code></pre>
 
 Note: we can execute this file by asking python to run it. 
@@ -93,11 +98,10 @@ We don't have to just use the cli
 
 ---
 
-<pre class="cli"><code>
-$ python
+<pre class="cli"><code>$ python
 Python 3.6.0
 >>> import snek
-🐍</code></pre>
+<img class="e" src="s.png"></code></pre>
 
 Note: we could also use the interactive python interface
 
@@ -118,7 +122,7 @@ it has a file in it that's got the extension pyc instead of just py
 $ cat snek.cpython-36.pyc
 3
 �&�X�@s
-&nbsp; &nbsp; ed�dS)u🐍N)�print�rr�
+&nbsp; &nbsp; ed�dS)u<img class="e" src="s.png">N)�print�rr�
 /private/tmp/snek.py&lt;module>s
 </code></pre>
 Note: but it looks to be full of a little bit of jibberish
@@ -129,7 +133,7 @@ Note: but it looks to be full of a little bit of jibberish
 <pre class="cli small"><code>$ python
 Python 3.6.0
 >>> def snek():
->>> &nbsp; &nbsp; print("🐍")
+>>> &nbsp; &nbsp; print("<img class="e" src="s.png">")
 </code></pre>
 
 Note: However, it's not gibberish to the python intepreter. It knows how to read this compiled content
@@ -141,7 +145,7 @@ If we run python, define our function
 <pre class="cli small"><code>$ python
 Python 3.6.0
 >>> def snek():
->>> &nbsp; &nbsp; print("🐍")
+>>> &nbsp; &nbsp; print("<img class="e" src="s.png">")
 >>> import dis
 >>> dis.dis(snek)
 </code></pre>
@@ -154,7 +158,7 @@ and ask it to dis this snek
 
 
 <pre class="cli small" style="margin-left: -20px"><code>2&nbsp;0 LOAD_GLOBAL&nbsp; &nbsp; 0 (print)
- &nbsp;  2 LOAD_CONST &nbsp; &nbsp;  1 ('🐍')
+ &nbsp;  2 LOAD_CONST &nbsp; &nbsp;  1 ('<img class="e" src="s.png">')
  &nbsp;  4 CALL_FUNCTION&nbsp; 1
  &nbsp;  6 POP_TOP
  &nbsp;  8 LOAD_CONST&nbsp; &nbsp;  &nbsp;0 (None)
@@ -167,16 +171,513 @@ Note: and you get this.
 The module 'dis' that we used, that's short for "disassembler"
 
 And what you're seeing here, is raw python bytecode.
+
+This is what CPython disassembles high-level Python code into. Hence, "dis" for disassemble
+
+Thank goodness we have nicer syntax to use!
+
 ---
 
+#= That's snek
 
+Note: So that's the 'snek'. A language that we know and love, that's really just a nice wrapper around building blocks
 
-@ beeware_full.png
+---
+
+#= But who is browser?
 
 Note: 
 
+But what about the browser? 
+
+---
+
+@= browser_logos.png
+
+Note: when I say browser, I mean one of the many application use use to 
+surf the information superhighway, also known as the internet. You may
+have heard of it. 
+
+---
+
+@= browser_window.png
+
+Note: This is a browser window. We have an address bar, which shows where we are. We have a window, which shows some content. 
+
+---
+
+<pre class="cli"><code>&lt;title>Hello World&lt;/title>
+&lt;h1>Hello World&lt;/h1>
+
+&lt;p>Welcome to the
+information super 
+highway&lt;/p>
+</code></pre>
+Note: 
+---
+
+@ winding_road.png
+
+<span class="dasfoot"><a href="https://unsplash.com/photos/XyoW1MhPqbs">unsplash</a></span>
+
+Note: 
+
+---
+
+@ form-window.png
+
+Note: 
+
+---
+
+<pre class="cli" style="margin-top: 0px; margin-left: -40px;"><code>&lt;form>
+&nbsp;  &lt;label>Username: &lt;/label>
+&nbsp;  &lt;input type="text"
+&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; id="username">
+&nbsp;&lt;button>Surf!&lt;/button>
+&lt;/form>
+</code></pre>
+---
+
+#= Form validation
+## Server side
+Note: So we want to validate our form
+
+We want to ensure the username is valid
+
+The actual validation rules here we'll use aren't best practice, but I'm using them to demonstrate a point.
+---
+
+<pre class="cli" style="font-size: 140%; margin-top: 0px; margin-left: -90px;"><code>def valid_username(un):
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+</code></pre>
+Note: So we declare a method in our server-side python API to validate a username is valid
+---
+<pre class="cli" style="font-size: 140%; margin-top: 0px; margin-left: -90px;"><code>def valid_username(un):
+&nbsp; usr = un
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+</code></pre>
+Note: One way to do this, is to take a copy of the username object
 
 
+---
+<pre class="cli" style="font-size: 140%; margin-top: 0px; margin-left: -90px;"><code>def valid_username(un):
+&nbsp; usr = un
+&nbsp;
+&nbsp;
+&nbsp; if usr != un:
+&nbsp; &nbsp; return False
+&nbsp;
+&nbsp; return True
+</code></pre>
+Note: and then after out maipulations, if they match, return True 
+
+---
+<pre class="cli" style="font-size: 140%; margin-top: 0px; margin-left: -90px;"><code>def valid_username(un):
+&nbsp; usr = un.lower()
+&nbsp;
+&nbsp;
+&nbsp; if usr != un:
+&nbsp; &nbsp; return False
+&nbsp;
+&nbsp; return True
+</code></pre>
+Note: For example, allowing usernames that are idential apart from case is bad, so we should
+only allow lowercase usernames to be entered to start
+
+---
+<pre class="cli" style="font-size: 140%; margin-top: 0px; margin-left: -90px;"><code>def valid_username(un):
+&nbsp; usr = un.lower().strip()
+&nbsp; &nbsp;
+&nbsp; &nbsp;
+&nbsp; if usr != un:
+&nbsp; &nbsp; return False
+&nbsp;
+&nbsp; return True
+</code></pre>
+Note: also, we want to strip whitespace from the start and end. 
+
+This is particularly useful for mobile entry, where when autocorrecting a space is added to the end
+in some keybaords. 
+---
+<pre class="cli" style="font-size: 140%; margin-top: 0px; margin-left: -90px;"><code>def valid_username(un):
+&nbsp; usr = un.lower().strip() \
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; .encode("ascii","ignore") \
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; .decode("utf-8")
+&nbsp; if usr != un:
+&nbsp; &nbsp; return False
+&nbsp;
+&nbsp; return True
+</code></pre>
+Note: And because we hate emoji, we may want to ensure that only ascii 
+
+This is great, we now have a function in python that does exactly what we want, that works
+exactly for our business logic in the API
+
+
+---
+
+#= Form validation
+## Client side
+
+Note: But if we want to use this same logic client side
+
+---
+
+@ javascript-logo.png
+Note: But because we're in the web, we have to use JavaScript
+
+JavaScript one the great language war in the browser, defeating such foes as Flash and ActiveScript. 
+
+
+---
+<pre class="cli" style="font-size: 140%; margin-top: 0px; margin-left: -90px;"><code>function valid_username(un) {
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+}
+</code></pre>
+Note: To ensure that we have the same validation on the front and back end, we need to translate our python code to javascript exactly 
+---
+
+<pre class="cli" style="font-size: 140%; margin-top: 0px; margin-left: -90px;"><code>function valid_username(un) {
+&nbsp; <h>usr = un</h>
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+}
+</code></pre>
+Note: Firstly, take a copy of the string. which is the same syntax in python as in javascript
+Except no it's not, because in this case, usr would be a global variable
+
+---
+<pre class="cli" style="font-size: 140%; margin-top: 0px; margin-left: -90px;"><code>function valid_username(un) {
+&nbsp; <h>var</h> usr = un
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+}
+</code></pre>
+Note: We need to the the 'var' prefix to ensure it's local. 
+
+Okay, this is fine. 
+
+---
+<pre class="cli" style="font-size: 140%; margin-top: 0px; margin-left: -90px;"><code>function valid_username(un) {
+&nbsp; var usr = un
+&nbsp; 
+&nbsp; if usr != un { 
+&nbsp; &nbsp; return False;
+&nbsp; }
+&nbsp; return True;
+}
+</code></pre>
+Note: we can then just add our if and return statements, swapping out the colon in python for braces in javascript, right?
+
+Well, no, this isn't valid
+
+---
+
+<pre class="cli" style="font-size: 140%; margin-top: 0px; margin-left: -90px;"><code>function valid_username(un) {
+&nbsp; var usr = un
+&nbsp; 
+&nbsp; if <h>(</h>usr != un<h>)</h> { 
+&nbsp; &nbsp; return False;
+&nbsp; }
+&nbsp; return True;
+}
+</code></pre>
+Note: you need to wrap the if statement comparison in brackets
+---
+
+<pre class="cli" style="font-size: 140%; margin-top: 0px; margin-left: -90px;"><code>function valid_username(un) {
+&nbsp; var usr = un
+&nbsp; 
+&nbsp; if (usr != un) { 
+&nbsp; &nbsp; return <h>f</h>alse;
+&nbsp; }
+&nbsp; return <h>t</h>rue;
+}
+</code></pre>
+Note: and you need to set the booleans to lowercase, because they spelt differently in javscript
+---
+
+<pre class="cli" style="font-size: 140%; margin-top: 0px; margin-left: -90px;"><code>function valid_username(un) {
+&nbsp; var usr = un
+&nbsp; 
+&nbsp; if (usr !=<h>=</h> un) { 
+&nbsp; &nbsp; return false;
+&nbsp; }
+&nbsp; return true;
+}
+</code></pre>
+Note: and you need to use a not equals equals in javascript because otherwise you
+may be comparing the equality between a string and a number, which would be bad
+
+Now, now, we can get to the bit where we actually get to the validation 
+
+So, converting a string to lowercase in javascript. A quick check of the mozilla develoepr network shows that we need
+---
+
+<pre class="cli" style="font-size: 140%; margin-top: 0px; margin-left: -90px;"><code>function valid_username(un) {
+&nbsp; var usr = un<h>.toLowerCase()</h>
+&nbsp; 
+&nbsp; if (usr !== un) { 
+&nbsp; &nbsp; return false;
+&nbsp; }
+&nbsp; return true;
+}
+</code></pre>
+Note: toLowerCase. that's fine. Next is strip. But there's no native strip function in javascript
+
+---
+
+<pre class="cli" style="font-size: 140%; margin-top: 0px; margin-left: -90px;"><code>function valid_username(un) {
+&nbsp; var usr = un.toLowerCase()<h>.trim()</h>
+&nbsp; 
+&nbsp; if (usr !== un) { 
+&nbsp; &nbsp; return false;
+&nbsp; }
+&nbsp; return true;
+}
+</code></pre>
+Note: There is a trim though. Except that won't work in all browsers, beacuse it was only introduced a few years ago, and IE8 won't understand this command
+
+And then there's the converting of the string from potentually unicode to ascii. 
+
+---
+<pre class="cli" style="font-size: 140%; margin-top: 0px; margin-left: -90px;"><code>function valid_username(un) {
+&nbsp; var usr = un.toLowerCase().trim()
+&nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; <h>.??????? </h>
+&nbsp; if (usr !== un) { 
+&nbsp; &nbsp; return false;
+&nbsp; }
+&nbsp; return true;
+}
+</code></pre>
+Note: how can we replicate the same functionality as an purposefully lossy encode decode in python in javascript
+
+There doesnt appear to be anything that natively does it in js. So we'd have to make our own 
+
+We could iterate over all the elements and use a charCodeAt to check if it's character id is less than 127
+
+Or we could use a regex
+
+Or we could use URI encoding and then strip any symbols 
+
+Or we could
+
+
+---
+
+#= Gah!
+
+Note: 
+GAH
+
+It's just too complicated. 
+
+Why can't we just use the python code, that works, in the browser?
+
+Well. we can
+
+---
+@ beeware.png
+
+Note: Beeware, is a series of libraries and tools that helps get python everywhere. 
+
+Remember our bytecode from earlier? We run that in the browser, using a BeeWare suite tool called Batavia
+
+---
+
+
+# Batavia
+@ batavia_full.png
+
+Note:
+
+Batavia is a Python virtual machine, written in javascript. 
+
+Why is it called batavia?
+
+Batavia was the name of a Dutch merchant ship in the 1600's. It sorta.. crashed.. into Australia
+
+Not far from Perth, actually, which is where the Bee-levolent Dictator For Now of BeeWare, 
+Russell Keith-Magee, hails from. 
+
+Now, the batavia had a small problem with it's crew, mainly mutiny.. but where it was suppoesd to be going
+was what is now Indonesia, to a small island called Java
+
+So the Batavia was the world's first Java ship. 
+
+---
+
+###= ba doom tish
+
+
+---
+
+@ snakebee.jpg
+
+Note: Using batavia, our little helper be can help lead the way for snek to be in the browser
+---
+
+<pre class="cli" style="font-size: 140%; margin-top: 0px; margin-left: -90px;"><code>def valid_username(un):
+&nbsp; usr = un.lower().strip() \
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; .encode("ascii","ignore") \
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; .decode("utf-8")
+&nbsp; if usr != un:
+&nbsp; &nbsp; return False
+&nbsp;
+&nbsp; return True
+</code></pre>
+Note: Here's our python function from before
+
+---
+
+# ... (process on how to convert previous slide to next slide)
+
+Note: TODO what is a nice process to convert script to bytecode?
+
+import pycompile pycompile.compile? 
+
+
+---
+<pre class="cli" style="font-size: 100%; margin-top: -50px; margin-left: -50px;"><code>&lt;script type="application/python-bytecode">
+bytecode = "Fg0NClq06VikAAAA4wAAAAAAAAAAAAAAAA
+IAAABAAAAAcxAAAABkAABkAQCEAABaAABkAgBTKQNjAQAA
+AAAAAAACAAAAAwAAAEMAAABzOwAAAHwAAGoAAIMAAGoBAI
+MAAGoCAGQBAGQCAIMCAGoDAGQDAIMBAH0BAHwBAHwAAGsD
+...
+IJAAAATikBcgkACAAAANoIPG1vZHVsZT4BAAAAcwAAAAA="
+&lt;script>
+</code></pre>
+Note: 
+---
+
+# ... (process on how to call the valid_username method now it's embeded)
+
+Note: TODO How to then call a python-function in javascript? just the `valid_username` call from javascript?
+---
+
+##= Doesn't this already exist?
+
+Note: Well, yes and no. 
+---
+
+##= Brython, Skulpt, PyPy.js
+### Compiler + Interpreter<br>+ REPL + Python Virtual Machine
+
+Note: Brython, Skult and PyPyJS all exist, and all solve the problem of getting Python
+in the browser, but in different ways. 
+
+Brython and Skulpt are full implementations of the Python compler and interpreter, complete with interactive prompt. 
+
+PyPyJS is similar, except it's used emscripted to compile the PyPy source code into javaScript. 
+
+These implementations are big. Like, 5 megabytes for PyPy.js. 
+
+I mean, 5MB may not be a lot, but it's a noticable load time. It's even more noticable on mobile. Even more
+noticable if you live on a small island in the middle of the pacific, like I do.  Or, say, on conference wifi. 
+
+
+---
+#= Batavia
+
+### ~~Compiler + Interpreter<br>+ REPL +~~ Python Virtual Machine
+
+Note: batavia, however, doesn't need a compiler, since we're proving the compiled code already. 
+
+We don't need an interpreter and repl because we already have our code, and our users aren't inputing code directly
+
+All we need is the python virtual machine. 
+
+Add it all up, and add javascript compression, compared to 5MB, batavia weighs in at about 10KB, which is 
+negligable, even over Australian mobile internet. 
+
+---
+
+##= But wait, there's more
+
+Note: So that's Batavia
+
+but that's only one part of the beeware suite. 
+
+---
+
+<pre class="cli" style="margin-top: 0px; margin-left: -40px;"><code>&lt;form>
+&nbsp;  &lt;label>Username: &lt;/label>
+&nbsp;  &lt;input type="text"
+&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; id="username">
+&nbsp;&lt;button>Surf!&lt;/button>
+&lt;/form>
+</code></pre>
+Note: Remember this markup from earlier? This will allow us to implement a form on the web
+
+We've already gotten rid of the JavaScript with BeeWare, but what about the HTML and the CSS?
+
+Can we remove those too?
+
+Yes. 
+---
+
+@ toga.png
+
+Note: we've already shaved that yak 
+
+
+Toga is a Python native, OS native, cross platform graphical uiser interface toolkit
+
+
+---
+
+#= ...
+
+Note: 
+
+TODO - how to explain going from HTML to a boxmodel is a thing
+
+(moving from our form example to F2C) ??
+
+How to get it to run in Django/static
+
+
+TODO some sort of summary
+---
+
+### TODO: Booth picture
+
+---
+@ livebees.jpg
+
+Note: We have stickers, all kinds
+
+---
+
+@ challenge-coin.png
+Note: We also have a shiny coin
+
+If you make a contribution to the beeware project, any contribution, you get a shiny coin
+
+We'll be here all through the sprints. 
 
 
 ---
