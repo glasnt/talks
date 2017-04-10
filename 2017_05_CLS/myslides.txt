@@ -524,24 +524,24 @@ Note: Looking at any github project page we can see all the contributors right?
 
 
 ---
-@= reveal_header_h.png
+@= reveal_header_e.png
 
 Note: ttere's a button right at the top and everything
 
 ---
 
-@= reveal_12.png
+@= reveal_contrib_top.png
 
 Note: But if we click it, then we don't actually get the contributors
 
 We get the top ones, with a graph, ranked by lines of code
 
 ---
-@= reveal_12_h.png
+@= reveal_contrib_top_e.png
 ---
-@= reveal_100.png
+@= reveal_contrib_bottom.png
 ---
-@= reveal_100_h.png
+@= reveal_contrib_bottom_e.png
 
 Note: And it's only the top 100
 
@@ -589,8 +589,8 @@ Note: introducing octohatrack
 ---
 
 #= hakimel/reveal.js
-##- GitHub Contributors: UPDATEME
-##- All Contributors: UPDATEME
+##- GitHub Contributors: 197
+##- All Contributors: 1741
 
 ---
 
@@ -620,13 +620,6 @@ Python HTTP Requests for Humans
 
 Note: So many conversions!
 
-
----
-
-! claps
-
----
-@^ jshatrack.png
 ---
 
 #= TL;DR: 

@@ -524,24 +524,24 @@ Note: Looking at any github project page we can see all the contributors right?
 
 
 ---
- <div style='margin: 0 auto;'><p align='center'><img src='pictures/reveal_header_h.png'></p></div>  <!-- .slide: class="center" -->
+ <div style='margin: 0 auto;'><p align='center'><img src='pictures/reveal_header_e.png'></p></div>  <!-- .slide: class="center" -->
 
 Note: ttere's a button right at the top and everything
 
 ---
 
- <div style='margin: 0 auto;'><p align='center'><img src='pictures/reveal_12.png'></p></div>  <!-- .slide: class="center" -->
+ <div style='margin: 0 auto;'><p align='center'><img src='pictures/reveal_contrib_top.png'></p></div>  <!-- .slide: class="center" -->
 
 Note: But if we click it, then we don't actually get the contributors
 
 We get the top ones, with a graph, ranked by lines of code
 
 ---
- <div style='margin: 0 auto;'><p align='center'><img src='pictures/reveal_12_h.png'></p></div>  <!-- .slide: class="center" -->
+ <div style='margin: 0 auto;'><p align='center'><img src='pictures/reveal_contrib_top_e.png'></p></div>  <!-- .slide: class="center" -->
 ---
- <div style='margin: 0 auto;'><p align='center'><img src='pictures/reveal_100.png'></p></div>  <!-- .slide: class="center" -->
+ <div style='margin: 0 auto;'><p align='center'><img src='pictures/reveal_contrib_bottom.png'></p></div>  <!-- .slide: class="center" -->
 ---
- <div style='margin: 0 auto;'><p align='center'><img src='pictures/reveal_100_h.png'></p></div>  <!-- .slide: class="center" -->
+ <div style='margin: 0 auto;'><p align='center'><img src='pictures/reveal_contrib_bottom_e.png'></p></div>  <!-- .slide: class="center" -->
 
 Note: And it's only the top 100
 
@@ -589,8 +589,8 @@ Note: introducing octohatrack
 ---
 
 # hakimel/reveal.js <!-- .slide: class="center" -->
-## GitHub Contributors: UPDATEME <!-- .element: class="fragment" -->
-## All Contributors: UPDATEME <!-- .element: class="fragment" -->
+## GitHub Contributors: 197 <!-- .element: class="fragment" -->
+## All Contributors: 1741 <!-- .element: class="fragment" -->
 
 ---
 
@@ -620,13 +620,6 @@ Python HTTP Requests for Humans
 
 Note: So many conversions!
 
-
----
-
- <div style='width: 50%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/claps.svg'></p></div> <!-- .slide: class="center" -->
-
----
- <img src="pictures/jshatrack.png" style="margin-top: -50px" />
 ---
 
 # TL;DR: <!-- .slide: class="center" -->
