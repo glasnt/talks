@@ -21,7 +21,7 @@ r { color: red }
 h { color: blue; font-weight: bold;}
 
 pre.cli { 
-    font-size: 60px;
+    font-size: 40px;
     line-height: 140%; 
 }
 pre.small { 

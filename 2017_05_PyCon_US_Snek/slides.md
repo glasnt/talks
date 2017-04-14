@@ -43,8 +43,6 @@ Note:
 
 more conventionally, snek is also pronounced "snake", of which Python is an instance.
 
-Python's logo looks sort of like a snake, I guess?
-
 More more importantly,
 
 ---
@@ -206,21 +204,29 @@ Note: This is a browser window. We have an address bar, which shows where we are
 
 ---
 
-<pre class="cli"><code>&lt;title>Hello World&lt;/title>
-&lt;h1>Hello World&lt;/h1>
+ <div style='margin: 0 auto;'><p align='center'><img src='pictures/html_logo.png'></p></div>  <!-- .slide: class="center" -->
+Note: this is made using HTML.
 
-&lt;p>Welcome to the
-information super
-highway&lt;/p> 
-</code></pre> 
-Note: 
+HTML, or Hypertext Markup Language, is what gives the information super highway it's look and feel
+
 ---
 
- <img src="pictures/winding_road.png" />
+<pre class="cli"><code>&lt;html>
+&nbsp; &lt;title>Hello World&lt;/title>
+&nbsp; &lt;body>
+&nbsp; &nbsp; &lt;h1>Hello World&lt;/h1>
+&nbsp; &nbsp; &lt;p>
+&nbsp; &nbsp; &nbsp; Welcome to the information
+&nbsp; &nbsp; &nbsp; super highway
+&nbsp; &nbsp; &lt;/p>
+&nbsp; &lt;/body>
+&lt;/html> 
+</code></pre> 
+Note: using a combination of markup tags we can make a structure on a page that is then rendered in a browser
 
-<span class="dasfoot"><a href="https://unsplash.com/photos/XyoW1MhPqbs">unsplash</a></span>
+---
 
-Note: 
+ <div style='width: 50%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/css_logo.png.svg'></p></div> <!-- .slide: class="center" -->
 
 ---
 
@@ -246,6 +252,11 @@ Note: So we want to validate our form
 We want to ensure the username is valid
 
 The actual validation rules here we'll use aren't best practice, but I'm using them to demonstrate a point.
+---
+
+ <div style='margin: 0 auto;'><p align='center'><img src='pictures/python-logo.png'></p></div>  <!-- .slide: class="center" -->
+
+Note: Serverside, we want to use Python
 ---
 
 <pre class="cli" style="font-size: 140%; margin-top: 0px; margin-left: -90px;"><code>def valid_username(un):
@@ -553,9 +564,11 @@ Note: Here's our python function from before
 
 ---
 
-# ... (process on how to convert previous slide to next slide)
+# ... <!-- .slide: class="center" -->
 
-Note: TODO what is a nice process to convert script to bytecode?
+Note: (process on how to convert previous slide to next slide)
+
+TODO what is a nice process to convert script to bytecode?
 
 import pycompile pycompile.compile?
 
@@ -573,9 +586,11 @@ IJAAAATikBcgkACAAAANoIPG1vZHVsZT4BAAAAcwAAAAA"  <!-- .slide: class="center" -->
 Note: 
 ---
 
-# ... (process on how to call the valid_username method now it's embeded)
+# ... <!-- .slide: class="center" -->
 
-Note: TODO How to then call a python-function in javascript? just the `valid_username` call from javascript?
+Note: (process on how to call the valid_username method now it's embeded)
+
+TODO How to then call a python-function in javascript? just the `valid_username` call from javascript?
 ---
 
 ## Doesn't this already exist? <!-- .slide: class="center" -->
@@ -663,7 +678,9 @@ How to get it to run in Django/static
 TODO some sort of summary
 ---
 
-### TODO: Booth picture
+# [booth picture] <!-- .slide: class="center" -->
+
+Note: TODO: Booth picture
 
 ---
  <img src="pictures/livebees.jpg" />
