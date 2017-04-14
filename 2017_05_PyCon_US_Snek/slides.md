@@ -226,13 +226,19 @@ Note: using a combination of markup tags we can make a structure on a page that 
 
 ---
 
- <div style='width: 50%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/css_logo.png.svg'></p></div> <!-- .slide: class="center" -->
+ <img src="pictures/css_logo.png" />
+---
 
+# ... <!-- .slide: class="center" -->
+
+Note: TODO nice CSS code and preview of the form
 ---
 
  <img src="pictures/form-window.png" />
 
-Note: 
+Note: We can extend our HTML to include a form.
+
+Forms allow us to send data to the server, which means we can interact with the internet
 
 ---
 
@@ -243,10 +249,12 @@ Note:
 &nbsp;&lt;button>Surf!&lt;/button> 
 &lt;/form> 
 </code></pre> 
+
+Note: This is what that little bit we've added looks like. There's a label, a form input element, and a button
 ---
 
-# Form validation <!-- .slide: class="center" -->
-## Server side
+ <div style='margin: 0 auto;'><p align='center'><img src='pictures/server.png'></p></div>  <!-- .slide: class="center" -->
+
 Note: So we want to validate our form
 
 We want to ensure the username is valid
@@ -339,8 +347,7 @@ exactly for our business logic in the API
 
 ---
 
-# Form validation <!-- .slide: class="center" -->
-## Client side
+ <div style='margin: 0 auto;'><p align='center'><img src='pictures/client.png'></p></div>  <!-- .slide: class="center" -->
 
 Note: But if we want to use this same logic client side
 
