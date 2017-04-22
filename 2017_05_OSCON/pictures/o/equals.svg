@@ -1,0 +1,28 @@
+<svg width="45" height="45" xmlns="http://www.w3.org/2000/svg">
+ <metadata id="metadata8">image/svg+xml</metadata>
+ <defs>
+  <clipPath clipPathUnits="userSpaceOnUse" id="clipPath16">
+   <path d="m11.488619,24.425327l36,0l0,-36l-36,0l0,36z" id="path18"/>
+  </clipPath>
+ </defs>
+ <g>
+  <title>background</title>
+  <rect fill="none" id="canvas_background" height="402" width="582" y="-1" x="-1"/>
+ </g>
+ <g>
+  <title>Layer 1</title>
+  <line stroke-linecap="null" stroke-linejoin="null" id="svg_1" y2="26.874943" x2="33.531107" y1="26.937443" x1="12.031386" stroke-width="2" fill="#292f33"/>
+  <g id="svg_16">
+   <g id="svg_13">
+    <ellipse stroke="null" ry="1.812476" rx="1.874976" id="svg_10" cy="23.796858" cx="13.000122" fill-opacity="null" stroke-opacity="null" stroke-width="null" fill="#292f33"/>
+    <ellipse ry="1.812476" rx="1.874976" id="svg_11" cy="23.796858" cx="31.999876" fill-opacity="null" stroke-opacity="null" stroke-width="null" stroke="null" fill="#292f33"/>
+    <rect stroke="null" id="svg_12" height="3.687452" width="19.062252" y="21.953131" x="13.125122" fill-opacity="null" stroke-opacity="null" stroke-width="null" fill="#292f33"/>
+   </g>
+   <g id="svg_15">
+    <ellipse stroke="null" ry="1.812476" rx="1.874976" id="svg_7" cy="16.421954" cx="13.000122" fill-opacity="null" stroke-opacity="null" stroke-width="null" fill="#292f33"/>
+    <ellipse ry="1.812476" rx="1.874976" id="svg_8" cy="16.421954" cx="31.999876" fill-opacity="null" stroke-opacity="null" stroke-width="null" stroke="null" fill="#292f33"/>
+    <rect stroke="null" id="svg_9" height="3.687452" width="19.062252" y="14.578227" x="13.125121" fill-opacity="null" stroke-opacity="null" stroke-width="null" fill="#292f33"/>
+   </g>
+  </g>
+ </g>
+</svg>
