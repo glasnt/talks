@@ -173,9 +173,11 @@ Note: and you get this.
 
 The module 'dis' that we used, that's short for "disassembler"
 
-And what you're seeing here, is raw python bytecode.
+And what you're seeing here, is raw Cpython byteocde.
 
-This is what CPython disassembles high-level Python code into. Hence, "dis" for disassemble
+You can pretty much read here what's going onn directly.
+
+Load a global, load a constact, call a function.
 
 Thank goodness we have nicer syntax to use!
 
@@ -268,9 +270,9 @@ Note: And that stylesheet tells certain parts of the page how to display.
 
  <img src="pictures/form-window.png" />
 
-Note: We can extend our HTML to include a form.
+Note: We can extend our HTML to include a form, that will allow us to surf the internets
 
-Forms allow us to send data to the server, which means we can interact with the internet
+Well, not actually. What we're doing here is enabling us to send information from the client front-end to the serer bakend.
 
 ---
 
@@ -388,9 +390,9 @@ Note: But if we want to use this same logic client side
  <img src="pictures/javascript-logo.png" />
 Note: But because we're in the web, we have to use JavaScript
 
-JavaScript one the great language war in the browser, defeating such foes as Flash and ActiveScript.
+JavaScript one the great language war in the browser, defeating such foes as Flash, Visual basic, JScript and ActiveScript.
 
-
+Luckily. 
 ---
 <pre class="cli" style="font-size: 140%; margin-top: 0px; margin-left: -90px;"><code>function valid_username(un) {
 &nbsp; 
@@ -531,7 +533,7 @@ We could iterate over all the elements and use a charCodeAt to check if it's cha
 
 Or we could use a regex
 
-Or we could use URI encoding and then strip any symbols
+We could probably use encodeURIcomponent to convert any of the non-ascii characters, then compare with the original string to spot any differences
 
 Or we could
 
@@ -668,8 +670,7 @@ BySwBkBABTZAUAUw"
 function validate() {
 &nbsp; usr = $("username")
 &nbsp; if !valid_username(usr) {
-&nbsp; &nbsp; $("button").prop("value",
-&nbsp; &nbsp; &nbsp; "you don't surf")
+&nbsp; &nbsp; alert("you don't surf")
 &nbsp; }
 } 
 ---
@@ -803,8 +804,14 @@ Note: if we take our form, we can re-create it in Toga
 <pre ><code>import toga
 
 class SuperHighway(toga.App):
-&nbsp; &nbsp; def validate_user(self, widget):
+
+
+&nbsp; &nbsp; def valid_username(un):
 &nbsp; &nbsp; &nbsp; &nbsp; ...
+
+&nbsp; &nbsp; def validate_user(self, widget):
+&nbsp; &nbsp; &nbsp; &nbsp; if not valid_username(self.username.value):
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;self.main_window.info_dialog("Denied", "you don't surf")
 
 &nbsp; &nbsp; def startup(self):
 &nbsp; &nbsp; &nbsp; &nbsp; self.main_window &equals; toga.MainWindow(self.name)
@@ -816,30 +823,30 @@ class SuperHighway(toga.App):
 &nbsp; &nbsp; &nbsp; &nbsp; self.main_window.show()
 
 def main():
-&nbsp; &nbsp; return SuperHighway("Hello World", "org.pybee.superhighway")
+&nbsp; &nbsp; return SuperHighway("Super Highway", "org.pybee.superhighway")
 </code></pre> 
 ---
 <pre><code> 
-<c># UI follows</c>
-un_label = toga.Label("Username")
-self.username = toga.TextInput()
-button = toga.Button("Surf", on_press=self.validate_user)
+<c># UI elements</c>
+un_label &equals; toga.Label("Username")
+self.username &equals; toga.TextInput()
+button &equals; toga.Button("Surf", on_press&equals;self.validate_user)
 
-box = toga.Box()
+box &equals; toga.Box()
 box.add(un_label) 
 box.add(self.username) 
 box.add(button) 
-self.username.style.set(width100)  <!-- .slide: class="center" -->
-un_label.style.set(width100)  <!-- .slide: class="center" -->
-button.style.set(width100)  <!-- .slide: class="center" -->
-box.style.set(padding30)  <!-- .slide: class="center" -->
-
+self.username.style.set(width&equals;100) 
+un_label.style.set(width&equals;100) 
+button.style.set(width&equals;100) 
+box.style.set(padding&equals;30) 
 </code></pre> 
+
 ---
 
 <pre class="cli"><code>
 
-$ python app.py</code></pre>
+$ python -m highway</code></pre>
 
 Note: we can then run this code, and we get...
 ---
@@ -847,6 +854,11 @@ Note: we can then run this code, and we get...
  <img src="pictures/toga-app.png" />
 
 Note: our program as a native platform application; in this case, macOS
+---
+
+ <img src="pictures/toga-app-popup.png" />
+
+Note: including the popup
 
 But if we want to take this away somewhere...
 
@@ -857,20 +869,24 @@ But if we want to take this away somewhere...
 
 Note: then, we can take this code, and wrap it in breifcase
 
-Why is it called briefcase? TODO
+Why is it called briefcase? Because it allows you to carry your apps around
+
+Sorry. I didn't name these things
 
 ---
 
 <pre class="cli"><code>
 
 $ python setup.py macOS
-$ open app/MyApp.app</code></pre>
-
+$ open highway/Super\ Highway.app</code></pre>
 ---
 
+ <img src="pictures/toga-icon.png" />
+
+Note: See? nice little self-contain macOS app
+---
  <img src="pictures/toga-app.png" />
 ---
-
 
 <pre class="cli"><code>$ python setup.py django
 $ ./django/manage.py runserver</code></pre>
@@ -890,16 +906,10 @@ $ open iOS/MyApp.xcodeproj</code></pre>
 
  <img src="pictures/validate_iphone_small.png" style="margin-top: -50px" />
 
+Note: 
 
----
-
-<pre class="cli"><code>
-
-$ python setup.py android
-$ ./gradlew run</code></pre>
----
-### TODO android screenshot here <!-- .slide: class="center" -->
- <img src="pictures/validate_android.png" style="margin-top: -50px" />
+TODO 
+Android, windows, linux screnshots
 ---
 
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='266px' src='pictures/space.svg'><img height='266px' src='pictures/sparkles.svg'><img height='266px' src='pictures/space.svg'></p></div> <!-- .slide: class="center" -->
@@ -960,31 +970,33 @@ Note: but what about 3.6?
 Well, some parts work, but 3.6 presents and interseting problem
 ---
 
-## TODO - bytecode vs wordcode <!-- .slide: class="center" -->
+## Bytecode vs Wordcode <!-- .slide: class="center" -->
+
+Note: remember how I said that bytecode was a cpython implementation? Well, even through it is documented, it's not formal, it's considered 'internal', and they made no guarentee of backwards compatbility
+
+The basis of this particular change is changing the underlying opcodes to use 16 bit units for various optimisations. The thing is, this is changes the marshelling that batavia does to wrangle bytecode around, so it doesn't work for 3.6
 
 ---
 
-## TODO - alpha, blah, blah, plz contribute/sponsor <!-- .slide: class="center" -->
+## You can help! <!-- .slide: class="center" -->
 
+Note: However, you can totally help! We have an open offer to mentor anyone who wants to contribute, even if you've never contributed to open source.
+
+If you do contrinue to the project
+
+---
+ <img src="pictures/challenge-coin.png" />
+Note: i
+You get one of the famous BeeWare challenge coins. If you have already contributed to beeware and haven't received your coin, I have a few here tonight, come and see me afterwards
 ---
 
 # We have a booth at OSCON and PyCon US! <!-- .slide: class="center" -->
 
-Note: TODO: Booth picture
-
+Note: Also, if you're coming along to OSCON or Pycon US, we'll have a booth there, where I'll have
 ---
  <img src="pictures/livebees.jpg" />
 
-Note: We have stickers, all kinds
-
----
-
- <img src="pictures/challenge-coin.png" />
-Note: We also have a shiny coin
-
-If you make a contribution to the beeware project, any contribution, you get a shiny coin
-
-We'll be here all through the sprints.
+Note: stickers! many many stickers. I don't have many here, sadly, but if you'd like one, come see me.
 
 
 ---
