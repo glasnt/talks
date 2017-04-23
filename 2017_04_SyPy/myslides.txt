@@ -898,14 +898,74 @@ $ open iOS/MyApp.xcodeproj</code></pre>
 $ python setup.py android
 $ ./gradlew run</code></pre>
 ---
-
+###= TODO android screenshot here
 @^ validate_android.png
 ---
 
 ! space | sparkles | space
 ---
 
-###= TODO more
+##= But wait, there's more. 
+
+Note: the thing is, Toga is a toolkit that is a collecton of cross-platform widgets. 
+
+Which means, 
+---
+
+@= browser_window.png
+
+Note: you rememebr that browser window from before?
+
+---
+<pre><code>#!/usr/bin/env python
+
+import toga
+from colosseum import CSS
+
+class Graze(toga.App):
+&nbsp; &nbsp; def startup(self):
+&nbsp; &nbsp; &nbsp; &nbsp; self.main_window = toga.MainWindow(self.name)
+&nbsp; &nbsp; &nbsp; &nbsp; self.main_window.app = self
+
+&nbsp; &nbsp; &nbsp; &nbsp; self.webview = toga.WebView(style=CSS(flex=1))
+&nbsp; &nbsp; &nbsp; &nbsp; self.url_input = toga.TextInput(
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; initial='https://pybee.com/',
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; style=CSS(flex=1, margin=5)
+&nbsp; &nbsp; &nbsp; &nbsp; )
+      
+        ...
+</code></pre>
+---
+
+@ toga-browser.png
+Note: Which means we can make our own brower that runs as a native app
+
+And yes, 
+---
+
+@ toga-django-browser.png
+
+Note: this means we can have a browser in a browser. 
+
+---
+
+##= Python 3.4, 3.5 Compatible
+Note: The entire BeeWare suite is compatible with Python 3.4 and 3.5
+
+---
+
+##= Python 3.6?
+Note: but what about 3.6?
+
+Well, some parts work, but 3.6 presents and interseting problem 
+---
+
+##= TODO - bytecode vs wordcode
+
+---
+
+##= TODO - alpha, blah, blah, plz contribute/sponsor
+
 ---
 
 #= We have a booth at OSCON and PyCon US!

@@ -898,14 +898,74 @@ $ open iOS/MyApp.xcodeproj</code></pre>
 $ python setup.py android
 $ ./gradlew run</code></pre>
 ---
-
+### TODO android screenshot here <!-- .slide: class="center" -->
  <img src="pictures/validate_android.png" style="margin-top: -50px" />
 ---
 
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='266px' src='pictures/space.svg'><img height='266px' src='pictures/sparkles.svg'><img height='266px' src='pictures/space.svg'></p></div> <!-- .slide: class="center" -->
 ---
 
-### TODO more <!-- .slide: class="center" -->
+## But wait, there's more. <!-- .slide: class="center" -->
+
+Note: the thing is, Toga is a toolkit that is a collecton of cross-platform widgets.
+
+Which means,
+---
+
+ <div style='margin: 0 auto;'><p align='center'><img src='pictures/browser_window.png'></p></div>  <!-- .slide: class="center" -->
+
+Note: you rememebr that browser window from before?
+
+---
+<pre><code>#!/usr/bin/env python
+
+import toga
+from colosseum import CSS
+
+class Graze(toga.App):
+&nbsp; &nbsp; def startup(self):
+&nbsp; &nbsp; &nbsp; &nbsp; self.main_window = toga.MainWindow(self.name)
+&nbsp; &nbsp; &nbsp; &nbsp; self.main_window.app = self
+
+&nbsp; &nbsp; &nbsp; &nbsp; self.webview = toga.WebView(style=CSS(flex=1))
+&nbsp; &nbsp; &nbsp; &nbsp; self.url_input = toga.TextInput(
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; initial='https://pybee.com/',
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; style=CSS(flex=1, margin=5)
+&nbsp; &nbsp; &nbsp; &nbsp; )
+
+... 
+</code></pre> 
+---
+
+ <img src="pictures/toga-browser.png" />
+Note: Which means we can make our own brower that runs as a native app
+
+And yes,
+---
+
+ <img src="pictures/toga-django-browser.png" />
+
+Note: this means we can have a browser in a browser.
+
+---
+
+## Python 3.4, 3.5 Compatible <!-- .slide: class="center" -->
+Note: The entire BeeWare suite is compatible with Python 3.4 and 3.5
+
+---
+
+## Python 3.6? <!-- .slide: class="center" -->
+Note: but what about 3.6?
+
+Well, some parts work, but 3.6 presents and interseting problem
+---
+
+## TODO - bytecode vs wordcode <!-- .slide: class="center" -->
+
+---
+
+## TODO - alpha, blah, blah, plz contribute/sponsor <!-- .slide: class="center" -->
+
 ---
 
 # We have a booth at OSCON and PyCon US! <!-- .slide: class="center" -->
