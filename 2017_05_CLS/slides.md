@@ -28,7 +28,7 @@ Note: But how do we track all these contributions that we make
 
 ---
 
- <div style='width: 50%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/github.svg'></p></div> <!-- .slide: class="center" -->
+ <div style='margin: 0 auto;'><p align='center'><img src='pictures/github.svg'></p></div>  <!-- .slide: class="center" -->
 
 Note: GitHub gives us some of this functionality
 
@@ -36,7 +36,7 @@ Pretty graphs and the like
 
 ---
 
- <div style='width: 50%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/github-a.svg'></p></div> <!-- .slide: class="center" -->
+ <div style='margin: 0 auto;'><p align='center'><img src='pictures/github-a.svg'></p></div>  <!-- .slide: class="center" -->
 
 Note: but it's not exactly perfect
 
@@ -256,7 +256,7 @@ Ricky Endlsey -- Open Source.com
 
 ---
 
- <div style='margin: 0 auto;'><p align='center'><img src='pictures/rustywrench.jpg'></p></div>  <!-- .slide: class="center" -->
+ <img src="pictures/rustywrench.jpg" />
 
 <span class="dasfoot"><a href="https://en.wikipedia.org/wiki/Linux_Australia#/media/File:The_Rusty_Wrench_at_Coogee_Beach,_Feb_2013.jpg">CC BY-SA 3.0</a></span>
 
@@ -422,7 +422,7 @@ LIST IT AS SUCH
 
 ---
 # &nbsp;
- <img src="pictures/Skills2point0.png" />
+ <img src="pictures/Endorsements.png" />
 ---
 
 <span style="font-size: 55px;">
@@ -492,26 +492,6 @@ wiki contribs don't count
 
 Note: Because creating a new repo and backdating a bunch of commits is a thing
 you can do to fake your profile
-
-
-
----
-# What if... <!-- .slide: class="center" -->
-
-
-Note: 
-
----
- <img src="pictures/github_glasnt_one.png" style="margin-top: -50px" />
----
- <img src="pictures/github_glasnt_nogreen.png" style="margin-top: -50px" />
-Note: Remove it.
-
----
-## <code>github.com<br>##.contributions-tab <br>> .flush.boxed-group</code> <!-- .slide: class="center" -->
-## &nbsp;
-## glasnt.com/block
-Note: But what about the projects?
 
 ---
 # Project<br>Contributions <!-- .slide: class="center" -->
@@ -640,7 +620,7 @@ Do more you self
 <p style="font-size: 60%">
 Contributors to this talk:
 <br> 
-<br>Donna&nbsp;Benjamin, Nick&nbsp;Coghlan, Ben&nbsp;Dechrai, Tom&nbsp;Eastman, Paul&nbsp;Fenwick, Leslie&nbsp;Hawthorn, Lara&nbsp;Hogan, Lindsay&nbsp;Holmwood, Russell&nbsp;Keith-Magee, Anna&nbsp;Ossowski, Deb&nbsp;Nicholson, Christopher&nbsp;Neugebauer, Jack&nbsp;Skinner, Lee&nbsp;Symes
+<br>Donna&nbsp;Benjamin, Nick&nbsp;Coghlan, Ben&nbsp;Dechrai, Tom&nbsp;Eastman, Paul&nbsp;Fenwick, Leslie&nbsp;Hawthorn, Lara&nbsp;Hogan, Lindsay&nbsp;Holmwood, Russell&nbsp;Keith-Magee, Anna&nbsp;Ossowski, Deb&nbsp;Nicholson, Christopher&nbsp;Neugebauer, Jack&nbsp;Skinner, Josh&nbsp;Simmons, Lee&nbsp;Symes
 <br> 
 <br> 
 Thank You <3</p>

@@ -59,7 +59,7 @@ Note: The tags on the top note how many more to expect
 ###16-bit hex
 
 ---
-# <c>`\u`</c><span style="font-weight: normal">`{xxxxxxxx}`</span> <!-- .slide: class="center" -->
+# <c>`\U`</c><span style="font-weight: normal">`xxxxxxxx`</span> <!-- .slide: class="center" -->
 ###32-bit hex
 
 ---

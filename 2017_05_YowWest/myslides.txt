@@ -59,7 +59,7 @@ Note: The tags on the top note how many more to expect
 ###16-bit hex
 
 ---
-#= <c>`\u`</c><span style="font-weight: normal">`{xxxxxxxx}`</span>
+#= <c>`\U`</c><span style="font-weight: normal">`xxxxxxxx`</span>
 ###32-bit hex
 
 ---
