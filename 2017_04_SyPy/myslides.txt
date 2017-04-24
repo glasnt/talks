@@ -112,7 +112,7 @@ and ask it to import the snek file for us
 which gives us snek
 ---
 
-<pre class="cli small"><code>$ cd &#95;&#95;pycache&#95;&#95;
+<pre class="cli"><code>$ cd &#95;&#95;pycache&#95;&#95;
 $ cat snek.cpython-35.pyc
 </code></pre>
 Note: after we do that, we see a new folder that's turned up in our file system
@@ -120,7 +120,7 @@ Note: after we do that, we see a new folder that's turned up in our file system
 it has a file in it that's got the extension pyc instead of just py
 ---
 
-<pre class="cli small"><code>$ cd &#95;&#95;pycache&#95;&#95;
+<pre class="cli"><code>$ cd &#95;&#95;pycache&#95;&#95;
 $ cat snek.cpython-35.pyc
 
 �$�X�@sed�dS)u<img class="e" src="s.png">N)�print
@@ -131,7 +131,7 @@ Note: but it looks to be full of a little bit of jibberish
 ---
 
 
-<pre class="cli small"><code>$ python
+<pre class="cli"><code>$ python
 Python 3.5.0
 >>> def snek():
 >>> &nbsp; &nbsp; print("<img class="e" src="s.png">")
@@ -143,7 +143,7 @@ If we run python, define our function
 ---
 
  
-<pre class="cli small"><code>$ python
+<pre class="cli"><code>$ python
 Python 3.5.0
 >>> def snek():
 >>> &nbsp; &nbsp; print("<img class="e" src="s.png">")
@@ -218,7 +218,7 @@ HTML, or Hypertext Markup Language, is what gives the information super highway 
 
 ---
 
-<pre class="html cli"><code>&lt;html>
+<pre class="cli"><code>&lt;html>
  &nbsp; &lt;title>Hello World&lt;/title>
  &nbsp; &lt;body>
 &nbsp; &nbsp; &lt;h1>Hello World&lt;/h1>
@@ -394,7 +394,7 @@ JavaScript one the great language war in the browser, defeating such foes as Fla
 
 Luckily. 
 ---
-<pre class="cli" style="font-size: 140%; margin-top: 0px; margin-left: -90px;"><code>function valid_username(un) {
+<pre class="cli"><code>function valid_username(un) {
 &nbsp;
 &nbsp;
 &nbsp;
@@ -406,7 +406,7 @@ Luckily.
 Note: To ensure that we have the same validation on the front and back end, we need to translate our python code to javascript exactly 
 ---
 
-<pre class="cli" style="font-size: 140%; margin-top: 0px; margin-left: -90px;"><code>function valid_username(un) {
+<pre class="cli"><code>function valid_username(un) {
 &nbsp; <h>usr = un</h>
 &nbsp;
 &nbsp;
@@ -419,7 +419,7 @@ Note: Firstly, take a copy of the string. which is the same syntax in python as 
 Except no it's not, because in this case, usr would be a global variable
 
 ---
-<pre class="cli" style="font-size: 140%; margin-top: 0px; margin-left: -90px;"><code>function valid_username(un) {
+<pre class="cli"><code>function valid_username(un) {
 &nbsp; <h>var</h> usr = un
 &nbsp;
 &nbsp;
@@ -433,7 +433,7 @@ Note: We need to the the 'var' prefix to ensure it's local.
 Okay, this is fine. 
 
 ---
-<pre class="cli" style="font-size: 140%; margin-top: 0px; margin-left: -90px;"><code>function valid_username(un) {
+<pre class="cli"><code>function valid_username(un) {
 &nbsp; var usr = un
 &nbsp; 
 &nbsp; if usr != un { 
@@ -448,7 +448,7 @@ Well, no, this isn't valid
 
 ---
 
-<pre class="cli" style="font-size: 140%; margin-top: 0px; margin-left: -90px;"><code>function valid_username(un) {
+<pre class="cli"><code>function valid_username(un) {
 &nbsp; var usr = un
 &nbsp; 
 &nbsp; if <h>(</h>usr != un<h>)</h> { 
@@ -460,7 +460,7 @@ Well, no, this isn't valid
 Note: you need to wrap the if statement comparison in brackets
 ---
 
-<pre class="cli" style="font-size: 140%; margin-top: 0px; margin-left: -90px;"><code>function valid_username(un) {
+<pre class="cli"><code>function valid_username(un) {
 &nbsp; var usr = un
 &nbsp; 
 &nbsp; if (usr != un) { 
@@ -472,7 +472,7 @@ Note: you need to wrap the if statement comparison in brackets
 Note: and you need to set the booleans to lowercase, because they spelt differently in javscript
 ---
 
-<pre class="cli" style="font-size: 140%; margin-top: 0px; margin-left: -90px;"><code>function valid_username(un) {
+<pre class="cli"><code>function valid_username(un) {
 &nbsp; var usr = un
 &nbsp; 
 &nbsp; if (usr !=<h>=</h> un) { 
@@ -489,7 +489,7 @@ Now, now, we can get to the bit where we actually get to the validation
 So, converting a string to lowercase in javascript. A quick check of the mozilla develoepr network shows that we need
 ---
 
-<pre class="cli" style="font-size: 140%; margin-top: 0px; margin-left: -90px;"><code>function valid_username(un) {
+<pre class="cli"><code>function valid_username(un) {
 &nbsp; var usr = un<h>.toLowerCase()</h>
 &nbsp; 
 &nbsp; if (usr !== un) { 
@@ -502,7 +502,7 @@ Note: toLowerCase. that's fine. Next is strip. But there's no native strip funct
 
 ---
 
-<pre class="cli" style="font-size: 140%; margin-top: 0px; margin-left: -90px;"><code>function valid_username(un) {
+<pre class="cli"><code>function valid_username(un) {
 &nbsp; var usr = un.toLowerCase()<h>.trim()</h>
 &nbsp; 
 &nbsp; if (usr !== un) { 
@@ -516,7 +516,7 @@ Note: There is a trim though. Except that won't work in all browsers, beacuse it
 And then there's the converting of the string from potentually unicode to ascii. 
 
 ---
-<pre class="cli" style="font-size: 140%; margin-top: 0px; margin-left: -90px;"><code>function valid_username(un) {
+<pre class="cli"><code>function valid_username(un) {
 &nbsp; var usr = un.toLowerCase().trim()
 &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; <h>.??????? </h>
 &nbsp; if (usr !== un) { 
@@ -674,7 +674,7 @@ function validate() {
 &nbsp;  } 
 }
 ---
-<pre class="cli" style="margin-top: 0px; margin-left: -40px;"><code>&lt;form>
+<pre class="cli" ><code>&lt;form>
 &nbsp;  &lt;label>Username: &lt;/label>
 &nbsp;  &lt;input type="text"
 &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; id="username">
@@ -683,7 +683,7 @@ function validate() {
 </code></pre>
 ---
 
-<pre class="cli" style="margin-top: 0px; margin-left: -40px;"><code>&lt;form <h>onSubmit="valid_username()"</h>>
+<pre class="cli" ><code>&lt;form <h>onSubmit="valid_username()"</h>>
 &nbsp;  &lt;label>Username: &lt;/label>
 &nbsp;  &lt;input type="text"
 &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; id="username">
@@ -747,7 +747,7 @@ but that's only one part of the beeware suite.
 
 ---
 
-<pre class="cli" style="margin-top: 0px; margin-left: -40px;"><code>&lt;form>
+<pre class="cli" ><code>&lt;form>
 &nbsp;  &lt;label>Username: &lt;/label>
 &nbsp;  &lt;input type="text"
 &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; id="username">
@@ -791,7 +791,7 @@ Why is it called toga? Well, when in Rome
 ###= sorry, not sorry
 
 ---
-<pre class="cli" style="margin-top: 0px; margin-left: -40px;"><code>&lt;form>
+<pre class="cli" ><code>&lt;form>
 &nbsp;  &lt;label>Username: &lt;/label>
 &nbsp;  &lt;input type="text"
 &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; id="username">
@@ -1011,7 +1011,7 @@ Note: i
 You get one of the famous BeeWare challenge coins. If you have already contributed to beeware and haven't received your coin, I have a few here tonight, come and see me afterwards
 ---
 
-#= We have a booth at OSCON and PyCon US!
+##= We have a booth at OSCON and PyCon US!
 
 Note: Also, if you're coming along to OSCON or Pycon US, we'll have a booth there, where I'll have 
 ---
