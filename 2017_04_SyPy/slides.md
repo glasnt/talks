@@ -839,7 +839,7 @@ box.add(button)
 self.username.style.set(width&equals;100) 
 un_label.style.set(width&equals;100) 
 button.style.set(width&equals;100) 
-box.style.set(padding&equals;30) 
+box.style.set(padding&equals;30, flex_direction&equals;"row")
 </code></pre> 
 
 ---
@@ -877,8 +877,8 @@ Sorry. I didn't name these things
 
 <pre class="cli"><code>
 
-$ python setup.py macOS
-$ open highway/Super\ Highway.app</code></pre>
+$ python setup.py macos
+</code></pre> 
 ---
 
  <img src="pictures/toga-icon.png" />
@@ -888,28 +888,49 @@ Note: See? nice little self-contain macOS app
  <img src="pictures/toga-app.png" />
 ---
 
-<pre class="cli"><code>$ python setup.py django
-$ ./django/manage.py runserver</code></pre>
+<pre class="cli"><code>
 
+$ python setup.py django
+</code></pre> 
 ---
 
  <img src="pictures/validate_django.png" />
 ---
 
-
-
 <pre class="cli"><code>
 
 $ python setup.py ios
-$ open iOS/MyApp.xcodeproj</code></pre>
+</code></pre> 
 ---
 
- <img src="pictures/validate_iphone_small.png" style="margin-top: -50px" />
+ <img src="pictures/validate_ios.png" style="margin-top: -50px" />
+---
+<pre class="cli"><code>
 
-Note: 
+$ python setup.py android
+</code></pre> 
+---
 
-TODO 
-Android, windows, linux screnshots
+ <div style='margin: 0 auto;'><p align='center'><img src='pictures/validate_android.png'></p></div>  <!-- .slide: class="center" -->
+---
+<pre class="cli"><code>
+
+$ python setup.py windows
+</code></pre> 
+---
+
+ <div style='margin: 0 auto;'><p align='center'><img src='pictures/validate_windows.png'></p></div>  <!-- .slide: class="center" -->
+
+---
+
+<pre class="cli"><code>
+
+$ python setup.py linux
+</code></pre> 
+---
+
+ <div style='margin: 0 auto;'><p align='center'><img src='pictures/validate_linux.png'></p></div>  <!-- .slide: class="center" -->
+
 ---
 
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='266px' src='pictures/space.svg'><img height='266px' src='pictures/sparkles.svg'><img height='266px' src='pictures/space.svg'></p></div> <!-- .slide: class="center" -->

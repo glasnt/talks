@@ -839,7 +839,7 @@ box.add(button)
 self.username.style.set(width&equals;100)
 un_label.style.set(width&equals;100)
 button.style.set(width&equals;100)
-box.style.set(padding&equals;30)
+box.style.set(padding&equals;30, flex_direction&equals;"row")
 </code></pre>
 
 ---
@@ -877,8 +877,8 @@ Sorry. I didn't name these things
 
 <pre class="cli"><code>
 
-$ python setup.py macOS
-$ open highway/Super\ Highway.app</code></pre>
+$ python setup.py macos
+</code></pre>
 ---
 
 @ toga-icon.png
@@ -888,28 +888,49 @@ Note: See? nice little self-contain macOS app
 @ toga-app.png
 ---
 
-<pre class="cli"><code>$ python setup.py django
-$ ./django/manage.py runserver</code></pre>
+<pre class="cli"><code>
 
+$ python setup.py django
+</code></pre>
 ---
 
 @ validate_django.png
 ---
 
-
-
 <pre class="cli"><code>
 
 $ python setup.py ios
-$ open iOS/MyApp.xcodeproj</code></pre>
+</code></pre>
 ---
 
-@^ validate_iphone_small.png
+@^ validate_ios.png
+---
+<pre class="cli"><code>
 
-Note:
+$ python setup.py android
+</code></pre>
+---
 
-TODO 
-Android, windows, linux screnshots
+@= validate_android.png
+---
+<pre class="cli"><code>
+
+$ python setup.py windows
+</code></pre>
+---
+
+@= validate_windows.png
+
+---
+
+<pre class="cli"><code>
+
+$ python setup.py linux
+</code></pre>
+---
+
+@= validate_linux.png
+
 ---
 
 ! space | sparkles | space
