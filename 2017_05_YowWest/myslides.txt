@@ -179,10 +179,32 @@ If you can't see these: Upgrade. You get new emoji ... and security patches
 ! t/facepalm-5
 ## `\u1F926\u1F3FE`
 ---
+
+! g/Z | g/W | g/J
+Note: zero width joiner
+
+zwidge
+
+Allows for combining existing emoji to make new ones
+---
+! t/facepalm-5
+## `\u1F926\u1F3FE`
+---
 ! t/facepalm | t/fitz
 ## `\u1F926 \u1F3FE`
 ---
+
+! space | t/manman.png | space
+## `\u1F468\u2764\u1F468`
+---
+! t/man | t/redheart.png | t/man
+
+## `\u1F468  \u2764  \u1F468`
+
+---
+
 ! g/US
+## &nbsp;
 Note: Speaking of those flags from earlier, they work in a similar way to the facepalm emoji
 ---
 ! g/US
@@ -524,10 +546,26 @@ uses brackets instead
 Note:
 
 Cross-platform incompatibility
+---
+! slack_logo
+
+Note: who here is familiar with slack
+---
+
+! parrot 
+##= `:partyparrot:`
+
+Note: and this?
 
 partyparrrot is not an emoji
+---
 
-shipit is not an emoji
+@ shipit.png
+##= `:shipit:`
+
+Note: so is github
+it's an emoticon
+
 ---
 ! t/lightbulb
 ---
@@ -659,7 +697,7 @@ Twitter DM and Slack message - if only emoji, they're display bigger
 <img src="pictures/o/alt_4.svg" style="height:170px; width:840px">
 <img src="pictures/o/whisky_speaker.svg" height="400px">
 ---
-#= `pip install emojificate`
+##= `pip install emojificate`
 ---
 ! t/lightbulb
 
@@ -678,10 +716,10 @@ Note: The future
 ! t/sparkles
 ---
 
-! unicode.png | e/10 | space | space | space  | e/star | e/2 | e/0 | e/1 | e/7
+! unicode.png | e/10 | space | space | space  | space | e/2 | e/0 | e/1 | e/7
 
 ! o/takeaway.png | hedgehog.png | o/dumpling.png | o/orangeh.png
-! o/eyebrow.png | o/curling.png | dino.png | brocolli.png
+! o/eyebrow.png | headscarf.png | dino.png | brocolli.png
 
 Note:
 
@@ -703,12 +741,15 @@ Merperson
 Note: I know right? mind. blown. 
 ---
 
-! unicode.png | e/10 | space | space | space  | e/star | e/2 | e/0 | e/1 | e/7
+! unicode.png | e/10 | space | space | space  | space | e/2 | e/0 | e/1 | e/7
 @ o/mindblown.png
 
 Note:
 which is also a candidate.
 ---
+! gb.png | sc.png | wa.png
+---
+
 #= <img height="400px" src="pictures/t/up.svg"> &nbsp; <img height="400px" src="pictures/t/calendar.svg">
 Note: updates 
 ---
@@ -716,44 +757,22 @@ Note: updates
 ---
 ! m/m1_smile.png | m/m1_cry.png | m/m1_toung.png |m/m1_kiss.png | m/m1_shock.png
 ! m/m2_smile.png | m/m2_cry.png | m/m2_toung.png | m/m2_kiss.png | m/m2_shock.png
+Note: windows 8 to windows 10
+---
+
+@= couples.png
+Note: updates in the creators update
+
 ---
 ! m/claps.png | m/newclap.png
 ---
-! a/grin.png | a/grinning_10.png
-Note: Across a lot of vendors
----
-! a/shrug.png | a/egg.png | a/cowboy.png | a/duck.png
-! a/tumbler.png | a/kiwi.png | o/spoon.png | a/facepalm-5.png
+@ owl.png
 
----
+Note: Emojione have also updated, now with a premoum version
 
-! a/owl.png | a/shark.png | a/squid.png | a/avo.png
-! a/shrimp.png | a/fox.png | a/gorilla.png | a/bacon.png
----
-@ o/g7cross.png
-Note:
+They're updated a bunch of things, including the Owl
 
-galaxy Note 7 
-
-if you see this emoji, RETURN YOUR DEVICE OMG EXPLOSIOTIONS
----
-! g/Z | g/W | g/J
-Note: zero width joiner
-
-zwidge
-
-Allows for combining existing emoji to make new ones
----
-! t/whiteflag | t/rainbow
-### `\u{1f3f3} \u{1f308}`
-### &nbsp;
----
-! t/rainbow_flag
-### `\u{1f3f3}`<r>`\ufe0f\u200d`</r>`\u{1f308}`
-### &nbsp;
-Note: apple has adopted these by having this as a separate button
-
-ios 10 beta has this as a separate character
+R.i.P. Argle Owl
 ---
 @ emojipedia-new-ios-10-gender.png
 ---
@@ -764,16 +783,50 @@ Note: Andoird 7.1  last few days
 ## &nbsp;
 @ a/tech_f1.png
 ---
+
+@= adults.png
+
+<span class="dasfoot" style="margin-top: -150px"><a href="http://blog.emojipedia.org/what-is-gender-and-why-does-it-matter-to-emoji/">emojipedia.org</a></span>
+Note: also, the 2017 update will include a third base for people, being gender neutral. 
+
+Which should allow for all the professions and people to have a version that not's a man or a woman
+---
 ! e/thinking
 ---
-@ redhead_1.jpg
+@= bald.png
+<span class="dasfoot" style="margin-top: -200px"><a href="http://www.unicode.org/L2/L2017/17082-natural-hair-color.pdf">UTC Proposal L2/17-082</a></span> 
 ---
-@ redhead_2.jpg
+@= redhead_2.jpg
 ---
-
 ! t/cocktail | e/fitz_6 | t/cherry 
 ---
 ! o/manhattan 
+---
+! space | t/chipmunk | t/tophat | space
+---
+! space | t/fox | t/globe_a | space
+
+Note: firefox
+---
+! parrot
+
+Note: but what about the partyy parrot? Well... there are serveral birds, but no "tropical bird"
+
+You're welcome.
+
+But that was last November, since then, they've literally added more exclusion factors, including
+---
+@^ tropical_bird.png
+Note: I submitted a proposal to fix this issue. 
+
+---
+! t/dog | t/poodle | t/camel1 | t/camel2 | e/cross 
+Note: Exclusion factor K: Faulty Comparison.
+
+"the emoji dog and poodle, and two type of camel, do not justify adding different varieties of the same kind of animal"
+---
+
+! g/sorry
 ---
 ! g/info
 Note: For more information

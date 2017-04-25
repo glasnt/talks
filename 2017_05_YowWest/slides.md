@@ -179,10 +179,32 @@ If you can't see these: Upgrade. You get new emoji ... and security patches
  <div style='width: 50%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/t/facepalm-5.svg'></p></div> <!-- .slide: class="center" -->
 ## `\u1F926\u1F3FE`
 ---
+
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='266px' src='pictures/g/Z.svg'><img height='266px' src='pictures/g/W.svg'><img height='266px' src='pictures/g/J.svg'></p></div> <!-- .slide: class="center" -->
+Note: zero width joiner
+
+zwidge 
+
+Allows for combining existing emoji to make new ones
+---
+ <div style='width: 50%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/t/facepalm-5.svg'></p></div> <!-- .slide: class="center" -->
+## `\u1F926\u1F3FE`
+---
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/t/facepalm.svg'><img height='400px' src='pictures/t/fitz.svg'></p></div> <!-- .slide: class="center" -->
 ## `\u1F926 \u1F3FE`
 ---
+
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='266px' src='pictures/space.svg'><img height='266px' src='pictures/t/manman.png'><img height='266px' src='pictures/space.svg'></p></div> <!-- .slide: class="center" -->
+## `\u1F468\u2764\u1F468`
+---
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='266px' src='pictures/t/man.svg'><img height='266px' src='pictures/t/redheart.png'><img height='266px' src='pictures/t/man.svg'></p></div> <!-- .slide: class="center" -->
+
+## `\u1F468 \u2764 \u1F468`
+
+---
+
  <div style='width: 50%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/g/US.svg'></p></div> <!-- .slide: class="center" -->
+## &nbsp;
 Note: Speaking of those flags from earlier, they work in a similar way to the facepalm emoji
 ---
  <div style='width: 50%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/g/US.svg'></p></div> <!-- .slide: class="center" -->
@@ -524,10 +546,26 @@ uses brackets instead
 Note: 
 
 Cross-platform incompatibility
+---
+ <div style='width: 50%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/slack_logo.svg'></p></div> <!-- .slide: class="center" -->
+
+Note: who here is familiar with slack
+---
+
+ <div style='width: 50%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/parrot.svg'></p></div> <!-- .slide: class="center" -->
+## `:partyparrot:` <!-- .slide: class="center" -->
+
+Note: and this?
 
 partyparrrot is not an emoji
+---
 
-shipit is not an emoji
+ <img src="pictures/shipit.png" />
+## `:shipit:` <!-- .slide: class="center" -->
+
+Note: so is github
+it's an emoticon
+
 ---
  <div style='width: 50%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/t/lightbulb.svg'></p></div> <!-- .slide: class="center" -->
 ---
@@ -659,7 +697,7 @@ Twitter DM and Slack message - if only emoji, they're display bigger
 <img src="pictures/o/alt_4.svg" style="height:170px; width:840px">
 <img src="pictures/o/whisky_speaker.svg" height="400px">
 ---
-# `pip install emojificate` <!-- .slide: class="center" -->
+## `pip install emojificate` <!-- .slide: class="center" -->
 ---
  <div style='width: 50%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/t/lightbulb.svg'></p></div> <!-- .slide: class="center" -->
 
@@ -678,10 +716,10 @@ Note: The future
  <div style='width: 50%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/t/sparkles.svg'></p></div> <!-- .slide: class="center" -->
 ---
 
- <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='80px' src='pictures/unicode.png'><img height='80px' src='pictures/e/10.svg'><img height='80px' src='pictures/space.svg'><img height='80px' src='pictures/space.svg'><img height='80px' src='pictures/space.svg'><img height='80px' src='pictures/e/star.svg'><img height='80px' src='pictures/e/2.svg'><img height='80px' src='pictures/e/0.svg'><img height='80px' src='pictures/e/1.svg'><img height='80px' src='pictures/e/7.svg'></p></div> <!-- .slide: class="center" -->
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='80px' src='pictures/unicode.png'><img height='80px' src='pictures/e/10.svg'><img height='80px' src='pictures/space.svg'><img height='80px' src='pictures/space.svg'><img height='80px' src='pictures/space.svg'><img height='80px' src='pictures/space.svg'><img height='80px' src='pictures/e/2.svg'><img height='80px' src='pictures/e/0.svg'><img height='80px' src='pictures/e/1.svg'><img height='80px' src='pictures/e/7.svg'></p></div> <!-- .slide: class="center" -->
 
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='200px' src='pictures/o/takeaway.png'><img height='200px' src='pictures/hedgehog.png'><img height='200px' src='pictures/o/dumpling.png'><img height='200px' src='pictures/o/orangeh.png'></p></div> <!-- .slide: class="center" -->
- <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='200px' src='pictures/o/eyebrow.png'><img height='200px' src='pictures/o/curling.png'><img height='200px' src='pictures/dino.png'><img height='200px' src='pictures/brocolli.png'></p></div> <!-- .slide: class="center" -->
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='200px' src='pictures/o/eyebrow.png'><img height='200px' src='pictures/headscarf.png'><img height='200px' src='pictures/dino.png'><img height='200px' src='pictures/brocolli.png'></p></div> <!-- .slide: class="center" -->
 
 Note: 
 
@@ -703,12 +741,15 @@ Merperson
 Note: I know right? mind. blown.
 ---
 
- <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='80px' src='pictures/unicode.png'><img height='80px' src='pictures/e/10.svg'><img height='80px' src='pictures/space.svg'><img height='80px' src='pictures/space.svg'><img height='80px' src='pictures/space.svg'><img height='80px' src='pictures/e/star.svg'><img height='80px' src='pictures/e/2.svg'><img height='80px' src='pictures/e/0.svg'><img height='80px' src='pictures/e/1.svg'><img height='80px' src='pictures/e/7.svg'></p></div> <!-- .slide: class="center" -->
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='80px' src='pictures/unicode.png'><img height='80px' src='pictures/e/10.svg'><img height='80px' src='pictures/space.svg'><img height='80px' src='pictures/space.svg'><img height='80px' src='pictures/space.svg'><img height='80px' src='pictures/space.svg'><img height='80px' src='pictures/e/2.svg'><img height='80px' src='pictures/e/0.svg'><img height='80px' src='pictures/e/1.svg'><img height='80px' src='pictures/e/7.svg'></p></div> <!-- .slide: class="center" -->
  <img src="pictures/o/mindblown.png" />
 
 Note: 
 which is also a candidate.
 ---
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='266px' src='pictures/gb.png'><img height='266px' src='pictures/sc.png'><img height='266px' src='pictures/wa.png'></p></div> <!-- .slide: class="center" -->
+---
+
 # <img height="400px" src="pictures/t/up.svg"> &nbsp; <img height="400px" src="pictures/t/calendar.svg"> <!-- .slide: class="center" -->
 Note: updates
 ---
@@ -716,44 +757,22 @@ Note: updates
 ---
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='160px' src='pictures/m/m1_smile.png'><img height='160px' src='pictures/m/m1_cry.png'><img height='160px' src='pictures/m/m1_toung.png'><img height='160px' src='pictures/m/m1_kiss.png'><img height='160px' src='pictures/m/m1_shock.png'></p></div> <!-- .slide: class="center" -->
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='160px' src='pictures/m/m2_smile.png'><img height='160px' src='pictures/m/m2_cry.png'><img height='160px' src='pictures/m/m2_toung.png'><img height='160px' src='pictures/m/m2_kiss.png'><img height='160px' src='pictures/m/m2_shock.png'></p></div> <!-- .slide: class="center" -->
+Note: windows 8 to windows 10
+---
+
+ <div style='margin: 0 auto;'><p align='center'><img src='pictures/couples.png'></p></div>  <!-- .slide: class="center" -->
+Note: updates in the creators update
+
 ---
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/m/claps.png'><img height='400px' src='pictures/m/newclap.png'></p></div> <!-- .slide: class="center" -->
 ---
- <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/a/grin.png'><img height='400px' src='pictures/a/grinning_10.png'></p></div> <!-- .slide: class="center" -->
-Note: Across a lot of vendors
----
- <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='200px' src='pictures/a/shrug.png'><img height='200px' src='pictures/a/egg.png'><img height='200px' src='pictures/a/cowboy.png'><img height='200px' src='pictures/a/duck.png'></p></div> <!-- .slide: class="center" -->
- <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='200px' src='pictures/a/tumbler.png'><img height='200px' src='pictures/a/kiwi.png'><img height='200px' src='pictures/o/spoon.png'><img height='200px' src='pictures/a/facepalm-5.png'></p></div> <!-- .slide: class="center" -->
+ <img src="pictures/owl.png" />
 
----
+Note: Emojione have also updated, now with a premoum version
 
- <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='200px' src='pictures/a/owl.png'><img height='200px' src='pictures/a/shark.png'><img height='200px' src='pictures/a/squid.png'><img height='200px' src='pictures/a/avo.png'></p></div> <!-- .slide: class="center" -->
- <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='200px' src='pictures/a/shrimp.png'><img height='200px' src='pictures/a/fox.png'><img height='200px' src='pictures/a/gorilla.png'><img height='200px' src='pictures/a/bacon.png'></p></div> <!-- .slide: class="center" -->
----
- <img src="pictures/o/g7cross.png" />
-Note: 
+They're updated a bunch of things, including the Owl
 
-galaxy Note 7
-
-if you see this emoji, RETURN YOUR DEVICE OMG EXPLOSIOTIONS
----
- <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='266px' src='pictures/g/Z.svg'><img height='266px' src='pictures/g/W.svg'><img height='266px' src='pictures/g/J.svg'></p></div> <!-- .slide: class="center" -->
-Note: zero width joiner
-
-zwidge 
-
-Allows for combining existing emoji to make new ones
----
- <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/t/whiteflag.svg'><img height='400px' src='pictures/t/rainbow.svg'></p></div> <!-- .slide: class="center" -->
-### `\u{1f3f3} \u{1f308}`
-### &nbsp;
----
- <div style='width: 50%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/t/rainbow_flag.svg'></p></div> <!-- .slide: class="center" -->
-### `\u{1f3f3}`<r>`\ufe0f\u200d`</r>`\u{1f308}`
-### &nbsp;
-Note: apple has adopted these by having this as a separate button
-
-ios 10 beta has this as a separate character
+R.i.P. Argle Owl
 ---
  <img src="pictures/emojipedia-new-ios-10-gender.png" />
 ---
@@ -764,16 +783,50 @@ Note: Andoird 7.1 last few days
 ## &nbsp;
  <img src="pictures/a/tech_f1.png" />
 ---
+
+ <div style='margin: 0 auto;'><p align='center'><img src='pictures/adults.png'></p></div>  <!-- .slide: class="center" -->
+
+<span class="dasfoot" style="margin-top: -150px"><a href="http://blog.emojipedia.org/what-is-gender-and-why-does-it-matter-to-emoji/">emojipedia.org</a></span>
+Note: also, the 2017 update will include a third base for people, being gender neutral.
+
+Which should allow for all the professions and people to have a version that not's a man or a woman
+---
  <div style='width: 50%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/e/thinking.svg'></p></div> <!-- .slide: class="center" -->
 ---
- <img src="pictures/redhead_1.jpg" />
+ <div style='margin: 0 auto;'><p align='center'><img src='pictures/bald.png'></p></div>  <!-- .slide: class="center" -->
+<span class="dasfoot" style="margin-top: -200px"><a href="http://www.unicode.org/L2/L2017/17082-natural-hair-color.pdf">UTC Proposal L2/17-082</a></span>
 ---
- <img src="pictures/redhead_2.jpg" />
+ <div style='margin: 0 auto;'><p align='center'><img src='pictures/redhead_2.jpg'></p></div>  <!-- .slide: class="center" -->
 ---
-
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='266px' src='pictures/t/cocktail.svg'><img height='266px' src='pictures/e/fitz_6.svg'><img height='266px' src='pictures/t/cherry.svg'></p></div> <!-- .slide: class="center" -->
 ---
  <div style='width: 50%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/o/manhattan.svg'></p></div> <!-- .slide: class="center" -->
+---
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='200px' src='pictures/space.svg'><img height='200px' src='pictures/t/chipmunk.svg'><img height='200px' src='pictures/t/tophat.svg'><img height='200px' src='pictures/space.svg'></p></div> <!-- .slide: class="center" -->
+---
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='200px' src='pictures/space.svg'><img height='200px' src='pictures/t/fox.svg'><img height='200px' src='pictures/t/globe_a.svg'><img height='200px' src='pictures/space.svg'></p></div> <!-- .slide: class="center" -->
+
+Note: firefox
+---
+ <div style='width: 50%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/parrot.svg'></p></div> <!-- .slide: class="center" -->
+
+Note: but what about the partyy parrot? Well... there are serveral birds, but no "tropical bird"
+
+You're welcome.
+
+But that was last November, since then, they've literally added more exclusion factors, including
+---
+ <img src="pictures/tropical_bird.png" style="margin-top: -50px" />
+Note: I submitted a proposal to fix this issue.
+
+---
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='160px' src='pictures/t/dog.svg'><img height='160px' src='pictures/t/poodle.svg'><img height='160px' src='pictures/t/camel1.svg'><img height='160px' src='pictures/t/camel2.svg'><img height='160px' src='pictures/e/cross.svg'></p></div> <!-- .slide: class="center" -->
+Note: Exclusion factor K: Faulty Comparison.
+
+"the emoji dog and poodle, and two type of camel, do not justify adding different varieties of the same kind of animal"
+---
+
+ <div style='width: 50%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/g/sorry.svg'></p></div> <!-- .slide: class="center" -->
 ---
  <div style='width: 50%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/g/info.svg'></p></div> <!-- .slide: class="center" -->
 Note: For more information
