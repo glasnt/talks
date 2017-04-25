@@ -266,7 +266,6 @@ Here's what Android went with.
 #= <img src="pictures/g/hairy_heart_s.png" height="400px">
 ---
 ! a/flushed.png | t/flushed | e/flushed | g/flushed
-
 ---
 
 ! a/hugs.png | g/hugs.png | t/hugs.png | e/hugs.png
@@ -277,6 +276,10 @@ Note: ** micro services **
 ! g/blonde | t/blonde | e/blonde | m/blonde 
 
 Note: Guess -- Blonde
+---
+
+@ fitbit.png
+<span class="dasfoot"><a href="https://www.flickr.com/photos/iphonedigital/24432058895">CC BY-SA 2.0</a> 
 ---
 ! t/grinning | t/grimice
 Note: grinning vs grimmace

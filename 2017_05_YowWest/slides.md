@@ -266,7 +266,6 @@ Here's what Android went with.
 # <img src="pictures/g/hairy_heart_s.png" height="400px"> <!-- .slide: class="center" -->
 ---
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='200px' src='pictures/a/flushed.png'><img height='200px' src='pictures/t/flushed.svg'><img height='200px' src='pictures/e/flushed.svg'><img height='200px' src='pictures/g/flushed.svg'></p></div> <!-- .slide: class="center" -->
-
 ---
 
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='200px' src='pictures/a/hugs.png'><img height='200px' src='pictures/g/hugs.png'><img height='200px' src='pictures/t/hugs.png'><img height='200px' src='pictures/e/hugs.png'></p></div> <!-- .slide: class="center" -->
@@ -277,6 +276,10 @@ Note: ** micro services **
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='200px' src='pictures/g/blonde.svg'><img height='200px' src='pictures/t/blonde.svg'><img height='200px' src='pictures/e/blonde.svg'><img height='200px' src='pictures/m/blonde.svg'></p></div> <!-- .slide: class="center" -->
 
 Note: Guess -- Blonde
+---
+
+ <img src="pictures/fitbit.png" />
+<span class="dasfoot"><a href="https://www.flickr.com/photos/iphonedigital/24432058895">CC BY-SA 2.0</a>
 ---
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/t/grinning.svg'><img height='400px' src='pictures/t/grimice.svg'></p></div> <!-- .slide: class="center" -->
 Note: grinning vs grimmace

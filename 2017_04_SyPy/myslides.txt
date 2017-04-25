@@ -73,7 +73,6 @@ This is the most common implementation of the Python language specification
 
 
 ---
-
 <pre class="cli"><code>$ cat snek.py
 def snek():
 &nbsp; &nbsp; print("<img class="e" src="s.png">")
@@ -658,7 +657,9 @@ IAagMAZAMAgwEAfQEAdAQAfAAAgwEAAXQEAH
 wBAIMBAAF8AQB8AABrAwBySwBkBABTZAUAUw&equals;&equals;'
 </code></pre>
 ---
-<pre class="cli"><code>&lt;script type="application/python-bytecode">
+<pre class="cli"><code>
+&lt;script src="/static/batavia.js">&lt;script>
+&lt;script type="application/python-bytecode">
 bytecode = "fAAAagAAgwAAagEAgwAAag
 IAZAEAZAIAgwIAagMAZAMAgwEAfQEAdAQA
 fAAAgwEAAXQEAHwBAIMBAAF8AQB8AABrAw
