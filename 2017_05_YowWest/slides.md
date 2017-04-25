@@ -766,7 +766,7 @@ Note: updates in the creators update
 ---
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/m/claps.png'><img height='400px' src='pictures/m/newclap.png'></p></div> <!-- .slide: class="center" -->
 ---
- <img src="pictures/owl.png" />
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/owl2.svg'><img height='400px' src='pictures/owl3.png'></p></div> <!-- .slide: class="center" -->
 
 Note: Emojione have also updated, now with a premoum version
 
@@ -793,8 +793,9 @@ Which should allow for all the professions and people to have a version that not
 ---
  <div style='width: 50%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/e/thinking.svg'></p></div> <!-- .slide: class="center" -->
 ---
- <div style='margin: 0 auto;'><p align='center'><img src='pictures/bald.png'></p></div>  <!-- .slide: class="center" -->
-<span class="dasfoot" style="margin-top: -200px"><a href="http://www.unicode.org/L2/L2017/17082-natural-hair-color.pdf">UTC Proposal L2/17-082</a></span>
+# &nbsp;
+ <img src="pictures/bald.png" />
+<span class="dasfoot" ><a href="http://www.unicode.org/L2/L2017/17082-natural-hair-color.pdf">UTC Proposal L2/17-082</a></span>
 ---
  <div style='margin: 0 auto;'><p align='center'><img src='pictures/redhead_2.jpg'></p></div>  <!-- .slide: class="center" -->
 ---
