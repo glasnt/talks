@@ -6,6 +6,14 @@
 ! g/wave
 Note: Hi~
 ---
+@ doctorwhoemoji.jpg
+<span class="dasfoot">&copy; BBC Wales</span>
+Note:
+TX versioni - facade in the dutch city of Amersfoort (armers-fort)
+@ emojiarch.png
+<span class="dasfoot"><a href="http://www.theverge.com/tldr/2017/4/24/15405402/emoji-emoticon-architecture-facade-netherlands">The Verge</a></span>
+
+---
 ! t/purple_heart
 Note: i love emoji 
 ---
@@ -16,7 +24,6 @@ Note: i love how broken it is
 Note: basically, because computers, we have 
 
 ---
-
 @ unicode.png
 
 ---
@@ -175,7 +182,16 @@ If you can't see these: Upgrade. You get new emoji ... and security patches
 ! t/facepalm | t/fitz
 ## `\u1F926 \u1F3FE`
 ---
+! g/US
+Note: Speaking of those flags from earlier, they work in a similar way to the facepalm emoji
+---
+! g/US
+##`\u1F1FA\u1F1F8`
+---
+!  g/U | g/S
+##`\u1F1FA \u1F1F8`
 
+---
 ! g/snake
 ---
 # &nbsp;
@@ -274,19 +290,84 @@ Note: ** micro services **
 ! a/claps.png | g/claps | t/claps | m/claps.png
 ---
 ! g/blonde | t/blonde | e/blonde | m/blonde 
-
 Note: Guess -- Blonde
 ---
+! g/cactus | t/cactus | e/cactus | o/lgcactus.png
+Note: Saguaro ("So-wa-ro")  mostly 
 
-@ fitbit.png
-<span class="dasfoot"><a href="https://www.flickr.com/photos/iphonedigital/24432058895">CC BY-SA 2.0</a> 
+Thing is we can take these variances to an interesting benefit
+
+---
+@ pcau_1.jpg
+Note: for example. The emoji in my talk. They appear on digitial displays on occassion
+
+This one is running Windows 8
+
+How can I tell? Because ot the emoji 
+---
+
+@ sweat_versions.png
+Note: this is face with cold sweat. With so many variations, it's easy to pick up exactly what OS is being run
+
+
+--- 
+
+@= fitbit.jpg
+Note: For example, if you send an emoji to a person who has fitnit notifications, you can work out exactly the operating system, which is Android 4.3. Now, it might be a custom version, but at it's base it's android 4.3 based on this introspection
+
+
 ---
 ! t/grinning | t/grimice
 Note: grinning vs grimmace
 
+It's not just issues across platforms. Intra-platform miscommunication
+
 Scientific Paper
 “Blissfully happy” or “ready to fight”: Varying Interpretations of Emoji
  University of Minnesota
+---
+
+! poland.png | indonesia.png
+
+Note: poland vs indonesia
+---
+
+! space | chile | space|  texas | space
+
+Note: chile vs texas
+
+---
+<pre> 85R10624 KSM-D &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;    H.C.R. No. 75
+
+ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; CONCURRENT RESOLUTION
+
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ....
+
+&nbsp; &nbsp; &nbsp; &nbsp;RESOLVED, That the 85th Legislature of the State of Texas
+  hereby reject the notion that the Chilean flag, although it is a
+  nice flag, can in any way compare to or be substituted for the
+  official state flag of Texas and urge all Texans not to use the
+  Republic of Chile flag emoji in digital forums when referring to the
+  Lone Star Flag of the great State of Texas.
+
+http://www.capitol.state.tx.us/tlodocs/85R/billtext/html/HC00075I.htm
+<pre>
+---
+<pre> 85R10624 KSM-D &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;    H.C.R. No. 75
+
+ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; CONCURRENT RESOLUTION
+
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ....
+
+&nbsp; &nbsp; &nbsp; &nbsp;RESOLVED, That the 85th Legislature of the State of Texas
+  hereby reject the notion that the Chilean flag, <h>although it is a
+  nice flag</h>, can in any way compare to or be substituted for the
+  official state flag of Texas and urge all Texans not to use the
+  Republic of Chile flag emoji in digital forums when referring to the
+  Lone Star Flag of the great State of Texas.
+
+http://www.capitol.state.tx.us/tlodocs/85R/billtext/html/HC00075I.htm
+<pre>
 ---
 ! e/thinking
 
@@ -350,46 +431,13 @@ Note:
 
 This extends to just normal characters too, not just emoji
 
+We can have fun breaking things
 
 JP: mo-ji-ba-ke
----
-@^ mcec_large.jpg
----
-@^ mcec.png
-
-Note: https://twitter.com/robjacoby/status/829474149143769088">Rob Jacoby, twitter
----
-@^ mcec_a.png
----
-## &nbsp;
-## &nbsp;
-# `ud83dude0dnn`
----
-## &nbsp;
-## &nbsp;
-# `\ud83d\ude0dnn`
----
-## &nbsp;
-## &nbsp;
-# `\ud83d \ude0d nn`
----
-## &nbsp;
-## &nbsp;
-# `\u1F60D nn`
----
-
-## &nbsp;
-## &nbsp;
-# <img src="pictures/g/hearts.png" style="width: 90px; margin-bottom: 0px"> `nn`
----
-
-@^ speaker_tweet.png
-Note: Thanks Rob
 ---
 ! t/link
 
 ---
-
 <img style="margin-top: 100px" src="pictures/o/spoon.ws.svg" height="300px">
 
 Note: Surprisingly enough, this works
@@ -611,24 +659,7 @@ Twitter DM and Slack message - if only emoji, they're display bigger
 <img src="pictures/o/alt_4.svg" style="height:170px; width:840px">
 <img src="pictures/o/whisky_speaker.svg" height="400px">
 ---
-<pre style="font-size: 28px"><code><c># github.com/glasnt/emojificiate</c><br>
-require 'gemoji'<br>
-def emojificate(str)
-&nbsp; str.split("").each do |s|
-&nbsp; &nbsp; e = Emoji.find_by_unicode(s)
-&nbsp; &nbsp; if e then
-&nbsp; &nbsp; &nbsp; u = s.ord.to_s(16) <c># e.g. 1f431</c>
-&nbsp; &nbsp; &nbsp; d = e.description&nbsp; <c># e.g. "cat face"</c>
-&nbsp; &nbsp; &nbsp; img = "&lt;img src='#{u}.png' <h>alt</h>='#{s}'" +
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; "<h>title</h>='#{d}' <h>aria-label</h>='Emoji: #{d}'>"
-&nbsp; &nbsp; &nbsp; return img
-&nbsp; &nbsp; else
-&nbsp; &nbsp; &nbsp; return s
-&nbsp; &nbsp; end
-&nbsp;  end
- end
-</pre></code>
-
+#= `pip install emojificate`
 ---
 ! t/lightbulb
 
