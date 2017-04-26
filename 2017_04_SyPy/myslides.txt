@@ -389,7 +389,7 @@ Note: But if we want to use this same logic client side
 @ javascript-logo.png
 Note: But because we're in the web, we have to use JavaScript
 
-JavaScript one the great language war in the browser, defeating such foes as Flash, Visual basic, JScript and ActiveScript. 
+JavaScript won the great language war in the browser, defeating such foes as Flash, Visual basic, JScript and ActiveScript. 
 
 Luckily. 
 ---
@@ -544,7 +544,7 @@ Or we could
 Note: 
 GAH
 
-It's just too complicated. 
+It's just too complicated, and highly prone to translation errors
 
 Why can't we just use the python code, that works, in the browser?
 
@@ -692,7 +692,7 @@ function validate() {
 &lt;/form>
 </code></pre>
 
-Note: (process on how to call the valid_username method now it's embeded)
+Note:
 ---
 
 @ form-window.png
@@ -735,8 +735,7 @@ We don't need an interpreter and repl because we already have our code, and our 
 
 All we need is the python virtual machine. 
 
-Add it all up, and add javascript compression, compared to 5MB, batavia weighs in at about 10KB, which is 
-negligable, even over Australian mobile internet. 
+Add it all up, and add javascript compression, batavia is currently under a quarter of the size, just under 800kb, which is negligable, even over Australian mobile internet. 
 
 ---
 
