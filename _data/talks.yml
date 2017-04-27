@@ -18,6 +18,17 @@
 #     - name: The Power ⚡️ and Responsibility 😓 of Unicode Adoption ✨
 #       link: https://conferences.oreilly.com/oscon/oscon-tx
 #
+
+- conference:
+    name: SyPy
+    link: https://www.meetup.com/sydneypython
+    date: 2017-27-04
+    location: Sydney
+    talks: 
+        - name: Snek in the Browser
+          link: https://www.meetup.com/sydneypython/events/239100863/
+          slides: 2017_04_SyPy
+
 - conference:
     name: CrikeyCon
     link: https://www.crikeycon.com/

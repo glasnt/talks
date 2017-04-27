@@ -95,7 +95,7 @@ Note: we can execute this file by asking python to run it.
 
 And then we get our snek
 
-We don't have to just use the cli
+But we have more ways to execute this code
 
 ---
 
@@ -300,7 +300,7 @@ The actual validation rules here we'll use aren't best practice, but I'm using t
 Note: Serverside, we want to use Python
 ---
 
-<pre class="cli" style="font-size: 140%; margin-top: 0px; margin-left: -90px;"><code>def valid_username(un):
+<pre class="cli"><code>def valid_username(un):
 &nbsp;
 &nbsp;
 &nbsp;
@@ -311,7 +311,7 @@ Note: Serverside, we want to use Python
 </code></pre>
 Note: So we declare a method in our server-side python API to validate a username is valid
 ---
-<pre class="cli" style="font-size: 140%; margin-top: 0px; margin-left: -90px;"><code>def valid_username(un):
+<pre class="cli"><code>def valid_username(un):
 &nbsp; usr = un
 &nbsp;
 &nbsp;
@@ -324,7 +324,7 @@ Note: One way to do this, is to take a copy of the username object
 
 
 ---
-<pre class="cli" style="font-size: 140%; margin-top: 0px; margin-left: -90px;"><code>def valid_username(un):
+<pre class="cli"><code>def valid_username(un):
 &nbsp; usr = un
 &nbsp;
 &nbsp;
@@ -336,7 +336,7 @@ Note: One way to do this, is to take a copy of the username object
 Note: and then after out maipulations, if they match, return True 
 
 ---
-<pre class="cli" style="font-size: 140%; margin-top: 0px; margin-left: -90px;"><code>def valid_username(un):
+<pre class="cli"><code>def valid_username(un):
 &nbsp; usr = un.lower()
 &nbsp;
 &nbsp;
@@ -349,7 +349,7 @@ Note: For example, allowing usernames that are idential apart from case is bad, 
 only allow lowercase usernames to be entered to start
 
 ---
-<pre class="cli" style="font-size: 140%; margin-top: 0px; margin-left: -90px;"><code>def valid_username(un):
+<pre class="cli"><code>def valid_username(un):
 &nbsp; usr = un.lower().strip()
 &nbsp; &nbsp;
 &nbsp; &nbsp;
@@ -363,7 +363,7 @@ Note: also, we want to strip whitespace from the start and end.
 This is particularly useful for mobile entry, where when autocorrecting a space is added to the end
 in some keybaords. 
 ---
-<pre class="cli" style="font-size: 140%; margin-top: 0px; margin-left: -90px;"><code>def valid_username(un):
+<pre class="cli"><code>def valid_username(un):
 &nbsp; usr = un.lower().strip() \
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; .encode("ascii","ignore") \
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; .decode("utf-8")
@@ -739,7 +739,7 @@ Add it all up, and add javascript compression, batavia is currently under a quar
 
 ---
 
-##= But wait, there's more
+##= But wait, there's more.
 
 Note: So that's Batavia
 
@@ -936,7 +936,7 @@ $ python setup.py linux
 ! space | sparkles | space
 ---
 
-##= But wait, there's more. 
+##= But wait, there's still more. 
 
 Note: the thing is, Toga is a toolkit that is a collecton of cross-platform widgets. 
 
@@ -947,6 +947,7 @@ Which means,
 
 Note: you rememebr that browser window from before?
 
+We can recreate that in Toga
 ---
 <pre><code>#!/usr/bin/env python
 
@@ -964,7 +965,7 @@ class Graze(toga.App):
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; style=CSS(flex=1, margin=5)
 &nbsp; &nbsp; &nbsp; &nbsp; )
       
-        ...
+&nbsp; &nbsp; &nbsp; ...
 </code></pre>
 ---
 
@@ -1011,7 +1012,8 @@ Note: i
 You get one of the famous BeeWare challenge coins. If you have already contributed to beeware and haven't received your coin, I have a few here tonight, come and see me afterwards
 ---
 
-##= We have a booth at OSCON and PyCon US!
+##= We have a booth at
+## OSCON and PyCon US!
 
 Note: Also, if you're coming along to OSCON or Pycon US, we'll have a booth there, where I'll have 
 ---
