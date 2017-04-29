@@ -340,7 +340,7 @@ Note: For example, if you send an emoji to a person who has fitnit notifications
 
 ---
 ! t/grinning | t/grimice
-Note: grinning vs grimmace
+Note: grinning face w/smiling eyes vs grimmace
 
 It's not just issues across platforms. Intra-platform miscommunication
 
@@ -747,7 +747,22 @@ Note: I know right? mind. blown.
 Note:
 which is also a candidate.
 ---
+! unicode.png | e/10 | space | space | space  | space | e/2 | e/0 | e/1 | e/7
 ! gb.png | sc.png | wa.png
+---
+
+! unicode.png | e/9 | space | space | space  | space | space | space | unicode.png | e/10
+! sweat9.png | sweat10.png
+
+Note: recommendations in Unicde10 include updating some of the glyphs to conform
+including the sweat drop character
+---
+@= adults.png
+
+<span class="dasfoot" style="margin-top: -150px"><a href="http://blog.emojipedia.org/what-is-gender-and-why-does-it-matter-to-emoji/">emojipedia.org</a></span>
+Note: also, the 2017 update will include a third base for people, being gender neutral. 
+
+Which should allow for all the professions and people to have a version that not's a man or a woman
 ---
 
 #= <img height="400px" src="pictures/t/up.svg"> &nbsp; <img height="400px" src="pictures/t/calendar.svg">
@@ -760,11 +775,11 @@ Note: updates
 Note: windows 8 to windows 10
 ---
 
+! m/claps.png | m/newclap.png
+---
 @= couples.png
 Note: updates in the creators update
 
----
-! m/claps.png | m/newclap.png
 ---
 ! owl2 | owl3.png 
 
@@ -784,13 +799,6 @@ Note: Andoird 7.1  last few days
 @ a/tech_f1.png
 ---
 
-@= adults.png
-
-<span class="dasfoot" style="margin-top: -150px"><a href="http://blog.emojipedia.org/what-is-gender-and-why-does-it-matter-to-emoji/">emojipedia.org</a></span>
-Note: also, the 2017 update will include a third base for people, being gender neutral. 
-
-Which should allow for all the professions and people to have a version that not's a man or a woman
----
 ! e/thinking
 ---
 # &nbsp;
@@ -798,6 +806,22 @@ Which should allow for all the professions and people to have a version that not
 <span class="dasfoot" ><a href="http://www.unicode.org/L2/L2017/17082-natural-hair-color.pdf">UTC Proposal L2/17-082</a></span> 
 ---
 @= redhead_2.jpg
+---
+! e/thinking
+
+Note: but what about more combinations?
+---
+
+@ xkcd_1813.png
+<span class="dasfoot"><a href="https://xkcd.com/1813">xkcd.com/1813</a></span>
+---
+
+@ xkcd_1813.png
+### &nbsp;
+#### "Already doable [...] without the need for a new character."</q>
+&dash; <a href="https://twitter.com/mark_e_davis/status/854556712631771136">Mark Davis</a>, Unicode Consortium President & Co-founder
+---
+@ m/ninja_cat.png
 ---
 ! t/cocktail | e/fitz_6 | t/cherry 
 ---
@@ -829,6 +853,7 @@ Note: Exclusion factor K: Faulty Comparison.
 
 ! g/sorry
 ---
+
 ! g/info
 Note: For more information
 ---
@@ -842,6 +867,16 @@ Note: For more information
 @ fakeunicode.jpg
 
 ### @fakeunicode
+---
+### &nbsp;
+
+@ unicode_icon.png
+### @unicode
+---
+
+### &nbsp;
+@ adopt.png
+#### 501(c)(3) Non-Profit
 ---
 @ o/takeaway.png
 Note: the takeaways

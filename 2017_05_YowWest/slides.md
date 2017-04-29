@@ -340,7 +340,7 @@ Note: For example, if you send an emoji to a person who has fitnit notifications
 
 ---
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/t/grinning.svg'><img height='400px' src='pictures/t/grimice.svg'></p></div> <!-- .slide: class="center" -->
-Note: grinning vs grimmace
+Note: grinning face w/smiling eyes vs grimmace
 
 It's not just issues across platforms. Intra-platform miscommunication
 
@@ -747,7 +747,22 @@ Note: I know right? mind. blown.
 Note: 
 which is also a candidate.
 ---
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='80px' src='pictures/unicode.png'><img height='80px' src='pictures/e/10.svg'><img height='80px' src='pictures/space.svg'><img height='80px' src='pictures/space.svg'><img height='80px' src='pictures/space.svg'><img height='80px' src='pictures/space.svg'><img height='80px' src='pictures/e/2.svg'><img height='80px' src='pictures/e/0.svg'><img height='80px' src='pictures/e/1.svg'><img height='80px' src='pictures/e/7.svg'></p></div> <!-- .slide: class="center" -->
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='266px' src='pictures/gb.png'><img height='266px' src='pictures/sc.png'><img height='266px' src='pictures/wa.png'></p></div> <!-- .slide: class="center" -->
+---
+
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='80px' src='pictures/unicode.png'><img height='80px' src='pictures/e/9.svg'><img height='80px' src='pictures/space.svg'><img height='80px' src='pictures/space.svg'><img height='80px' src='pictures/space.svg'><img height='80px' src='pictures/space.svg'><img height='80px' src='pictures/space.svg'><img height='80px' src='pictures/space.svg'><img height='80px' src='pictures/unicode.png'><img height='80px' src='pictures/e/10.svg'></p></div> <!-- .slide: class="center" -->
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/sweat9.png'><img height='400px' src='pictures/sweat10.png'></p></div> <!-- .slide: class="center" -->
+
+Note: recommendations in Unicde10 include updating some of the glyphs to conform
+including the sweat drop character
+---
+ <div style='margin: 0 auto;'><p align='center'><img src='pictures/adults.png'></p></div>  <!-- .slide: class="center" -->
+
+<span class="dasfoot" style="margin-top: -150px"><a href="http://blog.emojipedia.org/what-is-gender-and-why-does-it-matter-to-emoji/">emojipedia.org</a></span>
+Note: also, the 2017 update will include a third base for people, being gender neutral.
+
+Which should allow for all the professions and people to have a version that not's a man or a woman
 ---
 
 # <img height="400px" src="pictures/t/up.svg"> &nbsp; <img height="400px" src="pictures/t/calendar.svg"> <!-- .slide: class="center" -->
@@ -760,11 +775,11 @@ Note: updates
 Note: windows 8 to windows 10
 ---
 
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/m/claps.png'><img height='400px' src='pictures/m/newclap.png'></p></div> <!-- .slide: class="center" -->
+---
  <div style='margin: 0 auto;'><p align='center'><img src='pictures/couples.png'></p></div>  <!-- .slide: class="center" -->
 Note: updates in the creators update
 
----
- <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/m/claps.png'><img height='400px' src='pictures/m/newclap.png'></p></div> <!-- .slide: class="center" -->
 ---
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/owl2.svg'><img height='400px' src='pictures/owl3.png'></p></div> <!-- .slide: class="center" -->
 
@@ -784,13 +799,6 @@ Note: Andoird 7.1 last few days
  <img src="pictures/a/tech_f1.png" />
 ---
 
- <div style='margin: 0 auto;'><p align='center'><img src='pictures/adults.png'></p></div>  <!-- .slide: class="center" -->
-
-<span class="dasfoot" style="margin-top: -150px"><a href="http://blog.emojipedia.org/what-is-gender-and-why-does-it-matter-to-emoji/">emojipedia.org</a></span>
-Note: also, the 2017 update will include a third base for people, being gender neutral.
-
-Which should allow for all the professions and people to have a version that not's a man or a woman
----
  <div style='width: 50%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/e/thinking.svg'></p></div> <!-- .slide: class="center" -->
 ---
 # &nbsp;
@@ -798,6 +806,22 @@ Which should allow for all the professions and people to have a version that not
 <span class="dasfoot" ><a href="http://www.unicode.org/L2/L2017/17082-natural-hair-color.pdf">UTC Proposal L2/17-082</a></span>
 ---
  <div style='margin: 0 auto;'><p align='center'><img src='pictures/redhead_2.jpg'></p></div>  <!-- .slide: class="center" -->
+---
+ <div style='width: 50%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/e/thinking.svg'></p></div> <!-- .slide: class="center" -->
+
+Note: but what about more combinations?
+---
+
+ <img src="pictures/xkcd_1813.png" />
+<span class="dasfoot"><a href="https://xkcd.com/1813">xkcd.com/1813</a></span>
+---
+
+ <img src="pictures/xkcd_1813.png" />
+### &nbsp;
+#### "Already doable [...] without the need for a new character."</q>
+&dash; <a href="https://twitter.com/mark_e_davis/status/854556712631771136">Mark Davis</a>, Unicode Consortium President & Co-founder
+---
+ <img src="pictures/m/ninja_cat.png" />
 ---
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='266px' src='pictures/t/cocktail.svg'><img height='266px' src='pictures/e/fitz_6.svg'><img height='266px' src='pictures/t/cherry.svg'></p></div> <!-- .slide: class="center" -->
 ---
@@ -829,6 +853,7 @@ Note: Exclusion factor K: Faulty Comparison.
 
  <div style='width: 50%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/g/sorry.svg'></p></div> <!-- .slide: class="center" -->
 ---
+
  <div style='width: 50%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/g/info.svg'></p></div> <!-- .slide: class="center" -->
 Note: For more information
 ---
@@ -842,6 +867,16 @@ Note: For more information
  <img src="pictures/fakeunicode.jpg" />
 
 ### @fakeunicode
+---
+### &nbsp;
+
+ <img src="pictures/unicode_icon.png" />
+### @unicode
+---
+
+### &nbsp;
+ <img src="pictures/adopt.png" />
+#### 501(c)(3) Non-Profit
 ---
  <img src="pictures/o/takeaway.png" />
 Note: the takeaways
