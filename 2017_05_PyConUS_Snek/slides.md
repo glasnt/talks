@@ -724,6 +724,20 @@ Batavia is a Python virtual machine, written in javascript.
 
 Why is it called batavia?
 
+---
+
+ <img src="pictures/batavia_2.jpg" style="margin-top: -50px" />
+
+Note: This is the batavia
+
+And that's a model of the batavia
+
+---
+
+ <img src="pictures/batavia_1.jpg" style="margin-top: -50px" />
+
+Note: this is the batavia
+
 Batavia was the name of a Dutch merchant ship in the 1600's. It sorta.. crashed.. into Australia
 
 Not far from Perth, actually, which is where the Bee-levolent Dictator For Now of BeeWare,
@@ -959,6 +973,13 @@ Note: and we get the popup!
 Note: but how does Batavia get it all to happen?
 
 Batavia is a Python virtual machine, so it works not unlike cpython does
+---
+
+ <img src="pictures/batavia_3.jpg" style="margin-top: -50px" />
+
+Note: so let's take a look inside batavia, and see it's framework
+
+The following is code directly from the batavia javascript marshalling module, which has been cut down for readability
 ---
 
 <pre class="cli" style="margin-left: -20px"><code>$ cat batavia/modules/marshal.js
@@ -1341,10 +1362,12 @@ Note: i
 You get one of the famous BeeWare challenge coins. If you have already contributed to beeware and haven't received your coin, I have a few here tonight, come and see me afterwards
 ---
 
-## We have a booth at <!-- .slide: class="center" -->
-## OSCON and PyCon US!
+## We have a booth! <!-- .slide: class="center" -->
+## Come say hi!
 
-Note: Also, if you're coming along to OSCON or Pycon US, we'll have a booth there, where I'll have
+Note: Also, we have a booth! If you come to the exhibit hall, down near (LOCATION TODO), you'll see us, covered in bees
+
+TODO Contest?
 ---
  <img src="pictures/livebees.jpg" />
 
