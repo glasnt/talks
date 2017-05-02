@@ -510,6 +510,12 @@ Note: In the webspace, you have a few options
 Note: some websites have panels
 ---
 
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='114px' src='pictures/instagram.png'><img height='114px' src='pictures/space.svg'><img height='114px' src='pictures/t/magnify.svg'><img height='114px' src='pictures/t/sparkles.svg'><img height='114px' src='pictures/space.svg'><img height='114px' src='pictures/g/hash.svg'><img height='114px' src='pictures/t/sparkles.svg'></p></div> <!-- .slide: class="center" -->
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='114px' src='pictures/twitter.png'><img height='114px' src='pictures/space.svg'><img height='114px' src='pictures/t/magnify.svg'><img height='114px' src='pictures/t/sparkles.svg'><img height='114px' src='pictures/space.svg'><img height='114px' src='pictures/space.svg'><img height='114px' src='pictures/space.svg'></p></div> <!-- .slide: class="center" -->
+
+<span class="dasfoot" style="margin-top: -120px"><a href="https://thenextweb.com/apps/2017/04/28/twitter-now-supports-emoji-search-absolutely-needed/#.tnw_hLCAQj1Q">Twitter</a>, Instagram <a href="https://engineering.instagram.com/emojineering-part-1-machine-learning-for-emoji-trendsmachine-learning-for-emoji-trends-7f5f9cb979ad">1</a>, <a href="https://engineering.instagram.com/emojineering-part-ii-implementing-hashtag-emoji-7b653b221c82">2</a></span>
+---
+
  <div style='width: 50%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/t/shortcake.svg'></p></div> <!-- .slide: class="center" -->
 
 Note: but a workaround for having a visual input mechanism is shortcodes
@@ -617,7 +623,8 @@ Yes, it's not the best way to get things done, but
 ---
 
 # <span style="font-weight: normal">✌ ⁉ ⤴ ⚡ ⚗ 🀄 </span> <!-- .slide: class="center" -->
-# ⛽ 😂 😮 🖖 🙃 <span style="font-weight: normal"> 🥝</span>
+# ⛽ 😂 😮 🖖 🙃 <span style="font-weight: normal">🥝 🥦</span>
+
 
 ### glasnt.com/unicode-test
 

@@ -8,9 +8,6 @@ Note:
 Breathe. You got dis.
 ---
 
-###= Preview: PyCon US 2017
----
-
 ! wave
 
 Note: 
@@ -76,6 +73,9 @@ This is the most common implementation of the Python language specification
 <pre class="cli"><code>$ cat snek.py
 def snek():
 &nbsp; &nbsp; print("<img class="e" src="s.png">")
+
+if __name__ == "__main__":
+&nbsp; &nbsp; snek()
 </code></pre>
 
 
@@ -102,6 +102,7 @@ But we have more ways to execute this code
 <pre class="cli"><code>$ python
 Python 3.5.1
 >>> import snek
+>>> snek.snek()
 <img class="e" src="s.png"></code></pre>
 
 Note: we could also use the interactive python interface
@@ -122,8 +123,9 @@ it has a file in it that's got the extension pyc instead of just py
 <pre class="cli"><code>$ cd &#95;&#95;pycache&#95;&#95;
 $ cat snek.cpython-35.pyc
 
-�$�X�@sed�dS)u<img class="e" src="s.png">N)�print
-�rr�8/private/tmp/snek.py<module>
+�sYE�@s#dd�Zedkre�dS)cCstd�dS)Nu<img class="e" src="s.png">
+)�print�rr�tmp/snek.py�sneks
+r&lowbar;&lowbar;main&lowbar;&lowbar;N)r&lowbar;&lowbar;name&lowbar;&lowbar;rrrr<module>s
 </code></pre>
 Note: but it looks to be full of a little bit of jibberish
 
@@ -131,7 +133,7 @@ Note: but it looks to be full of a little bit of jibberish
 
 
 <pre class="cli"><code>$ python
-Python 3.5.0
+Python 3.5.1
 >>> def snek():
 >>> &nbsp; &nbsp; print("<img class="e" src="s.png">")
 </code></pre>
@@ -143,7 +145,7 @@ If we run python, define our function
 
  
 <pre class="cli"><code>$ python
-Python 3.5.0
+Python 3.5.1
 >>> def snek():
 >>> &nbsp; &nbsp; print("<img class="e" src="s.png">")
 >>> import dis
@@ -159,7 +161,7 @@ and ask it to dis this snek
 
 <pre class="cli" style="margin-left: -20px"><code>
 &nbsp; 2&nbsp;  0 LOAD_GLOBAL&nbsp; &nbsp; 0 (print)
-&nbsp; &nbsp; &nbsp;3 LOAD_CONST&nbsp; &nbsp; &nbsp;1 ('🐍')
+&nbsp; &nbsp; &nbsp;3 LOAD_CONST&nbsp; &nbsp; &nbsp;1 ('<img src="s.png" class="e">')
 &nbsp; &nbsp; &nbsp;6 CALL_FUNCTION&nbsp; 1
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  (1 positional, 0 keyword pair)
 &nbsp; &nbsp; &nbsp;9 POP_TOP
@@ -660,10 +662,9 @@ wBAIMBAAF8AQB8AABrAwBySwBkBABTZAUAUw&equals;&equals;'
 <pre class="cli"><code>
 &lt;script src="/static/batavia.js">&lt;script>
 &lt;script type="application/python-bytecode">
-bytecode = "fAAAagAAgwAAagEAgwAAag
-IAZAEAZAIAgwIAagMAZAMAgwEAfQEAdAQA
-fAAAgwEAAXQEAHwBAIMBAAF8AQB8AABrAw
-BySwBkBABTZAUAUw"
+fAAAagAAgwAAagEAgwAAagIAZAEAZAIAgw
+IAagMAZAMAgwEAfQEAdAQAfAAAgwEAAXQEAH
+wBAIMBAAF8AQB8AABrAwBySwBkBABTZAUAUw&equals;&equals;
 &lt;script>
 </code></pre>
 ---
@@ -701,6 +702,47 @@ Note:
 @ form_input.png
 ---
 @ form_input_invalid.png
+---
+##= But how?
+
+---
+
+
+###= TODO
+
+Note: Remember that base64 bytecode from earlier? It's just an encoded base of instructions
+
+>>> for b in snek.__code__.co_code:
+...     print(hex(b))
+... 
+0x74
+0x0
+0x0
+0x64
+0x1
+0x0
+0x83
+0x1
+0x0
+0x1
+0x64
+0x0
+0x0
+0x53
+
+dis.disco? Mapping of codes around?
+Or linking the dis.dis() to the bytecode
+
+then talk about walkthrough
+
+---
+
+##= Snek in the Browser
+
+Note: and that's snek int he browser
+
+
+
 ---
 
 ##= Doesn't this already exist?
