@@ -309,6 +309,11 @@ Here's what Android went with.
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='200px' src='pictures/a/hugs.png'><img height='200px' src='pictures/g/hugs.png'><img height='200px' src='pictures/t/hugs.png'><img height='200px' src='pictures/e/hugs.png'></p></div> <!-- .slide: class="center" -->
 Note: ** micro services **
 ---
+
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='160px' src='pictures/space.svg'><img height='160px' src='pictures/m/whale.png'><img height='160px' src='pictures/m/whale.png'><img height='160px' src='pictures/m/whale.png'><img height='160px' src='pictures/space.svg'></p></div> <!-- .slide: class="center" -->
+
+Note: obligatory
+---
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='200px' src='pictures/a/claps.png'><img height='200px' src='pictures/g/claps.svg'><img height='200px' src='pictures/t/claps.svg'><img height='200px' src='pictures/m/claps.png'></p></div> <!-- .slide: class="center" -->
 ---
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='200px' src='pictures/g/blonde.svg'><img height='200px' src='pictures/t/blonde.svg'><img height='200px' src='pictures/e/blonde.svg'><img height='200px' src='pictures/m/blonde.svg'></p></div> <!-- .slide: class="center" -->

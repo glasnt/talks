@@ -309,6 +309,11 @@ Here's what Android went with.
 ! a/hugs.png | g/hugs.png | t/hugs.png | e/hugs.png
 Note: ** micro services **
 ---
+
+! space | m/whale.png | m/whale.png | m/whale.png | space
+
+Note: obligatory
+---
 ! a/claps.png | g/claps | t/claps | m/claps.png
 ---
 ! g/blonde | t/blonde | e/blonde | m/blonde 
