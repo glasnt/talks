@@ -1,6 +1,6 @@
 ##= &nbsp; 
 #= Snek in the Browser
-## SyPy April 2017
+## PyCon US May 2017
 @ footer.svg
 
 Note: 
@@ -68,14 +68,15 @@ What is CPython?
 
 This is the most common implementation of the Python language specification
 
+---
+<pre class="cli"><code>$ cat snek.py
+</code></pre>
+Note: 
+Say you have a file called snek.py
 
 ---
 <pre class="cli"><code>$ cat snek.py
-def snek():
-&nbsp; &nbsp; print("<img class="e" src="s.png">")
-
-if __name__ == "__main__":
-&nbsp; &nbsp; snek()
+print("hey snek <img src="s.png" class="e">")
 </code></pre>
 
 
@@ -83,31 +84,50 @@ Note:
 
 Say you have a file called snek.py
 
-All it does it print an emoji snek
+And all it does is print "hey snek" 
 
 ---
-
 <pre class="cli"><code>$ python snek.py
-<img class="e" src="s.png">
 </code></pre>
 
 Note: we can execute this file by asking python to run it. 
+---
+<pre class="cli"><code>$ python snek.py
+hey snek <img class="e" src="s.png">
+</code></pre>
+
+Note:
+
 
 And then we get our snek
 
 But we have more ways to execute this code
 
 ---
-
 <pre class="cli"><code>$ python
 Python 3.5.1
->>> import snek
->>> snek.snek()
-<img class="e" src="s.png"></code></pre>
+>>>
+</code></pre>
 
 Note: we could also use the interactive python interface
 
+---
+<pre class="cli"><code>$ python
+Python 3.5.1
+>>> import snek
+</code></pre>
+
+Note: 
 and ask it to import the snek file for us
+
+---
+<pre class="cli"><code>$ python
+Python 3.5.1
+>>> import snek
+hey snek <img src="s.png" class="e">
+</code></pre>
+
+Note: 
 
 which gives us snek
 ---
@@ -123,31 +143,28 @@ it has a file in it that's got the extension pyc instead of just py
 <pre class="cli"><code>$ cd &#95;&#95;pycache&#95;&#95;
 $ cat snek.cpython-35.pyc
 
-�sYE�@s#dd�Zedkre�dS)cCstd�dS)Nu<img class="e" src="s.png">
-)�print�rr�tmp/snek.py�sneks
-r&lowbar;&lowbar;main&lowbar;&lowbar;N)r&lowbar;&lowbar;name&lowbar;&lowbar;rrrr<module>s
+hey snek <img src="s.png" class="e">N)�print�rr�/tmp/snek.py
 </code></pre>
 Note: but it looks to be full of a little bit of jibberish
+However, it's not gibberish to the python intepreter. It knows how to read this compiled content
+
 
 ---
 
 
 <pre class="cli"><code>$ python
 Python 3.5.1
->>> def snek():
->>> &nbsp; &nbsp; print("<img class="e" src="s.png">")
+>>> snek = "print('hey snek <img src="s.png" class="e">')"
 </code></pre>
 
-Note: However, it's not gibberish to the python intepreter. It knows how to read this compiled content
-
-If we run python, define our function
+Note: 
+If we run python, storing our python code in a string
 ---
 
  
 <pre class="cli"><code>$ python
 Python 3.5.1
->>> def snek():
->>> &nbsp; &nbsp; print("<img class="e" src="s.png">")
+>>> snek = "print('hey snek <img src="s.png" class="e">')"
 >>> import dis
 >>> dis.dis(snek)
 </code></pre>
@@ -157,30 +174,156 @@ Note: but then import a module called 'dis'
 and ask it to dis this snek
 
 ---
-
-
 <pre class="cli" style="margin-left: -20px"><code>
-&nbsp; 2&nbsp;  0 LOAD_GLOBAL&nbsp; &nbsp; 0 (print)
-&nbsp; &nbsp; &nbsp;3 LOAD_CONST&nbsp; &nbsp; &nbsp;1 ('<img src="s.png" class="e">')
-&nbsp; &nbsp; &nbsp;6 CALL_FUNCTION&nbsp; 1
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  (1 positional, 0 keyword pair)
-&nbsp; &nbsp; &nbsp;9 POP_TOP
-&nbsp; &nbsp;  10 LOAD_CONST&nbsp; &nbsp; &nbsp;0 (None)
-&nbsp; &nbsp;  13 RETURN_VALUE
+&nbsp; 1&nbsp;0 LOAD_NAME &nbsp; &nbsp; &nbsp;  0 (print)
+&nbsp; &nbsp;  3 LOAD_CONST&nbsp; &nbsp; &nbsp; 0 ('hey snek <img src="s.png" class="e">')
+&nbsp; &nbsp;  6 CALL_FUNCTION &nbsp;  1 
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; (1 positional, 0 keyword pair)
+&nbsp; &nbsp;  9 RETURN_VALUE
 </code></pre>
+Note: 
 
-
-Note: and you get this. 
+and you get this. 
 
 The module 'dis' that we used, that's short for "disassembler"
 
-And what you're seeing here, is raw Cpython byteocde. 
+And what you're seeing here, is raw Cpython bytecode
 
-You can pretty much read here what's going onn directly. 
+Bytecode is an intemediate intepretation that is then run against the Python Virtual machine. 
 
-Load a global, load a constact, call a function.
+It looks a bit like Assembly, or basic, and it is similar. The Python Virtual Machine is stack based, so these languages may look similar. 
 
-Thank goodness we have nicer syntax to use!
+
+We can pretty much read these instructions and work out the execution steps that will happen
+---
+<pre class="cli" style="margin-left: -20px"><code>
+&nbsp; &nbsp; print('hey snek <img src="s.png" class="e">')
+<p align="center">&#45;&#45;&#45;</p>&nbsp; 1&nbsp;0 LOAD_NAME &nbsp; &nbsp; &nbsp;  0 (print)
+&nbsp; &nbsp;  3 LOAD_CONST&nbsp; &nbsp; &nbsp; 0 ('hey snek <img src="s.png" class="e">')
+&nbsp; &nbsp;  6 CALL_FUNCTION &nbsp;  1 
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; (1 positional, 0 keyword pair)
+&nbsp; &nbsp;  9 RETURN_VALUE
+</code></pre>
+
+Note:
+ I'm going to put the original code up the top so we can see what's going on
+
+---
+<pre class="cli" style="margin-left: -20px"><code>
+&nbsp; &nbsp; print('hey snek <img src="s.png" class="e">')
+<p align="center">&#45;&#45;&#45;</p>&nbsp; <h>1</h>&nbsp;0 LOAD_NAME &nbsp; &nbsp; &nbsp;  0 (print)
+&nbsp; &nbsp;  3 LOAD_CONST&nbsp; &nbsp; &nbsp; 0 ('hey snek <img src="s.png" class="e">')
+&nbsp; &nbsp;  6 CALL_FUNCTION &nbsp;  1 
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; (1 positional, 0 keyword pair)
+&nbsp; &nbsp;  9 RETURN_VALUE
+</code></pre>
+
+Note:
+
+We start on line one. Well, we only have one line
+
+---
+<pre class="cli" style="margin-left: -20px"><code>
+&nbsp; &nbsp; <h>print</h>('hey snek <img src="s.png" class="e">')
+<p align="center">&#45;&#45;&#45;</p>&nbsp; 1&nbsp;0 <h>LOAD_NAME</h> &nbsp; &nbsp; &nbsp;  0 (<h>print</h>)
+&nbsp; &nbsp;  3 LOAD_CONST&nbsp; &nbsp; &nbsp; 0 ('hey snek <img src="s.png" class="e">')
+&nbsp; &nbsp;  6 CALL_FUNCTION &nbsp;  1 
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; (1 positional, 0 keyword pair)
+&nbsp; &nbsp;  9 RETURN_VALUE
+</code></pre>
+
+Note:
+
+We load up the code assoiated with the name print onto our stack
+---
+<pre class="cli" style="margin-left: -20px"><code>
+&nbsp; &nbsp; print(<h>'hey snek <img src="s.png" class="e">'</h>)
+<p align="center">&#45;&#45;&#45;</p>&nbsp; 1&nbsp;0 LOAD_NAME &nbsp; &nbsp; &nbsp;  0 (print)
+&nbsp; &nbsp;  3 <h>LOAD_CONST</h>&nbsp; &nbsp; &nbsp; 0 (<h>'hey snek <img src="s.png" class="e">'</h>)
+&nbsp; &nbsp;  6 CALL_FUNCTION &nbsp;  1 
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; (1 positional, 0 keyword pair)
+&nbsp; &nbsp;  9 RETURN_VALUE
+</code></pre>
+
+Note:
+Then we load the constact string onto the stack
+
+---
+<pre class="cli" style="margin-left: -20px"><code>
+&nbsp; &nbsp; print('hey snek <img src="s.png" class="e">')
+<p align="center">&#45;&#45;&#45;</p>&nbsp; 1&nbsp;0 LOAD_NAME &nbsp; &nbsp; &nbsp;  0 (print)
+&nbsp; &nbsp;  3 LOAD_CONST&nbsp; &nbsp; &nbsp; 0 ('hey snek <img src="s.png" class="e">')
+&nbsp; &nbsp;  6 <h>CALL_FUNCTION</h> &nbsp;  1 
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; (1 positional, 0 keyword pair)
+&nbsp; &nbsp;  9 RETURN_VALUE
+</code></pre>
+
+Note: Then we call the function. 
+We have one positional argument, because we provided just the string to print, and no keyword pairs
+---
+<pre class="cli" style="margin-left: -20px"><code>
+&nbsp; &nbsp; print('hey snek <img src="s.png" class="e">')
+<p align="center">&#45;&#45;&#45;</p>&nbsp; 1&nbsp;0 LOAD_NAME &nbsp; &nbsp; &nbsp;  0 (print)
+&nbsp; &nbsp;  3 LOAD_CONST&nbsp; &nbsp; &nbsp; 0 ('hey snek <img src="s.png" class="e">')
+&nbsp; &nbsp;  6 CALL_FUNCTION &nbsp;  1 
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; (1 positional, 0 keyword pair)
+&nbsp; &nbsp;  9 <h>RETURN_VALUE</h>
+</code></pre>
+
+Note:
+ 
+We then return
+
+We can also walk through a more complex example
+
+---
+
+<pre class="cli"><code>
+$ cat pybee.py
+s = "<img src="s.png" class="e">"
+b = "<img src="b.png" class="e">"
+print(s + b)
+</code></pre>
+
+Note: here, we define the variables s and b, then print their concatenation
+
+---
+<pre class="cli" style="margin-left: -20px"><code>$ python
+&gt;&gt;&gt; import dis
+&gt;&gt;&gt; with open("pybee.py") as f:
+...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;dis.dis(f.read())
+...
+Note: we can then disassemble our code file
+
+---
+<pre class="cli" style="margin-left: -20px"><code>$ python
+&gt;&gt;&gt; import dis
+&gt;&gt;&gt; with open("pybee.py") as f:
+...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;dis.dis(f.read())
+...
+&nbsp;&nbsp;1&nbsp;&nbsp;&nbsp;0&nbsp;LOAD_CONST&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0&nbsp;('s')
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3&nbsp;STORE_NAME&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0&nbsp;(s)<br>
+&nbsp;&nbsp;2&nbsp;&nbsp;&nbsp;6&nbsp;LOAD_CONST&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1&nbsp;('b')
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;9&nbsp;STORE_NAME&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1&nbsp;(b)<br>&nbsp;&nbsp;...
+---
+<pre class="cli" style="margin-left: -20px"><code>&nbsp;&nbsp;...<br>
+&nbsp;&nbsp;3&nbsp;&nbsp;12&nbsp;LOAD_NAME&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2&nbsp;(print)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;15&nbsp;LOAD_NAME&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0&nbsp;(s)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;18&nbsp;LOAD_NAME&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1&nbsp;(b)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;21&nbsp;BINARY_ADD
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;22&nbsp;CALL_FUNCTION&nbsp;&nbsp;1&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(1&nbsp;positional,&nbsp;0&nbsp;keyword&nbsp;pair)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;25&nbsp;POP_TOP
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;26&nbsp;LOAD_CONST&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2&nbsp;(None)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;29&nbsp;RETURN_VALUE
+
+ 
+---
+
+##= 500 Lines or Less: A Python Interpreter Written in Python
+### Allison Kaptur, asosbook.org
+
+Note: if you're interested more in how this works, This amazing piece by Allian Kaptur in the Architecture of Open Source applications is worth the read. 
 
 ---
 
@@ -257,7 +400,7 @@ Note:
 This is done by importing a stylesheet into the page
 
 ---
-<pre class="cli"><code>
+<pre class="cli"><code>$ cat style.css
 body {
 &nbsp; font-family: "Arial";
 }
@@ -273,7 +416,7 @@ Note: And that stylesheet tells certain parts of the page how to display.
 
 Note: We can extend our HTML to include a form, that will allow us to surf the internets
 
-Well, not actually. What we're doing here is enabling us to send information from the client front-end to the serer bakend. 
+Well, not actually. What we're doing here is enabling us to send information from the client front-end to the server bakend, which is the basis of the infotainment supertollway
 
 ---
 
@@ -384,7 +527,11 @@ exactly for our business logic in the API
 
 @= client.png
 
-Note: But if we want to use this same logic client side
+Note: But what if we want to use this same logic client side?
+
+It might be easier to have some of these tests on the browser for performance benefits. 
+
+Of course we're still going to have the same code serverside, but having the form validate in the client means quicker feedback when things are wrong, what with server round trip times being as they are
 
 ---
 
@@ -609,72 +756,171 @@ Note: Using batavia, our little helper be can help lead the way for snek to be i
 &nbsp; return True
 </code></pre>
 Note: Here's our python function from before
+---
+<pre class="cli"><code>$ cat validate.py
+def valid_username(un):
+&nbsp; usr = un.lower().strip() \
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; .encode("ascii","ignore") \
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; .decode("utf-8")
+&nbsp; if usr != un:
+&nbsp; &nbsp; return False
+&nbsp;
+&nbsp; return True
+</code></pre>
+Note: Let's put it in a file called validate.py
 
 ---
+<pre class="cli" style="margin-left: -20px"><code>$ python
+&gt;&gt;&gt; import py_compile
 
-<pre class="cli"><code>$ python
-Python 3.5.1 
->>> from validate import valid_username
 </code></pre>
+Note:
+Then open up Python again, import _pycompile
 ---
-<pre class="cli"><code>$ python
-Python 3.5.1 
->>> from validate import valid_username
->>> validate.__code__
+<pre class="cli" style="margin-left: -20px"><code>$ python
+&gt;&gt;&gt; import py_compile
+&gt;&gt;&gt; py_compile.compile("validate.py", \
+...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cfile&equals;"compiled.pyc")
 </code></pre>
+Note: and then force python to compile the code into a file of our choosing. 
+---
+<pre class="cli" style="margin-left: -20px"><code>$ cat compiled.py
+</pre></code>
+
+Note: We can then inspect the file
+
+---
+<pre class="cli" style="margin-left: -20px"><code>$ cat compiled.py
+
+dY��@sdd�ZdS)cCs;|j�j�jdd�jd�}||kr7dSdS)
+N�ascii�ignorezutf-8FT)�lower�strip�encode
+�decode)ZunZusr�r�
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;validate.py�valid_usernames
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;r&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;N)r&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;rrr<module>s
+</code></pre>
+Note: and see the wonderful machine code that we saw earlier
 ---
 
-<pre class="cli"><code>$ python
-Python 3.5.1 
->>> from validate import valid_username
->>> validate.__code__
-&ltcode object valid_username at 0x1035c95d0,
-file "/private/tmp/validate.py", line 1>
+<pre class="cli" style="margin-left: -20px"><code>$ cat compiled.py
+
+dY��@sdd�ZdS)cCs;|j�j�jdd�jd�}||kr7dSdS)
+N�ascii�ignorezutf-8FT)�<h>lower</h>�<h>strip</h>�<h>encode</h>
+�decode)ZunZusr�r�
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;validate.py�<h>valid_usernames</h>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;r&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;N)r&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;rrr<module>s
 </code></pre>
+Note: we can see some of our methods in here. 
+
+But this isn't very portable. 
+
+So what we do for batavia
+
 ---
-<pre class="cli"><code>>>> validate.__code__.co_code
+<pre class="cli" style="margin-left: -20px"><code>$ python
+&gt;&gt;&gt; import py_compile
+&gt;&gt;&gt; py_compile.compile("validate.py", \
+...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cfile&equals;"compiled.pyc")
 </code></pre>
+Note: is we take the code from earlier
+
 ---
-<pre class="cli"><code>>>> validate.__code__.co_code
-b'|\x00\x00j\x00\x00\x83\x00\x00j
-\x01\x00\x83\x00\x00j\x02\x00d\x01
-\x00d\x02\x00\x83\x02\x00j\x03\x00d
-\x03\x00\x83\x01\x00}\x01\x00t\x04
-\x00|\x00\x00\x83\x01\x00\x01t\x04
-\x00|\x01\x00\x83\x01\x00\x01|\x01
-\x00|\x00\x00k\x03\x00rK\x00d\x04
-\x00Sd\x05\x00S'
+<pre class="cli" style="margin-left: -20px"><code>$ python
+&gt;&gt;&gt; import py_compile
+&gt;&gt;&gt; py_compile.compile("validate.py", \
+...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cfile&equals;"compiled.pyc")
+&gt;&gt;&gt; import base64
 </code></pre>
+Note: import base64
 ---
-<pre class="cli"><code>>>> from base64 import b64encode
->>> b64encode(
-... valid_username.__code__.co_code)
+<pre class="cli" style="margin-left: -20px"><code>$ python
+&gt;&gt;&gt; import py_compile
+&gt;&gt;&gt; py_compile.compile("validate.py", \
+...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cfile&equals;"compiled.pyc")
+&gt;&gt;&gt; import base64
+&gt;&gt;&gt; with open("compiled.pyc", 'rb') as f:
+... &nbsp;&nbsp;    payload = base64.encodebytes(f.read())
 </code></pre>
+Note: we then read in our compiled file, ensuring we're using the read and byte flags, then encode in base64
+
 ---
-<pre class="cli"><code>>>> from base64 import b64encode
->>> b64encode(
-... valid_username.__code__.co_code)
-b'fAAAagAAgwAAagEAgwAAagIAZAEAZAIAgw
-IAagMAZAMAgwEAfQEAdAQAfAAAgwEAAXQEAH
-wBAIMBAAF8AQB8AABrAwBySwBkBABTZAUAUw&equals;&equals;'
+<pre class="cli" style="margin-left: -20px"><code>$ python
+&gt;&gt;&gt; import py_compile
+&gt;&gt;&gt; py_compile.compile("validate.py", \
+...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cfile&equals;"compiled.pyc")
+&gt;&gt;&gt; import base64
+&gt;&gt;&gt; with open("compiled.pyc", 'rb') as f:
+... &nbsp;&nbsp;    payload = base64.encodebytes(f.read())
+&gt;&gt;&gt; print(payload)
 </code></pre>
+Note: thsi payload
 ---
-<pre class="cli"><code>
-&lt;script src="/static/batavia.js">&lt;script>
+<pre class="cli" style="margin-left: -20px"><code>b'Fg0NCmRrCFmoAAAA4wAAAAAAAAAAAAAAAAIAAA
+&nbsp; BAAAAAcxAAAABkAABkAQCEAABaAABkAgBTKQNj
+&nbsp; AQAAAAAAAAACAAAAAwAAAEMAAABzOwAAAHwAAG
+&nbsp; oAAIMAAGoBAIMAAGoCAGQBAGQCAIMCAGoDAGQD
+&nbsp; AIMBAH0BAHwBAHwAAGsDAHI3AGQEAFNkBQBTKQ
+&nbsp; ZO2gVhc2NpadoGaWdub3JlegV1dGYtOEZUKQTa
+&nbsp; BWxvd2Vy2gVzdHJpcNoGZW5jb2Rl2gZkZWNvZG
+&nbsp; UpAloCdW5aA3VzcqkAcgcAAAD6C3ZhbGlkYXRl
+&nbsp; LnB52g52YWxpZF91c2VybmFtZQEAAABzDAAAAA
+&nbsp; ABEgEMAQkBDAEEAnIJAAAATikBcgkAAAByBwAA
+&nbsp; AHIHAAAAcgcAAAByCAAAANoIPG1vZHVsZT4BAA
+&nbsp; AAcwAAAAA&equals;'
+</code></pre>
+Note: we get base64 encoded bytecode. 
+
+Now, this is still not readable, in face it's less human readable; however in this form
+
+it's super easy to copy around. Less mojibake! 
+
+---
+<pre class="cli"><code>&lt;html>
+&lt;head>
+</code></pre>
+
+Note: Back in our HTML code
+
+---
+<pre class="cli"><code>&lt;html>
+&lt;head>
+&lt;script src="batavia.js">&lt;script>
+</code></pre>
+
+Note: we can import Batavia
+
+---
+<pre class="cli"><code>&lt;html>
+&lt;head>
+&lt;script src="batavia.js">&lt;script>
 &lt;script type="application/python-bytecode">
-fAAAagAAgwAAagEAgwAAagIAZAEAZAIAgw
-IAagMAZAMAgwEAfQEAdAQAfAAAgwEAAXQEAH
-wBAIMBAAF8AQB8AABrAwBySwBkBABTZAUAUw&equals;&equals;
-&lt;script>
+Fg0NCmRrCFmoAAAA4wAAAAAAAAAAAAAAAAIAAA
+BAAAAAcxAAAABkAABkAQCEAABaAABkAgBTKQNj
+AQAAAAAAAAACAAAAAwAAAEMAAABzOwAAAHwAAG
+...
+AAcwAAAAA&equals;
+&lt;/script>
 </code></pre>
+
+
+Note: And put the base64 validation code right in there
+
+You can use your existing pipelines to automatically generate this and insert it if you prefer
+
+But
 ---
 <pre class="cli"><code>&lt;script type="text/javascript">
-function validate() {
+function validate_form() {
 &nbsp;  usr = $("username")
 &nbsp;  if !valid_username(usr) { 
 &nbsp; &nbsp; alert("you don't surf")
 &nbsp;  } 
 }
+&lt;/script>
+</pre></code>
+
+Note: if we, for this demo, add a little bit of code that 
+
+runs our python code
 ---
 <pre class="cli" ><code>&lt;form>
 &nbsp;  &lt;label>Username: &lt;/label>
@@ -683,9 +929,10 @@ function validate() {
 &nbsp;&lt;button>Surf!&lt;/button>
 &lt;/form>
 </code></pre>
+Note: and edit our existing form
 ---
 
-<pre class="cli" ><code>&lt;form <h>onSubmit="valid_username()"</h>>
+<pre class="cli" ><code>&lt;form <h>onSubmit="validate_form()"</h>>
 &nbsp;  &lt;label>Username: &lt;/label>
 &nbsp;  &lt;input type="text"
 &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; id="username">
@@ -693,61 +940,79 @@ function validate() {
 &lt;/form>
 </code></pre>
 
-Note:
+Note: to include this new method
+
+We can then get our validate code working client side
 ---
 
 @ form-window.png
+Note: we have our form
 ---
 
 @ form_input.png
+Note: and we enter in something invalid
 ---
 @ form_input_invalid.png
+Note: and we get the popup!
 ---
 ##= But how?
+Note: but how does Batavia get it all to happen?
 
+Batavia is a Python virtual machine, so it works not unlike cpython does
 ---
 
+<pre class="cli" style="margin-left: -20px"><code>$ cat batavia/modules/marshal.js
+...
+marshal.load_pyc = function(vm, payload) { 
+&nbsp; return marshal.read_object(vm,
+&nbsp; &nbsp; &nbsp; new PYCFile(base64js.toByteArray(payload))
+}
+</code></pre>
 
-###= TODO
 
-Note: Remember that base64 bytecode from earlier? It's just an encoded base of instructions
+Note: bavatia starts by decoding the base64, and then reading the object
 
->>> for b in snek.__code__.co_code:
-...     print(hex(b))
-... 
-0x74
-0x0
-0x0
-0x64
-0x1
-0x0
-0x83
-0x1
-0x0
-0x1
-0x64
-0x0
-0x0
-0x53
+---
+<pre class="cli" style="margin-left: -20px"><code>marshal.r_object = function(vm, p) {
+&nbsp; ...
+&nbsp; var code = marshal.r_byte(vm, p)
+&nbsp; ...
+&nbsp; type = code & ~marshal.FLAG_REF
+</code></pre>
+Note: then it just steps through the code by byte, getting the type
+---
 
-dis.disco? Mapping of codes around?
-Or linking the dis.dis() to the bytecode
+<pre class="cli" style="margin-left: -20px"><code>&nbsp;&nbsp;...
+&nbsp; switch(type) { 
+&nbsp; &nbsp; case marshal.TYPE_null:
+&nbsp; &nbsp; &nbsp; ...
+&nbsp; &nbsp; case marshal.TYPE_NONE:
+&nbsp; &nbsp; &nbsp; ...
+&nbsp; &nbsp; case marshal.TYPE_STOPITER:
+&nbsp; &nbsp; &nbsp; ...
+&nbsp; &nbsp; case marshal.TYPE_ELLIPSIS:
+&nbsp; &nbsp; &nbsp; ...
 
-then talk about walkthrough
+Note: and then running a great big switch statement
 
+This then forks off to other functions, sometimes having to get multiple bytes, float fun, and a whole lot of other stuff
+
+This is literally a virtual machine, processing machine code. 
+
+Basic assembly-style language, in a stack
 ---
 
 ##= Snek in the Browser
 
 Note: and that's snek int he browser
 
-
+Python running where normally only javascript lives
 
 ---
 
 ##= Doesn't this already exist?
 
-Note: Well, yes and no. 
+Note: Can't we already get python in the browser? Well, yes and no. 
 ---
 
 ##= Brython, Skulpt, PyPy.js
@@ -797,6 +1062,7 @@ but that's only one part of the beeware suite.
 &lt;/form>
 </code></pre>
 Note: Remember this markup from earlier? This will allow us to implement a form on the web
+
 ---
 
 
@@ -841,32 +1107,33 @@ Why is it called toga? Well, when in Rome
 &lt;/form>
 </code></pre>
 
-Note: if we take our form, we can re-create it in Toga
+Note: this is our form from earlier. All we're doing here, is telling a machine to put pixels and vectors on screen. We're just drawing. 
+
+This is a high-level abstraction of drawling, so we don't have to draw the individual characters and boxes on a screen. HTML and CSS is just one way of getting stuff on a screen, but we don't have to use this CSS Box Model
 ---
-<pre ><code>import toga
-
+<pre><code>import toga
+&nbsp;
 class SuperHighway(toga.App):
-
-
 &nbsp; &nbsp; def valid_username(un):
 &nbsp; &nbsp; &nbsp; &nbsp; ...
-
 &nbsp; &nbsp; def validate_user(self, widget):
 &nbsp; &nbsp; &nbsp; &nbsp; if not valid_username(self.username.value):
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;self.main_window.info_dialog("Denied", "you don't surf")
-
+&nbsp;
 &nbsp; &nbsp; def startup(self):
 &nbsp; &nbsp; &nbsp; &nbsp; self.main_window &equals; toga.MainWindow(self.name)
 &nbsp; &nbsp; &nbsp; &nbsp; self.main_window.app &equals; self
-        
+&nbsp;        
 &nbsp; &nbsp; &nbsp; &nbsp; <c># insert UI here</c>
-
-&nbsp; &nbsp; &nbsp; &nbsp; self.main_window.content &equals; box
-&nbsp; &nbsp; &nbsp; &nbsp; self.main_window.show()
-
+&nbsp;
 def main():
 &nbsp; &nbsp; return SuperHighway("Super Highway", "org.pybee.superhighway")
 </code></pre>
+Note: Here's a basic toga app
+
+We have our class, with our validation functions from earlier
+
+And we setup a window, do stuff to it, then return it
 ---
 <pre><code>
 <c># UI elements</c>
@@ -882,7 +1149,27 @@ self.username.style.set(width&equals;100)
 un_label.style.set(width&equals;100)
 button.style.set(width&equals;100)
 box.style.set(padding&equals;30, flex_direction&equals;"row")
+
+self.main_window.content &equals; box
+self.main_window.show()
 </code></pre>
+
+Note: and this is the stuff
+
+we make a label
+we make a text input
+we make a button
+
+we make a box
+
+inside that box, we put the label
+inside that box, we put the button and the text input
+
+we add some pretty
+
+then we put everything in the window
+and show it
+
 
 ---
 
