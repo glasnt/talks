@@ -8,8 +8,13 @@ Note: Hi~
 ---
 @ doctorwhoemoji.jpg
 <span class="dasfoot">&copy; BBC Wales</span>
+
+
 Note:
-TX versioni - facade in the dutch city of Amersfoort (armers-fort)
+Emoji. An aspect of human language that's going to last for thousands of years, apparently. 
+
+
+TX version - facade in the dutch city of Amersfoort (armers-fort)
 @ emojiarch.png
 <span class="dasfoot"><a href="http://www.theverge.com/tldr/2017/4/24/15405402/emoji-emoticon-architecture-facade-netherlands">The Verge</a></span>
 
@@ -59,15 +64,6 @@ Note: The tags on the top note how many more to expect
 
 11 at start is one more (2 total)
 111 is two more
-
----
-
-#= <c>`\u`</c><span style="font-weight: normal">`xxxx`</span>
-###16-bit hex
-
----
-#= <c>`\U`</c><span style="font-weight: normal">`xxxxxxxx`</span>
-###32-bit hex
 
 ---
 ! g/A
@@ -216,15 +212,12 @@ Note: Speaking of those flags from earlier, they work in a similar way to the fa
 ---
 ! g/snake
 ---
-# &nbsp;
-#> $ python3
+#> $ python
 #> >>> import unicodedata
 #> >>> unicodedata.name("<img class="e" src="pictures/g/snake.svg" style="margin:0">")
 #> 'SNAKE'
 ---
-
-# &nbsp;
-#> $ python3
+#> $ python
 #> >>> "\N{SNAKE}"
 #> '<img src="pictures/g/snake.svg" class="e" style="margin:0">'
 
@@ -235,46 +228,77 @@ Note: Escape Sequence, for Named character in unicode database
 New in python 3.3
 
 ---
-
-# &nbsp;
-#> $ python3
+#> $ python
 #> >>> "<img class="e" src="pictures/g/snake.svg" style="margin:0">".encode("unicode_escape")
 #> b'\\U0001f40d'
 ---
-
-# &nbsp;
-#> $ python3
+#> $ python
 #> >>> "\U0001f40d"
 #> '<img class="e" src="pictures/g/snake.svg" style="margin:0">'
-
-
 
 
 ---
 ! g/red_gem
 ---
-#> &nbsp;
 #> $ irb
 #> > puts "\u{1f48e}"
 #> => <img style="margin: 0" height="40px" src="pictures/g/gem.svg">
 #> > "<img style="margin: 0" height="40px" src="pictures/g/gem.svg">".ord.to_s(16)
 #> => "1f48e"
 ---
-#> &nbsp;
 #> $ irb
 #> > <img style="margin: 0" height="40px" src="pictures/g/gem.svg"> = "gem"
 #> > puts "You are a " + <img style="margin: 0" height="40px" src="pictures/g/gem.svg"> + "!"
 #> => You are a gem!
 ---
-#> &nbsp;
 #> $ gem install gemoji
 #> $ irb
 #> > require 'gemoji'
 #> > g = Emoji.find_by_unicode("<img style="margin: 0" height="40px" src="pictures/g/gem.svg">")
 #> > g.description
 #> => "gem stone"
-#>- > Emoji.find_by_name("snake").raw
-#>- => "<img style="margin: 0" height="40px" src="pictures/g/snake.svg">"
+---
+#> $ gem install gemoji
+#> $ irb
+#> > require 'gemoji'
+#> > g = Emoji.find_by_unicode("<img style="margin: 0" height="40px" src="pictures/g/gem.svg">")
+#> > g.description
+#> => "gem stone"
+#> > Emoji.find_by_name("snake").raw
+---
+#> $ gem install gemoji
+#> $ irb
+#> > require 'gemoji'
+#> > g = Emoji.find_by_unicode("<img style="margin: 0" height="40px" src="pictures/g/gem.svg">")
+#> > g.description
+#> => "gem stone"
+#> > Emoji.find_by_name("snake").raw
+#> => "<img style="margin: 0" height="40px" src="pictures/g/snake.svg">"
+---
+! g/elephant
+---
+#> php -a
+#> php > IntlChar::charName('<img style="margin: 0" height="40px" src="pictures/a/claps.png">');
+#> CLAPPING HANDS SIGN
+---
+#> php -a
+#> php > $<img style="margin: 0" height="40px" src="pictures/a/claps.png"> = "Hello"
+#> php > $<img style="margin: 0" height="40px" src="pictures/a/globe_a.png"> = "World"
+
+---
+#> php -a
+#> php > $<img style="margin: 0" height="40px" src="pictures/a/claps.png"> = "Hello"
+#> php > $<img style="margin: 0" height="40px" src="pictures/a/globe_a.png"> = "World"
+#> php > echo $<img style="margin: 0" height="40px" src="pictures/a/claps.png">.' '.$<img style="margin: 0" height="40px" src="pictures/a/globe_a.png">
+
+
+---
+#> php -a
+#> php > $<img style="margin: 0" height="40px" src="pictures/a/claps.png"> = "Hello"
+#> php > $<img style="margin: 0" height="40px" src="pictures/a/globe_a.png"> = "World"
+#> php > echo $<img style="margin: 0" height="40px" src="pictures/a/claps.png">.' '.$<img style="margin: 0" height="40px" src="pictures/a/globe_a.png">
+#> Hello World
+
 ---
 ! g/sweat
 
@@ -360,8 +384,10 @@ Note: poland vs indonesia
 ---
 
 ! space | chile | space|  texas | space
-
 Note: chile vs texas
+---
+! space | chile_emoji.png | space| g/questionmark | space
+
 
 ---
 <pre> 85R10624 KSM-D &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;    H.C.R. No. 75
