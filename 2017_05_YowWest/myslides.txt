@@ -653,8 +653,8 @@ Just serve your own emoji graphs
 Yes, it's not the best way to get things done, but
 ---
 
-#= <span style="font-weight: normal">✌ ⁉   ⤴   ⚡   ⚗   🀄   </span>
-# ⛽   😂   😮   🖖   🙃  <span style="font-weight: normal">🥝  🥦</span>
+#= <span style="font-weight: normal">✌ ⁉   ⤴   ⚡   ⚗   🀄   ⛽   </span>
+#  😂   😮   🖖   🙃  <span style="font-weight: normal">🥝  🥦</span>
 
 
 ### glasnt.com/unicode-test
@@ -670,7 +670,14 @@ Chrome, Firefox, Safari evergreen all on el cap
 Note: Wordpress.com uses this.
 
 javascript front end change emoji to fallback images only
+---
+@^ yow.png
 
+
+
+Note: 
+
+Which is what you see on thw YOW website and on the program listings outside!
 we can do more
 ---
 
