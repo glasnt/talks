@@ -541,7 +541,7 @@ Note: In the webspace, you have a few options
 Note: some websites have panels
 ---
 
-! instagram.png | space  | t/magnify | t/sparkles | space | g/hash | t/sparkles
+! instagram.png | space  | t/magnify | t/sparkles | space | ap/hash.png | t/sparkles
 ! twitter.png | space |t/magnify | t/sparkles | space | space | space
 
 <span class="dasfoot" style="margin-top: -120px"><a href="https://thenextweb.com/apps/2017/04/28/twitter-now-supports-emoji-search-absolutely-needed/#.tnw_hLCAQj1Q">Twitter</a>, Instagram <a href="https://engineering.instagram.com/emojineering-part-1-machine-learning-for-emoji-trendsmachine-learning-for-emoji-trends-7f5f9cb979ad">1</a>, <a href="https://engineering.instagram.com/emojineering-part-ii-implementing-hashtag-emoji-7b653b221c82">2</a></span>
