@@ -1,10 +1,17 @@
-! space  | g/gem | t/megaphone |  g/koala | space
+! space  | t/blackheart.png | t/redheart |  t/megaphone | space
 ---
 ! o/bolt | g/sweat | t/sparkles
 @ footer.svg
 ---
 ! g/wave
 Note: Hi~
+Yes, this is a talk about emoji in the archecture track. Why?
+---
+@ emojiarch.png
+<span class="dasfoot"><a href="http://www.theverge.com/tldr/2017/4/24/15405402/emoji-emoticon-architecture-facade-netherlands">The Verge</a></span>
+Note: Amersfoort
+
+
 ---
 ! t/purple_heart
 Note: i love emoji 
@@ -16,7 +23,6 @@ Note: i love how broken it is
 Note: basically, because computers, we have 
 
 ---
-
 @ unicode.png
 
 ---
@@ -52,15 +58,6 @@ Note: The tags on the top note how many more to expect
 
 11 at start is one more (2 total)
 111 is two more
-
----
-
-#= <c>`\u`</c><span style="font-weight: normal">`xxxx`</span>
-###16-bit hex
-
----
-#= <c>`\u`</c><span style="font-weight: normal">`{xxxxxxxx}`</span>
-###32-bit hex
 
 ---
 ! g/A
@@ -165,40 +162,142 @@ Note: Unicode 8 2015
 ! unicode.png | e/9 |  space | space | space  | space | e/2 | e/0 | e/1 | e/6
 ! t/shrug | t/egg | t/cowboy | t/duck
 ! t/whisky | t/kiwifruit | o/spoon | t/facepalm-5 
-Note: These work in Twitter, Apple 10.2, GitHub since Dec, Facebook(!) since Jan, MICROSOFT(!!)
+Note: 
 
 If you can't see these: Upgrade. You get new emoji ... and security patches
 ---
 ! t/facepalm-5
-## `\u{1f926}\u{1f3fe}`
+## `\u1F926\u1F3FE`
+---
+
+! g/Z | g/W | g/J
+Note: zero width joiner
+
+zwidge
+
+Allows for combining existing emoji to make new ones
+---
+! t/facepalm-5
+## `\u1F926\u1F3FE`
 ---
 ! t/facepalm | t/fitz
-## `\u{1f926} \u{1f3fe}`
+## `\u1F926 \u1F3FE`
+---
+
+! a/womanhair.png | t/female.png | space | a/manhair.png | t/man.png
+### `\u1F487\u2640   \u1F487\u2642`
+
+---
+
+! space | t/manman.png | space
+## `\u1F468\u2764\u1F468`
+---
+! t/man | t/redheart.png | t/man
+
+## `\u1F468  \u2764  \u1F468`
+
+---
+
+! g/US
+## &nbsp;
+Note: Speaking of those flags from earlier, they work in a similar way to the facepalm emoji
+---
+! g/US
+##`\u1F1FA\u1F1F8`
+---
+!  g/U | g/S
+##`\u1F1FA \u1F1F8`
+
+---
+! g/snake
+---
+#> $ python
+#> >>> import unicodedata
+#> >>> unicodedata.name("<img class="e" src="pictures/g/snake.svg" style="margin:0">")
+#> 'SNAKE'
+---
+#> $ python
+#> >>> "\N{SNAKE}"
+#> '<img src="pictures/g/snake.svg" class="e" style="margin:0">'
+
+Note: Escape Sequence, for Named character in unicode database
+
+"Escape Sequences, good for unicode *and* gravitational fields!" -- Jason Yee, gitbiscet
+
+New in python 3.3
+
+---
+#> $ python
+#> >>> "<img class="e" src="pictures/g/snake.svg" style="margin:0">".encode("unicode_escape")
+#> b'\\U0001f40d'
+---
+#> $ python
+#> >>> "\U0001f40d"
+#> '<img class="e" src="pictures/g/snake.svg" style="margin:0">'
+
+
 ---
 ! g/red_gem
 ---
-#> &nbsp;
 #> $ irb
 #> > puts "\u{1f48e}"
 #> => <img style="margin: 0" height="40px" src="pictures/g/gem.svg">
 #> > "<img style="margin: 0" height="40px" src="pictures/g/gem.svg">".ord.to_s(16)
 #> => "1f48e"
 ---
-#> &nbsp;
 #> $ irb
 #> > <img style="margin: 0" height="40px" src="pictures/g/gem.svg"> = "gem"
 #> > puts "You are a " + <img style="margin: 0" height="40px" src="pictures/g/gem.svg"> + "!"
 #> => You are a gem!
 ---
-#> &nbsp;
 #> $ gem install gemoji
 #> $ irb
 #> > require 'gemoji'
 #> > g = Emoji.find_by_unicode("<img style="margin: 0" height="40px" src="pictures/g/gem.svg">")
 #> > g.description
 #> => "gem stone"
-#>- > Emoji.find_by_name("snake").raw
-#>- => "<img style="margin: 0" height="40px" src="pictures/g/snake.svg">"
+---
+#> $ gem install gemoji
+#> $ irb
+#> > require 'gemoji'
+#> > g = Emoji.find_by_unicode("<img style="margin: 0" height="40px" src="pictures/g/gem.svg">")
+#> > g.description
+#> => "gem stone"
+#> > Emoji.find_by_name("snake").raw
+---
+#> $ gem install gemoji
+#> $ irb
+#> > require 'gemoji'
+#> > g = Emoji.find_by_unicode("<img style="margin: 0" height="40px" src="pictures/g/gem.svg">")
+#> > g.description
+#> => "gem stone"
+#> > Emoji.find_by_name("snake").raw
+#> => "<img style="margin: 0" height="40px" src="pictures/g/snake.svg">"
+---
+! g/elephant
+---
+#> php -a
+#> php > IntlChar::charName('<img style="margin: 0" height="40px" src="pictures/a/claps.png">');
+#> CLAPPING HANDS SIGN
+---
+#> php -a
+#> php > $<img style="margin: 0" height="40px" src="pictures/a/claps.png"> = "Hello"
+#> php > $<img style="margin: 0" height="40px" src="pictures/a/globe_a.png"> = "World"
+
+---
+#> php -a
+#> php > $<img style="margin: 0" height="40px" src="pictures/a/claps.png"> = "Hello"
+#> php > $<img style="margin: 0" height="40px" src="pictures/a/globe_a.png"> = "World"
+#> php > echo $<img style="margin: 0" height="40px" src="pictures/a/claps.png">.' '.$<img style="margin: 0" height="40px" src="pictures/a/globe_a.png">
+
+
+---
+#> php -a
+#> php > $<img style="margin: 0" height="40px" src="pictures/a/claps.png"> = "Hello"
+#> php > $<img style="margin: 0" height="40px" src="pictures/a/globe_a.png"> = "World"
+#> php > echo $<img style="margin: 0" height="40px" src="pictures/a/claps.png">.' '.$<img style="margin: 0" height="40px" src="pictures/a/globe_a.png">
+#> Hello World
+
 ---
 ! g/sweat
 
@@ -214,11 +313,12 @@ and this has been depremental to emoji
 Especially with the original android adoption
 ---
 !  o/stdyellow.png | g/yellow
-#> > e = Emoji.find_by_unicode("<img class="e" src="pictures/g/yellow.svg" style="margin:0">")
-#> > e.description
-#> => "yellow heart"
+
+#> &nbsp; >>> unicodedata.name("<img class="e" src="pictures/g/yellow.svg" style="margin:0">")
+#> &nbsp; 'YELLOW HEART'
 Note:
 Yellow Heart
+
 
 This is the Apple version
 
@@ -227,20 +327,99 @@ Here's what Android went with.
 #= <img src="pictures/g/hairy_heart_s.png" height="400px">
 ---
 ! a/flushed.png | t/flushed | e/flushed | g/flushed
-
 ---
 
 ! a/hugs.png | g/hugs.png | t/hugs.png | e/hugs.png
 Note: ** micro services **
 ---
+
+! space | m/whale.png | m/whale.png | m/whale.png | space
+
+Note: obligatory
+---
 ! a/claps.png | g/claps | t/claps | m/claps.png
 ---
+! g/blonde | t/blonde | e/blonde | m/blonde 
+Note: Guess -- Blonde
+---
+! g/cactus | t/cactus | e/cactus | o/lgcactus.png
+Note: Saguaro ("So-wa-ro")  mostly 
+
+Thing is we can take these variances to an interesting benefit
+
+---
+@ pcau_1.jpg
+Note: for example. The emoji in my talk. They appear on digitial displays on occassion
+
+This one is running Windows 8
+
+How can I tell? Because ot the emoji 
+---
+
+@ sweat_versions.png
+Note: this is face with cold sweat. With so many variations, it's easy to pick up exactly what OS is being run
+
+
+--- 
+
+@= fitbit.jpg
+Note: For example, if you send an emoji to a person who has fitnit notifications, you can work out exactly the operating system, which is Android 4.3. Now, it might be a custom version, but at it's base it's android 4.3 based on this introspection
+
+
+---
 ! t/grinning | t/grimice
-Note: grinning vs grimmace
+Note: grinning face w/smiling eyes vs grimmace
+
+It's not just issues across platforms. Intra-platform miscommunication
 
 Scientific Paper
 “Blissfully happy” or “ready to fight”: Varying Interpretations of Emoji
  University of Minnesota
+---
+
+! poland.png | indonesia.png
+
+Note: poland vs indonesia
+---
+
+! space | chile | space|  texas | space
+Note: chile vs texas
+---
+! space | chile_emoji.png | space| g/questionmark | space
+
+
+---
+<pre> 85R10624 KSM-D &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;    H.C.R. No. 75
+
+ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; CONCURRENT RESOLUTION
+
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ....
+
+&nbsp; &nbsp; &nbsp; &nbsp;RESOLVED, That the 85th Legislature of the State of Texas
+  hereby reject the notion that the Chilean flag, although it is a
+  nice flag, can in any way compare to or be substituted for the
+  official state flag of Texas and urge all Texans not to use the
+  Republic of Chile flag emoji in digital forums when referring to the
+  Lone Star Flag of the great State of Texas.
+
+http://www.capitol.state.tx.us/tlodocs/85R/billtext/html/HC00075I.htm
+<pre>
+---
+<pre> 85R10624 KSM-D &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;    H.C.R. No. 75
+
+ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; CONCURRENT RESOLUTION
+
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ....
+
+&nbsp; &nbsp; &nbsp; &nbsp;RESOLVED, That the 85th Legislature of the State of Texas
+  hereby reject the notion that the Chilean flag, <h>although it is a
+  nice flag</h>, can in any way compare to or be substituted for the
+  official state flag of Texas and urge all Texans not to use the
+  Republic of Chile flag emoji in digital forums when referring to the
+  Lone Star Flag of the great State of Texas.
+
+http://www.capitol.state.tx.us/tlodocs/85R/billtext/html/HC00075I.htm
+<pre>
 ---
 ! e/thinking
 
@@ -304,46 +483,13 @@ Note:
 
 This extends to just normal characters too, not just emoji
 
+We can have fun breaking things
 
 JP: mo-ji-ba-ke
----
-@^ mcec_large.jpg
----
-@^ mcec.png
-
-Note: https://twitter.com/robjacoby/status/829474149143769088">Rob Jacoby, twitter
----
-@^ mcec_a.png
----
-## &nbsp;
-## &nbsp;
-# `ud83dude0dnn`
----
-## &nbsp;
-## &nbsp;
-# `\ud83d\ude0dnn`
----
-## &nbsp;
-## &nbsp;
-# `\ud83d \ude0d nn`
----
-## &nbsp;
-## &nbsp;
-# `\u1F60D nn`
----
-
-## &nbsp;
-## &nbsp;
-# <img src="pictures/g/hearts.png" style="width: 90px; margin-bottom: 0px"> `nn`
----
-
-@^ speaker_tweet.png
-Note: Thanks Rob
 ---
 ! t/link
 
 ---
-
 <img style="margin-top: 100px" src="pictures/o/spoon.ws.svg" height="300px">
 
 Note: Surprisingly enough, this works
@@ -394,6 +540,12 @@ Note: In the webspace, you have a few options
 Note: some websites have panels
 ---
 
+! instagram.png | space  | t/magnify | t/sparkles | space | ap/hash.png | t/sparkles
+! twitter.png | space |t/magnify | t/sparkles | space | space | space
+
+<span class="dasfoot" style="margin-top: -120px"><a href="https://thenextweb.com/apps/2017/04/28/twitter-now-supports-emoji-search-absolutely-needed/#.tnw_hLCAQj1Q">Twitter</a>, Instagram <a href="https://engineering.instagram.com/emojineering-part-1-machine-learning-for-emoji-trendsmachine-learning-for-emoji-trends-7f5f9cb979ad">1</a>, <a href="https://engineering.instagram.com/emojineering-part-ii-implementing-hashtag-emoji-7b653b221c82">2</a></span>
+---
+
 ! t/shortcake
 
 Note: but  a workaround for having a visual input mechanism is shortcodes
@@ -430,10 +582,26 @@ uses brackets instead
 Note:
 
 Cross-platform incompatibility
+---
+! slack_logo
+
+Note: who here is familiar with slack
+---
+
+! parrot 
+##= `:partyparrot:`
+
+Note: and this?
 
 partyparrrot is not an emoji
+---
 
-shipit is not an emoji
+@ shipit.png
+##= `:shipit:`
+
+Note: so is github
+it's an emoticon
+
 ---
 ! t/lightbulb
 ---
@@ -484,8 +652,9 @@ Just serve your own emoji graphs
 Yes, it's not the best way to get things done, but
 ---
 
-#= <span style="font-weight: normal">✌ ⁉   ⤴   ⚡   ⚗   🀄   </span>
-# ⛽   😂   😮   🖖   🙃  <span style="font-weight: normal"> 🥝</span>
+#= <span style="font-weight: normal">✌ ⁉   ⤴   ⚡   ⚗   🀄   ⛽   </span>
+#  😂   😮   🖖   🙃  <span style="font-weight: normal">🥝  🥦</span>
+
 
 ### glasnt.com/unicode-test
 
@@ -500,8 +669,6 @@ Chrome, Firefox, Safari evergreen all on el cap
 Note: Wordpress.com uses this.
 
 javascript front end change emoji to fallback images only
-
-we can do more
 ---
 
 ! t/raise | t/bar
@@ -565,24 +732,7 @@ Twitter DM and Slack message - if only emoji, they're display bigger
 <img src="pictures/o/alt_4.svg" style="height:170px; width:840px">
 <img src="pictures/o/whisky_speaker.svg" height="400px">
 ---
-<pre style="font-size: 28px"><code><c># github.com/glasnt/emojificiate</c><br>
-require 'gemoji'<br>
-def emojificate(str)
-&nbsp; str.split("").each do |s|
-&nbsp; &nbsp; e = Emoji.find_by_unicode(s)
-&nbsp; &nbsp; if e then
-&nbsp; &nbsp; &nbsp; u = s.ord.to_s(16) <c># e.g. 1f431</c>
-&nbsp; &nbsp; &nbsp; d = e.description&nbsp; <c># e.g. "cat face"</c>
-&nbsp; &nbsp; &nbsp; img = "&lt;img src='#{u}.png' <h>alt</h>='#{s}'" +
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; "<h>title</h>='#{d}' <h>aria-label</h>='Emoji: #{d}'>"
-&nbsp; &nbsp; &nbsp; return img
-&nbsp; &nbsp; else
-&nbsp; &nbsp; &nbsp; return s
-&nbsp; &nbsp; end
-&nbsp;  end
- end
-</pre></code>
-
+##= `pip install emojificate`
 ---
 ! t/lightbulb
 
@@ -601,10 +751,10 @@ Note: The future
 ! t/sparkles
 ---
 
-! unicode.png | e/10 | space | space | space  | e/star | e/2 | e/0 | e/1 | e/7
+! unicode.png | e/10 | space | space | space  | space | e/2 | e/0 | e/1 | e/7
 
 ! o/takeaway.png | hedgehog.png | o/dumpling.png | o/orangeh.png
-! o/eyebrow.png | o/curling.png | dino.png | brocolli.png
+! o/eyebrow.png | headscarf.png | dino.png | brocolli.png
 
 Note:
 
@@ -626,12 +776,30 @@ Merperson
 Note: I know right? mind. blown. 
 ---
 
-! unicode.png | e/10 | space | space | space  | e/star | e/2 | e/0 | e/1 | e/7
+! unicode.png | e/10 | space | space | space  | space | e/2 | e/0 | e/1 | e/7
 @ o/mindblown.png
 
 Note:
 which is also a candidate.
 ---
+! unicode.png | e/10 | space | space | space  | space | e/2 | e/0 | e/1 | e/7
+! gb.png | sc.png | wa.png
+---
+
+! unicode.png | e/9 | space | space | space  | space | space | space | unicode.png | e/10
+! sweat9.png | sweat10.png
+
+Note: recommendations in Unicde10 include updating some of the glyphs to conform
+including the sweat drop character
+---
+@= adults.png
+
+<span class="dasfoot" style="margin-top: -150px"><a href="http://blog.emojipedia.org/what-is-gender-and-why-does-it-matter-to-emoji/">emojipedia.org</a></span>
+Note: also, the 2017 update will include a third base for people, being gender neutral. 
+
+Which should allow for all the professions and people to have a version that not's a man or a woman
+---
+
 #= <img height="400px" src="pictures/t/up.svg"> &nbsp; <img height="400px" src="pictures/t/calendar.svg">
 Note: updates 
 ---
@@ -639,44 +807,22 @@ Note: updates
 ---
 ! m/m1_smile.png | m/m1_cry.png | m/m1_toung.png |m/m1_kiss.png | m/m1_shock.png
 ! m/m2_smile.png | m/m2_cry.png | m/m2_toung.png | m/m2_kiss.png | m/m2_shock.png
+Note: windows 8 to windows 10
 ---
+
 ! m/claps.png | m/newclap.png
 ---
-! a/grin.png | a/grinning_10.png
-Note: Across a lot of vendors
----
-! a/shrug.png | a/egg.png | a/cowboy.png | a/duck.png
-! a/tumbler.png | a/kiwi.png | o/spoon.png | a/facepalm-5.png
+@= couples.png
+Note: updates in the creators update
 
 ---
+! owl2 | owl3.png 
 
-! a/owl.png | a/shark.png | a/squid.png | a/avo.png
-! a/shrimp.png | a/fox.png | a/gorilla.png | a/bacon.png
----
-@ o/g7cross.png
-Note:
+Note: Emojione have also updated, now with a premoum version
 
-galaxy Note 7 
+They're updated a bunch of things, including the Owl
 
-if you see this emoji, RETURN YOUR DEVICE OMG EXPLOSIOTIONS
----
-! g/Z | g/W | g/J
-Note: zero width joiner
-
-zwidge
-
-Allows for combining existing emoji to make new ones
----
-! t/whiteflag | t/rainbow
-### `\u{1f3f3} \u{1f308}`
-### &nbsp;
----
-! t/rainbow_flag
-### `\u{1f3f3}`<r>`\ufe0f\u200d`</r>`\u{1f308}`
-### &nbsp;
-Note: apple has adopted these by having this as a separate button
-
-ios 10 beta has this as a separate character
+R.i.P. Argle Owl
 ---
 @ emojipedia-new-ios-10-gender.png
 ---
@@ -687,17 +833,62 @@ Note: Andoird 7.1  last few days
 ## &nbsp;
 @ a/tech_f1.png
 ---
+
 ! e/thinking
 ---
-@ redhead_1.jpg
+# &nbsp;
+@ bald.png
+<span class="dasfoot" ><a href="http://www.unicode.org/L2/L2017/17082-natural-hair-color.pdf">UTC Proposal L2/17-082</a></span> 
 ---
-@ redhead_2.jpg
+@= redhead_2.jpg
+---
+! e/thinking
+
+Note: but what about more combinations?
 ---
 
+@ xkcd_1813.png
+<span class="dasfoot"><a href="https://xkcd.com/1813">xkcd.com/1813</a></span>
+---
+
+@ xkcd_1813.png
+### &nbsp;
+#### "Already doable [...] without the need for a new character."</q>
+&dash; <a href="https://twitter.com/mark_e_davis/status/854556712631771136">Mark Davis</a>, Unicode Consortium President & Co-founder
+---
+@ m/ninja_cat.png
+---
 ! t/cocktail | e/fitz_6 | t/cherry 
 ---
 ! o/manhattan 
 ---
+! space | t/chipmunk | t/tophat | space
+---
+! space | t/fox | t/globe_a | space
+
+Note: firefox
+---
+! parrot
+
+Note: but what about the partyy parrot? Well... there are serveral birds, but no "tropical bird"
+
+You're welcome.
+
+But that was last November, since then, they've literally added more exclusion factors, including
+---
+@^ tropical_bird.png
+Note: I submitted a proposal to fix this issue. 
+
+---
+! t/dog | t/poodle | t/camel1 | t/camel2 | e/cross 
+Note: Exclusion factor K: Faulty Comparison.
+
+"the emoji dog and poodle, and two type of camel, do not justify adding different varieties of the same kind of animal"
+---
+
+! g/sorry
+---
+
 ! g/info
 Note: For more information
 ---
@@ -711,6 +902,16 @@ Note: For more information
 @ fakeunicode.jpg
 
 ### @fakeunicode
+---
+### &nbsp;
+
+@ unicode_icon.png
+### @unicode
+---
+
+### &nbsp;
+@ adopt.png
+#### 501(c)(3) Non-Profit
 ---
 @ o/takeaway.png
 Note: the takeaways
