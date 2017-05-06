@@ -24,8 +24,8 @@
     location: Perth
     talks: 
       - name: The Power ⚡️ and Responsibility 😓 of Unicode Adoption ✨
-      link: http://west.yowconference.com.au/speakers/katie-mclaughlin/
-      slides: 2017_05_YOWest
+        link: http://west.yowconference.com.au/speakers/katie-mclaughlin/
+        slides: 2017_05_YOWest
 
 - conference:
     name: SyPy

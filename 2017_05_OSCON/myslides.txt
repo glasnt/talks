@@ -825,6 +825,7 @@ They're updated a bunch of things, including the Owl
 R.i.P. Argle Owl
 ---
 @ emojipedia-new-ios-10-gender.png
+Note: on top of all the other gender mods
 ---
 ! g/teach_m6.png | g/mech.png | g/farm.png | g/cook.png 
 ! a/teach_m6.png | a/mech_f3.png | a/farmer_f5.png | a/cook_m1.png
