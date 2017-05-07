@@ -183,9 +183,15 @@ Allows for combining existing emoji to make new ones
 ! t/facepalm | t/fitz
 ## `\u1F926 \u1F3FE`
 ---
+! space | a/womanhair.png | space | space
+## `\u1F487`
+---
+! space | a/womanhair.png | t/man.png | space
+## `\u1F487 \u2642`
+---
+! space | a/manhair.png | space | space
+## `\u1F487\u2642`
 
-! a/womanhair.png | t/female.png | space | a/manhair.png | t/man.png
-### `\u1F487\u2640   \u1F487\u2642`
 
 ---
 

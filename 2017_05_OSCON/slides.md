@@ -183,9 +183,15 @@ Allows for combining existing emoji to make new ones
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/t/facepalm.svg'><img height='400px' src='pictures/t/fitz.svg'></p></div> <!-- .slide: class="center" -->
 ## `\u1F926 \u1F3FE`
 ---
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='200px' src='pictures/space.svg'><img height='200px' src='pictures/a/womanhair.png'><img height='200px' src='pictures/space.svg'><img height='200px' src='pictures/space.svg'></p></div> <!-- .slide: class="center" -->
+## `\u1F487`
+---
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='200px' src='pictures/space.svg'><img height='200px' src='pictures/a/womanhair.png'><img height='200px' src='pictures/t/man.png'><img height='200px' src='pictures/space.svg'></p></div> <!-- .slide: class="center" -->
+## `\u1F487 \u2642`
+---
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='200px' src='pictures/space.svg'><img height='200px' src='pictures/a/manhair.png'><img height='200px' src='pictures/space.svg'><img height='200px' src='pictures/space.svg'></p></div> <!-- .slide: class="center" -->
+## `\u1F487\u2642`
 
- <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='160px' src='pictures/a/womanhair.png'><img height='160px' src='pictures/t/female.png'><img height='160px' src='pictures/space.svg'><img height='160px' src='pictures/a/manhair.png'><img height='160px' src='pictures/t/man.png'></p></div> <!-- .slide: class="center" -->
-### `\u1F487\u2640 \u1F487\u2642`
 
 ---
 
