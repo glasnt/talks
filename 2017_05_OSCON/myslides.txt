@@ -7,7 +7,7 @@
 Note: Hi~
 Yes, this is a talk about emoji in the archecture track. Why?
 ---
-@ emojiarch.png
+# &nbsp; <!-- .slide: data-background="pictures/emojiarch.png" data-background-transition="none"-->
 <span class="dasfoot"><a href="http://www.theverge.com/tldr/2017/4/24/15405402/emoji-emoticon-architecture-facade-netherlands">The Verge</a></span>
 Note: Amersfoort
 
@@ -221,8 +221,6 @@ Note: Speaking of those flags from earlier, they work in a similar way to the fa
 #> >>> import unicodedata
 #> >>> unicodedata.name("<img class="e" src="pictures/g/snake.svg" style="margin:0">")
 #> 'SNAKE'
----
-#> $ python
 #> >>> "\N{SNAKE}"
 #> '<img src="pictures/g/snake.svg" class="e" style="margin:0">'
 
@@ -236,14 +234,22 @@ New in python 3.3
 #> $ python
 #> >>> "<img class="e" src="pictures/g/snake.svg" style="margin:0">".encode("unicode_escape")
 #> b'\\U0001f40d'
----
-#> $ python
 #> >>> "\U0001f40d"
 #> '<img class="e" src="pictures/g/snake.svg" style="margin:0">'
 
 
 ---
 ! g/red_gem
+---
+#> $ gem install gemoji
+#> $ irb
+#> > require 'gemoji'
+---
+#> > g = Emoji.find_by_unicode("<img style="margin: 0" height="40px" src="pictures/g/gem.svg">")
+#> > g.description
+#> "gem stone"
+#> > Emoji.find_by_name("gem stone").raw
+#> => "<img style="margin: 0" height="40px" src="pictures/g/gem.svg">"
 ---
 #> $ irb
 #> > puts "\u{1f48e}"
@@ -253,57 +259,39 @@ New in python 3.3
 ---
 #> $ irb
 #> > <img style="margin: 0" height="40px" src="pictures/g/gem.svg"> = "gem"
+Note: this is valud. You can have emoji variables
+---
+#> $ irb
+#> > <img style="margin: 0" height="40px" src="pictures/g/gem.svg"> = "gem"
 #> > puts "You are a " + <img style="margin: 0" height="40px" src="pictures/g/gem.svg"> + "!"
 #> => You are a gem!
+Note: asd
 ---
-#> $ gem install gemoji
-#> $ irb
-#> > require 'gemoji'
-#> > g = Emoji.find_by_unicode("<img style="margin: 0" height="40px" src="pictures/g/gem.svg">")
-#> > g.description
-#> => "gem stone"
----
-#> $ gem install gemoji
-#> $ irb
-#> > require 'gemoji'
-#> > g = Emoji.find_by_unicode("<img style="margin: 0" height="40px" src="pictures/g/gem.svg">")
-#> > g.description
-#> => "gem stone"
-#> > Emoji.find_by_name("snake").raw
----
-#> $ gem install gemoji
-#> $ irb
-#> > require 'gemoji'
-#> > g = Emoji.find_by_unicode("<img style="margin: 0" height="40px" src="pictures/g/gem.svg">")
-#> > g.description
-#> => "gem stone"
-#> > Emoji.find_by_name("snake").raw
-#> => "<img style="margin: 0" height="40px" src="pictures/g/snake.svg">"
----
-! g/elephant
+! t/elephant
 ---
 #> php -a
-#> php > IntlChar::charName('<img style="margin: 0" height="40px" src="pictures/a/claps.png">');
-#> CLAPPING HANDS SIGN
+#> php > echo IntlChar::charName('<img style="margin: 0" height="40px" src="pictures/t/elephant.png">');
+#> ELEPHANT
 ---
 #> php -a
-#> php > $<img style="margin: 0" height="40px" src="pictures/a/claps.png"> = "Hello"
-#> php > $<img style="margin: 0" height="40px" src="pictures/a/globe_a.png"> = "World"
-
+#> php > $<img style="margin: 0" height="40px" src="pictures/t/elephant.png"> = "elephant"
+#> php > echo "Baby " . $<img style="margin: 0" height="40px" src="pictures/t/elephant.png"> . " walk"
+#> Baby elephant walk
 ---
-#> php -a
-#> php > $<img style="margin: 0" height="40px" src="pictures/a/claps.png"> = "Hello"
-#> php > $<img style="margin: 0" height="40px" src="pictures/a/globe_a.png"> = "World"
-#> php > echo $<img style="margin: 0" height="40px" src="pictures/a/claps.png">.' '.$<img style="margin: 0" height="40px" src="pictures/a/globe_a.png">
-
-
+! g/abc
 ---
-#> php -a
-#> php > $<img style="margin: 0" height="40px" src="pictures/a/claps.png"> = "Hello"
-#> php > $<img style="margin: 0" height="40px" src="pictures/a/globe_a.png"> = "World"
-#> php > echo $<img style="margin: 0" height="40px" src="pictures/a/claps.png">.' '.$<img style="margin: 0" height="40px" src="pictures/a/globe_a.png">
-#> Hello World
 
+<img src="pictures/emojicode.png" style="height: 600px; margin-top: 0px">
+
+Note: Icecream == frozen variable
+---
+# &nbsp;
+## `CAUTION`
+### `Never use `&nbsp; <img style="margin: 0" height="40px" src="pictures/t/tonguewink.png"> &nbsp;` to compare strings.`
+### `Use ` &nbsp;<img style="margin: 0" height="40px" src="pictures/t/tongue.png"> &nbsp;` instead.`
+
+
+<span class="dasfoot"><a href="http://www.emojicode.org/docs/reference/the-s-package.html#string-pooling">Emojicode</a></span>
 ---
 ! g/sweat
 
@@ -388,6 +376,10 @@ Scientific Paper
 Note: poland vs indonesia
 ---
 
+# &nbsp; <!-- .slide: data-background="pictures/capitol.jpg" data-background-transition="none"-->
+---
+@ texas.svg
+---
 ! space | chile | space|  texas | space
 Note: chile vs texas
 ---
