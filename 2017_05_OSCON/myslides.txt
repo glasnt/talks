@@ -170,29 +170,20 @@ If you can't see these: Upgrade. You get new emoji ... and security patches
 ## `\u1F926\u1F3FE`
 ---
 
-! g/Z | g/W | g/J
-Note: zero width joiner
-
-zwidge
-
-Allows for combining existing emoji to make new ones
----
-! t/facepalm-5
-## `\u1F926\u1F3FE`
----
 ! t/facepalm | t/fitz
 ## `\u1F926 \u1F3FE`
 ---
-! space | a/womanhair.png | space | space
+! t/womanhaircut
 ## `\u1F487`
 ---
-! space | a/womanhair.png | t/man.png | space
-## `\u1F487 \u2642`
+! t/womanhaircut | t/female
+## `\u1F487` &nbsp; `\u2640`
 ---
-! space | a/manhair.png | space | space
+! t/womanhaircut | t/male
+## `\u1F487` &nbsp; `\u2642`
+---
+! t/manhaircut
 ## `\u1F487\u2642`
-
-
 ---
 
 ! space | t/manman.png | space
@@ -340,7 +331,12 @@ Note: Guess -- Blonde
 Note: Saguaro ("So-wa-ro")  mostly 
 
 Thing is we can take these variances to an interesting benefit
-
+---
+! a/htraffic.png | g/htraffic.png | t/htraffic | d/htraffic.png
+Note: Can you spot the problem? Let me flip them
+---
+! a/vtraffic.png | g/vtraffic.png | t/vtraffic | d/vtraffic.png
+Note: This is aussie traffic lights
 ---
 @ pcau_1.jpg
 Note: for example. The emoji in my talk. They appear on digitial displays on occassion
@@ -753,21 +749,14 @@ Note: The future
 
 ! o/takeaway.png | hedgehog.png | o/dumpling.png | o/orangeh.png
 ! o/eyebrow.png | headscarf.png | dino.png | brocolli.png
+<span class="dasfoot" style="margin-top: 0px"><a href="http://blog.emojipedia.org/final-2017-emoji-list/">emojipedia.org</a></span>
+---
+! unicode.png | e/10 | space | space | space  | space | e/2 | e/0 | e/1 | e/7
+! e/vampire.png | e/womanelf.png | e/zombie.png | e/monocle.png 
+! e/flyingsaucer.png | e/genie.png | e/pie.png | e/giraffe.png
 
-Note:
+<span class="dasfoot" style="margin-top: -0px"><a href="http://blog.emojipedia.org/final-2017-emoji-list/">emojipedia.org</a></span>
 
-
-Zebra Face
-Fairy
-Brain
-Pie
-Socks
-Older Adult
-Flying Saucer
-Breast-Feeding
-Pretzel
-Billed Cap
-Merperson
 ---
 ! space | space | space | space | space | space | space | space | space | space
 @ o/mindblown.png

@@ -170,29 +170,20 @@ If you can't see these: Upgrade. You get new emoji ... and security patches
 ## `\u1F926\u1F3FE`
 ---
 
- <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='266px' src='pictures/g/Z.svg'><img height='266px' src='pictures/g/W.svg'><img height='266px' src='pictures/g/J.svg'></p></div> <!-- .slide: class="center" -->
-Note: zero width joiner
-
-zwidge 
-
-Allows for combining existing emoji to make new ones
----
- <div style='width: 50%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/t/facepalm-5.svg'></p></div> <!-- .slide: class="center" -->
-## `\u1F926\u1F3FE`
----
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/t/facepalm.svg'><img height='400px' src='pictures/t/fitz.svg'></p></div> <!-- .slide: class="center" -->
 ## `\u1F926 \u1F3FE`
 ---
- <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='200px' src='pictures/space.svg'><img height='200px' src='pictures/a/womanhair.png'><img height='200px' src='pictures/space.svg'><img height='200px' src='pictures/space.svg'></p></div> <!-- .slide: class="center" -->
+ <div style='width: 50%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/t/womanhaircut.svg'></p></div> <!-- .slide: class="center" -->
 ## `\u1F487`
 ---
- <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='200px' src='pictures/space.svg'><img height='200px' src='pictures/a/womanhair.png'><img height='200px' src='pictures/t/man.png'><img height='200px' src='pictures/space.svg'></p></div> <!-- .slide: class="center" -->
-## `\u1F487 \u2642`
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/t/womanhaircut.svg'><img height='400px' src='pictures/t/female.svg'></p></div> <!-- .slide: class="center" -->
+## `\u1F487` &nbsp; `\u2640`
 ---
- <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='200px' src='pictures/space.svg'><img height='200px' src='pictures/a/manhair.png'><img height='200px' src='pictures/space.svg'><img height='200px' src='pictures/space.svg'></p></div> <!-- .slide: class="center" -->
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/t/womanhaircut.svg'><img height='400px' src='pictures/t/male.svg'></p></div> <!-- .slide: class="center" -->
+## `\u1F487` &nbsp; `\u2642`
+---
+ <div style='width: 50%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/t/manhaircut.svg'></p></div> <!-- .slide: class="center" -->
 ## `\u1F487\u2642`
-
-
 ---
 
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='266px' src='pictures/space.svg'><img height='266px' src='pictures/t/manman.png'><img height='266px' src='pictures/space.svg'></p></div> <!-- .slide: class="center" -->
@@ -340,7 +331,12 @@ Note: Guess -- Blonde
 Note: Saguaro ("So-wa-ro") mostly
 
 Thing is we can take these variances to an interesting benefit
-
+---
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='200px' src='pictures/a/htraffic.png'><img height='200px' src='pictures/g/htraffic.png'><img height='200px' src='pictures/t/htraffic.svg'><img height='200px' src='pictures/d/htraffic.png'></p></div> <!-- .slide: class="center" -->
+Note: Can you spot the problem? Let me flip them
+---
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='200px' src='pictures/a/vtraffic.png'><img height='200px' src='pictures/g/vtraffic.png'><img height='200px' src='pictures/t/vtraffic.svg'><img height='200px' src='pictures/d/vtraffic.png'></p></div> <!-- .slide: class="center" -->
+Note: This is aussie traffic lights
 ---
  <img src="pictures/pcau_1.jpg" />
 Note: for example. The emoji in my talk. They appear on digitial displays on occassion
@@ -753,21 +749,14 @@ Note: The future
 
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='200px' src='pictures/o/takeaway.png'><img height='200px' src='pictures/hedgehog.png'><img height='200px' src='pictures/o/dumpling.png'><img height='200px' src='pictures/o/orangeh.png'></p></div> <!-- .slide: class="center" -->
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='200px' src='pictures/o/eyebrow.png'><img height='200px' src='pictures/headscarf.png'><img height='200px' src='pictures/dino.png'><img height='200px' src='pictures/brocolli.png'></p></div> <!-- .slide: class="center" -->
+<span class="dasfoot" style="margin-top: 0px"><a href="http://blog.emojipedia.org/final-2017-emoji-list/">emojipedia.org</a></span>
+---
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='80px' src='pictures/unicode.png'><img height='80px' src='pictures/e/10.svg'><img height='80px' src='pictures/space.svg'><img height='80px' src='pictures/space.svg'><img height='80px' src='pictures/space.svg'><img height='80px' src='pictures/space.svg'><img height='80px' src='pictures/e/2.svg'><img height='80px' src='pictures/e/0.svg'><img height='80px' src='pictures/e/1.svg'><img height='80px' src='pictures/e/7.svg'></p></div> <!-- .slide: class="center" -->
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='200px' src='pictures/e/vampire.png'><img height='200px' src='pictures/e/womanelf.png'><img height='200px' src='pictures/e/zombie.png'><img height='200px' src='pictures/e/monocle.png'></p></div> <!-- .slide: class="center" -->
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='200px' src='pictures/e/flyingsaucer.png'><img height='200px' src='pictures/e/genie.png'><img height='200px' src='pictures/e/pie.png'><img height='200px' src='pictures/e/giraffe.png'></p></div> <!-- .slide: class="center" -->
 
-Note: 
+<span class="dasfoot" style="margin-top: -0px"><a href="http://blog.emojipedia.org/final-2017-emoji-list/">emojipedia.org</a></span>
 
-
-Zebra Face
-Fairy 
-Brain 
-Pie 
-Socks 
-Older Adult
-Flying Saucer
-Breast-Feeding 
-Pretzel 
-Billed Cap
-Merperson 
 ---
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='80px' src='pictures/space.svg'><img height='80px' src='pictures/space.svg'><img height='80px' src='pictures/space.svg'><img height='80px' src='pictures/space.svg'><img height='80px' src='pictures/space.svg'><img height='80px' src='pictures/space.svg'><img height='80px' src='pictures/space.svg'><img height='80px' src='pictures/space.svg'><img height='80px' src='pictures/space.svg'><img height='80px' src='pictures/space.svg'></p></div> <!-- .slide: class="center" -->
  <img src="pictures/o/mindblown.png" />
