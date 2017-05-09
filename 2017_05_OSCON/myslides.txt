@@ -876,7 +876,12 @@ Note: Exclusion factor K: Faulty Comparison.
 
 ! g/sorry
 ---
+! g/U | g/T | g/C | e/1 | e/5 | e/1
 
+Note: UTC 151 meeting on NOW in San Jose
+
+New stuff totally happening
+---
 ! g/info
 Note: For more information
 ---

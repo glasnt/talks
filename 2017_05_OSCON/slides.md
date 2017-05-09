@@ -876,7 +876,12 @@ Note: Exclusion factor K: Faulty Comparison.
 
  <div style='width: 50%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/g/sorry.svg'></p></div> <!-- .slide: class="center" -->
 ---
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='133px' src='pictures/g/U.svg'><img height='133px' src='pictures/g/T.svg'><img height='133px' src='pictures/g/C.svg'><img height='133px' src='pictures/e/1.svg'><img height='133px' src='pictures/e/5.svg'><img height='133px' src='pictures/e/1.svg'></p></div> <!-- .slide: class="center" -->
 
+Note: UTC 151 meeting on NOW in San Jose
+
+New stuff totally happening
+---
  <div style='width: 50%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/g/info.svg'></p></div> <!-- .slide: class="center" -->
 Note: For more information
 ---
