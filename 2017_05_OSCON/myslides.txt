@@ -336,6 +336,31 @@ Note: Can you spot the problem? Let me flip them
 ! a/vtraffic.png | g/vtraffic.png | t/vtraffic | d/vtraffic.png
 Note: This is aussie traffic lights
 ---
+! t/megaphone
+Note: We can have fun with these differences across platforms
+---
+# &nbsp; <!-- .slide: data-background="pictures/oscon_w.jpg" data-background-transition="none"-->
+---
+##= The Power and Responsibility
+##=of Unicode Adoption
+Note: 
+"The power and responsibility of UNicode adoption"
+
+I first gave it at this very meetup in March last year. 
+
+I know right? It sounds like a proper technical talk, but it's actually me just yelling about emoji and stuff
+
+Thing is, that's not the name
+---
+
+##= The Power <img style="margin-bottom: 0px" src="pictures/o/bolt.svg" width="50px"> and Responsibility <img style="margin-bottom: 0px" width="50px" src="pictures/g/sweat.svg">
+##= of Unicode Adoption <img style="margin-bottom: 0px" width="50px" src="pictures/t/sparkles.svg">
+
+Note: this is the name.  it has emoji in the title
+
+This has caused me all *sorts* of fun when trying to propose and present at conferences
+
+---
 @ pcau_1.jpg
 Note: This is the full title of my talk
 
@@ -358,12 +383,18 @@ Note: For example, if you send an emoji to a person who has fitnit notifications
 
 ---
 ! t/grinning | t/grimice
-Note: grinning face w/smiling eyes vs grimmace
+Note: 
+
 
 It's not just issues across platforms. Intra-platform miscommunication
 
+grinning face w/smiling eyes vs grimmace
+
+
 Scientific Paper
+
 “Blissfully happy” or “ready to fight”: Varying Interpretations of Emoji
+
  University of Minnesota
 ---
 

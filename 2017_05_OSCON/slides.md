@@ -336,6 +336,31 @@ Note: Can you spot the problem? Let me flip them
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='200px' src='pictures/a/vtraffic.png'><img height='200px' src='pictures/g/vtraffic.png'><img height='200px' src='pictures/t/vtraffic.svg'><img height='200px' src='pictures/d/vtraffic.png'></p></div> <!-- .slide: class="center" -->
 Note: This is aussie traffic lights
 ---
+ <div style='width: 50%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/t/megaphone.svg'></p></div> <!-- .slide: class="center" -->
+Note: We can have fun with these differences across platforms
+---
+# &nbsp; <!-- .slide: data-background="pictures/oscon_w.jpg" data-background-transition="none"-->
+---
+## The Power and Responsibility <!-- .slide: class="center" -->
+##of Unicode Adoption <!-- .slide: class="center" -->
+Note: 
+"The power and responsibility of UNicode adoption"
+
+I first gave it at this very meetup in March last year.
+
+I know right? It sounds like a proper technical talk, but it's actually me just yelling about emoji and stuff
+
+Thing is, that's not the name
+---
+
+## The Power <img style="margin-bottom: 0px" src="pictures/o/bolt.svg" width="50px"> and Responsibility <img style="margin-bottom: 0px" width="50px" src="pictures/g/sweat.svg"> <!-- .slide: class="center" -->
+## of Unicode Adoption <img style="margin-bottom: 0px" width="50px" src="pictures/t/sparkles.svg"> <!-- .slide: class="center" -->
+
+Note: this is the name. it has emoji in the title
+
+This has caused me all *sorts* of fun when trying to propose and present at conferences
+
+---
  <img src="pictures/pcau_1.jpg" />
 Note: This is the full title of my talk
 
@@ -358,12 +383,18 @@ Note: For example, if you send an emoji to a person who has fitnit notifications
 
 ---
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/t/grinning.svg'><img height='400px' src='pictures/t/grimice.svg'></p></div> <!-- .slide: class="center" -->
-Note: grinning face w/smiling eyes vs grimmace
+Note: 
+
 
 It's not just issues across platforms. Intra-platform miscommunication
 
+grinning face w/smiling eyes vs grimmace
+
+
 Scientific Paper
+
 “Blissfully happy” or “ready to fight”: Varying Interpretations of Emoji
+
 University of Minnesota
 ---
 
