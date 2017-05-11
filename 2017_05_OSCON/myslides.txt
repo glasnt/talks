@@ -8,9 +8,12 @@ Note: Hi~
 Yes, this is a talk about emoji in the archecture track. Why?
 ---
 # &nbsp; <!-- .slide: data-background="pictures/emojiarch.png" data-background-transition="none"-->
-<span class="dasfoot"><a href="http://www.theverge.com/tldr/2017/4/24/15405402/emoji-emoticon-architecture-facade-netherlands">The Verge</a></span>
 Note: Amersfoort
+http://www.theverge.com/tldr/2017/4/24/15405402/emoji-emoticon-architecture-facade-netherlands
 
+---
+# &nbsp; <!-- .slide: data-background="pictures/emojiarch2.jpg" data-background-transition="none"-->
+Note: Amersfoort
 
 ---
 ! t/purple_heart
@@ -317,11 +320,6 @@ Here's what Android went with.
 ! a/hugs.png | g/hugs.png | t/hugs.png | e/hugs.png
 Note: ** micro services **
 ---
-
-! space | m/whale.png | m/whale.png | m/whale.png | space
-
-Note: obligatory
----
 ! a/claps.png | g/claps | t/claps | m/claps.png
 ---
 ! g/blonde | t/blonde | e/blonde | m/blonde 
@@ -339,7 +337,9 @@ Note: Can you spot the problem? Let me flip them
 Note: This is aussie traffic lights
 ---
 @ pcau_1.jpg
-Note: for example. The emoji in my talk. They appear on digitial displays on occassion
+Note: This is the full title of my talk
+
+ They appear on digitial displays on occassion
 
 This one is running Windows 8
 

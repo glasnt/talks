@@ -8,9 +8,12 @@ Note: Hi~
 Yes, this is a talk about emoji in the archecture track. Why?
 ---
 # &nbsp; <!-- .slide: data-background="pictures/emojiarch.png" data-background-transition="none"-->
-<span class="dasfoot"><a href="http://www.theverge.com/tldr/2017/4/24/15405402/emoji-emoticon-architecture-facade-netherlands">The Verge</a></span>
 Note: Amersfoort
+http://www.theverge.com/tldr/2017/4/24/15405402/emoji-emoticon-architecture-facade-netherlands 
 
+---
+# &nbsp; <!-- .slide: data-background="pictures/emojiarch2.jpg" data-background-transition="none"-->
+Note: Amersfoort
 
 ---
  <div style='width: 50%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/t/purple_heart.svg'></p></div> <!-- .slide: class="center" -->
@@ -317,11 +320,6 @@ Here's what Android went with.
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='200px' src='pictures/a/hugs.png'><img height='200px' src='pictures/g/hugs.png'><img height='200px' src='pictures/t/hugs.png'><img height='200px' src='pictures/e/hugs.png'></p></div> <!-- .slide: class="center" -->
 Note: ** micro services **
 ---
-
- <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='160px' src='pictures/space.svg'><img height='160px' src='pictures/m/whale.png'><img height='160px' src='pictures/m/whale.png'><img height='160px' src='pictures/m/whale.png'><img height='160px' src='pictures/space.svg'></p></div> <!-- .slide: class="center" -->
-
-Note: obligatory
----
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='200px' src='pictures/a/claps.png'><img height='200px' src='pictures/g/claps.svg'><img height='200px' src='pictures/t/claps.svg'><img height='200px' src='pictures/m/claps.png'></p></div> <!-- .slide: class="center" -->
 ---
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='200px' src='pictures/g/blonde.svg'><img height='200px' src='pictures/t/blonde.svg'><img height='200px' src='pictures/e/blonde.svg'><img height='200px' src='pictures/m/blonde.svg'></p></div> <!-- .slide: class="center" -->
@@ -339,7 +337,9 @@ Note: Can you spot the problem? Let me flip them
 Note: This is aussie traffic lights
 ---
  <img src="pictures/pcau_1.jpg" />
-Note: for example. The emoji in my talk. They appear on digitial displays on occassion
+Note: This is the full title of my talk
+
+They appear on digitial displays on occassion
 
 This one is running Windows 8
 
