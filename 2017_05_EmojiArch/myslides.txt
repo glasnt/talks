@@ -205,7 +205,7 @@ This led to the introduction of UNICODE, providing vastly more alternatives with
 
 #= (◠‿◠*)
 # ヽ(`Д´)ﾉ
-# ಠ_ಠ
+#  (｡◕ ‿ ◕｡)
 
 Note:
 
@@ -213,7 +213,7 @@ It is not clear from the literature that *any* of these glyphs are actually used
 
 ---
 
-#= (ノಠ益ಠ)ノ彡┻━┻
+#= (ノ°□°)ノ彡┻━┻
 
 Note:
 
