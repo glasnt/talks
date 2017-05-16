@@ -292,24 +292,21 @@ Note: here, we define the variables s and b, then print their concatenation
 &gt;&gt;&gt; import dis
 &gt;&gt;&gt; with open("pybee.py") as f:
 ...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;dis.dis(f.read())
-...
 Note: we can then disassemble our code file
 
 ---
-<pre class="cli" style="margin-left: -20px"><code>$ python
-&gt;&gt;&gt; import dis
-&gt;&gt;&gt; with open("pybee.py") as f:
-...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;dis.dis(f.read())
-...
+<pre class="cli" style="margin-left: -20px">
 &nbsp;&nbsp;1&nbsp;&nbsp;&nbsp;0&nbsp;LOAD_CONST&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0&nbsp;('s')
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3&nbsp;STORE_NAME&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0&nbsp;(s)<br>
 &nbsp;&nbsp;2&nbsp;&nbsp;&nbsp;6&nbsp;LOAD_CONST&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1&nbsp;('b')
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;9&nbsp;STORE_NAME&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1&nbsp;(b)<br>&nbsp;&nbsp;...
----
-<pre class="cli" style="margin-left: -20px"><code>&nbsp;&nbsp;...<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;9&nbsp;STORE_NAME&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1&nbsp;(b)<br>
 &nbsp;&nbsp;3&nbsp;&nbsp;12&nbsp;LOAD_NAME&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2&nbsp;(print)
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;15&nbsp;LOAD_NAME&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0&nbsp;(s)
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;18&nbsp;LOAD_NAME&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1&nbsp;(b)
+&nbsp;&nbsp;...<br>
+---
+<pre class="cli" style="margin-left: -20px"><code>
+&nbsp;&nbsp;...
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;21&nbsp;BINARY_ADD
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;22&nbsp;CALL_FUNCTION&nbsp;&nbsp;1&nbsp;
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(1&nbsp;positional,&nbsp;0&nbsp;keyword&nbsp;pair)
@@ -1347,7 +1344,22 @@ Well, some parts work, but 3.6 presents and interseting problem
 Note: remember how I said that bytecode was a cpython implementation? Well, even through it is documented, it's not formal, it's considered 'internal', and they made no guarentee of backwards compatbility
 
 The basis of this particular change is changing the underlying opcodes to use 16 bit units for various optimisations. The thing is, this is changes the marshelling that batavia does to wrangle bytecode around, so it doesn't work for 3.6
-
+---
+<pre class="cli"><code>
+$ pyenv local 3.5.1
+$ python bytecode.py snek.py | md5sum
+a2e64825e43211481a2d3e91ea4a04c6
+</pre></code>
+---
+<pre class="cli"><code>
+$ pyenv local 3.5.1
+$ python bytecode.py snek.py | md5sum
+a2e64825e43211481a2d3e91ea4a04c6
+<br>
+$ pyenv local 3.6.1
+$ python bytecode.py snek.py | md5sum
+b1c35c70c0fcc330ad90ba43150d849f
+</pre></code>
 ---
 
 ##= You can help!
@@ -1357,22 +1369,37 @@ Note: However, you can totally help! We have an open offer to mentor anyone who 
 If you do contrinue to the project
 
 ---
+##= Contribute to BeeWare
+###= pybee.org/contributing/how/first-time/
+---
 @ challenge-coin.png
-Note: i
+Note: 
 You get one of the famous BeeWare challenge coins. If you have already contributed to beeware and haven't received your coin, I have a few here tonight, come and see me afterwards
 ---
-
-##= We have a booth!
-## Come say hi!
+##= Become a member
+### pybee.org/bee/join
+---
+##= Expo Hall Booth 103
+##= Win an Android Phone
+@ kogan.png
+## `#teampurple`
 
 Note: Also, we have a booth! If you come to the exhibit hall, down near (LOCATION TODO), you'll see us, covered in bees
 
-TODO Contest?
 ---
-@ livebees.jpg
+# &nbsp;
+<table><tr><td><img src="pictures/revsys.png"></td><td><img src="pictures/stickermule.png"></td></tr>
+<tr><td><img src="pictures/github.png"></td><td><img src="pictures/travis.png"></td></tr></table>
+Note: 
 
-Note: stickers! many many stickers. I don't have many here, sadly, but if you'd like one, come see me.
 
+Revsys coin
+
+Stickermule stickers
+
+Github coin 2.0 Yak Herder
+
+Travis CI concurrency
 
 ---
 ! claps
