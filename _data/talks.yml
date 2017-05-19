@@ -1,12 +1,13 @@
-#- conference:
-#    name: PyCon US
-#    link: https://us.pycon.org/2017/
-#    date: 2017-05-01
-#    location: Portland, OR
-#    talks: 
-#        - name: Snek in the Browser
-#          link: https://us.pycon.org/2017/schedule/presentation/51/
-#
+- conference:
+    name: PyCon US
+    link: https://us.pycon.org/2017/
+    date: 2017-05-19
+    location: Portland, OR
+    talks: 
+        - name: Snek in the Browser
+          link: https://us.pycon.org/2017/schedule/presentation/51/
+          slides: 2017_05_PyConUS_Snek
+
 - conference:
     name: OSCON
     link: https://conferences.oreilly.com/oscon/oscon-tx
