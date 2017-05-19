@@ -296,9 +296,9 @@ Note: we can then disassemble our code file
 
 ---
 <pre class="cli" style="margin-left: -20px">
-&nbsp;&nbsp;1&nbsp;&nbsp;&nbsp;0&nbsp;LOAD_CONST&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0&nbsp;('s') 
+&nbsp;&nbsp;1&nbsp;&nbsp;&nbsp;0&nbsp;LOAD_CONST&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0&nbsp;('<img src="s.png" class="e">')
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3&nbsp;STORE_NAME&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0&nbsp;(s)<br> 
-&nbsp;&nbsp;2&nbsp;&nbsp;&nbsp;6&nbsp;LOAD_CONST&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1&nbsp;('b') 
+&nbsp;&nbsp;2&nbsp;&nbsp;&nbsp;6&nbsp;LOAD_CONST&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1&nbsp;('<img src="b.png" class="e">')
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;9&nbsp;STORE_NAME&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1&nbsp;(b)<br> 
 &nbsp;&nbsp;3&nbsp;&nbsp;12&nbsp;LOAD_NAME&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2&nbsp;(print) 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;15&nbsp;LOAD_NAME&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0&nbsp;(s) 
@@ -1325,6 +1325,9 @@ And yes,
  <img src="pictures/toga-django-browser.png" />
 
 Note: this means we can have a browser in a browser.
+---
+
+## (inception horn) <!-- .slide: class="center" -->
 
 ---
 
@@ -1346,19 +1349,17 @@ Note: remember how I said that bytecode was a cpython implementation? Well, even
 The basis of this particular change is changing the underlying opcodes to use 16 bit units for various optimisations. The thing is, this is changes the marshelling that batavia does to wrangle bytecode around, so it doesn't work for 3.6
 ---
 <pre class="cli"><code>
-$ pyenv local 3.5.1
-$ python bytecode.py snek.py | md5sum
-a2e64825e43211481a2d3e91ea4a04c6 
+$ cat snek.cpython-35.pyc | md5sum
+4d3509f8148fb7f6da1d2803f1ed9341 -
+<br> 
 </pre></code> 
 ---
 <pre class="cli"><code>
-$ pyenv local 3.5.1
-$ python bytecode.py snek.py | md5sum
-a2e64825e43211481a2d3e91ea4a04c6 
+$ cat snek.cpython-35.pyc | md5sum
+4d3509f8148fb7f6da1d2803f1ed9341 -
 <br> 
-$ pyenv local 3.6.1
-$ python bytecode.py snek.py | md5sum
-b1c35c70c0fcc330ad90ba43150d849f 
+$ cat snek.cpython-36.pyc | md5sum
+f213a5b50590cad5abeacbc53ff752ed -
 </pre></code> 
 ---
 
