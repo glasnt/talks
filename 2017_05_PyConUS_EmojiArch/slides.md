@@ -1,5 +1,5 @@
 
-# Lightning Talk Karaoke <!-- .slide: class="center" -->
+# Lightning Talk Cover <!-- .slide: class="center" -->
 ## Present a talk,<br>but use someone else's slides
 
 Note: 

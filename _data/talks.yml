@@ -7,6 +7,8 @@
         - name: Snek in the Browser
           link: https://us.pycon.org/2017/schedule/presentation/51/
           slides: 2017_05_PyConUS_Snek
+        - name: Lightning Talk Cover - Emoji Archeology 101
+          slides: 2017_05_PyConUS_EmojiArch
 
 - conference:
     name: OSCON

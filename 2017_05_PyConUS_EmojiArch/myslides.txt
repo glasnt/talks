@@ -1,5 +1,5 @@
 
-#= Lightning Talk Karaoke
+#= Lightning Talk Cover
 ## Present a talk,<br>but use someone else's slides
 
 Note:
