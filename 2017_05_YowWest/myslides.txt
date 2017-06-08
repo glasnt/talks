@@ -8,8 +8,13 @@ Note: Hi~
 ---
 @ doctorwhoemoji.jpg
 <span class="dasfoot">&copy; BBC Wales</span>
+
+
 Note:
-TX versioni - facade in the dutch city of Amersfoort (armers-fort)
+Emoji. An aspect of human language that's going to last for thousands of years, apparently. 
+
+
+TX version - facade in the dutch city of Amersfoort (armers-fort)
 @ emojiarch.png
 <span class="dasfoot"><a href="http://www.theverge.com/tldr/2017/4/24/15405402/emoji-emoticon-architecture-facade-netherlands">The Verge</a></span>
 
@@ -59,15 +64,6 @@ Note: The tags on the top note how many more to expect
 
 11 at start is one more (2 total)
 111 is two more
-
----
-
-#= <c>`\u`</c><span style="font-weight: normal">`xxxx`</span>
-###16-bit hex
-
----
-#= <c>`\U`</c><span style="font-weight: normal">`xxxxxxxx`</span>
-###32-bit hex
 
 ---
 ! g/A
@@ -216,15 +212,12 @@ Note: Speaking of those flags from earlier, they work in a similar way to the fa
 ---
 ! g/snake
 ---
-# &nbsp;
-#> $ python3
+#> $ python
 #> >>> import unicodedata
 #> >>> unicodedata.name("<img class="e" src="pictures/g/snake.svg" style="margin:0">")
 #> 'SNAKE'
 ---
-
-# &nbsp;
-#> $ python3
+#> $ python
 #> >>> "\N{SNAKE}"
 #> '<img src="pictures/g/snake.svg" class="e" style="margin:0">'
 
@@ -235,46 +228,77 @@ Note: Escape Sequence, for Named character in unicode database
 New in python 3.3
 
 ---
-
-# &nbsp;
-#> $ python3
+#> $ python
 #> >>> "<img class="e" src="pictures/g/snake.svg" style="margin:0">".encode("unicode_escape")
 #> b'\\U0001f40d'
 ---
-
-# &nbsp;
-#> $ python3
+#> $ python
 #> >>> "\U0001f40d"
 #> '<img class="e" src="pictures/g/snake.svg" style="margin:0">'
-
-
 
 
 ---
 ! g/red_gem
 ---
-#> &nbsp;
 #> $ irb
 #> > puts "\u{1f48e}"
 #> => <img style="margin: 0" height="40px" src="pictures/g/gem.svg">
 #> > "<img style="margin: 0" height="40px" src="pictures/g/gem.svg">".ord.to_s(16)
 #> => "1f48e"
 ---
-#> &nbsp;
 #> $ irb
 #> > <img style="margin: 0" height="40px" src="pictures/g/gem.svg"> = "gem"
 #> > puts "You are a " + <img style="margin: 0" height="40px" src="pictures/g/gem.svg"> + "!"
 #> => You are a gem!
 ---
-#> &nbsp;
 #> $ gem install gemoji
 #> $ irb
 #> > require 'gemoji'
 #> > g = Emoji.find_by_unicode("<img style="margin: 0" height="40px" src="pictures/g/gem.svg">")
 #> > g.description
 #> => "gem stone"
-#>- > Emoji.find_by_name("snake").raw
-#>- => "<img style="margin: 0" height="40px" src="pictures/g/snake.svg">"
+---
+#> $ gem install gemoji
+#> $ irb
+#> > require 'gemoji'
+#> > g = Emoji.find_by_unicode("<img style="margin: 0" height="40px" src="pictures/g/gem.svg">")
+#> > g.description
+#> => "gem stone"
+#> > Emoji.find_by_name("snake").raw
+---
+#> $ gem install gemoji
+#> $ irb
+#> > require 'gemoji'
+#> > g = Emoji.find_by_unicode("<img style="margin: 0" height="40px" src="pictures/g/gem.svg">")
+#> > g.description
+#> => "gem stone"
+#> > Emoji.find_by_name("snake").raw
+#> => "<img style="margin: 0" height="40px" src="pictures/g/snake.svg">"
+---
+! g/elephant
+---
+#> php -a
+#> php > IntlChar::charName('<img style="margin: 0" height="40px" src="pictures/a/claps.png">');
+#> CLAPPING HANDS SIGN
+---
+#> php -a
+#> php > $<img style="margin: 0" height="40px" src="pictures/a/claps.png"> = "Hello"
+#> php > $<img style="margin: 0" height="40px" src="pictures/a/globe_a.png"> = "World"
+
+---
+#> php -a
+#> php > $<img style="margin: 0" height="40px" src="pictures/a/claps.png"> = "Hello"
+#> php > $<img style="margin: 0" height="40px" src="pictures/a/globe_a.png"> = "World"
+#> php > echo $<img style="margin: 0" height="40px" src="pictures/a/claps.png">.' '.$<img style="margin: 0" height="40px" src="pictures/a/globe_a.png">
+
+
+---
+#> php -a
+#> php > $<img style="margin: 0" height="40px" src="pictures/a/claps.png"> = "Hello"
+#> php > $<img style="margin: 0" height="40px" src="pictures/a/globe_a.png"> = "World"
+#> php > echo $<img style="margin: 0" height="40px" src="pictures/a/claps.png">.' '.$<img style="margin: 0" height="40px" src="pictures/a/globe_a.png">
+#> Hello World
+
 ---
 ! g/sweat
 
@@ -309,6 +333,11 @@ Here's what Android went with.
 ! a/hugs.png | g/hugs.png | t/hugs.png | e/hugs.png
 Note: ** micro services **
 ---
+
+! space | m/whale.png | m/whale.png | m/whale.png | space
+
+Note: obligatory
+---
 ! a/claps.png | g/claps | t/claps | m/claps.png
 ---
 ! g/blonde | t/blonde | e/blonde | m/blonde 
@@ -340,7 +369,7 @@ Note: For example, if you send an emoji to a person who has fitnit notifications
 
 ---
 ! t/grinning | t/grimice
-Note: grinning vs grimmace
+Note: grinning face w/smiling eyes vs grimmace
 
 It's not just issues across platforms. Intra-platform miscommunication
 
@@ -355,8 +384,10 @@ Note: poland vs indonesia
 ---
 
 ! space | chile | space|  texas | space
-
 Note: chile vs texas
+---
+! space | chile_emoji.png | space| g/questionmark | space
+
 
 ---
 <pre> 85R10624 KSM-D &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;    H.C.R. No. 75
@@ -510,6 +541,12 @@ Note: In the webspace, you have a few options
 Note: some websites have panels
 ---
 
+! instagram.png | space  | t/magnify | t/sparkles | space | ap/hash.png | t/sparkles
+! twitter.png | space |t/magnify | t/sparkles | space | space | space
+
+<span class="dasfoot" style="margin-top: -120px"><a href="https://thenextweb.com/apps/2017/04/28/twitter-now-supports-emoji-search-absolutely-needed/#.tnw_hLCAQj1Q">Twitter</a>, Instagram <a href="https://engineering.instagram.com/emojineering-part-1-machine-learning-for-emoji-trendsmachine-learning-for-emoji-trends-7f5f9cb979ad">1</a>, <a href="https://engineering.instagram.com/emojineering-part-ii-implementing-hashtag-emoji-7b653b221c82">2</a></span>
+---
+
 ! t/shortcake
 
 Note: but  a workaround for having a visual input mechanism is shortcodes
@@ -616,8 +653,9 @@ Just serve your own emoji graphs
 Yes, it's not the best way to get things done, but
 ---
 
-#= <span style="font-weight: normal">✌ ⁉   ⤴   ⚡   ⚗   🀄   </span>
-# ⛽   😂   😮   🖖   🙃  <span style="font-weight: normal"> 🥝</span>
+#= <span style="font-weight: normal">✌ ⁉   ⤴   ⚡   ⚗   🀄   ⛽   </span>
+#  😂   😮   🖖   🙃  <span style="font-weight: normal">🥝  🥦</span>
+
 
 ### glasnt.com/unicode-test
 
@@ -632,7 +670,14 @@ Chrome, Firefox, Safari evergreen all on el cap
 Note: Wordpress.com uses this.
 
 javascript front end change emoji to fallback images only
+---
+@^ yow.png
 
+
+
+Note: 
+
+Which is what you see on thw YOW website and on the program listings outside!
 we can do more
 ---
 
@@ -747,7 +792,22 @@ Note: I know right? mind. blown.
 Note:
 which is also a candidate.
 ---
+! unicode.png | e/10 | space | space | space  | space | e/2 | e/0 | e/1 | e/7
 ! gb.png | sc.png | wa.png
+---
+
+! unicode.png | e/9 | space | space | space  | space | space | space | unicode.png | e/10
+! sweat9.png | sweat10.png
+
+Note: recommendations in Unicde10 include updating some of the glyphs to conform
+including the sweat drop character
+---
+@= adults.png
+
+<span class="dasfoot" style="margin-top: -150px"><a href="http://blog.emojipedia.org/what-is-gender-and-why-does-it-matter-to-emoji/">emojipedia.org</a></span>
+Note: also, the 2017 update will include a third base for people, being gender neutral. 
+
+Which should allow for all the professions and people to have a version that not's a man or a woman
 ---
 
 #= <img height="400px" src="pictures/t/up.svg"> &nbsp; <img height="400px" src="pictures/t/calendar.svg">
@@ -760,11 +820,11 @@ Note: updates
 Note: windows 8 to windows 10
 ---
 
+! m/claps.png | m/newclap.png
+---
 @= couples.png
 Note: updates in the creators update
 
----
-! m/claps.png | m/newclap.png
 ---
 ! owl2 | owl3.png 
 
@@ -784,13 +844,6 @@ Note: Andoird 7.1  last few days
 @ a/tech_f1.png
 ---
 
-@= adults.png
-
-<span class="dasfoot" style="margin-top: -150px"><a href="http://blog.emojipedia.org/what-is-gender-and-why-does-it-matter-to-emoji/">emojipedia.org</a></span>
-Note: also, the 2017 update will include a third base for people, being gender neutral. 
-
-Which should allow for all the professions and people to have a version that not's a man or a woman
----
 ! e/thinking
 ---
 # &nbsp;
@@ -798,6 +851,22 @@ Which should allow for all the professions and people to have a version that not
 <span class="dasfoot" ><a href="http://www.unicode.org/L2/L2017/17082-natural-hair-color.pdf">UTC Proposal L2/17-082</a></span> 
 ---
 @= redhead_2.jpg
+---
+! e/thinking
+
+Note: but what about more combinations?
+---
+
+@ xkcd_1813.png
+<span class="dasfoot"><a href="https://xkcd.com/1813">xkcd.com/1813</a></span>
+---
+
+@ xkcd_1813.png
+### &nbsp;
+#### "Already doable [...] without the need for a new character."</q>
+&dash; <a href="https://twitter.com/mark_e_davis/status/854556712631771136">Mark Davis</a>, Unicode Consortium President & Co-founder
+---
+@ m/ninja_cat.png
 ---
 ! t/cocktail | e/fitz_6 | t/cherry 
 ---
@@ -829,6 +898,7 @@ Note: Exclusion factor K: Faulty Comparison.
 
 ! g/sorry
 ---
+
 ! g/info
 Note: For more information
 ---
@@ -842,6 +912,16 @@ Note: For more information
 @ fakeunicode.jpg
 
 ### @fakeunicode
+---
+### &nbsp;
+
+@ unicode_icon.png
+### @unicode
+---
+
+### &nbsp;
+@ adopt.png
+#### 501(c)(3) Non-Profit
 ---
 @ o/takeaway.png
 Note: the takeaways

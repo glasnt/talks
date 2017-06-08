@@ -1,0 +1,29 @@
+img.e { width: 50px; margin: 0 !important; margin-bottom: -10px !important} 
+div.big {
+	font-size: 120px;
+}
+
+.tinycode { 
+    font-size: 10px;
+    line-height:1;
+    white-space: pre;
+}   
+
+
+img.inline_emoji {
+    height: 60px;
+    margin: 15px 0px 0px;
+} 
+span.dasfoot { position:absolute; top: 670px; right: 1em; font-size: 50%; color: grey}
+c { color: green; font-weight:bold; }
+s { color: red }
+r { color: red }
+h { color: blue; font-weight: bold;}
+
+pre.cli { 
+    font-size: 40px;
+    line-height: 140%; 
+}
+pre.small { 
+    font-size: 60px;
+}

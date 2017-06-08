@@ -8,8 +8,13 @@ Note: Hi~
 ---
  <img src="pictures/doctorwhoemoji.jpg" />
 <span class="dasfoot">&copy; BBC Wales</span>
+
+
 Note: 
-TX versioni - facade in the dutch city of Amersfoort (armers-fort)
+Emoji. An aspect of human language that's going to last for thousands of years, apparently.
+
+
+TX version - facade in the dutch city of Amersfoort (armers-fort)
  <img src="pictures/emojiarch.png" />
 <span class="dasfoot"><a href="http://www.theverge.com/tldr/2017/4/24/15405402/emoji-emoticon-architecture-facade-netherlands">The Verge</a></span>
 
@@ -59,15 +64,6 @@ Note: The tags on the top note how many more to expect
 
 11 at start is one more (2 total)
 111 is two more
-
----
-
-# <c>`\u`</c><span style="font-weight: normal">`xxxx`</span> <!-- .slide: class="center" -->
-###16-bit hex
-
----
-# <c>`\U`</c><span style="font-weight: normal">`xxxxxxxx`</span> <!-- .slide: class="center" -->
-###32-bit hex
 
 ---
  <div style='width: 50%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/g/A.svg'></p></div> <!-- .slide: class="center" -->
@@ -216,15 +212,12 @@ Note: Speaking of those flags from earlier, they work in a similar way to the fa
 ---
  <div style='width: 50%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/g/snake.svg'></p></div> <!-- .slide: class="center" -->
 ---
-# &nbsp;
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">$ python3</code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">$ python</code></pre></div>
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">>>> import unicodedata</code></pre></div>
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">>>> unicodedata.name("<img class="e" src="pictures/g/snake.svg" style="margin:0">")</code></pre></div>
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">'SNAKE'</code></pre></div>
 ---
-
-# &nbsp;
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">$ python3</code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">$ python</code></pre></div>
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">>>> "\N{SNAKE}"</code></pre></div>
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">'<img src="pictures/g/snake.svg" class="e" style="margin:0">'</code></pre></div>
 
@@ -235,46 +228,77 @@ Note: Escape Sequence, for Named character in unicode database
 New in python 3.3
 
 ---
-
-# &nbsp;
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">$ python3</code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">$ python</code></pre></div>
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">>>> "<img class="e" src="pictures/g/snake.svg" style="margin:0">".encode("unicode_escape")</code></pre></div>
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">b'\\U0001f40d'</code></pre></div>
 ---
-
-# &nbsp;
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">$ python3</code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">$ python</code></pre></div>
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">>>> "\U0001f40d"</code></pre></div>
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">'<img class="e" src="pictures/g/snake.svg" style="margin:0">'</code></pre></div>
-
-
 
 
 ---
  <div style='width: 50%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/g/red_gem.svg'></p></div> <!-- .slide: class="center" -->
 ---
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">&nbsp;</code></pre></div>
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">$ irb</code></pre></div>
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> puts "\u{1f48e}"</code></pre></div>
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">=> <img style="margin: 0" height="40px" src="pictures/g/gem.svg"></code></pre></div>
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> "<img style="margin: 0" height="40px" src="pictures/g/gem.svg">".ord.to_s(16)</code></pre></div>
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">=> "1f48e"</code></pre></div>
 ---
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">&nbsp;</code></pre></div>
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">$ irb</code></pre></div>
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> <img style="margin: 0" height="40px" src="pictures/g/gem.svg"> = "gem"</code></pre></div>
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> puts "You are a " + <img style="margin: 0" height="40px" src="pictures/g/gem.svg"> + "!"</code></pre></div>
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">=> You are a gem!</code></pre></div>
 ---
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">&nbsp;</code></pre></div>
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">$ gem install gemoji</code></pre></div>
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">$ irb</code></pre></div>
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> require 'gemoji'</code></pre></div>
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> g = Emoji.find_by_unicode("<img style="margin: 0" height="40px" src="pictures/g/gem.svg">")</code></pre></div>
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> g.description</code></pre></div>
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">=> "gem stone"</code></pre></div>
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> Emoji.find_by_name("snake").raw</code></pre></div> <!-- .element: class="fragment" -->
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">=> "<img style="margin: 0" height="40px" src="pictures/g/snake.svg">"</code></pre></div> <!-- .element: class="fragment" -->
+---
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">$ gem install gemoji</code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">$ irb</code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> require 'gemoji'</code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> g = Emoji.find_by_unicode("<img style="margin: 0" height="40px" src="pictures/g/gem.svg">")</code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> g.description</code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">=> "gem stone"</code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> Emoji.find_by_name("snake").raw</code></pre></div>
+---
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">$ gem install gemoji</code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">$ irb</code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> require 'gemoji'</code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> g = Emoji.find_by_unicode("<img style="margin: 0" height="40px" src="pictures/g/gem.svg">")</code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> g.description</code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">=> "gem stone"</code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> Emoji.find_by_name("snake").raw</code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">=> "<img style="margin: 0" height="40px" src="pictures/g/snake.svg">"</code></pre></div>
+---
+ <div style='width: 50%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/g/elephant.svg'></p></div> <!-- .slide: class="center" -->
+---
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">php -a</code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">php > IntlChar::charName('<img style="margin: 0" height="40px" src="pictures/a/claps.png">');</code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">CLAPPING HANDS SIGN</code></pre></div>
+---
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">php -a</code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">php > $<img style="margin: 0" height="40px" src="pictures/a/claps.png"> = "Hello"</code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">php > $<img style="margin: 0" height="40px" src="pictures/a/globe_a.png"> = "World"</code></pre></div>
+
+---
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">php -a</code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">php > $<img style="margin: 0" height="40px" src="pictures/a/claps.png"> = "Hello"</code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">php > $<img style="margin: 0" height="40px" src="pictures/a/globe_a.png"> = "World"</code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">php > echo $<img style="margin: 0" height="40px" src="pictures/a/claps.png">.' '.$<img style="margin: 0" height="40px" src="pictures/a/globe_a.png"></code></pre></div>
+
+
+---
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">php -a</code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">php > $<img style="margin: 0" height="40px" src="pictures/a/claps.png"> = "Hello"</code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">php > $<img style="margin: 0" height="40px" src="pictures/a/globe_a.png"> = "World"</code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">php > echo $<img style="margin: 0" height="40px" src="pictures/a/claps.png">.' '.$<img style="margin: 0" height="40px" src="pictures/a/globe_a.png"></code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">Hello World</code></pre></div>
+
 ---
  <div style='width: 50%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/g/sweat.svg'></p></div> <!-- .slide: class="center" -->
 
@@ -309,6 +333,11 @@ Here's what Android went with.
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='200px' src='pictures/a/hugs.png'><img height='200px' src='pictures/g/hugs.png'><img height='200px' src='pictures/t/hugs.png'><img height='200px' src='pictures/e/hugs.png'></p></div> <!-- .slide: class="center" -->
 Note: ** micro services **
 ---
+
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='160px' src='pictures/space.svg'><img height='160px' src='pictures/m/whale.png'><img height='160px' src='pictures/m/whale.png'><img height='160px' src='pictures/m/whale.png'><img height='160px' src='pictures/space.svg'></p></div> <!-- .slide: class="center" -->
+
+Note: obligatory
+---
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='200px' src='pictures/a/claps.png'><img height='200px' src='pictures/g/claps.svg'><img height='200px' src='pictures/t/claps.svg'><img height='200px' src='pictures/m/claps.png'></p></div> <!-- .slide: class="center" -->
 ---
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='200px' src='pictures/g/blonde.svg'><img height='200px' src='pictures/t/blonde.svg'><img height='200px' src='pictures/e/blonde.svg'><img height='200px' src='pictures/m/blonde.svg'></p></div> <!-- .slide: class="center" -->
@@ -340,7 +369,7 @@ Note: For example, if you send an emoji to a person who has fitnit notifications
 
 ---
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/t/grinning.svg'><img height='400px' src='pictures/t/grimice.svg'></p></div> <!-- .slide: class="center" -->
-Note: grinning vs grimmace
+Note: grinning face w/smiling eyes vs grimmace
 
 It's not just issues across platforms. Intra-platform miscommunication
 
@@ -355,8 +384,10 @@ Note: poland vs indonesia
 ---
 
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='160px' src='pictures/space.svg'><img height='160px' src='pictures/chile.svg'><img height='160px' src='pictures/space.svg'><img height='160px' src='pictures/texas.svg'><img height='160px' src='pictures/space.svg'></p></div> <!-- .slide: class="center" -->
-
 Note: chile vs texas
+---
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='160px' src='pictures/space.svg'><img height='160px' src='pictures/chile_emoji.png'><img height='160px' src='pictures/space.svg'><img height='160px' src='pictures/g/questionmark.svg'><img height='160px' src='pictures/space.svg'></p></div> <!-- .slide: class="center" -->
+
 
 ---
 <pre> 85R10624 KSM-D &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; H.C.R. No. 75
@@ -510,6 +541,12 @@ Note: In the webspace, you have a few options
 Note: some websites have panels
 ---
 
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='114px' src='pictures/instagram.png'><img height='114px' src='pictures/space.svg'><img height='114px' src='pictures/t/magnify.svg'><img height='114px' src='pictures/t/sparkles.svg'><img height='114px' src='pictures/space.svg'><img height='114px' src='pictures/ap/hash.png'><img height='114px' src='pictures/t/sparkles.svg'></p></div> <!-- .slide: class="center" -->
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='114px' src='pictures/twitter.png'><img height='114px' src='pictures/space.svg'><img height='114px' src='pictures/t/magnify.svg'><img height='114px' src='pictures/t/sparkles.svg'><img height='114px' src='pictures/space.svg'><img height='114px' src='pictures/space.svg'><img height='114px' src='pictures/space.svg'></p></div> <!-- .slide: class="center" -->
+
+<span class="dasfoot" style="margin-top: -120px"><a href="https://thenextweb.com/apps/2017/04/28/twitter-now-supports-emoji-search-absolutely-needed/#.tnw_hLCAQj1Q">Twitter</a>, Instagram <a href="https://engineering.instagram.com/emojineering-part-1-machine-learning-for-emoji-trendsmachine-learning-for-emoji-trends-7f5f9cb979ad">1</a>, <a href="https://engineering.instagram.com/emojineering-part-ii-implementing-hashtag-emoji-7b653b221c82">2</a></span>
+---
+
  <div style='width: 50%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/t/shortcake.svg'></p></div> <!-- .slide: class="center" -->
 
 Note: but a workaround for having a visual input mechanism is shortcodes
@@ -616,8 +653,9 @@ Just serve your own emoji graphs
 Yes, it's not the best way to get things done, but
 ---
 
-# <span style="font-weight: normal">✌ ⁉ ⤴ ⚡ ⚗ 🀄 </span> <!-- .slide: class="center" -->
-# ⛽ 😂 😮 🖖 🙃 <span style="font-weight: normal"> 🥝</span>
+# <span style="font-weight: normal">✌ ⁉ ⤴ ⚡ ⚗ 🀄 ⛽ </span> <!-- .slide: class="center" -->
+# 😂 😮 🖖 🙃 <span style="font-weight: normal">🥝 🥦</span>
+
 
 ### glasnt.com/unicode-test
 
@@ -632,7 +670,14 @@ Chrome, Firefox, Safari evergreen all on el cap
 Note: Wordpress.com uses this.
 
 javascript front end change emoji to fallback images only
+---
+ <img src="pictures/yow.png" style="margin-top: -50px" />
 
+
+
+Note: 
+
+Which is what you see on thw YOW website and on the program listings outside!
 we can do more
 ---
 
@@ -747,7 +792,22 @@ Note: I know right? mind. blown.
 Note: 
 which is also a candidate.
 ---
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='80px' src='pictures/unicode.png'><img height='80px' src='pictures/e/10.svg'><img height='80px' src='pictures/space.svg'><img height='80px' src='pictures/space.svg'><img height='80px' src='pictures/space.svg'><img height='80px' src='pictures/space.svg'><img height='80px' src='pictures/e/2.svg'><img height='80px' src='pictures/e/0.svg'><img height='80px' src='pictures/e/1.svg'><img height='80px' src='pictures/e/7.svg'></p></div> <!-- .slide: class="center" -->
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='266px' src='pictures/gb.png'><img height='266px' src='pictures/sc.png'><img height='266px' src='pictures/wa.png'></p></div> <!-- .slide: class="center" -->
+---
+
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='80px' src='pictures/unicode.png'><img height='80px' src='pictures/e/9.svg'><img height='80px' src='pictures/space.svg'><img height='80px' src='pictures/space.svg'><img height='80px' src='pictures/space.svg'><img height='80px' src='pictures/space.svg'><img height='80px' src='pictures/space.svg'><img height='80px' src='pictures/space.svg'><img height='80px' src='pictures/unicode.png'><img height='80px' src='pictures/e/10.svg'></p></div> <!-- .slide: class="center" -->
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/sweat9.png'><img height='400px' src='pictures/sweat10.png'></p></div> <!-- .slide: class="center" -->
+
+Note: recommendations in Unicde10 include updating some of the glyphs to conform
+including the sweat drop character
+---
+ <div style='margin: 0 auto;'><p align='center'><img src='pictures/adults.png'></p></div>  <!-- .slide: class="center" -->
+
+<span class="dasfoot" style="margin-top: -150px"><a href="http://blog.emojipedia.org/what-is-gender-and-why-does-it-matter-to-emoji/">emojipedia.org</a></span>
+Note: also, the 2017 update will include a third base for people, being gender neutral.
+
+Which should allow for all the professions and people to have a version that not's a man or a woman
 ---
 
 # <img height="400px" src="pictures/t/up.svg"> &nbsp; <img height="400px" src="pictures/t/calendar.svg"> <!-- .slide: class="center" -->
@@ -760,11 +820,11 @@ Note: updates
 Note: windows 8 to windows 10
 ---
 
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/m/claps.png'><img height='400px' src='pictures/m/newclap.png'></p></div> <!-- .slide: class="center" -->
+---
  <div style='margin: 0 auto;'><p align='center'><img src='pictures/couples.png'></p></div>  <!-- .slide: class="center" -->
 Note: updates in the creators update
 
----
- <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/m/claps.png'><img height='400px' src='pictures/m/newclap.png'></p></div> <!-- .slide: class="center" -->
 ---
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/owl2.svg'><img height='400px' src='pictures/owl3.png'></p></div> <!-- .slide: class="center" -->
 
@@ -784,13 +844,6 @@ Note: Andoird 7.1 last few days
  <img src="pictures/a/tech_f1.png" />
 ---
 
- <div style='margin: 0 auto;'><p align='center'><img src='pictures/adults.png'></p></div>  <!-- .slide: class="center" -->
-
-<span class="dasfoot" style="margin-top: -150px"><a href="http://blog.emojipedia.org/what-is-gender-and-why-does-it-matter-to-emoji/">emojipedia.org</a></span>
-Note: also, the 2017 update will include a third base for people, being gender neutral.
-
-Which should allow for all the professions and people to have a version that not's a man or a woman
----
  <div style='width: 50%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/e/thinking.svg'></p></div> <!-- .slide: class="center" -->
 ---
 # &nbsp;
@@ -798,6 +851,22 @@ Which should allow for all the professions and people to have a version that not
 <span class="dasfoot" ><a href="http://www.unicode.org/L2/L2017/17082-natural-hair-color.pdf">UTC Proposal L2/17-082</a></span>
 ---
  <div style='margin: 0 auto;'><p align='center'><img src='pictures/redhead_2.jpg'></p></div>  <!-- .slide: class="center" -->
+---
+ <div style='width: 50%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/e/thinking.svg'></p></div> <!-- .slide: class="center" -->
+
+Note: but what about more combinations?
+---
+
+ <img src="pictures/xkcd_1813.png" />
+<span class="dasfoot"><a href="https://xkcd.com/1813">xkcd.com/1813</a></span>
+---
+
+ <img src="pictures/xkcd_1813.png" />
+### &nbsp;
+#### "Already doable [...] without the need for a new character."</q>
+&dash; <a href="https://twitter.com/mark_e_davis/status/854556712631771136">Mark Davis</a>, Unicode Consortium President & Co-founder
+---
+ <img src="pictures/m/ninja_cat.png" />
 ---
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='266px' src='pictures/t/cocktail.svg'><img height='266px' src='pictures/e/fitz_6.svg'><img height='266px' src='pictures/t/cherry.svg'></p></div> <!-- .slide: class="center" -->
 ---
@@ -829,6 +898,7 @@ Note: Exclusion factor K: Faulty Comparison.
 
  <div style='width: 50%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/g/sorry.svg'></p></div> <!-- .slide: class="center" -->
 ---
+
  <div style='width: 50%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/g/info.svg'></p></div> <!-- .slide: class="center" -->
 Note: For more information
 ---
@@ -842,6 +912,16 @@ Note: For more information
  <img src="pictures/fakeunicode.jpg" />
 
 ### @fakeunicode
+---
+### &nbsp;
+
+ <img src="pictures/unicode_icon.png" />
+### @unicode
+---
+
+### &nbsp;
+ <img src="pictures/adopt.png" />
+#### 501(c)(3) Non-Profit
 ---
  <img src="pictures/o/takeaway.png" />
 Note: the takeaways

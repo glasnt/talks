@@ -1,23 +1,43 @@
-#- conference:
-#    name: PyCon US
-#    link: https://us.pycon.org/2017/
-#    date: 2017-05-01
-#    upcoming: true
-#    location: Portland, OR
-#    talks: 
-#        - name: Snek in the Browser
-#          link: https://us.pycon.org/2017/schedule/presentation/51/
-#
-#- conference:
-#    name: OSCON
-#    link: https://conferences.oreilly.com/oscon/oscon-tx
-#    upcoming: true
-#    date: 2017-05-11
-#    location: Austin, TX
-#    talks: 
-#     - name: The Power ⚡️ and Responsibility 😓 of Unicode Adoption ✨
-#       link: https://conferences.oreilly.com/oscon/oscon-tx
-#
+- conference:
+    name: PyCon US
+    link: https://us.pycon.org/2017/
+    date: 2017-05-19
+    location: Portland, OR
+    talks: 
+        - name: Snek in the Browser
+          link: https://us.pycon.org/2017/schedule/presentation/51/
+          slides: 2017_05_PyConUS_Snek
+        - name: Lightning Talk Cover - Emoji Archeology 101
+          slides: 2017_05_PyConUS_EmojiArch
+
+- conference:
+    name: OSCON
+    link: https://conferences.oreilly.com/oscon/oscon-tx
+    date: 2017-05-11
+    location: Austin, TX
+    talks: 
+     - name: The Power and Responsibility of Unicode Adoption
+       link: https://conferences.oreilly.com/oscon/oscon-tx/public/schedule/detail/56370
+       slides: 2017_05_OSCON
+
+- conference:
+    name: Community Leadership Summit
+    link: http://web.archive.org/web/20170509012748/http://www.communityleadershipsummit.com/
+    date: 2017-05-7
+    location: Austin, TX
+    talks: 
+        - name: All Contributions Welcome
+          slides: 2017_05_CLS
+
+- conference:
+    name: YOW! West
+    link: http://west.yowconference.com.au/
+    date: 2017-05-03
+    location: Perth
+    talks: 
+      - name: The Power ⚡️ and Responsibility 😓 of Unicode Adoption ✨
+        link: http://west.yowconference.com.au/speakers/katie-mclaughlin/
+        slides: 2017_05_YOWest
 
 - conference:
     name: SyPy
@@ -33,7 +53,6 @@
     name: CrikeyCon
     link: https://www.crikeycon.com/
     date: 2017-02-25
-    upcoming: true
     location: Brisbane
     talks:
         - name: 🔐 + 😈 => 💥
