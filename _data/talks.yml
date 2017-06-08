@@ -7,8 +7,13 @@
         - name: Snek in the Browser
           link: https://us.pycon.org/2017/schedule/presentation/51/
           slides: 2017_05_PyConUS_Snek
-        - name: Lightning Talk Cover - Emoji Archeology 101
+          twitter: https://twitter.com/divio/status/865684109615673344
+          video: https://www.youtube.com/watch?v=1YmbZQjty3Y
+        - name: Emoji Archeology 101 (Cover Version)
+          type: Lightning Talk
           slides: 2017_05_PyConUS_EmojiArch
+          twitter: https://twitter.com/phildini/status/865731765876383744
+          video: https://youtu.be/tK6ZIf0yYhs?t=39
 
 - conference:
     name: OSCON
@@ -19,6 +24,7 @@
      - name: The Power and Responsibility of Unicode Adoption
        link: https://conferences.oreilly.com/oscon/oscon-tx/public/schedule/detail/56370
        slides: 2017_05_OSCON
+       twitter: https://twitter.com/bradfitz/status/862746287174803458
 
 - conference:
     name: Community Leadership Summit
@@ -28,6 +34,8 @@
     talks: 
         - name: All Contributions Welcome
           slides: 2017_05_CLS
+          type: Keynote
+          twitter: https://twitter.com/iantien/status/861248220428738560
 
 - conference:
     name: YOW! West
@@ -38,6 +46,7 @@
       - name: The Power ⚡️ and Responsibility 😓 of Unicode Adoption ✨
         link: http://west.yowconference.com.au/speakers/katie-mclaughlin/
         slides: 2017_05_YOWest
+        twitter: https://twitter.com/weberdc/status/859680578789978112
 
 - conference:
     name: SyPy
@@ -77,6 +86,7 @@
     talks: 
       - name: The Power ⚡️ and Responsibility 😓 of Unicode Adoption ✨
         slides: 2017_02_RubyConfAU
+        type: Invited Speaker
         twitter: https://twitter.com/sailorhg/status/829559265949999104
         video: https://www.youtube.com/watch?v=Acf14xTjnFA
 
@@ -104,7 +114,7 @@
         twitter: https://twitter.com/mobywhale/status/808584125456138240
 
 
--  conference:
+- conference:
     name: SydPHP
     date: 2016-11-24
     link: https://sydphp.org/
@@ -141,6 +151,7 @@
         - name: Serialization Formats are Not Toys (Cover Version)
           type: Lightning Talk
           slides: 2016_09_Serialization
+          twitter: https://twitter.com/tveastman/status/774102693149233153
           video: https://youtu.be/fOrYeUaOez4?t=611
 
 - conference:
@@ -295,8 +306,10 @@
     - name: Build a Better Hat Rack - All Contributions Welcome
       link: http://joomladay.org.au/program/schedule
       slides: 2015_10_JoomlaDay_Keynote
+      type: Keynote
     - name: Hack the Planet - A practical guide to web application vulnerabilities
       slides: 2015_10_JoomlaDay_Workshop
+      type: Tutorial
 
 
 - conference:
