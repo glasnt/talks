@@ -13,7 +13,7 @@ body {
   background-color: #fff; }
 
 .reveal {
-  font-family: 'PT Sans' , Helvetica, sans-serif;
+  font-family: "Gill Sans", 'PT Sans' , Helvetica, sans-serif;
   font-size: 38px;
   font-weight: normal;
   color: #000; }
@@ -33,7 +33,7 @@ body {
 .reveal h1, .reveal h2, .reveal h3, .reveal h4, .reveal h5, .reveal h6 {
   margin: 0 0 20px 0;
   color: #000;
-  font-family: 'PT Sans', Helvetica, sans-serif;
+  /*font-family: 'PT Sans', Helvetica, sans-serif;*/
   font-weight: 600;
   line-height: 1.2;
   letter-spacing: normal;
@@ -127,13 +127,13 @@ body {
   margin: 20px auto;
   text-align: left;
   font-size: 0.55em;
-  font-family: monospace;
+  font-family: 'Monaco', monospace;
   line-height: 1.2em;
   word-wrap: break-word;
  }
 
 .reveal code {
-  font-family: monospace; }
+  font-family: 'Monaco', monospace; }
 
 .reveal pre code {
   display: block;
