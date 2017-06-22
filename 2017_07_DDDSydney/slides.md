@@ -243,11 +243,13 @@ Note: more importantly, we're going to discuss why. Why is the language like thi
 # JavaScript® <!-- .slide: class="center" -->
 
 <span class="bfoot" style="bottom: -280px"><a href="http://tsdr.uspto.gov/#caseNumber=75026640&caseType=SERIAL_NO&searchType=statusSearch">US Trademark &#35;75026640</a></foot>
-Note: For starters, JavaScript is a registerd trademark of Oracle
+Note: For starters, JavaScript currently a registerd trademark of Oracle
 
-... because it was originally a trademark of Netscape, which got bought by Sun, which then got bought by Oracle.
+Originally trademarked by NetScape back in the day, because company acquistions it ended up in the hands of Sun, which then got bought by Oracle.
 
-It also had an extremely fast development cycle of just ten days. ... with no versioning.
+Capitalism. 
+
+JavaScript also had an extremely fast development cycle of just ten days. ... with no versioning.
 
 ---
 
