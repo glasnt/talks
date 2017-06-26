@@ -66,11 +66,9 @@ Note:
 
 Hi! I'm Katie.
 
-If you'll indulge me, I'm going to quote verbatium from my speaker profile
+If you'll indulge me, I'm going to quote verbatium from my speaker bio
 
-I've worn many hats over the years, but i'm currently a board member fo r Linux Australia[1], core develpoer on the beeware project, operations engineer at Ambiata, public speaker, and conference organiser.
-
-When I"m not doing all those thing, I enjoy cooking, making tapestries and
+When she's not changing the world she enjoys, cooking, making tapestries, and
 
 ---
 
@@ -468,10 +466,10 @@ Note: but it's not just numbers, strings are also fun. More specifically, the ex
 ---
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> "abc".split("")</code></pre></div>
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">["a","b","c"]</code></pre></div> <!-- .element: class="fragment" -->
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> "<img src="pictures/penguin.svg" class="e" style="margin: 0"><img src="pictures/koala.svg" style="margin: 0" class="e">".split("")</code></pre></div> <!-- .element: class="fragment" -->
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> "<img src="pictures/snake.png" class="e" style="margin: 0"><img src="pictures/bee.png" style="margin: 0" class="e">".split("")</code></pre></div> <!-- .element: class="fragment" -->
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">["�","�","�","�"]</code></pre></div> <!-- .element: class="fragment" -->
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> Array.from("<img src="pictures/penguin.svg" class="e" style="margin: 0"><img src="pictures/koala.svg" style="margin: 0" class="e">")</code></pre></div> <!-- .element: class="fragment" -->
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">["<img src="pictures/penguin.svg" class="e" style="margin: 0">","<img src="pictures/koala.svg" style="margin: 0" class="e">"]</code></pre></div> <!-- .element: class="fragment" -->
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> Array.from("<img src="pictures/snake.png" class="e" style="margin: 0"><img src="pictures/bee.png" style="margin: 0" class="e">")</code></pre></div> <!-- .element: class="fragment" -->
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">["<img src="pictures/snake.png" class="e" style="margin: 0">","<img src="pictures/bee.png" style="margin: 0" class="e">"]</code></pre></div> <!-- .element: class="fragment" -->
 
 Note: 
 So, if we want to split the string "abc" into indiviual characters
@@ -988,7 +986,8 @@ Note:
 
 Batavia! Batavia does things just a little bit differently.
 
-Batavia is an implementation of the python virtual machine, in javascript. It's part of the BeeWare suite of tools, and if you have a timemachine, or can wait for the recording, Russell Keith-Magee gave a talk on this just a few hours ago in the Wellington room.
+Batavia is an implementation of the python virtual machine, in javascript. It's part of the BeeWare suite of tools, of which I am a Senior Apiarist. If you're interested in running python everywhere, come chat to me afterwards. I have stickers!
+
 
 But wait, that's not all. There are other languages that can compile down into JS
 ---
@@ -1377,7 +1376,7 @@ Note: Let's talk about Python
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">>>> x = bytearray(1)</code></pre></div>
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">>>> y = {}</code></pre></div> <!-- .element: class="fragment" -->
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">>>> x % y</code></pre></div> <!-- .element: class="fragment" -->
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">bytearray(b’’)</code></pre></div> <!-- .element: class="fragment" -->
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">bytearray(b'')</code></pre></div> <!-- .element: class="fragment" -->
 
 <span class="bfoot" style="bottom: -435px"><a href="http://bugs.python.org/issue29073">Python Issue 29073</a></span>
 Note: If we declare x as a byte array of size one
@@ -1391,8 +1390,8 @@ a bytearray with an empty bytestring
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">>>> x = bytearray(1)</code></pre></div>
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">>>> y = {}</code></pre></div>
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">>>> x % y</code></pre></div>
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">bytearray(b’’) <c>&nbsp;&nbsp; &nbsp;# Python 3.5</c></code></pre></div>
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">bytearray(b’\x00’) <c># Python 3.6</c></code></pre></div> <!-- .element: class="fragment" -->
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">bytearray(b'') <c>&nbsp;&nbsp; &nbsp;# Python 3.5</c></code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">bytearray(b'\x00') <c># Python 3.6</c></code></pre></div> <!-- .element: class="fragment" -->
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">>>> x</code></pre></div> <!-- .element: class="fragment" -->
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">bytearray(b'\x00')</code></pre></div> <!-- .element: class="fragment" -->
 <span class="bfoot" style="bottom: -250px"><a href="http://bugs.python.org/issue29073">Python Issue 29073</a></span>
@@ -2151,7 +2150,7 @@ Note: And then there's this year's release, which includes stuff like
 Note: a native leftpad!
 ---
 
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">"Hello".padStart(10, ".")</code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> "Hello".padStart(10, ".")</code></pre></div>
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">.....Hello</code></pre></div> <!-- .element: class="fragment" -->
 
 
@@ -2175,7 +2174,7 @@ If you don't want to look at a big table of adoptions details
 ---
  <img src="pictures/mariko.png" style="margin-top: -50px" />
 
-<span class="bfoot" style="bottom: 40px"><a href="https://twitter.com/kosamari/status/819066613538373632">Browser Version Update Schedule</span>
+<span class="bfoot" style="bottom: 40px"><a href="https://twitter.com/kosamari/status/819066613538373632">Browser Version Update Schedule, Mariko Kosaka</span>
 Note: Mariko Kosaka has this wonderful drawing
 
 You can see that the dev versions get the twitter activity, but most of the major browsers do update at least once or twice a year, so as long as you RUN YOUR UPDATES then you should get all the new shiny :)
@@ -2291,17 +2290,17 @@ But I want to leave you with this section of her writing
 > PHP communities, for example, have lacked access to the development of DevOps tooling, the use of PHP is widely derided as being insecure by default, are they are widely mocked for being an “objectively bad language.” <!-- .slide: class="center" -->
 ---
 
-> Yet people make their livings working with PHP, deploying PHP, trying to secure PHP. Don’t they deserve the help that we received, the help of good practises and security-first development? <!-- .slide: class="center" -->
+> Yet people make their livings working with PHP, deploying PHP, trying to secure PHP. Don't they deserve the help that we received, the help of good practises and security-first development? <!-- .slide: class="center" -->
 
-> These people who can’t improve their work because we won’t work with them and drive them away from our communities with mockery and spite. <!-- .slide: class="center" -->
+> These people who can't improve their work because we won't work with them and drive them away from our communities with mockery and spite. <!-- .slide: class="center" -->
 ---
-> And then they engineer things on their own, because they still need these tools, and we have the gall to ask why they didn’t use these other tools. <!-- .slide: class="center" -->
+> And then they engineer things on their own, because they still need these tools, and we have the gall to ask why they didn't use these other tools. <!-- .slide: class="center" -->
 ---
 > Tools that we mocked them for asking about, telling them to get a real language, to rewrite their entire app, to rebuild from scratch because their particular path was not blessed enough. <!-- .slide: class="center" -->
 ---
-> I’m tired of calling people out again and again for dumping on PHP. <!-- .slide: class="center" -->
+> I'm tired of calling people out again and again for dumping on PHP. <!-- .slide: class="center" -->
 
-> I’m tired of people dumping on Windows, that most popular operating system, because it’s not what we choose to use <!-- .slide: class="center" -->
+> I'm tired of people dumping on Windows, that most popular operating system, because it's not what we choose to use <!-- .slide: class="center" -->
 ---
 > We excluded people. <!-- .slide: class="center" -->
 
@@ -2309,12 +2308,12 @@ But I want to leave you with this section of her writing
 
 > All of us. <!-- .slide: class="center" -->
 
-> Even if we didn’t intend to, it does not matter. <!-- .slide: class="center" -->
+> Even if we didn't intend to, it does not matter. <!-- .slide: class="center" -->
 ---
 
-> We make fun of the things others care about, make them feel small, make them feel like their achievements didn’t matter. <!-- .slide: class="center" -->
+> We make fun of the things others care about, make them feel small, make them feel like their achievements didn't matter. <!-- .slide: class="center" -->
 
-> Make them feel like they’re not welcome. <!-- .slide: class="center" -->
+> Make them feel like they're not welcome. <!-- .slide: class="center" -->
 ---
 > What can we do? <!-- .slide: class="center" -->
 ---
@@ -2325,16 +2324,16 @@ But I want to leave you with this section of her writing
 ---
 > If you need to make fun of a language, do it with your own language, inside your own community. <!-- .slide: class="center" -->
 ---
-> JavaScript is really good at this, because they’re trying to help people write better code within JavaScript. <!-- .slide: class="center" -->
+> JavaScript is really good at this, because they're trying to help people write better code within JavaScript. <!-- .slide: class="center" -->
 ---
-> Find some amazing project to celebrate in a language you’re contemptuous of. <!-- .slide: class="center" -->
+> Find some amazing project to celebrate in a language you're contemptuous of. <!-- .slide: class="center" -->
 ---
 
 > Go to meetups of what you despise. <!-- .slide: class="center" -->
 
-> Say you don’t know anything, and see how welcoming they are to new people. <!-- .slide: class="center" -->
+> Say you don't know anything, and see how welcoming they are to new people. <!-- .slide: class="center" -->
 
-> See what they say, what they do, and ask if you’d be as welcoming to them when they come to your meetups. <!-- .slide: class="center" -->
+> See what they say, what they do, and ask if you'd be as welcoming to them when they come to your meetups. <!-- .slide: class="center" -->
 ---
 > Work to change your community. <!-- .slide: class="center" -->
 
@@ -2344,7 +2343,7 @@ But I want to leave you with this section of her writing
 ---
 > The best advice we give programmers is to leave things better than how they started. <!-- .slide: class="center" -->
 ---
-> We do it with code, why don’t we do it with communities? <!-- .slide: class="center" -->
+> We do it with code, why don't we do it with communities? <!-- .slide: class="center" -->
 ---
 <br> 
 <br> 
