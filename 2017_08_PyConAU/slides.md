@@ -62,36 +62,114 @@ Thankfully today, two years on, I can give that talk.
 
 Note: Hi, I'm Katie, and this is how to handle abandoned projects
 
-This is based on a true story, it happened to a friend of a friend of mine.
-
 ---
 
  <!-- .slide: data-background="#000"-->
 # &nbsp;
 
-Note: Say you have a project
+Note: And this is where I freeze.
 
-You find a cool widget on GitHub
+What do I say? What can I say? Should I say anything?
 
-You want to use it.
+Does context matter?
 
-But.. 
+I mean, the talk is clearly about project abandonment, so something must have gone down
 
-It hasn't been updated in 4 years
+Was it burnout? Was it a loss of interest? Was it an unexpected passing of the maintainer?
 
-There's cobwebs all over it
+I could share the tips tricks and configuration suggestions without the context.
 
-It should do what you want
+Because does it matter? Does context matter?
 
-But it needs changes
+This is what I had a problem with. All this technology stuff in my talk is solid, current, and repeatable.
+
+Sure as you can see it covers github, but that's the stack I use, so that's the stack of cover.
+
+
+But a talk just about configuration, without the story, what kind of a talk is that?
+---
+
+ <img src="pictures/meetup.jpg" style="margin-top: -50px" />
+
+Note: 
+
+A few weeks after pycon I gave this talk at a local Sydney php user group. I
+did the talk, saying the context was that "it happened to a friend of a friend
+of mine". But that was bullshit. It was an outright lie, but it let me get past
+the context and into the content.
+
+And now I'm here, revisiting this question. Does context matter? Does the human
+story around why the tech exists matter? Does anyone care about what happened
+to put me in this situation?
+
+Yes. Yes it matters. It matters more than the tech. You can google a bunch of
+things around how migrate code and how to make copies and how to do all that
+push button get repo stuff. But if by telling my story it helps a single person
+going through the same thing I did feel less alone in what was a pretty shit
+situation, all things told, then it is absolutely worth it.
+
+---
+
+ <img src="pictures/office.png" />
+
+
+Note: So I'm in an office in Sydney, as you do. It's early 2015. It's a Tuesday. The month earlier
+I'd come back from doing a talk at an international conference about a project
+I'd been working on at the company for just over a year at that point
+
+It's a few minutes before standup, and I've just cracked this functionality hack
+in elastic search that meant that we could store some complex data within the system
+that meant that a function we wanted to implemented was now achievable.
+
+I'm bouncing on my feet at this point, because it was a breakthrough three or four
+layers down the stack that meant that we were about to crack production readiness .
+
+Effective immediately,
+... 
+
+Just as standup starts, I get called into the CTO's office.
 
 ---
 
 
+ <img src="pictures/office-dark.png" />
+Note: 
+Effective immediately, I am no longer employed at the company. My role has been made redundant.
+
+A quarter of the department was walked that day. By the end of the year, most of the lucky ones had left of their own accord.
+
+I was shattered.
+
+I'd been working there for four years. It was my first role that had anything at all to do with open source.
+
+I was a poster child for this place. Literally, on posters.
+
+Which is really fun to see your face on a google ad from a place that has just walked you, let me tell you.
+
+
+---
+
+ <img src="pictures/??" />
+
+Note: I was lucky. I was able to find a new job really quickly. I reached out to a friend and former coworker
+
+and they were able to get me an interview with their employer the next day.
+
+After settling in at that place, I then went back to working out what could be done about the project
+
+---
+
+ <!-- .slide: data-background="#000"-->
+
+Note: 
+And thus the original talk content continues
+
+---
  <!-- .slide: data-background="#000"-->
 # "Just fork it!" <!-- .slide: class="center" -->
 ## Well, it's not that simple <!-- .element: class="fragment" -->
 
+Yes, it was a public project on github, but
 ---
 
  <!-- .slide: data-background="#000"-->
@@ -130,7 +208,7 @@ It's not a full working copy of a code base
 ---
 
  <!-- .slide: data-background="#000"-->
-# Limitations
+# Limitations <!-- .slide: class="center" -->
 ## Parent Lock-in <!-- .element: class="fragment" -->
 ## Default Pull Requests <!-- .element: class="fragment" -->
 ## No Issue Logging by Default <!-- .element: class="fragment" -->
@@ -140,8 +218,7 @@ Note: Parent - perma link to source. Network Graph
 
 PR - defaults to parent, accidently attempt to merge upstream
 
-
-Issues - CORRECTION - issues are disabled by default, but can be enabled.
+Issues - CORRECTION - issues are disabled by default on forks, but can be enabled.
 
 Commits - you can work your butt off and your green graph doesn't fill up
 
@@ -150,128 +227,50 @@ Commits - you can work your butt off and your green graph doesn't fill up
 
  <!-- .slide: data-background="#000"-->
 
-# Licensing
-# BSD-3 <!-- .element: class="fragment" --> <!-- .slide: class="center" --> <!-- .element style="font-size: 5em" --> 
+# Licensing <!-- .slide: class="center" -->
 
-Note: Licensing is fun. If you have no licence, it defaults to All Rights Reserved
+Note: Licencing is fun, especially because laws around this stuff depend on the country you're in.
 
-ARR means you own the copyright, and noone else can have it
+It also depends on the site you're on.
+---
+ <!-- .slide: data-background="#000"-->
+### GitHub Code <!-- .slide: class="center" -->
+### No LICENCE?
+#### -> All Rights Reserved
 
-So, that's no fun. Let's use BSD as an example
+ <span class='foot'>https://help.github.com/articles/licensing-a-repository/</span>
 
-Berkeley Software Distribution 3 Clause License
+Note: For code on github, if the repo does not have a licence, no one may reproduce, distribute, or create derivative works from it. At all.
 
 ---
  <!-- .slide: data-background="#000"-->
-# Licensing
-# BSD-3? <!-- .slide: class="center" --> <!-- .element style="font-size: 5em" --> 
+## choosealicense.com <!-- .slide: class="center" -->
+## opensource.org/licenses
 
-Note: What does this even mean?
+Note: There are many places where you can get information about what lience to choose
 
----
+This isn't a licencing talk, so I defer to these resources.
 
- <!-- .slide: data-background="#000"-->
-
-<pre style="top: -20px">
-Redistribution and use in source and binary forms, with or without
-modification, are permitted provided that the following conditions
-are met:
-
-* Redistributions of source code must retain the above copyright
-notice, this list of conditions and the following disclaimer.
-
-* Redistributions in binary form must reproduce the above copyright
-notice, this list of conditions and the following disclaimer in the
-documentation and/or other materials provided with the distribution.
-
-* Neither the name of the organization nor the names of its
-contributors may be used to endorse or promote products derived
-from this software without specific prior written permission.
-
-THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-"AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS
-FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE
-COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT,
-INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES
-(INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
-SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)
-HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT,
-STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
-ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED
-OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre> 
-
-Note: Holy Wall Of Text, BatMan!
-
----
-
- <!-- .slide: data-background="#000"-->
-# What this actually means <!-- .slide: class="center" -->
-## (This is not legal advice)
-
----
-
- <!-- .slide: data-background="#000"-->
-# BSD-3 - Can:
-## Commercially Use <!-- .element: class="fragment" -->
-## Modifiy <!-- .element: class="fragment" -->
-## Distribute <!-- .element: class="fragment" -->
-## Place Warranty <!-- .element: class="fragment" -->
-
-
-Note: 
-
-From https://tldrlegal.com/
-
-
-Commercial Use, can use software for
-
-Modify the software and create derivatives.
-
-Distribute original or modified (derivative) works.
-
-Place Warranty on the software licensed.
-
----
-
- <!-- .slide: data-background="#000"-->
-# BSD-3 - Cannot:
-## Use Trademark <!-- .element: class="fragment" -->
-## Hold Liable <!-- .element: class="fragment" -->
-
-Note: 
-
-Use Trademark
-
-You may not use the names of the original company or its members to endorse derived products.
-
-Hold Liable
-
-Describes the warranty and if the software/license owner can be charged for damages.
-
----
-
- <!-- .slide: data-background="#000"-->
-# BSD-3 - Must:
-## Include License <!-- .element: class="fragment" -->
-## Include Copyright <!-- .element: class="fragment" -->
-## <img src="pictures/awkward.gif"> <!-- .element: class="fragment" -->
-
-
-Note: 
-
-Include License
-
-Including the full text of license in source or object code copies.
-
-Include Copyright
-
-Describes whether the original copyright must be retained.
+But of note, different websites have different default licence rights
 
 ---
  <!-- .slide: data-background="#000"-->
-# 'Competitor' Code
+##### <aside> <!-- .slide: class="center" -->
+### StackOverflow
+### Code? MIT
+### Everything else? CC-BY-SA
+##### </aside>
+
+ <span class='foot'>[A New Code License: The MIT, this time with Attribution Required, StackOverflow Meta](https://meta.stackexchange.com/questions/272956/a-new-code-license-the-mit-this-time-with-attribution-required?cb=1)</span>
+
+Note: Last year stackoverflow changed their default licencing arragements. For ages it's always been Creative Commons Share Alike. Which means you can share and adapt, but you must attribute.
+
+But as of March 2016, all code is MIT licenced. Which allows you to either keep the MIT licence, or remove it as long as you attribute the original author.
+
+Which can get fun, when you're talking abo
+---
+ <!-- .slide: data-background="#000"-->
+# 'Competitor' Code <!-- .slide: class="center" -->
 ## &copy; Their Company 2014 <!-- .element: class="fragment" -->
 ## &copy; Your Company 2015 <!-- .element: class="fragment" -->
 
@@ -280,7 +279,7 @@ Note: having copyrights with other company's copyright is kinda a weird thing, a
 ---
 
  <!-- .slide: data-background="#000"-->
-# Dead Source
+# Dead Source <!-- .slide: class="center" -->
 ## <img src="pictures/tumbleweed.gif"> <!-- .element: class="fragment" -->
 
 Note: If the source upstream is dead, then that's an inhibitor of innovation
@@ -506,13 +505,8 @@ Note: Thanks! /me mock cheers
 ---
 
 ## &nbsp;
-Note: A lot of things have happened since that talk .
 
-For one, Python 3 support has improved!
-
-For another, I learnt not to use gifs in slides.
-
-
+Note: 
 
 ---
 #### You should totally go see: <!-- .slide: class="center" -->
@@ -520,6 +514,188 @@ For another, I learnt not to use gifs in slides.
 ### VM Brasseur
 ### This afternoon!
 
+Note: If you're interested in this stuff, and around the planning of such things
+You really really need to go see VM Brasseur's talk this afternoon.
+Like really really need to.
+---
+
+ <img src="pictures/brisbane_pycon.jpg" />
+
+Note: I've had two years to try and get this talk right.
+
+Back in Brisbane, I was so stressout that I ended up having a panic attack.
+
+I don't remember a lot of the specifics leading up to the talk, so I've had to
+go and ask people who were there how it went down.
+
+That sunday afternoon, I didn't look right. I was stressed out in the break leading up
+to the talk, and I was trying to edit my slides at the last minute. Pro-tip, this never ends well
+
+I distinctly remember making my way to the room with the laptop, looking down the corridor, seeing the lecturn, and having the whole dolly zoom effect happen, and hoping NOPE.
+
+And you know what the immediate response was?
+
+Okay. Come over here and sit down.
+
+They'd planned for this. I didn't have to do anything I wasn't comfortable with.
+
+So immediately, waves of relief start washing over me.
+
+And then the reject and anxiety set in.
+
+I'd just let everyone down. They knew I was going to fail. I'm a terrible person. I shouldn't be here. I don't deserve to be here. I want to go home.
+
+Thankfully only a few moments into this sinking whirlpool of emotions, I was asked if I was okay, and if some freshair would be helpful
+---
+
+ <img src="pictures/brisbane.jpg" />
+
+Note: it was that trip outside that saved me from a breakdown. I mean, I wasn't okay, but I knew I would be.
+
+What started as 'let's get some freshair' turned into 'let's go into full distraction and self-care mode and go get some icecream'. The amazing puppies we met along the way was only icing on the cake.
+
+I came back to the conference after that. I sat in the back of the room for the end of day lightning talks and closing address... but I came back.
+
+---
+
+ <img src="pictures/brisbane_noodle.jpg" />
+ <span class='foot'>[Brisbane Noodle Night Markets, Espresso and Matcha](http://espresso-and-matcha.blogspot.com.au/2015/07/brisbane-noodle-night-markets-southbank.html)</span>
+
+Note: that night, I didn't go home. I went out with a group of people to the noodle markets over in Southbank
+
+My phone was going off by this point. People messaging me asking where I was, if I was okay. There was word that something was wrong. One person heard that I got gastro (erk). It was starting to set me off again
+
+It was suggested that I give my phone to a friend to hold onto so I wouldn't keep getting alerted and distracted. That evening was really nice. I ate.. something, I can't remember. But it was great just to be around people who wanted me to be around.
+
+---
+
+ <img src="pictures/brisbane_day.jpg" />
+
+Note: the next day, I went back. I could have hid, but I didn't. I wanted to be around these amazing people.
+
+The Monday and Tuesday were development sprint days. That was the sprints that I was introduced to BeeWare. And the rest is history.
+
+If I had left, I wouldn't have come back. At all. But I did. And here I am.
+
+---
+
+ <div style='margin: 0 auto;'><p align='center'><img src='pictures/dunedin.jpg'></p></div>  <!-- .slide: class="center" -->
+
+Note: it hasn't been smoothsailing for me since Brisbane.
+
+After that incident, I went through therapy. If you're covered under Medicare,
+you can go to your GP and get a Mental Health plan that allows you to get rebates on up
+to 10 visits to a mental health professional each year.
+
+Seriously. If you need to talk to someone, please do.
+
+I've been seeing a professional for a few years now, and it's helped me a lot.
+
+But I still get anxious. Especially over talks.
+
+I've had many sleepless nights just trying to work out how to best phrase this one.
+
+Being asked by Richard to keynote was a last minute thing. I wasn't his first choice, but I offered because I knew there were issues there, and I knew I could do it.
+
+Plus, the fact that a talk slot opening up because of a speaker dropping out about a speaker dropping out of a talk... I couldn't help but use this oppurunity to give the talk I couldn't give at this conference two years ago.
+
+It's okay to fail. If you can't give a talk and you have to step away, that's okay. I had to step away, and now I can step in place when the time came.
+
+---
+
+ <div style='margin: 0 auto;'><p align='center'><img src='pictures/selfiesquish.jpg'></p></div>  <!-- .slide: class="center" -->
+
+Note: what has helped me through out all of this is the community. Just having
+people who want me around is more helpful than you could ever imagine.
+
+Of note, this particularly lovely group of people here. You may notice a Paul Fenwick in there,
+who I mentioned right at the start of this talk.
+
+With his permission, I want to share a small story that shows again just how the little things
+can help some feel welcome and included in a community.
+
+I often get the oppurtinuty to go to conferences in communities I'm not a part of,
+and one of those was devworld.
+---
+
+ <img src="pictures/devworld.jpg" />
+
+Note: So I'm in a pub in Melbourne that has a plane in it, as you do. It's late 2015, and I've found
+myself at the speaker dinner for devworld.
+
+The only reason I'm at devworld is because a) i got offered a ticket, and b), after seeing the speaker lineup, I say, and I quote: "OMG OMG OMG Paul Fenwick is keynoting devworld I must go!"
+
+I remember Paul keynoting my first ever open source conference, and I regretted not being able to formally say hi.
+
+I think there may have been a "meeting the queen moment" where we all lined up and shook his hand, but I doubted he remembered me.
+
+So I'm at the dinner, and Paul arrives. And I get the oppurtinity to say hi. And I tell him about how I've seen him speak before, and a major reason why I'm at devworld is to see him.
+
+He later told me that it was my enthusasm for looking forward to hearing him speak that made him feel more at ease in his role at the conference. And this is coming from a long time public speaker.
+---
+
+ <img src="pictures/???" />
+
+Note: 
+Letting people know that you have been looking forward to seeing them, wishing them luck with their speaking, and actively enjoying their company.. that is what makes a great community.
+
+Going from just an event name that you've heard of before, into an annual pilgramage to see friends
+and meet people and gather with your people... that is what makes an amazing community.
+
+Having a group of people that actively help each other, either by activey volunteering
+to help run events, and reaching out those in their community that need just a little bit of help, that's what makes an incredible community.
+
+---
+
+ <img src="pictures/??" />
+
+Note: And it doesn't have to be big hugge things, it can be little things that make people feel included.
+
+It might be as simple as quiet room, offering to moderating questions, ensuring a ramp or a lift is available to rooms for wheelchair, or even just making sure someones name spelled correctly.
+
+Having stenographers or sign language intepretors. Having non-alcoholic beverages at dinner. Vege options and kosher meals.
+
+Offering to sit with someone at lunch. Being there if someone needs a hand. Or just being there, actively listening.
+
+
+Giving back to the community that gave so much to me is something that I've taken to heart, and dedicated a lot of my time to. And for my efforts
+---
+ <img src="pictures/glassbrick.jpg" />
+
+Note: I got a shiny glass brick. The O'reilly open source award. I was absolutely honoured and humbled by this, so much so that I keep calling it a glass brick.
+
+But it's not about the award. It's about the fact that actively helping people in your community, especially when they're having a bad time, can keep them around, and they have the potential to do great things.
+
+And with that, I want to end this on a high note by sharing some of the things I"ve learnt in these two years.
+
+---
+
+ <img src="pictures/glassbrick.jpg" />
+
+Lucite trophies show up as great big black blocks under xray scanners, so if you have to travel with one, keep it in your carry on, and make sure you take it out for scanning. And don't be surprised if every TSA agent makes the same joke or starts to give an award speech
+---
+
+ <img src="pictures/selfiesquish.jpg" />
+
+Note: I don't do selfies, but I've found that if you gather some of your cutest friends and have your face half absured, you may be pleasently surprised by the result.
+
+---
+
+ <img src="pictures/office.jpg" />
+
+Note: projects come and projects go. Companies fold.
+
+---
+
+ <img src="pictures/brisbane_pycon.jpg" />
+
+Note: But the people in your project communities, they are amazing people who can build great things, and you should do everything in your power to help them feel included, and to bring in more amazing peole into your community,
+---
+
+
+ <img src="pictures/brisbane.jpg" />
+
+Note: and sometimes, when everything seems too hard and you can't go on, the best thing to do right then, is to get icecream.
 ---
 <br> 
 <br> 
