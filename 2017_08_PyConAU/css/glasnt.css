@@ -2,7 +2,9 @@ c { color: green; font-weight:bold; }
 s { color: red }
 r { color: red }
 h { color: blue; font-weight: bold;}
-span.foot {position:absolute; top: 700px; right: 1em; font-size: 50%; color: grey}
+span.foot, span.cfoot {position:absolute; top: 700px; right: 1em; font-size: 50%; color: grey}
+span.cfoot { top: 600px}
+.foot>a, .cfoot>a{ color: grey !important}
 img.e { width: 40px;}
 .reveal a { color: black}
 
@@ -38,4 +40,9 @@ span.tweet > img {
     padding-left: 0;
     margin:0;
 }
-.has-dark-background h1, .has-dark-background h2, .has-dark-background h3, .has-dark-background pre { color: #fff !important }
+.has-dark-background h1, 
+.has-dark-background h2, 
+.has-dark-background h3, 
+.has-dark-background h4, 
+.has-dark-background pre,
+.has-dark-background .foot { color: #fff !important }

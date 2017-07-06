@@ -3,7 +3,7 @@
 <img src="pictures/footer_new.svg" width="500px">
 ---
  <img src="pictures/auckland.jpeg" />
- <span class='foot'>SPE Bari, Auckland. MenuLog.co.nz</span>
+ <span class='foot'>[Menulog](https://www.menulog.co.nz/spe_bar_restaurant_the_langham_auckland)</span>
 Note: So I'm in a pub in Auckland, as you do.
 
 It's 2013, and I've just finished attending my first open source software conference. For the first time, the Open Source Developers Conference, or OSDC, has been held outside of Australia.
@@ -32,20 +32,36 @@ Note: ... Ah.
 
 Turns out the bloke with the dreads was Ben Dechrai.. who sort of.. co-founded OSDC... yeah...
 
+This was the start of my journey into public speaking.
+
+I've told this story before, and it's been affectionately referred to as my
+
+"super hero origin story"
+
+The rest of this talk is about my trials.
+
 ---
  <img src="pictures/brisbane.jpg" />
 
- <span class='foot'>King George Square, Brisbane. Public Domain</span>
+ <span class='foot'>[Wikipedia](https://commons.wikimedia.org/wiki/File:Statue-of-King-George-V.jpg)</span>
 
-Note: So I'm in a public square in Brisbane, as you do. It's 2015, a wonderful winter's afternoon, and I'm supposed to be giving a talk.
+Note: So I'm in a public square in Brisbane, as you do. It's 2015, a wonderful winter's afternoon,
+and I'm holding onto an ice cream for a friend, while they are saying hello to some really cute labradours.
 
-Instead I'm holding someone's ice-cream as they say hello to two gorgeous labradors.
+
+What I'm supposed to be doing right then was giving a talk.
 
 ---
  <img src="pictures/hatrack.png" />
- <span class='foot'>PyCon AU 2015, Brisbane. CC-BY 2.0</span>
+ <span class='foot'>[Flickr, CC-BY 2.0](https://www.flickr.com/photos/developersteve/albums/72157656549888386)</span>
 Note: 
-At PyCon AU 2015, my first Python developers conference, I was supposed to give two talks. It wasn't the first time I'd been asked to do this at a conference, so I thought I'd be fine.
+At PyCon AU 2015, my first Python developers conference, I was supposed to give two talks.
+
+I'd been speaking at conferences for months. Months! Overseas and everything!
+
+And it wasn't the first time I'd been asked to do this at a conference, so I thought I'd be fine.
+
+But two brand new talks at a conference? For a new speaker? Yeaaahhh...
 
 The first talk on Sunday was about acknowledging contributions to open source that aren't code, now known as the Hat Rack talk.
 
@@ -53,7 +69,11 @@ The first talk on Sunday was about acknowledging contributions to open source th
 
 Note: The second talk never happened.
 
-Thankfully today, two years on, I can give that talk.
+Thankfully today, two years on, I've been given the oppurtinity to finally give that talk.
+
+Most of the following slides are true to the 2015 version, with some updates for time.
+
+And if you'll indulge me, there will be some commentary track involved here, and I'll give context as we go along.
 ---
  <!-- .slide: data-background="#000"-->
 ## &nbsp;
@@ -67,7 +87,13 @@ Note: Hi, I'm Katie, and this is how to handle abandoned projects
  <!-- .slide: data-background="#000"-->
 # &nbsp;
 
-Note: And this is where I freeze.
+Note: 
+
+*crickets* 
+
+Even now, just trying to start this talk is.. hard.
+
+How should I start?
 
 What do I say? What can I say? Should I say anything?
 
@@ -89,7 +115,9 @@ Sure as you can see it covers github, but that's the stack I use, so that's the 
 But a talk just about configuration, without the story, what kind of a talk is that?
 ---
 
+---
  <img src="pictures/meetup.jpg" style="margin-top: -50px" />
+ <span class='foot'>CC-BY-NC-SA 4.0</span>
 
 Note: 
 
@@ -115,16 +143,18 @@ situation, all things told, then it is absolutely worth it.
 
 Note: So I'm in an office in Sydney, as you do. It's early 2015. It's a Tuesday. The month earlier
 I'd come back from doing a talk at an international conference about a project
-I'd been working on at the company for just over a year at that point
+I'd been working on at the company for just over a year at that point.
+
+The project had gotten some traction at the conference. I'd gotten some really good feedback, and
+was beavering away, making improvements in the weeks since.
 
 It's a few minutes before standup, and I've just cracked this functionality hack
 in elastic search that meant that we could store some complex data within the system
 that meant that a function we wanted to implemented was now achievable.
 
 I'm bouncing on my feet at this point, because it was a breakthrough three or four
-layers down the stack that meant that we were about to crack production readiness .
+layers down the stack that meant that we were about to crack full-production readiness .
 
-Effective immediately,
 ... 
 
 Just as standup starts, I get called into the CTO's office.
@@ -136,26 +166,32 @@ Just as standup starts, I get called into the CTO's office.
 Note: 
 Effective immediately, I am no longer employed at the company. My role has been made redundant.
 
-A quarter of the department was walked that day. By the end of the year, most of the lucky ones had left of their own accord.
+A quarter of the department was walked out that day. By the end of that year,
+most of who remained left of their own accord.
 
 I was shattered.
 
-I'd been working there for four years. It was my first role that had anything at all to do with open source.
+I'd been working there for four years. It was my first role that I'd actually enjoyed working at.
 
 I was a poster child for this place. Literally, on posters.
 
-Which is really fun to see your face on a google ad from a place that has just walked you, let me tell you.
-
+Which is really fun to see your face on a google ad, advertising an employer that has just fired you.
 
 ---
 
- <img src="pictures/??" />
+ <img src="pictures/office-dark.png" />
 
 Note: I was lucky. I was able to find a new job really quickly. I reached out to a friend and former coworker
 
 and they were able to get me an interview with their employer the next day.
 
-After settling in at that place, I then went back to working out what could be done about the project
+I was also lucky about the fact that I got let go **after** my big international debut.
+
+I know some people that haven't been so lucky. Heck, it took me months to stop using "we" when talking about that employer. I can't even imagine how you'd go about giving a spruik to a place that just turfed you.
+
+
+
+After I settled into my new role, I started considering what I could do about the project I left behind.
 
 ---
 
@@ -166,40 +202,41 @@ And thus the original talk content continues
 
 ---
  <!-- .slide: data-background="#000"-->
-# "Just fork it!" <!-- .slide: class="center" -->
-## Well, it's not that simple <!-- .element: class="fragment" -->
 
-Yes, it was a public project on github, but
+Note: 
+
+In this case, the project is open source, in a public repo on github. So the solution should be easy, right?
+
+---
+ <!-- .slide: data-background="#000"-->
+# "Just fork it!" <!-- .slide: class="center" -->
+
+Note: Well.. no.
 ---
 
  <!-- .slide: data-background="#000"-->
 # GitHub doesn't<br>do "Forking" <!-- .slide: class="center" -->
 
-Note: They don't implement the traditional forking methodology
+Note: They don't implement the traditional forking methodology, regardless of the marketing you might read.
 
 We'll get to that
 
 ---
 
  <!-- .slide: data-background="#000"-->
-# Plus, there's more issues. <!-- .slide: class="center" -->
+## GitHub Faux-forking <!-- .slide: class="center" -->
+## Licensing
+## 'Competitor' Code
+## Dead Source
+
+
+Note: But there's even more issues
 
 ---
 
  <!-- .slide: data-background="#000"-->
-## GitHub Forking <!-- .slide: class="center" -->
-## Licensing <!-- .element: class="fragment" -->
-## 'Competitor' Code <!-- .element: class="fragment" -->
-## Dead Source <!-- .element: class="fragment" -->
-
-
-Note: We'll discuss all these things
-
----
-
- <!-- .slide: data-background="#000"-->
-# GitHub Forking
-## <img src="pictures/github_forking.gif"> <!-- .element: class="fragment" -->
+# GitHub Faux-Forking <!-- .slide: class="center" -->
+## <img src="pictures/github-forking.png">
 Note: Github's forking != Traditional Forking
 
 It's your copy for branches and PR merges.
@@ -214,13 +251,13 @@ It's not a full working copy of a code base
 ## No Issue Logging by Default <!-- .element: class="fragment" -->
 ## Commits Don't Count <!-- .element: class="fragment" -->
 
-Note: Parent - perma link to source. Network Graph
+Note: Parent - perma link to source, there's always going to be a little "Forked from" link at the top
 
-PR - defaults to parent, accidently attempt to merge upstream
+PR - new PRS defaults to parent, accidently attempt to merge upstream. Which gets fun if you don't notice, and accidently submit code up, because PRs can't be deleted.
 
-Issues - CORRECTION - issues are disabled by default on forks, but can be enabled.
+Issues - issues are disabled by default on forks, but can be enabled.
 
-Commits - you can work your butt off and your green graph doesn't fill up
+Commits - If you're familiar with my hatrack talk, you'll know that I'm alla bout the contributions graphs. For forks, anything to do, any edits you make, they don't count. At all.
 
 
 ---
@@ -234,9 +271,8 @@ Note: Licencing is fun, especially because laws around this stuff depend on the 
 It also depends on the site you're on.
 ---
  <!-- .slide: data-background="#000"-->
-### GitHub Code <!-- .slide: class="center" -->
-### No LICENCE?
-#### -> All Rights Reserved
+### GitHub Repo w/out LICENCE? <!-- .slide: class="center" -->
+### All Rights Reserved <!-- .element: class="fragment" -->
 
  <span class='foot'>https://help.github.com/articles/licensing-a-repository/</span>
 
@@ -263,7 +299,7 @@ But of note, different websites have different default licence rights
 
  <span class='foot'>[A New Code License: The MIT, this time with Attribution Required, StackOverflow Meta](https://meta.stackexchange.com/questions/272956/a-new-code-license-the-mit-this-time-with-attribution-required?cb=1)</span>
 
-Note: Last year stackoverflow changed their default licencing arragements. For ages it's always been Creative Commons Share Alike. Which means you can share and adapt, but you must attribute.
+Note: Last year stackoverflow changed their default licencing arrangements. Since the dawn of time, StackOverflow answers have been Creative Commons Share Alike. Which means you can share and adapt, but you must attribute.
 
 But as of March 2016, all code is MIT licenced. Which allows you to either keep the MIT licence, or remove it as long as you attribute the original author.
 
@@ -274,18 +310,32 @@ Which can get fun, when you're talking abo
 ## &copy; Their Company 2014 <!-- .element: class="fragment" -->
 ## &copy; Your Company 2015 <!-- .element: class="fragment" -->
 
-Note: having copyrights with other company's copyright is kinda a weird thing, amiright?
+Note: Another problem is competitor code.
+
+If you take a copy of their code, depending on their licence you probably have to keep their Copyright information
+
+Which means you end up having to append yours.
+
+And depending on how rivalrous your companies are...
+
+---
+ <!-- .slide: data-background="#000"-->
+
+ <div style='margin: 0 auto;'><p align='center'><img src='pictures/awkward2.gif'></p></div>  <!-- .slide: class="center" -->
+Note: Yeah.
+
 
 ---
 
  <!-- .slide: data-background="#000"-->
 # Dead Source <!-- .slide: class="center" -->
-## <img src="pictures/tumbleweed.gif"> <!-- .element: class="fragment" -->
+## <img src="pictures/tumbleweed2.gif">
 
 Note: If the source upstream is dead, then that's an inhibitor of innovation
 
+No merges ever, no changes. And you can't easily communicate this fact, either.
 
-No merges ever, no changes. Nerfed fork, very limited play
+Your fork might be churning away, but people up stream don't know.
 ---
 
  <!-- .slide: data-background="#000"-->
@@ -297,6 +347,7 @@ No merges ever, no changes. Nerfed fork, very limited play
 # Ask. <!-- .slide: class="center" --> <!-- .slide: class="center" --> <!-- .element style="font-size: 5em" --> 
 
 Note: Ask.
+
 Possible solutions: transfer of ownership, proper copy fork with attribution, many other
 
 ---
@@ -333,17 +384,13 @@ you shouldn't be using 1.8, 1.9.3 anyway, EOL
  <!-- .slide: data-background="#000"-->
 # Python 3 <!-- .slide: class="center" -->
 
-## Supported in < 10% of packages <!-- .element: class="fragment" -->
-
 Note: Per PyCon US 2015 Guido keynote
 
 Once 2.7 goes EOL, then projects can't be used any more.
 
-No satisfaction in just porting it
+There's no satisfaction in just porting it
 
 long tail of dependencies prohibit porting
-
-There are automated tools for this
 
 ---
 
@@ -356,31 +403,26 @@ Note: There's other things that could happen
 
  <!-- .slide: data-background="#000"-->
 # Google Code <!-- .slide: class="center" -->
-## Read Only <!-- .element: class="fragment" -->
+## Read Only
 
-Note: Not accepting new projects as of January.
-
-
-Read Only as of Aug 24 (Tuesday ish Australia time)
-
-Had a few months, but now anything on there is R/O
+Note: Like, proper read only. Back in 2015, it was in the process of shutting down,
+Now, there are pages that don't work, the export utilities don't work... Yeah.
 
 
 ---
-
  <!-- .slide: data-background="#000"-->
 # SourceForge <!-- .slide: class="center" -->
+## 👾
 
-Note: VLC binaries 'abandoned', being updated w/out consent, with spyware
+Note: Other source control places have had some ... issues
 
-Also, small two week outage in there
-
+Like feigning updates by repackaging binaries with spyware.
 
 ---
 
  <!-- .slide: data-background="#000"-->
 
-# Every active project is going to need love <!-- .slide: class="center" -->
+# Projects are going to need attention <!-- .slide: class="center" -->
 
 
 Note: 'active' meaning someone's using it, who's moving to the new structure
@@ -413,7 +455,13 @@ Note: Documentation is your friend
 You don't want people coming across your stuff when there's something better
 
 You really don't want people using code that has deps with known vuls
+---
+ <!-- .slide: data-background="#000"-->
 
+ <img src="pictures/nomaint.svg" style="width:100%"> <!-- .slide: class="center" -->
+## unmaintained.tech
+
+Note: 
 ---
 
  <!-- .slide: data-background="#000"-->
@@ -430,7 +478,7 @@ Remove new admin
 ---
 
  <!-- .slide: data-background="#000"-->
-# Benefits
+# Benefits <!-- .slide: class="center" -->
 ## All the PRs, Issues, Commits stay <!-- .element: class="fragment" -->
 ## 301 Redirects to new URL <!-- .element: class="fragment" -->
 ## You get the commit bit :D <!-- .element: class="fragment" -->
@@ -444,9 +492,9 @@ This may break if you attempt to overload the old namespace, however.
 
  <!-- .slide: data-background="#000"-->
 
-# Restore Dead Code
+# Restore Dead Code <!-- .slide: class="center" -->
 ## Check their README <!-- .element: class="fragment" -->
-## <img src="pictures/notdeadyet.gif"> <!-- .element: class="fragment" -->
+## <img src="pictures/notdeadyet2.gif"> <!-- .element: class="fragment" -->
 
 
 ---
@@ -456,7 +504,7 @@ This may break if you attempt to overload the old namespace, however.
 ## Check their README
 ## Is it inactive? <!-- .element: class="fragment" -->
 ## Is there a better solution? <!-- .element: class="fragment" -->
-## Can you be the new maintainer? <!-- .element: class="fragment" -->
+## Could you be the new maintainer? <!-- .element: class="fragment" -->
 
 Note: check the history.
 
@@ -486,7 +534,8 @@ Pet Projects
 ---
 
  <!-- .slide: data-background="#000"-->
-# Go to rule:<br>There's nothing wrong<br>with being nice. <!-- .slide: class="center" -->
+## Go to rule: <!-- .slide: class="center" -->
+# Ask.
 
 Note: the ability to openly communicate is one facet of opensource that makes it amazing
 
@@ -508,47 +557,69 @@ Note: Thanks! /me mock cheers
 
 Note: 
 
+*deep breath*
+
+That was really really good to get off my chest.
+
+Also, a term I didn't know at the time but do know now, is "GitHub Generation"
+
+I'm absolutely github generation, so a lot of what I spoke on was GitHub oriented.
+
+There's so much more to this topic, you have no idea.
+
 ---
 #### You should totally go see: <!-- .slide: class="center" -->
 ## Passing the Baton: Succession planning for your project talk
 ### VM Brasseur
 ### This afternoon!
 
-Note: If you're interested in this stuff, and around the planning of such things
+Note: Lucky, the conference provides!
+
+If you're interested in this stuff, and around the planning of such things
 You really really need to go see VM Brasseur's talk this afternoon.
 Like really really need to.
 ---
 
- <img src="pictures/brisbane_pycon.jpg" />
+ <div style='margin: 0 auto;'><p align='center'><img src='pictures/brisbane_pycon.jpg'></p></div>  <!-- .slide: class="center" -->
+ <span class='foot'>[Flickr](https://www.flickr.com/photos/developersteve/albums/72157656549888386)</span>
 
-Note: I've had two years to try and get this talk right.
+Note: Back to brisbane, back to the 2015, back to that Sunday afternoon.
 
-Back in Brisbane, I was so stressout that I ended up having a panic attack.
+Trying to find how to talk about that talk was all consuming, it was making so anxious that I must have had a breakdown.
 
-I don't remember a lot of the specifics leading up to the talk, so I've had to
-go and ask people who were there how it went down.
+I don't actually remember, because I was so consumed by the overwhelming emotions
+
+I've even had to go and research what happened to me, by asking people who were there, I was so out of it.
 
 That sunday afternoon, I didn't look right. I was stressed out in the break leading up
 to the talk, and I was trying to edit my slides at the last minute. Pro-tip, this never ends well
 
-I distinctly remember making my way to the room with the laptop, looking down the corridor, seeing the lecturn, and having the whole dolly zoom effect happen, and hoping NOPE.
+One thing I do distinctly remember is making my way around to the Kennedy room, laptop in hand, and looking down the corridor, seeing the lecturn, and having the whole dolly zoom effect happen, and going
+
+NOOOOOPE 
 
 And you know what the immediate response was?
+---
+
+### It's okay. <!-- .slide: class="center" -->
+
+Note: 
 
 Okay. Come over here and sit down.
 
-They'd planned for this. I didn't have to do anything I wasn't comfortable with.
+They'd planned for this. I didn't have to do anything I wasn't absolutely comfortable with.
 
 So immediately, waves of relief start washing over me.
 
-And then the reject and anxiety set in.
+And then the regret and anxiety set in.
 
-I'd just let everyone down. They knew I was going to fail. I'm a terrible person. I shouldn't be here. I don't deserve to be here. I want to go home.
+I'd just let everyone down. They knew I was going to fail. I'm a terrible person. I shouldn't be here. I don't deserve to be here. I want my mum. I want to go home.
 
 Thankfully only a few moments into this sinking whirlpool of emotions, I was asked if I was okay, and if some freshair would be helpful
 ---
 
- <img src="pictures/brisbane.jpg" />
+ <div style='margin: 0 auto;'><p align='center'><img src='pictures/brisbane.jpg'></p></div>  <!-- .slide: class="center" -->
+ <span class='foot'>[Wikipedia](https://commons.wikimedia.org/wiki/File:Statue-of-King-George-V.jpg)</span>
 
 Note: it was that trip outside that saved me from a breakdown. I mean, I wasn't okay, but I knew I would be.
 
@@ -558,52 +629,65 @@ I came back to the conference after that. I sat in the back of the room for the 
 
 ---
 
- <img src="pictures/brisbane_noodle.jpg" />
- <span class='foot'>[Brisbane Noodle Night Markets, Espresso and Matcha](http://espresso-and-matcha.blogspot.com.au/2015/07/brisbane-noodle-night-markets-southbank.html)</span>
+ <div style='margin: 0 auto;'><p align='center'><img src='pictures/brisbane_noodle.jpg'></p></div>  <!-- .slide: class="center" -->
+ <span class='foot'>[Espresso and Matcha](http://espresso-and-matcha.blogspot.com.au/2015/07/brisbane-noodle-night-markets-southbank.html)</span>
 
-Note: that night, I didn't go home. I went out with a group of people to the noodle markets over in Southbank
+Note: that night, I didn't go home. I could have, but I didn't.
 
-My phone was going off by this point. People messaging me asking where I was, if I was okay. There was word that something was wrong. One person heard that I got gastro (erk). It was starting to set me off again
+I went out with a group of people to the noodle markets over in Southbank
 
-It was suggested that I give my phone to a friend to hold onto so I wouldn't keep getting alerted and distracted. That evening was really nice. I ate.. something, I can't remember. But it was great just to be around people who wanted me to be around.
+My phone was going off by this point. People messaging me asking where I was, if I was okay. There was word that something was wrong. One person heard that I got gastro (erk). Having the constant buzzing and pinging made me feel even worse
+
+By mutual agreement, I give my phone to a friend to hold onto so I wouldn't keep getting alerted and distracted.
+
+It also meant I couldn't leave the markets without being able to be okay travelling back. I really needed that.
+
+That evening was really nice. I ate.. something tasty, I can't remember. But it was great just to be around people who wanted me to be around. At the time, that was a rare thing for me.
 
 ---
 
- <img src="pictures/brisbane_day.jpg" />
+ <div style='margin: 0 auto;'><p align='center'><img src='pictures/brisbane_day.jpg'></p></div>  <!-- .slide: class="center" -->
+ <span class='foot'>CC-BY-NC-SA 4.0</span>
 
-Note: the next day, I went back. I could have hid, but I didn't. I wanted to be around these amazing people.
+Note: the next day, I came back. I could have hid, but I didn't. I wanted to be around these amazing people.
 
 The Monday and Tuesday were development sprint days. That was the sprints that I was introduced to BeeWare. And the rest is history.
 
-If I had left, I wouldn't have come back. At all. But I did. And here I am.
+If I had left, I wouldn't have come back. At all. I would have felt that I couldn't show my face again.
+
+But I did come back. And I came back the next year. And now I'm here.
 
 ---
 
- <div style='margin: 0 auto;'><p align='center'><img src='pictures/dunedin.jpg'></p></div>  <!-- .slide: class="center" -->
+ <div style='margin: 0 auto;'><p align='center'><img src='pictures/dunedin.png'></p></div>  <!-- .slide: class="center" -->
+ <span class='foot'>CC-BY-NC-SA 4.0</span>
 
 Note: it hasn't been smoothsailing for me since Brisbane.
 
-After that incident, I went through therapy. If you're covered under Medicare,
-you can go to your GP and get a Mental Health plan that allows you to get rebates on up
-to 10 visits to a mental health professional each year.
+Anxiety is just the start.
+
+[TODO what to mention about the rest]
+
+But that incident, I sought out a professional about dealing with my anxiety.
 
 Seriously. If you need to talk to someone, please do.
 
+Australians covered under medicare, you can get rebates on seeing a professional that can deal with your mental health issues, just as you could for physical issues.
+
 I've been seeing a professional for a few years now, and it's helped me a lot.
 
-But I still get anxious. Especially over talks.
+But I still get anxious. Especially over talks. And **especially** this one.
 
-I've had many sleepless nights just trying to work out how to best phrase this one.
+I've had many sleepless nights just trying to work out how to best word this talk.
 
-Being asked by Richard to keynote was a last minute thing. I wasn't his first choice, but I offered because I knew there were issues there, and I knew I could do it.
+Being asked by Richard to keynote was a last minute thing. I wasn't his first choice, but I knew I could do it. And I wanted to. That's a big thing.
 
 Plus, the fact that a talk slot opening up because of a speaker dropping out about a speaker dropping out of a talk... I couldn't help but use this oppurunity to give the talk I couldn't give at this conference two years ago.
-
-It's okay to fail. If you can't give a talk and you have to step away, that's okay. I had to step away, and now I can step in place when the time came.
 
 ---
 
  <div style='margin: 0 auto;'><p align='center'><img src='pictures/selfiesquish.jpg'></p></div>  <!-- .slide: class="center" -->
+ <span class='foot'>[Twitter](https://twitter.com/chrisjrn/status/861230190336376832)</span>
 
 Note: what has helped me through out all of this is the community. Just having
 people who want me around is more helpful than you could ever imagine.
@@ -620,6 +704,8 @@ and one of those was devworld.
 
  <img src="pictures/devworld.jpg" />
 
+ <span class='foot'>[Broadsheet Melbourne](https://www.broadsheet.com.au/melbourne/bars/bimbo-deluxe)</span>
+
 Note: So I'm in a pub in Melbourne that has a plane in it, as you do. It's late 2015, and I've found
 myself at the speaker dinner for devworld.
 
@@ -633,9 +719,9 @@ So I'm at the dinner, and Paul arrives. And I get the oppurtinity to say hi. And
 
 He later told me that it was my enthusasm for looking forward to hearing him speak that made him feel more at ease in his role at the conference. And this is coming from a long time public speaker.
 ---
+ <div style='margin: 0 auto;'><p align='center'><img src='pictures/hellohugs.jpg'></p></div>  <!-- .slide: class="center" -->
 
- <img src="pictures/???" />
-
+ <span class='cfoot'>[Flickr, CC BY-NC 2.0](https://www.flickr.com/photos/140681500@N07/26064158351/in/album-72157666565815855/)</span>
 Note: 
 Letting people know that you have been looking forward to seeing them, wishing them luck with their speaking, and actively enjoying their company.. that is what makes a great community.
 
@@ -646,56 +732,45 @@ Having a group of people that actively help each other, either by activey volunt
 to help run events, and reaching out those in their community that need just a little bit of help, that's what makes an incredible community.
 
 ---
+ <div style='margin: 0 auto;'><p align='center'><img src='pictures/helloquestion.jpg'></p></div>  <!-- .slide: class="center" -->
 
- <img src="pictures/??" />
+ <span class='cfoot'>[Flickr, CC BY-NC 2.0](https://www.flickr.com/photos/140681500@N07/25781125034/in/album-72157666565815855/)</span>
 
 Note: And it doesn't have to be big hugge things, it can be little things that make people feel included.
 
-It might be as simple as quiet room, offering to moderating questions, ensuring a ramp or a lift is available to rooms for wheelchair, or even just making sure someones name spelled correctly.
+If a speaker asks for questions, making sure there's a question, even if it's from you.
+
+Offering to sit with someone at lunch. If you're local, suggesting a local cafe or restaurant.
+
+Little things to help attendees, like having quiet room, ensuring a ramp or a lift is available to rooms for wheelchair, or even just making sure someones name spelled correctly.
 
 Having stenographers or sign language intepretors. Having non-alcoholic beverages at dinner. Vege options and kosher meals.
 
-Offering to sit with someone at lunch. Being there if someone needs a hand. Or just being there, actively listening.
-
-
-Giving back to the community that gave so much to me is something that I've taken to heart, and dedicated a lot of my time to. And for my efforts
----
- <img src="pictures/glassbrick.jpg" />
-
-Note: I got a shiny glass brick. The O'reilly open source award. I was absolutely honoured and humbled by this, so much so that I keep calling it a glass brick.
-
-But it's not about the award. It's about the fact that actively helping people in your community, especially when they're having a bad time, can keep them around, and they have the potential to do great things.
-
-And with that, I want to end this on a high note by sharing some of the things I"ve learnt in these two years.
-
+Volunteering to help out. Being there if someone needs a hand. Or just being there, actively listening.
 ---
 
- <img src="pictures/glassbrick.jpg" />
+ <div style='margin: 0 auto;'><p align='center'><img src='pictures/plushieselfie.jpg'></p></div>  <!-- .slide: class="center" -->
+ <span class='foot'>CC-BY-NC-SA 4.0</span>
 
-Lucite trophies show up as great big black blocks under xray scanners, so if you have to travel with one, keep it in your carry on, and make sure you take it out for scanning. And don't be surprised if every TSA agent makes the same joke or starts to give an award speech
----
+Note: Because this community is amazing.
 
- <img src="pictures/selfiesquish.jpg" />
+I mean take this picture. This is a plushie group photo, because there are many people that have travelling
+stuffed animals that they take with them, and even have on the lecturn during their talk.
 
-Note: I don't do selfies, but I've found that if you gather some of your cutest friends and have your face half absured, you may be pleasently surprised by the result.
+[possibly moniyum ref]
 
----
+I've not just met people through this community, I've made friends. Good friends.
 
- <img src="pictures/office.jpg" />
+And this is something I've never had before. I've never had a group of people that want me around.
 
-Note: projects come and projects go. Companies fold.
+I was told once that I can't consider the people I meet, I know, and who I adore at events like this my friends.
 
----
+That is wrong.
+You may only see them once a year. You may only interact on bug trackers, or on IRC.
 
- <img src="pictures/brisbane_pycon.jpg" />
+But they can be your friends.
 
-Note: But the people in your project communities, they are amazing people who can build great things, and you should do everything in your power to help them feel included, and to bring in more amazing peole into your community,
----
-
-
- <img src="pictures/brisbane.jpg" />
-
-Note: and sometimes, when everything seems too hard and you can't go on, the best thing to do right then, is to get icecream.
+And it's because of these amazing people that I'm still here today. And i'm grateful.
 ---
 <br> 
 <br> 
