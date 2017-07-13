@@ -301,9 +301,9 @@ vv [A New Code License: The MIT, this time with Attribution Required, StackOverf
 
 Note: Last year stackoverflow changed their default licencing arrangements. Since the dawn of time, StackOverflow answers have been Creative Commons Share Alike. Which means you can share and adapt, but you must attribute. 
 
-But as of March 2016, all code is MIT licenced. Which allows you to either keep the MIT licence, or remove it as long as you attribute the original author.  
+But as of March 2016, all code is MIT licenced. You are released from having to copy the MIT licence text in your copy, as long as you give attribution to the original author
 
-Which can get fun, when you're talking abo
+Which can get fun, when you're talking about
 ---
 ~~~
 #= 'Competitor' Code

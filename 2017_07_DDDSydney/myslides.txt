@@ -1370,42 +1370,6 @@ but if we declare them on he same line
 
 they are
 ---
-#= <pre>/usr/local/bin python</pre>
-Note: Let's talk about Python
----
-#> >>> x = bytearray(1)
-#>- >>> y = {}
-#>- >>> x % y
-#>- bytearray(b'')
-
-<span class="bfoot" style="bottom: -435px"><a href="http://bugs.python.org/issue29073">Python Issue 29073</a></span>
-Note: If we declare x as a byte array of size one
-
-and y as an empty dict
-
-what would a bytearary modulus a dict be?
-
-a bytearray with an empty bytestring
----
-#> >>> x = bytearray(1)
-#> >>> y = {}
-#> >>> x % y
-#> bytearray(b'') <c>&nbsp;&nbsp; &nbsp;# Python 3.5</c>
-#>- bytearray(b'\x00') <c># Python 3.6</c>
-#>- >>> x
-#>- bytearray(b'\x00')
-<span class="bfoot" style="bottom: -250px"><a href="http://bugs.python.org/issue29073">Python Issue 29073</a></span>
-Note: but this has changed in python 3.6 into the bytearray of a bytestring of a null byte, which is what  x is originally
-
-This is the kind of fun we get when we upgrade the python versions in BeeWare components. Because we are reimplementing things, we find all the edge cases. 
-
-Our CI makes all the pretty colours :)
-
-Turns out that the Python 3.6 version is right, the Python 3.5 version is wrong, which has been backported and will be fixed in Python 3.5.3
-
-Ah, the things you find when you iterate over every single permutation. 
----
-
 #= <pre>#!/usr/bin/env java</pre>
 
 Note: let's talk about java
@@ -1720,7 +1684,7 @@ for (let i = 0; i < 500000000; i++) {
 
 </code></pre>
 
-<span class="bfoot" style="bottom: -135px"><a href="https://top.fse.guru/nodejs-a-quick-optimization-advice-7353b820c92e">top.fse.guru</a></span>
+<span class="bfoot" style="bottom: -105px"><a href="https://top.fse.guru/nodejs-a-quick-optimization-advice-7353b820c92e">top.fse.guru</a></span>
 
 
 Note: 
@@ -1751,7 +1715,6 @@ for (let i = 0; i < 500000000; i++) {
 </code></pre>
 
 #>- $ time -p node general.js<br>real 0.77<c> &nbsp;# vs 1.91</c>
-
 
 <span class="bfoot"><a href="https://top.fse.guru/nodejs-a-quick-optimization-advice-7353b820c92e">top.fse.guru</a></span>
 
