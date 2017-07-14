@@ -740,7 +740,7 @@ After Brisbane, I sought out a professional about dealing with my anxiety.
 Seriously. If you need to talk to someone, please do.
 
 Australians covered under medicare, you can get rebates on seeing a professional that can deal with your mental health issues, just as you could for physical issues.
-
+---
  <div style='margin: 0 auto;'><p align='center'><img src='pictures/dunedin.png'></p></div>  <!-- .slide: class="center" -->
  <span class='foot'>CC-BY-NC-SA 4.0</span>
 
@@ -748,7 +748,7 @@ Note: I've been seeing a professional for a few years now, and it's helped me a 
 
 But I still get anxious. Especially over talks. And **especially** this one.
 
-I've had many sleepless nights just trying to work out how to best word this talk.
+I've had many sleepless nights just trying to work out how to best word this talk. I can yell about emoji until the cows come home. but this talk is vulnerable. This talk is **hard**
 
 Being asked by Richard to keynote was a last minute thing. I wasn't his first choice, but I knew I could do it. And I wanted to. That's a big thing.
 
@@ -760,7 +760,8 @@ Plus, the fact that a talk slot opening up because of a speaker dropping out abo
 
  <span class='foot'>[Flickr](https://www.flickr.com/photos/oreillyconf/34151250760/in/album-72157681448852001/)</span>
 
-Note: This isn't a token talk about 'woman can't handle emotions, news at 11'
+Note: 
+TODO "woman has emotions, News at 11"
 
 I'm now an accomplished speaker and member of this community
 
