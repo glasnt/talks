@@ -6,7 +6,7 @@
 vv [Menulog](https://www.menulog.co.nz/spe_bar_restaurant_the_langham_auckland)
 Note: So I'm in a pub in Auckland, as you do. 
 
-It's 2013, and I've just finished attending my first open source software conference. For the first time, the Open Source Developers Conference, or OSDC, has been held outside of Australia. 
+It's 2013, and I've just finished attending my first open source software conference. It's the first time that the Open Source Developers Conference, or OSDC, has been held outside of Australia. 
 
 Paul Fenwick has just given the closing keynote, and a bunch of delegates have retired to the bar. The organisers are rounding up a bunch of people that are all going to see the blockbuster Gravity in the cinema
 
@@ -32,7 +32,7 @@ Note: ... Ah.
 
 Turns out the bloke with the dreads was Ben Dechrai.. who sort of.. co-founded OSDC... yeah... 
 
-This was the start of my journey into public speaking. 
+This was the start of my journey into public speaking and open source community wrangling 
 
 I've told this story before, and it's been affectionately referred to as my 
 
@@ -57,13 +57,13 @@ vv [Flickr, CC-BY 2.0](https://www.flickr.com/photos/developersteve/albums/72157
 Note:
 At PyCon AU 2015, my first Python developers conference, I was supposed to give two talks. 
 
-I'd been speaking at conferences for months. Months! Overseas and everything!
+Tt wasn't the first time I'd been asked to do two talks at a conference, so I thought I'd be fine. 
 
-And it wasn't the first time I'd been asked to do this at a conference, so I thought I'd be fine. 
+I'd been speaking at conferences for months. Months! Overseas and everything!
 
 But two brand new talks at a conference? For a new speaker? Yeaaahhh...
 
-The first talk on Sunday was about acknowledging contributions to open source that aren't code, now known as the Hat Rack talk. 
+The first talk on Saturday was about acknowledging contributions to open source that aren't code, now known as the Hat Rack talk. 
 
 ---
 
@@ -123,7 +123,7 @@ Note:
 
 A few weeks after pycon I gave this talk at a local Sydney php user group. I
 did the talk, saying the context was that "it happened to a friend of a friend
-of mine". But that was bullshit. It was an outright lie, but it let me get past
+of mine". But that was bull. It was an outright lie, but it let me get past
 the context and into the content.
 
 And now I'm here, revisiting this question. Does context matter? Does the human
@@ -133,7 +133,7 @@ to put me in this situation?
 Yes. Yes it matters. It matters more than the tech. You can google a bunch of
 things around how migrate code and how to make copies and how to do all that
 push button get repo stuff. But if by telling my story it helps a single person
-going through the same thing I did feel less alone in what was a pretty shit
+going through the same thing I did feel less alone in what was a pretty crappy
 situation, all things told, then it is absolutely worth it.
 
 ---
@@ -173,6 +173,8 @@ I was shattered.
 
 I'd been working there for four years. It was my first role that I'd actually enjoyed working at. 
 
+I'd been learning so much, and was actively encouraged to share that with others. Which is a huge difference from the closed source roles I'd previously been in 
+
 I was a poster child for this place. Literally, on posters.  
 
 Which is really fun to see your face on a google ad, advertising an employer that has just fired you.
@@ -187,11 +189,11 @@ and they were able to get me an interview with their employer the next day.
 
 I was also lucky about the fact that I got let go **after** my big international debut. 
 
-I know some people that haven't been so lucky. Heck, it took me months to stop using "we" when talking about that employer. I can't even imagine how you'd go about giving a spruik to a place that just turfed you. 
+I know some people that haven't been so lucky. Heck, it took me months to stop using "we" when talking about that employer. I can't even imagine how you'd go about giving a spruik to a place that just turfed you. I've seen people give that talk, and it's heartbreaking to watch. 
 
 
 
-After I settled into my new role, I started considering what I could do about the project I left behind. 
+Time passes, and  I settle into my new role. Then I start considering what I could do about the project I left behind. 
 
 ---
 
@@ -215,7 +217,7 @@ Note: Well.. no.
 ---
 
 ~~~
-#= GitHub doesn't<br>do "Forking"
+#= GitHub doesn't<br>do "forking"
 
 Note: They don't implement the traditional forking methodology, regardless of the marketing you might read.
 
@@ -237,11 +239,9 @@ Note: But there's even more issues
 ~~~
 #= GitHub Faux-Forking
 ## <img src="pictures/github-forking.png">
-Note: Github's forking != Traditional Forking
+Note: Github's 'forking' isn't the same as traditional forking
 
-It's your copy for branches and PR merges. 
-
-It's not a full working copy of a code base
+Sure, you get a copy of the code under your username, but it's not a full working copy with all the bells and whistles of a github repo
 ---
 
 ~~~
@@ -251,13 +251,15 @@ It's not a full working copy of a code base
 ##- No Issue Logging by Default
 ##- Commits Don't Count
 
-Note: Parent - perma link to source, there's always going to be a little "Forked from" link at the top
+Note: There are limitations
+
+Parent - perma link to source, there's always going to be a little "Forked from" link at the top
 
 PR - new PRS defaults to parent, accidently attempt to merge upstream. Which gets fun if you don't notice, and accidently submit code up, because PRs can't be deleted.
 
 Issues - issues are disabled by default on forks, but can be enabled.
 
-Commits - If you're familiar with my hatrack talk, you'll know that I'm alla bout the contributions graphs. For forks, anything to do, any edits you make, they don't count. At all. 
+Commits - If you're familiar with my hatrack talk, you'll know that I'm all about the contributions graphs. For forks, anything to do, any edits you make, they don't count. At all. 
 
 
 ---
@@ -276,7 +278,9 @@ It also depends on the site you're on.
 
 vv https://help.github.com/articles/licensing-a-repository/
 
-Note: For code on github, if the repo does not have a licence, no one may reproduce, distribute, or create derivative works from it. At all. 
+Note: For code on github, if the repo does not have a licence
+
+All Rights resreved: no one may reproduce, distribute, or create derivative works from it. At all. 
 
 ---
 ~~~
@@ -291,11 +295,11 @@ But of note, different websites have different default licence rights
 
 ---
 ~~~
-#####= <aside>
+####= &lt;aside>
 ### StackOverflow
 ### Code? MIT
 ### Everything else? CC-BY-SA
-##### </aside>
+#### &lt;/aside>
 
 vv [A New Code License: The MIT, this time with Attribution Required, StackOverflow Meta](https://meta.stackexchange.com/questions/272956/a-new-code-license-the-mit-this-time-with-attribution-required?cb=1)
 
@@ -303,14 +307,14 @@ Note: Last year stackoverflow changed their default licencing arrangements. Sinc
 
 But as of March 2016, all code is MIT licenced. You are released from having to copy the MIT licence text in your copy, as long as you give attribution to the original author
 
-Which can get fun, when you're talking about
+Speaking of licences, that gets fun when you copy code 
 ---
 ~~~
 #= 'Competitor' Code
 ##- &copy; Their Company 2014
 ##- &copy; Your Company 2015
 
-Note: Another problem is competitor code. 
+Note: Especially if it's from a competitor
 
 If you take a copy of their code, depending on their licence you probably have to keep their Copyright information
 
@@ -331,7 +335,9 @@ Note: Yeah.
 #= Dead Source
 ## <img src="pictures/tumbleweed2.gif"> 
 
-Note: If the source upstream is dead, then that's an inhibitor of innovation
+Note: And then ther'es dead source 
+
+If the source upstream is dead, then that's an inhibitor of innovation
 
 No merges ever, no changes. And you can't easily communicate this fact, either. 
 
@@ -348,12 +354,18 @@ Your fork might be churning away, but people up stream don't know.
 
 Note: Ask. 
 
-Possible solutions: transfer of ownership, proper copy fork with attribution, many other
+There are many possible solutions to this problem 
+
+You could transfer of ownership of the code
+
+They could update their code to reference your active fork
+
+And there are other otpions
 
 ---
 
 ~~~
-#= So why should<br>you care?
+#= But why should<br>you care?
 
 ---
 ~~~
@@ -370,27 +382,45 @@ Not just PHP
 #= Ruby 1.8, 1.9.3 EOL
 ##- <p> Example: <code>pry-debugger</code></p>
 
-Note: EOL languages. Things have migrated on
+Note: Language versions that have reached end of life are also a problem, especially when the changes in the new versions aren't backwards compatible
 
-pry-debugger - only works with 1.x
+An example of this: pry-debugger, a REALLY COOL inline debugging tool - only works with 1.x
 
 Was the go to debugger now not so much
 
-Top of README says: 2.0? use byebug
+It was the GO TO for ruby devs, but It doesn't work on anything in Ruby 2 up
 
-you shouldn't be using 1.8, 1.9.3 anyway, EOL
+There was a time when the readme didn't mention this, and the code just didn't work, and ruby devs didn't know what to use 
+
+Now the readme clearly states that you should use ByeBug if you're on Ruby 2 
+
+By the way, you really shouldn't be using Ruby 1.8 or 1.9 any more, they're end of life and no longer secure. Move up to Ruby 2. it's shiny
 
 ---
 ~~~
 #= Python 3 
 
-Note:  Per PyCon US 2015 Guido keynote
+Note: And yeah, I guess Python 3 also has to be considered. 
+
+Especially since there's a countdown timer now on the end of life of Python 2
 
 Once 2.7 goes EOL, then projects can't be used any more.
 
-There's no satisfaction in just porting it
+---
+~~~
 
-long tail of dependencies prohibit porting
+#= Porting is boring
+##- but it's imporant
+Note: 
+
+
+And I get it, porting is boring. 
+
+There's no satisfaction in it
+
+Especailly when there's a long tail of dependencies prohibit porting
+
+But if code isn't ported, then you're actively encouraging people to run insecure versions of languages and are inviting security issues. 
 
 ---
 
@@ -418,6 +448,8 @@ Note: Other source control places have had some ... issues
 
 Like feigning updates by repackaging binaries with spyware. 
 
+Allegedly
+
 ---
 
 ~~~
@@ -429,7 +461,7 @@ Note: 'active' meaning someone's using it, who's moving to the new structure
 
 The maintainer may be off growing grapes
 
-Hostile Forks Don't Help
+And Hostile Forks Don't Help
 
 ---
 
@@ -438,7 +470,9 @@ Hostile Forks Don't Help
 ##- Abandon Responsibly
 ##- Restore Dead Code
 
-Note: If you have a project vs if you see a project
+Note: Abandon If you have a project
+
+Help restore if you see a project
 
 ---
 ~~~
@@ -448,13 +482,16 @@ Note: If you have a project vs if you see a project
 ##- Mark as inactive
 ##- Link to a better solution
 ##- Leave a forwarding address
-##- Assign a new maintainer
 
 Note: Documentation is your friend
 
 You don't want people coming across your stuff when there's something better
 
 You really don't want people using code that has deps with known vuls
+
+Link
+
+Forwardning - point to the new people. Because may or may not want your email on code you wrote and people emailing you a decade later. 
 ---
 ~~~
 
@@ -462,18 +499,21 @@ You really don't want people using code that has deps with known vuls
 ## unmaintained.tech
 
 Note: 
+ Because github readme badges are cool, there's this one that includes a link to the site unmaintained.tech which includes a short manifesto which is helpful if you can't find the words to add to the readme yourself
 ---
 
 ~~~
 #= GitHub Ownership Transfer
 
-Note: Create a new/existing organisation
+Note: GitHub allows you to transfer repos around, and the process is relatively straight forward
 
-Add the admin from the otehr one in (shared rights)
+Work out where the repo is going, a new organisation or an existing one. 
 
-Transfer
+Make sure the new maintainer is an admin of both
 
-Remove new admin
+Then transfer the repo
+
+And remember to remove the admin from the original organisation, that could lead to fun if you don't want them to have perminant admin rights.
 
 ---
 
@@ -484,10 +524,16 @@ Remove new admin
 ##- You get the commit bit :D
 
 
-Note: the 301 is very nice, it will automatically users to the new repo based on the old URL
+Note: There are some really good benifits to this over forking
+
+All the PRs and issues stay intact
+
+301 - the 301 is very nice. Anyone trying to go to the old URL will get redirected to the new one. It also works for the git repos on disk too
 
 This may break if you attempt to overload the old namespace, however. 
 
+
+Commit - also, you get the commit bit, which is really nice
 ---
 
 ~~~
@@ -496,6 +542,8 @@ This may break if you attempt to overload the old namespace, however.
 ##- Check their README
 ##- <img src="pictures/notdeadyet2.gif">
 
+
+Note: you really need to check before trying anything. Some things to look for
 
 ---
 ~~~
@@ -580,6 +628,24 @@ You really really need to go see VM Brasseur's talk this afternoon.
 Like really really need to.
 ---
 
+#= What did I choose?
+
+Note: For those playing at home, what did I end up going with for my project?
+
+A combination of transferring ownership and marking things as "no maintenance intended"
+
+If you are interested in what the project was, the code still exists. 
+
+---
+
+###= github.com/WhereSoftwareGoesToDie
+
+Note: 
+
+This organisation name wasn't chosen by me, it was deleted by one of my old coworkers. I think it perfectly encapsulates our thoughts on the things we'd created. 
+
+---
+
 @= brisbane_pycon.jpg
 vv [Flickr](https://www.flickr.com/photos/developersteve/albums/72157656549888386)
 
@@ -605,7 +671,7 @@ And you know what the immediate response was?
 
 Note:
 
-Okay. Come over here and sit down. 
+It's okay. Come over here and sit down. 
 
 They'd planned for this. I didn't have to do anything I wasn't absolutely comfortable with. 
 
@@ -664,9 +730,7 @@ vv CC-BY-NC-SA 4.0
 
 Note: it hasn't been smoothsailing for me since Brisbane. 
 
-Anxiety is just the start.  
-
-[TODO what to mention about the rest]
+Anxiety is just the start. I've had a pretty terrible time of late, too. 
 
 But that incident, I sought out a professional about dealing with my anxiety. 
 
@@ -682,7 +746,7 @@ I've had many sleepless nights just trying to work out how to best word this tal
 
 Being asked by Richard to keynote was a last minute thing. I wasn't his first choice, but I knew I could do it. And I wanted to. That's a big thing. 
 
-Plus, the fact that a talk slot opening up because of a speaker dropping out about a speaker dropping out of a talk... I couldn't help but use this oppurunity to give the talk I couldn't give at this conference two years ago.
+Plus, the fact that a talk slot opening up because of a speaker dropping out about a speaker dropping out of a talk... I couldn't help but use this oppurtunity to give the talk I couldn't give at this conference two years ago.
 
 ---
 
