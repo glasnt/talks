@@ -732,13 +732,19 @@ Note: it hasn't been smoothsailing for me since Brisbane.
 
 Anxiety is just the start. I've had a pretty terrible time of late, too.
 
-But that incident, I sought out a professional about dealing with my anxiety.
+But I've also had some good things happen. One of which is the fact I've just started a new job at Divio, doing Python and Django as a day job. It's early days yet, but it's amazing to be able to work with the tech of the community I adore so much.
+
+
+After Brisbane, I sought out a professional about dealing with my anxiety.
 
 Seriously. If you need to talk to someone, please do.
 
 Australians covered under medicare, you can get rebates on seeing a professional that can deal with your mental health issues, just as you could for physical issues.
 
-I've been seeing a professional for a few years now, and it's helped me a lot.
+ <div style='margin: 0 auto;'><p align='center'><img src='pictures/dunedin.png'></p></div>  <!-- .slide: class="center" -->
+ <span class='foot'>CC-BY-NC-SA 4.0</span>
+
+Note: I've been seeing a professional for a few years now, and it's helped me a lot.
 
 But I still get anxious. Especially over talks. And **especially** this one.
 
@@ -747,6 +753,20 @@ I've had many sleepless nights just trying to work out how to best word this tal
 Being asked by Richard to keynote was a last minute thing. I wasn't his first choice, but I knew I could do it. And I wanted to. That's a big thing.
 
 Plus, the fact that a talk slot opening up because of a speaker dropping out about a speaker dropping out of a talk... I couldn't help but use this oppurtunity to give the talk I couldn't give at this conference two years ago.
+
+---
+
+ <div style='margin: 0 auto;'><p align='center'><img src='pictures/austin.jpg'></p></div>  <!-- .slide: class="center" -->
+
+ <span class='foot'>[Flickr](https://www.flickr.com/photos/oreillyconf/34151250760/in/album-72157681448852001/)</span>
+
+Note: This isn't a token talk about 'woman can't handle emotions, news at 11'
+
+I'm now an accomplished speaker and member of this community
+
+The other talk from Pycon AU 2015, the one I actually gave? The hat rack talk? I've given that as a keynote. Twice.
+
+I've helped run confernces all over the world, and spoken at more to boot. I've tried to give back to this amazing community what it gave to me. It can never me enough, but I hope it's something.
 
 ---
 
