@@ -1,14 +1,13 @@
+<pre><code>Tiny text of little significance</code></pre>
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%"><c>// If you can read this, yay!</code></pre></div>
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%"><s>123456789 123456789 123456789 12</s></code></pre></div>
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> console.log("Hello World");</code></pre></div>
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">Hello World</code></pre></div>
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%"><h>!#/usr/bin/env ruby</h></code></pre></div>
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> (0..3).each {|c| puts c}</code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> (0..1).each {|c| puts c}</code></pre></div>
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">0</code></pre></div>
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">1</code></pre></div>
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">2</code></pre></div>
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">3</code></pre></div>
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">=> 0..3 <c>// Console is 11x32 </c></code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">=> 0..1 <c>// display is 9 x 32 </c></code></pre></div>
 ---
 
 <br> 
@@ -22,9 +21,11 @@
 Note: Hi! Just a little bit of house keeping before we start
 ---
 # Audience<br>Participation <!-- .slide: class="center" -->
-Note: There will be a bunch of audience participation in this talk. If I ask a direct question, with my hand up, feel free to shout out an answer.
+Note: There will be a bunch of audience participation in this talk. If I ask a
+direct question, with my hand up, feel free to shout out an answer.
 
-If my hand isn't up, please dont spoil it for people trying to work out the answer themselves
+If my hand isn't up, please dont spoil it for people trying to work out the
+answer themselves
 
 ---
 <br><br> 
@@ -66,9 +67,9 @@ Note:
 
 Hi! I'm Katie.
 
-If you'll indulge me, I'm going to quote verbatium from my speaker bio
+If you've read my speaker bio, it says
 
-When she's not changing the world she enjoys, cooking, making tapestries, and
+That when I'm not changing the world she enjoys, cooking, making tapestries, and
 
 ---
 
@@ -1924,7 +1925,7 @@ The thing is that this is a function within standard PHP.
 Note: 
 left-pad is just one of countless thousands of work arounds that have been implemented due to a lack of unctionality in javascript
 
-Javascript doesn't have a standard library. the functionality a python, ruby or php dev takes for granted isn't ther ein javascript
+Javascript doesn't have a standard library. the functionality a python, ruby or PHP dev takes for granted isn't ther ein javascript
 
 and so there have been may ways that this has been worked around over the years, including fundamental libraries like jquery
 
@@ -2249,21 +2250,26 @@ I highly recommend you read the entire article and the associated talk.
 
 But I want to leave you with this section of her writing
 
+
+
 ---
-> PHP communities, for example, have lacked access to the development of DevOps tooling, the use of PHP is widely derided as being insecure by default, are they are widely mocked for being an “objectively bad language.” <!-- .slide: class="center" -->
+> PHP communities, for example, have lacked access<br>to the development of DevOps tooling,<br>the use of PHP is widely derided as being insecure by default, are they are widely mocked for being an<br>“objectively bad language.” <!-- .slide: class="center" -->
 ---
 
-> Yet people make their livings working with PHP, deploying PHP, trying to secure PHP. Don't they deserve the help that we received, the help of good practises and security-first development? <!-- .slide: class="center" -->
+> Yet people make their livings working with PHP,<br>deploying PHP, trying to secure PHP. <!-- .slide: class="center" -->
 
-> These people who can't improve their work because we won't work with them and drive them away from our communities with mockery and spite. <!-- .slide: class="center" -->
+> Don't they deserve the help that we received,<br>the help of good practices <br>and security-first development? <!-- .slide: class="center" -->
+---
+
+> These people who can't improve their work<br>because we won't work with them<br>and we drive them away from our communities<br>with mockery and spite. <!-- .slide: class="center" -->
 ---
 > And then they engineer things on their own, because they still need these tools, and we have the gall to ask why they didn't use these other tools. <!-- .slide: class="center" -->
 ---
-> Tools that we mocked them for asking about, telling them to get a real language, to rewrite their entire app, to rebuild from scratch because their particular path was not blessed enough. <!-- .slide: class="center" -->
+> Tools that we mocked them for asking about,<br>telling them to get a real language,<br>to rewrite their entire app,<br>to rebuild from scratch<br>because their particular path was not blessed enough. <!-- .slide: class="center" -->
 ---
-> I'm tired of calling people out again and again for dumping on PHP. <!-- .slide: class="center" -->
+> I'm tired of calling people out again and again<br>for dumping on PHP. <!-- .slide: class="center" -->
 
-> I'm tired of people dumping on Windows, that most popular operating system, because it's not what we choose to use <!-- .slide: class="center" -->
+> I'm tired of people dumping on Windows,<br>that most popular operating system,<br>because it's not what we choose to use. <!-- .slide: class="center" -->
 ---
 > We excluded people. <!-- .slide: class="center" -->
 
@@ -2274,7 +2280,7 @@ But I want to leave you with this section of her writing
 > Even if we didn't intend to, it does not matter. <!-- .slide: class="center" -->
 ---
 
-> We make fun of the things others care about, make them feel small, make them feel like their achievements didn't matter. <!-- .slide: class="center" -->
+> We make fun of the things others care about, make them feel small, make them feel like their<br>achievements didn't matter. <!-- .slide: class="center" -->
 
 > Make them feel like they're not welcome. <!-- .slide: class="center" -->
 ---
@@ -2289,24 +2295,24 @@ But I want to leave you with this section of her writing
 ---
 > JavaScript is really good at this, because they're trying to help people write better code within JavaScript. <!-- .slide: class="center" -->
 ---
-> Find some amazing project to celebrate in a language you're contemptuous of. <!-- .slide: class="center" -->
+> Find some amazing project to celebrate<br>in a language you're contemptuous of. <!-- .slide: class="center" -->
 ---
 
 > Go to meetups of what you despise. <!-- .slide: class="center" -->
 
-> Say you don't know anything, and see how welcoming they are to new people. <!-- .slide: class="center" -->
+> Say you don't know anything, and see<br>how welcoming they are to new people. <!-- .slide: class="center" -->
 
 > See what they say, what they do, and ask if you'd be as welcoming to them when they come to your meetups. <!-- .slide: class="center" -->
 ---
 > Work to change your community. <!-- .slide: class="center" -->
 
-> Ask people who try to pay for their membership in contempt to stop, or to leave. <!-- .slide: class="center" -->
+> Ask people who try to pay for their membership<br>in contempt to stop, or to leave. <!-- .slide: class="center" -->
 
-> Make it unacceptable to use these behaviours as a means of obtaining social wealth. <!-- .slide: class="center" -->
+> Make it unacceptable to use these behaviours<br>as a means of obtaining social wealth. <!-- .slide: class="center" -->
 ---
 > The best advice we give programmers is to leave things better than how they started. <!-- .slide: class="center" -->
 ---
-> We do it with code, why don't we do it with communities? <!-- .slide: class="center" -->
+> We do it with code, <br>so why don't we do it with communities? <!-- .slide: class="center" -->
 ---
 <br> 
 <br> 
