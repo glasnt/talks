@@ -1,4 +1,14 @@
 - conference:
+    name: DDD Sydney
+    link: http://2017.dddsydney.com.au/
+    date: 16-JUL-2017
+    location: Sydney
+    talks: 
+        - name: JavaScript is Awe-ful
+          slides: 2017_07_DDDSydney
+          type: Keynote
+
+- conference:
     name: PyCon US
     link: https://us.pycon.org/2017/
     date: 2017-05-19
