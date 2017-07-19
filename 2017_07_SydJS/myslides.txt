@@ -1871,8 +1871,8 @@ Note:
 We also get cool new things in ECMAScript 5 like map!
 ---
 
-#> ES5> [1, 2, 3].map(Math.sqrt)
-#>- [1, 4, 9]
+#> ES5> [1, 4, 9].map(Math.sqrt)
+#>- [1, 2, 3]
 #>- <c>// [Math.sqrt(1)<br>&nbsp; , Math.sqrt(2)<br>&nbsp; , Math.sqrt(3)]</c>
 #>- ES5> a = ['10','10','10','10']
 #>- ES5> a.map(parseInt)
