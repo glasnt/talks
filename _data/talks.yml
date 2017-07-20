@@ -1,3 +1,14 @@
+
+- conference:
+    name: SydJS
+    link: http://sydjs.com/
+    date: 19-JUL-2017
+    location: Sydney
+    talks: 
+        - name: JavaScript is Awe-ful
+          slides: 2017_07_SydJS
+          twitter: https://twitter.com/mobywhale/status/887621375342518273
+
 - conference:
     name: DDD Sydney
     link: http://2017.dddsydney.com.au/
@@ -7,6 +18,7 @@
         - name: JavaScript is Awe-ful
           slides: 2017_07_DDDSydney
           type: Keynote
+          twitter: https://twitter.com/moniyum/status/886190285595607040
 
 - conference:
     name: PyCon US
