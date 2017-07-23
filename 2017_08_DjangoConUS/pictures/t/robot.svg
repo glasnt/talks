@@ -1,0 +1,97 @@
+<svg width="48" height="48" xmlns="http://www.w3.org/2000/svg">
+ <metadata id="metadata8">image/svg+xml</metadata>
+ <defs>
+  <clipPath clipPathUnits="userSpaceOnUse" id="clipPath16">
+   <path d="m1.2,34.3l36,0l0,-36l-36,0l0,36z" id="path18"/>
+  </clipPath>
+  <clipPath clipPathUnits="userSpaceOnUse" id="clipPath98">
+   <path d="m10.7,11.3c-1.381,0 -2.5,-1.119 -2.5,-2.5l0,0c0,-1.381 1.119,-2.5 2.5,-2.5l0,0l17,0c1.381,0 2.5,1.119 2.5,2.5l0,0c0,1.381 -1.119,2.5 -2.5,2.5l0,0l-17,0z" id="path100"/>
+  </clipPath>
+  <clipPath clipPathUnits="userSpaceOnUse" id="clipPath110">
+   <path d="m1.2,34.3l36,0l0,-36l-36,0l0,36z" id="path112"/>
+  </clipPath>
+ </defs>
+ <g>
+  <title>background</title>
+  <rect fill="none" id="canvas_background" height="50" width="50" y="-1" x="-1"/>
+ </g>
+ <g>
+  <title>Layer 1</title>
+  <g id="g10" transform="matrix(1.25,0,0,-1.25,0,45) ">
+   <g id="g12">
+    <g id="g14" clip-path="url(#clipPath16)">
+     <g id="g20">
+      <path fill="#f4900c" fill-rule="nonzero" d="m37.2,19.8c0,-1.933 -1.119,-3.5 -2.5,-3.5c-1.381,0 -2.5,1.567 -2.5,3.5c0,1.933 1.119,3.5 2.5,3.5c1.381,0 2.5,-1.567 2.5,-3.5" id="path22"/>
+     </g>
+     <g id="g24">
+      <path fill="#f4900c" fill-rule="nonzero" d="m6.2,19.8c0,-1.933 -1.119,-3.5 -2.5,-3.5c-1.381,0 -2.5,1.567 -2.5,3.5c0,1.933 1.119,3.5 2.5,3.5c1.381,0 2.5,-1.567 2.5,-3.5" id="path26"/>
+     </g>
+     <g id="g28">
+      <path fill="#ffac33" fill-rule="nonzero" d="m35.2,15.3c0,-0.553 -0.447,-1 -1,-1l-3,0c-0.553,0 -1,0.447 -1,1l0,9c0,0.552 0.447,1 1,1l3,0c0.553,0 1,-0.448 1,-1l0,-9z" id="path30"/>
+     </g>
+     <g id="g32">
+      <path fill="#ffac33" fill-rule="nonzero" d="m8.2,15.3c0,-0.553 -0.448,-1 -1,-1l-3,0c-0.552,0 -1,0.447 -1,1l0,9c0,0.552 0.448,1 1,1l3,0c0.552,0 1,-0.448 1,-1l0,-9z" id="path34"/>
+     </g>
+     <g id="g36">
+      <path fill="#ffcc4d" fill-rule="nonzero" d="m29.2,29.3c0,-2.761 -4.477,-4 -10,-4c-5.523,0 -10,1.239 -10,4c0,2.761 4.477,5 10,5c5.523,0 10,-2.239 10,-5" id="path38"/>
+     </g>
+     <g id="g40">
+      <path fill="#f4900c" fill-rule="nonzero" d="m26.2,30.216501c0,-1.611 -3.135,-2.917 -7,-2.917c-3.866,0 -7,1.306 -7,2.917c0,1.611 3.134,2.917 7,2.917c3.865,0 7,-1.306 7,-2.917" id="path42"/>
+     </g>
+     <g id="g44">
+      <path fill="#226699" fill-rule="nonzero" d="m31.2,28.8c0,-1.381 -1.119,-1.5 -2.5,-1.5l-19,0c-1.381,0 -2.5,0.119 -2.5,1.5c0,1.381 1.119,2.5 2.5,2.5l19,0c1.381,0 2.5,-1.119 2.5,-2.5" id="path46"/>
+     </g>
+     <g id="g48">
+      <path fill="#55acee" fill-rule="nonzero" d="m33.2,4.3c0,-1.104 -0.895,-2 -2,-2l-24,0c-1.104,0 -2,0.896 -2,2l0,22c0,1.104 0.896,2 2,2l24,0c1.105,0 2,-0.896 2,-2l0,-22z" id="path50"/>
+     </g>
+     <g id="g52">
+      <path fill="#3b88c3" fill-rule="nonzero" d="m36.2,1.3c0,-1.105 0.105,-2 -1,-2l-32,0c-1.104,0 -1,0.895 -1,2l0,1c0,1.105 0.896,2 2,2l30,0c1.105,0 2,-0.895 2,-2l0,-1z" id="path54"/>
+     </g>
+     <g id="g56">
+      <path fill="#55acee" fill-rule="nonzero" d="m19.907001,0.9357c-0.391,-0.391 -1.023,-0.391 -1.414,0l-5.657,5.657c-0.39,0.391 -0.391,1.024 0,1.414l5.657,4.658c0.391,0.39 1.023,0.39 1.414,0l5.656,-4.658c0.391,-0.39 0.392,-1.023 0,-1.414l-5.656,-5.657z" id="path58"/>
+     </g>
+     <g id="g60">
+      <path fill="#ffffff" fill-rule="nonzero" d="m17.2,19.8c0,-2.485 -2.015,-4.5 -4.5,-4.5c-2.485,0 -4.5,2.015 -4.5,4.5c0,2.485 2.015,4.5 4.5,4.5c2.485,0 4.5,-2.015 4.5,-4.5" id="path62"/>
+     </g>
+     <g id="g64">
+      <path fill="#ffffff" fill-rule="nonzero" d="m30.2,19.8c0,-2.485 -2.015,-4.5 -4.5,-4.5c-2.485,0 -4.5,2.015 -4.5,4.5c0,2.485 2.015,4.5 4.5,4.5c2.485,0 4.5,-2.015 4.5,-4.5" id="path66"/>
+     </g>
+     <g id="g68">
+      <path fill="#66757f" fill-rule="nonzero" d="m13.2,20.3z" id="path70"/>
+     </g>
+     <g id="g72">
+      <path fill="#66757f" fill-rule="nonzero" d="m13.2,20.3z" id="path74"/>
+     </g>
+     <g id="g76">
+      <path fill="#dd2e44" fill-rule="nonzero" d="m27.2,17.3c0,-0.553 -0.447,-1 -1,-1l-1,0c-0.553,0 -1,0.447 -1,1l0,5c0,0.552 0.447,1 1,1l1,0c0.553,0 1,-0.448 1,-1l0,-5z" id="path78"/>
+     </g>
+     <g id="g80">
+      <path fill="#dd2e44" fill-rule="nonzero" d="m14.2,17.3c0,-0.553 -0.448,-1 -1,-1l-1,0c-0.552,0 -1,0.447 -1,1l0,5c0,0.552 0.448,1 1,1l1,0c0.552,0 1,-0.448 1,-1l0,-5z" id="path82"/>
+     </g>
+     <g id="g84">
+      <path fill="#f5f8fa" fill-rule="nonzero" d="m30.2,8.8c0,-1.381 -1.119,-2.5 -2.5,-2.5l-17,0c-1.381,0 -2.5,1.119 -2.5,2.5c0,1.381 1.119,2.5 2.5,2.5l17,0c1.381,0 2.5,-1.119 2.5,-2.5" id="path86"/>
+     </g>
+     <path fill="#ccd6dd" fill-rule="nonzero" d="m20.2,6.3l-2,0l0,5l2,0l0,-5z" id="path88"/>
+     <path fill="#ccd6dd" fill-rule="nonzero" d="m15.2,6.3l-2,0l0,5l2,0l0,-5z" id="path90"/>
+     <path fill="#ccd6dd" fill-rule="nonzero" d="m25.2,6.3l-2,0l0,5l2,0l0,-5z" id="path92"/>
+    </g>
+   </g>
+   <g id="g94">
+    <g id="g96" clip-path="url(#clipPath98)">
+     <path fill="#ccd6dd" fill-rule="nonzero" d="m10.2,6.3l-2,0l0,5l2,0l0,-5z" id="path102"/>
+     <path fill="#ccd6dd" fill-rule="nonzero" d="m30.2,6.3l-2,0l0,5l2,0l0,-5z" id="path104"/>
+    </g>
+   </g>
+   <g id="g106">
+    <g id="g108" clip-path="url(#clipPath110)">
+     <g id="g114">
+      <path fill="#55acee" fill-rule="nonzero" d="m31.2,1.3z" id="path116"/>
+     </g>
+     <g id="g118">
+      <path fill="#55acee" fill-rule="nonzero" d="m31.2,1.3z" id="path120"/>
+     </g>
+    </g>
+   </g>
+  </g>
+ </g>
+</svg>
