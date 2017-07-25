@@ -46,3 +46,12 @@ span.tweet > img {
 .has-dark-background h4, 
 .has-dark-background pre,
 .has-dark-background .foot { color: #fff !important }
+
+.countdown { 
+    color: white;
+}
+
+.countdown.div{ 
+    width: 100px;
+    display: inline-block;
+}

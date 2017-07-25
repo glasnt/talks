@@ -57,7 +57,7 @@ vv [Flickr, CC-BY 2.0](https://www.flickr.com/photos/developersteve/albums/72157
 Note:
 At PyCon AU 2015, my first Python developers conference, I was supposed to give two talks. 
 
-Tt wasn't the first time I'd been asked to do two talks at a conference, so I thought I'd be fine. 
+It wasn't the first time I'd been asked to do two talks at a conference, so I thought I'd be fine. 
 
 I'd been speaking at conferences for months. Months! Overseas and everything!
 
@@ -98,7 +98,6 @@ How should I start?
 What do I say? What can I say? Should I say anything?
 
 Does context matter? 
-
 I mean, the talk is clearly about project abandonment, so something must have gone down
 
 Was it burnout? Was it a loss of interest? Was it an unexpected passing of the maintainer?
@@ -106,10 +105,15 @@ Was it burnout? Was it a loss of interest? Was it an unexpected passing of the m
 I could share the tips tricks and configuration suggestions without the context. 
 
 Because does it matter? Does context matter? 
+---
+~~~
+Note: 
 
-This is what I had a problem with. All this technology stuff in my talk is solid, current, and repeatable.
+This, in essense, was the dilemma I face. 
 
-Sure as you can see it covers github, but that's the stack I use, so that's the stack of cover.
+All this technology stuff in my talk is solid, current, and repeatable.
+
+Sure, as you you'll see it, covers github, but that's the stack I use, that's the stack I know, well, so that's the stack of cover.
 
 
 But a talk just about configuration, without the story, what kind of a talk is that?
@@ -132,7 +136,7 @@ to put me in this situation?
 
 Yes. Yes it matters. It matters more than the tech. You can google a bunch of
 things around how migrate code and how to make copies and how to do all that
-push button get repo stuff. But if by telling my story it helps a single person
+"push button get repo" stuff. But if by telling my story it helps a single person
 going through the same thing I did feel less alone in what was a pretty crappy
 situation, all things told, then it is absolutely worth it.
 
@@ -152,9 +156,7 @@ It's a few minutes before standup, and I've just cracked this functionality hack
 in elastic search that meant that we could store some complex data within the system
 that meant that a function we wanted to implemented was now achievable. 
 
-I'm bouncing on my feet at this point, because it was a breakthrough three or four
-layers down the stack that meant that we were about to crack full-production readiness .
-
+I'm bouncing on my feet at this point, because I"m excited to share this breakthrough
 ...
 
 Just as standup starts, I get called into the CTO's office. 
@@ -171,7 +173,9 @@ most of who remained left of their own accord.
 
 I was shattered. 
 
-I'd been working there for four years. It was my first role that I'd actually enjoyed working at. 
+I'd been working there for four years. It was my first role that touched open source. 
+
+It was the first job that actually enjoyed.
 
 I'd been learning so much, and was actively encouraged to share that with others. Which is a huge difference from the closed source roles I'd previously been in 
 
@@ -183,14 +187,39 @@ Which is really fun to see your face on a google ad, advertising an employer tha
 
 @ office-dark.png
 
-Note: I was lucky. I was able to find a new job really quickly. I reached out to a friend and former coworker
+Note: I was lucky. I was able to find a new job really quickly. I reached out
+to a friend and former coworker and they were able to get me an interview with
+their employer the next day. 
 
-and they were able to get me an interview with their employer the next day. 
+I was also lucky about the fact that I got let go **after** my big
+international speaking debut. 
 
-I was also lucky about the fact that I got let go **after** my big international debut. 
+I know some people that aren't so lucky. It can take time to find a job,
+especially with such a sudden change of circumstance. 
 
-I know some people that haven't been so lucky. Heck, it took me months to stop using "we" when talking about that employer. I can't even imagine how you'd go about giving a spruik to a place that just turfed you. I've seen people give that talk, and it's heartbreaking to watch. 
 
+---
+
+@ office-dark.png
+Note: 
+Having represented the company, putting my name against them, it was really hard. 
+
+Heck, it took me months to stop using "we" when talking about that employer. 
+
+I was lucky in the sense that I didn't have any upcoming talks at that time. 
+
+I've seen people give that talk. Where they're on the bill with content about
+a company that has recently let them go. Where they're on the ground organising 
+an event, only to be told to walk before the event even ends. 
+
+And that's heartbreaking to watch. 
+
+I have absolutely utter respect for people in that situation that are professionals about it
+and see their prior commitments through. 
+
+---
+
+Note: 
 
 
 Time passes, and  I settle into my new role. Then I start considering what I could do about the project I left behind. 
@@ -201,11 +230,6 @@ Time passes, and  I settle into my new role. Then I start considering what I cou
 
 Note: 
 And thus the original talk content continues
-
----
-~~~
-
-Note: 
 
 In this case, the project is open source, in a public repo on github. So the solution should be easy, right?
 
@@ -242,6 +266,8 @@ Note: But there's even more issues
 Note: Github's 'forking' isn't the same as traditional forking
 
 Sure, you get a copy of the code under your username, but it's not a full working copy with all the bells and whistles of a github repo
+ 
+Which can come as a shock if you aren't expecting it
 ---
 
 ~~~
@@ -274,7 +300,7 @@ It also depends on the site you're on.
 ---
 ~~~
 ###= GitHub Repo w/out LICENCE?
-###- All Rights Reserved
+#- All Rights Reserved
 
 vv https://help.github.com/articles/licensing-a-repository/
 
@@ -398,13 +424,25 @@ By the way, you really shouldn't be using Ruby 1.8 or 1.9 any more, they're end 
 
 ---
 ~~~
-#= Python 3 
+#= Python 2.7 EOL <!-- .slide: data-state="27count" --> 
+####- <div id="27count" class="countdown"></div>
 
-Note: And yeah, I guess Python 3 also has to be considered. 
+Note: Also Python 2.7
 
-Especially since there's a countdown timer now on the end of life of Python 2
+*click*
 
-Once 2.7 goes EOL, then projects can't be used any more.
+Which has a timer on it
+Python 2.7 will not be maintained
+
+Many projects are moving away from python2.7 and dropping support
+
+but the version itself is not going to have any updates. Which means no sec patches
+
+And no sec patches is bad
+
+python 3 is good! you should use it and move your projects to it
+
+But I can hear you up in the back there
 
 ---
 ~~~
@@ -521,7 +559,7 @@ And remember to remove the admin from the original organisation, that could lead
 #= Benefits
 ##- All the PRs, Issues, Commits stay
 ##- 301 Redirects to new URL
-##- You get the commit bit :D
+##- You get the commit bit ✨
 
 
 Note: There are some really good benifits to this over forking
@@ -681,7 +719,8 @@ And then the regret and anxiety set in.
 
 I'd just let everyone down. They knew I was going to fail. I'm a terrible person.  I shouldn't be here. I don't deserve to be here. I want my mum. I want to go home. 
 
-Thankfully only a few moments into this sinking whirlpool of emotions, I was asked if I was okay, and if some freshair would be helpful
+Thankfully, I didn't have much time to sink into these thoughts before a friend **strongly** suggested I go with them outside for some fresh air
+
 ---
 
 @= brisbane.jpg
@@ -800,9 +839,19 @@ I remember Paul keynoting my first ever open source conference, and I regretted 
 
 I think there may have been a "meeting the queen moment" where we all lined up and shook his hand, but I doubted he remembered me. 
 
-So I'm at the dinner, and Paul arrives. And I get the oppurtinity to say hi. And I tell him about how I've seen him speak before, and a major reason why I'm at devworld is to see him. 
+---
 
-He later told me that it was my enthusasm for looking forward to hearing him speak that made him feel more at ease in his role at the conference. And this is coming from a long time public speaker. 
+
+@ devworld.jpg
+ 
+vv [Broadsheet Melbourne](https://www.broadsheet.com.au/melbourne/bars/bimbo-deluxe)
+Note: 
+So I'm at the dinner, and Paul arrives. And I get the oppurtinity to say hi. And I tell him about how I've seen him speak before, and a major reason why I'm at devworld is to see his talk. 
+
+He later told me that it was my enthusasm for looking forward to hearing him speak that made him feel more at ease in his role at the conference, a community he wasn't normally a part of, where he felt like an imposter.
+
+
+And this is coming from a long time public speaker. 
 ---
 @= hellohugs.jpg
 
@@ -810,11 +859,10 @@ vv= [Flickr, CC BY-NC 2.0](https://www.flickr.com/photos/140681500@N07/260641583
 Note: 
 Letting people know that you have been looking forward to seeing them, wishing them luck with their speaking, and actively enjoying their company.. that is what makes a great community. 
 
-Going from just an event name that you've heard of before, into an annual pilgramage to see friends
-and meet people and gather with your people... that is what makes an amazing community. 
+Going from just an event name that you've heard of before, into an annual pilgramage to see friends and gather with your people... that is what makes an amazing community. 
 
 Having a group of people that actively help each other, either by activey volunteering
-to help run events, and reaching out those in their community that need just a little bit of help, that's what makes an incredible community. 
+to help run events, and reaching out those in their community that need just a little bit of help... that's what makes an incredible community. 
 
 ---
 @= helloquestion.jpg
@@ -823,7 +871,7 @@ vv= [Flickr, CC BY-NC 2.0](https://www.flickr.com/photos/140681500@N07/257811250
 
 Note: And it doesn't have to be big hugge things, it can be little things that make people feel included. 
 
-If a speaker asks for questions, making sure there's a question, even if it's from you.
+If a speaker asks for questions, making sure there's at least one, even if it's from you.
 
 Offering to sit with someone at lunch. If you're local, suggesting a local cafe or restaurant.  
 
@@ -841,8 +889,6 @@ Note: Because this community is amazing.
 
 I mean take this picture. This is a plushie group photo, because there are many people that have travelling 
 stuffed animals that they take with them, and even have on the lecturn during their talk. 
-
-[possibly moniyum ref]
 
 I've not just met people through this community, I've made friends. Good friends. 
 
