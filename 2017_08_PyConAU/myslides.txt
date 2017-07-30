@@ -8,7 +8,9 @@ Note: So I'm in a pub in Auckland, as you do.
 
 It's 2013, and I've just finished attending my first open source software conference. It's the first time that the Open Source Developers Conference, or OSDC, has been held outside of Australia. 
 
-Paul Fenwick has just given the closing keynote, and a bunch of delegates have retired to the bar. The organisers are rounding up a bunch of people that are all going to see the blockbuster Gravity in the cinema
+Paul Fenwick has just given the closing keynote, and a bunch of delegates have retired to the bar. The tool written in ruby
+
+There you go.organisers are rounding up a bunch of people that are all going to see the blockbuster Gravity in the cinema
 
 And I'm next to a guy with dreads. 
 
@@ -30,8 +32,13 @@ Moments later, I get a notification. "Someone has retweeted your tweet!"
 @= eddie_2.png
 Note: ... Ah. 
 
+
 Turns out the bloke with the dreads was Ben Dechrai.. who sort of.. co-founded OSDC... yeah... 
 
+---
+
+@ ben.png
+Note:
 This was the start of my journey into public speaking and open source community wrangling 
 
 I've told this story before, and it's been affectionately referred to as my 
@@ -266,6 +273,8 @@ Note: But there's even more issues
 Note: Github's 'forking' isn't the same as traditional forking
 
 Sure, you get a copy of the code under your username, but it's not a full working copy with all the bells and whistles of a github repo
+
+Sure, it's fine if you're forking to work on code with the intent to merge it upstream, but as a seed to starting your own active ecosystem of the code, you get a completely different working environment than if you had cloned the code and pushed up a copy to a new rew repo
  
 Which can come as a shock if you aren't expecting it
 ---
@@ -392,6 +401,10 @@ And there are other otpions
 
 ~~~
 #= But why should<br>you care?
+
+Note: Why would this be important
+
+There are many factors, but there is an elephant in the room that needs to be addressed. 
 
 ---
 ~~~
@@ -604,6 +617,8 @@ See if they are looking for someone
 
 Do they have an IRC channel? A mailing list?
 
+Inactive doesn't mean dead, it could just be really really stable
+
 ---
 
 ~~~
@@ -611,11 +626,8 @@ Do they have an IRC channel? A mailing list?
 
 Note: It's never just that simple.
 
-Politics
+It could come down to politics, pet projects, authors who aren't condusive to outside help, or so amyn other factors
 
-Friendships
-
-Pet Projects
 
 ---
 
@@ -681,6 +693,14 @@ If you are interested in what the project was, the code still exists.
 Note: 
 
 This organisation name wasn't chosen by me, it was deleted by one of my old coworkers. I think it perfectly encapsulates our thoughts on the things we'd created. 
+
+So if you're interested in a ultra-high perforamnce time series data storage system written in Haskell, backed onto ceph
+
+or
+
+A web-based cross-origin time series data visualisation tool written in ruby
+
+There you go.
 
 ---
 
@@ -789,24 +809,61 @@ But I still get anxious. Especially over talks. And **especially** this one.
 
 I've had many sleepless nights just trying to work out how to best word this talk. I can yell about emoji until the cows come home. but this talk is vulnerable. This talk is **hard**
 
-Being asked by Richard to keynote was a last minute thing. I wasn't his first choice, but I knew I could do it. And I wanted to. That's a big thing. 
+I wasn't Richard's first choice for keynote, but when he asked me if I wanted to,  I knew I could do it. And I wanted to. That's a big thing. 
 
 Plus, the fact that a talk slot opening up because of a speaker dropping out about a speaker dropping out of a talk... I couldn't help but use this oppurtunity to give the talk I couldn't give at this conference two years ago.
 
+
+But I know what some of you might be thinking. 
 ---
 
+! eyeroll
+Note: 
+Some of you might be sitting there, zoned out, looking at your phone, and don't give a rats. 
+
+"Forking is just a button on a website, so what? You got fired, ho hum. Woman has feelings, news at 11, I wonder how long it is until morning tea"
+
+The best thing about doing a talk with meta commentary is that I can call this out. 
+
+Do you want to know what it's important?
+
+---
+
+@= empathy.jpg
+
+vv [katemccombs.com](http://www.katemccombs.com/teaandempathy/)
+
+Note: If you weren't in my shoes, if you didn't suffer the trauma, then sure, it could just be a button to you
+
+But it's more than that
+
+This community talks about other stuff than tech. Sure, tools are important, and the technical eccentricies behind them are interesting, but they're used to solve problems that humans have, and humans are far more interesting and intricate and facinating
+
+This community is empathetic and open to more views and experiences and change. 
+
+Technical talks are easy. People talks are HARD. 
+
+And that's why you should be listening. 
+
+
+---
 @= austin.jpg
 
 vv [Flickr](https://www.flickr.com/photos/oreillyconf/34151250760/in/album-72157681448852001/)
 
 Note:
-TODO "woman has emotions, News at 11" 
 
 I'm now an accomplished speaker and member of this community
 
 The other talk from Pycon AU 2015, the one I actually gave? The hat rack talk? I've given that as a keynote. Twice. 
 
-I've helped run confernces all over the world, and spoken at more to boot. I've tried to give back to this amazing community what it gave to me. It can never me enough, but I hope it's something.
+I've helped run confernces all over the world, and spoken at more to boot. 
+
+I've done everything from stacking chairs to being the master of ceremonies for the entire event, to being in papers committees, councils, and committees. 
+
+Although I haven't been the core organiser of an event. Yet. 
+
+ I've tried to give back to this amazing community what it gave to me. It can never me enough, but I hope it's something.
 
 ---
 

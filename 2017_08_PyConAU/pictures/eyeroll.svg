@@ -1,0 +1,71 @@
+<svg width="45" height="45" xmlns="http://www.w3.org/2000/svg">
+ <metadata id="metadata8">image/svg+xml</metadata>
+ <defs>
+  <clipPath clipPathUnits="userSpaceOnUse" id="clipPath16">
+   <path d="m0,36.099998l36,0l0,-36l-36,0l0,36z" id="path18"/>
+  </clipPath>
+ </defs>
+ <g>
+  <title>background</title>
+  <rect fill="none" id="canvas_background" height="47" width="47" y="-1" x="-1"/>
+ </g>
+ <g>
+  <title>Layer 1</title>
+  <g transform="matrix(1.25,0,0,-1.25,0,45) " id="g20">
+   <path fill="#4289c1" fill-rule="nonzero" d="m27,15.099998l-18,0c-2.209,0 -4,-1.791 -4,-4l0,-11l5,0l16,0l5,0l0,11c0,2.209 -1.791,4 -4,4" id="path22"/>
+  </g>
+  <path fill="#2a6797" fill-rule="nonzero" d="m12.5,33.625002l1.25,0l0,11.25l-1.25,0l0,-11.25z" id="path24"/>
+  <g transform="matrix(1.25,0,0,-1.25,0,45) " id="g26">
+   <path fill="#fcab40" fill-rule="nonzero" d="m4.7021,9.604898l-0.283,0.059l-0.511,0c0,0.057 0.023,0.112 0.035,0.169c-0.347,0.214 -0.546,0.625 -0.458,1.047c0.113,0.542 0.643,0.89 1.186,0.78l2.091,-0.433l1.675,0c0.864,0 1.563,-0.7 1.563,-1.563l0,-0.783l0,-0.781l-3.747,0c0,0 -1.481,0.669 -1.551,1.505" id="path28"/>
+  </g>
+  <g transform="matrix(1.25,0,0,-1.25,0,45) " id="g30">
+   <path fill="#ffdc5d" fill-rule="nonzero" d="m0,10.444698c0,0.432 0.35,0.782 0.781,0.782l4.691,-0.782l3.747,0c0.431,0 0.781,-0.351 0.781,-0.781l0,-1.564l-1.401,0l-3.599,0l-4.219,1.564c0,0 -0.781,0.349 -0.781,0.781" id="path32"/>
+  </g>
+  <g transform="matrix(1.25,0,0,-1.25,0,45) " id="g34">
+   <path fill="#4289c1" fill-rule="nonzero" d="m4,0.099998l6,0l0,8l-5,0l-1,-8z" id="path36"/>
+  </g>
+  <path fill="#2a6797" fill-rule="nonzero" d="m32.5,33.625002l-1.25,0l0,11.25l1.25,0l0,-11.25z" id="path38"/>
+  <g transform="matrix(1.25,0,0,-1.25,0,45) " id="g40">
+   <path fill="#fcab40" fill-rule="nonzero" d="m31.297899,9.604898l0.283,0.059l0.511,0c0,0.057 -0.023,0.112 -0.035,0.169c0.347,0.214 0.546,0.625 0.458,1.047c-0.113,0.542 -0.643,0.89 -1.186,0.78l-2.091,-0.433l-1.675,0c-0.864,0 -1.563,-0.7 -1.563,-1.563l0,-0.783l0,-0.781l3.747,0c0,0 1.481,0.669 1.551,1.505" id="path42"/>
+  </g>
+  <g transform="matrix(1.25,0,0,-1.25,0,45) " id="g44">
+   <path fill="#ffdc5d" fill-rule="nonzero" d="m36,10.444698c0,0.432 -0.35,0.782 -0.781,0.782l-4.691,-0.782l-3.747,0c-0.431,0 -0.781,-0.351 -0.781,-0.781l0,-1.564l1.401,0l3.599,0l4.219,1.564c0,0 0.781,0.349 0.781,0.781" id="path46"/>
+  </g>
+  <g transform="matrix(1.25,0,0,-1.25,0,45) " id="g48">
+   <path fill="#4289c1" fill-rule="nonzero" d="m32,0.099998l-6,0l0,8l5,0l1,-8z" id="path50"/>
+  </g>
+  <g transform="matrix(1.25,0,0,-1.25,0,45) " id="g52">
+   <path fill="#ffdc5d" fill-rule="nonzero" d="m9,29.099998l0,-10c0,-4.971 4.029,-9 9,-9c4.971,0 9,4.029 9,9l0,10l-18,0z" id="path54"/>
+  </g>
+  <g transform="matrix(1.25,0,0,-1.25,0,45) " id="g56">
+   <path fill="#ffdc5d" fill-rule="nonzero" d="m10.8472,22.384798c0,-1.58 -0.801,-2.861 -1.788,-2.861c-0.988,0 -1.788,1.281 -1.788,2.861c0,1.58 0.8,2.861 1.788,2.861c0.987,0 1.788,-1.281 1.788,-2.861" id="path58"/>
+  </g>
+  <g transform="matrix(1.25,0,0,-1.25,0,45) " id="g60">
+   <path fill="#ffdc5d" fill-rule="nonzero" d="m28.7292,22.384798c0,-1.58 -0.8,-2.861 -1.788,-2.861c-0.988,0 -1.788,1.281 -1.788,2.861c0,1.58 0.8,2.861 1.788,2.861c0.988,0 1.788,-1.281 1.788,-2.861" id="path62"/>
+  </g>
+  <g transform="matrix(1.25,0,0,-1.25,0,45) " id="g64">
+   <path fill="#ffac33" fill-rule="nonzero" d="m18,35.277198c-7.019,0 -10.139,-4.684 -10.139,-8.588c0,-3.903 1.343,-4.986 1.56,-3.903c0.78,3.903 3.119,5.102 3.119,5.102c4.68,-3.904 3.9,-0.781 3.9,-0.781c4.68,-4.684 2.34,0 2.34,0c1.56,-1.562 6.239,-1.562 6.239,-1.562c0,0 0.78,-1.198 1.56,-2.759c0.78,-1.561 1.56,0 1.56,3.903c0,3.904 -3.9,8.588 -10.139,8.588" id="path66"/>
+  </g>
+  <metadata transform="matrix(0.33382718957500757,0,0,0.33382718957500757,0,0) " id="svg_39">image/svg+xml</metadata>
+  <defs>
+   <clipPath clipPathUnits="userSpaceOnUse" id="svg_25">
+    <path d="m117.698067,25.241364l36,0l0,-36l-36,0l0,36z" id="svg_38"/>
+   </clipPath>
+  </defs>
+  <g id="svg_51">
+   <g id="svg_49">
+    <ellipse ry="3.312436" rx="3.437434" id="svg_47" cy="18.469146" cx="26.999833" stroke-width="0" stroke="#000" fill="#fff"/>
+    <ellipse ry="1.812465" rx="1.937463" id="svg_48" cy="17.281493" cx="26.062112" stroke-width="0" fill="#664500"/>
+   </g>
+   <g id="svg_50">
+    <ellipse ry="3.312436" rx="3.437434" id="svg_42" cy="18.469148" cx="18.000166" stroke-width="0" stroke="#000" fill="#fff"/>
+    <ellipse ry="1.812465" rx="1.937463" id="svg_46" cy="17.281494" cx="17.062445" stroke-width="0" fill="#664500"/>
+   </g>
+  </g>
+  <g stroke="null" id="svg_59">
+   <ellipse ry="0.592838" rx="0.999737" id="svg_56" cy="26.599317" cx="20.760931" stroke-width="0" fill="#664500"/>
+   <rect stroke="#000000" id="svg_57" height="1.187454" width="3.265501" y="26.005591" x="20.867171" stroke-opacity="0" stroke-width="0" fill="#664500"/>
+   <ellipse ry="0.592838" rx="0.999737" id="svg_58" cy="26.599317" cx="24.239069" stroke-width="0" fill="#664500"/>
+  </g>
+ </g>
+</svg>
