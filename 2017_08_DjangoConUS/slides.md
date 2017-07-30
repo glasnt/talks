@@ -688,6 +688,18 @@ Note: updates
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='160px' src='pictures/g/grinning_7.png'><img height='160px' src='pictures/g/crying_7.png'><img height='160px' src='pictures/g/tongue_7.png'><img height='160px' src='pictures/g/kissing_7.png'><img height='160px' src='pictures/g/shock_7.png'></p></div> <!-- .slide: class="center" -->
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='160px' src='pictures/g/grinning_o.png'><img height='160px' src='pictures/g/crying_o.png'><img height='160px' src='pictures/g/tongue_o.png'><img height='160px' src='pictures/g/kissing_o.png'><img height='160px' src='pictures/g/shock_o.png'></p></div> <!-- .slide: class="center" -->
 ---
+## &nbsp;
+ <div style='margin: 0 auto;'><p align='center'><img src='pictures/emojicompat.jpg'></p></div>  <!-- .slide: class="center" -->
+ <span class='foot'>[Emojipedia.org](http://blog.emojipedia.org/fewer-empty-boxes-ahead-for-android-users/)</span>
+
+Note: One this goeogle is fixing is the Emoji compatibility
+
+Apps can update their code to use emoji suport library
+
+Adds a font that features all the latest glyphs, and realtively simple code for app devs to use in order to replace glyphs that the system doesn't know about
+
+Should work for 4.4 onwards, (cc 2013)
+---
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='160px' src='pictures/m/m1_smile.png'><img height='160px' src='pictures/m/m1_cry.png'><img height='160px' src='pictures/m/m1_toung.png'><img height='160px' src='pictures/m/m1_kiss.png'><img height='160px' src='pictures/m/m1_shock.png'></p></div> <!-- .slide: class="center" -->
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='160px' src='pictures/m/m2_smile.png'><img height='160px' src='pictures/m/m2_cry.png'><img height='160px' src='pictures/m/m2_toung.png'><img height='160px' src='pictures/m/m2_kiss.png'><img height='160px' src='pictures/m/m2_shock.png'></p></div> <!-- .slide: class="center" -->
 Note: windows 8 to windows 10
