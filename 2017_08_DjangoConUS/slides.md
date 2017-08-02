@@ -716,6 +716,9 @@ Note: updates in the creators update
 ---
 <img src="pictures/windows-picker.png" width="60%">
 ---
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='160px' src='pictures/e/e1_smile.png'><img height='160px' src='pictures/e/e1_cry.png'><img height='160px' src='pictures/e/e1_toung.png'><img height='160px' src='pictures/e/e1_kiss.png'><img height='160px' src='pictures/e/e1_shock.png'></p></div> <!-- .slide: class="center" -->
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='160px' src='pictures/e/e2_smile.png'><img height='160px' src='pictures/e/e2_cry.png'><img height='160px' src='pictures/e/e2_toung.png'><img height='160px' src='pictures/e/e2_kiss.png'><img height='160px' src='pictures/e/e2_shock.png'></p></div> <!-- .slide: class="center" -->
+---
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/owl2.svg'><img height='400px' src='pictures/owl3.png'></p></div> <!-- .slide: class="center" -->
 
 Note: Emojione have also updated, now with a premoum version
@@ -734,11 +737,16 @@ Note: Andoird 7.1 last few days
 
  <div style='width: 50%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/e/thinking.svg'></p></div> <!-- .slide: class="center" -->
 ---
-# &nbsp;
- <img src="pictures/bald.png" />
-<span class="dasfoot" ><a href="http://www.unicode.org/L2/L2017/17082-natural-hair-color.pdf">UTC Proposal L2/17-082</a></span>
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='80px' src='pictures/unicode.png'><img height='80px' src='pictures/e/1.svg'><img height='80px' src='pictures/e/1.svg'><img height='80px' src='pictures/e/qcap.svg'><img height='80px' src='pictures/space.svg'><img height='80px' src='pictures/space.svg'><img height='80px' src='pictures/e/2.svg'><img height='80px' src='pictures/e/0.svg'><img height='80px' src='pictures/e/1.svg'><img height='80px' src='pictures/e/8.svg'></p></div> <!-- .slide: class="center" -->
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='200px' src='pictures/p/cupcake.png'><img height='200px' src='pictures/p/boot.png'><img height='200px' src='pictures/p/teddy.png'><img height='200px' src='pictures/p/oyster.png'></p></div> <!-- .slide: class="center" -->
+<div style='width: 100%; margin: 0 auto;'><p align='center'><img height='200px' src='pictures/p/hippo.png'><img height='200px' src='pictures/p/kangaroo.png'><img height='200px' src='pictures/p/llama.png'></p></div> <!-- .slide: class="center" -->
+ <span class='foot'>[unicode.org](http://www.unicode.org/L2/L2017/?C=M;O=D)</span>
 ---
- <div style='margin: 0 auto;'><p align='center'><img src='pictures/redhead_2.jpg'></p></div>  <!-- .slide: class="center" -->
+
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='80px' src='pictures/unicode.png'><img height='80px' src='pictures/e/1.svg'><img height='80px' src='pictures/e/qcap.svg'><img height='80px' src='pictures/space.svg'><img height='80px' src='pictures/space.svg'><img height='80px' src='pictures/space.svg'><img height='80px' src='pictures/e/2.svg'><img height='80px' src='pictures/e/0.svg'><img height='80px' src='pictures/e/1.svg'><img height='80px' src='pictures/e/qcap.svg'></p></div> <!-- .slide: class="center" -->
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='200px' src='pictures/z/cuteas.png'><img height='200px' src='pictures/z/delight.png'><img height='200px' src='pictures/z/idea.png'><img height='200px' src='pictures/z/nostalgic.png'></p></div> <!-- .slide: class="center" -->
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='200px' src='pictures/z/goofy.png'><img height='200px' src='pictures/z/hot.png'><img height='200px' src='pictures/z/lucky.png'><img height='200px' src='pictures/z/super.png'></p></div> <!-- .slide: class="center" -->
+ <span class='foot'>[Facebook]()</span>
 ---
  <div style='width: 50%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/e/thinking.svg'></p></div> <!-- .slide: class="center" -->
 
@@ -758,7 +766,7 @@ Note: but what about more combinations?
 
 Note: firefox
 ---
- <div style='width: 50%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/parrot.svg'></p></div> <!-- .slide: class="center" -->
+ <img src="pictures/birb.png" style="margin-top: -50px" />
 
 Note: but what about the partyy parrot? Well... there are serveral birds, but no "tropical bird"
 
@@ -766,8 +774,12 @@ You're welcome.
 
 But that was last November, since then, they've literally added more exclusion factors, including
 ---
- <img src="pictures/tropical_bird.png" style="margin-top: -50px" />
+ <img src="pictures/birbtext.png" style="margin-top: -50px" />
+ <span class='foot'>[L2/17-280](http://www.unicode.org/L2/L2017/17280-tropical-bird-emoji.pdf)</span>
 Note: I submitted a proposal to fix this issue.
+L2/17-280 is the unique identifier
+
+However, since this submission
 
 ---
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='160px' src='pictures/t/dog.svg'><img height='160px' src='pictures/t/poodle.svg'><img height='160px' src='pictures/t/camel1.svg'><img height='160px' src='pictures/t/camel2.svg'><img height='160px' src='pictures/e/cross.svg'></p></div> <!-- .slide: class="center" -->

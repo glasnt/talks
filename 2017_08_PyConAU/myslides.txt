@@ -800,14 +800,24 @@ Seriously. If you need to talk to someone, please do.
 
 Australians covered under medicare, you can get rebates on seeing a professional that can deal with your mental health issues, just as you could for physical issues.  
 ---
-@= dunedin.png
-vv CC-BY-NC-SA 4.0
+@= health_orgs.png
+vv BlueHackers.org &nbsp; OSMI.org &nbsp;  mhprompt.org
+Note: also, there are many organisations that are dedicated specifically to education and community building around recognising and de-stigmatising mentalhealth in tech and open source
 
-Note: I've been seeing a professional for a few years now, and it's helped me a lot. 
+These three are Blue hackers, OSMI, and Prompt
+
+I have stickers from all three with me, if anyone wants one. 
+
+I've been seeing a professional for a few years now, and it's helped me a lot. 
 
 But I still get anxious. Especially over talks. And **especially** this one. 
 
-I've had many sleepless nights just trying to work out how to best word this talk. I can yell about emoji until the cows come home. but this talk is vulnerable. This talk is **hard**
+---
+@= health_orgs.png
+vv BlueHackers.org &nbsp; OSMI.org &nbsp;  mhprompt.org
+
+
+Note: I've had many sleepless nights just trying to work out how to best word this talk. I can yell about emoji until the cows come home. but this talk is vulnerable. This talk is **hard**
 
 I wasn't Richard's first choice for keynote, but when he asked me if I wanted to,  I knew I could do it. And I wanted to. That's a big thing. 
 
@@ -944,21 +954,24 @@ vv CC-BY-NC-SA 4.0
 
 Note: Because this community is amazing. 
 
-I mean take this picture. This is a plushie group photo, because there are many people that have travelling 
-stuffed animals that they take with them, and even have on the lecturn during their talk. 
+I mean take this picture. This is a plushie group photo, because there are many
+people that have travelling stuffed animals that they take with them, and even
+have on the lecturn during their talk. 
 
-I've not just met people through this community, I've made friends. Good friends. 
+I've not just met people through this community, I've made friends. Good
+friends. 
 
-And this is something I've never had before. I've never had a group of people that want me around. 
+And this is something I've never had before. I've never had a group of people
+that want me around. 
 
-I was told once that I can't consider the people I meet, I know, and who I adore at events like this my friends. 
+You may only see them once a year. You may only interact on bug
+trackers, or on IRC. 
 
-That is wrong. 
-You may only see them once a year. You may only interact on bug trackers, or on IRC. 
+The people in open source and in the python and django community can be your friends. 
 
-But they can be your friends. 
+It's because of these amazing people that I'm still here. 
 
-And it's because of these amazing people that I'm still here today. And i'm grateful. 
+And for that, I will be forever grateful. 
 ---
 <br>
 <br>

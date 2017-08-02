@@ -716,6 +716,9 @@ Note: updates in the creators update
 ---
 <img src="pictures/windows-picker.png" width="60%">
 ---
+! e/e1_smile.png | e/e1_cry.png | e/e1_toung.png |e/e1_kiss.png | e/e1_shock.png
+! e/e2_smile.png | e/e2_cry.png | e/e2_toung.png | e/e2_kiss.png | e/e2_shock.png
+---
 ! owl2 | owl3.png 
 
 Note: Emojione have also updated, now with a premoum version
@@ -734,11 +737,16 @@ Note: Andoird 7.1  last few days
 
 ! e/thinking
 ---
-# &nbsp;
-@ bald.png
-<span class="dasfoot" ><a href="http://www.unicode.org/L2/L2017/17082-natural-hair-color.pdf">UTC Proposal L2/17-082</a></span> 
+! unicode.png | e/1 | e/1 | e/qcap | space  | space | e/2 | e/0 | e/1 | e/8
+! p/cupcake.png | p/boot.png | p/teddy.png | p/oyster.png
+<div style='width: 100%; margin: 0 auto;'><p align='center'><img height='200px' src='pictures/p/hippo.png'><img height='200px' src='pictures/p/kangaroo.png'><img height='200px' src='pictures/p/llama.png'></p></div> <!-- .slide: class="center" -->
+vv [unicode.org](http://www.unicode.org/L2/L2017/?C=M;O=D)
 ---
-@= redhead_2.jpg
+
+! unicode.png | e/1 | e/qcap | space | space  | space | e/2 | e/0 | e/1 | e/qcap
+! z/cuteas.png | z/delight.png | z/idea.png | z/nostalgic.png
+! z/goofy.png | z/hot.png | z/lucky.png | z/super.png
+vv [Facebook]()
 ---
 ! e/thinking
 
@@ -758,7 +766,7 @@ vv [Source](https://codepen.io/mandymichael/details/mWXGZp)
 
 Note: firefox
 ---
-! parrot
+@^ birb.png
 
 Note: but what about the partyy parrot? Well... there are serveral birds, but no "tropical bird"
 
@@ -766,8 +774,12 @@ You're welcome.
 
 But that was last November, since then, they've literally added more exclusion factors, including
 ---
-@^ tropical_bird.png
+@^ birbtext.png
+vv [L2/17-280](http://www.unicode.org/L2/L2017/17280-tropical-bird-emoji.pdf)
 Note: I submitted a proposal to fix this issue. 
+L2/17-280 is the unique identifier
+
+However, since this submission
 
 ---
 ! t/dog | t/poodle | t/camel1 | t/camel2 | e/cross 
