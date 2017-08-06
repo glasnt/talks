@@ -33,12 +33,13 @@ Moments later, I get a notification. "Someone has retweeted your tweet!"
 Note: ... Ah.
 
 
-Turns out the bloke with the dreads was Ben Dechrai.. who sort of.. co-founded OSDC... yeah...
 
 ---
 
  <img src="pictures/ben.png" />
 Note: 
+Turns out the bloke with the dreads was Ben Dechrai.. who sort of.. co-founded OSDC... yeah...
+
 This was the start of my journey into public speaking and open source community wrangling
 
 I've told this story before, and it's been affectionately referred to as my
