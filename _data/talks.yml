@@ -1,4 +1,14 @@
-
+- conference:
+    name: PyCon AU
+    link: https://2017.pycon-au.org
+    date: 06-AUG-2017
+    location: Melbourne
+    talks: 
+        - name: How to Handle Abandoned Projects, Take Two
+          slides: 2017_08_PyConAU
+          type: Keynote
+          link: https://2017.pycon-au.org/news/announcing-keynote-speaker-katie-mclaughlin/
+          twitter: https://twitter.com/developerjack/status/893983048919728128
 - conference:
     name: SydJS
     link: http://sydjs.com/
