@@ -85,7 +85,7 @@
 - conference:
     name: SyPy
     link: https://www.meetup.com/sydneypython
-    date: 2017-27-04
+    date: 2017-04-27
     location: Sydney
     talks: 
         - name: Snek in the Browser
