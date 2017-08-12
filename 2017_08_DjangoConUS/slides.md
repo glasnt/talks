@@ -155,7 +155,7 @@ Note: Unicode 8 2015
 ---
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='80px' src='pictures/unicode.png'><img height='80px' src='pictures/e/9.svg'><img height='80px' src='pictures/space.svg'><img height='80px' src='pictures/space.svg'><img height='80px' src='pictures/space.svg'><img height='80px' src='pictures/space.svg'><img height='80px' src='pictures/e/2.svg'><img height='80px' src='pictures/e/0.svg'><img height='80px' src='pictures/e/1.svg'><img height='80px' src='pictures/e/6.svg'></p></div> <!-- .slide: class="center" -->
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='200px' src='pictures/t/shrug.svg'><img height='200px' src='pictures/t/egg.svg'><img height='200px' src='pictures/t/cowboy.svg'><img height='200px' src='pictures/t/duck.svg'></p></div> <!-- .slide: class="center" -->
- <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='200px' src='pictures/t/whisky.svg'><img height='200px' src='pictures/t/kiwifruit.svg'><img height='200px' src='pictures/o/spoon.svg'><img height='200px' src='pictures/t/facepalm-5.svg'></p></div> <!-- .slide: class="center" -->
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='200px' src='pictures/t/owl.svg'><img height='200px' src='pictures/t/kiwifruit.svg'><img height='200px' src='pictures/o/spoon.svg'><img height='200px' src='pictures/t/facepalm-5.svg'></p></div> <!-- .slide: class="center" -->
 Note: 
 
 If you can't see these: Upgrade. You get new emoji ... and security patches
@@ -609,22 +609,25 @@ Where you can, allow the images to be bigger
 
 Twitter DM and Slack message - if only emoji, they're display bigger
 ---
-<img src="pictures/o/alt_0.svg" style="height:170px; width:840px">
-<img src="pictures/o/whisky_display.svg" height="400px">
+<pre class="ficate"><code>&lt;img src&equals;"img/1F989.png" alt="🦉"
+title&equals;"Owl" aria-label&equals;"Emoji: Owl">
+<img src="pictures/o/owl_display.png" height="400px">
 ---
-<img src="pictures/o/alt_1.svg" style="height:170px; width:840px">
-<img src="pictures/o/whisky_display.svg" height="400px">
----
-
-<img src="pictures/o/alt_2.svg" style="height:170px; width:840px">
-<img src="pictures/o/whisky_highlight.svg" height="400px">
+<pre class="ficate"><code>&lt;img <r>src&equals;"img/1F989.png"</r> alt="🦉"
+title&equals;"Owl" aria-label&equals;"Emoji: Owl">
+<img src="pictures/o/owl_display.png" height="400px">
 ---
 
-<img src="pictures/o/alt_3.svg" style="height:170px; width:840px">
-<img src="pictures/o/whisky_mouse.svg" height="400px">
+<pre class="ficate"><code>&lt;img src&equals;"img/1F989.png" <r>alt="🦉"</r>
+title&equals;"Owl" aria-label&equals;"Emoji: Owl">
+<img src="pictures/o/owl_highlight.png" height="400px">
 ---
-<img src="pictures/o/alt_4.svg" style="height:170px; width:840px">
-<img src="pictures/o/whisky_speaker.svg" height="400px">
+<pre class="ficate"><code>&lt;img src&equals;"img/1F989.png" alt="🦉"<br><r>title&equals;"Owl"</r> aria-label&equals;"Emoji: Owl">
+<img src="pictures/o/owl_point.png" height="400px">
+---
+<pre class="ficate"><code>&lt;img src&equals;"img/1F989.png" alt="🦉"
+title&equals;"Owl" <r>aria-label&equals;"Emoji: Owl"</r>>
+<img src="pictures/o/owl_say.png" height="400px">
 ---
 ## `pip install emojificate` <!-- .slide: class="center" -->
 ---
@@ -632,21 +635,23 @@ Twitter DM and Slack message - if only emoji, they're display bigger
 
 {% load emojificate %}
 
-Content: {{ content|emojificate }}
+&lt;dt>Content&lt;/dt> 
+&lt;dd>{{ words|emojificate }}&lt;/dd>
 </code></pre> 
  <span class='foot'>[Solve for Emoji](http://glasnt.com/blog/2016/08/06/solve-for-emoji.html)</span>
+Note: loading a template tag, and then passing 'content' through a template filter
 ---
 <pre style="font-size: 120%"><code>
 
-
 {% emojified %}
 
-Oh my gosh, unicorn emoji! 🦄
+😎🌈💕 
 
 {% endemojified %}
 
 </code></pre> 
  <span class='foot'>[Solve for Emoji](http://glasnt.com/blog/2016/08/06/solve-for-emoji.html)</span>
+Note: full template tag
 ---
  <div style='width: 50%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/t/lightbulb.svg'></p></div> <!-- .slide: class="center" -->
 

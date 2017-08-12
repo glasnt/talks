@@ -155,7 +155,7 @@ Note: Unicode 8 2015
 ---
 ! unicode.png | e/9 |  space | space | space  | space | e/2 | e/0 | e/1 | e/6
 ! t/shrug | t/egg | t/cowboy | t/duck
-! t/whisky | t/kiwifruit | o/spoon | t/facepalm-5 
+! t/owl | t/kiwifruit | o/spoon | t/facepalm-5 
 Note: 
 
 If you can't see these: Upgrade. You get new emoji ... and security patches
@@ -609,22 +609,25 @@ Where you can, allow the images to be bigger
 
 Twitter DM and Slack message - if only emoji, they're display bigger
 ---
-<img src="pictures/o/alt_0.svg" style="height:170px; width:840px">
-<img src="pictures/o/whisky_display.svg" height="400px">
+<pre class="ficate"><code>&lt;img src&equals;"img/1F989.png" alt="🦉"
+title&equals;"Owl" aria-label&equals;"Emoji: Owl">
+<img src="pictures/o/owl_display.png" height="400px">
 ---
-<img src="pictures/o/alt_1.svg" style="height:170px; width:840px">
-<img src="pictures/o/whisky_display.svg" height="400px">
----
-
-<img src="pictures/o/alt_2.svg" style="height:170px; width:840px">
-<img src="pictures/o/whisky_highlight.svg" height="400px">
+<pre class="ficate"><code>&lt;img <r>src&equals;"img/1F989.png"</r> alt="🦉"
+title&equals;"Owl" aria-label&equals;"Emoji: Owl">
+<img src="pictures/o/owl_display.png" height="400px">
 ---
 
-<img src="pictures/o/alt_3.svg" style="height:170px; width:840px">
-<img src="pictures/o/whisky_mouse.svg" height="400px">
+<pre class="ficate"><code>&lt;img src&equals;"img/1F989.png" <r>alt="🦉"</r>
+title&equals;"Owl" aria-label&equals;"Emoji: Owl">
+<img src="pictures/o/owl_highlight.png" height="400px">
 ---
-<img src="pictures/o/alt_4.svg" style="height:170px; width:840px">
-<img src="pictures/o/whisky_speaker.svg" height="400px">
+<pre class="ficate"><code>&lt;img src&equals;"img/1F989.png" alt="🦉"<br><r>title&equals;"Owl"</r> aria-label&equals;"Emoji: Owl">
+<img src="pictures/o/owl_point.png" height="400px">
+---
+<pre class="ficate"><code>&lt;img src&equals;"img/1F989.png" alt="🦉"
+title&equals;"Owl" <r>aria-label&equals;"Emoji: Owl"</r>>
+<img src="pictures/o/owl_say.png" height="400px">
 ---
 ##= `pip install emojificate`
 ---
@@ -632,21 +635,23 @@ Twitter DM and Slack message - if only emoji, they're display bigger
 
 {% load emojificate %}
 
-Content: {{ content|emojificate }} 
+&lt;dt>Content&lt;/dt>
+&lt;dd>{{ words|emojificate }}&lt;/dd>
 </code></pre>
 vv [Solve for Emoji](http://glasnt.com/blog/2016/08/06/solve-for-emoji.html)
+Note: loading a template tag, and then passing 'content' through a template filter
 ---
 <pre style="font-size: 120%"><code>
 
-
 {% emojified %}
 
-Oh my gosh, unicorn emoji! 🦄
+😎🌈💕 
 
 {% endemojified %}
 
 </code></pre>
 vv [Solve for Emoji](http://glasnt.com/blog/2016/08/06/solve-for-emoji.html)
+Note: full template tag
 ---
 ! t/lightbulb
 
