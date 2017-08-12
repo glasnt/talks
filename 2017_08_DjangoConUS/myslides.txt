@@ -633,7 +633,7 @@ title&equals;"Owl" <r>aria-label&equals;"Emoji: Owl"</r>>
 ---
 <pre style="font-size: 120%"><code>
 
-{% load emojificate %}
+&lcub;&percnt; load emojificate %}
 
 &lt;dt>Content&lt;/dt>
 &lt;dd>{{ words|emojificate }}&lt;/dd>
@@ -643,11 +643,11 @@ Note: loading a template tag, and then passing 'content' through a template filt
 ---
 <pre style="font-size: 120%"><code>
 
-{% emojified %}
+;&lcub;&percnt; emojified %}
 
 😎🌈💕 
 
-{% endemojified %}
+;&lcub;&percnt; endemojified %}
 
 </code></pre>
 vv [Solve for Emoji](http://glasnt.com/blog/2016/08/06/solve-for-emoji.html)
