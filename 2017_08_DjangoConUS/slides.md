@@ -276,8 +276,8 @@ Note:
 
 Note: Compatibility - Cowboy added to compat with Yahoo messenger
 ---
-
- <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='266px' src='pictures/t/libra.svg'><img height='266px' src='pictures/t/cancer.svg'><img height='266px' src='pictures/e/qcap.svg'></p></div> <!-- .slide: class="center" -->
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='266px' src='pictures/t/leo.svg'><img height='266px' src='pictures/t/cancer.svg'><img height='266px' src='pictures/t/scorpius.svg'></p></div> <!-- .slide: class="center" -->
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='266px' src='pictures/t/lion.svg'><img height='266px' src='pictures/t/crab.svg'><img height='266px' src='pictures/e/qcap.svg'></p></div> <!-- .slide: class="center" -->
 
 Note: Completeness - they didnt have the full zodiac set until 8.0 when 5 were added (including scorpio)
 ---
@@ -357,8 +357,33 @@ Note: Surprisingly enough, this works
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='114px' src='pictures/g/R.svg'><img height='114px' src='pictures/g/F.svg'><img height='114px' src='pictures/g/C.svg'><img height='114px' src='pictures/e/3.svg'><img height='114px' src='pictures/e/4.svg'><img height='114px' src='pictures/e/9.svg'><img height='114px' src='pictures/e/2.svg'></p></div> <!-- .slide: class="center" -->
 ---
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='160px' src='pictures/space.svg'><img height='160px' src='pictures/space.svg'><img height='160px' src='pictures/o/spoon.svg'><img height='160px' src='pictures/space.svg'><img height='160px' src='pictures/space.svg'></p></div> <!-- .slide: class="center" -->
-### `http://xn--9q9h.ws`
+### `https://xn--9q9h.ws`
+
 ---
+ <div style='width: 50%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/t/tabbed.svg'></p></div> <!-- .slide: class="center" -->
+
+Note: Speaking of the web, here's another interesting thing, to do with tabs in browsers
+
+---
+
+ <img src="pictures/locktab_1.png" style="margin-top: -50px" />
+
+Note: Emoji pedia is awesome, you can look up emoji and see all the cross-browser fun
+
+But notice something that's inconsistent?
+
+---
+
+ <img src="pictures/locktab_2.png" style="margin-top: -50px" />
+Note: Safari won't display lock emoji in brower tabs
+
+This is GOOD
+
+otherwise, people might assume the page is secured when it's not
+
+
+---
+
  <div style='width: 50%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/e/keyboard.svg'></p></div> <!-- .slide: class="center" -->
 
 Note: So how do you get the input in?
@@ -603,6 +628,26 @@ Twitter DM and Slack message - if only emoji, they're display bigger
 ---
 ## `pip install emojificate` <!-- .slide: class="center" -->
 ---
+<pre style="font-size: 120%"><code>
+
+{% load emojificate %}
+
+Content: {{ content|emojificate }}
+</code></pre> 
+ <span class='foot'>[Solve for Emoji](http://glasnt.com/blog/2016/08/06/solve-for-emoji.html)</span>
+---
+<pre style="font-size: 120%"><code>
+
+
+{% emojified %}
+
+Oh my gosh, unicorn emoji! 🦄
+
+{% endemojified %}
+
+</code></pre> 
+ <span class='foot'>[Solve for Emoji](http://glasnt.com/blog/2016/08/06/solve-for-emoji.html)</span>
+---
  <div style='width: 50%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/t/lightbulb.svg'></p></div> <!-- .slide: class="center" -->
 
 Note: TIP for general use
@@ -644,10 +689,6 @@ Note: I know right? mind. blown.
 Note: 
 which is also a candidate.
 ---
- <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='80px' src='pictures/unicode.png'><img height='80px' src='pictures/e/10.svg'><img height='80px' src='pictures/space.svg'><img height='80px' src='pictures/space.svg'><img height='80px' src='pictures/space.svg'><img height='80px' src='pictures/space.svg'><img height='80px' src='pictures/e/2.svg'><img height='80px' src='pictures/e/0.svg'><img height='80px' src='pictures/e/1.svg'><img height='80px' src='pictures/e/7.svg'></p></div> <!-- .slide: class="center" -->
- <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='266px' src='pictures/gb.png'><img height='266px' src='pictures/sc.png'><img height='266px' src='pictures/wa.png'></p></div> <!-- .slide: class="center" -->
----
-
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='80px' src='pictures/unicode.png'><img height='80px' src='pictures/e/9.svg'><img height='80px' src='pictures/space.svg'><img height='80px' src='pictures/space.svg'><img height='80px' src='pictures/space.svg'><img height='80px' src='pictures/space.svg'><img height='80px' src='pictures/space.svg'><img height='80px' src='pictures/space.svg'><img height='80px' src='pictures/unicode.png'><img height='80px' src='pictures/e/10.svg'></p></div> <!-- .slide: class="center" -->
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/sweat9.png'><img height='400px' src='pictures/sweat10.png'></p></div> <!-- .slide: class="center" -->
 
@@ -761,10 +802,6 @@ Note: but what about more combinations?
  <div style='width: 50%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/o/manhattan.svg'></p></div> <!-- .slide: class="center" -->
 ---
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='200px' src='pictures/space.svg'><img height='200px' src='pictures/t/chipmunk.svg'><img height='200px' src='pictures/t/tophat.svg'><img height='200px' src='pictures/space.svg'></p></div> <!-- .slide: class="center" -->
----
- <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='200px' src='pictures/space.svg'><img height='200px' src='pictures/t/fox.svg'><img height='200px' src='pictures/t/globe_a.svg'><img height='200px' src='pictures/space.svg'></p></div> <!-- .slide: class="center" -->
-
-Note: firefox
 ---
  <img src="pictures/birb.png" style="margin-top: -50px" />
 

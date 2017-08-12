@@ -276,8 +276,8 @@ Note:
 
 Note: Compatibility - Cowboy added to compat with Yahoo messenger
 ---
-
-! t/libra | t/cancer | e/qcap
+! t/leo | t/cancer | t/scorpius
+! t/lion | t/crab | e/qcap
 
 Note: Completeness - they didnt have the full zodiac set until 8.0 when 5 were added (including scorpio)
 ---
@@ -357,8 +357,33 @@ Note: Surprisingly enough, this works
 ! g/R | g/F | g/C | e/3 | e/4 | e/9 | e/2 
 ---
 ! space | space | o/spoon | space | space 
-###  `http://xn--9q9h.ws`
+###  `https://xn--9q9h.ws`
+
 ---
+! t/tabbed
+
+Note: Speaking of the web, here's another interesting thing, to do with tabs in browsers
+
+---
+
+@^ locktab_1.png
+
+Note: Emoji pedia is awesome, you can look up emoji and see all the cross-browser fun
+
+But notice something that's inconsistent? 
+
+---
+
+@^ locktab_2.png
+Note: Safari won't display lock emoji in brower tabs
+
+This is GOOD
+
+otherwise, people might assume the page is secured when it's not
+
+
+---
+
 ! e/keyboard
 
 Note: So how do you get the input in?
@@ -603,6 +628,26 @@ Twitter DM and Slack message - if only emoji, they're display bigger
 ---
 ##= `pip install emojificate`
 ---
+<pre style="font-size: 120%"><code>
+
+{% load emojificate %}
+
+Content: {{ content|emojificate }} 
+</code></pre>
+vv [Solve for Emoji](http://glasnt.com/blog/2016/08/06/solve-for-emoji.html)
+---
+<pre style="font-size: 120%"><code>
+
+
+{% emojified %}
+
+Oh my gosh, unicorn emoji! 🦄
+
+{% endemojified %}
+
+</code></pre>
+vv [Solve for Emoji](http://glasnt.com/blog/2016/08/06/solve-for-emoji.html)
+---
 ! t/lightbulb
 
 Note: TIP for general use
@@ -644,10 +689,6 @@ Note: I know right? mind. blown.
 Note:
 which is also a candidate.
 ---
-! unicode.png | e/10 | space | space | space  | space | e/2 | e/0 | e/1 | e/7
-! gb.png | sc.png | wa.png
----
-
 ! unicode.png | e/9 | space | space | space  | space | space | space | unicode.png | e/10
 ! sweat9.png | sweat10.png
 
@@ -761,10 +802,6 @@ vv [Source](https://codepen.io/mandymichael/details/mWXGZp)
 ! o/manhattan 
 ---
 ! space | t/chipmunk | t/tophat | space
----
-! space | t/fox | t/globe_a | space
-
-Note: firefox
 ---
 @^ birb.png
 
