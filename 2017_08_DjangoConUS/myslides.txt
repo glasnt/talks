@@ -290,7 +290,7 @@ Note: Frequently requested
 Note: some things that don't count
 
 ---
-! t/wine | t/cocktail | t/tropical | t/whisky | e/cross
+! f/ice.png | f/icecream.png | f/icecream2.png | e/cross
 Note: Overly specific
 
 Can't have a manhattan or a long island
@@ -802,11 +802,13 @@ Note: but what about more combinations?
 
 vv [Source](https://codepen.io/mandymichael/details/mWXGZp)
 ---
-! t/cocktail | e/fitz_6 | t/cherry 
+! t/banana | t/icecream
 ---
-! o/manhattan 
+@ banana-split.png
 ---
 ! space | t/chipmunk | t/tophat | space
+---
+@ shipit.png
 ---
 @^ birb.png
 

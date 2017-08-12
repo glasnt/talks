@@ -290,7 +290,7 @@ Note: Frequently requested
 Note: some things that don't count
 
 ---
- <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='160px' src='pictures/t/wine.svg'><img height='160px' src='pictures/t/cocktail.svg'><img height='160px' src='pictures/t/tropical.svg'><img height='160px' src='pictures/t/whisky.svg'><img height='160px' src='pictures/e/cross.svg'></p></div> <!-- .slide: class="center" -->
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='200px' src='pictures/f/ice.png'><img height='200px' src='pictures/f/icecream.png'><img height='200px' src='pictures/f/icecream2.png'><img height='200px' src='pictures/e/cross.svg'></p></div> <!-- .slide: class="center" -->
 Note: Overly specific
 
 Can't have a manhattan or a long island
@@ -802,11 +802,13 @@ Note: but what about more combinations?
 
  <span class='foot'>[Source](https://codepen.io/mandymichael/details/mWXGZp)</span>
 ---
- <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='266px' src='pictures/t/cocktail.svg'><img height='266px' src='pictures/e/fitz_6.svg'><img height='266px' src='pictures/t/cherry.svg'></p></div> <!-- .slide: class="center" -->
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/t/banana.svg'><img height='400px' src='pictures/t/icecream.svg'></p></div> <!-- .slide: class="center" -->
 ---
- <div style='width: 50%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/o/manhattan.svg'></p></div> <!-- .slide: class="center" -->
+ <img src="pictures/banana-split.png" />
 ---
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='200px' src='pictures/space.svg'><img height='200px' src='pictures/t/chipmunk.svg'><img height='200px' src='pictures/t/tophat.svg'><img height='200px' src='pictures/space.svg'></p></div> <!-- .slide: class="center" -->
+---
+ <img src="pictures/shipit.png" />
 ---
  <img src="pictures/birb.png" style="margin-top: -50px" />
 
