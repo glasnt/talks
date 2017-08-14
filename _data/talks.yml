@@ -1,4 +1,14 @@
 - conference:
+    name: DjangoCon US
+    link: https://2017.djangocon.us/
+    date: 10-AUG-2017
+    location: Spokane, WA
+    talks: 
+        - name: Django Translations for the next generation
+          link: https://github.com/glasnt/millennial
+          twitter: https://twitter.com/limedaring/status/897190563685978112
+
+- conference:
     name: PyCon AU
     link: https://2017.pycon-au.org
     date: 06-AUG-2017
