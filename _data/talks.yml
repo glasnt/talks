@@ -7,6 +7,8 @@
         - name: Django Translations for the next generation
           link: https://github.com/glasnt/millennial
           twitter: https://twitter.com/limedaring/status/897190563685978112
+        - name: The Power ⚡️ and Responsibility 😓 of Unicode Adoption ✨
+          link: 2017_08_DjangoConUS
 
 - conference:
     name: PyCon AU

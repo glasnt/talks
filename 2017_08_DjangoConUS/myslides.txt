@@ -187,6 +187,12 @@ If you can't see these: Upgrade. You get new emoji ... and security patches
 
 ## `\u1F468  \u2764  \u1F468`
 
+Note: "emoji tax"
+
+This one emoji takes multiple characters to encode, which doesn't matter 
+
+except in places like twitter or text where character counts count
+
 ---
 
 ! g/US
@@ -783,10 +789,10 @@ Note: Andoird 7.1  last few days
 
 ! e/thinking
 ---
-! unicode.png | e/1 | e/1 | e/qcap | space  | space | e/2 | e/0 | e/1 | e/8
+! unicode.png | e/1 | e/qcap | space | space  | space | e/2 | e/0 | e/1 | e/qcap
 ! p/cupcake.png | p/boot.png | p/teddy.png | p/oyster.png
 <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='200px' src='pictures/p/hippo.png'><img height='200px' src='pictures/p/kangaroo.png'><img height='200px' src='pictures/p/llama.png'></p></div> <!-- .slide: class="center" -->
-vv [unicode.org](http://www.unicode.org/L2/L2017/?C=M;O=D)
+vv [L2/17-284](http://www.unicode.org/L2/L2017/17284-emoji-recs.pdf)
 ---
 
 ! unicode.png | e/1 | e/qcap | space | space  | space | e/2 | e/0 | e/1 | e/qcap
@@ -800,7 +806,7 @@ Note: but what about more combinations?
 ---
 @ mandy.png
 
-vv [Source](https://codepen.io/mandymichael/details/mWXGZp)
+vv [Mandy Michael, CodePen](https://codepen.io/mandymichael/details/mWXGZp)
 ---
 ! t/banana | t/icecream
 ---

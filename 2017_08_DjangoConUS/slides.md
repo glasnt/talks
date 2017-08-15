@@ -187,6 +187,12 @@ If you can't see these: Upgrade. You get new emoji ... and security patches
 
 ## `\u1F468 \u2764 \u1F468`
 
+Note: "emoji tax"
+
+This one emoji takes multiple characters to encode, which doesn't matter
+
+except in places like twitter or text where character counts count
+
 ---
 
  <div style='width: 50%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/g/US.svg'></p></div> <!-- .slide: class="center" -->
@@ -783,10 +789,10 @@ Note: Andoird 7.1 last few days
 
  <div style='width: 50%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/e/thinking.svg'></p></div> <!-- .slide: class="center" -->
 ---
- <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='80px' src='pictures/unicode.png'><img height='80px' src='pictures/e/1.svg'><img height='80px' src='pictures/e/1.svg'><img height='80px' src='pictures/e/qcap.svg'><img height='80px' src='pictures/space.svg'><img height='80px' src='pictures/space.svg'><img height='80px' src='pictures/e/2.svg'><img height='80px' src='pictures/e/0.svg'><img height='80px' src='pictures/e/1.svg'><img height='80px' src='pictures/e/8.svg'></p></div> <!-- .slide: class="center" -->
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='80px' src='pictures/unicode.png'><img height='80px' src='pictures/e/1.svg'><img height='80px' src='pictures/e/qcap.svg'><img height='80px' src='pictures/space.svg'><img height='80px' src='pictures/space.svg'><img height='80px' src='pictures/space.svg'><img height='80px' src='pictures/e/2.svg'><img height='80px' src='pictures/e/0.svg'><img height='80px' src='pictures/e/1.svg'><img height='80px' src='pictures/e/qcap.svg'></p></div> <!-- .slide: class="center" -->
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='200px' src='pictures/p/cupcake.png'><img height='200px' src='pictures/p/boot.png'><img height='200px' src='pictures/p/teddy.png'><img height='200px' src='pictures/p/oyster.png'></p></div> <!-- .slide: class="center" -->
 <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='200px' src='pictures/p/hippo.png'><img height='200px' src='pictures/p/kangaroo.png'><img height='200px' src='pictures/p/llama.png'></p></div> <!-- .slide: class="center" -->
- <span class='foot'>[unicode.org](http://www.unicode.org/L2/L2017/?C=M;O=D)</span>
+ <span class='foot'>[L2/17-284](http://www.unicode.org/L2/L2017/17284-emoji-recs.pdf)</span>
 ---
 
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='80px' src='pictures/unicode.png'><img height='80px' src='pictures/e/1.svg'><img height='80px' src='pictures/e/qcap.svg'><img height='80px' src='pictures/space.svg'><img height='80px' src='pictures/space.svg'><img height='80px' src='pictures/space.svg'><img height='80px' src='pictures/e/2.svg'><img height='80px' src='pictures/e/0.svg'><img height='80px' src='pictures/e/1.svg'><img height='80px' src='pictures/e/qcap.svg'></p></div> <!-- .slide: class="center" -->
@@ -800,7 +806,7 @@ Note: but what about more combinations?
 ---
  <img src="pictures/mandy.png" />
 
- <span class='foot'>[Source](https://codepen.io/mandymichael/details/mWXGZp)</span>
+ <span class='foot'>[Mandy Michael, CodePen](https://codepen.io/mandymichael/details/mWXGZp)</span>
 ---
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/t/banana.svg'><img height='400px' src='pictures/t/icecream.svg'></p></div> <!-- .slide: class="center" -->
 ---
