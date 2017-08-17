@@ -1,4 +1,5 @@
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='160px' src='pictures/space.svg'><img height='160px' src='pictures/t/unicorn.svg'><img height='160px' src='pictures/t/tree.svg'><img height='160px' src='pictures/t/megaphone.svg'><img height='160px' src='pictures/space.svg'></p></div> <!-- .slide: class="center" -->
+Note: mention emoji movie
 ---
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='266px' src='pictures/o/bolt.svg'><img height='266px' src='pictures/g/sweat.svg'><img height='266px' src='pictures/t/sparkles.svg'></p></div> <!-- .slide: class="center" -->
  <img src="pictures/footer.svg" />
@@ -649,11 +650,11 @@ Note: loading a template tag, and then passing 'content' through a template filt
 ---
 <pre style="font-size: 120%"><code>
 
-;&lcub;&percnt; emojified %}
+&lcub;&percnt; emojified %}
 
 😎🌈💕 
 
-;&lcub;&percnt; endemojified %}
+&lcub;&percnt; endemojified %}
 
 </code></pre> 
  <span class='foot'>[Solve for Emoji](http://glasnt.com/blog/2016/08/06/solve-for-emoji.html)</span>

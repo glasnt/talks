@@ -1,4 +1,5 @@
 ! space  | t/unicorn | t/tree |  t/megaphone | space
+Note: mention emoji movie
 ---
 ! o/bolt | g/sweat | t/sparkles
 @ footer.svg
@@ -649,11 +650,11 @@ Note: loading a template tag, and then passing 'content' through a template filt
 ---
 <pre style="font-size: 120%"><code>
 
-;&lcub;&percnt; emojified %}
+&lcub;&percnt; emojified %}
 
 😎🌈💕 
 
-;&lcub;&percnt; endemojified %}
+&lcub;&percnt; endemojified %}
 
 </code></pre>
 vv [Solve for Emoji](http://glasnt.com/blog/2016/08/06/solve-for-emoji.html)
