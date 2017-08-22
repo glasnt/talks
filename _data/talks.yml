@@ -6,6 +6,7 @@
     talks: 
         - name: Django Translations for the next generation
           link: https://github.com/glasnt/millennial
+          type: Lightning Talk
           twitter: https://twitter.com/limedaring/status/897190563685978112
         - name: The Power ⚡️ and Responsibility 😓 of Unicode Adoption ✨
           slides: 2017_08_DjangoConUS
@@ -548,7 +549,7 @@
     date: 2014-11-01
     talks:
       - name: Integrating Machiavelli and Nagios
-        type: Short Talks
+        type: Short Talk
         slides: 2014_11_DevOps
         link: http://www.meetup.com/devops-sydney/events/153704752/
 
@@ -567,3 +568,6 @@
         link: http://2014.osdc.com.au/presentation/481-all-else-be-graphed
         video: https://www.youtube.com/watch?v=6i0kMCOOIaY
         slides: 2014_10_OSDC_Machiavelli
+      - name: Tapestries and Hardware
+        video: https://youtu.be/8BV2u7Zxh78?t=1712
+        type: Lightning Talk
