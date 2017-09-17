@@ -8,9 +8,11 @@
           link: https://github.com/glasnt/millennial
           type: Lightning Talk
           twitter: https://twitter.com/limedaring/status/897190563685978112
+          video: https://youtu.be/r_YIOg_NRkk?t=556
         - name: The Power ⚡️ and Responsibility 😓 of Unicode Adoption ✨
           slides: 2017_08_DjangoConUS
           twitter: https://twitter.com/willyhakim/status/897588082089705472
+          video: https://www.youtube.com/watch?v=BSQ_VmQfBZE
 
 - conference:
     name: PyCon AU
@@ -23,6 +25,8 @@
           type: Keynote
           link: https://2017.pycon-au.org/news/announcing-keynote-speaker-katie-mclaughlin/
           twitter: https://twitter.com/developerjack/status/893983048919728128
+          video: https://www.youtube.com/watch?v=prFaJugC95Y
+
 - conference:
     name: SydJS
     link: http://sydjs.com/
@@ -43,6 +47,7 @@
           slides: 2017_07_DDDSydney
           type: Keynote
           twitter: https://twitter.com/moniyum/status/886190285595607040
+          video: https://www.youtube.com/watch?v=Yo37Wnkyzt4 
 
 - conference:
     name: PyCon US
