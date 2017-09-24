@@ -281,6 +281,7 @@
       - name: JavaScript is Awe-ful
         link: https://tek.phparch.com/speakers/#70644
         slides: 2016_05_PHPTek_JavaScript
+        feedback: https://joind.in/event/phptek-2016/javascript-is-awe-ful
 
 -   conference:
       name: SydPHP
