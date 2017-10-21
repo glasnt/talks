@@ -5,8 +5,8 @@ background-image: url(images/test-pattern.png)
 class: title
 
 # ...Bees?
-
 ## GitHub Constellation, Sydney
+
 ![](images/footersmll.png)
 
 
@@ -27,7 +27,7 @@ background-image: url(images/ghosa-two.jpg)
 Beeware was fortunate enough to be one of these projects, and we were able to showcase our work and share what our project is all about
 
 ---
-
+class: title
 ![](images/beeware.png)
 
 
@@ -69,7 +69,7 @@ And if you wanted your app to not just be client side, but server driven, you're
 And that's not even considering if you want a native desktop application on Windows or Linux
 
 ---
-
+class: title
 ![](images/beeware.png)
 
 ???
@@ -78,98 +78,94 @@ This is where beeware comes in. Instead of having to learn half a dozen rpogramm
 
 ---
 
+class: title
+# github.com/python/cpython
+
 ![](images/python-logo.png)
 
 ???
 
-Python
+And it's all in python. 
 
-Why Python?
+Why python?
 
-TODO
+Python is a highly versitile language. Accessible to newcomers, but with enough grunt for the heavy lifting, powering sites like Instagram
+
+It's desgined for teaching, works on every platform, and it's free and open source software
+
+
+Fun fact: python has recently migrated to GitHub from a self-hosted mercurial repository
+
+
 ---
 
 # &nbsp;
 # github.com/pybee/toga
 ![](images/toga-icon.png)
----
-# &nbsp;
-# freedom.py
 
+???
+
+To see just how beeware works, here's an example application built in Toga
+
+Toga is a widget toolkit. We define an application with widgets declared by toga, and when it comes time to run the code on the host platform, we use the toga abstraction to call the base widgets. 
+
+Apple buttons on iOS, Android buttons on android, and so on. 
+
+The reason to do all of this is that we want our apps to look like they belong. 
+
+If any user can tell that the app they're using is made with beeware, we've failed. 
+
+---
 ```python
 import toga
 
-def build(app):
-    ...
+class Freedom(toga.App):
+  def calculate(self, widget):
+    try:
+      self.c_input.value = (float(self.f_input.value) - 32.0) * 5.0 / 9.0
+    except Exception:
+      self.c_input.value = '???'
+
+  def startup(self):
+    self.main_window = toga.MainWindow(self.name)
+    self.main_window.app = self
+
+    c_box = toga.Box()
+    f_box = toga.Box()
+    box = toga.Box()
+
+    self.c_input = toga.TextInput(readonly=True)
+    self.f_input = toga.TextInput()
+    # ...
+```
+---
+### &nbsp;
+```python
+    # ...
+    c_label = toga.Label('Celcius')
+    f_label = toga.Label('Fahrenheit')
+    join_label = toga.Label('is equivalent to')
+
+    button = toga.Button('Calculate', on_press=self.calculate)
+
+    # .. styling ..
+
+    f_box.add([self.f_input, f_label])
+    c_box.add([join_label, self.c_input, c_label])
+    box.add([f_box, c_box, button])
+
+    self.main_window.content = box
+    self.main_window.show()
 
 def main():
-    return toga.App('Freedom', 'org.pybee.freedom', startup=build)
-
-if __name__ == '__main__':
-    main().main_loop()
-```
----
-
-# &nbsp;
-```python
-# def build(app)
-c_box = toga.Box()
-f_box = toga.Box()
-box = toga.Box()
-
-c_input = toga.TextInput(readonly=True)
-f_input = toga.TextInput()
-
-c_label = toga.Label('Celsius', alignment=LEFT)
-f_label = toga.Label('Fahrenheit', alignment=toga.LEFT_ALIGNED)
-join_label = toga.Label('is equivalent to', alignment=toga.RIGHT_ALIGNED)
+  return Freedom('Freedom', 'org.pybee.freedom')
 
 ```
 ---
 # &nbsp;
-```python
-def calculate(widget):
-  try:
-    c_input.value = (float(f_input.value) - 32.0) * 5.0 / 9.0
-  except:
-    c_input.value = '???'
-
-button = toga.Button('Calculate', on_press=calculate)
-
-```
----
-# &nbsp;
-```python
-# put the box in the box
-f_box.add(f_input)
-f_box.add(f_label)
-
-c_box.add(join_label)
-c_box.add(c_input)
-c_box.add(c_label)
-
-box.add(f_box)
-box.add(c_box)
-box.add(button)
-```
----
-# &nbsp;
-```python
-# styling
-box.style.set(flex_direction='column', padding_top=10)
-f_box.style.set(flex_direction='row', margin=5)
-c_box.style.set(flex_direction='row', margin=5)
-
-c_input.style.set(flex=1)
-f_input.style.set(flex=1, margin_left=160)
-c_label.style.set(width=100, margin_left=10)
-f_label.style.set(width=100, margin_left=10)
-join_label.style.set(width=150, margin_right=10)
-
-button.style.set(margin=15)
-
-return box
-
+```shell
+$ pip install toga
+$ python -m freedom
 ```
 ---
 # &nbsp;
@@ -275,6 +271,8 @@ class: title
 # &nbsp;
 # This presentation
 
+## Yes, really. 
+
 ???
 
 Really :)
@@ -379,7 +377,7 @@ At python and django conferences, after say, 1 day of workshops and a few days o
 
 The time is normally unstructured, but it's an absolutely amazing feature of many of the conferences I attend
 
-You've spent a few days meeting new people and listneing to talks, and your brain is swarming with ideas
+You've spent a few days meeting new people and listneing to talks, and your brain is swarming with ideas. I mean, you've travelled how far to be with these people, so why not take advantage of their physical locality?
 
 Why not use the days immiedately following to take a look at that new python trick you learnt about, or help out with a project you're interested in while the people from that project are around
 
@@ -415,7 +413,7 @@ But at beeware, we have something a bit more substantial
 
 background-image: url(images/yak-shaver.jpg)
 
-### [99% Invisible: 'Coin Check'](https://99percentinvisible.org/episode/coin-check/)
+footnote: [99% Invisible: 'Coin Check'](https://99percentinvisible.org/episode/coin-check/)
 
 
 ???
@@ -442,7 +440,7 @@ class: title
 Not only that. with thanks to github for the funding for the coin pressing, we have a second coin
 ---
 
-background-image: url(images/yak-herder-2.jpg)
+background-image: url(images/yak-herder2.jpg)
 
 ???
 
@@ -456,8 +454,17 @@ background-image: url(images/bee-map.png)
 ???
 
 As part of conferences apiarists have spoken at, we've run sprints all over the world, on five continents
+---
+
+TODO broken travis, webhook, beekeeper, etc. 
+
 
 ---
+
+TODO
+
+ping for lca bees
+ping for pycon sydney bees
 
 
 # 
