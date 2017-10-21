@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Bees</title>
+  </head>
+  <link rel="icon" href="favicon.png"> 
+  <link rel="stylesheet" href="animate.css">
+  <link rel="stylesheet" href="default.css">
+  <link rel="stylesheet" href="theme.css"> <!-- import after default for customisations -->
+  <script>
+      // Add ?print to your URL to get a printable version of your slides
+      if (window.location.search.match( /print/gi )) {
+        var link = document.createElement( 'link' );
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = 'print.css';
+        document.getElementsByTagName( 'head' )[0].appendChild( link );
+      }
+  </script>
+  <body>
+    <script src="remark-0.14.0.min.js"></script>
+    <script>
+    var slideshow = remark.create({
+      ratio: "16:10", // Change to "4:3" for Standard Aspect Ratio
+      slideNumberFormat: "", // Remove to re-enable page numbers
+      sourceUrl: 'slides.md'
+    });
+    </script>
+  </body>
+</html>

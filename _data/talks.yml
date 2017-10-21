@@ -60,6 +60,7 @@
           slides: 2017_05_PyConUS_Snek
           twitter: https://twitter.com/divio/status/865684109615673344
           video: https://www.youtube.com/watch?v=1YmbZQjty3Y
+          transcript: https://twitter.com/skimbrel/status/865682411446718464
         - name: Emoji Archeology 101 (Cover Version)
           type: Lightning Talk
           slides: 2017_05_PyConUS_EmojiArch
@@ -388,6 +389,7 @@
     talks:
         - name: Hat Rack
           slides: 2015_09_PHPWellington
+          type: Lightning Talk
 
 
 - conference:

@@ -1,0 +1,51 @@
+#source {
+    display: none;
+}
+/* Overrides for printing */
+
+.remark-slide {
+    -webkit-print-color-adjust: exact;
+}
+
+.remark-container {
+    overflow: visible;
+    background-color: #fff;
+}
+
+.remark-slide-container {
+    display: block;
+    position: relative;
+}
+
+.remark-slide-scaler {
+    position: relative;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+
+    -webkit-transform: none;
+    transform: none;
+    -webkit-transform-origin: none;
+    transform-origin: none;
+}
+
+div.remark-slide-scaler {
+    -webkit-transform: none;
+    transform: none;
+    -webkit-transform-origin: none;
+    transform-origin: none;
+}
+
+.remark-slide-content::after {
+    content: "@glasnt | @pybeeware";
+    font-family: 'Droid Serif';
+    font-weight: normal;
+    position: absolute;
+    bottom: 12px;
+    right: 20px;
+    opacity: 0.5;
+}
+
+iframe {
+    /*display:none;*/
+}
