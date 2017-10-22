@@ -13,6 +13,37 @@ class: title
 ???
 
 ---
+
+background-image: url(images/gh-home.png)
+
+???
+
+I want to start off by pointing out smething pretty cool
+
+Here's the github homepage. It's what you see when you're not logged in. 
+
+But if you scroll down
+
+---
+
+background-image: url(images/gh-home-2.png)
+
+???
+
+you get to this community section. And listed there, is a guy called Russell
+
+---
+
+background-image: url(images/gh-profile.png)
+
+???
+
+Russell runs this little project called BeeWare. 
+
+Bees!
+
+---
+
 background-image: url(images/ghosa-one.jpg)
 
 ???
@@ -454,20 +485,104 @@ background-image: url(images/bee-map.png)
 ???
 
 As part of conferences apiarists have spoken at, we've run sprints all over the world, on five continents
+
+These sprints are normally minimum two days, so it takes some time for first time contributors to get up to speed with the project, setting up their environment, and working out what they want to work on and submitting their first PR
+
+So depending on the size of our sprint, can look like this
+
+
 ---
 
-TODO broken travis, webhook, beekeeper, etc. 
+class: title
+![](images/sprinttraffic.png)
+
+???
+
+A few issues, but Pull Requests. Lots of pull request. Many many pull requests. 
+
+For every PR we have, we run a bunch of tests. Our tests take a while. I think all of these PRs are from a project called Batavia. 
+
+Batavia is an implementation of the CPython intepreter in Javascript
+
+It lets us run python in the browser. 
+
+So, we need to test it. A lot. Every permutation of every operation while unit testing, and a bunch of full tests
+
+We take some python code, run it through CPython, and run it through our implemetnation, and check the outputs are identical
+
+We do that 10,000 times. It takes a while, even with a whole bunch of tweeks to make it go faster. 
+
+---
+
+![](images/ci_services2.png)
+
+???
+
+There are a bunch of services that offer free plans for continuous integration testing, such as Travis and Circle CI
+
+However, their base level plans only offer a certain amount of concurrency
+
+Now, these services are great. For smaller projects, they're wonderful. But, when we have a sprint... I'm not saying we've broken these services with our sheer amount of tests running, but I know that the entire website was boggy at least once. 
+
+Now, both these companies have been great. They have plans which allow you to increase your testing capacity, but these are static increases. We run a sprint every couple of months. We're an open source project, we don't have the money to pay for kit that isn't being used most of the time. 
+
+Both Travis and Circle have been amazing and temporarily bumped up our capacity once or twice when we've asked really nicely, which helps, but it's not enough. 
+
+So we built our own. 
+
+---
+
+class: title
+# github.com/pybee/beekeeper
+
+![](images/beekeeper-logo.png)
+
+???
+
+Beekeeper is our system for tending to bees
+
+Like Travis or Circle CI, for your project you define what tests you want to run, and you integrate the project to your CI system using GitHub web hooks. Any time someone creates or edits a Pull Request, Github sends a webhook, which we listen for, and we run the tests based on the code in the PR
+
+You can setup beekeeper yourself using AWS's container service, editing your configurations to suit, using profiles so that some of your tests can use bigger containers as you will. 
+
+All we're doing is just telling the system that "Hey, you have a script to run" and it goes and runs it
+
+We can scale up the amount of instances in the worker pool during sprints, and when we don't have sprints, we can use only free-tier containers so we have a very small cost in the off season, while we can still run the occasional test. 
+
 
 
 ---
 
-TODO
+class: title
+# pybee.org
+# @pybeeware
 
-ping for lca bees
-ping for pycon sydney bees
+???
+
+If you are intersted in what we're doing with beeware, you can find out more on our website, pybee.org, or on twitter, where we post what we're up to, and retweet cute pictures of bees. 
 
 
-# 
+---
+
+class: title
+![](images/lca-logo.png)
+
+???
+
+And if you're interested in coming to a development sprint, we'll be at two open source events in Sydney in the next few months
+
+Linux conf Austalia is on in January, and while it doesn't have sprints, do let us know and we can probably do a minisprint one evening
+
+And as we have for the past few years now, we'll be running sprints at PyCon Austarlia, the national Python language conference, in August. 
+---
+
+
+class: title
+![](images/beeware.png)
+
+???
+
+BeeWare is still a work in progress, and we'd appreciate any help, either develpoment time or financially, to get the framework into a state where it can be the go to open source way to write native cross platform apps. 
 
 ---
 class: title
