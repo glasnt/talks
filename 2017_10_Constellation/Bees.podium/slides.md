@@ -78,7 +78,7 @@ So you want to build a temperature converter
 
 ???
 
-So here's the mockup of the app. We have a field where we enter the temp in F, and then a field which shows us the temp in C. Press the buttom, and the value is calculated and placed in the C field. 
+So here's the mockup of the app. We have a field where we enter the temp in degress farenheight, and then a field which shows us the temp in degrees celcius. Press the buttom, and the value is calculated and placed in the celcius field. 
 
 So we know what we want our app to do, but how do we go about writing it?
 
@@ -91,7 +91,7 @@ Well it depends what platform we wantt o target.
 
 If you want a web app, you're going to have to use Javascript, html, and some css for styling
 
-If you want to build an iphone app, you're going to need swing
+If you want to build an iphone app, you're going to need SWIFT
 
 If you want an andoird app you're going to need java
 
@@ -137,6 +137,8 @@ Fun fact: python has recently migrated to GitHub from a self-hosted mercurial re
 ???
 
 To see just how beeware works, here's an example application built in Toga
+
+(NO PUN)
 
 Toga is a widget toolkit. We define an application with widgets declared by toga, and when it comes time to run the code on the host platform, we use the toga abstraction to call the base widgets. 
 
@@ -234,10 +236,13 @@ Thankfully, we have a app that can help us here.
 
 ???
 
-At beeware we don't just shave bespoke tibettan yaks. We are more than happy to take use store-bought yaks. 
+At beeware we don't just shave bespoke tibettan yaks. We are more than happy to take use store-bought yaks, and we contribute back financially.
+
 This is the case with cookiecutter
 
 With cookiecutter, you can easily create a template with replacement fields to create a structure for your app, project, receipe, anything you like
+
+
 
 ---
 
@@ -256,6 +261,10 @@ bundle [com.example]: org.pybee
 
 $ cp freedom.py freedom/app.py
 ```
+
+???
+
+DONT BUNDLE
 ---
 # &nbsp;
 ```shell 
@@ -263,6 +272,10 @@ $ python setup.py macos -s
 ```
 
 ![](images/freedom-macos.png)
+
+???
+
+And it runs on your mac
 
 ---
 ![](images/freedom-macos-folder.png)
@@ -272,7 +285,11 @@ $ python setup.py macos -s
 ```shell 
 $ python setup.py ios -s
 ```
-![](images/freedom-ios.png)
+![](images/freedom-ios-.png)
+
+???
+
+Run it with ios, and it runs on your iPhone 
 ---
 # &nbsp;
 ```shell 
@@ -299,10 +316,89 @@ $ python setup.py django -s
 ![](images/freedom-django.png)
 ---
 class: title
-# &nbsp;
+![](images/sparkles.png)
+???
+
+Ta da!
+ 
+but what else can we do?
+---
+
+class: title
+
+# More widgets, more possibilities
+
+???
+
+The more widgets you have, more than just firlesd and buttons
+
+---
+
+class: title
+
+# `toga.WebView`
+
+## A widget that's a browser window
+---
+
+```python
+import toga
+from colosseum import CSS
+
+class Graze(toga.App):
+    def startup(self):
+        self.main_window = toga.MainWindow(self.name)
+        self.main_window.app = self
+
+        self.webview = toga.WebView()
+        self.url_input = toga.TextInput(initial='https://github.com/')
+        # ... 
+        self.webview.url = self.url_input.value
+        self.main_window.show()
+
+    def load_page(self, widget):
+        self.webview.url = self.url_input.value
+
+if __name__ == '__main__':
+    app = Graze('Graze', 'org.pybee.graze')
+    app.main_loop()
+```
+---
+```shell
+$ python graze.py
+```
+
+![](images/toga-browser-gh-1.png) 
+
+---
+```shell
+$ python graze.py
+```
+
+![](images/toga-browser-gh-2.png) 
+
+---
+```shell
+$ python setup.py django -s
+```
+
+---
+```shell
+$ python setup.py django -s
+```
+![](images/toga-django-browser-2.png) 
+
+???
+
+Browser in a browser
+
+---
+class: title
+## Another example
+
 # This presentation
 
-## Yes, really. 
+### Yes, really. 
 
 ???
 
@@ -310,6 +406,11 @@ Really :)
 
 
 github.com/pybee/podium
+
+---
+
+
+background-image: url(images/podium-desktop.png)
 
 ---
 class: title
@@ -513,8 +614,8 @@ We take some python code, run it through CPython, and run it through our impleme
 We do that 10,000 times. It takes a while, even with a whole bunch of tweeks to make it go faster. 
 
 ---
-
-![](images/ci_services2.png)
+class: title
+![](images/ci_services.png)
 
 ???
 
@@ -555,7 +656,7 @@ We can scale up the amount of instances in the worker pool during sprints, and w
 
 class: title
 # pybee.org
-# @pybeeware
+## @pybeeware
 
 ???
 
@@ -565,15 +666,18 @@ If you are intersted in what we're doing with beeware, you can find out more on 
 ---
 
 class: title
+# &nbsp;
 ![](images/lca-logo.png)
 
 ???
 
 And if you're interested in coming to a development sprint, we'll be at two open source events in Sydney in the next few months
 
-Linux conf Austalia is on in January, and while it doesn't have sprints, do let us know and we can probably do a minisprint one evening
+Linux conf Austalia is on in January, tickets available now, and while it doesn't have sprints, do let us know if you're coming along and we can do a mini sprint. 
 
-And as we have for the past few years now, we'll be running sprints at PyCon Austarlia, the national Python language conference, in August. 
+
+And as we have for the past few years now, we'll be running sprints at PyCon Austarlia, the national Python language conference, in August next year. 
+
 ---
 
 
