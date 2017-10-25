@@ -20,6 +20,8 @@ background-image: url(images/gh-home.png)
 
 I want to start off by pointing out smething pretty cool
 
+One thing Daniel didn't mention on the github website
+
 Here's the github homepage. It's what you see when you're not logged in. 
 
 But if you scroll down

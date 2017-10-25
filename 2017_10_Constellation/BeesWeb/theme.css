@@ -1,0 +1,277 @@
+@import url('animate.css');
+
+
+/*******************************
+ * Basic slide layout and colors
+ ******************************/
+
+.remark-slide-content {
+    padding: 1em 6em 1em 6em;
+    background-color: white;
+    font-family: 'PT Sans', Helvetica, sans-serif; 
+    color: black;
+}
+
+.remark-slides-area .remark-slide-content::after {
+    content: "@glasnt | @pybeeware";
+    font-family: 'PT Sans', Helvetica, sans-serif; 
+    font-weight: normal;
+    font-size: 18pt;
+    position: absolute;
+    bottom: 12px;
+    right: 20px;
+    opacity: 0.5;
+}
+
+/***********************
+ * Common content markup
+ ***********************/
+
+h1, h2, h3 {
+    font-family: 'PT Sans', Helvetica, sans-serif; 
+    font-weight: normal;
+    text-align: center;
+}
+
+h1 {
+    font-size: 48pt;
+}
+
+h2 {
+    font-size: 36pt;
+}
+
+h3 {
+    font-size: 28pt;
+}
+
+p {
+    font-size: 24pt;
+    line-height: 1.4em;
+}
+
+li {
+    font-size: 24pt;
+    line-height: 1.4em;
+    margin: 0.4em 0;
+}
+
+li p {
+    margin: 0.4em 0;
+}
+
+pre {
+    white-space: pre-wrap;
+    max-width: 100%;
+}
+
+.hljs-default code {
+    font-size: 18pt;
+}
+
+.hljs-default pre {
+  margin: 0.4em 0;
+}
+.hljs-default pre code {
+    background-color: #f8fbfe;
+    border: 1px solid #272726;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    max-height: 75%;
+    margin: 0 auto;
+}
+
+blockquote p:before {
+  color: #7f7f7c;
+  content: "“";
+  font-size: 4em;
+  line-height: 0.1em;
+  margin-right: 0.15em;
+  vertical-align: -0.35em;
+}
+
+blockquote p:after {
+  color: #7f7f7c;
+  content: "”";
+  font-size: 4em;
+  line-height: 0.1em;
+  margin-left: 0.15em;
+  vertical-align: -0.55em;
+}
+
+cite {
+    color: #7f7f7c;
+    display: block;
+    text-align: right;
+    margin-top: 1em;
+}
+
+/* Quotes in a list don't need as much padding */
+li cite {
+    margin-top: 0;
+}
+
+/*********************************/
+/* Special content for footnotes */
+/*********************************/
+
+.footnotes {
+    font-size: 18pt;
+    position: absolute;
+    bottom: 2em;
+    right: 4em;
+    width: 80%;
+    text-align: right;
+}
+
+.footnotes p {
+    font-size: 18pt;
+    margin: 0.2em 0;
+}
+
+.dag1:before {
+    content: "†";
+}
+
+.dag2:before {
+    content: "‡";
+}
+
+.dag3:before {
+    content: "✣";
+}
+
+.dag4:before {
+    content: "❉";
+}
+
+/****************/
+/* Title slides */
+/****************/
+
+.remark-slide-content.title {
+    vertical-align: middle;
+}
+
+/******************/
+/* Reverse slides */
+/******************/
+
+.remark-slide-content.reverse {
+  background-color: #272726;
+  color: #f6f7f1;
+}
+
+/*********************/
+/* Screenshot slides */
+/*********************/
+
+.remark-slide-content.screenshot img {
+}
+
+img.e { width: 50px; margin: 0 !important; margin-bottom: -10px !important} 
+div.big {
+	font-size: 120px;
+}
+
+.tinycode { 
+    font-size: 10px;
+    line-height:1;
+    white-space: pre;
+}   
+
+
+img.inline_emoji {
+    height: 60px;
+    margin: 15px 0px 0px;
+} 
+span.dasfoot { position:absolute; top: 670px; right: 1em; font-size: 50%; color: grey}
+c { color: green; font-weight:bold; }
+s { color: red }
+r { color: red }
+h { color: blue; font-weight: bold;}
+
+pre.cli { 
+    font-size: 40px;
+    line-height: 140%; 
+}
+pre.small { 
+    font-size: 60px;
+}
+
+h1,h2,h3,h4,h5,h6 {
+  margin: 0 0 20px 0;
+  color: #000;
+  font-family: 'PT Sans', Helvetica, sans-serif;
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: normal;
+  text-shadow: none;
+  word-wrap: break-word; }
+
+h1 { font-size: 2.5em}
+
+h2 { font-size: 1.6em }
+h3 { font-size: 1.3em }
+h4 { font-size:   1em }
+
+/* PTSans */
+@font-face {
+	font-family:'PT Sans';
+	src:local('PT Sans'), local('PTSansRegular'),
+		url(fonts/PTSans.ttf) format('truetype'),
+		url(fonts/PTSans.svg#PTSans-Regular) format('svg');
+	}
+@font-face {
+	font-weight:bold;
+	font-family:'PT Sans';
+	src:local('PT Sans Bold'), local('PTSansBold'),
+		url(fonts/PTSans.Bold.ttf) format('truetype'),
+		url(fonts/PTSans.Bold.svg#PTSans-Bold) format('svg');
+	}
+@font-face {
+	font-style:italic;
+	font-family:'PT Sans';
+	src:local('PT Sans Italic'), local('PTSansItalic'),
+		url(fonts/PTSans.Italic.ttf) format('truetype'),
+		url(fonts/PTSans.Italic.svg#PTSans-Italic) format('svg');
+	}
+@font-face {
+	font-style:italic;
+	font-weight:bold;
+	font-family:'PT Sans';
+	src:local('PT Sans Bold Italic'), local('PTSansBoldItalic'),
+		url(fonts/PTSans.Bold.Italic.ttf) format('truetype'),
+		url(fonts/PTSans.Bold.Italic.svg#PTSans-BoldItalic) format('svg');
+	}
+@font-face {
+	font-family:'PT Sans Narrow';
+	src:local('PT Sans Narrow'), local('PTSansNarrow'),
+		url(fonts/PTSans.Narrow.ttf) format('truetype'),
+		url(fonts/PTSans.Narrow.svg#PTSans-Narrow) format('svg');
+	}
+@font-face {
+	font-family:'PT Sans Narrow';
+	font-weight:bold;
+	src:local('PT Sans Narrow Bold'), local('PTSansNarrowBold'),
+		url(fonts/PTSans.Narrow.Bold.ttf) format('truetype'),
+		url(fonts/PTSans.Narrow.Bold.svg#PTSans-NarrowBold) format('svg');
+	}
+
+/* PT Mono */
+@font-face {
+	font-family:'PT Mono';
+	src:local('PT Mono'), local('PTMonoRegular'),
+		url(fonts/PTMono.ttf) format('truetype'),
+		url(fonts/PTMono.svg#PTMono) format('svg');
+	}
+
+/* Linker */
+@font-face {
+	font-family:'Target Blank';
+	src:url(fonts/TargetBlank.otf) format('opentype'),
+		url(fonts/TargetBlank.svg#TargetBlank) format('svg');
+	}
