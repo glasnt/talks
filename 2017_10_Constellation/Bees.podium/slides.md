@@ -7,7 +7,7 @@ class: title
 # ...Bees?
 ## GitHub Constellation, Sydney
 
-![](images/footersmll.png)
+## katie@glasnt.com
 
 
 ???
@@ -85,6 +85,8 @@ So we know what we want our app to do, but how do we go about writing it?
 Well it depends what platform we wantt o target. 
 
 ---
+class: title
+
 ![](images/lang-logos.png)
 
 ???
@@ -130,7 +132,7 @@ Fun fact: python has recently migrated to GitHub from a self-hosted mercurial re
 
 ---
 
-# &nbsp;
+class: title
 # github.com/pybee/toga
 ![](images/toga-icon.png)
 
@@ -146,7 +148,11 @@ Apple buttons on iOS, Android buttons on android, and so on.
 
 The reason to do all of this is that we want our apps to look like they belong. 
 
+We want our apps to look and feel native.  
+
 If any user can tell that the app they're using is made with beeware, we've failed. 
+
+Your end user shouldn't care what your app is written in. They jsut want to use the thing. 
 
 ---
 ```python
@@ -171,6 +177,13 @@ class Freedom(toga.App):
     self.f_input = toga.TextInput()
     # ...
 ```
+
+???
+
+Speaking of thing, here is out thing!
+
+(GLOSS OVER, NO FULL TECH)
+
 ---
 ### &nbsp;
 ```python
@@ -278,6 +291,7 @@ $ python setup.py macos -s
 And it runs on your mac
 
 ---
+class: title
 ![](images/freedom-macos-folder.png)
 ---
 
@@ -330,15 +344,8 @@ class: title
 
 ???
 
-The more widgets you have, more than just firlesd and buttons
+The more widgets you have, more than just fields and buttons
 
----
-
-class: title
-
-# `toga.WebView`
-
-## A widget that's a browser window
 ---
 
 ```python
@@ -692,5 +699,7 @@ BeeWare is still a work in progress, and we'd appreciate any help, either develp
 class: title
 
 # Thank you!
+
+# 🐝
 
 ???
