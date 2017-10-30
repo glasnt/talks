@@ -1,0 +1,476 @@
+! t/bee | t/megaphone | t/kiwi
+
+
+---
+~@ beedeck.jpg
+
+## &nbsp;
+<h1 style="color: white; -webkit-text-stroke: 2px black;">Protect yourself<br>against the bees</h1>
+
+@ footerright.png
+
+---
+! g/wave
+---
+~@ beepurple.jpg
+
+Note: I like bees
+---
+
+~@ bumblewhite.jpg
+
+Note: bees are cool
+
+You know what else is cool?
+
+---
+
+@= bee_sticker.png
+
+Note: bee emoji
+
+but the bee emoji may not look like this to you
+
+
+---
+
+! bee_apple.png | bee_google_4.png | bee_ms.png
+### &nbsp;
+
+Note: depending on your platform, you'll see bees differently
+
+---
+
+
+! bee_apple.png | bee_google_4.png | bee_ms.png
+### iOS 10.3 &nbsp; &nbsp; Android 4.4 &nbsp; Windows 10
+
+
+
+Note: if you're on iOS, Android, or Windows, you'll know these bees
+
+But not all bees are created equal
+
+It depends on your platform
+
+---
+
+! bee_htcsense.png | bee_whatsapp.png | bee_twitter.png | bee_firefox.png
+### HTC Sense &nbsp; WhatsApp  &nbsp; Twemoji &nbsp;  Firefox OS
+
+Note: A number of the bees for some platforms are fine. They look like bees. They're good bees. 
+
+Some of them, however...
+---
+
+! space | bee_apple.png | space
+### iOS 10.3
+
+Note: the standard apple bee. Sure, it looks like a bee, a bit cartoon, but okay. 7 out of 10
+---
+
+! space | bee_emojione22.png | space
+## EmojiOne 2.2
+
+Note: This bee is also cute as heck. This one is from EmojiOne, a once free, not freemium open source emoji set
+
+But this bee, while cute, is superseded. 
+
+---
+
+! bee_emojione_1.png | bee_emojione_20.png |  bee_emojione22.png | bee_emojione30.png 
+### 1.0 &nbsp;&nbsp;&nbsp;  &nbsp;  2.0 &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;   2.2 &nbsp; &nbsp; &nbsp; &nbsp;  3.0
+#### EmojiOne
+
+Note: The emojione bee has gone from buzzy, to fuzzy, to cute af, to .. sadly anatomically correct. 
+
+---
+
+! space | bee_google_4.png | space
+## Android 4.4
+
+Note: this bee is my favourite, he's just so happy to see you. 10 out of 10, keep buzzing my friend. 
+
+Sadly, as you may have heard or seen, the cute blob android emoji have been replaced with 'normal' emoji...\
+
+I say 'normal', because the faces are very much styled similar to the apple emoji.. .
+
+and yet...
+
+---
+
+! space | bee_google_o.png | space
+
+## Android O
+
+Note: ... see a problem?
+
+It's an exorsist bee
+
+WAT
+
+
+and then you have the just.. strage ones...
+
+
+---
+
+! space | bee_lg.png | space
+## LG
+
+Note: the LG bee is just.. bulbus?
+
+---
+
+! space | bee_samsung.png | space
+## Samsung
+
+Note: The samsung bee is.. yeah?
+
+---
+
+! space | bee_emojidex.png | space
+
+## Emojidex
+
+Note: The emojidex bee though... I think he's playing some variation of quiddich
+
+Or he's a red teamer with his honeypot there. 
+
+
+---
+
+##= twitter.com/emojirates
+
+Note: if you're a fan of dog rates, check out emoji rates!
+
+They're good codepoints, brant. 
+
+---
+
+~@ beeyellow.jpg
+
+Note: ANYWAY
+
+While I'm not taking pictures or grading bees
+
+---
+
+! t/megaphone
+Note: 
+
+---
+##= The Power and Responsibility
+##=of Unicode Adoption
+Note: 
+"The power and responsibility of UNicode adoption"
+
+I first gave it at this very meetup in March last year. 
+
+I know right? It sounds like a proper technical talk, but it's actually me just yelling about emoji and stuff
+
+Thing is, that's not the name
+---
+
+##= The Power <img style="margin-bottom: 0px" src="pictures/o/bolt.svg" width="50px"> and Responsibility <img style="margin-bottom: 0px" width="50px" src="pictures/g/sweat.svg">
+##= of Unicode Adoption <img style="margin-bottom: 0px" width="50px" src="pictures/t/sparkles.svg">
+
+Note: this is the name.  it has emoji in the title
+
+This has caused me all *sorts* of fun when trying to propose and present at conferences
+
+---
+
+@ djangoconeu_accept.png
+
+Note: For example, some conferences can't get the name right, even when it's been entered into their system 
+
+---
+
+@ easychair.png
+
+Note: Some like some characters, but not others
+
+I had to resubmit this one and remove specific characters
+
+---
+
+@ kiwicon_cfp.png
+
+Note: Some just get a little bit corrupted (kiwicon)
+---
+@ pyconau_schedule_list.png
+Note: but sometimes it works!
+
+... on the website
+---
+@ pcau_2.jpg
+Note: but not on the printed schedule
+---
+
+@ pcau_3.jpg
+Note: or on the AV notes. 
+
+Side note, it's REALLY fun when the person introducing you on stage reads that verbatim
+
+---
+
+@ djeu_5.jpg
+
+Note: when you have broken unicode in the middle of glossy printed programs, that's fun
+
+---
+
+@ djeu_1.jpg
+
+Note: but it's not too bad when the schedule poster on the wall just leave them out
+---
+
+@ djeu_1.jpg
+@ djeu_2.jpg
+Note: because they can be corrected
+---
+@ pcau_1.jpg
+Note: But the best part is when the digital boards work
+
+Because I can tell you exactly what operating system this is running. Windows 8
+
+---
+# &nbsp;
+@ ms_sweat.png
+
+Note: This is the emoji
+---
+@ sweat_versions.png
+
+Note:
+
+Different vendors have implemented emoji differently. In this case, the 'sweat drop' face is the most easily recognisable as windows, because it looks like a face with boils all over it or something
+
+(picture of different sweat)
+
+Based on this, we can guess the operating system, down to the version, using just the emoji being displayed.
+---
+
+! g/sweat
+
+Note: but then sometimes things break completely. 
+
+
+---
+~@ beehobart.jpg
+
+
+---
+! e/thinking
+
+Note:
+
+
+But this is a hacker conf, that's not that interesting
+
+What if we could hack with emoji.
+
+Is it possible?
+
+Well, it depends on your definition of hacking, and emoji
+
+
+
+---
+
+@ not_emoji.png
+
+Note:
+These are not emoji
+
+So if, for example, you were to say download an executable claiming to give you an emoji pack for your favourite chat client, that's not hacking. That's you downloading a random executable and getting what's coming to you
+
+What's also not hacking, well, technically, is a Denial of Service attack that was recently fixed by apple.
+---
+
+! space | mobile.png | space
+
+---
+! t/rainbow_flag
+Note: Who is familiar with the Pride Flag emoji that was just added?
+---
+
+! t/whiteflag | zwj | t/rainbow
+Note: it's comprised of two existing emoji, the white flag and the rainbow, but with a special character
+
+a Zero Width joiner, between them
+
+You don't normally see this because in your flag picker, you see the end result. 
+
+However
+
+---
+! t/whiteflag | 0 | t/rainbow
+
+<span class="bfoot" style="bottom: -280px"><a href="http://thehackernews.com/2017/01/crash-iphone-emoji.html">You Can Crash Anyone's iPhone or iPad With A Simple Emoji Text Message (2017)</a></span>
+Note: There was a bug where if you sent the two emoji with a number between them, the device would get really confused, and not know what to do
+---
+
+@ iphonecrash.jpeg
+
+<span class="bfoot"><a href="https://www.kazoosoft.eu/wp-content/uploads/2015/05/Iphone6Bug2015.jpeg">jazoosoft.eu</a></span>
+Note: so it would crash
+
+this isn't the firts time a bug like this has happened
+---
+@ effectivepower.jpg
+
+<span class="bfoot"><a href="http://s.wsj.net/public/resources/images/BN-IP966_IMESSA_G_20150527143121.jpg">wsj.net</a></span>
+
+Note: This has happened before in what's known as the effective power bug
+---
+
+
+<pre style="font-size: 60px"><code>
+effective.
+Power
+لُلُصّبُلُلصّبُررً ॣ ॣh ॣ ॣ
+冗
+</code></pre>
+<span class="bfoot" style="bottom: -250px"><a href="https://www.youtube.com/watch?v=hJLMSllzoLA">The Effective Power Bug (2015)</a></span>
+Note: how this worked is that the words 'effective power' had no meaning, but the text after it, that's displaying weirdly here, would set it off
+
+When this text appeared in a notification popup, the truncation of that message would happen part way in the stuff on the third line, and the phone would get confused and restart
+
+but that's not hacking. 
+---
+
+! web
+
+
+---
+
+<img style="margin-top: 100px" src="pictures/o/spoon.ws.svg" height="300px">
+---
+! g/R | g/F | g/C | e/3 | e/4 | e/9 | e/2
+---
+! space | space | o/spoon | space | space
+###  `http://xn--9q9h.ws`
+Note: that's the domain, but the path...
+---
+
+#= `?utf8=✓`
+---
+###= `google.com`<img src="pictures/t/padlock.svg" style="margin-bottom: 0; width: 60px">`/test/عربي.امارات`
+<span class="bfoot" style="bottom: -280px"><a href="http://www.rafayhackingarticles.net/2016/08/google-chrome-firefox-address-bar.html">Google Chrome, Firefox Address Bar Spoofing Vulnerability</a></span>
+
+Note: RTL
+---
+###=`عربي.امارات/google.com`<img src="pictures/t/padlock.svg" style="margin-bottom: 0; width: 60px">`/test`
+<span class="bfoot" style="bottom: -280px"><a href="http://www.rafayhackingarticles.net/2016/08/google-chrome-firefox-address-bar.html">Google Chrome, Firefox Address Bar Spoofing Vulnerability</a></span>
+---
+! t/world | t/fire
+
+<span class="bfoot" style="bottom: -80px"><a href="https://poststatus.com/the-trojan-emoji/">Anatomy of a Critical Security Bug</a></span>
+Note: What is hacking is this wonderful incident I found involving mysql, not-strict tables, and wordpress
+
+With literally a bug that could set the world on fire
+
+---
+
+##= `STRICT_ALL_TABLES`
+
+Note: This could have all been avoided if STRICT TABLES had been enabled for wordpress
+
+Wordpress core used some of the ... more interesting features of mysql, so they couldn't enable this, and this is why everthing was a fire
+
+---
+
+~@ beeflight.jpg
+
+---
+
+! space | bee_google_4.png | space
+## &nbsp;
+
+---
+! space | bee_google_4.png | space
+## `U+1F41D`
+Note: 
+
+This is our codepoint
+
+---
+
+! space | bee_google_4.png | space
+## `\xf0\x9f\x90\x9d `
+Note: 
+The emoji uses four bytes
+
+And there's a small issue in mysql when strict tables is turned off. If you try and insert an emoji it'll... truncate. 
+---
+
+##= `<q cite="Bees are cute` <img src="pictures/bee_google_4.png" style="width: 50px; margin-bottom: 0px;">`">`
+## `BSides WLG is awesome</q>`
+
+Note: So, say if you have a Wordpress blog that allows comments, and citations, and you have something like this, which would pass javascript validation because it's a complete tag
+
+But because Mysql...
+---
+##= `<q cite="Bees are cute` &nbsp;&nbsp; &nbsp; &nbsp; <span style="color: white">.</span>
+
+## &nbsp;
+
+Note: It'd drop about here
+---
+
+##= `script src="honeypot.js">`
+
+Note: which means that if your NEXT comment happens to be something like this
+
+because that's not a script tag, there's no opening angle bracket
+
+---
+##= `<q cite="Bees are cute` 
+##= `...`
+##= `script src="honeypot.js">`
+Note: you'd end up with a very large quote tag, that had a script attribute
+
+sad trombone. 
+
+---
+
+! t/boom
+
+---
+
+#= `CVE-2015-3438`
+Note: So that's CVE 2015 3 4 3 8
+
+It's been patched as of WordPress 4.2, so please PATCH YOUR THINGS
+Wordpress 4.2 introduced emoji natively into the system... and also removed a small issue with it breaking everything
+
+but you get new emoji! you should update your things!
+---
+#= MySQL
+##= `STRICT_ALL_TABLES`
+Note: also, make sure you enable strict tables, because yowsa. 
+
+---
+
+! t/imp
+
+Note: this probably isn't the only thing out there, but it's something to watch out for
+---
+
+@ new_apple_bee.png
+
+<span class="dasfoot" style="bottom: -200px">[Jeremy Burge, Twitter](https://twitter.com/jeremyburge/status/917461084814049282)</span>
+
+---
+
+~@ beeupsidedown.jpg
+
+#&nbsp;
+
+#&nbsp;
+= <h3 style="-webkit-text-stroke: 1px black; color: white">glasnt.com/talks</h3>
+#&nbsp;
+#&nbsp;
+<h4 style="bottom: -200px; -webkit-text-stroke: 1px black; color: white">All bee photographs CC BY-NC-SA 4.0</h4>
