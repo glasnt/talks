@@ -1,5 +1,13 @@
 ! t/bee | t/megaphone | t/kiwi
 
+<span class="bfoot" style="bottom: -180px">🔊🔜</span>
+---
+<video src="foxpigchickenintro.webm" data-autoplay controls height="600px"></video>
+
+<span class="bfoot"><a href="https://twitter.com/ManxomeMia/status/926660732162154496" style="color: lightgray">Mia Harrison, Twitter</a></span>
+
+
+Note: data-autoplay
 
 ---
 ~@ beedeck.jpg
@@ -172,7 +180,7 @@ I know right? It sounds like a proper technical talk, but it's actually me just 
 Thing is, that's not the name
 ---
 
-##= The Power <img style="margin-bottom: 0px" src="pictures/o/bolt.svg" width="50px"> and Responsibility <img style="margin-bottom: 0px" width="50px" src="pictures/g/sweat.svg">
+##= The Power <img style="margin-bottom: 0px" src="pictures/o/bolt.svg" width="60px"> and Responsibility <img style="margin-bottom: 0px" width="60px" src="pictures/g/sweat.svg">
 ##= of Unicode Adoption <img style="margin-bottom: 0px" width="50px" src="pictures/t/sparkles.svg">
 
 Note: this is the name.  it has emoji in the title

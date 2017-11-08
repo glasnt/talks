@@ -1,5 +1,13 @@
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='266px' src='pictures/t/bee.svg'><img height='266px' src='pictures/t/megaphone.svg'><img height='266px' src='pictures/t/kiwi.svg'></p></div> <!-- .slide: class="center" -->
 
+<span class="bfoot" style="bottom: -180px">🔊🔜</span>
+---
+<video src="foxpigchickenintro.webm" data-autoplay controls height="600px"></video>
+
+<span class="bfoot"><a href="https://twitter.com/ManxomeMia/status/926660732162154496" style="color: lightgray">Mia Harrison, Twitter</a></span>
+
+
+Note: data-autoplay
 
 ---
  <!-- .slide: data-background-image="pictures/beedeck.jpg"-->
@@ -172,7 +180,7 @@ I know right? It sounds like a proper technical talk, but it's actually me just 
 Thing is, that's not the name
 ---
 
-## The Power <img style="margin-bottom: 0px" src="pictures/o/bolt.svg" width="50px"> and Responsibility <img style="margin-bottom: 0px" width="50px" src="pictures/g/sweat.svg"> <!-- .slide: class="center" -->
+## The Power <img style="margin-bottom: 0px" src="pictures/o/bolt.svg" width="60px"> and Responsibility <img style="margin-bottom: 0px" width="60px" src="pictures/g/sweat.svg"> <!-- .slide: class="center" -->
 ## of Unicode Adoption <img style="margin-bottom: 0px" width="50px" src="pictures/t/sparkles.svg"> <!-- .slide: class="center" -->
 
 Note: this is the name. it has emoji in the title
