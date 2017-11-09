@@ -1,13 +1,13 @@
 - conference:
     name: GitHub Constellation
     link: http://githubconstellation.com/sydney/
-    date: 25-AUG-2017
-    location: Sydney, Australia
+    date: 25-OCT-2017
+    location: Sydney
     talks: 
         - name: ...Bees?
-        - link: http://githubconstellation.com/sydney/#bees
-        - slides: 2017_10_Constellation/Bees.podium
-        - twitter: https://twitter.com/developerjack/status/923120201985437696
+          link: http://githubconstellation.com/sydney/#bees
+          slides: 2017_10_Constellation/Bees.podium
+          twitter: https://twitter.com/developerjack/status/923120201985437696
 
 - conference:
     name: DjangoCon US
@@ -88,6 +88,7 @@
      - name: The Power and Responsibility of Unicode Adoption
        link: https://conferences.oreilly.com/oscon/oscon-tx/public/schedule/detail/56370
        slides: 2017_05_OSCON
+       article: https://opensource.com/article/17/4/cross-platform-emoji
        twitter: https://twitter.com/bradfitz/status/862746287174803458
 
 - conference:
@@ -166,6 +167,7 @@
       slides: 2017_01_LCA_JavaScript
       video: https://www.youtube.com/watch?v=k3brfCZSFiQ
       twitter: https://twitter.com/callahad/status/821549245354287104
+      article: https://recompilermag.com/issues/issue-4/why-i-love-legacy-devops/
 
 - conference:
     name: Ruby on Rails Oceania
@@ -358,6 +360,7 @@
       type: Lightning Talk
       slides: HatRack
       video: https://youtu.be/1xWQ_eUuGmk?t=2211
+      article: https://opensource.com/life/15/10/octohat-github-non-code-contribution-tracker
     - name: Serialization Formats are Not Toys (Cover Version)
       type: Lightning Talk
       slides: http://s3.eastman.net.nz/serialization/
@@ -434,6 +437,7 @@
       - name: Build a Better Hat Rack - All Contributions Welcome
         link: http://2015.pycon-au.org/schedule/30023/view_talk?day=saturday
         video: https://www.youtube.com/watch?v=wNWrr19gE0Y
+        article: https://modelviewculture.com/pieces/acknowledging-non-coding-contributions
         slides: 2015_08_PyCon_AU
 
 - conference:

@@ -1,45 +1,6 @@
 ---
 layout: page 
 ---
-  
-  <div class="section">
-    <div class="container">
-    <h2>Major Talks and Associated Articles</h2>
-      <div class="row">
-        <h4>Build a better Hat Rack - All Contributions Welcome</h4>
-        <p><i>What about all the other stuff in open source; the stuff that's not code</i></p>
-        Further reading:
-        <ul><li>
-      <a href="https://opensource.com/life/15/10/octohat-github-non-code-contribution-tracker">A tool for tracking non-code GitHub contributions</a> (opensource.com)</li>
-        <li>
-        <a href="https://modelviewculture.com/pieces/acknowledging-non-coding-contributions">Acknowledging Non-Coding Contributions</a> (modelviewculture.com)</li>
-        <li><a href="http://glasnt.com/blog/2015/11/21/goodbye-octohat.html">Goodbye octohat</a> (About the project rename)
-        <li><a href="http://glasnt.com/blog/2015/04/29/hat-racks-and-linkedin.html">Hat Racks and LinkedIn</a>
-        <li><a href="http://crowdcast.io/e/contribute">Getting started contributing to open source</a> (crowdcast.io)
-        <li><a href="http://www.blog.pythonlibrary.org/2016/09/26/pydev-of-the-week-katie-mclaughlin/">PyDev of the Week</a> (pythonlibrary.org)
-    </div>
-      <div class="row">
-        <h4>The Power and Responsibility of Unicode Adoption</h4>
-        <p><i>It's not all sunshine and 🌹</i></p>
-        Further reading:
-        <ul><li><a href="http://glasnt.com/blog/2016/08/06/solve-for-emoji.html">Solve for Emoji</a>
-        <li><a href="http://glasnt.com/blog/2016/04/07/emoji-stuff-i-didnt-get-to.html">Emoji stuff I didn't get to</a> (after the DjangoCon Europe talk)
-        <li><a href="http://glasnt.com/blog/2016/11/25/on-emoji-and-display-issues.html">On emoji and display issues</a>
-        <li><a href="https://opensource.com/article/17/4/cross-platform-emoji">Solving the cross-platform emoji problem</a> (opensource.com)
-
-        </ul>
-        </p>
-      </div>
-      <div class="row">
-
-        <h4>Javascript is Awe-ful</h4>
-        <p><i>A dive into the eccentricities and peculiarities of JavaScript</i></p>
-        Further reading:
-        <li><a href="http://glasnt.com/blog/2015/12/16/on-contempt-culture.html">On contempt culture</a>
-        <li><a href="https://recompilermag.com/issues/issue-4/why-i-love-legacy-devops/">Why I Love Legacy DevOps</a> (recompilermag.com)
-      </div>
-  </div>
-  <hr>
 
   <div class="section">
     <div class="container">
@@ -66,6 +27,7 @@ layout: page
                   {% if talk.twitter %} <a href="{{talk.twitter}}">Twitter</a>{% endif %}
                   {% if talk.transcript %} <a href="{{talk.transcript}}">Transcript</a>{% endif %}
                   {% if talk.feedback %} <a href="{{talk.feedback}}">Feedback</a>{% endif %}
+                  {% if talk.article %} <a href="{{talk.article}}">Article</a>{% endif %}
             </div>
           </div>
         {% endfor %}
