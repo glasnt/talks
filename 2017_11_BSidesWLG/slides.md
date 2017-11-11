@@ -8,7 +8,6 @@
 
 
 Note: data-autoplay
-
 ---
  <!-- .slide: data-background-image="pictures/beedeck.jpg"-->
 
@@ -51,9 +50,9 @@ Note: depending on your platform, you'll see bees differently
 
 
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='266px' src='pictures/bee_apple.png'><img height='266px' src='pictures/bee_google_4.png'><img height='266px' src='pictures/bee_ms.png'></p></div> <!-- .slide: class="center" -->
-### iOS 10.3 &nbsp; &nbsp; Android 4.4 &nbsp; Windows 10
-
-
+<span style="display: inline-block; position: absolute; left: 125px"><h3>iOS 10.3</h3></span>
+<span style="display: inline-block; position: absolute; left: 377px"><h3>Android 4.4</h3></span>
+<span style="display: inline-block; position: absolute; left: 669px"><h3>Win 10</h3></span>
 
 Note: if you're on iOS, Android, or Windows, you'll know these bees
 
@@ -63,8 +62,8 @@ It depends on your platform
 
 ---
 
- <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='200px' src='pictures/bee_htcsense.png'><img height='200px' src='pictures/bee_whatsapp.png'><img height='200px' src='pictures/bee_twitter.png'><img height='200px' src='pictures/bee_firefox.png'></p></div> <!-- .slide: class="center" -->
-### HTC Sense &nbsp; WhatsApp &nbsp; Twemoji &nbsp; Firefox OS
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='160px' src='pictures/bee_htcsense.png'><img height='160px' src='pictures/bee_whatsapp.png'><img height='160px' src='pictures/bee_twitter.png'><img height='160px' src='pictures/bee_firefox.png'><img height='160px' src='pictures/bee_ms.png'></p></div> <!-- .slide: class="center" -->
+#### HTC Sense &nbsp; WhatsApp&nbsp; Twemoji &nbsp;Firefox OS &nbsp; Win 10
 
 Note: A number of the bees for some platforms are fine. They look like bees. They're good bees.
 
@@ -78,7 +77,7 @@ Note: the standard apple bee. Sure, it looks like a bee, a bit cartoon, but okay
 ---
 
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='266px' src='pictures/space.svg'><img height='266px' src='pictures/bee_emojione22.png'><img height='266px' src='pictures/space.svg'></p></div> <!-- .slide: class="center" -->
-## EmojiOne 2.2
+### EmojiOne 2.2
 
 Note: This bee is also cute as heck. This one is from EmojiOne, a once free, not freemium open source emoji set
 
@@ -373,9 +372,9 @@ Note: RTL
 ###`عربي.امارات/google.com`<img src="pictures/t/padlock.svg" style="margin-bottom: 0; width: 60px">`/test` <!-- .slide: class="center" -->
 <span class="bfoot" style="bottom: -280px"><a href="http://www.rafayhackingarticles.net/2016/08/google-chrome-firefox-address-bar.html">Google Chrome, Firefox Address Bar Spoofing Vulnerability</a></span>
 ---
- <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/t/world.svg'><img height='400px' src='pictures/t/fire.svg'></p></div> <!-- .slide: class="center" -->
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='200px' src='pictures/space.svg'><img height='200px' src='pictures/t/world.svg'><img height='200px' src='pictures/t/fire.svg'><img height='200px' src='pictures/space.svg'></p></div> <!-- .slide: class="center" -->
 
-<span class="bfoot" style="bottom: -80px"><a href="https://poststatus.com/the-trojan-emoji/">Anatomy of a Critical Security Bug</a></span>
+<span class="bfoot" style="bottom: -180px"><a href="https://poststatus.com/the-trojan-emoji/">Anatomy of a Critical Security Bug</a></span>
 Note: What is hacking is this wonderful incident I found involving mysql, not-strict tables, and wordpress
 
 With literally a bug that could set the world on fire
@@ -467,9 +466,9 @@ Note: also, make sure you enable strict tables, because yowsa.
 Note: this probably isn't the only thing out there, but it's something to watch out for
 ---
 
- <img src="pictures/new_apple_bee.png" />
-
-<span class="dasfoot" style="bottom: -200px">[Jeremy Burge, Twitter](https://twitter.com/jeremyburge/status/917461084814049282)</span>
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/bee_sticker.png'><img height='400px' src='pictures/bee_apple_new.png'></p></div> <!-- .slide: class="center" -->
+<span style="display: inline-block; position:absolute; left: 190px"><h3>Sierra<br>iOS10.3</h3></span>
+<span style="display: inline-block; position: absolute; left: 600px;"><h3>High Sierra<br>iOS11.1</h3></span>
 
 ---
 

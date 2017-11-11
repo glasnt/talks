@@ -8,7 +8,6 @@
 
 
 Note: data-autoplay
-
 ---
 ~@ beedeck.jpg
 
@@ -51,9 +50,9 @@ Note: depending on your platform, you'll see bees differently
 
 
 ! bee_apple.png | bee_google_4.png | bee_ms.png
-### iOS 10.3 &nbsp; &nbsp; Android 4.4 &nbsp; Windows 10
-
-
+<span style="display: inline-block; position: absolute; left: 125px"><h3>iOS 10.3</h3></span>
+<span style="display: inline-block; position: absolute; left: 377px"><h3>Android 4.4</h3></span>
+<span style="display: inline-block; position: absolute; left: 669px"><h3>Win 10</h3></span>
 
 Note: if you're on iOS, Android, or Windows, you'll know these bees
 
@@ -63,8 +62,8 @@ It depends on your platform
 
 ---
 
-! bee_htcsense.png | bee_whatsapp.png | bee_twitter.png | bee_firefox.png
-### HTC Sense &nbsp; WhatsApp  &nbsp; Twemoji &nbsp;  Firefox OS
+! bee_htcsense.png | bee_whatsapp.png | bee_twitter.png | bee_firefox.png | bee_ms.png
+#### HTC Sense &nbsp; WhatsApp&nbsp; Twemoji &nbsp;Firefox OS &nbsp; Win 10
 
 Note: A number of the bees for some platforms are fine. They look like bees. They're good bees. 
 
@@ -78,7 +77,7 @@ Note: the standard apple bee. Sure, it looks like a bee, a bit cartoon, but okay
 ---
 
 ! space | bee_emojione22.png | space
-## EmojiOne 2.2
+### EmojiOne 2.2
 
 Note: This bee is also cute as heck. This one is from EmojiOne, a once free, not freemium open source emoji set
 
@@ -373,9 +372,9 @@ Note: RTL
 ###=`عربي.امارات/google.com`<img src="pictures/t/padlock.svg" style="margin-bottom: 0; width: 60px">`/test`
 <span class="bfoot" style="bottom: -280px"><a href="http://www.rafayhackingarticles.net/2016/08/google-chrome-firefox-address-bar.html">Google Chrome, Firefox Address Bar Spoofing Vulnerability</a></span>
 ---
-! t/world | t/fire
+! space | t/world | t/fire | space
 
-<span class="bfoot" style="bottom: -80px"><a href="https://poststatus.com/the-trojan-emoji/">Anatomy of a Critical Security Bug</a></span>
+<span class="bfoot" style="bottom: -180px"><a href="https://poststatus.com/the-trojan-emoji/">Anatomy of a Critical Security Bug</a></span>
 Note: What is hacking is this wonderful incident I found involving mysql, not-strict tables, and wordpress
 
 With literally a bug that could set the world on fire
@@ -467,9 +466,9 @@ Note: also, make sure you enable strict tables, because yowsa.
 Note: this probably isn't the only thing out there, but it's something to watch out for
 ---
 
-@ new_apple_bee.png
-
-<span class="dasfoot" style="bottom: -200px">[Jeremy Burge, Twitter](https://twitter.com/jeremyburge/status/917461084814049282)</span>
+! bee_sticker.png | bee_apple_new.png
+<span style="display: inline-block; position:absolute; left: 190px"><h3>Sierra<br>iOS10.3</h3></span>
+<span style="display: inline-block; position: absolute; left: 600px;"><h3>High Sierra<br>iOS11.1</h3></span>
 
 ---
 
