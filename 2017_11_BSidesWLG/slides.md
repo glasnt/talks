@@ -1,6 +1,9 @@
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='266px' src='pictures/t/bee.svg'><img height='266px' src='pictures/t/megaphone.svg'><img height='266px' src='pictures/t/kiwi.svg'></p></div> <!-- .slide: class="center" -->
 
 <span class="bfoot" style="bottom: -180px">🔊🔜</span>
+Note: now, something to wake you up.
+
+Feel free to sing along....
 ---
 <video src="foxpigchickenintro.webm" data-autoplay controls height="600px"></video>
 
@@ -42,7 +45,7 @@ but the bee emoji may not look like this to you
 ---
 
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='266px' src='pictures/bee_apple.png'><img height='266px' src='pictures/bee_google_4.png'><img height='266px' src='pictures/bee_ms.png'></p></div> <!-- .slide: class="center" -->
-### &nbsp;
+<span style="display: inline-block; position: absolute;"><h3 style="color: white !important">.</h3></span>
 
 Note: depending on your platform, you'll see bees differently
 
@@ -222,20 +225,26 @@ Side note, it's REALLY fun when the person introducing you on stage reads that v
 
 ---
 
+ <img src="pictures/dw_2.jpg" />
+
+Note: granted, sometimes they get it right!
+---
+
+
  <img src="pictures/djeu_5.jpg" />
 
-Note: when you have broken unicode in the middle of glossy printed programs, that's fun
+Note: but sometimes it prints out wrong
 
 ---
 
  <img src="pictures/djeu_1.jpg" />
 
-Note: but it's not too bad when the schedule poster on the wall just leave them out
+Note: So sometimes they just cut it out entirely
 ---
 
  <img src="pictures/djeu_1.jpg" />
  <img src="pictures/djeu_2.jpg" />
-Note: because they can be corrected
+Note: but they can be corrected
 ---
  <img src="pictures/pcau_1.jpg" />
 Note: But the best part is when the digital boards work
@@ -282,22 +291,63 @@ Is it possible?
 
 Well, it depends on your definition of hacking, and emoji
 
-
-
 ---
 
  <img src="pictures/not_emoji.png" />
+
 
 Note: 
 These are not emoji
 
 So if, for example, you were to say download an executable claiming to give you an emoji pack for your favourite chat client, that's not hacking. That's you downloading a random executable and getting what's coming to you
 
-What's also not hacking, well, technically, is a Denial of Service attack that was recently fixed by apple.
+---
+
+<img src="pictures/facebook_sticker.gif" height="600px">
+
+Note: These are not emoji. These are stickers.
+
+These are animated devils that some vendors make you pay for.
+
+These were cool back in Yahoo messenger 15 years ago.
+
+---
+
+ <img src="pictures/animoji_gif.gif" />
+
+Note: this is not emoji. This is face detection as a gimick.
+
+---
+
+ <img src="pictures/twitter_sticker.png" />
+
+Note: these again, aren't emoji. These are twiter stickers, now, granted,
+
+---
+
+ <img src="pictures/twitter_sticker_emoji.png" />
+
+Note: these *are emoji*, but in the official twitter client, they are literally there so you can cover up your image.
+For example
+
+---
+
+ <img src="pictures/twitter_sticker_obscure.png" />
+
+Note: you might do this so you can mask the identity of these two individuals, right?
+
+Well no.
+
+TODO TWITTER STICKER OBSERVIE STORY
+https://twitter.com/devipotato/status/929830195766292480 
+
+
+But it's not just thirdparty apps taht can cause trouble
 ---
 
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='266px' src='pictures/space.svg'><img height='266px' src='pictures/mobile.png'><img height='266px' src='pictures/space.svg'></p></div> <!-- .slide: class="center" -->
 
+Note: native functioanlity with emoji can crash your phone.
 ---
  <div style='width: 50%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/t/rainbow_flag.svg'></p></div> <!-- .slide: class="center" -->
 Note: Who is familiar with the Pride Flag emoji that was just added?
