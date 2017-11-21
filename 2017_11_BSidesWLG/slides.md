@@ -135,7 +135,7 @@ Note: the LG bee is just.. bulbus?
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='266px' src='pictures/space.svg'><img height='266px' src='pictures/bee_samsung.png'><img height='266px' src='pictures/space.svg'></p></div> <!-- .slide: class="center" -->
 ## Samsung
 
-Note: The samsung bee is.. yeah?
+Note: it's the beemovie, but everytime you see the bee, you double check you aren't on a galaxy note that might.. explode..
 
 ---
 
@@ -421,6 +421,46 @@ Note: RTL
 ---
 ###`عربي.امارات/google.com`<img src="pictures/t/padlock.svg" style="margin-bottom: 0; width: 60px">`/test` <!-- .slide: class="center" -->
 <span class="bfoot" style="bottom: -280px"><a href="http://www.rafayhackingarticles.net/2016/08/google-chrome-firefox-address-bar.html">Google Chrome, Firefox Address Bar Spoofing Vulnerability</a></span>
+---
+ <div style='width: 50%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/t/tabbed.svg'></p></div> <!-- .slide: class="center" -->
+
+Note: Speaking of the web, here's another interesting thing, to do with tabs in
+browsers 
+
+---
+
+ <img src="pictures/locktab_1.png" style="margin-top: -50px" />
+
+Note: Emoji pedia is awesome, you can look up emoji and see all the cross-browser fun
+
+But notice something that's inconsistent?
+
+---
+
+ <img src="pictures/locktab_2.png" style="margin-top: -50px" />
+Note: Safari won't display lock emoji in brower tabs
+
+This is GOOD
+
+otherwise, people might assume the page is secured when it's not
+---
+
+ <div style='width: 50%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/g/shell.svg'></p></div> <!-- .slide: class="center" -->
+
+
+Note: some other interesting things you can do with emoji
+---
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/o/bolt.svg'><img height='400px' src='pictures/g/shell.svg'></p></div> <!-- .slide: class="center" -->
+---
+
+## `set ☀️=set`<br>`%♫% ☺️=pow^er&&%♫% `<span class="font-size:32px">☻</span>`=she^ll`<br>`%☺️%%`<span class="font-size:32px">☻</span>%` <!-- .slide: class="center" -->
+<span class="bfoot" style="bottom: -180px"><a href="https://twitter.com/ItsReallyNick/status/932681997876649989">Nick Carr, Twitter</a></span>
+---
+
+ <img src="pictures/powershell_1.png" />
+---
+
+ <img src="pictures/powershell_2.png" />
 ---
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='200px' src='pictures/space.svg'><img height='200px' src='pictures/t/world.svg'><img height='200px' src='pictures/t/fire.svg'><img height='200px' src='pictures/space.svg'></p></div> <!-- .slide: class="center" -->
 

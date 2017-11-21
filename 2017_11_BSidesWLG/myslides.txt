@@ -135,7 +135,7 @@ Note: the LG bee is just.. bulbus?
 ! space | bee_samsung.png | space
 ## Samsung
 
-Note: The samsung bee is.. yeah?
+Note: it's the beemovie, but everytime you see the bee, you double check you aren't on a galaxy note that might.. explode..
 
 ---
 
@@ -421,6 +421,46 @@ Note: RTL
 ---
 ###=`عربي.امارات/google.com`<img src="pictures/t/padlock.svg" style="margin-bottom: 0; width: 60px">`/test`
 <span class="bfoot" style="bottom: -280px"><a href="http://www.rafayhackingarticles.net/2016/08/google-chrome-firefox-address-bar.html">Google Chrome, Firefox Address Bar Spoofing Vulnerability</a></span>
+---
+! t/tabbed
+
+Note: Speaking of the web, here's another interesting thing, to do with tabs in
+browsers
+
+---
+
+@^ locktab_1.png
+
+Note: Emoji pedia is awesome, you can look up emoji and see all the cross-browser fun
+
+But notice something that's inconsistent?
+
+---
+
+@^ locktab_2.png
+Note: Safari won't display lock emoji in brower tabs
+
+This is GOOD
+
+otherwise, people might assume the page is secured when it's not
+---
+
+! g/shell
+
+
+Note: some other interesting things you can do with emoji
+---
+! o/bolt | g/shell
+---
+
+=## `set ☀️=set`<br>`%♫% ☺️=pow^er&&%♫% `<span class="font-size:32px">☻</span>`=she^ll`<br>`%☺️%%`<span class="font-size:32px">☻</span>%`
+<span class="bfoot" style="bottom: -180px"><a href="https://twitter.com/ItsReallyNick/status/932681997876649989">Nick Carr, Twitter</a></span>
+---
+
+@ powershell_1.png
+---
+
+@ powershell_2.png
 ---
 ! space | t/world | t/fire | space
 
