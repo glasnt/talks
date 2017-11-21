@@ -189,6 +189,7 @@ Note: this is the name. it has emoji in the title
 
 This has caused me all *sorts* of fun when trying to propose and present at conferences
 
+
 ---
 
  <img src="pictures/djangoconeu_accept.png" />
@@ -209,6 +210,7 @@ I had to resubmit this one and remove specific characters
 
 Note: Some just get a little bit corrupted (kiwicon)
 ---
+
  <img src="pictures/pyconau_schedule_list.png" />
 Note: but sometimes it works!
 
@@ -371,14 +373,14 @@ Note: There was a bug where if you sent the two emoji with a number between them
 
  <img src="pictures/iphonecrash.jpeg" />
 
-<span class="bfoot"><a href="https://www.kazoosoft.eu/wp-content/uploads/2015/05/Iphone6Bug2015.jpeg">jazoosoft.eu</a></span>
+<span class="bfoot" style="bottom: -36px"><a href="https://www.kazoosoft.eu/wp-content/uploads/2015/05/Iphone6Bug2015.jpeg">jazoosoft.eu</a></span>
 Note: so it would crash
 
 this isn't the firts time a bug like this has happened
 ---
  <img src="pictures/effectivepower.jpg" />
 
-<span class="bfoot"><a href="http://s.wsj.net/public/resources/images/BN-IP966_IMESSA_G_20150527143121.jpg">wsj.net</a></span>
+<span class="bfoot" style="bottom: -29px"><a href="http://s.wsj.net/public/resources/images/BN-IP966_IMESSA_G_20150527143121.jpg">wsj.net</a></span>
 
 Note: This has happened before in what's known as the effective power bug
 ---
@@ -390,12 +392,18 @@ Power
 لُلُصّبُلُلصّبُررً ॣ ॣh ॣ ॣ
 冗 
 </code></pre> 
-<span class="bfoot" style="bottom: -250px"><a href="https://www.youtube.com/watch?v=hJLMSllzoLA">The Effective Power Bug (2015)</a></span>
+<span class="bfoot" style="bottom: -260px"><a href="https://www.youtube.com/watch?v=hJLMSllzoLA">The Effective Power Bug (2015)</a></span>
 Note: how this worked is that the words 'effective power' had no meaning, but the text after it, that's displaying weirdly here, would set it off
 
 When this text appeared in a notification popup, the truncation of that message would happen part way in the stuff on the third line, and the phone would get confused and restart
 
 but that's not hacking.
+---
+
+ <img src="pictures/autocorrect-bug.jpg" />
+
+
+<span class="bfoot" style="bottom: -156px"><a href="https://ios.gadgethacks.com/how-to/fix-a-autocorrect-bug-ios-11-when-typing-i-out-your-iphone-0181016/">gadgethacks.com</a></span>
 ---
 
  <div style='width: 50%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/web.svg'></p></div> <!-- .slide: class="center" -->
@@ -556,6 +564,10 @@ Note: also, make sure you enable strict tables, because yowsa.
 Note: this probably isn't the only thing out there, but it's something to watch out for
 ---
 
+ <div style='width: 50%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/e/warning.svg'></p></div> <!-- .slide: class="center" -->
+
+Note: CRITICAL NOTE
+---
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/bee_sticker.png'><img height='400px' src='pictures/bee_apple_new.png'></p></div> <!-- .slide: class="center" -->
 <span style="display: inline-block; position:absolute; left: 190px"><h3>Sierra<br>iOS10.3</h3></span>
 <span style="display: inline-block; position: absolute; left: 600px;"><h3>High Sierra<br>iOS11.1</h3></span>
