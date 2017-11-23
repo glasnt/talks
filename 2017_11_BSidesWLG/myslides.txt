@@ -24,16 +24,6 @@ Note: Kia ora!
 ---
 ! g/wave
 ---
-@ bot.png
----
-@ trending.png
----
-##= katie@thoughtleader.guru
----
-##= self@deprekat.ie
----
-@= footer.svg
----
 ~@ beepurple.jpg
 
 Note: I like bees
@@ -372,7 +362,10 @@ These were cool back in Yahoo messenger 15 years ago.
 
 @ animoji_gif.gif
 
-Note: this is not emoji. This is face detection as a gimick.
+Note: this is not emoji. This is face detection as a gimmick
+
+
+trivialising
 
 ---
 
