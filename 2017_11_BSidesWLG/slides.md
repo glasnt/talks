@@ -24,6 +24,14 @@ Note: Kia ora!
 ---
  <div style='width: 50%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/g/wave.svg'></p></div> <!-- .slide: class="center" -->
 ---
+ <img src="pictures/trending.png" />
+---
+## katie@thoughtleader.guru <!-- .slide: class="center" -->
+---
+## self@deprekat.ie <!-- .slide: class="center" -->
+---
+ <div style='margin: 0 auto;'><p align='center'><img src='pictures/footer.svg'></p></div>  <!-- .slide: class="center" -->
+---
  <!-- .slide: data-background-image="pictures/beepurple.jpg"-->
 
 Note: I like bees
