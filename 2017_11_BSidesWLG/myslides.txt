@@ -24,6 +24,16 @@ Note: Kia ora!
 ---
 ! g/wave
 ---
+@ bot.png
+---
+@ plaus.png
+---
+##= katie@thoughtleader.guru
+---
+##= self@deprekat.ie
+---
+@= footer.svg
+---
 ~@ beepurple.jpg
 
 Note: I like bees
