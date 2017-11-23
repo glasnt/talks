@@ -26,7 +26,7 @@ Note: Kia ora!
 ---
 @ bot.png
 ---
-@ plaus.png
+@ trending.png
 ---
 ##= katie@thoughtleader.guru
 ---
@@ -37,6 +37,8 @@ Note: Kia ora!
 ~@ beepurple.jpg
 
 Note: I like bees
+---
+~@ beepurrrr.jpg
 ---
 
 ~@ bumblewhite.jpg

@@ -26,7 +26,7 @@ Note: Kia ora!
 ---
  <img src="pictures/bot.png" />
 ---
- <img src="pictures/plaus.png" />
+ <img src="pictures/trending.png" />
 ---
 ## katie@thoughtleader.guru <!-- .slide: class="center" -->
 ---
@@ -37,6 +37,8 @@ Note: Kia ora!
  <!-- .slide: data-background-image="pictures/beepurple.jpg"-->
 
 Note: I like bees
+---
+ <!-- .slide: data-background-image="pictures/beepurrrr.jpg"-->
 ---
 
  <!-- .slide: data-background-image="pictures/bumblewhite.jpg"-->
