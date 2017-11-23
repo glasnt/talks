@@ -19,6 +19,8 @@ Note: data-autoplay
 
  <img src="pictures/footerright.png" />
 
+Note: Kia ora!
+
 ---
  <div style='width: 50%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/g/wave.svg'></p></div> <!-- .slide: class="center" -->
 ---
@@ -40,6 +42,11 @@ You know what else is cool?
 Note: bee emoji
 
 but the bee emoji may not look like this to you
+
+Pūatahanga 
+
+Pu-a-tahanga 
+
 
 
 ---
@@ -227,7 +234,10 @@ Side note, it's REALLY fun when the person introducing you on stage reads that v
 
 ---
 
- <img src="pictures/dw_2.jpg" />
+ <img src="pictures/bsides_schedule.jpg" />
+
+---
+ <img src="pictures/dw_2.jpg" style="margin-top: -50px" />
 
 Note: granted, sometimes they get it right!
 ---
@@ -272,26 +282,59 @@ Based on this, we can guess the operating system, down to the version, using jus
 
  <div style='width: 50%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/g/sweat.svg'></p></div> <!-- .slide: class="center" -->
 
-Note: but then sometimes things break completely.
+Note: So yeah, that's fun.
+
+But oyu don't have to submit talks to confs to test out platforms and their emoji support
+
+---
+
+ <img src="pictures/airnz.jpg" style="margin-top: -50px" />
+
+Note: you can try it any time any application allows free-form input
+---
+
+ <div style='margin: 0 auto;'><p align='center'><img src='pictures/airnz_large.jpg'></p></div>  <!-- .slide: class="center" -->
+---
+ <img src="pictures/emoji_bun.jpg" style="margin-top: -50px" />
+
+Note: Sweet release
+
+Or if you want to be pure
+
+---
+
+ <img src="pictures/beesting.jpg" />
+
+Note: a bienenstich
+
+bee string
 
 
 ---
  <!-- .slide: data-background-image="pictures/beehobart.jpg"-->
 
+Note: go back to bees
+This is a hacker conf, yeah? while bees are awesome, what if we could hack with them?
+---
+
+ <img src="pictures/bee-backpack.jpg" />
+
+Note: you could attach tiny little microchips onto bees like sciencists in manchester did
+
+they created an
+
+internet of stings
+
+but this is fiddly
+
+we should stick to our emoji
 
 ---
  <div style='width: 50%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/e/thinking.svg'></p></div> <!-- .slide: class="center" -->
 
 Note: 
 
-
-But this is a hacker conf, that's not that interesting
-
-What if we could hack with emoji.
-
-Is it possible?
-
-Well, it depends on your definition of hacking, and emoji
+but what is emoji
 
 ---
 
@@ -461,6 +504,9 @@ Note: some other interesting things you can do with emoji
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/o/bolt.svg'><img height='400px' src='pictures/g/shell.svg'></p></div> <!-- .slide: class="center" -->
 ---
 
+## `set ☀️=set` <!-- .slide: class="center" -->
+Note: geddit? Sun set?... Annnnyway
+---
 ## `set ☀️=set`<br>`%♫% ☺️=pow^er&&%♫% `<span class="font-size:32px">☻</span>`=she^ll`<br>`%☺️%%`<span class="font-size:32px">☻</span>%` <!-- .slide: class="center" -->
 <span class="bfoot" style="bottom: -180px"><a href="https://twitter.com/ItsReallyNick/status/932681997876649989">Nick Carr, Twitter</a></span>
 ---
@@ -482,6 +528,7 @@ With literally a bug that could set the world on fire
 ## `STRICT_ALL_TABLES` <!-- .slide: class="center" -->
 
 Note: This could have all been avoided if STRICT TABLES had been enabled for wordpress
+
 
 Wordpress core used some of the ... more interesting features of mysql, so they couldn't enable this, and this is why everthing was a fire
 
@@ -555,6 +602,7 @@ but you get new emoji! you should update your things!
 ---
 # MySQL <!-- .slide: class="center" -->
 ## `STRICT_ALL_TABLES` <!-- .slide: class="center" -->
+## `utf8mb4` <!-- .slide: class="center" -->
 Note: also, make sure you enable strict tables, because yowsa.
 
 ---

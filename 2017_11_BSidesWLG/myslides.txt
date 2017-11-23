@@ -19,6 +19,8 @@ Note: data-autoplay
 
 @ footerright.png
 
+Note: Kia ora!
+
 ---
 ! g/wave
 ---
@@ -40,6 +42,11 @@ You know what else is cool?
 Note: bee emoji
 
 but the bee emoji may not look like this to you
+
+Pūatahanga
+
+Pu-a-tahanga
+
 
 
 ---
@@ -227,7 +234,10 @@ Side note, it's REALLY fun when the person introducing you on stage reads that v
 
 ---
 
-@ dw_2.jpg
+@ bsides_schedule.jpg
+
+---
+@^ dw_2.jpg
 
 Note: granted, sometimes they get it right!
 ---
@@ -272,26 +282,59 @@ Based on this, we can guess the operating system, down to the version, using jus
 
 ! g/sweat
 
-Note: but then sometimes things break completely. 
+Note: So yeah, that's fun. 
+
+But oyu don't have to submit talks to confs to test out platforms and their emoji support
+
+---
+
+@^ airnz.jpg
+
+Note: you can try it any time any application allows free-form input
+---
+
+@= airnz_large.jpg
+---
+@^ emoji_bun.jpg
+
+Note: Sweet release
+
+Or if you want to be pure
+
+---
+
+@ beesting.jpg
+
+Note: a bienenstich
+
+bee string
 
 
 ---
 ~@ beehobart.jpg
 
+Note: go back to bees
+This is a hacker conf, yeah? while bees are awesome, what if we could hack with them?
+---
+
+@ bee-backpack.jpg
+
+Note: you could attach tiny little microchips onto bees like sciencists in manchester did
+
+they created an 
+
+internet of stings
+
+but this is fiddly
+
+we should stick to our emoji
 
 ---
 ! e/thinking
 
 Note:
 
-
-But this is a hacker conf, that's not that interesting
-
-What if we could hack with emoji.
-
-Is it possible?
-
-Well, it depends on your definition of hacking, and emoji
+but what is emoji
 
 ---
 
@@ -461,6 +504,9 @@ Note: some other interesting things you can do with emoji
 ! o/bolt | g/shell
 ---
 
+=## `set ☀️=set`
+Note: geddit? Sun set?... Annnnyway
+---
 =## `set ☀️=set`<br>`%♫% ☺️=pow^er&&%♫% `<span class="font-size:32px">☻</span>`=she^ll`<br>`%☺️%%`<span class="font-size:32px">☻</span>%`
 <span class="bfoot" style="bottom: -180px"><a href="https://twitter.com/ItsReallyNick/status/932681997876649989">Nick Carr, Twitter</a></span>
 ---
@@ -482,6 +528,7 @@ With literally a bug that could set the world on fire
 ##= `STRICT_ALL_TABLES`
 
 Note: This could have all been avoided if STRICT TABLES had been enabled for wordpress
+
 
 Wordpress core used some of the ... more interesting features of mysql, so they couldn't enable this, and this is why everthing was a fire
 
@@ -555,6 +602,7 @@ but you get new emoji! you should update your things!
 ---
 #= MySQL
 ##= `STRICT_ALL_TABLES`
+##= `utf8mb4`
 Note: also, make sure you enable strict tables, because yowsa. 
 
 ---
