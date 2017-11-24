@@ -327,6 +327,7 @@ Or if you want to be pure
 
  <img src="pictures/beesting.jpg" />
 
+<span class="bfoot">[Wikipedia](https://en.wikipedia.org/wiki/Bienenstich#/media/File:Bienenstich.jpg)</span>
 Note: a bienenstich
 
 bee string
@@ -340,6 +341,8 @@ This is a hacker conf, yeah? while bees are awesome, what if we could hack with 
 ---
 
  <img src="pictures/bee-backpack.jpg" />
+
+<span class="bfoot" style="bottom: -10px">[BBC](http://www.bbc.com/news/av/technology-41363465/bees-go-online-in-manchester)</span>
 
 Note: you could attach tiny little microchips onto bees like sciencists in manchester did
 
