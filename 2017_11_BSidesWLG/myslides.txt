@@ -24,7 +24,13 @@ Note: Kia ora!
 ---
 ! g/wave
 ---
+@ bots.png
+
+Note: I'm a thought leader
+---
 @ trending.png
+
+Note: no really
 ---
 ##= katie@thoughtleader.guru
 ---
@@ -129,6 +135,8 @@ and yet...
 ! space | bee_google_o.png | space
 
 ## Android O
+
+<span class="bfoot" style="bottom: -100px">quip: [cgpgrey](https://twitter.com/Emojipedia/status/913401711137615872)</span>
 
 Note: ... see a problem?
 
@@ -298,6 +306,10 @@ But oyu don't have to submit talks to confs to test out platforms and their emoj
 
 ---
 
+@= ss23.jpg
+---
+@= ss23_l.jpg
+---
 @^ airnz.jpg
 
 Note: you can try it any time any application allows free-form input

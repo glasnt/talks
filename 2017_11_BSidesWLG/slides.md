@@ -24,7 +24,13 @@ Note: Kia ora!
 ---
  <div style='width: 50%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/g/wave.svg'></p></div> <!-- .slide: class="center" -->
 ---
+ <img src="pictures/bots.png" />
+
+Note: I'm a thought leader
+---
  <img src="pictures/trending.png" />
+
+Note: no really
 ---
 ## katie@thoughtleader.guru <!-- .slide: class="center" -->
 ---
@@ -129,6 +135,8 @@ and yet...
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='266px' src='pictures/space.svg'><img height='266px' src='pictures/bee_google_o.png'><img height='266px' src='pictures/space.svg'></p></div> <!-- .slide: class="center" -->
 
 ## Android O
+
+<span class="bfoot" style="bottom: -100px">quip: [cgpgrey](https://twitter.com/Emojipedia/status/913401711137615872)</span>
 
 Note: ... see a problem?
 
@@ -298,6 +306,10 @@ But oyu don't have to submit talks to confs to test out platforms and their emoj
 
 ---
 
+ <div style='margin: 0 auto;'><p align='center'><img src='pictures/ss23.jpg'></p></div>  <!-- .slide: class="center" -->
+---
+ <div style='margin: 0 auto;'><p align='center'><img src='pictures/ss23_l.jpg'></p></div>  <!-- .slide: class="center" -->
+---
  <img src="pictures/airnz.jpg" style="margin-top: -50px" />
 
 Note: you can try it any time any application allows free-form input
