@@ -1,4 +1,15 @@
 - conference:
+    name: BSides Wellington
+    link: https://www.bsides.nz/
+    date: 24-NOV-2017
+    location: Wellington, New Zealand
+    talks:
+        - name: Protect yourself against the bees 🐝
+          link: https://bsideswellington2017.sched.com/event/CR3O/protect-yourself-against-the-bees
+          slides: 2017_11_BSidesWLG
+          twitter: https://twitter.com/Blackwall_sec/status/933867420208345088
+
+- conference:
     name: GitHub Constellation
     link: http://githubconstellation.com/sydney/
     date: 25-OCT-2017
