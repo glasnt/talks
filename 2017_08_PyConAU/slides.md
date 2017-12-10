@@ -842,7 +842,7 @@ Do you want to know what it's important?
 
  <div style='margin: 0 auto;'><p align='center'><img src='pictures/empathy.jpg'></p></div>  <!-- .slide: class="center" -->
 
- <span class='foot'>[katemccombs.com](http://www.katemccombs.com/teaandempathy/)</span>
+ <span class='foot'>[teaandempathy.org](https://www.teaandempathy.org)</span>
 
 Note: If you weren't in my shoes, if you didn't suffer the trauma, then sure, it could just be a button to you
 
