@@ -1,0 +1,150 @@
+
+# &nbsp;
+#= A Right Stitchup
+### Lightning Talk
+
+@ footer.svg
+---
+
+##= ~~ <br>A long time ago <br> at a conference far away<br> ~~
+
+---
+
+~@ osdc2014.png
+
+---
+
+~@ green_display.jpg
+
+---
+
+~@ green_lynn.jpg
+
+---
+
+~@ green_design_clip.png
+---
+
+~@ green_working.jpg
+---
+
+
+# &nbsp; 
+
+*"If you know anything about image manipulation, colour setting, cross stitch charts..."*
+---
+# &nbsp; 
+*"If there is any [F/OSS] software out there please tell me.*
+
+- *Otherwise I will make my own,*
+
+- *and present it here next year"*
+
+- &dash; me, November 2014
+
+---
+
+# &nbsp;
+# &nbsp;
+- (To be fair, OSDC hasn't run since 2015)
+---
+
+##= Problems to solve
+
+* "image manipulation"
+* "colour setting"
+* "cross stitch charts"
+
+---
+
+##= Image manipulation
+---
+
+##= `imagemagick`
+---
+
+##= ~~`imagemagick`~~
+---
+
+##= `pillow`
+---
+##= `getpixel((x,y))`
+---
+##= Colour setting 
+---
+###= Let's learn about floss
+---
+@= dmc-logo.jpg
+
+Note: Dollfus-Mieg et Compagnie
+Est. 1746
+---
+~@ dmc-rack.jpg
+---
+~@ floss_macro.jpg
+---
+~@ wool_macro.jpg
+---
+@ dmc-cranberry.png
+---
+
+<pre><code style="font-size: 36px; line-height: 1.5;">
+
+V DK Cranberry&nbsp;&nbsp;600&nbsp;&nbsp;&nbsp;&nbsp;7600
+DK Cranberry&nbsp; &nbsp;&nbsp;601
+MD Cranberry&nbsp;&nbsp;&nbsp;&nbsp;602&nbsp;&nbsp;&nbsp;&nbsp;7603
+Cranberry&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;603&nbsp;&nbsp;&nbsp;&nbsp;7604
+LT Cranberry&nbsp;&nbsp;&nbsp;&nbsp;604&nbsp;&nbsp;&nbsp;&nbsp;7605
+V LT Cranberry&nbsp;&nbsp;605
+</code></pre>
+
+---
+##= ∑ floss > ∑ wool
+---
+###= *This chart has been formulated only as a guide to assist you in selecting color from the DMC family of products. Please use your own judgement in making the final decision on color interpretation.*
+---
+
+##= Color Code ➡ RGB
+### ???
+---
+##### *cough*
+---
+###= 454 RGB Codes for Floss
+---
+###= ➡ 291 RGB Codes for Wool
+---
+###= Reducing picture to only available colours
+---
+####= `pdata = [0, 0, 0, 255, 255, 255, ...]`
+####= `p = Image.new('P', (16, 16))`
+####= `p.putpalette(pdata)`
+####= `im.convert('P', 0, p.im)`
+---
+
+###= Problem: 256
+---
+
+###TODO scikit 
+
+---
+##= Cross-stitch charts
+---
+##= `<div>`
+---
+##= Result
+---
+
+##= github.com/glasnt/626 
+---
+~@ 626.png
+---
+
+~@ green_new_chart.png
+
+---
+
+@ sprinkles-chart.png
+---
+
+! space | claps | space
+@ footer.svg
