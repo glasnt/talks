@@ -107,7 +107,7 @@ V LT Cranberry&nbsp;&nbsp;605
 ##= Color Code ➡ RGB
 ### ???
 ---
-##### *cough*
+#####= *cough*
 ---
 ###= 454 RGB Codes for Floss
 ---
@@ -115,16 +115,50 @@ V LT Cranberry&nbsp;&nbsp;605
 ---
 ###= Reducing picture to only available colours
 ---
-####= `pdata = [0, 0, 0, 255, 255, 255, ...]`
-####= `p = Image.new('P', (16, 16))`
-####= `p.putpalette(pdata)`
-####= `im.convert('P', 0, p.im)`
+##= `pillow`
+---
+<pre><code style="font-size: 36px; line-height: 1.5;">
+pdata = [0, 0, 0, 255, 255, 255, ...]
+p = Image.new('P', (16, 16))
+p.putpalette(pdata)
+im.convert('P', 0, p.im)
+</code></pre>
+---
+@^ window-wool_1.png
+---
+@^ window-wool_2.png
+---
+<pre><code style="font-size: 36px; line-height: 1.5;">
+im.convert('P'
+    , palette=Image.ADAPTIVE
+    , colors=16)
+</code></pre>
+---
+@^ window-wool_2.png
+---
+@^ window-wool_3.png
 ---
 
 ###= Problem: 256
+Note: pillow palette limited to 256
+
+we have 291, shouldn't be too hard to remove the closest colurs, right?
 ---
 
-###TODO scikit 
+@= euclidean.jpg
+---
+@= ciede2000.jpg
+Note: latest revision of the forumula from  International Commission on Illumination (CIE) 
+---
+###= `from skimage.color`
+###= `import deltaE_ciede2000`
+
+Note: praise scikit
+---
+
+@ diff_2.png
+---
+@ diff_1.png
 
 ---
 ##= Cross-stitch charts
@@ -136,14 +170,18 @@ V LT Cranberry&nbsp;&nbsp;605
 
 ##= github.com/glasnt/626 
 ---
-~@ 626.png
+@ green_chart_new.png
 ---
 
 ~@ green_new_chart.png
-
 ---
-
-@ sprinkles-chart.png
+###= Here's one I prepared earlier
+---
+@^ sweet_large.png
+---
+@^ sweet_chart.png
+---
+@^ sweet_done.png
 ---
 
 ! space | claps | space
