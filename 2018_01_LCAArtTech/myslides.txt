@@ -31,9 +31,9 @@
 
 # &nbsp; 
 
-*"If you know anything about image manipulation, colour setting, cross stitch charts..."*
+*"If you know anything about image manipulation, colour setting, cross stitch charts...*
 
-- *"If there is any [FOSS] software out there please tell me.*
+- *If there is any [FOSS] software out there please tell me.*
 
 - *Otherwise I will make my own,*
 
@@ -105,7 +105,8 @@ V LT Cranberry&nbsp;&nbsp;605
 ---
 ~@ wool_6floss.jpg
 ---
-##= ∑ floss > ∑ wool
+##= more floss than wool
+####= over 50% more!
 ---
 ###= *This chart has been formulated only as a guide to assist you in selecting color from the DMC family of products. Please use your own judgement in making the final decision on color interpretation.*
 ---
@@ -115,9 +116,8 @@ V LT Cranberry&nbsp;&nbsp;605
 ---
 #####= *cough*
 ---
-###= ~450 RGB Codes for Floss
----
-###= -> ~290 RGB Codes for Wool
+###= 454 RGB Codes for Floss
+###= 293 RGB Codes for Wool
 ---
 ###= Reducing picture to only available colours
 ---
@@ -192,7 +192,6 @@ Note: praise scikit
 <tr><td>0.5026467750409492</td><td>Golden Brown Dk</td><td>#914F12</td><td style='background-color: #914F12'>&nbsp; &nbsp; &nbsp; &nbsp;</td><td style='background-color: #889268'>&nbsp; &nbsp; &nbsp; &nbsp; </td><td>#889268</td><td>Green Gray Md</td></tr>
 <tr><td>0.5026467750409492</td><td>Green Gray Md</td><td>#889268</td><td style='background-color: #889268'>&nbsp; &nbsp; &nbsp; &nbsp;</td><td style='background-color: #914F12'>&nbsp; &nbsp; &nbsp; &nbsp; </td><td>#914F12</td><td>Golden Brown Dk</td></tr>
 </table>
-####= Colour differences
 </section>
 ---
 <table class="difftable"><tr><th>deltaE ciede2000</th><th>Colour A</th><th>Hex A</th><th>Swatch A</th><th>Swatch B</th><th>Hex B</th><th>Colour B</th></tr>
@@ -215,7 +214,6 @@ Note: praise scikit
 <tr><td>0.014944343254283848</td><td>Carnation Very Light</td><td>#FFB2BB</td><td style='background-color: #FFB2BB'>&nbsp; &nbsp; &nbsp; &nbsp;</td><td style='background-color: #FCB0B9'>&nbsp; &nbsp; &nbsp; &nbsp; </td><td>#FCB0B9</td><td>Pink Medium</td></tr>
 <tr><td>0.014944343254283848</td><td>Pink Medium</td><td>#FCB0B9</td><td style='background-color: #FCB0B9'>&nbsp; &nbsp; &nbsp; &nbsp;</td><td style='background-color: #FFB2BB'>&nbsp; &nbsp; &nbsp; &nbsp; </td><td>#FFB2BB</td><td>Carnation Very Light</td></tr>
 </table>
-####= Nigh-undectable colour differences
 ---
 <table class="difftable"><tr><th>deltaE ciede2000</th><th>Colour A</th><th>Hex A</th><th>Swatch A</th><th>Swatch B</th><th>Hex B</th><th>Colour B</th></tr>
 <tr><td>0.04989602021800601</td><td>Cranberry Dark</td><td>#D1286A</td><td style='background-color: #D1286A'>&nbsp; &nbsp; &nbsp; &nbsp;</td><td style='background-color: #CD2F63'>&nbsp; &nbsp; &nbsp; &nbsp; </td><td>#CD2F63</td><td>Cranberry Very Dark</td></tr>
@@ -237,7 +235,6 @@ Note: praise scikit
 <tr><td>0.7542495972356424</td><td>Cranberry Very Dark</td><td>#CD2F63</td><td style='background-color: #CD2F63'>&nbsp; &nbsp; &nbsp; &nbsp;</td><td style='background-color: #FFA4BE'>&nbsp; &nbsp; &nbsp; &nbsp; </td><td>#FFA4BE</td><td>Cranberry</td></tr>
 <tr><td>0.7542495972356424</td><td>Cranberry</td><td>#FFA4BE</td><td style='background-color: #FFA4BE'>&nbsp; &nbsp; &nbsp; &nbsp;</td><td style='background-color: #CD2F63'>&nbsp; &nbsp; &nbsp; &nbsp; </td><td>#CD2F63</td><td>Cranberry Very Dark</td></tr>
 </table>
-####= Cranberry differences
 
 ---
 ##= Cross-stitch charts
@@ -249,7 +246,7 @@ Note: praise scikit
 
 ##= github.com/glasnt/626 
 ---
-@= green_chart_new.png
+@^ green_chart_new.png
 ---
 
 ~@ green_chart_new_clip.png
@@ -258,13 +255,17 @@ Note: praise scikit
 ---
 @^ sweet_large.png
 ---
-###= `./ih sweetsail.png -s2`
+####= `./ih sweetsail.png -s2`
 ---
 ~@ sweet_chart.png
 ---
-###= `./ih sweetsail.png -s2 -t`
+####= `./ih sweetsail.png -s2 -t`
 ---
 ~@ sweet_mock.png
+---
+####= `./ih sweetsail.png -s2 -t -p floss`
+---
+~@ sweet_cross.png
 ---
 ###= [needlepoint continues] 
 ---
@@ -285,5 +286,8 @@ $ ./ih wifi.png -s10 -t
 @^ wifi_mock.png
 
 ---
-! space | claps | space
+
+###= github.com/glasnt/626 
+<br>
+! space |  space | claps | space | space
 @ footer.svg
