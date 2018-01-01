@@ -197,7 +197,7 @@ except in places like twitter or text where character counts count
 ---
 
  <div style='width: 50%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/g/UK.svg'></p></div> <!-- .slide: class="center" -->
-## &nbsp;
+## <span style='color: white'> `.` &nbsp;</span>
 Note: Speaking of those flags from earlier, they work in a similar way to the facepalm emoji
 ---
  <div style='width: 50%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/g/UK.svg'></p></div> <!-- .slide: class="center" -->
@@ -375,6 +375,164 @@ JP: mo-ji-ba-ke
 Think of it like this
 ---
 
+ <div style='width: 50%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/t/megaphone.svg'></p></div> <!-- .slide: class="center" -->
+Note: 
+
+---
+## The Power and Responsibility <!-- .slide: class="center" -->
+##of Unicode Adoption <!-- .slide: class="center" -->
+Note: 
+"The power and responsibility of UNicode adoption"
+
+I first gave it at this very meetup in March last year.
+
+I know right? It sounds like a proper technical talk, but it's actually me just yelling about emoji and stuff
+
+Thing is, that's not the name
+---
+
+## The Power <img style="margin-bottom: 0px" src="pictures/o/bolt.svg" width="60px"> and Responsibility <img style="margin-bottom: 0px" width="60px" src="pictures/g/sweat.svg"> <!-- .slide: class="center" -->
+## of Unicode Adoption <img style="margin-bottom: 0px" width="50px" src="pictures/t/sparkles.svg"> <!-- .slide: class="center" -->
+
+Note: this is the name. it has emoji in the title
+
+This has caused me all *sorts* of fun when trying to propose and present at conferences
+
+
+---
+
+ <img src="pictures/djangoconeu_accept.png" />
+
+Note: For example, some conferences can't get the name right, even when it's been entered into their system
+
+---
+
+ <img src="pictures/easychair.png" />
+
+Note: Some like some characters, but not others
+
+I had to resubmit this one and remove specific characters
+
+---
+
+ <img src="pictures/pyconau_schedule_list.png" />
+Note: but sometimes it works!
+
+... on the website
+---
+ <img src="pictures/pcau_2.jpg" />
+Note: but not on the printed schedule
+---
+
+ <img src="pictures/pcau_3.jpg" />
+Note: or on the AV notes.
+
+Side note, it's REALLY fun when the person introducing you on stage reads that verbatim
+
+---
+
+ <img src="pictures/dw_2.jpg" style="margin-top: -50px" />
+
+Note: granted, sometimes they get it right!
+---
+
+
+ <img src="pictures/djeu_5.jpg" />
+
+Note: but sometimes it prints out wrong
+
+---
+
+ <img src="pictures/djeu_1.jpg" />
+
+Note: So sometimes they just cut it out entirely
+---
+
+ <img src="pictures/djeu_1.jpg" />
+ <img src="pictures/djeu_2.jpg" />
+Note: but they can be corrected
+---
+
+<img src="pictures/ndc_listed_talk.png" style="margin-top: -50px" height="700px">
+---
+
+ <div style='margin: 0 auto;'><p align='center'><img src='pictures/ndc_submitted.png'></p></div>  <!-- .slide: class="center" -->
+
+---
+
+ <div style='margin: 0 auto;'><p align='center'><img src='pictures/ndc_title.png'></p></div>  <!-- .slide: class="center" -->
+
+---
+ <img src="pictures/pcau_1.jpg" />
+Note: But the best part is when the digital boards work
+
+Because I can tell you exactly what operating system this is running. Windows 8
+
+---
+# &nbsp;
+ <img src="pictures/ms_sweat.png" />
+
+Note: This is the emoji
+---
+ <img src="pictures/sweat_versions.png" />
+
+Note: 
+
+Different vendors have implemented emoji differently. In this case, the 'sweat drop' face is the most easily recognisable as windows, because it looks like a face with boils all over it or something
+
+(picture of different sweat)
+
+Based on this, we can guess the operating system, down to the version, using just the emoji being displayed.
+---
+
+ <div style='width: 50%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/g/sweat.svg'></p></div> <!-- .slide: class="center" -->
+
+Note: So yeah, that's fun.
+
+But, back to those truncated paragraphs earlier. They are really important, because they can occur without human oversight.
+Which means you can get
+
+---
+
+# `CVE-2015-3438` <!-- .slide: class="center" -->
+<span class="dasfoot" style="bottom: -180px"><a href="https://poststatus.com/the-trojan-emoji/">Anatomy of a Critical Security Bug</a></span>
+---
+
+ <div style='width: 50%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/e/thinking.svg'></p></div> <!-- .slide: class="center" -->
+
+## <span style="color: white">.</span>
+---
+
+ <div style='width: 50%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/e/thinking.svg'></p></div> <!-- .slide: class="center" -->
+
+## `\u1F914`
+
+---
+
+ <div style='width: 50%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/e/thinking.svg'></p></div> <!-- .slide: class="center" -->
+
+## `\xf0\x9f\xa4\x94`
+
+---
+
+# `<q cite="`<img src="pictures/e/thinking.svg" style="width: 90px; margin-bottom: -20px;">`">` <!-- .slide: class="center" -->
+# &nbsp; <!-- .slide: class="center" -->
+
+---
+
+# `<q cite="` &nbsp; &nbsp; &nbsp;&nbsp;&nbsp; <!-- .slide: class="center" -->
+# &nbsp; <!-- .slide: class="center" -->
+
+---
+# `<q cite="` &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;<br>`" on_click="..">` <!-- .slide: class="center" -->
+
+---
+# MySQL <!-- .slide: class="center" -->
+## `STRICT_ALL_TABLES` <!-- .slide: class="center" -->
+## `utf8mb4` <!-- .slide: class="center" -->
+
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='160px' src='pictures/space.svg'><img height='160px' src='pictures/space.svg'><img height='160px' src='pictures/g/thumbsup.svg'><img height='160px' src='pictures/space.svg'><img height='160px' src='pictures/space.svg'></p></div> <!-- .slide: class="center" -->
+---
  <div style='width: 50%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/t/link.svg'></p></div> <!-- .slide: class="center" -->
 
 ---
@@ -784,7 +942,8 @@ Note: updates
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='200px' src='pictures/space.svg'><img height='200px' src='pictures/g/grinning_7.png'><img height='200px' src='pictures/g/grinning_o.png'><img height='200px' src='pictures/space.svg'></p></div> <!-- .slide: class="center" -->
 ---
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='200px' src='pictures/g-covermouth.png'><img height='200px' src='pictures/m-covermouth.png'><img height='200px' src='pictures/t-overmouth.png'><img height='200px' src='pictures/a-covermouth.png'></p></div> <!-- .slide: class="center" -->
- <span class='foot'>[twitter.com](https://twitter.com/guischmitt/status/944228089655152642)</span>
+
+<span class='dasfoot' style="top: 470px"> [twitter.com](https://twitter.com/guischmitt/status/944228089655152642)</span>
 ---
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='160px' src='pictures/g/grinning_7.png'><img height='160px' src='pictures/g/crying_7.png'><img height='160px' src='pictures/g/tongue_7.png'><img height='160px' src='pictures/g/kissing_7.png'><img height='160px' src='pictures/g/shock_7.png'></p></div> <!-- .slide: class="center" -->
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='160px' src='pictures/g/grinning_o.png'><img height='160px' src='pictures/g/crying_o.png'><img height='160px' src='pictures/g/tongue_o.png'><img height='160px' src='pictures/g/kissing_o.png'><img height='160px' src='pictures/g/shock_o.png'></p></div> <!-- .slide: class="center" -->

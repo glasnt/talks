@@ -197,7 +197,7 @@ except in places like twitter or text where character counts count
 ---
 
 ! g/UK
-## &nbsp;
+## <span style='color: white'> `.` &nbsp;</span>
 Note: Speaking of those flags from earlier, they work in a similar way to the facepalm emoji
 ---
 ! g/UK
@@ -375,6 +375,164 @@ JP: mo-ji-ba-ke
 Think of it like this
 ---
 
+! t/megaphone
+Note:
+
+---
+##= The Power and Responsibility
+##=of Unicode Adoption
+Note:
+"The power and responsibility of UNicode adoption"
+
+I first gave it at this very meetup in March last year.
+
+I know right? It sounds like a proper technical talk, but it's actually me just yelling about emoji and stuff
+
+Thing is, that's not the name
+---
+
+##= The Power <img style="margin-bottom: 0px" src="pictures/o/bolt.svg" width="60px"> and Responsibility <img style="margin-bottom: 0px" width="60px" src="pictures/g/sweat.svg">
+##= of Unicode Adoption <img style="margin-bottom: 0px" width="50px" src="pictures/t/sparkles.svg">
+
+Note: this is the name.  it has emoji in the title
+
+This has caused me all *sorts* of fun when trying to propose and present at conferences
+
+
+---
+
+@ djangoconeu_accept.png
+
+Note: For example, some conferences can't get the name right, even when it's been entered into their system
+
+---
+
+@ easychair.png
+
+Note: Some like some characters, but not others
+
+I had to resubmit this one and remove specific characters
+
+---
+
+@ pyconau_schedule_list.png
+Note: but sometimes it works!
+
+... on the website
+---
+@ pcau_2.jpg
+Note: but not on the printed schedule
+---
+
+@ pcau_3.jpg
+Note: or on the AV notes.
+
+Side note, it's REALLY fun when the person introducing you on stage reads that verbatim
+
+---
+
+@^ dw_2.jpg
+
+Note: granted, sometimes they get it right!
+---
+
+
+@ djeu_5.jpg
+
+Note: but sometimes it prints out wrong
+
+---
+
+@ djeu_1.jpg
+
+Note: So sometimes they just cut it out entirely
+---
+
+@ djeu_1.jpg
+@ djeu_2.jpg
+Note: but they can be corrected
+---
+
+<img src="pictures/ndc_listed_talk.png" style="margin-top: -50px" height="700px">
+---
+
+@= ndc_submitted.png
+
+---
+
+@= ndc_title.png
+
+---
+@ pcau_1.jpg
+Note: But the best part is when the digital boards work
+
+Because I can tell you exactly what operating system this is running. Windows 8
+
+---
+# &nbsp;
+@ ms_sweat.png
+
+Note: This is the emoji
+---
+@ sweat_versions.png
+
+Note:
+
+Different vendors have implemented emoji differently. In this case, the 'sweat drop' face is the most easily recognisable as windows, because it looks like a face with boils all over it or something
+
+(picture of different sweat)
+
+Based on this, we can guess the operating system, down to the version, using just the emoji being displayed.
+---
+
+! g/sweat
+
+Note: So yeah, that's fun.
+
+But, back to those truncated paragraphs earlier. They are really important, because they can occur without human oversight. 
+Which means you can get
+
+---
+
+#= `CVE-2015-3438`
+<span class="dasfoot" style="bottom: -180px"><a href="https://poststatus.com/the-trojan-emoji/">Anatomy of a Critical Security Bug</a></span>
+---
+
+! e/thinking
+
+## <span style="color: white">.</span>
+---
+
+! e/thinking
+
+## `\u1F914`
+
+---
+
+! e/thinking
+
+## `\xf0\x9f\xa4\x94`
+
+---
+
+#= `<q cite="`<img src="pictures/e/thinking.svg" style="width: 90px; margin-bottom: -20px;">`">`
+#= &nbsp;
+
+---
+
+#= `<q cite="` &nbsp; &nbsp; &nbsp;&nbsp;&nbsp; 
+#= &nbsp;
+
+---
+#= `<q cite="` &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;<br>`" on_click="..">`
+
+---
+#= MySQL
+##= `STRICT_ALL_TABLES`
+##= `utf8mb4` 
+
+! space | space | g/thumbsup | space | space
+---
 ! t/link
 
 ---
@@ -784,7 +942,8 @@ Note: updates
 ! space | g/grinning_7.png | g/grinning_o.png | space
 ---
 ! g-covermouth.png | m-covermouth.png | t-overmouth.png | a-covermouth.png 
-vv [twitter.com](https://twitter.com/guischmitt/status/944228089655152642)
+
+<span class='dasfoot' style="top: 470px"> [twitter.com](https://twitter.com/guischmitt/status/944228089655152642)</span>
 ---
 ! g/grinning_7.png | g/crying_7.png | g/tongue_7.png | g/kissing_7.png | g/shock_7.png
 ! g/grinning_o.png | g/crying_o.png | g/tongue_o.png | g/kissing_o.png | g/shock_o.png
