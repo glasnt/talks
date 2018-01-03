@@ -5,6 +5,8 @@ h { color: blue; font-weight: bold;}
 span.bfoot {position:absolute; bottom: 0px; right: 1em; font-size: 50%; color: grey !important; }
 span.bfoot a { color: grey !important}
 span.dasfoot { position:absolute; top: 670px; right: 1em; font-size: 50%; color: grey}
+span.foot { position:absolute; top: 670px; right: 1em; font-size: 50%; color: grey}
+span.foot a { color: grey !important}
 img.e { width: 40px;}
 .reveal a { color: black}
 table.difftable {

@@ -65,8 +65,15 @@
 ##= ~~`imagemagick`~~
 ---
 
-###= Disentangle a new fangled image mangler
-####= linux.conf.au 2015 Multimedia Miniconf
+###= "Don't wrap your shell script directly<br>in [web framework]"
+<small>Katie McLaughlin, "Disentangle a new fangled image mangler",<br>linux.conf.au 2015 Multimedia Miniconf</small>
+
+<span class="foot" style="top: 450px">[youtube.com](https://www.youtube.com/watch?v=XedLGMp38xA)</span>
+
+Note: I've already done that talk. I've already worked out that imagemagick is too powerful and vulnerable for my unsecase
+
+This talk is a lovely wander through a different image manipulation project of mine. 
+
 ---
 
 ##= `pillow`
@@ -108,11 +115,19 @@ V LT Cranberry&nbsp;&nbsp;605
 ##= more floss than wool
 ####= over 50% more!
 ---
-###= *This chart has been formulated only as a guide to assist you in selecting color from the DMC family of products. Please use your own judgement in making the final decision on color interpretation.*
+##= Colour Code ➡ RGB
+###- ???
 ---
+###= No official mapping exists
+####= 'proprietary information'
+<span class="foot" style="top: 437px"> [thread-bare.com](https://www.thread-bare.com/2017/09/20/creating-cross-stitch-charts-with-consistent-colors)</span>
+Note: proprietary information
 
-##= Color Code ➡ RGB
-### ???
+colour drifting over time
+
+official standard
+
+allows competitors to "steal" 
 ---
 #####= *cough*
 ---
@@ -153,10 +168,12 @@ we have 291, shouldn't be too hard to remove the closest colurs, right?
 
 @= euclidean.jpg
 ###= Euclidean Distance
+<span class="foot" style="top: 500px">[wikipedia](https://en.wikipedia.org/wiki/Color_difference)</span>
 Note: very rough estimate
 ---
 @= ciede2000.jpg
 ###= CIEDE2000
+<span class="foot" style="top: 515px">[wikipedia](https://en.wikipedia.org/wiki/Color_difference)</span>
 
 Note: latest revision of the forumula from  International Commission on Illumination (CIE) 
 
@@ -254,6 +271,7 @@ Note: praise scikit
 ###= Here's one I prepared earlier
 ---
 @^ sweet_large.png
+<span class="foot" style="top: 700px">[tumblr](http://probertson.tumblr.com/post/161081154009/australian-pokedex-30-57)</span>
 ---
 ####= `./ih sweetsail.png -s2`
 ---
@@ -263,19 +281,18 @@ Note: praise scikit
 ---
 ~@ sweet_mock.png
 ---
-####= `./ih sweetsail.png -s2 -t -p floss`
----
-~@ sweet_cross.png
----
-###= [needlepoint continues] 
+~@ sweet_progress.jpg
 ---
 ~@ sweet_finished.jpg
 ---
 
-##= More applications
-###= hacker edition
+##= Practical Applications
 
 Note: if time permits
+
+Stringly typed
+
+String a string to string a string
 ---
 <pre><code style="font-size: 36px; line-height: 1.5;">
 $ pip install qrcode
@@ -286,7 +303,24 @@ $ ./ih wifi.png -s10 -t
 @^ wifi_mock.png
 
 ---
+##= So why isn't this<br>Stitch as a Service?
+---
 
+###= "If you can avoid file uploads, at all, do."
+<small>Tom Eastman, "The dangerous, exquisite art of<br>safely handing user-uploaded files", linux.conf.au 2017</small>
+
+<span class="foot" style="top: 450px">[youtube.com](https://www.youtube.com/watch?v=7QVgzVcoV_M)</span>
+Note: basically, Tom put the fear of god in me. 
+
+This works locally. I'm not going to play this game again. 
+---
+
+##= But since y'all asked so nicely..
+
+---
+
+##= TODO
+---
 ###= github.com/glasnt/626 
 <br>
 ! space |  space | claps | space | space

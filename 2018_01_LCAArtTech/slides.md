@@ -65,8 +65,15 @@
 ## ~~`imagemagick`~~ <!-- .slide: class="center" -->
 ---
 
-### Disentangle a new fangled image mangler <!-- .slide: class="center" -->
-#### linux.conf.au 2015 Multimedia Miniconf <!-- .slide: class="center" -->
+### "Don't wrap your shell script directly<br>in [web framework]" <!-- .slide: class="center" -->
+<small>Katie McLaughlin, "Disentangle a new fangled image mangler",<br>linux.conf.au 2015 Multimedia Miniconf</small>
+
+<span class="foot" style="top: 450px">[youtube.com](https://www.youtube.com/watch?v=XedLGMp38xA)</span>
+
+Note: I've already done that talk. I've already worked out that imagemagick is too powerful and vulnerable for my unsecase
+
+This talk is a lovely wander through a different image manipulation project of mine.
+
 ---
 
 ## `pillow` <!-- .slide: class="center" -->
@@ -108,11 +115,19 @@ V LT Cranberry&nbsp;&nbsp;605
 ## more floss than wool <!-- .slide: class="center" -->
 #### over 50% more! <!-- .slide: class="center" -->
 ---
-### *This chart has been formulated only as a guide to assist you in selecting color from the DMC family of products. Please use your own judgement in making the final decision on color interpretation.* <!-- .slide: class="center" -->
+## Colour Code ➡ RGB <!-- .slide: class="center" -->
+### ??? <!-- .element: class="fragment" -->
 ---
+### No official mapping exists <!-- .slide: class="center" -->
+#### 'proprietary information' <!-- .slide: class="center" -->
+<span class="foot" style="top: 437px"> [thread-bare.com](https://www.thread-bare.com/2017/09/20/creating-cross-stitch-charts-with-consistent-colors)</span>
+Note: proprietary information
 
-## Color Code ➡ RGB <!-- .slide: class="center" -->
-### ???
+colour drifting over time
+
+official standard
+
+allows competitors to "steal"
 ---
 ##### *cough* <!-- .slide: class="center" -->
 ---
@@ -153,10 +168,12 @@ we have 291, shouldn't be too hard to remove the closest colurs, right?
 
  <div style='margin: 0 auto;'><p align='center'><img src='pictures/euclidean.jpg'></p></div>  <!-- .slide: class="center" -->
 ### Euclidean Distance <!-- .slide: class="center" -->
+<span class="foot" style="top: 500px">[wikipedia](https://en.wikipedia.org/wiki/Color_difference)</span>
 Note: very rough estimate
 ---
  <div style='margin: 0 auto;'><p align='center'><img src='pictures/ciede2000.jpg'></p></div>  <!-- .slide: class="center" -->
 ### CIEDE2000 <!-- .slide: class="center" -->
+<span class="foot" style="top: 515px">[wikipedia](https://en.wikipedia.org/wiki/Color_difference)</span>
 
 Note: latest revision of the forumula from International Commission on Illumination (CIE)
 
@@ -254,6 +271,7 @@ Note: praise scikit
 ### Here's one I prepared earlier <!-- .slide: class="center" -->
 ---
  <img src="pictures/sweet_large.png" style="margin-top: -50px" />
+<span class="foot" style="top: 700px">[tumblr](http://probertson.tumblr.com/post/161081154009/australian-pokedex-30-57)</span>
 ---
 #### `./ih sweetsail.png -s2` <!-- .slide: class="center" -->
 ---
@@ -263,19 +281,18 @@ Note: praise scikit
 ---
  <!-- .slide: data-background-image="pictures/sweet_mock.png"-->
 ---
-#### `./ih sweetsail.png -s2 -t -p floss` <!-- .slide: class="center" -->
----
- <!-- .slide: data-background-image="pictures/sweet_cross.png"-->
----
-### [needlepoint continues] <!-- .slide: class="center" -->
+ <!-- .slide: data-background-image="pictures/sweet_progress.jpg"-->
 ---
  <!-- .slide: data-background-image="pictures/sweet_finished.jpg"-->
 ---
 
-## More applications <!-- .slide: class="center" -->
-### hacker edition <!-- .slide: class="center" -->
+## Practical Applications <!-- .slide: class="center" -->
 
 Note: if time permits
+
+Stringly typed
+
+String a string to string a string
 ---
 <pre><code style="font-size: 36px; line-height: 1.5;">
 $ pip install qrcode
@@ -286,7 +303,24 @@ $ ./ih wifi.png -s10 -t
  <img src="pictures/wifi_mock.png" style="margin-top: -50px" />
 
 ---
+## So why isn't this<br>Stitch as a Service? <!-- .slide: class="center" -->
+---
 
+### "If you can avoid file uploads, at all, do." <!-- .slide: class="center" -->
+<small>Tom Eastman, "The dangerous, exquisite art of<br>safely handing user-uploaded files", linux.conf.au 2017</small>
+
+<span class="foot" style="top: 450px">[youtube.com](https://www.youtube.com/watch?v=7QVgzVcoV_M)</span>
+Note: basically, Tom put the fear of god in me.
+
+This works locally. I'm not going to play this game again.
+---
+
+## But since y'all asked so nicely.. <!-- .slide: class="center" -->
+
+---
+
+## TODO <!-- .slide: class="center" -->
+---
 ### github.com/glasnt/626 <!-- .slide: class="center" -->
 <br> 
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='160px' src='pictures/space.svg'><img height='160px' src='pictures/space.svg'><img height='160px' src='pictures/claps.svg'><img height='160px' src='pictures/space.svg'><img height='160px' src='pictures/space.svg'></p></div> <!-- .slide: class="center" -->
