@@ -21,14 +21,20 @@
  <!-- .slide: data-background-image="pictures/green_lynn.jpg"-->
 
 ---
-
  <!-- .slide: data-background-image="pictures/green_design_clip.png"-->
 ---
 
  <!-- .slide: data-background-image="pictures/green_working.jpg"-->
 ---
 
+###### &lt;aside&gt; <!-- .slide: class="center" -->
+# ⊠⊠⊠ <!-- .slide: class="center" -->
+### Cross Stitch <!-- .slide: class="center" -->
+# ⧄⧄⧄ <!-- .slide: class="center" -->
+### Half Stitch <!-- .slide: class="center" -->
 
+###### &lt;/aside&gt; <!-- .slide: class="center" -->
+---
 # &nbsp;
 
 *"If you know anything about image manipulation, colour setting, cross stitch charts...*
@@ -95,6 +101,8 @@ Est. 1746
 ---
  <!-- .slide: data-background-image="pictures/wool_macro.jpg"-->
 ---
+
+
  <img src="pictures/dmc-cranberry.png" />
 ---
 

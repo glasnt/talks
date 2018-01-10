@@ -21,14 +21,20 @@
 ~@ green_lynn.jpg
 
 ---
-
 ~@ green_design_clip.png
 ---
 
 ~@ green_working.jpg
 ---
 
+######= &lt;aside&gt;
+#= ⊠⊠⊠
+###= Cross Stitch
+#= ⧄⧄⧄
+###= Half Stitch
 
+######= &lt;/aside&gt;
+---
 # &nbsp; 
 
 *"If you know anything about image manipulation, colour setting, cross stitch charts...*
@@ -95,6 +101,8 @@ Est. 1746
 ---
 ~@ wool_macro.jpg
 ---
+
+
 @ dmc-cranberry.png
 ---
 
