@@ -996,6 +996,8 @@ Note: updates
 ! g/grinning_7.png | g/crying_7.png | g/tongue_7.png | g/kissing_7.png | g/shock_7.png
 ! g/grinning_o.png | g/crying_o.png | g/tongue_o.png | g/kissing_o.png | g/shock_o.png
 ---
+! g/burger_g_old | g/burger_g_new
+---
 ## &nbsp;
 @= emojicompat.jpg
 vv [Emojipedia.org](http://blog.emojipedia.org/fewer-empty-boxes-ahead-for-android-users/)
@@ -1030,6 +1032,16 @@ Note: Emojione have also updated, now with a premoum version
 They're updated a bunch of things, including the Owl
 
 R.i.P. Argle Owl
+---
+! g/blue_bird | e/2 | e/period | e/4
+
+---
+
+! t/thumbs_t_old | t/thumbs_t_new
+
+---
+! t/sparkles | t/new_sparkles
+
 ---
 ! g/teach_m6.png | g/mech.png | g/farm.png | g/cook.png 
 ! a/teach_m6.png | a/mech_f3.png | a/farmer_f5.png | a/cook_m1.png

@@ -996,6 +996,8 @@ Note: updates
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='160px' src='pictures/g/grinning_7.png'><img height='160px' src='pictures/g/crying_7.png'><img height='160px' src='pictures/g/tongue_7.png'><img height='160px' src='pictures/g/kissing_7.png'><img height='160px' src='pictures/g/shock_7.png'></p></div> <!-- .slide: class="center" -->
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='160px' src='pictures/g/grinning_o.png'><img height='160px' src='pictures/g/crying_o.png'><img height='160px' src='pictures/g/tongue_o.png'><img height='160px' src='pictures/g/kissing_o.png'><img height='160px' src='pictures/g/shock_o.png'></p></div> <!-- .slide: class="center" -->
 ---
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/g/burger_g_old.svg'><img height='400px' src='pictures/g/burger_g_new.svg'></p></div> <!-- .slide: class="center" -->
+---
 ## &nbsp;
  <div style='margin: 0 auto;'><p align='center'><img src='pictures/emojicompat.jpg'></p></div>  <!-- .slide: class="center" -->
  <span class='foot'>[Emojipedia.org](http://blog.emojipedia.org/fewer-empty-boxes-ahead-for-android-users/)</span>
@@ -1030,6 +1032,16 @@ Note: Emojione have also updated, now with a premoum version
 They're updated a bunch of things, including the Owl
 
 R.i.P. Argle Owl
+---
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='200px' src='pictures/g/blue_bird.svg'><img height='200px' src='pictures/e/2.svg'><img height='200px' src='pictures/e/period.svg'><img height='200px' src='pictures/e/4.svg'></p></div> <!-- .slide: class="center" -->
+
+---
+
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/t/thumbs_t_old.svg'><img height='400px' src='pictures/t/thumbs_t_new.svg'></p></div> <!-- .slide: class="center" -->
+
+---
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/t/sparkles.svg'><img height='400px' src='pictures/t/new_sparkles.svg'></p></div> <!-- .slide: class="center" -->
+
 ---
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='200px' src='pictures/g/teach_m6.png'><img height='200px' src='pictures/g/mech.png'><img height='200px' src='pictures/g/farm.png'><img height='200px' src='pictures/g/cook.png'></p></div> <!-- .slide: class="center" -->
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='200px' src='pictures/a/teach_m6.png'><img height='200px' src='pictures/a/mech_f3.png'><img height='200px' src='pictures/a/farmer_f5.png'><img height='200px' src='pictures/a/cook_m1.png'></p></div> <!-- .slide: class="center" -->
