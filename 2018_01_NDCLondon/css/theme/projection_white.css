@@ -128,13 +128,15 @@ body {
   margin: 20px auto;
   text-align: left;
   font-size: 0.55em;
-  font-family: monospace;
+  font-family: 'Monaco', monospace;
   line-height: 1.2em;
   word-wrap: break-word;
  }
 
 .reveal code {
-  font-family: monospace; }
+  font-family: 'Monaco', monospace; 
+  font-weight: normal;
+}
 
 .reveal pre code {
   display: block;

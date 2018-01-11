@@ -485,6 +485,52 @@ Different vendors have implemented emoji differently. In this case, the 'sweat d
 Based on this, we can guess the operating system, down to the version, using just the emoji being displayed.
 ---
 
+! space | a/bath.png | space
+
+---
+@^ mcec_large.png
+
+Note: Take this signage, from RubyConf just last week in Melbourne
+---
+@^ mcec.png
+
+Note: https://twitter.com/robjacoby/status/829474149143769088
+Rob Jacoby, twitter
+
+This is what the sign was showing.
+
+---
+@^ mcec_a.png
+Note: So what's this gibberish?
+---
+## &nbsp;
+## &nbsp;
+# `ud83dude0dnn`
+---
+## &nbsp;
+## &nbsp;
+# `\ud83d\ude0dnn`
+---
+## &nbsp;
+## &nbsp;
+# `\ud83d \ude0d nn`
+---
+## &nbsp;
+## &nbsp;
+# `\u1F60D nn`
+---
+
+## &nbsp;
+## &nbsp;
+# <img src="pictures/g/hearts.png" style="width: 90px; margin-bottom: 0px"> `nn`
+---
+
+@^ speaker_tweet.png
+Note: Thanks Rob
+
+
+
+---
 ! g/sweat
 
 Note: So yeah, that's fun.
@@ -525,7 +571,9 @@ Which means you can get
 
 ---
 #= `<q cite="` &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;<br>`" on_click="..">`
+---
 
+! space | t/boom | space
 ---
 #= MySQL
 ##= `STRICT_ALL_TABLES`

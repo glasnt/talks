@@ -485,6 +485,52 @@ Different vendors have implemented emoji differently. In this case, the 'sweat d
 Based on this, we can guess the operating system, down to the version, using just the emoji being displayed.
 ---
 
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='266px' src='pictures/space.svg'><img height='266px' src='pictures/a/bath.png'><img height='266px' src='pictures/space.svg'></p></div> <!-- .slide: class="center" -->
+
+---
+ <img src="pictures/mcec_large.png" style="margin-top: -50px" />
+
+Note: Take this signage, from RubyConf just last week in Melbourne
+---
+ <img src="pictures/mcec.png" style="margin-top: -50px" />
+
+Note: https://twitter.com/robjacoby/status/829474149143769088
+Rob Jacoby, twitter
+
+This is what the sign was showing.
+
+---
+ <img src="pictures/mcec_a.png" style="margin-top: -50px" />
+Note: So what's this gibberish?
+---
+## &nbsp;
+## &nbsp;
+# `ud83dude0dnn`
+---
+## &nbsp;
+## &nbsp;
+# `\ud83d\ude0dnn`
+---
+## &nbsp;
+## &nbsp;
+# `\ud83d \ude0d nn`
+---
+## &nbsp;
+## &nbsp;
+# `\u1F60D nn`
+---
+
+## &nbsp;
+## &nbsp;
+# <img src="pictures/g/hearts.png" style="width: 90px; margin-bottom: 0px"> `nn`
+---
+
+ <img src="pictures/speaker_tweet.png" style="margin-top: -50px" />
+Note: Thanks Rob
+
+
+
+---
  <div style='width: 50%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/g/sweat.svg'></p></div> <!-- .slide: class="center" -->
 
 Note: So yeah, that's fun.
@@ -525,7 +571,9 @@ Which means you can get
 
 ---
 # `<q cite="` &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;<br>`" on_click="..">` <!-- .slide: class="center" -->
+---
 
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='266px' src='pictures/space.svg'><img height='266px' src='pictures/t/boom.svg'><img height='266px' src='pictures/space.svg'></p></div> <!-- .slide: class="center" -->
 ---
 # MySQL <!-- .slide: class="center" -->
 ## `STRICT_ALL_TABLES` <!-- .slide: class="center" -->
