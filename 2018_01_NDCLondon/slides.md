@@ -251,7 +251,7 @@ Note: Speaking of those flags from earlier, they work in a similar way to the fa
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> puts "You are a " + <img style="margin: 0" height="40px" src="pictures/g/gem.svg"> + "!"</code></pre></div>
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">=> You are a gem!</code></pre></div>
 <hr> 
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">php -a</code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">$ php -a</code></pre></div>
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">php > $<img style="margin: 0" height="40px" src="pictures/g/elephant.svg"> = "Elephant"</code></pre></div>
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">php > echo $<img style="margin: 0" height="40px" src="pictures/g/elephant.svg">.'s are cool.'</code></pre></div>
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">Elephants are cool.</code></pre></div>
@@ -972,6 +972,18 @@ Note: also, the 2017 update also includes ' a third base for people, being gende
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='160px' src='pictures/space.svg'><img height='160px' src='pictures/f/man_climb.png'><img height='160px' src='pictures/f/person_climb.png'><img height='160px' src='pictures/f/woman_climb.png'><img height='160px' src='pictures/space.svg'></p></div> <!-- .slide: class="center" -->
 
 Note: Which should allow for all the professions and people to have a version that not's a man or a woman
+---
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='200px' src='pictures/t/left.svg'><img height='200px' src='pictures/space.svg'><img height='200px' src='pictures/space.svg'><img height='200px' src='pictures/t/right.svg'></p></div> <!-- .slide: class="center" -->
+
+<span class="dasfoot" style="position: absolute; top: 520px">[Unicode Technical Standard #51 11.0 Draft 2](http://www.unicode.org/reports/tr51/tr51-13.html#Direction)</span>
+---
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='200px' src='pictures/t/kickscooter.svg'><img height='200px' src='pictures/space.svg'><img height='200px' src='pictures/t/kickscooter.svg'><img height='200px' src='pictures/t/right.svg'></p></div> <!-- .slide: class="center" -->
+
+<span class="dasfoot" style="position: absolute; top: 520px">[Unicode Technical Standard #51 11.0 Draft 2](http://www.unicode.org/reports/tr51/tr51-13.html#Direction)</span>
+---
+<div style='width: 100%; margin: 0 auto;'><p align='center'><img height='200px' src='pictures/t/kickscooter.svg'><img height='200px' src='pictures/space.svg'><img height='200px' src='pictures/t/kickscooter.svg' style='-webkit-transform: scale(-1, 1)'><img height='200px' src='pictures/space.svg'></p></div> <!-- .slide: class="center" -->
+
+<span class="dasfoot" style="position: absolute; top: 520px">[Unicode Technical Standard #51 11.0 Draft 2](http://www.unicode.org/reports/tr51/tr51-13.html#Direction)</span>
 ---
 
 # <img height="400px" src="pictures/t/up.svg"> &nbsp; <img height="400px" src="pictures/t/calendar.svg"> <!-- .slide: class="center" -->
