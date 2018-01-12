@@ -22,12 +22,6 @@ Note: basically, because computers, we have
 
 ---
 
- <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='133px' src='pictures/g/U.svg'><img height='133px' src='pictures/g/T.svg'><img height='133px' src='pictures/g/F.svg'><img height='133px' src='pictures/g/hyphen.svg'><img height='133px' src='pictures/e/3.svg'><img height='133px' src='pictures/e/2.svg'></p></div> <!-- .slide: class="center" -->
- <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='133px' src='pictures/g/U.svg'><img height='133px' src='pictures/g/T.svg'><img height='133px' src='pictures/g/F.svg'><img height='133px' src='pictures/g/hyphen.svg'><img height='133px' src='pictures/e/8.svg'><img height='133px' src='pictures/space.svg'></p></div> <!-- .slide: class="center" -->
-Note: Three main encoding types.
-
-YOu might have heard of these
----
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='160px' src='pictures/g/U.svg'><img height='160px' src='pictures/g/T.svg'><img height='160px' src='pictures/g/F.svg'><img height='160px' src='pictures/g/hyphen.svg'><img height='160px' src='pictures/e/8.svg'></p></div> <!-- .slide: class="center" -->
  <div style='width: 50%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/e/flex.svg'></p></div> <!-- .slide: class="center" -->
 

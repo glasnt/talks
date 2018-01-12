@@ -22,12 +22,6 @@ Note: basically, because computers, we have
 
 ---
 
-! g/U | g/T | g/F | g/hyphen | e/3 | e/2
-! g/U | g/T | g/F | g/hyphen | e/8 | space
-Note: Three main encoding types.
-
-YOu might have heard of these
----
 ! g/U | g/T | g/F | g/hyphen | e/8
 ! e/flex
 
