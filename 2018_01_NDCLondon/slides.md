@@ -62,13 +62,13 @@ Note: The tags on the top note how many more to expect
 
 ---
 
- <div style='width: 50%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/g/accent_only_new.svg'></p></div> <!-- .slide: class="center" -->
+ <div style='width: 50%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/g/macron_only.svg'></p></div> <!-- .slide: class="center" -->
 # `\u0301`
 
 ---
 
- <div style='width: 50%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/g/ea.svg'></p></div> <!-- .slide: class="center" -->
-# `\u0045\u0341`
+ <div style='width: 50%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/g/e_macron.svg'></p></div> <!-- .slide: class="center" -->
+# `\u0045\u0304`
 ---
 
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='200px' src='pictures/g/US.svg'><img height='200px' src='pictures/g/france.svg'><img height='200px' src='pictures/g/russia.png'><img height='200px' src='pictures/g/china.svg'></p></div> <!-- .slide: class="center" -->
@@ -256,7 +256,21 @@ Note: Speaking of those flags from earlier, they work in a similar way to the fa
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">php > echo $<img style="margin: 0" height="40px" src="pictures/g/elephant.svg">.'s are cool.'</code></pre></div>
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">Elephants are cool.</code></pre></div>
 
+---
+ <div style='width: 50%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/t/exclaim.svg'></p></div> <!-- .slide: class="center" -->
+---
+<img src="pictures/emojicode.png" style="height: 600px; margin-top: 0px">
+<span class="dasfoot">[emojicode.org](www.emojicode.org)</span>
 
+Note: Icecream == frozen variable
+---
+# &nbsp;
+## `CAUTION`
+### `Never use `&nbsp; <img style="margin: 0" height="40px" src="pictures/t/tonguewink.png"> &nbsp;` to compare strings.`
+### `Use ` &nbsp;<img style="margin: 0" height="40px" src="pictures/t/tongue.png"> &nbsp;` instead.`
+
+
+<span class="dasfoot"><a href="http://www.emojicode.org/docs/reference/the-s-package.html#string-pooling">Emojicode</a></span>
 
 ---
 
@@ -588,7 +602,27 @@ Note: Surprisingly enough, this works
 ### `https://xn--9q9h.ws`
 ---
 
- <div style='width: 50%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/e/computer.svg'></p></div> <!-- .slide: class="center" -->
+ <div style='width: 50%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/e/anxious.svg'></p></div> <!-- .slide: class="center" -->
+---
+# &nbsp;
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">$ python</code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">>>> import unicodedata</code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">>>> unicodedata.normalize( ... )</code></pre></div>
+---
+
+# keke <!-- .slide: class="center" -->
+
+---
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='266px' src='pictures/space.svg'><img height='266px' src='pictures/t/shortcake.svg'><img height='266px' src='pictures/space.svg'></p></div> <!-- .slide: class="center" -->
+---
+# kēkē <!-- .slide: class="center" -->
+---
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='266px' src='pictures/space.svg'><img height='266px' src='pictures/e/flex.svg'><img height='266px' src='pictures/space.svg'></p></div> <!-- .slide: class="center" -->
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='266px' src='pictures/space.svg'><img height='266px' src='pictures/t/up-right.svg'><img height='266px' src='pictures/space.svg'></p></div> <!-- .slide: class="center" -->
+---
+ <div style='width: 50%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/t/unamused.svg'></p></div> <!-- .slide: class="center" -->
+---
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/e/nutbolt.svg'><img height='400px' src='pictures/e/computer.svg'></p></div> <!-- .slide: class="center" -->
 
 ---
 

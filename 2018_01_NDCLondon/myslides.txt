@@ -62,13 +62,13 @@ Note: The tags on the top note how many more to expect
 
 ---
 
-! g/accent_only_new 
+! g/macron_only 
 # `\u0301`
 
 ---
 
-! g/ea
-# `\u0045\u0341`
+! g/e_macron
+# `\u0045\u0304`
 ---
 
 ! g/US | g/france | g/russia.png | g/china
@@ -256,7 +256,21 @@ Note: Speaking of those flags from earlier, they work in a similar way to the fa
 #> php > echo $<img style="margin: 0" height="40px" src="pictures/g/elephant.svg">.'s are cool.'
 #> Elephants are cool.
 
+---
+! t/exclaim
+---
+<img src="pictures/emojicode.png" style="height: 600px; margin-top: 0px">
+<span class="dasfoot">[emojicode.org](www.emojicode.org)</span>
 
+Note: Icecream == frozen variable
+---
+# &nbsp;
+## `CAUTION`
+### `Never use `&nbsp; <img style="margin: 0" height="40px" src="pictures/t/tonguewink.png"> &nbsp;` to compare strings.`
+### `Use ` &nbsp;<img style="margin: 0" height="40px" src="pictures/t/tongue.png"> &nbsp;` instead.`
+
+
+<span class="dasfoot"><a href="http://www.emojicode.org/docs/reference/the-s-package.html#string-pooling">Emojicode</a></span>
 
 ---
 
@@ -588,7 +602,27 @@ Note: Surprisingly enough, this works
 ###  `https://xn--9q9h.ws`
 ---
 
-! e/computer
+! e/anxious
+---
+# &nbsp;
+#> $ python
+#> >>> import unicodedata
+#> >>> unicodedata.normalize( ... )
+---
+
+#= keke
+
+---
+! space | t/shortcake | space
+---
+#= kēkē
+---
+! space | e/flex | space
+! space | t/up-right | space
+---
+! t/unamused
+---
+! e/nutbolt | e/computer
 
 ---
 
