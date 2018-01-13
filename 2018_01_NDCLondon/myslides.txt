@@ -1060,6 +1060,7 @@ Note: windows 8 to windows 10
 @= couples.png
 Note: updates in the creators update
 
+Just a game of "Yes, And" with ZWJ
 ---
 
 ! e/e1_smile.png | e/e1_cry.png | e/e1_toung.png |e/e1_kiss.png | e/e1_shock.png

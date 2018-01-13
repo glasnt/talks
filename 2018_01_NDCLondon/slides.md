@@ -1060,6 +1060,7 @@ Note: windows 8 to windows 10
  <div style='margin: 0 auto;'><p align='center'><img src='pictures/couples.png'></p></div>  <!-- .slide: class="center" -->
 Note: updates in the creators update
 
+Just a game of "Yes, And" with ZWJ
 ---
 
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='160px' src='pictures/e/e1_smile.png'><img height='160px' src='pictures/e/e1_cry.png'><img height='160px' src='pictures/e/e1_toung.png'><img height='160px' src='pictures/e/e1_kiss.png'><img height='160px' src='pictures/e/e1_shock.png'></p></div> <!-- .slide: class="center" -->
