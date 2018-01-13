@@ -967,12 +967,12 @@ Note: The future
 
 ---
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='80px' src='pictures/space.svg'><img height='80px' src='pictures/space.svg'><img height='80px' src='pictures/space.svg'><img height='80px' src='pictures/space.svg'><img height='80px' src='pictures/space.svg'><img height='80px' src='pictures/space.svg'><img height='80px' src='pictures/space.svg'><img height='80px' src='pictures/space.svg'><img height='80px' src='pictures/space.svg'><img height='80px' src='pictures/space.svg'></p></div> <!-- .slide: class="center" -->
- <img src="pictures/a/mindblown.png" />
+ <img src="pictures/f/mindblown.png" />
 Note: I know right? mind. blown.
 ---
 
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='80px' src='pictures/unicode.png'><img height='80px' src='pictures/e/10.svg'><img height='80px' src='pictures/space.svg'><img height='80px' src='pictures/space.svg'><img height='80px' src='pictures/space.svg'><img height='80px' src='pictures/space.svg'><img height='80px' src='pictures/e/2.svg'><img height='80px' src='pictures/e/0.svg'><img height='80px' src='pictures/e/1.svg'><img height='80px' src='pictures/e/7.svg'></p></div> <!-- .slide: class="center" -->
- <img src="pictures/a/mindblown.png" />
+ <img src="pictures/f/mindblown.png" />
 
 Note: 
 which is also a candidate.
@@ -1093,7 +1093,7 @@ Note: Andoird 7.1 last few days
 
  <div style='width: 50%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/e/thinking.svg'></p></div> <!-- .slide: class="center" -->
 ---
- <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='80px' src='pictures/unicode.png'><img height='80px' src='pictures/e/1.svg'><img height='80px' src='pictures/e/qcap.svg'><img height='80px' src='pictures/space.svg'><img height='80px' src='pictures/space.svg'><img height='80px' src='pictures/space.svg'><img height='80px' src='pictures/e/2.svg'><img height='80px' src='pictures/e/0.svg'><img height='80px' src='pictures/e/1.svg'><img height='80px' src='pictures/e/qcap.svg'></p></div> <!-- .slide: class="center" -->
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='80px' src='pictures/unicode.png'><img height='80px' src='pictures/e/1.svg'><img height='80px' src='pictures/e/1.svg'><img height='80px' src='pictures/e/qcap.svg'><img height='80px' src='pictures/space.svg'><img height='80px' src='pictures/space.svg'><img height='80px' src='pictures/e/2.svg'><img height='80px' src='pictures/e/0.svg'><img height='80px' src='pictures/e/1.svg'><img height='80px' src='pictures/e/8.svg'></p></div> <!-- .slide: class="center" -->
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='200px' src='pictures/p/cupcake.png'><img height='200px' src='pictures/p/boot.png'><img height='200px' src='pictures/p/teddy.png'><img height='200px' src='pictures/o/badger.png'></p></div> <!-- .slide: class="center" -->
 <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='200px' src='pictures/p/hippo.png'><img height='200px' src='pictures/p/kangaroo.png'><img height='200px' src='pictures/p/llama.png'></p></div> <!-- .slide: class="center" -->
  <span class='foot'>[L2/17-284](http://www.unicode.org/L2/L2017/17284-emoji-recs.pdf)</span>

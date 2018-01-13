@@ -967,12 +967,12 @@ Note: The future
 
 ---
 ! space | space | space | space | space | space | space | space | space | space
-@ a/mindblown.png
+@ f/mindblown.png
 Note: I know right? mind. blown. 
 ---
 
 ! unicode.png | e/10 | space | space | space  | space | e/2 | e/0 | e/1 | e/7
-@ a/mindblown.png
+@ f/mindblown.png
 
 Note:
 which is also a candidate.
@@ -1093,7 +1093,7 @@ Note: Andoird 7.1  last few days
 
 ! e/thinking
 ---
-! unicode.png | e/1 | e/qcap | space | space  | space | e/2 | e/0 | e/1 | e/qcap
+! unicode.png | e/1 | e/1 | e/qcap | space  | space | e/2 | e/0 | e/1 | e/8
 ! p/cupcake.png | p/boot.png | p/teddy.png | o/badger.png
 <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='200px' src='pictures/p/hippo.png'><img height='200px' src='pictures/p/kangaroo.png'><img height='200px' src='pictures/p/llama.png'></p></div> <!-- .slide: class="center" -->
 vv [L2/17-284](http://www.unicode.org/L2/L2017/17284-emoji-recs.pdf)
