@@ -36,13 +36,6 @@ fibSlow n = fibSlow (n - 1) + fibSlow (n - 2)
 
 Source: original research.
 
-### Pascal
-
-The assignment operator for many programming languages is a single equals sign. Pascal differs from the norm by using `:=` instead. Given this, programmers unfamiliar with this separation from the 'standard' are tripped up. 
-
-Source: original research. 
-
-
 ### Bash
 
 Math in bash is doable, but the general solution to bash errors to just "wrap brackets around it" prevails here. 
@@ -70,12 +63,6 @@ Source: original research. [Documentation](http://stackoverflow.com/questions/12
 
 [Source](http://stackoverflow.com/a/2001861/124019)
 
-### Scala
-
-This one is particularly interesting because from previous examples, the empty-set in Scala can confuse unfamiliar programmers
-
-Source: original research
-
 ### Swift
 
 This bug has since been fixed. 
@@ -100,3 +87,9 @@ Source: original research. [Documentation](http://fuckpowershell.tumblr.com/post
 'wat' duck, [wat](https://www.destroyallsoftware.com/talks/wat), Gary Bernhardt
 
 'wat' duck, hiding, [edunham](https://500px.com/photo/140476163/wat-by-edunham)
+
+# Further Reading
+
+[Contempt Culture](https://blog.aurynn.com/2015/12/16-contempt-culture), auyrnn shaw
+
+[Why I love Legacy DevOps](https://recompilermag.com/issues/issue-4/why-i-love-legacy-devops/), Katie McLaughlin, [The Recompiler, Issue 4](https://recompilermag.com/issues/issue-4/)
