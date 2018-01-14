@@ -166,8 +166,16 @@ im.convert('P'
 @^ window-wool_2.png
 ---
 @^ window-wool_3.png
----
+Note: now, the palette is reduced, but for really rich images, I don't think it looks that good. 
 
+As opposed to:
+---
+<img src="pictures/cranberries_before.jpg" style="margin-top: -50px; height: 300px" />
+<img src="pictures/cranberries_after.jpg" style="height: 300px" />
+
+Note: monocromatic images to start with, or ones with reduced colour palettes, like 8-bit pixel images (:
+
+---
 ###= Problem: 256
 Note: pillow palette limited to 256
 
