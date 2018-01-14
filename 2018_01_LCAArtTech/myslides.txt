@@ -27,13 +27,10 @@
 ~@ green_working.jpg
 ---
 
-######= &lt;aside&gt;
 #= ⊠⊠⊠
 ###= Cross Stitch
 #= ⧄⧄⧄
 ###= Half Stitch
-
-######= &lt;/aside&gt;
 ---
 # &nbsp; 
 

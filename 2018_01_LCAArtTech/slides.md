@@ -27,13 +27,10 @@
  <!-- .slide: data-background-image="pictures/green_working.jpg"-->
 ---
 
-###### &lt;aside&gt; <!-- .slide: class="center" -->
 # ⊠⊠⊠ <!-- .slide: class="center" -->
 ### Cross Stitch <!-- .slide: class="center" -->
 # ⧄⧄⧄ <!-- .slide: class="center" -->
 ### Half Stitch <!-- .slide: class="center" -->
-
-###### &lt;/aside&gt; <!-- .slide: class="center" -->
 ---
 # &nbsp;
 
