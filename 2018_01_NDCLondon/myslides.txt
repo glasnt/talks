@@ -228,16 +228,23 @@ Note: Speaking of those flags from earlier, they work in a similar way to the fa
 #> $ gem install gemoji
 #> $ irb
 #> > require 'gemoji'
+
+###### &nbsp;
+
 #> > g = Emoji.find_by_unicode("<img style="margin: 0" height="40px" src="pictures/g/gem.svg">")
 #> > g.description
 #> => "gem stone"
+
+
+###### &nbsp;
+
 #> > Emoji.find_by_name("gem stone").raw
 #> => "<img style="margin: 0" height="40px" src="pictures/g/gem.svg">"
 ---
 
 ! g/elephant
 ---
-#> php -a
+#> $ php -a
 #> php > IntlChar::charName('<img style="margin: 0" height="40px" src="pictures/g/elephant.svg">');
 #> ELEPHANT
 ---
@@ -310,6 +317,10 @@ Note: ** micro services **
 ! a-revolving.png | e-revolving.png | t-revolving.png | g-revolving.png
 ---
 ! a/claps.png | g/claps | t/claps | m/claps.png
+---
+! horse-a.png | horse-t.png | horse-e.png | horse-s.png 
+
+<span class="dasfoot" style="top: 500px">[twitter.com](https://twitter.com/Ramanan_V/status/953210074947702784)</span>
 ---
 ! g/blonde | t/blonde | e/blonde | m/blonde 
 Note: Guess -- Blonde
@@ -467,14 +478,14 @@ Note: but they can be corrected
 @= ndc_submitted.png
 
 ---
+@^ ndc-mobile.png
+
+---
 
 @= ndc_title.png
 
 ---
 
-@^ ndc-mobile.png
-
----
 @ pcau_1.jpg
 Note: But the best part is when the digital boards work
 
@@ -488,14 +499,14 @@ Note: This is the emoji
 ---
 @ sweat_versions.png
 
-Note:
+Note: a
 
 Different vendors have implemented emoji differently. In this case, the 'sweat drop' face is the most easily recognisable as windows, because it looks like a face with boils all over it or something
 
 (picture of different sweat)
 
 Based on this, we can guess the operating system, down to the version, using just the emoji being displayed
---
+---
 
 ! space | a/bath.png | space
 
@@ -571,7 +582,7 @@ Note: UTF-32
 
 ! e/thinking
 
-## `\ud83e\udd14`
+## `\uD83E\uDD14`
 
 Note: UTF16
 ---

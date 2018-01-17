@@ -228,16 +228,23 @@ Note: Speaking of those flags from earlier, they work in a similar way to the fa
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">$ gem install gemoji</code></pre></div>
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">$ irb</code></pre></div>
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> require 'gemoji'</code></pre></div>
+
+###### &nbsp;
+
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> g = Emoji.find_by_unicode("<img style="margin: 0" height="40px" src="pictures/g/gem.svg">")</code></pre></div>
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> g.description</code></pre></div>
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">=> "gem stone"</code></pre></div>
+
+
+###### &nbsp;
+
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">> Emoji.find_by_name("gem stone").raw</code></pre></div>
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">=> "<img style="margin: 0" height="40px" src="pictures/g/gem.svg">"</code></pre></div>
 ---
 
  <div style='width: 50%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/g/elephant.svg'></p></div> <!-- .slide: class="center" -->
 ---
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">php -a</code></pre></div>
+ <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">$ php -a</code></pre></div>
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">php > IntlChar::charName('<img style="margin: 0" height="40px" src="pictures/g/elephant.svg">');</code></pre></div>
  <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">ELEPHANT</code></pre></div>
 ---
@@ -310,6 +317,10 @@ Note: ** micro services **
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='200px' src='pictures/a-revolving.png'><img height='200px' src='pictures/e-revolving.png'><img height='200px' src='pictures/t-revolving.png'><img height='200px' src='pictures/g-revolving.png'></p></div> <!-- .slide: class="center" -->
 ---
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='200px' src='pictures/a/claps.png'><img height='200px' src='pictures/g/claps.svg'><img height='200px' src='pictures/t/claps.svg'><img height='200px' src='pictures/m/claps.png'></p></div> <!-- .slide: class="center" -->
+---
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='200px' src='pictures/horse-a.png'><img height='200px' src='pictures/horse-t.png'><img height='200px' src='pictures/horse-e.png'><img height='200px' src='pictures/horse-s.png'></p></div> <!-- .slide: class="center" -->
+
+<span class="dasfoot" style="top: 500px">[twitter.com](https://twitter.com/Ramanan_V/status/953210074947702784)</span>
 ---
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='200px' src='pictures/g/blonde.svg'><img height='200px' src='pictures/t/blonde.svg'><img height='200px' src='pictures/e/blonde.svg'><img height='200px' src='pictures/m/blonde.svg'></p></div> <!-- .slide: class="center" -->
 Note: Guess -- Blonde
@@ -467,14 +478,14 @@ Note: but they can be corrected
  <div style='margin: 0 auto;'><p align='center'><img src='pictures/ndc_submitted.png'></p></div>  <!-- .slide: class="center" -->
 
 ---
+ <img src="pictures/ndc-mobile.png" style="margin-top: -50px" />
+
+---
 
  <div style='margin: 0 auto;'><p align='center'><img src='pictures/ndc_title.png'></p></div>  <!-- .slide: class="center" -->
 
 ---
 
- <img src="pictures/ndc-mobile.png" style="margin-top: -50px" />
-
----
  <img src="pictures/pcau_1.jpg" />
 Note: But the best part is when the digital boards work
 
@@ -488,14 +499,14 @@ Note: This is the emoji
 ---
  <img src="pictures/sweat_versions.png" />
 
-Note: 
+Note: a
 
 Different vendors have implemented emoji differently. In this case, the 'sweat drop' face is the most easily recognisable as windows, because it looks like a face with boils all over it or something
 
 (picture of different sweat)
 
 Based on this, we can guess the operating system, down to the version, using just the emoji being displayed
-  <!-- .element: class="fragment" -->
+---
 
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='266px' src='pictures/space.svg'><img height='266px' src='pictures/a/bath.png'><img height='266px' src='pictures/space.svg'></p></div> <!-- .slide: class="center" -->
 
@@ -571,7 +582,7 @@ Note: UTF-32
 
  <div style='width: 50%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/e/thinking.svg'></p></div> <!-- .slide: class="center" -->
 
-## `\ud83e\udd14`
+## `\uD83E\uDD14`
 
 Note: UTF16
 ---
