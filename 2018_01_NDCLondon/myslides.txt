@@ -471,6 +471,10 @@ Note: but they can be corrected
 @= ndc_title.png
 
 ---
+
+@^ ndc-mobile.png
+
+---
 @ pcau_1.jpg
 Note: But the best part is when the digital boards work
 
@@ -490,10 +494,14 @@ Different vendors have implemented emoji differently. In this case, the 'sweat d
 
 (picture of different sweat)
 
-Based on this, we can guess the operating system, down to the version, using just the emoji being displayed.
----
+Based on this, we can guess the operating system, down to the version, using just the emoji being displayed
+--
 
 ! space | a/bath.png | space
+
+Note: but sometimes I accidently break things when I don't intend to
+
+This happens when people try and do data sanitisation; trying to clean up their user input, with interesting results
 
 ---
 @^ mcec_large.png
@@ -514,10 +522,6 @@ Note: So what's this gibberish?
 ## &nbsp;
 ## &nbsp;
 # `ud83dude0dnn`
----
-## &nbsp;
-## &nbsp;
-# `\ud83d\ude0dnn`
 ---
 ## &nbsp;
 ## &nbsp;
@@ -561,11 +565,20 @@ Which means you can get
 
 ## `\u1F914`
 
+Note: UTF-32
+
 ---
 
 ! e/thinking
 
-## `\xf0\x9f\xa4\x94`
+## `\ud83e\udd14`
+
+Note: UTF16
+---
+! e/thinking
+## `f0 9f a4 94`
+
+Note: four bytes, UTF-8
 
 ---
 
@@ -928,7 +941,7 @@ Note: loading a template tag, and then passing 'content' through a template filt
 
 &lcub;&percnt; emojified %}
 
-😎🌈💕 
+✨💜✨
 
 &lcub;&percnt; endemojified %}
 
@@ -1024,6 +1037,8 @@ Note: Which should allow for all the professions and people to have a version th
 Note: updates 
 ---
 ! space | a/grin.png | a/grinning_10.png | space
+--- 
+! bee_sticker.png | bee_apple_new.png
 ---
 <div style='width: 100%; margin: 0 auto;'><p align='center'><img style="padding: 20px" height='266px' src='pictures/g/blushing.svg'><img style="padding: 20px" height='266px' src='pictures/g/flush_6.png'><img style="padding: 20px" height='266px' src='pictures/g/flushed7.svg'></p></div> <!-- .slide: class="center" -->
 ---
@@ -1109,6 +1124,14 @@ vv [L2/17-284](http://www.unicode.org/L2/L2017/17284-emoji-recs.pdf)
 ! p/heartface.png | p/partyface.png |  p/coldface.png | p/hotface.png
 ! p/hero2.png | p/villain2.png | p/ginger.png | p/bald.png 
 
+Note: the next UTC meeting is next week, there may be more additions, like recently suggested:
+
+parachute
+axe
+chess
+poison
+dodo
+squirell (which is completely different to the chipmunk, tyvm
 ---
 ! e/thinking
 

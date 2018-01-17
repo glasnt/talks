@@ -471,6 +471,10 @@ Note: but they can be corrected
  <div style='margin: 0 auto;'><p align='center'><img src='pictures/ndc_title.png'></p></div>  <!-- .slide: class="center" -->
 
 ---
+
+ <img src="pictures/ndc-mobile.png" style="margin-top: -50px" />
+
+---
  <img src="pictures/pcau_1.jpg" />
 Note: But the best part is when the digital boards work
 
@@ -490,10 +494,14 @@ Different vendors have implemented emoji differently. In this case, the 'sweat d
 
 (picture of different sweat)
 
-Based on this, we can guess the operating system, down to the version, using just the emoji being displayed.
----
+Based on this, we can guess the operating system, down to the version, using just the emoji being displayed
+  <!-- .element: class="fragment" -->
 
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='266px' src='pictures/space.svg'><img height='266px' src='pictures/a/bath.png'><img height='266px' src='pictures/space.svg'></p></div> <!-- .slide: class="center" -->
+
+Note: but sometimes I accidently break things when I don't intend to
+
+This happens when people try and do data sanitisation; trying to clean up their user input, with interesting results
 
 ---
  <img src="pictures/mcec_large.png" style="margin-top: -50px" />
@@ -514,10 +522,6 @@ Note: So what's this gibberish?
 ## &nbsp;
 ## &nbsp;
 # `ud83dude0dnn`
----
-## &nbsp;
-## &nbsp;
-# `\ud83d\ude0dnn`
 ---
 ## &nbsp;
 ## &nbsp;
@@ -561,11 +565,20 @@ Which means you can get
 
 ## `\u1F914`
 
+Note: UTF-32
+
 ---
 
  <div style='width: 50%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/e/thinking.svg'></p></div> <!-- .slide: class="center" -->
 
-## `\xf0\x9f\xa4\x94`
+## `\ud83e\udd14`
+
+Note: UTF16
+---
+ <div style='width: 50%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/e/thinking.svg'></p></div> <!-- .slide: class="center" -->
+## `f0 9f a4 94`
+
+Note: four bytes, UTF-8
 
 ---
 
@@ -928,7 +941,7 @@ Note: loading a template tag, and then passing 'content' through a template filt
 
 &lcub;&percnt; emojified %}
 
-😎🌈💕 
+✨💜✨ 
 
 &lcub;&percnt; endemojified %}
 
@@ -1025,6 +1038,8 @@ Note: updates
 ---
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='200px' src='pictures/space.svg'><img height='200px' src='pictures/a/grin.png'><img height='200px' src='pictures/a/grinning_10.png'><img height='200px' src='pictures/space.svg'></p></div> <!-- .slide: class="center" -->
 ---
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/bee_sticker.png'><img height='400px' src='pictures/bee_apple_new.png'></p></div> <!-- .slide: class="center" -->
+---
 <div style='width: 100%; margin: 0 auto;'><p align='center'><img style="padding: 20px" height='266px' src='pictures/g/blushing.svg'><img style="padding: 20px" height='266px' src='pictures/g/flush_6.png'><img style="padding: 20px" height='266px' src='pictures/g/flushed7.svg'></p></div> <!-- .slide: class="center" -->
 ---
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='200px' src='pictures/space.svg'><img height='200px' src='pictures/g/grinning_7.png'><img height='200px' src='pictures/g/grinning_o.png'><img height='200px' src='pictures/space.svg'></p></div> <!-- .slide: class="center" -->
@@ -1109,6 +1124,14 @@ Note: Andoird 7.1 last few days
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='200px' src='pictures/p/heartface.png'><img height='200px' src='pictures/p/partyface.png'><img height='200px' src='pictures/p/coldface.png'><img height='200px' src='pictures/p/hotface.png'></p></div> <!-- .slide: class="center" -->
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='200px' src='pictures/p/hero2.png'><img height='200px' src='pictures/p/villain2.png'><img height='200px' src='pictures/p/ginger.png'><img height='200px' src='pictures/p/bald.png'></p></div> <!-- .slide: class="center" -->
 
+Note: the next UTC meeting is next week, there may be more additions, like recently suggested:
+
+parachute 
+axe 
+chess 
+poison 
+dodo 
+squirell (which is completely different to the chipmunk, tyvm
 ---
  <div style='width: 50%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/e/thinking.svg'></p></div> <!-- .slide: class="center" -->
 
