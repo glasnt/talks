@@ -1001,8 +1001,13 @@ Note: I know right? mind. blown.
 Note:
 which is also a candidate.
 ---
-! space | g/UK | space
+! unicode.png | e/10 | space | space | space  | space | e/2 | e/0 | e/1 | e/7
 ! g/ENG.png | g/SCO.png | g/CYM.png 
+---
+
+
+! unicode.png | e/8 | space | space | space  | space | e/2 | e/0 | e/1 | e/5
+! space | manx | space
 
 ---
 ! unicode.png | e/9 | space | space | space  | space | space | space | unicode.png | e/10
@@ -1099,9 +1104,6 @@ Note: Emojione have also updated, now with a premoum version
 They're updated a bunch of things, including the Owl
 
 R.i.P. Argle Owl
----
-! g/blue_bird | e/2 | e/period | e/4
-
 ---
 
 ! t/thumbs_t_old | t/thumbs_t_new

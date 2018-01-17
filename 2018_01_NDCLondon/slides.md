@@ -1001,8 +1001,13 @@ Note: I know right? mind. blown.
 Note: 
 which is also a candidate.
 ---
- <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='266px' src='pictures/space.svg'><img height='266px' src='pictures/g/UK.svg'><img height='266px' src='pictures/space.svg'></p></div> <!-- .slide: class="center" -->
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='80px' src='pictures/unicode.png'><img height='80px' src='pictures/e/10.svg'><img height='80px' src='pictures/space.svg'><img height='80px' src='pictures/space.svg'><img height='80px' src='pictures/space.svg'><img height='80px' src='pictures/space.svg'><img height='80px' src='pictures/e/2.svg'><img height='80px' src='pictures/e/0.svg'><img height='80px' src='pictures/e/1.svg'><img height='80px' src='pictures/e/7.svg'></p></div> <!-- .slide: class="center" -->
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='266px' src='pictures/g/ENG.png'><img height='266px' src='pictures/g/SCO.png'><img height='266px' src='pictures/g/CYM.png'></p></div> <!-- .slide: class="center" -->
+---
+
+
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='80px' src='pictures/unicode.png'><img height='80px' src='pictures/e/8.svg'><img height='80px' src='pictures/space.svg'><img height='80px' src='pictures/space.svg'><img height='80px' src='pictures/space.svg'><img height='80px' src='pictures/space.svg'><img height='80px' src='pictures/e/2.svg'><img height='80px' src='pictures/e/0.svg'><img height='80px' src='pictures/e/1.svg'><img height='80px' src='pictures/e/5.svg'></p></div> <!-- .slide: class="center" -->
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='266px' src='pictures/space.svg'><img height='266px' src='pictures/manx.svg'><img height='266px' src='pictures/space.svg'></p></div> <!-- .slide: class="center" -->
 
 ---
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='80px' src='pictures/unicode.png'><img height='80px' src='pictures/e/9.svg'><img height='80px' src='pictures/space.svg'><img height='80px' src='pictures/space.svg'><img height='80px' src='pictures/space.svg'><img height='80px' src='pictures/space.svg'><img height='80px' src='pictures/space.svg'><img height='80px' src='pictures/space.svg'><img height='80px' src='pictures/unicode.png'><img height='80px' src='pictures/e/10.svg'></p></div> <!-- .slide: class="center" -->
@@ -1099,9 +1104,6 @@ Note: Emojione have also updated, now with a premoum version
 They're updated a bunch of things, including the Owl
 
 R.i.P. Argle Owl
----
- <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='200px' src='pictures/g/blue_bird.svg'><img height='200px' src='pictures/e/2.svg'><img height='200px' src='pictures/e/period.svg'><img height='200px' src='pictures/e/4.svg'></p></div> <!-- .slide: class="center" -->
-
 ---
 
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/t/thumbs_t_old.svg'><img height='400px' src='pictures/t/thumbs_t_new.svg'></p></div> <!-- .slide: class="center" -->

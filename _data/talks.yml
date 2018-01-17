@@ -1,3 +1,16 @@
+
+- conference:
+    name: NDC London
+    link: https://ndc-london.com/
+    date: 17-JAN-2018
+    location: London, UK
+    talks: 
+        - name: The Power and Responsibility of Unicode Adoption
+          slides: 2018_01_NDCLondon
+          link: https://ndc-london.com/talk/the-power-and-responsibility-of-unicode-adoption/
+          twitter: https://twitter.com/azadehkhojandi/status/953642171051200513
+
+
 - conference:
     name: BSides Wellington
     link: https://www.bsides.nz/
