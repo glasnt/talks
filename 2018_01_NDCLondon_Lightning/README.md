@@ -4,7 +4,7 @@ Slides: soliloquy-of-wat.key
 
 ## Inspriation
 
-Gary Bernhardt, [wat](https://www.destroyallsoftware.com/talks/wat), Gary Bernhardt
+Gary Bernhardt, [wat](https://www.destroyallsoftware.com/talks/wat), Destroy all Software
 
 ## Technical Explanations
 
