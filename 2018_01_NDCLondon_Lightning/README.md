@@ -14,6 +14,10 @@ Type coersion, inherited behaviour from Java
 
 Numbers can be cast into Strings in some situations
 
+### Chrome 63 Inspection Console
+
+.... I'm not sure :D
+
 ### Ruby
 
 Order of prescidence. "&&" and "and" are separated by "not"
@@ -62,12 +66,6 @@ Source: original research. [Documentation](http://stackoverflow.com/questions/12
 ### Java
 
 [Source](http://stackoverflow.com/a/2001861/124019)
-
-### Swift
-
-This bug has since been fixed. 
-
-[Source](https://bugs.swift.org/browse/SR-305)
 
 ### Perl
 
