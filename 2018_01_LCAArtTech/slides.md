@@ -61,25 +61,8 @@
 
 ## Image manipulation <!-- .slide: class="center" -->
 ---
-
-## `imagemagick` <!-- .slide: class="center" -->
----
-
-## ~~`imagemagick`~~ <!-- .slide: class="center" -->
----
-
-### "Don't wrap your shell script directly<br>in [web framework]" <!-- .slide: class="center" -->
-<small>Katie McLaughlin, "Disentangle a new fangled image mangler",<br>linux.conf.au 2015 Multimedia Miniconf</small>
-
-<span class="foot" style="top: 450px">[youtube.com](https://www.youtube.com/watch?v=XedLGMp38xA)</span>
-
-Note: I've already done that talk. I've already worked out that imagemagick is too powerful and vulnerable for my unsecase
-
-This talk is a lovely wander through a different image manipulation project of mine.
-
----
-
 ## `pillow` <!-- .slide: class="center" -->
+### Python Imaging Library <!-- .slide: class="center" -->
 ---
 ## `getpixel((x,y))` <!-- .slide: class="center" -->
 ---
@@ -98,7 +81,6 @@ Est. 1746
 ---
  <!-- .slide: data-background-image="pictures/wool_macro.jpg"-->
 ---
-
 
  <img src="pictures/dmc-cranberry.png" />
 ---
@@ -143,11 +125,12 @@ allows competitors to "steal"
 ---
 ## `pillow` <!-- .slide: class="center" -->
 ---
+### `putpalette(data)` <!-- .slide: class="center" -->
+---
 <pre><code style="font-size: 36px; line-height: 1.5;">
-pdata = [0, 0, 0, 255, 255, 255, ...]
-p = Image.new('P', (16, 16))
-p.putpalette(pdata) 
-im.convert('P', 0, p.im)
+im.convert('P' 
+&nbsp; &nbsp; , 0
+&nbsp; &nbsp; , palette.im)
 </code></pre> 
 ---
  <img src="pictures/window-wool_1.png" style="margin-top: -50px" />
@@ -163,15 +146,6 @@ im.convert('P'
  <img src="pictures/window-wool_2.png" style="margin-top: -50px" />
 ---
  <img src="pictures/window-wool_3.png" style="margin-top: -50px" />
-Note: now, the palette is reduced, but for really rich images, I don't think it looks that good.
-
-As opposed to:
----
-<img src="pictures/cranberries_before.jpg" style="margin-top: -50px; height: 300px" />
-<img src="pictures/cranberries_after.jpg" style="height: 300px" />
-
-Note: monocromatic images to start with, or ones with reduced colour palettes, like 8-bit pixel images (:
-
 ---
 ### Problem: 256 <!-- .slide: class="center" -->
 Note: pillow palette limited to 256
@@ -276,7 +250,7 @@ Note: praise scikit
 
 ## github.com/glasnt/626 <!-- .slide: class="center" -->
 ---
- <img src="pictures/green_chart_new.png" style="margin-top: -50px" />
+ <img src="pictures/green_chart_new.png" style="margin-top: -50px; height: 700px;" />
 ---
 
  <!-- .slide: data-background-image="pictures/green_chart_new_clip.png"-->
@@ -313,28 +287,15 @@ $ qrcode "YourWifiPassword" > wifi.png
 $ ./ih wifi.png -s10 -t
 </code></pre> 
 ---
- <img src="pictures/wifi_mock.png" style="margin-top: -50px" />
-
+ <img src="pictures/wifi_mock.png" style="margin-top: -50px; height: 700px;" />
 ---
-## So why isn't this<br>Stitch as a Service? <!-- .slide: class="center" -->
+ <img src="pictures/snap.png" style="margin-top: -50px; height: 700px;" />
 ---
-
-### "If you can avoid file uploads, at all, do." <!-- .slide: class="center" -->
-<small>Tom Eastman, "The dangerous, exquisite art of<br>safely handing user-uploaded files", linux.conf.au 2017</small>
-
-<span class="foot" style="top: 450px">[youtube.com](https://www.youtube.com/watch?v=7QVgzVcoV_M)</span>
-Note: basically, Tom put the fear of god in me.
-
-This works locally. I'm not going to play this game again.
+## glasnt.com/qr <!-- .slide: class="center" -->
 ---
-
-## But since y'all asked so nicely.. <!-- .slide: class="center" -->
-
----
-
-## TODO <!-- .slide: class="center" -->
+ <img src="pictures/qrgen.png" style="margin-top: -50px; height: 700px;" />
 ---
 ### github.com/glasnt/626 <!-- .slide: class="center" -->
-<br> 
+### glasnt.com/qr <!-- .slide: class="center" -->
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='160px' src='pictures/space.svg'><img height='160px' src='pictures/space.svg'><img height='160px' src='pictures/claps.svg'><img height='160px' src='pictures/space.svg'><img height='160px' src='pictures/space.svg'></p></div> <!-- .slide: class="center" -->
  <img src="pictures/footer.svg" />
