@@ -26,12 +26,6 @@
 
 ~@ green_working.jpg
 ---
-
-#= ⊠⊠⊠
-###= Cross Stitch
-#= ⧄⧄⧄
-###= Half Stitch
----
 # &nbsp; 
 
 *"If you know anything about image manipulation, colour setting, cross stitch charts...*
@@ -45,12 +39,6 @@
 - &dash; me, November 2014
 
 ---
-
-# &nbsp;
-# &nbsp;
-- (To be fair, OSDC hasn't run since 2015)
----
-
 ##= Problems to solve
 
 * "image manipulation"
@@ -66,6 +54,13 @@
 ---
 ##= `getpixel((x,y))`
 ---
+<pre><code style="font-size: 36px; line-height: 1.5;">
+>>> from PIL import Image
+>>> im = Image.open("image.png")
+>>> im.getpixel((1,1))
+(255, 255, 255, 255)
+</code></pre>
+---
 ##= Colour setting 
 ---
 ###= Let's learn about floss
@@ -80,6 +75,12 @@ Est. 1746
 ~@ floss_macro.jpg
 ---
 ~@ wool_macro.jpg
+---
+
+#= ⊠⊠⊠
+###= Cross Stitch
+#= ⧄⧄⧄
+###= Half Stitch
 ---
 
 @ dmc-cranberry.png
@@ -152,17 +153,13 @@ Note: pillow palette limited to 256
 
 we have 291, shouldn't be too hard to remove the closest colurs, right?
 ---
-
-@= euclidean.jpg
-###= Euclidean Distance
-<span class="foot" style="top: 500px">[wikipedia](https://en.wikipedia.org/wiki/Color_difference)</span>
-Note: very rough estimate
----
 @= ciede2000.jpg
 ###= CIEDE2000
 <span class="foot" style="top: 515px">[wikipedia](https://en.wikipedia.org/wiki/Color_difference)</span>
 
-Note: latest revision of the forumula from  International Commission on Illumination (CIE) 
+Note: Luckily there's math for that!
+
+latest revision of the forumula from  International Commission on Illumination (CIE) 
 
 Perceptual uniformity
 
@@ -243,7 +240,9 @@ Note: praise scikit
 ---
 ##= Cross-stitch charts
 ---
-##= `<div>`
+##= `<span>`
+---
+##= `box-shadow: inset`
 ---
 ##= Result
 ---
@@ -260,11 +259,15 @@ Note: praise scikit
 @^ sweet_large.png
 <span class="foot" style="top: 700px">[tumblr](http://probertson.tumblr.com/post/161081154009/australian-pokedex-30-57)</span>
 ---
-####= `./ih sweetsail.png -s2`
+<pre><code style="font-size: 36px; line-height: 1.5;">
+$ ./ih sweetsail.png -s2
+</pre></code>
 ---
 ~@ sweet_chart.png
 ---
-####= `./ih sweetsail.png -s2 -t`
+<pre><code style="font-size: 36px; line-height: 1.5;">
+./ih sweetsail.png -s2 -t
+</code></pre>
 ---
 ~@ sweet_mock.png
 ---
@@ -290,6 +293,8 @@ $ ./ih wifi.png -s10 -t
 @^^ wifi_mock.png
 ---
 @^^ snap.png
+---
+@= popular.png
 ---
 ##= glasnt.com/qr
 ---

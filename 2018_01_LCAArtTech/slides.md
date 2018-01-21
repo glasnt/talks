@@ -26,12 +26,6 @@
 
  <!-- .slide: data-background-image="pictures/green_working.jpg"-->
 ---
-
-# ⊠⊠⊠ <!-- .slide: class="center" -->
-### Cross Stitch <!-- .slide: class="center" -->
-# ⧄⧄⧄ <!-- .slide: class="center" -->
-### Half Stitch <!-- .slide: class="center" -->
----
 # &nbsp;
 
 *"If you know anything about image manipulation, colour setting, cross stitch charts...*
@@ -45,12 +39,6 @@
  &dash; me, November 2014 <!-- .element: class="fragment" -->
 
 ---
-
-# &nbsp;
-# &nbsp;
- (To be fair, OSDC hasn't run since 2015) <!-- .element: class="fragment" -->
----
-
 ## Problems to solve <!-- .slide: class="center" -->
 
 * "image manipulation"
@@ -66,6 +54,13 @@
 ---
 ## `getpixel((x,y))` <!-- .slide: class="center" -->
 ---
+<pre><code style="font-size: 36px; line-height: 1.5;">
+>>> from PIL import Image
+>>> im = Image.open("image.png")
+>>> im.getpixel((1,1))
+(255, 255, 255, 255)
+</code></pre> 
+---
 ## Colour setting <!-- .slide: class="center" -->
 ---
 ### Let's learn about floss <!-- .slide: class="center" -->
@@ -80,6 +75,12 @@ Est. 1746
  <!-- .slide: data-background-image="pictures/floss_macro.jpg"-->
 ---
  <!-- .slide: data-background-image="pictures/wool_macro.jpg"-->
+---
+
+# ⊠⊠⊠ <!-- .slide: class="center" -->
+### Cross Stitch <!-- .slide: class="center" -->
+# ⧄⧄⧄ <!-- .slide: class="center" -->
+### Half Stitch <!-- .slide: class="center" -->
 ---
 
  <img src="pictures/dmc-cranberry.png" />
@@ -152,17 +153,13 @@ Note: pillow palette limited to 256
 
 we have 291, shouldn't be too hard to remove the closest colurs, right?
 ---
-
- <div style='margin: 0 auto;'><p align='center'><img src='pictures/euclidean.jpg'></p></div>  <!-- .slide: class="center" -->
-### Euclidean Distance <!-- .slide: class="center" -->
-<span class="foot" style="top: 500px">[wikipedia](https://en.wikipedia.org/wiki/Color_difference)</span>
-Note: very rough estimate
----
  <div style='margin: 0 auto;'><p align='center'><img src='pictures/ciede2000.jpg'></p></div>  <!-- .slide: class="center" -->
 ### CIEDE2000 <!-- .slide: class="center" -->
 <span class="foot" style="top: 515px">[wikipedia](https://en.wikipedia.org/wiki/Color_difference)</span>
 
-Note: latest revision of the forumula from International Commission on Illumination (CIE)
+Note: Luckily there's math for that!
+
+latest revision of the forumula from International Commission on Illumination (CIE)
 
 Perceptual uniformity
 
@@ -243,7 +240,9 @@ Note: praise scikit
 ---
 ## Cross-stitch charts <!-- .slide: class="center" -->
 ---
-## `<div>` <!-- .slide: class="center" -->
+## `<span>` <!-- .slide: class="center" -->
+---
+## `box-shadow: inset` <!-- .slide: class="center" -->
 ---
 ## Result <!-- .slide: class="center" -->
 ---
@@ -260,11 +259,15 @@ Note: praise scikit
  <img src="pictures/sweet_large.png" style="margin-top: -50px" />
 <span class="foot" style="top: 700px">[tumblr](http://probertson.tumblr.com/post/161081154009/australian-pokedex-30-57)</span>
 ---
-#### `./ih sweetsail.png -s2` <!-- .slide: class="center" -->
+<pre><code style="font-size: 36px; line-height: 1.5;">
+$ ./ih sweetsail.png -s2
+</pre></code> 
 ---
  <!-- .slide: data-background-image="pictures/sweet_chart.png"-->
 ---
-#### `./ih sweetsail.png -s2 -t` <!-- .slide: class="center" -->
+<pre><code style="font-size: 36px; line-height: 1.5;">
+./ih sweetsail.png -s2 -t
+</code></pre> 
 ---
  <!-- .slide: data-background-image="pictures/sweet_mock.png"-->
 ---
@@ -290,6 +293,8 @@ $ ./ih wifi.png -s10 -t
  <img src="pictures/wifi_mock.png" style="margin-top: -50px; height: 700px;" />
 ---
  <img src="pictures/snap.png" style="margin-top: -50px; height: 700px;" />
+---
+ <div style='margin: 0 auto;'><p align='center'><img src='pictures/popular.png'></p></div>  <!-- .slide: class="center" -->
 ---
 ## glasnt.com/qr <!-- .slide: class="center" -->
 ---
