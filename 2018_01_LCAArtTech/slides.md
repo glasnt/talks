@@ -1,8 +1,7 @@
 
 # &nbsp;
 # A Right Stitchup <!-- .slide: class="center" -->
-### Lightning Talk
-
+### 🖼❤️💻
  <img src="pictures/footer.svg" />
 ---
 
@@ -129,9 +128,9 @@ allows competitors to "steal"
 ### `putpalette(data)` <!-- .slide: class="center" -->
 ---
 <pre><code style="font-size: 36px; line-height: 1.5;">
-im.convert('P' 
-&nbsp; &nbsp; , 0
-&nbsp; &nbsp; , palette.im)
+>>> im.convert('P'
+&nbsp;&nbsp;&nbsp; &nbsp; , 0
+&nbsp;&nbsp;&nbsp; &nbsp; , palette.im)
 </code></pre> 
 ---
  <img src="pictures/window-wool_1.png" style="margin-top: -50px" />
@@ -139,9 +138,9 @@ im.convert('P'
  <img src="pictures/window-wool_2.png" style="margin-top: -50px" />
 ---
 <pre><code style="font-size: 36px; line-height: 1.5;">
-im.convert('P' 
-&nbsp; &nbsp; , palette=Image.ADAPTIVE
-&nbsp; &nbsp; , colors=16)
+>>> im.convert('P'
+&nbsp; &nbsp; &nbsp; , palette=Image.ADAPTIVE
+&nbsp; &nbsp; &nbsp; , colors=16)
 </code></pre> 
 ---
  <img src="pictures/window-wool_2.png" style="margin-top: -50px" />
@@ -266,7 +265,7 @@ $ ./ih sweetsail.png -s2
  <!-- .slide: data-background-image="pictures/sweet_chart.png"-->
 ---
 <pre><code style="font-size: 36px; line-height: 1.5;">
-./ih sweetsail.png -s2 -t
+$ ./ih sweetsail.png -s2 -t
 </code></pre> 
 ---
  <!-- .slide: data-background-image="pictures/sweet_mock.png"-->
