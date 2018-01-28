@@ -8,6 +8,12 @@
           link: https://rego.linux.conf.au/schedule/presentation/141/
           slides: 2018_01_LCAArtTech/
           twitter: https://twitter.com/adambrenecki/status/955687634092810240
+          video: https://www.youtube.com/watch?v=vwzMniTNK2Q
+        - name: Meltdown, Spectre, and the free-software community
+          type: Panel
+          link: https://rego.linux.conf.au/schedule/presentation/223/
+          twitter: https://twitter.com/glasnt/status/956309684872347648
+          video: https://www.youtube.com/watch?v=nlcXQWJALqQ
 
 
 - conference:
