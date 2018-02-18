@@ -73,7 +73,8 @@ Source: original research. [Explanation](http://stackoverflow.com/a/14046720/124
 
 ### PHP
 
-[Source](http://stackoverflow.com/a/14046720/124019)
+
+[Source](http://phpsadness.com/sad/30)
 
 ### Powershell
 
