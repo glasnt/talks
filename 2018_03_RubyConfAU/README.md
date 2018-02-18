@@ -22,6 +22,7 @@ Good!
 
 ⬇️  Click to reveal ⬇️
 
+<details>
 
 ## JavaScript
 
@@ -58,17 +59,9 @@ https://www.safaribooksonline.com/library/view/you-dont-know/9781491905159/ch04.
 > == allows coercion in the equality comparison and === disallows coercion.
 
 
-```
-> parseInt("42 Wallaby Way")
-42
-```
+http://2ality.com/2012/01/object-plus-object.html
 
-https://www.safaribooksonline.com/library/view/you-dont-know/9781491905159/ch04.html#explicitly-parsing-numeric-strings
-
-
-> Parsing a numeric value out of a string is tolerant of non-numeric
-> characters—it just stops parsing left-to-right when encountered
-
+https://www.ecma-international.org/ecma-262/5.1/#sec-11.6.1
 
 ## Interlude: Ducks
 
@@ -158,4 +151,4 @@ Source: original research. [Documentation](http://fuckpowershell.tumblr.com/post
 [Why I love Legacy DevOps](https://recompilermag.com/issues/issue-4/why-i-love-legacy-devops/), Katie McLaughlin, [The Recompiler, Issue 4](https://recompilermag.com/issues/issue-4/)
 
 
-
+</details>
