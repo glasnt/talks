@@ -130,6 +130,8 @@ Source: original research. [Explanation](http://stackoverflow.com/a/14046720/124
 
 [Source](http://phpsadness.com/sad/30)
 
+http://php.net/manual/en/language.operators.comparison.php#language.operators.comparison.ternary
+
 ### Powershell
 
 Source: original research. [Documentation](http://fuckpowershell.tumblr.com/post/31777924330/fuck-using-standard-operands)
