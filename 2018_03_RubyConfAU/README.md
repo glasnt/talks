@@ -61,7 +61,7 @@ https://www.safaribooksonline.com/library/view/you-dont-know/9781491905159/ch04.
 
 http://2ality.com/2012/01/object-plus-object.html
 
-https://www.ecma-international.org/ecma-262/5.1/#sec-11.6.1
+https://www.ecma-international.org/ecma-262/#sec-addition-operator-plus
 
 ## Interlude: Ducks
 
