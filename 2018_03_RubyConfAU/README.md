@@ -106,12 +106,9 @@ due to two's-complement integer overflow
 
 https://golang.org/ref/spec#Integer_overflow
 
-### C++ / cpp
+### Scala
 
-Trigraphs, yo
-
-
-Source: original research. [Documentation](http://stackoverflow.com/questions/1234582/purpose-of-trigraph-sequences-in-c)
+Default functionality 
 
 
 ### Python
@@ -141,12 +138,12 @@ Source: original research. [Documentation](http://fuckpowershell.tumblr.com/post
 
 'wat' duck, [wat](https://www.destroyallsoftware.com/talks/wat), Gary Bernhardt
 
-'wat' duck, hiding, [edunham](https://500px.com/photo/140476163/wat-by-edunham)
+'wat' duck, Sydney, [hofman](https://imgur.com/gallery/gqilq)
+
+https://www.florentijnhofman.nl/
 
 
 # Further Reading
-
-
 
 [Contempt Culture](https://blog.aurynn.com/2015/12/16-contempt-culture), auyrnn shaw
 
