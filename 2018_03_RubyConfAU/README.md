@@ -94,6 +94,8 @@ http://www.cursingthedarkness.com/2015/10/the-definitive-all-dancing-all-complet
 
 ## Go
 
+(removed for time, but interesting)
+
 https://twitter.com/pasiphae_goals/status/923821863222079488
 
 https://twitter.com/rozaliev/status/923919964720988166
