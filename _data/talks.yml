@@ -1,3 +1,13 @@
+- conference:
+    name: RubyConf AU
+    link: http://www.rubyconf.org.au/2018
+    date: 2017-03-08
+    location: Sydney
+    talks: 
+      - name: JavaScript is Awe-ful
+        slides: 2018_03_RubyConfAU
+        twitter: https://twitter.com/JessRudder/status/971552800495697920
+
 - conference: 
     name: linux.conf.au
     link: https://linux.conf.au/
