@@ -5,7 +5,7 @@
     location: Sydney
     talks: 
       - name: JavaScript is Awe-ful
-        slides: 2018_03_RubyConfAU
+        slides: https://github.com/glasnt/talks/tree/gh-pages/2018_03_RubyConfAU
         twitter: https://twitter.com/JessRudder/status/971552800495697920
         feedback: https://alainakafkes.github.io/chronicles/2018/03/11/rubyconf-au.html
 
