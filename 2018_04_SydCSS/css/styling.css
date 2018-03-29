@@ -1,0 +1,44 @@
+body { 
+    font-family: "Helvetica Neue"; 
+}
+
+table {
+    border-collapse: collapse;
+    white-space: nowrap;
+    overflow: scroll;
+}
+
+.legend table, .legend th, .legend td, .chart table, .chart th, .chart td {
+    border: 1px solid black;
+}
+
+.legend td, .chart td {
+    vertical-align: middle;
+    text-align: center;
+    height: 30px;
+    width: 30px
+}
+.alt { background-color: #fefdff; color: black; } 
+.main { background-color: #d9542b; color: lightgray; } 
+.white { background-color: white; color: black; } 
+
+.zztop { 
+    vertical-align: top;
+}
+
+.space { 
+    padding-left: 20px; 
+}
+
+.color_cell {
+    text-align: center;
+    display: inline-block !important;
+    line-height: 80px;
+    height: 80px; 
+    width: 80px;
+    font-size: 60px !important;
+    box-shadow:inset 0px 0px 0px 2px #000;
+}
+
+.hardborder { "; box-shadow:inset 0px 0px 0px 4px #f00;" }
+.normalborder {"; box-shadow:inset 0px 0px 0px 0.5px #000;" }
