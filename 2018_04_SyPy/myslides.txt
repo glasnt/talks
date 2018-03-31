@@ -2,54 +2,48 @@
 #= ORM: The Sequel
 ###= SyPy April 2018
 @ footer.svg
-
+---
+! wave
+---
+@= dceu18.png
+&nbsp; <!-- .slide: data-background-color="#f58619" -->
 ---
 @= djangologo.png
 ---
-#> &nbsp; <br><br>
-#> ./manage.py shell
+@= dceu16.png
+&nbsp; <!-- .slide: data-background-color="#302613" -->
 ---
+@= dcus17.png
+&nbsp; <!-- .slide: data-background-color="#c2eaf4" -->
+---
+~@ 17_bg.png
+@= dcau17.png
+---
+@= djangologo.png
+---
+#= &nbsp;
 
-#> Python 3.5.2 (Jan 18 2017, 02:49:23)
-#> [GCC 4.9.2] on linux
-#> Type "help", "copyright", "credits"<br>or "license" for more information.
-#> (InteractiveConsole)
-#> >>>
+Note: Nope. 
+---
+@= djadmin.png
+---
+~@ macbook.jpg
+---
+~@ thinkpad.jpg
 ---
 ~@ apex32.jpg
 ---
-#> >>> select &ast; from dba_tables;
----
-#> >>> select &ast; from dba_tables;
-#> <br>Traceback (most recent call last):
-#> &nbsp; &nbsp; File "&lt;console&gt;", line 1
-#> &nbsp; &nbsp; &nbsp; select * from dba_tables;
-#> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; ^
-#> SyntaxError: invalid syntax
+@= apex.gif
 ---
 
-#> >>> show tables;
+@= djadmin.png
 ---
-
-#> >>> show tables;
-
-#> <br>Traceback (most recent call last):
-#> &nbsp; &nbsp; File "&lt;console&gt;", line 1
-#> &nbsp; &nbsp; &nbsp; show tables;
-#> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp; ^
-#> SyntaxError: invalid syntax
+~@ fogofwar.png
 ---
-
-#> >>> \dt
----
-#> >>> \dt
-#> <br>Traceback (most recent call last):
-#> &nbsp; &nbsp; File "&lt;console&gt;", line 1
-#> &nbsp; &nbsp; &nbsp; \dt
-#> &nbsp; &nbsp; &nbsp; &nbsp; ^
-#> SyntaxError: unexpected character<br>after line continuation character
+@= manageshell.png
 ---
 <br>
 ! space |  space | claps | space | space
 @ footer.svg
+vv Some images: [WOCinTech Chat](https://www.flickr.com/photos/wocintechchat/albums)
 

@@ -2,53 +2,47 @@
 # ORM: The Sequel <!-- .slide: class="center" -->
 ### SyPy April 2018 <!-- .slide: class="center" -->
  <img src="pictures/footer.svg" />
-
+---
+ <div style='width: 50%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/wave.svg'></p></div> <!-- .slide: class="center" -->
+---
+ <div style='margin: 0 auto;'><p align='center'><img src='pictures/dceu18.png'></p></div>  <!-- .slide: class="center" -->
+&nbsp; <!-- .slide: data-background-color="#f58619" -->
 ---
  <div style='margin: 0 auto;'><p align='center'><img src='pictures/djangologo.png'></p></div>  <!-- .slide: class="center" -->
 ---
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">&nbsp; <br><br></code></pre></div>
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">./manage.py shell</code></pre></div>
+ <div style='margin: 0 auto;'><p align='center'><img src='pictures/dceu16.png'></p></div>  <!-- .slide: class="center" -->
+&nbsp; <!-- .slide: data-background-color="#302613" -->
 ---
+ <div style='margin: 0 auto;'><p align='center'><img src='pictures/dcus17.png'></p></div>  <!-- .slide: class="center" -->
+&nbsp; <!-- .slide: data-background-color="#c2eaf4" -->
+---
+ <!-- .slide: data-background-image="pictures/17_bg.png"-->
+ <div style='margin: 0 auto;'><p align='center'><img src='pictures/dcau17.png'></p></div>  <!-- .slide: class="center" -->
+---
+ <div style='margin: 0 auto;'><p align='center'><img src='pictures/djangologo.png'></p></div>  <!-- .slide: class="center" -->
+---
+# &nbsp; <!-- .slide: class="center" -->
 
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">Python 3.5.2 (Jan 18 2017, 02:49:23)</code></pre></div>
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">[GCC 4.9.2] on linux</code></pre></div>
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">Type "help", "copyright", "credits"<br>or "license" for more information.</code></pre></div>
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">(InteractiveConsole)</code></pre></div>
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">>>></code></pre></div>
+Note: Nope.
+---
+ <div style='margin: 0 auto;'><p align='center'><img src='pictures/djadmin.png'></p></div>  <!-- .slide: class="center" -->
+---
+ <!-- .slide: data-background-image="pictures/macbook.jpg"-->
+---
+ <!-- .slide: data-background-image="pictures/thinkpad.jpg"-->
 ---
  <!-- .slide: data-background-image="pictures/apex32.jpg"-->
 ---
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">>>> select &ast; from dba_tables;</code></pre></div>
----
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">>>> select &ast; from dba_tables;</code></pre></div>
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%"><br>Traceback (most recent call last):</code></pre></div>
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">&nbsp; &nbsp; File "&lt;console&gt;", line 1</code></pre></div>
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">&nbsp; &nbsp; &nbsp; select * from dba_tables;</code></pre></div>
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; ^</code></pre></div>
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">SyntaxError: invalid syntax</code></pre></div>
+ <div style='margin: 0 auto;'><p align='center'><img src='pictures/apex.gif'></p></div>  <!-- .slide: class="center" -->
 ---
 
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">>>> show tables;</code></pre></div>
+ <div style='margin: 0 auto;'><p align='center'><img src='pictures/djadmin.png'></p></div>  <!-- .slide: class="center" -->
 ---
-
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">>>> show tables;</code></pre></div>
-
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%"><br>Traceback (most recent call last):</code></pre></div>
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">&nbsp; &nbsp; File "&lt;console&gt;", line 1</code></pre></div>
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">&nbsp; &nbsp; &nbsp; show tables;</code></pre></div>
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp; ^</code></pre></div>
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">SyntaxError: invalid syntax</code></pre></div>
+ <!-- .slide: data-background-image="pictures/fogofwar.png"-->
 ---
-
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">>>> \dt</code></pre></div>
----
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">>>> \dt</code></pre></div>
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%"><br>Traceback (most recent call last):</code></pre></div>
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">&nbsp; &nbsp; File "&lt;console&gt;", line 1</code></pre></div>
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">&nbsp; &nbsp; &nbsp; \dt</code></pre></div>
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">&nbsp; &nbsp; &nbsp; &nbsp; ^</code></pre></div>
- <div style='margin-bottom:0px; font-size: 80px'><pre style='margin-bottom:0px;margin-top:0px'><code style="font: 'monospace' 150%">SyntaxError: unexpected character<br>after line continuation character</code></pre></div>
+ <div style='margin: 0 auto;'><p align='center'><img src='pictures/manageshell.png'></p></div>  <!-- .slide: class="center" -->
 ---
 <br> 
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='160px' src='pictures/space.svg'><img height='160px' src='pictures/space.svg'><img height='160px' src='pictures/claps.svg'><img height='160px' src='pictures/space.svg'><img height='160px' src='pictures/space.svg'></p></div> <!-- .slide: class="center" -->
  <img src="pictures/footer.svg" />
+ <span class='foot'>Some images: [WOCinTech Chat](https://www.flickr.com/photos/wocintechchat/albums)</span>
