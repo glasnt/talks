@@ -1,0 +1,55 @@
+<br>
+#= ORM: The Sequel
+###= SyPy April 2018
+@ footer.svg
+
+---
+@= djangologo.png
+---
+#> &nbsp; <br><br>
+#> ./manage.py shell
+---
+
+#> Python 3.5.2 (Jan 18 2017, 02:49:23)
+#> [GCC 4.9.2] on linux
+#> Type "help", "copyright", "credits"<br>or "license" for more information.
+#> (InteractiveConsole)
+#> >>>
+---
+~@ apex32.jpg
+---
+#> >>> select &ast; from dba_tables;
+---
+#> >>> select &ast; from dba_tables;
+#> <br>Traceback (most recent call last):
+#> &nbsp; &nbsp; File "&lt;console&gt;", line 1
+#> &nbsp; &nbsp; &nbsp; select * from dba_tables;
+#> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; ^
+#> SyntaxError: invalid syntax
+---
+
+#> >>> show tables;
+---
+
+#> >>> show tables;
+
+#> <br>Traceback (most recent call last):
+#> &nbsp; &nbsp; File "&lt;console&gt;", line 1
+#> &nbsp; &nbsp; &nbsp; show tables;
+#> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp; ^
+#> SyntaxError: invalid syntax
+---
+
+#> >>> \dt
+---
+#> >>> \dt
+#> <br>Traceback (most recent call last):
+#> &nbsp; &nbsp; File "&lt;console&gt;", line 1
+#> &nbsp; &nbsp; &nbsp; \dt
+#> &nbsp; &nbsp; &nbsp; &nbsp; ^
+#> SyntaxError: unexpected character<br>after line continuation character
+---
+<br>
+! space |  space | claps | space | space
+@ footer.svg
+
