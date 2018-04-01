@@ -329,13 +329,11 @@ $ ./ih wifi.png -s10 -t
 ---
 ## Automated Applications <!-- .slide: class="center" -->
 ---
- <img src="pictures/win_icons_twitter.png" style="margin-top: -50px" />
+ <img src="pictures/win_icons.png" style="margin-top: -50px" />
 ---
- <img src="pictures/winicon.png" style="margin-top: -50px" />
+ <img src="pictures/win_icons_chart.png" style="margin-top: -50px" />
 ---
- <img src="pictures/win_icons_chart_twitter.png" style="margin-top: -50px" />
----
- <img src="pictures/winiconchart.png" style="margin-top: -50px" />
+ <img src="pictures/chart.jpg" style="margin-top: -50px" />
 ---
 ### github.com/glasnt/626 <!-- .slide: class="center" -->
 ### glasnt.com/qr <!-- .slide: class="center" -->

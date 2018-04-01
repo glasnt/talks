@@ -1,7 +1,14 @@
-c { color: green; font-weight:bold; }
-s { color: red }
-r { color: red }
-h { color: blue; font-weight: bold;}
+r { color: #d73a49 }
+l { color: #005cc5 }
+d { color: #032f62 }
+c { color: #6a737d; }
+pre code { 
+   font-family: "SFMono-Regular",Consolas,"Liberation Mono",Menlo,Courier,monospace !important;
+   font-size: 30pt !important; 
+   line-height: 40pt !important; 
+   margin-left: -50pt !important;
+} 
+
 span.bfoot {position:absolute; bottom: 0px; right: 1em; font-size: 50%; color: grey !important; }
 span.bfoot a { color: grey !important}
 span.dasfoot { position:absolute; top: 670px; right: 1em; font-size: 50%; color: grey}
@@ -9,11 +16,3 @@ span.foot { position:absolute; top: 670px; right: 1em; font-size: 50%; color: gr
 span.foot a { color: grey !important}
 img.e { width: 40px;}
 .reveal a { color: black}
-table.difftable {
-  font: 19px Arial;
-    width: 1200px;
-    margin-left: -120px;
-position: absolute;
-top: 50px;
-
-}

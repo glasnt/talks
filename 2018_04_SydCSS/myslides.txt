@@ -329,13 +329,11 @@ $ ./ih wifi.png -s10 -t
 ---
 ##= Automated Applications
 ---
-@^ win_icons_twitter.png
+@^ win_icons.png
 ---
-@^ winicon.png
+@^ win_icons_chart.png
 ---
-@^ win_icons_chart_twitter.png
----
-@^ winiconchart.png
+@^ chart.jpg
 ---
 ###= github.com/glasnt/626 
 ###= glasnt.com/qr
