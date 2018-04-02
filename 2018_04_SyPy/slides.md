@@ -135,7 +135,19 @@ Note: The ORM
 ## "But, how do I use the shell?" <!-- .slide: class="center" -->
 ## *"..."* <!-- .element: class="fragment" -->
 ---
-## Dodgy Hack #1: Meta <!-- .slide: class="center" -->
+## Finding all tables <!-- .slide: class="center" -->
+---
+<pre><code> 
+<c>&dash;&dash; MySQL</c>
+show tables
+
+<c>&dash;&dash; PostgreSQL</c>
+\dt 
+
+<c>&dash;&dash; Oracle</c>
+<r>SELECT * <br>&nbsp; FROM</r> <l>dba</l>.<l>tables</l>
+</code></pre> 
+---
 ---
 <pre><code> 
 <c># Generate import statements</c>
@@ -148,7 +160,51 @@ Note: The ORM
 &nbsp; &nbsp; <l>print</l>(<d>f'from</d> <l>{</l>l<l>}</l><d>.models import </d><l>{</l>n<l>}</l>')
 </code></pre> 
 ---
+## Show all table contents <!-- .slide: class="center" -->
+---
+<pre><code> 
+<c>&dash;&dash; SQL</c>
+<r>SELECT * <br>&nbsp; FROM</r> <l>unicodex_codepoint;</l>
+<br><br> 
+</code></pre> 
+---
+<pre><code> 
+<c>&dash;&dash; SQL</c>
+<r>SELECT * <br>&nbsp; FROM</r> <l>unicodex_codepoint;</l>
+
+<c>&num; ORM</c>
+Codepoint.objects.all() 
+</code></pre> 
+---
+## Show specific table contents <!-- .slide: class="center" -->
+---
+<pre><code> 
+<c>&dash;&dash; SQL</c>
+<r>SELECT * <br>&nbsp; FROM</r> <l>unicodex_codepoint c</l><br>&nbsp;<r>WHERE</r> <l>c</l>.<l>name</l> <r>=</r> 'Sparkles';
+<br><br> 
+</code></pre> 
+---
+<pre><code> 
+<c>&dash;&dash; SQL</c>
+<r>SELECT * <br>&nbsp; FROM</r> <l>unicodex_codepoint c</l><br>&nbsp;<r>WHERE</r> <l>c</l>.<l>name</l> <r>&equals;</r> 'Sparkles';
+
+<c>&num; ORM</c>
+Codepoint.objects.filter(<r>name&equals;</r>'Sparkles') 
+</code></pre> 
+---
+## Joins <!-- .slide: class="center" -->
+---
+<pre><code> 
+<c>&dash;&dash; SQL</c>
+<r>SELECT * <br>&nbsp; FROM</r> <l>unicodex_codepoint c</l><br>&nbsp;<r>WHERE</r> <l>c</l>.<l>name</l> <r>&equals;</r> 'Sparkles';
+
+<c>&num; ORM</c>
+Codepoint.objects.filter(<r>name&equals;</r>'Sparkles') 
+</code></pre> 
+---
 # .. <!-- .slide: class="center" -->
+---
+ <div style='margin: 0 auto;'><p align='center'><img src='pictures/legacy3.png'></p></div>  <!-- .slide: class="center" -->
 ---
  <!-- .slide: data-background-image="pictures/pyconau18.png"-->
 
