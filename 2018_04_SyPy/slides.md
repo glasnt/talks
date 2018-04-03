@@ -196,11 +196,49 @@ Codepoint.objects.filter(<r>name&equals;</r>'Sparkles')
 ---
 <pre><code> 
 <c>&dash;&dash; SQL</c>
-<r>SELECT * <br>&nbsp; FROM</r> <l>unicodex_codepoint c</l><br>&nbsp;<r>WHERE</r> <l>c</l>.<l>name</l> <r>&equals;</r> 'Sparkles';
+<r>SELECT * <br>&nbsp; FROM</r> <l>unicodex_codepoint c, unicodex_design d</l><br>&nbsp;<r>WHERE</r> <l>c</l>.<l>name</l> <r>&equals;</r> 'Sparkles'<BR><r>&nbsp; &nbsp;AND</r> d.codepoint_id = c.id;
 
 <c>&num; ORM</c>
-Codepoint.objects.filter(<r>name&equals;</r>'Sparkles') 
+Design.objects.filter(<o><br>&nbsp;&nbsp;&nbsp;codepoint__name&equals;</o>"Sparkles") 
 </code></pre> 
+---
+<pre><code> 
+<c>&dash;&dash; SQL</c>
+<r>SELECT * <br>&nbsp; FROM</r> <l>unicodex_codepoint c, unicodex_design d</l><br>&nbsp;<r>WHERE</r> <l>c</l>.<l>name</l> <r>&equals;</r> 'Sparkles'<BR><r>&nbsp; &nbsp;AND</r> d.codepoint_id = c.id;
+
+<c>&num; ORM</c>
+Design.objects.filter(<o><br>&nbsp;&nbsp;&nbsp;codepoint__name&equals;</o>"Sparkles") 
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <c>^^</c>
+</code></pre> 
+---
+<pre><code> 
+<c>&num; ORM</c>
+Thing.objects.filter(<o>relation__name&equals;</o>"str") 
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <c>^^</c>
+</code></pre> 
+
+### Double Underscore <!-- .element: class="fragment" -->
+##### <span>'*just follow the fields til you get to the one you want*'<br>- <fl>[django docs](https://docs.djangoproject.com/en/2.0/topics/db/queries/#lookups-that-span-relationships)</fl></span> <!-- .element: class="fragment" -->
+
+Note: Django offers a powerful and intuitive way to “follow” relationships in lookups, taking care of the SQL JOINs for you automatically, behind the scenes. To span a relationship, just use the field name of related fields across models, separated by double underscores, until you get to the field you want."
+
+---
+<pre><code> 
+<c>&num; Follow the fields</c>
+Design.objects.filter(<br> &nbsp;<o>vendorversion__vendor__name&equals;</o>"Apple")
+</code></pre> 
+---
+<pre><code> 
+<c>&num; Follow the fields</c>
+Design.objects.filter(<br> &nbsp;<o>vendorversion__vendor__name&equals;</o>"Apple")
+
+<c>&num; ... and then some </c>
+Design.objects.filter(<br> &nbsp;<o>vendorversion__vendor__name__contains&equals;</o>"App")
+</code></pre> 
+
+
+
+
 ---
 # .. <!-- .slide: class="center" -->
 ---
