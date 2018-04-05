@@ -1,4 +1,14 @@
 - conference:
+    name: SydCSS
+    link: https://www.meetup.com/SydCSS/events/248729348/
+    date: 2018-04-05
+    location: Sydney
+    talks:
+     - name: A Right Stitch Up
+       slides: 2018_04_SydCSS
+       twitter: https://twitter.com/SydCSS/status/981821965773168640
+
+- conference:
     name: RubyConf AU
     link: http://www.rubyconf.org.au/2018
     date: 2017-03-08

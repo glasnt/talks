@@ -10,8 +10,8 @@
 ---
 
  <!-- .slide: data-background-image="pictures/osdc2014.png"-->
-
 ---
+
 
  <!-- .slide: data-background-image="pictures/green_display.jpg"-->
 
