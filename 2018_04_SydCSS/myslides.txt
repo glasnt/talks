@@ -98,14 +98,12 @@ V LT Cranberry&nbsp;&nbsp;605
 ---
 ~@ wool_6floss.jpg
 ---
-##= more floss than wool
-####= over 50% more!
+##= Disperate Colour Palettes
 ---
-##= Colour Code ➡ RGB
-###- ???
+##= Mapping Palette to RGB
 ---
 ###= No official mapping exists
-####= 'proprietary information'
+####= *"proprietary information"*
 <span class="foot" style="top: 437px"> [thread-bare.com](https://www.thread-bare.com/2017/09/20/creating-cross-stitch-charts-with-consistent-colors)</span>
 Note: proprietary information
 
@@ -115,7 +113,7 @@ official standard
 
 allows competitors to "steal" 
 ---
-#####= *cough*
+#####= ...
 ---
 ###= 454 RGB Codes for Floss
 ###= 293 RGB Codes for Wool
@@ -125,7 +123,6 @@ allows competitors to "steal"
 ##= `pillow`
 ---
 ###= `putpalette(data)`
----
 <pre><code style="font-size: 36px; line-height: 1.5;">
 >>> im.convert('P'
 &nbsp;&nbsp;&nbsp; &nbsp; , 0
@@ -136,6 +133,7 @@ allows competitors to "steal"
 ---
 @^ window-wool_2.png
 ---
+###= `putpalette(data)`
 <pre><code style="font-size: 36px; line-height: 1.5;">
 >>> im.convert('P'
 &nbsp; &nbsp; &nbsp; , palette=Image.ADAPTIVE
@@ -242,7 +240,6 @@ Note: praise scikit
 ---
 ##= `box-shadow: inset`
 ---
-
 <pre><code>
 .color_cell { 
 &nbsp; box-shadow: inset 0px 0px 0px 2px #000;
@@ -273,21 +270,37 @@ Note: praise scikit
 @^ sweet_large.png
 <span class="foot" style="top: 700px">[tumblr](http://probertson.tumblr.com/post/161081154009/australian-pokedex-30-57)</span>
 ---
-<pre><code style="font-size: 36px; line-height: 1.5;">
-$ ./ih sweetsail.png -s2
-</pre></code>
+<pre><code style="font-size: 36px; line-height: 1.5;">$ ./ih sweetsail.png -s2
+@ sweet_chart.png
 ---
-~@ sweet_chart.png
----
-<pre><code style="font-size: 36px; line-height: 1.5;">
-$ ./ih sweetsail.png -s2 -t
-</code></pre>
----
-~@ sweet_mock.png
+<pre><code style="font-size: 36px; line-height: 1.5;">$ ./ih sweetsail.png -s2 -t
+@ sweet_mock.png
 ---
 ~@ sweet_progress.jpg
 ---
 ~@ sweet_finished.jpg
+---
+##= Mockup Rendering
+---
+@= wool-large.png
+###= Semi-transparent image<br>+ `background-color`
+
+Note: old trick I worked out years ago. For 'web portal customisation'
+---
+<pre><code>
+.color_cell { 
+&nbsp; &nbsp; ...
+&nbsp; &nbsp; background-image: url(img/wool.png);
+&nbsp; &nbsp; background-size: cover;
+}
+</code></pre>
+
+<div class="chart"><div class=" wool alt">&nbsp;</div><div class=" wool alt">&nbsp;</div><div class=" wool alt">&nbsp;</div><div class="wool alt">&nbsp;</div></div>
+<div class="chart"><div class=" wool main">&nbsp;</div><div class=" wool main">&nbsp;</div><div class=" wool main">&nbsp;</div><div class=" wool main">&nbsp;</div></div>
+<div class="chart"><div class=" wool alt">&nbsp;</div><div class=" wool alt">&nbsp;</div><div class=" wool alt">&nbsp;</div><div class="wool alt">&nbsp;</div></div>
+<div class="chart"><div class=" wool main">&nbsp;</div><div class=" wool main">&nbsp;</div><div class=" wool main">&nbsp;</div><div class=" wool main">&nbsp;</div></div>
+</div>
+
 ---
 <pre><code style="font-size: 36px; line-height: 1.5;">$ ./ih sweetsail.png -s2 -t -p wool <c>#<img src="pictures/yarn_emoji.png" class="e"></c>
 </code></pre>
@@ -336,7 +349,6 @@ $ ./ih wifi.png -s10 -t
 @^ chart.jpg
 ---
 ###= github.com/glasnt/626 
-###= glasnt.com/qr
-###= @win_icons_chart
+###= glasnt.com/qr &nbsp; &nbsp; @win_icons_chart
 ! space | space |  space | space | claps | space | space | space | space
 @ footer.svg

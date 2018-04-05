@@ -42,3 +42,13 @@ table {
 
 .hardborder { "; box-shadow:inset 0px 0px 0px 4px #f00;" }
 .normalborder {"; box-shadow:inset 0px 0px 0px 0.5px #000;" }
+
+.wool { 
+    background-image: url(../pictures/wool-large.png); 
+    background-size:cover; 
+    text-align: center;
+    display: inline-block !important;
+    line-height: 80px;
+    height: 80px; 
+    width: 80px;
+} 

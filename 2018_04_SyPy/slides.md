@@ -236,8 +236,38 @@ Design.objects.filter(<br> &nbsp;<o>vendorversion__vendor__name&equals;</o>"Appl
 Design.objects.filter(<br> &nbsp;<o>vendorversion__vendor__name__contains&equals;</o>"App")
 </code></pre> 
 
+---
+# ... <!-- .slide: class="center" -->
 
+---
 
+# Bonus <!-- .slide: class="center" -->
+## PostgreSQL Gotchas <!-- .slide: class="center" -->
+
+---
+<pre><code>$ pg_dump ... > db_dump
+
+$ grep INSERT db_dump <r>|</r> wc -l
+0 
+
+$ less db_dump
+... 
+COPY public.django_site (id, domain, name) FROM stdin;
+... 
+
+</code></pre> 
+---
+
+<pre><code>$ pg_dump --insert .. > db_dump_inserts
+
+$ grep INSERT db_dump_inserts <r>|</r> wc -l
+30241 
+
+$ less db_dump_inserts
+... 
+INSERT INTO public.django_site VALUES
+... 
+</code></pre> 
 
 ---
 # .. <!-- .slide: class="center" -->

@@ -98,14 +98,12 @@ V LT Cranberry&nbsp;&nbsp;605
 ---
  <!-- .slide: data-background-image="pictures/wool_6floss.jpg"-->
 ---
-## more floss than wool <!-- .slide: class="center" -->
-#### over 50% more! <!-- .slide: class="center" -->
+## Disperate Colour Palettes <!-- .slide: class="center" -->
 ---
-## Colour Code ➡ RGB <!-- .slide: class="center" -->
-### ??? <!-- .element: class="fragment" -->
+## Mapping Palette to RGB <!-- .slide: class="center" -->
 ---
 ### No official mapping exists <!-- .slide: class="center" -->
-#### 'proprietary information' <!-- .slide: class="center" -->
+#### *"proprietary information"* <!-- .slide: class="center" -->
 <span class="foot" style="top: 437px"> [thread-bare.com](https://www.thread-bare.com/2017/09/20/creating-cross-stitch-charts-with-consistent-colors)</span>
 Note: proprietary information
 
@@ -115,7 +113,7 @@ official standard
 
 allows competitors to "steal"
 ---
-##### *cough* <!-- .slide: class="center" -->
+##### ... <!-- .slide: class="center" -->
 ---
 ### 454 RGB Codes for Floss <!-- .slide: class="center" -->
 ### 293 RGB Codes for Wool <!-- .slide: class="center" -->
@@ -125,7 +123,6 @@ allows competitors to "steal"
 ## `pillow` <!-- .slide: class="center" -->
 ---
 ### `putpalette(data)` <!-- .slide: class="center" -->
----
 <pre><code style="font-size: 36px; line-height: 1.5;">
 >>> im.convert('P'
 &nbsp;&nbsp;&nbsp; &nbsp; , 0
@@ -136,6 +133,7 @@ allows competitors to "steal"
 ---
  <img src="pictures/window-wool_2.png" style="margin-top: -50px" />
 ---
+### `putpalette(data)` <!-- .slide: class="center" -->
 <pre><code style="font-size: 36px; line-height: 1.5;">
 >>> im.convert('P'
 &nbsp; &nbsp; &nbsp; , palette=Image.ADAPTIVE
@@ -242,7 +240,6 @@ Note: praise scikit
 ---
 ## `box-shadow: inset` <!-- .slide: class="center" -->
 ---
-
 <pre><code> 
 .color_cell {
 &nbsp; box-shadow: inset 0px 0px 0px 2px #000;
@@ -273,21 +270,37 @@ Note: praise scikit
  <img src="pictures/sweet_large.png" style="margin-top: -50px" />
 <span class="foot" style="top: 700px">[tumblr](http://probertson.tumblr.com/post/161081154009/australian-pokedex-30-57)</span>
 ---
-<pre><code style="font-size: 36px; line-height: 1.5;">
-$ ./ih sweetsail.png -s2
-</pre></code> 
+<pre><code style="font-size: 36px; line-height: 1.5;">$ ./ih sweetsail.png -s2
+ <img src="pictures/sweet_chart.png" />
 ---
- <!-- .slide: data-background-image="pictures/sweet_chart.png"-->
----
-<pre><code style="font-size: 36px; line-height: 1.5;">
-$ ./ih sweetsail.png -s2 -t
-</code></pre> 
----
- <!-- .slide: data-background-image="pictures/sweet_mock.png"-->
+<pre><code style="font-size: 36px; line-height: 1.5;">$ ./ih sweetsail.png -s2 -t
+ <img src="pictures/sweet_mock.png" />
 ---
  <!-- .slide: data-background-image="pictures/sweet_progress.jpg"-->
 ---
  <!-- .slide: data-background-image="pictures/sweet_finished.jpg"-->
+---
+## Mockup Rendering <!-- .slide: class="center" -->
+---
+ <div style='margin: 0 auto;'><p align='center'><img src='pictures/wool-large.png'></p></div>  <!-- .slide: class="center" -->
+### Semi-transparent image<br>+ `background-color` <!-- .slide: class="center" -->
+
+Note: old trick I worked out years ago. For 'web portal customisation'
+---
+<pre><code> 
+.color_cell {
+&nbsp; &nbsp; ...
+&nbsp; &nbsp; background-image: url(img/wool.png);
+&nbsp; &nbsp; background-size: cover;
+} 
+</code></pre> 
+
+<div class="chart"><div class=" wool alt">&nbsp;</div><div class=" wool alt">&nbsp;</div><div class=" wool alt">&nbsp;</div><div class="wool alt">&nbsp;</div></div>
+<div class="chart"><div class=" wool main">&nbsp;</div><div class=" wool main">&nbsp;</div><div class=" wool main">&nbsp;</div><div class=" wool main">&nbsp;</div></div>
+<div class="chart"><div class=" wool alt">&nbsp;</div><div class=" wool alt">&nbsp;</div><div class=" wool alt">&nbsp;</div><div class="wool alt">&nbsp;</div></div>
+<div class="chart"><div class=" wool main">&nbsp;</div><div class=" wool main">&nbsp;</div><div class=" wool main">&nbsp;</div><div class=" wool main">&nbsp;</div></div>
+</div> 
+
 ---
 <pre><code style="font-size: 36px; line-height: 1.5;">$ ./ih sweetsail.png -s2 -t -p wool <c>#<img src="pictures/yarn_emoji.png" class="e"></c>
 </code></pre> 
@@ -336,7 +349,6 @@ $ ./ih wifi.png -s10 -t
  <img src="pictures/chart.jpg" style="margin-top: -50px" />
 ---
 ### github.com/glasnt/626 <!-- .slide: class="center" -->
-### glasnt.com/qr <!-- .slide: class="center" -->
-### @win_icons_chart <!-- .slide: class="center" -->
+### glasnt.com/qr &nbsp; &nbsp; @win_icons_chart <!-- .slide: class="center" -->
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='88px' src='pictures/space.svg'><img height='88px' src='pictures/space.svg'><img height='88px' src='pictures/space.svg'><img height='88px' src='pictures/space.svg'><img height='88px' src='pictures/claps.svg'><img height='88px' src='pictures/space.svg'><img height='88px' src='pictures/space.svg'><img height='88px' src='pictures/space.svg'><img height='88px' src='pictures/space.svg'></p></div> <!-- .slide: class="center" -->
  <img src="pictures/footer.svg" />
