@@ -350,5 +350,6 @@ $ ./ih wifi.png -s10 -t
 ---
 ### github.com/glasnt/626 <!-- .slide: class="center" -->
 ### glasnt.com/qr &nbsp; &nbsp; @win_icons_chart <!-- .slide: class="center" -->
- <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='88px' src='pictures/space.svg'><img height='88px' src='pictures/space.svg'><img height='88px' src='pictures/space.svg'><img height='88px' src='pictures/space.svg'><img height='88px' src='pictures/claps.svg'><img height='88px' src='pictures/space.svg'><img height='88px' src='pictures/space.svg'><img height='88px' src='pictures/space.svg'><img height='88px' src='pictures/space.svg'></p></div> <!-- .slide: class="center" -->
+<img src="pictures/sparkles.svg" height="200px" style="margin-top: 62px; margin-bottom: -66px;">
+
  <img src="pictures/footer.svg" />

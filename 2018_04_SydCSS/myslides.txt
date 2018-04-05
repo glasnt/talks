@@ -350,5 +350,6 @@ $ ./ih wifi.png -s10 -t
 ---
 ###= github.com/glasnt/626 
 ###= glasnt.com/qr &nbsp; &nbsp; @win_icons_chart
-! space | space |  space | space | claps | space | space | space | space
+<img src="pictures/sparkles.svg" height="200px" style="margin-top: 62px; margin-bottom: -66px;">
+
 @ footer.svg
