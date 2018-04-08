@@ -1,5 +1,4 @@
-<br> 
-# ORM: The Sequel <!-- .slide: class="center" -->
+<br> #= ORM: The Sequel
 ### SyPy April 2018 <!-- .slide: class="center" -->
  <img src="pictures/footer.svg" />
 ---
@@ -157,7 +156,7 @@ It's also not helpful for the way that I came into Django; trying to fix an exis
 So for the purposes of this, we're going to use an existing project
 ---
 
- <div style='margin: 0 auto;'><p align='center'><img src='pictures/unicodex_index.png'></p></div>  <!-- .slide: class="center" -->
+ <img src="pictures/unicodex_index.png" style="margin-top: -50px" />
 
 Note: 
 
@@ -170,7 +169,7 @@ On the home page there's a bunch of emoji and if you click on one
 
 ---
 
- <div style='margin: 0 auto;'><p align='center'><img src='pictures/unicodex_sparkles.png'></p></div>  <!-- .slide: class="center" -->
+ <img src="pictures/unicodex_sparkles.png" style="margin-top: -50px" />
 
 Note: it shows you the emoji from different vendors and the versions.
 
@@ -201,6 +200,17 @@ show tables
 <r>SELECT * <br>&nbsp; FROM</r> <l>dba</l>.<l>tables</l>
 </code></pre> 
 ---
+<pre><code> 
+<c>&num; ORM</c>
+<c>&num; ...</c>
+
+Note: To get this in the ORM.. there's no real good way.
+
+In order to start querying model objects, you need to import the models
+
+But without looking at the model code, and understanding what you're looking at in order to generate the import statement, you can be at a complete loss.
+
+Thankfully, django is clever and has helpful methods you can call to generate a list of imports for all the models in the project
 ---
 <pre><code> 
 <c># Generate import statements</c>
@@ -216,6 +226,19 @@ show tables
  <div style='margin: 0 auto;'><p align='center'><img src='pictures/tablelist_cmd.png'></p></div>  <!-- .slide: class="center" -->
 ---
  <div style='margin: 0 auto;'><p align='center'><img src='pictures/tablelist_res.png'></p></div>  <!-- .slide: class="center" -->
+---
+## Finding all tables <!-- .slide: class="center" -->
+### via the database
+---
+ <div style='margin: 0 auto;'><p align='center'><img src='pictures/managepy_dbshell.png'></p></div>  <!-- .slide: class="center" -->
+---
+ <div style='margin: 0 auto;'><p align='center'><img src='pictures/managepy_dbshell_res.png'></p></div>  <!-- .slide: class="center" -->
+---
+ <div style='margin: 0 auto;'><p align='center'><img src='pictures/dt_cli.png'></p></div>  <!-- .slide: class="center" -->
+---
+ <div style='margin: 0 auto;'><p align='center'><img src='pictures/dt_res_1.png'></p></div>  <!-- .slide: class="center" -->
+---
+ <div style='margin: 0 auto;'><p align='center'><img src='pictures/dt_res_2.png'></p></div>  <!-- .slide: class="center" -->
 ---
 ## Show all table contents <!-- .slide: class="center" -->
 ---
@@ -237,7 +260,7 @@ Codepoint.objects.all()
 ---
  <div style='margin: 0 auto;'><p align='center'><img src='pictures/all_cmd.png'></p></div>  <!-- .slide: class="center" -->
 ---
- <div style='margin: 0 auto;'><p align='center'><img src='pictures/all_sparkles.png'></p></div>  <!-- .slide: class="center" -->
+ <div style='margin: 0 auto;'><p align='center'><img src='pictures/all_res.png'></p></div>  <!-- .slide: class="center" -->
 ---
 ## Show specific table contents <!-- .slide: class="center" -->
 ---
@@ -254,6 +277,17 @@ Codepoint.objects.all()
 <c>&num; ORM</c>
 Codepoint.objects.filter(<r>name&equals;</r>'Sparkles') 
 </code></pre> 
+---
+ <img src="pictures/filter_cmd.png" style="margin-top: -50px" />
+
+---
+ <img src="pictures/filter_res.png" style="margin-top: -50px" />
+---
+## Get specific record <!-- .slide: class="center" -->
+---
+ <img src="pictures/get_cmd.png" style="margin-top: -50px" />
+---
+ <img src="pictures/get_res.png" style="margin-top: -50px" />
 ---
 ## Joins <!-- .slide: class="center" -->
 ---
@@ -284,6 +318,22 @@ Thing.objects.filter(<o>relation__name&equals;</o>"str")
 ##### <span>'*just follow the fields til you get to the one you want*'<br>- <fl>[django docs](https://docs.djangoproject.com/en/2.0/topics/db/queries/#lookups-that-span-relationships)</fl></span> <!-- .element: class="fragment" -->
 
 Note: Django offers a powerful and intuitive way to “follow” relationships in lookups, taking care of the SQL JOINs for you automatically, behind the scenes. To span a relationship, just use the field name of related fields across models, separated by double underscores, until you get to the field you want."
+---
+
+ <div style='margin: 0 auto;'><p align='center'><img src='pictures/filter_cmd1.png'></p></div>  <!-- .slide: class="center" -->
+---
+ <div style='margin: 0 auto;'><p align='center'><img src='pictures/filter_cmd2.png'></p></div>  <!-- .slide: class="center" -->
+---
+ <div style='margin: 0 auto;'><p align='center'><img src='pictures/filter_res.png'></p></div>  <!-- .slide: class="center" -->
+---
+## Counting results <!-- .slide: class="center" -->
+---
+ <div style='margin: 0 auto;'><p align='center'><img src='pictures/count_cmd1.png'></p></div>  <!-- .slide: class="center" -->
+---
+ <div style='margin: 0 auto;'><p align='center'><img src='pictures/count_cmd2.png'></p></div>  <!-- .slide: class="center" -->
+---
+ <div style='margin: 0 auto;'><p align='center'><img src='pictures/count_res.png'></p></div>  <!-- .slide: class="center" -->
+
 
 ---
 <pre><code> 
