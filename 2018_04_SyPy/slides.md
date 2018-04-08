@@ -55,7 +55,13 @@ Note: I'm currently serving as a Director of the Django Software Foundation
 Note: But I'm an absolute novice at django. I have no idea what I'm doing
 ---
  <div style='margin: 0 auto;'><p align='center'><img src='pictures/djadmin.png'></p></div>  <!-- .slide: class="center" -->
-Note: I still see the admin as a magical piece of software development
+Note: I still see the django admin as
+
+---
+ <div style='margin: 0 auto;'><p align='center'><img src='pictures/djadmin_sparkles.png'></p></div>  <!-- .slide: class="center" -->
+
+Note: a magical piece of software development
+
 ---
  <!-- .slide: data-background-image="pictures/macbook.jpg"-->
 Note: But just because I'm a novice at django, doesn't mean I'm a novice at tech
@@ -71,7 +77,7 @@ But before that, around the time the magic was being removed from Django, I was 
  <div style='margin: 0 auto;'><p align='center'><img src='pictures/apexlogo.png'></p></div>  <!-- .slide: class="center" -->
 &nbsp; <!-- .slide: data-background-color="#f8f8f8" -->
 
-Note: Was Orale Applicarion Express
+Note: Was Orale Application Express
 
 Oracle Appplication express, also known as Apex, is a in-database web application creation suite. it comes free with Oracle XE (the free version of the database)
 ---
@@ -94,6 +100,7 @@ Note: I haven't used APEX for years. But, there's one thing that I have an intri
 ---
 
  <h1 style="color: white;text-shadow: 1px 1px 6px black, 0 0 136px red, 0 0 51px yellow; font-family: arial; font-size: 200pt">SQL</h1> <!-- .slide: class="center" -->
+ <h1 style="color: white;text-shadow: 1px 1px 6px black, 0 0 136px red, 0 0 51px yellow; font-family: arial; font-size:40pt">Structured Query Language</h1> <!-- .slide: class="center" -->
 
 Note: SQL
 
@@ -120,17 +127,63 @@ Note: Even worse when I'm told "Oh, just use the shell"
 
 It's an empty space. But I've been told that this is where the actual Django magic lives
 ---
-
-
  <h1 style="color: white;text-shadow: 1px 1px 6px black, 0 0 136px blue, 0 0 51px green; font-family: arial; font-size: 200pt">ORM</h1> <!-- .slide: class="center" -->
 
+ <h1 style="color: white;text-shadow: 1px 1px 6px black, 0 0 136px blue, 0 0 51px green; font-family: arial; font-size: 40pt">Object Relational Mapper</h1> <!-- .slide: class="center" -->
 Note: The ORM
+
+The Object relational mapper
+
+The engine that makes django go
+
+But without context, what does that even mean?
 ---
- <div style='margin: 0 auto;'><p align='center'><img src='pictures/shell.png'></p></div>  <!-- .slide: class="center" -->
+# Context matters <!-- .slide: class="center" -->
+
+Note: Context is important.
+
+So for the purposes of this, let's break away from the normal.
+
 ---
- <div style='margin: 0 auto;'><p align='center'><img src='pictures/managepycmd.png'></p></div>  <!-- .slide: class="center" -->
+
+# Context: existing project <!-- .slide: class="center" -->
+
+Note: A number of tutorials start with a clean slate, and assume you have little to know dev experience. DjangoGirls is great for complete beginners to development
+
+But it's not so helpful for developers who come into the space with prior knowledge
+
+It's also not helpful for the way that I came into Django; trying to fix an existing project
+
+So for the purposes of this, we're going to use an existing project
 ---
- <div style='margin: 0 auto;'><p align='center'><img src='pictures/managepyres.png'></p></div>  <!-- .slide: class="center" -->
+
+ <div style='margin: 0 auto;'><p align='center'><img src='pictures/unicodex_index.png'></p></div>  <!-- .slide: class="center" -->
+
+Note: 
+
+
+If you've seen my DjangoCon EU 2016 talk, this website would be sort of familiar to you.
+
+I call it.. Unicodex. It's a django-backed database of different emoji from different platforms
+
+On the home page there's a bunch of emoji and if you click on one
+
+---
+
+ <div style='margin: 0 auto;'><p align='center'><img src='pictures/unicodex_sparkles.png'></p></div>  <!-- .slide: class="center" -->
+
+Note: it shows you the emoji from different vendors and the versions.
+
+So given this website exists, we can start poking around in the shell
+---
+ <div style='margin: 0 auto;'><p align='center'><img src='pictures/project_cli.png'></p></div>  <!-- .slide: class="center" -->
+Note: Going back to our original statement "Just use the shell", what we mean is invoking manage.py shell
+---
+ <div style='margin: 0 auto;'><p align='center'><img src='pictures/managepy_cmd.png'></p></div>  <!-- .slide: class="center" -->
+Note: So we navigate to our project directory and type manage.py shell
+---
+ <div style='margin: 0 auto;'><p align='center'><img src='pictures/managepy_res.png'></p></div>  <!-- .slide: class="center" -->
+Note: and we're given a
 ---
 ## "But, how do I use the shell?" <!-- .slide: class="center" -->
 ## *"..."* <!-- .element: class="fragment" -->
@@ -160,6 +213,10 @@ show tables
 &nbsp; &nbsp; <l>print</l>(<d>f'from</d> <l>{</l>l<l>}</l><d>.models import </d><l>{</l>n<l>}</l>')
 </code></pre> 
 ---
+ <div style='margin: 0 auto;'><p align='center'><img src='pictures/tablelist_cmd.png'></p></div>  <!-- .slide: class="center" -->
+---
+ <div style='margin: 0 auto;'><p align='center'><img src='pictures/tablelist_res.png'></p></div>  <!-- .slide: class="center" -->
+---
 ## Show all table contents <!-- .slide: class="center" -->
 ---
 <pre><code> 
@@ -175,6 +232,12 @@ show tables
 <c>&num; ORM</c>
 Codepoint.objects.all() 
 </code></pre> 
+---
+ <div style='margin: 0 auto;'><p align='center'><img src='pictures/all_import.png'></p></div>  <!-- .slide: class="center" -->
+---
+ <div style='margin: 0 auto;'><p align='center'><img src='pictures/all_cmd.png'></p></div>  <!-- .slide: class="center" -->
+---
+ <div style='margin: 0 auto;'><p align='center'><img src='pictures/all_sparkles.png'></p></div>  <!-- .slide: class="center" -->
 ---
 ## Show specific table contents <!-- .slide: class="center" -->
 ---
