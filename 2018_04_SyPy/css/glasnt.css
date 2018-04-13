@@ -54,7 +54,7 @@ Added: Zenburn, mostly.
   padding: 5px 0 !important;
   margin: 0;
   text-shadow: 1px 1px 0 rgba(255,255,255,0.5);
-  font-size: 0.65em !important;
+  font-size: 0.45em !important;
   font-family: 'BlinkMacSystemFont', -apple-system, sans-serif !important; 
   border: 1px solid #CCCCCC;
   border-bottom: none;
@@ -79,13 +79,14 @@ Added: Zenburn, mostly.
   margin: 0;
   text-align: left;
   list-style: none;
+  letter-spacing: -0.4px !important;
   font-size: 17pt !important;
   color: rgb(199,199,199);
   font-family: "SFMono-Regular",Consolas,"Liberation Mono",Menlo,Courier,monospace !important;
   line-height: 1.4em !important;
 
-  padding: 0px 15px 15px 15px !important; 
-  margin-top: -5px !important;
+  padding: 0px 10px 10px 10px !important; 
+  margin-top: -15px !important;
 
   -webkit-border-bottom-right-radius: 3px;
   -webkit-border-bottom-left-radius: 3px;

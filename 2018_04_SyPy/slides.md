@@ -176,9 +176,6 @@ Note: it shows you the emoji from different vendors and the versions.
 
 So given this website exists, we can start poking around in the shell
 ---
- <div style='margin: 0 auto;'><p align='center'><img src='pictures/project_cli.png'></p></div>  <!-- .slide: class="center" -->
-Note: Going back to our original statement "Just use the shell", what we mean is invoking manage.py shell
----
 <div class="shell-wrap"><p class="shell-top-bar">bash</p><p class="shell-body">
 <ps>myrtle</ps> <dr>~ $</dr> cd project<br>
 <ps>myrtle</ps> <dr>~/project $</dr> <w>&nbsp;</w><b>
@@ -193,6 +190,8 @@ Note: Going back to our original statement "Just use the shell", what we mean is
 <br> 
 <br> 
 </p></p></div> 
+
+Note: Going back to our original statement "Just use the shell", what we mean is invoking manage.py shell
 ---
 <div class="shell-wrap"><p class="shell-top-bar">bash</p><p class="shell-body">
 <ps>myrtle</ps> <dr>~ $</dr> cd project<br>
@@ -208,6 +207,8 @@ Note: Going back to our original statement "Just use the shell", what we mean is
 <br> 
 <br> 
 </p></p></div> 
+
+Note: So we navigate to our project directory and type manage.py shell
 ---
 <div class="shell-wrap"><p class="shell-top-bar">python3.6</p><p class="shell-body">
 <ps>myrtle</ps> <dr>~ $</dr> cd project<br>
@@ -223,11 +224,7 @@ Type "help", "copyright", "credits" or "license" for more information.<br>
 <br> 
 <br> 
 </p></p></div> 
----
- <div style='margin: 0 auto;'><p align='center'><img src='pictures/managepy_cmd.png'></p></div>  <!-- .slide: class="center" -->
-Note: So we navigate to our project directory and type manage.py shell
----
- <div style='margin: 0 auto;'><p align='center'><img src='pictures/managepy_res.png'></p></div>  <!-- .slide: class="center" -->
+
 Note: and we're given a
 ---
 ## "But, how do I use the shell?" <!-- .slide: class="center" -->
