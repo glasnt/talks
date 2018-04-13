@@ -1,4 +1,5 @@
-<br> #= ORM: The Sequel
+<br> 
+# ORM: The Sequel <!-- .slide: class="center" -->
 ### SyPy April 2018 <!-- .slide: class="center" -->
  <img src="pictures/footer.svg" />
 ---
@@ -278,10 +279,10 @@ Codepoint.objects.all()
 Codepoint.objects.filter(<r>name&equals;</r>'Sparkles') 
 </code></pre> 
 ---
- <img src="pictures/filter_cmd.png" style="margin-top: -50px" />
+ <img src="pictures/cfilter_cmd.png" style="margin-top: -50px" />
 
 ---
- <img src="pictures/filter_res.png" style="margin-top: -50px" />
+ <img src="pictures/cfilter_res.png" style="margin-top: -50px" />
 ---
 ## Get specific record <!-- .slide: class="center" -->
 ---
@@ -320,20 +321,12 @@ Thing.objects.filter(<o>relation__name&equals;</o>"str")
 Note: Django offers a powerful and intuitive way to “follow” relationships in lookups, taking care of the SQL JOINs for you automatically, behind the scenes. To span a relationship, just use the field name of related fields across models, separated by double underscores, until you get to the field you want."
 ---
 
- <div style='margin: 0 auto;'><p align='center'><img src='pictures/filter_cmd1.png'></p></div>  <!-- .slide: class="center" -->
+ <div style='margin: 0 auto;'><p align='center'><img src='pictures/dfilter_cmd1.png'></p></div>  <!-- .slide: class="center" -->
 ---
- <div style='margin: 0 auto;'><p align='center'><img src='pictures/filter_cmd2.png'></p></div>  <!-- .slide: class="center" -->
+ <div style='margin: 0 auto;'><p align='center'><img src='pictures/dfilter_cmd2.png'></p></div>  <!-- .slide: class="center" -->
 ---
- <div style='margin: 0 auto;'><p align='center'><img src='pictures/filter_res.png'></p></div>  <!-- .slide: class="center" -->
+ <div style='margin: 0 auto;'><p align='center'><img src='pictures/dfilter_res.png'></p></div>  <!-- .slide: class="center" -->
 ---
-## Counting results <!-- .slide: class="center" -->
----
- <div style='margin: 0 auto;'><p align='center'><img src='pictures/count_cmd1.png'></p></div>  <!-- .slide: class="center" -->
----
- <div style='margin: 0 auto;'><p align='center'><img src='pictures/count_cmd2.png'></p></div>  <!-- .slide: class="center" -->
----
- <div style='margin: 0 auto;'><p align='center'><img src='pictures/count_res.png'></p></div>  <!-- .slide: class="center" -->
-
 
 ---
 <pre><code> 
@@ -348,12 +341,93 @@ Design.objects.filter(<br> &nbsp;<o>vendorversion__vendor__name&equals;</o>"Appl
 <c>&num; ... and then some </c>
 Design.objects.filter(<br> &nbsp;<o>vendorversion__vendor__name__contains&equals;</o>"App")
 </code></pre> 
+---
+<pre><code> 
+<c>&num; ... and then some AND </c>
+Design.objects.filter(<br> &nbsp;<o>vendorversion__vendor__name__contains&equals;</o>"App",<br>&nbsp; <o>codepoint__name__startswith&equals;</o>"Spark",<br>&nbsp; <o>image__endswith&equals;</o>"png")
+</code></pre> 
+---
+<pre><code><c>&num; Field Lookups</c><table>
+<tr><td><l>contains</l></td><td><o>LIKE "%?%"</o></td></tr>
+<tr><td><l>icontains</l></td><td><o>ILIKE "%?%"</o></td></tr>
+<tr><td><l>in</l></td><td><o>IN (?, ?, ?, ...)</o></td></tr>
+<tr><td><l>gt, ge</l></td><td><o>&gt;, &gt;=</o></td></tr>
+<tr><td><l>lt, le</l></td><td><o>&lt;, &lt;=</o></td></tr>
+<tr><td><l>isnull</l></td><td><o>NULL</o></td></tr></table><c>&num; ... and many more!</c>
+<span class="bfoot" style="margin-bottom: -170px"><fl>[docs - querysets field lookups](https://docs.djangoproject.com/en/2.0/ref/models/querysets/#field-lookups)</fl></span>
+---
+## `OR` else <!-- .slide: class="center" -->
+---
+## `Q` <!-- .slide: class="center" -->
+
+Note: Q
+---
+<pre><code><c>&dash;&dash; SQL</c><br><r>SELECT * <br>&nbsp; FROM</r> <l>unicodex_codepoint c, unicodex_design d</l><br>&nbsp;<r>WHERE</r> d.codepoint_id &equals; c.id<br><l><r>&nbsp; &nbsp;AND</r> (c</l>.<l>name</l> <r>&equals;</r> 'Sparkles'<BR><l><r>&nbsp; &nbsp;&nbsp; OR</r> c</l>.<l>name</l> <r>&equals;</r> 'Unicorn')
+</code></pre> 
 
 ---
-# ... <!-- .slide: class="center" -->
+<pre><code><c>&dash;&dash; SQL</c><br><r>SELECT * <br>&nbsp; FROM</r> <l>unicodex_codepoint c, unicodex_design d</l><br>&nbsp;<r>WHERE</r> d.codepoint_id &equals; c.id<br><l><r>&nbsp; &nbsp;AND</r> (c</l>.<l>name</l> <r>&equals;</r> 'Sparkles'<BR><l><r>&nbsp; &nbsp;&nbsp; OR</r> c</l>.<l>name</l> <r>&equals;</r> 'Unicorn')
+<c>&num; ORM </c><br>Design.objects.filter(<br>&nbsp; &nbsp;<o>codepoint_&#95;name</o>&equals;'Unicorn',<br>&nbsp; &nbsp;<o>codepoint&#95;_name&equals;</o>"Sparkles")
+---
+<pre><code><c>&dash;&dash; SQL</c><br><r>SELECT * <br>&nbsp; FROM</r> <l>unicodex_codepoint c, unicodex_design d</l><br>&nbsp;<r>WHERE</r> d.codepoint_id &equals; c.id<br><l><r>&nbsp; &nbsp;AND</r> (c</l>.<l>name</l> <r>&equals;</r> 'Sparkles'<BR><l><r>&nbsp; &nbsp;&nbsp; OR</r> c</l>.<l>name</l> <r>&equals;</r> 'Unicorn')
+<c>&num; ORM </c><br>Design.objects.filter(<br>&nbsp; &nbsp;<o>codepoint_&#95;name</o>&equals;'Unicorn',<br>&nbsp; &nbsp;<o>codepoint&#95;_name&equals;</o>"Sparkles")
+<b><r>SyntaxError: keyword argument repeated</r></b>
+---
+<pre><code><r>from</r> django.db.models <r>import</r> Q
+<br>Design.objects.filter(<br>&nbsp; &nbsp;Q(<o>codepoint_&#95;name</o>&equals;'Unicorn'),<br>&nbsp; &nbsp;Q(<o>codepoint&#95;_name&equals;</o>"Sparkles")<br>)
+<c># Unicorn and Sparkles?</c>
+---
+<pre><code><r>from</r> django.db.models <r>import</r> Q
+<br>Design.objects.filter(<br>&nbsp; &nbsp;Q(<o>codepoint_&#95;name</o>&equals;'Unicorn'),<br>&nbsp; &nbsp;~Q(<o>codepoint&#95;_name&equals;</o>"Sparkles")<br>)
+<c># Unicorn OR Sparkles!</c>
 
 ---
+## Counting results <!-- .slide: class="center" -->
+---
+<pre><code> 
+<c>&dash;&dash; SQL</c>
+<r>SELECT count(1) <br>&nbsp; FROM</r> <l>unicodex_codepoint c, unicodex_design d</l><br>&nbsp;<r>WHERE</r> <l>c</l>.<l>name</l> <r>&equals;</r> 'Sparkles'<BR><r>&nbsp; &nbsp;AND</r> d.codepoint_id = c.id;
 
+<c>&num; ORM</c>
+Design.objects.filter(<o><br>&nbsp;&nbsp;&nbsp;codepoint__name&equals;</o>"Sparkles").count() 
+</code></pre> 
+---
+# Protip <!-- .slide: class="center" -->
+## Use `ipython` <!-- .slide: class="center" -->
+---
+<pre><code><c>$</c>./manage.py shell
+&gt;&gt;&gt; 
+^C 
+<c>&num; requirements.txt, Pipfile, etc</c>
+ipython 
+
+$ ./manage.py shell
+In [1]:
+
+---
+<div class="shell-wrap"><p class="shell-top-bar">./manage.py shell</p><p class="shell-body">
+Line 1<br>
+Line 2<br>
+Line 3<br>
+Line 4<br>
+Line 5<br>
+Line 6<br>
+Line 7<br>
+Line 8<br>
+Line 9<br>
+Line 10<br>
+012345678901234567890123456789012345 
+<br> 
+</p></p></div> 
+---
+<div class="shell-wrap"><p class="shell-top-bar">./manage.py shell</p><p class="shell-body">
+<tg>In [</tg><ty>1</ty><tg>]: from </tg><tb>uni</tb><w>&nbsp;</w>
+<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <w>unicodedata</w>
+<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <w>unicodex</w>
+<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <w>unittest</w>
+</pre></code> 
+</p></p></div> 
+---
 # Bonus <!-- .slide: class="center" -->
 ## PostgreSQL Gotchas <!-- .slide: class="center" -->
 
