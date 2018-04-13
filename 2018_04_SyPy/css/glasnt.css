@@ -77,8 +77,8 @@ Added: Zenburn, mostly.
 
 .shell-body {
   margin: 0;
+  height: 550px;
   text-align: left;
-  list-style: none;
   letter-spacing: -0.4px !important;
   font-size: 17pt !important;
   color: rgb(199,199,199);
