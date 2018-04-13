@@ -179,6 +179,51 @@ So given this website exists, we can start poking around in the shell
  <div style='margin: 0 auto;'><p align='center'><img src='pictures/project_cli.png'></p></div>  <!-- .slide: class="center" -->
 Note: Going back to our original statement "Just use the shell", what we mean is invoking manage.py shell
 ---
+<div class="shell-wrap"><p class="shell-top-bar">bash</p><p class="shell-body">
+<ps>myrtle</ps> <dr>~ $</dr> cd project<br>
+<ps>myrtle</ps> <dr>~/project $</dr> <w>&nbsp;</w><b>
+<br> 
+<br> 
+<br> 
+<br> 
+<br> 
+<br> 
+<br> 
+<br> 
+<br> 
+<br> 
+</p></p></div> 
+---
+<div class="shell-wrap"><p class="shell-top-bar">bash</p><p class="shell-body">
+<ps>myrtle</ps> <dr>~ $</dr> cd project<br>
+<ps>myrtle</ps> <dr>~/project $</dr> ./manage.py shell<w>&nbsp;</w>
+<br> 
+<br> 
+<br> 
+<br> 
+<br> 
+<br> 
+<br> 
+<br> 
+<br> 
+<br> 
+</p></p></div> 
+---
+<div class="shell-wrap"><p class="shell-top-bar">python3.6</p><p class="shell-body">
+<ps>myrtle</ps> <dr>~ $</dr> cd project<br>
+<ps>myrtle</ps> <dr>~/project $</dr> ./manage.py shell<br>
+Python 3.6.3 (default, Nov 9 2017, 15:58:30)<br>
+[GCC 4.2.1 Compatible Apple LLVM 9.0.0 (clang-900.0.38)] on darwin<br>
+Type "help", "copyright", "credits" or "license" for more information.<br>
+(InteractiveConsole)<br> 
+&gt;&gt;&gt; <w>&nbsp;</w>
+<br> 
+<br> 
+<br> 
+<br> 
+<br> 
+</p></p></div> 
+---
  <div style='margin: 0 auto;'><p align='center'><img src='pictures/managepy_cmd.png'></p></div>  <!-- .slide: class="center" -->
 Note: So we navigate to our project directory and type manage.py shell
 ---

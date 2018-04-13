@@ -8,6 +8,8 @@ tg { color: rgb(0,135,6) }
 w { color: rgb(98,98,98); background-color: rgb(188,188,188)}
 tb { color: rgb(0,135,215) }
 fl { font-family: "DTLProkyonST", regular}
+ps { color: rgb(212,212,173) }
+dr { color: rgb(201,135,135) }
 
 /* vectorised terminal */
 code.terminal { 
@@ -36,7 +38,7 @@ Added: Zenburn, mostly.
 ***/
 
 .shell-wrap {
-  width: 850px;
+  width: 1000px;
   margin: 20px auto 0 auto !important;
   box-shadow: 0 0 30px rgba(0,0,0,0.4);
 
@@ -52,7 +54,7 @@ Added: Zenburn, mostly.
   padding: 5px 0 !important;
   margin: 0;
   text-shadow: 1px 1px 0 rgba(255,255,255,0.5);
-  font-size: 0.75em !important;
+  font-size: 0.65em !important;
   font-family: 'BlinkMacSystemFont', -apple-system, sans-serif !important; 
   border: 1px solid #CCCCCC;
   border-bottom: none;
@@ -77,12 +79,14 @@ Added: Zenburn, mostly.
   margin: 0;
   text-align: left;
   list-style: none;
+  font-size: 17pt !important;
   color: rgb(199,199,199);
   font-family: "SFMono-Regular",Consolas,"Liberation Mono",Menlo,Courier,monospace !important;
-  line-height: 1.6em;
+  line-height: 1.4em !important;
 
-  padding-left: 15px !important; 
-  padding-bottom: 15px !important;
+  padding: 0px 15px 15px 15px !important; 
+  margin-top: -5px !important;
+
   -webkit-border-bottom-right-radius: 3px;
   -webkit-border-bottom-left-radius: 3px;
   -moz-border-radius-bottomright: 3px;
