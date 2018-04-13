@@ -176,6 +176,12 @@ Note: it shows you the emoji from different vendors and the versions.
 
 So given this website exists, we can start poking around in the shell
 ---
+## "Just use the shell" <!-- .slide: class="center" -->
+---
+ <div class="shell-wrap"><p class="shell-top-bar">bash</p><p class="shell-body">
+ <ps>myrtle</ps> <dr>~ $</dr> 
+ </p></p></div>
+---
  <div class="shell-wrap"><p class="shell-top-bar">bash</p><p class="shell-body">
  <ps>myrtle</ps> <dr>~ $</dr> 
  cd project<w>&nbsp;</w>
