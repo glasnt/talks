@@ -258,22 +258,121 @@ Thankfully, django is clever and has helpful methods you can call to generate a 
 &nbsp; &nbsp; <l>print</l>(<d>f'from</d> <l>{</l>l<l>}</l><d>.models import </d><l>{</l>n<l>}</l>')
 </code></pre> 
 ---
- <div style='margin: 0 auto;'><p align='center'><img src='pictures/tablelist_cmd.png'></p></div>  <!-- .slide: class="center" -->
+ <div class="shell-wrap"><p class="shell-top-bar">python3.6</p><p class="shell-body">
+ <ps>myrtle</ps> <dr>~/project $</dr> 
+./manage.py shell<br>
+Python 3.6.3 (default, Nov 9 2017, 15:58:30)<br>
+[GCC 4.2.1 Compatible Apple LLVM 9.0.0 (clang-900.0.38)] on darwin<br>
+Type "help", "copyright", "credits" or "license" for more information.<br>
+(InteractiveConsole)<br> 
+ &gt;&gt;&gt;&nbsp;<w>&nbsp;</w>
+ </p></p></div>
 ---
- <div style='margin: 0 auto;'><p align='center'><img src='pictures/tablelist_res.png'></p></div>  <!-- .slide: class="center" -->
+ <div class="shell-wrap"><p class="shell-top-bar">python3.6</p><p class="shell-body">
+ <ps>myrtle</ps> <dr>~/project $</dr> 
+./manage.py shell<br>
+Python 3.6.3 (default, Nov 9 2017, 15:58:30)<br>
+[GCC 4.2.1 Compatible Apple LLVM 9.0.0 (clang-900.0.38)] on darwin<br>
+Type "help", "copyright", "credits" or "license" for more information.<br>
+(InteractiveConsole)<br> 
+&gt;&gt;&gt; from django.apps import apps<br>
+&gt;&gt;&gt; for app_config in apps.get_app_configs():<br>
+...&nbsp; l = app_config.label<br>
+...&nbsp; for model in app_config.get_models():<br>
+...&nbsp; &nbsp; n = model._meta.object_name<br>
+...&nbsp; &nbsp; print(f'from {l}.models import {n}')<br>
+ ...&nbsp;<w>&nbsp;</w>
+ </p></p></div>
+---
+ <div class="shell-wrap"><p class="shell-top-bar">python3.6</p><p class="shell-body">
+...&nbsp; l = app_config.label<br>
+...&nbsp; for model in app_config.get_models():<br>
+...&nbsp; &nbsp; n = model._meta.object_name<br>
+...&nbsp; &nbsp; print(f'from {l}.models import {n}')<br>
+...&nbsp;<br> 
+from auth.models import Permission<br>
+from auth.models import Group<br>
+from auth.models import User<br>
+from contenttypes.models import ContentType<br>
+from sessions.models import Session<br>
+from sites.models import Site<br>
+from aldryn_sso.models import AldrynCloudUser<br>
+from admin.models import LogEntry<br>
+from unicodex.models import Codepoint<br>
+from unicodex.models import Vendor<br>
+from unicodex.models import VendorVersion<br>
+from unicodex.models import Design<br>
+ &gt;&gt;&gt;&nbsp;<w>&nbsp;</w>
+ </p></p></div>
 ---
 ## Finding all tables <!-- .slide: class="center" -->
 ### via the database
 ---
- <div style='margin: 0 auto;'><p align='center'><img src='pictures/managepy_dbshell.png'></p></div>  <!-- .slide: class="center" -->
+ <div class="shell-wrap"><p class="shell-top-bar">bash</p><p class="shell-body">
+ <ps>myrtle</ps> <dr>~/project $</dr> 
+ ./manage.py dbshell<w>&nbsp;</w>
+ </p></p></div>
 ---
- <div style='margin: 0 auto;'><p align='center'><img src='pictures/managepy_dbshell_res.png'></p></div>  <!-- .slide: class="center" -->
+ <div class="shell-wrap"><p class="shell-top-bar">psql</p><p class="shell-body">
+ <ps>myrtle</ps> <dr>~/project $</dr> 
+./manage.py dbshell<br>
+psql (9.6.5, server 9.6.8)<br>
+Type "help" for help.<br>
+<br> 
+ db=#&nbsp;<w>&nbsp;</w>
+ </p></p></div>
 ---
- <div style='margin: 0 auto;'><p align='center'><img src='pictures/dt_cli.png'></p></div>  <!-- .slide: class="center" -->
+ <div class="shell-wrap"><p class="shell-top-bar">psql</p><p class="shell-body">
+ <ps>myrtle</ps> <dr>~/project $</dr> 
+./manage.py dbshell<br>
+psql (9.6.5, server 9.6.8)<br>
+Type "help" for help.<br>
+<br> 
+ db=# \dt<w>&nbsp;</w>
+ </p></p></div>
 ---
- <div style='margin: 0 auto;'><p align='center'><img src='pictures/dt_res_1.png'></p></div>  <!-- .slide: class="center" -->
+ <div class="shell-wrap"><p class="shell-top-bar">psql</p><p class="shell-body">
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; List of relations<br>
+&nbsp;Schema |&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Name&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; | Type&nbsp; |&nbsp; Owner<br>
+&dash;&dash;&dash;&dash;&dash;&dash;&dash;&dash;+&dash;&dash;&dash;&dash;&dash;&dash;&dash;&dash;&dash;&dash;&dash;&dash;&dash;&dash;&dash;&dash;&dash;&dash;&dash;&dash;&dash;&dash;&dash;&dash;&dash;&dash;&dash;&dash;+&dash;&dash;&dash;&dash;&dash;&dash;&dash;+&dash;&dash;&dash;&dash;&dash;&dash;&dash;&dash;&dash;&dash;<br> 
+&nbsp;public | aldryn_sso_aldrynclouduser | table | postgres<br>
+&nbsp;public | auth_group&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; | table | postgres<br>
+&nbsp;public | auth_group_permissions&nbsp; &nbsp; &nbsp;| table | postgres<br>
+&nbsp;public | auth_permission&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; | table | postgres<br>
+&nbsp;public | auth_user&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; | table | postgres<br>
+&nbsp;public | auth_user_groups&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; | table | postgres<br>
+&nbsp;public | auth_user_user_permissions | table | postgres<br>
+&nbsp;public | django_admin_log&nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; | table | postgres<br>
+&nbsp;public | django_content_type&nbsp; &nbsp; &nbsp; &nbsp; | table | postgres<br>
+&nbsp;public&nbsp;|&nbsp;django_migrations&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;table&nbsp;|&nbsp;postgres<br. 
+&nbsp;public&nbsp;|&nbsp;django_session&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;table&nbsp;|&nbsp;postgres<br> 
+&nbsp;public&nbsp;|&nbsp;django_site&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;table&nbsp;|&nbsp;postgres<br> 
+&nbsp;public&nbsp;|&nbsp;unicodex_codepoint&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;table&nbsp;|&nbsp;postgres<br> 
+&nbsp;public&nbsp;|&nbsp;unicodex_design&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;table&nbsp;|&nbsp;postgres<br> 
+&nbsp;public&nbsp;|&nbsp;unicodex_vendor&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;table&nbsp;|&nbsp;postgres<br> 
+&dash;&dash;More&dash;&dash; 
 ---
- <div style='margin: 0 auto;'><p align='center'><img src='pictures/dt_res_2.png'></p></div>  <!-- .slide: class="center" -->
+ <div class="shell-wrap"><p class="shell-top-bar">psql</p><p class="shell-body">
+&nbsp;public | aldryn_sso_aldrynclouduser | table | postgres<br>
+&nbsp;public | auth_group&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; | table | postgres<br>
+&nbsp;public | auth_group_permissions&nbsp; &nbsp; &nbsp;| table | postgres<br>
+&nbsp;public | auth_permission&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; | table | postgres<br>
+&nbsp;public | auth_user&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; | table | postgres<br>
+&nbsp;public | auth_user_groups&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; | table | postgres<br>
+&nbsp;public | auth_user_user_permissions | table | postgres<br>
+&nbsp;public | django_admin_log&nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; | table | postgres<br>
+&nbsp;public | django_content_type&nbsp; &nbsp; &nbsp; &nbsp; | table | postgres<br>
+&nbsp;public&nbsp;|&nbsp;django_migrations&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;table&nbsp;|&nbsp;postgres<br. 
+&nbsp;public&nbsp;|&nbsp;django_session&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;table&nbsp;|&nbsp;postgres<br> 
+&nbsp;public&nbsp;|&nbsp;django_site&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;table&nbsp;|&nbsp;postgres<br> 
+&nbsp;public&nbsp;|&nbsp;unicodex_codepoint&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;table&nbsp;|&nbsp;postgres<br> 
+&nbsp;public&nbsp;|&nbsp;unicodex_design&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;table&nbsp;|&nbsp;postgres<br> 
+&nbsp;public&nbsp;|&nbsp;unicodex_vendor&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;table&nbsp;|&nbsp;postgres<br> 
+&nbsp;public&nbsp;|&nbsp;unicodex_vendorversion&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;table&nbsp;|&nbsp;postgres<br> 
+(16 rows)<br>
+<br> 
+ db=#&nbsp;<w>&nbsp;</w>
+ </p></p></div>
 ---
 ## Show all table contents <!-- .slide: class="center" -->
 ---
@@ -291,11 +390,56 @@ Thankfully, django is clever and has helpful methods you can call to generate a 
 Codepoint.objects.all() 
 </code></pre> 
 ---
- <div style='margin: 0 auto;'><p align='center'><img src='pictures/all_import.png'></p></div>  <!-- .slide: class="center" -->
+ <div class="shell-wrap"><p class="shell-top-bar">python3.6</p><p class="shell-body">
+ <ps>myrtle</ps> <dr>~/project $</dr> 
+./manage.py shell<br>
+Python 3.6.3 (default, Nov 9 2017, 15:58:30)<br>
+[GCC 4.2.1 Compatible Apple LLVM 9.0.0 (clang-900.0.38)] on darwin<br>
+Type "help", "copyright", "credits" or "license" for more information.<br>
+(InteractiveConsole)<br> 
+ &gt;&gt;&gt; <w>&nbsp;</w>
 ---
- <div style='margin: 0 auto;'><p align='center'><img src='pictures/all_cmd.png'></p></div>  <!-- .slide: class="center" -->
+ <div class="shell-wrap"><p class="shell-top-bar">python3.6</p><p class="shell-body">
+ <ps>myrtle</ps> <dr>~/project $</dr> 
+./manage.py shell<br>
+Python 3.6.3 (default, Nov 9 2017, 15:58:30)<br>
+[GCC 4.2.1 Compatible Apple LLVM 9.0.0 (clang-900.0.38)] on darwin<br>
+Type "help", "copyright", "credits" or "license" for more information.<br>
+(InteractiveConsole)<br> 
+ &gt;&gt;&gt; from unicodex.models import Codepoint<w>&nbsp;</w>
 ---
- <div style='margin: 0 auto;'><p align='center'><img src='pictures/all_res.png'></p></div>  <!-- .slide: class="center" -->
+ <div class="shell-wrap"><p class="shell-top-bar">python3.6</p><p class="shell-body">
+ <ps>myrtle</ps> <dr>~/project $</dr> 
+./manage.py shell<br>
+Python 3.6.3 (default, Nov 9 2017, 15:58:30)<br>
+[GCC 4.2.1 Compatible Apple LLVM 9.0.0 (clang-900.0.38)] on darwin<br>
+Type "help", "copyright", "credits" or "license" for more information.<br>
+(InteractiveConsole)<br> 
+ &gt;&gt;&gt; from unicodex.models import Codepoint<br>
+ &gt;&gt;&gt; <w>&nbsp;</w>
+---
+ <div class="shell-wrap"><p class="shell-top-bar">python3.6</p><p class="shell-body">
+ <ps>myrtle</ps> <dr>~/project $</dr> 
+./manage.py shell<br>
+Python 3.6.3 (default, Nov 9 2017, 15:58:30)<br>
+[GCC 4.2.1 Compatible Apple LLVM 9.0.0 (clang-900.0.38)] on darwin<br>
+Type "help", "copyright", "credits" or "license" for more information.<br>
+(InteractiveConsole)<br> 
+ &gt;&gt;&gt; from unicodex.models import Codepoint<br>
+ &gt;&gt;&gt; Codepoint.objects.all()<w>&nbsp;</w>
+---
+ <div class="shell-wrap"><p class="shell-top-bar">python3.6</p><p class="shell-body">
+ <ps>myrtle</ps> <dr>~/project $</dr> 
+./manage.py shell<br>
+Python 3.6.3 (default, Nov 9 2017, 15:58:30)<br>
+[GCC 4.2.1 Compatible Apple LLVM 9.0.0 (clang-900.0.38)] on darwin<br>
+Type "help", "copyright", "credits" or "license" for more information.<br>
+(InteractiveConsole)<br> 
+ &gt;&gt;&gt; from unicodex.models import Codepoint<br>
+ &gt;&gt;&gt; Codepoint.objects.all()<br>
+&lt;QuerySet [&lt;Codepoint: Sparkles>, &lt;Codepoint: Unicorn>, &lt;Codepoint: Two Hearts>]><br>
+ &gt;&gt;&gt; <w>&nbsp;</w>
+
 ---
 ## Show specific table contents <!-- .slide: class="center" -->
 ---
@@ -313,16 +457,55 @@ Codepoint.objects.all()
 Codepoint.objects.filter(<r>name&equals;</r>'Sparkles') 
 </code></pre> 
 ---
- <img src="pictures/cfilter_cmd.png" style="margin-top: -50px" />
-
+ <div class="shell-wrap"><p class="shell-top-bar">python3.6</p><p class="shell-body">
+ &gt;&gt;&gt; from unicodex.models import Codepoint<br>
+ &gt;&gt;&gt; Codepoint.objects.filter(name='Sparkles')<w>&nbsp;</w>
 ---
- <img src="pictures/cfilter_res.png" style="margin-top: -50px" />
+ <div class="shell-wrap"><p class="shell-top-bar">python3.6</p><p class="shell-body">
+ &gt;&gt;&gt; from unicodex.models import Codepoint<br>
+ &gt;&gt;&gt; Codepoint.objects.filter(name='Sparkles')<br>
+&lt;QuerySet [&lt;Codepoint: Sparkles>]><br>
+ &gt;&gt;&gt; <w>&nbsp;</w>
 ---
 ## Get specific record <!-- .slide: class="center" -->
 ---
- <img src="pictures/get_cmd.png" style="margin-top: -50px" />
+ <div class="shell-wrap"><p class="shell-top-bar">python3.6</p><p class="shell-body">
+ &gt;&gt;&gt; from unicodex.models import Codepoint<br>
+ &gt;&gt;&gt; Codepoint.objects.filter(name='Sparkles')<br>
+&lt;QuerySet [&lt;Codepoint: Sparkles>]><br>
+ &gt;&gt;&gt; Codepoint.objects.get(name='Sparkles')<w>&nbsp;</w>
 ---
- <img src="pictures/get_res.png" style="margin-top: -50px" />
+ <div class="shell-wrap"><p class="shell-top-bar">python3.6</p><p class="shell-body">
+ &gt;&gt;&gt; from unicodex.models import Codepoint<br>
+ &gt;&gt;&gt; Codepoint.objects.filter(name='Sparkles')<br>
+&lt;QuerySet [&lt;Codepoint: Sparkles>]><br>
+ &gt;&gt;&gt; Codepoint.objects.get(name='Sparkles')<br>
+&lt;Codepoint: Sparkles><br>
+ &gt;&gt;&gt; <w>&nbsp;</w>
+---
+ <div class="shell-wrap"><p class="shell-top-bar">python3.6</p><p class="shell-body">
+ &gt;&gt;&gt; from unicodex.models import Codepoint<br>
+ &gt;&gt;&gt; Codepoint.objects.filter(name='Sparkles')<br>
+&lt;QuerySet [&lt;Codepoint: Sparkles>]><br>
+ &gt;&gt;&gt; Codepoint.objects.get(name='Sparkles')<br>
+&lt;Codepoint: Sparkles><br>
+ &gt;&gt;&gt; Codepoint.objects.get()<w>&nbsp;</w>
+---
+ <div class="shell-wrap"><p class="shell-top-bar">python3.6</p><p class="shell-body">
+ &gt;&gt;&gt; from unicodex.models import Codepoint<br>
+ &gt;&gt;&gt; Codepoint.objects.filter(name='Sparkles')<br>
+&lt;QuerySet [&lt;Codepoint: Sparkles>]><br>
+ &gt;&gt;&gt; Codepoint.objects.get(name='Sparkles')<br>
+&lt;Codepoint: Sparkles><br>
+ &gt;&gt;&gt; Codepoint.objects.get()<br>
+Traceback (most recent call last):<br>
+&nbsp; File "&lt;console>", line 1, in &lt;module><br>
+&nbsp; File "/usr/local/lib/python3.6/site-packages/django/db/models/manager.p y", line 85, in manager_method<br>
+&nbsp; &nbsp; return getattr(self.get_queryset(), name)(&#42;args, &#42;&#42;kwargs)<br>
+&nbsp; File "/usr/local/lib/python3.6/site-packages/django/db/models/query.py" , line 384, in get<br>
+&nbsp; &nbsp; (self.model._meta.object_name, num)<br>
+unicodex.models.MultipleObjectsReturned: get() returned more than one Codepoint -- it returned 3!<br>
+ &gt;&gt;&gt; <w>&nbsp;</w>
 ---
 ## Joins <!-- .slide: class="center" -->
 ---

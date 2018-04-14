@@ -84,6 +84,8 @@ Added: Zenburn, mostly.
   color: rgb(199,199,199);
   font-family: "SFMono-Regular",Consolas,"Liberation Mono",Menlo,Courier,monospace !important;
   line-height: 1.4em !important;
+  word-wrap: break-word !important;
+  overflow-wrap: break-word !important;
 
   padding: 0px 10px 10px 10px !important; 
   margin-top: -15px !important;

@@ -258,22 +258,121 @@ Thankfully, django is clever and has helpful methods you can call to generate a 
 &nbsp; &nbsp; <l>print</l>(<d>f'from</d> <l>{</l>l<l>}</l><d>.models import </d><l>{</l>n<l>}</l>')
 </code></pre>
 ---
-@= tablelist_cmd.png
+$$terminal python3.6
+$$prompt ~/project
+./manage.py shell<br>
+Python 3.6.3 (default, Nov  9 2017, 15:58:30)<br>
+[GCC 4.2.1 Compatible Apple LLVM 9.0.0 (clang-900.0.38)] on darwin<br>
+Type "help", "copyright", "credits" or "license" for more information.<br>
+(InteractiveConsole)<br>
+$$w &gt;&gt;&gt;&nbsp;  
+$$end
 ---
-@= tablelist_res.png
+$$terminal python3.6
+$$prompt ~/project
+./manage.py shell<br>
+Python 3.6.3 (default, Nov  9 2017, 15:58:30)<br>
+[GCC 4.2.1 Compatible Apple LLVM 9.0.0 (clang-900.0.38)] on darwin<br>
+Type "help", "copyright", "credits" or "license" for more information.<br>
+(InteractiveConsole)<br>
+&gt;&gt;&gt; from django.apps import apps<br>
+&gt;&gt;&gt; for app_config in apps.get_app_configs():<br>
+...&nbsp; l = app_config.label<br>
+...&nbsp; for model in app_config.get_models():<br>
+...&nbsp; &nbsp; n = model._meta.object_name<br>
+...&nbsp; &nbsp; print(f'from {l}.models import {n}')<br>
+$$w ...&nbsp; 
+$$end
+---
+$$terminal python3.6
+...&nbsp; l = app_config.label<br>
+...&nbsp; for model in app_config.get_models():<br>
+...&nbsp; &nbsp; n = model._meta.object_name<br>
+...&nbsp; &nbsp; print(f'from {l}.models import {n}')<br>
+...&nbsp;<br> 
+from auth.models import Permission<br>
+from auth.models import Group<br>
+from auth.models import User<br>
+from contenttypes.models import ContentType<br>
+from sessions.models import Session<br>
+from sites.models import Site<br>
+from aldryn_sso.models import AldrynCloudUser<br>
+from admin.models import LogEntry<br>
+from unicodex.models import Codepoint<br>
+from unicodex.models import Vendor<br>
+from unicodex.models import VendorVersion<br>
+from unicodex.models import Design<br>
+$$w &gt;&gt;&gt;&nbsp;  
+$$end
 ---
 ##= Finding all tables
 ### via the database
 ---
-@= managepy_dbshell.png
+$$terminal bash
+$$prompt ~/project
+$$w ./manage.py dbshell
+$$end
 ---
-@= managepy_dbshell_res.png
+$$terminal psql
+$$prompt ~/project
+./manage.py dbshell<br>
+psql (9.6.5, server 9.6.8)<br>
+Type "help" for help.<br>
+<br>
+$$w db=#&nbsp;
+$$end
 ---
-@= dt_cli.png
+$$terminal psql
+$$prompt ~/project
+./manage.py dbshell<br>
+psql (9.6.5, server 9.6.8)<br>
+Type "help" for help.<br>
+<br>
+$$w db=# \dt
+$$end
 ---
-@= dt_res_1.png
+$$terminal psql
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; List of relations<br>
+&nbsp;Schema |&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Name&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; | Type&nbsp; |&nbsp; Owner<br>
+&dash;&dash;&dash;&dash;&dash;&dash;&dash;&dash;+&dash;&dash;&dash;&dash;&dash;&dash;&dash;&dash;&dash;&dash;&dash;&dash;&dash;&dash;&dash;&dash;&dash;&dash;&dash;&dash;&dash;&dash;&dash;&dash;&dash;&dash;&dash;&dash;+&dash;&dash;&dash;&dash;&dash;&dash;&dash;+&dash;&dash;&dash;&dash;&dash;&dash;&dash;&dash;&dash;&dash;<br>
+&nbsp;public | aldryn_sso_aldrynclouduser | table | postgres<br>
+&nbsp;public | auth_group&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; | table | postgres<br>
+&nbsp;public | auth_group_permissions&nbsp; &nbsp; &nbsp;| table | postgres<br>
+&nbsp;public | auth_permission&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; | table | postgres<br>
+&nbsp;public | auth_user&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; | table | postgres<br>
+&nbsp;public | auth_user_groups&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;  | table | postgres<br>
+&nbsp;public | auth_user_user_permissions | table | postgres<br>
+&nbsp;public | django_admin_log&nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;  | table | postgres<br>
+&nbsp;public | django_content_type&nbsp; &nbsp; &nbsp; &nbsp; | table | postgres<br>
+&nbsp;public&nbsp;|&nbsp;django_migrations&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;table&nbsp;|&nbsp;postgres<br.
+&nbsp;public&nbsp;|&nbsp;django_session&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;table&nbsp;|&nbsp;postgres<br>
+&nbsp;public&nbsp;|&nbsp;django_site&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;table&nbsp;|&nbsp;postgres<br>
+&nbsp;public&nbsp;|&nbsp;unicodex_codepoint&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;table&nbsp;|&nbsp;postgres<br>
+&nbsp;public&nbsp;|&nbsp;unicodex_design&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;table&nbsp;|&nbsp;postgres<br>
+&nbsp;public&nbsp;|&nbsp;unicodex_vendor&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;table&nbsp;|&nbsp;postgres<br>
+&dash;&dash;More&dash;&dash;
 ---
-@= dt_res_2.png
+$$terminal psql
+&nbsp;public | aldryn_sso_aldrynclouduser | table | postgres<br>
+&nbsp;public | auth_group&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; | table | postgres<br>
+&nbsp;public | auth_group_permissions&nbsp; &nbsp; &nbsp;| table | postgres<br>
+&nbsp;public | auth_permission&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; | table | postgres<br>
+&nbsp;public | auth_user&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; | table | postgres<br>
+&nbsp;public | auth_user_groups&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;  | table | postgres<br>
+&nbsp;public | auth_user_user_permissions | table | postgres<br>
+&nbsp;public | django_admin_log&nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;  | table | postgres<br>
+&nbsp;public | django_content_type&nbsp; &nbsp; &nbsp; &nbsp; | table | postgres<br>
+&nbsp;public&nbsp;|&nbsp;django_migrations&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;table&nbsp;|&nbsp;postgres<br.
+&nbsp;public&nbsp;|&nbsp;django_session&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;table&nbsp;|&nbsp;postgres<br>
+&nbsp;public&nbsp;|&nbsp;django_site&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;table&nbsp;|&nbsp;postgres<br>
+&nbsp;public&nbsp;|&nbsp;unicodex_codepoint&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;table&nbsp;|&nbsp;postgres<br>
+&nbsp;public&nbsp;|&nbsp;unicodex_design&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;table&nbsp;|&nbsp;postgres<br>
+&nbsp;public&nbsp;|&nbsp;unicodex_vendor&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;table&nbsp;|&nbsp;postgres<br>
+&nbsp;public&nbsp;|&nbsp;unicodex_vendorversion&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;table&nbsp;|&nbsp;postgres<br>
+(16 rows)<br>
+<br>
+$$w db=#&nbsp;
+$$end
 ---
 ##= Show all table contents
 ---
@@ -291,11 +390,56 @@ Thankfully, django is clever and has helpful methods you can call to generate a 
 Codepoint.objects.all()
 </code></pre>
 ---
-@= all_import.png
+$$terminal python3.6
+$$prompt ~/project
+./manage.py shell<br>
+Python 3.6.3 (default, Nov  9 2017, 15:58:30)<br>
+[GCC 4.2.1 Compatible Apple LLVM 9.0.0 (clang-900.0.38)] on darwin<br>
+Type "help", "copyright", "credits" or "license" for more information.<br>
+(InteractiveConsole)<br>
+$$pyw
 ---
-@= all_cmd.png
+$$terminal python3.6
+$$prompt ~/project
+./manage.py shell<br>
+Python 3.6.3 (default, Nov  9 2017, 15:58:30)<br>
+[GCC 4.2.1 Compatible Apple LLVM 9.0.0 (clang-900.0.38)] on darwin<br>
+Type "help", "copyright", "credits" or "license" for more information.<br>
+(InteractiveConsole)<br>
+$$pyw from unicodex.models import Codepoint
 ---
-@= all_res.png
+$$terminal python3.6
+$$prompt ~/project
+./manage.py shell<br>
+Python 3.6.3 (default, Nov  9 2017, 15:58:30)<br>
+[GCC 4.2.1 Compatible Apple LLVM 9.0.0 (clang-900.0.38)] on darwin<br>
+Type "help", "copyright", "credits" or "license" for more information.<br>
+(InteractiveConsole)<br>
+$$py from unicodex.models import Codepoint
+$$pyw 
+---
+$$terminal python3.6
+$$prompt ~/project
+./manage.py shell<br>
+Python 3.6.3 (default, Nov  9 2017, 15:58:30)<br>
+[GCC 4.2.1 Compatible Apple LLVM 9.0.0 (clang-900.0.38)] on darwin<br>
+Type "help", "copyright", "credits" or "license" for more information.<br>
+(InteractiveConsole)<br>
+$$py from unicodex.models import Codepoint
+$$pyw Codepoint.objects.all()
+---
+$$terminal python3.6
+$$prompt ~/project
+./manage.py shell<br>
+Python 3.6.3 (default, Nov  9 2017, 15:58:30)<br>
+[GCC 4.2.1 Compatible Apple LLVM 9.0.0 (clang-900.0.38)] on darwin<br>
+Type "help", "copyright", "credits" or "license" for more information.<br>
+(InteractiveConsole)<br>
+$$py from unicodex.models import Codepoint
+$$py Codepoint.objects.all()
+&lt;QuerySet [&lt;Codepoint: Sparkles>, &lt;Codepoint: Unicorn>, &lt;Codepoint: Two Hearts>]><br>
+$$pyw
+
 ---
 ##= Show specific table contents
 ---
@@ -313,16 +457,55 @@ Codepoint.objects.all()
 Codepoint.objects.filter(<r>name&equals;</r>'Sparkles')
 </code></pre>
 ---
-@^ cfilter_cmd.png
-
+$$terminal python3.6
+$$py from unicodex.models import Codepoint
+$$pyw Codepoint.objects.filter(name='Sparkles')
 ---
-@^ cfilter_res.png
+$$terminal python3.6
+$$py from unicodex.models import Codepoint
+$$py Codepoint.objects.filter(name='Sparkles')
+&lt;QuerySet [&lt;Codepoint: Sparkles>]><br>
+$$pyw
 ---
 ##= Get specific record
 ---
-@^ get_cmd.png
+$$terminal python3.6
+$$py from unicodex.models import Codepoint
+$$py Codepoint.objects.filter(name='Sparkles')
+&lt;QuerySet [&lt;Codepoint: Sparkles>]><br>
+$$pyw Codepoint.objects.get(name='Sparkles')
 ---
-@^ get_res.png
+$$terminal python3.6
+$$py from unicodex.models import Codepoint
+$$py Codepoint.objects.filter(name='Sparkles')
+&lt;QuerySet [&lt;Codepoint: Sparkles>]><br>
+$$py Codepoint.objects.get(name='Sparkles')
+&lt;Codepoint: Sparkles><br>
+$$pyw
+---
+$$terminal python3.6
+$$py from unicodex.models import Codepoint
+$$py Codepoint.objects.filter(name='Sparkles')
+&lt;QuerySet [&lt;Codepoint: Sparkles>]><br>
+$$py Codepoint.objects.get(name='Sparkles')
+&lt;Codepoint: Sparkles><br>
+$$pyw Codepoint.objects.get()
+---
+$$terminal python3.6
+$$py from unicodex.models import Codepoint
+$$py Codepoint.objects.filter(name='Sparkles')
+&lt;QuerySet [&lt;Codepoint: Sparkles>]><br>
+$$py Codepoint.objects.get(name='Sparkles')
+&lt;Codepoint: Sparkles><br>
+$$py Codepoint.objects.get()
+Traceback (most recent call last):<br>
+&nbsp; File "&lt;console>", line 1, in &lt;module><br>
+&nbsp; File "/usr/local/lib/python3.6/site-packages/django/db/models/manager.p y", line 85, in manager_method<br>
+&nbsp; &nbsp; return getattr(self.get_queryset(), name)(&#42;args, &#42;&#42;kwargs)<br>
+&nbsp; File "/usr/local/lib/python3.6/site-packages/django/db/models/query.py" , line 384, in get<br>
+&nbsp; &nbsp; (self.model._meta.object_name, num)<br>
+unicodex.models.MultipleObjectsReturned: get() returned more than one Codepoint -- it returned 3!<br>
+$$pyw
 ---
 ##= Joins
 ---
