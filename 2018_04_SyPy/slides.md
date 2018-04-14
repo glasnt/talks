@@ -138,17 +138,13 @@ The engine that makes django go
 
 But without context, what does that even mean?
 ---
-# Context matters <!-- .slide: class="center" -->
+# Context <!-- .slide: class="center" -->
 
 Note: Context is important.
 
 So for the purposes of this, let's break away from the normal.
 
----
-
-# Context: existing project <!-- .slide: class="center" -->
-
-Note: A number of tutorials start with a clean slate, and assume you have little to know dev experience. DjangoGirls is great for complete beginners to development
+A number of tutorials start with a clean slate, and assume you have little to know dev experience. DjangoGirls is great for complete beginners to development
 
 But it's not so helpful for developers who come into the space with prior knowledge
 
@@ -156,7 +152,12 @@ It's also not helpful for the way that I came into Django; trying to fix an exis
 
 So for the purposes of this, we're going to use an existing project
 ---
-
+ <!-- .slide: data-background-image="pictures/legacy_explorer.png"-->
+---
+# Context <!-- .slide: class="center" -->
+---
+# ✨ <!-- .slide: class="center" -->
+---
  <img src="pictures/unicodex_index.png" style="margin-top: -50px" />
 
 Note: 
@@ -726,6 +727,26 @@ SyntaxError: keyword argument repeated<br>
 Design.objects.filter(<o><br>&nbsp;&nbsp;&nbsp;codepoint__name&equals;</o>"Sparkles").count() 
 </code></pre> 
 ---
+## You've seen this before <!-- .slide: class="center" -->
+  <!-- .element: class="fragment" -->
+## This is how the admin works <!-- .slide: class="center" -->
+---
+# 🤯 <!-- .slide: class="center" -->
+---
+## What if the ORM doesn't do it? <!-- .slide: class="center" -->
+---
+## extra <!-- .slide: class="center" -->
+---
+## raw <!-- .slide: class="center" -->
+---
+## Discover more yourself <!-- .slide: class="center" -->
+---
+## Creating objects <!-- .slide: class="center" -->
+## Field Types <!-- .slide: class="center" -->
+## Field Releationships <!-- .slide: class="center" -->
+  <!-- .element: class="fragment" -->
+## <fl>docs</fl> <!-- .slide: class="center" -->
+---
 # Protip <!-- .slide: class="center" -->
 ## Add `ipython` to your requirements.txt, Pipfile <!-- .slide: class="center" -->
 ---
@@ -774,6 +795,7 @@ IPython 6.3.1 -- An enhanced Interactive Python. Type '?' for help.<br>
 <br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <ww>unicodex&nbsp; &nbsp;</ww>
 <br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <ww>unittest&nbsp; &nbsp;</ww>
 ---
+
 # Bonus <!-- .slide: class="center" -->
 ## PostgreSQL Gotchas <!-- .slide: class="center" -->
 
@@ -801,17 +823,28 @@ $ less db_dump_inserts
 INSERT INTO public.django_site VALUES
 ... 
 </code></pre> 
+---
 
+ <!-- .slide: data-background-image="pictures/legacy_explorer.png"-->
+Note: explore code
+
+Find bugs
 ---
-# .. <!-- .slide: class="center" -->
----
+#### Read more <!-- .slide: class="center" -->
+<br> 
+## *Why I love Legacy DevOps*
+
  <div style='margin: 0 auto;'><p align='center'><img src='pictures/legacy3.png'></p></div>  <!-- .slide: class="center" -->
----
- <!-- .slide: data-background-image="pictures/pyconau18.png"-->
-
-Note: CFP?
+ <span class='foot'>[Why I Love Legacy DevOps, The Recompiler](https://recompilermag.com/issues/issue-4/why-i-love-legacy-devops/) -- Illustration by Victoria Wang</span>
 ---
 <br> 
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='160px' src='pictures/space.svg'><img height='160px' src='pictures/space.svg'><img height='160px' src='pictures/claps.svg'><img height='160px' src='pictures/space.svg'><img height='160px' src='pictures/space.svg'></p></div> <!-- .slide: class="center" -->
  <img src="pictures/footer.svg" />
  <span class='foot'>Some images: [WOCinTech Chat](https://www.flickr.com/photos/wocintechchat/albums)</span>
+---
+ <!-- .slide: data-background-image="pictures/pyconau18.png"-->
+<h2 style="color: white; margin-top: 256px">Call for Proposals Now Open</h2>
+<br><br><br> 
+<h2 style="color: white; margin-top: 65px">pycon-au.org</h2>
+
+Note: PS PyCon AU is a thing that's happening
