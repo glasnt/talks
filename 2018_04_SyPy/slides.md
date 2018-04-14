@@ -537,14 +537,19 @@ Thing.objects.filter(<o>relation__name&equals;</o>"str")
 
 Note: Django offers a powerful and intuitive way to “follow” relationships in lookups, taking care of the SQL JOINs for you automatically, behind the scenes. To span a relationship, just use the field name of related fields across models, separated by double underscores, until you get to the field you want."
 ---
-
- <div style='margin: 0 auto;'><p align='center'><img src='pictures/dfilter_cmd1.png'></p></div>  <!-- .slide: class="center" -->
+ <div class="shell-wrap"><p class="shell-top-bar">python3.6</p><p class="shell-body">
+ &gt;&gt;&gt; from unicodex.models import Design<br>
+ &gt;&gt;&gt; <w>&nbsp;</w>
 ---
- <div style='margin: 0 auto;'><p align='center'><img src='pictures/dfilter_cmd2.png'></p></div>  <!-- .slide: class="center" -->
+ <div class="shell-wrap"><p class="shell-top-bar">python3.6</p><p class="shell-body">
+ &gt;&gt;&gt; from unicodex.models import Design<br>
+ &gt;&gt;&gt; Design.objects.filter(codepoint__name='Sparkles')<w>&nbsp;</w>
 ---
- <div style='margin: 0 auto;'><p align='center'><img src='pictures/dfilter_res.png'></p></div>  <!-- .slide: class="center" -->
----
-
+ <div class="shell-wrap"><p class="shell-top-bar">python3.6</p><p class="shell-body">
+ &gt;&gt;&gt; from unicodex.models import Design<br>
+ &gt;&gt;&gt; Design.objects.filter(codepoint__name='Sparkles')<br>
+&lt;QuerySet [&lt;Design: Sparkles Microsoft - Windows 10>, &lt;Design: Sparkles Microsoft - Windows 8.1>, &lt;Design: Sparkles Microsoft - Windows 8.0>, &lt;Design: Sparkles Facebook - 2.2>, &lt;Design: Sparkles Facebook - 1.0>, &lt;Design: Sparkles Messenger - 1.0>, &lt;Design: Sparkles Twitter - 1.0>, &lt;Design: Sparkles EmojiOne - 3.0>, &lt;Design: Sparkles EmojiOne - 2.0>, &lt;Design: Sparkles EmojiOne - 1.0>, '...(remaining elements truncated)...']><br>
+ &gt;&gt;&gt; <w>&nbsp;</w>
 ---
 <pre><code> 
 <c>&num; Follow the fields</c>
@@ -581,14 +586,80 @@ Note: Q
 ---
 <pre><code><c>&dash;&dash; SQL</c><br><r>SELECT * <br>&nbsp; FROM</r> <l>unicodex_codepoint c, unicodex_design d</l><br>&nbsp;<r>WHERE</r> d.codepoint_id &equals; c.id<br><l><r>&nbsp; &nbsp;AND</r> (c</l>.<l>name</l> <r>&equals;</r> 'Sparkles'<BR><l><r>&nbsp; &nbsp;&nbsp; OR</r> c</l>.<l>name</l> <r>&equals;</r> 'Unicorn')
 </code></pre> 
-
 ---
 <pre><code><c>&dash;&dash; SQL</c><br><r>SELECT * <br>&nbsp; FROM</r> <l>unicodex_codepoint c, unicodex_design d</l><br>&nbsp;<r>WHERE</r> d.codepoint_id &equals; c.id<br><l><r>&nbsp; &nbsp;AND</r> (c</l>.<l>name</l> <r>&equals;</r> 'Sparkles'<BR><l><r>&nbsp; &nbsp;&nbsp; OR</r> c</l>.<l>name</l> <r>&equals;</r> 'Unicorn')
-<c>&num; ORM </c><br>Design.objects.filter(<br>&nbsp; &nbsp;<o>codepoint_&#95;name</o>&equals;'Unicorn',<br>&nbsp; &nbsp;<o>codepoint&#95;_name&equals;</o>"Sparkles")
+<c>&num; ORM</c>
+<c>&num; ...</c>
 ---
-<pre><code><c>&dash;&dash; SQL</c><br><r>SELECT * <br>&nbsp; FROM</r> <l>unicodex_codepoint c, unicodex_design d</l><br>&nbsp;<r>WHERE</r> d.codepoint_id &equals; c.id<br><l><r>&nbsp; &nbsp;AND</r> (c</l>.<l>name</l> <r>&equals;</r> 'Sparkles'<BR><l><r>&nbsp; &nbsp;&nbsp; OR</r> c</l>.<l>name</l> <r>&equals;</r> 'Unicorn')
-<c>&num; ORM </c><br>Design.objects.filter(<br>&nbsp; &nbsp;<o>codepoint_&#95;name</o>&equals;'Unicorn',<br>&nbsp; &nbsp;<o>codepoint&#95;_name&equals;</o>"Sparkles")
-<b><r>SyntaxError: keyword argument repeated</r></b>
+ <div class="shell-wrap"><p class="shell-top-bar">python3.6</p><p class="shell-body">
+ &gt;&gt;&gt; <w>&nbsp;</w>
+---
+ <div class="shell-wrap"><p class="shell-top-bar">python3.6</p><p class="shell-body">
+ &gt;&gt;&gt; from unicodex.models import Design<w>&nbsp;</w>
+---
+ <div class="shell-wrap"><p class="shell-top-bar">python3.6</p><p class="shell-body">
+ &gt;&gt;&gt; from unicodex.models import Design<br>
+ &gt;&gt;&gt; <w>&nbsp;</w>
+---
+ <div class="shell-wrap"><p class="shell-top-bar">python3.6</p><p class="shell-body">
+ &gt;&gt;&gt; from unicodex.models import Design<br>
+ &gt;&gt;&gt; Design.objects.filter(<br>
+... &nbsp; codepoint&#95;&#95;name='Sparkles', <br>
+... &nbsp; codepoint&#95;&#95;name='Unicorn')<w>&nbsp;</w>
+---
+ <div class="shell-wrap"><p class="shell-top-bar">python3.6</p><p class="shell-body">
+ &gt;&gt;&gt; from unicodex.models import Design<br>
+ &gt;&gt;&gt; Design.objects.filter(<br>
+... &nbsp; codepoint&#95;&#95;name='Sparkles', <br>
+... &nbsp; codepoint&#95;&#95;name='Unicorn')<br>
+&nbsp; File "&lt;console>", line 3<br>
+SyntaxError: keyword argument repeated<br>
+ &gt;&gt;&gt; <w>&nbsp;</w>
+---
+ <div class="shell-wrap"><p class="shell-top-bar">python3.6</p><p class="shell-body">
+ &gt;&gt;&gt; from unicodex.models import Design<br>
+ &gt;&gt;&gt; Design.objects.filter(<br>
+... &nbsp; codepoint&#95;&#95;name='Sparkles', <br>
+... &nbsp; codepoint&#95;&#95;name='Unicorn')<br>
+&nbsp; File "&lt;console>", line 3<br>
+SyntaxError: keyword argument repeated<br>
+ &gt;&gt;&gt; from django.db.models import Q<w>&nbsp;</w>
+---
+ <div class="shell-wrap"><p class="shell-top-bar">python3.6</p><p class="shell-body">
+ &gt;&gt;&gt; from unicodex.models import Design<br>
+ &gt;&gt;&gt; Design.objects.filter(<br>
+... &nbsp; codepoint&#95;&#95;name='Sparkles', <br>
+... &nbsp; codepoint&#95;&#95;name='Unicorn')<br>
+&nbsp; File "&lt;console>", line 3<br>
+SyntaxError: keyword argument repeated<br>
+ &gt;&gt;&gt; from django.db.models import Q<br>
+ &gt;&gt;&gt; <w>&nbsp;</w>
+---
+ <div class="shell-wrap"><p class="shell-top-bar">python3.6</p><p class="shell-body">
+ &gt;&gt;&gt; from unicodex.models import Design<br>
+ &gt;&gt;&gt; Design.objects.filter(<br>
+... &nbsp; codepoint&#95;&#95;name='Sparkles', <br>
+... &nbsp; codepoint&#95;&#95;name='Unicorn')<br>
+&nbsp; File "&lt;console>", line 3<br>
+SyntaxError: keyword argument repeated<br>
+ &gt;&gt;&gt; from django.db.models import Q<br>
+ &gt;&gt;&gt; Design.objects.filter(<br>
+... &nbsp; Q(codepoint&#95;&#95;name='Sparkles'), <br>
+... &nbsp; Q(codepoint&#95;&#95;name='Unicorn'))<w>&nbsp;</w><br>
+---
+ <div class="shell-wrap"><p class="shell-top-bar">python3.6</p><p class="shell-body">
+ &gt;&gt;&gt; from unicodex.models import Design<br>
+ &gt;&gt;&gt; Design.objects.filter(<br>
+... &nbsp; codepoint&#95;&#95;name='Sparkles', <br>
+... &nbsp; codepoint&#95;&#95;name='Unicorn')<br>
+&nbsp; File "&lt;console>", line 3<br>
+SyntaxError: keyword argument repeated<br>
+ &gt;&gt;&gt; from django.db.models import Q<br>
+ &gt;&gt;&gt; Design.objects.filter(<br>
+... &nbsp; Q(codepoint&#95;&#95;name='Sparkles'), <br>
+... &nbsp; Q(codepoint&#95;&#95;name='Unicorn'))<br>
+&lt;QuerySet []><br>
+ &gt;&gt;&gt; <w>&nbsp;</w>
 ---
 <pre><code><r>from</r> django.db.models <r>import</r> Q
 <br>Design.objects.filter(<br>&nbsp; &nbsp;Q(<o>codepoint_&#95;name</o>&equals;'Unicorn'),<br>&nbsp; &nbsp;Q(<o>codepoint&#95;_name&equals;</o>"Sparkles")<br>)
@@ -597,7 +668,53 @@ Note: Q
 <pre><code><r>from</r> django.db.models <r>import</r> Q
 <br>Design.objects.filter(<br>&nbsp; &nbsp;Q(<o>codepoint_&#95;name</o>&equals;'Unicorn'),<br>&nbsp; &nbsp;~Q(<o>codepoint&#95;_name&equals;</o>"Sparkles")<br>)
 <c># Unicorn OR Sparkles!</c>
-
+---
+ <div class="shell-wrap"><p class="shell-top-bar">python3.6</p><p class="shell-body">
+ &gt;&gt;&gt; from unicodex.models import Design<br>
+ &gt;&gt;&gt; Design.objects.filter(<br>
+... &nbsp; codepoint&#95;&#95;name='Sparkles', <br>
+... &nbsp; codepoint&#95;&#95;name='Unicorn')<br>
+&nbsp; File "&lt;console>", line 3<br>
+SyntaxError: keyword argument repeated<br>
+ &gt;&gt;&gt; from django.db.models import Q<br>
+ &gt;&gt;&gt; Design.objects.filter(<br>
+... &nbsp; Q(codepoint&#95;&#95;name='Sparkles'), <br>
+... &nbsp; Q(codepoint&#95;&#95;name='Unicorn'))<br>
+&lt;QuerySet []><br>
+ &gt;&gt;&gt; <w>&nbsp;</w>
+---
+ <div class="shell-wrap"><p class="shell-top-bar">python3.6</p><p class="shell-body">
+ &gt;&gt;&gt; from unicodex.models import Design<br>
+ &gt;&gt;&gt; Design.objects.filter(<br>
+... &nbsp; codepoint&#95;&#95;name='Sparkles', <br>
+... &nbsp; codepoint&#95;&#95;name='Unicorn')<br>
+&nbsp; File "&lt;console>", line 3<br>
+SyntaxError: keyword argument repeated<br>
+ &gt;&gt;&gt; from django.db.models import Q<br>
+ &gt;&gt;&gt; Design.objects.filter(<br>
+... &nbsp; Q(codepoint&#95;&#95;name='Sparkles'), <br>
+... &nbsp; Q(codepoint&#95;&#95;name='Unicorn'))<br>
+&lt;QuerySet []><br>
+ &gt;&gt;&gt; Design.objects.filter(<br>
+... &nbsp; Q(codepoint&#95;&#95;name='Sparkles'), <br>
+... &nbsp; ~Q(codepoint&#95;&#95;name='Unicorn'))<w>&nbsp;</w><br>
+---
+ <div class="shell-wrap"><p class="shell-top-bar">python3.6</p><p class="shell-body">
+ &gt;&gt;&gt; Design.objects.filter(<br>
+... &nbsp; codepoint&#95;&#95;name='Sparkles', <br>
+... &nbsp; codepoint&#95;&#95;name='Unicorn')<br>
+&nbsp; File "&lt;console>", line 3<br>
+SyntaxError: keyword argument repeated<br>
+ &gt;&gt;&gt; from django.db.models import Q<br>
+ &gt;&gt;&gt; Design.objects.filter(<br>
+... &nbsp; Q(codepoint&#95;&#95;name='Sparkles'), <br>
+... &nbsp; Q(codepoint&#95;&#95;name='Unicorn'))<br>
+&lt;QuerySet []><br>
+ &gt;&gt;&gt; Design.objects.filter(<br>
+... &nbsp; Q(codepoint&#95;&#95;name='Sparkles'), <br>
+... &nbsp; ~Q(codepoint&#95;&#95;name='Unicorn'))<br>
+&lt;QuerySet [&lt;Design: Unicorn EmojiOne - 2.0>, &lt;Design: Unicorn Apple - iOS 10.2>, &lt;Design: Unicorn Android - 8.0>, &lt;Design: Unicorn Android - 6.0>, &lt;Design: Unicorn Facebook - 2.2>, &lt;Design: Unicorn Twitter - 2.5>, &lt;Design: Unicorn EmojiOne - 3.0>]><br>
+ &gt;&gt;&gt; <w>&nbsp;</w>
 ---
 ## Counting results <!-- .slide: class="center" -->
 ---
@@ -610,40 +727,52 @@ Design.objects.filter(<o><br>&nbsp;&nbsp;&nbsp;codepoint__name&equals;</o>"Spark
 </code></pre> 
 ---
 # Protip <!-- .slide: class="center" -->
-## Use `ipython` <!-- .slide: class="center" -->
+## Add `ipython` to your requirements.txt, Pipfile <!-- .slide: class="center" -->
 ---
-<pre><code><c>$</c>./manage.py shell
-&gt;&gt;&gt; 
-^C 
-<c>&num; requirements.txt, Pipfile, etc</c>
-ipython 
-
-$ ./manage.py shell
-In [1]:
-
+ <div class="shell-wrap"><p class="shell-top-bar">python3.6</p><p class="shell-body">
+ <ps>myrtle</ps> <dr>~ $</dr> 
+cd project<br>
+ <ps>myrtle</ps> <dr>~/project $</dr> 
+./manage.py shell<br>
+Python 3.6.3 (default, Nov 9 2017, 15:58:30)<br>
+[GCC 4.2.1 Compatible Apple LLVM 9.0.0 (clang-900.0.38)] on darwin<br>
+Type "help", "copyright", "credits" or "license" for more information.<br>
+(InteractiveConsole)<br> 
+ &gt;&gt;&gt;&nbsp;<w>&nbsp;</w>
+ </p></p></div>
 ---
-<div class="shell-wrap"><p class="shell-top-bar">./manage.py shell</p><p class="shell-body">
-Line 1<br>
-Line 2<br>
-Line 3<br>
-Line 4<br>
-Line 5<br>
-Line 6<br>
-Line 7<br>
-Line 8<br>
-Line 9<br>
-Line 10<br>
-012345678901234567890123456789012345 
-<br> 
-</p></p></div> 
+ <div class="shell-wrap"><p class="shell-top-bar">python3.6</p><p class="shell-body">
+ <ps>myrtle</ps> <dr>~ $</dr> 
+cd project<br>
+ <ps>myrtle</ps> <dr>~/project $</dr> 
+./manage.py shell<br>
+Python 3.6.3 (default, Nov 9 2017, 15:58:30)<br>
+Type 'copyright', 'credits' or 'license' for more information<br>
+IPython 6.3.1 -- An enhanced Interactive Python. Type '?' for help.<br><br>
+ <tg>In [</tg><ty>1</ty><tg>]:&nbsp;<w>&nbsp;</w>
 ---
-<div class="shell-wrap"><p class="shell-top-bar">./manage.py shell</p><p class="shell-body">
-<tg>In [</tg><ty>1</ty><tg>]: from </tg><tb>uni</tb><w>&nbsp;</w>
-<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <w>unicodedata</w>
-<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <w>unicodex</w>
-<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <w>unittest</w>
-</pre></code> 
-</p></p></div> 
+ <div class="shell-wrap"><p class="shell-top-bar">python3.6</p><p class="shell-body">
+ <ps>myrtle</ps> <dr>~ $</dr> 
+cd project<br>
+ <ps>myrtle</ps> <dr>~/project $</dr> 
+./manage.py shell<br>
+Python 3.6.3 (default, Nov 9 2017, 15:58:30)<br>
+Type 'copyright', 'credits' or 'license' for more information<br>
+IPython 6.3.1 -- An enhanced Interactive Python. Type '?' for help.<br>
+<br><tg>In [</tg><ty>1</ty><tg>]: from </tg><tb>uni</tb><w>&nbsp;</w>
+---
+ <div class="shell-wrap"><p class="shell-top-bar">python3.6</p><p class="shell-body">
+ <ps>myrtle</ps> <dr>~ $</dr> 
+cd project<br>
+ <ps>myrtle</ps> <dr>~/project $</dr> 
+./manage.py shell<br>
+Python 3.6.3 (default, Nov 9 2017, 15:58:30)<br>
+Type 'copyright', 'credits' or 'license' for more information<br>
+IPython 6.3.1 -- An enhanced Interactive Python. Type '?' for help.<br>
+<br><tg>In [</tg><ty>1</ty><tg>]: from </tg><tb>uni</tb><w>&nbsp;</w>
+<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <ww>unicodedata</ww>
+<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <ww>unicodex&nbsp; &nbsp;</ww>
+<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <ww>unittest&nbsp; &nbsp;</ww>
 ---
 # Bonus <!-- .slide: class="center" -->
 ## PostgreSQL Gotchas <!-- .slide: class="center" -->
