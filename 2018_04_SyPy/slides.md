@@ -510,17 +510,18 @@ unicodex.models.MultipleObjectsReturned: get() returned more than one Codepoint 
 ---
 ## Joins <!-- .slide: class="center" -->
 ---
-<pre><code> 
-<c>&dash;&dash; SQL</c>
-<r>SELECT * <br>&nbsp; FROM</r> <l>unicodex_codepoint c, unicodex_design d</l><br>&nbsp;<r>WHERE</r> <l>c</l>.<l>name</l> <r>&equals;</r> 'Sparkles'<BR><r>&nbsp; &nbsp;AND</r> d.codepoint_id = c.id;
+<pre><code><c>&dash;&dash; SQL</c>
+<r>SELECT * <br>&nbsp; FROM</r> <l>unicodex_codepoint c,<br>&nbsp; &nbsp; &nbsp; &nbsp;unicodex_design d</l><br>&nbsp;<r>WHERE</r> <l>c</l>.<l>name</l> <r>&equals;</r> 'Sparkles'<BR><r>&nbsp; &nbsp;AND</r> d.codepoint_id = c.id;
+---
+<pre><code><c>&dash;&dash; SQL</c>
+<r>SELECT * <br>&nbsp; FROM</r> <l>unicodex_codepoint c,<br>&nbsp; &nbsp; &nbsp; &nbsp;unicodex_design d</l><br>&nbsp;<r>WHERE</r> <l>c</l>.<l>name</l> <r>&equals;</r> 'Sparkles'<BR><r>&nbsp; &nbsp;AND</r> d.codepoint_id = c.id;
 
 <c>&num; ORM</c>
 Design.objects.filter(<o><br>&nbsp;&nbsp;&nbsp;codepoint__name&equals;</o>"Sparkles") 
 </code></pre> 
 ---
-<pre><code> 
-<c>&dash;&dash; SQL</c>
-<r>SELECT * <br>&nbsp; FROM</r> <l>unicodex_codepoint c, unicodex_design d</l><br>&nbsp;<r>WHERE</r> <l>c</l>.<l>name</l> <r>&equals;</r> 'Sparkles'<BR><r>&nbsp; &nbsp;AND</r> d.codepoint_id = c.id;
+<pre><code><c>&dash;&dash; SQL</c>
+<r>SELECT * <br>&nbsp; FROM</r> <l>unicodex_codepoint c,<br>&nbsp; &nbsp; &nbsp; &nbsp;unicodex_design d</l><br>&nbsp;<r>WHERE</r> <l>c</l>.<l>name</l> <r>&equals;</r> 'Sparkles'<BR><r>&nbsp; &nbsp;AND</r> d.codepoint_id = c.id;
 
 <c>&num; ORM</c>
 Design.objects.filter(<o><br>&nbsp;&nbsp;&nbsp;codepoint__name&equals;</o>"Sparkles") 
@@ -551,6 +552,10 @@ Note: Django offers a powerful and intuitive way to “follow” relationships i
  &gt;&gt;&gt; Design.objects.filter(codepoint__name='Sparkles')<br>
 &lt;QuerySet [&lt;Design: Sparkles Microsoft - Windows 10>, &lt;Design: Sparkles Microsoft - Windows 8.1>, &lt;Design: Sparkles Microsoft - Windows 8.0>, &lt;Design: Sparkles Facebook - 2.2>, &lt;Design: Sparkles Facebook - 1.0>, &lt;Design: Sparkles Messenger - 1.0>, &lt;Design: Sparkles Twitter - 1.0>, &lt;Design: Sparkles EmojiOne - 3.0>, &lt;Design: Sparkles EmojiOne - 2.0>, &lt;Design: Sparkles EmojiOne - 1.0>, '...(remaining elements truncated)...']><br>
  &gt;&gt;&gt; <w>&nbsp;</w>
+
+
+Note: Truncated results are SO USEFUL
+Data is still there, if you iterate over the list, but the print representation specificalyl doesn't flood your terminal
 ---
 <pre><code> 
 <c>&num; Follow the fields</c>
@@ -585,7 +590,7 @@ Design.objects.filter(<br> &nbsp;<o>vendorversion__vendor__name__contains&equals
 
 Note: Q
 ---
-<pre><code><c>&dash;&dash; SQL</c><br><r>SELECT * <br>&nbsp; FROM</r> <l>unicodex_codepoint c, unicodex_design d</l><br>&nbsp;<r>WHERE</r> d.codepoint_id &equals; c.id<br><l><r>&nbsp; &nbsp;AND</r> (c</l>.<l>name</l> <r>&equals;</r> 'Sparkles'<BR><l><r>&nbsp; &nbsp;&nbsp; OR</r> c</l>.<l>name</l> <r>&equals;</r> 'Unicorn')
+<pre><code><c>&dash;&dash; SQL</c><br><r>SELECT * <br>&nbsp; FROM</r> <l>unicodex_codepoint c,<br>&nbsp; &nbsp; unicodex_design d</l><br>&nbsp;<r>WHERE</r> d.codepoint_id &equals; c.id<br><l><r>&nbsp; &nbsp;AND</r> (c</l>.<l>name</l> <r>&equals;</r> 'Sparkles'<BR><l><r>&nbsp; &nbsp;&nbsp; OR</r> c</l>.<l>name</l> <r>&equals;</r> 'Unicorn')
 </code></pre> 
 ---
 <pre><code><c>&dash;&dash; SQL</c><br><r>SELECT * <br>&nbsp; FROM</r> <l>unicodex_codepoint c, unicodex_design d</l><br>&nbsp;<r>WHERE</r> d.codepoint_id &equals; c.id<br><l><r>&nbsp; &nbsp;AND</r> (c</l>.<l>name</l> <r>&equals;</r> 'Sparkles'<BR><l><r>&nbsp; &nbsp;&nbsp; OR</r> c</l>.<l>name</l> <r>&equals;</r> 'Unicorn')
@@ -728,23 +733,37 @@ Design.objects.filter(<o><br>&nbsp;&nbsp;&nbsp;codepoint__name&equals;</o>"Spark
 </code></pre> 
 ---
 ## You've seen this before <!-- .slide: class="center" -->
-  <!-- .element: class="fragment" -->
+---
 ## This is how the admin works <!-- .slide: class="center" -->
 ---
 # 🤯 <!-- .slide: class="center" -->
 ---
+
+TODO admin walk though, filters, custom query string
+---
 ## What if the ORM doesn't do it? <!-- .slide: class="center" -->
 ---
-## extra <!-- .slide: class="center" -->
+## `raw` <!-- .slide: class="center" -->
 ---
-## raw <!-- .slide: class="center" -->
+# ⚠️ <!-- .slide: class="center" -->
+---
+<div class="left"><span style="font-family: Roboto">Performing raw SQL queries</span><br><br>
+<rr>The raw() manager ...</rr><br/>
+<br>⚠️ <rb>You should be very careful whenever you write.</rb><br>
+<br>`Abc.objects.raw('SELECT * FROM myapp_abc')`<br><br>
+🗒 <rr>Where did the name of the Person table come from in that example?</rr>
+<br>⚠️ <rb>No checking is done on the SQL statement that is passed in to .raw().</rb>
+<br>⚠️ <rb>If you are performing queries on MySQL, note that MySQL’s silent type coercion may cause unexpected results when mixing types.</rb>
+<br>⚠️ <rb>While a RawQuerySet instance can be iterated over like a normal QuerySet, RawQuerySet doesn’t implement </rb><br></div>
+---
+## The SQL isn't always worse <!-- .slide: class="center" -->
 ---
 ## Discover more yourself <!-- .slide: class="center" -->
 ---
 ## Creating objects <!-- .slide: class="center" -->
-## Field Types <!-- .slide: class="center" -->
-## Field Releationships <!-- .slide: class="center" -->
-  <!-- .element: class="fragment" -->
+## Field Types
+## Field Releationships
+---
 ## <fl>docs</fl> <!-- .slide: class="center" -->
 ---
 # Protip <!-- .slide: class="center" -->
@@ -796,35 +815,6 @@ IPython 6.3.1 -- An enhanced Interactive Python. Type '?' for help.<br>
 <br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <ww>unittest&nbsp; &nbsp;</ww>
 ---
 
-# Bonus <!-- .slide: class="center" -->
-## PostgreSQL Gotchas <!-- .slide: class="center" -->
-
----
-<pre><code>$ pg_dump ... > db_dump
-
-$ grep INSERT db_dump <r>|</r> wc -l
-0 
-
-$ less db_dump
-... 
-COPY public.django_site (id, domain, name) FROM stdin;
-... 
-
-</code></pre> 
----
-
-<pre><code>$ pg_dump --insert .. > db_dump_inserts
-
-$ grep INSERT db_dump_inserts <r>|</r> wc -l
-30241 
-
-$ less db_dump_inserts
-... 
-INSERT INTO public.django_site VALUES
-... 
-</code></pre> 
----
-
  <!-- .slide: data-background-image="pictures/legacy_explorer.png"-->
 Note: explore code
 
@@ -835,7 +825,7 @@ Find bugs
 ## *Why I love Legacy DevOps*
 
  <div style='margin: 0 auto;'><p align='center'><img src='pictures/legacy3.png'></p></div>  <!-- .slide: class="center" -->
- <span class='foot'>[Why I Love Legacy DevOps, The Recompiler](https://recompilermag.com/issues/issue-4/why-i-love-legacy-devops/) -- Illustration by Victoria Wang</span>
+ <span class='foot'>[The Recompiler, Issue 4](https://recompilermag.com/issues/issue-4/why-i-love-legacy-devops/) -- Illustration by Victoria Wang</span>
 ---
 <br> 
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='160px' src='pictures/space.svg'><img height='160px' src='pictures/space.svg'><img height='160px' src='pictures/claps.svg'><img height='160px' src='pictures/space.svg'><img height='160px' src='pictures/space.svg'></p></div> <!-- .slide: class="center" -->

@@ -8,9 +8,19 @@ tg { color: rgb(0,135,6) }
 w { color: rgb(98,98,98); background-color: rgb(188,188,188)}
 ww { padding: 4px 7px 4px 7px; color: rgb(98,98,98); background-color: rgb(188,188,188)}
 tb { color: rgb(0,135,215) }
-fl { font-family: "DTLProkyonST", regular}
 ps { color: rgb(212,212,173) }
 dr { color: rgb(201,135,135) }
+ .left { text-align: left; }
+
+/* Flux font */ fl { font-family: "DTLProkyonST", regular}
+
+/* redacted font */ 
+@font-face { font-family: "RedactedB"; src: url("redacted-script-bold.ttf") format('truetype'); font-style:bold; }
+@font-face { font-family: "RedactedR"; src: url("redacted-script-regular.ttf") format('truetype'); font-style:normal; }
+rb { font-family: "RedactedB", regular;  }
+rr { font-family: "RedactedR", regular;  }
+/* https://github.com/christiannaths/Redacted-Font */
+
 
 /* vectorised terminal */
 code.terminal { 
