@@ -1,0 +1,51 @@
+! space  | g/snake | t/tw| e/newkey | a/note.png | space
+---
+#= Communication strategies beyond the Basic Multilingual Plane
+<img src="pictures/footer.svg" style="margin-top:-50px">
+---
+
+! g/wave
+
+Note: Hi! I'm Katie
+---
+
+! g/pray
+
+Note: Thank you so much for having me at your amazing conference
+
+---
+
+! t/shortcake
+
+Note: A number of my good friends have had the pleasure of keynoting this event in the past few years, but it was only after seeing the AMAZING CATERING that I cheekily suggested I should keynote
+---
+
+@= a/ok.png
+
+Note: and does it live up to expectations :D
+
+But I'm not just here for cake
+
+---
+
+! o/bolt | g/sweat | t/sparkles
+
+Note: I've been giving a talk for over two years now called
+
+The power and responsibility of unicode adoption
+
+---
+
+! g/UK | g/US | g/HN.png | g/AU.png | g/NZ.png
+! space | g/US | space | g/AU.png | g/NZ.png
+! space | space | space | g/AU.png | space
+
+Note: I've given this talk a few times now, mostly in Australia and New Zealand, but twice in the US, once in the UK and Hungary 
+---
+
+Note: But this talk isn't about that
+
+---
+! g/claps
+
+### glasnt.com/talks
