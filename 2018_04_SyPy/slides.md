@@ -156,6 +156,8 @@ So for the purposes of this, we're going to use an existing project
 Note: we're going to go bug hunting
 
 So let's grab our butterfly net, our best bug chasing dress, and dive in
+
+TODO pending Recompiler release
 ---
 # Context <!-- .slide: class="center" -->
 
@@ -568,6 +570,7 @@ Adding a where clause for, say, sparkles
 <c>&num; ORM</c>
 Codepoint.objects.filter(<r>name&equals;</r>'Sparkles') 
 </code></pre> 
+
 Note: this maps to the ORM as filter. where the name column is a keyword argument of filter.
 
 
@@ -725,6 +728,8 @@ But, the resuts are truncated for us
 This is so incredibly useful
 
 Data is still there, if you iterate over the list, but the print representation specificalyl doesn't flood your terminal
+
+(this was implemented because of a very real bug at Lawrance Journal World, where they had servers keep crashing, because the debug page was trying to be helpful and show all the data... a million objects worth..)
 ---
 <pre><code> 
 <c>&num; Follow the fields</c>
@@ -924,7 +929,7 @@ Note:
 But, we were asking for codepoints that were called both Sparkles and Unicorns. Sadly no emoji like that exists. (yet)
 ---
 <pre><code><r>from</r> django.db.models <r>import</r> Q
-<br>Design.objects.filter(<br>&nbsp; &nbsp;Q(<o>codepoint_&#95;name</o>&equals;'Unicorn'),<br>&nbsp; &nbsp;~Q(<o>codepoint&#95;_name&equals;</o>"Sparkles")<br>)
+<br>Design.objects.filter(<br>&nbsp; &nbsp;Q(<o>codepoint_&#95;name</o>&equals;'Unicorn')<br>&nbsp;| Q(<o>codepoint&#95;_name&equals;</o>"Sparkles")<br>)
 <c># Unicorn OR Sparkles!</c>
 Note: 
 What we want to search for is code points named Sparkles OR unicorn
@@ -957,7 +962,7 @@ SyntaxError: keyword argument repeated<br>
 ... &nbsp; Q(codepoint&#95;&#95;name='Unicorn'))<br>
 &lt;QuerySet []><br>
  &gt;&gt;&gt; Design.objects.filter(<br>
-... &nbsp; Q(codepoint&#95;&#95;name='Sparkles'), <br>
+... &nbsp; Q(codepoint&#95;&#95;name='Sparkles') <br>
 ... | Q(codepoint&#95;&#95;name='Unicorn'))<w>&nbsp;</w><br>
 ---
  <div class="shell-wrap"><p class="shell-top-bar">python3.6</p><p class="shell-body">
@@ -969,7 +974,7 @@ SyntaxError: keyword argument repeated<br>
 ... &nbsp; Q(codepoint&#95;&#95;name='Unicorn'))<br>
 &lt;QuerySet []><br>
  &gt;&gt;&gt; Design.objects.filter(<br>
-... &nbsp; Q(codepoint&#95;&#95;name='Sparkles'), <br>
+... &nbsp; Q(codepoint&#95;&#95;name='Sparkles') <br>
 ... | Q(codepoint&#95;&#95;name='Unicorn'))<br>
 &lt;QuerySet [&lt;Design: Sparkles Microsoft - Windows 10>, &lt;Design: Sparkles Microsoft - Windows 8.1>, &lt;Design: Sparkles Microsoft - Windows 8.0>, &lt;Design: Sparkles Facebook - 2.2>, &lt;Design: Sparkles Facebook - 1.0>, &lt;Design: Sparkles Messenger - 1.0>, &lt;Design: Sparkles Twitter - 1.0>, &lt;Design: Sparkles EmojiOne - 3.0>, &lt;Design: Sparkles EmojiOne - 2.0>, &lt;Design: Sparkles EmojiOne - 1.0>, '...(remaining elements truncated)...']><br>
  &gt;&gt;&gt; <w>&nbsp;</w>
@@ -1092,6 +1097,10 @@ and the URL changes
 ---
  <img src="pictures/djuser_superactive_h.png" style="margin-top: -50px" />
 Note: it now shows an and in there.
+
+There are limitations about how crafty you can get in the URL filter for security reasons, but basic operations work, even if there isn't any filters on the right hand side panel
+
+TODO JB info about where/what limitations?
 ---
 ## So, what if the ORM doesn't do it? <!-- .slide: class="center" -->
 
@@ -1122,7 +1131,7 @@ If you look up the docs about how to do this
 
 Note: you'll see it is FULL of warnings and notes and conditions
 
-If you dive into raw SQL you can encounter issues with SQL injections.
+There are specific sections in the docs about how to give raw parameterised arguments to help prevent potential SQL injection, but you should still understand how this functionality works before you try using it.
 
 You also break the ability for your app to be used by multiple databases. Because of the differences in SQL between databases, your postgres flavoured code probably will break if someone wants to run it on an sqlite database
 
