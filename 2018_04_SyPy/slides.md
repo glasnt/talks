@@ -777,10 +777,10 @@ Note: some of the field looksups we can do are contains, icontains, which is cas
 
 less thans, greater thans, comparsion equality, and null and more
 ---
-<pre><code> 
-<c>&num; ... and then some AND </c>
+<pre><code><br><c>&num; ... and then some AND </c>
 Design.objects.filter(<br> &nbsp;<o>vendorversion__vendor__name__contains&equals;</o>"App",<br>&nbsp; <o>codepoint__name__startswith&equals;</o>"Spark",<br>&nbsp; <o>image__endswith&equals;</o>"png")
 </code></pre> 
+
 Note: you can take this further, adding whatever filters you want
 ---
 ## `OR` else <!-- .slide: class="center" -->
@@ -809,8 +809,8 @@ If we want to run a statement like this
 
 ---
 <pre><code><c>&dash;&dash; SQL</c><br><r>SELECT * <br>&nbsp; FROM</r> <l>unicodex_codepoint c,<br>&nbsp;&nbsp; &nbsp; &nbsp; unicodex_design d</l><br>&nbsp;<r>WHERE</r> d.codepoint_id &equals; c.id<br><l><r>&nbsp; &nbsp;AND</r> (c</l>.<l>name</l> <r>&equals;</r> 'Sparkles'<BR><l><r>&nbsp; &nbsp;&nbsp; OR</r> c</l>.<l>name</l> <r>&equals;</r> 'Unicorn')
-<c>&num; ORM</c>
-<c>&num; ...</c>
+<c>&num; ORM</c><br><c>&num; ...</c>
+
 Note: the ORM code, instead of giving it out straight away, we're going to build up
 ---
  <div class="shell-wrap"><p class="shell-top-bar">python3.6</p><p class="shell-body">
@@ -858,7 +858,7 @@ This isn't a django error, this is a python error
 
 we can use name twice in keyword arguments. It's against the rules of Python
 
-So we
+So we can now use the fancy new Q we just learnt about
 ---
  <div class="shell-wrap"><p class="shell-top-bar">python3.6</p><p class="shell-body">
  &gt;&gt;&gt; from unicodex.models import Design<br>
@@ -868,6 +868,8 @@ So we
 &nbsp; File "&lt;console>", line 3<br>
 SyntaxError: keyword argument repeated<br>
  &gt;&gt;&gt; from django.db.models import Q<w>&nbsp;</w>
+
+Note: Q is a native django widget, so we need to import it from django db models
 ---
  <div class="shell-wrap"><p class="shell-top-bar">python3.6</p><p class="shell-body">
  &gt;&gt;&gt; from unicodex.models import Design<br>
@@ -878,6 +880,8 @@ SyntaxError: keyword argument repeated<br>
 SyntaxError: keyword argument repeated<br>
  &gt;&gt;&gt; from django.db.models import Q<br>
  &gt;&gt;&gt; <w>&nbsp;</w>
+
+Note: and it imports fine. It's always good when that happens.
 ---
  <div class="shell-wrap"><p class="shell-top-bar">python3.6</p><p class="shell-body">
  &gt;&gt;&gt; from unicodex.models import Design<br>
@@ -890,6 +894,8 @@ SyntaxError: keyword argument repeated<br>
  &gt;&gt;&gt; Design.objects.filter(<br>
 ... &nbsp; Q(codepoint&#95;&#95;name='Sparkles'), <br>
 ... &nbsp; Q(codepoint&#95;&#95;name='Unicorn'))<w>&nbsp;</w><br>
+
+Note: so we're going to take our exact function from before, but wrap the codepointname calls in Qs
 ---
  <div class="shell-wrap"><p class="shell-top-bar">python3.6</p><p class="shell-body">
  &gt;&gt;&gt; from unicodex.models import Design<br>
@@ -904,14 +910,24 @@ SyntaxError: keyword argument repeated<br>
 ... &nbsp; Q(codepoint&#95;&#95;name='Unicorn'))<br>
 &lt;QuerySet []><br>
  &gt;&gt;&gt; <w>&nbsp;</w>
+
+Note: And it works!
+
+Well, it no longer syntax errors.
+
+
 ---
 <pre><code><r>from</r> django.db.models <r>import</r> Q
 <br>Design.objects.filter(<br>&nbsp; &nbsp;Q(<o>codepoint_&#95;name</o>&equals;'Unicorn'),<br>&nbsp; &nbsp;Q(<o>codepoint&#95;_name&equals;</o>"Sparkles")<br>)
 <c># Unicorn and Sparkles?</c>
+Note: 
+But, we were asking for codepoints that were called both Sparkles and Unicorns. Sadly no emoji like that exists. (yet)
 ---
 <pre><code><r>from</r> django.db.models <r>import</r> Q
 <br>Design.objects.filter(<br>&nbsp; &nbsp;Q(<o>codepoint_&#95;name</o>&equals;'Unicorn'),<br>&nbsp; &nbsp;~Q(<o>codepoint&#95;_name&equals;</o>"Sparkles")<br>)
 <c># Unicorn OR Sparkles!</c>
+Note: 
+What we want to search for is code points named Sparkles OR unicorn
 ---
  <div class="shell-wrap"><p class="shell-top-bar">python3.6</p><p class="shell-body">
  &gt;&gt;&gt; from unicodex.models import Design<br>
@@ -926,6 +942,7 @@ SyntaxError: keyword argument repeated<br>
 ... &nbsp; Q(codepoint&#95;&#95;name='Unicorn'))<br>
 &lt;QuerySet []><br>
  &gt;&gt;&gt; <w>&nbsp;</w>
+Note: so in our terminal, we want to change this from an and to and or
 ---
  <div class="shell-wrap"><p class="shell-top-bar">python3.6</p><p class="shell-body">
  &gt;&gt;&gt; from unicodex.models import Design<br>
@@ -941,12 +958,9 @@ SyntaxError: keyword argument repeated<br>
 &lt;QuerySet []><br>
  &gt;&gt;&gt; Design.objects.filter(<br>
 ... &nbsp; Q(codepoint&#95;&#95;name='Sparkles'), <br>
-... &nbsp; ~Q(codepoint&#95;&#95;name='Unicorn'))<w>&nbsp;</w><br>
+... | Q(codepoint&#95;&#95;name='Unicorn'))<w>&nbsp;</w><br>
 ---
  <div class="shell-wrap"><p class="shell-top-bar">python3.6</p><p class="shell-body">
- &gt;&gt;&gt; Design.objects.filter(<br>
-... &nbsp; codepoint&#95;&#95;name='Sparkles', <br>
-... &nbsp; codepoint&#95;&#95;name='Unicorn')<br>
 &nbsp; File "&lt;console>", line 3<br>
 SyntaxError: keyword argument repeated<br>
  &gt;&gt;&gt; from django.db.models import Q<br>
@@ -956,34 +970,146 @@ SyntaxError: keyword argument repeated<br>
 &lt;QuerySet []><br>
  &gt;&gt;&gt; Design.objects.filter(<br>
 ... &nbsp; Q(codepoint&#95;&#95;name='Sparkles'), <br>
-... &nbsp; ~Q(codepoint&#95;&#95;name='Unicorn'))<br>
-&lt;QuerySet [&lt;Design: Unicorn EmojiOne - 2.0>, &lt;Design: Unicorn Apple - iOS 10.2>, &lt;Design: Unicorn Android - 8.0>, &lt;Design: Unicorn Android - 6.0>, &lt;Design: Unicorn Facebook - 2.2>, &lt;Design: Unicorn Twitter - 2.5>, &lt;Design: Unicorn EmojiOne - 3.0>]><br>
+... | Q(codepoint&#95;&#95;name='Unicorn'))<br>
+&lt;QuerySet [&lt;Design: Sparkles Microsoft - Windows 10>, &lt;Design: Sparkles Microsoft - Windows 8.1>, &lt;Design: Sparkles Microsoft - Windows 8.0>, &lt;Design: Sparkles Facebook - 2.2>, &lt;Design: Sparkles Facebook - 1.0>, &lt;Design: Sparkles Messenger - 1.0>, &lt;Design: Sparkles Twitter - 1.0>, &lt;Design: Sparkles EmojiOne - 3.0>, &lt;Design: Sparkles EmojiOne - 2.0>, &lt;Design: Sparkles EmojiOne - 1.0>, '...(remaining elements truncated)...']><br>
  &gt;&gt;&gt; <w>&nbsp;</w>
 ---
-## Counting results <!-- .slide: class="center" -->
----
-<pre><code> 
-<c>&dash;&dash; SQL</c>
-<r>SELECT count(1) <br>&nbsp; FROM</r> <l>unicodex_codepoint c, unicodex_design d</l><br>&nbsp;<r>WHERE</r> <l>c</l>.<l>name</l> <r>&equals;</r> 'Sparkles'<BR><r>&nbsp; &nbsp;AND</r> d.codepoint_id = c.id;
+## `not` <!-- .slide: class="center" -->
 
-<c>&num; ORM</c>
-Design.objects.filter(<o><br>&nbsp;&nbsp;&nbsp;codepoint__name&equals;</o>"Sparkles").count() 
-</code></pre> 
+Note: we can also do exclusion filters
+
+For example
 ---
-## You've seen this before <!-- .slide: class="center" -->
+ <div class="shell-wrap"><p class="shell-top-bar">python3.6</p><p class="shell-body">
+ &gt;&gt;&gt; from unicodex.objects import Codepoint<br>
+ &gt;&gt;&gt; Codepoint.objects.filter(<br>
+... &nbsp; Q(name&#95;&#95;contains='s') <br>
+... | Q(name&#95;&#95;contains="w"))<w>&nbsp;</w>
+
+Note: So, we have an OR
+
+If the name has an S or a W
+
+---
+ <div class="shell-wrap"><p class="shell-top-bar">python3.6</p><p class="shell-body">
+ &gt;&gt;&gt; from unicodex.objects import Codepoint<br>
+ &gt;&gt;&gt; Codepoint.objects.filter(<br>
+... &nbsp; Q(name&#95;&#95;contains='s') <br>
+... | Q(name&#95;&#95;contains="w"))<br>
+&lt;QuerySet [&lt;Codepoint: Sparkles>, &lt;Codepoint: Two Hearts>]><br>
+ &gt;&gt;&gt; <w>&nbsp;</w>
+
+Note: which returns both Sparkles and Two Hearts
+
+If we want to do an AND
+---
+ <div class="shell-wrap"><p class="shell-top-bar">python3.6</p><p class="shell-body">
+ &gt;&gt;&gt; from unicodex.objects import Codepoint<br>
+ &gt;&gt;&gt; Codepoint.objects.filter(<br>
+... &nbsp; Q(name&#95;&#95;contains='s') <br>
+... & Q(name&#95;&#95;contains="w"))<w>&nbsp;</w>
+
+Note: we change the pipe to an and
+
+---
+ <div class="shell-wrap"><p class="shell-top-bar">python3.6</p><p class="shell-body">
+ &gt;&gt;&gt; from unicodex.objects import Codepoint<br>
+ &gt;&gt;&gt; Codepoint.objects.filter(<br>
+... &nbsp; Q(name&#95;&#95;contains='s') <br>
+... & Q(name&#95;&#95;contains="w"))<br>
+&lt;QuerySet [&lt;Codepoint: Two Hearts>]><br>
+ &gt;&gt;&gt; <w>&nbsp;</w>
+
+Note: and we only get the one codepoint that has both an S and An W
+
+Now, if we want to negate that
+
+---
+ <div class="shell-wrap"><p class="shell-top-bar">python3.6</p><p class="shell-body">
+ &gt;&gt;&gt; from unicodex.objects import Codepoint<br>
+ &gt;&gt;&gt; Codepoint.objects.filter(<br>
+... &nbsp; Q(name&#95;&#95;contains='s') <br>
+... & ~Q(name&#95;&#95;contains="w"))<w>&nbsp;</w>
+
+Note: change it to S and NOT w
+
+---
+ <div class="shell-wrap"><p class="shell-top-bar">python3.6</p><p class="shell-body">
+ &gt;&gt;&gt; from unicodex.objects import Codepoint<br>
+ &gt;&gt;&gt; Codepoint.objects.filter(<br>
+... &nbsp; Q(name&#95;&#95;contains='s') <br>
+... & ~Q(name&#95;&#95;contains="w"))<br>
+&lt;QuerySet [&lt;Codepoint: Sparkles>]><br>
+ &gt;&gt;&gt; <w>&nbsp;</w>
+
+Note: we get the one result sparkles
+
+And as a side note
+
+If we're combining queries, we can either use a single and
+---
+ <div class="shell-wrap"><p class="shell-top-bar">python3.6</p><p class="shell-body">
+ &gt;&gt;&gt; from unicodex.objects import Codepoint<br>
+ &gt;&gt;&gt; Codepoint.objects.filter(<br>
+... &nbsp; Q(name&#95;&#95;contains='s'), <br>
+... &nbsp; ~Q(name&#95;&#95;contains="w"))<br>
+&lt;QuerySet [&lt;Codepoint: Sparkles>]><br>
+ &gt;&gt;&gt; <w>&nbsp;</w>
+
+Note: or we can just chain them together in a list
+
+
+But you see the thing is
+---
+## You've seen this functionality before <!-- .slide: class="center" -->
 ---
 ## This is how the admin works <!-- .slide: class="center" -->
 ---
 # 🤯 <!-- .slide: class="center" -->
 ---
 
-TODO admin walk though, filters, custom query string
+ <img src="pictures/djadmin.png" style="margin-top: -50px" />
+Note: here is the admin from earlier
+One of those default apps is user authentication
 ---
-## What if the ORM doesn't do it? <!-- .slide: class="center" -->
+
+ <img src="pictures/djuser_none.png" style="margin-top: -50px" />
+Note: if we go to the admin page for users, we see a list of users, but these filters on the right are useful for filtering
+---
+ <img src="pictures/djuser_super.png" style="margin-top: -50px" />
+Note: we can filter by super users
+---
+ <img src="pictures/djuser_super_h.png" style="margin-top: -50px" />
+Note: 
+
+Look at the URL
+It's the same filter we were hand coding
+
+---
+ <img src="pictures/djuser_superactive.png" style="margin-top: -50px" />
+Note: click on active users
+and the URL changes
+---
+ <img src="pictures/djuser_superactive_h.png" style="margin-top: -50px" />
+Note: it now shows an and in there.
+---
+## So, what if the ORM doesn't do it? <!-- .slide: class="center" -->
+
+Note: but what if you have something reeeeeally complex, that you can't easily represent in the ORM?
+
 ---
 ## `raw` <!-- .slide: class="center" -->
+Note: If you really really really need to, you can drop down to raw SQL CODE
 ---
 # ⚠️ <!-- .slide: class="center" -->
+Note: but
+
+but but but
+
+You need to be careful
+
+If you look up the docs about how to do this
+
 ---
 <div class="left"><span style="font-family: Roboto">Performing raw SQL queries</span><br><br>
 <rr>The raw() manager ...</rr><br/>
@@ -993,19 +1119,51 @@ TODO admin walk though, filters, custom query string
 <br>⚠️ <rb>No checking is done on the SQL statement that is passed in to .raw().</rb>
 <br>⚠️ <rb>If you are performing queries on MySQL, note that MySQL’s silent type coercion may cause unexpected results when mixing types.</rb>
 <br>⚠️ <rb>While a RawQuerySet instance can be iterated over like a normal QuerySet, RawQuerySet doesn’t implement </rb><br></div>
+
+Note: you'll see it is FULL of warnings and notes and conditions
+
+If you dive into raw SQL you can encounter issues with SQL injections.
+
+You also break the ability for your app to be used by multiple databases. Because of the differences in SQL between databases, your postgres flavoured code probably will break if someone wants to run it on an sqlite database
+
 ---
-## The SQL isn't always worse <!-- .slide: class="center" -->
+## Sometimes, the sequels are better. <!-- .slide: class="center" -->
+
+Note: But sometimes, SQL is better
+
+the whole point of the ORM is in the name: the Object Relational Mapper. It's all about mapping objects to relations
+
+the ORM can do 80% of things, but if there's stuff that's easier to do in RAW self, instead of wrangling the ORM, do that instead.
+
 ---
 ## Discover more yourself <!-- .slide: class="center" -->
+Note: I've only touched the surface of the power of the ORM
+
+If I've caught your interest in the power of this part of django, you can learn more yourself
 ---
 ## Creating objects <!-- .slide: class="center" -->
 ## Field Types
 ## Field Releationships
+
+Note: How to create objects, including from raw SQL
+
+Field types - things like email fields and image fields
+
+And more field relations, ways that you can call both codepoint attributes on a design object, and design attributes on a codepoint
 ---
-## <fl>docs</fl> <!-- .slide: class="center" -->
+## <fl>docs.djangoproject.com</fl> <!-- .slide: class="center" -->
+
+Note: seriously, the docs are wonderful. Now that you know some of the general terms of this bit of software, you should be able to find more interesting ways to make the ORM work for you
 ---
-# Protip <!-- .slide: class="center" -->
-## Add `ipython` to your requirements.txt, Pipfile <!-- .slide: class="center" -->
+# ☝️ <!-- .slide: class="center" -->
+## &nbsp; <!-- .slide: class="center" -->
+Note: Oh, and just one more note before I go
+If you really want to make the ORM work well for you when developing
+---
+
+# ☝️ <!-- .slide: class="center" -->
+## `echo "ipython" >> Pipfile` <!-- .slide: class="center" -->
+Note: add ipython as a dev requirement in your Pipfile, or requirements.txt or whereever all good python package managers store their requirements.
 ---
  <div class="shell-wrap"><p class="shell-top-bar">python3.6</p><p class="shell-body">
  <ps>myrtle</ps> <dr>~ $</dr> 
@@ -1018,6 +1176,7 @@ Type "help", "copyright", "credits" or "license" for more information.<br>
 (InteractiveConsole)<br> 
  &gt;&gt;&gt;&nbsp;<w>&nbsp;</w>
  </p></p></div>
+Note: it will turn your shell from this old and busted
 ---
  <div class="shell-wrap"><p class="shell-top-bar">python3.6</p><p class="shell-body">
  <ps>myrtle</ps> <dr>~ $</dr> 
@@ -1028,6 +1187,9 @@ Python 3.6.3 (default, Nov 9 2017, 15:58:30)<br>
 Type 'copyright', 'credits' or 'license' for more information<br>
 IPython 6.3.1 -- An enhanced Interactive Python. Type '?' for help.<br><br>
  <tg>In [</tg><ty>1</ty><tg>]:&nbsp;<w>&nbsp;</w>
+Note: to the new hotness
+
+This is an ipython powered shell, which means
 ---
  <div class="shell-wrap"><p class="shell-top-bar">python3.6</p><p class="shell-body">
  <ps>myrtle</ps> <dr>~ $</dr> 
@@ -1038,6 +1200,7 @@ Python 3.6.3 (default, Nov 9 2017, 15:58:30)<br>
 Type 'copyright', 'credits' or 'license' for more information<br>
 IPython 6.3.1 -- An enhanced Interactive Python. Type '?' for help.<br>
 <br><tg>In [</tg><ty>1</ty><tg>]: from </tg><tb>uni</tb><w>&nbsp;</w>
+Note: you start typing something, press tab, and
 ---
  <div class="shell-wrap"><p class="shell-top-bar">python3.6</p><p class="shell-body">
  <ps>myrtle</ps> <dr>~ $</dr> 
@@ -1051,12 +1214,28 @@ IPython 6.3.1 -- An enhanced Interactive Python. Type '?' for help.<br>
 <br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <ww>unicodedata</ww>
 <br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <ww>unicodex&nbsp; &nbsp;</ww>
 <br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <ww>unittest&nbsp; &nbsp;</ww>
+Note: you get autocompleted suggestions.
+
+So cool
 ---
 
  <!-- .slide: data-background-image="pictures/legacy_explorer.png"-->
-Note: explore code
+Note: 
+So, now that you have your standard issue bug catcher, you too can start bounding forward to catch that pesky bug in your code
 
-Find bugs
+---
+#### &nbsp; <!-- .slide: class="center" -->
+<br> 
+## &nbsp;
+ <div style='margin: 0 auto;'><p align='center'><img src='pictures/legacy3.png'></p></div>  <!-- .slide: class="center" -->
+ <span class='foot'>&nbsp;</span>
+
+Note: and I say this with all due respect, but django is now boring. As I said at the start, odds are first time you interact with django in the workplace isn't going to be on a new shiny app, it'll be on something that exists.
+
+But that doesn't mean you can't attack the problem sideon and get in the stacks and poke around and see what django is about from the inside out.
+
+If you want to know more, I have a copy of the recompiler here with me, which has an article I've written called
+
 ---
 #### Read more <!-- .slide: class="center" -->
 <br> 
@@ -1064,11 +1243,25 @@ Find bugs
 
  <div style='margin: 0 auto;'><p align='center'><img src='pictures/legacy3.png'></p></div>  <!-- .slide: class="center" -->
  <span class='foot'>[The Recompiler, Issue 4](https://recompilermag.com/issues/issue-4/why-i-love-legacy-devops/) -- Illustration by Victoria Wang</span>
+Note: why I love legacy devops
+
+It's all about how I find utmost dorkish joy in finding that odd little thing in a technology stack that just a short time ago I had no idea about.
+
+And being able to use your skills gained from other technology sets in new fields is really fun, sometimes a bit interesting, but always great.
+
+You never start form zero.
+
+You're just used to different critters
+
+You just have to get used to using a different kind of net to catch them
+
 ---
 <br> 
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='160px' src='pictures/space.svg'><img height='160px' src='pictures/space.svg'><img height='160px' src='pictures/claps.svg'><img height='160px' src='pictures/space.svg'><img height='160px' src='pictures/space.svg'></p></div> <!-- .slide: class="center" -->
  <img src="pictures/footer.svg" />
  <span class='foot'>Some images: [WOCinTech Chat](https://www.flickr.com/photos/wocintechchat/albums)</span>
+
+Note: thank you for your time
 ---
  <!-- .slide: data-background-image="pictures/pyconau18.png"-->
 <h2 style="color: white; margin-top: 256px">Call for Proposals Now Open</h2>
