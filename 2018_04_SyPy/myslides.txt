@@ -153,17 +153,26 @@ It's also not helpful for the way that I came into Django; trying to fix an exis
 So for the purposes of this, we're going to use an existing project
 ---
 ~@ legacy_explorer.png
+Note: we're going to go bug hunting
+
+So let's grab our butterfly net, our best bug chasing dress, and dive in 
 ---
 #= Context
+
+Note: so, our context today isn't going to be the standard blog site or news portal. 
+
+It's going to be about something near and dear to my heart
 ---
 #= ✨
+Note: emoji
 ---
 @^ unicodex_index.png
 
 Note: 
 
+If you've seen my {DjangoCon EU 2016 talk,emoji talks before}
 
-If you've seen my DjangoCon EU 2016 talk, this website would be sort of familiar to you. 
+this website would be sort of familiar to you. 
 
 I call it.. Unicodex. It's a django-backed database of different emoji from different platforms 
 
@@ -178,17 +187,26 @@ Note: it shows you the emoji from different vendors and the versions.
 So given this website exists, we can start poking around in the shell
 ---
 ##= "Just use the shell"
+
+Note: The shell in this case doesn't refer to what we would normally call a shell
 ---
 $$terminal bash
 $$prompt ~
 $$end
+
+Note: this is a shell. Also known as a command line, a terminal, a hacker portal, and the like. 
+
+When we talk about the django shell, we mean a specific thing
 ---
 $$terminal bash
 $$prompt ~
 $$w cd project
 $$end
 
-Note: Going back to our original statement "Just use the shell", what we mean is invoking manage.py shell 
+Note: First, we need to go to where we have the code on disk
+
+For the purposes of expediency I'll assume that we cloned our repo the same time we were given our standard issue bug catching net
+
 ---
 $$terminal bash
 $$prompt ~
@@ -196,6 +214,8 @@ cd project<br>
 $$prompt ~/project
 $$w
 $$end
+
+Note: so we navigate to the project
 ---
 $$terminal bash
 $$prompt ~
@@ -204,7 +224,7 @@ $$prompt ~/project
 $$w ./manage.py shell
 $$end
 
-Note: So we navigate to our project directory and type manage.py shell
+Note: and then we run manage dot py shell
 ---
 $$terminal python3.6
 $$prompt ~
@@ -218,10 +238,20 @@ Type "help", "copyright", "credits" or "license" for more information.<br>
 $$w &gt;&gt;&gt;&nbsp;  
 $$end
 
-Note: and we're given a 
+Note: assuming that with our standard issue net we also installed our packages and whatnot, we get this interface 
+
+It shows us a few helpful versions of things, and it gives us, as it says an interactive console.
+
+What's happened here is we've been presented with an environment that is setup to accept code within a django context
+
+
 ---
 ##= "But, how do I use the shell?"
 ##- *"..."*
+
+Note: but how do I use the shell
+
+First things first. For an SQL dev, the first thing they normally do in a foreign system is
 ---
 ##= Finding all tables
 ---
@@ -235,14 +265,28 @@ show tables
 <c>&dash;&dash; Oracle</c>
 <r>SELECT * <br>&nbsp; FROM</r> <l>dba</l>.<l>tables</l>
 </code></pre>
+
+Note: depending on which flavour of database is most familiar to you, you'd try and issue one of these commands
+
+For mysql, for postgres, for oracle
+
+But we're not in a database console, we're in the django shell. We need to use ORM codes. 
+
+ 
 ---
 <pre><code>
 <c>&num; ORM</c>
 <c>&num; ...</c>
 
-Note: To get this in the ORM.. there's no real good way. 
+Note: SO! To list all the tables in a project in the django shell!...
+
+there's no real good way. 
 
 In order to start querying model objects, you need to import the models
+
+In django, a project has multiple applications, or apps, and an app can have one or many models. 
+
+The model code is the powerhouse of django. the ORM manipulates models. A lot of the logic for a django project is going to be in the model.py of it's various applications. 
 
 But without looking at the model code, and understanding what you're looking at in order to generate the import statement, you can be at a complete loss. 
 
@@ -258,6 +302,17 @@ Thankfully, django is clever and has helpful methods you can call to generate a 
 &nbsp; &nbsp; n <r>=</r> model._meta.object_name
 &nbsp; &nbsp; <l>print</l>(<d>f'from</d> <l>{</l>l<l>}</l><d>.models import </d><l>{</l>n<l>}</l>')
 </code></pre>
+
+Note: here's some I prepared earlier
+
+We're going to import the django apps
+
+And iterate over all the apps that django knows about
+
+For each of those, we're going to get all the models
+
+and print an import statement for each
+
 ---
 $$terminal python3.6
 $$prompt ~/project
@@ -268,6 +323,8 @@ Type "help", "copyright", "credits" or "license" for more information.<br>
 (InteractiveConsole)<br>
 $$w &gt;&gt;&gt;&nbsp;  
 $$end
+
+Note: Going back to our shell
 ---
 $$terminal python3.6
 $$prompt ~/project
@@ -284,6 +341,8 @@ Type "help", "copyright", "credits" or "license" for more information.<br>
 ...&nbsp; &nbsp; print(f'from {l}.models import {n}')<br>
 $$w ...&nbsp; 
 $$end
+
+Note: for now, we're just going to dump in that code and run it 
 ---
 $$terminal python3.6
 ...&nbsp; l = app_config.label<br>
@@ -305,14 +364,28 @@ from unicodex.models import VendorVersion<br>
 from unicodex.models import Design<br>
 $$w &gt;&gt;&gt;&nbsp;  
 $$end
+
+Note: and what we get back is some generated import statements about 
+
+This output will have similarities across django projects
+
+the first few in this list are pretty standard fair; authentication, sessions, sites, admin
+
+But what we're looking for is, in a lovely happenstance, the models that match the name of the website we saw earlier -- unicodex. 
 ---
 ##= Finding all tables
 ### via the database
+
+Note: But before I go too much further, we're going to need to know the actual database tables for some of our later examples. 
+
+There is an inbuilt way to do this 
 ---
 $$terminal bash
 $$prompt ~/project
 $$w ./manage.py dbshell
 $$end
+
+Note: back in our terminal, instead of running manage.py shell, we run DB shell
 ---
 $$terminal psql
 $$prompt ~/project
@@ -322,6 +395,10 @@ Type "help" for help.<br>
 <br>
 $$w db=#&nbsp;
 $$end
+
+Note: and we get an output that will be familiar to postgres devs in the audience
+
+This particular project has a postgres backend
 ---
 $$terminal psql
 $$prompt ~/project
@@ -331,6 +408,8 @@ Type "help" for help.<br>
 <br>
 $$w db=# \dt
 $$end
+
+Note: given we know it's postgres, we cna issue the postgres list table command, and get back
 ---
 $$terminal psql
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; List of relations<br>
@@ -352,6 +431,8 @@ $$terminal psql
 &nbsp;public&nbsp;|&nbsp;unicodex_design&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;table&nbsp;|&nbsp;postgres<br>
 &nbsp;public&nbsp;|&nbsp;unicodex_vendor&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;table&nbsp;|&nbsp;postgres<br>
 &dash;&dash;More&dash;&dash;
+
+Note: all our tables. Note the usual suspects from earlier, auth, content, sites
 ---
 $$terminal psql
 &nbsp;public | aldryn_sso_aldrynclouduser | table | postgres<br>
@@ -374,14 +455,22 @@ $$terminal psql
 <br>
 $$w db=#&nbsp;
 $$end
+
+Note: but also, our own project's tables
+
+We'll take note of these for later. 
 ---
 ##= Show all table contents
+
+Note: so now that we know there are tables, we'd like to see what's inside them 
 ---
 <pre><code>
 <c>&dash;&dash; SQL</c>
 <r>SELECT * <br>&nbsp; FROM</r> <l>unicodex_codepoint;</l>
 <br><br>
 </code></pre>
+
+Note: in SQL, this would be your standard select star from table
 ---
 <pre><code>
 <c>&dash;&dash; SQL</c>
@@ -390,6 +479,10 @@ $$end
 <c>&num; ORM</c>
 Codepoint.objects.all()
 </code></pre>
+
+Note: in the oRM, this maps to Codepoint, the model, dot objects dot all
+
+Just list all of them
 ---
 $$terminal python3.6
 $$prompt ~/project
@@ -399,6 +492,7 @@ Python 3.6.3 (default, Nov  9 2017, 15:58:30)<br>
 Type "help", "copyright", "credits" or "license" for more information.<br>
 (InteractiveConsole)<br>
 $$pyw
+Note: back over in our console, before we can call Codepoint, we need to use that import statement we generated earlier
 ---
 $$terminal python3.6
 $$prompt ~/project
@@ -408,6 +502,8 @@ Python 3.6.3 (default, Nov  9 2017, 15:58:30)<br>
 Type "help", "copyright", "credits" or "license" for more information.<br>
 (InteractiveConsole)<br>
 $$pyw from unicodex.models import Codepoint
+
+Note: from unicodex dot models import codepoint
 ---
 $$terminal python3.6
 $$prompt ~/project
@@ -418,6 +514,8 @@ Type "help", "copyright", "credits" or "license" for more information.<br>
 (InteractiveConsole)<br>
 $$py from unicodex.models import Codepoint
 $$pyw 
+
+Note: after we hit enter, we'll get no output, which is good, because this was successfully imported.
 ---
 $$terminal python3.6
 $$prompt ~/project
@@ -428,6 +526,8 @@ Type "help", "copyright", "credits" or "license" for more information.<br>
 (InteractiveConsole)<br>
 $$py from unicodex.models import Codepoint
 $$pyw Codepoint.objects.all()
+
+Note: then we make our codepoint dot objects dot all call
 ---
 $$terminal python3.6
 $$prompt ~/project
@@ -441,14 +541,25 @@ $$py Codepoint.objects.all()
 &lt;QuerySet [&lt;Codepoint: Sparkles>, &lt;Codepoint: Unicorn>, &lt;Codepoint: Two Hearts>]><br>
 $$pyw
 
+Note: and we get back a queryset of objects
+
+We remember from earlier that there were sparkles, unicorns and hearts on our page, so we're getting the right data!
+
+The return value here is known as a queryset, a list of objects. QuerySets can be enacted upon further, which we'll see later.
 ---
 ##= Show specific table contents
+
+Note: now that we can see all the things, how about just some of the things
 ---
 <pre><code>
 <c>&dash;&dash; SQL</c>
 <r>SELECT * <br>&nbsp; FROM</r> <l>unicodex_codepoint c</l><br>&nbsp;<r>WHERE</r> <l>c</l>.<l>name</l> <r>=</r> 'Sparkles'; 
 <br><br>
 </code></pre>
+
+Note: the SQL would be familiar
+
+Adding a where clause for, say, sparkles
 ---
 <pre><code>
 <c>&dash;&dash; SQL</c>
@@ -457,24 +568,37 @@ $$pyw
 <c>&num; ORM</c>
 Codepoint.objects.filter(<r>name&equals;</r>'Sparkles')
 </code></pre>
+Note: this maps to the ORM as filter. where the name column is a keyword argument of filter. 
+
+
 ---
 $$terminal python3.6
 $$py from unicodex.models import Codepoint
 $$pyw Codepoint.objects.filter(name='Sparkles')
+
+Note: so in our fresh terminal, we import Codepoint
+
+Then run our filter
 ---
 $$terminal python3.6
 $$py from unicodex.models import Codepoint
 $$py Codepoint.objects.filter(name='Sparkles')
 &lt;QuerySet [&lt;Codepoint: Sparkles>]><br>
 $$pyw
+Note: and we get back a queryset with a single object: sparkles
 ---
 ##= Get specific record
+
+Note: we can also just return one specific record, instead of a queryset
 ---
 $$terminal python3.6
 $$py from unicodex.models import Codepoint
 $$py Codepoint.objects.filter(name='Sparkles')
 &lt;QuerySet [&lt;Codepoint: Sparkles>]><br>
 $$pyw Codepoint.objects.get(name='Sparkles')
+Note: so where last time we used filter
+
+This time we use get
 ---
 $$terminal python3.6
 $$py from unicodex.models import Codepoint
@@ -483,6 +607,8 @@ $$py Codepoint.objects.filter(name='Sparkles')
 $$py Codepoint.objects.get(name='Sparkles')
 &lt;Codepoint: Sparkles><br>
 $$pyw
+
+Note: and we get a single object
 ---
 $$terminal python3.6
 $$py from unicodex.models import Codepoint
@@ -491,6 +617,12 @@ $$py Codepoint.objects.filter(name='Sparkles')
 $$py Codepoint.objects.get(name='Sparkles')
 &lt;Codepoint: Sparkles><br>
 $$pyw Codepoint.objects.get()
+
+Note: a thing to note about get 
+
+Get will always return one and only one object
+
+So if you try and run get, say, without any limiatations
 ---
 $$terminal python3.6
 $$py from unicodex.models import Codepoint
@@ -507,18 +639,36 @@ Traceback (most recent call last):<br>
 &nbsp; &nbsp; (self.model._meta.object_name, num)<br>
 unicodex.models.MultipleObjectsReturned: get() returned more than one Codepoint -- it returned 3!<br>
 $$pyw
+
+Note: we get a MultipleObjectsReturned error
+
+which tells us that it would have returned three Codepoint objects, which is just far too much for get to handle. 
 ---
 ##= Joins
----
-<pre><code><c>&dash;&dash; SQL</c>
-<r>SELECT * <br>&nbsp; FROM</r> <l>unicodex_codepoint c,<br>&nbsp; &nbsp; &nbsp; &nbsp;unicodex_design d</l><br>&nbsp;<r>WHERE</r> <l>c</l>.<l>name</l> <r>&equals;</r> 'Sparkles'<BR><r>&nbsp; &nbsp;AND</r> d.codepoint_id = c.id;
----
-<pre><code><c>&dash;&dash; SQL</c>
-<r>SELECT * <br>&nbsp; FROM</r> <l>unicodex_codepoint c,<br>&nbsp; &nbsp; &nbsp; &nbsp;unicodex_design d</l><br>&nbsp;<r>WHERE</r> <l>c</l>.<l>name</l> <r>&equals;</r> 'Sparkles'<BR><r>&nbsp; &nbsp;AND</r> d.codepoint_id = c.id; 
 
-<c>&num; ORM</c>
+Note: So now we come to the fun bit. Joins
+
+Anyone who's worked with SQL for long enough will know the venn diagrams for inner joins, outer joins, left joins, right joins, and it can get a bit confusing
+
+Thankfully, especially for someone like me who has forgotten so much SQL, the ORM makes joins a joy. 
+---
+<pre><code><c>&dash;&dash; SQL</c><br><r>SELECT * <br>&nbsp; FROM</r> <l>unicodex_codepoint c,<br>&nbsp; &nbsp; &nbsp; &nbsp;unicodex_design d</l><br>&nbsp;<r>WHERE</r> <l>c</l>.<l>name</l> <r>&equals;</r> 'Sparkles'<BR><r>&nbsp; &nbsp;AND</r> d.codepoint_id = c.id;
+Note: say we want to join our design and codepoint tables
+
+A codepoint has multiple designs. Sparkles has an image that shows up in Android, Apple, Facebook, etc
+
+So we want to join on the codepoint_id on the designs table to the primary codepoint id
+
+This is a good chunk of SQL
+
+So what does the ORM equivelent look like?
+---
+<pre><code><c>&dash;&dash; SQL</c><br><r>SELECT * <br>&nbsp; FROM</r> <l>unicodex_codepoint c,<br>&nbsp; &nbsp; &nbsp; &nbsp;unicodex_design d</l><br>&nbsp;<r>WHERE</r> <l>c</l>.<l>name</l> <r>&equals;</r> 'Sparkles'<BR><r>&nbsp; &nbsp;AND</r> d.codepoint_id = c.id;<br><br><c>&num; ORM</c>
 Design.objects.filter(<o><br>&nbsp;&nbsp;&nbsp;codepoint__name&equals;</o>"Sparkles")
 </code></pre>
+Note: Design dot objects dot filter codepoint dunder name equals sparkles. 
+
+I know right?
 ---
 <pre><code><c>&dash;&dash; SQL</c>
 <r>SELECT * <br>&nbsp; FROM</r> <l>unicodex_codepoint c,<br>&nbsp; &nbsp; &nbsp; &nbsp;unicodex_design d</l><br>&nbsp;<r>WHERE</r> <l>c</l>.<l>name</l> <r>&equals;</r> 'Sparkles'<BR><r>&nbsp; &nbsp;AND</r> d.codepoint_id = c.id; 
@@ -527,6 +677,8 @@ Design.objects.filter(<o><br>&nbsp;&nbsp;&nbsp;codepoint__name&equals;</o>"Spark
 Design.objects.filter(<o><br>&nbsp;&nbsp;&nbsp;codepoint__name&equals;</o>"Sparkles")
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <c>^^</c> 
 </code></pre>
+
+Note: this doubleunderscore here is doing a lot of powerful things behind the scenes 
 ---
 <pre><code>
 <c>&num; ORM</c>
@@ -537,15 +689,28 @@ Thing.objects.filter(<o>relation__name&equals;</o>"str")
 ###- Double Underscore
 #####- <span>'*just follow the fields til you get to the one you want*'<br>- <fl>[django docs](https://docs.djangoproject.com/en/2.0/topics/db/queries/#lookups-that-span-relationships)</fl></span>
 
-Note: Django offers a powerful and intuitive way to “follow” relationships in lookups, taking care of the SQL JOINs for you automatically, behind the scenes. To span a relationship, just use the field name of related fields across models, separated by double underscores, until you get to the field you want."
+Note:
+
+The Django Documentation puts it's thusly
+
+ Django offers a powerful and intuitive way to “follow” relationships in lookups, taking care of the SQL JOINs for you automatically, behind the scenes. To span a relationship, just use the field name of related fields across models, separated by double underscores, until you get to the field you want."
+
+(click at end of read to reveal)
+
+Honestly, once you wrap your head around the basics of django, the documentation reads like a dream. It has got to be one of the best documented projects I've ever worked with. 
 ---
 $$terminal python3.6
 $$py from unicodex.models import Design
 $$pyw 
+
+Note: back to our terminal again, to execute this elegant little code snippet
+
+We import the design model this time
 ---
 $$terminal python3.6
 $$py from unicodex.models import Design
 $$pyw Design.objects.filter(codepoint__name='Sparkles')
+Note: and we run our filter
 ---
 $$terminal python3.6
 $$py from unicodex.models import Design
@@ -553,14 +718,25 @@ $$py Design.objects.filter(codepoint__name='Sparkles')
 &lt;QuerySet [&lt;Design: Sparkles Microsoft - Windows 10>, &lt;Design: Sparkles Microsoft - Windows 8.1>, &lt;Design: Sparkles Microsoft - Windows 8.0>, &lt;Design: Sparkles Facebook - 2.2>, &lt;Design: Sparkles Facebook - 1.0>, &lt;Design: Sparkles Messenger - 1.0>, &lt;Design: Sparkles Twitter - 1.0>, &lt;Design: Sparkles EmojiOne - 3.0>, &lt;Design: Sparkles EmojiOne - 2.0>, &lt;Design: Sparkles EmojiOne - 1.0>,  '...(remaining elements truncated)...']><br>
 $$pyw
 
+Note: And we get back a reeeeeeally long queryset. 
 
-Note: Truncated results are SO USEFUL
+But, the resuts are truncated for us
+
+This is so incredibly useful
+
 Data is still there, if you iterate over the list, but the print representation specificalyl doesn't flood your terminal
 ---
 <pre><code>
 <c>&num; Follow the fields</c>
 Design.objects.filter(<br> &nbsp;<o>vendorversion__vendor__name&equals;</o>"Apple")
 </code></pre>
+
+Note: depending on how our app is setup, we can follow the fields in a numner of ways
+
+In this case, we can do things like design objects filter vendorversion vendor name
+
+In our app, we have many vendors, and each of those vendors has a version. So we can store the different versions of iOS, etco
+
 ---
 <pre><code>
 <c>&num; Follow the fields</c>
@@ -569,11 +745,24 @@ Design.objects.filter(<br> &nbsp;<o>vendorversion__vendor__name&equals;</o>"Appl
 <c>&num; ... and then some </c>
 Design.objects.filter(<br> &nbsp;<o>vendorversion__vendor__name__contains&equals;</o>"App")
 </code></pre>
+
+Note: we can also end our filter in a number of field lookup keywords
+
 ---
 <pre><code>
-<c>&num; ... and then some AND </c>
-Design.objects.filter(<br> &nbsp;<o>vendorversion__vendor__name__contains&equals;</o>"App",<br>&nbsp; <o>codepoint__name__startswith&equals;</o>"Spark",<br>&nbsp; <o>image__endswith&equals;</o>"png")
+<c>&num; Follow the fields</c>
+Design.objects.filter(<br> &nbsp;<o>vendorversion__vendor__name&equals;</o>"Apple")
+
+<c>&num; ... and then some </c>
+Design.objects.filter(<br> &nbsp;<o>vendorversion__vendor__name__contains&equals;</o>"App")
+
+<c>&dash;&dash;SQL</c>
+<c>...</c><r>WHERE</r> <l>name</l> <r>LIKE</r> '%App%'
 </code></pre>
+
+
+
+Note: IN this case, contains, which is the equivelent of a like 
 ---
 <pre><code><c>&num; Field Lookups</c><table>
 <tr><td><l>contains</l></td><td><o>LIKE "%?%"</o></td></tr>
@@ -582,36 +771,76 @@ Design.objects.filter(<br> &nbsp;<o>vendorversion__vendor__name__contains&equals
 <tr><td><l>gt, ge</l></td><td><o>&gt;, &gt;=</o></td></tr>
 <tr><td><l>lt, le</l></td><td><o>&lt;, &lt;=</o></td></tr>
 <tr><td><l>isnull</l></td><td><o>NULL</o></td></tr></table><c>&num; ... and many more!</c>
-<span class="bfoot" style="margin-bottom: -170px"><fl>[docs - querysets field lookups](https://docs.djangoproject.com/en/2.0/ref/models/querysets/#field-lookups)</fl></span>
+<span class="bfoot" style="margin-bottom: -270px"><fl>[docs - querysets field lookups](https://docs.djangoproject.com/en/2.0/ref/models/querysets/#field-lookups)</fl></span>
+
+Note: some of the field looksups we can do are contains, icontains, which is case insentitive (i for insensitive)
+
+less thans, greater thans, comparsion equality, and null and more
+---
+<pre><code>
+<c>&num; ... and then some AND </c>
+Design.objects.filter(<br> &nbsp;<o>vendorversion__vendor__name__contains&equals;</o>"App",<br>&nbsp; <o>codepoint__name__startswith&equals;</o>"Spark",<br>&nbsp; <o>image__endswith&equals;</o>"png")
+</code></pre>
+Note: you can take this further, adding whatever filters you want
 ---
 ##= `OR` else
----
-##= `Q`
+Note: or else. 
 
-Note: Q
+So far we've dealt with single or chained filters, which will AND together
+
+name equals sparkles AND image ends with png AND AND AND
+
+If we want to start using OR, we need to get a bit fancy
 ---
-<pre><code><c>&dash;&dash; SQL</c><br><r>SELECT * <br>&nbsp; FROM</r> <l>unicodex_codepoint c,<br>&nbsp; &nbsp; unicodex_design d</l><br>&nbsp;<r>WHERE</r> d.codepoint_id &equals; c.id<br><l><r>&nbsp; &nbsp;AND</r> (c</l>.<l>name</l> <r>&equals;</r> 'Sparkles'<BR><l><r>&nbsp; &nbsp;&nbsp; OR</r> c</l>.<l>name</l> <r>&equals;</r> 'Unicorn')
+#= `Q`
+
+Note: This is where Q comes in
+
+No, not the race from the great Star Trek sequel, The Next Generation, 
+
+Q and in Query
+---
+<pre><code><c>&dash;&dash; SQL</c><br><r>SELECT * <br>&nbsp; FROM</r> <l>unicodex_codepoint c,<br>&nbsp;&nbsp; &nbsp; &nbsp; unicodex_design d</l><br>&nbsp;<r>WHERE</r> d.codepoint_id &equals; c.id<br><l><r>&nbsp; &nbsp;AND</r> (c</l>.<l>name</l> <r>&equals;</r> 'Sparkles'<BR><l><r>&nbsp; &nbsp;&nbsp; OR</r> c</l>.<l>name</l> <r>&equals;</r> 'Unicorn')
 </code></pre>
+Note: Let's start from the foundation we've built so far
+
+If we want to run a statement like this
+
+ 
 ---
-<pre><code><c>&dash;&dash; SQL</c><br><r>SELECT * <br>&nbsp; FROM</r> <l>unicodex_codepoint c, unicodex_design d</l><br>&nbsp;<r>WHERE</r> d.codepoint_id &equals; c.id<br><l><r>&nbsp; &nbsp;AND</r> (c</l>.<l>name</l> <r>&equals;</r> 'Sparkles'<BR><l><r>&nbsp; &nbsp;&nbsp; OR</r> c</l>.<l>name</l> <r>&equals;</r> 'Unicorn')
+<pre><code><c>&dash;&dash; SQL</c><br><r>SELECT * <br>&nbsp; FROM</r> <l>unicodex_codepoint c,<br>&nbsp;&nbsp; &nbsp; &nbsp; unicodex_design d</l><br>&nbsp;<r>WHERE</r> d.codepoint_id &equals; c.id<br><l><r>&nbsp; &nbsp;AND</r> (c</l>.<l>name</l> <r>&equals;</r> 'Sparkles'<BR><l><r>&nbsp; &nbsp;&nbsp; OR</r> c</l>.<l>name</l> <r>&equals;</r> 'Unicorn')
 <c>&num; ORM</c>
 <c>&num; ...</c>
+Note: the ORM code, instead of giving it out straight away, we're going to build up
 ---
 $$terminal python3.6
 $$pyw
+Note: start with a fresh shell
 ---
 $$terminal python3.6
 $$pyw from unicodex.models import Design
+Note: we're dealing with design objects, so we import that
 ---
 $$terminal python3.6
 $$py from unicodex.models import Design
 $$pyw
+Note: okay good
+
+so we wanted to filter by name equals sparkles and name equals unicorn
 ---
 $$terminal python3.6
 $$py from unicodex.models import Design
 $$py Design.objects.filter(
 ... &nbsp; codepoint&#95;&#95;name='Sparkles', <br>
 ... &nbsp; codepoint&#95;&#95;name='Unicorn')<w>&nbsp;</w>
+Note: so we write that in ORM
+
+designs dot objects dot filter
+
+codepoint name equals sparkles
+codepoint name equals unicorn
+
+press enter and
 ---
 $$terminal python3.6
 $$py from unicodex.models import Design
@@ -621,6 +850,15 @@ $$py Design.objects.filter(
 &nbsp; File "&lt;console>", line 3<br>
 SyntaxError: keyword argument repeated<br>
 $$pyw
+Note: Sad trombone
+
+We have a syntax error, keywork argument repeated
+
+This isn't a django error, this is a python error
+
+we can use name twice in keyword arguments. It's against the rules of Python
+
+So we 
 ---
 $$terminal python3.6
 $$py from unicodex.models import Design
