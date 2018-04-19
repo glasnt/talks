@@ -1,4 +1,5 @@
 img.e { width: 40px} 
+img { margin: 10px !important; }
 div.big {
 	font-size: 120px;
 }
