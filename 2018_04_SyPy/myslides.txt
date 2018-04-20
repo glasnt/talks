@@ -625,6 +625,8 @@ Note: a thing to note about get
 
 Get will always return one and only one object
 
+THERE CAN BE ONLY ONE
+
 So if you try and run get, say, without any limiatations
 ---
 $$terminal python3.6
@@ -667,7 +669,7 @@ This is a good chunk of SQL
 So what does the ORM equivelent look like?
 ---
 <pre><code><c>&dash;&dash; SQL</c><br><r>SELECT * <br>&nbsp; FROM</r> <l>unicodex_codepoint c,<br>&nbsp; &nbsp; &nbsp; &nbsp;unicodex_design d</l><br>&nbsp;<r>WHERE</r> <l>c</l>.<l>name</l> <r>&equals;</r> 'Sparkles'<BR><r>&nbsp; &nbsp;AND</r> d.codepoint_id = c.id;<br><br><c>&num; ORM</c>
-Design.objects.filter(<o><br>&nbsp;&nbsp;&nbsp;codepoint__name&equals;</o>"Sparkles")
+Design.objects.filter(<o><br>&nbsp;&nbsp;&nbsp;codepoint__name&equals;</o>'Sparkles')
 </code></pre>
 Note: Design dot objects dot filter codepoint dunder name equals sparkles. 
 
@@ -677,7 +679,7 @@ I know right?
 <r>SELECT * <br>&nbsp; FROM</r> <l>unicodex_codepoint c,<br>&nbsp; &nbsp; &nbsp; &nbsp;unicodex_design d</l><br>&nbsp;<r>WHERE</r> <l>c</l>.<l>name</l> <r>&equals;</r> 'Sparkles'<BR><r>&nbsp; &nbsp;AND</r> d.codepoint_id = c.id; 
 
 <c>&num; ORM</c>
-Design.objects.filter(<o><br>&nbsp;&nbsp;&nbsp;codepoint__name&equals;</o>"Sparkles")
+Design.objects.filter(<o><br>&nbsp;&nbsp;&nbsp;codepoint__name&equals;</o>'Sparkles')
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <c>^^</c> 
 </code></pre>
 
@@ -923,13 +925,13 @@ Well, it no longer syntax errors.
 
 ---
 <pre><code><r>from</r> django.db.models <r>import</r> Q
-<br>Design.objects.filter(<br>&nbsp; &nbsp;Q(<o>codepoint_&#95;name</o>&equals;'Unicorn'),<br>&nbsp; &nbsp;Q(<o>codepoint&#95;_name&equals;</o>"Sparkles")<br>)
+<br>Design.objects.filter(<br>&nbsp; &nbsp;Q(<o>codepoint_&#95;name</o>&equals;'Unicorn'),<br>&nbsp; &nbsp;Q(<o>codepoint&#95;_name&equals;</o>'Sparkles')<br>)
 <c># Unicorn and Sparkles?</c>
 Note: 
 But, we were asking for codepoints that were called both Sparkles and Unicorns. Sadly no emoji like that exists. (yet)
 ---
 <pre><code><r>from</r> django.db.models <r>import</r> Q
-<br>Design.objects.filter(<br>&nbsp; &nbsp;Q(<o>codepoint_&#95;name</o>&equals;'Unicorn')<br>&nbsp;| Q(<o>codepoint&#95;_name&equals;</o>"Sparkles")<br>)
+<br>Design.objects.filter(<br>&nbsp; &nbsp;Q(<o>codepoint_&#95;name</o>&equals;'Unicorn')<br>&nbsp;| Q(<o>codepoint&#95;_name&equals;</o>'Sparkles')<br>)
 <c># Unicorn OR Sparkles!</c>
 Note: 
 What we want to search for is code points named Sparkles OR unicorn
