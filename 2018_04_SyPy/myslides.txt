@@ -189,35 +189,7 @@ Note: it shows you the emoji from different vendors and the versions.
 So given this website exists, we can start poking around in the shell
 ---
 ##= "Just use the shell"
-
-Note: The shell in this case doesn't refer to what we would normally call a shell
----
-$$terminal bash
-$$prompt ~
-$$end
-
-Note: this is a shell. Also known as a command line, a terminal, a hacker portal, and the like. 
-
-When we talk about the django shell, we mean a specific thing
----
-$$terminal bash
-$$prompt ~
-$$w cd project
-$$end
-
-Note: First, we need to go to where we have the code on disk
-
-For the purposes of expediency I'll assume that we cloned our repo the same time we were given our standard issue bug catching net
-
----
-$$terminal bash
-$$prompt ~
-cd project<br>
-$$prompt ~/project
-$$w
-$$end
-
-Note: so we navigate to the project
+Note: what they mean here is the django shell
 ---
 $$terminal bash
 $$prompt ~
@@ -226,7 +198,7 @@ $$prompt ~/project
 $$w ./manage.py shell
 $$end
 
-Note: and then we run manage dot py shell
+Note: which is available using the manage.py shell command
 ---
 $$terminal python3.6
 $$prompt ~
@@ -240,12 +212,13 @@ Type "help", "copyright", "credits" or "license" for more information.<br>
 $$w &gt;&gt;&gt;&nbsp;  
 $$end
 
-Note: assuming that with our standard issue net we also installed our packages and whatnot, we get this interface 
+Note:
 
-It shows us a few helpful versions of things, and it gives us, as it says an interactive console.
+Here, we're presented with an interactive console
 
-What's happened here is we've been presented with an environment that is setup to accept code within a django context
+All shell is is a python environment where the django environment path has been loaded. 
 
+From here you can interact with your django projet directly.
 
 ---
 ##= "But, how do I use the shell?"
@@ -257,8 +230,7 @@ First things first. For an SQL dev, the first thing they normally do in a foreig
 ---
 ##= Finding all tables
 ---
-<pre><code>
-<c>&dash;&dash; MySQL</c>
+<pre><code><c>&dash;&dash; MySQL</c>
 show tables
 
 <c>&dash;&dash; PostgreSQL</c>
@@ -276,8 +248,7 @@ But we're not in a database console, we're in the django shell. We need to use O
 
  
 ---
-<pre><code>
-<c>&num; ORM</c>
+<pre><code><c>&num; ORM</c>
 <c>&num; ...</c>
 
 Note: SO! To list all the tables in a project in the django shell!...
@@ -289,13 +260,11 @@ In order to start querying model objects, you need to import the models
 In django, a project has multiple applications, or apps, and an app can have one or many models. 
 
 The model code is the powerhouse of django. the ORM manipulates models. A lot of the logic for a django project is going to be in the model.py of it's various applications. 
-
 But without looking at the model code, and understanding what you're looking at in order to generate the import statement, you can be at a complete loss. 
 
 Thankfully, django is clever and has helpful methods you can call to generate a list of imports for all the models in the project
 ---
-<pre><code>
-<c># Generate import statements</c>
+<pre><code><c># Generate import statements</c>
 <r>from</r> django.apps <r>import</r> apps
 &nbsp;
 <r>for</r> app_config <r>in</r> apps.get_app_configs():
@@ -375,12 +344,153 @@ the first few in this list are pretty standard fair; authentication, sessions, s
 
 But what we're looking for is, in a lovely happenstance, the models that match the name of the website we saw earlier -- unicodex. 
 ---
+
+##= Finding the table for a model
+---
+<pre><code><c># ORM</c>
+Codepoint._meta.db_table
+</code></pre>
+---
+$$terminal python3.6
+...&nbsp; l = app_config.label<br>
+...&nbsp; for model in app_config.get_models():<br>
+...&nbsp; &nbsp; n = model._meta.object_name<br>
+...&nbsp; &nbsp; print(f'from {l}.models import {n}')<br>
+...&nbsp;<br> 
+from auth.models import Permission<br>
+from auth.models import Group<br>
+from auth.models import User<br>
+from contenttypes.models import ContentType<br>
+from sessions.models import Session<br>
+from sites.models import Site<br>
+from aldryn_sso.models import AldrynCloudUser<br>
+from admin.models import LogEntry<br>
+from unicodex.models import Codepoint<br>
+from unicodex.models import Vendor<br>
+from unicodex.models import VendorVersion<br>
+from unicodex.models import Design<br>
+$$w &gt;&gt;&gt;&nbsp;  
+$$end
+
+---
+$$terminal python3.6
+...&nbsp; l = app_config.label<br>
+...&nbsp; for model in app_config.get_models():<br>
+...&nbsp; &nbsp; n = model._meta.object_name<br>
+...&nbsp; &nbsp; print(f'from {l}.models import {n}')<br>
+...&nbsp;<br> 
+from auth.models import Permission<br>
+from auth.models import Group<br>
+from auth.models import User<br>
+from contenttypes.models import ContentType<br>
+from sessions.models import Session<br>
+from sites.models import Site<br>
+from aldryn_sso.models import AldrynCloudUser<br>
+from admin.models import LogEntry<br>
+from unicodex.models import Codepoint<br>
+from unicodex.models import Vendor<br>
+from unicodex.models import VendorVersion<br>
+from unicodex.models import Design<br>
+$$pyw Codepoint._meta.db_table
+$$end
+---
+$$terminal python3.6
+...&nbsp; &nbsp; n = model._meta.object_name<br>
+...&nbsp; &nbsp; print(f'from {l}.models import {n}')<br>
+...&nbsp;<br> 
+from auth.models import Permission<br>
+from auth.models import Group<br>
+from auth.models import User<br>
+from contenttypes.models import ContentType<br>
+from sessions.models import Session<br>
+from sites.models import Site<br>
+from aldryn_sso.models import AldrynCloudUser<br>
+from admin.models import LogEntry<br>
+from unicodex.models import Codepoint<br>
+from unicodex.models import Vendor<br>
+from unicodex.models import VendorVersion<br>
+from unicodex.models import Design<br>
+$$py Codepoint._meta.db_table
+'unicodex_copdepoint'<br>
+$$pyw
+$$end
+
+---
+##= Showing all table columns
+---
+<pre><code><c># ORM</c>
+Codepoint._meta.get_fields()
+---
+$$terminal python3.6
+...&nbsp; &nbsp; n = model._meta.object_name<br>
+...&nbsp; &nbsp; print(f'from {l}.models import {n}')<br>
+...&nbsp;<br> 
+from auth.models import Permission<br>
+from auth.models import Group<br>
+from auth.models import User<br>
+from contenttypes.models import ContentType<br>
+from sessions.models import Session<br>
+from sites.models import Site<br>
+from aldryn_sso.models import AldrynCloudUser<br>
+from admin.models import LogEntry<br>
+from unicodex.models import Codepoint<br>
+from unicodex.models import Vendor<br>
+from unicodex.models import VendorVersion<br>
+from unicodex.models import Design<br>
+$$py Codepoint._meta.db_table
+'unicodex_copdepoint'<br>
+$$pyw
+$$end
+---
+
+$$terminal python3.6
+...&nbsp; &nbsp; n = model._meta.object_name<br>
+...&nbsp; &nbsp; print(f'from {l}.models import {n}')<br>
+...&nbsp;<br> 
+from auth.models import Permission<br>
+from auth.models import Group<br>
+from auth.models import User<br>
+from contenttypes.models import ContentType<br>
+from sessions.models import Session<br>
+from sites.models import Site<br>
+from aldryn_sso.models import AldrynCloudUser<br>
+from admin.models import LogEntry<br>
+from unicodex.models import Codepoint<br>
+from unicodex.models import Vendor<br>
+from unicodex.models import VendorVersion<br>
+from unicodex.models import Design<br>
+$$py Codepoint._meta.db_table
+'unicodex_copdepoint'<br>
+$$pyw Codepoint.meta.get_fields()
+$$end
+---
+$$terminal python3.6
+...&nbsp;<br> 
+from sessions.models import Session<br>
+from sites.models import Site<br>
+from aldryn_sso.models import AldrynCloudUser<br>
+from admin.models import LogEntry<br>
+from unicodex.models import Codepoint<br>
+from unicodex.models import Vendor<br>
+from unicodex.models import VendorVersion<br>
+from unicodex.models import Design<br>
+$$py Codepoint._meta.db_table
+'unicodex_copdepoint'<br>
+$$py Codepoint.meta.get_fields()
+(&lt;ManyToOneRel: unicodex.design>, <br>
+&lt;django.db.models.fields.AutoField: id>, <br>
+&lt;django.db.models.fields.CharField: name>, <br>
+&lt;django.db.models.fields.TextField: description>,<br> 
+&lt;django.db.models.fields.CharField: codepoint>)<br>
+$$pyw
+$$end
+---
 ##= Finding all tables
 ### via the database
 
-Note: But before I go too much further, we're going to need to know the actual database tables for some of our later examples. 
+Note: We can find all this information directly via the database, 
 
-There is an inbuilt way to do this 
+and django provides an easy way to get there
 ---
 $$terminal bash
 $$prompt ~/project
@@ -547,7 +657,11 @@ Note: and we get back a queryset of objects
 
 We remember from earlier that there were sparkles, unicorns and hearts on our page, so we're getting the right data!
 
-The return value here is known as a queryset, a list of objects. QuerySets can be enacted upon further, which we'll see later.
+The return value here is known as a queryset, an unordered objects. QuerySets can be enacted upon further, which we'll see later.
+
+
+**Query set is not a list**
+
 ---
 ##= Show specific table contents
 
@@ -685,14 +799,8 @@ Design.objects.filter(<o><br>&nbsp;&nbsp;&nbsp;codepoint__name&equals;</o>'Spark
 
 Note: this doubleunderscore here is doing a lot of powerful things behind the scenes 
 ---
-<pre><code>
-<c>&num; ORM</c>
-Thing.objects.filter(<o>relation__name&equals;</o>"str")
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <c>^^</c> 
-</code></pre>
-
-###- Double Underscore
-#####- <span>'*just follow the fields til you get to the one you want*'<br>- <fl>[django docs](https://docs.djangoproject.com/en/2.0/topics/db/queries/#lookups-that-span-relationships)</fl></span>
+###= Double Underscore
+##### <span>'*just follow the fields til you get to the one you want*'<br>- <fl>[django docs](https://docs.djangoproject.com/en/2.0/topics/db/queries/#lookups-that-span-relationships)</fl></span>
 
 Note:
 
@@ -1154,7 +1262,7 @@ If I've caught your interest in the power of this part of django, you can learn 
 ---
 ##= Creating objects
 ## Field Types
-## Field Releationships
+## Field Relationships
 
 Note: How to create objects, including from raw SQL
 
