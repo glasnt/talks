@@ -783,34 +783,24 @@ This is a good chunk of SQL
 So what does the ORM equivelent look like?
 ---
 <pre><code><c>&dash;&dash; SQL</c><br><r>SELECT * <br>&nbsp; FROM</r> <l>unicodex_codepoint c,<br>&nbsp; &nbsp; &nbsp; &nbsp;unicodex_design d</l><br>&nbsp;<r>WHERE</r> <l>c</l>.<l>name</l> <r>&equals;</r> 'Sparkles'<BR><r>&nbsp; &nbsp;AND</r> d.codepoint_id = c.id;<br><br><c>&num; ORM</c>
-Design.objects.filter(<o><br>&nbsp;&nbsp;&nbsp;codepoint__name&equals;</o>'Sparkles')
+Design.objects.filter(<o><br>&nbsp;&nbsp;&nbsp;codepointname&equals;</o>'Sparkles')
 </code></pre>
 Note: Design dot objects dot filter codepoint dunder name equals sparkles. 
 
-I know right?
+I know right? so simple!
 ---
 <pre><code><c>&dash;&dash; SQL</c>
 <r>SELECT * <br>&nbsp; FROM</r> <l>unicodex_codepoint c,<br>&nbsp; &nbsp; &nbsp; &nbsp;unicodex_design d</l><br>&nbsp;<r>WHERE</r> <l>c</l>.<l>name</l> <r>&equals;</r> 'Sparkles'<BR><r>&nbsp; &nbsp;AND</r> d.codepoint_id = c.id; 
 
 <c>&num; ORM</c>
-Design.objects.filter(<o><br>&nbsp;&nbsp;&nbsp;codepoint__name&equals;</o>'Sparkles')
+Design.objects.filter(<o><br>&nbsp;&nbsp;&nbsp;codepointname&equals;</o>'Sparkles')
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <c>^^</c> 
 </code></pre>
 
 Note: this doubleunderscore here is doing a lot of powerful things behind the scenes 
----
-###= Double Underscore
-##### <span>'*just follow the fields til you get to the one you want*'<br>- <fl>[django docs](https://docs.djangoproject.com/en/2.0/topics/db/queries/#lookups-that-span-relationships)</fl></span>
 
-Note:
+which I'll explain more in a moment. 
 
-The Django Documentation puts it's thusly
-
- Django offers a powerful and intuitive way to “follow” relationships in lookups, taking care of the SQL JOINs for you automatically, behind the scenes. To span a relationship, just use the field name of related fields across models, separated by double underscores, until you get to the field you want."
-
-(click at end of read to reveal)
-
-Honestly, once you wrap your head around the basics of django, the documentation reads like a dream. It has got to be one of the best documented projects I've ever worked with. 
 ---
 $$terminal python3.6
 $$py from unicodex.models import Design
@@ -822,12 +812,12 @@ We import the design model this time
 ---
 $$terminal python3.6
 $$py from unicodex.models import Design
-$$pyw Design.objects.filter(codepoint__name='Sparkles')
+$$pyw Design.objects.filter(codepointname='Sparkles')
 Note: and we run our filter
 ---
 $$terminal python3.6
 $$py from unicodex.models import Design
-$$py Design.objects.filter(codepoint__name='Sparkles')
+$$py Design.objects.filter(codepointname='Sparkles')
 &lt;QuerySet [&lt;Design: Sparkles Microsoft - Windows 10>, &lt;Design: Sparkles Microsoft - Windows 8.1>, &lt;Design: Sparkles Microsoft - Windows 8.0>, &lt;Design: Sparkles Facebook - 2.2>, &lt;Design: Sparkles Facebook - 1.0>, &lt;Design: Sparkles Messenger - 1.0>, &lt;Design: Sparkles Twitter - 1.0>, &lt;Design: Sparkles EmojiOne - 3.0>, &lt;Design: Sparkles EmojiOne - 2.0>, &lt;Design: Sparkles EmojiOne - 1.0>,  '...(remaining elements truncated)...']><br>
 $$pyw
 
@@ -841,43 +831,158 @@ Data is still there, if you iterate over the list, but the print representation 
 
 (this was implemented because of a very real bug at Lawrance Journal World, where they had servers keep crashing, because the debug page was trying to be helpful and show all the data... a million objects worth..)
 ---
-<pre><code>
-<c>&num; Follow the fields</c>
-Design.objects.filter(<br> &nbsp;<o>vendorversion__vendor__name&equals;</o>"Apple")
-</code></pre>
+<pre><code><c>&num; ORM</c>
+Design.objects.filter(<o><br>&nbsp;&nbsp;&nbsp;codepointname&equals;</o>'Sparkles')
 
-Note: depending on how our app is setup, we can follow the fields in a numner of ways
+<c>&num; field, field, field... lookup</c>
 
-In this case, we can do things like design objects filter vendorversion vendor name
+Note: what we have here is one or more fields and then a lookup, all separated by double underscores
 
-In our app, we have many vendors, and each of those vendors has a version. So we can store the different versions of iOS, etco
+A lookup as an operation on that field
+
+If you remember back when we looked up the fields on a model, we know what options we have here. 
+---
+$$terminal python3.6
+$$py from unicodex.models import Design
+$$pyw Design._meta.get_fields()
+---
+$$terminal python3.6
+$$py from unicodex.models import Design
+$$py Design._meta.get_fields()
+(&lt;django.db.models.fields.AutoField: id>,<br> 
+&lt;django.db.models.fields.related.ForeignKey: vendorversion>, <br>
+&lt;django.db.models.fields.related.ForeignKey: codepoint>, <br>
+&lt;django.db.models.fields.files.FileField: image>)<br>
+$$pyw
+
+Note: we have four fields - a unique id, two foreign keys off to other models, and image
 
 ---
-<pre><code>
-<c>&num; Follow the fields</c>
-Design.objects.filter(<br> &nbsp;<o>vendorversion__vendor__name&equals;</o>"Apple")
+$$terminal python3.6
+$$py from unicodex.models import Design
+$$py Design._meta.get_fields()
+(&lt;django.db.models.fields.AutoField: id>,<br> 
+&lt;django.db.models.fields.related.ForeignKey: vendorversion>, <br>
+&lt;django.db.models.fields.related.ForeignKey: codepoint>, <br>
+&lt;django.db.models.fields.files.FileField: image>)<br>
+$$pyw Design.objects.filter(codepointname=&equals;'Sparkles')
 
-<c>&num; ... and then some </c>
-Design.objects.filter(<br> &nbsp;<o>vendorversion__vendor__name__contains&equals;</o>"App")
-</code></pre>
 
-Note: we can also end our filter in a number of field lookup keywords
+Note: You'll also note in our example that we end on a field.
+
+By default the look up is an exact match on the string. So effectively, name equals sparkles 
 
 ---
-<pre><code>
-<c>&num; Follow the fields</c>
-Design.objects.filter(<br> &nbsp;<o>vendorversion__vendor__name&equals;</o>"Apple")
+$$terminal python3.6
+$$py from unicodex.models import Design
+$$py Design._meta.get_fields()
+(&lt;django.db.models.fields.AutoField: id>,<br> 
+&lt;django.db.models.fields.related.ForeignKey: vendorversion>, <br>
+&lt;django.db.models.fields.related.ForeignKey: codepoint>, <br>
+&lt;django.db.models.fields.files.FileField: image>)<br>
+$$pyw Design.objects.filter(codepointname__contains=&equals;'Spark')
+Note: we could also search for substrings in the field, with contains
 
-<c>&num; ... and then some </c>
-Design.objects.filter(<br> &nbsp;<o>vendorversion__vendor__name__contains&equals;</o>"App")
+We can also forge a path down a different series of foreign keys
 
-<c>&dash;&dash;SQL</c>
-<c>...</c><r>WHERE</r> <l>name</l> <r>LIKE</r> '%App%'
-</code></pre>
+See the vendorversion there? Let's see what that contains
+---
+
+$$terminal python3.6
+$$py from unicodex.models import VendorVersion
+$$pyw VendorVersion._meta.get_fields()
 
 
+Note: let's refresh our terminal and inspect VendorVersion
 
-Note: IN this case, contains, which is the equivelent of a like 
+---
+$$terminal python3.6
+$$py from unicodex.models import VendorVersion
+$$py VendorVersion._meta.get_fields()
+(&lt;ManyToOneRel: unicodex.design>,<br> 
+&lt;django.db.models.fields.AutoField: id>, <br>
+&lt;django.db.models.fields.CharField: name>, <br>
+&lt;django.db.models.fields.related.ForeignKey: vendor>)<br>
+$$pyw
+
+Note: Okay, so a vendorversion has many designs, an ID, a name, and a Vendor FK
+
+What about Vendor?
+---
+ 
+$$terminal python3.6
+$$py from unicodex.models import Vendor
+$$pyw Vendor._meta.get_fields()
+
+
+Note: clear our terminal, import Vendor, and check
+
+---
+$$terminal python3.6
+$$py from unicodex.models import Vendor
+$$py Vendor._meta.get_fields()
+(&lt;ManyToOneRel: unicodex.vendorversion>, <br>
+&lt;django.db.models.fields.AutoField: id>, <br>
+&lt;django.db.models.fields.CharField: name>) <br>
+$$pyw
+
+Note: so vendor has a relationship with vendorversion, an id and a name too
+
+And thus, we have exhausted our search, and we could build up a UML diagram showing the relationships between all the tables in this app
+
+But I woldn't do that too you. 
+
+Back to what we were doing, showing filter walks
+
+---
+
+$$terminal python3.6
+$$pyw Design.objects.filter(
+
+Note: we have a number of options here. Let's build the longest chain we can...
+
+---
+$$terminal python3.6
+$$pyw Design.objects.filter(vendorversion
+
+Note: Let's filter design objects where... the linked vendor version
+
+---
+
+$$terminal python3.6
+$$pyw Design.objects.filter(vendorversion&#95;&#95;vendor
+
+
+Note: and the vendor linked to that....
+
+---
+$$terminal python3.6
+$$pyw Design.objects.filter(vendorversion&#95;&#95;vendor&#95;&#95;name
+
+Note: the name of that vendor
+
+---
+
+
+$$terminal python3.6
+$$pyw Design.objects.filter(vendorversion&#95;&#95;vendor&#95;&#95;name&#95;&#95;contains=
+
+Note: contains...
+---
+
+$$terminal python3.6
+$$pyw Design.objects.filter(vendorversion&#95;&#95;vendor&#95;&#95;name&#95;&#95;contains="Micro")
+
+Note: the string Micro
+---
+
+$$terminal python3.6
+$$pyw Design.objects.filter(vendorversion&#95;&#95;vendor&#95;&#95;name&#95;&#95;contains="Micro")
+&lt;QuerySet [&lt;Design: Sparkles Microsoft - Windows 8.0>, &lt;Design: Two Hearts Microsoft - Windows 8.0>, &lt;Design: Sparkles Microsoft - Windows 8.1>, &lt;Design: Two Hearts Microsoft - Windows 8.1>, &lt;Design: Sparkles Microsoft - Windows 10>, &lt;Design: Two Hearts Microsoft - Windows 10>]><br>
+$$pyw
+
+Note: And thus, we get a of all designs where the name of the linked vendor contains Micro
+
 ---
 <pre><code><c>&num; Field Lookups</c><table>
 <tr><td><l>contains</l></td><td><o>LIKE "%?%"</o></td></tr>
@@ -888,15 +993,48 @@ Note: IN this case, contains, which is the equivelent of a like
 <tr><td><l>isnull</l></td><td><o>NULL</o></td></tr></table><c>&num; ... and many more!</c>
 <span class="bfoot" style="margin-bottom: -270px"><fl>[docs - querysets field lookups](https://docs.djangoproject.com/en/2.0/ref/models/querysets/#field-lookups)</fl></span>
 
-Note: some of the field looksups we can do are contains, icontains, which is case insentitive (i for insensitive)
+Note: There are other field lookups we can use for a number of differnt things. 
 
-less thans, greater thans, comparsion equality, and null and more
+We're also not just limited to one filter, we can have more than one
 ---
-<pre><code><br><c>&num; ... and then some AND </c>
-Design.objects.filter(<br> &nbsp;<o>vendorversion__vendor__name__contains&equals;</o>"App",<br>&nbsp; <o>codepoint__name__startswith&equals;</o>"Spark",<br>&nbsp; <o>image__endswith&equals;</o>"png")
-</code></pre>
 
-Note: you can take this further, adding whatever filters you want
+$$terminal python3.6
+$$pyw Design.objects.filter(vendorversion&#95;&#95;vendor&#95;&#95;name&#95;&#95;contains="Micro"
+
+Note: instead of just filtering on Micro, we could alos
+---
+$$terminal python3.6
+$$py Design.objects.filter(vendorversion&#95;&#95;vendor&#95;&#95;name&#95;&#95;contains="Micro",
+$$pdw &nbsp;&nbsp; 
+---
+$$terminal python3.6
+$$py Design.objects.filter(vendorversion&#95;&#95;vendor&#95;&#95;name&#95;&#95;contains="Micro", 
+$$pdw &nbsp; codepoint 
+
+---
+$$terminal python3.6
+$$py Design.objects.filter(vendorversion&#95;&#95;vendor&#95;&#95;name&#95;&#95;contains="Micro", 
+$$pdw &nbsp; codepoint&#95;&#95;name
+
+
+---
+$$terminal python3.6
+$$py Design.objects.filter(vendorversion&#95;&#95;vendor&#95;&#95;name&#95;&#95;contains="Micro", 
+$$pdw &nbsp; codepoint&#95;&#95;name&#95;&#95;contains 
+
+---
+$$terminal python3.6
+$$py Design.objects.filter(vendorversion&#95;&#95;vendor&#95;&#95;name&#95;&#95;contains="Micro", 
+$$pdw &nbsp; codepoint&#95;&#95;name&#95;&#95;contains="Heart") 
+
+
+---
+$$terminal python3.6
+$$py Design.objects.filter(vendorversion&#95;&#95;vendor&#95;&#95;name&#95;&#95;contains="Micro", 
+$$pd &nbsp; codepoint&#95;&#95;name&#95;&#95;contains="Heart") 
+&lt;QuerySet [&lt;Design: Two Hearts Microsoft - Windows 10>, &lt;Design: Two Hearts Microsoft - Windows 8.1>, &lt;Design: Two Hearts Microsoft - Windows 8.0>]><br>
+$$pyw
+
 ---
 ##= `OR` else
 Note: or else. 
