@@ -152,12 +152,19 @@ It's also not helpful for the way that I came into Django; trying to fix an exis
 
 So for the purposes of this, we're going to use an existing project
 ---
- <!-- .slide: data-background-image="pictures/legacy_explorer.png"-->
-Note: we're going to go bug hunting
+ <!-- .slide: data-background-image="pictures/hunterbird.jpg"-->
 
-So let's grab our butterfly net, our best bug chasing dress, and dive in
+Note: 
+
+
+we're going to go bug hunting
+
+We're going to find outselves an existing project, in this case, a field of kale, and hunt about trying to find some delicious bugs. We may not find any, but we can poke around and see what we find.
+
 
 TODO pending Recompiler release
+legacy_explorer.png 
+So let's grab our butterfly net, our best bug chasing dress, and dive in
 ---
 # Context <!-- .slide: class="center" -->
 
@@ -196,7 +203,6 @@ Note: what they mean here is the django shell
 cd project<br>
  <ps>myrtle</ps> <dr>~/project $</dr> 
  ./manage.py shell<w>&nbsp;</w>
- </p></p></div>
 
 Note: which is available using the manage.py shell command
 ---
@@ -210,7 +216,6 @@ Python 3.6.3 (default, Nov 9 2017, 15:58:30)<br>
 Type "help", "copyright", "credits" or "license" for more information.<br>
 (InteractiveConsole)<br> 
  &gt;&gt;&gt;&nbsp;<w>&nbsp;</w>
- </p></p></div>
 
 Note: 
 
@@ -293,7 +298,6 @@ Python 3.6.3 (default, Nov 9 2017, 15:58:30)<br>
 Type "help", "copyright", "credits" or "license" for more information.<br>
 (InteractiveConsole)<br> 
  &gt;&gt;&gt;&nbsp;<w>&nbsp;</w>
- </p></p></div>
 
 Note: Going back to our shell
 ---
@@ -311,7 +315,6 @@ Type "help", "copyright", "credits" or "license" for more information.<br>
 ...&nbsp; &nbsp; n = model._meta.object_name<br>
 ...&nbsp; &nbsp; print(f'from {l}.models import {n}')<br>
  ...&nbsp;<w>&nbsp;</w>
- </p></p></div>
 
 Note: for now, we're just going to dump in that code and run it
 ---
@@ -334,7 +337,6 @@ from unicodex.models import Vendor<br>
 from unicodex.models import VendorVersion<br>
 from unicodex.models import Design<br>
  &gt;&gt;&gt;&nbsp;<w>&nbsp;</w>
- </p></p></div>
 
 Note: and what we get back is some generated import statements about
 
@@ -347,135 +349,67 @@ But what we're looking for is, in a lovely happenstance, the models that match t
 
 ## Finding the table for a model <!-- .slide: class="center" -->
 ---
-<pre><code><c># ORM</c>
+<pre><code> 
+<c># ORM</c>
 Codepoint._meta.db_table 
 </code></pre> 
 ---
  <div class="shell-wrap"><p class="shell-top-bar">python3.6</p><p class="shell-body">
-...&nbsp; l = app_config.label<br>
-...&nbsp; for model in app_config.get_models():<br>
-...&nbsp; &nbsp; n = model._meta.object_name<br>
-...&nbsp; &nbsp; print(f'from {l}.models import {n}')<br>
-...&nbsp;<br> 
-from auth.models import Permission<br>
-from auth.models import Group<br>
-from auth.models import User<br>
-from contenttypes.models import ContentType<br>
-from sessions.models import Session<br>
-from sites.models import Site<br>
-from aldryn_sso.models import AldrynCloudUser<br>
-from admin.models import LogEntry<br>
-from unicodex.models import Codepoint<br>
-from unicodex.models import Vendor<br>
-from unicodex.models import VendorVersion<br>
-from unicodex.models import Design<br>
- &gt;&gt;&gt;&nbsp;<w>&nbsp;</w>
- </p></p></div>
-
----
- <div class="shell-wrap"><p class="shell-top-bar">python3.6</p><p class="shell-body">
-...&nbsp; l = app_config.label<br>
-...&nbsp; for model in app_config.get_models():<br>
-...&nbsp; &nbsp; n = model._meta.object_name<br>
-...&nbsp; &nbsp; print(f'from {l}.models import {n}')<br>
-...&nbsp;<br> 
-from auth.models import Permission<br>
-from auth.models import Group<br>
-from auth.models import User<br>
-from contenttypes.models import ContentType<br>
-from sessions.models import Session<br>
-from sites.models import Site<br>
-from aldryn_sso.models import AldrynCloudUser<br>
-from admin.models import LogEntry<br>
-from unicodex.models import Codepoint<br>
-from unicodex.models import Vendor<br>
-from unicodex.models import VendorVersion<br>
-from unicodex.models import Design<br>
- &gt;&gt;&gt; Codepoint._meta.db_table<w>&nbsp;</w>
- </p></p></div>
----
- <div class="shell-wrap"><p class="shell-top-bar">python3.6</p><p class="shell-body">
-...&nbsp; &nbsp; n = model._meta.object_name<br>
-...&nbsp; &nbsp; print(f'from {l}.models import {n}')<br>
-...&nbsp;<br> 
-from auth.models import Permission<br>
-from auth.models import Group<br>
-from auth.models import User<br>
-from contenttypes.models import ContentType<br>
-from sessions.models import Session<br>
-from sites.models import Site<br>
-from aldryn_sso.models import AldrynCloudUser<br>
-from admin.models import LogEntry<br>
-from unicodex.models import Codepoint<br>
-from unicodex.models import Vendor<br>
-from unicodex.models import VendorVersion<br>
-from unicodex.models import Design<br>
- &gt;&gt;&gt; Codepoint._meta.db_table<br>
-'unicodex_copdepoint'<br> 
+ <ps>myrtle</ps> <dr>~/project $</dr> 
+./manage.py shell<br>
+Python 3.6.3 (default, Nov 9 2017, 15:58:30)<br>
+[GCC 4.2.1 Compatible Apple LLVM 9.0.0 (clang-900.0.38)] on darwin<br>
+Type "help", "copyright", "credits" or "license" for more information.<br>
+(InteractiveConsole)<br> 
  &gt;&gt;&gt; <w>&nbsp;</w>
- </p></p></div>
+---
+ <div class="shell-wrap"><p class="shell-top-bar">python3.6</p><p class="shell-body">
+ <ps>myrtle</ps> <dr>~/project $</dr> 
+./manage.py shell<br>
+Python 3.6.3 (default, Nov 9 2017, 15:58:30)<br>
+[GCC 4.2.1 Compatible Apple LLVM 9.0.0 (clang-900.0.38)] on darwin<br>
+Type "help", "copyright", "credits" or "license" for more information.<br>
+(InteractiveConsole)<br> 
+ &gt;&gt;&gt; Codepoint._meta.db_table<w>&nbsp;</w>
+---
+ <div class="shell-wrap"><p class="shell-top-bar">python3.6</p><p class="shell-body">
+ <ps>myrtle</ps> <dr>~/project $</dr> 
+./manage.py shell<br>
+Python 3.6.3 (default, Nov 9 2017, 15:58:30)<br>
+[GCC 4.2.1 Compatible Apple LLVM 9.0.0 (clang-900.0.38)] on darwin<br>
+Type "help", "copyright", "credits" or "license" for more information.<br>
+(InteractiveConsole)<br> 
+ &gt;&gt;&gt; Codepoint._meta.db_table<br>
+'unicodex_coodepoint'<br> 
+ &gt;&gt;&gt; <w>&nbsp;</w>
 
 ---
 ## Showing all table columns <!-- .slide: class="center" -->
 ---
-<pre><code><c># ORM</c>
+<pre><code> 
+<c># ORM</c>
 Codepoint._meta.get_fields() 
 ---
  <div class="shell-wrap"><p class="shell-top-bar">python3.6</p><p class="shell-body">
-...&nbsp; &nbsp; n = model._meta.object_name<br>
-...&nbsp; &nbsp; print(f'from {l}.models import {n}')<br>
-...&nbsp;<br> 
-from auth.models import Permission<br>
-from auth.models import Group<br>
-from auth.models import User<br>
-from contenttypes.models import ContentType<br>
-from sessions.models import Session<br>
-from sites.models import Site<br>
-from aldryn_sso.models import AldrynCloudUser<br>
-from admin.models import LogEntry<br>
-from unicodex.models import Codepoint<br>
-from unicodex.models import Vendor<br>
-from unicodex.models import VendorVersion<br>
-from unicodex.models import Design<br>
+ <ps>myrtle</ps> <dr>~/project $</dr> 
+./manage.py shell<br>
+Python 3.6.3 (default, Nov 9 2017, 15:58:30)<br>
+[GCC 4.2.1 Compatible Apple LLVM 9.0.0 (clang-900.0.38)] on darwin<br>
+Type "help", "copyright", "credits" or "license" for more information.<br>
+(InteractiveConsole)<br> 
  &gt;&gt;&gt; Codepoint._meta.db_table<br>
-'unicodex_copdepoint'<br> 
- &gt;&gt;&gt; <w>&nbsp;</w>
- </p></p></div>
----
-
- <div class="shell-wrap"><p class="shell-top-bar">python3.6</p><p class="shell-body">
-...&nbsp; &nbsp; n = model._meta.object_name<br>
-...&nbsp; &nbsp; print(f'from {l}.models import {n}')<br>
-...&nbsp;<br> 
-from auth.models import Permission<br>
-from auth.models import Group<br>
-from auth.models import User<br>
-from contenttypes.models import ContentType<br>
-from sessions.models import Session<br>
-from sites.models import Site<br>
-from aldryn_sso.models import AldrynCloudUser<br>
-from admin.models import LogEntry<br>
-from unicodex.models import Codepoint<br>
-from unicodex.models import Vendor<br>
-from unicodex.models import VendorVersion<br>
-from unicodex.models import Design<br>
- &gt;&gt;&gt; Codepoint._meta.db_table<br>
-'unicodex_copdepoint'<br> 
+'unicodex_codepoint'<br> 
  &gt;&gt;&gt; Codepoint.meta.get_fields()<w>&nbsp;</w>
- </p></p></div>
 ---
  <div class="shell-wrap"><p class="shell-top-bar">python3.6</p><p class="shell-body">
-...&nbsp;<br> 
-from sessions.models import Session<br>
-from sites.models import Site<br>
-from aldryn_sso.models import AldrynCloudUser<br>
-from admin.models import LogEntry<br>
-from unicodex.models import Codepoint<br>
-from unicodex.models import Vendor<br>
-from unicodex.models import VendorVersion<br>
-from unicodex.models import Design<br>
+ <ps>myrtle</ps> <dr>~/project $</dr> 
+./manage.py shell<br>
+Python 3.6.3 (default, Nov 9 2017, 15:58:30)<br>
+[GCC 4.2.1 Compatible Apple LLVM 9.0.0 (clang-900.0.38)] on darwin<br>
+Type "help", "copyright", "credits" or "license" for more information.<br>
+(InteractiveConsole)<br> 
  &gt;&gt;&gt; Codepoint._meta.db_table<br>
-'unicodex_copdepoint'<br> 
+'unicodex_codepoint'<br> 
  &gt;&gt;&gt; Codepoint.meta.get_fields()<br>
 (&lt;ManyToOneRel: unicodex.design>, <br>
 &lt;django.db.models.fields.AutoField: id>, <br>
@@ -483,7 +417,6 @@ from unicodex.models import Design<br>
 &lt;django.db.models.fields.TextField: description>,<br>
 &lt;django.db.models.fields.CharField: codepoint>)<br>
  &gt;&gt;&gt; <w>&nbsp;</w>
- </p></p></div>
 ---
 ## Finding all tables <!-- .slide: class="center" -->
 ### via the database
@@ -495,7 +428,6 @@ and django provides an easy way to get there
  <div class="shell-wrap"><p class="shell-top-bar">bash</p><p class="shell-body">
  <ps>myrtle</ps> <dr>~/project $</dr> 
  ./manage.py dbshell<w>&nbsp;</w>
- </p></p></div>
 
 Note: back in our terminal, instead of running manage.py shell, we run DB shell
 ---
@@ -506,7 +438,6 @@ psql (9.6.5, server 9.6.8)<br>
 Type "help" for help.<br>
 <br> 
  db=#&nbsp;<w>&nbsp;</w>
- </p></p></div>
 
 Note: and we get an output that will be familiar to postgres devs in the audience
 
@@ -519,7 +450,6 @@ psql (9.6.5, server 9.6.8)<br>
 Type "help" for help.<br>
 <br> 
  db=# \dt<w>&nbsp;</w>
- </p></p></div>
 
 Note: given we know it's postgres, we cna issue the postgres list table command, and get back
 ---
@@ -566,7 +496,6 @@ Note: all our tables. Note the usual suspects from earlier, auth, content, sites
 (16 rows)<br>
 <br> 
  db=#&nbsp;<w>&nbsp;</w>
- </p></p></div>
 
 Note: but also, our own project's tables
 
@@ -783,7 +712,7 @@ This is a good chunk of SQL
 So what does the ORM equivelent look like?
 ---
 <pre><code><c>&dash;&dash; SQL</c><br><r>SELECT * <br>&nbsp; FROM</r> <l>unicodex_codepoint c,<br>&nbsp; &nbsp; &nbsp; &nbsp;unicodex_design d</l><br>&nbsp;<r>WHERE</r> <l>c</l>.<l>name</l> <r>&equals;</r> 'Sparkles'<BR><r>&nbsp; &nbsp;AND</r> d.codepoint_id = c.id;<br><br><c>&num; ORM</c>
-Design.objects.filter(<o><br>&nbsp;&nbsp;&nbsp;codepointname&equals;</o>'Sparkles') 
+Design.objects.filter(<o><br>&nbsp;&nbsp;&nbsp;codepoint&#95;&#95;name&equals;</o>'Sparkles') 
 </code></pre> 
 Note: Design dot objects dot filter codepoint dunder name equals sparkles.
 
@@ -793,7 +722,7 @@ I know right? so simple!
 <r>SELECT * <br>&nbsp; FROM</r> <l>unicodex_codepoint c,<br>&nbsp; &nbsp; &nbsp; &nbsp;unicodex_design d</l><br>&nbsp;<r>WHERE</r> <l>c</l>.<l>name</l> <r>&equals;</r> 'Sparkles'<BR><r>&nbsp; &nbsp;AND</r> d.codepoint_id = c.id;
 
 <c>&num; ORM</c>
-Design.objects.filter(<o><br>&nbsp;&nbsp;&nbsp;codepointname&equals;</o>'Sparkles') 
+Design.objects.filter(<o><br>&nbsp;&nbsp;&nbsp;codepoint&#95;&#95;name&equals;</o>'Sparkles') 
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <c>^^</c>
 </code></pre> 
 
@@ -812,12 +741,12 @@ We import the design model this time
 ---
  <div class="shell-wrap"><p class="shell-top-bar">python3.6</p><p class="shell-body">
  &gt;&gt;&gt; from unicodex.models import Design<br>
- &gt;&gt;&gt; Design.objects.filter(codepointname='Sparkles')<w>&nbsp;</w>
+ &gt;&gt;&gt; Design.objects.filter(codepoint&#95;&#95;name='Sparkles')<w>&nbsp;</w>
 Note: and we run our filter
 ---
  <div class="shell-wrap"><p class="shell-top-bar">python3.6</p><p class="shell-body">
  &gt;&gt;&gt; from unicodex.models import Design<br>
- &gt;&gt;&gt; Design.objects.filter(codepointname='Sparkles')<br>
+ &gt;&gt;&gt; Design.objects.filter(codepoint&#95;&#95;name='Sparkles')<br>
 &lt;QuerySet [&lt;Design: Sparkles Microsoft - Windows 10>, &lt;Design: Sparkles Microsoft - Windows 8.1>, &lt;Design: Sparkles Microsoft - Windows 8.0>, &lt;Design: Sparkles Facebook - 2.2>, &lt;Design: Sparkles Facebook - 1.0>, &lt;Design: Sparkles Messenger - 1.0>, &lt;Design: Sparkles Twitter - 1.0>, &lt;Design: Sparkles EmojiOne - 3.0>, &lt;Design: Sparkles EmojiOne - 2.0>, &lt;Design: Sparkles EmojiOne - 1.0>, '...(remaining elements truncated)...']><br>
  &gt;&gt;&gt; <w>&nbsp;</w>
 
@@ -832,7 +761,7 @@ Data is still there, if you iterate over the list, but the print representation 
 (this was implemented because of a very real bug at Lawrance Journal World, where they had servers keep crashing, because the debug page was trying to be helpful and show all the data... a million objects worth..)
 ---
 <pre><code><c>&num; ORM</c>
-Design.objects.filter(<o><br>&nbsp;&nbsp;&nbsp;codepointname&equals;</o>'Sparkles') 
+Design.objects.filter(<o><br>&nbsp;&nbsp;&nbsp;codepoint&#95;&#95;name&equals;</o>'Sparkles') 
 
 <c>&num; field, field, field... lookup</c>
 
@@ -857,6 +786,8 @@ If you remember back when we looked up the fields on a model, we know what optio
 
 Note: we have four fields - a unique id, two foreign keys off to other models, and image
 
+but name isn't there. That came from codepoint
+
 ---
  <div class="shell-wrap"><p class="shell-top-bar">python3.6</p><p class="shell-body">
  &gt;&gt;&gt; from unicodex.models import Design<br>
@@ -865,12 +796,41 @@ Note: we have four fields - a unique id, two foreign keys off to other models, a
 &lt;django.db.models.fields.related.ForeignKey: vendorversion>, <br>
 &lt;django.db.models.fields.related.ForeignKey: codepoint>, <br>
 &lt;django.db.models.fields.files.FileField: image>)<br>
- &gt;&gt;&gt; Design.objects.filter(codepointname=&equals;'Sparkles')<w>&nbsp;</w>
+ &gt;&gt;&gt; Codepoint._meta.get_fields()<w>&nbsp;</w>
 
+Note: so if we inspect Codepoint
+
+---
+ <div class="shell-wrap"><p class="shell-top-bar">python3.6</p><p class="shell-body">
+ &gt;&gt;&gt; from unicodex.models import Design<br>
+ &gt;&gt;&gt; Design._meta.get_fields()<br>
+(&lt;django.db.models.fields.AutoField: id>,<br>
+&lt;django.db.models.fields.related.ForeignKey: vendorversion>, <br>
+&lt;django.db.models.fields.related.ForeignKey: codepoint>, <br>
+&lt;django.db.models.fields.files.FileField: image>)<br>
+ &gt;&gt;&gt; Codepoint._meta.get_fields()<br>
+(&lt;ManyToOneRel: unicodex.design>, <br>
+&lt;django.db.models.fields.AutoField: id>,<br>
+&lt;django.db.models.fields.CharField: name>, <br>
+&lt;django.db.models.fields.TextField: description>,<br>
+&lt;django.db.models.fields.CharField: codepoint>)<br>
+ &gt;&gt;&gt; <w>&nbsp;</w>
+
+Note: WE see that codepoint has the name field
+---
+<pre><code><c>&num; ORM</c>
+Design.objects.filter(<o><br>&nbsp;&nbsp;&nbsp;codepoint&#95;&#95;name&equals;</o>'Sparkles')<br><br><c>&num; field, field, field... lookup</c>
 
 Note: You'll also note in our example that we end on a field.
 
 By default the look up is an exact match on the string. So effectively, name equals sparkles
+---
+<pre><code><c>&num; ORM</c>
+Design.objects.filter(<o><br>&nbsp;&nbsp;&nbsp;codepoint&#95;&#95;name&equals;</o>'Sparkles')<br><br><c>&num; field, field, field... lookup</c>
+<br><c>&num; ORM</c>
+Design.objects.filter(<o><br>&nbsp;&nbsp;&nbsp;codepoint&#95;&#95;name&#95;&#95;exact&equals;</o>'Sparkles') 
+
+Note: so by default what we're calling is codepoint name equals
 
 ---
  <div class="shell-wrap"><p class="shell-top-bar">python3.6</p><p class="shell-body">
@@ -880,14 +840,32 @@ By default the look up is an exact match on the string. So effectively, name equ
 &lt;django.db.models.fields.related.ForeignKey: vendorversion>, <br>
 &lt;django.db.models.fields.related.ForeignKey: codepoint>, <br>
 &lt;django.db.models.fields.files.FileField: image>)<br>
- &gt;&gt;&gt; Design.objects.filter(codepointname__contains=&equals;'Spark')<w>&nbsp;</w>
-Note: we could also search for substrings in the field, with contains
+ &gt;&gt;&gt; Codepoint._meta.get_fields()<br>
+(&lt;ManyToOneRel: unicodex.design>, <br>
+&lt;django.db.models.fields.AutoField: id>,<br>
+&lt;django.db.models.fields.CharField: name>, <br>
+&lt;django.db.models.fields.TextField: description>,<br>
+&lt;django.db.models.fields.CharField: codepoint>)<br>
+ &gt;&gt;&gt; <w>&nbsp;</w>
+
+Note: 
 
 We can also forge a path down a different series of foreign keys
 
 See the vendorversion there? Let's see what that contains
 ---
 
+ <div class="shell-wrap"><p class="shell-top-bar">python3.6</p><p class="shell-body">
+ &gt;&gt;&gt; <w>&nbsp;</w>
+---
+ <div class="shell-wrap"><p class="shell-top-bar">python3.6</p><p class="shell-body">
+ &gt;&gt;&gt; from unicodex.models import VendorVersion<w>&nbsp;</w>
+---
+
+ <div class="shell-wrap"><p class="shell-top-bar">python3.6</p><p class="shell-body">
+ &gt;&gt;&gt; from unicodex.models import VendorVersion<br>
+ &gt;&gt;&gt; <w>&nbsp;</w>
+---
  <div class="shell-wrap"><p class="shell-top-bar">python3.6</p><p class="shell-body">
  &gt;&gt;&gt; from unicodex.models import VendorVersion<br>
  &gt;&gt;&gt; VendorVersion._meta.get_fields()<w>&nbsp;</w>
@@ -909,8 +887,33 @@ Note: Okay, so a vendorversion has many designs, an ID, a name, and a Vendor FK
 
 What about Vendor?
 ---
-
  <div class="shell-wrap"><p class="shell-top-bar">python3.6</p><p class="shell-body">
+ &gt;&gt;&gt; from unicodex.models import VendorVersion<br>
+ &gt;&gt;&gt; VendorVersion._meta.get_fields()<br>
+(&lt;ManyToOneRel: unicodex.design>,<br>
+&lt;django.db.models.fields.AutoField: id>, <br>
+&lt;django.db.models.fields.CharField: name>, <br>
+&lt;django.db.models.fields.related.ForeignKey: vendor>)<br>
+ &gt;&gt;&gt; from unicodex.models import Vendor<w>&nbsp;</w>
+
+---
+ <div class="shell-wrap"><p class="shell-top-bar">python3.6</p><p class="shell-body">
+ &gt;&gt;&gt; from unicodex.models import VendorVersion<br>
+ &gt;&gt;&gt; VendorVersion._meta.get_fields()<br>
+(&lt;ManyToOneRel: unicodex.design>,<br>
+&lt;django.db.models.fields.AutoField: id>, <br>
+&lt;django.db.models.fields.CharField: name>, <br>
+&lt;django.db.models.fields.related.ForeignKey: vendor>)<br>
+ &gt;&gt;&gt; from unicodex.models import Vendor<br>
+ &gt;&gt;&gt; <w>&nbsp;</w>
+---
+ <div class="shell-wrap"><p class="shell-top-bar">python3.6</p><p class="shell-body">
+ &gt;&gt;&gt; from unicodex.models import VendorVersion<br>
+ &gt;&gt;&gt; VendorVersion._meta.get_fields()<br>
+(&lt;ManyToOneRel: unicodex.design>,<br>
+&lt;django.db.models.fields.AutoField: id>, <br>
+&lt;django.db.models.fields.CharField: name>, <br>
+&lt;django.db.models.fields.related.ForeignKey: vendor>)<br>
  &gt;&gt;&gt; from unicodex.models import Vendor<br>
  &gt;&gt;&gt; Vendor._meta.get_fields()<w>&nbsp;</w>
 
@@ -919,6 +922,12 @@ Note: clear our terminal, import Vendor, and check
 
 ---
  <div class="shell-wrap"><p class="shell-top-bar">python3.6</p><p class="shell-body">
+ &gt;&gt;&gt; from unicodex.models import VendorVersion<br>
+ &gt;&gt;&gt; VendorVersion._meta.get_fields()<br>
+(&lt;ManyToOneRel: unicodex.design>,<br>
+&lt;django.db.models.fields.AutoField: id>, <br>
+&lt;django.db.models.fields.CharField: name>, <br>
+&lt;django.db.models.fields.related.ForeignKey: vendor>)<br>
  &gt;&gt;&gt; from unicodex.models import Vendor<br>
  &gt;&gt;&gt; Vendor._meta.get_fields()<br>
 (&lt;ManyToOneRel: unicodex.vendorversion>, <br>
@@ -936,6 +945,11 @@ Back to what we were doing, showing filter walks
 
 ---
 
+ <div class="shell-wrap"><p class="shell-top-bar">python3.6</p><p class="shell-body">
+ &gt;&gt;&gt; <w>&nbsp;</w>
+
+Note: clearing our terminal again with Control L
+---
  <div class="shell-wrap"><p class="shell-top-bar">python3.6</p><p class="shell-body">
  &gt;&gt;&gt; Design.objects.filter(<w>&nbsp;</w>
 
@@ -977,7 +991,7 @@ Note: the string Micro
 ---
 
  <div class="shell-wrap"><p class="shell-top-bar">python3.6</p><p class="shell-body">
- &gt;&gt;&gt; Design.objects.filter(vendorversion&#95;&#95;vendor&#95;&#95;name&#95;&#95;contains="Micro")<w>&nbsp;</w>
+ &gt;&gt;&gt; Design.objects.filter(vendorversion&#95;&#95;vendor&#95;&#95;name&#95;&#95;contains="Micro")<br>
 &lt;QuerySet [&lt;Design: Sparkles Microsoft - Windows 8.0>, &lt;Design: Two Hearts Microsoft - Windows 8.0>, &lt;Design: Sparkles Microsoft - Windows 8.1>, &lt;Design: Two Hearts Microsoft - Windows 8.1>, &lt;Design: Sparkles Microsoft - Windows 10>, &lt;Design: Two Hearts Microsoft - Windows 10>]><br>
  &gt;&gt;&gt; <w>&nbsp;</w>
 
@@ -986,10 +1000,11 @@ Note: And thus, we get a of all designs where the name of the linked vendor cont
 ---
 <pre><code><c>&num; Field Lookups</c><table>
 <tr><td><l>contains</l></td><td><o>LIKE "%?%"</o></td></tr>
-<tr><td><l>icontains</l></td><td><o>ILIKE "%?%"</o></td></tr>
+<tr><td><l>startswith</l></td><td><o>LIKE "%?"</o></td></tr>
+<tr><td><l>endswith</l></td><td><o>LIKE "?%"</o></td></tr>
 <tr><td><l>in</l></td><td><o>IN (?, ?, ?, ...)</o></td></tr>
-<tr><td><l>gt, ge</l></td><td><o>&gt;, &gt;=</o></td></tr>
-<tr><td><l>lt, le</l></td><td><o>&lt;, &lt;=</o></td></tr>
+<tr><td><l>lt, le, gt, ge</l></td><td><o>&lt;, &lt;=, &gt;, &gt;=</o></td></tr>
+<tr><td><l>range</l></td><td><o>BETWEEN</o></td></tr> 
 <tr><td><l>isnull</l></td><td><o>NULL</o></td></tr></table><c>&num; ... and many more!</c>
 <span class="bfoot" style="margin-bottom: -270px"><fl>[docs - querysets field lookups](https://docs.djangoproject.com/en/2.0/ref/models/querysets/#field-lookups)</fl></span>
 
@@ -1020,24 +1035,25 @@ Note: instead of just filtering on Micro, we could alos
 ---
  <div class="shell-wrap"><p class="shell-top-bar">python3.6</p><p class="shell-body">
  &gt;&gt;&gt; Design.objects.filter(vendorversion&#95;&#95;vendor&#95;&#95;name&#95;&#95;contains="Micro",<br>
- ... &nbsp; codepoint&#95;&#95;name&#95;&#95;contains<w>&nbsp;</w><br>
+ ... &nbsp; codepoint&#95;&#95;name&#95;&#95;endswith<w>&nbsp;</w><br>
 
 ---
  <div class="shell-wrap"><p class="shell-top-bar">python3.6</p><p class="shell-body">
  &gt;&gt;&gt; Design.objects.filter(vendorversion&#95;&#95;vendor&#95;&#95;name&#95;&#95;contains="Micro",<br>
- ... &nbsp; codepoint&#95;&#95;name&#95;&#95;contains="Heart")<w>&nbsp;</w><br>
+ ... &nbsp; codepoint&#95;&#95;name&#95;&#95;endswith="Hearts")<w>&nbsp;</w><br>
 
 
 ---
  <div class="shell-wrap"><p class="shell-top-bar">python3.6</p><p class="shell-body">
  &gt;&gt;&gt; Design.objects.filter(vendorversion&#95;&#95;vendor&#95;&#95;name&#95;&#95;contains="Micro",<br>
- ... &nbsp; codepoint&#95;&#95;name&#95;&#95;contains="Heart")<br>
+ ... &nbsp; codepoint&#95;&#95;name&#95;&#95;endswith="Hearts")<br>
 &lt;QuerySet [&lt;Design: Two Hearts Microsoft - Windows 10>, &lt;Design: Two Hearts Microsoft - Windows 8.1>, &lt;Design: Two Hearts Microsoft - Windows 8.0>]><br>
  &gt;&gt;&gt; <w>&nbsp;</w>
 
+Note: we get list of designs both from a vendor
 ---
-## `OR` else <!-- .slide: class="center" -->
-Note: or else.
+## `AND`? `OR` <!-- .slide: class="center" -->
+Note: 
 
 So far we've dealt with single or chained filters, which will AND together
 
@@ -1053,270 +1069,46 @@ No, not the race from the great Star Trek sequel, The Next Generation,
 
 Q and in Query
 ---
-<pre><code><c>&dash;&dash; SQL</c><br><r>SELECT * <br>&nbsp; FROM</r> <l>unicodex_codepoint c,<br>&nbsp;&nbsp; &nbsp; &nbsp; unicodex_design d</l><br>&nbsp;<r>WHERE</r> d.codepoint_id &equals; c.id<br><l><r>&nbsp; &nbsp;AND</r> (c</l>.<l>name</l> <r>&equals;</r> 'Sparkles'<BR><l><r>&nbsp; &nbsp;&nbsp; OR</r> c</l>.<l>name</l> <r>&equals;</r> 'Unicorn')
-</code></pre> 
-Note: Let's start from the foundation we've built so far
 
-If we want to run a statement like this
+TODO EXPAND OUT
 
 
----
-<pre><code><c>&dash;&dash; SQL</c><br><r>SELECT * <br>&nbsp; FROM</r> <l>unicodex_codepoint c,<br>&nbsp;&nbsp; &nbsp; &nbsp; unicodex_design d</l><br>&nbsp;<r>WHERE</r> d.codepoint_id &equals; c.id<br><l><r>&nbsp; &nbsp;AND</r> (c</l>.<l>name</l> <r>&equals;</r> 'Sparkles'<BR><l><r>&nbsp; &nbsp;&nbsp; OR</r> c</l>.<l>name</l> <r>&equals;</r> 'Unicorn')
-<c>&num; ORM</c><br><c>&num; ...</c>
 
-Note: the ORM code, instead of giving it out straight away, we're going to build up
----
- <div class="shell-wrap"><p class="shell-top-bar">python3.6</p><p class="shell-body">
- &gt;&gt;&gt; <w>&nbsp;</w>
-Note: start with a fresh shell
----
- <div class="shell-wrap"><p class="shell-top-bar">python3.6</p><p class="shell-body">
- &gt;&gt;&gt; from unicodex.models import Design<w>&nbsp;</w>
-Note: we're dealing with design objects, so we import that
----
- <div class="shell-wrap"><p class="shell-top-bar">python3.6</p><p class="shell-body">
- &gt;&gt;&gt; from unicodex.models import Design<br>
- &gt;&gt;&gt; <w>&nbsp;</w>
-Note: okay good
 
-so we wanted to filter by name equals sparkles and name equals unicorn
----
- <div class="shell-wrap"><p class="shell-top-bar">python3.6</p><p class="shell-body">
- &gt;&gt;&gt; from unicodex.models import Design<br>
- &gt;&gt;&gt; Design.objects.filter(<br>
-... &nbsp; codepoint&#95;&#95;name='Sparkles', <br>
-... &nbsp; codepoint&#95;&#95;name='Unicorn')<w>&nbsp;</w>
-Note: so we write that in ORM
 
-designs dot objects dot filter
+Book.objects.filter(name'Bible', author='God') <!-- .slide: class="center" -->
+Book.objects.filter(name__exact'Bible', author__exact='God') <!-- .slide: class="center" -->
 
-codepoint name equals sparkles
-codepoint name equals unicorn
+Book.objects.filter(Q(name'Bible') & Q(author='God')) <!-- .slide: class="center" -->
 
-press enter and
----
- <div class="shell-wrap"><p class="shell-top-bar">python3.6</p><p class="shell-body">
- &gt;&gt;&gt; from unicodex.models import Design<br>
- &gt;&gt;&gt; Design.objects.filter(<br>
-... &nbsp; codepoint&#95;&#95;name='Sparkles', <br>
-... &nbsp; codepoint&#95;&#95;name='Unicorn')<br>
-&nbsp; File "&lt;console>", line 3<br>
-SyntaxError: keyword argument repeated<br>
- &gt;&gt;&gt; <w>&nbsp;</w>
-Note: Sad trombone
+Book.objects.filter(Q(name'Bible'), author='God') <!-- .slide: class="center" -->
 
-We have a syntax error, keywork argument repeated
+Book.objects.filter(Q(name'Bible'), Q(author='God')) <!-- .slide: class="center" -->
 
-This isn't a django error, this is a python error
+Book.objects.filter(author'God', Q(name='Bible')) # Syntax error <!-- .slide: class="center" -->
 
-we can use name twice in keyword arguments. It's against the rules of Python
+Book.objects.filter(name'Bible', name='Hitchikers') # Why bother? It's always empty <!-- .slide: class="center" -->
 
-So we can now use the fancy new Q we just learnt about
----
- <div class="shell-wrap"><p class="shell-top-bar">python3.6</p><p class="shell-body">
- &gt;&gt;&gt; from unicodex.models import Design<br>
- &gt;&gt;&gt; Design.objects.filter(<br>
-... &nbsp; codepoint&#95;&#95;name='Sparkles', <br>
-... &nbsp; codepoint&#95;&#95;name='Unicorn')<br>
-&nbsp; File "&lt;console>", line 3<br>
-SyntaxError: keyword argument repeated<br>
- &gt;&gt;&gt; from django.db.models import Q<w>&nbsp;</w>
+Book.objects.filter(Q(name'Bible') | Q(name='Hitchikers')) <!-- .slide: class="center" -->
 
-Note: Q is a native django widget, so we need to import it from django db models
----
- <div class="shell-wrap"><p class="shell-top-bar">python3.6</p><p class="shell-body">
- &gt;&gt;&gt; from unicodex.models import Design<br>
- &gt;&gt;&gt; Design.objects.filter(<br>
-... &nbsp; codepoint&#95;&#95;name='Sparkles', <br>
-... &nbsp; codepoint&#95;&#95;name='Unicorn')<br>
-&nbsp; File "&lt;console>", line 3<br>
-SyntaxError: keyword argument repeated<br>
- &gt;&gt;&gt; from django.db.models import Q<br>
- &gt;&gt;&gt; <w>&nbsp;</w>
+Book.objects.filter(author__name'John', author__age=42) # One join <!-- .slide: class="center" -->
+Book.objects.filter(author__name'John').filter(author__age42) # Two joins <!-- .slide: class="center" -->
 
-Note: and it imports fine. It's always good when that happens.
----
- <div class="shell-wrap"><p class="shell-top-bar">python3.6</p><p class="shell-body">
- &gt;&gt;&gt; from unicodex.models import Design<br>
- &gt;&gt;&gt; Design.objects.filter(<br>
-... &nbsp; codepoint&#95;&#95;name='Sparkles', <br>
-... &nbsp; codepoint&#95;&#95;name='Unicorn')<br>
-&nbsp; File "&lt;console>", line 3<br>
-SyntaxError: keyword argument repeated<br>
- &gt;&gt;&gt; from django.db.models import Q<br>
- &gt;&gt;&gt; Design.objects.filter(<br>
-... &nbsp; Q(codepoint&#95;&#95;name='Sparkles'), <br>
-... &nbsp; Q(codepoint&#95;&#95;name='Unicorn'))<w>&nbsp;</w><br>
 
-Note: so we're going to take our exact function from before, but wrap the codepointname calls in Qs
----
- <div class="shell-wrap"><p class="shell-top-bar">python3.6</p><p class="shell-body">
- &gt;&gt;&gt; from unicodex.models import Design<br>
- &gt;&gt;&gt; Design.objects.filter(<br>
-... &nbsp; codepoint&#95;&#95;name='Sparkles', <br>
-... &nbsp; codepoint&#95;&#95;name='Unicorn')<br>
-&nbsp; File "&lt;console>", line 3<br>
-SyntaxError: keyword argument repeated<br>
- &gt;&gt;&gt; from django.db.models import Q<br>
- &gt;&gt;&gt; Design.objects.filter(<br>
-... &nbsp; Q(codepoint&#95;&#95;name='Sparkles'), <br>
-... &nbsp; Q(codepoint&#95;&#95;name='Unicorn'))<br>
-&lt;QuerySet []><br>
- &gt;&gt;&gt; <w>&nbsp;</w>
 
-Note: And it works!
 
-Well, it no longer syntax errors.
+
+
+
+
+
+
 
 
 ---
-<pre><code><r>from</r> django.db.models <r>import</r> Q
-<br>Design.objects.filter(<br>&nbsp; &nbsp;Q(<o>codepoint_&#95;name</o>&equals;'Unicorn'),<br>&nbsp; &nbsp;Q(<o>codepoint&#95;_name&equals;</o>'Sparkles')<br>)
-<c># Unicorn and Sparkles?</c>
-Note: 
-But, we were asking for codepoints that were called both Sparkles and Unicorns. Sadly no emoji like that exists. (yet)
+## Wanna know something really cool? <!-- .slide: class="center" -->
 ---
-<pre><code><r>from</r> django.db.models <r>import</r> Q
-<br>Design.objects.filter(<br>&nbsp; &nbsp;Q(<o>codepoint_&#95;name</o>&equals;'Unicorn')<br>&nbsp;| Q(<o>codepoint&#95;_name&equals;</o>'Sparkles')<br>)
-<c># Unicorn OR Sparkles!</c>
-Note: 
-What we want to search for is code points named Sparkles OR unicorn
----
- <div class="shell-wrap"><p class="shell-top-bar">python3.6</p><p class="shell-body">
- &gt;&gt;&gt; from unicodex.models import Design<br>
- &gt;&gt;&gt; Design.objects.filter(<br>
-... &nbsp; codepoint&#95;&#95;name='Sparkles', <br>
-... &nbsp; codepoint&#95;&#95;name='Unicorn')<br>
-&nbsp; File "&lt;console>", line 3<br>
-SyntaxError: keyword argument repeated<br>
- &gt;&gt;&gt; from django.db.models import Q<br>
- &gt;&gt;&gt; Design.objects.filter(<br>
-... &nbsp; Q(codepoint&#95;&#95;name='Sparkles'), <br>
-... &nbsp; Q(codepoint&#95;&#95;name='Unicorn'))<br>
-&lt;QuerySet []><br>
- &gt;&gt;&gt; <w>&nbsp;</w>
-Note: so in our terminal, we want to change this from an and to and or
----
- <div class="shell-wrap"><p class="shell-top-bar">python3.6</p><p class="shell-body">
- &gt;&gt;&gt; from unicodex.models import Design<br>
- &gt;&gt;&gt; Design.objects.filter(<br>
-... &nbsp; codepoint&#95;&#95;name='Sparkles', <br>
-... &nbsp; codepoint&#95;&#95;name='Unicorn')<br>
-&nbsp; File "&lt;console>", line 3<br>
-SyntaxError: keyword argument repeated<br>
- &gt;&gt;&gt; from django.db.models import Q<br>
- &gt;&gt;&gt; Design.objects.filter(<br>
-... &nbsp; Q(codepoint&#95;&#95;name='Sparkles'), <br>
-... &nbsp; Q(codepoint&#95;&#95;name='Unicorn'))<br>
-&lt;QuerySet []><br>
- &gt;&gt;&gt; Design.objects.filter(<br>
-... &nbsp; Q(codepoint&#95;&#95;name='Sparkles') <br>
-... | Q(codepoint&#95;&#95;name='Unicorn'))<w>&nbsp;</w><br>
----
- <div class="shell-wrap"><p class="shell-top-bar">python3.6</p><p class="shell-body">
-&nbsp; File "&lt;console>", line 3<br>
-SyntaxError: keyword argument repeated<br>
- &gt;&gt;&gt; from django.db.models import Q<br>
- &gt;&gt;&gt; Design.objects.filter(<br>
-... &nbsp; Q(codepoint&#95;&#95;name='Sparkles'), <br>
-... &nbsp; Q(codepoint&#95;&#95;name='Unicorn'))<br>
-&lt;QuerySet []><br>
- &gt;&gt;&gt; Design.objects.filter(<br>
-... &nbsp; Q(codepoint&#95;&#95;name='Sparkles') <br>
-... | Q(codepoint&#95;&#95;name='Unicorn'))<br>
-&lt;QuerySet [&lt;Design: Sparkles Microsoft - Windows 10>, &lt;Design: Sparkles Microsoft - Windows 8.1>, &lt;Design: Sparkles Microsoft - Windows 8.0>, &lt;Design: Sparkles Facebook - 2.2>, &lt;Design: Sparkles Facebook - 1.0>, &lt;Design: Sparkles Messenger - 1.0>, &lt;Design: Sparkles Twitter - 1.0>, &lt;Design: Sparkles EmojiOne - 3.0>, &lt;Design: Sparkles EmojiOne - 2.0>, &lt;Design: Sparkles EmojiOne - 1.0>, '...(remaining elements truncated)...']><br>
- &gt;&gt;&gt; <w>&nbsp;</w>
----
-## `not` <!-- .slide: class="center" -->
-
-Note: we can also do exclusion filters
-
-For example
----
- <div class="shell-wrap"><p class="shell-top-bar">python3.6</p><p class="shell-body">
- &gt;&gt;&gt; from unicodex.objects import Codepoint<br>
- &gt;&gt;&gt; Codepoint.objects.filter(<br>
-... &nbsp; Q(name&#95;&#95;contains='s') <br>
-... | Q(name&#95;&#95;contains="w"))<w>&nbsp;</w>
-
-Note: So, we have an OR
-
-If the name has an S or a W
-
----
- <div class="shell-wrap"><p class="shell-top-bar">python3.6</p><p class="shell-body">
- &gt;&gt;&gt; from unicodex.objects import Codepoint<br>
- &gt;&gt;&gt; Codepoint.objects.filter(<br>
-... &nbsp; Q(name&#95;&#95;contains='s') <br>
-... | Q(name&#95;&#95;contains="w"))<br>
-&lt;QuerySet [&lt;Codepoint: Sparkles>, &lt;Codepoint: Two Hearts>]><br>
- &gt;&gt;&gt; <w>&nbsp;</w>
-
-Note: which returns both Sparkles and Two Hearts
-
-If we want to do an AND
----
- <div class="shell-wrap"><p class="shell-top-bar">python3.6</p><p class="shell-body">
- &gt;&gt;&gt; from unicodex.objects import Codepoint<br>
- &gt;&gt;&gt; Codepoint.objects.filter(<br>
-... &nbsp; Q(name&#95;&#95;contains='s') <br>
-... & Q(name&#95;&#95;contains="w"))<w>&nbsp;</w>
-
-Note: we change the pipe to an and
-
----
- <div class="shell-wrap"><p class="shell-top-bar">python3.6</p><p class="shell-body">
- &gt;&gt;&gt; from unicodex.objects import Codepoint<br>
- &gt;&gt;&gt; Codepoint.objects.filter(<br>
-... &nbsp; Q(name&#95;&#95;contains='s') <br>
-... & Q(name&#95;&#95;contains="w"))<br>
-&lt;QuerySet [&lt;Codepoint: Two Hearts>]><br>
- &gt;&gt;&gt; <w>&nbsp;</w>
-
-Note: and we only get the one codepoint that has both an S and An W
-
-Now, if we want to negate that
-
----
- <div class="shell-wrap"><p class="shell-top-bar">python3.6</p><p class="shell-body">
- &gt;&gt;&gt; from unicodex.objects import Codepoint<br>
- &gt;&gt;&gt; Codepoint.objects.filter(<br>
-... &nbsp; Q(name&#95;&#95;contains='s') <br>
-... & ~Q(name&#95;&#95;contains="w"))<w>&nbsp;</w>
-
-Note: change it to S and NOT w
-
----
- <div class="shell-wrap"><p class="shell-top-bar">python3.6</p><p class="shell-body">
- &gt;&gt;&gt; from unicodex.objects import Codepoint<br>
- &gt;&gt;&gt; Codepoint.objects.filter(<br>
-... &nbsp; Q(name&#95;&#95;contains='s') <br>
-... & ~Q(name&#95;&#95;contains="w"))<br>
-&lt;QuerySet [&lt;Codepoint: Sparkles>]><br>
- &gt;&gt;&gt; <w>&nbsp;</w>
-
-Note: we get the one result sparkles
-
-And as a side note
-
-If we're combining queries, we can either use a single and
----
- <div class="shell-wrap"><p class="shell-top-bar">python3.6</p><p class="shell-body">
- &gt;&gt;&gt; from unicodex.objects import Codepoint<br>
- &gt;&gt;&gt; Codepoint.objects.filter(<br>
-... &nbsp; Q(name&#95;&#95;contains='s'), <br>
-... &nbsp; ~Q(name&#95;&#95;contains="w"))<br>
-&lt;QuerySet [&lt;Codepoint: Sparkles>]><br>
- &gt;&gt;&gt; <w>&nbsp;</w>
-
-Note: or we can just chain them together in a list
-
-
-But you see the thing is
----
-## You've seen this functionality before <!-- .slide: class="center" -->
----
-## This is how the admin works <!-- .slide: class="center" -->
+## You can do this in the admin <!-- .slide: class="center" -->
 ---
 # 🤯 <!-- .slide: class="center" -->
 ---
@@ -1432,7 +1224,7 @@ Python 3.6.3 (default, Nov 9 2017, 15:58:30)<br>
 Type "help", "copyright", "credits" or "license" for more information.<br>
 (InteractiveConsole)<br> 
  &gt;&gt;&gt;&nbsp;<w>&nbsp;</w>
- </p></p></div>
+
 Note: it will turn your shell from this old and busted
 ---
  <div class="shell-wrap"><p class="shell-top-bar">python3.6</p><p class="shell-body">
@@ -1476,16 +1268,15 @@ Note: you get autocompleted suggestions.
 So cool
 ---
 
- <!-- .slide: data-background-image="pictures/legacy_explorer.png"-->
+ <!-- .slide: data-background-image="pictures/hunterfound.jpg"-->
+
+
 Note: 
 So, now that you have your standard issue bug catcher, you too can start bounding forward to catch that pesky bug in your code
 
+legacy_explorer.png 
 ---
 #### &nbsp; <!-- .slide: class="center" -->
-<br> 
-## &nbsp;
- <div style='margin: 0 auto;'><p align='center'><img src='pictures/legacy3.png'></p></div>  <!-- .slide: class="center" -->
- <span class='foot'>&nbsp;</span>
 
 Note: and I say this with all due respect, but django is now boring. As I said at the start, odds are first time you interact with django in the workplace isn't going to be on a new shiny app, it'll be on something that exists.
 
@@ -1493,13 +1284,15 @@ But that doesn't mean you can't attack the problem sideon and get in the stacks 
 
 If you want to know more, I have a copy of the recompiler here with me, which has an article I've written called
 
+<br> 
+## &nbsp;
+ <div style='margin: 0 auto;'><p align='center'><img src='pictures/legacy3.png'></p></div>  <!-- .slide: class="center" -->
+ <span class='foot'>&nbsp;</span>
 ---
 #### Read more <!-- .slide: class="center" -->
 <br> 
 ## *Why I love Legacy DevOps*
-
- <div style='margin: 0 auto;'><p align='center'><img src='pictures/legacy3.png'></p></div>  <!-- .slide: class="center" -->
- <span class='foot'>[The Recompiler, Issue 4](https://recompilermag.com/issues/issue-4/why-i-love-legacy-devops/) -- Illustration by Victoria Wang</span>
+[The Recompiler, Issue 4](https://recompilermag.com/issues/issue-4/why-i-love-legacy-devops/)
 Note: why I love legacy devops
 
 It's all about how I find utmost dorkish joy in finding that odd little thing in a technology stack that just a short time ago I had no idea about.
@@ -1511,6 +1304,8 @@ You never start form zero.
 You're just used to different critters
 
 You just have to get used to using a different kind of net to catch them
+ <div style='margin: 0 auto;'><p align='center'><img src='pictures/legacy3.png'></p></div>  <!-- .slide: class="center" -->
+ Illustration by Victoria Wang <!-- .element: class="fragment" -->
 
 ---
 <br> 
