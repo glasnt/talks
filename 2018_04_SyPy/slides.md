@@ -376,6 +376,26 @@ Python 3.6.3 (default, Nov 9 2017, 15:58:30)<br>
 [GCC 4.2.1 Compatible Apple LLVM 9.0.0 (clang-900.0.38)] on darwin<br>
 Type "help", "copyright", "credits" or "license" for more information.<br>
 (InteractiveConsole)<br> 
+ &gt;&gt;&gt; from unicodex.models import Codepoint<w>&nbsp;</w>
+---
+ <div class="shell-wrap"><p class="shell-top-bar">python3.6</p><p class="shell-body">
+ <ps>myrtle</ps> <dr>~/project $</dr> 
+./manage.py shell<br>
+Python 3.6.3 (default, Nov 9 2017, 15:58:30)<br>
+[GCC 4.2.1 Compatible Apple LLVM 9.0.0 (clang-900.0.38)] on darwin<br>
+Type "help", "copyright", "credits" or "license" for more information.<br>
+(InteractiveConsole)<br> 
+ &gt;&gt;&gt; from unicodex.models import Codepoint<br>
+ &gt;&gt;&gt; <w>&nbsp;</w>
+---
+ <div class="shell-wrap"><p class="shell-top-bar">python3.6</p><p class="shell-body">
+ <ps>myrtle</ps> <dr>~/project $</dr> 
+./manage.py shell<br>
+Python 3.6.3 (default, Nov 9 2017, 15:58:30)<br>
+[GCC 4.2.1 Compatible Apple LLVM 9.0.0 (clang-900.0.38)] on darwin<br>
+Type "help", "copyright", "credits" or "license" for more information.<br>
+(InteractiveConsole)<br> 
+ &gt;&gt;&gt; from unicodex.models import Codepoint<br>
  &gt;&gt;&gt; Codepoint._meta.db_table<w>&nbsp;</w>
 ---
  <div class="shell-wrap"><p class="shell-top-bar">python3.6</p><p class="shell-body">
@@ -385,10 +405,10 @@ Python 3.6.3 (default, Nov 9 2017, 15:58:30)<br>
 [GCC 4.2.1 Compatible Apple LLVM 9.0.0 (clang-900.0.38)] on darwin<br>
 Type "help", "copyright", "credits" or "license" for more information.<br>
 (InteractiveConsole)<br> 
+ &gt;&gt;&gt; from unicodex.models import Codepoint<br>
  &gt;&gt;&gt; Codepoint._meta.db_table<br>
-'unicodex_coodepoint'<br> 
+'unicodex_codepoint'<br> 
  &gt;&gt;&gt; <w>&nbsp;</w>
-
 ---
 ## Showing all table columns <!-- .slide: class="center" -->
 ---
@@ -403,6 +423,7 @@ Python 3.6.3 (default, Nov 9 2017, 15:58:30)<br>
 [GCC 4.2.1 Compatible Apple LLVM 9.0.0 (clang-900.0.38)] on darwin<br>
 Type "help", "copyright", "credits" or "license" for more information.<br>
 (InteractiveConsole)<br> 
+ &gt;&gt;&gt; from unicodex.models import Codepoint<br>
  &gt;&gt;&gt; Codepoint._meta.db_table<br>
 'unicodex_codepoint'<br> 
  &gt;&gt;&gt; Codepoint.meta.get_fields()<w>&nbsp;</w>
@@ -414,6 +435,7 @@ Python 3.6.3 (default, Nov 9 2017, 15:58:30)<br>
 [GCC 4.2.1 Compatible Apple LLVM 9.0.0 (clang-900.0.38)] on darwin<br>
 Type "help", "copyright", "credits" or "license" for more information.<br>
 (InteractiveConsole)<br> 
+ &gt;&gt;&gt; from unicodex.models import Codepoint<br>
  &gt;&gt;&gt; Codepoint._meta.db_table<br>
 'unicodex_codepoint'<br> 
  &gt;&gt;&gt; Codepoint.meta.get_fields()<br>
@@ -1454,7 +1476,7 @@ Type "help", "copyright", "credits" or "license" for more information.<br>
 
 Note: so in our terminal
 
-  <!-- .element: class="fragment" -->
+---
  <div class="shell-wrap"><p class="shell-top-bar">python3.6</p><p class="shell-body">
  <ps>myrtle</ps> <dr>~/project $</dr> 
 ./manage.py shell<br>
@@ -1463,7 +1485,8 @@ Python 3.6.3 (default, Nov 9 2017, 15:58:30)<br>
 Type "help", "copyright", "credits" or "license" for more information.<br>
 (InteractiveConsole)<br> 
  &gt;&gt;&gt; from unicodex.models import Codepoint<w>&nbsp;</w>
-  <!-- .element: class="fragment" -->
+
+---
  <div class="shell-wrap"><p class="shell-top-bar">python3.6</p><p class="shell-body">
  <ps>myrtle</ps> <dr>~/project $</dr> 
 ./manage.py shell<br>
@@ -1858,8 +1881,8 @@ You never start form zero.
 You're just used to different critters
 
 You just have to get used to using a different kind of net to catch them
- <div style='margin: 0 auto;'><p align='center'><img src='pictures/legacy3.png'></p></div>  <!-- .slide: class="center" -->
- Illustration by Victoria Wang <!-- .element: class="fragment" -->
+legacy3.png 
+Illustration by Victoria Wang
 
 ---
 <br> 

@@ -376,6 +376,26 @@ Python 3.6.3 (default, Nov  9 2017, 15:58:30)<br>
 [GCC 4.2.1 Compatible Apple LLVM 9.0.0 (clang-900.0.38)] on darwin<br>
 Type "help", "copyright", "credits" or "license" for more information.<br>
 (InteractiveConsole)<br>
+$$pyw from unicodex.models import Codepoint
+---
+$$terminal python3.6
+$$prompt ~/project
+./manage.py shell<br>
+Python 3.6.3 (default, Nov  9 2017, 15:58:30)<br>
+[GCC 4.2.1 Compatible Apple LLVM 9.0.0 (clang-900.0.38)] on darwin<br>
+Type "help", "copyright", "credits" or "license" for more information.<br>
+(InteractiveConsole)<br>
+$$py from unicodex.models import Codepoint
+$$pyw
+---
+$$terminal python3.6
+$$prompt ~/project
+./manage.py shell<br>
+Python 3.6.3 (default, Nov  9 2017, 15:58:30)<br>
+[GCC 4.2.1 Compatible Apple LLVM 9.0.0 (clang-900.0.38)] on darwin<br>
+Type "help", "copyright", "credits" or "license" for more information.<br>
+(InteractiveConsole)<br>
+$$py from unicodex.models import Codepoint
 $$pyw Codepoint._meta.db_table
 ---
 $$terminal python3.6
@@ -385,10 +405,10 @@ Python 3.6.3 (default, Nov  9 2017, 15:58:30)<br>
 [GCC 4.2.1 Compatible Apple LLVM 9.0.0 (clang-900.0.38)] on darwin<br>
 Type "help", "copyright", "credits" or "license" for more information.<br>
 (InteractiveConsole)<br>
+$$py from unicodex.models import Codepoint
 $$py Codepoint._meta.db_table
-'unicodex_coodepoint'<br>
+'unicodex_codepoint'<br>
 $$pyw
-
 ---
 ##= Showing all table columns
 ---
@@ -403,6 +423,7 @@ Python 3.6.3 (default, Nov  9 2017, 15:58:30)<br>
 [GCC 4.2.1 Compatible Apple LLVM 9.0.0 (clang-900.0.38)] on darwin<br>
 Type "help", "copyright", "credits" or "license" for more information.<br>
 (InteractiveConsole)<br>
+$$py from unicodex.models import Codepoint
 $$py Codepoint._meta.db_table
 'unicodex_codepoint'<br>
 $$pyw Codepoint.meta.get_fields()
@@ -414,6 +435,7 @@ Python 3.6.3 (default, Nov  9 2017, 15:58:30)<br>
 [GCC 4.2.1 Compatible Apple LLVM 9.0.0 (clang-900.0.38)] on darwin<br>
 Type "help", "copyright", "credits" or "license" for more information.<br>
 (InteractiveConsole)<br>
+$$py from unicodex.models import Codepoint
 $$py Codepoint._meta.db_table
 'unicodex_codepoint'<br>
 $$py Codepoint.meta.get_fields()
@@ -1454,7 +1476,7 @@ $$pyw
 
 Note: so in our terminal
 
-----
+---
 $$terminal python3.6
 $$prompt ~/project
 ./manage.py shell<br>
@@ -1463,7 +1485,8 @@ Python 3.6.3 (default, Nov  9 2017, 15:58:30)<br>
 Type "help", "copyright", "credits" or "license" for more information.<br>
 (InteractiveConsole)<br>
 $$pyw from unicodex.models import Codepoint
-----
+
+---
 $$terminal python3.6
 $$prompt ~/project
 ./manage.py shell<br>
@@ -1858,8 +1881,8 @@ You never start form zero.
 You're just used to different critters
 
 You just have to get used to using a different kind of net to catch them
-@= legacy3.png
- -- Illustration by Victoria Wang
+ legacy3.png
+ Illustration by Victoria Wang
 
 ---
 <br>
