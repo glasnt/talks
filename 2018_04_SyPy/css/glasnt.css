@@ -30,8 +30,8 @@ code.terminal {
 } 
 pre code { 
    font-family: "SFMono-Regular",Consolas,"Liberation Mono",Menlo,Courier,monospace !important;
-   font-size: 30pt !important; 
-   line-height: 40pt !important; 
+   font-size: 24pt !important; 
+   line-height: 32pt !important; 
    margin-left: -50pt !important;
 } 
 

@@ -412,9 +412,7 @@ Type "help", "copyright", "credits" or "license" for more information.<br>
 ---
 ## Showing all table columns <!-- .slide: class="center" -->
 ---
-<pre><code> 
-<c># ORM</c>
-Codepoint._meta.get_fields() 
+<pre><code><br><c># ORM</c><br>Codepoint._meta.get_fields()
 ---
  <div class="shell-wrap"><p class="shell-top-bar">python3.6</p><p class="shell-body">
  <ps>myrtle</ps> <dr>~/project $</dr> 
@@ -426,7 +424,7 @@ Type "help", "copyright", "credits" or "license" for more information.<br>
  &gt;&gt;&gt; from unicodex.models import Codepoint<br>
  &gt;&gt;&gt; Codepoint._meta.db_table<br>
 'unicodex_codepoint'<br> 
- &gt;&gt;&gt; Codepoint.meta.get_fields()<w>&nbsp;</w>
+ &gt;&gt;&gt; Codepoint._meta.get_fields()<w>&nbsp;</w>
 ---
  <div class="shell-wrap"><p class="shell-top-bar">python3.6</p><p class="shell-body">
  <ps>myrtle</ps> <dr>~/project $</dr> 
@@ -438,7 +436,7 @@ Type "help", "copyright", "credits" or "license" for more information.<br>
  &gt;&gt;&gt; from unicodex.models import Codepoint<br>
  &gt;&gt;&gt; Codepoint._meta.db_table<br>
 'unicodex_codepoint'<br> 
- &gt;&gt;&gt; Codepoint.meta.get_fields()<br>
+ &gt;&gt;&gt; Codepoint._meta.get_fields()<br>
 (&lt;ManyToOneRel: unicodex.design>, <br>
 &lt;django.db.models.fields.AutoField: id>, <br>
 &lt;django.db.models.fields.CharField: name>, <br>
@@ -1231,7 +1229,7 @@ So, we could just wrap the second one, and leave the first one alone, right?
 Codepoint.objects.filter( 
 &nbsp; <o>name=</o>'Sparkles',
 &nbsp; Q(<o>description=</o>'Shiny!')
-)<br><br><r>SyntaxError: positional argument follows<br>keyword argument</r>
+)<br><br><r>SyntaxError: positional argument follows keyword argument</r>
 
 Note: well no, we get an error.
 
@@ -1300,7 +1298,7 @@ Codepoint.objects.filter(
 &nbsp; Q(<o>name=</o>'Sparkles') |
 &nbsp; Q(<o>name=</o>'Unicorn')
 )<br><br><c>&dash;&dash; SQL</c><br><r>SELECT *
-&nbsp; FROM</r> <l>unicodex_codepoint c </l><br><r>&nbsp;WHERE</r> <l>c</l>.<l>name</l> <r>=</r> 'Sparkles'<br><r>&nbsp; &nbsp;OR</r> <l>c</l>.<l>name</l> <r>=</r> 'Unicorn'
+&nbsp; FROM</r> <l>unicodex_codepoint c </l><br><r>&nbsp;WHERE</r> <l>c</l>.<l>name</l> <r>=</r> 'Sparkles'<br><r> &nbsp; &nbsp;OR</r> <l>c</l>.<l>name</l> <r>=</r> 'Unicorn'
 
 Note: to a pipe.
 
@@ -1312,7 +1310,8 @@ We're sending one argument to filter, but django is doing something awesome here
 
 A quick recap of the and and or operators
 ---
-
+### Review: Bitmasking <!-- .slide: class="center" -->
+---
  <div class="shell-wrap"><p class="shell-top-bar">python3.6</p><p class="shell-body">
  &gt;&gt;&gt; <w>&nbsp;</w>
 ---
@@ -1394,7 +1393,7 @@ Codepoint.objects.filter(
 &nbsp; Q(<o>name=</o>'Sparkles') |
 &nbsp; Q(<o>name=</o>'Unicorn')
 )<br><br><c>&dash;&dash; SQL</c><br><r>SELECT *
-&nbsp; FROM</r> <l>unicodex_codepoint c </l><br><r>&nbsp;WHERE</r> <l>c</l>.<l>name</l> <r>=</r> 'Sparkles'<br><r>&nbsp; &nbsp;OR</r> <l>c</l>.<l>name</l> <r>=</r> 'Unicorn'
+&nbsp; FROM</r> <l>unicodex_codepoint c </l><br><r>&nbsp;WHERE</r> <l>c</l>.<l>name</l> <r>=</r> 'Sparkles'<br><r> &nbsp; &nbsp;OR</r> <l>c</l>.<l>name</l> <r>=</r> 'Unicorn'
 
 
 Note: so, using the and or operators here makes sense, because those are the actions we are performing
@@ -1408,7 +1407,7 @@ I'm going to show you a small snippet of django source code. It won't be scary, 
 ---
 <pre><code style="font-size: 24pt !important"><r>class</r> <g>Q</g>(<g>tree</g>.<g>Node</g>):
 <c>"""<br>Encapsulate filters as objects that can<br>then be combined logically (using `&` and `|`).<br>"""</c>
-&nbsp; ...
+&nbsp; ...<br<br>>
 &nbsp; <r>def</r> <l>&#95;&#95;or&#95;&#95;</l>(self, other):
 &nbsp; &nbsp; <r>return</r> <l>self</l>._combine(other, <l>self.OR</l>)
 
@@ -1432,7 +1431,7 @@ Codepoint.objects.filter(
 &nbsp; Q(<o>name=</o>'Sparkles') |
 &nbsp; Q(<o>name=</o>'Unicorn')
 )<br><br><c>&dash;&dash; SQL</c><br><r>SELECT *
-&nbsp; FROM</r> <l>unicodex_codepoint c </l><br><r>&nbsp;WHERE</r> <l>c</l>.<l>name</l> <r>=</r> 'Sparkles'<br><r>&nbsp; &nbsp;OR</r> <l>c</l>.<l>name</l> <r>=</r> 'Unicorn'
+&nbsp; FROM</r> <l>unicodex_codepoint c </l><br><r>&nbsp;WHERE</r> <l>c</l>.<l>name</l> <r>=</r> 'Sparkles'<br><r> &nbsp; &nbsp;OR</r> <l>c</l>.<l>name</l> <r>=</r> 'Unicorn'
 
 Note: as well as AND or OR, we can also do NOT
 
@@ -1444,7 +1443,7 @@ Codepoint.objects.filter(
 &nbsp; Q(<o>name=</o>'Sparkles') |
 &nbsp; ~Q(<o>name=</o>'Unicorn')
 )<br><br><c>&dash;&dash; SQL</c><br><r>SELECT *
-&nbsp; FROM</r> <l>unicodex_codepoint c </l><br><r>&nbsp;WHERE</r> <l>c</l>.<l>name</l> <r>=</r> 'Sparkles'<br><r>&nbsp; &nbsp;OR NOT</r> <l>c</l>.<l>name</l> <r>=</r> 'Unicorn'
+&nbsp; FROM</r> <l>unicodex_codepoint c </l><br><r>&nbsp;WHERE</r> <l>c</l>.<l>name</l> <r>=</r> 'Sparkles'<br><r> &nbsp; &nbsp;OR NOT</r> <l>c</l>.<l>name</l> <r>=</r> 'Unicorn'
 
 
 Note: we can and a tilda negation to invert that part of the query, and add a NOT to our SQL
@@ -1454,13 +1453,14 @@ Using our field lookups and these operations, we can do a lot of things. But are
 Firstly, you need to understand how the joins happen in order avoid confusion
 
 ---
-
 <pre><code><c>&num; ORM</c>
 Codepoint.objects.filter( 
-&nbsp; design&#95;&#95;image&#95;&#95;contains="png",
-&nbsp; design&#95;&#95;image&#95;&#95;startswith="des")
+&nbsp; <o>design&#95;&#95;image&#95;&#95;contains=</o>"png",
+&nbsp; <o>design&#95;&#95;image&#95;&#95;startswith=</o>"design")
 
-Note: Consider the following we want codepoints where their design iages have png and start with des
+Note: Consider the following we want codepoints where their design iages have png and start with design
+
+THis is based on the filename I'm using for the iages uploaded to my models
 
 Okay. Let's run that and see what happens
 
@@ -1508,7 +1508,7 @@ Python 3.6.3 (default, Nov 9 2017, 15:58:30)<br>
 Type "help", "copyright", "credits" or "license" for more information.<br>
 (InteractiveConsole)<br> 
  &gt;&gt;&gt; from unicodex.models import Codepoint<br>
- &gt;&gt;&gt; Codepoint.objects.filter(design&#95;&#95;image&#95;&#95;contains="png", design&#95;&#95;image&#95;&#95;startswith="des")<w>&nbsp;</w>
+ &gt;&gt;&gt; Codepoint.objects.filter(design&#95;&#95;image&#95;&#95;contains="png", design&#95;&#95;image&#95;&#95;startswith="design")<w>&nbsp;</w>
 
 Note: we add our code
 
@@ -1521,13 +1521,12 @@ Python 3.6.3 (default, Nov 9 2017, 15:58:30)<br>
 Type "help", "copyright", "credits" or "license" for more information.<br>
 (InteractiveConsole)<br> 
  &gt;&gt;&gt; from unicodex.models import Codepoint<br>
- &gt;&gt;&gt; Codepoint.objects.filter(design&#95;&#95;image&#95;&#95;contains="png", design&#95;&#95;image&#95;&#95;startswith="des")<br>
+ &gt;&gt;&gt; Codepoint.objects.filter(design&#95;&#95;image&#95;&#95;contains="png", design&#95;&#95;image&#95;&#95;startswith="design")<br>
 &lt;QuerySet [&lt;Codepoint: Sparkles>, &lt;Codepoint: Sparkles>, &lt;Codepoint: Sparkles>, &lt;Codepoint: Sparkles>, &lt;Codepoint: Sparkles>, &lt;Codepoint: Sparkles>, &lt;Codepoint: Sparkles>, &lt;Codepoint: Sparkles>, &lt;Codepoint: Sparkles>, &lt;Codepoint: Sparkles>, &lt;Codepoint: Sparkles>, &lt;Codepoint: Unicorn>, &lt;Codepoint: Unicorn>, &lt;Codepoint: Unicorn>, &lt;Codepoint: Unicorn>, &lt;Codepoint: Unicorn>, &lt;Codepoint: Unicorn>, &lt;Codepoint: Unicorn>, &lt;Codepoint: Two Hearts>, &lt;Codepoint: Two Hearts>, '...(remaining elements truncated)...']><br>
  &gt;&gt;&gt; <w>&nbsp;</w>
 
 
-Note: we get a whole bunch of results
-For simplicity here, let's just display the number of results
+Note: our results are truncated here, so let's get the count of this
 
 ---
  <div class="shell-wrap"><p class="shell-top-bar">python3.6</p><p class="shell-body">
@@ -1538,7 +1537,7 @@ Python 3.6.3 (default, Nov 9 2017, 15:58:30)<br>
 Type "help", "copyright", "credits" or "license" for more information.<br>
 (InteractiveConsole)<br> 
  &gt;&gt;&gt; from unicodex.models import Codepoint<br>
- &gt;&gt;&gt; Codepoint.objects.filter(design&#95;&#95;image&#95;&#95;contains="png", design&#95;&#95;image&#95;&#95;startswith="des")<w>&nbsp;</w>
+ &gt;&gt;&gt; Codepoint.objects.filter(design&#95;&#95;image&#95;&#95;contains="png", design&#95;&#95;image&#95;&#95;startswith="design")<w>&nbsp;</w>
 
 
 Note: rewind a step
@@ -1552,7 +1551,7 @@ Python 3.6.3 (default, Nov 9 2017, 15:58:30)<br>
 Type "help", "copyright", "credits" or "license" for more information.<br>
 (InteractiveConsole)<br> 
  &gt;&gt;&gt; from unicodex.models import Codepoint<br>
- &gt;&gt;&gt; Codepoint.objects.filter(design&#95;&#95;image&#95;&#95;contains="png", design&#95;&#95;image&#95;&#95;startswith="des").count()<w>&nbsp;</w>
+ &gt;&gt;&gt; Codepoint.objects.filter(design&#95;&#95;image&#95;&#95;contains="png", design&#95;&#95;image&#95;&#95;startswith="design").count()<w>&nbsp;</w>
 
 Note: add a count function on the end
 
@@ -1565,15 +1564,46 @@ Python 3.6.3 (default, Nov 9 2017, 15:58:30)<br>
 Type "help", "copyright", "credits" or "license" for more information.<br>
 (InteractiveConsole)<br> 
  &gt;&gt;&gt; from unicodex.models import Codepoint<br>
- &gt;&gt;&gt; Codepoint.objects.filter(design&#95;&#95;image&#95;&#95;contains="png", design&#95;&#95;image&#95;&#95;startswith="des").count()<br>
+ &gt;&gt;&gt; Codepoint.objects.filter(design&#95;&#95;image&#95;&#95;contains="png", design&#95;&#95;image&#95;&#95;startswith="design").count()<br>
 37<br> 
  &gt;&gt;&gt; <w>&nbsp;</w>
 
 Note: 37 results
 
-But what code was run?
+---
+<pre><code><c>&num; ORM</c>
+Codepoint.objects.filter( 
+&nbsp; <o>design&#95;&#95;image&#95;&#95;contains=</o>"png",
+&nbsp; <o>design&#95;&#95;image&#95;&#95;startswith=</o>"design")
 
-We have the ability toc heck this
+---
+<pre><code><c>&num; ORM</c>
+Codepoint.objects.filter( 
+&nbsp; <o>design&#95;&#95;image&#95;&#95;contains=</o>"png",
+&nbsp; <o>design&#95;&#95;image&#95;&#95;startswith=</o>"design")<br><br><c>&dash;&dash; SQL</c><br><c>&dash;&dash; ?? </c>
+
+
+Note: But what code was run?
+
+We have the ability to check this
+---
+<pre><code><c>&num; ORM</c>
+Codepoint.objects.filter( 
+&nbsp; <o>design&#95;&#95;image&#95;&#95;contains=</o>"png",
+&nbsp; <o>design&#95;&#95;image&#95;&#95;startswith=</o>"design")<br><br><c>&dash;&dash; SQL</c><br><c>&dash;&dash; ?? </c><br><br><c>&num; ORM</c><br><r>from</r> django.db <r>import</r> connection<br>connection.queries
+</code></pre> 
+---
+ <div class="shell-wrap"><p class="shell-top-bar">python3.6</p><p class="shell-body">
+ <ps>myrtle</ps> <dr>~/project $</dr> 
+./manage.py shell<br>
+Python 3.6.3 (default, Nov 9 2017, 15:58:30)<br>
+[GCC 4.2.1 Compatible Apple LLVM 9.0.0 (clang-900.0.38)] on darwin<br>
+Type "help", "copyright", "credits" or "license" for more information.<br>
+(InteractiveConsole)<br> 
+ &gt;&gt;&gt; from unicodex.models import Codepoint<br>
+ &gt;&gt;&gt; Codepoint.objects.filter(design&#95;&#95;image&#95;&#95;contains="png", design&#95;&#95;image&#95;&#95;startswith="design").count()<br>
+37<br> 
+ &gt;&gt;&gt; <w>&nbsp;</w>
 ---
 
  <div class="shell-wrap"><p class="shell-top-bar">python3.6</p><p class="shell-body">
@@ -1584,7 +1614,7 @@ Python 3.6.3 (default, Nov 9 2017, 15:58:30)<br>
 Type "help", "copyright", "credits" or "license" for more information.<br>
 (InteractiveConsole)<br> 
  &gt;&gt;&gt; from unicodex.models import Codepoint<br>
- &gt;&gt;&gt; Codepoint.objects.filter(design&#95;&#95;image&#95;&#95;contains="png", design&#95;&#95;image&#95;&#95;startswith="des").count()<br>
+ &gt;&gt;&gt; Codepoint.objects.filter(design&#95;&#95;image&#95;&#95;contains="png", design&#95;&#95;image&#95;&#95;startswith="design").count()<br>
 37<br> 
  &gt;&gt;&gt; from django.db import connection<w>&nbsp;</w>
 
@@ -1599,7 +1629,7 @@ Python 3.6.3 (default, Nov 9 2017, 15:58:30)<br>
 Type "help", "copyright", "credits" or "license" for more information.<br>
 (InteractiveConsole)<br> 
  &gt;&gt;&gt; from unicodex.models import Codepoint<br>
- &gt;&gt;&gt; Codepoint.objects.filter(design&#95;&#95;image&#95;&#95;contains="png", design&#95;&#95;image&#95;&#95;startswith="des").count()<br>
+ &gt;&gt;&gt; Codepoint.objects.filter(design&#95;&#95;image&#95;&#95;contains="png", design&#95;&#95;image&#95;&#95;startswith="design").count()<br>
 37<br> 
  &gt;&gt;&gt; from django.db import connection<br>
  &gt;&gt;&gt; <w>&nbsp;</w>
@@ -1613,7 +1643,7 @@ Python 3.6.3 (default, Nov 9 2017, 15:58:30)<br>
 Type "help", "copyright", "credits" or "license" for more information.<br>
 (InteractiveConsole)<br> 
  &gt;&gt;&gt; from unicodex.models import Codepoint<br>
- &gt;&gt;&gt; Codepoint.objects.filter(design&#95;&#95;image&#95;&#95;contains="png", design&#95;&#95;image&#95;&#95;startswith="des").count()<br>
+ &gt;&gt;&gt; Codepoint.objects.filter(design&#95;&#95;image&#95;&#95;contains="png", design&#95;&#95;image&#95;&#95;startswith="design").count()<br>
 37<br> 
  &gt;&gt;&gt; from django.db import connection<br>
  &gt;&gt;&gt; connection.queries[-1]<w>&nbsp;</w>
@@ -1630,21 +1660,31 @@ Python 3.6.3 (default, Nov 9 2017, 15:58:30)<br>
 Type "help", "copyright", "credits" or "license" for more information.<br>
 (InteractiveConsole)<br> 
  &gt;&gt;&gt; from unicodex.models import Codepoint<br>
- &gt;&gt;&gt; Codepoint.objects.filter(design&#95;&#95;image&#95;&#95;contains="png", design&#95;&#95;image&#95;&#95;startswith="des").count()<br>
+ &gt;&gt;&gt; Codepoint.objects.filter(design&#95;&#95;image&#95;&#95;contains="png", design&#95;&#95;image&#95;&#95;startswith="design").count()<br>
 37<br> 
  &gt;&gt;&gt; from django.db import connection<br>
  &gt;&gt;&gt; connection.queries[-1]<br>
 {'sql': 'SELECT COUNT(&#42;) AS "&#95;&#95;count" FROM "unicodex_codepoint" INNER JOIN "unicodex_design" ON ("unicodex_codepoint"."id" = "unicodex_design"."codepoint_id") WHERE ("unicodex_design"."image"::text LIKE \'%png%\' AND "unicodex_design"."image"::text LIKE \'des%\')', 'time': '0.001'}<br>
  &gt;&gt;&gt; <w>&nbsp;</w>
 ---
-<pre><code><c>&dash;&dash; SQL</c><br><r>SELECT</r> <l>count</l>(<r>*</r>)
-&nbsp; <r>FROM</r> from unicodex_codepoint C<br><r>INNER JOIN</r> unicodex_design D <r>ON</r> (<l>C</l>.<l>id <r>=</r> D</l>.<l>id</l>)<br><r>&nbsp;WHERE</r> (<l>D</l>.<l>image</l> <r>LIKE</r> '%png%'
+<pre><code><c>&num; ORM</c>
+Codepoint.objects.filter( 
+&nbsp; <o>design&#95;&#95;image&#95;&#95;contains=</o>"png",
+&nbsp; <o>design&#95;&#95;image&#95;&#95;startswith=</o>"design")<br><br><c>&dash;&dash; SQL</c><br><r>SELECT</r> <l>count</l>(<r>*</r>)
+&nbsp; <r>FROM</r> from unicodex_codepoint C<br><r>&nbsp;INNER JOIN</r> unicodex_design D <r>ON</r> (<l>C</l>.<l>id <r>=</r> D</l>.<l>id</l>)<br><r>&nbsp;WHERE</r> (<l>D</l>.<l>image</l> <r>LIKE</r> '%png%'
 &nbsp; &nbsp; <r>AND</r> <l>D</l>.<l>image</l> <r>LIKE</r>'des%')
+
+---
+
+<pre><code><c>&num; ORM</c>
+Codepoint.objects.filter( 
+&nbsp; <o>design&#95;&#95;image&#95;&#95;contains=</o>"png").filter(
+&nbsp; <o>design&#95;&#95;image&#95;&#95;startswith=</o>"design")<br><br><c>&dash;&dash; SQL</c><br><c>&dash;&dash; ??
 
 ---
  <div class="shell-wrap"><p class="shell-top-bar">python3.6</p><p class="shell-body">
  &gt;&gt;&gt; from unicodex.models import Codepoint<br>
- &gt;&gt;&gt; Codepoint.objects.filter(design&#95;&#95;image&#95;&#95;contains="png", design&#95;&#95;image&#95;&#95;startswith="des").count()<br>
+ &gt;&gt;&gt; Codepoint.objects.filter(design&#95;&#95;image&#95;&#95;contains="png", design&#95;&#95;image&#95;&#95;startswith="design").count()<br>
 37<br> 
  &gt;&gt;&gt; from django.db import connection<br>
  &gt;&gt;&gt; connection.queries[-1]<br>
@@ -1653,24 +1693,24 @@ Type "help", "copyright", "credits" or "license" for more information.<br>
 ---
  <div class="shell-wrap"><p class="shell-top-bar">python3.6</p><p class="shell-body">
  &gt;&gt;&gt; from unicodex.models import Codepoint<br>
- &gt;&gt;&gt; Codepoint.objects.filter(design&#95;&#95;image&#95;&#95;contains="png", design&#95;&#95;image&#95;&#95;startswith="des").count()<br>
+ &gt;&gt;&gt; Codepoint.objects.filter(design&#95;&#95;image&#95;&#95;contains="png", design&#95;&#95;image&#95;&#95;startswith="design").count()<br>
 37<br> 
  &gt;&gt;&gt; from django.db import connection<br>
  &gt;&gt;&gt; connection.queries[-1]<br>
 {'sql': 'SELECT COUNT(&#42;) AS "&#95;&#95;count" FROM "unicodex&#95;codepoint" INNER JOIN "unicodex&#95;design" ON ("unicodex&#95;codepoint"."id" = "unicodex&#95;design"."codepoint&#95;id") WHERE ("unicodex&#95;design"."image"::text LIKE \'%png%\' AND "unicodex&#95;design"."image"::text LIKE \'des%\')', 'time': '0.001'}<br>
  &gt;&gt;&gt; Codepoint.objects.filter(design&#95;&#95;image&#95;&#95;contains="png").filter(<br>
- ... design&#95;&#95;image&#95;&#95;startswith="des").count()<w>&nbsp;</w><br>
+ ... design&#95;&#95;image&#95;&#95;startswith="design").count()<w>&nbsp;</w><br>
 
 ---
  <div class="shell-wrap"><p class="shell-top-bar">python3.6</p><p class="shell-body">
  &gt;&gt;&gt; from unicodex.models import Codepoint<br>
- &gt;&gt;&gt; Codepoint.objects.filter(design&#95;&#95;image&#95;&#95;contains="png", design&#95;&#95;image&#95;&#95;startswith="des").count()<br>
+ &gt;&gt;&gt; Codepoint.objects.filter(design&#95;&#95;image&#95;&#95;contains="png", design&#95;&#95;image&#95;&#95;startswith="design").count()<br>
 37<br> 
  &gt;&gt;&gt; from django.db import connection<br>
  &gt;&gt;&gt; connection.queries[-1]<br>
 {'sql': 'SELECT COUNT(&#42;) AS "&#95;&#95;count" FROM "unicodex&#95;codepoint" INNER JOIN "unicodex&#95;design" ON ("unicodex&#95;codepoint"."id" = "unicodex&#95;design"."codepoint&#95;id") WHERE ("unicodex&#95;design"."image"::text LIKE \'%png%\' AND "unicodex&#95;design"."image"::text LIKE \'des%\')', 'time': '0.001'}<br>
  &gt;&gt;&gt; Codepoint.objects.filter(design&#95;&#95;image&#95;&#95;contains="png").filter(<br>
- ... design&#95;&#95;image&#95;&#95;startswith="des").count()<br>
+ ... design&#95;&#95;image&#95;&#95;startswith="design").count()<br>
 501<br> 
  &gt;&gt;&gt; <w>&nbsp;</w>
 
@@ -1679,13 +1719,13 @@ Note: wait, what??
 ---
  <div class="shell-wrap"><p class="shell-top-bar">python3.6</p><p class="shell-body">
  &gt;&gt;&gt; from unicodex.models import Codepoint<br>
- &gt;&gt;&gt; Codepoint.objects.filter(design&#95;&#95;image&#95;&#95;contains="png", design&#95;&#95;image&#95;&#95;startswith="des").count()<br>
+ &gt;&gt;&gt; Codepoint.objects.filter(design&#95;&#95;image&#95;&#95;contains="png", design&#95;&#95;image&#95;&#95;startswith="design").count()<br>
 37<br> 
  &gt;&gt;&gt; from django.db import connection<br>
  &gt;&gt;&gt; connection.queries[-1]<br>
 {'sql': 'SELECT COUNT(&#42;) AS "&#95;&#95;count" FROM "unicodex&#95;codepoint" INNER JOIN "unicodex&#95;design" ON ("unicodex&#95;codepoint"."id" = "unicodex&#95;design"."codepoint&#95;id") WHERE ("unicodex&#95;design"."image"::text LIKE \'%png%\' AND "unicodex&#95;design"."image"::text LIKE \'des%\')', 'time': '0.001'}<br>
  &gt;&gt;&gt; Codepoint.objects.filter(design&#95;&#95;image&#95;&#95;contains="png").filter(<br>
- ... design&#95;&#95;image&#95;&#95;startswith="des").count()<br>
+ ... design&#95;&#95;image&#95;&#95;startswith="design").count()<br>
 501<br> 
  &gt;&gt;&gt; connection.queries[-1]<w>&nbsp;</w>
 
@@ -1699,7 +1739,7 @@ Note: let's check
  &gt;&gt;&gt; connection.queries[-1]<br>
 {'sql': 'SELECT COUNT(&#42;) AS "&#95;&#95;count" FROM "unicodex&#95;codepoint" INNER JOIN "unicodex&#95;design" ON ("unicodex&#95;codepoint"."id" = "unicodex&#95;design"."codepoint&#95;id") WHERE ("unicodex&#95;design"."image"::text LIKE \'%png%\' AND "unicodex&#95;design"."image"::text LIKE \'des%\')', 'time': '0.001'}<br>
  &gt;&gt;&gt; Codepoint.objects.filter(design&#95;&#95;image&#95;&#95;contains="png").filter(<br>
- ... design&#95;&#95;image&#95;&#95;startswith="des").count()<br>
+ ... design&#95;&#95;image&#95;&#95;startswith="design").count()<br>
 501<br> 
  &gt;&gt;&gt; connection.queries[-1]<br>
 {'sql': 'SELECT COUNT(&#42;) AS "&#95;&#95;count" FROM "unicodex&#95;codepoint" INNER JOIN "unicodex&#95;design" ON ("unicodex&#95;codepoint"."id" = "unicodex&#95;design"."codepoint&#95;id") INNER JOIN "unicodex&#95;design" T3 ON ("unicodex&#95;codepoint"."id" = T3."codepoint&#95;id") WHERE ("unicodex&#95;design"."image"::text LIKE \'%png%\' AND T3."image"::text LIKE \'des%\')', 'time': '0.002'}<br>
@@ -1707,8 +1747,11 @@ Note: let's check
 
 Note: well, we can tell it's a different SQL statement than before based on the length of the output.. but let's format itnicely and see what's going on
 ---
-<pre><code><c>&dash;&dash; SQL</c><br><r>SELECT</r> <l>count</l>(<r>*</r>)
-&nbsp; <r>FROM</r> from unicodex_codepoint C<br><r>INNER JOIN</r> unicodex_design D <r>ON</r> (<l>C</l>.<l>id <r>=</r> D</l>.<l>id</l>)<br><r>INNER JOIN</r> unicodex_design E <r>ON</r> (<l>C</l>.<l>id <r>=</r> E</l>.<l>id</l>)<br><r>&nbsp;WHERE</r> (<l>D</l>.<l>image</l> <r>LIKE</r> '%png%'
+<pre><code><c>&num; ORM</c>
+Codepoint.objects.filter( 
+&nbsp; <o>design&#95;&#95;image&#95;&#95;contains=</o>"png").filter(
+&nbsp; <o>design&#95;&#95;image&#95;&#95;startswith=</o>"design")<br><br><c>&dash;&dash; SQL</c><br><r>SELECT</r> <l>count</l>(<r>&#42;</r>)
+&nbsp; <r>FROM</r> from unicodex_codepoint C<br><r>&nbsp;INNER JOIN</r> unicodex_design D <r>ON</r> (<l>C</l>.<l>id <r>=</r> D</l>.<l>id</l>)<br><r>&nbsp;INNER JOIN</r> unicodex_design E <r>ON</r> (<l>C</l>.<l>id <r>=</r> E</l>.<l>id</l>)<br><r>&nbsp;WHERE</r> (<l>D</l>.<l>image</l> <r>LIKE</r> '%png%'
 &nbsp; &nbsp; <r>AND</r> <l>D</l>.<l>image</l> <r>LIKE</r>'des%')
 
 Note: Ah.
@@ -1782,7 +1825,7 @@ And more field relations, ways that you can call both codepoint attributes on a 
 Note: seriously, the docs are wonderful. Now that you know some of the general terms of this bit of software, you should be able to find more interesting ways to make the ORM work for you
 ---
 # ☝️ <!-- .slide: class="center" -->
-## &nbsp; <!-- .slide: class="center" -->
+## <span style="color: white">`.`</span> <!-- .slide: class="center" -->
 Note: Oh, and just one more note before I go
 If you really want to make the ORM work well for you when developing
 ---
@@ -1792,8 +1835,6 @@ If you really want to make the ORM work well for you when developing
 Note: add ipython as a dev requirement in your Pipfile, or requirements.txt or whereever all good python package managers store their requirements.
 ---
  <div class="shell-wrap"><p class="shell-top-bar">python3.6</p><p class="shell-body">
- <ps>myrtle</ps> <dr>~ $</dr> 
-cd project<br>
  <ps>myrtle</ps> <dr>~/project $</dr> 
 ./manage.py shell<br>
 Python 3.6.3 (default, Nov 9 2017, 15:58:30)<br>
@@ -1805,8 +1846,6 @@ Type "help", "copyright", "credits" or "license" for more information.<br>
 Note: it will turn your shell from this old and busted
 ---
  <div class="shell-wrap"><p class="shell-top-bar">python3.6</p><p class="shell-body">
- <ps>myrtle</ps> <dr>~ $</dr> 
-cd project<br>
  <ps>myrtle</ps> <dr>~/project $</dr> 
 ./manage.py shell<br>
 Python 3.6.3 (default, Nov 9 2017, 15:58:30)<br>
@@ -1818,8 +1857,6 @@ Note: to the new hotness
 This is an ipython powered shell, which means
 ---
  <div class="shell-wrap"><p class="shell-top-bar">python3.6</p><p class="shell-body">
- <ps>myrtle</ps> <dr>~ $</dr> 
-cd project<br>
  <ps>myrtle</ps> <dr>~/project $</dr> 
 ./manage.py shell<br>
 Python 3.6.3 (default, Nov 9 2017, 15:58:30)<br>
@@ -1829,8 +1866,6 @@ IPython 6.3.1 -- An enhanced Interactive Python. Type '?' for help.<br>
 Note: you start typing something, press tab, and
 ---
  <div class="shell-wrap"><p class="shell-top-bar">python3.6</p><p class="shell-body">
- <ps>myrtle</ps> <dr>~ $</dr> 
-cd project<br>
  <ps>myrtle</ps> <dr>~/project $</dr> 
 ./manage.py shell<br>
 Python 3.6.3 (default, Nov 9 2017, 15:58:30)<br>
