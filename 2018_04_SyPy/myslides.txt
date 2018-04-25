@@ -1164,14 +1164,33 @@ Note: so going back to our first example,
 ---
 <pre><code><c>&num; ORM</c>
 Codepoint.objects.filter(
+&nbsp; <o>name=</o>'Sparkles').filter(
+&nbsp; <o>description=</o>'Shiny!'
+)<br><br><c>&dash;&dash; SQL</c><br><r>SELECT * 
+&nbsp; FROM</r> <l>unicodex_codepoint c </l><br><r>&nbsp;WHERE</r> <l>c</l>.<l>name</l> <r>=</r> 'Sparkles'<br><r>&nbsp; &nbsp;AND</r> <l>c</l>.<l>description</l> <r>=</r> 'Shiny!'
+
+Note: we could also have two separate filter clauses. 
+---
+<pre><code><c>&num; ORM</c>
+Codepoint.objects.filter(
+&nbsp; <o>name=</o>'Sparkles',
+&nbsp; <o>description=</o>'Shiny!'
+)<br><br><c>&dash;&dash; SQL</c><br><r>SELECT * 
+&nbsp; FROM</r> <l>unicodex_codepoint c </l><br><r>&nbsp;WHERE</r> <l>c</l>.<l>name</l> <r>=</r> 'Sparkles'<br><r>&nbsp; &nbsp;AND</r> <l>c</l>.<l>description</l> <r>=</r> 'Shiny!'
+
+Note: we could also
+
+---
+<pre><code><c>&num; ORM</c>
+Codepoint.objects.filter(
 &nbsp; Q(<o>name=</o>'Sparkles'),
 &nbsp; Q(<o>description=</o>'Shiny!')
 )<br><br><c>&dash;&dash; SQL</c><br><r>SELECT * 
 &nbsp; FROM</r> <l>unicodex_codepoint c </l><br><r>&nbsp;WHERE</r> <l>c</l>.<l>name</l> <r>=</r> 'Sparkles'<br><r>&nbsp; &nbsp;AND</r> <l>c</l>.<l>description</l> <r>=</r> 'Shiny!'
 
-Note: we can just wrap our two filter parameters in Q
+Note: wrap our two filter parameters in Q
 
-This proides the same result
+This provides the same result
 
 Notice in all of this, the equivelent SQL hasn't changed. 
 
@@ -1186,6 +1205,8 @@ Codepoint.objects.filter(
 &nbsp; FROM</r> <l>unicodex_codepoint c </l><br><r>&nbsp;WHERE</r> <l>c</l>.<l>name</l> <r>=</r> 'Sparkles'<br><r>&nbsp; &nbsp;AND</r> <l>c</l>.<l>description</l> <r>=</r> 'Shiny!'
 
 Note: 
+
+But, since we have Q objects, we can do operations on them
 
 Here, we're saying filter by this Query, and this Query
 
@@ -1574,13 +1595,13 @@ Note: 37 results
 <pre><code><c>&num; ORM</c>
 Codepoint.objects.filter(
 &nbsp; <o>design&#95;&#95;image&#95;&#95;contains=</o>"png",
-&nbsp; <o>design&#95;&#95;image&#95;&#95;startswith=</o>"design")
+&nbsp; <o>design&#95;&#95;image&#95;&#95;startswith=</o>"design").count()
 
 ---
 <pre><code><c>&num; ORM</c>
 Codepoint.objects.filter(
 &nbsp; <o>design&#95;&#95;image&#95;&#95;contains=</o>"png",
-&nbsp; <o>design&#95;&#95;image&#95;&#95;startswith=</o>"design")<br><br><c>&dash;&dash; SQL</c><br><c>&dash;&dash; ?? </c>
+&nbsp; <o>design&#95;&#95;image&#95;&#95;startswith=</o>"design").count()<br><br><c>&dash;&dash; SQL</c><br><c>&dash;&dash; ?? </c>
 
 
 Note: But what code was run?
@@ -1590,7 +1611,7 @@ We have the ability to check this
 <pre><code><c>&num; ORM</c>
 Codepoint.objects.filter(
 &nbsp; <o>design&#95;&#95;image&#95;&#95;contains=</o>"png",
-&nbsp; <o>design&#95;&#95;image&#95;&#95;startswith=</o>"design")<br><br><c>&dash;&dash; SQL</c><br><c>&dash;&dash; ?? </c><br><br><c>&num; ORM</c><br><r>from</r> django.db <r>import</r> connection<br>connection.queries
+&nbsp; <o>design&#95;&#95;image&#95;&#95;startswith=</o>"design").count()<br><br><c>&dash;&dash; SQL</c><br><c>&dash;&dash; ?? </c><br><br><c>&num; ORM</c><br><r>from</r> django.db <r>import</r> connection<br>connection.queries
 </code></pre>
 ---
 $$terminal python3.6
@@ -1670,7 +1691,7 @@ $$pyw
 <pre><code><c>&num; ORM</c>
 Codepoint.objects.filter(
 &nbsp; <o>design&#95;&#95;image&#95;&#95;contains=</o>"png",
-&nbsp; <o>design&#95;&#95;image&#95;&#95;startswith=</o>"design")<br><br><c>&dash;&dash; SQL</c><br><r>SELECT</r> <l>count</l>(<r>*</r>)
+&nbsp; <o>design&#95;&#95;image&#95;&#95;startswith=</o>"design").count()<br><br><c>&dash;&dash; SQL</c><br><r>SELECT</r> <l>count</l>(<r>*</r>)
 &nbsp; <r>FROM</r> from unicodex_codepoint C<br><r>&nbsp;INNER JOIN</r> unicodex_design D <r>ON</r> (<l>C</l>.<l>id <r>=</r> D</l>.<l>id</l>)<br><r>&nbsp;WHERE</r> (<l>D</l>.<l>image</l> <r>LIKE</r> '%png%'
 &nbsp; &nbsp; <r>AND</r> <l>D</l>.<l>image</l> <r>LIKE</r>'des%')
 
@@ -1679,7 +1700,7 @@ Codepoint.objects.filter(
 <pre><code><c>&num; ORM</c>
 Codepoint.objects.filter(
 &nbsp; <o>design&#95;&#95;image&#95;&#95;contains=</o>"png").filter(
-&nbsp; <o>design&#95;&#95;image&#95;&#95;startswith=</o>"design")<br><br><c>&dash;&dash; SQL</c><br><c>&dash;&dash; ??
+&nbsp; <o>design&#95;&#95;image&#95;&#95;startswith=</o>"design").count()<br><br><c>&dash;&dash; SQL</c><br><c>&dash;&dash; ??
 
 ---
 $$terminal python3.6
@@ -1750,7 +1771,7 @@ Note: well, we can tell it's a different SQL statement than before based on the 
 <pre><code><c>&num; ORM</c>
 Codepoint.objects.filter(
 &nbsp; <o>design&#95;&#95;image&#95;&#95;contains=</o>"png").filter(
-&nbsp; <o>design&#95;&#95;image&#95;&#95;startswith=</o>"design")<br><br><c>&dash;&dash; SQL</c><br><r>SELECT</r> <l>count</l>(<r>&#42;</r>)
+&nbsp; <o>design&#95;&#95;image&#95;&#95;startswith=</o>"design").count()<br><br><c>&dash;&dash; SQL</c><br><r>SELECT</r> <l>count</l>(<r>&#42;</r>)
 &nbsp; <r>FROM</r> from unicodex_codepoint C<br><r>&nbsp;INNER JOIN</r> unicodex_design D <r>ON</r> (<l>C</l>.<l>id <r>=</r> D</l>.<l>id</l>)<br><r>&nbsp;INNER JOIN</r> unicodex_design E <r>ON</r> (<l>C</l>.<l>id <r>=</r> E</l>.<l>id</l>)<br><r>&nbsp;WHERE</r> (<l>D</l>.<l>image</l> <r>LIKE</r> '%png%'
 &nbsp; &nbsp; <r>AND</r> <l>D</l>.<l>image</l> <r>LIKE</r>'des%')
 
