@@ -59,8 +59,14 @@ Note: I still see the django admin as
 
 ---
  <div style='margin: 0 auto;'><p align='center'><img src='pictures/djadmin_sparkles.png'></p></div>  <!-- .slide: class="center" -->
-
 Note: a magical piece of software development
+---
+ <div style='margin: 0 auto;'><p align='center'><img src='pictures/djuser_super.png'></p></div>  <!-- .slide: class="center" -->
+
+Note: I mean, the fact that this admin is just generated based on something called models..?
+
+and it just works, it's so cool
+
 
 ---
  <!-- .slide: data-background-image="pictures/macbook.jpg"-->
@@ -611,7 +617,7 @@ Adding a where clause for, say, sparkles
 <r>SELECT * <br>&nbsp; FROM</r> <l>unicodex_codepoint c</l><br>&nbsp;<r>WHERE</r> <l>c</l>.<l>name</l> <r>&equals;</r> 'Sparkles';
 
 <c>&num; ORM</c>
-Codepoint.objects.filter(<r>name&equals;</r>'Sparkles') 
+Codepoint.objects.filter(<o>name&equals;</o>'Sparkles') 
 </code></pre> 
 
 Note: this maps to the ORM as filter. where the name column is a keyword argument of filter.
@@ -831,6 +837,24 @@ Design.objects.filter(<o><br>&nbsp;&nbsp;&nbsp;codepoint&#95;&#95;name&equals;</
 Design.objects.filter(<o><br>&nbsp;&nbsp;&nbsp;codepoint&#95;&#95;name&#95;&#95;exact&equals;</o>'Sparkles') 
 
 Note: so by default what we're calling is codepoint name equals
+---
+# Aside <!-- .slide: class="center" -->
+
+Note: as aside, did you know that this is how those awesome admin filters work? it's true!
+---
+ <img src="pictures/djuser_super.png" style="margin-top: -50px" />
+Note: if we go back to that admin page we saw right at the start
+---
+ <img src="pictures/djuser_super_h.png" style="margin-top: -50px" />
+Note: 
+
+Look at the URL
+
+It's our filters
+
+the admin uses field lookups in it's UI
+
+and to some extent, you can handcode this URL to do some basic filtering, even if there isn't any filters on the right hand side panel
 
 ---
  <div class="shell-wrap"><p class="shell-top-bar">python3.6</p><p class="shell-body">
@@ -849,6 +873,8 @@ Note: so by default what we're calling is codepoint name equals
  &gt;&gt;&gt; <w>&nbsp;</w>
 
 Note: 
+
+back to our terminal
 
 We can also forge a path down a different series of foreign keys
 
@@ -1052,7 +1078,7 @@ Note: instead of just filtering on Micro, we could alos
 
 Note: we get list of designs both from a vendor
 ---
-## `AND`? `OR` <!-- .slide: class="center" -->
+## ... `AND`? <!-- .slide: class="center" -->
 Note: 
 
 So far we've dealt with single or chained filters, which will AND together
@@ -1068,79 +1094,607 @@ Note: This is where Q comes in
 No, not the race from the great Star Trek sequel, The Next Generation,
 
 Q and in Query
+
+With Q, we can build up AND, OR, and NOT statements in our where clause when filtering objects
+
+So, let's start some comparisons...
 ---
-
-TODO EXPAND OUT
-
-
-
-
-
-Book.objects.filter(name'Bible', author='God') <!-- .slide: class="center" -->
-Book.objects.filter(name__exact'Bible', author__exact='God') <!-- .slide: class="center" -->
-
-Book.objects.filter(Q(name'Bible') & Q(author='God')) <!-- .slide: class="center" -->
-
-Book.objects.filter(Q(name'Bible'), author='God') <!-- .slide: class="center" -->
-
-Book.objects.filter(Q(name'Bible'), Q(author='God')) <!-- .slide: class="center" -->
-
-Book.objects.filter(author'God', Q(name='Bible')) # Syntax error <!-- .slide: class="center" -->
-
-Book.objects.filter(name'Bible', name='Hitchikers') # Why bother? It's always empty <!-- .slide: class="center" -->
-
-Book.objects.filter(Q(name'Bible') | Q(name='Hitchikers')) <!-- .slide: class="center" -->
-
-Book.objects.filter(author__name'John', author__age=42) # One join <!-- .slide: class="center" -->
-Book.objects.filter(author__name'John').filter(author__age42) # Two joins <!-- .slide: class="center" -->
+<pre><code><c>&num; ORM</c>
+Codepoint.objects.filter( 
+&nbsp; <o>name=</o>'Sparkles',
+&nbsp; <o>description=</o>'Shiny!'
+) 
 
 
-
-
-
-
-
-
-
-
-
+Note: instead of using our super long chaining filter, let's use a simpler example here
+this query would give us codepoints named sparkles with the description shiny
 
 ---
-## Wanna know something really cool? <!-- .slide: class="center" -->
+<pre><code><c>&num; ORM</c>
+Codepoint.objects.filter( 
+&nbsp; <o>name=</o>'Sparkles',
+&nbsp; <o>description=</o>'Shiny!'
+)<br><br><c>&dash;&dash; SQL</c><br><r>SELECT *
+&nbsp; FROM</r> <l>unicodex_codepoint c </l><br><r>&nbsp;WHERE</r> <l>c</l>.<l>name</l> <r>=</r> 'Sparkles'<br><r>&nbsp; &nbsp;AND</r> <l>c</l>.<l>description</l> <r>=</r> 'Shiny!'
+
+Note: this would be the equvilent SQL
 ---
-## You can do this in the admin <!-- .slide: class="center" -->
----
-# 🤯 <!-- .slide: class="center" -->
+<pre><code><c>&num; ORM</c>
+Codepoint.objects.filter( 
+&nbsp; <o>name&#95;&#95;exact=</o>'Sparkles',
+&nbsp; <o>description&#95;&#95;exact=</o>'Shiny!'
+)<br><br><c>&dash;&dash; SQL</c><br><r>SELECT *
+&nbsp; FROM</r> <l>unicodex_codepoint c </l><br><r>&nbsp;WHERE</r> <l>c</l>.<l>name</l> <r>=</r> 'Sparkles'<br><r>&nbsp; &nbsp;AND</r> <l>c</l>.<l>description</l> <r>=</r> 'Shiny!'
+
+Note: And we learnt earlier that unless there's a field lookup defined, we assume exact
+
+This is the same SQL
+
+We can also express this same statement using Q
 ---
 
- <img src="pictures/djadmin.png" style="margin-top: -50px" />
-Note: here is the admin from earlier
-One of those default apps is user authentication
----
+<pre><code><c>&num; ORM</c>
+Codepoint.objects.filter( 
+&nbsp; <o>name=</o>'Sparkles',
+&nbsp; <o>description=</o>'Shiny!'
+)<br><br><c>&dash;&dash; SQL</c><br><r>SELECT *
+&nbsp; FROM</r> <l>unicodex_codepoint c </l><br><r>&nbsp;WHERE</r> <l>c</l>.<l>name</l> <r>=</r> 'Sparkles'<br><r>&nbsp; &nbsp;AND</r> <l>c</l>.<l>description</l> <r>=</r> 'Shiny!'
 
- <img src="pictures/djuser_none.png" style="margin-top: -50px" />
-Note: if we go to the admin page for users, we see a list of users, but these filters on the right are useful for filtering
+Note: so going back to our first example,
 ---
- <img src="pictures/djuser_super.png" style="margin-top: -50px" />
-Note: we can filter by super users
+<pre><code><c>&num; ORM</c>
+Codepoint.objects.filter( 
+&nbsp; Q(<o>name=</o>'Sparkles'),
+&nbsp; Q(<o>description=</o>'Shiny!')
+)<br><br><c>&dash;&dash; SQL</c><br><r>SELECT *
+&nbsp; FROM</r> <l>unicodex_codepoint c </l><br><r>&nbsp;WHERE</r> <l>c</l>.<l>name</l> <r>=</r> 'Sparkles'<br><r>&nbsp; &nbsp;AND</r> <l>c</l>.<l>description</l> <r>=</r> 'Shiny!'
+
+Note: we can just wrap our two filter parameters in Q
+
+This proides the same result
+
+Notice in all of this, the equivelent SQL hasn't changed.
+
+With our comma here, we're implying we're using AND here. We can be explicit
+
 ---
- <img src="pictures/djuser_super_h.png" style="margin-top: -50px" />
+<pre><code><c>&num; ORM</c>
+Codepoint.objects.filter( 
+&nbsp; Q(<o>name=</o>'Sparkles') <r>&</r>
+&nbsp; Q(<o>description=</o>'Shiny!')
+)<br><br><c>&dash;&dash; SQL</c><br><r>SELECT *
+&nbsp; FROM</r> <l>unicodex_codepoint c </l><br><r>&nbsp;WHERE</r> <l>c</l>.<l>name</l> <r>=</r> 'Sparkles'<br><r>&nbsp; &nbsp;AND</r> <l>c</l>.<l>description</l> <r>=</r> 'Shiny!'
+
 Note: 
 
-Look at the URL
-It's the same filter we were hand coding
+Here, we're saying filter by this Query, and this Query
+
+And we're using AND here explitictly
+
+We don't have to wrap both in Q, either
+---
+<pre><code><c>&num; ORM</c>
+Codepoint.objects.filter( 
+&nbsp; Q(<o>name=</o>'Sparkles'),</r>
+&nbsp; Q(<o>description=</o>'Shiny!')
+)<br><br><c>&dash;&dash; SQL</c><br><r>SELECT *
+&nbsp; FROM</r> <l>unicodex_codepoint c </l><br><r>&nbsp;WHERE</r> <l>c</l>.<l>name</l> <r>=</r> 'Sparkles'<br><r>&nbsp; &nbsp;AND</r> <l>c</l>.<l>description</l> <r>=</r> 'Shiny!'
+
+Note: going back to our changed example
+---
+<pre><code><c>&num; ORM</c>
+Codepoint.objects.filter( 
+&nbsp; Q(<o>name=</o>'Sparkles'),
+&nbsp; <o>description=</o>'Shiny!'
+)<br><br><c>&dash;&dash; SQL</c><br><r>SELECT *
+&nbsp; FROM</r> <l>unicodex_codepoint c </l><br><r>&nbsp;WHERE</r> <l>c</l>.<l>name</l> <r>=</r> 'Sparkles'<br><r>&nbsp; &nbsp;AND</r> <l>c</l>.<l>description</l> <r>=</r> 'Shiny!'
+
+
+Note: we can change our queries with comman, and just wrap the first one and leave thther. Same result
+---
+<pre><code><c>&num; ORM</c>
+Codepoint.objects.filter( 
+&nbsp; <o>name=</o>'Sparkles',
+&nbsp; <o>description=</o>'Shiny!'
+)<br><br><c>&dash;&dash; SQL</c><br><r>SELECT *
+&nbsp; FROM</r> <l>unicodex_codepoint c </l><br><r>&nbsp;WHERE</r> <l>c</l>.<l>name</l> <r>=</r> 'Sparkles'<br><r>&nbsp; &nbsp;AND</r> <l>c</l>.<l>description</l> <r>=</r> 'Shiny!'
+
+
+Note: and we don't have to wrap either. But what if we wrap just the second
+So, we could just wrap the second one, and leave the first one alone, right?
+
 
 ---
- <img src="pictures/djuser_superactive.png" style="margin-top: -50px" />
-Note: click on active users
-and the URL changes
+<pre><code><c>&num; ORM</c>
+Codepoint.objects.filter( 
+&nbsp; <o>name=</o>'Sparkles',
+&nbsp; Q(<o>description=</o>'Shiny!')
+)<br><br><r>SyntaxError: positional argument follows<br>keyword argument</r>
+
+Note: well no, we get an error.
+
+The error here is insightful: Syntax Error, positioal argument follows keyword argument
+
+The reasoning behind this is that in all the code we've been doing here, we've been giving arguments to the filter function
+
+And in python, you have to declare positional argumnet before keyword argumnets
+
+Remembering that even in these new Django concepts, we're still using Python, so python rules still apply.
 ---
- <img src="pictures/djuser_superactive_h.png" style="margin-top: -50px" />
-Note: it now shows an and in there.
 
-There are limitations about how crafty you can get in the URL filter for security reasons, but basic operations work, even if there isn't any filters on the right hand side panel
+<pre><code><c>&num; ORM</c>
+Codepoint.objects.filter( 
+&nbsp; <o>name=</o>'Sparkles',
+&nbsp; <o>description=</o>'Shiny!'
+)<br><br><c>&dash;&dash; SQL</c><br><r>SELECT *
+&nbsp; FROM</r> <l>unicodex_codepoint c </l><br><r>&nbsp;WHERE</r> <l>c</l>.<l>name</l> <r>=</r> 'Sparkles'<br><r>&nbsp; &nbsp;AND</r> <l>c</l>.<l>description</l> <r>=</r> 'Shiny!'
 
-TODO JB info about where/what limitations?
+Note: Another example of this. Let's put our code back working, and try changing that description
+
+Say we want to search for sparkles and unicorns
+
+So we search for name equals sparkles and name equals unicorns and
+---
+<pre><code><c>&num; ORM</c>
+Codepoint.objects.filter( 
+&nbsp; <o>name=</o>'Sparkles',
+&nbsp; <o>name=</o>'Unicorn'
+)<br><br><r>SyntaxError: keyword argument repeated</r>
+
+Note: oh. There's an error.
+
+This is agan, because Python. You can't repeat keyword aguments. But, you can get around this.
+Just wrap it in Q
+
+---
+<pre><code><c>&num; ORM</c>
+Codepoint.objects.filter( 
+&nbsp; Q(<o>name=</o>'Sparkles'),
+&nbsp; Q(<o>name=</o>'Unicorn')
+)<br><br><c>&dash;&dash; SQL</c><br><r>SELECT *
+&nbsp; FROM</r> <l>unicodex_codepoint c </l><br><r>&nbsp;WHERE</r> <l>c</l>.<l>name</l> <r>=</r> 'Sparkles'<br><r>&nbsp; &nbsp;AND</r> <l>c</l>.<l>name</l> <r>=</r> 'Unicorn'
+
+Note: now, this code is valid python, but it isn't useful, because it will never return any results.
+
+We're asking for exact string matches on the same column, twice. It'll always be an empty set.
+
+But what we can do is change this from an and, to an OR
+
+---
+<pre><code><c>&num; ORM</c>
+Codepoint.objects.filter( 
+&nbsp; Q(<o>name=</o>'Sparkles') &
+&nbsp; Q(<o>name=</o>'Unicorn')
+)<br><br><c>&dash;&dash; SQL</c><br><r>SELECT *
+&nbsp; FROM</r> <l>unicodex_codepoint c </l><br><r>&nbsp;WHERE</r> <l>c</l>.<l>name</l> <r>=</r> 'Sparkles'<br><r>&nbsp; &nbsp;AND</r> <l>c</l>.<l>name</l> <r>=</r> 'Unicorn'
+
+Note: Using the comma is equiv to this AND, but with the comma we're giving filter two arguments. Here, we're giving it one. We'll get back to this, because it's really cool
+
+So, to take our AND to and OR, we change the ampersand
+
+---
+<pre><code><c>&num; ORM</c>
+Codepoint.objects.filter( 
+&nbsp; Q(<o>name=</o>'Sparkles') |
+&nbsp; Q(<o>name=</o>'Unicorn')
+)<br><br><c>&dash;&dash; SQL</c><br><r>SELECT *
+&nbsp; FROM</r> <l>unicodex_codepoint c </l><br><r>&nbsp;WHERE</r> <l>c</l>.<l>name</l> <r>=</r> 'Sparkles'<br><r>&nbsp; &nbsp;OR</r> <l>c</l>.<l>name</l> <r>=</r> 'Unicorn'
+
+Note: to a pipe.
+
+This command is now useful, because it will show us both Sparkles and Unicorns.
+
+What's happening here is really cool
+
+We're sending one argument to filter, but django is doing something awesome here
+
+A quick recap of the and and or operators
+---
+
+ <div class="shell-wrap"><p class="shell-top-bar">python3.6</p><p class="shell-body">
+ &gt;&gt;&gt; <w>&nbsp;</w>
+---
+ <div class="shell-wrap"><p class="shell-top-bar">python3.6</p><p class="shell-body">
+ &gt;&gt;&gt; x = 0b10101010<w>&nbsp;</w>
+
+Note: if we have X as a binary string of one zero one zero
+
+---
+ <div class="shell-wrap"><p class="shell-top-bar">python3.6</p><p class="shell-body">
+ &gt;&gt;&gt; x = 0b10101010<br>
+ &gt;&gt;&gt; <w>&nbsp;</w>
+
+---
+ <div class="shell-wrap"><p class="shell-top-bar">python3.6</p><p class="shell-body">
+ &gt;&gt;&gt; x = 0b10101010<br>
+ &gt;&gt;&gt; y = 0b11110000<w>&nbsp;</w>
+
+Note: and we have y as one one one zero zero zero zero
+
+we can do something called bit masking
+
+---
+ <div class="shell-wrap"><p class="shell-top-bar">python3.6</p><p class="shell-body">
+ &gt;&gt;&gt; x = 0b10101010<br>
+ &gt;&gt;&gt; y = 0b11110000<br>
+ &gt;&gt;&gt; <w>&nbsp;</w>
+
+---
+ <div class="shell-wrap"><p class="shell-top-bar">python3.6</p><p class="shell-body">
+ &gt;&gt;&gt; x = 0b10101010<br>
+ &gt;&gt;&gt; y = 0b11110000<br>
+ &gt;&gt;&gt; bin(x & y)<w>&nbsp;</w>
+
+Note: if we ask for x AND y
+
+---
+ <div class="shell-wrap"><p class="shell-top-bar">python3.6</p><p class="shell-body">
+ &gt;&gt;&gt; x = 0b10101010<br>
+ &gt;&gt;&gt; y = 0b11110000<br>
+ &gt;&gt;&gt; bin(x & y)<br>
+'0b10100000'<br> 
+ &gt;&gt;&gt; <w>&nbsp;</w>
+
+Note: we get 10100000
+
+For each bit, we only return 1 if both are 1
+
+---
+ <div class="shell-wrap"><p class="shell-top-bar">python3.6</p><p class="shell-body">
+ &gt;&gt;&gt; x = 0b10101010<br>
+ &gt;&gt;&gt; y = 0b11110000<br>
+ &gt;&gt;&gt; bin(x & y)<br>
+'0b10100000'<br> 
+ &gt;&gt;&gt; bin(x | y)<w>&nbsp;</w>
+
+Note: conversely, if we ask for x OR y
+
+---
+ <div class="shell-wrap"><p class="shell-top-bar">python3.6</p><p class="shell-body">
+ &gt;&gt;&gt; x = 0b10101010<br>
+ &gt;&gt;&gt; y = 0b11110000<br>
+ &gt;&gt;&gt; bin(x & y)<br>
+'0b10100000'<br> 
+ &gt;&gt;&gt; bin(x | y)<br>
+'0b11110101' 
+
+Note: we get all ones at the start, then our stripes
+
+That's because we return one is either or are 1
+
+This is very similar to what we do in SQL.
+
+For each row of a table, we want to return it in our result set if BOTH conditions are true on and, or if either are true on and OR
+
+---
+<pre><code><c>&num; ORM</c>
+Codepoint.objects.filter( 
+&nbsp; Q(<o>name=</o>'Sparkles') |
+&nbsp; Q(<o>name=</o>'Unicorn')
+)<br><br><c>&dash;&dash; SQL</c><br><r>SELECT *
+&nbsp; FROM</r> <l>unicodex_codepoint c </l><br><r>&nbsp;WHERE</r> <l>c</l>.<l>name</l> <r>=</r> 'Sparkles'<br><r>&nbsp; &nbsp;OR</r> <l>c</l>.<l>name</l> <r>=</r> 'Unicorn'
+
+
+Note: so, using the and or operators here makes sense, because those are the actions we are performing
+
+But, we're doing these operations on Query objects, not binary. Do how does that work?
+
+What's happening here is metaprogramming. Sometimes confused for magic, it's a funcitonlaity of python that makes it really powerful.
+
+I'm going to show you a small snippet of django source code. It won't be scary, don't worry.
+
+---
+<pre><code style="font-size: 24pt !important"><r>class</r> <g>Q</g>(<g>tree</g>.<g>Node</g>):
+<c>"""<br>Encapsulate filters as objects that can<br>then be combined logically (using `&` and `|`).<br>"""</c>
+&nbsp; ...
+&nbsp; <r>def</r> <l>&#95;&#95;or&#95;&#95;</l>(self, other):
+&nbsp; &nbsp; <r>return</r> <l>self</l>._combine(other, <l>self.OR</l>)
+
+&nbsp; <r>def</r> <l>&#95;&#95;and&#95;&#95;</l>(self, other):
+&nbsp; &nbsp; <r>return</r> <l>self</l>._combine(other, <l>self.AND</l>)
+</code></pre> 
+
+ <span class='foot'>[django db/models/utils.py](https://github.com/django/django/blame/5256a805ff1c31e4d5112627846291e91c5dc65d/django/db/models/query_utils.py#L142)</span>
+
+Note: django literally overloads the operations that happens when you try and do bitwise operations on the Q class in order for Q to have a logical response to bitwise operations
+
+and it means you can do bitwise operations on Q obecjts and it's compeltely valid python
+
+it's composble, it's functional, and it's intuative.
+
+and it's been in Django for over 10 years
+
+---
+<pre><code><c>&num; ORM</c>
+Codepoint.objects.filter( 
+&nbsp; Q(<o>name=</o>'Sparkles') |
+&nbsp; Q(<o>name=</o>'Unicorn')
+)<br><br><c>&dash;&dash; SQL</c><br><r>SELECT *
+&nbsp; FROM</r> <l>unicodex_codepoint c </l><br><r>&nbsp;WHERE</r> <l>c</l>.<l>name</l> <r>=</r> 'Sparkles'<br><r>&nbsp; &nbsp;OR</r> <l>c</l>.<l>name</l> <r>=</r> 'Unicorn'
+
+Note: as well as AND or OR, we can also do NOT
+
+So with our code above
+
+---
+<pre><code><c>&num; ORM</c>
+Codepoint.objects.filter( 
+&nbsp; Q(<o>name=</o>'Sparkles') |
+&nbsp; ~Q(<o>name=</o>'Unicorn')
+)<br><br><c>&dash;&dash; SQL</c><br><r>SELECT *
+&nbsp; FROM</r> <l>unicodex_codepoint c </l><br><r>&nbsp;WHERE</r> <l>c</l>.<l>name</l> <r>=</r> 'Sparkles'<br><r>&nbsp; &nbsp;OR NOT</r> <l>c</l>.<l>name</l> <r>=</r> 'Unicorn'
+
+
+Note: we can and a tilda negation to invert that part of the query, and add a NOT to our SQL
+
+Using our field lookups and these operations, we can do a lot of things. But are some limitations
+
+Firstly, you need to understand how the joins happen in order avoid confusion
+
+---
+
+<pre><code><c>&num; ORM</c>
+Codepoint.objects.filter( 
+&nbsp; design&#95;&#95;image&#95;&#95;contains="png",
+&nbsp; design&#95;&#95;image&#95;&#95;startswith="des")
+
+Note: Consider the following we want codepoints where their design iages have png and start with des
+
+Okay. Let's run that and see what happens
+
+---
+ <div class="shell-wrap"><p class="shell-top-bar">python3.6</p><p class="shell-body">
+ <ps>myrtle</ps> <dr>~/project $</dr> 
+./manage.py shell<br>
+Python 3.6.3 (default, Nov 9 2017, 15:58:30)<br>
+[GCC 4.2.1 Compatible Apple LLVM 9.0.0 (clang-900.0.38)] on darwin<br>
+Type "help", "copyright", "credits" or "license" for more information.<br>
+(InteractiveConsole)<br> 
+ &gt;&gt;&gt; <w>&nbsp;</w>
+
+Note: so in our terminal
+
+  <!-- .element: class="fragment" -->
+ <div class="shell-wrap"><p class="shell-top-bar">python3.6</p><p class="shell-body">
+ <ps>myrtle</ps> <dr>~/project $</dr> 
+./manage.py shell<br>
+Python 3.6.3 (default, Nov 9 2017, 15:58:30)<br>
+[GCC 4.2.1 Compatible Apple LLVM 9.0.0 (clang-900.0.38)] on darwin<br>
+Type "help", "copyright", "credits" or "license" for more information.<br>
+(InteractiveConsole)<br> 
+ &gt;&gt;&gt; from unicodex.models import Codepoint<w>&nbsp;</w>
+  <!-- .element: class="fragment" -->
+ <div class="shell-wrap"><p class="shell-top-bar">python3.6</p><p class="shell-body">
+ <ps>myrtle</ps> <dr>~/project $</dr> 
+./manage.py shell<br>
+Python 3.6.3 (default, Nov 9 2017, 15:58:30)<br>
+[GCC 4.2.1 Compatible Apple LLVM 9.0.0 (clang-900.0.38)] on darwin<br>
+Type "help", "copyright", "credits" or "license" for more information.<br>
+(InteractiveConsole)<br> 
+ &gt;&gt;&gt; from unicodex.models import Codepoint<br>
+ &gt;&gt;&gt; <w>&nbsp;</w>
+
+Note: remembering to import our model
+
+---
+ <div class="shell-wrap"><p class="shell-top-bar">python3.6</p><p class="shell-body">
+ <ps>myrtle</ps> <dr>~/project $</dr> 
+./manage.py shell<br>
+Python 3.6.3 (default, Nov 9 2017, 15:58:30)<br>
+[GCC 4.2.1 Compatible Apple LLVM 9.0.0 (clang-900.0.38)] on darwin<br>
+Type "help", "copyright", "credits" or "license" for more information.<br>
+(InteractiveConsole)<br> 
+ &gt;&gt;&gt; from unicodex.models import Codepoint<br>
+ &gt;&gt;&gt; Codepoint.objects.filter(design&#95;&#95;image&#95;&#95;contains="png", design&#95;&#95;image&#95;&#95;startswith="des")<w>&nbsp;</w>
+
+Note: we add our code
+
+---
+ <div class="shell-wrap"><p class="shell-top-bar">python3.6</p><p class="shell-body">
+ <ps>myrtle</ps> <dr>~/project $</dr> 
+./manage.py shell<br>
+Python 3.6.3 (default, Nov 9 2017, 15:58:30)<br>
+[GCC 4.2.1 Compatible Apple LLVM 9.0.0 (clang-900.0.38)] on darwin<br>
+Type "help", "copyright", "credits" or "license" for more information.<br>
+(InteractiveConsole)<br> 
+ &gt;&gt;&gt; from unicodex.models import Codepoint<br>
+ &gt;&gt;&gt; Codepoint.objects.filter(design&#95;&#95;image&#95;&#95;contains="png", design&#95;&#95;image&#95;&#95;startswith="des")<br>
+&lt;QuerySet [&lt;Codepoint: Sparkles>, &lt;Codepoint: Sparkles>, &lt;Codepoint: Sparkles>, &lt;Codepoint: Sparkles>, &lt;Codepoint: Sparkles>, &lt;Codepoint: Sparkles>, &lt;Codepoint: Sparkles>, &lt;Codepoint: Sparkles>, &lt;Codepoint: Sparkles>, &lt;Codepoint: Sparkles>, &lt;Codepoint: Sparkles>, &lt;Codepoint: Unicorn>, &lt;Codepoint: Unicorn>, &lt;Codepoint: Unicorn>, &lt;Codepoint: Unicorn>, &lt;Codepoint: Unicorn>, &lt;Codepoint: Unicorn>, &lt;Codepoint: Unicorn>, &lt;Codepoint: Two Hearts>, &lt;Codepoint: Two Hearts>, '...(remaining elements truncated)...']><br>
+ &gt;&gt;&gt; <w>&nbsp;</w>
+
+
+Note: we get a whole bunch of results
+For simplicity here, let's just display the number of results
+
+---
+ <div class="shell-wrap"><p class="shell-top-bar">python3.6</p><p class="shell-body">
+ <ps>myrtle</ps> <dr>~/project $</dr> 
+./manage.py shell<br>
+Python 3.6.3 (default, Nov 9 2017, 15:58:30)<br>
+[GCC 4.2.1 Compatible Apple LLVM 9.0.0 (clang-900.0.38)] on darwin<br>
+Type "help", "copyright", "credits" or "license" for more information.<br>
+(InteractiveConsole)<br> 
+ &gt;&gt;&gt; from unicodex.models import Codepoint<br>
+ &gt;&gt;&gt; Codepoint.objects.filter(design&#95;&#95;image&#95;&#95;contains="png", design&#95;&#95;image&#95;&#95;startswith="des")<w>&nbsp;</w>
+
+
+Note: rewind a step
+
+---
+ <div class="shell-wrap"><p class="shell-top-bar">python3.6</p><p class="shell-body">
+ <ps>myrtle</ps> <dr>~/project $</dr> 
+./manage.py shell<br>
+Python 3.6.3 (default, Nov 9 2017, 15:58:30)<br>
+[GCC 4.2.1 Compatible Apple LLVM 9.0.0 (clang-900.0.38)] on darwin<br>
+Type "help", "copyright", "credits" or "license" for more information.<br>
+(InteractiveConsole)<br> 
+ &gt;&gt;&gt; from unicodex.models import Codepoint<br>
+ &gt;&gt;&gt; Codepoint.objects.filter(design&#95;&#95;image&#95;&#95;contains="png", design&#95;&#95;image&#95;&#95;startswith="des").count()<w>&nbsp;</w>
+
+Note: add a count function on the end
+
+---
+ <div class="shell-wrap"><p class="shell-top-bar">python3.6</p><p class="shell-body">
+ <ps>myrtle</ps> <dr>~/project $</dr> 
+./manage.py shell<br>
+Python 3.6.3 (default, Nov 9 2017, 15:58:30)<br>
+[GCC 4.2.1 Compatible Apple LLVM 9.0.0 (clang-900.0.38)] on darwin<br>
+Type "help", "copyright", "credits" or "license" for more information.<br>
+(InteractiveConsole)<br> 
+ &gt;&gt;&gt; from unicodex.models import Codepoint<br>
+ &gt;&gt;&gt; Codepoint.objects.filter(design&#95;&#95;image&#95;&#95;contains="png", design&#95;&#95;image&#95;&#95;startswith="des").count()<br>
+37<br> 
+ &gt;&gt;&gt; <w>&nbsp;</w>
+
+Note: 37 results
+
+But what code was run?
+
+We have the ability toc heck this
+---
+
+ <div class="shell-wrap"><p class="shell-top-bar">python3.6</p><p class="shell-body">
+ <ps>myrtle</ps> <dr>~/project $</dr> 
+./manage.py shell<br>
+Python 3.6.3 (default, Nov 9 2017, 15:58:30)<br>
+[GCC 4.2.1 Compatible Apple LLVM 9.0.0 (clang-900.0.38)] on darwin<br>
+Type "help", "copyright", "credits" or "license" for more information.<br>
+(InteractiveConsole)<br> 
+ &gt;&gt;&gt; from unicodex.models import Codepoint<br>
+ &gt;&gt;&gt; Codepoint.objects.filter(design&#95;&#95;image&#95;&#95;contains="png", design&#95;&#95;image&#95;&#95;startswith="des").count()<br>
+37<br> 
+ &gt;&gt;&gt; from django.db import connection<w>&nbsp;</w>
+
+Note: we can import the django database connection modele
+---
+
+ <div class="shell-wrap"><p class="shell-top-bar">python3.6</p><p class="shell-body">
+ <ps>myrtle</ps> <dr>~/project $</dr> 
+./manage.py shell<br>
+Python 3.6.3 (default, Nov 9 2017, 15:58:30)<br>
+[GCC 4.2.1 Compatible Apple LLVM 9.0.0 (clang-900.0.38)] on darwin<br>
+Type "help", "copyright", "credits" or "license" for more information.<br>
+(InteractiveConsole)<br> 
+ &gt;&gt;&gt; from unicodex.models import Codepoint<br>
+ &gt;&gt;&gt; Codepoint.objects.filter(design&#95;&#95;image&#95;&#95;contains="png", design&#95;&#95;image&#95;&#95;startswith="des").count()<br>
+37<br> 
+ &gt;&gt;&gt; from django.db import connection<br>
+ &gt;&gt;&gt; <w>&nbsp;</w>
+---
+
+ <div class="shell-wrap"><p class="shell-top-bar">python3.6</p><p class="shell-body">
+ <ps>myrtle</ps> <dr>~/project $</dr> 
+./manage.py shell<br>
+Python 3.6.3 (default, Nov 9 2017, 15:58:30)<br>
+[GCC 4.2.1 Compatible Apple LLVM 9.0.0 (clang-900.0.38)] on darwin<br>
+Type "help", "copyright", "credits" or "license" for more information.<br>
+(InteractiveConsole)<br> 
+ &gt;&gt;&gt; from unicodex.models import Codepoint<br>
+ &gt;&gt;&gt; Codepoint.objects.filter(design&#95;&#95;image&#95;&#95;contains="png", design&#95;&#95;image&#95;&#95;startswith="des").count()<br>
+37<br> 
+ &gt;&gt;&gt; from django.db import connection<br>
+ &gt;&gt;&gt; connection.queries[-1]<w>&nbsp;</w>
+
+Note: and inspect the last query run against our databse
+
+
+---
+ <div class="shell-wrap"><p class="shell-top-bar">python3.6</p><p class="shell-body">
+ <ps>myrtle</ps> <dr>~/project $</dr> 
+./manage.py shell<br>
+Python 3.6.3 (default, Nov 9 2017, 15:58:30)<br>
+[GCC 4.2.1 Compatible Apple LLVM 9.0.0 (clang-900.0.38)] on darwin<br>
+Type "help", "copyright", "credits" or "license" for more information.<br>
+(InteractiveConsole)<br> 
+ &gt;&gt;&gt; from unicodex.models import Codepoint<br>
+ &gt;&gt;&gt; Codepoint.objects.filter(design&#95;&#95;image&#95;&#95;contains="png", design&#95;&#95;image&#95;&#95;startswith="des").count()<br>
+37<br> 
+ &gt;&gt;&gt; from django.db import connection<br>
+ &gt;&gt;&gt; connection.queries[-1]<br>
+{'sql': 'SELECT COUNT(&#42;) AS "&#95;&#95;count" FROM "unicodex_codepoint" INNER JOIN "unicodex_design" ON ("unicodex_codepoint"."id" = "unicodex_design"."codepoint_id") WHERE ("unicodex_design"."image"::text LIKE \'%png%\' AND "unicodex_design"."image"::text LIKE \'des%\')', 'time': '0.001'}<br>
+ &gt;&gt;&gt; <w>&nbsp;</w>
+---
+<pre><code><c>&dash;&dash; SQL</c><br><r>SELECT</r> <l>count</l>(<r>*</r>)
+&nbsp; <r>FROM</r> from unicodex_codepoint C<br><r>INNER JOIN</r> unicodex_design D <r>ON</r> (<l>C</l>.<l>id <r>=</r> D</l>.<l>id</l>)<br><r>&nbsp;WHERE</r> (<l>D</l>.<l>image</l> <r>LIKE</r> '%png%'
+&nbsp; &nbsp; <r>AND</r> <l>D</l>.<l>image</l> <r>LIKE</r>'des%')
+
+---
+ <div class="shell-wrap"><p class="shell-top-bar">python3.6</p><p class="shell-body">
+ &gt;&gt;&gt; from unicodex.models import Codepoint<br>
+ &gt;&gt;&gt; Codepoint.objects.filter(design&#95;&#95;image&#95;&#95;contains="png", design&#95;&#95;image&#95;&#95;startswith="des").count()<br>
+37<br> 
+ &gt;&gt;&gt; from django.db import connection<br>
+ &gt;&gt;&gt; connection.queries[-1]<br>
+{'sql': 'SELECT COUNT(&#42;) AS "&#95;&#95;count" FROM "unicodex&#95;codepoint" INNER JOIN "unicodex&#95;design" ON ("unicodex&#95;codepoint"."id" = "unicodex&#95;design"."codepoint&#95;id") WHERE ("unicodex&#95;design"."image"::text LIKE \'%png%\' AND "unicodex&#95;design"."image"::text LIKE \'des%\')', 'time': '0.001'}<br>
+ &gt;&gt;&gt; <w>&nbsp;</w>
+---
+ <div class="shell-wrap"><p class="shell-top-bar">python3.6</p><p class="shell-body">
+ &gt;&gt;&gt; from unicodex.models import Codepoint<br>
+ &gt;&gt;&gt; Codepoint.objects.filter(design&#95;&#95;image&#95;&#95;contains="png", design&#95;&#95;image&#95;&#95;startswith="des").count()<br>
+37<br> 
+ &gt;&gt;&gt; from django.db import connection<br>
+ &gt;&gt;&gt; connection.queries[-1]<br>
+{'sql': 'SELECT COUNT(&#42;) AS "&#95;&#95;count" FROM "unicodex&#95;codepoint" INNER JOIN "unicodex&#95;design" ON ("unicodex&#95;codepoint"."id" = "unicodex&#95;design"."codepoint&#95;id") WHERE ("unicodex&#95;design"."image"::text LIKE \'%png%\' AND "unicodex&#95;design"."image"::text LIKE \'des%\')', 'time': '0.001'}<br>
+ &gt;&gt;&gt; Codepoint.objects.filter(design&#95;&#95;image&#95;&#95;contains="png").filter(<br>
+ ... design&#95;&#95;image&#95;&#95;startswith="des").count()<w>&nbsp;</w><br>
+
+---
+ <div class="shell-wrap"><p class="shell-top-bar">python3.6</p><p class="shell-body">
+ &gt;&gt;&gt; from unicodex.models import Codepoint<br>
+ &gt;&gt;&gt; Codepoint.objects.filter(design&#95;&#95;image&#95;&#95;contains="png", design&#95;&#95;image&#95;&#95;startswith="des").count()<br>
+37<br> 
+ &gt;&gt;&gt; from django.db import connection<br>
+ &gt;&gt;&gt; connection.queries[-1]<br>
+{'sql': 'SELECT COUNT(&#42;) AS "&#95;&#95;count" FROM "unicodex&#95;codepoint" INNER JOIN "unicodex&#95;design" ON ("unicodex&#95;codepoint"."id" = "unicodex&#95;design"."codepoint&#95;id") WHERE ("unicodex&#95;design"."image"::text LIKE \'%png%\' AND "unicodex&#95;design"."image"::text LIKE \'des%\')', 'time': '0.001'}<br>
+ &gt;&gt;&gt; Codepoint.objects.filter(design&#95;&#95;image&#95;&#95;contains="png").filter(<br>
+ ... design&#95;&#95;image&#95;&#95;startswith="des").count()<br>
+501<br> 
+ &gt;&gt;&gt; <w>&nbsp;</w>
+
+Note: wait, what??
+
+---
+ <div class="shell-wrap"><p class="shell-top-bar">python3.6</p><p class="shell-body">
+ &gt;&gt;&gt; from unicodex.models import Codepoint<br>
+ &gt;&gt;&gt; Codepoint.objects.filter(design&#95;&#95;image&#95;&#95;contains="png", design&#95;&#95;image&#95;&#95;startswith="des").count()<br>
+37<br> 
+ &gt;&gt;&gt; from django.db import connection<br>
+ &gt;&gt;&gt; connection.queries[-1]<br>
+{'sql': 'SELECT COUNT(&#42;) AS "&#95;&#95;count" FROM "unicodex&#95;codepoint" INNER JOIN "unicodex&#95;design" ON ("unicodex&#95;codepoint"."id" = "unicodex&#95;design"."codepoint&#95;id") WHERE ("unicodex&#95;design"."image"::text LIKE \'%png%\' AND "unicodex&#95;design"."image"::text LIKE \'des%\')', 'time': '0.001'}<br>
+ &gt;&gt;&gt; Codepoint.objects.filter(design&#95;&#95;image&#95;&#95;contains="png").filter(<br>
+ ... design&#95;&#95;image&#95;&#95;startswith="des").count()<br>
+501<br> 
+ &gt;&gt;&gt; connection.queries[-1]<w>&nbsp;</w>
+
+Note: let's check
+
+
+
+---
+ <div class="shell-wrap"><p class="shell-top-bar">python3.6</p><p class="shell-body">
+ &gt;&gt;&gt; from django.db import connection<br>
+ &gt;&gt;&gt; connection.queries[-1]<br>
+{'sql': 'SELECT COUNT(&#42;) AS "&#95;&#95;count" FROM "unicodex&#95;codepoint" INNER JOIN "unicodex&#95;design" ON ("unicodex&#95;codepoint"."id" = "unicodex&#95;design"."codepoint&#95;id") WHERE ("unicodex&#95;design"."image"::text LIKE \'%png%\' AND "unicodex&#95;design"."image"::text LIKE \'des%\')', 'time': '0.001'}<br>
+ &gt;&gt;&gt; Codepoint.objects.filter(design&#95;&#95;image&#95;&#95;contains="png").filter(<br>
+ ... design&#95;&#95;image&#95;&#95;startswith="des").count()<br>
+501<br> 
+ &gt;&gt;&gt; connection.queries[-1]<br>
+{'sql': 'SELECT COUNT(&#42;) AS "&#95;&#95;count" FROM "unicodex&#95;codepoint" INNER JOIN "unicodex&#95;design" ON ("unicodex&#95;codepoint"."id" = "unicodex&#95;design"."codepoint&#95;id") INNER JOIN "unicodex&#95;design" T3 ON ("unicodex&#95;codepoint"."id" = T3."codepoint&#95;id") WHERE ("unicodex&#95;design"."image"::text LIKE \'%png%\' AND T3."image"::text LIKE \'des%\')', 'time': '0.002'}<br>
+ &gt;&gt;&gt; <w>&nbsp;</w>
+
+Note: well, we can tell it's a different SQL statement than before based on the length of the output.. but let's format itnicely and see what's going on
+---
+<pre><code><c>&dash;&dash; SQL</c><br><r>SELECT</r> <l>count</l>(<r>*</r>)
+&nbsp; <r>FROM</r> from unicodex_codepoint C<br><r>INNER JOIN</r> unicodex_design D <r>ON</r> (<l>C</l>.<l>id <r>=</r> D</l>.<l>id</l>)<br><r>INNER JOIN</r> unicodex_design E <r>ON</r> (<l>C</l>.<l>id <r>=</r> E</l>.<l>id</l>)<br><r>&nbsp;WHERE</r> (<l>D</l>.<l>image</l> <r>LIKE</r> '%png%'
+&nbsp; &nbsp; <r>AND</r> <l>D</l>.<l>image</l> <r>LIKE</r>'des%')
+
+Note: Ah.
+
+We have TWO joins happening here
+
+Every time there is a separate filter, it's another join. Which can absolutely be useful, but not when you're matching on the same associated table in both filters, as you can't join those references together.
+
+To do that, put them both in the same filter call. Django will be able to work it out, then.
 ---
 ## So, what if the ORM doesn't do it? <!-- .slide: class="center" -->
 
@@ -1223,7 +1777,7 @@ Python 3.6.3 (default, Nov 9 2017, 15:58:30)<br>
 [GCC 4.2.1 Compatible Apple LLVM 9.0.0 (clang-900.0.38)] on darwin<br>
 Type "help", "copyright", "credits" or "license" for more information.<br>
 (InteractiveConsole)<br> 
- &gt;&gt;&gt;&nbsp;<w>&nbsp;</w>
+ &gt;&gt;&gt; <w>&nbsp;</w>
 
 Note: it will turn your shell from this old and busted
 ---
