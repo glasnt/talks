@@ -164,10 +164,6 @@ Note:
 
 We're going to be a noisy myna, and go bughunting.
 
-Now, you may not used to being a noisy myna. You might be used to being a rainbow lorikeet.
-
-But in both cases, you know how to find bugs. You've just using a different set of wings to get there.
-
 We're going to find outselves an existing project, in this case, a field of kale, and hunt about trying to find some delicious bugs. We may not find any, but we can poke around and see what we find.
 ---
 # Context <!-- .slide: class="center" -->
@@ -1321,15 +1317,10 @@ Codepoint.objects.filter(
 
 Note: to a pipe.
 
-This command is now useful, because it will show us both Sparkles and Unicorns.
+This is an or operation
 
-What's happening here is really cool
+You may have only seen these operators before in bitmasking
 
-We're sending one argument to filter, but django is doing something awesome here
-
-A quick recap of the and and or operators
----
-### Review: Bitmasking <!-- .slide: class="center" -->
 ---
  <div class="shell-wrap"><p class="shell-top-bar">python3.6</p><p class="shell-body">
  &gt;&gt;&gt; <w>&nbsp;</w>
@@ -1401,6 +1392,9 @@ Note: conversely, if we ask for x OR y
 Note: we get all ones at the start, then our stripes
 
 That's because we return one is either or are 1
+
+
+That's how binary ANDs and binary ORs work
 
 This is very similar to what we do in SQL.
 
@@ -1909,12 +1903,6 @@ So that's all I had. Hopefully with these tips and tricks about how to use the O
 It might be a new stack to you, it might be old school, but I find the utmost dorkish joy in finding that odd little thing in a technology stack that just a short time ago I had no idea about, and then being able to harness that power.
 
 And being able to use your skills gained from other technology sets in new fields is really fun, sometimes a bit interesting, but always great.
-
-You never start again from zero.
-
-You have a lot of knowledge behind you.
-
-You've just used to being a different kind of bird. Doesn't mean you won't find your wings.
 
 ---
 <br> 
