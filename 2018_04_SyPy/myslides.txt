@@ -1685,7 +1685,7 @@ $$py Codepoint.objects.filter(design&#95;&#95;image&#95;&#95;contains="png", des
 37<br>
 $$py from django.db import connection
 $$py connection.queries[-1]
-{'sql': 'SELECT COUNT(&#42;) AS "&#95;&#95;count" FROM "unicodex_codepoint" INNER JOIN "unicodex_design" ON ("unicodex_codepoint"."id" = "unicodex_design"."codepoint_id") WHERE ("unicodex_design"."image"::text LIKE \'%png%\' AND "unicodex_design"."image"::text LIKE \'des%\')', 'time': '0.001'}<br>
+{'sql': 'SELECT COUNT(&#42;) AS "&#95;&#95;count" FROM "unicodex_codepoint" INNER JOIN "unicodex_design" ON ("unicodex_codepoint"."id" = "unicodex_design"."codepoint_id") WHERE ("unicodex_design"."image"::text LIKE \'%png%\' AND "unicodex_design"."image"::text LIKE \'design%\')', 'time': '0.001'}<br>
 $$pyw
 ---
 <pre><code><c>&num; ORM</c>
@@ -1693,7 +1693,7 @@ Codepoint.objects.filter(
 &nbsp; <o>design&#95;&#95;image&#95;&#95;contains=</o>"png",
 &nbsp; <o>design&#95;&#95;image&#95;&#95;startswith=</o>"design").count()<br><br><c>&dash;&dash; SQL</c><br><r>SELECT</r> <l>count</l>(<r>*</r>)
 &nbsp; <r>FROM</r> from unicodex_codepoint C<br><r>&nbsp;INNER JOIN</r> unicodex_design D <r>ON</r> (<l>C</l>.<l>id <r>=</r> D</l>.<l>id</l>)<br><r>&nbsp;WHERE</r> (<l>D</l>.<l>image</l> <r>LIKE</r> '%png%'
-&nbsp; &nbsp; <r>AND</r> <l>D</l>.<l>image</l> <r>LIKE</r>'des%')
+&nbsp; &nbsp; <r>AND</r> <l>D</l>.<l>image</l> <r>LIKE</r> 'design%')
 
 ---
 
@@ -1709,7 +1709,7 @@ $$py Codepoint.objects.filter(design&#95;&#95;image&#95;&#95;contains="png", des
 37<br>
 $$py from django.db import connection
 $$py connection.queries[-1]
-{'sql': 'SELECT COUNT(&#42;) AS "&#95;&#95;count" FROM "unicodex&#95;codepoint" INNER JOIN "unicodex&#95;design" ON ("unicodex&#95;codepoint"."id" = "unicodex&#95;design"."codepoint&#95;id") WHERE ("unicodex&#95;design"."image"::text LIKE \'%png%\' AND "unicodex&#95;design"."image"::text LIKE \'des%\')', 'time': '0.001'}<br>
+{'sql': 'SELECT COUNT(&#42;) AS "&#95;&#95;count" FROM "unicodex&#95;codepoint" INNER JOIN "unicodex&#95;design" ON ("unicodex&#95;codepoint"."id" = "unicodex&#95;design"."codepoint&#95;id") WHERE ("unicodex&#95;design"."image"::text LIKE \'%png%\' AND "unicodex&#95;design"."image"::text LIKE \'design%\')', 'time': '0.001'}<br>
 $$pyw
 ---
 $$terminal python3.6
@@ -1718,7 +1718,7 @@ $$py Codepoint.objects.filter(design&#95;&#95;image&#95;&#95;contains="png", des
 37<br>
 $$py from django.db import connection
 $$py connection.queries[-1]
-{'sql': 'SELECT COUNT(&#42;) AS "&#95;&#95;count" FROM "unicodex&#95;codepoint" INNER JOIN "unicodex&#95;design" ON ("unicodex&#95;codepoint"."id" = "unicodex&#95;design"."codepoint&#95;id") WHERE ("unicodex&#95;design"."image"::text LIKE \'%png%\' AND "unicodex&#95;design"."image"::text LIKE \'des%\')', 'time': '0.001'}<br>
+{'sql': 'SELECT COUNT(&#42;) AS "&#95;&#95;count" FROM "unicodex&#95;codepoint" INNER JOIN "unicodex&#95;design" ON ("unicodex&#95;codepoint"."id" = "unicodex&#95;design"."codepoint&#95;id") WHERE ("unicodex&#95;design"."image"::text LIKE \'%png%\' AND "unicodex&#95;design"."image"::text LIKE \'design%\')', 'time': '0.001'}<br>
 $$py Codepoint.objects.filter(design&#95;&#95;image&#95;&#95;contains="png").filter(
 $$pdw design&#95;&#95;image&#95;&#95;startswith="design").count()
 
@@ -1729,7 +1729,7 @@ $$py Codepoint.objects.filter(design&#95;&#95;image&#95;&#95;contains="png", des
 37<br>
 $$py from django.db import connection
 $$py connection.queries[-1]
-{'sql': 'SELECT COUNT(&#42;) AS "&#95;&#95;count" FROM "unicodex&#95;codepoint" INNER JOIN "unicodex&#95;design" ON ("unicodex&#95;codepoint"."id" = "unicodex&#95;design"."codepoint&#95;id") WHERE ("unicodex&#95;design"."image"::text LIKE \'%png%\' AND "unicodex&#95;design"."image"::text LIKE \'des%\')', 'time': '0.001'}<br>
+{'sql': 'SELECT COUNT(&#42;) AS "&#95;&#95;count" FROM "unicodex&#95;codepoint" INNER JOIN "unicodex&#95;design" ON ("unicodex&#95;codepoint"."id" = "unicodex&#95;design"."codepoint&#95;id") WHERE ("unicodex&#95;design"."image"::text LIKE \'%png%\' AND "unicodex&#95;design"."image"::text LIKE \'design%\')', 'time': '0.001'}<br>
 $$py Codepoint.objects.filter(design&#95;&#95;image&#95;&#95;contains="png").filter(
 $$pd design&#95;&#95;image&#95;&#95;startswith="design").count()
 501<br>
@@ -1744,7 +1744,7 @@ $$py Codepoint.objects.filter(design&#95;&#95;image&#95;&#95;contains="png", des
 37<br>
 $$py from django.db import connection
 $$py connection.queries[-1]
-{'sql': 'SELECT COUNT(&#42;) AS "&#95;&#95;count" FROM "unicodex&#95;codepoint" INNER JOIN "unicodex&#95;design" ON ("unicodex&#95;codepoint"."id" = "unicodex&#95;design"."codepoint&#95;id") WHERE ("unicodex&#95;design"."image"::text LIKE \'%png%\' AND "unicodex&#95;design"."image"::text LIKE \'des%\')', 'time': '0.001'}<br>
+{'sql': 'SELECT COUNT(&#42;) AS "&#95;&#95;count" FROM "unicodex&#95;codepoint" INNER JOIN "unicodex&#95;design" ON ("unicodex&#95;codepoint"."id" = "unicodex&#95;design"."codepoint&#95;id") WHERE ("unicodex&#95;design"."image"::text LIKE \'%png%\' AND "unicodex&#95;design"."image"::text LIKE \'design%\')', 'time': '0.001'}<br>
 $$py Codepoint.objects.filter(design&#95;&#95;image&#95;&#95;contains="png").filter(
 $$pd design&#95;&#95;image&#95;&#95;startswith="design").count()
 501<br>
@@ -1758,12 +1758,12 @@ Note: let's check
 $$terminal python3.6
 $$py from django.db import connection
 $$py connection.queries[-1]
-{'sql': 'SELECT COUNT(&#42;) AS "&#95;&#95;count" FROM "unicodex&#95;codepoint" INNER JOIN "unicodex&#95;design" ON ("unicodex&#95;codepoint"."id" = "unicodex&#95;design"."codepoint&#95;id") WHERE ("unicodex&#95;design"."image"::text LIKE \'%png%\' AND "unicodex&#95;design"."image"::text LIKE \'des%\')', 'time': '0.001'}<br>
+{'sql': 'SELECT COUNT(&#42;) AS "&#95;&#95;count" FROM "unicodex&#95;codepoint" INNER JOIN "unicodex&#95;design" ON ("unicodex&#95;codepoint"."id" = "unicodex&#95;design"."codepoint&#95;id") WHERE ("unicodex&#95;design"."image"::text LIKE \'%png%\' AND "unicodex&#95;design"."image"::text LIKE \'design%\')', 'time': '0.001'}<br>
 $$py Codepoint.objects.filter(design&#95;&#95;image&#95;&#95;contains="png").filter(
 $$pd design&#95;&#95;image&#95;&#95;startswith="design").count()
 501<br>
 $$py connection.queries[-1]
-{'sql': 'SELECT COUNT(&#42;) AS "&#95;&#95;count" FROM "unicodex&#95;codepoint" INNER JOIN "unicodex&#95;design" ON ("unicodex&#95;codepoint"."id" = "unicodex&#95;design"."codepoint&#95;id") INNER JOIN "unicodex&#95;design" T3 ON ("unicodex&#95;codepoint"."id" = T3."codepoint&#95;id") WHERE ("unicodex&#95;design"."image"::text LIKE \'%png%\' AND T3."image"::text LIKE \'des%\')', 'time': '0.002'}<br>
+{'sql': 'SELECT COUNT(&#42;) AS "&#95;&#95;count" FROM "unicodex&#95;codepoint" INNER JOIN "unicodex&#95;design" ON ("unicodex&#95;codepoint"."id" = "unicodex&#95;design"."codepoint&#95;id") INNER JOIN "unicodex&#95;design" T3 ON ("unicodex&#95;codepoint"."id" = T3."codepoint&#95;id") WHERE ("unicodex&#95;design"."image"::text LIKE \'%png%\' AND T3."image"::text LIKE \'design%\')', 'time': '0.002'}<br>
 $$pyw
 
 Note: well, we can tell it's a different SQL statement than before based on the length of the output.. but let's format itnicely and see what's going on
@@ -1773,7 +1773,7 @@ Codepoint.objects.filter(
 &nbsp; <o>design&#95;&#95;image&#95;&#95;contains=</o>"png").filter(
 &nbsp; <o>design&#95;&#95;image&#95;&#95;startswith=</o>"design").count()<br><br><c>&dash;&dash; SQL</c><br><r>SELECT</r> <l>count</l>(<r>&#42;</r>)
 &nbsp; <r>FROM</r> from unicodex_codepoint C<br><r>&nbsp;INNER JOIN</r> unicodex_design D <r>ON</r> (<l>C</l>.<l>id <r>=</r> D</l>.<l>id</l>)<br><r>&nbsp;INNER JOIN</r> unicodex_design E <r>ON</r> (<l>C</l>.<l>id <r>=</r> E</l>.<l>id</l>)<br><r>&nbsp;WHERE</r> (<l>D</l>.<l>image</l> <r>LIKE</r> '%png%'
-&nbsp; &nbsp; <r>AND</r> <l>D</l>.<l>image</l> <r>LIKE</r>'des%')
+&nbsp; &nbsp; <r>AND</r> <l>E</l>.<l>image</l> <r>LIKE</r> 'design%')
 
 Note: Ah. 
 
