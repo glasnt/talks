@@ -1040,8 +1040,8 @@ Note: And thus, we get a of all designs where the name of the linked vendor cont
 ---
 <pre><code><c>&num; Field Lookups</c><table>
 <tr><td><l>contains</l></td><td><o>LIKE "%?%"</o></td></tr>
-<tr><td><l>startswith</l></td><td><o>LIKE "%?"</o></td></tr>
-<tr><td><l>endswith</l></td><td><o>LIKE "?%"</o></td></tr>
+<tr><td><l>startswith</l></td><td><o>LIKE "?%"</o></td></tr>
+<tr><td><l>endswith</l></td><td><o>LIKE "%?"</o></td></tr>
 <tr><td><l>in</l></td><td><o>IN (?, ?, ?, ...)</o></td></tr>
 <tr><td><l>lt, le, gt, ge</l></td><td><o>&lt;, &lt;=, &gt;, &gt;=</o></td></tr>
 <tr><td><l>range</l></td><td><o>BETWEEN</o></td></tr> 
@@ -1684,7 +1684,7 @@ Type "help", "copyright", "credits" or "license" for more information.<br>
 Codepoint.objects.filter( 
 &nbsp; <o>design&#95;&#95;image&#95;&#95;contains=</o>"png",
 &nbsp; <o>design&#95;&#95;image&#95;&#95;startswith=</o>"design").count()<br><br><c>&dash;&dash; SQL</c><br><r>SELECT</r> <l>count</l>(<r>*</r>)
-&nbsp; <r>FROM</r> from unicodex_codepoint C<br><r>&nbsp;INNER JOIN</r> unicodex_design D <r>ON</r> (<l>C</l>.<l>id <r>=</r> D</l>.<l>id</l>)<br><r>&nbsp;WHERE</r> (<l>D</l>.<l>image</l> <r>LIKE</r> '%png%'
+&nbsp; <r>FROM</r> unicodex_codepoint C<br><r>&nbsp;INNER JOIN</r> unicodex_design D <r>ON</r> (<l>C</l>.<l>id <r>=</r> D</l>.<l>id</l>)<br><r>&nbsp;WHERE</r> (<l>D</l>.<l>image</l> <r>LIKE</r> '%png%'
 &nbsp; &nbsp; <r>AND</r> <l>D</l>.<l>image</l> <r>LIKE</r> 'design%')
 
 ---
