@@ -162,15 +162,13 @@ So for the purposes of this, we're going to use an existing project
 
 Note: 
 
+We're going to be a noisy myna, and go bughunting.
 
-we're going to go bug hunting
+Now, you may not used to being a noisy myna. You might be used to being a rainbow lorikeet.
+
+But in both cases, you know how to find bugs. You've just using a different set of wings to get there.
 
 We're going to find outselves an existing project, in this case, a field of kale, and hunt about trying to find some delicious bugs. We may not find any, but we can poke around and see what we find.
-
-
-TODO pending Recompiler release
-legacy_explorer.png 
-So let's grab our butterfly net, our best bug chasing dress, and dive in
 ---
 # Context <!-- .slide: class="center" -->
 
@@ -1905,40 +1903,18 @@ So cool
 
 
 Note: 
-So, now that you have your standard issue bug catcher, you too can start bounding forward to catch that pesky bug in your code
 
-legacy_explorer.png 
----
-#### &nbsp; <!-- .slide: class="center" -->
+So that's all I had. Hopefully with these tips and tricks about how to use the ORM to interact your project, you can start finding those pesky bugs you've been tasked to find.
 
-Note: and I say this with all due respect, but django is now boring. As I said at the start, odds are first time you interact with django in the workplace isn't going to be on a new shiny app, it'll be on something that exists.
-
-But that doesn't mean you can't attack the problem sideon and get in the stacks and poke around and see what django is about from the inside out.
-
-If you want to know more, I have a copy of the recompiler here with me, which has an article I've written called
-
-<br> 
-## &nbsp;
- <div style='margin: 0 auto;'><p align='center'><img src='pictures/legacy3.png'></p></div>  <!-- .slide: class="center" -->
- <span class='foot'>&nbsp;</span>
----
-#### Read more <!-- .slide: class="center" -->
-<br> 
-## *Why I love Legacy DevOps*
-[The Recompiler, Issue 4](https://recompilermag.com/issues/issue-4/why-i-love-legacy-devops/)
-Note: why I love legacy devops
-
-It's all about how I find utmost dorkish joy in finding that odd little thing in a technology stack that just a short time ago I had no idea about.
+It might be a new stack to you, it might be old school, but I find the utmost dorkish joy in finding that odd little thing in a technology stack that just a short time ago I had no idea about, and then being able to harness that power.
 
 And being able to use your skills gained from other technology sets in new fields is really fun, sometimes a bit interesting, but always great.
 
-You never start form zero.
+You never start again from zero.
 
-You're just used to different critters
+You have a lot of knowledge behind you.
 
-You just have to get used to using a different kind of net to catch them
-legacy3.png 
-Illustration by Victoria Wang
+You've just used to being a different kind of bird. Doesn't mean you won't find your wings.
 
 ---
 <br> 
