@@ -1,4 +1,13 @@
 - conference:
+    name: SyPy
+    link: https://www.meetup.com/sydneypython/events/qxgdlpyxgbjc/
+    date: 2018-04-26
+    location: Sydney
+    talks:
+      - name: ORM&#58; The Sequel
+        twitter: https://twitter.com/web_goddess/status/989423247681716224
+
+- conference:
     name: SydCSS
     link: https://www.meetup.com/SydCSS/events/248729348/
     date: 2018-04-05
