@@ -218,7 +218,7 @@ show tables
 \dt
 
 <c>&dash;&dash; Oracle</c>
-<r>SELECT * <br>&nbsp; FROM</r> <l>dba</l>.<l>tables</l>
+<r>SELECT * <br>&nbsp; FROM</r> dba.tables;
 </code></pre>
 
 Note: depending on which flavour of database is most familiar to you, you'd try and issue one of these commands
@@ -515,7 +515,7 @@ Note: so now that we know there are tables, we'd like to see what's inside them
 ---
 <pre><code>
 <c>&dash;&dash; SQL</c>
-<r>SELECT * <br>&nbsp; FROM</r> <l>unicodex_codepoint;</l>
+<r>SELECT * <br>&nbsp; FROM</r> unicodex_codepoint;
 <br><br>
 </code></pre>
 
@@ -523,13 +523,13 @@ Note: in SQL, this would be your standard select star from table
 ---
 <pre><code>
 <c>&dash;&dash; SQL</c>
-<r>SELECT * <br>&nbsp; FROM</r> <l>unicodex_codepoint;</l>
+<r>SELECT * <br>&nbsp; FROM</r> unicodex_codepoint;
 
 <c>&num; ORM</c>
 Codepoint.objects.all()
 </code></pre>
 
-Note: in the oRM, this maps to Codepoint, the model, dot objects dot all
+Note: in the ORM, this maps to Codepoint, the model, dot objects dot all
 
 Just list all of them
 ---
@@ -606,7 +606,7 @@ Note: now that we can see all the things, how about just some of the things
 ---
 <pre><code>
 <c>&dash;&dash; SQL</c>
-<r>SELECT * <br>&nbsp; FROM</r> <l>unicodex_codepoint c</l><br>&nbsp;<r>WHERE</r> <l>c</l>.<l>name</l> <r>=</r> 'Sparkles'; 
+<r>SELECT * <br>&nbsp; FROM</r> unicodex_codepoint c<br>&nbsp;<r>WHERE</r> <l>c</l>.<l>name</l> <r>=</r> <d>'Sparkles'</d>; 
 <br><br>
 </code></pre>
 
@@ -616,7 +616,7 @@ Adding a where clause for, say, sparkles
 ---
 <pre><code>
 <c>&dash;&dash; SQL</c>
-<r>SELECT * <br>&nbsp; FROM</r> <l>unicodex_codepoint c</l><br>&nbsp;<r>WHERE</r> <l>c</l>.<l>name</l> <r>&equals;</r> 'Sparkles'; 
+<r>SELECT * <br>&nbsp; FROM</r> unicodex_codepoint c<br>&nbsp;<r>WHERE</r> <l>c</l>.<l>name</l> <r>&equals;</r> <d>'Sparkles'</d>; 
 
 <c>&num; ORM</c>
 Codepoint.objects.filter(<o>name&equals;</o>'Sparkles')
@@ -708,7 +708,7 @@ Anyone who's worked with SQL for long enough will know the venn diagrams for inn
 
 Thankfully, especially for someone like me who has forgotten so much SQL, the ORM makes joins a joy. 
 ---
-<pre><code><c>&dash;&dash; SQL</c><br><r>SELECT</r> <l>d</l>.<r>*</r> <br>&nbsp; <r>FROM</r> <l>unicodex_codepoint c,<br>&nbsp; &nbsp; &nbsp; &nbsp;unicodex_design d</l><br>&nbsp;<r>WHERE</r> <l>c</l>.<l>name</l> <r>&equals;</r> 'Sparkles'<BR><r>&nbsp; &nbsp;AND</r> d.codepoint_id = c.id;
+<pre><code><c>&dash;&dash; SQL</c><br><r>SELECT</r> d.<r>*</r> <br>&nbsp; <r>FROM</r> unicodex_codepoint c,<br>&nbsp; &nbsp; &nbsp; &nbsp;unicodex_design d<br>&nbsp;<r>WHERE</r> <l>c</l>.<l>name</l> <r>&equals;</r> <d>'Sparkles'</d><BR><r>&nbsp; &nbsp;AND</r> <l>d</l>.<l>codepoint_id</l> <r>=</r> <l>c</l>.<l>id</l>;
 Note: say we want to join our design and codepoint tables
 
 A codepoint has multiple designs. Sparkles has an image that shows up in Android, Apple, Facebook, etc
@@ -719,17 +719,14 @@ This is a good chunk of SQL
 
 So what does the ORM equivelent look like?
 ---
-<pre><code><c>&dash;&dash; SQL</c><br><r>SELECT</r> <l>d</l>.<r>*</r> <br>&nbsp; <r>FROM</r> <l>unicodex_codepoint c,<br>&nbsp; &nbsp; &nbsp; &nbsp;unicodex_design d</l><br>&nbsp;<r>WHERE</r> <l>c</l>.<l>name</l> <r>&equals;</r> 'Sparkles'<BR><r>&nbsp; &nbsp;AND</r> d.codepoint_id = c.id;<br><br><c>&num; ORM</c>
+<pre><code><c>&dash;&dash; SQL</c><br><r>SELECT</r> d.<r>*</r> <br>&nbsp; <r>FROM</r> unicodex_codepoint c,<br>&nbsp; &nbsp; &nbsp; &nbsp;unicodex_design d<br>&nbsp;<r>WHERE</r> <l>c</l>.<l>name</l> <r>&equals;</r> <d>'Sparkles'</d><BR><r>&nbsp; &nbsp;AND</r> <l>d</l>.<l>codepoint_id</l> <r>=</r> <l>c</l>.<l>id</l>;<br><br><c>&num; ORM</c>
 Design.objects.filter(<o>codepoint&#95;&#95;name&equals;</o>'Sparkles')
 </code></pre>
 Note: Design dot objects dot filter codepoint dunder name equals sparkles. 
 
 I know right? so simple!
 ---
-<pre><code><c>&dash;&dash; SQL</c>
-<r>SELECT</r> <l>d</l>.<r>*</r> <br>&nbsp;<r> FROM</r> <l>unicodex_codepoint c,<br>&nbsp; &nbsp; &nbsp; &nbsp;unicodex_design d</l><br>&nbsp;<r>WHERE</r> <l>c</l>.<l>name</l> <r>&equals;</r> 'Sparkles'<BR><r>&nbsp; &nbsp;AND</r> d.codepoint_id = c.id; 
-
-<c>&num; ORM</c>
+<pre><code><c>&dash;&dash; SQL</c><br><r>SELECT</r> d.<r>*</r> <br>&nbsp; <r>FROM</r> unicodex_codepoint c,<br>&nbsp; &nbsp; &nbsp; &nbsp;unicodex_design d<br>&nbsp;<r>WHERE</r> <l>c</l>.<l>name</l> <r>&equals;</r> <d>'Sparkles'</d><BR><r>&nbsp; &nbsp;AND</r> <l>d</l>.<l>codepoint_id</l> <r>=</r> <l>c</l>.<l>id</l>;<br><br><c>&num; ORM</c>
 Design.objects.filter(<o>codepoint&#95;&#95;name&equals;</o>'Sparkles')
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <c>^^</c> 
 </code></pre>
@@ -1118,7 +1115,7 @@ Codepoint.objects.filter(
 &nbsp; <o>name=</o>'Sparkles',
 &nbsp; <o>description=</o>'Shiny!'
 )<br><br><c>&dash;&dash; SQL</c><br><r>SELECT * 
-&nbsp; FROM</r> <l>unicodex_codepoint c </l><br><r>&nbsp;WHERE</r> <l>c</l>.<l>name</l> <r>=</r> 'Sparkles'<br><r>&nbsp; &nbsp;AND</r> <l>c</l>.<l>description</l> <r>=</r> 'Shiny!'
+&nbsp; FROM</r> unicodex_codepoint c <br><r>&nbsp;WHERE</r> <l>c</l>.<l>name</l> <r>=</r> <d>'Sparkles'</d><br><r>&nbsp; &nbsp;AND</r> <l>c</l>.<l>description</l> <r>=</r> <d>'Shiny!'</d>
 
 Note: this would be the equvilent SQL
 ---
@@ -1127,7 +1124,7 @@ Codepoint.objects.filter(
 &nbsp; <o>name&#95;&#95;exact=</o>'Sparkles',
 &nbsp; <o>description&#95;&#95;exact=</o>'Shiny!'
 )<br><br><c>&dash;&dash; SQL</c><br><r>SELECT * 
-&nbsp; FROM</r> <l>unicodex_codepoint c </l><br><r>&nbsp;WHERE</r> <l>c</l>.<l>name</l> <r>=</r> 'Sparkles'<br><r>&nbsp; &nbsp;AND</r> <l>c</l>.<l>description</l> <r>=</r> 'Shiny!'
+&nbsp; FROM</r> unicodex_codepoint c <br><r>&nbsp;WHERE</r> <l>c</l>.<l>name</l> <r>=</r> <d>'Sparkles'</d><br><r>&nbsp; &nbsp;AND</r> <l>c</l>.<l>description</l> <r>=</r> <d>'Shiny!'</d>
 
 Note: And we learnt earlier that unless there's a field lookup defined, we assume exact
 
@@ -1141,7 +1138,7 @@ Codepoint.objects.filter(
 &nbsp; <o>name=</o>'Sparkles',
 &nbsp; <o>description=</o>'Shiny!'
 )<br><br><c>&dash;&dash; SQL</c><br><r>SELECT * 
-&nbsp; FROM</r> <l>unicodex_codepoint c </l><br><r>&nbsp;WHERE</r> <l>c</l>.<l>name</l> <r>=</r> 'Sparkles'<br><r>&nbsp; &nbsp;AND</r> <l>c</l>.<l>description</l> <r>=</r> 'Shiny!'
+&nbsp; FROM</r> unicodex_codepoint c <br><r>&nbsp;WHERE</r> <l>c</l>.<l>name</l> <r>=</r> <d>'Sparkles'</d><br><r>&nbsp; &nbsp;AND</r> <l>c</l>.<l>description</l> <r>=</r> <d>'Shiny!'</d>
 
 Note: so going back to our first example, 
 ---
@@ -1150,7 +1147,7 @@ Codepoint.objects.filter(
 &nbsp; <o>name=</o>'Sparkles').filter(
 &nbsp; <o>description=</o>'Shiny!'
 )<br><br><c>&dash;&dash; SQL</c><br><r>SELECT * 
-&nbsp; FROM</r> <l>unicodex_codepoint c </l><br><r>&nbsp;WHERE</r> <l>c</l>.<l>name</l> <r>=</r> 'Sparkles'<br><r>&nbsp; &nbsp;AND</r> <l>c</l>.<l>description</l> <r>=</r> 'Shiny!'
+&nbsp; FROM</r> unicodex_codepoint c <br><r>&nbsp;WHERE</r> <l>c</l>.<l>name</l> <r>=</r> <d>'Sparkles'</d><br><r>&nbsp; &nbsp;AND</r> <l>c</l>.<l>description</l> <r>=</r> <d>'Shiny!'</d>
 
 Note: we could also have two separate filter clauses. 
 ---
@@ -1159,7 +1156,7 @@ Codepoint.objects.filter(
 &nbsp; <o>name=</o>'Sparkles',
 &nbsp; <o>description=</o>'Shiny!'
 )<br><br><c>&dash;&dash; SQL</c><br><r>SELECT * 
-&nbsp; FROM</r> <l>unicodex_codepoint c </l><br><r>&nbsp;WHERE</r> <l>c</l>.<l>name</l> <r>=</r> 'Sparkles'<br><r>&nbsp; &nbsp;AND</r> <l>c</l>.<l>description</l> <r>=</r> 'Shiny!'
+&nbsp; FROM</r> unicodex_codepoint c <br><r>&nbsp;WHERE</r> <l>c</l>.<l>name</l> <r>=</r> <d>'Sparkles'</d><br><r>&nbsp; &nbsp;AND</r> <l>c</l>.<l>description</l> <r>=</r> <d>'Shiny!'</d>
 
 Note: we could also
 
@@ -1169,7 +1166,7 @@ Codepoint.objects.filter(
 &nbsp; Q(<o>name=</o>'Sparkles'),
 &nbsp; Q(<o>description=</o>'Shiny!')
 )<br><br><c>&dash;&dash; SQL</c><br><r>SELECT * 
-&nbsp; FROM</r> <l>unicodex_codepoint c </l><br><r>&nbsp;WHERE</r> <l>c</l>.<l>name</l> <r>=</r> 'Sparkles'<br><r>&nbsp; &nbsp;AND</r> <l>c</l>.<l>description</l> <r>=</r> 'Shiny!'
+&nbsp; FROM</r> unicodex_codepoint c <br><r>&nbsp;WHERE</r> <l>c</l>.<l>name</l> <r>=</r> <d>'Sparkles'</d><br><r>&nbsp; &nbsp;AND</r> <l>c</l>.<l>description</l> <r>=</r> <d>'Shiny!'</d>
 
 Note: wrap our two filter parameters in Q
 
@@ -1185,7 +1182,7 @@ Codepoint.objects.filter(
 &nbsp; Q(<o>name=</o>'Sparkles') <r>&</r>
 &nbsp; Q(<o>description=</o>'Shiny!')
 )<br><br><c>&dash;&dash; SQL</c><br><r>SELECT * 
-&nbsp; FROM</r> <l>unicodex_codepoint c </l><br><r>&nbsp;WHERE</r> <l>c</l>.<l>name</l> <r>=</r> 'Sparkles'<br><r>&nbsp; &nbsp;AND</r> <l>c</l>.<l>description</l> <r>=</r> 'Shiny!'
+&nbsp; FROM</r> unicodex_codepoint c <br><r>&nbsp;WHERE</r> <l>c</l>.<l>name</l> <r>=</r> <d>'Sparkles'</d><br><r>&nbsp; &nbsp;AND</r> <l>c</l>.<l>description</l> <r>=</r> <d>'Shiny!'</d>
 
 Note: 
 
@@ -1202,7 +1199,7 @@ Codepoint.objects.filter(
 &nbsp; Q(<o>name=</o>'Sparkles'),</r>
 &nbsp; Q(<o>description=</o>'Shiny!')
 )<br><br><c>&dash;&dash; SQL</c><br><r>SELECT * 
-&nbsp; FROM</r> <l>unicodex_codepoint c </l><br><r>&nbsp;WHERE</r> <l>c</l>.<l>name</l> <r>=</r> 'Sparkles'<br><r>&nbsp; &nbsp;AND</r> <l>c</l>.<l>description</l> <r>=</r> 'Shiny!'
+&nbsp; FROM</r> unicodex_codepoint c <br><r>&nbsp;WHERE</r> <l>c</l>.<l>name</l> <r>=</r> <d>'Sparkles'</d><br><r>&nbsp; &nbsp;AND</r> <l>c</l>.<l>description</l> <r>=</r> <d>'Shiny!'</d>
 
 Note: going back to our changed example
 ---
@@ -1211,7 +1208,7 @@ Codepoint.objects.filter(
 &nbsp; Q(<o>name=</o>'Sparkles'),
 &nbsp; <o>description=</o>'Shiny!'
 )<br><br><c>&dash;&dash; SQL</c><br><r>SELECT * 
-&nbsp; FROM</r> <l>unicodex_codepoint c </l><br><r>&nbsp;WHERE</r> <l>c</l>.<l>name</l> <r>=</r> 'Sparkles'<br><r>&nbsp; &nbsp;AND</r> <l>c</l>.<l>description</l> <r>=</r> 'Shiny!'
+&nbsp; FROM</r> unicodex_codepoint c <br><r>&nbsp;WHERE</r> <l>c</l>.<l>name</l> <r>=</r> <d>'Sparkles'</d><br><r>&nbsp; &nbsp;AND</r> <l>c</l>.<l>description</l> <r>=</r> <d>'Shiny!'</d>
 
 
 Note: we can change our queries with comman, and just wrap the first one and leave thther. Same result
@@ -1221,7 +1218,7 @@ Codepoint.objects.filter(
 &nbsp; <o>name=</o>'Sparkles',
 &nbsp; <o>description=</o>'Shiny!'
 )<br><br><c>&dash;&dash; SQL</c><br><r>SELECT * 
-&nbsp; FROM</r> <l>unicodex_codepoint c </l><br><r>&nbsp;WHERE</r> <l>c</l>.<l>name</l> <r>=</r> 'Sparkles'<br><r>&nbsp; &nbsp;AND</r> <l>c</l>.<l>description</l> <r>=</r> 'Shiny!'
+&nbsp; FROM</r> unicodex_codepoint c <br><r>&nbsp;WHERE</r> <l>c</l>.<l>name</l> <r>=</r> <d>'Sparkles'</d><br><r>&nbsp; &nbsp;AND</r> <l>c</l>.<l>description</l> <r>=</r> <d>'Shiny!'</d>
 
 
 Note: and we don't have to wrap either. But what if we wrap just the second
@@ -1251,7 +1248,7 @@ Codepoint.objects.filter(
 &nbsp; <o>name=</o>'Sparkles',
 &nbsp; <o>description=</o>'Shiny!'
 )<br><br><c>&dash;&dash; SQL</c><br><r>SELECT * 
-&nbsp; FROM</r> <l>unicodex_codepoint c </l><br><r>&nbsp;WHERE</r> <l>c</l>.<l>name</l> <r>=</r> 'Sparkles'<br><r>&nbsp; &nbsp;AND</r> <l>c</l>.<l>description</l> <r>=</r> 'Shiny!'
+&nbsp; FROM</r> unicodex_codepoint c <br><r>&nbsp;WHERE</r> <l>c</l>.<l>name</l> <r>=</r> <d>'Sparkles'</d><br><r>&nbsp; &nbsp;AND</r> <l>c</l>.<l>description</l> <r>=</r> <d>'Shiny!'</d>
 
 Note: Another example of this. Let's put our code back working, and try changing that description
 
@@ -1276,7 +1273,7 @@ Codepoint.objects.filter(
 &nbsp; Q(<o>name=</o>'Sparkles'),
 &nbsp; Q(<o>name=</o>'Unicorn')
 )<br><br><c>&dash;&dash; SQL</c><br><r>SELECT * 
-&nbsp; FROM</r> <l>unicodex_codepoint c </l><br><r>&nbsp;WHERE</r> <l>c</l>.<l>name</l> <r>=</r> 'Sparkles'<br><r>&nbsp; &nbsp;AND</r> <l>c</l>.<l>name</l> <r>=</r> 'Unicorn'
+&nbsp; FROM</r> unicodex_codepoint c <br><r>&nbsp;WHERE</r> <l>c</l>.<l>name</l> <r>=</r> <d>'Sparkles'</d><br><r>&nbsp; &nbsp;AND</r> <l>c</l>.<l>name</l> <r>=</r> <d>'Unicorn'</d>
 
 Note: now, this code is valid python, but it isn't useful, because it will never return any results. 
 
@@ -1290,7 +1287,7 @@ Codepoint.objects.filter(
 &nbsp; Q(<o>name=</o>'Sparkles') &
 &nbsp; Q(<o>name=</o>'Unicorn')
 )<br><br><c>&dash;&dash; SQL</c><br><r>SELECT * 
-&nbsp; FROM</r> <l>unicodex_codepoint c </l><br><r>&nbsp;WHERE</r> <l>c</l>.<l>name</l> <r>=</r> 'Sparkles'<br><r>&nbsp; &nbsp;AND</r> <l>c</l>.<l>name</l> <r>=</r> 'Unicorn'
+&nbsp; FROM</r> unicodex_codepoint c <br><r>&nbsp;WHERE</r> <l>c</l>.<l>name</l> <r>=</r> <d>'Sparkles'</d><br><r>&nbsp; &nbsp;AND</r> <l>c</l>.<l>name</l> <r>=</r> <d>'Unicorn'</d>
 
 Note: Using the comma is equiv to this AND, but with the comma we're giving filter two arguments. Here, we're giving it one. We'll get back to this, because it's really cool
 
@@ -1302,7 +1299,7 @@ Codepoint.objects.filter(
 &nbsp; Q(<o>name=</o>'Sparkles') |
 &nbsp; Q(<o>name=</o>'Unicorn')
 )<br><br><c>&dash;&dash; SQL</c><br><r>SELECT * 
-&nbsp; FROM</r> <l>unicodex_codepoint c </l><br><r>&nbsp;WHERE</r> <l>c</l>.<l>name</l> <r>=</r> 'Sparkles'<br><r> &nbsp; &nbsp;OR</r> <l>c</l>.<l>name</l> <r>=</r> 'Unicorn'
+&nbsp; FROM</r> unicodex_codepoint c <br><r>&nbsp;WHERE</r> <l>c</l>.<l>name</l> <r>=</r> <d>'Sparkles'</d><br><r>&nbsp; &nbsp; OR</r> <l>c</l>.<l>name</l> <r>=</r> <d>'Unicorn'</d>
 
 Note: to a pipe. 
 
@@ -1395,7 +1392,7 @@ Codepoint.objects.filter(
 &nbsp; Q(<o>name=</o>'Sparkles') |
 &nbsp; Q(<o>name=</o>'Unicorn')
 )<br><br><c>&dash;&dash; SQL</c><br><r>SELECT * 
-&nbsp; FROM</r> <l>unicodex_codepoint c </l><br><r>&nbsp;WHERE</r> <l>c</l>.<l>name</l> <r>=</r> 'Sparkles'<br><r> &nbsp; &nbsp;OR</r> <l>c</l>.<l>name</l> <r>=</r> 'Unicorn'
+&nbsp; FROM</r> unicodex_codepoint c <br><r>&nbsp;WHERE</r> <l>c</l>.<l>name</l> <r>=</r> <d>'Sparkles'</d><br><r>&nbsp; &nbsp; OR</r> <l>c</l>.<l>name</l> <r>=</r> <d>'Unicorn'</d>
 
 
 Note: so, using the and or operators here makes sense, because those are the actions we are performing
@@ -1409,7 +1406,7 @@ I'm going to show you a small snippet of django source code. It won't be scary, 
 ---
 <pre><code style="font-size: 24pt !important"><r>class</r> <g>Q</g>(<g>tree</g>.<g>Node</g>):
 <c>"""<br>Encapsulate filters as objects that can<br>then be combined logically (using `&` and `|`).<br>"""</c>
-&nbsp; ...<br<br>>
+&nbsp; ...<br><br>
 &nbsp; <r>def</r> <l>&#95;&#95;or&#95;&#95;</l>(self, other):
 &nbsp; &nbsp; <r>return</r> <l>self</l>._combine(other, <l>self.OR</l>)
 
@@ -1433,7 +1430,7 @@ Codepoint.objects.filter(
 &nbsp; Q(<o>name=</o>'Sparkles') |
 &nbsp; Q(<o>name=</o>'Unicorn')
 )<br><br><c>&dash;&dash; SQL</c><br><r>SELECT * 
-&nbsp; FROM</r> <l>unicodex_codepoint c </l><br><r>&nbsp;WHERE</r> <l>c</l>.<l>name</l> <r>=</r> 'Sparkles'<br><r> &nbsp; &nbsp;OR</r> <l>c</l>.<l>name</l> <r>=</r> 'Unicorn'
+&nbsp; FROM</r> unicodex_codepoint c <br><r>&nbsp;WHERE</r> <l>c</l>.<l>name</l> <r>=</r> <d>'Sparkles'</d><br><r>&nbsp; &nbsp; OR</r> <l>c</l>.<l>name</l> <r>=</r> <d>'Unicorn'</d>
 
 Note: as well as AND or OR, we can also do NOT
 
@@ -1445,7 +1442,7 @@ Codepoint.objects.filter(
 &nbsp; Q(<o>name=</o>'Sparkles') |
 &nbsp; ~Q(<o>name=</o>'Unicorn')
 )<br><br><c>&dash;&dash; SQL</c><br><r>SELECT * 
-&nbsp; FROM</r> <l>unicodex_codepoint c </l><br><r>&nbsp;WHERE</r> <l>c</l>.<l>name</l> <r>=</r> 'Sparkles'<br><r> &nbsp; &nbsp;OR NOT</r> <l>c</l>.<l>name</l> <r>=</r> 'Unicorn'
+&nbsp; FROM</r> unicodex_codepoint c <br><r>&nbsp;WHERE</r> <l>c</l>.<l>name</l> <r>=</r> <d>'Sparkles'</d><br><r> &nbsp; &nbsp;OR NOT</r> <l>c</l>.<l>name</l> <r>=</r> <d>'Unicorn'</d>
 
 
 Note: we can and a tilda negation to invert that part of the query, and add a NOT to our SQL
@@ -1577,10 +1574,10 @@ Type "help", "copyright", "credits" or "license" for more information.<br>
 (InteractiveConsole)<br>
 $$py from unicodex.models import Codepoint
 $$py Codepoint.objects.filter(design&#95;&#95;image&#95;&#95;contains="png", design&#95;&#95;image&#95;&#95;startswith="design").count()
-37<br>
+44<br>
 $$pyw
 
-Note: 37 results
+Note: 44 results
 
 ---
 <pre><code><c>&num; ORM</c>
@@ -1614,7 +1611,7 @@ Type "help", "copyright", "credits" or "license" for more information.<br>
 (InteractiveConsole)<br>
 $$py from unicodex.models import Codepoint
 $$py Codepoint.objects.filter(design&#95;&#95;image&#95;&#95;contains="png", design&#95;&#95;image&#95;&#95;startswith="design").count()
-37<br>
+44<br>
 $$pyw
 ---
 
@@ -1627,7 +1624,7 @@ Type "help", "copyright", "credits" or "license" for more information.<br>
 (InteractiveConsole)<br>
 $$py from unicodex.models import Codepoint
 $$py Codepoint.objects.filter(design&#95;&#95;image&#95;&#95;contains="png", design&#95;&#95;image&#95;&#95;startswith="design").count()
-37<br>
+44<br>
 $$pyw from django.db import connection
 
 Note: we can import the django database connection modele
@@ -1642,7 +1639,7 @@ Type "help", "copyright", "credits" or "license" for more information.<br>
 (InteractiveConsole)<br>
 $$py from unicodex.models import Codepoint
 $$py Codepoint.objects.filter(design&#95;&#95;image&#95;&#95;contains="png", design&#95;&#95;image&#95;&#95;startswith="design").count()
-37<br>
+44<br>
 $$py from django.db import connection
 $$pyw
 ---
@@ -1656,7 +1653,7 @@ Type "help", "copyright", "credits" or "license" for more information.<br>
 (InteractiveConsole)<br>
 $$py from unicodex.models import Codepoint
 $$py Codepoint.objects.filter(design&#95;&#95;image&#95;&#95;contains="png", design&#95;&#95;image&#95;&#95;startswith="design").count()
-37<br>
+44<br>
 $$py from django.db import connection
 $$pyw connection.queries[-1]
 
@@ -1673,7 +1670,7 @@ Type "help", "copyright", "credits" or "license" for more information.<br>
 (InteractiveConsole)<br>
 $$py from unicodex.models import Codepoint
 $$py Codepoint.objects.filter(design&#95;&#95;image&#95;&#95;contains="png", design&#95;&#95;image&#95;&#95;startswith="design").count()
-37<br>
+44<br>
 $$py from django.db import connection
 $$py connection.queries[-1]
 {'sql': 'SELECT COUNT(&#42;) AS "&#95;&#95;count" FROM "unicodex_codepoint" INNER JOIN "unicodex_design" ON ("unicodex_codepoint"."id" = "unicodex_design"."codepoint_id") WHERE ("unicodex_design"."image"::text LIKE \'%png%\' AND "unicodex_design"."image"::text LIKE \'design%\')', 'time': '0.001'}<br>
@@ -1683,8 +1680,8 @@ $$pyw
 Codepoint.objects.filter(
 &nbsp; <o>design&#95;&#95;image&#95;&#95;contains=</o>"png",
 &nbsp; <o>design&#95;&#95;image&#95;&#95;startswith=</o>"design").count()<br><br><c>&dash;&dash; SQL</c><br><r>SELECT</r> <l>count</l>(<r>*</r>)
-&nbsp; <r>FROM</r> unicodex_codepoint C<br><r>&nbsp;INNER JOIN</r> unicodex_design D <r>ON</r> (<l>C</l>.<l>id <r>=</r> D</l>.<l>id</l>)<br><r>&nbsp;WHERE</r> (<l>D</l>.<l>image</l> <r>LIKE</r> '%png%'
-&nbsp; &nbsp; <r>AND</r> <l>D</l>.<l>image</l> <r>LIKE</r> 'design%')
+&nbsp; <r>FROM</r> unicodex_codepoint C<br><r>&nbsp;INNER JOIN</r> unicodex_design D <r>ON</r> (<l>C</l>.<l>id <r>=</r> D</l>.<l>id</l>)<br><r>&nbsp;WHERE</r> (<l>D</l>.<l>image</l> <r>LIKE</r> <d>'%png%'</d>
+&nbsp; &nbsp; <r>AND</r> <l>D</l>.<l>image</l> <r>LIKE</r> <d>'design%'</d>)
 
 ---
 
@@ -1697,7 +1694,7 @@ Codepoint.objects.filter(
 $$terminal python3.6
 $$py from unicodex.models import Codepoint
 $$py Codepoint.objects.filter(design&#95;&#95;image&#95;&#95;contains="png", design&#95;&#95;image&#95;&#95;startswith="design").count()
-37<br>
+44<br>
 $$py from django.db import connection
 $$py connection.queries[-1]
 {'sql': 'SELECT COUNT(&#42;) AS "&#95;&#95;count" FROM "unicodex&#95;codepoint" INNER JOIN "unicodex&#95;design" ON ("unicodex&#95;codepoint"."id" = "unicodex&#95;design"."codepoint&#95;id") WHERE ("unicodex&#95;design"."image"::text LIKE \'%png%\' AND "unicodex&#95;design"."image"::text LIKE \'design%\')', 'time': '0.001'}<br>
@@ -1706,7 +1703,7 @@ $$pyw
 $$terminal python3.6
 $$py from unicodex.models import Codepoint
 $$py Codepoint.objects.filter(design&#95;&#95;image&#95;&#95;contains="png", design&#95;&#95;image&#95;&#95;startswith="design").count()
-37<br>
+44<br>
 $$py from django.db import connection
 $$py connection.queries[-1]
 {'sql': 'SELECT COUNT(&#42;) AS "&#95;&#95;count" FROM "unicodex&#95;codepoint" INNER JOIN "unicodex&#95;design" ON ("unicodex&#95;codepoint"."id" = "unicodex&#95;design"."codepoint&#95;id") WHERE ("unicodex&#95;design"."image"::text LIKE \'%png%\' AND "unicodex&#95;design"."image"::text LIKE \'design%\')', 'time': '0.001'}<br>
@@ -1717,13 +1714,13 @@ $$pdw design&#95;&#95;image&#95;&#95;startswith="design").count()
 $$terminal python3.6
 $$py from unicodex.models import Codepoint
 $$py Codepoint.objects.filter(design&#95;&#95;image&#95;&#95;contains="png", design&#95;&#95;image&#95;&#95;startswith="design").count()
-37<br>
+44<br>
 $$py from django.db import connection
 $$py connection.queries[-1]
 {'sql': 'SELECT COUNT(&#42;) AS "&#95;&#95;count" FROM "unicodex&#95;codepoint" INNER JOIN "unicodex&#95;design" ON ("unicodex&#95;codepoint"."id" = "unicodex&#95;design"."codepoint&#95;id") WHERE ("unicodex&#95;design"."image"::text LIKE \'%png%\' AND "unicodex&#95;design"."image"::text LIKE \'design%\')', 'time': '0.001'}<br>
 $$py Codepoint.objects.filter(design&#95;&#95;image&#95;&#95;contains="png").filter(
 $$pd design&#95;&#95;image&#95;&#95;startswith="design").count()
-501<br>
+712<br>
 $$pyw
 
 Note: wait, what??
@@ -1732,13 +1729,13 @@ Note: wait, what??
 $$terminal python3.6
 $$py from unicodex.models import Codepoint
 $$py Codepoint.objects.filter(design&#95;&#95;image&#95;&#95;contains="png", design&#95;&#95;image&#95;&#95;startswith="design").count()
-37<br>
+44<br>
 $$py from django.db import connection
 $$py connection.queries[-1]
 {'sql': 'SELECT COUNT(&#42;) AS "&#95;&#95;count" FROM "unicodex&#95;codepoint" INNER JOIN "unicodex&#95;design" ON ("unicodex&#95;codepoint"."id" = "unicodex&#95;design"."codepoint&#95;id") WHERE ("unicodex&#95;design"."image"::text LIKE \'%png%\' AND "unicodex&#95;design"."image"::text LIKE \'design%\')', 'time': '0.001'}<br>
 $$py Codepoint.objects.filter(design&#95;&#95;image&#95;&#95;contains="png").filter(
 $$pd design&#95;&#95;image&#95;&#95;startswith="design").count()
-501<br>
+712<br>
 $$pyw connection.queries[-1]
 
 Note: let's check
@@ -1752,7 +1749,7 @@ $$py connection.queries[-1]
 {'sql': 'SELECT COUNT(&#42;) AS "&#95;&#95;count" FROM "unicodex&#95;codepoint" INNER JOIN "unicodex&#95;design" ON ("unicodex&#95;codepoint"."id" = "unicodex&#95;design"."codepoint&#95;id") WHERE ("unicodex&#95;design"."image"::text LIKE \'%png%\' AND "unicodex&#95;design"."image"::text LIKE \'design%\')', 'time': '0.001'}<br>
 $$py Codepoint.objects.filter(design&#95;&#95;image&#95;&#95;contains="png").filter(
 $$pd design&#95;&#95;image&#95;&#95;startswith="design").count()
-501<br>
+712<br>
 $$py connection.queries[-1]
 {'sql': 'SELECT COUNT(&#42;) AS "&#95;&#95;count" FROM "unicodex&#95;codepoint" INNER JOIN "unicodex&#95;design" ON ("unicodex&#95;codepoint"."id" = "unicodex&#95;design"."codepoint&#95;id") INNER JOIN "unicodex&#95;design" T3 ON ("unicodex&#95;codepoint"."id" = T3."codepoint&#95;id") WHERE ("unicodex&#95;design"."image"::text LIKE \'%png%\' AND T3."image"::text LIKE \'design%\')', 'time': '0.002'}<br>
 $$pyw
@@ -1763,8 +1760,8 @@ Note: well, we can tell it's a different SQL statement than before based on the 
 Codepoint.objects.filter(
 &nbsp; <o>design&#95;&#95;image&#95;&#95;contains=</o>"png").filter(
 &nbsp; <o>design&#95;&#95;image&#95;&#95;startswith=</o>"design").count()<br><br><c>&dash;&dash; SQL</c><br><r>SELECT</r> <l>count</l>(<r>&#42;</r>)
-&nbsp; <r>FROM</r> from unicodex_codepoint C<br><r>&nbsp;INNER JOIN</r> unicodex_design D <r>ON</r> (<l>C</l>.<l>id <r>=</r> D</l>.<l>id</l>)<br><r>&nbsp;INNER JOIN</r> unicodex_design E <r>ON</r> (<l>C</l>.<l>id <r>=</r> E</l>.<l>id</l>)<br><r>&nbsp;WHERE</r> (<l>D</l>.<l>image</l> <r>LIKE</r> '%png%'
-&nbsp; &nbsp; <r>AND</r> <l>E</l>.<l>image</l> <r>LIKE</r> 'design%')
+&nbsp; <r>FROM</r> from unicodex_codepoint C<br><r>&nbsp;INNER JOIN</r> unicodex_design D <r>ON</r> (<l>C</l>.<l>id <r>=</r> D</l>.<l>id</l>)<br><r>&nbsp;INNER JOIN</r> unicodex_design E <r>ON</r> (<l>C</l>.<l>id <r>=</r> E</l>.<l>id</l>)<br><r>&nbsp;WHERE</r> (<l>D</l>.<l>image</l> <r>LIKE</r> <d>'%png%'</d>
+&nbsp; &nbsp; <r>AND</r> <l>E</l>.<l>image</l> <r>LIKE</r> <d>'design%'</d>)
 
 Note: Ah. 
 
