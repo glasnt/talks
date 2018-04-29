@@ -1744,7 +1744,6 @@ Note: let's check
 
 ---
  <div class="shell-wrap"><p class="shell-top-bar">python3.6</p><p class="shell-body">
- &gt;&gt;&gt; from django.db import connection<br>
  &gt;&gt;&gt; connection.queries[-1]<br>
 {'sql': 'SELECT COUNT(&#42;) AS "&#95;&#95;count" FROM "unicodex&#95;codepoint" INNER JOIN "unicodex&#95;design" ON ("unicodex&#95;codepoint"."id" = "unicodex&#95;design"."codepoint&#95;id") WHERE ("unicodex&#95;design"."image"::text LIKE \'%png%\' AND "unicodex&#95;design"."image"::text LIKE \'design%\')', 'time': '0.001'}<br>
  &gt;&gt;&gt; Codepoint.objects.filter(design&#95;&#95;image&#95;&#95;contains="png").filter(<br>
