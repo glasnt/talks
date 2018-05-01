@@ -37,12 +37,38 @@ The power and responsibility of unicode adoption
 
 ---
 ! t/AU | t/AU | t/AU | t/AU | t/AU
-! t/UK | t/US | t/HN | t/NZ | t/NZ
+! t/NZ | t/UK | t/US | t/US | t/HN 
 
 Note: I've given this talk a few times now, mostly in Australia and New Zealand, but twice in the US, once in the UK and Hungary 
 ---
 
-Note: But this talk isn't about that
+! t/moviecamera
+
+Note: I'm not giving that talk today. If you are interested in that talk, there are many differente verions available online, and most of the recordings are linked on my website
+
+Instead I want to talk about something else today
+
+---
+
+= <img height='400px' src='pictures/m/dragon.png'>
+
+Note: dragons
+
+Dragons and dragon mythology stretch across the world in different mediums, from creation tales to table top games
+
+But what I'm talking about is one specific dragon
+
+---
+
+= <img height='400px' src='pictures/m/dragon.png'>
+
+!  e/1 | e/Fcap | e/4 | e/0 | e/9
+
+Note: Dragon one eff four oh nine
+
+This is the code point for the dragon emoji
+
+ 
 
 ---
 ! g/claps
