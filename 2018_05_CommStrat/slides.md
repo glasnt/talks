@@ -68,6 +68,116 @@ Note: Dragon one eff four oh nine
 
 This is the code point for the dragon emoji
 
+I can't send you this dragon, sadly.
+
+But I can send you the reference code point to this dragon, and your phone, tablet, laptop will intepret that codepoint, and display *a* dragon
+
+But it might not be this dragon
+
+It depends on what operating system your device is using
+---
+
+
+ <img height='400px' src='pictures/dragon/htc.png'> <!-- .slide: class="center" -->
+
+Note: if you have a HTC phone, your dragon will look like this
+
+But if oyu have a samsung, it'll look like
+
+---
+ <img height='400px' src='pictures/dragon/samsung9.png'> <!-- .slide: class="center" -->
+
+Note: like this
+
+But that's only if you have the latest updates on your phone
+
+If you don't
+---
+
+ <img height='400px' src='pictures/dragon/samsung7.png'> <!-- .slide: class="center" -->
+
+Note: your dragon looks a little bit cuter!
+
+The thing is, HTC and Samsung have their own emoji
+
+If oyu have an android phone by a different manufacturer
+
+---
+
+ <img height='400px' src='pictures/dragon/android4.svg'> <!-- .slide: class="center" -->
+
+Note: your dragonw ill probably look like this
+
+But if you have a newer android, or have service from a provider that gives operating system updates
+
+---
+
+ <img height='400px' src='pictures/dragon/android8.png'> <!-- .slide: class="center" -->
+
+Note: your dragon will look like this
+
+But if you have an iphone, your dragon will look completely different
+
+
+---
+
+ <img height='400px' src='pictures/dragon/apple6.png'> <!-- .slide: class="center" -->
+
+Note: older apples will look like this
+
+and newer ones
+
+---
+
+ <img height='400px' src='pictures/dragon/apple.png'> <!-- .slide: class="center" -->
+
+Note: will look like this
+
+But it doesn't matter what platform you have if you're using certain social media platforms
+
+Because they have their own emoji!
+
+---
+
+
+ <img height='400px' src='pictures/dragon/twitter.svg'> <!-- .slide: class="center" -->
+
+Note: twitter's version looks more like the Loch Ness Monster
+
+And for Facebook, it's even worse, because it can depending HOW YOU"RE USING FACEBOOK
+
+---
+
+
+
+ <img height='400px' src='pictures/dragon/messenger.png'> <!-- .slide: class="center" -->
+
+Note: if you're using the Facebook Mobile app, messenger, your dragon looks like this
+
+but if you're using the facebook WEBSITE
+
+---
+ <img height='400px' src='pictures/dragon/facebook.png'> <!-- .slide: class="center" -->
+
+Note: your dragon looks different **AGAIN**
+---
+
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='160px' src='pictures/dragon/htc.png'><img height='160px' src='pictures/dragon/samsung7.png'><img height='160px' src='pictures/dragon/samsung9.png'><img height='160px' src='pictures/dragon/android4.svg'><img height='160px' src='pictures/dragon/android8.png'></p></div> <!-- .slide: class="center" -->
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='160px' src='pictures/dragon/apple6.png'><img height='160px' src='pictures/dragon/apple.png'><img height='160px' src='pictures/dragon/twitter.svg'><img height='160px' src='pictures/dragon/messenger.png'><img height='160px' src='pictures/dragon/facebook.png'></p></div> <!-- .slide: class="center" -->
+
+Note: There are ten different dragons here, and that's not even counting if you have an older version of windows, if you're running linux, if you have custom emoji sets...
+
+And here's the thing. They all look like dragons. I mean, sure, some look more european, and others look more like traditional Long dragons, but they're all dragons.
+
+And depending on if you're using facebook on the web or messenger your dragon will change between chinese and medieval... but they're all dragons.
+
+I mean, sure, a few of them are charging up ball lightning for some reason, but they're all dragons
+
+It's when you start trying to use only emoji to communicate that you get issues.
+
+For example, if you were to send the message: I feel powerful, but you drop powerful and just send a dragon...
+
+---
 
 
 ---
