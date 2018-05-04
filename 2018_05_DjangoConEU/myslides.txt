@@ -249,7 +249,7 @@ Thankfully, django is clever and has helpful methods you can call to generate a 
 <r>from</r> django.apps <r>import</r> apps
 &nbsp;
 <r>for</r> app_config <r>in</r> apps.get_app_configs():
-&nbsp; l <r>=</r> app_config.label
+&nbsp; l <r>=</r> app_config.name
 &nbsp; <r>for</r> model <r>in</r> app_config.get_models():
 &nbsp; &nbsp; n <r>=</r> model._meta.object_name
 &nbsp; &nbsp; <l>print</l>(<d>f'from</d> <l>{</l>l<l>}</l><d>.models import </d><l>{</l>n<l>}</l>')
@@ -286,7 +286,7 @@ Type "help", "copyright", "credits" or "license" for more information.<br>
 (InteractiveConsole)<br>
 &gt;&gt;&gt; from django.apps import apps<br>
 &gt;&gt;&gt; for app_config in apps.get_app_configs():<br>
-...&nbsp; l = app_config.label<br>
+...&nbsp; l = app_config.name<br>
 ...&nbsp; for model in app_config.get_models():<br>
 ...&nbsp; &nbsp; n = model._meta.object_name<br>
 ...&nbsp; &nbsp; print(f'from {l}.models import {n}')<br>
@@ -295,7 +295,7 @@ $$w ...&nbsp;
 Note: for now, we're just going to dump in that code and run it 
 ---
 $$terminal python3.6
-...&nbsp; l = app_config.label<br>
+...&nbsp; l = app_config.name<br>
 ...&nbsp; for model in app_config.get_models():<br>
 ...&nbsp; &nbsp; n = model._meta.object_name<br>
 ...&nbsp; &nbsp; print(f'from {l}.models import {n}')<br>
