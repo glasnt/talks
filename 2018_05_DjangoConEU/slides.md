@@ -300,14 +300,14 @@ Note: for now, we're just going to dump in that code and run it
 ...&nbsp; &nbsp; n = model._meta.object_name<br>
 ...&nbsp; &nbsp; print(f'from {l}.models import {n}')<br>
 ...&nbsp;<br> 
-from auth.models import Permission<br>
-from auth.models import Group<br>
-from auth.models import User<br>
-from contenttypes.models import ContentType<br>
-from sessions.models import Session<br>
-from sites.models import Site<br>
+from django.contrib.auth.models import Permission<br>
+from django.contrib.auth.models import Group<br>
+from django.contrib.auth.models import User<br>
+from django.contrib.contenttypes.models import ContentType<br>
+from django.contrib.sessions.models import Session<br>
+from django.contrib.sites.models import Site<br>
 from aldryn_sso.models import AldrynCloudUser<br>
-from admin.models import LogEntry<br>
+from django.contrib.admin.models import LogEntry<br>
 from unicodex.models import Codepoint<br>
 from unicodex.models import Vendor<br>
 from unicodex.models import VendorVersion<br>
