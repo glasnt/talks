@@ -175,9 +175,130 @@ I mean, sure, a few of them are charging up ball lightning for some reason, but 
 
 It's when you start trying to use only emoji to communicate that you get issues.
 
-For example, if you were to send the message: I feel powerful, but you drop powerful and just send a dragon...
+For example, if you were to send the message: I feel powerful, with a dragon on the end... are you being
+---
+
+ <img height='400px' src='pictures/dragon/apple.png'> <!-- .slide: class="center" -->
+
+Note: literal? I feel so powerful I'm bristling with power!
+
 
 ---
+
+ <img height='400px' src='pictures/dragon/htc.png'> <!-- .slide: class="center" -->
+
+Note: sarcastic? Feeling bloated and tired and a bit green around the gills...
+---
+
+# &nbsp;
+
+Note: yeah, okay, I might be pushing this anology with dragons, but this happens all the time in real life
+
+For example: I get to speak at PyCon TW!
+
+---
+
+ <div style='width: 50%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/t/grimace.svg'></p></div> <!-- .slide: class="center" -->
+
+Note: What am I trying to say here?
+
+This face to me seems... slightly anguished?
+
+Maybe I meant another face..
+---
+
+ <div style='width: 50%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/t/grinning.svg'></p></div> <!-- .slide: class="center" -->
+
+Note: this is only just slightly better to me, but that mouth seems wrong, and not the emoji I'd chose to describe my actual feeling: excitement
+
+---
+
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/t/grimace.svg'><img height='400px' src='pictures/t/grinning.svg'></p></div> <!-- .slide: class="center" -->
+
+Note: this particular pair of emoji are Grimace and Grinning
+
+In older versions of emoji these codepoints were represeneted in ways where they could be easily confused
+
+So much so that there was a research study on exactly this
+
+“Blissfully happy” or “ready to fight”: Varying Interpretations of Emoji
+
+From the University of Minnesota
+
+It found that while the misintepretation across different platforms were problematic, as we've already seen with our dragons, there were issues with different emoji within the same platform.
+
+For this partiuclar instance this has been fixed
+
+
+---
+
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/t/grimace_new.svg'><img height='400px' src='pictures/t/beaming.svg'></p></div> <!-- .slide: class="center" -->
+
+Note: Nearly every platform has ensured that the grinning face with smiling eyes emoji has a mouth that suits
+
+But there are still emoji that can be confused with each other.
+
+For example:
+
+---
+
+# &nbsp;
+
+Note: A message from a relative letting you know that the family pet is in hosptial
+
+---
+
+
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/t/tearsjoy.svg'><img height='400px' src='pictures/space.svg'></p></div> <!-- .slide: class="center" -->
+
+Note: crying happy face
+
+... Not sure that's the one you meant, honey...
+
+---
+
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/t/tearsjoy.svg'><img height='400px' src='pictures/t/loudcry.svg'></p></div> <!-- .slide: class="center" -->
+
+Note: you probably meant Loudly crying face
+
+I mean, sure, you can see the subtle differences here when they're big on a projector screen
+
+The mouths are different, sure, but if you're typing this out on a phone you're not getting a good resolution to view the differences
+---
+
+
+<div style='width: 100%; margin: 0 auto;'><p align='center'><img height='40px' src='pictures/t/tearsjoy.svg'><img height='40px' src='pictures/t/loudcry.svg'></p></div> <!-- .slide: class="center" -->
+
+
+Note: your phone's emoji keynote is TINY and so it's easy to not ever see the differences
+
+It's so very important to make sure you're not allowing the intepretation of your message to hang in the balance of an emoji.
+
+
+---
+
+# &nbsp;
+
+Note: There's another issue wrapped up in here that I want to talk about.
+
+And that's where emoji come from
+
+---
+
+ <div style='width: 50%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/g/japan.svg'></p></div> <!-- .slide: class="center" -->
+
+Note: the simple answer is Japan!
+
+But there's a long and complicated answer that describes why the confusion with the eyes happens.
+
+TODO: short japanese emoji history
+kaimoji vs emoticons
+eyes vs mouths
+
+information desk, etc, a westerner's view
+
+---
+
 
 
 ---
