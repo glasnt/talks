@@ -291,14 +291,30 @@ Note: the simple answer is Japan!
 
 But there's a long and complicated answer that describes why the confusion with the eyes happens. 
 
-TODO: short japanese emoji history
-kaimoji vs emoticons
-eyes vs mouths
+---
 
-information desk, etc, a westerner's view
+! g/mobile
+---
+! t/zzz | t/collision
+---
+! g/dizzy
+---
+! t/anger
+---
+! t/person_info | t/person_ok | t/person_no
+---
+! f/smile_d.png | f/happy_d.png
+---
+#= :D ^_^
+---
+
+! t-covermouth.png | m-covermouth.png | g-covermouth.png | a-covermouth.png
 
 ---
 
+<div style='width: 100%; margin: 0 auto;'><p align='center'><img height='150px' style="padding-top:50px" src='pictures/t/raisedfist.svg'><img height='200px' src='pictures/t/point.svg'><img height='200px' src='pictures/t/peace.svg'><img height='200px' src='pictures/t/ilu.svg'></p></div> <!-- .slide: class="center" -->
+! t/horns | t/vulcan | t/crossfingers | t/hand-spread
+---
 
 
 ---

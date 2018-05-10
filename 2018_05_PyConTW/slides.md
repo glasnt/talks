@@ -291,14 +291,30 @@ Note: the simple answer is Japan!
 
 But there's a long and complicated answer that describes why the confusion with the eyes happens.
 
-TODO: short japanese emoji history
-kaimoji vs emoticons
-eyes vs mouths
+---
 
-information desk, etc, a westerner's view
+ <div style='width: 50%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/g/mobile.svg'></p></div> <!-- .slide: class="center" -->
+---
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/t/zzz.svg'><img height='400px' src='pictures/t/collision.svg'></p></div> <!-- .slide: class="center" -->
+---
+ <div style='width: 50%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/g/dizzy.svg'></p></div> <!-- .slide: class="center" -->
+---
+ <div style='width: 50%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/t/anger.svg'></p></div> <!-- .slide: class="center" -->
+---
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='266px' src='pictures/t/person_info.svg'><img height='266px' src='pictures/t/person_ok.svg'><img height='266px' src='pictures/t/person_no.svg'></p></div> <!-- .slide: class="center" -->
+---
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/f/smile_d.png'><img height='400px' src='pictures/f/happy_d.png'></p></div> <!-- .slide: class="center" -->
+---
+# :D ^_^ <!-- .slide: class="center" -->
+---
+
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='200px' src='pictures/t-covermouth.png'><img height='200px' src='pictures/m-covermouth.png'><img height='200px' src='pictures/g-covermouth.png'><img height='200px' src='pictures/a-covermouth.png'></p></div> <!-- .slide: class="center" -->
 
 ---
 
+<div style='width: 100%; margin: 0 auto;'><p align='center'><img height='150px' style="padding-top:50px" src='pictures/t/raisedfist.svg'><img height='200px' src='pictures/t/point.svg'><img height='200px' src='pictures/t/peace.svg'><img height='200px' src='pictures/t/ilu.svg'></p></div> <!-- .slide: class="center" -->
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='200px' src='pictures/t/horns.svg'><img height='200px' src='pictures/t/vulcan.svg'><img height='200px' src='pictures/t/crossfingers.svg'><img height='200px' src='pictures/t/hand-spread.svg'></p></div> <!-- .slide: class="center" -->
+---
 
 
 ---
