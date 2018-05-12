@@ -291,30 +291,220 @@ Note: the simple answer is Japan!
 
 But there's a long and complicated answer that describes why the confusion with the eyes happens.
 
+While picograms have been a part of many written languages for a veeery long time
+
+It was japan in the 90's that introduced what we now call emoji
+
+Named - "e" - Picture, and "moji" - character
+
+
+---
+ <div style='width: 50%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/g/new_mobile.svg'></p></div> <!-- .slide: class="center" -->
+
+Note: It was introduced on on mobile phones. Not when they looked like this
+
+---
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/g/mobile.png'><img height='400px' src='pictures/m/pager.png'></p></div> <!-- .slide: class="center" -->
+
+Note: but when we looked like this
+
+The object on the right is known as a Pager. It was a way to receive messages and it beeped at you, constantly, so it's also referred to as a beeper.
+
+Japanese telcoms realised there was space in their encoding sets for small images for useful things
+
 ---
 
- <div style='width: 50%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/g/mobile.svg'></p></div> <!-- .slide: class="center" -->
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='200px' src='pictures/d/heart.svg'><img height='200px' src='pictures/d/video.svg'><img height='200px' src='pictures/d/cat.svg'><img height='200px' src='pictures/d/sparkles.svg'></p></div> <!-- .slide: class="center" -->
+
+Note: like hearts, location symbols like a mobie thetre, cats, and sparkles
+
+But some of these symbols make more sense than others
+---
+
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/d/zzz.svg'><img height='400px' src='pictures/d/collision.svg'></p></div> <!-- .slide: class="center" -->
+
+Note: for me, I can understand what these symbols mean
+
+Here, let me show them in their current Apple rendering to assist
 ---
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/t/zzz.svg'><img height='400px' src='pictures/t/collision.svg'></p></div> <!-- .slide: class="center" -->
+Note: I know these two. ZZZ is sleeping. The bang is a collision, or explision
 ---
  <div style='width: 50%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/g/dizzy.svg'></p></div> <!-- .slide: class="center" -->
+Note: but this.. this is a bit more unfamiliar to me. This is dizzy, like when a cartoon character runs into a wall and hits their head, they see stars
 ---
  <div style='width: 50%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/t/anger.svg'></p></div> <!-- .slide: class="center" -->
+Note: However, this symbol. I have absolutely no idea on.
+
+Coming from outside a culture where this symbol is used, I have no context.
+
+But I looked it up. This is anger. It's from manga, and is supposed to represented throbbing blood vessels on the head.
+
+Yeah, okay, I can see that now. Anger.
+
+But it doesn't stop there. I'm a dumb westerner
+
 ---
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='266px' src='pictures/t/person_info.svg'><img height='266px' src='pictures/t/person_ok.svg'><img height='266px' src='pictures/t/person_no.svg'></p></div> <!-- .slide: class="center" -->
+
+Note: so these don't have any context for me.
+
+These, for the record, are Information Desk, Okay, and No.
+
+The middle one is from Japanese culture where a circle is a mark of correctness
+---
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/t/circle.svg'><img height='400px' src='pictures/m/tick.png'></p></div> <!-- .slide: class="center" -->
+
+Note: I'm used to having a tick or a check for correctless, so having a picture of someone making an O face doesn't register with me
 ---
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/f/smile_d.png'><img height='400px' src='pictures/f/happy_d.png'></p></div> <!-- .slide: class="center" -->
+
+Note: so back to the two smiling faces. The difference in the eyes is simple to show.
 ---
-# :D ^_^ <!-- .slide: class="center" -->
+ <div class="h0">^_^</div> <!-- .slide: class="center" -->
+Note: kaomoji predate emoji, and use symbols to make faces
+
+This is smiling eyes.
+
+This style is very much prelevent in Asia and communites who are within that culture.
+
+As for the west?
+---
+ <div class="h0">:D</div> <!-- .slide: class="center" -->
+
+Note: this is our smile. It's sideways, and the eyes are made with a colon
+---
+## <span style="margin-right:225px">:D</span><span style="margin-left:100px"> ^_^</span>
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/f/smile_d.png'><img height='400px' src='pictures/f/happy_d.png'></p></div> <!-- .slide: class="center" -->
+
+Note: so when you put them together with their emoji counterparts, you can see how someone like me might not understand how the eyes in cartoons hold all the emotion in Asian comics, where as in the west, it's normally the mouth.
+
+Once you first learn this, the difference is obvious.
+
+Unfortunately, this still isn't universal knowledge.
 ---
 
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='200px' src='pictures/t-covermouth.png'><img height='200px' src='pictures/m-covermouth.png'><img height='200px' src='pictures/g-covermouth.png'><img height='200px' src='pictures/a-covermouth.png'></p></div> <!-- .slide: class="center" -->
+Note: this is a new emoji callled Face With Hand Over Mouth
 
+And when there are smiling eyes on every platform apart from Apple... you're going to get problems.
+
+Having the smiling eyes changes the assumed expression from
+
+ooops 
+
+to 
+
+teehee 
+
+Which means if you send this two or from an iphone, your meaning will be lost without any context
+
+
+And it's not just faces where context matters
 ---
 
 <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='150px' style="padding-top:50px" src='pictures/t/raisedfist.svg'><img height='200px' src='pictures/t/point.svg'><img height='200px' src='pictures/t/peace.svg'><img height='200px' src='pictures/t/ilu.svg'></p></div> <!-- .slide: class="center" -->
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='200px' src='pictures/t/horns.svg'><img height='200px' src='pictures/t/vulcan.svg'><img height='200px' src='pictures/t/crossfingers.svg'><img height='200px' src='pictures/t/hand-spread.svg'></p></div> <!-- .slide: class="center" -->
+
+Note: these are just some of the hand and fingers based emoji that are available.
+
+Depending on your culture, you may or may not recognise any of these.
+
 ---
+
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/t/peace.svg'><img height='400px' src='pictures/space.svg'></p></div> <!-- .slide: class="center" -->
+
+Note: the index and middle finger extended, palm facing out
+
+---
+
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/t/peace.svg'><img height='400px' src='pictures/t/peace-symbol.svg'></p></div> <!-- .slide: class="center" -->
+
+Note: it could mean "peace"
+
+---
+
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/t/peace.svg'><img height='400px' src='pictures/e/2.svg'></p></div> <!-- .slide: class="center" -->
+
+Note: it could mean two
+
+But only in some languages. In german, this isn't two, as they start counting form the thumb
+
+And there's even more examples
+
+---
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/t/thumbsup.svg'><img height='400px' src='pictures/space.svg'></p></div> <!-- .slide: class="center" -->
+
+
+Note: extending the thumb only, pointed upwards
+
+This could mean
+
+---
+
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/t/thumbsup.svg'><img height='400px' src='pictures/m/tick.png'></p></div> <!-- .slide: class="center" -->
+
+Note: everything is okay!
+
+---
+
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/t/thumbsup.svg'><img height='400px' src='pictures/t/warning.svg'></p></div> <!-- .slide: class="center" -->
+
+Note: in scuba diving, it means SOMETHING IS VERY WRONG and I have to come up for air
+
+---
+
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='266px' src='pictures/t/thumbsup.svg'><img height='266px' src='pictures/e/1.svg'><img height='266px' src='pictures/g/germany.svg'></p></div> <!-- .slide: class="center" -->
+
+Note: in Germany it could be the number one
+
+---
+
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='266px' src='pictures/t/thumbsup.svg'><img height='266px' src='pictures/e/5.svg'><img height='266px' src='pictures/g/japan.svg'></p></div> <!-- .slide: class="center" -->
+
+Note: while in japan it means five!
+
+---
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/t/thumbsup.svg'><img height='400px' src='pictures/e/automobile.svg'></p></div> <!-- .slide: class="center" -->
+
+Note: while in Australia it could used to flag down a bus or a car,
+
+or when use agressively
+---
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/t/thumbsup.svg'><img height='400px' src='pictures/m/anger.png'></p></div> <!-- .slide: class="center" -->
+
+Note: can be an extremely rude 'Up Yours!'
+---
+
+&nbsp; 
+
+Note: there are some things that will always only make sense in context
+
+such is the ambiguity of human gestures
+
+But 
+
+---
+
+ <img src="pictures/m/dragon.png" />
+
+Note: getting back to our original point
+
+Dragons 
+
+There are efforts to fix how emoji are represented across different platforms so they all at least look the same.
+
+---
+
+ <div style='width: 50%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/t/repeat.svg'></p></div> <!-- .slide: class="center" -->
+
+Note: this has been dubbed the Convergence of emoji
+
+Bringing all the representations of a single codepoint across platforms closer together.
+
+---
+
+#TODO DANCER
 
 
 ---
