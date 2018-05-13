@@ -1,6 +1,8 @@
 ! space  | g/snake | t/tw| e/newkey | a/note.png | space
 ---
-#= Communication strategies beyond the Basic Multilingual Plane
+###= &nbsp;
+##= Communication strategies beyond the Basic Multilingual Plane
+###= &nbsp;
 
 <img src="pictures/footer.svg" style="margin-top:-50px !important">
 ---
@@ -54,9 +56,66 @@ Instead I want to talk about something else today
 
 Note: dragons
 
-TODO BMP "Dragons come from another plane... let me explain"
+Dragons are real. They just come from another plane... let me explain
 
-Dragons and dragon mythology stretch across the world in different mediums, from creation tales to table top games
+---
+
+! g/currency
+
+Note: Back in the early days of computers, every country had their own standard of how they stored data
+
+Americans had ASCII, Taiwan had Big 5, Japan had Shift JIS, and there were so many others
+
+---
+
+! t/convert
+
+Note: trying to convert between all these standards was terrible. 
+
+There wasn't one standard that everyone could use, that could handle every type of symbol everyone wanted
+
+---
+
+! g/universe
+
+Note: Thankfully, the Unicode Consortium was formed and made a universal encoding - unicode
+
+It allows for over a million different code points to be encoded within it. 
+
+The space is split up into planes, allowing for around 65 thousand characters each
+
+---
+
+! space | t/letter_input | space 
+! space | space | e/0 | e/0 | e/0 | e/0  
+! space | space | e/Fcap | e/Fcap | e/Fcap | e/Fcap 
+
+Note: Plane 0 is known as the Basic Multilingual Plane, and covers all the characters you can represent with just 4 hexadecimal digits 
+
+This plane contains a lot of things; Every latin character, non-latin european character, middle eastern scripts, asian scripts, and all the Han unificiation characters. There's a lot in this plane, but it's only one of 17 planes
+
+
+---
+
+! space | t/symbol_input | space
+ 
+! space | e/1 | e/0 | e/0 | e/0 | e/0 
+! space | e/1 | e/Fcap | e/Fcap | e/Fcap | e/Fcap
+
+
+Note: The plane I'm more interested in, and what I'll be focusing on, is the Supplimentary Multilingual Plane
+
+This is where you find every emoji that currently exists. 
+
+
+---
+= <img height='400px' src='pictures/m/dragon.png'>
+
+Note: 
+
+This is where the dragons live. 
+
+
 
 But what I'm talking about is one specific dragon
 
@@ -488,7 +547,7 @@ But
 
 ---
 
-@ m/dragon.png
+= <img height='400px' src='pictures/m/dragon.png'>
 
 Note: getting back to our original point
 
@@ -534,9 +593,61 @@ Note: they literally made a man dancer just to try and clean it up
 
 Note: this is just the story for one particular code point, but it could very well happen again. 
 
+New emoji have been introduced every for the past few years, with mixed results
 ---
 
-TODO PARROT
+= <img height="400px" src="pictures/original_dumpling.png">
+! e/1 | e/Fcap | e/9 | e/5 | e/Fcap
+
+Note: this is the dumpling emoji, which was introduced in Unicode version 10 last year
+
+The submission to the Unicode Consortium included this image as a suggested represetnation
+
+But it's only ever a suggestion. Vendors can choose whatever they want
+
+Which is how we ended up with this
+---
+
+! dumpling_ap.png | dumpling_a.png | dumpling_w.png | dumpling_f.png | dumpling_e.png | dumpling_t.png
+
+Note: yes, they're all dumplings, but some are obviously "shou long bao" while others look more like gyoza
+
+which means that if you're using only this emoji to denote where you want to go for lunch, you're either going to end up having people thinking you want chinese or japanese, depending on what mobile phone they use. 
+
+I mean, it's not the end of the world, but it's a serious consideration. 
+
+Personally I have a vested interest in this. Not dumplings. I  mean, I love dumplings, but I have a vested interest in how emoji are going to be displayed. 
+
+One emoji in paricular. 
+
+---
+= <img src="pictures/parrot_1f99c.png" height="400px">
+
+! e/1 | e/Fcap | e/9 | e/9 | e/Ccap
+
+Note: this emoji, the parrot emoji
+
+Because I made this emoji
+
+
+I submitted a proposal to the unicode consortium, and it was approved
+
+So some time in the next few months, the parrot emoji will show up on your phones. But I have no idea how it will be represented. 
+---
+
+! t/questionmark | t/questionmark | t/questionmark | t/questionmark | t/questionmark
+
+Note: 
+Will it be a toucan? A cockatoo? a parakeet? a Macaw? A kakapo?
+
+I don't know
+
+it'll be a surprise :)
+
+---
+
+Note: summary here?
+
 ---
 ! g/claps
 

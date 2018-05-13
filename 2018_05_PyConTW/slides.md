@@ -1,6 +1,8 @@
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='133px' src='pictures/space.svg'><img height='133px' src='pictures/g/snake.svg'><img height='133px' src='pictures/t/tw.svg'><img height='133px' src='pictures/e/newkey.svg'><img height='133px' src='pictures/a/note.png'><img height='133px' src='pictures/space.svg'></p></div> <!-- .slide: class="center" -->
 ---
-# Communication strategies beyond the Basic Multilingual Plane <!-- .slide: class="center" -->
+### &nbsp; <!-- .slide: class="center" -->
+## Communication strategies beyond the Basic Multilingual Plane <!-- .slide: class="center" -->
+### &nbsp; <!-- .slide: class="center" -->
 
 <img src="pictures/footer.svg" style="margin-top:-50px !important">
 ---
@@ -54,9 +56,66 @@ Instead I want to talk about something else today
 
 Note: dragons
 
-TODO BMP "Dragons come from another plane... let me explain"
+Dragons are real. They just come from another plane... let me explain
 
-Dragons and dragon mythology stretch across the world in different mediums, from creation tales to table top games
+---
+
+ <div style='width: 50%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/g/currency.svg'></p></div> <!-- .slide: class="center" -->
+
+Note: Back in the early days of computers, every country had their own standard of how they stored data
+
+Americans had ASCII, Taiwan had Big 5, Japan had Shift JIS, and there were so many others
+
+---
+
+ <div style='width: 50%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/t/convert.svg'></p></div> <!-- .slide: class="center" -->
+
+Note: trying to convert between all these standards was terrible.
+
+There wasn't one standard that everyone could use, that could handle every type of symbol everyone wanted
+
+---
+
+ <div style='width: 50%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/g/universe.svg'></p></div> <!-- .slide: class="center" -->
+
+Note: Thankfully, the Unicode Consortium was formed and made a universal encoding - unicode
+
+It allows for over a million different code points to be encoded within it.
+
+The space is split up into planes, allowing for around 65 thousand characters each
+
+---
+
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='266px' src='pictures/space.svg'><img height='266px' src='pictures/t/letter_input.svg'><img height='266px' src='pictures/space.svg'></p></div> <!-- .slide: class="center" -->
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='133px' src='pictures/space.svg'><img height='133px' src='pictures/space.svg'><img height='133px' src='pictures/e/0.svg'><img height='133px' src='pictures/e/0.svg'><img height='133px' src='pictures/e/0.svg'><img height='133px' src='pictures/e/0.svg'></p></div> <!-- .slide: class="center" -->
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='133px' src='pictures/space.svg'><img height='133px' src='pictures/space.svg'><img height='133px' src='pictures/e/Fcap.svg'><img height='133px' src='pictures/e/Fcap.svg'><img height='133px' src='pictures/e/Fcap.svg'><img height='133px' src='pictures/e/Fcap.svg'></p></div> <!-- .slide: class="center" -->
+
+Note: Plane 0 is known as the Basic Multilingual Plane, and covers all the characters you can represent with just 4 hexadecimal digits
+
+This plane contains a lot of things; Every latin character, non-latin european character, middle eastern scripts, asian scripts, and all the Han unificiation characters. There's a lot in this plane, but it's only one of 17 planes
+
+
+---
+
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='266px' src='pictures/space.svg'><img height='266px' src='pictures/t/symbol_input.svg'><img height='266px' src='pictures/space.svg'></p></div> <!-- .slide: class="center" -->
+
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='133px' src='pictures/space.svg'><img height='133px' src='pictures/e/1.svg'><img height='133px' src='pictures/e/0.svg'><img height='133px' src='pictures/e/0.svg'><img height='133px' src='pictures/e/0.svg'><img height='133px' src='pictures/e/0.svg'></p></div> <!-- .slide: class="center" -->
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='133px' src='pictures/space.svg'><img height='133px' src='pictures/e/1.svg'><img height='133px' src='pictures/e/Fcap.svg'><img height='133px' src='pictures/e/Fcap.svg'><img height='133px' src='pictures/e/Fcap.svg'><img height='133px' src='pictures/e/Fcap.svg'></p></div> <!-- .slide: class="center" -->
+
+
+Note: The plane I'm more interested in, and what I'll be focusing on, is the Supplimentary Multilingual Plane
+
+This is where you find every emoji that currently exists.
+
+
+---
+ <img height='400px' src='pictures/m/dragon.png'> <!-- .slide: class="center" -->
+
+Note: 
+
+This is where the dragons live.
+
+
 
 But what I'm talking about is one specific dragon
 
@@ -488,7 +547,7 @@ But
 
 ---
 
- <img src="pictures/m/dragon.png" />
+ <img height='400px' src='pictures/m/dragon.png'> <!-- .slide: class="center" -->
 
 Note: getting back to our original point
 
@@ -534,9 +593,61 @@ Note: they literally made a man dancer just to try and clean it up
 
 Note: this is just the story for one particular code point, but it could very well happen again.
 
+New emoji have been introduced every for the past few years, with mixed results
 ---
 
-TODO PARROT
+ <img height="400px" src="pictures/original_dumpling.png"> <!-- .slide: class="center" -->
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='160px' src='pictures/e/1.svg'><img height='160px' src='pictures/e/Fcap.svg'><img height='160px' src='pictures/e/9.svg'><img height='160px' src='pictures/e/5.svg'><img height='160px' src='pictures/e/Fcap.svg'></p></div> <!-- .slide: class="center" -->
+
+Note: this is the dumpling emoji, which was introduced in Unicode version 10 last year
+
+The submission to the Unicode Consortium included this image as a suggested represetnation
+
+But it's only ever a suggestion. Vendors can choose whatever they want
+
+Which is how we ended up with this
+---
+
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='133px' src='pictures/dumpling_ap.png'><img height='133px' src='pictures/dumpling_a.png'><img height='133px' src='pictures/dumpling_w.png'><img height='133px' src='pictures/dumpling_f.png'><img height='133px' src='pictures/dumpling_e.png'><img height='133px' src='pictures/dumpling_t.png'></p></div> <!-- .slide: class="center" -->
+
+Note: yes, they're all dumplings, but some are obviously "shou long bao" while others look more like gyoza
+
+which means that if you're using only this emoji to denote where you want to go for lunch, you're either going to end up having people thinking you want chinese or japanese, depending on what mobile phone they use.
+
+I mean, it's not the end of the world, but it's a serious consideration.
+
+Personally I have a vested interest in this. Not dumplings. I mean, I love dumplings, but I have a vested interest in how emoji are going to be displayed.
+
+One emoji in paricular.
+
+---
+ <img src="pictures/parrot_1f99c.png" height="400px"> <!-- .slide: class="center" -->
+
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='160px' src='pictures/e/1.svg'><img height='160px' src='pictures/e/Fcap.svg'><img height='160px' src='pictures/e/9.svg'><img height='160px' src='pictures/e/9.svg'><img height='160px' src='pictures/e/Ccap.svg'></p></div> <!-- .slide: class="center" -->
+
+Note: this emoji, the parrot emoji
+
+Because I made this emoji
+
+
+I submitted a proposal to the unicode consortium, and it was approved
+
+So some time in the next few months, the parrot emoji will show up on your phones. But I have no idea how it will be represented.
+---
+
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='160px' src='pictures/t/questionmark.svg'><img height='160px' src='pictures/t/questionmark.svg'><img height='160px' src='pictures/t/questionmark.svg'><img height='160px' src='pictures/t/questionmark.svg'><img height='160px' src='pictures/t/questionmark.svg'></p></div> <!-- .slide: class="center" -->
+
+Note: 
+Will it be a toucan? A cockatoo? a parakeet? a Macaw? A kakapo?
+
+I don't know
+
+it'll be a surprise :)
+
+---
+
+Note: summary here?
+
 ---
  <div style='width: 50%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/g/claps.svg'></p></div> <!-- .slide: class="center" -->
 
