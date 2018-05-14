@@ -56,7 +56,7 @@ Instead I want to talk about something else today
 
 Note: dragons
 
-Dragons are real. They just come from another plane... let me explain
+Dragons are real. They just come from another plane of existance... let me explain
 
 ---
 
@@ -565,27 +565,51 @@ Bringing all the representations of a single codepoint across platforms closer t
 
 ---
 
-= <img height='400px' src='pictures/d/dancer_m4.png'>
+= <img height='400px' src='pictures/d/dance_m4.png'>
 ! e/1 | e/Fcap | e/4 | e/8 | e/3
 
 Note: the most notable instance of this is with this emoji, dancer. 
 
 Now, this is the most recent Micosft represetnation, but in the beginning, it wasn't so simple
 ---
+! space | space | d/dance_a6.png | space | space
+! space | e/2 | e/0 | e/0 | e/8 | space
+---
+! d/dance_a43.png | space |  d/dance_a6.png | space | d/dance_m1.png 
+! space | e/2 | e/0 | e/1 | e/2 | space
+---
+! d/dance_a44.png | space |  d/dance_a6.png | space | d/dance_m2.png 
+! space | e/2 | e/0 | e/1 | e/3 | space
+---
+! d/dance_a44.png | space |  d/dance_a6.png | d/dance_s2.png | d/dance_m2.png 
+! space | e/2 | e/0 | e/1 | e/4 | space
+---
+! d/dance_a44.png | d/dance_t1.png |  d/dance_a6.png | d/dance_s2.png | d/dance_m2.png 
+! space | e/2 | e/0 | e/1 | e/4 | space
+---
+! d/dance_a44.png | d/dance_t1.png |  d/dance_a6.png | d/dance_s2.png | d/dance_m2.png | d/dance_e1.png
+! space | e/2 | e/0 | e/1 | e/4 | space
+---
+! d/dance_a50 | d/dance_t1.png |  d/dance_a6.png | d/dance_s2.png | d/dance_m2.png | d/dance_e1.png
+! space | e/2 | e/0 | e/1 | e/4 | space
+---
+! d/dance_a50 | d/dance_t1.png |  d/dance_a6.png | d/dance_s3.png | d/dance_m2.png | d/dance_e1.png
+! space | e/2 | e/0 | e/1 | e/4 | space
+---
+! d/dance_a50 | d/dance_t2.png |  d/dance_a6.png | d/dance_s3.png | d/dance_m2.png | d/dance_e2
+! space | e/2 | e/0 | e/1 | e/5 | space
+---
 
-! d/dance_a43.png | d/dance_m1.png | d/dance_a6.png | d/dance_e1.png | d/dance_t1.png | d/dance_s2.png 
+! d/dance_a50 | d/dance_t2.png |  d/dance_a11.png | d/dance_s71.png | d/dance_m4.png | d/dance_e2
+! space | e/2 | e/0 | e/1 | e/6 | space
 ---
-! d/dance_a44.png | d/dance_m2.png | d/dance_a6.png | d/dance_e1.png | d/dance_t1.png | d/dance_s2.png 
----
-! d/dance_a50 | d/dance_m2.png | d/dance_a6.png | d/dance_e1.png | d/dance_t1.png | d/dance_s3.png
----
-! d/dance_a50 | d/dance_m2.png | d/dance_a6.png | d/dance_e2.png | d/dance_t1.png | d/dance_s71.png
----
-! d/dance_g9.png | d/dance_w4.png | d/dance_a11.png | d/dance_e3.png | d/dance_t2.png | d/dance_s9.png
+! d/dance_g9.png | d/dance_t2.png |  d/dance_a11.png | d/dance_s9.png | d/dance_m4.png | d/dance_e3.png
+! space | e/2 | e/0 | e/1 | e/7 | space
 
 Note: today, most of the images look the same. But it's to be noted that because of some of the issues
 ---
 ! d/man_g.png | d/man_w.png | d/man_a.png | d/man_e.png | d/man_t.png | d/man_s.png
+! space | e/2 | e/0 | e/1 | e/6 | space
 
 Note: they literally made a man dancer just to try and clean it up
 ---

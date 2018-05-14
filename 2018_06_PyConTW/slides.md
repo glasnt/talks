@@ -56,7 +56,7 @@ Instead I want to talk about something else today
 
 Note: dragons
 
-Dragons are real. They just come from another plane... let me explain
+Dragons are real. They just come from another plane of existance... let me explain
 
 ---
 
@@ -565,27 +565,51 @@ Bringing all the representations of a single codepoint across platforms closer t
 
 ---
 
- <img height='400px' src='pictures/d/dancer_m4.png'> <!-- .slide: class="center" -->
+ <img height='400px' src='pictures/d/dance_m4.png'> <!-- .slide: class="center" -->
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='160px' src='pictures/e/1.svg'><img height='160px' src='pictures/e/Fcap.svg'><img height='160px' src='pictures/e/4.svg'><img height='160px' src='pictures/e/8.svg'><img height='160px' src='pictures/e/3.svg'></p></div> <!-- .slide: class="center" -->
 
 Note: the most notable instance of this is with this emoji, dancer.
 
 Now, this is the most recent Micosft represetnation, but in the beginning, it wasn't so simple
 ---
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='160px' src='pictures/space.svg'><img height='160px' src='pictures/space.svg'><img height='160px' src='pictures/d/dance_a6.png'><img height='160px' src='pictures/space.svg'><img height='160px' src='pictures/space.svg'></p></div> <!-- .slide: class="center" -->
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='133px' src='pictures/space.svg'><img height='133px' src='pictures/e/2.svg'><img height='133px' src='pictures/e/0.svg'><img height='133px' src='pictures/e/0.svg'><img height='133px' src='pictures/e/8.svg'><img height='133px' src='pictures/space.svg'></p></div> <!-- .slide: class="center" -->
+---
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='160px' src='pictures/d/dance_a43.png'><img height='160px' src='pictures/space.svg'><img height='160px' src='pictures/d/dance_a6.png'><img height='160px' src='pictures/space.svg'><img height='160px' src='pictures/d/dance_m1.png'></p></div> <!-- .slide: class="center" -->
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='133px' src='pictures/space.svg'><img height='133px' src='pictures/e/2.svg'><img height='133px' src='pictures/e/0.svg'><img height='133px' src='pictures/e/1.svg'><img height='133px' src='pictures/e/2.svg'><img height='133px' src='pictures/space.svg'></p></div> <!-- .slide: class="center" -->
+---
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='160px' src='pictures/d/dance_a44.png'><img height='160px' src='pictures/space.svg'><img height='160px' src='pictures/d/dance_a6.png'><img height='160px' src='pictures/space.svg'><img height='160px' src='pictures/d/dance_m2.png'></p></div> <!-- .slide: class="center" -->
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='133px' src='pictures/space.svg'><img height='133px' src='pictures/e/2.svg'><img height='133px' src='pictures/e/0.svg'><img height='133px' src='pictures/e/1.svg'><img height='133px' src='pictures/e/3.svg'><img height='133px' src='pictures/space.svg'></p></div> <!-- .slide: class="center" -->
+---
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='160px' src='pictures/d/dance_a44.png'><img height='160px' src='pictures/space.svg'><img height='160px' src='pictures/d/dance_a6.png'><img height='160px' src='pictures/d/dance_s2.png'><img height='160px' src='pictures/d/dance_m2.png'></p></div> <!-- .slide: class="center" -->
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='133px' src='pictures/space.svg'><img height='133px' src='pictures/e/2.svg'><img height='133px' src='pictures/e/0.svg'><img height='133px' src='pictures/e/1.svg'><img height='133px' src='pictures/e/4.svg'><img height='133px' src='pictures/space.svg'></p></div> <!-- .slide: class="center" -->
+---
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='160px' src='pictures/d/dance_a44.png'><img height='160px' src='pictures/d/dance_t1.png'><img height='160px' src='pictures/d/dance_a6.png'><img height='160px' src='pictures/d/dance_s2.png'><img height='160px' src='pictures/d/dance_m2.png'></p></div> <!-- .slide: class="center" -->
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='133px' src='pictures/space.svg'><img height='133px' src='pictures/e/2.svg'><img height='133px' src='pictures/e/0.svg'><img height='133px' src='pictures/e/1.svg'><img height='133px' src='pictures/e/4.svg'><img height='133px' src='pictures/space.svg'></p></div> <!-- .slide: class="center" -->
+---
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='133px' src='pictures/d/dance_a44.png'><img height='133px' src='pictures/d/dance_t1.png'><img height='133px' src='pictures/d/dance_a6.png'><img height='133px' src='pictures/d/dance_s2.png'><img height='133px' src='pictures/d/dance_m2.png'><img height='133px' src='pictures/d/dance_e1.png'></p></div> <!-- .slide: class="center" -->
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='133px' src='pictures/space.svg'><img height='133px' src='pictures/e/2.svg'><img height='133px' src='pictures/e/0.svg'><img height='133px' src='pictures/e/1.svg'><img height='133px' src='pictures/e/4.svg'><img height='133px' src='pictures/space.svg'></p></div> <!-- .slide: class="center" -->
+---
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='133px' src='pictures/d/dance_a50.svg'><img height='133px' src='pictures/d/dance_t1.png'><img height='133px' src='pictures/d/dance_a6.png'><img height='133px' src='pictures/d/dance_s2.png'><img height='133px' src='pictures/d/dance_m2.png'><img height='133px' src='pictures/d/dance_e1.png'></p></div> <!-- .slide: class="center" -->
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='133px' src='pictures/space.svg'><img height='133px' src='pictures/e/2.svg'><img height='133px' src='pictures/e/0.svg'><img height='133px' src='pictures/e/1.svg'><img height='133px' src='pictures/e/4.svg'><img height='133px' src='pictures/space.svg'></p></div> <!-- .slide: class="center" -->
+---
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='133px' src='pictures/d/dance_a50.svg'><img height='133px' src='pictures/d/dance_t1.png'><img height='133px' src='pictures/d/dance_a6.png'><img height='133px' src='pictures/d/dance_s3.png'><img height='133px' src='pictures/d/dance_m2.png'><img height='133px' src='pictures/d/dance_e1.png'></p></div> <!-- .slide: class="center" -->
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='133px' src='pictures/space.svg'><img height='133px' src='pictures/e/2.svg'><img height='133px' src='pictures/e/0.svg'><img height='133px' src='pictures/e/1.svg'><img height='133px' src='pictures/e/4.svg'><img height='133px' src='pictures/space.svg'></p></div> <!-- .slide: class="center" -->
+---
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='133px' src='pictures/d/dance_a50.svg'><img height='133px' src='pictures/d/dance_t2.png'><img height='133px' src='pictures/d/dance_a6.png'><img height='133px' src='pictures/d/dance_s3.png'><img height='133px' src='pictures/d/dance_m2.png'><img height='133px' src='pictures/d/dance_e2.svg'></p></div> <!-- .slide: class="center" -->
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='133px' src='pictures/space.svg'><img height='133px' src='pictures/e/2.svg'><img height='133px' src='pictures/e/0.svg'><img height='133px' src='pictures/e/1.svg'><img height='133px' src='pictures/e/5.svg'><img height='133px' src='pictures/space.svg'></p></div> <!-- .slide: class="center" -->
+---
 
- <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='133px' src='pictures/d/dance_a43.png'><img height='133px' src='pictures/d/dance_m1.png'><img height='133px' src='pictures/d/dance_a6.png'><img height='133px' src='pictures/d/dance_e1.png'><img height='133px' src='pictures/d/dance_t1.png'><img height='133px' src='pictures/d/dance_s2.png'></p></div> <!-- .slide: class="center" -->
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='133px' src='pictures/d/dance_a50.svg'><img height='133px' src='pictures/d/dance_t2.png'><img height='133px' src='pictures/d/dance_a11.png'><img height='133px' src='pictures/d/dance_s71.png'><img height='133px' src='pictures/d/dance_m4.png'><img height='133px' src='pictures/d/dance_e2.svg'></p></div> <!-- .slide: class="center" -->
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='133px' src='pictures/space.svg'><img height='133px' src='pictures/e/2.svg'><img height='133px' src='pictures/e/0.svg'><img height='133px' src='pictures/e/1.svg'><img height='133px' src='pictures/e/6.svg'><img height='133px' src='pictures/space.svg'></p></div> <!-- .slide: class="center" -->
 ---
- <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='133px' src='pictures/d/dance_a44.png'><img height='133px' src='pictures/d/dance_m2.png'><img height='133px' src='pictures/d/dance_a6.png'><img height='133px' src='pictures/d/dance_e1.png'><img height='133px' src='pictures/d/dance_t1.png'><img height='133px' src='pictures/d/dance_s2.png'></p></div> <!-- .slide: class="center" -->
----
- <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='133px' src='pictures/d/dance_a50.svg'><img height='133px' src='pictures/d/dance_m2.png'><img height='133px' src='pictures/d/dance_a6.png'><img height='133px' src='pictures/d/dance_e1.png'><img height='133px' src='pictures/d/dance_t1.png'><img height='133px' src='pictures/d/dance_s3.png'></p></div> <!-- .slide: class="center" -->
----
- <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='133px' src='pictures/d/dance_a50.svg'><img height='133px' src='pictures/d/dance_m2.png'><img height='133px' src='pictures/d/dance_a6.png'><img height='133px' src='pictures/d/dance_e2.png'><img height='133px' src='pictures/d/dance_t1.png'><img height='133px' src='pictures/d/dance_s71.png'></p></div> <!-- .slide: class="center" -->
----
- <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='133px' src='pictures/d/dance_g9.png'><img height='133px' src='pictures/d/dance_w4.png'><img height='133px' src='pictures/d/dance_a11.png'><img height='133px' src='pictures/d/dance_e3.png'><img height='133px' src='pictures/d/dance_t2.png'><img height='133px' src='pictures/d/dance_s9.png'></p></div> <!-- .slide: class="center" -->
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='133px' src='pictures/d/dance_g9.png'><img height='133px' src='pictures/d/dance_t2.png'><img height='133px' src='pictures/d/dance_a11.png'><img height='133px' src='pictures/d/dance_s9.png'><img height='133px' src='pictures/d/dance_m4.png'><img height='133px' src='pictures/d/dance_e3.png'></p></div> <!-- .slide: class="center" -->
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='133px' src='pictures/space.svg'><img height='133px' src='pictures/e/2.svg'><img height='133px' src='pictures/e/0.svg'><img height='133px' src='pictures/e/1.svg'><img height='133px' src='pictures/e/7.svg'><img height='133px' src='pictures/space.svg'></p></div> <!-- .slide: class="center" -->
 
 Note: today, most of the images look the same. But it's to be noted that because of some of the issues
 ---
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='133px' src='pictures/d/man_g.png'><img height='133px' src='pictures/d/man_w.png'><img height='133px' src='pictures/d/man_a.png'><img height='133px' src='pictures/d/man_e.png'><img height='133px' src='pictures/d/man_t.png'><img height='133px' src='pictures/d/man_s.png'></p></div> <!-- .slide: class="center" -->
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='133px' src='pictures/space.svg'><img height='133px' src='pictures/e/2.svg'><img height='133px' src='pictures/e/0.svg'><img height='133px' src='pictures/e/1.svg'><img height='133px' src='pictures/e/6.svg'><img height='133px' src='pictures/space.svg'></p></div> <!-- .slide: class="center" -->
 
 Note: they literally made a man dancer just to try and clean it up
 ---
