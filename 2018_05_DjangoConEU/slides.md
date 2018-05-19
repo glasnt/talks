@@ -46,9 +46,12 @@ and it just works, it's so cool
 
 ---
  <!-- .slide: data-background-image="pictures/macbook.jpg"-->
+ <span class='foot'>[WOCinTech](https://www.flickr.com/photos/wocintechchat/albums)</span>
 Note: But just because I'm a novice at django, doesn't mean I'm a novice at tech
 ---
  <!-- .slide: data-background-image="pictures/thinkpad.jpg"-->
+ <span class='foot'><a href="https://www.flickr.com/photos/wocintechchat/albums" style="color:white !important">WOCinTech</a></span>
+
 Note: I have over a decade of software development and systems administration behind me.
 
 Before getting into the Python/Django space, I was a ruby dev, working with Rails and Sinatra stacks
@@ -140,7 +143,10 @@ Note:
 
 We're going to be a noisy myna, and go bughunting.
 
-We're going to find outselves an existing project, in this case, a field of kale, and hunt about trying to find some delicious bugs. We may not find any, but we can poke around and see what we find.
+We're going to find outselves an existing project, in this case, a field of kale, and hunt about trying to find some delicious bugs.
+
+The field may look daunting, endless complexities that seem impossible to understand, but we'll get there.
+
 ---
 # Context <!-- .slide: class="center" -->
 
@@ -2371,13 +2377,10 @@ And being able to use your skills gained from other technology sets in new field
 <br> 
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='160px' src='pictures/space.svg'><img height='160px' src='pictures/space.svg'><img height='160px' src='pictures/claps.svg'><img height='160px' src='pictures/space.svg'><img height='160px' src='pictures/space.svg'></p></div> <!-- .slide: class="center" -->
  <img src="pictures/footer.svg" />
- <span class='foot'>Some images: [WOCinTech Chat](https://www.flickr.com/photos/wocintechchat/albums)</span>
+ <span class='foot'>Technical reviewers: James Bennett, Russell Keith-Magee</span>
 
 Note: thank you for your time
 ---
  <!-- .slide: data-background-image="pictures/pyconau18.png"-->
-<h2 style="color: white; margin-top: 256px">Call for Proposals Close May 28 AoE</h2>
-<br><br><br> 
-<h2 style="color: white; margin-top: 65px">pycon-au.org</h2>
-
+<div style="-webkit-transform: rotate(-29deg);color: lightgreen;font-size: 64pt;margin-top: 230px;font-family: 'DTLProkyonST', regular;margin-left: 600px;z-index: 999;width: 500px;"><b>Includes<br>DjangoCon AU</b></div>
 Note: PS PyCon AU is a thing that's happening
