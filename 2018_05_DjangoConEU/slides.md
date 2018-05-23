@@ -23,6 +23,11 @@ Note: I was a mentor, and also gave a talk, at DjangoCon US 2017
  <div style='margin: 0 auto;'><p align='center'><img src='pictures/dcau17.png'></p></div>  <!-- .slide: class="center" -->
 Note: I was the organiser of djangocon australia 17
 ---
+
+ <div style='margin: 0 auto;'><p align='center'><img src='pictures/divio-logo.png'></p></div>  <!-- .slide: class="center" -->
+
+Note: I'm a site reliability engineer at Divio, the company behind django-cms
+---
  <div style='margin: 0 auto;'><p align='center'><img src='pictures/djangologo.png'></p></div>  <!-- .slide: class="center" -->
 Note: I'm currently serving as a Director of the Django Software Foundation
 ---
@@ -325,6 +330,8 @@ Note: and what we get back is some generated import statements about
 This output will have similarities across django projects
 
 the first few in this list are pretty standard fair; authentication, sessions, sites, admin
+
+There's also one in there called aldryn_sso. this is because I've hosted this on divio cloud. We're holding a workshop during the sprints on it, come see me afterwards!
 
 But what we're looking for is, in a lovely happenstance, the models that match the name of the website we saw earlier -- unicodex.
 ---
