@@ -1,3 +1,17 @@
+- conference: 
+    name: DjangoCon Europe
+    link: https://2018.djangocon.eu/
+    date: 2018-05-24
+    location: Heidelberg, Germany
+    talks:
+      - name: ORM&#58; The Sequel
+        slides: https://glasnt.com/talks/2018_05_DjangoConEU
+        twitter: https://twitter.com/aaronbassett/status/999582217708941312
+        article: https://reinout.vanrees.org/weblog/2018/05/24/03-orm.html
+      - name: Serialization Formats are Not Toys (Cover Version)
+        twitter: https://twitter.com/DjangoTricks/status/999392282422988800
+        slides: https://glasnt.com/talks/2018_05_Serialization/
+        
 - conference:
     name: SyPy
     link: https://www.meetup.com/sydneypython/events/qxgdlpyxgbjc/
@@ -6,6 +20,7 @@
     talks:
       - name: ORM&#58; The Sequel
         twitter: https://twitter.com/web_goddess/status/989423247681716224
+        slides: https://glasnt.com/talks/2018_04_SyPy
 
 - conference:
     name: SydCSS
