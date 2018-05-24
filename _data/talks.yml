@@ -8,9 +8,11 @@
         slides: https://glasnt.com/talks/2018_05_DjangoConEU
         twitter: https://twitter.com/aaronbassett/status/999582217708941312
         article: https://reinout.vanrees.org/weblog/2018/05/24/03-orm.html
+        video: https://www.youtube.com/watch?v=AIke7IZdVJI
       - name: Serialization Formats are Not Toys (Cover Version)
         twitter: https://twitter.com/DjangoTricks/status/999392282422988800
         slides: https://glasnt.com/talks/2018_05_Serialization/
+        video: https://www.youtube.com/watch?time_continue=775&v=eEZYDDaDeCs
         
 - conference:
     name: SyPy
