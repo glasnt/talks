@@ -33,7 +33,11 @@ Note: I'm currently serving as a Director of the Django Software Foundation
 ---
 # &nbsp; <!-- .slide: class="center" -->
 
-Note: But I'm an absolute novice at django. I have no idea what I'm doing
+Note: But I don't know django.
+
+Yet. 
+
+I'm an absolute novice. I have no idea what I'm doing
 ---
  <div style='margin: 0 auto;'><p align='center'><img src='pictures/djadmin.png'></p></div>  <!-- .slide: class="center" -->
 Note: I still see the django admin as
