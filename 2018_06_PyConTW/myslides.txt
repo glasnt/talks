@@ -338,6 +338,18 @@ It's so very important to make sure you're not allowing the intepretation of you
 
 ---
 
+! t/weary | t/tired | t/sleepy | t/sleeping
+
+Note: or the fact that if you look up the different emoji, you get things that might not align with your expression of an emotion
+
+For example - these are weary, tired sleepy and sleeping
+
+I know the last one, that's a person snoring
+
+the other three are completely subtitutable for me.
+
+---
+
 # &nbsp;
 
 Note: There's another issue wrapped up in here that I want to talk about. 
@@ -668,9 +680,41 @@ I don't know
 
 it'll be a surprise :)
 
+Well, that's a lie. I do know what one will look like
+
 ---
 
-Note: summary here?
+! t/questionmark | t/questionmark | t/questionmark | e/parrot.png | t/questionmark
+
+Note: I know that the EmojiOne parrot emoji will look like a scarlet macaw
+
+---
+
+<img src="pictures/e/parrot_card.png" height="700px" style="margin-top: -70px !important">
+
+Note: EmojiOne have kindly shared this preview with me
+
+---
+
+&nbsp;
+
+Note: 
+
+The thing is, I don't knwo what's going to happen
+
+I don't know how emoji will continue to evolve
+
+---
+
+! space | m/crystal_ball.png | space
+
+Note: if I did I'd be able to see into the future
+
+There will be more emoji
+
+And hopefully more clarity in designs
+
+TODO: ending?
 
 ---
 ! g/claps

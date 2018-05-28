@@ -338,6 +338,18 @@ It's so very important to make sure you're not allowing the intepretation of you
 
 ---
 
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='200px' src='pictures/t/weary.svg'><img height='200px' src='pictures/t/tired.svg'><img height='200px' src='pictures/t/sleepy.svg'><img height='200px' src='pictures/t/sleeping.svg'></p></div> <!-- .slide: class="center" -->
+
+Note: or the fact that if you look up the different emoji, you get things that might not align with your expression of an emotion
+
+For example - these are weary, tired sleepy and sleeping
+
+I know the last one, that's a person snoring
+
+the other three are completely subtitutable for me.
+
+---
+
 # &nbsp;
 
 Note: There's another issue wrapped up in here that I want to talk about.
@@ -668,9 +680,41 @@ I don't know
 
 it'll be a surprise :)
 
+Well, that's a lie. I do know what one will look like
+
 ---
 
-Note: summary here?
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='160px' src='pictures/t/questionmark.svg'><img height='160px' src='pictures/t/questionmark.svg'><img height='160px' src='pictures/t/questionmark.svg'><img height='160px' src='pictures/e/parrot.png'><img height='160px' src='pictures/t/questionmark.svg'></p></div> <!-- .slide: class="center" -->
+
+Note: I know that the EmojiOne parrot emoji will look like a scarlet macaw
+
+---
+
+<img src="pictures/e/parrot_card.png" height="700px" style="margin-top: -70px !important">
+
+Note: EmojiOne have kindly shared this preview with me
+
+---
+
+&nbsp; 
+
+Note: 
+
+The thing is, I don't knwo what's going to happen
+
+I don't know how emoji will continue to evolve
+
+---
+
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='266px' src='pictures/space.svg'><img height='266px' src='pictures/m/crystal_ball.png'><img height='266px' src='pictures/space.svg'></p></div> <!-- .slide: class="center" -->
+
+Note: if I did I'd be able to see into the future
+
+There will be more emoji
+
+And hopefully more clarity in designs
+
+TODO: ending?
 
 ---
  <div style='width: 50%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/g/claps.svg'></p></div> <!-- .slide: class="center" -->
