@@ -4,6 +4,10 @@ div.big {
 	font-size: 120px;
 }
 
+a { 
+    color: black !important; 
+}
+
 .tinycode { 
     font-size: 10px;
     line-height:1;

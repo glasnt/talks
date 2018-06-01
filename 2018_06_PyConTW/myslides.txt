@@ -1,4 +1,4 @@
-! space  | g/snake | t/tw| e/newkey | a/note.png | space
+! space  | g/snake | t/tw| e/newkey | t/note.png | space
 ---
 ###= &nbsp;
 ##= Communication strategies beyond the Basic Multilingual Plane
@@ -87,25 +87,27 @@ The space is split up into planes, allowing for around 65 thousand characters ea
 ---
 
 ! space | t/letter_input | space 
-! space | space | e/0 | e/0 | e/0 | e/0  
-! space | space | e/Fcap | e/Fcap | e/Fcap | e/Fcap 
+! space | space | space | space | e/0 | e/0 | e/0 | e/0  
+! space | space | space | space | e/Fcap | e/Fcap | e/Fcap | e/Fcap 
 
 Note: Plane 0 is known as the Basic Multilingual Plane, and covers all the characters you can represent with just 4 hexadecimal digits 
 
 This plane contains a lot of things; Every latin character, non-latin european character, middle eastern scripts, asian scripts, and all the Han unificiation characters. There's a lot in this plane, but it's only one of 17 planes
 
+You can use up to 8 hexidecimal characters - 0 through F - so there's plenty of room for everyone
 
 ---
 
 ! space | t/symbol_input | space
  
-! space | e/1 | e/0 | e/0 | e/0 | e/0 
-! space | e/1 | e/Fcap | e/Fcap | e/Fcap | e/Fcap
+! space | space | space | e/1 | e/0 | e/0 | e/0 | e/0 
+! space | space | space | e/1 | e/Fcap | e/Fcap | e/Fcap | e/Fcap
 
 
 Note: The plane I'm more interested in, and what I'll be focusing on, is the Supplimentary Multilingual Plane
 
 This is where you find every emoji that currently exists. 
+
 
 
 ---
@@ -114,7 +116,6 @@ This is where you find every emoji that currently exists.
 Note: 
 
 This is where the dragons live. 
-
 
 
 But what I'm talking about is one specific dragon
@@ -652,6 +653,10 @@ which means that if you're using only this emoji to denote where you want to go 
 
 I mean, it's not the end of the world, but it's a serious consideration. 
 
+---
+&nbsp;
+
+Note: 
 Personally I have a vested interest in this. Not dumplings. I  mean, I love dumplings, but I have a vested interest in how emoji are going to be displayed. 
 
 One emoji in paricular. 
@@ -668,7 +673,13 @@ Because I made this emoji
 
 I submitted a proposal to the unicode consortium, and it was approved
 
-So some time in the next few months, the parrot emoji will show up on your phones. But I have no idea how it will be represented. 
+So some time in the next few months, the parrot emoji will show up on your phones.
+
+It won't look like this. This is a sample image created by Emojipedia, but it's a represetnation of what it could look like. 
+
+
+ But I have no idea how it will acutally appear on devices
+ 
 ---
 
 ! t/questionmark | t/questionmark | t/questionmark | t/questionmark | t/questionmark
@@ -701,6 +712,8 @@ Note: EmojiOne have kindly shared this preview with me
 Note: 
 
 The thing is, I don't knwo what's going to happen
+
+I mean, I do know little things; like that the new emoji on Twitter should be available in the middle of June. And I know that Some of the other new emoji include lobsters, kangaroos, a partying face, 
 
 There's a lot I don't know about emoji
 
@@ -788,24 +801,52 @@ But
 there is an entire community working towards creating new proposals
 
 ---
-
 ! space | t/united.png |nation.png | space
 
 #### [emojination.org](http://www.emojination.org/)
 
 Note: emojination is a community that helps you propose emoji
 
-and make sure that you don't submit somthing that's already been submitted
+They are the ones that made the dumpling emoji happen
 
-If you are intested, check them out
+and make sure that you don't submit somthing that's already been submitted
+ 
+for instance, if you wanted, say, bubble tea to be an emoji, they already have it up there, and it's currently "on hold"
+
+I've helped out with a few on there, including knitting needles, yarn, and thread. Ive also had some rejected, like Coin and Needle 
+
+If you are interested, check them out
 
 ---
 
+
+! space | g/orangebook.png | a/bigface.png | space 
+
+#### [emojipedia.org](http://www.emojipedia.org/)
+Note:  lot of information I've presented today is based on the collection of information known as emojipedia
+
+it's like an encyclopedia, but for emoji
+
+It's run by Jeremy Burge, an Australian (yay australians!) and it has so much useful information about every minor change in emoji over every major vendor, and also has a blog, and a podcast, and a newsletter. I've been in the newsletter. It's kinda cool :D
+
+
+
+---
 ! space
 
-Note: and that's all I had *TODO SUMMARY*
+Note: and that's all I had
+
+
+GO TO - question time? 
+
+OR
+
+END?
 
 ---
 ! g/claps
 
 ### glasnt.com/talks
+---
+
+! g/questiontime

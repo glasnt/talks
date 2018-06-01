@@ -1,4 +1,4 @@
- <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='133px' src='pictures/space.svg'><img height='133px' src='pictures/g/snake.svg'><img height='133px' src='pictures/t/tw.svg'><img height='133px' src='pictures/e/newkey.svg'><img height='133px' src='pictures/a/note.png'><img height='133px' src='pictures/space.svg'></p></div> <!-- .slide: class="center" -->
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='133px' src='pictures/space.svg'><img height='133px' src='pictures/g/snake.svg'><img height='133px' src='pictures/t/tw.svg'><img height='133px' src='pictures/e/newkey.svg'><img height='133px' src='pictures/t/note.png'><img height='133px' src='pictures/space.svg'></p></div> <!-- .slide: class="center" -->
 ---
 ### &nbsp; <!-- .slide: class="center" -->
 ## Communication strategies beyond the Basic Multilingual Plane <!-- .slide: class="center" -->
@@ -87,25 +87,27 @@ The space is split up into planes, allowing for around 65 thousand characters ea
 ---
 
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='266px' src='pictures/space.svg'><img height='266px' src='pictures/t/letter_input.svg'><img height='266px' src='pictures/space.svg'></p></div> <!-- .slide: class="center" -->
- <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='133px' src='pictures/space.svg'><img height='133px' src='pictures/space.svg'><img height='133px' src='pictures/e/0.svg'><img height='133px' src='pictures/e/0.svg'><img height='133px' src='pictures/e/0.svg'><img height='133px' src='pictures/e/0.svg'></p></div> <!-- .slide: class="center" -->
- <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='133px' src='pictures/space.svg'><img height='133px' src='pictures/space.svg'><img height='133px' src='pictures/e/Fcap.svg'><img height='133px' src='pictures/e/Fcap.svg'><img height='133px' src='pictures/e/Fcap.svg'><img height='133px' src='pictures/e/Fcap.svg'></p></div> <!-- .slide: class="center" -->
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='100px' src='pictures/space.svg'><img height='100px' src='pictures/space.svg'><img height='100px' src='pictures/space.svg'><img height='100px' src='pictures/space.svg'><img height='100px' src='pictures/e/0.svg'><img height='100px' src='pictures/e/0.svg'><img height='100px' src='pictures/e/0.svg'><img height='100px' src='pictures/e/0.svg'></p></div> <!-- .slide: class="center" -->
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='100px' src='pictures/space.svg'><img height='100px' src='pictures/space.svg'><img height='100px' src='pictures/space.svg'><img height='100px' src='pictures/space.svg'><img height='100px' src='pictures/e/Fcap.svg'><img height='100px' src='pictures/e/Fcap.svg'><img height='100px' src='pictures/e/Fcap.svg'><img height='100px' src='pictures/e/Fcap.svg'></p></div> <!-- .slide: class="center" -->
 
 Note: Plane 0 is known as the Basic Multilingual Plane, and covers all the characters you can represent with just 4 hexadecimal digits
 
 This plane contains a lot of things; Every latin character, non-latin european character, middle eastern scripts, asian scripts, and all the Han unificiation characters. There's a lot in this plane, but it's only one of 17 planes
 
+You can use up to 8 hexidecimal characters - 0 through F - so there's plenty of room for everyone
 
 ---
 
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='266px' src='pictures/space.svg'><img height='266px' src='pictures/t/symbol_input.svg'><img height='266px' src='pictures/space.svg'></p></div> <!-- .slide: class="center" -->
 
- <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='133px' src='pictures/space.svg'><img height='133px' src='pictures/e/1.svg'><img height='133px' src='pictures/e/0.svg'><img height='133px' src='pictures/e/0.svg'><img height='133px' src='pictures/e/0.svg'><img height='133px' src='pictures/e/0.svg'></p></div> <!-- .slide: class="center" -->
- <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='133px' src='pictures/space.svg'><img height='133px' src='pictures/e/1.svg'><img height='133px' src='pictures/e/Fcap.svg'><img height='133px' src='pictures/e/Fcap.svg'><img height='133px' src='pictures/e/Fcap.svg'><img height='133px' src='pictures/e/Fcap.svg'></p></div> <!-- .slide: class="center" -->
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='100px' src='pictures/space.svg'><img height='100px' src='pictures/space.svg'><img height='100px' src='pictures/space.svg'><img height='100px' src='pictures/e/1.svg'><img height='100px' src='pictures/e/0.svg'><img height='100px' src='pictures/e/0.svg'><img height='100px' src='pictures/e/0.svg'><img height='100px' src='pictures/e/0.svg'></p></div> <!-- .slide: class="center" -->
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='100px' src='pictures/space.svg'><img height='100px' src='pictures/space.svg'><img height='100px' src='pictures/space.svg'><img height='100px' src='pictures/e/1.svg'><img height='100px' src='pictures/e/Fcap.svg'><img height='100px' src='pictures/e/Fcap.svg'><img height='100px' src='pictures/e/Fcap.svg'><img height='100px' src='pictures/e/Fcap.svg'></p></div> <!-- .slide: class="center" -->
 
 
 Note: The plane I'm more interested in, and what I'll be focusing on, is the Supplimentary Multilingual Plane
 
 This is where you find every emoji that currently exists.
+
 
 
 ---
@@ -114,7 +116,6 @@ This is where you find every emoji that currently exists.
 Note: 
 
 This is where the dragons live.
-
 
 
 But what I'm talking about is one specific dragon
@@ -652,6 +653,10 @@ which means that if you're using only this emoji to denote where you want to go 
 
 I mean, it's not the end of the world, but it's a serious consideration.
 
+---
+&nbsp; 
+
+Note: 
 Personally I have a vested interest in this. Not dumplings. I mean, I love dumplings, but I have a vested interest in how emoji are going to be displayed.
 
 One emoji in paricular.
@@ -668,7 +673,13 @@ Because I made this emoji
 
 I submitted a proposal to the unicode consortium, and it was approved
 
-So some time in the next few months, the parrot emoji will show up on your phones. But I have no idea how it will be represented.
+So some time in the next few months, the parrot emoji will show up on your phones.
+
+It won't look like this. This is a sample image created by Emojipedia, but it's a represetnation of what it could look like.
+
+
+But I have no idea how it will acutally appear on devices
+
 ---
 
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='160px' src='pictures/t/questionmark.svg'><img height='160px' src='pictures/t/questionmark.svg'><img height='160px' src='pictures/t/questionmark.svg'><img height='160px' src='pictures/t/questionmark.svg'><img height='160px' src='pictures/t/questionmark.svg'></p></div> <!-- .slide: class="center" -->
@@ -701,6 +712,8 @@ Note: EmojiOne have kindly shared this preview with me
 Note: 
 
 The thing is, I don't knwo what's going to happen
+
+I mean, I do know little things; like that the new emoji on Twitter should be available in the middle of June. And I know that Some of the other new emoji include lobsters, kangaroos, a partying face,
 
 There's a lot I don't know about emoji
 
@@ -788,24 +801,52 @@ But
 there is an entire community working towards creating new proposals
 
 ---
-
  <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='200px' src='pictures/space.svg'><img height='200px' src='pictures/t/united.png'><img height='200px' src='pictures/nation.png'><img height='200px' src='pictures/space.svg'></p></div> <!-- .slide: class="center" -->
 
 #### [emojination.org](http://www.emojination.org/)
 
 Note: emojination is a community that helps you propose emoji
 
+They are the ones that made the dumpling emoji happen
+
 and make sure that you don't submit somthing that's already been submitted
 
-If you are intested, check them out
+for instance, if you wanted, say, bubble tea to be an emoji, they already have it up there, and it's currently "on hold"
+
+I've helped out with a few on there, including knitting needles, yarn, and thread. Ive also had some rejected, like Coin and Needle
+
+If you are interested, check them out
 
 ---
 
+
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='200px' src='pictures/space.svg'><img height='200px' src='pictures/g/orangebook.png'><img height='200px' src='pictures/a/bigface.png'><img height='200px' src='pictures/space.svg'></p></div> <!-- .slide: class="center" -->
+
+#### [emojipedia.org](http://www.emojipedia.org/)
+Note: lot of information I've presented today is based on the collection of information known as emojipedia
+
+it's like an encyclopedia, but for emoji
+
+It's run by Jeremy Burge, an Australian (yay australians!) and it has so much useful information about every minor change in emoji over every major vendor, and also has a blog, and a podcast, and a newsletter. I've been in the newsletter. It's kinda cool :D
+
+
+
+---
  <div style='width: 50%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/space.svg'></p></div> <!-- .slide: class="center" -->
 
-Note: and that's all I had *TODO SUMMARY*
+Note: and that's all I had
+
+
+GO TO - question time?
+
+OR 
+
+END? 
 
 ---
  <div style='width: 50%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/g/claps.svg'></p></div> <!-- .slide: class="center" -->
 
 ### glasnt.com/talks
+---
+
+ <div style='width: 50%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/g/questiontime.svg'></p></div> <!-- .slide: class="center" -->
