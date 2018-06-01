@@ -702,6 +702,8 @@ Note:
 
 The thing is, I don't knwo what's going to happen
 
+There's a lot I don't know about emoji
+
 I don't know how emoji will continue to evolve
 
 ---
@@ -712,9 +714,96 @@ Note: if I did I'd be able to see into the future
 
 There will be more emoji
 
-And hopefully more clarity in designs
+This is inevitable, ebcause the process to add new emoji is a public process. 
 
-TODO: ending?
+For instance.. what is one emoji that could be added...
+
+
+---
+
+! space | m/dragon.png | space | space
+
+
+Note: A dragon...
+
+---
+
+! space | m/dragon.png | m/airplane.png | space
+
+Note: Fly.  A dragonfly
+
+To request a new emoji, you need to submit an aplication directly to the Unicode Consortium's Emoji subcommittee
+
+They detail a list of inclusion and exclusion factors
+---
+
+! space | m/dragon.png | m/airplane.png | m/tick.png | space
+Note: For instance, would the emoji be popular
+
+Would it be frequently used
+
+Is it disinctive
+
+Is it already used on an instant messaging service, where adding it to unicode would be good for compatibility purposes
+
+
+However, there are factors that work against it too
+
+---
+
+
+! space | m/dragon.png | m/airplane.png | m/cross.png | space
+
+Note: is it overly specific
+
+is it already represented
+
+is it a logo or a brand
+
+---
+
+! space | m/dragon.png | m/airplane.png | m/question.png | space
+
+
+Note: I think that dragonfly might be a good addition, but it is a little bit specific.
+
+There also isn't currently a fly, let alone a dragon fly
+
+---
+
+! t/bug | g/bee | spider.png | ant.png | ladybeetle.png | butterfly.png
+
+Note: there is only a limited amount of insects already, but is this enough?
+
+
+---
+
+! space | e/email.png | space
+#### [unicode.org/emoji/selection.html](https://www.unicode.org/emoji/selection.html)
+
+Note: if you are interestd, you can email the unicode consortiym directly
+
+But
+
+there is an entire community working towards creating new proposals
+
+---
+
+! space | t/united.png |nation.png | space
+
+#### [emojination.org](http://www.emojination.org/)
+
+Note: emojination is a community that helps you propose emoji
+
+and make sure that you don't submit somthing that's already been submitted
+
+If you are intested, check them out
+
+---
+
+! space
+
+Note: and that's all I had *TODO SUMMARY*
 
 ---
 ! g/claps

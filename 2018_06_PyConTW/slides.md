@@ -702,6 +702,8 @@ Note:
 
 The thing is, I don't knwo what's going to happen
 
+There's a lot I don't know about emoji
+
 I don't know how emoji will continue to evolve
 
 ---
@@ -712,9 +714,96 @@ Note: if I did I'd be able to see into the future
 
 There will be more emoji
 
-And hopefully more clarity in designs
+This is inevitable, ebcause the process to add new emoji is a public process.
 
-TODO: ending?
+For instance.. what is one emoji that could be added...
+
+
+---
+
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='200px' src='pictures/space.svg'><img height='200px' src='pictures/m/dragon.png'><img height='200px' src='pictures/space.svg'><img height='200px' src='pictures/space.svg'></p></div> <!-- .slide: class="center" -->
+
+
+Note: A dragon...
+
+---
+
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='200px' src='pictures/space.svg'><img height='200px' src='pictures/m/dragon.png'><img height='200px' src='pictures/m/airplane.png'><img height='200px' src='pictures/space.svg'></p></div> <!-- .slide: class="center" -->
+
+Note: Fly. A dragonfly
+
+To request a new emoji, you need to submit an aplication directly to the Unicode Consortium's Emoji subcommittee
+
+They detail a list of inclusion and exclusion factors
+---
+
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='160px' src='pictures/space.svg'><img height='160px' src='pictures/m/dragon.png'><img height='160px' src='pictures/m/airplane.png'><img height='160px' src='pictures/m/tick.png'><img height='160px' src='pictures/space.svg'></p></div> <!-- .slide: class="center" -->
+Note: For instance, would the emoji be popular
+
+Would it be frequently used
+
+Is it disinctive
+
+Is it already used on an instant messaging service, where adding it to unicode would be good for compatibility purposes
+
+
+However, there are factors that work against it too
+
+---
+
+
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='160px' src='pictures/space.svg'><img height='160px' src='pictures/m/dragon.png'><img height='160px' src='pictures/m/airplane.png'><img height='160px' src='pictures/m/cross.png'><img height='160px' src='pictures/space.svg'></p></div> <!-- .slide: class="center" -->
+
+Note: is it overly specific
+
+is it already represented
+
+is it a logo or a brand
+
+---
+
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='160px' src='pictures/space.svg'><img height='160px' src='pictures/m/dragon.png'><img height='160px' src='pictures/m/airplane.png'><img height='160px' src='pictures/m/question.png'><img height='160px' src='pictures/space.svg'></p></div> <!-- .slide: class="center" -->
+
+
+Note: I think that dragonfly might be a good addition, but it is a little bit specific.
+
+There also isn't currently a fly, let alone a dragon fly
+
+---
+
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='133px' src='pictures/t/bug.svg'><img height='133px' src='pictures/g/bee.svg'><img height='133px' src='pictures/spider.png'><img height='133px' src='pictures/ant.png'><img height='133px' src='pictures/ladybeetle.png'><img height='133px' src='pictures/butterfly.png'></p></div> <!-- .slide: class="center" -->
+
+Note: there is only a limited amount of insects already, but is this enough?
+
+
+---
+
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='266px' src='pictures/space.svg'><img height='266px' src='pictures/e/email.png'><img height='266px' src='pictures/space.svg'></p></div> <!-- .slide: class="center" -->
+#### [unicode.org/emoji/selection.html](https://www.unicode.org/emoji/selection.html)
+
+Note: if you are interestd, you can email the unicode consortiym directly
+
+But 
+
+there is an entire community working towards creating new proposals
+
+---
+
+ <div style='width: 100%; margin: 0 auto;'><p align='center'><img height='200px' src='pictures/space.svg'><img height='200px' src='pictures/t/united.png'><img height='200px' src='pictures/nation.png'><img height='200px' src='pictures/space.svg'></p></div> <!-- .slide: class="center" -->
+
+#### [emojination.org](http://www.emojination.org/)
+
+Note: emojination is a community that helps you propose emoji
+
+and make sure that you don't submit somthing that's already been submitted
+
+If you are intested, check them out
+
+---
+
+ <div style='width: 50%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/space.svg'></p></div> <!-- .slide: class="center" -->
+
+Note: and that's all I had *TODO SUMMARY*
 
 ---
  <div style='width: 50%; margin: 0 auto;'><p align='center'><img height='400px' src='pictures/g/claps.svg'></p></div> <!-- .slide: class="center" -->
