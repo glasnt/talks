@@ -1,4 +1,16 @@
 - conference: 
+    name: PyCon TW
+    link: https://tw.pycon.org/2018/en-us/
+    date: 2018-06-02
+    location: Taipei, Taiwan
+    talks:
+      - name: Communication strategies beyond the Basic Multilingual Plane 
+        link: https://tw.pycon.org/2018/en-us/events/keynotes/
+        type: Keynote
+        slides: https://glasnt.com/talks/2018_06_PyConTW
+        twitter: https://twitter.com/adrianliaw2000/status/1002746425526980608
+
+- conference: 
     name: DjangoCon Europe
     link: https://2018.djangocon.eu/
     date: 2018-05-24
