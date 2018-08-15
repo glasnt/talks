@@ -1,3 +1,13 @@
+- conference:
+    name: Pursuit Podcast
+    date: 2018-08-02
+    link: https://twitter.com/PursuitPod
+    talks:
+      - link: https://www.youtube.com/watch?v=kgzzusCmEg8
+        type: Podcast
+        name: Celebrating Contributions
+        twitter: https://twitter.com/PursuitPod/status/1025328294399565824 
+
 - conference: 
     name: PyCon TW
     link: https://tw.pycon.org/2018/en-us/
@@ -57,6 +67,17 @@
         slides: https://github.com/glasnt/talks/tree/gh-pages/2018_03_RubyConfAU
         twitter: https://twitter.com/JessRudder/status/971552800495697920
         feedback: https://alainakafkes.github.io/chronicles/2018/03/11/rubyconf-au.html
+
+- conference:
+    name: Hacker Public Radio
+    link: http://hackerpublicradio.org/
+    date: 2018-02-01
+    talks: 
+        - name: "hpr2482 :: lca2018: Katie McLaughlin"
+          type: Podcast
+          link: https://hackerpublicradio.org/eps.php?id=2482
+
+
 
 - conference: 
     name: linux.conf.au
@@ -230,6 +251,17 @@
           slides: 2017_04_SyPy
 
 - conference:
+    name: Python Chat
+    link: https://twitter.com/PythonChat
+    date: 2017-03-03
+    talks:
+        - name: Emoji Chat - Emoji Boogalo
+          type: Crowdcast
+          link: https://www.crowdcast.io/e/emoji2
+          twitter: 
+    
+
+- conference:
     name: CrikeyCon
     link: https://www.crikeycon.com/
     date: 2017-02-25
@@ -285,6 +317,14 @@
         slides: 2016_12_RoroSyd
         twitter: https://twitter.com/mobywhale/status/808584125456138240
 
+- conference:
+    name: Arrested DevOps
+    date: 2016-12-02
+    link: https://www.arresteddevops.com/devopsdays-sydney-2016/
+    talks:
+        - name: Devopsdays Sydney 2016 (ADO78)
+          link: https://www.arresteddevops.com/devopsdays-sydney-2016/
+
 
 - conference:
     name: SydPHP
@@ -325,6 +365,16 @@
           slides: 2016_09_Serialization
           twitter: https://twitter.com/tveastman/status/774102693149233153
           video: https://youtu.be/fOrYeUaOez4?t=611
+
+- conference:
+    name: Python Chat
+    link: https://twitter.com/PythonChat
+    date: 2016-08-10
+    talks:
+        - name: Getting started contributing to open source
+          type: Crowdcast
+          link: https://www.crowdcast.io/e/contribute
+
 
 - conference:
       link: http://2016.devworld.com.au/

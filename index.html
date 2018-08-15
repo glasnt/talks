@@ -15,7 +15,8 @@ layout: page
                 {% else %}
                     {{c.conference.name}},
                 {% endif %}
-                    {{c.conference.location}}, {{c.conference.date | date: "%b %Y"}}</div>
+                    {% if c.conference.location %}{{c.conference.location}}, {%endif%}
+                    {{c.conference.date | date: "%b %Y"}}</div>
           </div>
           {% for talk in c.conference.talks %} 
           <div class="row">
