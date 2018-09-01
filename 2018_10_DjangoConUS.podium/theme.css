@@ -58,16 +58,17 @@ pre {
 }
 
 .hljs-default code {
-    font-size: 24pt;
-    font-family: "monospace";
+    font-size: 17pt;
+    font-family: "SFMono-Regular",Consolas,"Liberation Mono",Menlo,Courier,monospace !important;
 }
 
 .hljs-default pre {
   margin: 0.4em 0;
 }
 .hljs-default pre code {
-    background-color: #f8fbfe;
-    border: 1px solid #272726;
+   /* background-color: #f8fbfe;
+    border: 1px solid #272726; */
+    background-color: #fff !important;
 }
 
 img {
@@ -111,6 +112,8 @@ li cite {
 /* Special content for footnotes */
 /*********************************/
 
+.center { vertical-align: middle }
+
 .footnotes {
     font-size: 18pt;
     position: absolute;
@@ -120,6 +123,7 @@ li cite {
     text-align: right;
 }
 
+.footnotes a { color: grey }
 .footnotes p {
     font-size: 18pt;
     margin: 0.2em 0;
@@ -179,9 +183,9 @@ li cite {
 }
 
 .title h2 {
-    font-size: 24pt;
+    font-size: 36pt;
     margin: 0.2em;
-    font-weight: normal;
+    font-weight: bold;
 }
 
 .title h3 {
@@ -194,7 +198,7 @@ li cite {
 /******************/
 
 .remark-slide-content.reverse {
-  background-color: #272726;
+  /*background-color: #272726;*/
   color: #f6f7f1;
 }
 
@@ -233,7 +237,7 @@ li cite {
 /*********************/
 
 .remark-slide-content.django {
-  background-color: #092E20;
+  /*background-color: #092E20;*/
 }
 r { color: #d73a49 }
 l { color: #005cc5 }
@@ -262,14 +266,14 @@ rr { font-family: "RedactedR", regular;  }
 
 /* vectorised terminal */
 code.terminal { 
-    background-color: rgb(63,63,63) !important
+    /*background-color: rgb(63,63,63) !important*/
 
 } 
 pre code { 
    font-family: "SFMono-Regular",Consolas,"Liberation Mono",Menlo,Courier,monospace !important;
    font-size: 24pt !important; 
    line-height: 32pt !important; 
-   margin-left: -50pt !important;
+   /*margin-left: -50pt !important;*/
 } 
 
 span.bfoot {position:absolute; bottom: 0px; right: 1em; font-size: 50%; color: grey !important; }
@@ -302,8 +306,9 @@ Added: Zenburn, mostly.
   color: #525252;
   padding: 5px 0 !important;
   margin: 0;
+  margin-bottom: 20px;
   text-shadow: 1px 1px 0 rgba(255,255,255,0.5);
-  font-size: 0.45em !important;
+  font-size: 1em !important;
   font-family: 'BlinkMacSystemFont', -apple-system, sans-serif !important; 
   border: 1px solid #CCCCCC;
   border-bottom: none;
@@ -326,7 +331,7 @@ Added: Zenburn, mostly.
 
 .shell-body {
   margin: 0;
-  height: 550px;
+  height: 470px;
   text-align: left;
   letter-spacing: -0.4px !important;
   font-size: 17pt !important;

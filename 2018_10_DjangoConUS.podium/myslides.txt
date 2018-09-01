@@ -56,7 +56,7 @@ vv [WOCinTech](https://www.flickr.com/photos/wocintechchat/albums)
 Note: But just because I'm a novice at django, doesn't mean I'm a novice at tech
 ---
 ~@ thinkpad.jpg
-vv <a href="https://www.flickr.com/photos/wocintechchat/albums" style="color:white !important">WOCinTech</a>
+vv [WOCinTech](https://www.flickr.com/photos/wocintechchat/albums)
 
 Note: I have over a decade of software development and systems administration behind me. 
 
@@ -72,7 +72,7 @@ Note: Was Orale Application Express
 
 Oracle Appplication express, also known as Apex, is a in-database web application creation suite. it comes free with Oracle XE (the free version of the database)
 ---
-<img src="pictures/apex_window.png" style="margin-top: -50px; margin-left: -115px; max-width: 125%">
+@ apex_window.png
 
 vv [StackOverflow](https://stackoverflow.com/questions/48789457/oracle-apex-version-3-2-tabindex-not-working) 
 
@@ -203,7 +203,7 @@ Python 3.6.3 (default, Nov  9 2017, 15:58:30)<br>
 [GCC 4.2.1 Compatible Apple LLVM 9.0.0 (clang-900.0.38)] on darwin<br>
 Type "help", "copyright", "credits" or "license" for more information.<br>
 (InteractiveConsole)<br>
-$$w &gt;&gt;&gt;&nbsp;  
+$$pyw &nbsp;  
 
 Note:
 
@@ -223,15 +223,19 @@ First things first. For an SQL dev, the first thing they normally do in a foreig
 ---
 ##= Finding all tables
 ---
-<pre><code><c>&dash;&dash; MySQL</c>
-show tables
+```sql
 
-<c>&dash;&dash; PostgreSQL</c>
+-- MySQL
+show tables;
+
+-- PostgreSQL
 \dt
 
-<c>&dash;&dash; Oracle</c>
-<r>SELECT * <br>&nbsp; FROM</r> dba.tables;
-</code></pre>
+-- Oracle
+SELECT * 
+FROM dba.tables;
+```
+
 
 Note: depending on which flavour of database is most familiar to you, you'd try and issue one of these commands
 
@@ -241,8 +245,10 @@ But we're not in a database console, we're in the django shell. We need to use O
 
  
 ---
-<pre><code><c>&num; ORM</c>
-<c>&num; ...</c>
+```python
+&num;  ORM Code 
+&num;  ...
+```
 
 Note: SO! To list all the tables in a project in the django shell!...
 
@@ -257,15 +263,17 @@ But without looking at the model code, and understanding what you're looking at 
 
 Thankfully, django is clever and has helpful methods you can call to generate a list of imports for all the models in the project
 ---
-<pre><code><c># Generate import statements</c>
-<r>from</r> django.apps <r>import</r> apps
-&nbsp;
-<r>for</r> app_config <r>in</r> apps.get_app_configs():
-&nbsp; l <r>=</r> app_config.name
-&nbsp; <r>for</r> model <r>in</r> app_config.get_models():
-&nbsp; &nbsp; n <r>=</r> model._meta.object_name
-&nbsp; &nbsp; <l>print</l>(<d>f'from</d> <l>{</l>l<l>}</l><d>.models import </d><l>{</l>n<l>}</l>')
-</code></pre>
+```python
+
+# Generate import statements
+from django.apps import apps
+
+for app_config in apps.get_app_configs():
+   l = app_config.name
+   for model in app_config.get_models():
+     n = model._meta.object_name
+     print(f'from {l}.models import {n}')
+```
 
 Note: here's some I prepared earlier
 
@@ -278,17 +286,19 @@ For each of those, we're going to get all the models
 and print an import statement for each
 
 ---
+### Generate import statements
 $$terminal python3.6
 $$prompt ~/project
 ./manage.py shell<br>
 Python 3.6.3 (default, Nov  9 2017, 15:58:30)<br>
 [GCC 4.2.1 Compatible Apple LLVM 9.0.0 (clang-900.0.38)] on darwin<br>
 Type "help", "copyright", "credits" or "license" for more information.<br>
-(InteractiveConsole)<br>
-$$w &gt;&gt;&gt;&nbsp;  
+(InteractiveConsole TEST TEST)<br>
+$$pyw &nbsp;  
 
 Note: Going back to our shell
 ---
+### Generate import statements
 $$terminal python3.6
 $$prompt ~/project
 ./manage.py shell<br>
@@ -296,8 +306,8 @@ Python 3.6.3 (default, Nov  9 2017, 15:58:30)<br>
 [GCC 4.2.1 Compatible Apple LLVM 9.0.0 (clang-900.0.38)] on darwin<br>
 Type "help", "copyright", "credits" or "license" for more information.<br>
 (InteractiveConsole)<br>
-&gt;&gt;&gt; from django.apps import apps<br>
-&gt;&gt;&gt; for app_config in apps.get_app_configs():<br>
+$$py from django.apps import apps<br>
+$$py for app_config in apps.get_app_configs():<br>
 ...&nbsp; l = app_config.name<br>
 ...&nbsp; for model in app_config.get_models():<br>
 ...&nbsp; &nbsp; n = model._meta.object_name<br>
@@ -306,11 +316,8 @@ $$w ...&nbsp;
 
 Note: for now, we're just going to dump in that code and run it 
 ---
+### Generate import statements
 $$terminal python3.6
-...&nbsp; l = app_config.name<br>
-...&nbsp; for model in app_config.get_models():<br>
-...&nbsp; &nbsp; n = model._meta.object_name<br>
-...&nbsp; &nbsp; print(f'from {l}.models import {n}')<br>
 ...&nbsp;<br> 
 from django.contrib.auth.models import Permission<br>
 from django.contrib.auth.models import Group<br>
@@ -324,7 +331,7 @@ from unicodex.models import Codepoint<br>
 from unicodex.models import Vendor<br>
 from unicodex.models import VendorVersion<br>
 from unicodex.models import Design<br>
-$$w &gt;&gt;&gt;&nbsp;  
+$$pyw &nbsp;  
 
 Note: and what we get back is some generated import statements about 
 
@@ -339,11 +346,13 @@ But what we're looking for is, in a lovely happenstance, the models that match t
 
 ##= Finding the table for a model
 ---
+### Finding the table for a model
 <pre><code>
 <c># ORM</c>
 Codepoint._meta.db_table
 </code></pre>
 ---
+### Finding the table for a model
 $$terminal python3.6
 $$prompt ~/project
 ./manage.py shell<br>
@@ -353,6 +362,7 @@ Type "help", "copyright", "credits" or "license" for more information.<br>
 (InteractiveConsole)<br>
 $$pyw
 ---
+### Finding the table for a model
 $$terminal python3.6
 $$prompt ~/project
 ./manage.py shell<br>
@@ -362,6 +372,7 @@ Type "help", "copyright", "credits" or "license" for more information.<br>
 (InteractiveConsole)<br>
 $$pyw from unicodex.models import Codepoint
 ---
+### Finding the table for a model
 $$terminal python3.6
 $$prompt ~/project
 ./manage.py shell<br>
@@ -372,6 +383,7 @@ Type "help", "copyright", "credits" or "license" for more information.<br>
 $$py from unicodex.models import Codepoint
 $$pyw
 ---
+### Finding the table for a model
 $$terminal python3.6
 $$prompt ~/project
 ./manage.py shell<br>
@@ -382,6 +394,7 @@ Type "help", "copyright", "credits" or "license" for more information.<br>
 $$py from unicodex.models import Codepoint
 $$pyw Codepoint._meta.db_table
 ---
+### Finding the table for a model
 $$terminal python3.6
 $$prompt ~/project
 ./manage.py shell<br>
@@ -396,8 +409,10 @@ $$pyw
 ---
 ##= Showing all table columns
 ---
+### Showing all table columns
 <pre><code><br><c># ORM</c><br>Codepoint._meta.get_fields()
 ---
+### Showing all table columns
 $$terminal python3.6
 $$prompt ~/project
 ./manage.py shell<br>
@@ -410,6 +425,7 @@ $$py Codepoint._meta.db_table
 'unicodex_codepoint'<br>
 $$pyw 
 ---
+### Showing all table columns
 $$terminal python3.6
 $$prompt ~/project
 ./manage.py shell<br>
@@ -422,9 +438,8 @@ $$py Codepoint._meta.db_table
 'unicodex_codepoint'<br>
 $$pyw Codepoint._meta.get_fields()
 ---
+### Showing all table columns
 $$terminal python3.6
-$$prompt ~/project
-./manage.py shell<br>
 Python 3.6.3 (default, Nov  9 2017, 15:58:30)<br>
 [GCC 4.2.1 Compatible Apple LLVM 9.0.0 (clang-900.0.38)] on darwin<br>
 Type "help", "copyright", "credits" or "license" for more information.<br>
@@ -447,12 +462,14 @@ Note: We can find all this information directly via the database,
 
 and django provides an easy way to get there
 ---
+### Find all tables via the database
 $$terminal bash
 $$prompt ~/project
 $$w ./manage.py dbshell
 
 Note: back in our terminal, instead of running manage.py shell, we run DB shell
 ---
+### Find all tables via the database
 $$terminal psql
 $$prompt ~/project
 ./manage.py dbshell<br>
@@ -465,6 +482,7 @@ Note: and we get an output that will be familiar to postgres devs in the audienc
 
 This particular project has a postgres backend
 ---
+### Find all tables via the database
 $$terminal psql
 $$prompt ~/project
 ./manage.py dbshell<br>
@@ -475,6 +493,7 @@ $$w db=# \dt
 
 Note: given we know it's postgres, we cna issue the postgres list table command, and get back
 ---
+### Find all tables via the database
 $$terminal psql
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; List of relations<br>
 &nbsp;Schema |&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Name&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; | Type&nbsp; |&nbsp; Owner<br>
@@ -491,17 +510,12 @@ $$terminal psql
 &nbsp;public&nbsp;|&nbsp;django_migrations&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;table&nbsp;|&nbsp;postgres<br.
 &nbsp;public&nbsp;|&nbsp;django_session&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;table&nbsp;|&nbsp;postgres<br>
 &nbsp;public&nbsp;|&nbsp;django_site&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;table&nbsp;|&nbsp;postgres<br>
-&nbsp;public&nbsp;|&nbsp;unicodex_codepoint&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;table&nbsp;|&nbsp;postgres<br>
-&nbsp;public&nbsp;|&nbsp;unicodex_design&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;table&nbsp;|&nbsp;postgres<br>
-&nbsp;public&nbsp;|&nbsp;unicodex_vendor&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;table&nbsp;|&nbsp;postgres<br>
 &dash;&dash;More&dash;&dash;
 
 Note: all our tables. Note the usual suspects from earlier, auth, content, sites
 ---
+### Find all tables via the database
 $$terminal psql
-&nbsp;public | aldryn_sso_aldrynclouduser | table | postgres<br>
-&nbsp;public | auth_group&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; | table | postgres<br>
-&nbsp;public | auth_group_permissions&nbsp; &nbsp; &nbsp;| table | postgres<br>
 &nbsp;public | auth_permission&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; | table | postgres<br>
 &nbsp;public | auth_user&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; | table | postgres<br>
 &nbsp;public | auth_user_groups&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;  | table | postgres<br>
@@ -527,6 +541,7 @@ We'll take note of these for later.
 
 Note: so now that we know there are tables, we'd like to see what's inside them 
 ---
+### Show all table contents
 <pre><code>
 <c>&dash;&dash; SQL</c>
 <r>SELECT * <br>&nbsp; FROM</r> unicodex_codepoint;
@@ -535,6 +550,7 @@ Note: so now that we know there are tables, we'd like to see what's inside them
 
 Note: in SQL, this would be your standard select star from table
 ---
+### Show all table contents
 <pre><code>
 <c>&dash;&dash; SQL</c>
 <r>SELECT * <br>&nbsp; FROM</r> unicodex_codepoint;
@@ -547,6 +563,7 @@ Note: in the ORM, this maps to Codepoint, the model, dot objects dot all
 
 Just list all of them
 ---
+### Show all table contents
 $$terminal python3.6
 $$prompt ~/project
 ./manage.py shell<br>
@@ -557,6 +574,7 @@ Type "help", "copyright", "credits" or "license" for more information.<br>
 $$pyw
 Note: back over in our console, before we can call Codepoint, we need to use that import statement we generated earlier
 ---
+### Show all table contents
 $$terminal python3.6
 $$prompt ~/project
 ./manage.py shell<br>
@@ -568,6 +586,7 @@ $$pyw from unicodex.models import Codepoint
 
 Note: from unicodex dot models import codepoint
 ---
+### Show all table contents
 $$terminal python3.6
 $$prompt ~/project
 ./manage.py shell<br>
@@ -580,6 +599,7 @@ $$pyw
 
 Note: after we hit enter, we'll get no output, which is good, because this was successfully imported.
 ---
+### Show all table contents
 $$terminal python3.6
 $$prompt ~/project
 ./manage.py shell<br>
@@ -592,6 +612,7 @@ $$pyw Codepoint.objects.all()
 
 Note: then we make our codepoint dot objects dot all call
 ---
+### Show all table contents
 $$terminal python3.6
 $$prompt ~/project
 ./manage.py shell<br>
@@ -618,6 +639,7 @@ The return value here is known as a queryset, an unordered objects. QuerySets ca
 
 Note: now that we can see all the things, how about just some of the things
 ---
+### Show specific table contents
 <pre><code>
 <c>&dash;&dash; SQL</c>
 <r>SELECT * <br>&nbsp; FROM</r> unicodex_codepoint c<br>&nbsp;<r>WHERE</r> <l>c</l>.<l>name</l> <r>=</r> <d>'Sparkles'</d>; 
@@ -628,6 +650,7 @@ Note: the SQL would be familiar
 
 Adding a where clause for, say, sparkles
 ---
+### Show specific table contents
 <pre><code>
 <c>&dash;&dash; SQL</c>
 <r>SELECT * <br>&nbsp; FROM</r> unicodex_codepoint c<br>&nbsp;<r>WHERE</r> <l>c</l>.<l>name</l> <r>&equals;</r> <d>'Sparkles'</d>; 
@@ -640,6 +663,7 @@ Note: this maps to the ORM as filter. where the name column is a keyword argumen
 
 
 ---
+### Show specific table contents
 $$terminal python3.6
 $$py from unicodex.models import Codepoint
 $$pyw Codepoint.objects.filter(name='Sparkles')
@@ -648,6 +672,7 @@ Note: so in our fresh terminal, we import Codepoint
 
 Then run our filter
 ---
+### Show specific table contents
 $$terminal python3.6
 $$py from unicodex.models import Codepoint
 $$py Codepoint.objects.filter(name='Sparkles')
@@ -659,6 +684,7 @@ Note: and we get back a queryset with a single object: sparkles
 
 Note: we can also just return one specific record, instead of a queryset
 ---
+### Get specific record
 $$terminal python3.6
 $$py from unicodex.models import Codepoint
 $$py Codepoint.objects.filter(name='Sparkles')
@@ -668,6 +694,7 @@ Note: so where last time we used filter
 
 This time we use get
 ---
+### Get specific record
 $$terminal python3.6
 $$py from unicodex.models import Codepoint
 $$py Codepoint.objects.filter(name='Sparkles')
@@ -678,6 +705,7 @@ $$pyw
 
 Note: and we get a single object
 ---
+### Get specific record
 $$terminal python3.6
 $$py from unicodex.models import Codepoint
 $$py Codepoint.objects.filter(name='Sparkles')
@@ -694,9 +722,8 @@ THERE CAN BE ONLY ONE
 
 So if you try and run get, say, without any limiatations
 ---
+### Get specific record
 $$terminal python3.6
-$$py from unicodex.models import Codepoint
-$$py Codepoint.objects.filter(name='Sparkles')
 &lt;QuerySet [&lt;Codepoint: Sparkles>]><br>
 $$py Codepoint.objects.get(name='Sparkles')
 &lt;Codepoint: Sparkles><br>
@@ -722,6 +749,7 @@ Anyone who's worked with SQL for long enough will know the venn diagrams for inn
 
 Thankfully, especially for someone like me who has forgotten so much SQL, the ORM makes joins a joy. 
 ---
+### Joins
 <pre><code><c>&dash;&dash; SQL</c><br><r>SELECT</r> d.<r>*</r> <br>&nbsp; <r>FROM</r> unicodex_codepoint c,<br>&nbsp; &nbsp; &nbsp; &nbsp;unicodex_design d<br>&nbsp;<r>WHERE</r> <l>c</l>.<l>name</l> <r>&equals;</r> <d>'Sparkles'</d><BR><r>&nbsp; &nbsp;AND</r> <l>d</l>.<l>codepoint_id</l> <r>=</r> <l>c</l>.<l>id</l>;
 Note: say we want to join our design and codepoint tables
 
@@ -733,6 +761,7 @@ This is a good chunk of SQL
 
 So what does the ORM equivelent look like?
 ---
+### Joins
 <pre><code><c>&dash;&dash; SQL</c><br><r>SELECT</r> d.<r>*</r> <br>&nbsp; <r>FROM</r> unicodex_codepoint c,<br>&nbsp; &nbsp; &nbsp; &nbsp;unicodex_design d<br>&nbsp;<r>WHERE</r> <l>c</l>.<l>name</l> <r>&equals;</r> <d>'Sparkles'</d><BR><r>&nbsp; &nbsp;AND</r> <l>d</l>.<l>codepoint_id</l> <r>=</r> <l>c</l>.<l>id</l>;<br><br><c>&num; ORM</c>
 Design.objects.filter(<o>codepoint&#95;&#95;name&equals;</o>'Sparkles')
 </code></pre>
@@ -740,6 +769,7 @@ Note: Design dot objects dot filter codepoint dunder name equals sparkles.
 
 I know right? so simple!
 ---
+### Joins
 <pre><code><c>&dash;&dash; SQL</c><br><r>SELECT</r> d.<r>*</r> <br>&nbsp; <r>FROM</r> unicodex_codepoint c,<br>&nbsp; &nbsp; &nbsp; &nbsp;unicodex_design d<br>&nbsp;<r>WHERE</r> <l>c</l>.<l>name</l> <r>&equals;</r> <d>'Sparkles'</d><BR><r>&nbsp; &nbsp;AND</r> <l>d</l>.<l>codepoint_id</l> <r>=</r> <l>c</l>.<l>id</l>;<br><br><c>&num; ORM</c>
 Design.objects.filter(<o>codepoint&#95;&#95;name&equals;</o>'Sparkles')
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <c>^^</c> 
@@ -750,6 +780,7 @@ Note: this doubleunderscore here is doing a lot of powerful things behind the sc
 which I'll explain more in a moment. 
 
 ---
+### Joins
 $$terminal python3.6
 $$pyw
 
@@ -757,19 +788,23 @@ Note: back to our terminal again, to execute this elegant little code snippet
 
 We import the design model this time
 ---
+### Joins
 $$terminal python3.6
 $$pyw from unicodex.models import Design
 ---
+### Joins
 $$terminal python3.6
 $$py from unicodex.models import Design
 $$pyw
 ---
 
+### Joins
 $$terminal python3.6
 $$py from unicodex.models import Design
 $$pyw Design.objects.filter(codepoint&#95;&#95;name='Sparkles')
 Note: and we run our filter
 ---
+### Joins
 $$terminal python3.6
 $$py from unicodex.models import Design
 $$py Design.objects.filter(codepoint&#95;&#95;name='Sparkles')
@@ -780,6 +815,7 @@ $$pyw
 Note:
 
 ---
+### Joins
 <pre><code><c>&num; ORM</c>
 Design.objects.filter(<o>codepoint&#95;&#95;name&equals;</o>'Sparkles')
 
@@ -791,10 +827,12 @@ A lookup as an operation on that field
 
 If you remember back when we looked up the fields on a model, we know what options we have here. 
 ---
+### Joins
 $$terminal python3.6
 $$py from unicodex.models import Design
 $$pyw Design._meta.get_fields()
 ---
+### Joins
 $$terminal python3.6
 $$py from unicodex.models import Design
 $$py Design._meta.get_fields()
@@ -809,6 +847,7 @@ Note: we have four fields - a unique id, two foreign keys off to other models, a
 but name isn't there. That came from codepoint
 
 ---
+### Joins
 $$terminal python3.6
 $$py from unicodex.models import Design
 $$py Design._meta.get_fields()
@@ -821,6 +860,7 @@ $$pyw Codepoint._meta.get_fields()
 Note: so if we inspect Codepoint
 
 ---
+### Joins
 $$terminal python3.6
 $$py from unicodex.models import Design
 $$py Design._meta.get_fields()
@@ -845,10 +885,14 @@ Note: You'll also note in our example that we end on a field.
 
 By default the look up is an exact match on the string. So effectively, name equals sparkles 
 ---
-<pre><code><c>&num; ORM</c>
-Design.objects.filter(<o>codepoint&#95;&#95;name&equals;</o>'Sparkles')<br><br><c>&num; field, field, field... lookup</c>
-<br><c>&num; ORM</c>
-Design.objects.filter(<o>codepoint&#95;&#95;name&#95;&#95;exact&equals;</o>'Sparkles')
+```python
+# ORM
+Design.objects.filter(codepoint__name='Sparkles')
+# field, field, field... lookup
+
+# ORM
+Design.objects.filter(codepoint__name__exact='Sparkles')
+```
 
 Note: so by default what we're calling is codepoint name equals
 ---
