@@ -1,0 +1,655 @@
+#= Turning wat into why
+## All Things Open, 2018
+@ footer.svg
+
+Note: You got this 💪
+---
+#= JavaScript
+Note: Let's talk about javascript
+---
+$$# JavaScript
+js- > 4 + 2
+js- 6
+js- > 4 - 2
+js- 2
+js- > 4 - "2"
+js- 2
+js- > 4 + "2"
+js "42"
+
+---
+$$# JavaScript
+js- > 1 == "1"
+js- true
+js- > 1 === "1"
+js false 
+---
+$$# JavaScript
+js- > "👩🏻‍🚀".split("")
+js  ["�","�","�","�",,"�","�"]
+---
+~@ wat.png
+.wat[.wat-pos[wat]]
+---
+~@ wat.png
+.wat[.wat-pos[.strike[wat]]]
+.why[.why-pos[why]]
+---
+#= JavaScript
+Note: Let's talk about javascript
+---
+$$# JavaScript
+js > 4 + 2
+js 6
+js > 4 - 2
+js 2
+js > 4 - "2"
+js 2
+js > 4 + "2"
+js "42"
+
+Note: the problem with this example is to do with types
+---
+$$# JavaScript
+js > 4 + 2
+js 6
+js > 4 - 2
+js 2
+js > 4 .mark[-] "2" // implicit coercion
+js 2
+js > 4 + "2" 
+js "42"
+
+
+Note:
+1: subtraction is only defined for numerics, so it coerces the string into a number
+---
+$$# JavaScript
+js > 4 + 2
+js 6
+js > 4 - 2
+js 2
+js > 4 .mark[-] "2" // implicit coercion
+js 2
+js > 4 .mark[+] "2" // overloaded operand
+js "42"
+
+
+Note:
+
+
+2: the plus is an overloaded operand. It can act as both numeric addition, or in this case, concatenation
+
+---
+$$# JavaScript
+js > 1 == "1"
+js true
+js > 1 === "1"
+js  false 
+Note: This next example is to do with the difference in the equality operators
+
+---
+$$# JavaScript
+js > 1 == "1" // with type coercion
+js true
+js > 1 === "1"  // without type coercion
+js  false 
+Note: This next example is to do with the difference in the equality operators
+---
+$$# JavaScript
+js > "👩🏻‍🚀".split("")
+js-  ["�","�","�","�",,"�","�"]
+js- > Array.from("👩🏻‍🚀")
+js ["👩","🏻","‍","🚀"]
+
+Note: JS predates unicode, so javascript makes some... assumptions about variable length characters
+like the fact that they are each two characters. 
+
+
+---
+$$# JavaScript
+js- > [] + []
+js- ""
+js- > [] + {}
+js- "[object Object]"
+js- > {} + []
+js- 0
+js- > {} + {}
+js NaN
+---
+
+$$# JavaScript
+js > [] + []
+js "" // ???
+js > [] + {}
+js "[object Object]" // ???
+js > {} + []
+js 0 // ???
+js > {} + {}
+js NaN // ???
+---
+
+#= `+`
+
+Note: Remember that overloaded operand I mentioned earlier?
+
+Let's dive into that a bit more. 
+
+This is going to get a be complicated
+But that's okay, there's a spec for that
+---
+class: center
+# ECMA-262, 9th edition
+## ECMAScript® 2018 Language Specification
+### 12.8.3 The Addition Operator ( `+` )
+#### &nbsp;
+
+vv [ECMA-262, 9th Edition, 12.8.3](http://www.ecma-international.org/ecma-262/9.0/index.html#sec-addition-operator-plus)
+---
+
+class: center
+# ECMA-262, 9th edition
+## ECMAScript® 2018 Language Specification
+### 12.8.3 The Addition Operator ( `+` )
+#### NOTE The addition operator either performs string concatenation or numeric addition.
+
+vv [ECMA-262, 9th Edition, 12.8.3](http://www.ecma-international.org/ecma-262/9.0/index.html#sec-addition-operator-plus)
+---
+class: center
+
+a + b
+
+---
+## TODO
+---
+#= JavaScript is awe-ful
+---
+#= So don't use it.
+---
+# Languages that compile to JavaScript
+---
+# Languages that compile to JavaScript
+
+.tinytext[8ball, acorn, ActionScript, ADsafe, Agda, Alasql, Amber, APL, asm.js, AST, Astring, Babel, Batavia, Bck2Brwsr, bdParse, Bennu, BicaJVM, bison-lalr1.js, BiwaScheme, Bizubee, BlackCoffee, Blade, Block, Blockly, Bonsai-C, Bridge.NET, browserl, Brozula, Brython, Bucklescript, Builder, Bulbul, burrito, Caffeine, Caja, Canopy, Ceylon, Cheerp, Chlorinejs, CilJs, CirruScript, Clamato, ClojureJS, ClojureScript, Clue, CobolScript, Coco, CoffeeScript, CokeScript, ColaScript, ColdRuby, Compiler, ContextJS, Continuation.js, Contracts.coffee, Cor, Cruiser.Parse, Daonode, Dart, defrac, DoctorJS, Doppio, DotNetWebToolkit, DuoCode, E, ecma-ast, EdgeLisp, ElixirScript, Elm, EmberScript, Emscripten, ErlyJS, esast, escodegen, eslisp, esmangle, Esprima, estraverse, Fable, falafel, Fantom, Fargo, fay, Flapjax, Flow, forml, Fun, FunScript, FutureScript, ghcjs, Gnusto, Go2js, GopherJS, GorillaScript, Grey, GrooScript, GWT, Ham, haste, Haxe, heap.coffee, Hodor, HotRuby, IcedCoffeeScript, Idris, Illumination, Limba, Interpreter, Iode, j2js, Jacaranda, jangaroo, Jasy, Java2Script, JavaScript++, JavaScripthon, JEnglish, jison, jisp, jLang, jmacro, Js_of_ocaml, js--, js-scala, js.js, JS/CC, jsc, JScala, JSCL, JScriptSuite, jsForth, JSGLR, jshaskell, JSIL, JsMaker, jsparse, JSPipe, JSweet, JSX, jwacs, Kaffeine, Kal, Kernel, Khan, Khepri, ki, Kotlin, L2, lambdascript, languagejs, Lisp, LispyScript, LiteScript, LiveScript, LLJS, lua.js, LuvvieScript, maja, Mandreel, Mascara, Meemoo, MetaCoffee, mfjs, mobl, Mochiscript, Mode, Moescript, Monkey, MoonScript, Narcissus, NarrativeJS, nconc, nearley, NemerleWeb, Netjs, Nim, node-jvm, NodeScript, NoFlo, O’Browser, Objective-J, Ocamljs, Oia, oj, oK, OMeta/JS, Opa, Opal, Oppo, Outlet, p2js, p4js, Parenscript, parse-js, PearScript, PEG.js, Perlito, PharoJS, php.js, phype, Pit, Plaid, pogoscript, Prefix, Processing.js, Prolog, prolog.js, promiseLand, pseudo-python, PureScript, PyCow, Pygmy, Pyjaco, Pyjamas, Pyjs, PyNarcissus, PyPyJS, PythonScript, pythonscript, PyvaScript, PYXC-PJ, qb.js, Quby, Quixe, QWT, RacketScript, Ralph, RamdaScript, RapydScript, rb2js, rbnarcissus, Reb2Static, Red, RedScript, reflect.js, ReParse, rocambole, Roy, RoyalScript, RPN, ruby-parser.js, Ruby2JS, RubyJS, Rusthon, Saltarelle, Scala.js, scalagwt, Scheje, Scheme, scheme2js, Script#, ScriptBlocks, Scriptjure, SDK, Secure, Shaper, SharpKit, Shen, Sibilant, Six, Skew, Skulpt, Smallscript, Smalltalk, SMLtoJs, smpl.js, Snap, SourceMap, Specification, Specification, Spider, Spiderbasic, Spock, sql-parser, sql.js, sqld3, SqueakJS, STIP.js, Storm, StratifiedJS, Streamline.js, Studio, Studio, Sugar, sweet.js, Swym, Taijilang, TameJS, TARDISgo, TeaVM, TeJaS, TIScript, TLC, ToffeeScript, Topaz, Traceur, Transcrypt, treehugger, Typecast.js, types, TypeScript, Uberscript, UglifyJS, UHC, uilang, uniter, Ur, Waterbear, WebAssembly, WebSharper, wForth, Whalesong, Wind.js, WootzJs, Wortel, XLCC, YHC, YoptaScript, Zeon, ZeParser. So yeah, you have a few different options. Just a few, though.]
+ 
+Note: You could use another language and compile that down to JavaScript
+
+The Coffee Script GitHub wiki lists over 340 examples
+
+Take another language and convert it to javascript
+
+That'll solve all your problems right?
+---
+##= Using another language won't save you.
+
+Note: Well no. 
+
+Using another language won't save you. 
+---
+#= Ruby
+
+Note: let's talk about Ruby
+---
+$$# Ruby
+rb- > not true && false
+rb- => true
+rb- > not true and false
+rb => false
+---
+$$# Ruby
+rb > not true && false
+rb => true
+rb > not true and false
+rb => false  # precedence
+---
+$$# Ruby
+rb > .fix[not] true .mark[&&] false
+rb => true
+rb > .fix[not] true .focus[and] false
+rb => false  # precedence
+
+<br>
+rb # Order of precedence
+
+rb .mark[&&] , ||
+rb .fix[not]
+rb .focus[and] , or
+
+---
+#= Python
+---
+$$# Python
+py- >>> a = 256
+py- >>> b = 256
+py- >>> a is b
+py .fix[True]
+---
+$$# Python
+py- >>> a = 257
+py- >>> b = 257
+py- >>> a is b
+py- False
+<br>
+py- >>> a = 257; b = 257
+py- >>> a is b
+py True
+---
+$$# Terminal
+`$ python`
+---
+$$# Python
+py- >>> a = 256
+py- >>> b = 256
+py- >>> a is b
+py True
+$$# CPython Cache
+sh &nbsp;
+sh &nbsp; &nbsp; &nbsp;  [ -5 ][ -4 ][ -3 ][...][ 254 ][ 255 ][ 256 ]
+sh &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;a&nbsp;b&nbsp;
+
+Note: 1: In Python, when you load the interpreter, you're loading CPython. An optimisation of CPython is to create a list of integers from -5 to 256 for you.
+
+2: so when you assign a variable, it can use one you prepared earlier
+
+6: "IS" when we talk about "is" here, we're doing an identity check. Are A and B the same object. Yes!
+---
+$$# Python
+py >>> a = 257; b = 257
+py >>> a is b
+py True
+---
+$$# Python
+py >>> a = 257; b = 257
+py >>> a == b
+py True
+
+.fix-correct[&nbsp; &nbsp; &nbsp;]
+.fix-tilt[fix]
+---
+#= Java
+
+---
+$$# Java
+java- java> Integer a = 128;
+java- java> Integer b = 128;
+java- java> a <= b
+java- true
+java- java> a >= b
+java- true
+java- java> a == b
+java- false
+---
+$$# Java
+java java> Integer a = 128;
+java java> Integer b = 128;
+java java> a <= b
+java true
+java java> a >= b
+java true
+java java> a.equals(b)
+java true
+.fix-tilt[fix #1]
+
+---
+$$# Java
+java java> int a = 128;
+java java> int b = 128;
+java java> a <= b
+java true
+java java> a >= b
+java true
+java java> a == b
+java true
+.fix-tilt[fix #2]
+
+---
+#= All languages have quirks
+
+Note:
+
+All these things might be first taken to be 'quirks'
+
+But if you have a deep understanding of how a language works
+
+it's not a quirks
+
+it's how the language works
+
+---
+
+#= Perl
+---
+$$# Perl
+pl > if ("a" == "b") { 
+pl &nbsp; &nbsp; print "true" 
+pl } else { 
+pl &nbsp; &nbsp; print "false" }
+pl- &nbsp; 
+pl true
+
+---
+$$# Perl
+pl > if ("a" == "b") { # numeric equality 
+pl &nbsp; &nbsp; print "true" 
+pl } else { 
+pl &nbsp; &nbsp; print "false" }
+pl &nbsp; 
+pl true
+
+---
+$$# Perl
+pl > if ("a" eq "b") { # string equality 
+pl &nbsp; &nbsp; print "true" 
+pl } else { 
+pl &nbsp; &nbsp; print "false" }
+pl &nbsp; 
+pl false
+---
+#= Bash
+---
+$$# Bash
+sh- ~ $ 4 + 2
+sh- bash: 4: command not found
+sh- ~ $ $(4 + 2)
+sh- bash: 4+2: command not found
+sh- ~ $ $((4 + 2))
+sh- bash: 6: command not found
+sh- ~ $ echo $((4 + 2))
+sh 6
+
+Note: Bash isn't designed to do raw arithmetic
+
+2: But it can if we give it the correct syntax
+Ah
+
+3: we need to echo out the result
+
+---
+$$# Bash
+sh ~ $ 4 + 2
+sh bash: 4: command not found
+sh ~ $ $(4 + 2)
+sh bash: 4+2: command not found
+sh ~ $ $((4 + 2))
+sh bash: 6: command not found
+sh ~ $ echo $((4 + 2))
+sh 6
+
+.fix-tilt[By Design]
+
+Note: Because bash is designed for execution, not returning a string representation of the value of some mathematical equation, like every other example so far
+---
+
+#= Haskell
+---
+$$# Haskell
+hs- λ> let a = 2 + 2
+hs- λ> a
+hs- 4
+hs &nbsp;
+hs- λ> let b = 2 + 2
+hs- &nbsp;&nbsp; &nbsp; &nbsp; where 2 + 2 = 5
+hs- λ> b
+hs- 5
+
+---
+
+$$# Haskell
+hs λ> let a = 2 + 2
+hs λ> a
+hs 4
+hs &nbsp;
+hs λ> let b = 2 + 2
+hs &nbsp;&nbsp; &nbsp; &nbsp; where 2 + 2 = 5 # pattern matching
+hs λ> b
+hs 5
+
+.fix-tilt[By Design]
+---
+$$# Haskell
+hs fib :: Int -> Int
+hs fib 0 = 0
+hs fib 1 = 1
+hs fib n = fib (n - 1) + fib (n - 2)
+---
+$$# Haskell
+hs fib :: Int -> Int
+hs fib 0 = 0
+hs fib 1 = 1
+hs fib n = fib (n - 1) + fib (n - 2)
+<br>
+$$# Ruby
+rb def fib(n)
+rb &nbsp; &nbsp;  return n if (0..1).include? n
+rb &nbsp; &nbsp; (fib(n - 1) + fib(n - 2))
+rb end
+---
+
+#= Elixir
+---
+$$# Elixir
+```elixir
+iex> Enum.map(1..5, fn(x) -> x*x end)
+```
+iex- [1, 4, 9, 16, 25]
+<br>
+iex- iex> Enum.map(6..10, fn(x) -> x&ast;x end)
+iex '$1@Qd'
+
+---
+$$# Elixir
+iex- iex> a = Enum.map(6..10, fn(x) -> x*x end)
+iex- iex> Enum.map(a, fn(x) -> IO.puts x end)
+iex 36
+iex 49
+iex 64
+iex 81
+iex 100
+
+Note: 
+If we were to assign our list as a variable
+then iterate over each element to print it
+
+we get the list we expected
+
+But why did our first example break and the second one not?
+
+Let's try a different range
+
+---
+$$# Elixir
+iex- iex> Enum.map(65..90, fn(x) -> x end)
+iex 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+
+
+Note: Let's try say... 65 to 90
+
+No reason
+
+And let's not to anything, just have each element in the range pass through
+
+We get a recognisable string. 
+
+This is because in ASCII, Capital A starts at sequence 65
+---
+
+$$# Elixir
+iex iex> Enum.map(65..90, fn(x) -> x end)
+iex 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+
+.fix-tilt[By design]
+
+
+Note: The reason for this: 
+
+Elixir was built on top of Erlang, which was created in the 80's, and strings in Erlang are represented as a lists of integers. So, without telling our interpreter any different, it's going to assume that we want to print a string, not a list of numbers
+
+There are flags in erlang to change this, but it's only going to effect our interactive interpreter, not the actual data manipulation
+
+---
+#= Scala
+---
+$$# Scala
+sc- scala> println({} + "")
+sc ()
+---
+$$# Scala
+sc scala> println({} + "")
+sc ()
+
+.fix-tilt[By design]
+
+Note: yeah, so this is because scala uses punctuation in a completely different way to javascript and other languages; the braces you're seeing is an empty function, and the concatenation of that to an empty string is an empty result
+
+for anyone unfamiliar with the conventions of syntax in scala, this might be confusing, but this is absolutely by design
+
+---
+
+#= No language is 'better'
+
+Note: No language is better than any other
+
+The mere fact a programming language exists means years of work by many many people building and developing a common dialect to describe and manipulate the realm in which it lives
+
+Each have their own strengths
+
+---
+
+#= PHP
+
+---
+$$# PHP
+php- php> echo (TRUE ? "True" : "False");
+php- true
+<br>
+php- php> echo (False ? "True" : "False");
+php false
+
+Note: Ternary operators
+
+
+but
+
+---
+$$# PHP
+php php> echo (FALSE ? "one" :
+php &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;FALSE ? "two" : 
+php- &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;  "three");
+php three
+
+---
+$$# PHP
+php php> echo (FALSE ? "one" :
+php &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;TRUE &nbsp;? "two" : 
+php- &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;  "three");
+php two
+
+---
+$$# PHP
+php php> echo (TRUE &nbsp;? "one" :
+php &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;TRUE &nbsp;? "two" : 
+php- &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;  "three");
+php two
+
+Note: This is because ternary expressions in PHP are left associative
+
+Like we saw earlier in the ruby example, the assumption of the order of operations is that we'd short cut to "one" here
+
+The solution?
+---
+$$# PHP
+php php> echo (TRUE &nbsp;? "one" :
+php &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;TRUE &nbsp;? "two" : 
+php &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;  .strike["three"]);
+php two
+.fix-tilt[AVOID]
+
+Note: This is because ternary expressions in PHP are left associative
+
+Like we saw earlier in the ruby example, the assumption of the order of operations is that we'd short cut to "one" here
+
+The solution?
+---
+#= PowerShell
+
+---
+$$# PowerShell
+
+ps PS> if (2 > 1) { "true"  }
+ps- &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;else&nbsp;  { "false" }
+ps- true
+<br> 
+ps PS> if (2 < 1) { "true"  }
+ps- &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;else&nbsp;  { "false" }
+ps .ps-error[The '<' operator is reserved for future use.]
+
+---
+$$# PowerShell
+
+ps PS> if (2 > 1) { "true"  }
+ps &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;else&nbsp;  { "false" }
+ps true
+<br> 
+ps PS> if (2 < 1) { "true"  }
+ps &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;else&nbsp;  { "false" }
+ps .ps-error[The '<' operator is reserved for future use.]
+.fix-tilt[AVOID]
+---
+$$# PowerShell
+ps PS> if (2 .fix[-gt] 1) { "true"  }
+ps &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;else&nbsp;  { "false" }
+ps true
+<br> 
+ps PS> if (2 .fix[-lt] 1) { "true"  }
+ps &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;else&nbsp;  { "false" }
+ps false
+.fix-tilt[FIX]
+
+Note: You should avoid using greater than, since the complementary less than doesn't exist.
+
+---
+&nbsp; 
+
+Note: 
+INTENTIONALLY BLANK
+
+I've gone through just about a dozen programming languages
+
+And shown what could be described as a 'wat'
+
+But if you have a deep understanding of how a language works
+it's not a wat
+it's how the language works
+---
+
+#= Turn .wat[wat] into .why[why]
+
+Note: 
+
+When ever you find yourself thinking WAT
+turn it into a why
+
+Find out why things are the way they are
+
+Understand the reasoning behind the decision
+
+It will help you get a deeper mastery of the language, and you might just learn something neat along the way
+
+---
+
+#= Learn something ✨.new[new]✨
+
+Note: 
+> A bunch of the examples in this talk are from personal encounters I've had with code over the years
+I may not be an expert in any particular language, but I feel that given by experience across a number of different languages, I have experience being a multi-lingual programmer, in much the same way that learning a second language can help you understand your primary tongue
+
+If you are proficient at, say, ruby, and only ruby, that's great. But why not try your hand at something else? You might learn something more and help deeper your understanding of what you already know
+
+
+
+
+---
+<br>
+=@ footer.svg
+
+Note: thank you for your time

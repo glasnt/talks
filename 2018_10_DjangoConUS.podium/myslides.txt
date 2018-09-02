@@ -1,6 +1,6 @@
-<br>
-#= ORM: The Sequel
-###= DjangoCon Europe 2018
+class: title
+# ORM: The Sequel
+### DjangoCon US 2018
 @ footer.svg
 ---
 ! wave
@@ -17,8 +17,10 @@ Note: I spoke at DjangoCon Europe 16 in Budapest
 @= dcus17.png
 Note: I was a mentor, and also gave a talk, at DjangoCon US 2017
 ---
+@= dceu18.png
+Note: I also spoke in Heidelberg just a few short months ago
+---
 @= dcau17.png
-~@ 17_bg.png
 Note: I was the organiser of djangocon australia 17
 ---
 
@@ -89,9 +91,8 @@ Yes, I'm that much of a nerd.
 Note: I haven't used APEX for years. But, there's one thing that I have an intrinstic knowledge of
 
 ---
-
-= <h1 style="color: white;text-shadow: 1px 1px 6px black, 0 0 136px red, 0 0 51px yellow; font-family: arial; font-size: 200pt">SQL</h1>
-= <h1 style="color: white;text-shadow: 1px 1px 6px black, 0 0 136px red, 0 0 51px yellow; font-family: arial; font-size:40pt">Structured Query Language</h1>
+<h1 style="color: white;text-shadow: 1px 1px 6px black, 0 0 136px red, 0 0 51px yellow; font-family: arial; font-size: 200pt">SQL</h1>
+<h1 style="color: white;text-shadow: 1px 1px 6px black, 0 0 136px red, 0 0 51px yellow; font-family: arial; font-size:40pt">Structured Query Language</h1>
 
 Note: SQL
 
@@ -118,9 +119,9 @@ Note: Even worse when I'm told "Oh, just use the shell"
 
 It's an empty space. But I've been told that this is where the actual Django magic lives 
 ---
-= <h1 style="color: white;text-shadow: 1px 1px 6px black, 0 0 136px blue, 0 0 51px green; font-family: arial; font-size: 200pt">ORM</h1>
+<h1 style="color: white;text-shadow: 1px 1px 6px black, 0 0 136px blue, 0 0 51px green; font-family: arial; font-size: 200pt">ORM</h1>
 
-= <h1 style="color: white;text-shadow: 1px 1px 6px black, 0 0 136px blue, 0 0 51px green; font-family: arial; font-size: 40pt">Object Relational Mapper</h1>
+<h1 style="color: white;text-shadow: 1px 1px 6px black, 0 0 136px blue, 0 0 51px green; font-family: arial; font-size: 40pt">Object Relational Mapper</h1>
 Note: The ORM
 
 The Object relational mapper
@@ -160,6 +161,7 @@ Note: so, our context today isn't going to be the standard blog site or news por
 
 It's going to be about something near and dear to my heart
 ---
+class: title, emoji
 #= ✨
 Note: emoji
 ---
@@ -186,6 +188,7 @@ So given this website exists, we can start poking around in the shell
 ##= "Just use the shell"
 Note: what they mean here is the django shell
 ---
+### The Shell
 $$terminal bash
 $$prompt ~
 cd project<br>
@@ -194,6 +197,7 @@ $$w ./manage.py shell
 
 Note: which is available using the manage.py shell command
 ---
+### The Shell
 $$terminal python3.6
 $$prompt ~
 cd project<br>
@@ -223,6 +227,7 @@ First things first. For an SQL dev, the first thing they normally do in a foreig
 ---
 ##= Finding all tables
 ---
+### Finding all tables
 ```sql
 
 -- MySQL
@@ -245,6 +250,7 @@ But we're not in a database console, we're in the django shell. We need to use O
 
  
 ---
+### Finding all tables
 ```python
 &num;  ORM Code 
 &num;  ...
@@ -263,9 +269,8 @@ But without looking at the model code, and understanding what you're looking at 
 
 Thankfully, django is clever and has helpful methods you can call to generate a list of imports for all the models in the project
 ---
+### Generate import statements
 ```python
-
-# Generate import statements
 from django.apps import apps
 
 for app_config in apps.get_app_configs():
@@ -816,10 +821,14 @@ Note:
 
 ---
 ### Joins
-<pre><code><c>&num; ORM</c>
-Design.objects.filter(<o>codepoint&#95;&#95;name&equals;</o>'Sparkles')
 
-<c>&num; field, field, field... lookup</c>
+```python
+
+# ORM
+Design.objects.filter(codepoint__name='Sparkles')
+
+# field, field, field... lookup
+```
 
 Note: what we have here is one or more fields and then a lookup, all separated by double underscores
 
@@ -878,13 +887,18 @@ $$pyw
 
 Note: WE see that codepoint has the name field
 ---
-<pre><code><c>&num; ORM</c>
-Design.objects.filter(<o>codepoint&#95;&#95;name&equals;</o>'Sparkles')<br><br><c>&num; field, field, field... lookup</c>
+### Joins
+```python
+# ORM
+Design.objects.filter(codepoint__name='Sparkles')
+# field, field, field... lookup
+```
 
 Note: You'll also note in our example that we end on a field.
 
 By default the look up is an exact match on the string. So effectively, name equals sparkles 
 ---
+### Joins
 ```python
 # ORM
 Design.objects.filter(codepoint__name='Sparkles')

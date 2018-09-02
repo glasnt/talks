@@ -1,8 +1,9 @@
 /*******************************
  * Basic slide layout and colors
  ******************************/
-.hljs-default pre code {
+.hljs-default pre code, .code {
   background-color: #fff !important;
+  padding: 0;
 }
 
 
@@ -96,13 +97,60 @@ li cite {
 /*********************************/
 
 .center { vertical-align: middle }
+.wat { font-family: 'American Typewriter'; color: #F8BA00; font-weight: bold;}
+.new { font-family: 'American Typewriter'; color: #CB297B; font-weight: bold;}
+.why { font-family: 'American Typewriter'; color: #45E768; font-weight: bold;}
+.strike { text-decoration: line-through;}
 
-.righthead { 
-    font-size: 18pt;
+.wat-pos { font-size: 80pt; position:absolute; bottom: 4em; left: 2em;}
+.why-pos { font-size: 80pt; position:absolute; bottom: 1em; right: 1em;}
+
+.fix   { outline: 4px solid green; outline-offset: 5px; }
+.mark  { outline: 4px solid blue; outline-offset: 5px; }
+.focus { outline: 4px solid red; outline-offset: 5px; }
+
+.tinytext { 
+    margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+    line-height: 1;
+
+ }
+.fix-correct { 
+    border: 3px green solid; 
     position: absolute;
-    bottom: 2em;
-    right: 4em;
-    width: 80%;
+    left: 5.5em;
+    top: 4.4em;
+}
+.ps-error { color: red !important; font-weight: bold; }
+
+.fix-tilt { 
+    position: absolute;
+    font-size: 64pt;
+    bottom: 0em;
+    right: 1em;
+    color: grey;
+    font-family: monospace; 
+    font-weight: bold;
+    width: 100%;
+    text-align: right;
+    -webkit-transform: rotate(-30deg);
+    -moz-transform: rotate(-30deg);
+    -ms-transform: rotate(-30deg);
+    -o-transform: rotate(-30deg);
+    filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+}   
+.righthead { 
+    font-size: 34pt;
+    float: right;
+    top: 1em;
+    color: grey;
+    font-family: monospace;
+    right: 1em;
+    width: 100%;
     text-align: right;
 }   
 
@@ -237,13 +285,11 @@ dr { color: rgb(201,135,135) }
 @font-face { font-family: "RedactedR"; src: url("redacted-script-regular.ttf") format('truetype'); font-style:normal; }
 rb { font-family: "RedactedB", regular;  }
 rr { font-family: "RedactedR", regular;  }
-/* https://github.com/christiannaths/Redacted-Font */
 
-
-/* vectorised terminal */
-code.terminal { 
-    /*background-color: rgb(63,63,63) !important*/
-
+.code { 
+   font-family: "SFMono-Regular",Consolas,"Liberation Mono",Menlo,Courier,monospace !important;
+   margin: 0;
+   padding: -10px;
 } 
 pre code { 
    font-family: "SFMono-Regular",Consolas,"Liberation Mono",Menlo,Courier,monospace !important;
