@@ -279,7 +279,7 @@ class: title
 --
 <pre><code class="python">>>> a is b</code></pre>
 --
-<pre><code class="python">.fix[True]</code></pre>
+<pre><code class="python">True</code></pre>
 ---
 .righthead[Python]
 <pre><code class="python">>>> a = 257</code></pre>
@@ -299,7 +299,6 @@ class: title
 ---
 .righthead[Terminal]
 `$ python`
----
 .righthead[Python]
 <pre><code class="python">>>> a = 256</code></pre>
 --
@@ -310,8 +309,8 @@ class: title
 <pre><code class="python">True</code></pre>
 .righthead[CPython Cache]
 <pre><code class="bash">&nbsp;</code></pre>
-<pre><code class="bash">&nbsp; &nbsp; &nbsp; [ -5 ][ -4 ][ -3 ][...][ 254 ][ 255 ][ 256 ]</code></pre>
-<pre><code class="bash">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;a&nbsp;b&nbsp;</code></pre>
+<pre><code class="bash">[ -5 ][ -4 ][...][ 254 ][ 255 ][ 256 ][~][ 257 ][ 257 ]</code></pre>
+<pre><code class="bash">.white[.................................]a b</code></pre>
 
 ???
 
@@ -418,7 +417,7 @@ class: title
 
 ---
 .righthead[Perl]
-<pre><code class="perl">> if ("a" eq "b") { # string equality</code></pre>
+<pre><code class="perl">> if ("a" .fix[eq] "b") { # string equality</code></pre>
 <pre><code class="perl">&nbsp; &nbsp; print "true"</code></pre>
 <pre><code class="perl">} else {</code></pre>
 <pre><code class="perl">&nbsp; &nbsp; print "false" }</code></pre>

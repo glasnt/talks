@@ -222,7 +222,7 @@ $$# Python
 py- >>> a = 256
 py- >>> b = 256
 py- >>> a is b
-py .fix[True]
+py True
 ---
 $$# Python
 py- >>> a = 257
@@ -236,7 +236,6 @@ py True
 ---
 $$# Terminal
 `$ python`
----
 $$# Python
 py- >>> a = 256
 py- >>> b = 256
@@ -244,8 +243,8 @@ py- >>> a is b
 py True
 $$# CPython Cache
 sh &nbsp;
-sh &nbsp; &nbsp; &nbsp;  [ -5 ][ -4 ][ -3 ][...][ 254 ][ 255 ][ 256 ]
-sh &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;a&nbsp;b&nbsp;
+sh [ -5 ][ -4 ][...][ 254 ][ 255 ][ 256 ][~][ 257 ][ 257 ]
+sh .white[.................................]a b
 
 Note: 1: In Python, when you load the interpreter, you're loading CPython. An optimisation of CPython is to create a list of integers from -5 to 256 for you.
 
@@ -338,7 +337,7 @@ pl true
 
 ---
 $$# Perl
-pl > if ("a" eq "b") { # string equality 
+pl > if ("a" .fix[eq] "b") { # string equality 
 pl &nbsp; &nbsp; print "true" 
 pl } else { 
 pl &nbsp; &nbsp; print "false" }

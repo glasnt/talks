@@ -105,6 +105,7 @@ li cite {
 .wat-pos { font-size: 80pt; position:absolute; bottom: 4em; left: 2em;}
 .why-pos { font-size: 80pt; position:absolute; bottom: 1em; right: 1em;}
 
+.white { color: white;}
 .fix   { outline: 4px solid green; outline-offset: 5px; }
 .mark  { outline: 4px solid blue; outline-offset: 5px; }
 .focus { outline: 4px solid red; outline-offset: 5px; }
