@@ -1189,8 +1189,13 @@ If you are proficient at, say, ruby, and only ruby, that's great. But why not tr
 
 
 ---
-<br>
-=@ footer.svg
+
+class: title
+# <br><br>Thanks!
+
+![Image](images/footer.svg)
+
+.footnotes[With thanks to [Mathias](https://twitter.com/mathias/status/1036605331982438400), TODO]
 
 ???
 

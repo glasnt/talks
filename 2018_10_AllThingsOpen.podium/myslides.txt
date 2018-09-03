@@ -992,7 +992,11 @@ If you are proficient at, say, ruby, and only ruby, that's great. But why not tr
 
 
 ---
-<br>
-=@ footer.svg
+
+#= <br><br>Thanks!
+
+@ footer.svg
+
+vv With thanks to [Mathias](https://twitter.com/mathias/status/1036605331982438400), TODO
 
 Note: thank you for your time
