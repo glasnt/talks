@@ -37,12 +37,12 @@ h3 {
 
 p {
     font-size: 24pt;
-    line-height: 1.4em;
+    line-height: 1.2em;
 }
 
 li {
     font-size: 24pt;
-    line-height: 1.4em;
+    line-height: 1.2em;
     margin: 0.4em 0;
 }
 
@@ -92,10 +92,6 @@ li cite {
     margin-top: 0;
 }
 
-/*********************************/
-/* Special content for footnotes */
-/*********************************/
-
 .center { vertical-align: middle }
 .wat { font-family: 'American Typewriter'; color: #F8BA00; font-weight: bold;}
 .new { font-family: 'American Typewriter'; color: #CB297B; font-weight: bold;}
@@ -103,12 +99,22 @@ li cite {
 .strike { text-decoration: line-through;}
 
 .wat-pos { font-size: 80pt; position:absolute; bottom: 4em; left: 2em;}
-.why-pos { font-size: 80pt; position:absolute; bottom: 1em; right: 1em;}
+.why-pos { font-size: 120pt; position:absolute; bottom: 1em; right: 1em;}
 
+.w { font-family: "American Typewriter"}
+.large { font-size: 35pt; line-height: 1; }
+.emoji { font-size: 60pt; line-height: 1; }
+.bc code { font-weight: bold; }
+.lemoji { font-size: 160pt; line-height: 1; }
 .white { color: white;}
-.fix   { outline: 4px solid green; outline-offset: 5px; }
-.mark  { outline: 4px solid blue; outline-offset: 5px; }
-.focus { outline: 4px solid red; outline-offset: 5px; }
+.green { outline: 4px solid #AED557; outline-offset: 5px; }
+.greyf { color: grey }
+.greenf { color: #AED557; }
+.blue  { outline: 4px solid #4ECDC4; outline-offset: 5px; }
+.bluef  { color: #4ECDC4; }
+.red   { outline: 4px solid #FF6B6B; outline-offset: 5px; }
+.purple { outline: 4px solid #70568F; outline-offset: 5px; }
+
 
 .tinytext { 
     margin: 0;
@@ -120,24 +126,27 @@ li cite {
     line-height: 1;
 
  }
-.fix-correct { 
-    border: 3px green solid; 
-    position: absolute;
-    left: 5.5em;
-    top: 4.4em;
-}
 .ps-error { color: red !important; font-weight: bold; }
 
+.fix-notilt {  /* for shooting star only */ 
+    position: absolute;
+    max-width: 400px;
+    right: 0em;
+    bottom: 1.1em;
+    text-align: center;
+}
 .fix-tilt { 
     position: absolute;
     font-size: 64pt;
-    bottom: 0em;
-    right: 1em;
+    max-width: 400px;
+    right: 0em;
+    line-height: 1;
+    bottom: 1.1em;
     color: grey;
     font-family: monospace; 
     font-weight: bold;
     width: 100%;
-    text-align: right;
+    text-align: center;
     -webkit-transform: rotate(-30deg);
     -moz-transform: rotate(-30deg);
     -ms-transform: rotate(-30deg);
@@ -182,6 +191,7 @@ li cite {
   width: 45%;
   float: right;
 }
+
 
 /****************/
 /* Title slides */
@@ -291,6 +301,9 @@ rr { font-family: "RedactedR", regular;  }
    font-family: "SFMono-Regular",Consolas,"Liberation Mono",Menlo,Courier,monospace !important;
    margin: 0;
    padding: -10px;
+   font-size: 24pt !important; 
+   line-height: 32pt !important; 
+ 
 } 
 pre code { 
    font-family: "SFMono-Regular",Consolas,"Liberation Mono",Menlo,Courier,monospace !important;

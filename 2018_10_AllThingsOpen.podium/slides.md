@@ -1,5 +1,6 @@
+
 class: title
-# Turning wat into why
+# <br>Turning wat into why
 ## All Things Open, 2018
 ![Image](images/footer.svg)
 
@@ -41,9 +42,9 @@ Let's talk about javascript
 <pre><code class="javascript">false</code></pre>
 ---
 .righthead[JavaScript]
-<pre><code class="javascript">> "👩🏻‍🚀".split("")</code></pre>
+<pre><code class="javascript">.large[> ".emoji[👩🏻‍🚀]".split("")]</code></pre>
 --
-<pre><code class="javascript">["�","�","�","�",,"�","�"]</code></pre>
+<pre><code class="javascript">.large[[".w[�]",".w[�]",".w[�]",".w[�]",,".w[�]",".w[�]"]]</code></pre>
 ---
 background-image: url("images/wat.png")
 .wat[.wat-pos[wat]]
@@ -77,7 +78,7 @@ the problem with this example is to do with types
 <pre><code class="javascript">6</code></pre>
 <pre><code class="javascript">> 4 - 2</code></pre>
 <pre><code class="javascript">2</code></pre>
-<pre><code class="javascript">> 4 .mark[-] "2" // implicit coercion</code></pre>
+<pre><code class="javascript">> 4 .blue[-] "2" // implicit coercion</code></pre>
 <pre><code class="javascript">2</code></pre>
 <pre><code class="javascript">> 4 + "2"</code></pre>
 <pre><code class="javascript">"42"</code></pre>
@@ -91,14 +92,13 @@ the problem with this example is to do with types
 <pre><code class="javascript">6</code></pre>
 <pre><code class="javascript">> 4 - 2</code></pre>
 <pre><code class="javascript">2</code></pre>
-<pre><code class="javascript">> 4 .mark[-] "2" // implicit coercion</code></pre>
+<pre><code class="javascript">> 4 .blue[-] "2" // implicit coercion</code></pre>
 <pre><code class="javascript">2</code></pre>
-<pre><code class="javascript">> 4 .mark[+] "2" // overloaded operand</code></pre>
+<pre><code class="javascript">> 4 .blue[+] "2" // overloaded operand</code></pre>
 <pre><code class="javascript">"42"</code></pre>
 
 
 ???
-
 
 2: the plus is an overloaded operand. It can act as both numeric addition, or in this case, concatenation
 
@@ -123,18 +123,57 @@ This next example is to do with the difference in the equality operators
 This next example is to do with the difference in the equality operators
 ---
 .righthead[JavaScript]
-<pre><code class="javascript">> "👩🏻‍🚀".split("")</code></pre>
-<pre><code class="javascript">["�","�","�","�",,"�","�"]</code></pre>
---
-<pre><code class="javascript">> Array.from("👩🏻‍🚀")</code></pre>
---
-<pre><code class="javascript">["👩","🏻","‍","🚀"]</code></pre>
-
+<pre><code class="javascript">.large[> ".emoji[👩🏻‍🚀]".split("")]</code></pre>
+<pre><code class="javascript">.large[[".w[�]",".w[�]",".w[�]",".w[�]",,".w[�]",".w[�]"]]</code></pre>
 ???
 
 JS predates unicode, so javascript makes some... assumptions about variable length characters
 like the fact that they are each two characters.
+---
 
+.righthead[JavaScript]
+<pre><code class="javascript">.large[> ".emoji[👩🏻‍🚀]".split("")]</code></pre>
+<pre><code class="javascript">.large[[".w[�]",".w[�]",".w[�]",".w[�]",,".w[�]",".w[�]"]]</code></pre>
+<br>
+<pre><code class="javascript">.large[> Array.from(".emoji[👩🏻‍🚀]")]</code></pre>
+--
+<pre><code class="javascript">.large[[".emoji[👩]",".emoji[🏻]","‍",".emoji[🚀]"]]</code></pre>
+
+???
+
+What you should be using in this situation is Array.from
+
+This is the correct answer here.
+
+Because: Fun Emoji Fact - the light skin toned female astronaut emoji is
+
+a sequence of the Woman emoji
+
+the light skin tone fitzpatrick modifier (which allows you to define skin colour)
+
+a zero width joiner
+
+and the rocket ship emoji
+
+Which means we can also do stuff like string replacement
+
+---
+
+.righthead[JavaScript]
+<pre><code class="javascript">.large[> ".emoji[👩🏻‍🚀]".replace(".emoji[👩]",".emoji[👨]")]]</code></pre>
+--
+<pre><code class="javascript">.emoji[👨🏻‍🚀]</code></pre>
+--
+<br><br><br>
+.center[.lemoji[👩🏻‍🚀 ➡ 👨🏻‍🚀]]
+---
+
+class: title
+# JavaScript
+
+???
+
+Let's talk more about javascript
 
 ---
 .righthead[JavaScript]
@@ -195,12 +234,275 @@ class: center
 
 .footnotes[[ECMA-262, 9th Edition, 12.8.3](http://www.ecma-international.org/ecma-262/9.0/index.html#sec-addition-operator-plus)]
 ---
-class: center
+.righthead[ECMAScript]
+## .bluef[`a`] `+` .greenf[`b`]
 
-a + b
+--
+
+.bc[Convert .bluef[`a`] and .greenf[`b`] to primatives]
+
+--
+
+* .bc[`typeof()` in `undefined`, `null`, `boolean`, `number`, `string`]
+
+--
+
+* Try .bc[`.valueOf()`], else .bc[`.toString()`]
+
+--
+
+Are .bc[.bluef[`a`]] or .bc[.greenf[`b`]] a string?
+
+--
+
+Yes → .bc[Concatenate `String(`.bluef[`a`]`)` and `String(`.greenf[`b`]`)`]
+
+--
+
+No → .bc[Sum `Number(`.bluef[`a`]`)` and `Number(`.greenf[`b`]`)`]
+---
+.righthead[ECMAScript]
+## .bluef[`[]`] `+` .greenf[`{}`]
+--
+
+.bc[Convert .bluef[`[]`] to primative]
+
+--
+
+* .bc[`typeof()` in `undefined`, `null`, `boolean`, `number`, `string`]
+* Try .bc[`.valueOf()`]
+
+--
+<pre><code class="javascript">> [].valueOf()</code></pre>
+--
+<pre><code class="javascript">[]</code></pre>
+--
+<pre><code class="javascript">> typeof([])</code></pre>
+--
+<pre><code class="javascript">"object"</code></pre>
+---
+.righthead[ECMAScript]
+## .bluef[`[]`] `+` .greenf[`{}`]
+
+.bc[Convert .bluef[`[]`] to primative]
+
+* .bc[`typeof()` in `undefined`, `null`, `boolean`, `number`, `string`]
+* Try .bc[`.valueOf()`, else `.toString()`]
+
+--
+<pre><code class="javascript">> [].toString()</code></pre>
+--
+<pre><code class="javascript">""</code></pre>
+--
+<pre><code class="javascript">> typeof("")</code></pre>
+--
+<pre><code class="javascript">"string"</code></pre>
 
 ---
-## TODO
+.righthead[ECMAScript]
+## .bluef[`""`] `+` .greenf[`{}`]
+--
+
+.bc[Convert .greenf[`{}`] to primative]
+
+--
+
+* .bc[`typeof()` in `undefined`, `null`, `boolean`, `number`, `string`]
+* Try .bc[`.valueOf()`]
+
+--
+<pre><code class="javascript">> {}.valueOf()</code></pre>
+--
+<pre><code class="javascript">{}</code></pre>
+--
+<pre><code class="javascript">> typeof({})</code></pre>
+--
+<pre><code class="javascript">"object"</code></pre>
+---
+.righthead[ECMAScript]
+## .bluef[`""`] `+` .greenf[`{}`]
+
+.bc[Convert .greenf[`{}`] to primative]
+
+* .bc[`typeof()` in `undefined`, `null`, `boolean`, `number`, `string`]
+* Try .bc[`.valueOf()`, else `.toString()`]
+
+--
+<pre><code class="javascript">> {}.toString()</code></pre>
+--
+<pre><code class="javascript">"[object Object]"</code></pre>
+--
+<pre><code class="javascript">// ... huh?</code></pre>
+---
+.righthead[ECMAScript]
+
+.fix-tilt[aside]
+<pre><code class="javascript">> String({"a": "b"})</code></pre>
+<pre><code class="javascript">"[object Object]"</code></pre>
+--
+<br>
+<pre><code class="javascript">> JSON.stringify({"a": "b"})</code></pre>
+--
+<pre><code class="javascript">'{"a":"b"}'</code></pre>
+
+---
+.righthead[ECMAScript]
+## .bluef[`""`] `+` .greenf[`{}`]
+
+.bc[Convert .greenf[`{}`] to primative]
+
+* .bc[`typeof()` in `undefined`, `null`, `boolean`, `number`, `string`]
+* Try .bc[`.valueOf()`, else `.toString()`]
+
+--
+<pre><code class="javascript">> {}.toString()</code></pre>
+<pre><code class="javascript">"[object Object]"</code></pre>
+--
+<pre><code class="javascript">> typeof("[object Object]")</code></pre>
+--
+<pre><code class="javascript">"string"</code></pre>
+
+
+???
+
+As an aside: the default string representation of a object is the string object object
+
+A lot of other languages have printed representations of dictionaries or objects that are more useful, but not javascript.
+
+If you do want to get the string representation without altering the functionality of Obejcts, you can use JSON.stringify to natively check
+
+
+---
+.righthead[ECMAScript]
+## .bluef[`""`] `+` .greenf[`"[object Object]"`]
+--
+
+Are .bc[.bluef[`""`]] or .bc[.greenf[`"[object Object]"`]] a string?
+
+--
+
+Yes → .bc[Concatenate `String(`.bluef[`a`]`)` and `String(`.greenf[`b`]`)`]
+
+<pre><code class="javascript">> "" + "[object Object]"</code></pre>
+--
+<pre><code class="javascript">"[object Object]"</code></pre>
+
+---
+.righthead[ECMAScript]
+.bc[.bluef[`[] → ""`] &nbsp; &nbsp; .greenf[`{} → "[object Object]"`]]
+--
+<pre><code class="javascript">> [] + []</code></pre>
+--
+.code[.greyf[.bc[`≈ "" + ""`]]]
+--
+<pre><code class="javascript">""</code></pre>
+--
+<br><br>
+<pre><code class="javascript">> [] + {}</code></pre>
+--
+.code[.greyf[.bc[`≈ "" + "[object Object]"`]]]
+--
+<pre><code class="javascript">"[object Object]"</code></pre>
+
+---
+.righthead[ECMAScript]
+.bc[.bluef[`[] → ""`] &nbsp; &nbsp; .greenf[`{} → "[object Object]"`]]
+--
+<pre><code class="javascript">> {} + []</code></pre>
+---
+.righthead[ECMAScript]
+.bc[.bluef[`[] → ""`] &nbsp; &nbsp; .greenf[`{} → "[object Object]"`]]
+<pre><code class="javascript">> .blue[{}] + [] // code block</code></pre>
+
+???
+
+Code blocks are ignored, as a no-op
+
+So we can ignore that side, but the other side
+
+---
+.righthead[ECMAScript]
+.bc[.bluef[`[] → ""`] &nbsp; &nbsp; .greenf[`{} → "[object Object]"`]]
+<pre><code class="javascript">> .grey[{}] .green[+ []] // unary addition</code></pre>
+
+???
+
+the other side is a unary addition.
+---
+.righthead[ECMAScript]
+.bc[.bluef[`[] → ""`] &nbsp; &nbsp; .greenf[`{} → "[object Object]"`]]
+<pre><code class="javascript">> {} + []</code></pre>
+.code[.greyf[.bc[`≈ ` &nbsp &nbsp`+ ""`]]]
+
+???
+
+this is the equiv of casting the empty string, the primative from earlier, to a number
+
+Which in this case is zero
+
+~~~~~~~~~~~~
+
+--
+<pre><code class="javascript">0</code></pre>
+--
+<br><br>
+<pre><code class="javascript">> {} + {}</code></pre>
+--
+
+.code[.greyf[.bc[`≈ ` &nbsp &nbsp`+ "[object Object]"`]]]
+
+???
+
+unary addition on a string is the same as
+
+casting a string to a number
+
+Which works just about as well as you think
+
+--
+<pre><code class="javascript">NaN</code></pre>
+
+???
+
+Therefore.
+
+---
+.righthead[JavaScript]
+<pre><code class="javascript">> [] + []</code></pre>
+--
+<pre><code class="javascript">""</code></pre>
+--
+<pre><code class="javascript">> [] + {}</code></pre>
+--
+<pre><code class="javascript">"[object Object]"</code></pre>
+--
+<pre><code class="javascript">> {} + []</code></pre>
+--
+<pre><code class="javascript">0</code></pre>
+--
+<pre><code class="javascript">> {} + {}</code></pre>
+--
+<pre><code class="javascript">NaN</code></pre>
+
+---
+.righthead[JavaScript]
+<pre><code class="javascript">> [] + []</code></pre>
+<pre><code class="javascript">""</code></pre>
+<pre><code class="javascript">> [] + {}</code></pre>
+<pre><code class="javascript">"[object Object]"</code></pre>
+<pre><code class="javascript">> {} + []</code></pre>
+<pre><code class="javascript">0</code></pre>
+<pre><code class="javascript">> {} + {}</code></pre>
+<pre><code class="javascript">NaN</code></pre>
+
+.fix-notilt[<img src="images/tada.png">]
+
+???
+
+tada
+---
+
+TODO - confirm where commumative property introduced
 ---
 class: title
 # JavaScript is awe-ful
@@ -256,17 +558,17 @@ let's talk about Ruby
 <pre><code class="ruby">=> false # precedence</code></pre>
 ---
 .righthead[Ruby]
-<pre><code class="ruby">> .fix[not] true .mark[&&] false</code></pre>
+<pre><code class="ruby">> .green[not] true .blue[&&] false</code></pre>
 <pre><code class="ruby">=> true</code></pre>
-<pre><code class="ruby">> .fix[not] true .focus[and] false</code></pre>
+<pre><code class="ruby">> .green[not] true .red[and] false</code></pre>
 <pre><code class="ruby">=> false # precedence</code></pre>
 
 <br>
 <pre><code class="ruby"># Order of precedence</code></pre>
 
-<pre><code class="ruby">.mark[&&] , ||</code></pre>
-<pre><code class="ruby">.fix[not]</code></pre>
-<pre><code class="ruby">.focus[and] , or</code></pre>
+<pre><code class="ruby">.blue[&&] , ||</code></pre>
+<pre><code class="ruby">.green[not]</code></pre>
+<pre><code class="ruby">.red[and] , or</code></pre>
 
 ---
 class: title
@@ -330,7 +632,6 @@ class: title
 <pre><code class="python">>>> a == b</code></pre>
 <pre><code class="python">True</code></pre>
 
-.fix-correct[&nbsp; &nbsp; &nbsp;]
 .fix-tilt[fix]
 ---
 class: title
@@ -417,7 +718,7 @@ class: title
 
 ---
 .righthead[Perl]
-<pre><code class="perl">> if ("a" .fix[eq] "b") { # string equality</code></pre>
+<pre><code class="perl">> if ("a" .green[eq] "b") { # string equality</code></pre>
 <pre><code class="perl">&nbsp; &nbsp; print "true"</code></pre>
 <pre><code class="perl">} else {</code></pre>
 <pre><code class="perl">&nbsp; &nbsp; print "false" }</code></pre>
@@ -729,11 +1030,11 @@ class: title
 .fix-tilt[AVOID]
 ---
 .righthead[PowerShell]
-<pre><code class="powershell">PS> if (2 .fix[-gt] 1) { "true" }</code></pre>
+<pre><code class="powershell">PS> if (2 .green[-gt] 1) { "true" }</code></pre>
 <pre><code class="powershell">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;else&nbsp; { "false" }</code></pre>
 <pre><code class="powershell">true</code></pre>
 <br>
-<pre><code class="powershell">PS> if (2 .fix[-lt] 1) { "true" }</code></pre>
+<pre><code class="powershell">PS> if (2 .green[-lt] 1) { "true" }</code></pre>
 <pre><code class="powershell">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;else&nbsp; { "false" }</code></pre>
 <pre><code class="powershell">false</code></pre>
 .fix-tilt[FIX]

@@ -1,4 +1,5 @@
-#= Turning wat into why
+
+#= <br>Turning wat into why
 ## All Things Open, 2018
 @ footer.svg
 
@@ -25,8 +26,8 @@ js- > 1 === "1"
 js false 
 ---
 $$# JavaScript
-js- > "👩🏻‍🚀".split("")
-js  ["�","�","�","�",,"�","�"]
+js- .large[> ".emoji[👩🏻‍🚀]".split("")]
+js .large[[".w[�]",".w[�]",".w[�]",".w[�]",,".w[�]",".w[�]"]]
 ---
 ~@ wat.png
 .wat[.wat-pos[wat]]
@@ -55,7 +56,7 @@ js > 4 + 2
 js 6
 js > 4 - 2
 js 2
-js > 4 .mark[-] "2" // implicit coercion
+js > 4 .blue[-] "2" // implicit coercion
 js 2
 js > 4 + "2" 
 js "42"
@@ -69,14 +70,13 @@ js > 4 + 2
 js 6
 js > 4 - 2
 js 2
-js > 4 .mark[-] "2" // implicit coercion
+js > 4 .blue[-] "2" // implicit coercion
 js 2
-js > 4 .mark[+] "2" // overloaded operand
+js > 4 .blue[+] "2" // overloaded operand
 js "42"
 
 
 Note:
-
 
 2: the plus is an overloaded operand. It can act as both numeric addition, or in this case, concatenation
 
@@ -97,14 +97,47 @@ js  false
 Note: This next example is to do with the difference in the equality operators
 ---
 $$# JavaScript
-js > "👩🏻‍🚀".split("")
-js-  ["�","�","�","�",,"�","�"]
-js- > Array.from("👩🏻‍🚀")
-js ["👩","🏻","‍","🚀"]
-
+js .large[> ".emoji[👩🏻‍🚀]".split("")]
+js .large[[".w[�]",".w[�]",".w[�]",".w[�]",,".w[�]",".w[�]"]]
 Note: JS predates unicode, so javascript makes some... assumptions about variable length characters
 like the fact that they are each two characters. 
+---
 
+$$# JavaScript
+js .large[> ".emoji[👩🏻‍🚀]".split("")]
+js .large[[".w[�]",".w[�]",".w[�]",".w[�]",,".w[�]",".w[�]"]]
+<br>
+js- .large[> Array.from(".emoji[👩🏻‍🚀]")]
+js .large[[".emoji[👩]",".emoji[🏻]","‍",".emoji[🚀]"]]
+
+Note: What you should be using in this situation is Array.from
+
+This is the correct answer here. 
+
+Because: Fun Emoji Fact - the light skin toned female astronaut emoji is 
+
+a sequence of the Woman emoji
+
+the light skin tone fitzpatrick modifier (which allows you to define skin colour)
+
+a zero width joiner
+
+and the rocket ship emoji 
+
+Which means we can also do stuff like string replacement
+
+---
+
+$$# JavaScript
+js- .large[> ".emoji[👩🏻‍🚀]".replace(".emoji[👩]",".emoji[👨]")]]
+js- .emoji[👨🏻‍🚀]
+<br><br><br>
+.center[.lemoji[👩🏻‍🚀 ➡ 👨🏻‍🚀]]
+---
+
+#= JavaScript
+
+Note: Let's talk more about javascript
 
 ---
 $$# JavaScript
@@ -155,12 +188,233 @@ class: center
 
 vv [ECMA-262, 9th Edition, 12.8.3](http://www.ecma-international.org/ecma-262/9.0/index.html#sec-addition-operator-plus)
 ---
-class: center
+$$# ECMAScript
+## .bluef[`a`] `+` .greenf[`b`]
 
-a + b
+--
+
+.bc[Convert .bluef[`a`] and .greenf[`b`] to primatives]
+ 
+--
+
+  * .bc[`typeof()` in `undefined`, `null`, `boolean`, `number`, `string`]
+ 
+--
+ 
+  * Try .bc[`.valueOf()`], else .bc[`.toString()`]
+
+--
+
+Are .bc[.bluef[`a`]] or .bc[.greenf[`b`]] a string?
+
+--
+
+Yes → .bc[Concatenate `String(`.bluef[`a`]`)` and `String(`.greenf[`b`]`)`]
+
+--
+
+No → .bc[Sum `Number(`.bluef[`a`]`)` and `Number(`.greenf[`b`]`)`]
+---
+$$# ECMAScript
+## .bluef[`[]`] `+` .greenf[`{}`]
+--
+
+.bc[Convert .bluef[`[]`] to primative]
+
+-- 
+
+  * .bc[`typeof()` in `undefined`, `null`, `boolean`, `number`, `string`]
+  * Try .bc[`.valueOf()`]
+
+--
+js- > [].valueOf()
+js- []
+js- > typeof([])
+js "object"
+---
+$$# ECMAScript
+## .bluef[`[]`] `+` .greenf[`{}`]
+
+.bc[Convert .bluef[`[]`] to primative]
+
+  * .bc[`typeof()` in `undefined`, `null`, `boolean`, `number`, `string`]
+  * Try .bc[`.valueOf()`, else `.toString()`]
+
+--
+js- > [].toString()
+js- ""
+js- > typeof("")
+js  "string"
 
 ---
-## TODO
+$$# ECMAScript
+## .bluef[`""`] `+` .greenf[`{}`]
+--
+
+.bc[Convert .greenf[`{}`] to primative]
+
+-- 
+
+  * .bc[`typeof()` in `undefined`, `null`, `boolean`, `number`, `string`]
+  * Try .bc[`.valueOf()`]
+
+--
+js- > {}.valueOf()
+js- {}
+js- > typeof({})
+js "object"
+---
+$$# ECMAScript
+## .bluef[`""`] `+` .greenf[`{}`]
+
+.bc[Convert .greenf[`{}`] to primative]
+
+  * .bc[`typeof()` in `undefined`, `null`, `boolean`, `number`, `string`]
+  * Try .bc[`.valueOf()`, else `.toString()`]
+
+--
+js- > {}.toString()
+js- "[object Object]"
+js // ... huh?
+---
+$$# ECMAScript
+
+.fix-tilt[aside]
+js > String({"a": "b"})
+js- "[object Object]"
+<br>
+js- > JSON.stringify({"a": "b"})
+js '{"a":"b"}'
+
+---
+$$# ECMAScript
+## .bluef[`""`] `+` .greenf[`{}`]
+
+.bc[Convert .greenf[`{}`] to primative]
+
+  * .bc[`typeof()` in `undefined`, `null`, `boolean`, `number`, `string`]
+  * Try .bc[`.valueOf()`, else `.toString()`]
+
+--
+js > {}.toString()
+js- "[object Object]"
+js- > typeof("[object Object]")
+js "string"
+
+
+Note: As an aside: the default string representation of a object is the string object object
+
+A lot of other languages have printed representations of dictionaries or objects that are more useful, but not javascript.
+
+If you do want to get the string representation without altering the functionality of Obejcts, you can use JSON.stringify to natively check
+
+
+---
+$$# ECMAScript
+## .bluef[`""`] `+` .greenf[`"[object Object]"`]
+--
+
+Are .bc[.bluef[`""`]] or .bc[.greenf[`"[object Object]"`]] a string?
+
+--
+
+Yes → .bc[Concatenate `String(`.bluef[`a`]`)` and `String(`.greenf[`b`]`)`]
+
+js- > "" + "[object Object]"
+js "[object Object]"
+
+---
+$$# ECMAScript
+.bc[.bluef[`[] → ""`]  &nbsp; &nbsp;  .greenf[`{} → "[object Object]"`]]
+--
+js- > [] + []
+.code[.greyf[.bc[`≈ "" + ""`]]]
+--
+js- ""
+<br><br>
+js- > [] + {}
+.code[.greyf[.bc[`≈ "" + "[object Object]"`]]]
+--
+js "[object Object]"
+
+---
+$$# ECMAScript
+.bc[.bluef[`[] → ""`]  &nbsp; &nbsp;  .greenf[`{} → "[object Object]"`]]
+--
+js > {} + []
+---
+$$# ECMAScript
+.bc[.bluef[`[] → ""`]  &nbsp; &nbsp;  .greenf[`{} → "[object Object]"`]]
+js > .blue[{}] + [] // code block
+
+Note: Code blocks are ignored, as a no-op
+
+So we can ignore that side, but the other side
+
+---
+$$# ECMAScript
+.bc[.bluef[`[] → ""`]  &nbsp; &nbsp;  .greenf[`{} → "[object Object]"`]]
+js > .grey[{}] .green[+ []] // unary addition
+
+Note: the other side is a unary addition. 
+---
+$$# ECMAScript
+.bc[.bluef[`[] → ""`]  &nbsp; &nbsp;  .greenf[`{} → "[object Object]"`]]
+js > {} + []
+.code[.greyf[.bc[`≈ ` &nbsp &nbsp`+ ""`]]]
+
+Note: this is the equiv of casting the empty string, the primative from earlier, to a number
+
+Which in this case  is zero
+
+~~~~~~~~~~~~
+
+--
+js- 0
+<br><br>
+js- > {} + {}
+
+.code[.greyf[.bc[`≈ ` &nbsp &nbsp`+ "[object Object]"`]]]
+
+Note: unary addition on a string is the same as
+
+casting a string to a number
+
+Which works just about as well as you think
+
+--
+js NaN
+
+Note: Therefore.
+
+---
+$$# JavaScript
+js- > [] + []
+js- ""
+js- > [] + {}
+js- "[object Object]"
+js- > {} + []
+js- 0
+js- > {} + {}
+js NaN
+
+---
+$$# JavaScript
+js > [] + []
+js ""
+js > [] + {}
+js "[object Object]"
+js > {} + []
+js 0
+js > {} + {}
+js NaN
+
+.fix-notilt[<img src="images/tada.png">]
+
+Note: tada
+---
+
+TODO - confirm where commumative property introduced
 ---
 #= JavaScript is awe-ful
 ---
@@ -203,17 +457,17 @@ rb > not true and false
 rb => false  # precedence
 ---
 $$# Ruby
-rb > .fix[not] true .mark[&&] false
+rb > .green[not] true .blue[&&] false
 rb => true
-rb > .fix[not] true .focus[and] false
+rb > .green[not] true .red[and] false
 rb => false  # precedence
 
 <br>
 rb # Order of precedence
 
-rb .mark[&&] , ||
-rb .fix[not]
-rb .focus[and] , or
+rb .blue[&&] , ||
+rb .green[not]
+rb .red[and] , or
 
 ---
 #= Python
@@ -262,7 +516,6 @@ py >>> a = 257; b = 257
 py >>> a == b
 py True
 
-.fix-correct[&nbsp; &nbsp; &nbsp;]
 .fix-tilt[fix]
 ---
 #= Java
@@ -337,7 +590,7 @@ pl true
 
 ---
 $$# Perl
-pl > if ("a" .fix[eq] "b") { # string equality 
+pl > if ("a" .green[eq] "b") { # string equality 
 pl &nbsp; &nbsp; print "true" 
 pl } else { 
 pl &nbsp; &nbsp; print "false" }
@@ -595,11 +848,11 @@ ps .ps-error[The '<' operator is reserved for future use.]
 .fix-tilt[AVOID]
 ---
 $$# PowerShell
-ps PS> if (2 .fix[-gt] 1) { "true"  }
+ps PS> if (2 .green[-gt] 1) { "true"  }
 ps &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;else&nbsp;  { "false" }
 ps true
 <br> 
-ps PS> if (2 .fix[-lt] 1) { "true"  }
+ps PS> if (2 .green[-lt] 1) { "true"  }
 ps &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;else&nbsp;  { "false" }
 ps false
 .fix-tilt[FIX]
