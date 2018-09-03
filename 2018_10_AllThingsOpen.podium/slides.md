@@ -356,6 +356,7 @@ No → .bc[Sum `Number(`.bluef[`a`]`)` and `Number(`.greenf[`b`]`)`]
 
 --
 <pre><code class="javascript">> {}.toString()</code></pre>
+--
 <pre><code class="javascript">"[object Object]"</code></pre>
 --
 <pre><code class="javascript">> typeof("[object Object]")</code></pre>
@@ -383,6 +384,7 @@ Are .bc[.bluef[`""`]] or .bc[.greenf[`"[object Object]"`]] a string?
 
 Yes → .bc[Concatenate `String(`.bluef[`a`]`)` and `String(`.greenf[`b`]`)`]
 
+--
 <pre><code class="javascript">> "" + "[object Object]"</code></pre>
 --
 <pre><code class="javascript">"[object Object]"</code></pre>
@@ -412,7 +414,9 @@ Yes → .bc[Concatenate `String(`.bluef[`a`]`)` and `String(`.greenf[`b`]`)`]
 ---
 .righthead[ECMAScript]
 .bc[.bluef[`[] → ""`] &nbsp; &nbsp; .greenf[`{} → "[object Object]"`]]
-<pre><code class="javascript">> .blue[{}] + [] // code block</code></pre>
+<pre><code class="javascript">> .blue[{}] + [] // empty block</code></pre>
+
+.footnotes[[ECMAScript 262 § 13.2 Block](https://tc39.github.io/ecma262/#prod-Block)]
 
 ???
 
@@ -425,9 +429,11 @@ So we can ignore that side, but the other side
 .bc[.bluef[`[] → ""`] &nbsp; &nbsp; .greenf[`{} → "[object Object]"`]]
 <pre><code class="javascript">> .grey[{}] .green[+ []] // unary addition</code></pre>
 
+.footnotes[[ECMAScript 262 § 12.5.6 Unary `+` Operator](https://tc39.github.io/ecma262/#sec-unary-plus-operator)]
+
 ???
 
-the other side is a unary addition.
+the other side is a unary addition, which casts the object to number
 ---
 .righthead[ECMAScript]
 .bc[.bluef[`[] → ""`] &nbsp; &nbsp; .greenf[`{} → "[object Object]"`]]
@@ -501,16 +507,112 @@ Therefore.
 
 tada
 ---
+.righthead[JavaScript]
+<pre><code class="javascript">> [] + []</code></pre>
+<pre><code class="javascript">""</code></pre>
+<pre><code class="javascript">> [] + {}</code></pre>
+<pre><code class="javascript">"[object Object]"</code></pre>
+<pre><code class="javascript">> {} + []</code></pre>
+<pre><code class="javascript">0</code></pre>
+<pre><code class="javascript">> {} + {}</code></pre>
+<pre><code class="javascript">NaN</code></pre>
 
-TODO - confirm where commumative property introduced
+.fix-notilt[<img src="images/tadoh.png">]
+
+???
+
+but, technically, this isn't completely right
+
+I mean, everything I've just said is accurate, but the problem is that we were using flawed logic.
+
+That code block is only intepreted as a codeblock if it's leading the statement
+
+In these examples, we can't rely on the console interpreting things for us.
+
+We should be using actual IO operations, variables, etc, to replicate what we would get in production code.
+
+---
+.righthead[ECMAScript]
+
+.code[`> var` .bluef[.bc[`a`]] ` = []; var` .greenf[.bc[`b`]] ` = {}`]
+
+--
+
+.code[.bc[> .bluef[`a`] + .bluef[`a`]]]
+--
+<pre><code class="javascript">""</code></pre>
+--
+.code[.bc[> .bluef[`a`] + .greenf[`b`]]]
+--
+<pre><code class="javascript">"[object Object]"</code></pre>
+--
+.code[.bc[> .greenf[`b`] + .bluef[`a`]]]
+--
+<pre><code class="javascript">"[object Object]"</code></pre>
+--
+.code[.bc[> .greenf[`b`] + .greenf[`b`]]]
+--
+<pre><code class="javascript">NaN</code></pre>
+
+
+---
+
+.righthead[ECMAScript]
+
+.code[`> var` .bluef[.bc[`a`]] ` = []; var` .greenf[.bc[`b`]] ` = {}`]
+
+.code[.bc[> .bluef[`a`] + .bluef[`a`]]]
+<pre><code class="javascript">""</code></pre>
+.code[.bc[> .bluef[`a`] + .greenf[`b`]]]
+<pre><code class="javascript">"[object Object]"</code></pre>
+.code[.bc[> .greenf[`b`] + .bluef[`a`]]]
+<pre><code class="javascript">"[object Object]"</code></pre>
+.code[.bc[> .greenf[`b`] + .greenf[`b`]]]
+<pre><code class="javascript">NaN</code></pre>
+
+.fix-tilt-long[commutative]
+.fix-notilt[<img src="images/tada.png">]
+
+???
+
+Commutative - same forwards as is backwards
+---
+class: title
+# JavaScript isn't awful
+
+???
+
+JS isn't awful
 ---
 class: title
 # JavaScript is awe-ful
+
+???
+
+It's awe-ful, full of awe.
+
+If you're interseted I have an entire full talk where I dive deeper in to JS, called Javascript is Awe-ful.
+
+But to summarise
+
+It's a 22 year old language that is 100% backwards compatible. JavaScript written in 1995 will work today.
+
+But if you don't understand the design constraints and considerations, you might think of these wats as weird little edge cases.
+
+
 ---
 class: title
 # So don't use it.
+???
+
+There are so many different languages that you can use in the browser!
+
+You can use... JavaScript
+
+Or
 ---
 # Languages that compile to JavaScript
+
 ---
 # Languages that compile to JavaScript
 
@@ -520,9 +622,9 @@ class: title
 
 You could use another language and compile that down to JavaScript
 
-The Coffee Script GitHub wiki lists over 340 examples
+One of those in there is one I helped write, Batavia. Come see me after, I have stickers!
 
-Take another language and convert it to javascript
+In all seriousness, you can take literally *ANY* another language and convert it to javascript
 
 That'll solve all your problems right?
 ---

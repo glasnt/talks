@@ -296,7 +296,7 @@ $$# ECMAScript
   * Try .bc[`.valueOf()`, else `.toString()`]
 
 --
-js > {}.toString()
+js- > {}.toString()
 js- "[object Object]"
 js- > typeof("[object Object]")
 js "string"
@@ -320,6 +320,7 @@ Are .bc[.bluef[`""`]] or .bc[.greenf[`"[object Object]"`]] a string?
 
 Yes → .bc[Concatenate `String(`.bluef[`a`]`)` and `String(`.greenf[`b`]`)`]
 
+--
 js- > "" + "[object Object]"
 js "[object Object]"
 
@@ -345,7 +346,9 @@ js > {} + []
 ---
 $$# ECMAScript
 .bc[.bluef[`[] → ""`]  &nbsp; &nbsp;  .greenf[`{} → "[object Object]"`]]
-js > .blue[{}] + [] // code block
+js > .blue[{}] + [] // empty block
+
+vv [ECMAScript 262 § 13.2 Block](https://tc39.github.io/ecma262/#prod-Block)
 
 Note: Code blocks are ignored, as a no-op
 
@@ -356,7 +359,9 @@ $$# ECMAScript
 .bc[.bluef[`[] → ""`]  &nbsp; &nbsp;  .greenf[`{} → "[object Object]"`]]
 js > .grey[{}] .green[+ []] // unary addition
 
-Note: the other side is a unary addition. 
+vv [ECMAScript 262 § 12.5.6 Unary `+` Operator](https://tc39.github.io/ecma262/#sec-unary-plus-operator)
+
+Note: the other side is a unary addition, which casts the object to number
 ---
 $$# ECMAScript
 .bc[.bluef[`[] → ""`]  &nbsp; &nbsp;  .greenf[`{} → "[object Object]"`]]
@@ -413,14 +418,100 @@ js NaN
 
 Note: tada
 ---
+$$# JavaScript
+js > [] + []
+js ""
+js > [] + {}
+js "[object Object]"
+js > {} + []
+js 0
+js > {} + {}
+js NaN
 
-TODO - confirm where commumative property introduced
+.fix-notilt[<img src="images/tadoh.png">]
+
+Note: but, technically, this isn't completely right
+
+I mean, everything I've just said is accurate, but the problem is that we were using flawed logic. 
+
+That code block is only intepreted as a codeblock if it's leading the statement
+
+In these examples, we can't rely on the console interpreting things for us. 
+
+We should be using actual IO operations, variables, etc, to replicate what we would get in production code. 
+
+---
+$$# ECMAScript
+
+.code[`> var` .bluef[.bc[`a`]] ` = []; var` .greenf[.bc[`b`]] ` = {}`]
+
+--
+
+.code[.bc[> .bluef[`a`] + .bluef[`a`]]]
+--
+js- ""
+.code[.bc[> .bluef[`a`] + .greenf[`b`]]]
+--
+js- "[object Object]"
+.code[.bc[> .greenf[`b`] + .bluef[`a`]]]
+--
+js- "[object Object]"
+.code[.bc[> .greenf[`b`] + .greenf[`b`]]]
+--
+js NaN
+
+
+---
+
+$$# ECMAScript
+
+.code[`> var` .bluef[.bc[`a`]] ` = []; var` .greenf[.bc[`b`]] ` = {}`]
+
+.code[.bc[> .bluef[`a`] + .bluef[`a`]]]
+js ""
+.code[.bc[> .bluef[`a`] + .greenf[`b`]]]
+js "[object Object]"
+.code[.bc[> .greenf[`b`] + .bluef[`a`]]]
+js "[object Object]"
+.code[.bc[> .greenf[`b`] + .greenf[`b`]]]
+js NaN
+
+.fix-tilt-long[commutative]
+.fix-notilt[<img src="images/tada.png">]
+
+Note: Commutative - same forwards as is backwards
+---
+#= JavaScript isn't awful
+
+Note: JS isn't awful
 ---
 #= JavaScript is awe-ful
+
+Note: 
+
+It's awe-ful, full of awe. 
+
+If you're interseted I have an entire full talk where I dive deeper in to JS, called Javascript is Awe-ful. 
+
+But to summarise
+
+It's a 22 year old language that is 100% backwards compatible. JavaScript written in 1995 will work today. 
+
+But if you don't understand the design constraints and considerations, you might think of these wats as weird little edge cases.
+
+
 ---
 #= So don't use it.
+Note: 
+
+There are so many different languages that you can use in the browser!
+
+You can use... JavaScript
+
+Or
 ---
 # Languages that compile to JavaScript
+
 ---
 # Languages that compile to JavaScript
 
@@ -428,9 +519,9 @@ TODO - confirm where commumative property introduced
  
 Note: You could use another language and compile that down to JavaScript
 
-The Coffee Script GitHub wiki lists over 340 examples
+One of those in there is one I helped write, Batavia. Come see me after, I have stickers!
 
-Take another language and convert it to javascript
+In all seriousness, you can take literally *ANY* another language and convert it to javascript
 
 That'll solve all your problems right?
 ---

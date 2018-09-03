@@ -135,6 +135,26 @@ li cite {
     bottom: 1.1em;
     text-align: center;
 }
+.fix-tilt-long { 
+    position: absolute;
+    font-size: 64pt;
+    max-width: 400px;
+    right: 2em;
+    line-height: 1;
+    bottom: 1em;
+    z-index: 111;
+    color: grey;
+    font-family: monospace; 
+    font-weight: bold;
+    width: 100%;
+    text-align: center;
+    -webkit-transform: rotate(-15deg);
+    -moz-transform: rotate(-15deg);
+    -ms-transform: rotate(-15deg);
+    -o-transform: rotate(-15deg);
+    filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+
+ }
 .fix-tilt { 
     position: absolute;
     font-size: 64pt;
