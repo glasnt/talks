@@ -114,9 +114,9 @@ This next example is to do with the difference in the equality operators
 
 ---
 .righthead[JavaScript]
-<pre><code class="javascript">> 1 == "1" // with type coercion</code></pre>
+<pre><code class="javascript">> 1 .blue[==] "1" // with type coercion</code></pre>
 <pre><code class="javascript">true</code></pre>
-<pre><code class="javascript">> 1 === "1" // without type coercion</code></pre>
+<pre><code class="javascript">> 1 .blue[===] "1" // without type coercion</code></pre>
 <pre><code class="javascript">false</code></pre>
 ???
 
@@ -518,6 +518,7 @@ tada
 <pre><code class="javascript">NaN</code></pre>
 
 .fix-notilt[<img src="images/tadoh.png">]
+.footnotes[[js-repl-goal](https://twitter.com/littledan/status/1036991541154394115)]
 
 ???
 
@@ -703,38 +704,306 @@ class: title
 ---
 .righthead[Terminal]
 `$ python`
+
+???
+
+In Python, when you load the interpreter, you're probably loading CPython. An optimisation of CPython is to create a list of integers from -5 to 256 for you.
+--
 .righthead[Python]
-<pre><code class="python">>>> a = 256</code></pre>
---
-<pre><code class="python">>>> b = 256</code></pre>
---
-<pre><code class="python">>>> a is b</code></pre>
---
-<pre><code class="python">True</code></pre>
+<pre><code class="python">>>> .white[a=b]</code></pre>
+<pre><code class="python">.white[.]</code></pre>
+<pre><code class="python">.white[.]</code></pre>
+<pre><code class="python">.white[.]</code></pre>
 .righthead[CPython Cache]
 <pre><code class="bash">&nbsp;</code></pre>
-<pre><code class="bash">[ -5 ][ -4 ][...][ 254 ][ 255 ][ 256 ][~][ 257 ][ 257 ]</code></pre>
+
+<pre><code class="bash">[ -5 ][ -4 ][...][ 254 ][ 255 ][ 256 ]</code></pre>
+???
+An optimisation of CPython is to create a list of integers from -5 to 256 for you.
+---
+.righthead[Terminal]
+`$ python`
+.righthead[Python]
+<pre><code class="python">>>> a = 256</code></pre>
+<pre><code class="python">.white[.]</code></pre>
+<pre><code class="python">.white[.]</code></pre>
+<pre><code class="python">.white[.]</code></pre>
+.righthead[CPython Cache]
+<pre><code class="bash">&nbsp;</code></pre>
+
+<pre><code class="bash">[ -5 ][ -4 ][...][ 254 ][ 255 ][ 256 ]</code></pre>
+<pre><code class="bash">.white[.................................]a</code></pre>
+
+???
+
+so when you assign a variable, it can use one you prepared earlier
+---
+.righthead[Terminal]
+`$ python`
+.righthead[Python]
+<pre><code class="python">>>> a = 256</code></pre>
+<pre><code class="python">>>> b = 256</code></pre>
+<pre><code class="python">.white[.]</code></pre>
+<pre><code class="python">.white[.]</code></pre>
+.righthead[CPython Cache]
+<pre><code class="bash">&nbsp;</code></pre>
+<pre><code class="bash">[ -5 ][ -4 ][...][ 254 ][ 255 ][ 256 ]</code></pre>
+<pre><code class="bash">.white[.................................]a b</code></pre>
+
+---
+.righthead[Terminal]
+`$ python`
+.righthead[Python]
+<pre><code class="python">>>> a = 256</code></pre>
+<pre><code class="python">>>> b = 256</code></pre>
+<pre><code class="python">>>> a is b</code></pre>
+<pre><code class="python">.white[.]</code></pre>
+.righthead[CPython Cache]
+<pre><code class="bash">&nbsp;</code></pre>
+<pre><code class="bash">[ -5 ][ -4 ][...][ 254 ][ 255 ][ 256 ]</code></pre>
 <pre><code class="bash">.white[.................................]a b</code></pre>
 
 ???
 
-1: In Python, when you load the interpreter, you're loading CPython. An optimisation of CPython is to create a list of integers from -5 to 256 for you.
+`is` when we talk about "is" here, we're doing an identity check.
 
-2: so when you assign a variable, it can use one you prepared earlier
-
-6: "IS" when we talk about "is" here, we're doing an identity check. Are A and B the same object. Yes!
+Identity is a check to see if two objects are the same
 ---
+.righthead[Terminal]
+`$ python`
 .righthead[Python]
-<pre><code class="python">>>> a = 257; b = 257</code></pre>
+<pre><code class="python">>>> a = 256</code></pre>
+<pre><code class="python">>>> b = 256</code></pre>
+<pre><code class="python">>>> a is b</code></pre>
+<pre><code class="python">.white[.]</code></pre>
+.righthead[CPython Cache]
+<pre><code class="bash">&nbsp;</code></pre>
+<pre><code class="bash">[ -5 ][ -4 ][...][ 254 ][ 255 ][ .green[256] ]</code></pre>
+<pre><code class="bash">.white[.................................]a b</code></pre>
+
+???
+
+Are A and B the same object. Yes!
+
+---
+
+.righthead[Terminal]
+`$ python`
+.righthead[Python]
+<pre><code class="python">>>> a = 256</code></pre>
+<pre><code class="python">>>> b = 256</code></pre>
 <pre><code class="python">>>> a is b</code></pre>
 <pre><code class="python">True</code></pre>
+.righthead[CPython Cache]
+<pre><code class="bash">&nbsp;</code></pre>
+<pre><code class="bash">[ -5 ][ -4 ][...][ 254 ][ 255 ][ .green[256] ]</code></pre>
+<pre><code class="bash">.white[.................................]a b</code></pre>
+
+???
+
+Are A and B the same object. Yes!
+
+---
+.righthead[Terminal]
+`$ python`
+.righthead[Python]
+<pre><code class="python">>>> .white[a=b]</code></pre>
+<pre><code class="python">.white[.]</code></pre>
+<pre><code class="python">.white[.]</code></pre>
+<pre><code class="python">.white[.]</code></pre>
+.righthead[CPython Cache]
+<pre><code class="bash">&nbsp;</code></pre>
+
+<pre><code class="bash">[ -5 ][ -4 ][...][ 254 ][ 255 ][ 256 ]</code></pre>
+???
+But when we use integers outside of our cache, things change
+
+---
+.righthead[Terminal]
+`$ python`
+.righthead[Python]
+<pre><code class="python">>>> a = 257</code></pre>
+<pre><code class="python">.white[.]</code></pre>
+<pre><code class="python">.white[.]</code></pre>
+<pre><code class="python">.white[.]</code></pre>
+.righthead[CPython Cache]
+<pre><code class="bash">&nbsp;</code></pre>
+
+<pre><code class="bash">[ -5 ][ -4 ][...][ 254 ][ 255 ][ 256 ][~][ 257 ]</code></pre>
+<pre><code class="bash">.white[...........................................]a</code></pre>
+???
+When we exceed the predeclared array, the value is assigned somewhere else in memory
+
+
+---
+.righthead[Terminal]
+`$ python`
+.righthead[Python]
+<pre><code class="python">>>> a = 257</code></pre>
+<pre><code class="python">>>> b = 257</code></pre>
+<pre><code class="python">.white[.]</code></pre>
+<pre><code class="python">.white[.]</code></pre>
+.righthead[CPython Cache]
+<pre><code class="bash">&nbsp;</code></pre>
+
+<pre><code class="bash">[ -5 ][ -4 ][...][ 254 ][ 255 ][ 256 ][~][ 257 ][ 257 ]</code></pre>
+<pre><code class="bash">.white[............................................]a.white[......]b</code></pre>
+???
+And when we declare B we also store that as it's own value
+
+---
+.righthead[Terminal]
+`$ python`
+.righthead[Python]
+<pre><code class="python">>>> a = 257</code></pre>
+<pre><code class="python">>>> b = 257</code></pre>
+<pre><code class="python">>>> a is b</code></pre>
+<pre><code class="python">.white[.]</code></pre>
+.righthead[CPython Cache]
+<pre><code class="bash">&nbsp;</code></pre>
+
+<pre><code class="bash">[ -5 ][ -4 ][...][ 254 ][ 255 ][ 256 ][~][ 257 ][ 257 ]</code></pre>
+<pre><code class="bash">.white[............................................]a.white[......]b</code></pre>
+???
+
+So when we run the check
+---
+.righthead[Terminal]
+`$ python`
+.righthead[Python]
+<pre><code class="python">>>> a = 257</code></pre>
+<pre><code class="python">>>> b = 257</code></pre>
+<pre><code class="python">>>> a is b</code></pre>
+<pre><code class="python">.white[.]</code></pre>
+.righthead[CPython Cache]
+<pre><code class="bash">&nbsp;</code></pre>
+
+<pre><code class="bash">[ -5 ][ -4 ][...][ 254 ][ 255 ][ 256 ][~][ .red[257] ][ .red[257] ]</code></pre>
+<pre><code class="bash">.white[............................................]a.white[......]b</code></pre>
+???
+
+The objects aren't the same
+
+---
+.righthead[Terminal]
+`$ python`
+.righthead[Python]
+<pre><code class="python">>>> a = 257</code></pre>
+<pre><code class="python">>>> b = 257</code></pre>
+<pre><code class="python">>>> a is b</code></pre>
+<pre><code class="python">False</code></pre>
+.righthead[CPython Cache]
+<pre><code class="bash">&nbsp;</code></pre>
+
+<pre><code class="bash">[ -5 ][ -4 ][...][ 254 ][ 255 ][ 256 ][~][ .red[257] ][ .red[257] ]</code></pre>
+<pre><code class="bash">.white[............................................]a.white[......]b</code></pre>
+???
+
+So the check is false
+Even thought he variables have the same value, they aren't the same value, so the identity check fails.
+---
+.righthead[Terminal]
+`$ python`
+.righthead[Python]
+<pre><code class="python">>>> a = 257; b = 257;</code></pre>
+<pre><code class="python">.white[.]</code></pre>
+<pre><code class="python">.white[.]</code></pre>
+<pre><code class="python">.white[.]</code></pre>
+.righthead[CPython Cache]
+<pre><code class="bash">&nbsp;</code></pre>
+
+<pre><code class="bash">[ -5 ][ -4 ][...][ 254 ][ 255 ][ 256 ]</code></pre>
+???
+
+Here, the one line of code with a semicolon
+
+a quite rare character to see in python code, btw
+
+the interpreter processes this all as one code object
+---
+.righthead[Terminal]
+`$ python`
+.righthead[Python]
+<pre><code class="python">>>> a = 257; b = 257;</code></pre>
+<pre><code class="python">.white[.]</code></pre>
+<pre><code class="python">.white[.]</code></pre>
+<pre><code class="python">.white[.]</code></pre>
+.righthead[CPython Cache]
+<pre><code class="bash">&nbsp;</code></pre>
+
+<pre><code class="bash">[ -5 ][ -4 ][...][ 254 ][ 255 ][ 256 ][~][ 257 ]</code></pre>
+<pre><code class="bash">.white[...........................................]a b</code></pre>
+???
+
+so it's allowed to optimise
+and so it only creates one constant
+---
+.righthead[Terminal]
+`$ python`
+.righthead[Python]
+<pre><code class="python">>>> a = 257; b = 257;</code></pre>
+<pre><code class="python">>>> a is b</code></pre>
+<pre><code class="python">.white[.]</code></pre>
+<pre><code class="python">.white[.]</code></pre>
+.righthead[CPython Cache]
+<pre><code class="bash">&nbsp;</code></pre>
+
+<pre><code class="bash">[ -5 ][ -4 ][...][ 254 ][ 255 ][ 256 ][~][ 257 ]</code></pre>
+<pre><code class="bash">.white[...........................................]a b</code></pre>
+???
+
+So when we do our identity check again
+---
+.righthead[Terminal]
+`$ python`
+.righthead[Python]
+<pre><code class="python">>>> a = 257; b = 257;</code></pre>
+<pre><code class="python">>>> a is b</code></pre>
+<pre><code class="python">.white[.]</code></pre>
+<pre><code class="python">.white[.]</code></pre>
+.righthead[CPython Cache]
+<pre><code class="bash">&nbsp;</code></pre>
+
+<pre><code class="bash">[ -5 ][ -4 ][...][ 254 ][ 255 ][ 256 ][~][ .green[257] ]</code></pre>
+<pre><code class="bash">.white[...........................................]a b</code></pre>
+???
+
+The objects are the same
+---
+.righthead[Terminal]
+`$ python`
+.righthead[Python]
+<pre><code class="python">>>> a = 257; b = 257;</code></pre>
+<pre><code class="python">>>> a is b</code></pre>
+<pre><code class="python">True</code></pre>
+<pre><code class="python">.white[.]</code></pre>
+.righthead[CPython Cache]
+<pre><code class="bash">&nbsp;</code></pre>
+
+<pre><code class="bash">[ -5 ][ -4 ][...][ 254 ][ 255 ][ 256 ][~][ .green[257] ]</code></pre>
+<pre><code class="bash">.white[...........................................]a b</code></pre>
+???
+So our check succeeds
+
 ---
 .righthead[Python]
-<pre><code class="python">>>> a = 257; b = 257</code></pre>
-<pre><code class="python">>>> a == b</code></pre>
+<pre><code class="python">>>> a = 257</code></pre>
+<pre><code class="python">>>> b = 257</code></pre>
+<pre><code class="python">>>> a is b</code></pre>
+<pre><code class="python">False</code></pre>
+???
+
+if what we wanted to do here was an equality check, checking if the values were equal,
+---
+.righthead[Python]
+<pre><code class="python">>>> a = 257</code></pre>
+<pre><code class="python">>>> b = 257</code></pre>
+<pre><code class="python">>>> a .green[==] b</code></pre>
 <pre><code class="python">True</code></pre>
 
 .fix-tilt[fix]
+???
+we need to use double equals here instead.
 ---
 class: title
 # Java
@@ -757,6 +1026,7 @@ class: title
 --
 <pre><code class="java">false</code></pre>
 --
+
 ---
 .righthead[Java]
 <pre><code class="java">java> Integer a = 128;</code></pre>
@@ -765,14 +1035,26 @@ class: title
 <pre><code class="java">true</code></pre>
 <pre><code class="java">java> a >= b</code></pre>
 <pre><code class="java">true</code></pre>
-<pre><code class="java">java> a.equals(b)</code></pre>
+<pre><code class="java">java> a .blue[==] b /* identity ✱ /</code></pre>
+<pre><code class="java">false</code></pre>
+
+???
+---
+.righthead[Java]
+<pre><code class="java">java> Integer a = 128;</code></pre>
+<pre><code class="java">java> Integer b = 128;</code></pre>
+<pre><code class="java">java> a <= b</code></pre>
+<pre><code class="java">true</code></pre>
+<pre><code class="java">java> a >= b</code></pre>
+<pre><code class="java">true</code></pre>
+<pre><code class="java">java> a .green[.equals] (b)</code></pre>
 <pre><code class="java">true</code></pre>
 .fix-tilt[fix #1]
 
 ---
 .righthead[Java]
-<pre><code class="java">java> int a = 128;</code></pre>
-<pre><code class="java">java> int b = 128;</code></pre>
+<pre><code class="java">java> .green[int] a = 128;</code></pre>
+<pre><code class="java">java> .green[int] b = 128;</code></pre>
 <pre><code class="java">java> a <= b</code></pre>
 <pre><code class="java">true</code></pre>
 <pre><code class="java">java> a >= b</code></pre>
@@ -811,7 +1093,7 @@ class: title
 
 ---
 .righthead[Perl]
-<pre><code class="perl">> if ("a" == "b") { # numeric equality</code></pre>
+<pre><code class="perl">> if ("a" .blue[==] "b") { # numeric equality</code></pre>
 <pre><code class="perl">&nbsp; &nbsp; print "true"</code></pre>
 <pre><code class="perl">} else {</code></pre>
 <pre><code class="perl">&nbsp; &nbsp; print "false" }</code></pre>
@@ -850,6 +1132,7 @@ class: title
 ???
 
 Bash isn't designed to do raw arithmetic
+Bash is a shell
 
 2: But it can if we give it the correct syntax
 Ah
@@ -892,7 +1175,6 @@ class: title
 <pre><code class="haskell">λ> b</code></pre>
 --
 <pre><code class="haskell">5</code></pre>
---
 
 ---
 
@@ -916,15 +1198,25 @@ class: title
 ---
 .righthead[Haskell]
 <pre><code class="haskell">fib :: Int -> Int</code></pre>
-<pre><code class="haskell">fib 0 = 0</code></pre>
-<pre><code class="haskell">fib 1 = 1</code></pre>
+<pre><code class="haskell">.green[fib 0 = 0]</code></pre>
+<pre><code class="haskell">.green[fib 1 = 1]</code></pre>
+<pre><code class="haskell">fib n = fib (n - 1) + fib (n - 2)</code></pre>
+---
+.righthead[Haskell]
+<pre><code class="haskell">fib :: Int -> Int</code></pre>
+<pre><code class="haskell">.green[fib 0 = 0]</code></pre>
+<pre><code class="haskell">.green[fib 1 = 1]</code></pre>
 <pre><code class="haskell">fib n = fib (n - 1) + fib (n - 2)</code></pre>
 <br>
 .righthead[Ruby]
 <pre><code class="ruby">def fib(n)</code></pre>
-<pre><code class="ruby">&nbsp; &nbsp; return n if (0..1).include? n</code></pre>
+<pre><code class="ruby">&nbsp; &nbsp; .green[return n if (0..1).include? n]</code></pre>
 <pre><code class="ruby">&nbsp; &nbsp; (fib(n - 1) + fib(n - 2))</code></pre>
 <pre><code class="ruby">end</code></pre>
+
+???
+
+this has the same sort of effect as in Ruby
 ---
 
 class: title
@@ -934,6 +1226,7 @@ class: title
 ```elixir
 iex> Enum.map(1..5, fn(x) -> x*x end)
 ```
+--
 <pre><code class="elixir">[1, 4, 9, 16, 25]</code></pre>
 --
 <br>
@@ -1145,6 +1438,8 @@ class: title
 
 You should avoid using greater than, since the complementary less than doesn't exist.
 
+It also means you don't hvae to remember which way the crocodile goes
+
 ---
 &nbsp;
 
@@ -1153,7 +1448,7 @@ INTENTIONALLY BLANK
 
 I've gone through just about a dozen programming languages
 
-And shown what could be described as a 'wat'
+And shown what could be described in each as a 'wat'
 
 But if you have a deep understanding of how a language works
 it's not a wat
@@ -1180,12 +1475,23 @@ class: title
 # Learn something ✨.new[new]✨
 
 ???
-> A bunch of the examples in this talk are from personal encounters I've had with code over the years
-I may not be an expert in any particular language, but I feel that given by experience across a number of different languages, I have experience being a multi-lingual programmer, in much the same way that learning a second language can help you understand your primary tongue
+>
 
-If you are proficient at, say, ruby, and only ruby, that's great. But why not try your hand at something else? You might learn something more and help deeper your understanding of what you already know
+Because these are all examples that I have personally come across. I have been a polyglot developer for *mumble* years now, in every one of these languages, and I use to think
 
+just because I'm a ruby dev, python is terrible
 
+or
+
+I'm doing haskell now, everything that's not functional sucks
+
+But
+
+they're tools
+
+they're tools to manipulate data to solve problems, and each of them has their place
+
+If you are proficient at, say, ruby, and only ruby, that's great. But why not try your hand at something else? You might learn something more and help deeper your understanding of your language of choice along the way
 
 
 ---
@@ -1194,8 +1500,6 @@ class: title
 # <br><br>Thanks!
 
 ![Image](images/footer.svg)
-
-.footnotes[With thanks to [Mathias](https://twitter.com/mathias/status/1036605331982438400), TODO]
 
 ???
 
