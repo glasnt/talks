@@ -339,11 +339,30 @@ No → .bc[Sum `Number(`.bluef[`a`]`)` and `Number(`.greenf[`b`]`)`]
 .fix-tilt[aside]
 <pre><code class="javascript">> String({"a": "b"})</code></pre>
 <pre><code class="javascript">"[object Object]"</code></pre>
---
+
+???
+
+As an aside: the default string representation of a object is the string object object
+
+A lot of other languages have printed representations of dictionaries or objects that are more useful, but not javascript.
+
+
+---
+.righthead[ECMAScript]
+
+.fix-tilt[aside]
+<pre><code class="javascript">> String({"a": "b"})</code></pre>
+<pre><code class="javascript">"[object Object]"</code></pre>
 <br>
 <pre><code class="javascript">> JSON.stringify({"a": "b"})</code></pre>
---
 <pre><code class="javascript">'{"a":"b"}'</code></pre>
+
+???
+
+If you do want to get the string representation without altering the functionality of Obejcts, you can use JSON.stringify to natively check
+
+
+Backwards compatibility
 
 ---
 .righthead[ECMAScript]
@@ -362,15 +381,6 @@ No → .bc[Sum `Number(`.bluef[`a`]`)` and `Number(`.greenf[`b`]`)`]
 <pre><code class="javascript">> typeof("[object Object]")</code></pre>
 --
 <pre><code class="javascript">"string"</code></pre>
-
-
-???
-
-As an aside: the default string representation of a object is the string object object
-
-A lot of other languages have printed representations of dictionaries or objects that are more useful, but not javascript.
-
-If you do want to get the string representation without altering the functionality of Obejcts, you can use JSON.stringify to natively check
 
 
 ---
@@ -658,13 +668,21 @@ let's talk about Ruby
 <pre><code class="ruby">> not true && false</code></pre>
 <pre><code class="ruby">=> true</code></pre>
 <pre><code class="ruby">> not true and false</code></pre>
-<pre><code class="ruby">=> false # precedence</code></pre>
+<pre><code class="ruby">=> false</code></pre>
+
+<br>
+<pre><code class="ruby"># Order of precedence</code></pre>
+
+<pre><code class="ruby">&& , ||</code></pre>
+<pre><code class="ruby">not</code></pre>
+<pre><code class="ruby">and , or</code></pre>
+
 ---
 .righthead[Ruby]
 <pre><code class="ruby">> .green[not] true .blue[&&] false</code></pre>
 <pre><code class="ruby">=> true</code></pre>
 <pre><code class="ruby">> .green[not] true .red[and] false</code></pre>
-<pre><code class="ruby">=> false # precedence</code></pre>
+<pre><code class="ruby">=> false</code></pre>
 
 <br>
 <pre><code class="ruby"># Order of precedence</code></pre>
@@ -672,7 +690,6 @@ let's talk about Ruby
 <pre><code class="ruby">.blue[&&] , ||</code></pre>
 <pre><code class="ruby">.green[not]</code></pre>
 <pre><code class="ruby">.red[and] , or</code></pre>
-
 ---
 class: title
 # Python
@@ -1025,7 +1042,6 @@ class: title
 <pre><code class="java">java> a == b</code></pre>
 --
 <pre><code class="java">false</code></pre>
---
 
 ---
 .righthead[Java]
@@ -1037,6 +1053,9 @@ class: title
 <pre><code class="java">true</code></pre>
 <pre><code class="java">java> a .blue[==] b /* identity ✱ /</code></pre>
 <pre><code class="java">false</code></pre>
+--
+.righthead[IntegerCache]
+<pre><code class="bash">.white[..........................][-127][-126][...][126][127]</code></pre>
 
 ???
 ---
@@ -1423,6 +1442,9 @@ class: title
 <pre><code class="powershell">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;else&nbsp; { "false" }</code></pre>
 <pre><code class="powershell">.ps-error[The '<' operator is reserved for future use.]</code></pre>
 .fix-tilt[AVOID]
+???
+
+You should avoid using greater than, since the complementary less than doesn't exist.
 ---
 .righthead[PowerShell]
 <pre><code class="powershell">PS> if (2 .green[-gt] 1) { "true" }</code></pre>
@@ -1435,9 +1457,6 @@ class: title
 .fix-tilt[FIX]
 
 ???
-
-You should avoid using greater than, since the complementary less than doesn't exist.
-
 It also means you don't hvae to remember which way the crocodile goes
 
 ---

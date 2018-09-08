@@ -1,5 +1,5 @@
 class: title
-# ORM: The Sequel
+# <br>ORM: The Sequel
 ### DjangoCon US 2018
 ![Image](images/footer.svg)
 ---
@@ -34,12 +34,6 @@ class: middle, center, image
 ???
 
 I also spoke in Heidelberg just a few short months ago
----
-class: middle, center, image
-![Image](images/dcau17.png)
-???
-
-I was the organiser of djangocon australia 17
 ---
 
 class: middle, center, image
@@ -311,18 +305,13 @@ class: title
 ## Finding all tables
 ---
 ### Finding all tables
-```sql
 
---
-show tables;
+<pre><code class="sql">-- MySQL<br>show tables;</code></pre>
+<br>
 
---
-\dt
+<pre><code class="sql">-- PostgreSQL<br>\dt</code></pre>
 
---
-SELECT * 
-FROM dba.tables;
-```
+<pre><code class="sql">-- Oracle<br>SELECT *<br>FROM dba.tables;</code></pre>
 
 
 ???
@@ -387,7 +376,7 @@ and print an import statement for each
 Python 3.6.3 (default, Nov 9 2017, 15:58:30)<br>
 [GCC 4.2.1 Compatible Apple LLVM 9.0.0 (clang-900.0.38)] on darwin<br>
 Type "help", "copyright", "credits" or "license" for more information.<br>
-(InteractiveConsole TEST TEST)<br>
+(InteractiveConsole)<br>
 `>>>` &nbsp;<w>&nbsp;</w>
 
 ???
@@ -580,7 +569,7 @@ back in our terminal, instead of running manage.py shell, we run DB shell
 <div class="shell-wrap"><p class="shell-top-bar">psql</p><p class="shell-body">
 <ps>myrtle</ps> <dr>~/project $</dr>
 ./manage.py dbshell<br>
-psql (9.6.5, server 9.6.8)<br>
+ql <pre><code class="powershell">(9.6.5, server 9.6.8)<br></code></pre>
 Type "help" for help.<br>
 <br>
 db=#&nbsp;<w>&nbsp;</w>
@@ -595,7 +584,7 @@ This particular project has a postgres backend
 <div class="shell-wrap"><p class="shell-top-bar">psql</p><p class="shell-body">
 <ps>myrtle</ps> <dr>~/project $</dr>
 ./manage.py dbshell<br>
-psql (9.6.5, server 9.6.8)<br>
+ql <pre><code class="powershell">(9.6.5, server 9.6.8)<br></code></pre>
 Type "help" for help.<br>
 <br>
 db=# \dt<w>&nbsp;</w>

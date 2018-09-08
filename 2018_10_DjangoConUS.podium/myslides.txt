@@ -1,5 +1,5 @@
 class: title
-# ORM: The Sequel
+# <br>ORM: The Sequel
 ### DjangoCon US 2018
 @ footer.svg
 ---
@@ -19,9 +19,6 @@ Note: I was a mentor, and also gave a talk, at DjangoCon US 2017
 ---
 @= dceu18.png
 Note: I also spoke in Heidelberg just a few short months ago
----
-@= dcau17.png
-Note: I was the organiser of djangocon australia 17
 ---
 
 @= divio-logo.png
@@ -228,18 +225,13 @@ First things first. For an SQL dev, the first thing they normally do in a foreig
 ##= Finding all tables
 ---
 ### Finding all tables
-```sql
 
--- MySQL
-show tables;
+sql -- MySQL<br>show tables;
+<br>
 
--- PostgreSQL
-\dt
+sql -- PostgreSQL<br>\dt
 
--- Oracle
-SELECT * 
-FROM dba.tables;
-```
+sql -- Oracle<br>SELECT *<br>FROM dba.tables;
 
 
 Note: depending on which flavour of database is most familiar to you, you'd try and issue one of these commands
@@ -298,7 +290,7 @@ $$prompt ~/project
 Python 3.6.3 (default, Nov  9 2017, 15:58:30)<br>
 [GCC 4.2.1 Compatible Apple LLVM 9.0.0 (clang-900.0.38)] on darwin<br>
 Type "help", "copyright", "credits" or "license" for more information.<br>
-(InteractiveConsole TEST TEST)<br>
+(InteractiveConsole)<br>
 $$pyw &nbsp;  
 
 Note: Going back to our shell
