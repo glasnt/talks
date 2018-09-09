@@ -1,6 +1,6 @@
 class: title
 # <br>ORM: The Sequel
-### DjangoCon US 2018
+## DjangoCon US 2018
 ![Image](images/footer.svg)
 ---
 class: middle, center
@@ -230,7 +230,7 @@ class: title
 emoji
 ---
 class: top, image
-![Image](images/unicodex_index.png)
+![Image](images/unicodex_index_desert.png)
 
 ???
 
@@ -245,7 +245,7 @@ On the home page there's a bunch of emoji and if you click on one
 ---
 
 class: top, image
-![Image](images/unicodex_sparkles_bug.png)
+![Image](images/unicodex_sparkles.png)
 
 ???
 
@@ -569,7 +569,7 @@ back in our terminal, instead of running manage.py shell, we run DB shell
 <div class="shell-wrap"><p class="shell-top-bar">psql</p><p class="shell-body">
 <ps>myrtle</ps> <dr>~/project $</dr>
 ./manage.py dbshell<br>
-ql <pre><code class="powershell">(9.6.5, server 9.6.8)<br></code></pre>
+&#112;sql (9.6.5, server 9.6.8)<br>
 Type "help" for help.<br>
 <br>
 db=#&nbsp;<w>&nbsp;</w>
@@ -584,7 +584,7 @@ This particular project has a postgres backend
 <div class="shell-wrap"><p class="shell-top-bar">psql</p><p class="shell-body">
 <ps>myrtle</ps> <dr>~/project $</dr>
 ./manage.py dbshell<br>
-ql <pre><code class="powershell">(9.6.5, server 9.6.8)<br></code></pre>
+&#112;sql (9.6.5, server 9.6.8)<br>
 Type "help" for help.<br>
 <br>
 db=# \dt<w>&nbsp;</w>
@@ -741,7 +741,7 @@ Type "help", "copyright", "credits" or "license" for more information.<br>
 (InteractiveConsole)<br>
 `>>>` from unicodex.models import Codepoint<br>
 `>>>` Codepoint.objects.all()<br>
-`<`QuerySet [`<`Codepoint: Sparkles>, `<`Codepoint: Unicorn>, `<`Codepoint: Castle>]><br>
+`<`QuerySet [`<`Codepoint: Sparkles>, `<`Codepoint: Unicorn>, `<`Codepoint: Desert Island>]><br>
 `>>>` <w>&nbsp;</w>
 
 ???
@@ -918,6 +918,8 @@ Design.objects.filter(<o>codepoint&#95;&#95;name&equals;</o>'Sparkles')
 Design dot objects dot filter codepoint dunder name equals sparkles.
 
 I know right? so simple!
+
+TODO CLEANUP FROM HERE
 ---
 ### Joins
 <pre><code><c>&dash;&dash; SQL</c><br><r>SELECT</r> d.<r>*</r> <br>&nbsp; <r>FROM</r> unicodex_codepoint c,<br>&nbsp; &nbsp; &nbsp; &nbsp;unicodex_design d<br>&nbsp;<r>WHERE</r> <l>c</l>.<l>name</l> <r>&equals;</r> <d>'Sparkles'</d><BR><r>&nbsp; &nbsp;AND</r> <l>d</l>.<l>codepoint_id</l> <r>=</r> <l>c</l>.<l>id</l>;<br><br><c>&num; ORM</c>
@@ -1282,7 +1284,7 @@ the string Micro
 
 <div class="shell-wrap"><p class="shell-top-bar">python3.6</p><p class="shell-body">
 `>>>` Design.objects.filter(vendorversion&#95;&#95;vendor&#95;&#95;name&#95;&#95;contains="Micro")<br>
-`<`QuerySet [`<`Design: Sparkles Microsoft Windows 8.0>, `<`Design: Castle Microsoft Windows 8.0>, `<`Design: Sparkles Microsoft Windows 8.1>, `<`Design: Castle Microsoft Windows 8.1>, `<`Design: Sparkles Microsoft Windows 10>, `<`Design: Unicorn Microsoft Windows 10>, `<`Design: Castle Microsoft Windows 10>]><br>
+`<`QuerySet [`<`Design: Sparkles Microsoft Windows 8.0>, `<`Design: Desert Island Microsoft Windows 8.0>, `<`Design: Sparkles Microsoft Windows 8.1>, `<`Design: Desert Island Microsoft Windows 8.1>, `<`Design: Sparkles Microsoft Windows 10>, `<`Design: Unicorn Microsoft Windows 10>, `<`Design: Desert Island Microsoft Windows 10>]><br>
 `>>>` <w>&nbsp;</w>
 
 ???
@@ -1349,6 +1351,7 @@ instead of just filtering on Micro, we could alos
 ???
 
 we get list of designs both from a vendor
+TODO CLEANUP MORE FROM HERE
 ---
 class: title
 ## ... `AND`?
@@ -1857,7 +1860,7 @@ Type "help", "copyright", "credits" or "license" for more information.<br>
 (InteractiveConsole)<br>
 `>>>` from unicodex.models import Codepoint<br>
 `>>>` Codepoint.objects.filter(design&#95;&#95;image&#95;&#95;contains="png", design&#95;&#95;image&#95;&#95;startswith="design")<br>
-`<`QuerySet [`<`Codepoint: Sparkles>, `<`Codepoint: Sparkles>, `<`Codepoint: Sparkles>, `<`Codepoint: Sparkles>, `<`Codepoint: Sparkles>, `<`Codepoint: Sparkles>, `<`Codepoint: Sparkles>, `<`Codepoint: Sparkles>, `<`Codepoint: Sparkles>, `<`Codepoint: Sparkles>, `<`Codepoint: Sparkles>, `<`Codepoint: Unicorn>, `<`Codepoint: Unicorn>, `<`Codepoint: Unicorn>, `<`Codepoint: Unicorn>, `<`Codepoint: Unicorn>, `<`Codepoint: Unicorn>, `<`Codepoint: Unicorn>, `<`Codepoint: Castle>, `<`Codepoint: Castle>, '...(remaining elements truncated)...']><br>
+`<`QuerySet [`<`Codepoint: Sparkles>, `<`Codepoint: Sparkles>, `<`Codepoint: Sparkles>, `<`Codepoint: Sparkles>, `<`Codepoint: Sparkles>, `<`Codepoint: Sparkles>, `<`Codepoint: Sparkles>, `<`Codepoint: Sparkles>, `<`Codepoint: Sparkles>, `<`Codepoint: Sparkles>, `<`Codepoint: Sparkles>, `<`Codepoint: Unicorn>, `<`Codepoint: Unicorn>, `<`Codepoint: Unicorn>, `<`Codepoint: Unicorn>, `<`Codepoint: Unicorn>, `<`Codepoint: Unicorn>, `<`Codepoint: Unicorn>, `<`Codepoint: Desert Island>, `<`Codepoint: Desert Island>, '...(remaining elements truncated)...']><br>
 `>>>` <w>&nbsp;</w>
 
 
@@ -2136,7 +2139,7 @@ so now that we know how to hunt let's find that bug
 ---
 
 class: top, image
-![Image](images/unicodex_sparkles_bug.png)
+![Image](images/unicodex_sparkles.png)
 
 ???
 

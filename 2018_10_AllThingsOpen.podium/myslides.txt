@@ -1076,6 +1076,12 @@ rb end
 Note: this has the same sort of effect as in Ruby
 ---
 
+#= Pascal
+---
+
+TODO :=
+---
+
 #= Elixir
 ---
 $$# Elixir
@@ -1154,7 +1160,12 @@ sc ()
 Note: yeah, so this is because scala uses punctuation in a completely different way to javascript and other languages; the braces you're seeing is an empty function, and the concatenation of that to an empty string is an empty result
 
 for anyone unfamiliar with the conventions of syntax in scala, this might be confusing, but this is absolutely by design
+---
 
+#= Go
+---
+
+b = 4;
 ---
 
 #= No language is 'better'

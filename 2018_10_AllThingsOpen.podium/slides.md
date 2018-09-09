@@ -1239,6 +1239,13 @@ this has the same sort of effect as in Ruby
 ---
 
 class: title
+# Pascal
+---
+
+TODO :=
+---
+
+class: title
 # Elixir
 ---
 .righthead[Elixir]
@@ -1330,7 +1337,13 @@ class: title
 yeah, so this is because scala uses punctuation in a completely different way to javascript and other languages; the braces you're seeing is an empty function, and the concatenation of that to an empty string is an empty result
 
 for anyone unfamiliar with the conventions of syntax in scala, this might be confusing, but this is absolutely by design
+---
 
+class: title
+# Go
+---
+
+b = 4;
 ---
 
 class: title
