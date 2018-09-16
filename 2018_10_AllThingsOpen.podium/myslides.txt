@@ -29,6 +29,16 @@ $$# JavaScript
 js- .large[> ".emoji[👩🏻‍🚀]".split("")]
 js .large[[".w[�]",".w[�]",".w[�]",".w[�]",,".w[�]",".w[�]"]]
 ---
+$$# JavaScript
+js- > [] + []
+js- ""
+js- > [] + {}
+js- "[object Object]"
+js- > {} + []
+js- 0
+js- > {} + {}
+js NaN
+---
 ~@ wat.png
 .wat[.wat-pos[wat]]
 ---
@@ -135,20 +145,18 @@ js- .emoji[👨🏻‍🚀]
 .center[.lemoji[👩🏻‍🚀 ➡ 👨🏻‍🚀]]
 ---
 
-#= JavaScript
-
-Note: Let's talk more about javascript
-
----
 $$# JavaScript
-js- > [] + []
-js- ""
-js- > [] + {}
-js- "[object Object]"
-js- > {} + []
-js- 0
-js- > {} + {}
+js > [] + []
+js ""
+js > [] + {}
+js "[object Object]"
+js > {} + []
+js 0
+js > {} + {}
 js NaN
+
+Note: but as for this example... 
+
 ---
 
 $$# JavaScript
@@ -160,6 +168,7 @@ js > {} + []
 js 0 // ???
 js > {} + {}
 js NaN // ???
+Note: This one is a bit more complicated. 
 ---
 
 #= `+`
@@ -168,63 +177,59 @@ Note: Remember that overloaded operand I mentioned earlier?
 
 Let's dive into that a bit more. 
 
-This is going to get a be complicated
-But that's okay, there's a spec for that
 ---
 class: center
-# ECMA-262, 9th edition
-## ECMAScript® 2018 Language Specification
-### 12.8.3 The Addition Operator ( `+` )
+# .ecma[.ecma-header[ECMA-262, 9th edition]]
+## .ecma[.ecma-header[ECMAScript® 2018 Language Specification]]
+### .ecma[12.8.3 The Addition Operator ( `+` )]
 #### &nbsp;
 
-vv [ECMA-262, 9th Edition, 12.8.3](http://www.ecma-international.org/ecma-262/9.0/index.html#sec-addition-operator-plus)
 ---
 
 class: center
-# ECMA-262, 9th edition
-## ECMAScript® 2018 Language Specification
-### 12.8.3 The Addition Operator ( `+` )
+# .ecma[.ecma-header[ECMA-262, 9th edition]]
+## .ecma[.ecma-header[ECMAScript® 2018 Language Specification]]
+### .ecma[12.8.3 The Addition Operator ( `+` )]
 #### NOTE The addition operator either performs string concatenation or numeric addition.
 
-vv [ECMA-262, 9th Edition, 12.8.3](http://www.ecma-international.org/ecma-262/9.0/index.html#sec-addition-operator-plus)
 ---
 $$# ECMAScript
 ## .bluef[`a`] `+` .greenf[`b`]
 
 --
 
-.bc[Convert .bluef[`a`] and .greenf[`b`] to primatives]
+.ecma[.bc[Convert .bluef[`a`] and .greenf[`b`] to primatives]]
  
 --
 
-  * .bc[`typeof()` in `undefined`, `null`, `boolean`, `number`, `string`]
+ * .ecma[.bc[`typeof()` in `undefined`, `null`, `boolean`, `number`, `string`]]
  
 --
  
-  * Try .bc[`.valueOf()`], else .bc[`.toString()`]
+ * .ecma[Try .bc[`.valueOf()`], else .bc[`.toString()`]]
 
 --
 
-Are .bc[.bluef[`a`]] or .bc[.greenf[`b`]] a string?
+.ecma[Are .bc[.bluef[`a`]] or .bc[.greenf[`b`]] a string?]
 
 --
 
-Yes → .bc[Concatenate `String(`.bluef[`a`]`)` and `String(`.greenf[`b`]`)`]
+.ecma[Yes → .bc[Concatenate `String(`.bluef[`a`]`)` and `String(`.greenf[`b`]`)`]]
 
 --
 
-No → .bc[Sum `Number(`.bluef[`a`]`)` and `Number(`.greenf[`b`]`)`]
+.ecma[No → .bc[Sum `Number(`.bluef[`a`]`)` and `Number(`.greenf[`b`]`)`]]
 ---
 $$# ECMAScript
 ## .bluef[`[]`] `+` .greenf[`{}`]
 --
 
-.bc[Convert .bluef[`[]`] to primative]
+.ecma[.bc[Convert .bluef[`[]`] to primative]]
 
 -- 
 
-  * .bc[`typeof()` in `undefined`, `null`, `boolean`, `number`, `string`]
-  * Try .bc[`.valueOf()`]
+  * .ecma[.bc[`typeof()` in `undefined`, `null`, `boolean`, `number`, `string`]]
+  * .ecma[Try .bc[`.valueOf()`]]
 
 --
 js- > [].valueOf()
@@ -235,10 +240,10 @@ js "object"
 $$# ECMAScript
 ## .bluef[`[]`] `+` .greenf[`{}`]
 
-.bc[Convert .bluef[`[]`] to primative]
+.ecma[.bc[Convert .bluef[`[]`] to primative]]
 
-  * .bc[`typeof()` in `undefined`, `null`, `boolean`, `number`, `string`]
-  * Try .bc[`.valueOf()`, else `.toString()`]
+  * .ecma[.bc[`typeof()` in `undefined`, `null`, `boolean`, `number`, `string`]]
+  * .ecma[Try .bc[`.valueOf()`, else `.toString()`]]
 
 --
 js- > [].toString()
@@ -251,12 +256,12 @@ $$# ECMAScript
 ## .bluef[`""`] `+` .greenf[`{}`]
 --
 
-.bc[Convert .greenf[`{}`] to primative]
+.ecma[.bc[Convert .greenf[`{}`] to primative]]
 
 -- 
 
-  * .bc[`typeof()` in `undefined`, `null`, `boolean`, `number`, `string`]
-  * Try .bc[`.valueOf()`]
+  * .ecma[.bc[`typeof()` in `undefined`, `null`, `boolean`, `number`, `string`]]
+  * .ecma[Try .bc[`.valueOf()`]]
 
 --
 js- > {}.valueOf()
@@ -267,10 +272,10 @@ js "object"
 $$# ECMAScript
 ## .bluef[`""`] `+` .greenf[`{}`]
 
-.bc[Convert .greenf[`{}`] to primative]
+.ecma[.bc[Convert .greenf[`{}`] to primative]]
 
-  * .bc[`typeof()` in `undefined`, `null`, `boolean`, `number`, `string`]
-  * Try .bc[`.valueOf()`, else `.toString()`]
+  * .ecma[.bc[`typeof()` in `undefined`, `null`, `boolean`, `number`, `string`]]
+  * .ecma[Try .bc[`.valueOf()`, else `.toString()`]]
 
 --
 js- > {}.toString()
@@ -311,10 +316,10 @@ Backwards compatibility
 $$# ECMAScript
 ## .bluef[`""`] `+` .greenf[`{}`]
 
-.bc[Convert .greenf[`{}`] to primative]
+.ecma[.bc[Convert .greenf[`{}`] to primative]]
 
-  * .bc[`typeof()` in `undefined`, `null`, `boolean`, `number`, `string`]
-  * Try .bc[`.valueOf()`, else `.toString()`]
+  * .ecma[.bc[`typeof()` in `undefined`, `null`, `boolean`, `number`, `string`]]
+  * .ecma[Try .bc[`.valueOf()`, else `.toString()`]]
 
 --
 js- > {}.toString()
@@ -328,11 +333,11 @@ $$# ECMAScript
 ## .bluef[`""`] `+` .greenf[`"[object Object]"`]
 --
 
-Are .bc[.bluef[`""`]] or .bc[.greenf[`"[object Object]"`]] a string?
+.ecma[Are .bc[.bluef[`""`]] or .bc[.greenf[`"[object Object]"`]] a string?]
 
 --
 
-Yes → .bc[Concatenate `String(`.bluef[`a`]`)` and `String(`.greenf[`b`]`)`]
+.ecma[Yes → .bc[Concatenate `String(`.bluef[`a`]`)` and `String(`.greenf[`b`]`)`]]
 
 --
 js- > "" + "[object Object]"
@@ -362,7 +367,6 @@ $$# ECMAScript
 .bc[.bluef[`[] → ""`]  &nbsp; &nbsp;  .greenf[`{} → "[object Object]"`]]
 js > .blue[{}] + [] // empty block
 
-vv [ECMAScript 262 § 13.2 Block](https://tc39.github.io/ecma262/#prod-Block)
 
 Note: Code blocks are ignored, as a no-op
 
@@ -373,7 +377,6 @@ $$# ECMAScript
 .bc[.bluef[`[] → ""`]  &nbsp; &nbsp;  .greenf[`{} → "[object Object]"`]]
 js > .grey[{}] .green[+ []] // unary addition
 
-vv [ECMAScript 262 § 12.5.6 Unary `+` Operator](https://tc39.github.io/ecma262/#sec-unary-plus-operator)
 
 Note: the other side is a unary addition, which casts the object to number
 ---
@@ -443,7 +446,6 @@ js > {} + {}
 js NaN
 
 .fix-notilt[<img src="images/tadoh.png">]
-vv [js-repl-goal](https://twitter.com/littledan/status/1036991541154394115)
 
 Note: but, technically, this isn't completely right
 
@@ -495,6 +497,8 @@ js NaN
 .fix-notilt[<img src="images/tada.png">]
 
 Note: Commutative - same forwards as is backwards
+
+Pron.: Com-ut-a-tive
 ---
 #= JavaScript isn't awful
 
@@ -506,13 +510,19 @@ Note:
 
 It's awe-ful, full of awe. 
 
-If you're interseted I have an entire full talk where I dive deeper in to JS, called Javascript is Awe-ful. 
-
-But to summarise
+(
+If you're interseted I have an entire full talk where I dive deeper in to JS, called Javascript is Awe-ful. But to summarise
+)
 
 It's a 22 year old language that is 100% backwards compatible. JavaScript written in 1995 will work today. 
 
-But if you don't understand the design constraints and considerations, you might think of these wats as weird little edge cases.
+That ye olde space jam website? It still works on modern browsers. 
+
+JavaScript also won the browser-langauge wars, defeating such foes as Flash, Visual basic, JScript and ActiveScript.
+
+However. 
+
+If you don't understand the design constraints and considerations, you might think of these wats as weird little edge cases.
 
 
 ---
@@ -571,16 +581,16 @@ rb and , or
 
 ---
 $$# Ruby
-rb > .green[not] true .blue[&&] false
+rb > not .blue[true && false]
 rb => true
-rb > .green[not] true .red[and] false
+rb > .red[not true] and false
 rb => false 
 
 <br>
 rb # Order of precedence
 
 rb .blue[&&] , ||
-rb .green[not]
+rb not
 rb .red[and] , or
 ---
 #= Python
@@ -606,7 +616,7 @@ $$# Terminal
 
 Note: In Python, when you load the interpreter, you're probably loading CPython. An optimisation of CPython is to create a list of integers from -5 to 256 for you.
 --
-$$# Python
+$$# CPython
 py >>> .white[a=b]
 py .white[.]
 py .white[.]
@@ -620,7 +630,7 @@ An optimisation of CPython is to create a list of integers from -5 to 256 for yo
 ---
 $$# Terminal
 `$ python`
-$$# Python
+$$# CPython
 py >>> a = 256
 py .white[.]
 py .white[.]
@@ -635,7 +645,7 @@ Note: so when you assign a variable, it can use one you prepared earlier
 ---
 $$# Terminal
 `$ python`
-$$# Python
+$$# CPython
 py >>> a = 256
 py >>> b = 256
 py .white[.]
@@ -648,7 +658,7 @@ sh .white[.................................]a b
 ---
 $$# Terminal
 `$ python`
-$$# Python
+$$# CPython
 py >>> a = 256
 py >>> b = 256
 py >>> a is b
@@ -664,7 +674,7 @@ Identity is a check to see if two objects are the same
 ---
 $$# Terminal
 `$ python`
-$$# Python
+$$# CPython
 py >>> a = 256
 py >>> b = 256
 py >>> a is b
@@ -680,7 +690,7 @@ Note: Are A and B the same object. Yes!
 
 $$# Terminal
 `$ python`
-$$# Python
+$$# CPython
 py >>> a = 256
 py >>> b = 256
 py >>> a is b
@@ -695,7 +705,7 @@ Note: Are A and B the same object. Yes!
 ---
 $$# Terminal
 `$ python`
-$$# Python
+$$# CPython
 py >>> .white[a=b]
 py .white[.]
 py .white[.]
@@ -710,7 +720,7 @@ But when we use integers outside of our cache, things change
 ---
 $$# Terminal
 `$ python`
-$$# Python
+$$# CPython
 py >>> a = 257
 py .white[.]
 py .white[.]
@@ -719,7 +729,7 @@ $$# CPython Cache
 sh &nbsp;
 
 sh [ -5 ][ -4 ][...][ 254 ][ 255 ][ 256 ][~][ 257 ]
-sh .white[...........................................]a
+sh .white[............................................]a
 Note: 
 When we exceed the predeclared array, the value is assigned somewhere else in memory
 
@@ -727,7 +737,7 @@ When we exceed the predeclared array, the value is assigned somewhere else in me
 ---
 $$# Terminal
 `$ python`
-$$# Python
+$$# CPython
 py >>> a = 257
 py >>> b = 257
 py .white[.]
@@ -743,7 +753,7 @@ And when we declare B we also store that as it's own value
 ---
 $$# Terminal
 `$ python`
-$$# Python
+$$# CPython
 py >>> a = 257
 py >>> b = 257
 py >>> a is b
@@ -759,7 +769,7 @@ So when we run the check
 ---
 $$# Terminal
 `$ python`
-$$# Python
+$$# CPython
 py >>> a = 257
 py >>> b = 257
 py >>> a is b
@@ -776,7 +786,7 @@ The objects aren't the same
 ---
 $$# Terminal
 `$ python`
-$$# Python
+$$# CPython
 py >>> a = 257
 py >>> b = 257
 py >>> a is b
@@ -793,7 +803,7 @@ Even thought he variables have the same value, they aren't the same value, so th
 ---
 $$# Terminal
 `$ python`
-$$# Python
+$$# CPython
 py >>> a = 257; b = 257;
 py .white[.]
 py .white[.]
@@ -810,7 +820,7 @@ the interpreter processes this all as one code object
 ---
 $$# Terminal
 `$ python`
-$$# Python
+$$# CPython
 py >>> a = 257; b = 257;
 py .white[.]
 py .white[.]
@@ -825,7 +835,7 @@ and so it only creates one constant
 ---
 $$# Terminal
 `$ python`
-$$# Python
+$$# CPython
 py >>> a = 257; b = 257;
 py >>> a is b
 py .white[.]
@@ -841,7 +851,7 @@ So when we do our identity check again
 ---
 $$# Terminal
 `$ python`
-$$# Python
+$$# CPython
 py >>> a = 257; b = 257;
 py >>> a is b
 py .white[.]
@@ -857,7 +867,7 @@ The objects are the same
 ---
 $$# Terminal
 `$ python`
-$$# Python
+$$# CPython
 py >>> a = 257; b = 257;
 py >>> a is b
 py True
@@ -871,7 +881,7 @@ Note:
 So our check succeeds
 
 ---
-$$# Python
+$$# CPython
 py >>> a = 257
 py >>> b = 257
 py >>> a is b
@@ -880,7 +890,7 @@ Note:
 
 if what we wanted to do here was an equality check, checking if the values were equal, 
 ---
-$$# Python
+$$# CPython
 py >>> a = 257
 py >>> b = 257
 py >>> a .green[==] b
@@ -915,7 +925,7 @@ java java> a .blue[==] b /* identity ✱ /
 java false
 --
 $$# IntegerCache
-sh .white[..........................][-127][-126][...][126][127]
+sh .white[.............................][-127][-126][...][126][127]
 
 Note: 
 ---
@@ -1143,6 +1153,90 @@ Note: The reason for this:
 Elixir was built on top of Erlang, which was created in the 80's, and strings in Erlang are represented as a lists of integers. So, without telling our interpreter any different, it's going to assume that we want to print a string, not a list of numbers
 
 There are flags in erlang to change this, but it's only going to effect our interactive interpreter, not the actual data manipulation
+
+---
+#= CSS
+---
+$$# CSS
+css .black { color: black; }
+css .gold &nbsp;{ color: gold; }
+
+
+$$# HTML
+html `<div class="black gold"> Black Gold </div>`
+html `<div class="gold black"> Gold Black </div>`
+
+--
+$$# Result
+<div class="css-demo">
+<div class="black gold">Black Gold</div>
+<div class="gold black">Gold Black</div>
+</div>
+
+Note: These two classes have the same specificity, so CSS falls back to source order.
+
+---
+$$# CSS
+css .black { color: black; }
+css .red[.gold &nbsp;{ color: gold; }] /* specificity ✱ /
+
+
+$$# HTML
+html `<div class="black gold"> Black Gold </div>`
+html `<div class="gold black"> Gold Black </div>`
+
+$$# Result
+<div class="css-demo">
+<div class="black gold">Black Gold</div>
+<div class="gold black">Gold Black</div>
+</div>
+
+Note: The class order on the element does not matter. These two classes have the same specificity, so CSS falls back to source order.
+
+But ah! I hear you cry. What about `!important`
+---
+
+$$# CSS
+css .black { color: black !important; }
+css .gold &nbsp;{ color: gold; }
+
+$$# HTML
+html `<div class="black gold"> Black Gold </div>`
+html `<div class="gold black"> Gold Black </div>`
+
+Note: Let's just add that here, that'll make sure black actually works!
+--
+
+$$# Result
+<div class="css-demo">
+<div class="blacki gold">Black Gold</div>
+<div class="gold blacki">Gold Black</div>
+</div>
+
+Note: well yes, but it'll also override Gold 
+---
+$$# CSS Specificity
+<br><br>
+Type selector  .bc[.row2[`h1, h2, p`]] .row3[`# lowest`]
+
+Class selector  .bc[.row2[`.black, .gold`]]
+
+ID selector    .bc[.row2[`#specific, #example`]] .row3[`# highest`]
+
+Note: the specificity of the CSS selector in lowest to highest
+
+types, classes, then specific identifers
+
+
+
+--
+<br><br>
+<br><br>
+**Bad Practice** .bc[.row2[.red[`!important`]]]
+
+Note: Important will override, but you should avoid using it where possible. There are some situations were it's the only way to get things working, such as overriding inline CSS, but using inline css is VERY bad practice.   
+
+CSS is literally cascading style sheets. It should naturally cascade
 
 ---
 #= Scala

@@ -6,7 +6,6 @@
   padding: 0;
 }
 
-
 .remark-slide-content {
     padding: 1em 6em 1em 6em;
     font-family: 'PT Sans';
@@ -115,15 +114,14 @@ li cite {
 .red   { outline: 4px solid #FF6B6B; outline-offset: 5px; }
 .purple { outline: 4px solid #70568F; outline-offset: 5px; }
 
+.ecma { font-family: Cambria, Palatino Linotype, Palatino, Liberation Serif,  serif }
+.ecma-header { color: #f60}
 
 .tinytext { 
     margin: 0;
 	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
-    line-height: 1;
+	font-size: 50%;
+    line-height: 8pt;
 
  }
 .ps-error { color: red !important; font-weight: bold; }
@@ -418,3 +416,21 @@ Added: Zenburn, mostly.
 
 /**********************************/
 
+
+.remark-slides-area .remark-slide-content::after {
+    content: "glasnt.com/wat" ;
+    font-weight: normal;
+    font-size: 18pt;
+    position: absolute;
+    bottom: 24px;
+    right: 24px;
+    opacity: 0.5;
+}
+
+.row2 { position: absolute; left: 400px }
+.row3 { position: absolute; left: 800px }
+
+.css-demo { text-align: center; font-weight: bold; font-size: 28pt; padding: 10px; }
+.css-demo .black { color: black}
+.css-demo .blacki { color: black !important}
+.css-demo .gold { color: gold}
