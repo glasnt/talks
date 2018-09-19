@@ -10,6 +10,7 @@ You got this 💪
 ---
 class: title
 # JavaScript
+### ☞ &nbsp;`Chrome 69 Console`
 ???
 
 Let's talk about javascript
@@ -487,7 +488,7 @@ Which works just about as well as you think
 Therefore.
 
 ---
-.righthead[JavaScript]
+.righthead[ECMAScript]
 <pre><code class="javascript">> [] + []</code></pre>
 --
 <pre><code class="javascript">""</code></pre>
@@ -505,7 +506,7 @@ Therefore.
 <pre><code class="javascript">NaN</code></pre>
 
 ---
-.righthead[JavaScript]
+.righthead[ECMAScript]
 <pre><code class="javascript">> [] + []</code></pre>
 <pre><code class="javascript">""</code></pre>
 <pre><code class="javascript">> [] + {}</code></pre>
@@ -521,7 +522,7 @@ Therefore.
 
 tada
 ---
-.righthead[JavaScript]
+.righthead[ECMAScript]
 <pre><code class="javascript">> [] + []</code></pre>
 <pre><code class="javascript">""</code></pre>
 <pre><code class="javascript">> [] + {}</code></pre>
@@ -661,6 +662,7 @@ Using another language won't save you.
 ---
 class: title
 # Ruby
+### ☞ &nbsp;`brew install ruby && irb`
 
 ???
 
@@ -704,6 +706,7 @@ let's talk about Ruby
 ---
 class: title
 # Python
+### ☞ &nbsp;`brew install python && python`
 ---
 .righthead[Python]
 <pre><code class="python">>>> a = 256</code></pre>
@@ -1035,12 +1038,12 @@ we need to use double equals here instead.
 ---
 class: title
 # Java
-
+### ☞ &nbsp;`brew install javarepl && javarepl`
 ---
 .righthead[Java]
-<pre><code class="java">java> Integer a = 128;</code></pre>
+<pre><code class="java">java> Integer a = 128</code></pre>
 --
-<pre><code class="java">java> Integer b = 128;</code></pre>
+<pre><code class="java">java> Integer b = 128</code></pre>
 --
 <pre><code class="java">java> a <= b</code></pre>
 --
@@ -1056,8 +1059,8 @@ class: title
 
 ---
 .righthead[Java]
-<pre><code class="java">java> Integer a = 128;</code></pre>
-<pre><code class="java">java> Integer b = 128;</code></pre>
+<pre><code class="java">java> Integer a = 128</code></pre>
+<pre><code class="java">java> Integer b = 128</code></pre>
 <pre><code class="java">java> a <= b</code></pre>
 <pre><code class="java">true</code></pre>
 <pre><code class="java">java> a >= b</code></pre>
@@ -1071,8 +1074,8 @@ class: title
 ???
 ---
 .righthead[Java]
-<pre><code class="java">java> Integer a = 128;</code></pre>
-<pre><code class="java">java> Integer b = 128;</code></pre>
+<pre><code class="java">java> Integer a = 128</code></pre>
+<pre><code class="java">java> Integer b = 128</code></pre>
 <pre><code class="java">java> a <= b</code></pre>
 <pre><code class="java">true</code></pre>
 <pre><code class="java">java> a >= b</code></pre>
@@ -1083,8 +1086,8 @@ class: title
 
 ---
 .righthead[Java]
-<pre><code class="java">java> .green[int] a = 128;</code></pre>
-<pre><code class="java">java> .green[int] b = 128;</code></pre>
+<pre><code class="java">java> .green[int] a = 128</code></pre>
+<pre><code class="java">java> .green[int] b = 128</code></pre>
 <pre><code class="java">java> a <= b</code></pre>
 <pre><code class="java">true</code></pre>
 <pre><code class="java">java> a >= b</code></pre>
@@ -1111,6 +1114,7 @@ it's how the language works
 
 class: title
 # Perl
+### ☞ &nbsp;`brew install perl && perl -de1`
 ---
 .righthead[Perl]
 <pre><code class="perl">> if ("a" == "b") {</code></pre>
@@ -1141,6 +1145,7 @@ class: title
 ---
 class: title
 # Bash
+### ☞ &nbsp;`bash`
 ---
 .righthead[Bash]
 <pre><code class="bash">~ $ 4 + 2</code></pre>
@@ -1186,9 +1191,10 @@ Ah
 
 Because bash is designed for execution, not returning a string representation of the value of some mathematical equation, like every other example so far
 ---
-
-class: title
+<br><br><br><br>
 # Haskell
+### ☞ &nbsp;`brew install haskell-platform && ghci`
+.footnotes[†&nbsp;`echo ":set prompt "λ> " > ~/.ghci/ghci.conf` .white[................................................]]
 ---
 .righthead[Haskell]
 <pre><code class="haskell">λ> let a = 2 + 2</code></pre>
@@ -1248,16 +1254,49 @@ class: title
 
 this has the same sort of effect as in Ruby
 ---
-
-class: title
+<br><br><br><br>
 # Pascal
----
+### ☞ &nbsp;`brew install fpc`<br> &nbsp;`fpc example.pas && ./example`
 
-TODO :=
+---
+.righthead[cat example.pas]
+<pre><code class="delphi">Program example(output);</code></pre>
+<pre><code class="delphi">VAR x: INTEGER;</code></pre>
+<pre><code class="delphi">begin</code></pre>
+<pre><code class="delphi">&nbsp; x := 41;</code></pre>
+<pre><code class="delphi">&nbsp; x += 1;</code></pre>
+<pre><code class="delphi">&nbsp; writeln(x = 42);</code></pre>
+<pre><code class="delphi">end.</code></pre>
+.righthead[Terminal]
+.code[`$ fpc example.pas && ./example`]
+--
+<pre><code class="delphi">TRUE</code></pre>
+
+---
+.righthead[cat example.pas]
+<pre><code class="delphi">Program example(output);</code></pre>
+<pre><code class="delphi">VAR x: INTEGER;</code></pre>
+<pre><code class="delphi">begin</code></pre>
+<pre><code class="delphi">&nbsp; x .blue[:=] 41; // assignment</code></pre>
+<pre><code class="delphi">&nbsp; x += 1;</code></pre>
+<pre><code class="delphi">&nbsp; writeln(x .blue[=] 42); // equality</code></pre>
+<pre><code class="delphi">end.</code></pre>
+.righthead[Terminal]
+.code[`$ fpc example.pas && ./example`]
+<pre><code class="delphi">TRUE</code></pre>
+
+
+???
+
+that's all I wanted to point out
+
+an assignment operator that doesn't look like equality; bliss
+
 ---
 
 class: title
 # Elixir
+### ☞ &nbsp;`brew install elixir && iex`
 ---
 .righthead[Elixir]
 ```elixir
@@ -1331,18 +1370,20 @@ There are flags in erlang to change this, but it's only going to effect our inte
 ---
 class: title
 # CSS
+### ☞ &nbsp;`Chrome 69`
 ---
-.righthead[CSS]
+.righthead[example.css]
 <pre><code class="css">.black { color: black; }</code></pre>
 <pre><code class="css">.gold &nbsp;{ color: gold; }</code></pre>
 
-
-.righthead[HTML]
+.righthead[example.html]
+<pre><code class="html">.nopad[`<link rel="stylesheet" href="example.css" />`]</code></pre>
 <pre><code class="html">`<div class="black gold"> Black Gold </div>`</code></pre>
 <pre><code class="html">`<div class="gold black"> Gold Black </div>`</code></pre>
 
 --
-.righthead[Result]
+.righthead[open example.html]
+.white[.]
 <div class="css-demo">
 <div class="black gold">Black Gold</div>
 <div class="gold black">Gold Black</div>
@@ -1353,16 +1394,16 @@ class: title
 These two classes have the same specificity, so CSS falls back to source order.
 
 ---
-.righthead[CSS]
+.righthead[example.css]
 <pre><code class="css">.black { color: black; }</code></pre>
-<pre><code class="css">.red[.gold &nbsp;{ color: gold; }] /* specificity ✱ /</code></pre>
+<pre><code class="css">.red[.gold &nbsp;{ color: gold; }] .inline-code[`/* specificity */`]</code></pre>
 
-
-.righthead[HTML]
+.righthead[example.html]
+<pre><code class="html">.nopad[`<link rel="stylesheet" href="example.css" />`]</code></pre>
 <pre><code class="html">`<div class="black gold"> Black Gold </div>`</code></pre>
 <pre><code class="html">`<div class="gold black"> Gold Black </div>`</code></pre>
 
-.righthead[Result]
+.righthead[open example.html]
 <div class="css-demo">
 <div class="black gold">Black Gold</div>
 <div class="gold black">Gold Black</div>
@@ -1374,12 +1415,12 @@ The class order on the element does not matter. These two classes have the same 
 
 But ah! I hear you cry. What about `!important`
 ---
-
-.righthead[CSS]
+.righthead[example.css]
 <pre><code class="css">.black { color: black !important; }</code></pre>
 <pre><code class="css">.gold &nbsp;{ color: gold; }</code></pre>
 
-.righthead[HTML]
+.righthead[example.html]
+<pre><code class="html">.nopad[`<link rel="stylesheet" href="example.css" />`]</code></pre>
 <pre><code class="html">`<div class="black gold"> Black Gold </div>`</code></pre>
 <pre><code class="html">`<div class="gold black"> Gold Black </div>`</code></pre>
 
@@ -1388,7 +1429,7 @@ But ah! I hear you cry. What about `!important`
 Let's just add that here, that'll make sure black actually works!
 --
 
-.righthead[Result]
+.righthead[open example.html]
 <div class="css-demo">
 <div class="blacki gold">Black Gold</div>
 <div class="gold blacki">Gold Black</div>
@@ -1428,6 +1469,7 @@ CSS is literally cascading style sheets. It should naturally cascade
 ---
 class: title
 # Scala
+### ☞ &nbsp;`brew install scala && scala`
 ---
 .righthead[Scala]
 <pre><code class="scala">scala> println({} + "")</code></pre>
@@ -1449,9 +1491,65 @@ for anyone unfamiliar with the conventions of syntax in scala, this might be con
 
 class: title
 # Go
+### ☞ &nbsp;`brew install go`<br> &nbsp;`go run example.go`
 ---
+.righthead[example.go]
 
-b = 4;
+<pre><code class="go">package main</code></pre>
+<pre><code class="go">func main() {</code></pre>
+<pre><code class="go">&nbsp; a := 4</code></pre>
+<pre><code class="go">&nbsp; b := 2</code></pre>
+<pre><code class="go">&nbsp; print(a == b)</code></pre>
+<pre><code class="go">}</code></pre>
+--
+.righthead[Terminal]
+.code[`$ go run example.go`]
+--
+<br>
+.code[`false`]
+
+---
+.righthead[example.go]
+
+<pre><code class="go">package main</code></pre>
+<pre><code class="go">func main() {</code></pre>
+<pre><code class="go">&nbsp; a .blue[:=] 4 // assignment</code></pre>
+<pre><code class="go">&nbsp; b .blue[:=] 2 // ... right?</code></pre>
+<pre><code class="go">&nbsp; print(a == b)</code></pre>
+<pre><code class="go">}</code></pre>
+.righthead[Terminal]
+.code[`$ go run example.go`]
+<br>
+.code[`false`]
+
+???
+
+So you'd expect these operators to be assignment, just like pascal
+
+Except they're not operators.
+
+They're shortcuts.
+
+---
+.righthead[example.go]
+
+<pre><code class="go">package main</code></pre>
+<pre><code class="go">func main() {</code></pre>
+<pre><code class="go">&nbsp; .green[var a = 4] // standard assignment</code></pre>
+<pre><code class="go">&nbsp; b .blue[:=] 2 .white[..] // short variable declaration</code></pre>
+<pre><code class="go">&nbsp; print(a == b)</code></pre>
+<pre><code class="go">}</code></pre>
+.righthead[Terminal]
+.code[`$ go run example.go`]
+<br>
+.code[`false`]
+
+
+???
+
+I can use the full declaration on the variable a, and it's the equivelent of the colon equals I"m performing on B
+
+
 ---
 
 class: title
@@ -1469,6 +1567,7 @@ Each have their own strengths
 
 class: title
 # PHP
+### ☞ &nbsp;`brew install php && php -a`
 
 ---
 .righthead[PHP]
@@ -1523,7 +1622,7 @@ The solution?
 .righthead[PHP]
 <pre><code class="php">php> echo (TRUE &nbsp;? "one" :</code></pre>
 <pre><code class="php">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;TRUE &nbsp;? "two" :</code></pre>
-<pre><code class="php">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; .strike["three"]);</code></pre>
+<pre><code class="php">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; .strike["three"]); .inline-code[`/* left associative */`]</code></pre>
 <pre><code class="php">two</code></pre>
 .fix-tilt[AVOID]
 
@@ -1535,32 +1634,33 @@ Like we saw earlier in the ruby example, the assumption of the order of operatio
 
 The solution?
 ---
-class: title
+<br><br><br><br>
 # PowerShell
+### ☞ &nbsp;`brew cask install powershell && pwsh`
+--
+<br>
+### (Yes, really!)
 
 ---
 .righthead[PowerShell]
-
-<pre><code class="powershell">PS> if (2 > 1) { "true" }</code></pre>
-<pre><code class="powershell">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;else&nbsp; { "false" }</code></pre>
+<br>
+<pre><code class="powershell">PS> if (4 > 6) { "true" } else { "false" }</code></pre>
 --
-<pre><code class="powershell">true</code></pre>
+<pre><code class="powershell">false</code></pre>
+
 --
 <br>
-<pre><code class="powershell">PS> if (2 < 1) { "true" }</code></pre>
-<pre><code class="powershell">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;else&nbsp; { "false" }</code></pre>
+<pre><code class="powershell">PS> if (4 < 6) { "true" } else { "false" }</code></pre>
 --
 <pre><code class="powershell">.ps-error[The '<' operator is reserved for future use.]</code></pre>
 
 ---
 .righthead[PowerShell]
-
-<pre><code class="powershell">PS> if (2 > 1) { "true" }</code></pre>
-<pre><code class="powershell">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;else&nbsp; { "false" }</code></pre>
-<pre><code class="powershell">true</code></pre>
 <br>
-<pre><code class="powershell">PS> if (2 < 1) { "true" }</code></pre>
-<pre><code class="powershell">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;else&nbsp; { "false" }</code></pre>
+<pre><code class="powershell">PS> if (4 .red[>] 6) { "true" } else { "false" } # redirection</code></pre>
+<pre><code class="powershell">false</code></pre>
+<br>
+<pre><code class="powershell">PS> if (4 .red[<] 6) { "true" } else { "false" } # AVOID</code></pre>
 <pre><code class="powershell">.ps-error[The '<' operator is reserved for future use.]</code></pre>
 .fix-tilt[AVOID]
 ???
@@ -1568,12 +1668,11 @@ class: title
 You should avoid using greater than, since the complementary less than doesn't exist.
 ---
 .righthead[PowerShell]
-<pre><code class="powershell">PS> if (2 .green[-gt] 1) { "true" }</code></pre>
-<pre><code class="powershell">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;else&nbsp; { "false" }</code></pre>
+<br>
+<pre><code class="powershell">PS> if (4 .green[-gt] 6) { "true" } else { "false" }</code></pre>
 <pre><code class="powershell">true</code></pre>
 <br>
-<pre><code class="powershell">PS> if (2 .green[-lt] 1) { "true" }</code></pre>
-<pre><code class="powershell">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;else&nbsp; { "false" }</code></pre>
+<pre><code class="powershell">PS> if (4 .green[-lt] 6) { "true" } else { "false" }</code></pre>
 <pre><code class="powershell">false</code></pre>
 .fix-tilt[FIX]
 
@@ -1612,7 +1711,7 @@ It will help you get a deeper mastery of the language, and you might just learn 
 ---
 
 class: title
-# Learn something ✨.new[new]✨
+# .inline-img[Learn something ![](images/sparkles.png).new[new]![](images/sparkles.png)]
 
 ???
 >

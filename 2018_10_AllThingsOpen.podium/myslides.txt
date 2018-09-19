@@ -6,6 +6,7 @@
 Note: You got this 💪
 ---
 #= JavaScript
+### ☞ &nbsp;`Chrome 69 Console`
 Note: Let's talk about javascript
 ---
 $$# JavaScript
@@ -410,7 +411,7 @@ js NaN
 Note: Therefore.
 
 ---
-$$# JavaScript
+$$# ECMAScript
 js- > [] + []
 js- ""
 js- > [] + {}
@@ -421,7 +422,7 @@ js- > {} + {}
 js NaN
 
 ---
-$$# JavaScript
+$$# ECMAScript
 js > [] + []
 js ""
 js > [] + {}
@@ -435,7 +436,7 @@ js NaN
 
 Note: tada
 ---
-$$# JavaScript
+$$# ECMAScript
 js > [] + []
 js ""
 js > [] + {}
@@ -557,6 +558,7 @@ Note: Well no.
 Using another language won't save you. 
 ---
 #= Ruby
+### ☞ &nbsp;`brew install ruby && irb`
 
 Note: let's talk about Ruby
 ---
@@ -594,6 +596,7 @@ rb not
 rb .red[and] , or
 ---
 #= Python
+### ☞ &nbsp;`brew install python && python`
 ---
 $$# Python
 py- >>> a = 256
@@ -901,11 +904,11 @@ Note:
 we need to use double equals here instead. 
 ---
 #= Java
-
+### ☞ &nbsp;`brew install javarepl && javarepl`
 ---
 $$# Java
-java- java> Integer a = 128;
-java- java> Integer b = 128;
+java- java> Integer a = 128
+java- java> Integer b = 128
 java- java> a <= b
 java- true
 java- java> a >= b
@@ -915,8 +918,8 @@ java false
 
 ---
 $$# Java
-java java> Integer a = 128;
-java java> Integer b = 128;
+java java> Integer a = 128
+java java> Integer b = 128
 java java> a <= b
 java true
 java java> a >= b
@@ -930,8 +933,8 @@ sh .white[.............................][-127][-126][...][126][127]
 Note: 
 ---
 $$# Java
-java java> Integer a = 128;
-java java> Integer b = 128;
+java java> Integer a = 128
+java java> Integer b = 128
 java java> a <= b
 java true
 java java> a >= b
@@ -942,8 +945,8 @@ java true
 
 ---
 $$# Java
-java java> .green[int] a = 128;
-java java> .green[int] b = 128;
+java java> .green[int] a = 128
+java java> .green[int] b = 128
 java java> a <= b
 java true
 java java> a >= b
@@ -968,6 +971,7 @@ it's how the language works
 ---
 
 #= Perl
+### ☞ &nbsp;`brew install perl && perl -de1`
 ---
 $$# Perl
 pl > if ("a" == "b") { 
@@ -996,6 +1000,7 @@ pl &nbsp;
 pl false
 ---
 #= Bash
+### ☞ &nbsp;`bash`
 ---
 $$# Bash
 sh- ~ $ 4 + 2
@@ -1032,8 +1037,10 @@ sh 6
 
 Note: Because bash is designed for execution, not returning a string representation of the value of some mathematical equation, like every other example so far
 ---
-
-#= Haskell
+<br><br><br><br>
+# Haskell
+### ☞ &nbsp;`brew install haskell-platform && ghci`
+vv †&nbsp;`echo ":set prompt "λ> " > ~/.ghci/ghci.conf` .white[................................................]
 ---
 $$# Haskell
 hs- λ> let a = 2 + 2
@@ -1085,14 +1092,46 @@ rb end
 
 Note: this has the same sort of effect as in Ruby
 ---
+<br><br><br><br>
+# Pascal
+### ☞ &nbsp;`brew install fpc`<br> &nbsp;`fpc example.pas && ./example`
 
-#= Pascal
 ---
+$$# cat example.pas
+pas Program example(output);
+pas VAR x: INTEGER;
+pas begin
+pas &nbsp; x := 41;
+pas  &nbsp; x += 1;
+pas &nbsp; writeln(x = 42);
+pas end.
+$$# Terminal
+.code[`$ fpc example.pas && ./example`]
+-- 
+pas  TRUE
 
-TODO :=
+---
+$$# cat example.pas
+pas Program example(output);
+pas VAR x: INTEGER;
+pas begin
+pas &nbsp; x .blue[:=] 41; // assignment
+pas  &nbsp; x += 1;
+pas &nbsp; writeln(x .blue[=] 42); // equality
+pas end.
+$$# Terminal
+.code[`$ fpc example.pas && ./example`]
+pas  TRUE
+
+
+Note: that's all I wanted to point out
+
+an assignment operator that doesn't look like equality; bliss
+
 ---
 
 #= Elixir
+### ☞ &nbsp;`brew install elixir && iex`
 ---
 $$# Elixir
 ```elixir
@@ -1156,18 +1195,20 @@ There are flags in erlang to change this, but it's only going to effect our inte
 
 ---
 #= CSS
+### ☞ &nbsp;`Chrome 69`
 ---
-$$# CSS
+$$# example.css
 css .black { color: black; }
 css .gold &nbsp;{ color: gold; }
 
-
-$$# HTML
+$$# example.html
+html .nopad[`<link rel="stylesheet" href="example.css" />`]
 html `<div class="black gold"> Black Gold </div>`
 html `<div class="gold black"> Gold Black </div>`
 
 --
-$$# Result
+$$# open example.html
+.white[.]
 <div class="css-demo">
 <div class="black gold">Black Gold</div>
 <div class="gold black">Gold Black</div>
@@ -1176,16 +1217,16 @@ $$# Result
 Note: These two classes have the same specificity, so CSS falls back to source order.
 
 ---
-$$# CSS
+$$# example.css
 css .black { color: black; }
-css .red[.gold &nbsp;{ color: gold; }] /* specificity ✱ /
+css .red[.gold &nbsp;{ color: gold; }] .inline-code[`/* specificity */`]
 
-
-$$# HTML
+$$# example.html
+html .nopad[`<link rel="stylesheet" href="example.css" />`]
 html `<div class="black gold"> Black Gold </div>`
 html `<div class="gold black"> Gold Black </div>`
 
-$$# Result
+$$# open example.html
 <div class="css-demo">
 <div class="black gold">Black Gold</div>
 <div class="gold black">Gold Black</div>
@@ -1195,19 +1236,19 @@ Note: The class order on the element does not matter. These two classes have the
 
 But ah! I hear you cry. What about `!important`
 ---
-
-$$# CSS
+$$# example.css
 css .black { color: black !important; }
 css .gold &nbsp;{ color: gold; }
 
-$$# HTML
+$$# example.html
+html .nopad[`<link rel="stylesheet" href="example.css" />`]
 html `<div class="black gold"> Black Gold </div>`
 html `<div class="gold black"> Gold Black </div>`
 
 Note: Let's just add that here, that'll make sure black actually works!
 --
 
-$$# Result
+$$# open example.html
 <div class="css-demo">
 <div class="blacki gold">Black Gold</div>
 <div class="gold blacki">Gold Black</div>
@@ -1240,6 +1281,7 @@ CSS is literally cascading style sheets. It should naturally cascade
 
 ---
 #= Scala
+### ☞ &nbsp;`brew install scala && scala`
 ---
 $$# Scala
 sc- scala> println({} + "")
@@ -1257,9 +1299,61 @@ for anyone unfamiliar with the conventions of syntax in scala, this might be con
 ---
 
 #= Go
+### ☞ &nbsp;`brew install go`<br> &nbsp;`go run example.go`
 ---
+$$# example.go
 
-b = 4;
+go package main
+go func main() {
+go &nbsp;  a := 4
+go &nbsp;  b := 2
+go &nbsp;  print(a == b)
+go }
+--
+$$# Terminal
+.code[`$ go run example.go`]
+--
+<br>
+.code[`false`]
+
+---
+$$# example.go
+
+go package main
+go func main() {
+go &nbsp;  a .blue[:=] 4 // assignment
+go &nbsp;  b .blue[:=] 2 // ... right?
+go &nbsp;  print(a == b)
+go }
+$$# Terminal
+.code[`$ go run example.go`]
+<br>
+.code[`false`]
+
+Note: So you'd expect these operators to be assignment, just like pascal
+
+Except they're not operators. 
+
+They're shortcuts. 
+
+---
+$$# example.go
+
+go package main
+go func main() {
+go &nbsp;  .green[var a = 4] // standard assignment
+go &nbsp;  b .blue[:=] 2 .white[..] // short variable declaration
+go &nbsp;  print(a == b)
+go }
+$$# Terminal
+.code[`$ go run example.go`]
+<br>
+.code[`false`]
+
+
+Note: I can use the full declaration on the variable a, and it's the equivelent of the colon equals I"m performing on B
+
+
 ---
 
 #= No language is 'better'
@@ -1273,6 +1367,7 @@ Each have their own strengths
 ---
 
 #= PHP
+### ☞ &nbsp;`brew install php && php -a`
 
 ---
 $$# PHP
@@ -1317,7 +1412,7 @@ The solution?
 $$# PHP
 php php> echo (TRUE &nbsp;? "one" :
 php &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;TRUE &nbsp;? "two" : 
-php &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;  .strike["three"]);
+php &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;  .strike["three"]); .inline-code[`/* left associative */`]
 php two
 .fix-tilt[AVOID]
 
@@ -1327,39 +1422,41 @@ Like we saw earlier in the ruby example, the assumption of the order of operatio
 
 The solution?
 ---
-#= PowerShell
+<br><br><br><br>
+# PowerShell
+### ☞ &nbsp;`brew cask install powershell && pwsh`
+--
+<br>
+### (Yes, really!)
 
 ---
 $$# PowerShell
+<br>
+ps- PS> if (4 > 6) { "true" } else { "false" }
+ps false
 
-ps PS> if (2 > 1) { "true"  }
-ps- &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;else&nbsp;  { "false" }
-ps- true
-<br> 
-ps PS> if (2 < 1) { "true"  }
-ps- &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;else&nbsp;  { "false" }
+--
+<br>
+ps- PS> if (4 < 6) { "true" } else { "false" }
 ps .ps-error[The '<' operator is reserved for future use.]
 
 ---
 $$# PowerShell
-
-ps PS> if (2 > 1) { "true"  }
-ps &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;else&nbsp;  { "false" }
-ps true
+<br>
+ps PS> if (4 .red[>] 6) { "true" } else { "false" } # redirection
+ps false
 <br> 
-ps PS> if (2 < 1) { "true"  }
-ps &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;else&nbsp;  { "false" }
+ps PS> if (4 .red[<] 6) { "true" } else { "false" } # AVOID 
 ps .ps-error[The '<' operator is reserved for future use.]
 .fix-tilt[AVOID]
 Note: You should avoid using greater than, since the complementary less than doesn't exist.
 ---
 $$# PowerShell
-ps PS> if (2 .green[-gt] 1) { "true"  }
-ps &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;else&nbsp;  { "false" }
+<br>
+ps PS> if (4 .green[-gt] 6) { "true" } else { "false" }
 ps true
 <br> 
-ps PS> if (2 .green[-lt] 1) { "true"  }
-ps &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;else&nbsp;  { "false" }
+ps PS> if (4 .green[-lt] 6) { "true" } else { "false" }
 ps false
 .fix-tilt[FIX]
 
@@ -1396,7 +1493,7 @@ It will help you get a deeper mastery of the language, and you might just learn 
 
 ---
 
-#= Learn something ✨.new[new]✨
+#= .inline-img[Learn something ![](images/sparkles.png).new[new]![](images/sparkles.png)]
 
 Note: 
 > 

@@ -235,16 +235,6 @@ li cite {
     font-size: 256px;
 }
 
-.title h2 {
-    font-size: 36pt;
-    margin: 0.2em;
-    font-weight: bold;
-}
-
-.title h3 {
-    margin: 0.2em;
-    font-weight: normal;
-}
 
 /******************/
 /* Reverse slides */
@@ -323,6 +313,7 @@ rr { font-family: "RedactedR", regular;  }
    line-height: 32pt !important; 
  
 } 
+.inline-code { display: inline-block; }
 pre code { 
    font-family: "SFMono-Regular",Consolas,"Liberation Mono",Menlo,Courier,monospace !important;
    font-size: 24pt !important; 
@@ -420,17 +411,23 @@ Added: Zenburn, mostly.
 .remark-slides-area .remark-slide-content::after {
     content: "glasnt.com/wat" ;
     font-weight: normal;
+    background-color: white;
+    color: grey;
+    padding: 10px; 
     font-size: 18pt;
     position: absolute;
-    bottom: 24px;
+    bottom: 16px;
     right: 24px;
-    opacity: 0.5;
+    opacity: 0.9;
 }
 
 .row2 { position: absolute; left: 400px }
 .row3 { position: absolute; left: 800px }
 
-.css-demo { text-align: center; font-weight: bold; font-size: 28pt; padding: 10px; }
+.css-demo { font-family: 'Times New Roman', serif; text-align: center; font-weight: bold; font-size: 28pt; padding: 10px; }
 .css-demo .black { color: black}
 .css-demo .blacki { color: black !important}
 .css-demo .gold { color: gold}
+.nopad { padding: 0; }
+.inline-img img { display: inline-block; height: 50px; padding: 0 5px 0 5px;}
+
