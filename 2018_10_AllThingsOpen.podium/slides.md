@@ -664,9 +664,16 @@ class: title
 # Ruby
 ### ☞ &nbsp;`brew install ruby && irb`
 
+
 ???
 
 let's talk about Ruby
+
+As a note: all the examples are completely reproducable on a macbook, I've included the brew commands and repl invocation, or how to run the example script. The link at the bottom of every slide has all this, don't worry.
+
+So!
+
+Ruby
 ---
 .righthead[Ruby]
 <pre><code class="ruby">> not true && false</code></pre>
@@ -1685,7 +1692,7 @@ It also means you don't hvae to remember which way the crocodile goes
 ???
 INTENTIONALLY BLANK
 
-I've gone through just about a dozen programming languages
+I've gone through over a dozen programming languages
 
 And shown what could be described in each as a 'wat'
 
