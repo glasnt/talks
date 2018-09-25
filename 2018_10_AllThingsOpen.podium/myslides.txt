@@ -1209,9 +1209,9 @@ css .black { color: black; }
 css .gold &nbsp;{ color: gold; }
 
 $$# example.html
-html .nopad[`<link rel="stylesheet" href="example.css" />`]
-html `<div class="black gold"> Black Gold </div>`
-html `<div class="gold black"> Gold Black </div>`
+xml .nopad[`<link rel="stylesheet" href="example.css" />`]
+xml `<div class="black gold"> Black Gold </div>`
+xml `<div class="gold black"> Gold Black </div>`
 
 --
 $$# open example.html
@@ -1229,9 +1229,9 @@ css .black { color: black; }
 css .red[.gold &nbsp;{ color: gold; }] .inline-code[`/* specificity */`]
 
 $$# example.html
-html .nopad[`<link rel="stylesheet" href="example.css" />`]
-html `<div class="black gold"> Black Gold </div>`
-html `<div class="gold black"> Gold Black </div>`
+xml .nopad[`<link rel="stylesheet" href="example.css" />`]
+xml `<div class="black gold"> Black Gold </div>`
+xml `<div class="gold black"> Gold Black </div>`
 
 $$# open example.html
 <div class="css-demo">
@@ -1248,9 +1248,9 @@ css .black { color: black !important; }
 css .gold &nbsp;{ color: gold; }
 
 $$# example.html
-html .nopad[`<link rel="stylesheet" href="example.css" />`]
-html `<div class="black gold"> Black Gold </div>`
-html `<div class="gold black"> Gold Black </div>`
+xml .nopad[`<link rel="stylesheet" href="example.css" />`]
+xml `<div class="black gold"> Black Gold </div>`
+xml `<div class="gold black"> Gold Black </div>`
 
 Note: Let's just add that here, that'll make sure black actually works!
 --

@@ -7,33 +7,9 @@ class: title
 
 Note: Hi I'm Katie 
 ---
-@= djangologo.png
 
-Note: And I do a bunch of things in the Django community 
----
-@= dceu16.png
-Note: I spoke at DjangoCon Europe 16 in Budapest
----
-@= dcus17.png
-Note: I was a mentor, and also gave a talk, at DjangoCon US 2017
----
-@= dceu18.png
-Note: I also spoke in Heidelberg just a few short months ago
----
+TODO: how to intro self
 
-@= divio-logo.png
-
-Note: I'm a site reliability engineer at Divio, the company behind django-cms
----
-@= djangologo.png
-Note: I'm currently serving as a Director of the Django Software Foundation
----
-
-Note: But I don't know django. 
-
-Yet. 
-
-I'm an absolute novice. I have no idea what I'm doing
 ---
 @= djadmin.png
 Note: I still see the django admin as 
@@ -195,16 +171,15 @@ $$w ./manage.py shell
 Note: which is available using the manage.py shell command
 ---
 ### The Shell
-$$terminal python3.6
+$$terminal python3.7
 $$prompt ~
 cd project<br>
 $$prompt ~/project
 ./manage.py shell<br>
-Python 3.6.3 (default, Nov  9 2017, 15:58:30)<br>
-[GCC 4.2.1 Compatible Apple LLVM 9.0.0 (clang-900.0.38)] on darwin<br>
+Python 3.7.0 (default, Sep 24 2018, 20:50:19)<br>
+[Clang 10.0.0 (clang-1000.10.44.2)] on darwin<br>
 Type "help", "copyright", "credits" or "license" for more information.<br>
-(InteractiveConsole)<br>
-$$pyw &nbsp;  
+$$pyw 
 
 Note:
 
@@ -215,8 +190,7 @@ All shell is is a python environment where the django environment path has been 
 From here you can interact with your django projet directly.
 
 ---
-##= "But, how do I use the shell?"
-##- *"..."*
+##= "So how do I use this thing?"
 
 Note: but how do I use the shell
 
@@ -263,6 +237,8 @@ Thankfully, django is clever and has helpful methods you can call to generate a 
 ---
 ### Generate import statements
 ```python
+# python
+
 from django.apps import apps
 
 for app_config in apps.get_app_configs():
@@ -284,25 +260,23 @@ and print an import statement for each
 
 ---
 ### Generate import statements
-$$terminal python3.6
+$$terminal python3.7
 $$prompt ~/project
 ./manage.py shell<br>
-Python 3.6.3 (default, Nov  9 2017, 15:58:30)<br>
-[GCC 4.2.1 Compatible Apple LLVM 9.0.0 (clang-900.0.38)] on darwin<br>
+Python 3.7.0 (default, Sep 24 2018, 20:50:19)<br>
+[Clang 10.0.0 (clang-1000.10.44.2)] on darwin<br>
 Type "help", "copyright", "credits" or "license" for more information.<br>
-(InteractiveConsole)<br>
 $$pyw &nbsp;  
 
 Note: Going back to our shell
 ---
 ### Generate import statements
-$$terminal python3.6
+$$terminal python3.7
 $$prompt ~/project
 ./manage.py shell<br>
-Python 3.6.3 (default, Nov  9 2017, 15:58:30)<br>
-[GCC 4.2.1 Compatible Apple LLVM 9.0.0 (clang-900.0.38)] on darwin<br>
+Python 3.7.0 (default, Sep 24 2018, 20:50:19)<br>
+[Clang 10.0.0 (clang-1000.10.44.2)] on darwin<br>
 Type "help", "copyright", "credits" or "license" for more information.<br>
-(InteractiveConsole)<br>
 $$py from django.apps import apps<br>
 $$py for app_config in apps.get_app_configs():<br>
 ...&nbsp; l = app_config.name<br>
@@ -314,7 +288,7 @@ $$w ...&nbsp;
 Note: for now, we're just going to dump in that code and run it 
 ---
 ### Generate import statements
-$$terminal python3.6
+$$terminal python3.7
 ...&nbsp;<br> 
 from django.contrib.auth.models import Permission<br>
 from django.contrib.auth.models import Group<br>
@@ -350,55 +324,50 @@ Codepoint._meta.db_table
 </code></pre>
 ---
 ### Finding the table for a model
-$$terminal python3.6
+$$terminal python3.7
 $$prompt ~/project
 ./manage.py shell<br>
-Python 3.6.3 (default, Nov  9 2017, 15:58:30)<br>
-[GCC 4.2.1 Compatible Apple LLVM 9.0.0 (clang-900.0.38)] on darwin<br>
+Python 3.7.0 (default, Sep 24 2018, 20:50:19)<br>
+[Clang 10.0.0 (clang-1000.10.44.2)] on darwin<br>
 Type "help", "copyright", "credits" or "license" for more information.<br>
-(InteractiveConsole)<br>
 $$pyw
 ---
 ### Finding the table for a model
-$$terminal python3.6
+$$terminal python3.7
 $$prompt ~/project
 ./manage.py shell<br>
-Python 3.6.3 (default, Nov  9 2017, 15:58:30)<br>
-[GCC 4.2.1 Compatible Apple LLVM 9.0.0 (clang-900.0.38)] on darwin<br>
+Python 3.7.0 (default, Sep 24 2018, 20:50:19)<br>
+[Clang 10.0.0 (clang-1000.10.44.2)] on darwin<br>
 Type "help", "copyright", "credits" or "license" for more information.<br>
-(InteractiveConsole)<br>
 $$pyw from unicodex.models import Codepoint
 ---
 ### Finding the table for a model
-$$terminal python3.6
+$$terminal python3.7
 $$prompt ~/project
 ./manage.py shell<br>
-Python 3.6.3 (default, Nov  9 2017, 15:58:30)<br>
-[GCC 4.2.1 Compatible Apple LLVM 9.0.0 (clang-900.0.38)] on darwin<br>
+Python 3.7.0 (default, Sep 24 2018, 20:50:19)<br>
+[Clang 10.0.0 (clang-1000.10.44.2)] on darwin<br>
 Type "help", "copyright", "credits" or "license" for more information.<br>
-(InteractiveConsole)<br>
 $$py from unicodex.models import Codepoint
 $$pyw
 ---
 ### Finding the table for a model
-$$terminal python3.6
+$$terminal python3.7
 $$prompt ~/project
 ./manage.py shell<br>
-Python 3.6.3 (default, Nov  9 2017, 15:58:30)<br>
-[GCC 4.2.1 Compatible Apple LLVM 9.0.0 (clang-900.0.38)] on darwin<br>
+Python 3.7.0 (default, Sep 24 2018, 20:50:19)<br>
+[Clang 10.0.0 (clang-1000.10.44.2)] on darwin<br>
 Type "help", "copyright", "credits" or "license" for more information.<br>
-(InteractiveConsole)<br>
 $$py from unicodex.models import Codepoint
 $$pyw Codepoint._meta.db_table
 ---
 ### Finding the table for a model
-$$terminal python3.6
+$$terminal python3.7
 $$prompt ~/project
 ./manage.py shell<br>
-Python 3.6.3 (default, Nov  9 2017, 15:58:30)<br>
-[GCC 4.2.1 Compatible Apple LLVM 9.0.0 (clang-900.0.38)] on darwin<br>
+Python 3.7.0 (default, Sep 24 2018, 20:50:19)<br>
+[Clang 10.0.0 (clang-1000.10.44.2)] on darwin<br>
 Type "help", "copyright", "credits" or "license" for more information.<br>
-(InteractiveConsole)<br>
 $$py from unicodex.models import Codepoint
 $$py Codepoint._meta.db_table
 'unicodex_codepoint'<br>
@@ -410,37 +379,34 @@ $$pyw
 <pre><code><br><c># ORM</c><br>Codepoint._meta.get_fields()
 ---
 ### Showing all table columns
-$$terminal python3.6
+$$terminal python3.7
 $$prompt ~/project
 ./manage.py shell<br>
-Python 3.6.3 (default, Nov  9 2017, 15:58:30)<br>
-[GCC 4.2.1 Compatible Apple LLVM 9.0.0 (clang-900.0.38)] on darwin<br>
+Python 3.7.0 (default, Sep 24 2018, 20:50:19)<br>
+[Clang 10.0.0 (clang-1000.10.44.2)] on darwin<br>
 Type "help", "copyright", "credits" or "license" for more information.<br>
-(InteractiveConsole)<br>
 $$py from unicodex.models import Codepoint
 $$py Codepoint._meta.db_table
 'unicodex_codepoint'<br>
 $$pyw 
 ---
 ### Showing all table columns
-$$terminal python3.6
+$$terminal python3.7
 $$prompt ~/project
 ./manage.py shell<br>
-Python 3.6.3 (default, Nov  9 2017, 15:58:30)<br>
-[GCC 4.2.1 Compatible Apple LLVM 9.0.0 (clang-900.0.38)] on darwin<br>
+Python 3.7.0 (default, Sep 24 2018, 20:50:19)<br>
+[Clang 10.0.0 (clang-1000.10.44.2)] on darwin<br>
 Type "help", "copyright", "credits" or "license" for more information.<br>
-(InteractiveConsole)<br>
 $$py from unicodex.models import Codepoint
 $$py Codepoint._meta.db_table
 'unicodex_codepoint'<br>
 $$pyw Codepoint._meta.get_fields()
 ---
 ### Showing all table columns
-$$terminal python3.6
-Python 3.6.3 (default, Nov  9 2017, 15:58:30)<br>
-[GCC 4.2.1 Compatible Apple LLVM 9.0.0 (clang-900.0.38)] on darwin<br>
+$$terminal python3.7
+Python 3.7.0 (default, Sep 24 2018, 20:50:19)<br>
+[Clang 10.0.0 (clang-1000.10.44.2)] on darwin<br>
 Type "help", "copyright", "credits" or "license" for more information.<br>
-(InteractiveConsole)<br>
 $$py from unicodex.models import Codepoint
 $$py Codepoint._meta.db_table
 'unicodex_codepoint'<br>
@@ -561,62 +527,57 @@ Note: in the ORM, this maps to Codepoint, the model, dot objects dot all
 Just list all of them
 ---
 ### Show all table contents
-$$terminal python3.6
+$$terminal python3.7
 $$prompt ~/project
 ./manage.py shell<br>
-Python 3.6.3 (default, Nov  9 2017, 15:58:30)<br>
-[GCC 4.2.1 Compatible Apple LLVM 9.0.0 (clang-900.0.38)] on darwin<br>
+Python 3.7.0 (default, Sep 24 2018, 20:50:19)<br>
+[Clang 10.0.0 (clang-1000.10.44.2)] on darwin<br>
 Type "help", "copyright", "credits" or "license" for more information.<br>
-(InteractiveConsole)<br>
 $$pyw
 Note: back over in our console, before we can call Codepoint, we need to use that import statement we generated earlier
 ---
 ### Show all table contents
-$$terminal python3.6
+$$terminal python3.7
 $$prompt ~/project
 ./manage.py shell<br>
-Python 3.6.3 (default, Nov  9 2017, 15:58:30)<br>
-[GCC 4.2.1 Compatible Apple LLVM 9.0.0 (clang-900.0.38)] on darwin<br>
+Python 3.7.0 (default, Sep 24 2018, 20:50:19)<br>
+[Clang 10.0.0 (clang-1000.10.44.2)] on darwin<br>
 Type "help", "copyright", "credits" or "license" for more information.<br>
-(InteractiveConsole)<br>
 $$pyw from unicodex.models import Codepoint
 
 Note: from unicodex dot models import codepoint
 ---
 ### Show all table contents
-$$terminal python3.6
+$$terminal python3.7
 $$prompt ~/project
 ./manage.py shell<br>
-Python 3.6.3 (default, Nov  9 2017, 15:58:30)<br>
-[GCC 4.2.1 Compatible Apple LLVM 9.0.0 (clang-900.0.38)] on darwin<br>
+Python 3.7.0 (default, Sep 24 2018, 20:50:19)<br>
+[Clang 10.0.0 (clang-1000.10.44.2)] on darwin<br>
 Type "help", "copyright", "credits" or "license" for more information.<br>
-(InteractiveConsole)<br>
 $$py from unicodex.models import Codepoint
 $$pyw 
 
 Note: after we hit enter, we'll get no output, which is good, because this was successfully imported.
 ---
 ### Show all table contents
-$$terminal python3.6
+$$terminal python3.7
 $$prompt ~/project
 ./manage.py shell<br>
-Python 3.6.3 (default, Nov  9 2017, 15:58:30)<br>
-[GCC 4.2.1 Compatible Apple LLVM 9.0.0 (clang-900.0.38)] on darwin<br>
+Python 3.7.0 (default, Sep 24 2018, 20:50:19)<br>
+[Clang 10.0.0 (clang-1000.10.44.2)] on darwin<br>
 Type "help", "copyright", "credits" or "license" for more information.<br>
-(InteractiveConsole)<br>
 $$py from unicodex.models import Codepoint
 $$pyw Codepoint.objects.all()
 
 Note: then we make our codepoint dot objects dot all call
 ---
 ### Show all table contents
-$$terminal python3.6
+$$terminal python3.7
 $$prompt ~/project
 ./manage.py shell<br>
-Python 3.6.3 (default, Nov  9 2017, 15:58:30)<br>
-[GCC 4.2.1 Compatible Apple LLVM 9.0.0 (clang-900.0.38)] on darwin<br>
+Python 3.7.0 (default, Sep 24 2018, 20:50:19)<br>
+[Clang 10.0.0 (clang-1000.10.44.2)] on darwin<br>
 Type "help", "copyright", "credits" or "license" for more information.<br>
-(InteractiveConsole)<br>
 $$py from unicodex.models import Codepoint
 $$py Codepoint.objects.all()
 &lt;QuerySet [&lt;Codepoint: Sparkles>, &lt;Codepoint: Unicorn>, &lt;Codepoint: Desert Island>]><br>
@@ -661,7 +622,7 @@ Note: this maps to the ORM as filter. where the name column is a keyword argumen
 
 ---
 ### Show specific table contents
-$$terminal python3.6
+$$terminal python3.7
 $$py from unicodex.models import Codepoint
 $$pyw Codepoint.objects.filter(name='Sparkles')
 
@@ -670,7 +631,7 @@ Note: so in our fresh terminal, we import Codepoint
 Then run our filter
 ---
 ### Show specific table contents
-$$terminal python3.6
+$$terminal python3.7
 $$py from unicodex.models import Codepoint
 $$py Codepoint.objects.filter(name='Sparkles')
 &lt;QuerySet [&lt;Codepoint: Sparkles>]><br>
@@ -682,7 +643,7 @@ Note: and we get back a queryset with a single object: sparkles
 Note: we can also just return one specific record, instead of a queryset
 ---
 ### Get specific record
-$$terminal python3.6
+$$terminal python3.7
 $$py from unicodex.models import Codepoint
 $$py Codepoint.objects.filter(name='Sparkles')
 &lt;QuerySet [&lt;Codepoint: Sparkles>]><br>
@@ -692,7 +653,7 @@ Note: so where last time we used filter
 This time we use get
 ---
 ### Get specific record
-$$terminal python3.6
+$$terminal python3.7
 $$py from unicodex.models import Codepoint
 $$py Codepoint.objects.filter(name='Sparkles')
 &lt;QuerySet [&lt;Codepoint: Sparkles>]><br>
@@ -703,7 +664,7 @@ $$pyw
 Note: and we get a single object
 ---
 ### Get specific record
-$$terminal python3.6
+$$terminal python3.7
 $$py from unicodex.models import Codepoint
 $$py Codepoint.objects.filter(name='Sparkles')
 &lt;QuerySet [&lt;Codepoint: Sparkles>]><br>
@@ -720,16 +681,16 @@ THERE CAN BE ONLY ONE
 So if you try and run get, say, without any limiatations
 ---
 ### Get specific record
-$$terminal python3.6
+$$terminal python3.7
 &lt;QuerySet [&lt;Codepoint: Sparkles>]><br>
 $$py Codepoint.objects.get(name='Sparkles')
 &lt;Codepoint: Sparkles><br>
 $$py Codepoint.objects.get()
 Traceback (most recent call last):<br>
 &nbsp; File "&lt;console>", line 1, in &lt;module><br>
-&nbsp; File "/usr/local/lib/python3.6/site-packages/django/db/models/manager.p y", line 85, in manager_method<br>
+&nbsp; File "/usr/local/lib/python3.7/site-packages/django/db/models/manager.p y", line 85, in manager_method<br>
 &nbsp; &nbsp; return getattr(self.get_queryset(), name)(&#42;args, &#42;&#42;kwargs)<br>
-&nbsp; File "/usr/local/lib/python3.6/site-packages/django/db/models/query.py" , line 384, in get<br>
+&nbsp; File "/usr/local/lib/python3.7/site-packages/django/db/models/query.py" , line 384, in get<br>
 &nbsp; &nbsp; (self.model._meta.object_name, num)<br>
 unicodex.models.MultipleObjectsReturned: get() returned more than one Codepoint -- it returned 3!<br>
 $$pyw
@@ -780,7 +741,7 @@ which I'll explain more in a moment.
 
 ---
 ### Joins
-$$terminal python3.6
+$$terminal python3.7
 $$pyw
 
 Note: back to our terminal again, to execute this elegant little code snippet
@@ -788,23 +749,23 @@ Note: back to our terminal again, to execute this elegant little code snippet
 We import the design model this time
 ---
 ### Joins
-$$terminal python3.6
+$$terminal python3.7
 $$pyw from unicodex.models import Design
 ---
 ### Joins
-$$terminal python3.6
+$$terminal python3.7
 $$py from unicodex.models import Design
 $$pyw
 ---
 
 ### Joins
-$$terminal python3.6
+$$terminal python3.7
 $$py from unicodex.models import Design
 $$pyw Design.objects.filter(codepoint&#95;&#95;name='Sparkles')
 Note: and we run our filter
 ---
 ### Joins
-$$terminal python3.6
+$$terminal python3.7
 $$py from unicodex.models import Design
 $$py Design.objects.filter(codepoint&#95;&#95;name='Sparkles')
 &lt;QuerySet [&lt;Design: Sparkles Apple iOS 10.2>, &lt;Design: Sparkles Apple iOS 6.0>, &lt;Design: Sparkles Android 8.1>, &lt;Design: Sparkles Android 4.4>, &lt;Design: Sparkles Android 4.3>, &lt;Design: Sparkles Microsoft Windows 10>, &lt;Design: Sparkles Microsoft Windows 8.0>, &lt;Design: Sparkles Microsoft Windows 8.1>, &lt;Design: Sparkles Twitter 2.4>, &lt;Design: Sparkles EmojiOne 3.0>, &lt;Design: Sparkles EmojiOne 2.0>, &lt;Design: Sparkles EmojiOne 1.0>, &lt;Design: Sparkles Facebook 2.2>, &lt;Design: Sparkles Facebook 1.0>, &lt;Design: Sparkles Messenger 1.0>, &lt;Design: Sparkles WhatsApp 2.17>, &lt;Design: Sparkles Mozilla Firefox OS 2.5>, &lt;Design: Sparkles Twitter 1.0>]><br>
@@ -817,11 +778,9 @@ Note:
 ### Joins
 
 ```python
-
 # ORM
 Design.objects.filter(codepoint__name='Sparkles')
-
-# field, field, field... lookup
+# field, lookup
 ```
 
 Note: what we have here is one or more fields and then a lookup, all separated by double underscores
@@ -829,77 +788,21 @@ Note: what we have here is one or more fields and then a lookup, all separated b
 A lookup as an operation on that field
 
 If you remember back when we looked up the fields on a model, we know what options we have here. 
----
-### Joins
-$$terminal python3.6
-$$py from unicodex.models import Design
-$$pyw Design._meta.get_fields()
----
-### Joins
-$$terminal python3.6
-$$py from unicodex.models import Design
-$$py Design._meta.get_fields()
-(&lt;django.db.models.fields.AutoField: id>,<br> 
-&lt;django.db.models.fields.related.ForeignKey: vendorversion>, <br>
-&lt;django.db.models.fields.related.ForeignKey: codepoint>, <br>
-&lt;django.db.models.fields.files.FileField: image>)<br>
-$$pyw
 
-Note: we have four fields - a unique id, two foreign keys off to other models, and image
-
-but name isn't there. That came from codepoint
-
----
-### Joins
-$$terminal python3.6
-$$py from unicodex.models import Design
-$$py Design._meta.get_fields()
-(&lt;django.db.models.fields.AutoField: id>,<br> 
-&lt;django.db.models.fields.related.ForeignKey: vendorversion>, <br>
-&lt;django.db.models.fields.related.ForeignKey: codepoint>, <br>
-&lt;django.db.models.fields.files.FileField: image>)<br>
-$$pyw Codepoint._meta.get_fields()
-
-Note: so if we inspect Codepoint
-
----
-### Joins
-$$terminal python3.6
-$$py from unicodex.models import Design
-$$py Design._meta.get_fields()
-(&lt;django.db.models.fields.AutoField: id>,<br> 
-&lt;django.db.models.fields.related.ForeignKey: vendorversion>, <br>
-&lt;django.db.models.fields.related.ForeignKey: codepoint>, <br>
-&lt;django.db.models.fields.files.FileField: image>)<br>
-$$py Codepoint._meta.get_fields()
-(&lt;ManyToOneRel: unicodex.design>, <br>
-&lt;django.db.models.fields.AutoField: id>,<br> 
-&lt;django.db.models.fields.CharField: name>, <br>
-&lt;django.db.models.fields.TextField: description>,<br>
-&lt;django.db.models.fields.CharField: codepoint>)<br>
-$$pyw
-
-Note: WE see that codepoint has the name field
----
-### Joins
-```python
-# ORM
-Design.objects.filter(codepoint__name='Sparkles')
-# field, field, field... lookup
-```
-
-Note: You'll also note in our example that we end on a field.
+You'll also note in our example that we end on a field.
 
 By default the look up is an exact match on the string. So effectively, name equals sparkles 
 ---
 ### Joins
+
 ```python
 # ORM
 Design.objects.filter(codepoint__name='Sparkles')
-# field, field, field... lookup
+# field, lookup
 
 # ORM
 Design.objects.filter(codepoint__name__exact='Sparkles')
+# field, field, lookup
 ```
 
 Note: so by default what we're calling is codepoint name equals
@@ -923,227 +826,354 @@ the admin uses field lookups in it's UI
 and to some extent, you can handcode this URL to do some basic filtering, even if there isn't any filters on the right hand side panel
 
 ---
-$$terminal python3.6
+#= Dunderchain
+### .white[.]
+Note: what's really cool, is that we can chain these together 
+It's like the blockchain, but actually usable. 
+
+---
+#= Dunderchain
+### field, field, field, ... lookup
+Note: 
+
+So long as we know which models are joined other, we can just keep going, ending with a lookup
+
+To do that, we need to know how the different models link together.  
+
+We've already done that with our get_fields method earlier. 
+
+So we can do that again, and view all the fields we have. 
+
+Or we can do things a more clever way. 
+
+And don't worry, all my slides will be available online so you can get the code. 
+
+---
+### Discovering the schema
+$$terminal python3.7
+$$prompt ~/project
+./manage.py shell<br>
+Python 3.7.0 (default, Sep 24 2018, 20:50:19)<br>
+[Clang 10.0.0 (clang-1000.10.44.2)] on darwin<br>
+Type "help", "copyright", "credits" or "license" for more information.<br>
+$$pyw 
+
+Note: back in our django shell, a new, fresh shell
+
+We could  forge a path down a different series of foreign keys
+
+---
+### Discovering the schema
+$$terminal python3.7
+$$prompt ~/project
+./manage.py shell<br>
+Python 3.7.0 (default, Sep 24 2018, 20:50:19)<br>
+[Clang 10.0.0 (clang-1000.10.44.2)] on darwin<br>
+Type "help", "copyright", "credits" or "license" for more information.<br>
+$$pyw from unicodex.models import Design
+
+Note: import our object from earlier
+---
+### Discovering the schema
+$$terminal python3.7
+$$prompt ~/project
+./manage.py shell<br>
+Python 3.7.0 (default, Sep 24 2018, 20:50:19)<br>
+[Clang 10.0.0 (clang-1000.10.44.2)] on darwin<br>
+Type "help", "copyright", "credits" or "license" for more information.<br>
+$$py from unicodex.models import Design
+$$pyw Design._meta.get_fields()
+
+Note: get the fields
+---
+### Discovering the schema
+$$terminal python3.7
+$$prompt ~/project
+./manage.py shell<br>
+Python 3.7.0 (default, Sep 24 2018, 20:50:19)<br>
+[Clang 10.0.0 (clang-1000.10.44.2)] on darwin<br>
+Type "help", "copyright", "credits" or "license" for more information.<br>
 $$py from unicodex.models import Design
 $$py Design._meta.get_fields()
 (&lt;django.db.models.fields.AutoField: id>,<br> 
 &lt;django.db.models.fields.related.ForeignKey: vendorversion>, <br>
 &lt;django.db.models.fields.related.ForeignKey: codepoint>, <br>
 &lt;django.db.models.fields.files.FileField: image>)<br>
-$$py Codepoint._meta.get_fields()
-(&lt;ManyToOneRel: unicodex.design>, <br>
-&lt;django.db.models.fields.AutoField: id>,<br> 
-&lt;django.db.models.fields.CharField: name>, <br>
-&lt;django.db.models.fields.TextField: description>,<br>
-&lt;django.db.models.fields.CharField: codepoint>)<br>
 $$pyw
 
+Note: and we see we have the fields
+
+we could do this for all the other models we know of
+
+but there's a better way. 
+
+And I'm sorry, but there's going to be a UML diagram. 
+---
+
+<h1 style="color: white;text-shadow: 1px 1px 6px black, 0 0 136px aqua, 0 0 51px purple; font-family: arial; font-size: 200pt">UML</h1>
+
+Note: Unified Modeling Language
+
+These diagrams might bring up some memories from your college days (I know it does for me), but it's a good way to quickly visualise models. 
+
+And the great thing is, there's a simple way to get this happening in django. 
+
+Nw, I will point out, so far everything I've mentioned we could have done using only a shell and native django, but for this, we'll need some helpers. 
+
+---
+### Generate UML diagrams - setup
+
+$$terminal bash
+$$prompt ~/project
+$$w
+Note: there's a bit of setup required
+---
+### Generate UML diagrams - setup
+$$terminal bash
+$$prompt ~/project
+$$w brew install graphviz
+---
+### Generate UML diagrams - setup
+$$terminal bash
+$$prompt ~/project
+brew install graphviz
+<br>
+.lblue[==>] .b[Downloading https`:`//homebrew.bintray.com/bottles/graphviz-2.40.1.hig h_sierra.bottle.1.tar.gz]<br>
+.white[############################################################ 100.0%]<br>
+.lblue[==>] .b[Pouring graphviz-2.40.1.high_sierra.bottle.1.tar.gz]<br>
+🍺  /usr/local/Cellar/graphviz/2.40.1: 500 files, 11.2MB<br>
+$$prompt ~/project
+$$w
+
+Note: TODO update to mojave signature
+---
+### Generate UML diagrams - setup
+$$terminal bash
+$$prompt ~/project
+brew install graphviz
+<br>
+.lblue[==>] .b[Downloading https`:`//homebrew.bintray.com/bottles/graphviz-2.40.1.hig h_sierra.bottle.1.tar.gz]<br>
+.white[############################################################ 100.0%]<br>
+.lblue[==>] .b[Pouring graphviz-2.40.1.high_sierra.bottle.1.tar.gz]<br>
+🍺  /usr/local/Cellar/graphviz/2.40.1: 500 files, 11.2MB<br>
+$$prompt ~/project 
+$$w pip install pygraphviz django-extensions
 Note: 
 
-back to our terminal
-
-We can also forge a path down a different series of foreign keys
-
-See the vendorversion there? Let's see what that contains
 ---
-
-$$terminal python3.6
-$$pyw
+### Generate UML diagrams - setup
+$$terminal bash
+$$prompt ~/project
+brew install graphviz
+<br>
+.lblue[==>] .b[Downloading https`:`//homebrew.bintray.com/bottles/graphviz-2.40.1.hig h_sierra.bottle.1.tar.gz]<br>
+.white[############################################################ 100.0%]<br>
+.lblue[==>] .b[Pouring graphviz-2.40.1.high_sierra.bottle.1.tar.gz]<br>
+🍺  /usr/local/Cellar/graphviz/2.40.1: 500 files, 11.2MB<br>
+$$prompt ~/project 
+pip install pygraphviz django-extensions<br>
+... <br> Successfully installed django-extensions-2.1.2 pygraphviz-1.5<br>
+$$prompt ~/project
+$$w
+Note: 
+These are the instructions for macOS
 ---
-$$terminal python3.6
-$$pyw from unicodex.models import VendorVersion
+### Generate UML diagrams - setup
+$$terminal bash
+$$prompt ~/project
+brew install graphviz
+<br>
+.lblue[==>] .b[Downloading https`:`//homebrew.bintray.com/bottles/graphviz-2.40.1.hig h_sierra.bottle.1.tar.gz]<br>
+.white[############################################################ 100.0%]<br>
+.lblue[==>] .b[Pouring graphviz-2.40.1.high_sierra.bottle.1.tar.gz]<br>
+🍺  /usr/local/Cellar/graphviz/2.40.1: 500 files, 11.2MB<br>
+$$prompt ~/project 
+pip install pygraphviz django-extensions<br>
+... <br> Successfully installed django-extensions-2.1.2 pygraphviz-1.5<br>
+$$prompt ~/project
+$$w vi settings.py
+Note: 
+
+You then need to make a small edit to your settings file. 
 ---
+### Generate UML diagrams - setup
+$$terminal vim
+.aqua[import] aldryn_addons.settings<br>
+aldryn_addons.settings.load(.b[.mblue[locals]]())<br>
+<br>
+.mblue[# all django settings can be altered here]
+<br>
+<br>
+INSTALLED_APPS.extend([<br>
+.tp[....].pink["unicodex"],<br>
+])<br>
+.mblue[~]<br>
+.mblue[~]<br>
+.mblue[~]<br>
+.mblue[~]<br>
+.mblue[~]<br>
+.mblue[~]<br>
+"settings.py" 9L, 156C written
 
-$$terminal python3.6
-$$py from unicodex.models import VendorVersion
-$$pyw
+
+
+Note: 
 ---
-$$terminal python3.6
-$$py from unicodex.models import VendorVersion
-$$pyw VendorVersion._meta.get_fields()
+### Generate UML diagrams - setup
+$$terminal vim
+.aqua[import] aldryn_addons.settings<br>
+aldryn_addons.settings.load(.b[.mblue[locals]]())<br>
+<br>
+.mblue[# all django settings can be altered here]
+<br>
+<br>
+INSTALLED_APPS.extend([<br>
+.tp[....].pink["unicodex"],<br>
+$$w .tp[....].pink["django_extensions"], .mblue[# note the underscore]
+<br>
+])<br>
+.mblue[~]<br>
+.mblue[~]<br>
+.mblue[~]<br>
+.mblue[~]<br>
+.mblue[~]<br>
+"settings.py" 10L, 203C written
 
 
-Note: let's refresh our terminal and inspect VendorVersion
 
+Note: 
 ---
-$$terminal python3.6
-$$py from unicodex.models import VendorVersion
-$$py VendorVersion._meta.get_fields()
-(&lt;ManyToOneRel: unicodex.design>,<br> 
-&lt;django.db.models.fields.AutoField: id>, <br>
-&lt;django.db.models.fields.CharField: name>, <br>
-&lt;django.db.models.fields.related.ForeignKey: vendor>)<br>
-$$pyw
+### Generate UML diagrams
+$$terminal bash
+$$prompt ~/project
+brew install graphviz
+<br>
+.lblue[==>] .b[Downloading https`:`//homebrew.bintray.com/bottles/graphviz-2.40.1.hig h_sierra.bottle.1.tar.gz]<br>
+.white[############################################################ 100.0%]<br>
+.lblue[==>] .b[Pouring graphviz-2.40.1.high_sierra.bottle.1.tar.gz]<br>
+🍺  /usr/local/Cellar/graphviz/2.40.1: 500 files, 11.2MB<br>
+$$prompt ~/project 
+pip install pygraphviz django-extensions<br>
+... <br> Successfully installed django-extensions-2.1.2 pygraphviz-1.5<br>
+$$prompt ~/project
+vi settings.py<br>
+$$prompt ~/project
+$$w
 
-Note: Okay, so a vendorversion has many designs, an ID, a name, and a Vendor FK
-
-What about Vendor?
----
-$$terminal python3.6
-$$py from unicodex.models import VendorVersion
-$$py VendorVersion._meta.get_fields()
-(&lt;ManyToOneRel: unicodex.design>,<br> 
-&lt;django.db.models.fields.AutoField: id>, <br>
-&lt;django.db.models.fields.CharField: name>, <br>
-&lt;django.db.models.fields.related.ForeignKey: vendor>)<br>
-$$pyw from unicodex.models import Vendor
-
----
-$$terminal python3.6
-$$py from unicodex.models import VendorVersion
-$$py VendorVersion._meta.get_fields()
-(&lt;ManyToOneRel: unicodex.design>,<br> 
-&lt;django.db.models.fields.AutoField: id>, <br>
-&lt;django.db.models.fields.CharField: name>, <br>
-&lt;django.db.models.fields.related.ForeignKey: vendor>)<br>
-$$py from unicodex.models import Vendor
-$$pyw
----
-$$terminal python3.6
-$$py from unicodex.models import VendorVersion
-$$py VendorVersion._meta.get_fields()
-(&lt;ManyToOneRel: unicodex.design>,<br> 
-&lt;django.db.models.fields.AutoField: id>, <br>
-&lt;django.db.models.fields.CharField: name>, <br>
-&lt;django.db.models.fields.related.ForeignKey: vendor>)<br>
-$$py from unicodex.models import Vendor
-$$pyw Vendor._meta.get_fields()
-
-
-Note: clear our terminal, import Vendor, and check
-
----
-$$terminal python3.6
-$$py from unicodex.models import VendorVersion
-$$py VendorVersion._meta.get_fields()
-(&lt;ManyToOneRel: unicodex.design>,<br> 
-&lt;django.db.models.fields.AutoField: id>, <br>
-&lt;django.db.models.fields.CharField: name>, <br>
-&lt;django.db.models.fields.related.ForeignKey: vendor>)<br>
-$$py from unicodex.models import Vendor
-$$py Vendor._meta.get_fields()
-(&lt;ManyToOneRel: unicodex.vendorversion>, <br>
-&lt;django.db.models.fields.AutoField: id>, <br>
-&lt;django.db.models.fields.CharField: name>) <br>
-$$pyw
-
-Note: so vendor has a relationship with vendorversion, an id and a name too
-
-And thus, we have exhausted our search, and we could build up a UML diagram showing the relationships between all the tables in this app
-
-But I woldn't do that too you. 
-
-Back to what we were doing, showing filter walks
-
----
-
-$$terminal python3.6
-$$pyw
-
-Note: clearing our terminal again with Control L
----
-$$terminal python3.6
-$$pyw Design.objects.filter(
-
-Note: we have a number of options here. Let's build the longest chain we can...
+Note: and from here, we should just be able to run the darn command :)
 
 ---
-$$terminal python3.6
-$$pyw Design.objects.filter(vendorversion
-
-Note: Let's filter design objects where... the linked vendor version
-
----
-
-$$terminal python3.6
-$$pyw Design.objects.filter(vendorversion&#95;&#95;vendor
-
-
-Note: and the vendor linked to that....
-
----
-$$terminal python3.6
-$$pyw Design.objects.filter(vendorversion&#95;&#95;vendor&#95;&#95;name
-
-Note: the name of that vendor
+### Generate UML diagrams
+$$terminal bash
+$$prompt ~/project
+brew install graphviz
+<br>
+.lblue[==>] .b[Downloading https`:`//homebrew.bintray.com/bottles/graphviz-2.40.1.hig h_sierra.bottle.1.tar.gz]<br>
+.white[############################################################ 100.0%]<br>
+.lblue[==>] .b[Pouring graphviz-2.40.1.high_sierra.bottle.1.tar.gz]<br>
+🍺  /usr/local/Cellar/graphviz/2.40.1: 500 files, 11.2MB<br>
+$$prompt ~/project 
+pip install pygraphviz django-extensions<br>
+... <br> Successfully installed django-extensions-2.1.2 pygraphviz-1.5<br>
+$$prompt ~/project
+vi settings.py<br>
+$$prompt ~/project
+$$w ./manage.py graph_models unicodex -o uml.png
 
 ---
-
-
-$$terminal python3.6
-$$pyw Design.objects.filter(vendorversion&#95;&#95;vendor&#95;&#95;name&#95;&#95;contains=
-
-Note: contains...
+### Generate UML diagrams
+$$terminal bash
+$$prompt ~/project
+brew install graphviz
+<br>
+.lblue[==>] .b[Downloading https`:`//homebrew.bintray.com/bottles/graphviz-2.40.1.hig h_sierra.bottle.1.tar.gz]<br>
+.white[############################################################ 100.0%]<br>
+.lblue[==>] .b[Pouring graphviz-2.40.1.high_sierra.bottle.1.tar.gz]<br>
+🍺  /usr/local/Cellar/graphviz/2.40.1: 500 files, 11.2MB<br>
+$$prompt ~/project 
+pip install pygraphviz django-extensions<br>
+... <br> Successfully installed django-extensions-2.1.2 pygraphviz-1.5<br>
+$$prompt ~/project
+vi settings.py<br>
+$$prompt ~/project
+./manage.py graph_models unicodex -o uml.png<br>
+$$prompt ~/project
+$$w
 ---
-
-$$terminal python3.6
-$$pyw Design.objects.filter(vendorversion&#95;&#95;vendor&#95;&#95;name&#95;&#95;contains="Micro")
-
-Note: the string Micro
+### Generate UML diagrams
+$$terminal bash
+$$prompt ~/project
+brew install graphviz
+<br>
+.lblue[==>] .b[Downloading https`:`//homebrew.bintray.com/bottles/graphviz-2.40.1.hig h_sierra.bottle.1.tar.gz]<br>
+.white[############################################################ 100.0%]<br>
+.lblue[==>] .b[Pouring graphviz-2.40.1.high_sierra.bottle.1.tar.gz]<br>
+🍺  /usr/local/Cellar/graphviz/2.40.1: 500 files, 11.2MB<br>
+$$prompt ~/project 
+pip install pygraphviz django-extensions<br>
+... <br> Successfully installed django-extensions-2.1.2 pygraphviz-1.5<br>
+$$prompt ~/project
+vi settings.py<br>
+$$prompt ~/project
+./manage.py graph_models unicodex -o uml.png<br>
+$$prompt ~/project
+$$w open uml.png
 ---
+~@ uml_screenshot.png
 
-$$terminal python3.6
-$$py Design.objects.filter(vendorversion&#95;&#95;vendor&#95;&#95;name&#95;&#95;contains="Micro")
-&lt;QuerySet [&lt;Design: Sparkles Microsoft Windows 8.0>, &lt;Design: Desert Island Microsoft Windows 8.0>, &lt;Design: Sparkles Microsoft Windows 8.1>, &lt;Design: Desert Island Microsoft Windows 8.1>, &lt;Design: Sparkles Microsoft Windows 10>, &lt;Design: Unicorn Microsoft Windows 10>, &lt;Design: Desert Island Microsoft Windows 10>]><br>
-$$pyw
+Note: and here's out diagram
 
-Note: And thus, we get a of all designs where the name of the linked vendor contains Micro
+Let me teach out some stuff about unicodex.
 
----
-<pre><code><c>&num; Field Lookups</c><table>
-<tr><td><l>contains</l></td><td><o>LIKE "%?%"</o></td></tr>
-<tr><td><l>startswith</l></td><td><o>LIKE "?%"</o></td></tr>
-<tr><td><l>endswith</l></td><td><o>LIKE "%?"</o></td></tr>
-<tr><td><l>in</l></td><td><o>IN (?, ?, ?, ...)</o></td></tr>
-<tr><td><l>lt, le, gt, ge</l></td><td><o>&lt;, &lt;=, &gt;, &gt;=</o></td></tr>
-<tr><td><l>range</l></td><td><o>BETWEEN</o></td></tr>
-<tr><td><l>isnull</l></td><td><o>NULL</o></td></tr></table><c>&num; ... and many more!</c>
-<span class="bfoot" style="margin-bottom: -270px"><fl>[docs - querysets field lookups](https://docs.djangoproject.com/en/2.0/ref/models/querysets/#field-lookups)</fl></span>
+insert explanation here
 
-Note: There are other field lookups we can use for a number of differnt things. 
-
-We're also not just limited to one filter, we can have more than one
----
-
-$$terminal python3.6
-$$pyw Design.objects.filter(vendorversion&#95;&#95;vendor&#95;&#95;name&#95;&#95;contains="Micro"
-
-Note: instead of just filtering on Micro, we could alos
----
-$$terminal python3.6
-$$py Design.objects.filter(vendorversion&#95;&#95;vendor&#95;&#95;name&#95;&#95;contains="Micro",
-$$pdw &nbsp;&nbsp; 
----
-$$terminal python3.6
-$$py Design.objects.filter(vendorversion&#95;&#95;vendor&#95;&#95;name&#95;&#95;contains="Micro", 
-$$pdw &nbsp; codepoint 
+Which means we should be able to do things like just follow the arrows 
 
 ---
-$$terminal python3.6
-$$py Design.objects.filter(vendorversion&#95;&#95;vendor&#95;&#95;name&#95;&#95;contains="Micro", 
-$$pdw &nbsp; codepoint&#95;&#95;name
-
-
----
-$$terminal python3.6
-$$py Design.objects.filter(vendorversion&#95;&#95;vendor&#95;&#95;name&#95;&#95;contains="Micro", 
-$$pdw &nbsp; codepoint&#95;&#95;name&#95;&#95;endswith 
-
----
-$$terminal python3.6
-$$py Design.objects.filter(vendorversion&#95;&#95;vendor&#95;&#95;name&#95;&#95;contains="Micro", 
-$$pdw &nbsp; codepoint&#95;&#95;name&#95;&#95;endswith="corn") 
-
-
----
-$$terminal python3.6
-$$py Design.objects.filter(vendorversion&#95;&#95;vendor&#95;&#95;name&#95;&#95;contains="Micro", 
-$$pd &nbsp; codepoint&#95;&#95;name&#95;&#95;endswith="corn") 
-&lt;QuerySet [&lt;Design: Unicorn Microsoft Windows 10>]><br>
+### Longest filter chain
+$$terminal python3.7
+$$prompt ~/project
+./manage.py shell<br>
+Python 3.7.0 (default, Sep 24 2018, 20:50:19)<br>
+[Clang 10.0.0 (clang-1000.10.44.2)] on darwin<br>
+Type "help", "copyright", "credits" or "license" for more information.<br>
 $$pyw
 
-Note: we get list of designs both from a vendor 
-TODO CLEANUP MORE FROM HERE
+
+Note: so that longest chain... 
+---
+### Longest filter chain
+$$terminal python3.7
+$$prompt ~/project
+./manage.py shell<br>
+Python 3.7.0 (default, Sep 24 2018, 20:50:19)<br>
+[Clang 10.0.0 (clang-1000.10.44.2)] on darwin<br>
+Type "help", "copyright", "credits" or "license" for more information.<br>
+$$pyw from unicodex.models import *
+
+Note: so we can import our models
+
+and we can cheat here, by importing all 
+
+hehe
+
+---
+### Longest filter chain
+$$terminal python3.7
+$$prompt ~/project
+./manage.py shell<br>Python 3.7.0 (default, Sep 24 2018, 20:50:19)<br>[Clang 10.0.0 (clang-1000.10.44.2)] on darwin<br>Type "help", "copyright", "credits" or "license" for more information.<br>
+$$py from unicodex.models import *
+$$pyw
+
+Note: now, we can use that diagram from earlier...
+
+
+TODO - longest chaain. 
+
+
+
+
+
 ---
 ##= ... `AND`?
 Note: 
@@ -1375,21 +1405,21 @@ This is an or operation
 You may have only seen these operators before in bitmasking
 
 ---
-$$terminal python3.6
+$$terminal python3.7
 $$pyw
 ---
-$$terminal python3.6
+$$terminal python3.7
 $$pyw x = 0b10101010
 
 Note: if we have X as a binary string of one zero one zero
 
 ---
-$$terminal python3.6
+$$terminal python3.7
 $$py  x = 0b10101010
 $$pyw 
 
 ---
-$$terminal python3.6
+$$terminal python3.7
 $$py  x = 0b10101010
 $$pyw y = 0b11110000
 
@@ -1398,13 +1428,13 @@ Note: and we have y as one one one zero zero zero zero
 we can do something called bit masking
 
 ---
-$$terminal python3.6
+$$terminal python3.7
 $$py  x = 0b10101010
 $$py y = 0b11110000
 $$pyw 
 
 ---
-$$terminal python3.6
+$$terminal python3.7
 $$py  x = 0b10101010
 $$py y = 0b11110000
 $$pyw bin(x & y)
@@ -1412,7 +1442,7 @@ $$pyw bin(x & y)
 Note: if we ask for x AND y
 
 ---
-$$terminal python3.6
+$$terminal python3.7
 $$py  x = 0b10101010
 $$py y = 0b11110000
 $$py bin(x & y)
@@ -1424,7 +1454,7 @@ Note: we get 10100000
 For each bit, we only return 1 if both are 1
 
 ---
-$$terminal python3.6
+$$terminal python3.7
 $$py  x = 0b10101010
 $$py y = 0b11110000
 $$py bin(x & y)
@@ -1434,7 +1464,7 @@ $$pyw bin(x | y)
 Note: conversely, if we ask for x OR y
 
 ---
-$$terminal python3.6
+$$terminal python3.7
 $$py  x = 0b10101010
 $$py y = 0b11110000
 $$py bin(x & y)
@@ -1531,61 +1561,56 @@ THis is based on the filename I'm using for the iages uploaded to my models
 Okay. Let's run that and see what happens
 
 ---
-$$terminal python3.6
+$$terminal python3.7
 $$prompt ~/project
 ./manage.py shell<br>
-Python 3.6.3 (default, Nov  9 2017, 15:58:30)<br>
-[GCC 4.2.1 Compatible Apple LLVM 9.0.0 (clang-900.0.38)] on darwin<br>
+Python 3.7.0 (default, Sep 24 2018, 20:50:19)<br>
+[Clang 10.0.0 (clang-1000.10.44.2)] on darwin<br>
 Type "help", "copyright", "credits" or "license" for more information.<br>
-(InteractiveConsole)<br>
 $$pyw
 
 Note: so in our terminal
 
 ---
-$$terminal python3.6
+$$terminal python3.7
 $$prompt ~/project
 ./manage.py shell<br>
-Python 3.6.3 (default, Nov  9 2017, 15:58:30)<br>
-[GCC 4.2.1 Compatible Apple LLVM 9.0.0 (clang-900.0.38)] on darwin<br>
+Python 3.7.0 (default, Sep 24 2018, 20:50:19)<br>
+[Clang 10.0.0 (clang-1000.10.44.2)] on darwin<br>
 Type "help", "copyright", "credits" or "license" for more information.<br>
-(InteractiveConsole)<br>
 $$pyw from unicodex.models import Codepoint
 
 ---
-$$terminal python3.6
+$$terminal python3.7
 $$prompt ~/project
 ./manage.py shell<br>
-Python 3.6.3 (default, Nov  9 2017, 15:58:30)<br>
-[GCC 4.2.1 Compatible Apple LLVM 9.0.0 (clang-900.0.38)] on darwin<br>
+Python 3.7.0 (default, Sep 24 2018, 20:50:19)<br>
+[Clang 10.0.0 (clang-1000.10.44.2)] on darwin<br>
 Type "help", "copyright", "credits" or "license" for more information.<br>
-(InteractiveConsole)<br>
 $$py from unicodex.models import Codepoint
 $$pyw
 
 Note: remembering to import our model
 
 ---
-$$terminal python3.6
+$$terminal python3.7
 $$prompt ~/project
 ./manage.py shell<br>
-Python 3.6.3 (default, Nov  9 2017, 15:58:30)<br>
-[GCC 4.2.1 Compatible Apple LLVM 9.0.0 (clang-900.0.38)] on darwin<br>
+Python 3.7.0 (default, Sep 24 2018, 20:50:19)<br>
+[Clang 10.0.0 (clang-1000.10.44.2)] on darwin<br>
 Type "help", "copyright", "credits" or "license" for more information.<br>
-(InteractiveConsole)<br>
 $$py from unicodex.models import Codepoint
 $$pyw Codepoint.objects.filter(design&#95;&#95;image&#95;&#95;contains="png", design&#95;&#95;image&#95;&#95;startswith="design")
 
 Note: we add our code
 
 ---
-$$terminal python3.6
+$$terminal python3.7
 $$prompt ~/project
 ./manage.py shell<br>
-Python 3.6.3 (default, Nov  9 2017, 15:58:30)<br>
-[GCC 4.2.1 Compatible Apple LLVM 9.0.0 (clang-900.0.38)] on darwin<br>
+Python 3.7.0 (default, Sep 24 2018, 20:50:19)<br>
+[Clang 10.0.0 (clang-1000.10.44.2)] on darwin<br>
 Type "help", "copyright", "credits" or "license" for more information.<br>
-(InteractiveConsole)<br>
 $$py from unicodex.models import Codepoint
 $$py Codepoint.objects.filter(design&#95;&#95;image&#95;&#95;contains="png", design&#95;&#95;image&#95;&#95;startswith="design")
 &lt;QuerySet [&lt;Codepoint: Sparkles>, &lt;Codepoint: Sparkles>, &lt;Codepoint: Sparkles>, &lt;Codepoint: Sparkles>, &lt;Codepoint: Sparkles>, &lt;Codepoint: Sparkles>, &lt;Codepoint: Sparkles>, &lt;Codepoint: Sparkles>, &lt;Codepoint: Sparkles>, &lt;Codepoint: Sparkles>, &lt;Codepoint: Sparkles>, &lt;Codepoint: Unicorn>, &lt;Codepoint: Unicorn>, &lt;Codepoint: Unicorn>, &lt;Codepoint: Unicorn>, &lt;Codepoint: Unicorn>, &lt;Codepoint: Unicorn>, &lt;Codepoint: Unicorn>, &lt;Codepoint: Desert Island>, &lt;Codepoint: Desert Island>, '...(remaining elements truncated)...']><br>
@@ -1605,13 +1630,12 @@ Data is still there, if you iterate over the list, but the print representation 
 (this was implemented because of a very real bug at Lawrance Journal World, where they had servers keep crashing, because the debug page was trying to be helpful and show all the data... a million objects worth..)
 
 ---
-$$terminal python3.6
+$$terminal python3.7
 $$prompt ~/project
 ./manage.py shell<br>
-Python 3.6.3 (default, Nov  9 2017, 15:58:30)<br>
-[GCC 4.2.1 Compatible Apple LLVM 9.0.0 (clang-900.0.38)] on darwin<br>
+Python 3.7.0 (default, Sep 24 2018, 20:50:19)<br>
+[Clang 10.0.0 (clang-1000.10.44.2)] on darwin<br>
 Type "help", "copyright", "credits" or "license" for more information.<br>
-(InteractiveConsole)<br>
 $$py from unicodex.models import Codepoint
 $$pyw Codepoint.objects.filter(design&#95;&#95;image&#95;&#95;contains="png", design&#95;&#95;image&#95;&#95;startswith="design")
 
@@ -1619,26 +1643,24 @@ $$pyw Codepoint.objects.filter(design&#95;&#95;image&#95;&#95;contains="png", de
 Note: rewind a step
 
 ---
-$$terminal python3.6
+$$terminal python3.7
 $$prompt ~/project
 ./manage.py shell<br>
-Python 3.6.3 (default, Nov  9 2017, 15:58:30)<br>
-[GCC 4.2.1 Compatible Apple LLVM 9.0.0 (clang-900.0.38)] on darwin<br>
+Python 3.7.0 (default, Sep 24 2018, 20:50:19)<br>
+[Clang 10.0.0 (clang-1000.10.44.2)] on darwin<br>
 Type "help", "copyright", "credits" or "license" for more information.<br>
-(InteractiveConsole)<br>
 $$py from unicodex.models import Codepoint
 $$pyw Codepoint.objects.filter(design&#95;&#95;image&#95;&#95;contains="png", design&#95;&#95;image&#95;&#95;startswith="design").count()
 
 Note: add a count function on the end
 
 ---
-$$terminal python3.6
+$$terminal python3.7
 $$prompt ~/project
 ./manage.py shell<br>
-Python 3.6.3 (default, Nov  9 2017, 15:58:30)<br>
-[GCC 4.2.1 Compatible Apple LLVM 9.0.0 (clang-900.0.38)] on darwin<br>
+Python 3.7.0 (default, Sep 24 2018, 20:50:19)<br>
+[Clang 10.0.0 (clang-1000.10.44.2)] on darwin<br>
 Type "help", "copyright", "credits" or "license" for more information.<br>
-(InteractiveConsole)<br>
 $$py from unicodex.models import Codepoint
 $$py Codepoint.objects.filter(design&#95;&#95;image&#95;&#95;contains="png", design&#95;&#95;image&#95;&#95;startswith="design").count()
 44<br>
@@ -1669,26 +1691,24 @@ Codepoint.objects.filter(
 &nbsp; <o>design&#95;&#95;image&#95;&#95;startswith=</o>"design").count()<br><br><c>&dash;&dash; SQL</c><br><c>&dash;&dash; ?? </c><br><br><c>&num; ORM</c><br><r>from</r> django.db <r>import</r> connection<br>connection.queries
 </code></pre>
 ---
-$$terminal python3.6
+$$terminal python3.7
 $$prompt ~/project
 ./manage.py shell<br>
-Python 3.6.3 (default, Nov  9 2017, 15:58:30)<br>
-[GCC 4.2.1 Compatible Apple LLVM 9.0.0 (clang-900.0.38)] on darwin<br>
+Python 3.7.0 (default, Sep 24 2018, 20:50:19)<br>
+[Clang 10.0.0 (clang-1000.10.44.2)] on darwin<br>
 Type "help", "copyright", "credits" or "license" for more information.<br>
-(InteractiveConsole)<br>
 $$py from unicodex.models import Codepoint
 $$py Codepoint.objects.filter(design&#95;&#95;image&#95;&#95;contains="png", design&#95;&#95;image&#95;&#95;startswith="design").count()
 44<br>
 $$pyw
 ---
 
-$$terminal python3.6
+$$terminal python3.7
 $$prompt ~/project
 ./manage.py shell<br>
-Python 3.6.3 (default, Nov  9 2017, 15:58:30)<br>
-[GCC 4.2.1 Compatible Apple LLVM 9.0.0 (clang-900.0.38)] on darwin<br>
+Python 3.7.0 (default, Sep 24 2018, 20:50:19)<br>
+[Clang 10.0.0 (clang-1000.10.44.2)] on darwin<br>
 Type "help", "copyright", "credits" or "license" for more information.<br>
-(InteractiveConsole)<br>
 $$py from unicodex.models import Codepoint
 $$py Codepoint.objects.filter(design&#95;&#95;image&#95;&#95;contains="png", design&#95;&#95;image&#95;&#95;startswith="design").count()
 44<br>
@@ -1697,13 +1717,12 @@ $$pyw from django.db import connection
 Note: we can import the django database connection modele
 ---
 
-$$terminal python3.6
+$$terminal python3.7
 $$prompt ~/project
 ./manage.py shell<br>
-Python 3.6.3 (default, Nov  9 2017, 15:58:30)<br>
-[GCC 4.2.1 Compatible Apple LLVM 9.0.0 (clang-900.0.38)] on darwin<br>
+Python 3.7.0 (default, Sep 24 2018, 20:50:19)<br>
+[Clang 10.0.0 (clang-1000.10.44.2)] on darwin<br>
 Type "help", "copyright", "credits" or "license" for more information.<br>
-(InteractiveConsole)<br>
 $$py from unicodex.models import Codepoint
 $$py Codepoint.objects.filter(design&#95;&#95;image&#95;&#95;contains="png", design&#95;&#95;image&#95;&#95;startswith="design").count()
 44<br>
@@ -1711,13 +1730,12 @@ $$py from django.db import connection
 $$pyw
 ---
 
-$$terminal python3.6
+$$terminal python3.7
 $$prompt ~/project
 ./manage.py shell<br>
-Python 3.6.3 (default, Nov  9 2017, 15:58:30)<br>
-[GCC 4.2.1 Compatible Apple LLVM 9.0.0 (clang-900.0.38)] on darwin<br>
+Python 3.7.0 (default, Sep 24 2018, 20:50:19)<br>
+[Clang 10.0.0 (clang-1000.10.44.2)] on darwin<br>
 Type "help", "copyright", "credits" or "license" for more information.<br>
-(InteractiveConsole)<br>
 $$py from unicodex.models import Codepoint
 $$py Codepoint.objects.filter(design&#95;&#95;image&#95;&#95;contains="png", design&#95;&#95;image&#95;&#95;startswith="design").count()
 44<br>
@@ -1728,13 +1746,12 @@ Note: and inspect the last query run against our databse
 
 
 ---
-$$terminal python3.6
+$$terminal python3.7
 $$prompt ~/project
 ./manage.py shell<br>
-Python 3.6.3 (default, Nov  9 2017, 15:58:30)<br>
-[GCC 4.2.1 Compatible Apple LLVM 9.0.0 (clang-900.0.38)] on darwin<br>
+Python 3.7.0 (default, Sep 24 2018, 20:50:19)<br>
+[Clang 10.0.0 (clang-1000.10.44.2)] on darwin<br>
 Type "help", "copyright", "credits" or "license" for more information.<br>
-(InteractiveConsole)<br>
 $$py from unicodex.models import Codepoint
 $$py Codepoint.objects.filter(design&#95;&#95;image&#95;&#95;contains="png", design&#95;&#95;image&#95;&#95;startswith="design").count()
 44<br>
@@ -1758,7 +1775,7 @@ Codepoint.objects.filter(
 &nbsp; <o>design&#95;&#95;image&#95;&#95;startswith=</o>"design").count()<br><br><c>&dash;&dash; SQL</c><br><c>&dash;&dash; ??
 
 ---
-$$terminal python3.6
+$$terminal python3.7
 $$py from unicodex.models import Codepoint
 $$py Codepoint.objects.filter(design&#95;&#95;image&#95;&#95;contains="png", design&#95;&#95;image&#95;&#95;startswith="design").count()
 44<br>
@@ -1767,7 +1784,7 @@ $$py connection.queries[-1]
 {'sql': 'SELECT COUNT(&#42;) AS "&#95;&#95;count" FROM "unicodex&#95;codepoint" INNER JOIN "unicodex&#95;design" ON ("unicodex&#95;codepoint"."id" = "unicodex&#95;design"."codepoint&#95;id") WHERE ("unicodex&#95;design"."image"::text LIKE \'%png%\' AND "unicodex&#95;design"."image"::text LIKE \'design%\')', 'time': '0.001'}<br>
 $$pyw
 ---
-$$terminal python3.6
+$$terminal python3.7
 $$py from unicodex.models import Codepoint
 $$py Codepoint.objects.filter(design&#95;&#95;image&#95;&#95;contains="png", design&#95;&#95;image&#95;&#95;startswith="design").count()
 44<br>
@@ -1778,7 +1795,7 @@ $$py Codepoint.objects.filter(design&#95;&#95;image&#95;&#95;contains="png").fil
 $$pdw design&#95;&#95;image&#95;&#95;startswith="design").count()
 
 ---
-$$terminal python3.6
+$$terminal python3.7
 $$py from unicodex.models import Codepoint
 $$py Codepoint.objects.filter(design&#95;&#95;image&#95;&#95;contains="png", design&#95;&#95;image&#95;&#95;startswith="design").count()
 44<br>
@@ -1793,7 +1810,7 @@ $$pyw
 Note: wait, what??
 
 ---
-$$terminal python3.6
+$$terminal python3.7
 $$py from unicodex.models import Codepoint
 $$py Codepoint.objects.filter(design&#95;&#95;image&#95;&#95;contains="png", design&#95;&#95;image&#95;&#95;startswith="design").count()
 44<br>
@@ -1810,7 +1827,7 @@ Note: let's check
 
 
 ---
-$$terminal python3.6
+$$terminal python3.7
 $$py connection.queries[-1]
 {'sql': 'SELECT COUNT(&#42;) AS "&#95;&#95;count" FROM "unicodex&#95;codepoint" INNER JOIN "unicodex&#95;design" ON ("unicodex&#95;codepoint"."id" = "unicodex&#95;design"."codepoint&#95;id") WHERE ("unicodex&#95;design"."image"::text LIKE \'%png%\' AND "unicodex&#95;design"."image"::text LIKE \'design%\')', 'time': '0.001'}<br>
 $$py Codepoint.objects.filter(design&#95;&#95;image&#95;&#95;contains="png").filter(
@@ -1860,164 +1877,151 @@ $$prompt ~/project
 $$w ./manage.py shell
 
 ---
-$$terminal python3.6
+$$terminal python3.7
 $$prompt ~
 cd project<br>
 $$prompt ~/project 
 ./manage.py shell<br>
-Python 3.6.3 (default, Nov  9 2017, 15:58:30)<br>
-[GCC 4.2.1 Compatible Apple LLVM 9.0.0 (clang-900.0.38)] on darwin<br>
+Python 3.7.0 (default, Sep 24 2018, 20:50:19)<br>
+[Clang 10.0.0 (clang-1000.10.44.2)] on darwin<br>
 Type "help", "copyright", "credits" or "license" for more information.<br>
-(InteractiveConsole)<br>
 $$pyw
 ---
-$$terminal python3.6
+$$terminal python3.7
 $$prompt ~
 cd project<br>
 $$prompt ~/project 
 ./manage.py shell<br>
-Python 3.6.3 (default, Nov  9 2017, 15:58:30)<br>
-[GCC 4.2.1 Compatible Apple LLVM 9.0.0 (clang-900.0.38)] on darwin<br>
+Python 3.7.0 (default, Sep 24 2018, 20:50:19)<br>
+[Clang 10.0.0 (clang-1000.10.44.2)] on darwin<br>
 Type "help", "copyright", "credits" or "license" for more information.<br>
-(InteractiveConsole)<br>
 $$pyw from unicodex.objects import
 ---
-$$terminal python3.6
+$$terminal python3.7
 $$prompt ~
 cd project<br>
 $$prompt ~/project 
 ./manage.py shell<br>
-Python 3.6.3 (default, Nov  9 2017, 15:58:30)<br>
-[GCC 4.2.1 Compatible Apple LLVM 9.0.0 (clang-900.0.38)] on darwin<br>
+Python 3.7.0 (default, Sep 24 2018, 20:50:19)<br>
+[Clang 10.0.0 (clang-1000.10.44.2)] on darwin<br>
 Type "help", "copyright", "credits" or "license" for more information.<br>
-(InteractiveConsole)<br>
 $$pyw from unicodex.objects import *
 ---
-$$terminal python3.6
+$$terminal python3.7
 $$prompt ~
 cd project<br>
 $$prompt ~/project 
 ./manage.py shell<br>
-Python 3.6.3 (default, Nov  9 2017, 15:58:30)<br>
-[GCC 4.2.1 Compatible Apple LLVM 9.0.0 (clang-900.0.38)] on darwin<br>
+Python 3.7.0 (default, Sep 24 2018, 20:50:19)<br>
+[Clang 10.0.0 (clang-1000.10.44.2)] on darwin<br>
 Type "help", "copyright", "credits" or "license" for more information.<br>
-(InteractiveConsole)<br>
 $$py from unicodex.objects import *
 $$pyw
 ---
-$$terminal python3.6
+$$terminal python3.7
 $$prompt ~
 cd project<br>
 $$prompt ~/project 
 ./manage.py shell<br>
-Python 3.6.3 (default, Nov  9 2017, 15:58:30)<br>
-[GCC 4.2.1 Compatible Apple LLVM 9.0.0 (clang-900.0.38)] on darwin<br>
+Python 3.7.0 (default, Sep 24 2018, 20:50:19)<br>
+[Clang 10.0.0 (clang-1000.10.44.2)] on darwin<br>
 Type "help", "copyright", "credits" or "license" for more information.<br>
-(InteractiveConsole)<br>
 $$py from unicodex.objects import *
 $$pyw Design.objects.filter(
 ---
-$$terminal python3.6
+$$terminal python3.7
 $$prompt ~
 cd project<br>
 $$prompt ~/project 
 ./manage.py shell<br>
-Python 3.6.3 (default, Nov  9 2017, 15:58:30)<br>
-[GCC 4.2.1 Compatible Apple LLVM 9.0.0 (clang-900.0.38)] on darwin<br>
+Python 3.7.0 (default, Sep 24 2018, 20:50:19)<br>
+[Clang 10.0.0 (clang-1000.10.44.2)] on darwin<br>
 Type "help", "copyright", "credits" or "license" for more information.<br>
-(InteractiveConsole)<br>
 $$py from unicodex.objects import *
 $$pyw Design.objects.filter(codepoint&#95;&#95;name="Sparkles"
 ---
-$$terminal python3.6
+$$terminal python3.7
 $$prompt ~
 cd project<br>
 $$prompt ~/project 
 ./manage.py shell<br>
-Python 3.6.3 (default, Nov  9 2017, 15:58:30)<br>
-[GCC 4.2.1 Compatible Apple LLVM 9.0.0 (clang-900.0.38)] on darwin<br>
+Python 3.7.0 (default, Sep 24 2018, 20:50:19)<br>
+[Clang 10.0.0 (clang-1000.10.44.2)] on darwin<br>
 Type "help", "copyright", "credits" or "license" for more information.<br>
-(InteractiveConsole)<br>
 $$py from unicodex.objects import *
 $$py Design.objects.filter(codepoint&#95;&#95;name="Sparkles",
 $$pdw 
 ---
-$$terminal python3.6
+$$terminal python3.7
 $$prompt ~
 cd project<br>
 $$prompt ~/project 
 ./manage.py shell<br>
-Python 3.6.3 (default, Nov  9 2017, 15:58:30)<br>
-[GCC 4.2.1 Compatible Apple LLVM 9.0.0 (clang-900.0.38)] on darwin<br>
+Python 3.7.0 (default, Sep 24 2018, 20:50:19)<br>
+[Clang 10.0.0 (clang-1000.10.44.2)] on darwin<br>
 Type "help", "copyright", "credits" or "license" for more information.<br>
-(InteractiveConsole)<br>
 $$py from unicodex.objects import *
 $$py Design.objects.filter(codepoint&#95;&#95;name="Sparkles",
 $$pdw vendorversion
 ---
-$$terminal python3.6
+$$terminal python3.7
 $$prompt ~
 cd project<br>
 $$prompt ~/project 
 ./manage.py shell<br>
-Python 3.6.3 (default, Nov  9 2017, 15:58:30)<br>
-[GCC 4.2.1 Compatible Apple LLVM 9.0.0 (clang-900.0.38)] on darwin<br>
+Python 3.7.0 (default, Sep 24 2018, 20:50:19)<br>
+[Clang 10.0.0 (clang-1000.10.44.2)] on darwin<br>
 Type "help", "copyright", "credits" or "license" for more information.<br>
-(InteractiveConsole)<br>
 $$py from unicodex.objects import *
 $$py Design.objects.filter(codepoint&#95;&#95;name="Sparkles",
 $$pdw vendorversion&#95;&#95;vendor
 ---
-$$terminal python3.6
+$$terminal python3.7
 $$prompt ~
 cd project<br>
 $$prompt ~/project 
 ./manage.py shell<br>
-Python 3.6.3 (default, Nov  9 2017, 15:58:30)<br>
-[GCC 4.2.1 Compatible Apple LLVM 9.0.0 (clang-900.0.38)] on darwin<br>
+Python 3.7.0 (default, Sep 24 2018, 20:50:19)<br>
+[Clang 10.0.0 (clang-1000.10.44.2)] on darwin<br>
 Type "help", "copyright", "credits" or "license" for more information.<br>
-(InteractiveConsole)<br>
 $$py from unicodex.objects import *
 $$py Design.objects.filter(codepoint&#95;&#95;name="Sparkles",
 $$pdw vendorversion&#95;&#95;vendor&#95;&#95;name
 ---
-$$terminal python3.6
+$$terminal python3.7
 $$prompt ~
 cd project<br>
 $$prompt ~/project 
-./manage.py shell<br>
-Python 3.6.3 (default, Nov  9 2017, 15:58:30)<br>
-[GCC 4.2.1 Compatible Apple LLVM 9.0.0 (clang-900.0.38)] on darwin<br>
+Python 3.7.0 (default, Sep 24 2018, 20:50:19)<br>
+[Clang 10.0.0 (clang-1000.10.44.2)] on darwin<br>
 Type "help", "copyright", "credits" or "license" for more information.<br>
-(InteractiveConsole)<br>
+./manage.py shell<br>
 $$py from unicodex.objects import *
 $$py Design.objects.filter(codepoint&#95;&#95;name="Sparkles",
 $$pdw vendorversion&#95;&#95;vendor&#95;&#95;name="Twitter")
 ---
-$$terminal python3.6
+$$terminal python3.7
 $$prompt ~
 cd project<br>
 $$prompt ~/project 
 ./manage.py shell<br>
-Python 3.6.3 (default, Nov  9 2017, 15:58:30)<br>
-[GCC 4.2.1 Compatible Apple LLVM 9.0.0 (clang-900.0.38)] on darwin<br>
+Python 3.7.0 (default, Sep 24 2018, 20:50:19)<br>
+[Clang 10.0.0 (clang-1000.10.44.2)] on darwin<br>
 Type "help", "copyright", "credits" or "license" for more information.<br>
-(InteractiveConsole)<br>
 $$py from unicodex.objects import *
 $$py Design.objects.filter(codepoint&#95;&#95;name="Sparkles",
 $$pd vendorversion&#95;&#95;vendor&#95;&#95;name="Twitter")
 &lt;QuerySet [&lt;Design: Sparkles Twitter 1.0>, &lt;Design: Sparkles Twitter 2.4>]><br>
 $$pyw
 ---
-$$terminal python3.6
+$$terminal python3.7
 $$prompt ~
 cd project<br>
 $$prompt ~/project 
 ./manage.py shell<br>
-Python 3.6.3 (default, Nov  9 2017, 15:58:30)<br>
-[GCC 4.2.1 Compatible Apple LLVM 9.0.0 (clang-900.0.38)] on darwin<br>
+Python 3.7.0 (default, Sep 24 2018, 20:50:19)<br>
+[Clang 10.0.0 (clang-1000.10.44.2)] on darwin<br>
 Type "help", "copyright", "credits" or "license" for more information.<br>
-(InteractiveConsole)<br>
 $$py from unicodex.objects import *
 $$py Design.objects.filter(codepoint&#95;&#95;name="Sparkles",
 $$pd vendorversion&#95;&#95;vendor&#95;&#95;name="Twitter")
@@ -2027,15 +2031,14 @@ $$pdw vendorversion&#95;&#95;vendor&#95;&#95;name="Twitter")
 
 Note: press up to replay the line
 ---
-$$terminal python3.6
+$$terminal python3.7
 $$prompt ~
 cd project<br>
 $$prompt ~/project 
 ./manage.py shell<br>
-Python 3.6.3 (default, Nov  9 2017, 15:58:30)<br>
-[GCC 4.2.1 Compatible Apple LLVM 9.0.0 (clang-900.0.38)] on darwin<br>
+Python 3.7.0 (default, Sep 24 2018, 20:50:19)<br>
+[Clang 10.0.0 (clang-1000.10.44.2)] on darwin<br>
 Type "help", "copyright", "credits" or "license" for more information.<br>
-(InteractiveConsole)<br>
 $$py from unicodex.objects import *
 $$py Design.objects.filter(codepoint&#95;&#95;name="Sparkles",
 $$pd vendorversion&#95;&#95;vendor&#95;&#95;name="Twitter")
@@ -2044,15 +2047,14 @@ $$py <w>D</w>esign.objects.filter(codepoint&#95;&#95;name="Sparkles",
 $$pd vendorversion&#95;&#95;vendor&#95;&#95;name="Twitter")
 
 ---
-$$terminal python3.6
+$$terminal python3.7
 $$prompt ~
 cd project<br>
 $$prompt ~/project 
 ./manage.py shell<br>
-Python 3.6.3 (default, Nov  9 2017, 15:58:30)<br>
-[GCC 4.2.1 Compatible Apple LLVM 9.0.0 (clang-900.0.38)] on darwin<br>
+Python 3.7.0 (default, Sep 24 2018, 20:50:19)<br>
+[Clang 10.0.0 (clang-1000.10.44.2)] on darwin<br>
 Type "help", "copyright", "credits" or "license" for more information.<br>
-(InteractiveConsole)<br>
 $$py from unicodex.objects import *
 $$py Design.objects.filter(codepoint&#95;&#95;name="Sparkles",
 $$pd vendorversion&#95;&#95;vendor&#95;&#95;name="Twitter")
@@ -2061,15 +2063,14 @@ $$py d =<w>&nbsp;</w>Design.objects.filter(codepoint&#95;&#95;name="Sparkles",
 $$pd vendorversion&#95;&#95;vendor&#95;&#95;name="Twitter")
 
 ---
-$$terminal python3.6
+$$terminal python3.7
 $$prompt ~
 cd project<br>
 $$prompt ~/project 
 ./manage.py shell<br>
-Python 3.6.3 (default, Nov  9 2017, 15:58:30)<br>
-[GCC 4.2.1 Compatible Apple LLVM 9.0.0 (clang-900.0.38)] on darwin<br>
+Python 3.7.0 (default, Sep 24 2018, 20:50:19)<br>
+[Clang 10.0.0 (clang-1000.10.44.2)] on darwin<br>
 Type "help", "copyright", "credits" or "license" for more information.<br>
-(InteractiveConsole)<br>
 $$py from unicodex.objects import *
 $$py Design.objects.filter(codepoint&#95;&#95;name="Sparkles",
 $$pd vendorversion&#95;&#95;vendor&#95;&#95;name="Twitter")
@@ -2080,15 +2081,15 @@ $$pyw
 
 Note: now we have our value saved
 ---
-$$terminal python3.6
+$$terminal python3.7
 $$pyw
 
 Note: clear terminal
 ---
-$$terminal python3.6
+$$terminal python3.7
 $$pyw d
 ---
-$$terminal python3.6
+$$terminal python3.7
 $$py d
 &lt;QuerySet [&lt;Design: Sparkles Twitter 1.0>, &lt;Design: Sparkles Twitter 2.4>]><br>
 $$pyw
@@ -2096,7 +2097,7 @@ $$pyw
 Note: now, we can filter more. 
 ---
 
-$$terminal python3.6
+$$terminal python3.7
 $$py d
 &lt;QuerySet [&lt;Design: Sparkles Twitter 1.0>, &lt;Design: Sparkles Twitter 2.4>]><br>
 $$pyw d[0]
@@ -2105,7 +2106,7 @@ Note: we could absolutely just return the first value of this array
 
 That's completely valid
 ---
-$$terminal python3.6
+$$terminal python3.7
 $$py d
 &lt;QuerySet [&lt;Design: Sparkles Twitter 1.0>, &lt;Design: Sparkles Twitter 2.4>]><br>
 $$pyw d
@@ -2113,7 +2114,7 @@ $$pyw d
 Note: but let's keep filtering, instead
 
 ---
-$$terminal python3.6
+$$terminal python3.7
 $$py d
 &lt;QuerySet [&lt;Design: Sparkles Twitter 1.0>, &lt;Design: Sparkles Twitter 2.4>]><br>
 $$pyw d.filter(
@@ -2121,29 +2122,29 @@ $$pyw d.filter(
 Note: we can chain filters on querysets, remember?
 
 ---
-$$terminal python3.6
+$$terminal python3.7
 $$py d
 &lt;QuerySet [&lt;Design: Sparkles Twitter 1.0>, &lt;Design: Sparkles Twitter 2.4>]><br>
 $$pyw d.filter(vendorversion
 ---
-$$terminal python3.6
+$$terminal python3.7
 $$py d
 &lt;QuerySet [&lt;Design: Sparkles Twitter 1.0>, &lt;Design: Sparkles Twitter 2.4>]><br>
 $$pyw d.filter(vendorversion&#95;&#95;name
 ---
-$$terminal python3.6
+$$terminal python3.7
 $$py d
 &lt;QuerySet [&lt;Design: Sparkles Twitter 1.0>, &lt;Design: Sparkles Twitter 2.4>]><br>
 $$pyw d.filter(vendorversion&#95;&#95;name&#95;&#95;contains
 
 Note: contains here, to be save. We know the string will have 1.0 in it, but we aren't 100% sure where
 ---
-$$terminal python3.6
+$$terminal python3.7
 $$py d
 &lt;QuerySet [&lt;Design: Sparkles Twitter 1.0>, &lt;Design: Sparkles Twitter 2.4>]><br>
 $$pyw d.filter(vendorversion&#95;&#95;name&#95;&#95;contains="1.0")
 ---
-$$terminal python3.6
+$$terminal python3.7
 $$py d
 &lt;QuerySet [&lt;Design: Sparkles Twitter 1.0>, &lt;Design: Sparkles Twitter 2.4>]><br>
 $$py d.filter(vendorversion&#95;&#95;name&#95;&#95;contains="1.0")
@@ -2152,21 +2153,21 @@ $$pyw
 
 Note: woo!
 ---
-$$terminal python3.6
+$$terminal python3.7
 $$py d
 &lt;QuerySet [&lt;Design: Sparkles Twitter 1.0>, &lt;Design: Sparkles Twitter 2.4>]><br>
 $$py d.filter(vendorversion&#95;&#95;name&#95;&#95;contains="1.0")
 &lt;QuerySet [&lt;Design: Sparkles Twitter 1.0>]><br>
 $$pyw d.filter(vendorversion&#95;&#95;name&#95;&#95;contains="1.0")
 ---
-$$terminal python3.6
+$$terminal python3.7
 $$py d
 &lt;QuerySet [&lt;Design: Sparkles Twitter 1.0>, &lt;Design: Sparkles Twitter 2.4>]><br>
 $$py d.filter(vendorversion&#95;&#95;name&#95;&#95;contains="1.0")
 &lt;QuerySet [&lt;Design: Sparkles Twitter 1.0>]><br>
 $$py <w>d</w>.filter(vendorversion&#95;&#95;name&#95;&#95;contains="1.0")
 ---
-$$terminal python3.6
+$$terminal python3.7
 $$py d
 &lt;QuerySet [&lt;Design: Sparkles Twitter 1.0>, &lt;Design: Sparkles Twitter 2.4>]><br>
 $$py d.filter(vendorversion&#95;&#95;name&#95;&#95;contains="1.0")
@@ -2174,21 +2175,21 @@ $$py d.filter(vendorversion&#95;&#95;name&#95;&#95;contains="1.0")
 $$py d.filte<w>r</w>(vendorversion&#95;&#95;name&#95;&#95;contains="1.0")
 
 ---
-$$terminal python3.6
+$$terminal python3.7
 $$py d
 &lt;QuerySet [&lt;Design: Sparkles Twitter 1.0>, &lt;Design: Sparkles Twitter 2.4>]><br>
 $$py d.filter(vendorversion&#95;&#95;name&#95;&#95;contains="1.0")
 &lt;QuerySet [&lt;Design: Sparkles Twitter 1.0>]><br>
 $$py d.<w>(</w>vendorversion&#95;&#95;name&#95;&#95;contains="1.0")
 ---
-$$terminal python3.6
+$$terminal python3.7
 $$py d
 &lt;QuerySet [&lt;Design: Sparkles Twitter 1.0>, &lt;Design: Sparkles Twitter 2.4>]><br>
 $$py d.filter(vendorversion&#95;&#95;name&#95;&#95;contains="1.0")
 &lt;QuerySet [&lt;Design: Sparkles Twitter 1.0>]><br>
 $$py d.get<w>(</w>vendorversion&#95;&#95;name&#95;&#95;contains="1.0")
 ---
-$$terminal python3.6
+$$terminal python3.7
 $$py d
 &lt;QuerySet [&lt;Design: Sparkles Twitter 1.0>, &lt;Design: Sparkles Twitter 2.4>]><br>
 $$py d.filter(vendorversion&#95;&#95;name&#95;&#95;contains="1.0")
@@ -2197,7 +2198,7 @@ $$py d.get(vendorversion&#95;&#95;name&#95;&#95;contains="1.0")
 &lt;Design: Sparkles Twitter 1.0><br>
 $$pyw
 ---
-$$terminal python3.6
+$$terminal python3.7
 $$py d
 &lt;QuerySet [&lt;Design: Sparkles Twitter 1.0>, &lt;Design: Sparkles Twitter 2.4>]><br>
 $$py d.filter(vendorversion&#95;&#95;name&#95;&#95;contains="1.0")
@@ -2207,7 +2208,7 @@ $$py d.get(vendorversion&#95;&#95;name&#95;&#95;contains="1.0")
 $$pyw d.get(vendorversion&#95;&#95;name&#95;&#95;contains="1.0")
 
 ---
-$$terminal python3.6
+$$terminal python3.7
 $$py d
 &lt;QuerySet [&lt;Design: Sparkles Twitter 1.0>, &lt;Design: Sparkles Twitter 2.4>]><br>
 $$py d.filter(vendorversion&#95;&#95;name&#95;&#95;contains="1.0")
@@ -2217,7 +2218,7 @@ $$py d.get(vendorversion&#95;&#95;name&#95;&#95;contains="1.0")
 $$pyw d.get(vendorversion&#95;&#95;name&#95;&#95;contains="1.0")._meta.get_fields()
 
 ---
-$$terminal python3.6
+$$terminal python3.7
 $$py d
 &lt;QuerySet [&lt;Design: Sparkles Twitter 1.0>, &lt;Design: Sparkles Twitter 2.4>]><br>
 $$py d.filter(vendorversion&#95;&#95;name&#95;&#95;contains="1.0")
@@ -2231,7 +2232,7 @@ $$py d.get(vendorversion&#95;&#95;name&#95;&#95;contains="1.0")._meta.get_fields
 &lt;django.db.models.fields.files.FileField: image>)<br>
 $$pyw
 ---
-$$terminal python3.6
+$$terminal python3.7
 $$py d
 &lt;QuerySet [&lt;Design: Sparkles Twitter 1.0>, &lt;Design: Sparkles Twitter 2.4>]><br>
 $$py d.filter(vendorversion&#95;&#95;name&#95;&#95;contains="1.0")
@@ -2245,7 +2246,7 @@ $$py d.get(vendorversion&#95;&#95;name&#95;&#95;contains="1.0")._meta.get_fields
 &lt;django.db.models.fields.files.FileField: image>)<br>
 $$pyw d.get(vendorversion&#95;&#95;name&#95;&#95;contains="1.0")._meta.get_fields()
 ---
-$$terminal python3.6
+$$terminal python3.7
 $$py d
 &lt;QuerySet [&lt;Design: Sparkles Twitter 1.0>, &lt;Design: Sparkles Twitter 2.4>]><br>
 $$py d.filter(vendorversion&#95;&#95;name&#95;&#95;contains="1.0")
@@ -2260,7 +2261,7 @@ $$py d.get(vendorversion&#95;&#95;name&#95;&#95;contains="1.0")._meta.get_fields
 $$pyw d.get(vendorversion&#95;&#95;name&#95;&#95;contains="1.0")
 
 ---
-$$terminal python3.6
+$$terminal python3.7
 $$py d
 &lt;QuerySet [&lt;Design: Sparkles Twitter 1.0>, &lt;Design: Sparkles Twitter 2.4>]><br>
 $$py d.filter(vendorversion&#95;&#95;name&#95;&#95;contains="1.0")
@@ -2274,7 +2275,7 @@ $$py d.get(vendorversion&#95;&#95;name&#95;&#95;contains="1.0")._meta.get_fields
 &lt;django.db.models.fields.files.FileField: image>)<br>
 $$pyw d.get(vendorversion&#95;&#95;name&#95;&#95;contains="1.0").image
 ---
-$$terminal python3.6
+$$terminal python3.7
 $$py d
 &lt;QuerySet [&lt;Design: Sparkles Twitter 1.0>, &lt;Design: Sparkles Twitter 2.4>]><br>
 $$py d.filter(vendorversion&#95;&#95;name&#95;&#95;contains="1.0")
@@ -2377,44 +2378,40 @@ If you really want to make the ORM work well for you when developing
 ##= `echo "ipython" >> Pipfile`
 Note: add ipython as a dev requirement in your Pipfile, or requirements.txt or whereever all good python package managers store their requirements.
 ---
-$$terminal python3.6
+$$terminal python3.7
 $$prompt ~/project
 ./manage.py shell<br>
-Python 3.6.3 (default, Nov  9 2017, 15:58:30)<br>
-[GCC 4.2.1 Compatible Apple LLVM 9.0.0 (clang-900.0.38)] on darwin<br>
+Python 3.7.0 (default, Sep 24 2018, 20:50:19)<br>
+[Clang 10.0.0 (clang-1000.10.44.2)] on darwin<br>
 Type "help", "copyright", "credits" or "license" for more information.<br>
-(InteractiveConsole)<br>
 $$pyw
 
 Note: it will turn your shell from this old and busted
 ---
-$$terminal python3.6
+$$terminal python3.7
 $$prompt ~/project
 ./manage.py shell<br>
-Python 3.6.3 (default, Nov  9 2017, 15:58:30)<br>
-Type 'copyright', 'credits' or 'license' for more information<br>
-IPython 6.3.1 -- An enhanced Interactive Python. Type '?' for help.<br><br>
-$$w <tg>In [</tg><ty>1</ty><tg>]:&nbsp; 
+Python 3.7.0 (default, Sep 24 2018, 20:50:19)<br>
+[Clang 10.0.0 (clang-1000.10.44.2)] on darwin<br>
+Type "help", "copyright", "credits" or "license" for more information.<br>
 Note: to the new hotness
 
 This is an ipython powered shell, which means
 ---
-$$terminal python3.6
+$$terminal python3.7
 $$prompt ~/project
 ./manage.py shell<br>
-Python 3.6.3 (default, Nov  9 2017, 15:58:30)<br>
-Type 'copyright', 'credits' or 'license' for more information<br>
-IPython 6.3.1 -- An enhanced Interactive Python. Type '?' for help.<br>
-<br><tg>In [</tg><ty>1</ty><tg>]: from </tg><tb>uni</tb><w>&nbsp;</w>
+Python 3.7.0 (default, Sep 24 2018, 20:50:19)<br>
+[Clang 10.0.0 (clang-1000.10.44.2)] on darwin<br>
+Type "help", "copyright", "credits" or "license" for more information.<br>
 Note: you start typing something, press tab, and
 ---
-$$terminal python3.6
+$$terminal python3.7
 $$prompt ~/project
 ./manage.py shell<br>
-Python 3.6.3 (default, Nov  9 2017, 15:58:30)<br>
-Type 'copyright', 'credits' or 'license' for more information<br>
-IPython 6.3.1 -- An enhanced Interactive Python. Type '?' for help.<br>
-<br><tg>In [</tg><ty>1</ty><tg>]: from </tg><tb>uni</tb><w>&nbsp;</w>
+Python 3.7.0 (default, Sep 24 2018, 20:50:19)<br>
+[Clang 10.0.0 (clang-1000.10.44.2)] on darwin<br>
+Type "help", "copyright", "credits" or "license" for more information.<br>
 <br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  <ww>unicodedata</ww>
 <br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  <ww>unicodex&nbsp; &nbsp;</ww>
 <br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  <ww>unittest&nbsp; &nbsp;</ww>

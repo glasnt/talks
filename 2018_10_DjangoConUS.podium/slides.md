@@ -10,53 +10,9 @@ class: middle, center
 
 Hi I'm Katie
 ---
-class: middle, center, image
-![Image](images/djangologo.png)
 
-???
+TODO: how to intro self
 
-And I do a bunch of things in the Django community
----
-class: middle, center, image
-![Image](images/dceu16.png)
-???
-
-I spoke at DjangoCon Europe 16 in Budapest
----
-class: middle, center, image
-![Image](images/dcus17.png)
-???
-
-I was a mentor, and also gave a talk, at DjangoCon US 2017
----
-class: middle, center, image
-![Image](images/dceu18.png)
-???
-
-I also spoke in Heidelberg just a few short months ago
----
-
-class: middle, center, image
-![Image](images/divio-logo.png)
-
-???
-
-I'm a site reliability engineer at Divio, the company behind django-cms
----
-class: middle, center, image
-![Image](images/djangologo.png)
-???
-
-I'm currently serving as a Director of the Django Software Foundation
----
-
-???
-
-But I don't know django.
-
-Yet.
-
-I'm an absolute novice. I have no idea what I'm doing
 ---
 class: middle, center, image
 ![Image](images/djadmin.png)
@@ -271,16 +227,15 @@ cd project<br>
 which is available using the manage.py shell command
 ---
 ### The Shell
-<div class="shell-wrap"><p class="shell-top-bar">python3.6</p><p class="shell-body">
+<div class="shell-wrap"><p class="shell-top-bar">python3.7</p><p class="shell-body">
 <ps>myrtle</ps> <dr>~ $</dr>
 cd project<br>
 <ps>myrtle</ps> <dr>~/project $</dr>
 ./manage.py shell<br>
-Python 3.6.3 (default, Nov 9 2017, 15:58:30)<br>
-[GCC 4.2.1 Compatible Apple LLVM 9.0.0 (clang-900.0.38)] on darwin<br>
+Python 3.7.0 (default, Sep 24 2018, 20:50:19)<br>
+[Clang 10.0.0 (clang-1000.10.44.2)] on darwin<br>
 Type "help", "copyright", "credits" or "license" for more information.<br>
-(InteractiveConsole)<br>
-`>>>` &nbsp;<w>&nbsp;</w>
+`>>>` <w>&nbsp;</w>
 
 ???
 
@@ -292,8 +247,7 @@ From here you can interact with your django projet directly.
 
 ---
 class: title
-## "But, how do I use the shell?"
-##- *"..."*
+## "So how do I use this thing?"
 
 ???
 
@@ -347,6 +301,8 @@ Thankfully, django is clever and has helpful methods you can call to generate a 
 ---
 ### Generate import statements
 ```python
+# python
+
 from django.apps import apps
 
 for app_config in apps.get_app_configs():
@@ -370,13 +326,12 @@ and print an import statement for each
 
 ---
 ### Generate import statements
-<div class="shell-wrap"><p class="shell-top-bar">python3.6</p><p class="shell-body">
+<div class="shell-wrap"><p class="shell-top-bar">python3.7</p><p class="shell-body">
 <ps>myrtle</ps> <dr>~/project $</dr>
 ./manage.py shell<br>
-Python 3.6.3 (default, Nov 9 2017, 15:58:30)<br>
-[GCC 4.2.1 Compatible Apple LLVM 9.0.0 (clang-900.0.38)] on darwin<br>
+Python 3.7.0 (default, Sep 24 2018, 20:50:19)<br>
+[Clang 10.0.0 (clang-1000.10.44.2)] on darwin<br>
 Type "help", "copyright", "credits" or "license" for more information.<br>
-(InteractiveConsole)<br>
 `>>>` &nbsp;<w>&nbsp;</w>
 
 ???
@@ -384,13 +339,12 @@ Type "help", "copyright", "credits" or "license" for more information.<br>
 Going back to our shell
 ---
 ### Generate import statements
-<div class="shell-wrap"><p class="shell-top-bar">python3.6</p><p class="shell-body">
+<div class="shell-wrap"><p class="shell-top-bar">python3.7</p><p class="shell-body">
 <ps>myrtle</ps> <dr>~/project $</dr>
 ./manage.py shell<br>
-Python 3.6.3 (default, Nov 9 2017, 15:58:30)<br>
-[GCC 4.2.1 Compatible Apple LLVM 9.0.0 (clang-900.0.38)] on darwin<br>
+Python 3.7.0 (default, Sep 24 2018, 20:50:19)<br>
+[Clang 10.0.0 (clang-1000.10.44.2)] on darwin<br>
 Type "help", "copyright", "credits" or "license" for more information.<br>
-(InteractiveConsole)<br>
 `>>>` from django.apps import apps<br><br>
 `>>>` for app_config in apps.get_app_configs():<br><br>
 ...&nbsp; l = app_config.name<br>
@@ -404,7 +358,7 @@ Type "help", "copyright", "credits" or "license" for more information.<br>
 for now, we're just going to dump in that code and run it
 ---
 ### Generate import statements
-<div class="shell-wrap"><p class="shell-top-bar">python3.6</p><p class="shell-body">
+<div class="shell-wrap"><p class="shell-top-bar">python3.7</p><p class="shell-body">
 ...&nbsp;<br>
 from django.contrib.auth.models import Permission<br>
 from django.contrib.auth.models import Group<br>
@@ -443,55 +397,50 @@ Codepoint._meta.db_table
 </code></pre>
 ---
 ### Finding the table for a model
-<div class="shell-wrap"><p class="shell-top-bar">python3.6</p><p class="shell-body">
+<div class="shell-wrap"><p class="shell-top-bar">python3.7</p><p class="shell-body">
 <ps>myrtle</ps> <dr>~/project $</dr>
 ./manage.py shell<br>
-Python 3.6.3 (default, Nov 9 2017, 15:58:30)<br>
-[GCC 4.2.1 Compatible Apple LLVM 9.0.0 (clang-900.0.38)] on darwin<br>
+Python 3.7.0 (default, Sep 24 2018, 20:50:19)<br>
+[Clang 10.0.0 (clang-1000.10.44.2)] on darwin<br>
 Type "help", "copyright", "credits" or "license" for more information.<br>
-(InteractiveConsole)<br>
 `>>>` <w>&nbsp;</w>
 ---
 ### Finding the table for a model
-<div class="shell-wrap"><p class="shell-top-bar">python3.6</p><p class="shell-body">
+<div class="shell-wrap"><p class="shell-top-bar">python3.7</p><p class="shell-body">
 <ps>myrtle</ps> <dr>~/project $</dr>
 ./manage.py shell<br>
-Python 3.6.3 (default, Nov 9 2017, 15:58:30)<br>
-[GCC 4.2.1 Compatible Apple LLVM 9.0.0 (clang-900.0.38)] on darwin<br>
+Python 3.7.0 (default, Sep 24 2018, 20:50:19)<br>
+[Clang 10.0.0 (clang-1000.10.44.2)] on darwin<br>
 Type "help", "copyright", "credits" or "license" for more information.<br>
-(InteractiveConsole)<br>
 `>>>` from unicodex.models import Codepoint<w>&nbsp;</w>
 ---
 ### Finding the table for a model
-<div class="shell-wrap"><p class="shell-top-bar">python3.6</p><p class="shell-body">
+<div class="shell-wrap"><p class="shell-top-bar">python3.7</p><p class="shell-body">
 <ps>myrtle</ps> <dr>~/project $</dr>
 ./manage.py shell<br>
-Python 3.6.3 (default, Nov 9 2017, 15:58:30)<br>
-[GCC 4.2.1 Compatible Apple LLVM 9.0.0 (clang-900.0.38)] on darwin<br>
+Python 3.7.0 (default, Sep 24 2018, 20:50:19)<br>
+[Clang 10.0.0 (clang-1000.10.44.2)] on darwin<br>
 Type "help", "copyright", "credits" or "license" for more information.<br>
-(InteractiveConsole)<br>
 `>>>` from unicodex.models import Codepoint<br>
 `>>>` <w>&nbsp;</w>
 ---
 ### Finding the table for a model
-<div class="shell-wrap"><p class="shell-top-bar">python3.6</p><p class="shell-body">
+<div class="shell-wrap"><p class="shell-top-bar">python3.7</p><p class="shell-body">
 <ps>myrtle</ps> <dr>~/project $</dr>
 ./manage.py shell<br>
-Python 3.6.3 (default, Nov 9 2017, 15:58:30)<br>
-[GCC 4.2.1 Compatible Apple LLVM 9.0.0 (clang-900.0.38)] on darwin<br>
+Python 3.7.0 (default, Sep 24 2018, 20:50:19)<br>
+[Clang 10.0.0 (clang-1000.10.44.2)] on darwin<br>
 Type "help", "copyright", "credits" or "license" for more information.<br>
-(InteractiveConsole)<br>
 `>>>` from unicodex.models import Codepoint<br>
 `>>>` Codepoint._meta.db_table<w>&nbsp;</w>
 ---
 ### Finding the table for a model
-<div class="shell-wrap"><p class="shell-top-bar">python3.6</p><p class="shell-body">
+<div class="shell-wrap"><p class="shell-top-bar">python3.7</p><p class="shell-body">
 <ps>myrtle</ps> <dr>~/project $</dr>
 ./manage.py shell<br>
-Python 3.6.3 (default, Nov 9 2017, 15:58:30)<br>
-[GCC 4.2.1 Compatible Apple LLVM 9.0.0 (clang-900.0.38)] on darwin<br>
+Python 3.7.0 (default, Sep 24 2018, 20:50:19)<br>
+[Clang 10.0.0 (clang-1000.10.44.2)] on darwin<br>
 Type "help", "copyright", "credits" or "license" for more information.<br>
-(InteractiveConsole)<br>
 `>>>` from unicodex.models import Codepoint<br>
 `>>>` Codepoint._meta.db_table<br>
 'unicodex_codepoint'<br>
@@ -504,37 +453,34 @@ class: title
 <pre><code><br><c># ORM</c><br>Codepoint._meta.get_fields()
 ---
 ### Showing all table columns
-<div class="shell-wrap"><p class="shell-top-bar">python3.6</p><p class="shell-body">
+<div class="shell-wrap"><p class="shell-top-bar">python3.7</p><p class="shell-body">
 <ps>myrtle</ps> <dr>~/project $</dr>
 ./manage.py shell<br>
-Python 3.6.3 (default, Nov 9 2017, 15:58:30)<br>
-[GCC 4.2.1 Compatible Apple LLVM 9.0.0 (clang-900.0.38)] on darwin<br>
+Python 3.7.0 (default, Sep 24 2018, 20:50:19)<br>
+[Clang 10.0.0 (clang-1000.10.44.2)] on darwin<br>
 Type "help", "copyright", "credits" or "license" for more information.<br>
-(InteractiveConsole)<br>
 `>>>` from unicodex.models import Codepoint<br>
 `>>>` Codepoint._meta.db_table<br>
 'unicodex_codepoint'<br>
 `>>>` <w>&nbsp;</w>
 ---
 ### Showing all table columns
-<div class="shell-wrap"><p class="shell-top-bar">python3.6</p><p class="shell-body">
+<div class="shell-wrap"><p class="shell-top-bar">python3.7</p><p class="shell-body">
 <ps>myrtle</ps> <dr>~/project $</dr>
 ./manage.py shell<br>
-Python 3.6.3 (default, Nov 9 2017, 15:58:30)<br>
-[GCC 4.2.1 Compatible Apple LLVM 9.0.0 (clang-900.0.38)] on darwin<br>
+Python 3.7.0 (default, Sep 24 2018, 20:50:19)<br>
+[Clang 10.0.0 (clang-1000.10.44.2)] on darwin<br>
 Type "help", "copyright", "credits" or "license" for more information.<br>
-(InteractiveConsole)<br>
 `>>>` from unicodex.models import Codepoint<br>
 `>>>` Codepoint._meta.db_table<br>
 'unicodex_codepoint'<br>
 `>>>` Codepoint._meta.get_fields()<w>&nbsp;</w>
 ---
 ### Showing all table columns
-<div class="shell-wrap"><p class="shell-top-bar">python3.6</p><p class="shell-body">
-Python 3.6.3 (default, Nov 9 2017, 15:58:30)<br>
-[GCC 4.2.1 Compatible Apple LLVM 9.0.0 (clang-900.0.38)] on darwin<br>
+<div class="shell-wrap"><p class="shell-top-bar">python3.7</p><p class="shell-body">
+Python 3.7.0 (default, Sep 24 2018, 20:50:19)<br>
+[Clang 10.0.0 (clang-1000.10.44.2)] on darwin<br>
 Type "help", "copyright", "credits" or "license" for more information.<br>
-(InteractiveConsole)<br>
 `>>>` from unicodex.models import Codepoint<br>
 `>>>` Codepoint._meta.db_table<br>
 'unicodex_codepoint'<br>
@@ -675,26 +621,24 @@ in the ORM, this maps to Codepoint, the model, dot objects dot all
 Just list all of them
 ---
 ### Show all table contents
-<div class="shell-wrap"><p class="shell-top-bar">python3.6</p><p class="shell-body">
+<div class="shell-wrap"><p class="shell-top-bar">python3.7</p><p class="shell-body">
 <ps>myrtle</ps> <dr>~/project $</dr>
 ./manage.py shell<br>
-Python 3.6.3 (default, Nov 9 2017, 15:58:30)<br>
-[GCC 4.2.1 Compatible Apple LLVM 9.0.0 (clang-900.0.38)] on darwin<br>
+Python 3.7.0 (default, Sep 24 2018, 20:50:19)<br>
+[Clang 10.0.0 (clang-1000.10.44.2)] on darwin<br>
 Type "help", "copyright", "credits" or "license" for more information.<br>
-(InteractiveConsole)<br>
 `>>>` <w>&nbsp;</w>
 ???
 
 back over in our console, before we can call Codepoint, we need to use that import statement we generated earlier
 ---
 ### Show all table contents
-<div class="shell-wrap"><p class="shell-top-bar">python3.6</p><p class="shell-body">
+<div class="shell-wrap"><p class="shell-top-bar">python3.7</p><p class="shell-body">
 <ps>myrtle</ps> <dr>~/project $</dr>
 ./manage.py shell<br>
-Python 3.6.3 (default, Nov 9 2017, 15:58:30)<br>
-[GCC 4.2.1 Compatible Apple LLVM 9.0.0 (clang-900.0.38)] on darwin<br>
+Python 3.7.0 (default, Sep 24 2018, 20:50:19)<br>
+[Clang 10.0.0 (clang-1000.10.44.2)] on darwin<br>
 Type "help", "copyright", "credits" or "license" for more information.<br>
-(InteractiveConsole)<br>
 `>>>` from unicodex.models import Codepoint<w>&nbsp;</w>
 
 ???
@@ -702,13 +646,12 @@ Type "help", "copyright", "credits" or "license" for more information.<br>
 from unicodex dot models import codepoint
 ---
 ### Show all table contents
-<div class="shell-wrap"><p class="shell-top-bar">python3.6</p><p class="shell-body">
+<div class="shell-wrap"><p class="shell-top-bar">python3.7</p><p class="shell-body">
 <ps>myrtle</ps> <dr>~/project $</dr>
 ./manage.py shell<br>
-Python 3.6.3 (default, Nov 9 2017, 15:58:30)<br>
-[GCC 4.2.1 Compatible Apple LLVM 9.0.0 (clang-900.0.38)] on darwin<br>
+Python 3.7.0 (default, Sep 24 2018, 20:50:19)<br>
+[Clang 10.0.0 (clang-1000.10.44.2)] on darwin<br>
 Type "help", "copyright", "credits" or "license" for more information.<br>
-(InteractiveConsole)<br>
 `>>>` from unicodex.models import Codepoint<br>
 `>>>` <w>&nbsp;</w>
 
@@ -717,13 +660,12 @@ Type "help", "copyright", "credits" or "license" for more information.<br>
 after we hit enter, we'll get no output, which is good, because this was successfully imported.
 ---
 ### Show all table contents
-<div class="shell-wrap"><p class="shell-top-bar">python3.6</p><p class="shell-body">
+<div class="shell-wrap"><p class="shell-top-bar">python3.7</p><p class="shell-body">
 <ps>myrtle</ps> <dr>~/project $</dr>
 ./manage.py shell<br>
-Python 3.6.3 (default, Nov 9 2017, 15:58:30)<br>
-[GCC 4.2.1 Compatible Apple LLVM 9.0.0 (clang-900.0.38)] on darwin<br>
+Python 3.7.0 (default, Sep 24 2018, 20:50:19)<br>
+[Clang 10.0.0 (clang-1000.10.44.2)] on darwin<br>
 Type "help", "copyright", "credits" or "license" for more information.<br>
-(InteractiveConsole)<br>
 `>>>` from unicodex.models import Codepoint<br>
 `>>>` Codepoint.objects.all()<w>&nbsp;</w>
 
@@ -732,13 +674,12 @@ Type "help", "copyright", "credits" or "license" for more information.<br>
 then we make our codepoint dot objects dot all call
 ---
 ### Show all table contents
-<div class="shell-wrap"><p class="shell-top-bar">python3.6</p><p class="shell-body">
+<div class="shell-wrap"><p class="shell-top-bar">python3.7</p><p class="shell-body">
 <ps>myrtle</ps> <dr>~/project $</dr>
 ./manage.py shell<br>
-Python 3.6.3 (default, Nov 9 2017, 15:58:30)<br>
-[GCC 4.2.1 Compatible Apple LLVM 9.0.0 (clang-900.0.38)] on darwin<br>
+Python 3.7.0 (default, Sep 24 2018, 20:50:19)<br>
+[Clang 10.0.0 (clang-1000.10.44.2)] on darwin<br>
 Type "help", "copyright", "credits" or "license" for more information.<br>
-(InteractiveConsole)<br>
 `>>>` from unicodex.models import Codepoint<br>
 `>>>` Codepoint.objects.all()<br>
 `<`QuerySet [`<`Codepoint: Sparkles>, `<`Codepoint: Unicorn>, `<`Codepoint: Desert Island>]><br>
@@ -792,7 +733,7 @@ this maps to the ORM as filter. where the name column is a keyword argument of f
 
 ---
 ### Show specific table contents
-<div class="shell-wrap"><p class="shell-top-bar">python3.6</p><p class="shell-body">
+<div class="shell-wrap"><p class="shell-top-bar">python3.7</p><p class="shell-body">
 `>>>` from unicodex.models import Codepoint<br>
 `>>>` Codepoint.objects.filter(name='Sparkles')<w>&nbsp;</w>
 
@@ -803,7 +744,7 @@ so in our fresh terminal, we import Codepoint
 Then run our filter
 ---
 ### Show specific table contents
-<div class="shell-wrap"><p class="shell-top-bar">python3.6</p><p class="shell-body">
+<div class="shell-wrap"><p class="shell-top-bar">python3.7</p><p class="shell-body">
 `>>>` from unicodex.models import Codepoint<br>
 `>>>` Codepoint.objects.filter(name='Sparkles')<br>
 `<`QuerySet [`<`Codepoint: Sparkles>]><br>
@@ -820,7 +761,7 @@ class: title
 we can also just return one specific record, instead of a queryset
 ---
 ### Get specific record
-<div class="shell-wrap"><p class="shell-top-bar">python3.6</p><p class="shell-body">
+<div class="shell-wrap"><p class="shell-top-bar">python3.7</p><p class="shell-body">
 `>>>` from unicodex.models import Codepoint<br>
 `>>>` Codepoint.objects.filter(name='Sparkles')<br>
 `<`QuerySet [`<`Codepoint: Sparkles>]><br>
@@ -832,7 +773,7 @@ so where last time we used filter
 This time we use get
 ---
 ### Get specific record
-<div class="shell-wrap"><p class="shell-top-bar">python3.6</p><p class="shell-body">
+<div class="shell-wrap"><p class="shell-top-bar">python3.7</p><p class="shell-body">
 `>>>` from unicodex.models import Codepoint<br>
 `>>>` Codepoint.objects.filter(name='Sparkles')<br>
 `<`QuerySet [`<`Codepoint: Sparkles>]><br>
@@ -845,7 +786,7 @@ This time we use get
 and we get a single object
 ---
 ### Get specific record
-<div class="shell-wrap"><p class="shell-top-bar">python3.6</p><p class="shell-body">
+<div class="shell-wrap"><p class="shell-top-bar">python3.7</p><p class="shell-body">
 `>>>` from unicodex.models import Codepoint<br>
 `>>>` Codepoint.objects.filter(name='Sparkles')<br>
 `<`QuerySet [`<`Codepoint: Sparkles>]><br>
@@ -864,16 +805,16 @@ THERE CAN BE ONLY ONE
 So if you try and run get, say, without any limiatations
 ---
 ### Get specific record
-<div class="shell-wrap"><p class="shell-top-bar">python3.6</p><p class="shell-body">
+<div class="shell-wrap"><p class="shell-top-bar">python3.7</p><p class="shell-body">
 `<`QuerySet [`<`Codepoint: Sparkles>]><br>
 `>>>` Codepoint.objects.get(name='Sparkles')<br>
 `<`Codepoint: Sparkles><br>
 `>>>` Codepoint.objects.get()<br>
 Traceback (most recent call last):<br>
 &nbsp; File "`<`console>", line 1, in `<`module><br>
-&nbsp; File "/usr/local/lib/python3.6/site-packages/django/db/models/manager.p y", line 85, in manager_method<br>
+&nbsp; File "/usr/local/lib/python3.7/site-packages/django/db/models/manager.p y", line 85, in manager_method<br>
 &nbsp; &nbsp; return getattr(self.get_queryset(), name)(&#42;args, &#42;&#42;kwargs)<br>
-&nbsp; File "/usr/local/lib/python3.6/site-packages/django/db/models/query.py" , line 384, in get<br>
+&nbsp; File "/usr/local/lib/python3.7/site-packages/django/db/models/query.py" , line 384, in get<br>
 &nbsp; &nbsp; (self.model._meta.object_name, num)<br>
 unicodex.models.MultipleObjectsReturned: get() returned more than one Codepoint -- it returned 3!<br>
 `>>>` <w>&nbsp;</w>
@@ -935,7 +876,7 @@ which I'll explain more in a moment.
 
 ---
 ### Joins
-<div class="shell-wrap"><p class="shell-top-bar">python3.6</p><p class="shell-body">
+<div class="shell-wrap"><p class="shell-top-bar">python3.7</p><p class="shell-body">
 `>>>` <w>&nbsp;</w>
 
 ???
@@ -945,17 +886,17 @@ back to our terminal again, to execute this elegant little code snippet
 We import the design model this time
 ---
 ### Joins
-<div class="shell-wrap"><p class="shell-top-bar">python3.6</p><p class="shell-body">
+<div class="shell-wrap"><p class="shell-top-bar">python3.7</p><p class="shell-body">
 `>>>` from unicodex.models import Design<w>&nbsp;</w>
 ---
 ### Joins
-<div class="shell-wrap"><p class="shell-top-bar">python3.6</p><p class="shell-body">
+<div class="shell-wrap"><p class="shell-top-bar">python3.7</p><p class="shell-body">
 `>>>` from unicodex.models import Design<br>
 `>>>` <w>&nbsp;</w>
 ---
 
 ### Joins
-<div class="shell-wrap"><p class="shell-top-bar">python3.6</p><p class="shell-body">
+<div class="shell-wrap"><p class="shell-top-bar">python3.7</p><p class="shell-body">
 `>>>` from unicodex.models import Design<br>
 `>>>` Design.objects.filter(codepoint&#95;&#95;name='Sparkles')<w>&nbsp;</w>
 ???
@@ -963,7 +904,7 @@ We import the design model this time
 and we run our filter
 ---
 ### Joins
-<div class="shell-wrap"><p class="shell-top-bar">python3.6</p><p class="shell-body">
+<div class="shell-wrap"><p class="shell-top-bar">python3.7</p><p class="shell-body">
 `>>>` from unicodex.models import Design<br>
 `>>>` Design.objects.filter(codepoint&#95;&#95;name='Sparkles')<br>
 `<`QuerySet [`<`Design: Sparkles Apple iOS 10.2>, `<`Design: Sparkles Apple iOS 6.0>, `<`Design: Sparkles Android 8.1>, `<`Design: Sparkles Android 4.4>, `<`Design: Sparkles Android 4.3>, `<`Design: Sparkles Microsoft Windows 10>, `<`Design: Sparkles Microsoft Windows 8.0>, `<`Design: Sparkles Microsoft Windows 8.1>, `<`Design: Sparkles Twitter 2.4>, `<`Design: Sparkles EmojiOne 3.0>, `<`Design: Sparkles EmojiOne 2.0>, `<`Design: Sparkles EmojiOne 1.0>, `<`Design: Sparkles Facebook 2.2>, `<`Design: Sparkles Facebook 1.0>, `<`Design: Sparkles Messenger 1.0>, `<`Design: Sparkles WhatsApp 2.17>, `<`Design: Sparkles Mozilla Firefox OS 2.5>, `<`Design: Sparkles Twitter 1.0>]><br>
@@ -976,11 +917,9 @@ and we run our filter
 ### Joins
 
 ```python
-
 # ORM
 Design.objects.filter(codepoint__name='Sparkles')
-
-# field, field, field... lookup
+# field, lookup
 ```
 
 ???
@@ -990,85 +929,21 @@ what we have here is one or more fields and then a lookup, all separated by doub
 A lookup as an operation on that field
 
 If you remember back when we looked up the fields on a model, we know what options we have here.
----
-### Joins
-<div class="shell-wrap"><p class="shell-top-bar">python3.6</p><p class="shell-body">
-`>>>` from unicodex.models import Design<br>
-`>>>` Design._meta.get_fields()<w>&nbsp;</w>
----
-### Joins
-<div class="shell-wrap"><p class="shell-top-bar">python3.6</p><p class="shell-body">
-`>>>` from unicodex.models import Design<br>
-`>>>` Design._meta.get_fields()<br>
-(`<`django.db.models.fields.AutoField: id>,<br>
-`<`django.db.models.fields.related.ForeignKey: vendorversion>, <br>
-`<`django.db.models.fields.related.ForeignKey: codepoint>, <br>
-`<`django.db.models.fields.files.FileField: image>)<br>
-`>>>` <w>&nbsp;</w>
-
-???
-
-we have four fields - a unique id, two foreign keys off to other models, and image
-
-but name isn't there. That came from codepoint
-
----
-### Joins
-<div class="shell-wrap"><p class="shell-top-bar">python3.6</p><p class="shell-body">
-`>>>` from unicodex.models import Design<br>
-`>>>` Design._meta.get_fields()<br>
-(`<`django.db.models.fields.AutoField: id>,<br>
-`<`django.db.models.fields.related.ForeignKey: vendorversion>, <br>
-`<`django.db.models.fields.related.ForeignKey: codepoint>, <br>
-`<`django.db.models.fields.files.FileField: image>)<br>
-`>>>` Codepoint._meta.get_fields()<w>&nbsp;</w>
-
-???
-
-so if we inspect Codepoint
-
----
-### Joins
-<div class="shell-wrap"><p class="shell-top-bar">python3.6</p><p class="shell-body">
-`>>>` from unicodex.models import Design<br>
-`>>>` Design._meta.get_fields()<br>
-(`<`django.db.models.fields.AutoField: id>,<br>
-`<`django.db.models.fields.related.ForeignKey: vendorversion>, <br>
-`<`django.db.models.fields.related.ForeignKey: codepoint>, <br>
-`<`django.db.models.fields.files.FileField: image>)<br>
-`>>>` Codepoint._meta.get_fields()<br>
-(`<`ManyToOneRel: unicodex.design>, <br>
-`<`django.db.models.fields.AutoField: id>,<br>
-`<`django.db.models.fields.CharField: name>, <br>
-`<`django.db.models.fields.TextField: description>,<br>
-`<`django.db.models.fields.CharField: codepoint>)<br>
-`>>>` <w>&nbsp;</w>
-
-???
-
-WE see that codepoint has the name field
----
-### Joins
-```python
-# ORM
-Design.objects.filter(codepoint__name='Sparkles')
-# field, field, field... lookup
-```
-
-???
 
 You'll also note in our example that we end on a field.
 
 By default the look up is an exact match on the string. So effectively, name equals sparkles
 ---
 ### Joins
+
 ```python
 # ORM
 Design.objects.filter(codepoint__name='Sparkles')
-# field, field, field... lookup
+# field, lookup
 
 # ORM
 Design.objects.filter(codepoint__name__exact='Sparkles')
+# field, field, lookup
 ```
 
 ???
@@ -1101,257 +976,382 @@ the admin uses field lookups in it's UI
 and to some extent, you can handcode this URL to do some basic filtering, even if there isn't any filters on the right hand side panel
 
 ---
-<div class="shell-wrap"><p class="shell-top-bar">python3.6</p><p class="shell-body">
+class: title
+# Dunderchain
+### .white[.]
+???
+
+what's really cool, is that we can chain these together
+It's like the blockchain, but actually usable.
+
+---
+class: title
+# Dunderchain
+### field, field, field, ... lookup
+???
+
+So long as we know which models are joined other, we can just keep going, ending with a lookup
+
+To do that, we need to know how the different models link together.
+
+We've already done that with our get_fields method earlier.
+
+So we can do that again, and view all the fields we have.
+
+Or we can do things a more clever way.
+
+And don't worry, all my slides will be available online so you can get the code.
+
+---
+### Discovering the schema
+<div class="shell-wrap"><p class="shell-top-bar">python3.7</p><p class="shell-body">
+<ps>myrtle</ps> <dr>~/project $</dr>
+./manage.py shell<br>
+Python 3.7.0 (default, Sep 24 2018, 20:50:19)<br>
+[Clang 10.0.0 (clang-1000.10.44.2)] on darwin<br>
+Type "help", "copyright", "credits" or "license" for more information.<br>
+`>>>` <w>&nbsp;</w>
+
+???
+
+back in our django shell, a new, fresh shell
+
+We could forge a path down a different series of foreign keys
+
+---
+### Discovering the schema
+<div class="shell-wrap"><p class="shell-top-bar">python3.7</p><p class="shell-body">
+<ps>myrtle</ps> <dr>~/project $</dr>
+./manage.py shell<br>
+Python 3.7.0 (default, Sep 24 2018, 20:50:19)<br>
+[Clang 10.0.0 (clang-1000.10.44.2)] on darwin<br>
+Type "help", "copyright", "credits" or "license" for more information.<br>
+`>>>` from unicodex.models import Design<w>&nbsp;</w>
+
+???
+
+import our object from earlier
+---
+### Discovering the schema
+<div class="shell-wrap"><p class="shell-top-bar">python3.7</p><p class="shell-body">
+<ps>myrtle</ps> <dr>~/project $</dr>
+./manage.py shell<br>
+Python 3.7.0 (default, Sep 24 2018, 20:50:19)<br>
+[Clang 10.0.0 (clang-1000.10.44.2)] on darwin<br>
+Type "help", "copyright", "credits" or "license" for more information.<br>
+`>>>` from unicodex.models import Design<br>
+`>>>` Design._meta.get_fields()<w>&nbsp;</w>
+
+???
+
+get the fields
+---
+### Discovering the schema
+<div class="shell-wrap"><p class="shell-top-bar">python3.7</p><p class="shell-body">
+<ps>myrtle</ps> <dr>~/project $</dr>
+./manage.py shell<br>
+Python 3.7.0 (default, Sep 24 2018, 20:50:19)<br>
+[Clang 10.0.0 (clang-1000.10.44.2)] on darwin<br>
+Type "help", "copyright", "credits" or "license" for more information.<br>
 `>>>` from unicodex.models import Design<br>
 `>>>` Design._meta.get_fields()<br>
 (`<`django.db.models.fields.AutoField: id>,<br>
 `<`django.db.models.fields.related.ForeignKey: vendorversion>, <br>
 `<`django.db.models.fields.related.ForeignKey: codepoint>, <br>
 `<`django.db.models.fields.files.FileField: image>)<br>
-`>>>` Codepoint._meta.get_fields()<br>
-(`<`ManyToOneRel: unicodex.design>, <br>
-`<`django.db.models.fields.AutoField: id>,<br>
-`<`django.db.models.fields.CharField: name>, <br>
-`<`django.db.models.fields.TextField: description>,<br>
-`<`django.db.models.fields.CharField: codepoint>)<br>
 `>>>` <w>&nbsp;</w>
 
 ???
 
-back to our terminal
+and we see we have the fields
 
-We can also forge a path down a different series of foreign keys
+we could do this for all the other models we know of
 
-See the vendorversion there? Let's see what that contains
+but there's a better way.
+
+And I'm sorry, but there's going to be a UML diagram.
 ---
 
-<div class="shell-wrap"><p class="shell-top-bar">python3.6</p><p class="shell-body">
+<h1 style="color: white;text-shadow: 1px 1px 6px black, 0 0 136px aqua, 0 0 51px purple; font-family: arial; font-size: 200pt">UML</h1>
+
+???
+
+Unified Modeling Language
+
+These diagrams might bring up some memories from your college days (I know it does for me), but it's a good way to quickly visualise models.
+
+And the great thing is, there's a simple way to get this happening in django.
+
+Nw, I will point out, so far everything I've mentioned we could have done using only a shell and native django, but for this, we'll need some helpers.
+
+---
+### Generate UML diagrams - setup
+
+<div class="shell-wrap"><p class="shell-top-bar">bash</p><p class="shell-body">
+<ps>myrtle</ps> <dr>~/project $</dr>
+<w>&nbsp;</w>
+???
+
+there's a bit of setup required
+---
+### Generate UML diagrams - setup
+<div class="shell-wrap"><p class="shell-top-bar">bash</p><p class="shell-body">
+<ps>myrtle</ps> <dr>~/project $</dr>
+brew install graphviz<w>&nbsp;</w>
+---
+### Generate UML diagrams - setup
+<div class="shell-wrap"><p class="shell-top-bar">bash</p><p class="shell-body">
+<ps>myrtle</ps> <dr>~/project $</dr>
+brew install graphviz
+<br>
+.lblue[==>] .b[Downloading https`:`//homebrew.bintray.com/bottles/graphviz-2.40.1.hig h_sierra.bottle.1.tar.gz]<br>
+.white[############################################################ 100.0%]<br>
+.lblue[==>] .b[Pouring graphviz-2.40.1.high_sierra.bottle.1.tar.gz]<br>
+🍺 /usr/local/Cellar/graphviz/2.40.1: 500 files, 11.2MB<br>
+<ps>myrtle</ps> <dr>~/project $</dr>
+<w>&nbsp;</w>
+
+???
+
+TODO update to mojave signature
+---
+### Generate UML diagrams - setup
+<div class="shell-wrap"><p class="shell-top-bar">bash</p><p class="shell-body">
+<ps>myrtle</ps> <dr>~/project $</dr>
+brew install graphviz
+<br>
+.lblue[==>] .b[Downloading https`:`//homebrew.bintray.com/bottles/graphviz-2.40.1.hig h_sierra.bottle.1.tar.gz]<br>
+.white[############################################################ 100.0%]<br>
+.lblue[==>] .b[Pouring graphviz-2.40.1.high_sierra.bottle.1.tar.gz]<br>
+🍺 /usr/local/Cellar/graphviz/2.40.1: 500 files, 11.2MB<br>
+<ps>myrtle</ps> <dr>~/project $</dr>
+pip install pygraphviz django-extensions<w>&nbsp;</w>
+???
+
+---
+### Generate UML diagrams - setup
+<div class="shell-wrap"><p class="shell-top-bar">bash</p><p class="shell-body">
+<ps>myrtle</ps> <dr>~/project $</dr>
+brew install graphviz
+<br>
+.lblue[==>] .b[Downloading https`:`//homebrew.bintray.com/bottles/graphviz-2.40.1.hig h_sierra.bottle.1.tar.gz]<br>
+.white[############################################################ 100.0%]<br>
+.lblue[==>] .b[Pouring graphviz-2.40.1.high_sierra.bottle.1.tar.gz]<br>
+🍺 /usr/local/Cellar/graphviz/2.40.1: 500 files, 11.2MB<br>
+<ps>myrtle</ps> <dr>~/project $</dr>
+pip install pygraphviz django-extensions<br>
+... <br> Successfully installed django-extensions-2.1.2 pygraphviz-1.5<br>
+<ps>myrtle</ps> <dr>~/project $</dr>
+<w>&nbsp;</w>
+???
+These are the instructions for macOS
+---
+### Generate UML diagrams - setup
+<div class="shell-wrap"><p class="shell-top-bar">bash</p><p class="shell-body">
+<ps>myrtle</ps> <dr>~/project $</dr>
+brew install graphviz
+<br>
+.lblue[==>] .b[Downloading https`:`//homebrew.bintray.com/bottles/graphviz-2.40.1.hig h_sierra.bottle.1.tar.gz]<br>
+.white[############################################################ 100.0%]<br>
+.lblue[==>] .b[Pouring graphviz-2.40.1.high_sierra.bottle.1.tar.gz]<br>
+🍺 /usr/local/Cellar/graphviz/2.40.1: 500 files, 11.2MB<br>
+<ps>myrtle</ps> <dr>~/project $</dr>
+pip install pygraphviz django-extensions<br>
+... <br> Successfully installed django-extensions-2.1.2 pygraphviz-1.5<br>
+<ps>myrtle</ps> <dr>~/project $</dr>
+vi settings.py<w>&nbsp;</w>
+???
+
+You then need to make a small edit to your settings file.
+---
+### Generate UML diagrams - setup
+<div class="shell-wrap"><p class="shell-top-bar">vim</p><p class="shell-body">
+.aqua[import] aldryn_addons.settings<br>
+aldryn_addons.settings.load(.b[.mblue[locals]]())<br>
+<br>
+.mblue[# all django settings can be altered here]
+<br>
+<br>
+INSTALLED_APPS.extend([<br>
+.tp[....].pink["unicodex"],<br>
+])<br>
+.mblue[~]<br>
+.mblue[~]<br>
+.mblue[~]<br>
+.mblue[~]<br>
+.mblue[~]<br>
+.mblue[~]<br>
+"settings.py" 9L, 156C written
+
+
+
+???
+---
+### Generate UML diagrams - setup
+<div class="shell-wrap"><p class="shell-top-bar">vim</p><p class="shell-body">
+.aqua[import] aldryn_addons.settings<br>
+aldryn_addons.settings.load(.b[.mblue[locals]]())<br>
+<br>
+.mblue[# all django settings can be altered here]
+<br>
+<br>
+INSTALLED_APPS.extend([<br>
+.tp[....].pink["unicodex"],<br>
+.tp[....].pink["django_extensions"], .mblue[# note the underscore]<w>&nbsp;</w>
+<br>
+])<br>
+.mblue[~]<br>
+.mblue[~]<br>
+.mblue[~]<br>
+.mblue[~]<br>
+.mblue[~]<br>
+"settings.py" 10L, 203C written
+
+
+
+???
+---
+### Generate UML diagrams
+<div class="shell-wrap"><p class="shell-top-bar">bash</p><p class="shell-body">
+<ps>myrtle</ps> <dr>~/project $</dr>
+brew install graphviz
+<br>
+.lblue[==>] .b[Downloading https`:`//homebrew.bintray.com/bottles/graphviz-2.40.1.hig h_sierra.bottle.1.tar.gz]<br>
+.white[############################################################ 100.0%]<br>
+.lblue[==>] .b[Pouring graphviz-2.40.1.high_sierra.bottle.1.tar.gz]<br>
+🍺 /usr/local/Cellar/graphviz/2.40.1: 500 files, 11.2MB<br>
+<ps>myrtle</ps> <dr>~/project $</dr>
+pip install pygraphviz django-extensions<br>
+... <br> Successfully installed django-extensions-2.1.2 pygraphviz-1.5<br>
+<ps>myrtle</ps> <dr>~/project $</dr>
+vi settings.py<br>
+<ps>myrtle</ps> <dr>~/project $</dr>
+<w>&nbsp;</w>
+
+???
+
+and from here, we should just be able to run the darn command :)
+
+---
+### Generate UML diagrams
+<div class="shell-wrap"><p class="shell-top-bar">bash</p><p class="shell-body">
+<ps>myrtle</ps> <dr>~/project $</dr>
+brew install graphviz
+<br>
+.lblue[==>] .b[Downloading https`:`//homebrew.bintray.com/bottles/graphviz-2.40.1.hig h_sierra.bottle.1.tar.gz]<br>
+.white[############################################################ 100.0%]<br>
+.lblue[==>] .b[Pouring graphviz-2.40.1.high_sierra.bottle.1.tar.gz]<br>
+🍺 /usr/local/Cellar/graphviz/2.40.1: 500 files, 11.2MB<br>
+<ps>myrtle</ps> <dr>~/project $</dr>
+pip install pygraphviz django-extensions<br>
+... <br> Successfully installed django-extensions-2.1.2 pygraphviz-1.5<br>
+<ps>myrtle</ps> <dr>~/project $</dr>
+vi settings.py<br>
+<ps>myrtle</ps> <dr>~/project $</dr>
+./manage.py graph_models unicodex -o uml.png<w>&nbsp;</w>
+
+---
+### Generate UML diagrams
+<div class="shell-wrap"><p class="shell-top-bar">bash</p><p class="shell-body">
+<ps>myrtle</ps> <dr>~/project $</dr>
+brew install graphviz
+<br>
+.lblue[==>] .b[Downloading https`:`//homebrew.bintray.com/bottles/graphviz-2.40.1.hig h_sierra.bottle.1.tar.gz]<br>
+.white[############################################################ 100.0%]<br>
+.lblue[==>] .b[Pouring graphviz-2.40.1.high_sierra.bottle.1.tar.gz]<br>
+🍺 /usr/local/Cellar/graphviz/2.40.1: 500 files, 11.2MB<br>
+<ps>myrtle</ps> <dr>~/project $</dr>
+pip install pygraphviz django-extensions<br>
+... <br> Successfully installed django-extensions-2.1.2 pygraphviz-1.5<br>
+<ps>myrtle</ps> <dr>~/project $</dr>
+vi settings.py<br>
+<ps>myrtle</ps> <dr>~/project $</dr>
+./manage.py graph_models unicodex -o uml.png<br>
+<ps>myrtle</ps> <dr>~/project $</dr>
+<w>&nbsp;</w>
+---
+### Generate UML diagrams
+<div class="shell-wrap"><p class="shell-top-bar">bash</p><p class="shell-body">
+<ps>myrtle</ps> <dr>~/project $</dr>
+brew install graphviz
+<br>
+.lblue[==>] .b[Downloading https`:`//homebrew.bintray.com/bottles/graphviz-2.40.1.hig h_sierra.bottle.1.tar.gz]<br>
+.white[############################################################ 100.0%]<br>
+.lblue[==>] .b[Pouring graphviz-2.40.1.high_sierra.bottle.1.tar.gz]<br>
+🍺 /usr/local/Cellar/graphviz/2.40.1: 500 files, 11.2MB<br>
+<ps>myrtle</ps> <dr>~/project $</dr>
+pip install pygraphviz django-extensions<br>
+... <br> Successfully installed django-extensions-2.1.2 pygraphviz-1.5<br>
+<ps>myrtle</ps> <dr>~/project $</dr>
+vi settings.py<br>
+<ps>myrtle</ps> <dr>~/project $</dr>
+./manage.py graph_models unicodex -o uml.png<br>
+<ps>myrtle</ps> <dr>~/project $</dr>
+open uml.png<w>&nbsp;</w>
+---
+background-image: url("images/uml_screenshot.png")
+
+???
+
+and here's out diagram
+
+Let me teach out some stuff about unicodex.
+
+insert explanation here
+
+Which means we should be able to do things like just follow the arrows
+
+---
+### Longest filter chain
+<div class="shell-wrap"><p class="shell-top-bar">python3.7</p><p class="shell-body">
+<ps>myrtle</ps> <dr>~/project $</dr>
+./manage.py shell<br>
+Python 3.7.0 (default, Sep 24 2018, 20:50:19)<br>
+[Clang 10.0.0 (clang-1000.10.44.2)] on darwin<br>
+Type "help", "copyright", "credits" or "license" for more information.<br>
 `>>>` <w>&nbsp;</w>
----
-<div class="shell-wrap"><p class="shell-top-bar">python3.6</p><p class="shell-body">
-`>>>` from unicodex.models import VendorVersion<w>&nbsp;</w>
----
-
-<div class="shell-wrap"><p class="shell-top-bar">python3.6</p><p class="shell-body">
-`>>>` from unicodex.models import VendorVersion<br>
-`>>>` <w>&nbsp;</w>
----
-<div class="shell-wrap"><p class="shell-top-bar">python3.6</p><p class="shell-body">
-`>>>` from unicodex.models import VendorVersion<br>
-`>>>` VendorVersion._meta.get_fields()<w>&nbsp;</w>
 
 
 ???
 
-let's refresh our terminal and inspect VendorVersion
-
+so that longest chain...
 ---
-<div class="shell-wrap"><p class="shell-top-bar">python3.6</p><p class="shell-body">
-`>>>` from unicodex.models import VendorVersion<br>
-`>>>` VendorVersion._meta.get_fields()<br>
-(`<`ManyToOneRel: unicodex.design>,<br>
-`<`django.db.models.fields.AutoField: id>, <br>
-`<`django.db.models.fields.CharField: name>, <br>
-`<`django.db.models.fields.related.ForeignKey: vendor>)<br>
-`>>>` <w>&nbsp;</w>
+### Longest filter chain
+<div class="shell-wrap"><p class="shell-top-bar">python3.7</p><p class="shell-body">
+<ps>myrtle</ps> <dr>~/project $</dr>
+./manage.py shell<br>
+Python 3.7.0 (default, Sep 24 2018, 20:50:19)<br>
+[Clang 10.0.0 (clang-1000.10.44.2)] on darwin<br>
+Type "help", "copyright", "credits" or "license" for more information.<br>
+`>>>` from unicodex.models import *<w>&nbsp;</w>
 
 ???
 
-Okay, so a vendorversion has many designs, an ID, a name, and a Vendor FK
+so we can import our models
 
-What about Vendor?
----
-<div class="shell-wrap"><p class="shell-top-bar">python3.6</p><p class="shell-body">
-`>>>` from unicodex.models import VendorVersion<br>
-`>>>` VendorVersion._meta.get_fields()<br>
-(`<`ManyToOneRel: unicodex.design>,<br>
-`<`django.db.models.fields.AutoField: id>, <br>
-`<`django.db.models.fields.CharField: name>, <br>
-`<`django.db.models.fields.related.ForeignKey: vendor>)<br>
-`>>>` from unicodex.models import Vendor<w>&nbsp;</w>
+and we can cheat here, by importing all
+
+hehe
 
 ---
-<div class="shell-wrap"><p class="shell-top-bar">python3.6</p><p class="shell-body">
-`>>>` from unicodex.models import VendorVersion<br>
-`>>>` VendorVersion._meta.get_fields()<br>
-(`<`ManyToOneRel: unicodex.design>,<br>
-`<`django.db.models.fields.AutoField: id>, <br>
-`<`django.db.models.fields.CharField: name>, <br>
-`<`django.db.models.fields.related.ForeignKey: vendor>)<br>
-`>>>` from unicodex.models import Vendor<br>
-`>>>` <w>&nbsp;</w>
----
-<div class="shell-wrap"><p class="shell-top-bar">python3.6</p><p class="shell-body">
-`>>>` from unicodex.models import VendorVersion<br>
-`>>>` VendorVersion._meta.get_fields()<br>
-(`<`ManyToOneRel: unicodex.design>,<br>
-`<`django.db.models.fields.AutoField: id>, <br>
-`<`django.db.models.fields.CharField: name>, <br>
-`<`django.db.models.fields.related.ForeignKey: vendor>)<br>
-`>>>` from unicodex.models import Vendor<br>
-`>>>` Vendor._meta.get_fields()<w>&nbsp;</w>
-
-
-???
-
-clear our terminal, import Vendor, and check
-
----
-<div class="shell-wrap"><p class="shell-top-bar">python3.6</p><p class="shell-body">
-`>>>` from unicodex.models import VendorVersion<br>
-`>>>` VendorVersion._meta.get_fields()<br>
-(`<`ManyToOneRel: unicodex.design>,<br>
-`<`django.db.models.fields.AutoField: id>, <br>
-`<`django.db.models.fields.CharField: name>, <br>
-`<`django.db.models.fields.related.ForeignKey: vendor>)<br>
-`>>>` from unicodex.models import Vendor<br>
-`>>>` Vendor._meta.get_fields()<br>
-(`<`ManyToOneRel: unicodex.vendorversion>, <br>
-`<`django.db.models.fields.AutoField: id>, <br>
-`<`django.db.models.fields.CharField: name>) <br>
+### Longest filter chain
+<div class="shell-wrap"><p class="shell-top-bar">python3.7</p><p class="shell-body">
+<ps>myrtle</ps> <dr>~/project $</dr>
+./manage.py shell<br>Python 3.7.0 (default, Sep 24 2018, 20:50:19)<br>[Clang 10.0.0 (clang-1000.10.44.2)] on darwin<br>Type "help", "copyright", "credits" or "license" for more information.<br>
+`>>>` from unicodex.models import *<br>
 `>>>` <w>&nbsp;</w>
 
 ???
 
-so vendor has a relationship with vendorversion, an id and a name too
-
-And thus, we have exhausted our search, and we could build up a UML diagram showing the relationships between all the tables in this app
-
-But I woldn't do that too you.
-
-Back to what we were doing, showing filter walks
-
----
-
-<div class="shell-wrap"><p class="shell-top-bar">python3.6</p><p class="shell-body">
-`>>>` <w>&nbsp;</w>
-
-???
-
-clearing our terminal again with Control L
----
-<div class="shell-wrap"><p class="shell-top-bar">python3.6</p><p class="shell-body">
-`>>>` Design.objects.filter(<w>&nbsp;</w>
-
-???
-
-we have a number of options here. Let's build the longest chain we can...
-
----
-<div class="shell-wrap"><p class="shell-top-bar">python3.6</p><p class="shell-body">
-`>>>` Design.objects.filter(vendorversion<w>&nbsp;</w>
-
-???
-
-Let's filter design objects where... the linked vendor version
-
----
-
-<div class="shell-wrap"><p class="shell-top-bar">python3.6</p><p class="shell-body">
-`>>>` Design.objects.filter(vendorversion&#95;&#95;vendor<w>&nbsp;</w>
+now, we can use that diagram from earlier...
 
 
-???
-
-and the vendor linked to that....
-
----
-<div class="shell-wrap"><p class="shell-top-bar">python3.6</p><p class="shell-body">
-`>>>` Design.objects.filter(vendorversion&#95;&#95;vendor&#95;&#95;name<w>&nbsp;</w>
-
-???
-
-the name of that vendor
-
----
+TODO - longest chaain.
 
 
-<div class="shell-wrap"><p class="shell-top-bar">python3.6</p><p class="shell-body">
-`>>>` Design.objects.filter(vendorversion&#95;&#95;vendor&#95;&#95;name&#95;&#95;contains=<w>&nbsp;</w>
-
-???
-
-contains...
----
-
-<div class="shell-wrap"><p class="shell-top-bar">python3.6</p><p class="shell-body">
-`>>>` Design.objects.filter(vendorversion&#95;&#95;vendor&#95;&#95;name&#95;&#95;contains="Micro")<w>&nbsp;</w>
-
-???
-
-the string Micro
----
-
-<div class="shell-wrap"><p class="shell-top-bar">python3.6</p><p class="shell-body">
-`>>>` Design.objects.filter(vendorversion&#95;&#95;vendor&#95;&#95;name&#95;&#95;contains="Micro")<br>
-`<`QuerySet [`<`Design: Sparkles Microsoft Windows 8.0>, `<`Design: Desert Island Microsoft Windows 8.0>, `<`Design: Sparkles Microsoft Windows 8.1>, `<`Design: Desert Island Microsoft Windows 8.1>, `<`Design: Sparkles Microsoft Windows 10>, `<`Design: Unicorn Microsoft Windows 10>, `<`Design: Desert Island Microsoft Windows 10>]><br>
-`>>>` <w>&nbsp;</w>
-
-???
-
-And thus, we get a of all designs where the name of the linked vendor contains Micro
-
----
-<pre><code><c>&num; Field Lookups</c><table>
-<tr><td><l>contains</l></td><td><o>LIKE "%?%"</o></td></tr>
-<tr><td><l>startswith</l></td><td><o>LIKE "?%"</o></td></tr>
-<tr><td><l>endswith</l></td><td><o>LIKE "%?"</o></td></tr>
-<tr><td><l>in</l></td><td><o>IN (?, ?, ?, ...)</o></td></tr>
-<tr><td><l>lt, le, gt, ge</l></td><td><o>`<`, `<`=, `>`, `>`=</o></td></tr>
-<tr><td><l>range</l></td><td><o>BETWEEN</o></td></tr>
-<tr><td><l>isnull</l></td><td><o>NULL</o></td></tr></table><c>&num; ... and many more!</c>
-<span class="bfoot" style="margin-bottom: -270px"><fl>[docs - querysets field lookups](https://docs.djangoproject.com/en/2.0/ref/models/querysets/#field-lookups)</fl></span>
-
-???
-
-There are other field lookups we can use for a number of differnt things.
-
-We're also not just limited to one filter, we can have more than one
----
-
-<div class="shell-wrap"><p class="shell-top-bar">python3.6</p><p class="shell-body">
-`>>>` Design.objects.filter(vendorversion&#95;&#95;vendor&#95;&#95;name&#95;&#95;contains="Micro"<w>&nbsp;</w>
-
-???
-
-instead of just filtering on Micro, we could alos
----
-<div class="shell-wrap"><p class="shell-top-bar">python3.6</p><p class="shell-body">
-`>>>` Design.objects.filter(vendorversion&#95;&#95;vendor&#95;&#95;name&#95;&#95;contains="Micro",<br>
-... &nbsp;&nbsp;<w>&nbsp;</w><br>
----
-<div class="shell-wrap"><p class="shell-top-bar">python3.6</p><p class="shell-body">
-`>>>` Design.objects.filter(vendorversion&#95;&#95;vendor&#95;&#95;name&#95;&#95;contains="Micro",<br>
-... &nbsp; codepoint<w>&nbsp;</w><br>
-
----
-<div class="shell-wrap"><p class="shell-top-bar">python3.6</p><p class="shell-body">
-`>>>` Design.objects.filter(vendorversion&#95;&#95;vendor&#95;&#95;name&#95;&#95;contains="Micro",<br>
-... &nbsp; codepoint&#95;&#95;name<w>&nbsp;</w><br>
 
 
----
-<div class="shell-wrap"><p class="shell-top-bar">python3.6</p><p class="shell-body">
-`>>>` Design.objects.filter(vendorversion&#95;&#95;vendor&#95;&#95;name&#95;&#95;contains="Micro",<br>
-... &nbsp; codepoint&#95;&#95;name&#95;&#95;endswith<w>&nbsp;</w><br>
 
----
-<div class="shell-wrap"><p class="shell-top-bar">python3.6</p><p class="shell-body">
-`>>>` Design.objects.filter(vendorversion&#95;&#95;vendor&#95;&#95;name&#95;&#95;contains="Micro",<br>
-... &nbsp; codepoint&#95;&#95;name&#95;&#95;endswith="corn")<w>&nbsp;</w><br>
-
-
----
-<div class="shell-wrap"><p class="shell-top-bar">python3.6</p><p class="shell-body">
-`>>>` Design.objects.filter(vendorversion&#95;&#95;vendor&#95;&#95;name&#95;&#95;contains="Micro",<br>
-... &nbsp; codepoint&#95;&#95;name&#95;&#95;endswith="corn")<br>
-`<`QuerySet [`<`Design: Unicorn Microsoft Windows 10>]><br>
-`>>>` <w>&nbsp;</w>
-
-???
-
-we get list of designs both from a vendor
-TODO CLEANUP MORE FROM HERE
 ---
 class: title
 ## ... `AND`?
@@ -1619,10 +1619,10 @@ This is an or operation
 You may have only seen these operators before in bitmasking
 
 ---
-<div class="shell-wrap"><p class="shell-top-bar">python3.6</p><p class="shell-body">
+<div class="shell-wrap"><p class="shell-top-bar">python3.7</p><p class="shell-body">
 `>>>` <w>&nbsp;</w>
 ---
-<div class="shell-wrap"><p class="shell-top-bar">python3.6</p><p class="shell-body">
+<div class="shell-wrap"><p class="shell-top-bar">python3.7</p><p class="shell-body">
 `>>>` x = 0b10101010<w>&nbsp;</w>
 
 ???
@@ -1630,12 +1630,12 @@ You may have only seen these operators before in bitmasking
 if we have X as a binary string of one zero one zero
 
 ---
-<div class="shell-wrap"><p class="shell-top-bar">python3.6</p><p class="shell-body">
+<div class="shell-wrap"><p class="shell-top-bar">python3.7</p><p class="shell-body">
 `>>>` x = 0b10101010<br>
 `>>>` <w>&nbsp;</w>
 
 ---
-<div class="shell-wrap"><p class="shell-top-bar">python3.6</p><p class="shell-body">
+<div class="shell-wrap"><p class="shell-top-bar">python3.7</p><p class="shell-body">
 `>>>` x = 0b10101010<br>
 `>>>` y = 0b11110000<w>&nbsp;</w>
 
@@ -1646,13 +1646,13 @@ and we have y as one one one zero zero zero zero
 we can do something called bit masking
 
 ---
-<div class="shell-wrap"><p class="shell-top-bar">python3.6</p><p class="shell-body">
+<div class="shell-wrap"><p class="shell-top-bar">python3.7</p><p class="shell-body">
 `>>>` x = 0b10101010<br>
 `>>>` y = 0b11110000<br>
 `>>>` <w>&nbsp;</w>
 
 ---
-<div class="shell-wrap"><p class="shell-top-bar">python3.6</p><p class="shell-body">
+<div class="shell-wrap"><p class="shell-top-bar">python3.7</p><p class="shell-body">
 `>>>` x = 0b10101010<br>
 `>>>` y = 0b11110000<br>
 `>>>` bin(x & y)<w>&nbsp;</w>
@@ -1662,7 +1662,7 @@ we can do something called bit masking
 if we ask for x AND y
 
 ---
-<div class="shell-wrap"><p class="shell-top-bar">python3.6</p><p class="shell-body">
+<div class="shell-wrap"><p class="shell-top-bar">python3.7</p><p class="shell-body">
 `>>>` x = 0b10101010<br>
 `>>>` y = 0b11110000<br>
 `>>>` bin(x & y)<br>
@@ -1676,7 +1676,7 @@ we get 10100000
 For each bit, we only return 1 if both are 1
 
 ---
-<div class="shell-wrap"><p class="shell-top-bar">python3.6</p><p class="shell-body">
+<div class="shell-wrap"><p class="shell-top-bar">python3.7</p><p class="shell-body">
 `>>>` x = 0b10101010<br>
 `>>>` y = 0b11110000<br>
 `>>>` bin(x & y)<br>
@@ -1688,7 +1688,7 @@ For each bit, we only return 1 if both are 1
 conversely, if we ask for x OR y
 
 ---
-<div class="shell-wrap"><p class="shell-top-bar">python3.6</p><p class="shell-body">
+<div class="shell-wrap"><p class="shell-top-bar">python3.7</p><p class="shell-body">
 `>>>` x = 0b10101010<br>
 `>>>` y = 0b11110000<br>
 `>>>` bin(x & y)<br>
@@ -1797,13 +1797,12 @@ THis is based on the filename I'm using for the iages uploaded to my models
 Okay. Let's run that and see what happens
 
 ---
-<div class="shell-wrap"><p class="shell-top-bar">python3.6</p><p class="shell-body">
+<div class="shell-wrap"><p class="shell-top-bar">python3.7</p><p class="shell-body">
 <ps>myrtle</ps> <dr>~/project $</dr>
 ./manage.py shell<br>
-Python 3.6.3 (default, Nov 9 2017, 15:58:30)<br>
-[GCC 4.2.1 Compatible Apple LLVM 9.0.0 (clang-900.0.38)] on darwin<br>
+Python 3.7.0 (default, Sep 24 2018, 20:50:19)<br>
+[Clang 10.0.0 (clang-1000.10.44.2)] on darwin<br>
 Type "help", "copyright", "credits" or "license" for more information.<br>
-(InteractiveConsole)<br>
 `>>>` <w>&nbsp;</w>
 
 ???
@@ -1811,23 +1810,21 @@ Type "help", "copyright", "credits" or "license" for more information.<br>
 so in our terminal
 
 ---
-<div class="shell-wrap"><p class="shell-top-bar">python3.6</p><p class="shell-body">
+<div class="shell-wrap"><p class="shell-top-bar">python3.7</p><p class="shell-body">
 <ps>myrtle</ps> <dr>~/project $</dr>
 ./manage.py shell<br>
-Python 3.6.3 (default, Nov 9 2017, 15:58:30)<br>
-[GCC 4.2.1 Compatible Apple LLVM 9.0.0 (clang-900.0.38)] on darwin<br>
+Python 3.7.0 (default, Sep 24 2018, 20:50:19)<br>
+[Clang 10.0.0 (clang-1000.10.44.2)] on darwin<br>
 Type "help", "copyright", "credits" or "license" for more information.<br>
-(InteractiveConsole)<br>
 `>>>` from unicodex.models import Codepoint<w>&nbsp;</w>
 
 ---
-<div class="shell-wrap"><p class="shell-top-bar">python3.6</p><p class="shell-body">
+<div class="shell-wrap"><p class="shell-top-bar">python3.7</p><p class="shell-body">
 <ps>myrtle</ps> <dr>~/project $</dr>
 ./manage.py shell<br>
-Python 3.6.3 (default, Nov 9 2017, 15:58:30)<br>
-[GCC 4.2.1 Compatible Apple LLVM 9.0.0 (clang-900.0.38)] on darwin<br>
+Python 3.7.0 (default, Sep 24 2018, 20:50:19)<br>
+[Clang 10.0.0 (clang-1000.10.44.2)] on darwin<br>
 Type "help", "copyright", "credits" or "license" for more information.<br>
-(InteractiveConsole)<br>
 `>>>` from unicodex.models import Codepoint<br>
 `>>>` <w>&nbsp;</w>
 
@@ -1836,13 +1833,12 @@ Type "help", "copyright", "credits" or "license" for more information.<br>
 remembering to import our model
 
 ---
-<div class="shell-wrap"><p class="shell-top-bar">python3.6</p><p class="shell-body">
+<div class="shell-wrap"><p class="shell-top-bar">python3.7</p><p class="shell-body">
 <ps>myrtle</ps> <dr>~/project $</dr>
 ./manage.py shell<br>
-Python 3.6.3 (default, Nov 9 2017, 15:58:30)<br>
-[GCC 4.2.1 Compatible Apple LLVM 9.0.0 (clang-900.0.38)] on darwin<br>
+Python 3.7.0 (default, Sep 24 2018, 20:50:19)<br>
+[Clang 10.0.0 (clang-1000.10.44.2)] on darwin<br>
 Type "help", "copyright", "credits" or "license" for more information.<br>
-(InteractiveConsole)<br>
 `>>>` from unicodex.models import Codepoint<br>
 `>>>` Codepoint.objects.filter(design&#95;&#95;image&#95;&#95;contains="png", design&#95;&#95;image&#95;&#95;startswith="design")<w>&nbsp;</w>
 
@@ -1851,13 +1847,12 @@ Type "help", "copyright", "credits" or "license" for more information.<br>
 we add our code
 
 ---
-<div class="shell-wrap"><p class="shell-top-bar">python3.6</p><p class="shell-body">
+<div class="shell-wrap"><p class="shell-top-bar">python3.7</p><p class="shell-body">
 <ps>myrtle</ps> <dr>~/project $</dr>
 ./manage.py shell<br>
-Python 3.6.3 (default, Nov 9 2017, 15:58:30)<br>
-[GCC 4.2.1 Compatible Apple LLVM 9.0.0 (clang-900.0.38)] on darwin<br>
+Python 3.7.0 (default, Sep 24 2018, 20:50:19)<br>
+[Clang 10.0.0 (clang-1000.10.44.2)] on darwin<br>
 Type "help", "copyright", "credits" or "license" for more information.<br>
-(InteractiveConsole)<br>
 `>>>` from unicodex.models import Codepoint<br>
 `>>>` Codepoint.objects.filter(design&#95;&#95;image&#95;&#95;contains="png", design&#95;&#95;image&#95;&#95;startswith="design")<br>
 `<`QuerySet [`<`Codepoint: Sparkles>, `<`Codepoint: Sparkles>, `<`Codepoint: Sparkles>, `<`Codepoint: Sparkles>, `<`Codepoint: Sparkles>, `<`Codepoint: Sparkles>, `<`Codepoint: Sparkles>, `<`Codepoint: Sparkles>, `<`Codepoint: Sparkles>, `<`Codepoint: Sparkles>, `<`Codepoint: Sparkles>, `<`Codepoint: Unicorn>, `<`Codepoint: Unicorn>, `<`Codepoint: Unicorn>, `<`Codepoint: Unicorn>, `<`Codepoint: Unicorn>, `<`Codepoint: Unicorn>, `<`Codepoint: Unicorn>, `<`Codepoint: Desert Island>, `<`Codepoint: Desert Island>, '...(remaining elements truncated)...']><br>
@@ -1877,13 +1872,12 @@ Data is still there, if you iterate over the list, but the print representation 
 (this was implemented because of a very real bug at Lawrance Journal World, where they had servers keep crashing, because the debug page was trying to be helpful and show all the data... a million objects worth..)
 
 ---
-<div class="shell-wrap"><p class="shell-top-bar">python3.6</p><p class="shell-body">
+<div class="shell-wrap"><p class="shell-top-bar">python3.7</p><p class="shell-body">
 <ps>myrtle</ps> <dr>~/project $</dr>
 ./manage.py shell<br>
-Python 3.6.3 (default, Nov 9 2017, 15:58:30)<br>
-[GCC 4.2.1 Compatible Apple LLVM 9.0.0 (clang-900.0.38)] on darwin<br>
+Python 3.7.0 (default, Sep 24 2018, 20:50:19)<br>
+[Clang 10.0.0 (clang-1000.10.44.2)] on darwin<br>
 Type "help", "copyright", "credits" or "license" for more information.<br>
-(InteractiveConsole)<br>
 `>>>` from unicodex.models import Codepoint<br>
 `>>>` Codepoint.objects.filter(design&#95;&#95;image&#95;&#95;contains="png", design&#95;&#95;image&#95;&#95;startswith="design")<w>&nbsp;</w>
 
@@ -1893,13 +1887,12 @@ Type "help", "copyright", "credits" or "license" for more information.<br>
 rewind a step
 
 ---
-<div class="shell-wrap"><p class="shell-top-bar">python3.6</p><p class="shell-body">
+<div class="shell-wrap"><p class="shell-top-bar">python3.7</p><p class="shell-body">
 <ps>myrtle</ps> <dr>~/project $</dr>
 ./manage.py shell<br>
-Python 3.6.3 (default, Nov 9 2017, 15:58:30)<br>
-[GCC 4.2.1 Compatible Apple LLVM 9.0.0 (clang-900.0.38)] on darwin<br>
+Python 3.7.0 (default, Sep 24 2018, 20:50:19)<br>
+[Clang 10.0.0 (clang-1000.10.44.2)] on darwin<br>
 Type "help", "copyright", "credits" or "license" for more information.<br>
-(InteractiveConsole)<br>
 `>>>` from unicodex.models import Codepoint<br>
 `>>>` Codepoint.objects.filter(design&#95;&#95;image&#95;&#95;contains="png", design&#95;&#95;image&#95;&#95;startswith="design").count()<w>&nbsp;</w>
 
@@ -1908,13 +1901,12 @@ Type "help", "copyright", "credits" or "license" for more information.<br>
 add a count function on the end
 
 ---
-<div class="shell-wrap"><p class="shell-top-bar">python3.6</p><p class="shell-body">
+<div class="shell-wrap"><p class="shell-top-bar">python3.7</p><p class="shell-body">
 <ps>myrtle</ps> <dr>~/project $</dr>
 ./manage.py shell<br>
-Python 3.6.3 (default, Nov 9 2017, 15:58:30)<br>
-[GCC 4.2.1 Compatible Apple LLVM 9.0.0 (clang-900.0.38)] on darwin<br>
+Python 3.7.0 (default, Sep 24 2018, 20:50:19)<br>
+[Clang 10.0.0 (clang-1000.10.44.2)] on darwin<br>
 Type "help", "copyright", "credits" or "license" for more information.<br>
-(InteractiveConsole)<br>
 `>>>` from unicodex.models import Codepoint<br>
 `>>>` Codepoint.objects.filter(design&#95;&#95;image&#95;&#95;contains="png", design&#95;&#95;image&#95;&#95;startswith="design").count()<br>
 44<br>
@@ -1949,26 +1941,24 @@ Codepoint.objects.filter(
 &nbsp; <o>design&#95;&#95;image&#95;&#95;startswith=</o>"design").count()<br><br><c>&dash;&dash; SQL</c><br><c>&dash;&dash; ?? </c><br><br><c>&num; ORM</c><br><r>from</r> django.db <r>import</r> connection<br>connection.queries
 </code></pre>
 ---
-<div class="shell-wrap"><p class="shell-top-bar">python3.6</p><p class="shell-body">
+<div class="shell-wrap"><p class="shell-top-bar">python3.7</p><p class="shell-body">
 <ps>myrtle</ps> <dr>~/project $</dr>
 ./manage.py shell<br>
-Python 3.6.3 (default, Nov 9 2017, 15:58:30)<br>
-[GCC 4.2.1 Compatible Apple LLVM 9.0.0 (clang-900.0.38)] on darwin<br>
+Python 3.7.0 (default, Sep 24 2018, 20:50:19)<br>
+[Clang 10.0.0 (clang-1000.10.44.2)] on darwin<br>
 Type "help", "copyright", "credits" or "license" for more information.<br>
-(InteractiveConsole)<br>
 `>>>` from unicodex.models import Codepoint<br>
 `>>>` Codepoint.objects.filter(design&#95;&#95;image&#95;&#95;contains="png", design&#95;&#95;image&#95;&#95;startswith="design").count()<br>
 44<br>
 `>>>` <w>&nbsp;</w>
 ---
 
-<div class="shell-wrap"><p class="shell-top-bar">python3.6</p><p class="shell-body">
+<div class="shell-wrap"><p class="shell-top-bar">python3.7</p><p class="shell-body">
 <ps>myrtle</ps> <dr>~/project $</dr>
 ./manage.py shell<br>
-Python 3.6.3 (default, Nov 9 2017, 15:58:30)<br>
-[GCC 4.2.1 Compatible Apple LLVM 9.0.0 (clang-900.0.38)] on darwin<br>
+Python 3.7.0 (default, Sep 24 2018, 20:50:19)<br>
+[Clang 10.0.0 (clang-1000.10.44.2)] on darwin<br>
 Type "help", "copyright", "credits" or "license" for more information.<br>
-(InteractiveConsole)<br>
 `>>>` from unicodex.models import Codepoint<br>
 `>>>` Codepoint.objects.filter(design&#95;&#95;image&#95;&#95;contains="png", design&#95;&#95;image&#95;&#95;startswith="design").count()<br>
 44<br>
@@ -1979,13 +1969,12 @@ Type "help", "copyright", "credits" or "license" for more information.<br>
 we can import the django database connection modele
 ---
 
-<div class="shell-wrap"><p class="shell-top-bar">python3.6</p><p class="shell-body">
+<div class="shell-wrap"><p class="shell-top-bar">python3.7</p><p class="shell-body">
 <ps>myrtle</ps> <dr>~/project $</dr>
 ./manage.py shell<br>
-Python 3.6.3 (default, Nov 9 2017, 15:58:30)<br>
-[GCC 4.2.1 Compatible Apple LLVM 9.0.0 (clang-900.0.38)] on darwin<br>
+Python 3.7.0 (default, Sep 24 2018, 20:50:19)<br>
+[Clang 10.0.0 (clang-1000.10.44.2)] on darwin<br>
 Type "help", "copyright", "credits" or "license" for more information.<br>
-(InteractiveConsole)<br>
 `>>>` from unicodex.models import Codepoint<br>
 `>>>` Codepoint.objects.filter(design&#95;&#95;image&#95;&#95;contains="png", design&#95;&#95;image&#95;&#95;startswith="design").count()<br>
 44<br>
@@ -1993,13 +1982,12 @@ Type "help", "copyright", "credits" or "license" for more information.<br>
 `>>>` <w>&nbsp;</w>
 ---
 
-<div class="shell-wrap"><p class="shell-top-bar">python3.6</p><p class="shell-body">
+<div class="shell-wrap"><p class="shell-top-bar">python3.7</p><p class="shell-body">
 <ps>myrtle</ps> <dr>~/project $</dr>
 ./manage.py shell<br>
-Python 3.6.3 (default, Nov 9 2017, 15:58:30)<br>
-[GCC 4.2.1 Compatible Apple LLVM 9.0.0 (clang-900.0.38)] on darwin<br>
+Python 3.7.0 (default, Sep 24 2018, 20:50:19)<br>
+[Clang 10.0.0 (clang-1000.10.44.2)] on darwin<br>
 Type "help", "copyright", "credits" or "license" for more information.<br>
-(InteractiveConsole)<br>
 `>>>` from unicodex.models import Codepoint<br>
 `>>>` Codepoint.objects.filter(design&#95;&#95;image&#95;&#95;contains="png", design&#95;&#95;image&#95;&#95;startswith="design").count()<br>
 44<br>
@@ -2012,13 +2000,12 @@ and inspect the last query run against our databse
 
 
 ---
-<div class="shell-wrap"><p class="shell-top-bar">python3.6</p><p class="shell-body">
+<div class="shell-wrap"><p class="shell-top-bar">python3.7</p><p class="shell-body">
 <ps>myrtle</ps> <dr>~/project $</dr>
 ./manage.py shell<br>
-Python 3.6.3 (default, Nov 9 2017, 15:58:30)<br>
-[GCC 4.2.1 Compatible Apple LLVM 9.0.0 (clang-900.0.38)] on darwin<br>
+Python 3.7.0 (default, Sep 24 2018, 20:50:19)<br>
+[Clang 10.0.0 (clang-1000.10.44.2)] on darwin<br>
 Type "help", "copyright", "credits" or "license" for more information.<br>
-(InteractiveConsole)<br>
 `>>>` from unicodex.models import Codepoint<br>
 `>>>` Codepoint.objects.filter(design&#95;&#95;image&#95;&#95;contains="png", design&#95;&#95;image&#95;&#95;startswith="design").count()<br>
 44<br>
@@ -2042,7 +2029,7 @@ Codepoint.objects.filter(
 &nbsp; <o>design&#95;&#95;image&#95;&#95;startswith=</o>"design").count()<br><br><c>&dash;&dash; SQL</c><br><c>&dash;&dash; ??
 
 ---
-<div class="shell-wrap"><p class="shell-top-bar">python3.6</p><p class="shell-body">
+<div class="shell-wrap"><p class="shell-top-bar">python3.7</p><p class="shell-body">
 `>>>` from unicodex.models import Codepoint<br>
 `>>>` Codepoint.objects.filter(design&#95;&#95;image&#95;&#95;contains="png", design&#95;&#95;image&#95;&#95;startswith="design").count()<br>
 44<br>
@@ -2051,7 +2038,7 @@ Codepoint.objects.filter(
 {'sql': 'SELECT COUNT(&#42;) AS "&#95;&#95;count" FROM "unicodex&#95;codepoint" INNER JOIN "unicodex&#95;design" ON ("unicodex&#95;codepoint"."id" = "unicodex&#95;design"."codepoint&#95;id") WHERE ("unicodex&#95;design"."image"::text LIKE \'%png%\' AND "unicodex&#95;design"."image"::text LIKE \'design%\')', 'time': '0.001'}<br>
 `>>>` <w>&nbsp;</w>
 ---
-<div class="shell-wrap"><p class="shell-top-bar">python3.6</p><p class="shell-body">
+<div class="shell-wrap"><p class="shell-top-bar">python3.7</p><p class="shell-body">
 `>>>` from unicodex.models import Codepoint<br>
 `>>>` Codepoint.objects.filter(design&#95;&#95;image&#95;&#95;contains="png", design&#95;&#95;image&#95;&#95;startswith="design").count()<br>
 44<br>
@@ -2062,7 +2049,7 @@ Codepoint.objects.filter(
 ... design&#95;&#95;image&#95;&#95;startswith="design").count()<w>&nbsp;</w><br>
 
 ---
-<div class="shell-wrap"><p class="shell-top-bar">python3.6</p><p class="shell-body">
+<div class="shell-wrap"><p class="shell-top-bar">python3.7</p><p class="shell-body">
 `>>>` from unicodex.models import Codepoint<br>
 `>>>` Codepoint.objects.filter(design&#95;&#95;image&#95;&#95;contains="png", design&#95;&#95;image&#95;&#95;startswith="design").count()<br>
 44<br>
@@ -2079,7 +2066,7 @@ Codepoint.objects.filter(
 wait, what??
 
 ---
-<div class="shell-wrap"><p class="shell-top-bar">python3.6</p><p class="shell-body">
+<div class="shell-wrap"><p class="shell-top-bar">python3.7</p><p class="shell-body">
 `>>>` from unicodex.models import Codepoint<br>
 `>>>` Codepoint.objects.filter(design&#95;&#95;image&#95;&#95;contains="png", design&#95;&#95;image&#95;&#95;startswith="design").count()<br>
 44<br>
@@ -2098,7 +2085,7 @@ let's check
 
 
 ---
-<div class="shell-wrap"><p class="shell-top-bar">python3.6</p><p class="shell-body">
+<div class="shell-wrap"><p class="shell-top-bar">python3.7</p><p class="shell-body">
 `>>>` connection.queries[-1]<br>
 {'sql': 'SELECT COUNT(&#42;) AS "&#95;&#95;count" FROM "unicodex&#95;codepoint" INNER JOIN "unicodex&#95;design" ON ("unicodex&#95;codepoint"."id" = "unicodex&#95;design"."codepoint&#95;id") WHERE ("unicodex&#95;design"."image"::text LIKE \'%png%\' AND "unicodex&#95;design"."image"::text LIKE \'design%\')', 'time': '0.001'}<br>
 `>>>` Codepoint.objects.filter(design&#95;&#95;image&#95;&#95;contains="png").filter(<br>
@@ -2157,164 +2144,151 @@ cd project<br>
 ./manage.py shell<w>&nbsp;</w>
 
 ---
-<div class="shell-wrap"><p class="shell-top-bar">python3.6</p><p class="shell-body">
+<div class="shell-wrap"><p class="shell-top-bar">python3.7</p><p class="shell-body">
 <ps>myrtle</ps> <dr>~ $</dr>
 cd project<br>
 <ps>myrtle</ps> <dr>~/project $</dr>
 ./manage.py shell<br>
-Python 3.6.3 (default, Nov 9 2017, 15:58:30)<br>
-[GCC 4.2.1 Compatible Apple LLVM 9.0.0 (clang-900.0.38)] on darwin<br>
+Python 3.7.0 (default, Sep 24 2018, 20:50:19)<br>
+[Clang 10.0.0 (clang-1000.10.44.2)] on darwin<br>
 Type "help", "copyright", "credits" or "license" for more information.<br>
-(InteractiveConsole)<br>
 `>>>` <w>&nbsp;</w>
 ---
-<div class="shell-wrap"><p class="shell-top-bar">python3.6</p><p class="shell-body">
+<div class="shell-wrap"><p class="shell-top-bar">python3.7</p><p class="shell-body">
 <ps>myrtle</ps> <dr>~ $</dr>
 cd project<br>
 <ps>myrtle</ps> <dr>~/project $</dr>
 ./manage.py shell<br>
-Python 3.6.3 (default, Nov 9 2017, 15:58:30)<br>
-[GCC 4.2.1 Compatible Apple LLVM 9.0.0 (clang-900.0.38)] on darwin<br>
+Python 3.7.0 (default, Sep 24 2018, 20:50:19)<br>
+[Clang 10.0.0 (clang-1000.10.44.2)] on darwin<br>
 Type "help", "copyright", "credits" or "license" for more information.<br>
-(InteractiveConsole)<br>
 `>>>` from unicodex.objects import<w>&nbsp;</w>
 ---
-<div class="shell-wrap"><p class="shell-top-bar">python3.6</p><p class="shell-body">
+<div class="shell-wrap"><p class="shell-top-bar">python3.7</p><p class="shell-body">
 <ps>myrtle</ps> <dr>~ $</dr>
 cd project<br>
 <ps>myrtle</ps> <dr>~/project $</dr>
 ./manage.py shell<br>
-Python 3.6.3 (default, Nov 9 2017, 15:58:30)<br>
-[GCC 4.2.1 Compatible Apple LLVM 9.0.0 (clang-900.0.38)] on darwin<br>
+Python 3.7.0 (default, Sep 24 2018, 20:50:19)<br>
+[Clang 10.0.0 (clang-1000.10.44.2)] on darwin<br>
 Type "help", "copyright", "credits" or "license" for more information.<br>
-(InteractiveConsole)<br>
 `>>>` from unicodex.objects import *<w>&nbsp;</w>
 ---
-<div class="shell-wrap"><p class="shell-top-bar">python3.6</p><p class="shell-body">
+<div class="shell-wrap"><p class="shell-top-bar">python3.7</p><p class="shell-body">
 <ps>myrtle</ps> <dr>~ $</dr>
 cd project<br>
 <ps>myrtle</ps> <dr>~/project $</dr>
 ./manage.py shell<br>
-Python 3.6.3 (default, Nov 9 2017, 15:58:30)<br>
-[GCC 4.2.1 Compatible Apple LLVM 9.0.0 (clang-900.0.38)] on darwin<br>
+Python 3.7.0 (default, Sep 24 2018, 20:50:19)<br>
+[Clang 10.0.0 (clang-1000.10.44.2)] on darwin<br>
 Type "help", "copyright", "credits" or "license" for more information.<br>
-(InteractiveConsole)<br>
 `>>>` from unicodex.objects import *<br>
 `>>>` <w>&nbsp;</w>
 ---
-<div class="shell-wrap"><p class="shell-top-bar">python3.6</p><p class="shell-body">
+<div class="shell-wrap"><p class="shell-top-bar">python3.7</p><p class="shell-body">
 <ps>myrtle</ps> <dr>~ $</dr>
 cd project<br>
 <ps>myrtle</ps> <dr>~/project $</dr>
 ./manage.py shell<br>
-Python 3.6.3 (default, Nov 9 2017, 15:58:30)<br>
-[GCC 4.2.1 Compatible Apple LLVM 9.0.0 (clang-900.0.38)] on darwin<br>
+Python 3.7.0 (default, Sep 24 2018, 20:50:19)<br>
+[Clang 10.0.0 (clang-1000.10.44.2)] on darwin<br>
 Type "help", "copyright", "credits" or "license" for more information.<br>
-(InteractiveConsole)<br>
 `>>>` from unicodex.objects import *<br>
 `>>>` Design.objects.filter(<w>&nbsp;</w>
 ---
-<div class="shell-wrap"><p class="shell-top-bar">python3.6</p><p class="shell-body">
+<div class="shell-wrap"><p class="shell-top-bar">python3.7</p><p class="shell-body">
 <ps>myrtle</ps> <dr>~ $</dr>
 cd project<br>
 <ps>myrtle</ps> <dr>~/project $</dr>
 ./manage.py shell<br>
-Python 3.6.3 (default, Nov 9 2017, 15:58:30)<br>
-[GCC 4.2.1 Compatible Apple LLVM 9.0.0 (clang-900.0.38)] on darwin<br>
+Python 3.7.0 (default, Sep 24 2018, 20:50:19)<br>
+[Clang 10.0.0 (clang-1000.10.44.2)] on darwin<br>
 Type "help", "copyright", "credits" or "license" for more information.<br>
-(InteractiveConsole)<br>
 `>>>` from unicodex.objects import *<br>
 `>>>` Design.objects.filter(codepoint&#95;&#95;name="Sparkles"<w>&nbsp;</w>
 ---
-<div class="shell-wrap"><p class="shell-top-bar">python3.6</p><p class="shell-body">
+<div class="shell-wrap"><p class="shell-top-bar">python3.7</p><p class="shell-body">
 <ps>myrtle</ps> <dr>~ $</dr>
 cd project<br>
 <ps>myrtle</ps> <dr>~/project $</dr>
 ./manage.py shell<br>
-Python 3.6.3 (default, Nov 9 2017, 15:58:30)<br>
-[GCC 4.2.1 Compatible Apple LLVM 9.0.0 (clang-900.0.38)] on darwin<br>
+Python 3.7.0 (default, Sep 24 2018, 20:50:19)<br>
+[Clang 10.0.0 (clang-1000.10.44.2)] on darwin<br>
 Type "help", "copyright", "credits" or "license" for more information.<br>
-(InteractiveConsole)<br>
 `>>>` from unicodex.objects import *<br>
 `>>>` Design.objects.filter(codepoint&#95;&#95;name="Sparkles",<br>
 ... <w>&nbsp;</w><br>
 ---
-<div class="shell-wrap"><p class="shell-top-bar">python3.6</p><p class="shell-body">
+<div class="shell-wrap"><p class="shell-top-bar">python3.7</p><p class="shell-body">
 <ps>myrtle</ps> <dr>~ $</dr>
 cd project<br>
 <ps>myrtle</ps> <dr>~/project $</dr>
 ./manage.py shell<br>
-Python 3.6.3 (default, Nov 9 2017, 15:58:30)<br>
-[GCC 4.2.1 Compatible Apple LLVM 9.0.0 (clang-900.0.38)] on darwin<br>
+Python 3.7.0 (default, Sep 24 2018, 20:50:19)<br>
+[Clang 10.0.0 (clang-1000.10.44.2)] on darwin<br>
 Type "help", "copyright", "credits" or "license" for more information.<br>
-(InteractiveConsole)<br>
 `>>>` from unicodex.objects import *<br>
 `>>>` Design.objects.filter(codepoint&#95;&#95;name="Sparkles",<br>
 ... vendorversion<w>&nbsp;</w><br>
 ---
-<div class="shell-wrap"><p class="shell-top-bar">python3.6</p><p class="shell-body">
+<div class="shell-wrap"><p class="shell-top-bar">python3.7</p><p class="shell-body">
 <ps>myrtle</ps> <dr>~ $</dr>
 cd project<br>
 <ps>myrtle</ps> <dr>~/project $</dr>
 ./manage.py shell<br>
-Python 3.6.3 (default, Nov 9 2017, 15:58:30)<br>
-[GCC 4.2.1 Compatible Apple LLVM 9.0.0 (clang-900.0.38)] on darwin<br>
+Python 3.7.0 (default, Sep 24 2018, 20:50:19)<br>
+[Clang 10.0.0 (clang-1000.10.44.2)] on darwin<br>
 Type "help", "copyright", "credits" or "license" for more information.<br>
-(InteractiveConsole)<br>
 `>>>` from unicodex.objects import *<br>
 `>>>` Design.objects.filter(codepoint&#95;&#95;name="Sparkles",<br>
 ... vendorversion&#95;&#95;vendor<w>&nbsp;</w><br>
 ---
-<div class="shell-wrap"><p class="shell-top-bar">python3.6</p><p class="shell-body">
+<div class="shell-wrap"><p class="shell-top-bar">python3.7</p><p class="shell-body">
 <ps>myrtle</ps> <dr>~ $</dr>
 cd project<br>
 <ps>myrtle</ps> <dr>~/project $</dr>
 ./manage.py shell<br>
-Python 3.6.3 (default, Nov 9 2017, 15:58:30)<br>
-[GCC 4.2.1 Compatible Apple LLVM 9.0.0 (clang-900.0.38)] on darwin<br>
+Python 3.7.0 (default, Sep 24 2018, 20:50:19)<br>
+[Clang 10.0.0 (clang-1000.10.44.2)] on darwin<br>
 Type "help", "copyright", "credits" or "license" for more information.<br>
-(InteractiveConsole)<br>
 `>>>` from unicodex.objects import *<br>
 `>>>` Design.objects.filter(codepoint&#95;&#95;name="Sparkles",<br>
 ... vendorversion&#95;&#95;vendor&#95;&#95;name<w>&nbsp;</w><br>
 ---
-<div class="shell-wrap"><p class="shell-top-bar">python3.6</p><p class="shell-body">
+<div class="shell-wrap"><p class="shell-top-bar">python3.7</p><p class="shell-body">
 <ps>myrtle</ps> <dr>~ $</dr>
 cd project<br>
 <ps>myrtle</ps> <dr>~/project $</dr>
-./manage.py shell<br>
-Python 3.6.3 (default, Nov 9 2017, 15:58:30)<br>
-[GCC 4.2.1 Compatible Apple LLVM 9.0.0 (clang-900.0.38)] on darwin<br>
+Python 3.7.0 (default, Sep 24 2018, 20:50:19)<br>
+[Clang 10.0.0 (clang-1000.10.44.2)] on darwin<br>
 Type "help", "copyright", "credits" or "license" for more information.<br>
-(InteractiveConsole)<br>
+./manage.py shell<br>
 `>>>` from unicodex.objects import *<br>
 `>>>` Design.objects.filter(codepoint&#95;&#95;name="Sparkles",<br>
 ... vendorversion&#95;&#95;vendor&#95;&#95;name="Twitter")<w>&nbsp;</w><br>
 ---
-<div class="shell-wrap"><p class="shell-top-bar">python3.6</p><p class="shell-body">
+<div class="shell-wrap"><p class="shell-top-bar">python3.7</p><p class="shell-body">
 <ps>myrtle</ps> <dr>~ $</dr>
 cd project<br>
 <ps>myrtle</ps> <dr>~/project $</dr>
 ./manage.py shell<br>
-Python 3.6.3 (default, Nov 9 2017, 15:58:30)<br>
-[GCC 4.2.1 Compatible Apple LLVM 9.0.0 (clang-900.0.38)] on darwin<br>
+Python 3.7.0 (default, Sep 24 2018, 20:50:19)<br>
+[Clang 10.0.0 (clang-1000.10.44.2)] on darwin<br>
 Type "help", "copyright", "credits" or "license" for more information.<br>
-(InteractiveConsole)<br>
 `>>>` from unicodex.objects import *<br>
 `>>>` Design.objects.filter(codepoint&#95;&#95;name="Sparkles",<br>
 ... vendorversion&#95;&#95;vendor&#95;&#95;name="Twitter")<br>
 `<`QuerySet [`<`Design: Sparkles Twitter 1.0>, `<`Design: Sparkles Twitter 2.4>]><br>
 `>>>` <w>&nbsp;</w>
 ---
-<div class="shell-wrap"><p class="shell-top-bar">python3.6</p><p class="shell-body">
+<div class="shell-wrap"><p class="shell-top-bar">python3.7</p><p class="shell-body">
 <ps>myrtle</ps> <dr>~ $</dr>
 cd project<br>
 <ps>myrtle</ps> <dr>~/project $</dr>
 ./manage.py shell<br>
-Python 3.6.3 (default, Nov 9 2017, 15:58:30)<br>
-[GCC 4.2.1 Compatible Apple LLVM 9.0.0 (clang-900.0.38)] on darwin<br>
+Python 3.7.0 (default, Sep 24 2018, 20:50:19)<br>
+[Clang 10.0.0 (clang-1000.10.44.2)] on darwin<br>
 Type "help", "copyright", "credits" or "license" for more information.<br>
-(InteractiveConsole)<br>
 `>>>` from unicodex.objects import *<br>
 `>>>` Design.objects.filter(codepoint&#95;&#95;name="Sparkles",<br>
 ... vendorversion&#95;&#95;vendor&#95;&#95;name="Twitter")<br>
@@ -2326,15 +2300,14 @@ Type "help", "copyright", "credits" or "license" for more information.<br>
 
 press up to replay the line
 ---
-<div class="shell-wrap"><p class="shell-top-bar">python3.6</p><p class="shell-body">
+<div class="shell-wrap"><p class="shell-top-bar">python3.7</p><p class="shell-body">
 <ps>myrtle</ps> <dr>~ $</dr>
 cd project<br>
 <ps>myrtle</ps> <dr>~/project $</dr>
 ./manage.py shell<br>
-Python 3.6.3 (default, Nov 9 2017, 15:58:30)<br>
-[GCC 4.2.1 Compatible Apple LLVM 9.0.0 (clang-900.0.38)] on darwin<br>
+Python 3.7.0 (default, Sep 24 2018, 20:50:19)<br>
+[Clang 10.0.0 (clang-1000.10.44.2)] on darwin<br>
 Type "help", "copyright", "credits" or "license" for more information.<br>
-(InteractiveConsole)<br>
 `>>>` from unicodex.objects import *<br>
 `>>>` Design.objects.filter(codepoint&#95;&#95;name="Sparkles",<br>
 ... vendorversion&#95;&#95;vendor&#95;&#95;name="Twitter")<br>
@@ -2343,15 +2316,14 @@ Type "help", "copyright", "credits" or "license" for more information.<br>
 ... vendorversion&#95;&#95;vendor&#95;&#95;name="Twitter")<br>
 
 ---
-<div class="shell-wrap"><p class="shell-top-bar">python3.6</p><p class="shell-body">
+<div class="shell-wrap"><p class="shell-top-bar">python3.7</p><p class="shell-body">
 <ps>myrtle</ps> <dr>~ $</dr>
 cd project<br>
 <ps>myrtle</ps> <dr>~/project $</dr>
 ./manage.py shell<br>
-Python 3.6.3 (default, Nov 9 2017, 15:58:30)<br>
-[GCC 4.2.1 Compatible Apple LLVM 9.0.0 (clang-900.0.38)] on darwin<br>
+Python 3.7.0 (default, Sep 24 2018, 20:50:19)<br>
+[Clang 10.0.0 (clang-1000.10.44.2)] on darwin<br>
 Type "help", "copyright", "credits" or "license" for more information.<br>
-(InteractiveConsole)<br>
 `>>>` from unicodex.objects import *<br>
 `>>>` Design.objects.filter(codepoint&#95;&#95;name="Sparkles",<br>
 ... vendorversion&#95;&#95;vendor&#95;&#95;name="Twitter")<br>
@@ -2360,15 +2332,14 @@ Type "help", "copyright", "credits" or "license" for more information.<br>
 ... vendorversion&#95;&#95;vendor&#95;&#95;name="Twitter")<br>
 
 ---
-<div class="shell-wrap"><p class="shell-top-bar">python3.6</p><p class="shell-body">
+<div class="shell-wrap"><p class="shell-top-bar">python3.7</p><p class="shell-body">
 <ps>myrtle</ps> <dr>~ $</dr>
 cd project<br>
 <ps>myrtle</ps> <dr>~/project $</dr>
 ./manage.py shell<br>
-Python 3.6.3 (default, Nov 9 2017, 15:58:30)<br>
-[GCC 4.2.1 Compatible Apple LLVM 9.0.0 (clang-900.0.38)] on darwin<br>
+Python 3.7.0 (default, Sep 24 2018, 20:50:19)<br>
+[Clang 10.0.0 (clang-1000.10.44.2)] on darwin<br>
 Type "help", "copyright", "credits" or "license" for more information.<br>
-(InteractiveConsole)<br>
 `>>>` from unicodex.objects import *<br>
 `>>>` Design.objects.filter(codepoint&#95;&#95;name="Sparkles",<br>
 ... vendorversion&#95;&#95;vendor&#95;&#95;name="Twitter")<br>
@@ -2381,17 +2352,17 @@ Type "help", "copyright", "credits" or "license" for more information.<br>
 
 now we have our value saved
 ---
-<div class="shell-wrap"><p class="shell-top-bar">python3.6</p><p class="shell-body">
+<div class="shell-wrap"><p class="shell-top-bar">python3.7</p><p class="shell-body">
 `>>>` <w>&nbsp;</w>
 
 ???
 
 clear terminal
 ---
-<div class="shell-wrap"><p class="shell-top-bar">python3.6</p><p class="shell-body">
+<div class="shell-wrap"><p class="shell-top-bar">python3.7</p><p class="shell-body">
 `>>>` d<w>&nbsp;</w>
 ---
-<div class="shell-wrap"><p class="shell-top-bar">python3.6</p><p class="shell-body">
+<div class="shell-wrap"><p class="shell-top-bar">python3.7</p><p class="shell-body">
 `>>>` d<br>
 `<`QuerySet [`<`Design: Sparkles Twitter 1.0>, `<`Design: Sparkles Twitter 2.4>]><br>
 `>>>` <w>&nbsp;</w>
@@ -2401,7 +2372,7 @@ clear terminal
 now, we can filter more.
 ---
 
-<div class="shell-wrap"><p class="shell-top-bar">python3.6</p><p class="shell-body">
+<div class="shell-wrap"><p class="shell-top-bar">python3.7</p><p class="shell-body">
 `>>>` d<br>
 `<`QuerySet [`<`Design: Sparkles Twitter 1.0>, `<`Design: Sparkles Twitter 2.4>]><br>
 `>>>` d[0]<w>&nbsp;</w>
@@ -2412,7 +2383,7 @@ we could absolutely just return the first value of this array
 
 That's completely valid
 ---
-<div class="shell-wrap"><p class="shell-top-bar">python3.6</p><p class="shell-body">
+<div class="shell-wrap"><p class="shell-top-bar">python3.7</p><p class="shell-body">
 `>>>` d<br>
 `<`QuerySet [`<`Design: Sparkles Twitter 1.0>, `<`Design: Sparkles Twitter 2.4>]><br>
 `>>>` d<w>&nbsp;</w>
@@ -2422,7 +2393,7 @@ That's completely valid
 but let's keep filtering, instead
 
 ---
-<div class="shell-wrap"><p class="shell-top-bar">python3.6</p><p class="shell-body">
+<div class="shell-wrap"><p class="shell-top-bar">python3.7</p><p class="shell-body">
 `>>>` d<br>
 `<`QuerySet [`<`Design: Sparkles Twitter 1.0>, `<`Design: Sparkles Twitter 2.4>]><br>
 `>>>` d.filter(<w>&nbsp;</w>
@@ -2432,17 +2403,17 @@ but let's keep filtering, instead
 we can chain filters on querysets, remember?
 
 ---
-<div class="shell-wrap"><p class="shell-top-bar">python3.6</p><p class="shell-body">
+<div class="shell-wrap"><p class="shell-top-bar">python3.7</p><p class="shell-body">
 `>>>` d<br>
 `<`QuerySet [`<`Design: Sparkles Twitter 1.0>, `<`Design: Sparkles Twitter 2.4>]><br>
 `>>>` d.filter(vendorversion<w>&nbsp;</w>
 ---
-<div class="shell-wrap"><p class="shell-top-bar">python3.6</p><p class="shell-body">
+<div class="shell-wrap"><p class="shell-top-bar">python3.7</p><p class="shell-body">
 `>>>` d<br>
 `<`QuerySet [`<`Design: Sparkles Twitter 1.0>, `<`Design: Sparkles Twitter 2.4>]><br>
 `>>>` d.filter(vendorversion&#95;&#95;name<w>&nbsp;</w>
 ---
-<div class="shell-wrap"><p class="shell-top-bar">python3.6</p><p class="shell-body">
+<div class="shell-wrap"><p class="shell-top-bar">python3.7</p><p class="shell-body">
 `>>>` d<br>
 `<`QuerySet [`<`Design: Sparkles Twitter 1.0>, `<`Design: Sparkles Twitter 2.4>]><br>
 `>>>` d.filter(vendorversion&#95;&#95;name&#95;&#95;contains<w>&nbsp;</w>
@@ -2451,12 +2422,12 @@ we can chain filters on querysets, remember?
 
 contains here, to be save. We know the string will have 1.0 in it, but we aren't 100% sure where
 ---
-<div class="shell-wrap"><p class="shell-top-bar">python3.6</p><p class="shell-body">
+<div class="shell-wrap"><p class="shell-top-bar">python3.7</p><p class="shell-body">
 `>>>` d<br>
 `<`QuerySet [`<`Design: Sparkles Twitter 1.0>, `<`Design: Sparkles Twitter 2.4>]><br>
 `>>>` d.filter(vendorversion&#95;&#95;name&#95;&#95;contains="1.0")<w>&nbsp;</w>
 ---
-<div class="shell-wrap"><p class="shell-top-bar">python3.6</p><p class="shell-body">
+<div class="shell-wrap"><p class="shell-top-bar">python3.7</p><p class="shell-body">
 `>>>` d<br>
 `<`QuerySet [`<`Design: Sparkles Twitter 1.0>, `<`Design: Sparkles Twitter 2.4>]><br>
 `>>>` d.filter(vendorversion&#95;&#95;name&#95;&#95;contains="1.0")<br>
@@ -2467,21 +2438,21 @@ contains here, to be save. We know the string will have 1.0 in it, but we aren't
 
 woo!
 ---
-<div class="shell-wrap"><p class="shell-top-bar">python3.6</p><p class="shell-body">
+<div class="shell-wrap"><p class="shell-top-bar">python3.7</p><p class="shell-body">
 `>>>` d<br>
 `<`QuerySet [`<`Design: Sparkles Twitter 1.0>, `<`Design: Sparkles Twitter 2.4>]><br>
 `>>>` d.filter(vendorversion&#95;&#95;name&#95;&#95;contains="1.0")<br>
 `<`QuerySet [`<`Design: Sparkles Twitter 1.0>]><br>
 `>>>` d.filter(vendorversion&#95;&#95;name&#95;&#95;contains="1.0")<w>&nbsp;</w>
 ---
-<div class="shell-wrap"><p class="shell-top-bar">python3.6</p><p class="shell-body">
+<div class="shell-wrap"><p class="shell-top-bar">python3.7</p><p class="shell-body">
 `>>>` d<br>
 `<`QuerySet [`<`Design: Sparkles Twitter 1.0>, `<`Design: Sparkles Twitter 2.4>]><br>
 `>>>` d.filter(vendorversion&#95;&#95;name&#95;&#95;contains="1.0")<br>
 `<`QuerySet [`<`Design: Sparkles Twitter 1.0>]><br>
 `>>>` <w>d</w>.filter(vendorversion&#95;&#95;name&#95;&#95;contains="1.0")<br>
 ---
-<div class="shell-wrap"><p class="shell-top-bar">python3.6</p><p class="shell-body">
+<div class="shell-wrap"><p class="shell-top-bar">python3.7</p><p class="shell-body">
 `>>>` d<br>
 `<`QuerySet [`<`Design: Sparkles Twitter 1.0>, `<`Design: Sparkles Twitter 2.4>]><br>
 `>>>` d.filter(vendorversion&#95;&#95;name&#95;&#95;contains="1.0")<br>
@@ -2489,21 +2460,21 @@ woo!
 `>>>` d.filte<w>r</w>(vendorversion&#95;&#95;name&#95;&#95;contains="1.0")<br>
 
 ---
-<div class="shell-wrap"><p class="shell-top-bar">python3.6</p><p class="shell-body">
+<div class="shell-wrap"><p class="shell-top-bar">python3.7</p><p class="shell-body">
 `>>>` d<br>
 `<`QuerySet [`<`Design: Sparkles Twitter 1.0>, `<`Design: Sparkles Twitter 2.4>]><br>
 `>>>` d.filter(vendorversion&#95;&#95;name&#95;&#95;contains="1.0")<br>
 `<`QuerySet [`<`Design: Sparkles Twitter 1.0>]><br>
 `>>>` d.<w>(</w>vendorversion&#95;&#95;name&#95;&#95;contains="1.0")<br>
 ---
-<div class="shell-wrap"><p class="shell-top-bar">python3.6</p><p class="shell-body">
+<div class="shell-wrap"><p class="shell-top-bar">python3.7</p><p class="shell-body">
 `>>>` d<br>
 `<`QuerySet [`<`Design: Sparkles Twitter 1.0>, `<`Design: Sparkles Twitter 2.4>]><br>
 `>>>` d.filter(vendorversion&#95;&#95;name&#95;&#95;contains="1.0")<br>
 `<`QuerySet [`<`Design: Sparkles Twitter 1.0>]><br>
 `>>>` d.get<w>(</w>vendorversion&#95;&#95;name&#95;&#95;contains="1.0")<br>
 ---
-<div class="shell-wrap"><p class="shell-top-bar">python3.6</p><p class="shell-body">
+<div class="shell-wrap"><p class="shell-top-bar">python3.7</p><p class="shell-body">
 `>>>` d<br>
 `<`QuerySet [`<`Design: Sparkles Twitter 1.0>, `<`Design: Sparkles Twitter 2.4>]><br>
 `>>>` d.filter(vendorversion&#95;&#95;name&#95;&#95;contains="1.0")<br>
@@ -2512,7 +2483,7 @@ woo!
 `<`Design: Sparkles Twitter 1.0><br>
 `>>>` <w>&nbsp;</w>
 ---
-<div class="shell-wrap"><p class="shell-top-bar">python3.6</p><p class="shell-body">
+<div class="shell-wrap"><p class="shell-top-bar">python3.7</p><p class="shell-body">
 `>>>` d<br>
 `<`QuerySet [`<`Design: Sparkles Twitter 1.0>, `<`Design: Sparkles Twitter 2.4>]><br>
 `>>>` d.filter(vendorversion&#95;&#95;name&#95;&#95;contains="1.0")<br>
@@ -2522,7 +2493,7 @@ woo!
 `>>>` d.get(vendorversion&#95;&#95;name&#95;&#95;contains="1.0")<w>&nbsp;</w>
 
 ---
-<div class="shell-wrap"><p class="shell-top-bar">python3.6</p><p class="shell-body">
+<div class="shell-wrap"><p class="shell-top-bar">python3.7</p><p class="shell-body">
 `>>>` d<br>
 `<`QuerySet [`<`Design: Sparkles Twitter 1.0>, `<`Design: Sparkles Twitter 2.4>]><br>
 `>>>` d.filter(vendorversion&#95;&#95;name&#95;&#95;contains="1.0")<br>
@@ -2532,7 +2503,7 @@ woo!
 `>>>` d.get(vendorversion&#95;&#95;name&#95;&#95;contains="1.0")._meta.get_fields()<w>&nbsp;</w>
 
 ---
-<div class="shell-wrap"><p class="shell-top-bar">python3.6</p><p class="shell-body">
+<div class="shell-wrap"><p class="shell-top-bar">python3.7</p><p class="shell-body">
 `>>>` d<br>
 `<`QuerySet [`<`Design: Sparkles Twitter 1.0>, `<`Design: Sparkles Twitter 2.4>]><br>
 `>>>` d.filter(vendorversion&#95;&#95;name&#95;&#95;contains="1.0")<br>
@@ -2546,7 +2517,7 @@ woo!
 `<`django.db.models.fields.files.FileField: image>)<br>
 `>>>` <w>&nbsp;</w>
 ---
-<div class="shell-wrap"><p class="shell-top-bar">python3.6</p><p class="shell-body">
+<div class="shell-wrap"><p class="shell-top-bar">python3.7</p><p class="shell-body">
 `>>>` d<br>
 `<`QuerySet [`<`Design: Sparkles Twitter 1.0>, `<`Design: Sparkles Twitter 2.4>]><br>
 `>>>` d.filter(vendorversion&#95;&#95;name&#95;&#95;contains="1.0")<br>
@@ -2560,7 +2531,7 @@ woo!
 `<`django.db.models.fields.files.FileField: image>)<br>
 `>>>` d.get(vendorversion&#95;&#95;name&#95;&#95;contains="1.0")._meta.get_fields()<w>&nbsp;</w>
 ---
-<div class="shell-wrap"><p class="shell-top-bar">python3.6</p><p class="shell-body">
+<div class="shell-wrap"><p class="shell-top-bar">python3.7</p><p class="shell-body">
 `>>>` d<br>
 `<`QuerySet [`<`Design: Sparkles Twitter 1.0>, `<`Design: Sparkles Twitter 2.4>]><br>
 `>>>` d.filter(vendorversion&#95;&#95;name&#95;&#95;contains="1.0")<br>
@@ -2575,7 +2546,7 @@ woo!
 `>>>` d.get(vendorversion&#95;&#95;name&#95;&#95;contains="1.0")<w>&nbsp;</w>
 
 ---
-<div class="shell-wrap"><p class="shell-top-bar">python3.6</p><p class="shell-body">
+<div class="shell-wrap"><p class="shell-top-bar">python3.7</p><p class="shell-body">
 `>>>` d<br>
 `<`QuerySet [`<`Design: Sparkles Twitter 1.0>, `<`Design: Sparkles Twitter 2.4>]><br>
 `>>>` d.filter(vendorversion&#95;&#95;name&#95;&#95;contains="1.0")<br>
@@ -2589,7 +2560,7 @@ woo!
 `<`django.db.models.fields.files.FileField: image>)<br>
 `>>>` d.get(vendorversion&#95;&#95;name&#95;&#95;contains="1.0").image<w>&nbsp;</w>
 ---
-<div class="shell-wrap"><p class="shell-top-bar">python3.6</p><p class="shell-body">
+<div class="shell-wrap"><p class="shell-top-bar">python3.7</p><p class="shell-body">
 `>>>` d<br>
 `<`QuerySet [`<`Design: Sparkles Twitter 1.0>, `<`Design: Sparkles Twitter 2.4>]><br>
 `>>>` d.filter(vendorversion&#95;&#95;name&#95;&#95;contains="1.0")<br>
@@ -2727,50 +2698,46 @@ class: title
 
 add ipython as a dev requirement in your Pipfile, or requirements.txt or whereever all good python package managers store their requirements.
 ---
-<div class="shell-wrap"><p class="shell-top-bar">python3.6</p><p class="shell-body">
+<div class="shell-wrap"><p class="shell-top-bar">python3.7</p><p class="shell-body">
 <ps>myrtle</ps> <dr>~/project $</dr>
 ./manage.py shell<br>
-Python 3.6.3 (default, Nov 9 2017, 15:58:30)<br>
-[GCC 4.2.1 Compatible Apple LLVM 9.0.0 (clang-900.0.38)] on darwin<br>
+Python 3.7.0 (default, Sep 24 2018, 20:50:19)<br>
+[Clang 10.0.0 (clang-1000.10.44.2)] on darwin<br>
 Type "help", "copyright", "credits" or "license" for more information.<br>
-(InteractiveConsole)<br>
 `>>>` <w>&nbsp;</w>
 
 ???
 
 it will turn your shell from this old and busted
 ---
-<div class="shell-wrap"><p class="shell-top-bar">python3.6</p><p class="shell-body">
+<div class="shell-wrap"><p class="shell-top-bar">python3.7</p><p class="shell-body">
 <ps>myrtle</ps> <dr>~/project $</dr>
 ./manage.py shell<br>
-Python 3.6.3 (default, Nov 9 2017, 15:58:30)<br>
-Type 'copyright', 'credits' or 'license' for more information<br>
-IPython 6.3.1 -- An enhanced Interactive Python. Type '?' for help.<br><br>
-<tg>In [</tg><ty>1</ty><tg>]:&nbsp;<w>&nbsp;</w>
+Python 3.7.0 (default, Sep 24 2018, 20:50:19)<br>
+[Clang 10.0.0 (clang-1000.10.44.2)] on darwin<br>
+Type "help", "copyright", "credits" or "license" for more information.<br>
 ???
 
 to the new hotness
 
 This is an ipython powered shell, which means
 ---
-<div class="shell-wrap"><p class="shell-top-bar">python3.6</p><p class="shell-body">
+<div class="shell-wrap"><p class="shell-top-bar">python3.7</p><p class="shell-body">
 <ps>myrtle</ps> <dr>~/project $</dr>
 ./manage.py shell<br>
-Python 3.6.3 (default, Nov 9 2017, 15:58:30)<br>
-Type 'copyright', 'credits' or 'license' for more information<br>
-IPython 6.3.1 -- An enhanced Interactive Python. Type '?' for help.<br>
-<br><tg>In [</tg><ty>1</ty><tg>]: from </tg><tb>uni</tb><w>&nbsp;</w>
+Python 3.7.0 (default, Sep 24 2018, 20:50:19)<br>
+[Clang 10.0.0 (clang-1000.10.44.2)] on darwin<br>
+Type "help", "copyright", "credits" or "license" for more information.<br>
 ???
 
 you start typing something, press tab, and
 ---
-<div class="shell-wrap"><p class="shell-top-bar">python3.6</p><p class="shell-body">
+<div class="shell-wrap"><p class="shell-top-bar">python3.7</p><p class="shell-body">
 <ps>myrtle</ps> <dr>~/project $</dr>
 ./manage.py shell<br>
-Python 3.6.3 (default, Nov 9 2017, 15:58:30)<br>
-Type 'copyright', 'credits' or 'license' for more information<br>
-IPython 6.3.1 -- An enhanced Interactive Python. Type '?' for help.<br>
-<br><tg>In [</tg><ty>1</ty><tg>]: from </tg><tb>uni</tb><w>&nbsp;</w>
+Python 3.7.0 (default, Sep 24 2018, 20:50:19)<br>
+[Clang 10.0.0 (clang-1000.10.44.2)] on darwin<br>
+Type "help", "copyright", "credits" or "license" for more information.<br>
 <br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <ww>unicodedata</ww>
 <br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <ww>unicodex&nbsp; &nbsp;</ww>
 <br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <ww>unittest&nbsp; &nbsp;</ww>

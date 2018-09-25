@@ -1384,9 +1384,9 @@ class: title
 <pre><code class="css">.gold &nbsp;{ color: gold; }</code></pre>
 
 .righthead[example.html]
-<pre><code class="html">.nopad[`<link rel="stylesheet" href="example.css" />`]</code></pre>
-<pre><code class="html">`<div class="black gold"> Black Gold </div>`</code></pre>
-<pre><code class="html">`<div class="gold black"> Gold Black </div>`</code></pre>
+<pre><code class="xml">.nopad[`<link rel="stylesheet" href="example.css" />`]</code></pre>
+<pre><code class="xml">`<div class="black gold"> Black Gold </div>`</code></pre>
+<pre><code class="xml">`<div class="gold black"> Gold Black </div>`</code></pre>
 
 --
 .righthead[open example.html]
@@ -1406,9 +1406,9 @@ These two classes have the same specificity, so CSS falls back to source order.
 <pre><code class="css">.red[.gold &nbsp;{ color: gold; }] .inline-code[`/* specificity */`]</code></pre>
 
 .righthead[example.html]
-<pre><code class="html">.nopad[`<link rel="stylesheet" href="example.css" />`]</code></pre>
-<pre><code class="html">`<div class="black gold"> Black Gold </div>`</code></pre>
-<pre><code class="html">`<div class="gold black"> Gold Black </div>`</code></pre>
+<pre><code class="xml">.nopad[`<link rel="stylesheet" href="example.css" />`]</code></pre>
+<pre><code class="xml">`<div class="black gold"> Black Gold </div>`</code></pre>
+<pre><code class="xml">`<div class="gold black"> Gold Black </div>`</code></pre>
 
 .righthead[open example.html]
 <div class="css-demo">
@@ -1427,9 +1427,9 @@ But ah! I hear you cry. What about `!important`
 <pre><code class="css">.gold &nbsp;{ color: gold; }</code></pre>
 
 .righthead[example.html]
-<pre><code class="html">.nopad[`<link rel="stylesheet" href="example.css" />`]</code></pre>
-<pre><code class="html">`<div class="black gold"> Black Gold </div>`</code></pre>
-<pre><code class="html">`<div class="gold black"> Gold Black </div>`</code></pre>
+<pre><code class="xml">.nopad[`<link rel="stylesheet" href="example.css" />`]</code></pre>
+<pre><code class="xml">`<div class="black gold"> Black Gold </div>`</code></pre>
+<pre><code class="xml">`<div class="gold black"> Gold Black </div>`</code></pre>
 
 ???
 

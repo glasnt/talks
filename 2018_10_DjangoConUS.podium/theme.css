@@ -338,3 +338,14 @@ Added: Zenburn, mostly.
 
 /**********************************/
 
+
+.white { color: white}
+.comment { color: green }
+.b { font-weight: bold; }
+.lgreen { color: rgb(214, 252, 185) }
+.lblue { color: rgb(165 , 211, 250) }
+.aqua { color: rgb(95,212,231)}
+.mblue { color: rgb(230,231,250)}
+.pink { color: rgb(229,174,255) }
+
+.tp { color: rgba(0,0,0,0) }

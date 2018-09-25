@@ -1,6 +1,8 @@
 /*******************************
  * Basic slide layout and colors
  ******************************/
+@import url("highlightjs.css");
+
 .hljs-default pre code, .code {
   background-color: #fff !important;
   padding: 0;
@@ -278,9 +280,9 @@ li cite {
 /*********************/
 /* Django slides */
 /*********************/
-
+/*
 .remark-slide-content.django {
-  /*background-color: #092E20;*/
+  background-color: #092E20;
 }
 r { color: #d73a49 }
 l { color: #005cc5 }
@@ -295,6 +297,8 @@ ww { padding: 4px 7px 4px 7px; color: rgb(98,98,98); background-color: rgb(188,1
 tb { color: rgb(0,135,215) }
 ps { color: rgb(212,212,173) }
 dr { color: rgb(201,135,135) }
+
+*/
  .left { text-align: left; }
 
 /* Flux font */ fl { font-family: "DTLProkyonST", regular}
