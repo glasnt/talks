@@ -10,8 +10,13 @@ class: middle, center
 
 Hi I'm Katie
 ---
+background-image: url("images/divio-background.png")
 
-TODO: how to intro self
+![Image](images/divio-logo4.png)
+
+???
+
+Divio sent me
 
 ---
 class: middle, center, image

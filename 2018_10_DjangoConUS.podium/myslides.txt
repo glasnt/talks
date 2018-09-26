@@ -7,8 +7,13 @@ class: title
 
 Note: Hi I'm Katie 
 ---
+~@ divio-background.png
 
-TODO: how to intro self
+@ divio-logo4.png 
+
+Note: 
+
+Divio sent me
 
 ---
 @= djadmin.png
