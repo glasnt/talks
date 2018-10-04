@@ -252,6 +252,8 @@ pre code {
    /*margin-left: -50pt !important;*/
 } 
 
+.code { display: inline-block; }
+
 span.foot { position:absolute; top: 670px; right: 1em; font-size: 50%; color: grey}
 span.foot a { color: grey !important}
 .reveal a { color: black}
@@ -349,3 +351,20 @@ Added: Zenburn, mostly.
 .pink { color: rgb(229,174,255) }
 
 .tp { color: rgba(0,0,0,0) }
+
+.ORM { color: white;text-shadow: 1px 1px 6px black, 0 0 136px blue, 0 0 51px green; font-family: arial;}
+.SQL { color: white;text-shadow: 1px 1px 6px black, 0 0 136px red, 0 0 51px yellow; font-family: arial;}
+.header { font-size: 200pt; top: 300px; }
+.tagline { font-size: 40pt; padding-top: 100px;}
+.center { text-align: center}
+
+/* redacted font */
+@font-face { font-family: "RedactedB"; src: url("fonts/redacted-script-bold.ttf") format('truetype'); font-style:bold; }
+@font-face { font-family: "RedactedR"; src: url("fonts/redacted-script-regular.ttf") format('truetype'); font-style:normal; }
+rb { font-family: "RedactedB", regular;  }
+rr { font-family: "RedactedR", regular;  }
+/* https://github.com/christiannaths/Redacted-Font */
+
+@font-face { font-family: "Roboto"; src: url("fonts/Roboto-Regular.ttf") format('truetype'); font-style: normal; }
+.roboto { font-family: "Roboto", regular; }
+

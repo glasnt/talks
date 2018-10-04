@@ -11,140 +11,102 @@ class: middle, center
 Hi I'm Katie
 ---
 background-image: url("images/divio-background.png")
-
 ![Image](images/divio-logo4.png)
 
 ???
 
-Divio sent me
+I'm a site reliability engineer at divio
+We do hosted django as a service, come speak to me later if this interests you.
+
+---
+class: middle, center, image
+![Image](images/django_logo.png)
+
+???
+
+I do a lot of things in and around Django, from being a Director of the Django Software foundation, to having run a DjangoCon, and helped at many more.
+
+But I'm not currently a django developer. My current job is more the on-call, operations and support side of things.
 
 ---
 class: middle, center, image
 ![Image](images/djadmin.png)
 ???
 
-I still see the django admin as
+Something about having something like this
 
 ---
 class: middle, center, image
 ![Image](images/djadmin_sparkles.png)
+
 ???
 
-a magical piece of software development
+oh it's just so awesome
 ---
 class: middle, center, image
 ![Image](images/djuser_super.png)
 
 ???
 
-I mean, the fact that this admin is just generated based on something called models..?
+The fact I can use a web interface to see and view and manipulate my data? that's awesome
 
-and it just works, it's so cool
+and what makes this even more awesome?
+
+you can use the same functionality in your code.
+
+The thing that makes django kind of great?
 
 
 ---
-background-image: url("images/macbook.jpg")
-.footnotes[[WOCinTech](https://www.flickr.com/photos/wocintechchat/albums)]
+<br><br><br><br><br>
+.center[.ORM[.header[ORM]]]
+<br>
+.center[.ORM[.tagline[Object Relational Mapper]]]
+
 ???
 
-But just because I'm a novice at django, doesn't mean I'm a novice at tech
+the ORM
+
+The object relational mapper
+
+django is still new to me, but I reckon, if I can work out how the ORM works, I can get a good chunk of django sorted.
+if I can just work out how the engine works.
+
 ---
 background-image: url("images/thinkpad.jpg")
 .footnotes[[WOCinTech](https://www.flickr.com/photos/wocintechchat/albums)]
 
 ???
 
-I have over a decade of software development and systems administration behind me.
+and I don't say this as a novice.
 
-Before getting into the Python/Django space, I was a ruby dev, working with Rails and Sinatra stacks
+I've been in tech going on 12 years next month (woo! I'm old!) and I've worked in a lot of tech stacks, from perl to ruby to haskell and some ones you've never even heard of.
 
-But before that, around the time the magic was being removed from Django, I was in my first tech job, and using my first tech stack:
+I would have loved to have something like the admin when I was doing my first stint in a web framework.
 
----
-class: middle, center, image
-![Image](images/apexlogo.png)
-&nbsp; <!-- .slide: data-background-color="#f8f8f8" -->
 
-???
+But. As I said, I'm new to django, but I have a solid tech history.
 
-Was Orale Application Express
+And to learn Django, I can leverage what I already know
 
-Oracle Appplication express, also known as Apex, is a in-database web application creation suite. it comes free with Oracle XE (the free version of the database)
----
-![Image](images/apex_window.png)
-
-.footnotes[[StackOverflow](https://stackoverflow.com/questions/48789457/oracle-apex-version-3-2-tabindex-not-working)]
-
-???
-
-Back in 2006, this was the bees knees. An entire web GUI way to build a website based on form submissions and database manpulations. I used this for years
----
-background-image: url("images/apex32.jpg")
-???
-
-So much so, I was a technical reviewer for a technical book on the subject.
-
-Yes, I'm that much of a nerd.
----
-
-class: title
-# &nbsp;
-
-???
-
-I haven't used APEX for years. But, there's one thing that I have an intrinstic knowledge of
+And there's one thing I know really well.
 
 ---
-<h1 style="color: white;text-shadow: 1px 1px 6px black, 0 0 136px red, 0 0 51px yellow; font-family: arial; font-size: 200pt">SQL</h1>
-<h1 style="color: white;text-shadow: 1px 1px 6px black, 0 0 136px red, 0 0 51px yellow; font-family: arial; font-size:40pt">Structured Query Language</h1>
+<br><br><br><br><br>
+.center[.SQL[.header[SQL]]]
+<br>
+.center[.SQL[.tagline[Structured Query Language]]]
 
 ???
 
 SQL
 
-It's like riding a bike. Left outer joins are always going to be a bit.. fuzzy, but I can't count the amount of times I wished there was an option of throwing a LIKE clause on search results.
+Structured Query Language
 
+Select star from table where blah is like blah
 
----
-class: middle, center, image
-![Image](images/djadmin.png)
-???
+SQL is extremely powerful, and although some databases have slightly different flavours, it all has the same foundation.
 
-Getting back to Django.
-
-I'm still getting my head around how Django works
-
-I mean, sure, for a sufficiently setup existing django application, the admin makes things so intuitive.
-
-But if you were to try and tell me how things work underneath
-
----
-background-image: url("images/fogofwar.png")
-
-???
-
-I would have some sort of fog of war thing going on. I can't tell what's going on.
----
-class: title
-## > *"Oh, just use the shell!"*
-???
-
-Even worse when I'm told "Oh, just use the shell"
-
-It's an empty space. But I've been told that this is where the actual Django magic lives
----
-<h1 style="color: white;text-shadow: 1px 1px 6px black, 0 0 136px blue, 0 0 51px green; font-family: arial; font-size: 200pt">ORM</h1>
-
-<h1 style="color: white;text-shadow: 1px 1px 6px black, 0 0 136px blue, 0 0 51px green; font-family: arial; font-size: 40pt">Object Relational Mapper</h1>
-???
-
-The ORM
-
-The Object relational mapper
-
-The engine that makes django go
-
-But without context, what does that even mean?
 ---
 class: title
 # Context
@@ -387,7 +349,7 @@ This output will have similarities across django projects
 
 the first few in this list are pretty standard fair; authentication, sessions, sites, admin
 
-There's also one in there called aldryn_sso. this is because I've hosted this on divio cloud. We're holding a workshop during the sprints on it, come see me afterwards!
+There's also one in there called aldryn_sso. The divio platform gives a bunch of things out of the boxx, and the ability to use your divio account to log into the django admin is one of them.
 
 But what we're looking for is, in a lovely happenstance, the models that match the name of the website we saw earlier -- unicodex.
 ---
@@ -766,6 +728,16 @@ class: title
 we can also just return one specific record, instead of a queryset
 ---
 ### Get specific record
+<pre><code>
+<c>&num; ORM</c>
+Codepoint.objects.get(<o>name&equals;</o>'Sparkles')
+</code></pre>
+
+???
+
+intead of filter, we can use get
+---
+### Get specific record
 <div class="shell-wrap"><p class="shell-top-bar">python3.7</p><p class="shell-body">
 `>>>` from unicodex.models import Codepoint<br>
 `>>>` Codepoint.objects.filter(name='Sparkles')<br>
@@ -857,7 +829,7 @@ So what does the ORM equivelent look like?
 ---
 ### Joins
 <pre><code><c>&dash;&dash; SQL</c><br><r>SELECT</r> d.<r>*</r> <br>&nbsp; <r>FROM</r> unicodex_codepoint c,<br>&nbsp; &nbsp; &nbsp; &nbsp;unicodex_design d<br>&nbsp;<r>WHERE</r> <l>c</l>.<l>name</l> <r>&equals;</r> <d>'Sparkles'</d><BR><r>&nbsp; &nbsp;AND</r> <l>d</l>.<l>codepoint_id</l> <r>=</r> <l>c</l>.<l>id</l>;<br><br><c>&num; ORM</c>
-Design.objects.filter(<o>codepoint&#95;&#95;name&equals;</o>'Sparkles')
+Design.objects.filter(<o>codepoint＿name&equals;</o>'Sparkles')
 </code></pre>
 ???
 
@@ -869,7 +841,7 @@ TODO CLEANUP FROM HERE
 ---
 ### Joins
 <pre><code><c>&dash;&dash; SQL</c><br><r>SELECT</r> d.<r>*</r> <br>&nbsp; <r>FROM</r> unicodex_codepoint c,<br>&nbsp; &nbsp; &nbsp; &nbsp;unicodex_design d<br>&nbsp;<r>WHERE</r> <l>c</l>.<l>name</l> <r>&equals;</r> <d>'Sparkles'</d><BR><r>&nbsp; &nbsp;AND</r> <l>d</l>.<l>codepoint_id</l> <r>=</r> <l>c</l>.<l>id</l>;<br><br><c>&num; ORM</c>
-Design.objects.filter(<o>codepoint&#95;&#95;name&equals;</o>'Sparkles')
+Design.objects.filter(<o>codepoint＿name&equals;</o>'Sparkles')
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <c>^^</c>
 </code></pre>
 
@@ -903,7 +875,7 @@ We import the design model this time
 ### Joins
 <div class="shell-wrap"><p class="shell-top-bar">python3.7</p><p class="shell-body">
 `>>>` from unicodex.models import Design<br>
-`>>>` Design.objects.filter(codepoint&#95;&#95;name='Sparkles')<w>&nbsp;</w>
+`>>>` Design.objects.filter(codepoint＿name='Sparkles')<w>&nbsp;</w>
 ???
 
 and we run our filter
@@ -911,7 +883,7 @@ and we run our filter
 ### Joins
 <div class="shell-wrap"><p class="shell-top-bar">python3.7</p><p class="shell-body">
 `>>>` from unicodex.models import Design<br>
-`>>>` Design.objects.filter(codepoint&#95;&#95;name='Sparkles')<br>
+`>>>` Design.objects.filter(codepoint＿name='Sparkles')<br>
 `<`QuerySet [`<`Design: Sparkles Apple iOS 10.2>, `<`Design: Sparkles Apple iOS 6.0>, `<`Design: Sparkles Android 8.1>, `<`Design: Sparkles Android 4.4>, `<`Design: Sparkles Android 4.3>, `<`Design: Sparkles Microsoft Windows 10>, `<`Design: Sparkles Microsoft Windows 8.0>, `<`Design: Sparkles Microsoft Windows 8.1>, `<`Design: Sparkles Twitter 2.4>, `<`Design: Sparkles EmojiOne 3.0>, `<`Design: Sparkles EmojiOne 2.0>, `<`Design: Sparkles EmojiOne 1.0>, `<`Design: Sparkles Facebook 2.2>, `<`Design: Sparkles Facebook 1.0>, `<`Design: Sparkles Messenger 1.0>, `<`Design: Sparkles WhatsApp 2.17>, `<`Design: Sparkles Mozilla Firefox OS 2.5>, `<`Design: Sparkles Twitter 1.0>]><br>
 `>>>` <w>&nbsp;</w>
 
@@ -1306,6 +1278,12 @@ insert explanation here
 
 Which means we should be able to do things like just follow the arrows
 
+So if we wanted to get our longest chain, we can just start in this case, from one end, and work our way across
+
+---
+
+class: title
+## Longest filter chain
 ---
 ### Longest filter chain
 <div class="shell-wrap"><p class="shell-top-bar">python3.7</p><p class="shell-body">
@@ -1346,16 +1324,78 @@ hehe
 `>>>` from unicodex.models import *<br>
 `>>>` <w>&nbsp;</w>
 
-???
+---
+### Longest filter chain
+<div class="shell-wrap"><p class="shell-top-bar">python3.7</p><p class="shell-body">
+<ps>myrtle</ps> <dr>~/project $</dr>
+./manage.py shell<br>Python 3.7.0 (default, Sep 24 2018, 20:50:19)<br>[Clang 10.0.0 (clang-1000.10.44.2)] on darwin<br>Type "help", "copyright", "credits" or "license" for more information.<br>
+`>>>` from unicodex.models import *<br>
+`>>>` Codepoint.objects.filter(<w>&nbsp;</w>
+---
+### Longest filter chain
+<div class="shell-wrap"><p class="shell-top-bar">python3.7</p><p class="shell-body">
+<ps>myrtle</ps> <dr>~/project $</dr>
+./manage.py shell<br>Python 3.7.0 (default, Sep 24 2018, 20:50:19)<br>[Clang 10.0.0 (clang-1000.10.44.2)] on darwin<br>Type "help", "copyright", "credits" or "license" for more information.<br>
+`>>>` from unicodex.models import *<br>
+`>>>` Codepoint.objects.filter(design`__`<w>&nbsp;</w>
+---
+### Longest filter chain
+<div class="shell-wrap"><p class="shell-top-bar">python3.7</p><p class="shell-body">
+<ps>myrtle</ps> <dr>~/project $</dr>
+./manage.py shell<br>Python 3.7.0 (default, Sep 24 2018, 20:50:19)<br>[Clang 10.0.0 (clang-1000.10.44.2)] on darwin<br>Type "help", "copyright", "credits" or "license" for more information.<br>
+`>>>` from unicodex.models import *<br>
+`>>>` Codepoint.objects.filter(design`__`vendorversion`__`<w>&nbsp;</w>
+---
+### Longest filter chain
+<div class="shell-wrap"><p class="shell-top-bar">python3.7</p><p class="shell-body">
+<ps>myrtle</ps> <dr>~/project $</dr>
+./manage.py shell<br>Python 3.7.0 (default, Sep 24 2018, 20:50:19)<br>[Clang 10.0.0 (clang-1000.10.44.2)] on darwin<br>Type "help", "copyright", "credits" or "license" for more information.<br>
+`>>>` from unicodex.models import *<br>
+`>>>` Codepoint.objects.filter(design`__`vendorversion`__`vendor`__`<w>&nbsp;</w>
+---
+### Longest filter chain
+<div class="shell-wrap"><p class="shell-top-bar">python3.7</p><p class="shell-body">
+<ps>myrtle</ps> <dr>~/project $</dr>
+./manage.py shell<br>Python 3.7.0 (default, Sep 24 2018, 20:50:19)<br>[Clang 10.0.0 (clang-1000.10.44.2)] on darwin<br>Type "help", "copyright", "credits" or "license" for more information.<br>
+`>>>` from unicodex.models import *<br>
+`>>>` Codepoint.objects.filter(design`__`vendorversion`__`vendor`__`name`__`<w>&nbsp;</w>
 
-now, we can use that diagram from earlier...
+
+---
+### Longest filter chain
+<div class="shell-wrap"><p class="shell-top-bar">python3.7</p><p class="shell-body">
+<ps>myrtle</ps> <dr>~/project $</dr>
+./manage.py shell<br>Python 3.7.0 (default, Sep 24 2018, 20:50:19)<br>[Clang 10.0.0 (clang-1000.10.44.2)] on darwin<br>Type "help", "copyright", "credits" or "license" for more information.<br>
+`>>>` from unicodex.models import *<br>
+`>>>` Codepoint.objects.filter(design`__`vendorversion`__`vendor`__`name`__`contai ns=<w>&nbsp;</w>
 
 
-TODO - longest chaain.
 
+---
+### Longest filter chain
+<div class="shell-wrap"><p class="shell-top-bar">python3.7</p><p class="shell-body">
+<ps>myrtle</ps> <dr>~/project $</dr>
+./manage.py shell<br>Python 3.7.0 (default, Sep 24 2018, 20:50:19)<br>[Clang 10.0.0 (clang-1000.10.44.2)] on darwin<br>Type "help", "copyright", "credits" or "license" for more information.<br>
+`>>>` from unicodex.models import *<br>
+`>>>` Codepoint.objects.filter(design`__`vendorversion`__`vendor`__`name`__`contai ns="Microsoft"<w>&nbsp;</w>
 
+---
+### Longest filter chain
+<div class="shell-wrap"><p class="shell-top-bar">python3.7</p><p class="shell-body">
+<ps>myrtle</ps> <dr>~/project $</dr>
+./manage.py shell<br>Python 3.7.0 (default, Sep 24 2018, 20:50:19)<br>[Clang 10.0.0 (clang-1000.10.44.2)] on darwin<br>Type "help", "copyright", "credits" or "license" for more information.<br>
+`>>>` from unicodex.models import *<br>
+`>>>` Codepoint.objects.filter(design`__`vendorversion`__`vendor`__`name`__`contai ns="Microsoft")<w>&nbsp;</w>
 
-
+---
+### Longest filter chain
+<div class="shell-wrap"><p class="shell-top-bar">python3.7</p><p class="shell-body">
+<ps>myrtle</ps> <dr>~/project $</dr>
+./manage.py shell<br>Python 3.7.0 (default, Sep 24 2018, 20:50:19)<br>[Clang 10.0.0 (clang-1000.10.44.2)] on darwin<br>Type "help", "copyright", "credits" or "license" for more information.<br>
+`>>>` from unicodex.models import *<br>
+`>>>` Codepoint.objects.filter(design`__`vendorversion`__`vendor`__`name`__`contai ns="Microsoft")<br>
+`<`QuerySet [`<`Codepoint: Sparkles>, `<`Codepoint: Sparkles>, `<`Codepoint: Sparkles>, `<`Codepoint: Unicorn>, `<`Codepoint: Desert Island>, `<`Codepoint: Desert Island>]><br>
+`>>>` <w>&nbsp;</w>
 
 ---
 class: title
@@ -1383,6 +1423,7 @@ With Q, we can build up AND, OR, and NOT statements in our where clause when fil
 
 So, let's start some comparisons...
 ---
+### Equivalent Queries
 <pre><code><c>&num; ORM</c>
 Codepoint.objects.filter(
 &nbsp; <o>name=</o>'Sparkles',
@@ -1396,6 +1437,7 @@ instead of using our super long chaining filter, let's use a simpler example her
 this query would give us codepoints named sparkles with the description shiny
 
 ---
+### Equivalent Queries
 <pre><code><c>&num; ORM</c>
 Codepoint.objects.filter(
 &nbsp; <o>name=</o>'Sparkles',
@@ -1407,10 +1449,11 @@ Codepoint.objects.filter(
 
 this would be the equvilent SQL
 ---
+### Equivalent Queries
 <pre><code><c>&num; ORM</c>
 Codepoint.objects.filter(
-&nbsp; <o>name&#95;&#95;exact=</o>'Sparkles',
-&nbsp; <o>description&#95;&#95;exact=</o>'Shiny!'
+&nbsp; <o>name＿exact=</o>'Sparkles',
+&nbsp; <o>description＿exact=</o>'Shiny!'
 )<br><br><c>&dash;&dash; SQL</c><br><r>SELECT *
 &nbsp; FROM</r> unicodex_codepoint c <br><r>&nbsp;WHERE</r> <l>c</l>.<l>name</l> <r>=</r> <d>'Sparkles'</d><br><r>&nbsp; &nbsp;AND</r> <l>c</l>.<l>description</l> <r>=</r> <d>'Shiny!'</d>
 
@@ -1423,6 +1466,7 @@ This is the same SQL
 We can also express this same statement using Q
 ---
 
+### Equivalent Queries
 <pre><code><c>&num; ORM</c>
 Codepoint.objects.filter(
 &nbsp; <o>name=</o>'Sparkles',
@@ -1434,6 +1478,7 @@ Codepoint.objects.filter(
 
 so going back to our first example,
 ---
+### Equivalent Queries
 <pre><code><c>&num; ORM</c>
 Codepoint.objects.filter(
 &nbsp; <o>name=</o>'Sparkles').filter(
@@ -1445,6 +1490,7 @@ Codepoint.objects.filter(
 
 we could also have two separate filter clauses.
 ---
+### Equivalent Queries
 <pre><code><c>&num; ORM</c>
 Codepoint.objects.filter(
 &nbsp; <o>name=</o>'Sparkles',
@@ -1457,6 +1503,7 @@ Codepoint.objects.filter(
 we could also
 
 ---
+### Equivalent Queries
 <pre><code><c>&num; ORM</c>
 Codepoint.objects.filter(
 &nbsp; Q(<o>name=</o>'Sparkles'),
@@ -1475,6 +1522,7 @@ Notice in all of this, the equivelent SQL hasn't changed.
 With our comma here, we're implying we're using AND here. We can be explicit
 
 ---
+### Equivalent Queries
 <pre><code><c>&num; ORM</c>
 Codepoint.objects.filter(
 &nbsp; Q(<o>name=</o>'Sparkles') <r>&</r>
@@ -1492,6 +1540,7 @@ And we're using AND here explitictly
 
 We don't have to wrap both in Q, either
 ---
+### Equivalent Queries
 <pre><code><c>&num; ORM</c>
 Codepoint.objects.filter(
 &nbsp; Q(<o>name=</o>'Sparkles'),</r>
@@ -1503,6 +1552,7 @@ Codepoint.objects.filter(
 
 going back to our changed example
 ---
+### Equivalent Queries
 <pre><code><c>&num; ORM</c>
 Codepoint.objects.filter(
 &nbsp; Q(<o>name=</o>'Sparkles'),
@@ -1515,6 +1565,7 @@ Codepoint.objects.filter(
 
 we can change our queries with comman, and just wrap the first one and leave thther. Same result
 ---
+### Equivalent Queries
 <pre><code><c>&num; ORM</c>
 Codepoint.objects.filter(
 &nbsp; <o>name=</o>'Sparkles',
@@ -1530,6 +1581,7 @@ So, we could just wrap the second one, and leave the first one alone, right?
 
 
 ---
+### Not so Equivalent Queries
 <pre><code><c>&num; ORM</c>
 Codepoint.objects.filter(
 &nbsp; <o>name=</o>'Sparkles',
@@ -1549,6 +1601,7 @@ And in python, you have to declare positional argumnet before keyword argumnets
 Remembering that even in these new Django concepts, we're still using Python, so python rules still apply.
 ---
 
+### Equivalent Queries
 <pre><code><c>&num; ORM</c>
 Codepoint.objects.filter(
 &nbsp; <o>name=</o>'Sparkles',
@@ -1564,6 +1617,7 @@ Say we want to search for sparkles and unicorns
 
 So we search for name equals sparkles and name equals unicorns and
 ---
+### Not so Equivalent Queries
 <pre><code><c>&num; ORM</c>
 Codepoint.objects.filter(
 &nbsp; <o>name=</o>'Sparkles',
@@ -1578,6 +1632,7 @@ This is agan, because Python. You can't repeat keyword aguments. But, you can ge
 Just wrap it in Q
 
 ---
+### Equivalent Queries
 <pre><code><c>&num; ORM</c>
 Codepoint.objects.filter(
 &nbsp; Q(<o>name=</o>'Sparkles'),
@@ -1594,6 +1649,7 @@ We're asking for exact string matches on the same column, twice. It'll always be
 But what we can do is change this from an and, to an OR
 
 ---
+### Equivalent Queries
 <pre><code><c>&num; ORM</c>
 Codepoint.objects.filter(
 &nbsp; Q(<o>name=</o>'Sparkles') &
@@ -1608,6 +1664,7 @@ Using the comma is equiv to this AND, but with the comma we're giving filter two
 So, to take our AND to and OR, we change the ampersand
 
 ---
+### Equivalent Queries
 <pre><code><c>&num; ORM</c>
 Codepoint.objects.filter(
 &nbsp; Q(<o>name=</o>'Sparkles') |
@@ -1624,9 +1681,11 @@ This is an or operation
 You may have only seen these operators before in bitmasking
 
 ---
+### Bitmasking Refresher
 <div class="shell-wrap"><p class="shell-top-bar">python3.7</p><p class="shell-body">
 `>>>` <w>&nbsp;</w>
 ---
+### Bitmasking Refresher
 <div class="shell-wrap"><p class="shell-top-bar">python3.7</p><p class="shell-body">
 `>>>` x = 0b10101010<w>&nbsp;</w>
 
@@ -1635,11 +1694,13 @@ You may have only seen these operators before in bitmasking
 if we have X as a binary string of one zero one zero
 
 ---
+### Bitmasking Refresher
 <div class="shell-wrap"><p class="shell-top-bar">python3.7</p><p class="shell-body">
 `>>>` x = 0b10101010<br>
 `>>>` <w>&nbsp;</w>
 
 ---
+### Bitmasking Refresher
 <div class="shell-wrap"><p class="shell-top-bar">python3.7</p><p class="shell-body">
 `>>>` x = 0b10101010<br>
 `>>>` y = 0b11110000<w>&nbsp;</w>
@@ -1651,12 +1712,14 @@ and we have y as one one one zero zero zero zero
 we can do something called bit masking
 
 ---
+### Bitmasking Refresher
 <div class="shell-wrap"><p class="shell-top-bar">python3.7</p><p class="shell-body">
 `>>>` x = 0b10101010<br>
 `>>>` y = 0b11110000<br>
 `>>>` <w>&nbsp;</w>
 
 ---
+### Bitmasking Refresher
 <div class="shell-wrap"><p class="shell-top-bar">python3.7</p><p class="shell-body">
 `>>>` x = 0b10101010<br>
 `>>>` y = 0b11110000<br>
@@ -1667,6 +1730,7 @@ we can do something called bit masking
 if we ask for x AND y
 
 ---
+### Bitmasking Refresher
 <div class="shell-wrap"><p class="shell-top-bar">python3.7</p><p class="shell-body">
 `>>>` x = 0b10101010<br>
 `>>>` y = 0b11110000<br>
@@ -1681,6 +1745,7 @@ we get 10100000
 For each bit, we only return 1 if both are 1
 
 ---
+### Bitmasking Refresher
 <div class="shell-wrap"><p class="shell-top-bar">python3.7</p><p class="shell-body">
 `>>>` x = 0b10101010<br>
 `>>>` y = 0b11110000<br>
@@ -1693,6 +1758,7 @@ For each bit, we only return 1 if both are 1
 conversely, if we ask for x OR y
 
 ---
+### Bitmasking Refresher
 <div class="shell-wrap"><p class="shell-top-bar">python3.7</p><p class="shell-body">
 `>>>` x = 0b10101010<br>
 `>>>` y = 0b11110000<br>
@@ -1715,6 +1781,7 @@ This is very similar to what we do in SQL.
 For each row of a table, we want to return it in our result set if BOTH conditions are true on and, or if either are true on and OR
 
 ---
+### Equivalent Queries
 <pre><code><c>&num; ORM</c>
 Codepoint.objects.filter(
 &nbsp; Q(<o>name=</o>'Sparkles') |
@@ -1735,12 +1802,12 @@ I'm going to show you a small snippet of django source code. It won't be scary, 
 
 ---
 <pre><code style="font-size: 24pt !important"><r>class</r> <g>Q</g>(<g>tree</g>.<g>Node</g>):
-<c>"""<br>Encapsulate filters as objects that can<br>then be combined logically (using `&` and `|`).<br>"""</c>
-&nbsp; ...<br><br>
-&nbsp; <r>def</r> <l>&#95;&#95;or&#95;&#95;</l>(self, other):
+<c>"""<br>Encapsulate filters as objects that can<br>then be combined logically (using.code[`` `&` ``]and.code[`` `|` ``]).<br>"""</c>
+&nbsp; ...
+&nbsp; <r>def</r> <l>＿or＿</l>(self, other):
 &nbsp; &nbsp; <r>return</r> <l>self</l>._combine(other, <l>self.OR</l>)
 
-&nbsp; <r>def</r> <l>&#95;&#95;and&#95;&#95;</l>(self, other):
+&nbsp; <r>def</r> <l>＿and＿</l>(self, other):
 &nbsp; &nbsp; <r>return</r> <l>self</l>._combine(other, <l>self.AND</l>)
 </code></pre>
 
@@ -1757,6 +1824,7 @@ it's composble, it's functional, and it's intuative.
 and it's been in Django for over 10 years
 
 ---
+### Equivalent Queries
 <pre><code><c>&num; ORM</c>
 Codepoint.objects.filter(
 &nbsp; Q(<o>name=</o>'Sparkles') |
@@ -1771,6 +1839,7 @@ as well as AND or OR, we can also do NOT
 So with our code above
 
 ---
+### Equivalent Queries
 <pre><code><c>&num; ORM</c>
 Codepoint.objects.filter(
 &nbsp; Q(<o>name=</o>'Sparkles') |
@@ -1788,10 +1857,11 @@ Using our field lookups and these operations, we can do a lot of things. But are
 Firstly, you need to understand how the joins happen in order avoid confusion
 
 ---
+### Equivalent Query?
 <pre><code><c>&num; ORM</c>
 Codepoint.objects.filter(
-&nbsp; <o>design&#95;&#95;image&#95;&#95;contains=</o>"png",
-&nbsp; <o>design&#95;&#95;image&#95;&#95;startswith=</o>"design")
+&nbsp; <o>design＿image＿contains=</o>"png",
+&nbsp; <o>design＿image＿startswith=</o>"design")
 
 ???
 
@@ -1802,6 +1872,7 @@ THis is based on the filename I'm using for the iages uploaded to my models
 Okay. Let's run that and see what happens
 
 ---
+### Equivalent Query?
 <div class="shell-wrap"><p class="shell-top-bar">python3.7</p><p class="shell-body">
 <ps>myrtle</ps> <dr>~/project $</dr>
 ./manage.py shell<br>
@@ -1815,6 +1886,7 @@ Type "help", "copyright", "credits" or "license" for more information.<br>
 so in our terminal
 
 ---
+### Equivalent Query?
 <div class="shell-wrap"><p class="shell-top-bar">python3.7</p><p class="shell-body">
 <ps>myrtle</ps> <dr>~/project $</dr>
 ./manage.py shell<br>
@@ -1824,6 +1896,7 @@ Type "help", "copyright", "credits" or "license" for more information.<br>
 `>>>` from unicodex.models import Codepoint<w>&nbsp;</w>
 
 ---
+### Equivalent Query?
 <div class="shell-wrap"><p class="shell-top-bar">python3.7</p><p class="shell-body">
 <ps>myrtle</ps> <dr>~/project $</dr>
 ./manage.py shell<br>
@@ -1838,6 +1911,7 @@ Type "help", "copyright", "credits" or "license" for more information.<br>
 remembering to import our model
 
 ---
+### Equivalent Query?
 <div class="shell-wrap"><p class="shell-top-bar">python3.7</p><p class="shell-body">
 <ps>myrtle</ps> <dr>~/project $</dr>
 ./manage.py shell<br>
@@ -1845,13 +1919,14 @@ Python 3.7.0 (default, Sep 24 2018, 20:50:19)<br>
 [Clang 10.0.0 (clang-1000.10.44.2)] on darwin<br>
 Type "help", "copyright", "credits" or "license" for more information.<br>
 `>>>` from unicodex.models import Codepoint<br>
-`>>>` Codepoint.objects.filter(design&#95;&#95;image&#95;&#95;contains="png", design&#95;&#95;image&#95;&#95;startswith="design")<w>&nbsp;</w>
+`>>>` Codepoint.objects.filter(design＿image＿contains="png", design＿image＿startswith="design")<w>&nbsp;</w>
 
 ???
 
 we add our code
 
 ---
+### Equivalent Query?
 <div class="shell-wrap"><p class="shell-top-bar">python3.7</p><p class="shell-body">
 <ps>myrtle</ps> <dr>~/project $</dr>
 ./manage.py shell<br>
@@ -1859,8 +1934,8 @@ Python 3.7.0 (default, Sep 24 2018, 20:50:19)<br>
 [Clang 10.0.0 (clang-1000.10.44.2)] on darwin<br>
 Type "help", "copyright", "credits" or "license" for more information.<br>
 `>>>` from unicodex.models import Codepoint<br>
-`>>>` Codepoint.objects.filter(design&#95;&#95;image&#95;&#95;contains="png", design&#95;&#95;image&#95;&#95;startswith="design")<br>
-`<`QuerySet [`<`Codepoint: Sparkles>, `<`Codepoint: Sparkles>, `<`Codepoint: Sparkles>, `<`Codepoint: Sparkles>, `<`Codepoint: Sparkles>, `<`Codepoint: Sparkles>, `<`Codepoint: Sparkles>, `<`Codepoint: Sparkles>, `<`Codepoint: Sparkles>, `<`Codepoint: Sparkles>, `<`Codepoint: Sparkles>, `<`Codepoint: Unicorn>, `<`Codepoint: Unicorn>, `<`Codepoint: Unicorn>, `<`Codepoint: Unicorn>, `<`Codepoint: Unicorn>, `<`Codepoint: Unicorn>, `<`Codepoint: Unicorn>, `<`Codepoint: Desert Island>, `<`Codepoint: Desert Island>, '...(remaining elements truncated)...']><br>
+`>>>` Codepoint.objects.filter(design＿image＿contains="png", design＿image＿startswith="design")<br>
+`<`QuerySet [`<`Codepoint: Sparkles>, `<`Codepoint: Sparkles>, `<`Codepoint: Sparkles>, `<`Codepoint: Sparkles>, `<`Codepoint: Sparkles>, `<`Codepoint: Sparkles>, `<`Codepoint: Sparkles>, `<`Codepoint: Sparkles>, `<`Codepoint: Sparkles>, `<`Codepoint: Sparkles>, `<`Codepoint: Sparkles>, `<`Codepoint: Unicorn>, `<`Codepoint: Unicorn>, `<`Codepoint: Unicorn>, `<`Codepoint: Unicorn>, `<`Codepoint: Unicorn>, `<`Codepoint: Unicorn>, `<`Codepoint: Unicorn>, '...(remaining elements truncated)...']><br>
 `>>>` <w>&nbsp;</w>
 
 
@@ -1877,6 +1952,7 @@ Data is still there, if you iterate over the list, but the print representation 
 (this was implemented because of a very real bug at Lawrance Journal World, where they had servers keep crashing, because the debug page was trying to be helpful and show all the data... a million objects worth..)
 
 ---
+### Equivalent Query?
 <div class="shell-wrap"><p class="shell-top-bar">python3.7</p><p class="shell-body">
 <ps>myrtle</ps> <dr>~/project $</dr>
 ./manage.py shell<br>
@@ -1884,7 +1960,7 @@ Python 3.7.0 (default, Sep 24 2018, 20:50:19)<br>
 [Clang 10.0.0 (clang-1000.10.44.2)] on darwin<br>
 Type "help", "copyright", "credits" or "license" for more information.<br>
 `>>>` from unicodex.models import Codepoint<br>
-`>>>` Codepoint.objects.filter(design&#95;&#95;image&#95;&#95;contains="png", design&#95;&#95;image&#95;&#95;startswith="design")<w>&nbsp;</w>
+`>>>` Codepoint.objects.filter(design＿image＿contains="png", design＿image＿startswith="design")<w>&nbsp;</w>
 
 
 ???
@@ -1892,6 +1968,7 @@ Type "help", "copyright", "credits" or "license" for more information.<br>
 rewind a step
 
 ---
+### Equivalent Query?
 <div class="shell-wrap"><p class="shell-top-bar">python3.7</p><p class="shell-body">
 <ps>myrtle</ps> <dr>~/project $</dr>
 ./manage.py shell<br>
@@ -1899,13 +1976,14 @@ Python 3.7.0 (default, Sep 24 2018, 20:50:19)<br>
 [Clang 10.0.0 (clang-1000.10.44.2)] on darwin<br>
 Type "help", "copyright", "credits" or "license" for more information.<br>
 `>>>` from unicodex.models import Codepoint<br>
-`>>>` Codepoint.objects.filter(design&#95;&#95;image&#95;&#95;contains="png", design&#95;&#95;image&#95;&#95;startswith="design").count()<w>&nbsp;</w>
+`>>>` Codepoint.objects.filter(design＿image＿contains="png", design＿image＿startswith="design").count()<w>&nbsp;</w>
 
 ???
 
 add a count function on the end
 
 ---
+### Equivalent Query?
 <div class="shell-wrap"><p class="shell-top-bar">python3.7</p><p class="shell-body">
 <ps>myrtle</ps> <dr>~/project $</dr>
 ./manage.py shell<br>
@@ -1913,7 +1991,7 @@ Python 3.7.0 (default, Sep 24 2018, 20:50:19)<br>
 [Clang 10.0.0 (clang-1000.10.44.2)] on darwin<br>
 Type "help", "copyright", "credits" or "license" for more information.<br>
 `>>>` from unicodex.models import Codepoint<br>
-`>>>` Codepoint.objects.filter(design&#95;&#95;image&#95;&#95;contains="png", design&#95;&#95;image&#95;&#95;startswith="design").count()<br>
+`>>>` Codepoint.objects.filter(design＿image＿contains="png", design＿image＿startswith="design").count()<br>
 44<br>
 `>>>` <w>&nbsp;</w>
 
@@ -1922,16 +2000,18 @@ Type "help", "copyright", "credits" or "license" for more information.<br>
 44 results
 
 ---
+### Equivalent Query?
 <pre><code><c>&num; ORM</c>
 Codepoint.objects.filter(
-&nbsp; <o>design&#95;&#95;image&#95;&#95;contains=</o>"png",
-&nbsp; <o>design&#95;&#95;image&#95;&#95;startswith=</o>"design").count()
+&nbsp; <o>design＿image＿contains=</o>"png",
+&nbsp; <o>design＿image＿startswith=</o>"design").count()
 
 ---
+### Equivalent Query?
 <pre><code><c>&num; ORM</c>
 Codepoint.objects.filter(
-&nbsp; <o>design&#95;&#95;image&#95;&#95;contains=</o>"png",
-&nbsp; <o>design&#95;&#95;image&#95;&#95;startswith=</o>"design").count()<br><br><c>&dash;&dash; SQL</c><br><c>&dash;&dash; ?? </c>
+&nbsp; <o>design＿image＿contains=</o>"png",
+&nbsp; <o>design＿image＿startswith=</o>"design").count()<br><br><c>&dash;&dash; SQL</c><br><c>&dash;&dash; ?? </c>
 
 
 ???
@@ -1940,12 +2020,14 @@ But what code was run?
 
 We have the ability to check this
 ---
+### Equivalent Query?
 <pre><code><c>&num; ORM</c>
 Codepoint.objects.filter(
-&nbsp; <o>design&#95;&#95;image&#95;&#95;contains=</o>"png",
-&nbsp; <o>design&#95;&#95;image&#95;&#95;startswith=</o>"design").count()<br><br><c>&dash;&dash; SQL</c><br><c>&dash;&dash; ?? </c><br><br><c>&num; ORM</c><br><r>from</r> django.db <r>import</r> connection<br>connection.queries
+&nbsp; <o>design＿image＿contains=</o>"png",
+&nbsp; <o>design＿image＿startswith=</o>"design").count()<br><br><c>&dash;&dash; SQL</c><br><c>&dash;&dash; ?? </c><br><br><c>&num; ORM</c><br><r>from</r> django.db <r>import</r> connection<br>connection.queries
 </code></pre>
 ---
+### Equivalent Query?
 <div class="shell-wrap"><p class="shell-top-bar">python3.7</p><p class="shell-body">
 <ps>myrtle</ps> <dr>~/project $</dr>
 ./manage.py shell<br>
@@ -1953,11 +2035,12 @@ Python 3.7.0 (default, Sep 24 2018, 20:50:19)<br>
 [Clang 10.0.0 (clang-1000.10.44.2)] on darwin<br>
 Type "help", "copyright", "credits" or "license" for more information.<br>
 `>>>` from unicodex.models import Codepoint<br>
-`>>>` Codepoint.objects.filter(design&#95;&#95;image&#95;&#95;contains="png", design&#95;&#95;image&#95;&#95;startswith="design").count()<br>
+`>>>` Codepoint.objects.filter(design＿image＿contains="png", design＿image＿startswith="design").count()<br>
 44<br>
 `>>>` <w>&nbsp;</w>
 ---
 
+### Equivalent Query?
 <div class="shell-wrap"><p class="shell-top-bar">python3.7</p><p class="shell-body">
 <ps>myrtle</ps> <dr>~/project $</dr>
 ./manage.py shell<br>
@@ -1965,7 +2048,7 @@ Python 3.7.0 (default, Sep 24 2018, 20:50:19)<br>
 [Clang 10.0.0 (clang-1000.10.44.2)] on darwin<br>
 Type "help", "copyright", "credits" or "license" for more information.<br>
 `>>>` from unicodex.models import Codepoint<br>
-`>>>` Codepoint.objects.filter(design&#95;&#95;image&#95;&#95;contains="png", design&#95;&#95;image&#95;&#95;startswith="design").count()<br>
+`>>>` Codepoint.objects.filter(design＿image＿contains="png", design＿image＿startswith="design").count()<br>
 44<br>
 `>>>` from django.db import connection<w>&nbsp;</w>
 
@@ -1974,6 +2057,7 @@ Type "help", "copyright", "credits" or "license" for more information.<br>
 we can import the django database connection modele
 ---
 
+### Equivalent Query?
 <div class="shell-wrap"><p class="shell-top-bar">python3.7</p><p class="shell-body">
 <ps>myrtle</ps> <dr>~/project $</dr>
 ./manage.py shell<br>
@@ -1981,11 +2065,12 @@ Python 3.7.0 (default, Sep 24 2018, 20:50:19)<br>
 [Clang 10.0.0 (clang-1000.10.44.2)] on darwin<br>
 Type "help", "copyright", "credits" or "license" for more information.<br>
 `>>>` from unicodex.models import Codepoint<br>
-`>>>` Codepoint.objects.filter(design&#95;&#95;image&#95;&#95;contains="png", design&#95;&#95;image&#95;&#95;startswith="design").count()<br>
+`>>>` Codepoint.objects.filter(design＿image＿contains="png", design＿image＿startswith="design").count()<br>
 44<br>
 `>>>` from django.db import connection<br>
 `>>>` <w>&nbsp;</w>
 ---
+### Equivalent Query?
 
 <div class="shell-wrap"><p class="shell-top-bar">python3.7</p><p class="shell-body">
 <ps>myrtle</ps> <dr>~/project $</dr>
@@ -1994,10 +2079,10 @@ Python 3.7.0 (default, Sep 24 2018, 20:50:19)<br>
 [Clang 10.0.0 (clang-1000.10.44.2)] on darwin<br>
 Type "help", "copyright", "credits" or "license" for more information.<br>
 `>>>` from unicodex.models import Codepoint<br>
-`>>>` Codepoint.objects.filter(design&#95;&#95;image&#95;&#95;contains="png", design&#95;&#95;image&#95;&#95;startswith="design").count()<br>
+`>>>` Codepoint.objects.filter(design＿image＿contains="png", design＿image＿startswith="design").count()<br>
 44<br>
 `>>>` from django.db import connection<br>
-`>>>` connection.queries[-1]<w>&nbsp;</w>
+`>>>` connection.queries`[`-1`]`<w>&nbsp;</w>
 
 ???
 
@@ -2005,6 +2090,7 @@ and inspect the last query run against our databse
 
 
 ---
+### Equivalent Query?
 <div class="shell-wrap"><p class="shell-top-bar">python3.7</p><p class="shell-body">
 <ps>myrtle</ps> <dr>~/project $</dr>
 ./manage.py shell<br>
@@ -2012,57 +2098,62 @@ Python 3.7.0 (default, Sep 24 2018, 20:50:19)<br>
 [Clang 10.0.0 (clang-1000.10.44.2)] on darwin<br>
 Type "help", "copyright", "credits" or "license" for more information.<br>
 `>>>` from unicodex.models import Codepoint<br>
-`>>>` Codepoint.objects.filter(design&#95;&#95;image&#95;&#95;contains="png", design&#95;&#95;image&#95;&#95;startswith="design").count()<br>
+`>>>` Codepoint.objects.filter(design＿image＿contains="png", design＿image＿startswith="design").count()<br>
 44<br>
 `>>>` from django.db import connection<br>
-`>>>` connection.queries[-1]<br>
-{'sql': 'SELECT COUNT(&#42;) AS "&#95;&#95;count" FROM "unicodex_codepoint" INNER JOIN "unicodex_design" ON ("unicodex_codepoint"."id" = "unicodex_design"."codepoint_id") WHERE ("unicodex_design"."image"::text LIKE \'%png%\' AND "unicodex_design"."image"::text LIKE \'design%\')', 'time': '0.001'}<br>
+`>>>` connection.queries`[`-1`]`<br>
+{'sql': 'SELECT COUNT(&#42;) AS "＿count" FROM "unicodex_codepoint" INNER JOIN "unicodex_design" ON ("unicodex_codepoint"."id" = "unicodex_design"."codepoint_id") WHERE ("unicodex_design"."image"::text LIKE \'%png%\' AND "unicodex_design"."image"::text LIKE \'design%\')', 'time': '0.001'}<br>
 `>>>` <w>&nbsp;</w>
 ---
+### Equivalent Queries
 <pre><code><c>&num; ORM</c>
 Codepoint.objects.filter(
-&nbsp; <o>design&#95;&#95;image&#95;&#95;contains=</o>"png",
-&nbsp; <o>design&#95;&#95;image&#95;&#95;startswith=</o>"design").count()<br><br><c>&dash;&dash; SQL</c><br><r>SELECT</r> <l>count</l>(<r>*</r>)
+&nbsp; <o>design＿image＿contains=</o>"png",
+&nbsp; <o>design＿image＿startswith=</o>"design").count()<br><br><c>&dash;&dash; SQL</c><br><r>SELECT</r> <l>count</l>(<r>*</r>)
 &nbsp; <r>FROM</r> unicodex_codepoint C<br><r>&nbsp;INNER JOIN</r> unicodex_design D <r>ON</r> (<l>C</l>.<l>id <r>=</r> D</l>.<l>id</l>)<br><r>&nbsp;WHERE</r> (<l>D</l>.<l>image</l> <r>LIKE</r> <d>'%png%'</d>
 &nbsp; &nbsp; <r>AND</r> <l>D</l>.<l>image</l> <r>LIKE</r> <d>'design%'</d>)
 
 ---
 
+### Equivalent Query?
 <pre><code><c>&num; ORM</c>
 Codepoint.objects.filter(
-&nbsp; <o>design&#95;&#95;image&#95;&#95;contains=</o>"png").filter(
-&nbsp; <o>design&#95;&#95;image&#95;&#95;startswith=</o>"design").count()<br><br><c>&dash;&dash; SQL</c><br><c>&dash;&dash; ??
+&nbsp; <o>design＿image＿contains=</o>"png").filter(
+&nbsp; <o>design＿image＿startswith=</o>"design").count()<br><br><c>&dash;&dash; SQL</c><br><c>&dash;&dash; ??
 
 ---
+### Equivalent Query?
 <div class="shell-wrap"><p class="shell-top-bar">python3.7</p><p class="shell-body">
 `>>>` from unicodex.models import Codepoint<br>
-`>>>` Codepoint.objects.filter(design&#95;&#95;image&#95;&#95;contains="png", design&#95;&#95;image&#95;&#95;startswith="design").count()<br>
+`>>>` Codepoint.objects.filter(design＿image＿contains="png", design＿image＿startswith="design").count()<br>
 44<br>
 `>>>` from django.db import connection<br>
-`>>>` connection.queries[-1]<br>
-{'sql': 'SELECT COUNT(&#42;) AS "&#95;&#95;count" FROM "unicodex&#95;codepoint" INNER JOIN "unicodex&#95;design" ON ("unicodex&#95;codepoint"."id" = "unicodex&#95;design"."codepoint&#95;id") WHERE ("unicodex&#95;design"."image"::text LIKE \'%png%\' AND "unicodex&#95;design"."image"::text LIKE \'design%\')', 'time': '0.001'}<br>
+`>>>` connection.queries`[`-1`]`<br>
+{'sql': 'SELECT COUNT(&#42;) AS "＿count" FROM "unicodex&#95;codepoint" INNER JOIN "unicodex&#95;design" ON ("unicodex&#95;codepoint"."id" = "unicodex&#95;design"."codepoint&#95;id") WHERE ("unicodex&#95;design"."image"::text LIKE \'%png%\' AND "unicodex&#95;design"."image"::text LIKE \'design%\')', 'time': '0.001'}<br>
 `>>>` <w>&nbsp;</w>
 ---
+### Equivalent Query?
 <div class="shell-wrap"><p class="shell-top-bar">python3.7</p><p class="shell-body">
 `>>>` from unicodex.models import Codepoint<br>
-`>>>` Codepoint.objects.filter(design&#95;&#95;image&#95;&#95;contains="png", design&#95;&#95;image&#95;&#95;startswith="design").count()<br>
+`>>>` Codepoint.objects.filter(design＿image＿contains="png", design＿image＿startswith="design").count()<br>
 44<br>
 `>>>` from django.db import connection<br>
-`>>>` connection.queries[-1]<br>
-{'sql': 'SELECT COUNT(&#42;) AS "&#95;&#95;count" FROM "unicodex&#95;codepoint" INNER JOIN "unicodex&#95;design" ON ("unicodex&#95;codepoint"."id" = "unicodex&#95;design"."codepoint&#95;id") WHERE ("unicodex&#95;design"."image"::text LIKE \'%png%\' AND "unicodex&#95;design"."image"::text LIKE \'design%\')', 'time': '0.001'}<br>
-`>>>` Codepoint.objects.filter(design&#95;&#95;image&#95;&#95;contains="png").filter(<br>
-... design&#95;&#95;image&#95;&#95;startswith="design").count()<w>&nbsp;</w><br>
+`>>>` connection.queries`[`-1`]`<br>
+{'sql': 'SELECT COUNT(&#42;) AS "＿count" FROM "unicodex&#95;codepoint" INNER JOIN "unicodex&#95;design" ON ("unicodex&#95;codepoint"."id" = "unicodex&#95;design"."codepoint&#95;id") WHERE ("unicodex&#95;design"."image"::text LIKE \'%png%\' AND "unicodex&#95;design"."image"::text LIKE \'design%\')', 'time': '0.001'}<br>
+`>>>` Codepoint.objects.filter(design＿image＿contains="png").filter(<br>
+... design＿image＿startswith="design").count()<w>&nbsp;</w><br>
 
 ---
+### Equivalent Query?
 <div class="shell-wrap"><p class="shell-top-bar">python3.7</p><p class="shell-body">
 `>>>` from unicodex.models import Codepoint<br>
-`>>>` Codepoint.objects.filter(design&#95;&#95;image&#95;&#95;contains="png", design&#95;&#95;image&#95;&#95;startswith="design").count()<br>
+`>>>` Codepoint.objects.filter(design＿image＿contains="png", design＿image＿startswith="design").count()<br>
 44<br>
 `>>>` from django.db import connection<br>
-`>>>` connection.queries[-1]<br>
-{'sql': 'SELECT COUNT(&#42;) AS "&#95;&#95;count" FROM "unicodex&#95;codepoint" INNER JOIN "unicodex&#95;design" ON ("unicodex&#95;codepoint"."id" = "unicodex&#95;design"."codepoint&#95;id") WHERE ("unicodex&#95;design"."image"::text LIKE \'%png%\' AND "unicodex&#95;design"."image"::text LIKE \'design%\')', 'time': '0.001'}<br>
-`>>>` Codepoint.objects.filter(design&#95;&#95;image&#95;&#95;contains="png").filter(<br>
-... design&#95;&#95;image&#95;&#95;startswith="design").count()<br>
+`>>>` connection.queries`[`-1`]`<br>
+{'sql': 'SELECT COUNT(&#42;) AS "＿count" FROM "unicodex&#95;codepoint" INNER JOIN "unicodex&#95;design" ON ("unicodex&#95;codepoint"."id" = "unicodex&#95;design"."codepoint&#95;id") WHERE ("unicodex&#95;design"."image"::text LIKE \'%png%\' AND "unicodex&#95;design"."image"::text LIKE \'design%\')', 'time': '0.001'}<br>
+`>>>` Codepoint.objects.filter(design＿image＿contains="png").filter(<br>
+... design＿image＿startswith="design").count()<br>
 712<br>
 `>>>` <w>&nbsp;</w>
 
@@ -2071,17 +2162,18 @@ Codepoint.objects.filter(
 wait, what??
 
 ---
+### Equivalent Query?
 <div class="shell-wrap"><p class="shell-top-bar">python3.7</p><p class="shell-body">
 `>>>` from unicodex.models import Codepoint<br>
-`>>>` Codepoint.objects.filter(design&#95;&#95;image&#95;&#95;contains="png", design&#95;&#95;image&#95;&#95;startswith="design").count()<br>
+`>>>` Codepoint.objects.filter(design＿image＿contains="png", design＿image＿startswith="design").count()<br>
 44<br>
 `>>>` from django.db import connection<br>
-`>>>` connection.queries[-1]<br>
-{'sql': 'SELECT COUNT(&#42;) AS "&#95;&#95;count" FROM "unicodex&#95;codepoint" INNER JOIN "unicodex&#95;design" ON ("unicodex&#95;codepoint"."id" = "unicodex&#95;design"."codepoint&#95;id") WHERE ("unicodex&#95;design"."image"::text LIKE \'%png%\' AND "unicodex&#95;design"."image"::text LIKE \'design%\')', 'time': '0.001'}<br>
-`>>>` Codepoint.objects.filter(design&#95;&#95;image&#95;&#95;contains="png").filter(<br>
-... design&#95;&#95;image&#95;&#95;startswith="design").count()<br>
+`>>>` connection.queries`[`-1`]`<br>
+{'sql': 'SELECT COUNT(&#42;) AS "＿count" FROM "unicodex&#95;codepoint" INNER JOIN "unicodex&#95;design" ON ("unicodex&#95;codepoint"."id" = "unicodex&#95;design"."codepoint&#95;id") WHERE ("unicodex&#95;design"."image"::text LIKE \'%png%\' AND "unicodex&#95;design"."image"::text LIKE \'design%\')', 'time': '0.001'}<br>
+`>>>` Codepoint.objects.filter(design＿image＿contains="png").filter(<br>
+... design＿image＿startswith="design").count()<br>
 712<br>
-`>>>` connection.queries[-1]<w>&nbsp;</w>
+`>>>` connection.queries`[`-1`]`<w>&nbsp;</w>
 
 ???
 
@@ -2090,24 +2182,25 @@ let's check
 
 
 ---
+### Equivalent Query?
 <div class="shell-wrap"><p class="shell-top-bar">python3.7</p><p class="shell-body">
-`>>>` connection.queries[-1]<br>
-{'sql': 'SELECT COUNT(&#42;) AS "&#95;&#95;count" FROM "unicodex&#95;codepoint" INNER JOIN "unicodex&#95;design" ON ("unicodex&#95;codepoint"."id" = "unicodex&#95;design"."codepoint&#95;id") WHERE ("unicodex&#95;design"."image"::text LIKE \'%png%\' AND "unicodex&#95;design"."image"::text LIKE \'design%\')', 'time': '0.001'}<br>
-`>>>` Codepoint.objects.filter(design&#95;&#95;image&#95;&#95;contains="png").filter(<br>
-... design&#95;&#95;image&#95;&#95;startswith="design").count()<br>
+JOIN "unicodex＿design" ON ("unicodex＿codepoint"."id" = "unicodex＿design"."codepoint＿id") WHERE ("unicodex＿design"."image"::text LIKE \'%png%\' AND "unicodex＿design"."image"::text LIKE \'design%\')', 'time': '0.001'}<br>
+`>>>` Codepoint.objects.filter(design＿image＿contains="png").filter(<br>
+... design＿image＿startswith="design").count()<br>
 712<br>
-`>>>` connection.queries[-1]<br>
-{'sql': 'SELECT COUNT(&#42;) AS "&#95;&#95;count" FROM "unicodex&#95;codepoint" INNER JOIN "unicodex&#95;design" ON ("unicodex&#95;codepoint"."id" = "unicodex&#95;design"."codepoint&#95;id") INNER JOIN "unicodex&#95;design" T3 ON ("unicodex&#95;codepoint"."id" = T3."codepoint&#95;id") WHERE ("unicodex&#95;design"."image"::text LIKE \'%png%\' AND T3."image"::text LIKE \'design%\')', 'time': '0.002'}<br>
+`>>>` connection.queries`[`-1`]`<br>
+{'sql': 'SELECT COUNT(&#42;) AS "＿count" FROM "unicodex&#95;codepoint" INNER JOIN "unicodex&#95;design" ON ("unicodex&#95;codepoint"."id" = "unicodex&#95;design"."codepoint&#95;id") INNER JOIN "unicodex&#95;design" T3 ON ("unicodex&#95;codepoint"."id" = T3."codepoint&#95;id") WHERE ("unicodex&#95;design"."image"::text LIKE \'%png%\' AND T3."image"::text LIKE \'design%\')', 'time': '0.002'}<br>
 `>>>` <w>&nbsp;</w>
 
 ???
 
 well, we can tell it's a different SQL statement than before based on the length of the output.. but let's format itnicely and see what's going on
 ---
+### Not an Equivalent Query
 <pre><code><c>&num; ORM</c>
 Codepoint.objects.filter(
-&nbsp; <o>design&#95;&#95;image&#95;&#95;contains=</o>"png").filter(
-&nbsp; <o>design&#95;&#95;image&#95;&#95;startswith=</o>"design").count()<br><br><c>&dash;&dash; SQL</c><br><r>SELECT</r> <l>count</l>(<r>&#42;</r>)
+&nbsp; <o>design＿image＿contains=</o>"png").filter(
+&nbsp; <o>design＿image＿startswith=</o>"design").count()<br><br><c>&dash;&dash; SQL</c><br><r>SELECT</r> <l>count</l>(<r>&#42;</r>)
 &nbsp; <r>FROM</r> from unicodex_codepoint C<br><r>&nbsp;INNER JOIN</r> unicodex_design D <r>ON</r> (<l>C</l>.<l>id <r>=</r> D</l>.<l>id</l>)<br><r>&nbsp;INNER JOIN</r> unicodex_design E <r>ON</r> (<l>C</l>.<l>id <r>=</r> E</l>.<l>id</l>)<br><r>&nbsp;WHERE</r> (<l>D</l>.<l>image</l> <r>LIKE</r> <d>'%png%'</d>
 &nbsp; &nbsp; <r>AND</r> <l>E</l>.<l>image</l> <r>LIKE</r> <d>'design%'</d>)
 
@@ -2142,6 +2235,10 @@ So let's find that.
 Option: 'shout it out'
 
 ---
+class: title
+# Find the bug
+---
+### Find the bug
 <div class="shell-wrap"><p class="shell-top-bar">bash</p><p class="shell-body">
 <ps>myrtle</ps> <dr>~ $</dr>
 cd project<br>
@@ -2149,6 +2246,7 @@ cd project<br>
 ./manage.py shell<w>&nbsp;</w>
 
 ---
+### Find the bug
 <div class="shell-wrap"><p class="shell-top-bar">python3.7</p><p class="shell-body">
 <ps>myrtle</ps> <dr>~ $</dr>
 cd project<br>
@@ -2159,6 +2257,7 @@ Python 3.7.0 (default, Sep 24 2018, 20:50:19)<br>
 Type "help", "copyright", "credits" or "license" for more information.<br>
 `>>>` <w>&nbsp;</w>
 ---
+### Find the bug
 <div class="shell-wrap"><p class="shell-top-bar">python3.7</p><p class="shell-body">
 <ps>myrtle</ps> <dr>~ $</dr>
 cd project<br>
@@ -2169,6 +2268,7 @@ Python 3.7.0 (default, Sep 24 2018, 20:50:19)<br>
 Type "help", "copyright", "credits" or "license" for more information.<br>
 `>>>` from unicodex.objects import<w>&nbsp;</w>
 ---
+### Find the bug
 <div class="shell-wrap"><p class="shell-top-bar">python3.7</p><p class="shell-body">
 <ps>myrtle</ps> <dr>~ $</dr>
 cd project<br>
@@ -2179,6 +2279,7 @@ Python 3.7.0 (default, Sep 24 2018, 20:50:19)<br>
 Type "help", "copyright", "credits" or "license" for more information.<br>
 `>>>` from unicodex.objects import *<w>&nbsp;</w>
 ---
+### Find the bug
 <div class="shell-wrap"><p class="shell-top-bar">python3.7</p><p class="shell-body">
 <ps>myrtle</ps> <dr>~ $</dr>
 cd project<br>
@@ -2190,6 +2291,7 @@ Type "help", "copyright", "credits" or "license" for more information.<br>
 `>>>` from unicodex.objects import *<br>
 `>>>` <w>&nbsp;</w>
 ---
+### Find the bug
 <div class="shell-wrap"><p class="shell-top-bar">python3.7</p><p class="shell-body">
 <ps>myrtle</ps> <dr>~ $</dr>
 cd project<br>
@@ -2201,6 +2303,7 @@ Type "help", "copyright", "credits" or "license" for more information.<br>
 `>>>` from unicodex.objects import *<br>
 `>>>` Design.objects.filter(<w>&nbsp;</w>
 ---
+### Find the bug
 <div class="shell-wrap"><p class="shell-top-bar">python3.7</p><p class="shell-body">
 <ps>myrtle</ps> <dr>~ $</dr>
 cd project<br>
@@ -2210,8 +2313,9 @@ Python 3.7.0 (default, Sep 24 2018, 20:50:19)<br>
 [Clang 10.0.0 (clang-1000.10.44.2)] on darwin<br>
 Type "help", "copyright", "credits" or "license" for more information.<br>
 `>>>` from unicodex.objects import *<br>
-`>>>` Design.objects.filter(codepoint&#95;&#95;name="Sparkles"<w>&nbsp;</w>
+`>>>` Design.objects.filter(codepoint＿name="Sparkles"<w>&nbsp;</w>
 ---
+### Find the bug
 <div class="shell-wrap"><p class="shell-top-bar">python3.7</p><p class="shell-body">
 <ps>myrtle</ps> <dr>~ $</dr>
 cd project<br>
@@ -2221,9 +2325,10 @@ Python 3.7.0 (default, Sep 24 2018, 20:50:19)<br>
 [Clang 10.0.0 (clang-1000.10.44.2)] on darwin<br>
 Type "help", "copyright", "credits" or "license" for more information.<br>
 `>>>` from unicodex.objects import *<br>
-`>>>` Design.objects.filter(codepoint&#95;&#95;name="Sparkles",<br>
+`>>>` Design.objects.filter(codepoint＿name="Sparkles",<br>
 ... <w>&nbsp;</w><br>
 ---
+### Find the bug
 <div class="shell-wrap"><p class="shell-top-bar">python3.7</p><p class="shell-body">
 <ps>myrtle</ps> <dr>~ $</dr>
 cd project<br>
@@ -2233,9 +2338,10 @@ Python 3.7.0 (default, Sep 24 2018, 20:50:19)<br>
 [Clang 10.0.0 (clang-1000.10.44.2)] on darwin<br>
 Type "help", "copyright", "credits" or "license" for more information.<br>
 `>>>` from unicodex.objects import *<br>
-`>>>` Design.objects.filter(codepoint&#95;&#95;name="Sparkles",<br>
+`>>>` Design.objects.filter(codepoint＿name="Sparkles",<br>
 ... vendorversion<w>&nbsp;</w><br>
 ---
+### Find the bug
 <div class="shell-wrap"><p class="shell-top-bar">python3.7</p><p class="shell-body">
 <ps>myrtle</ps> <dr>~ $</dr>
 cd project<br>
@@ -2245,9 +2351,10 @@ Python 3.7.0 (default, Sep 24 2018, 20:50:19)<br>
 [Clang 10.0.0 (clang-1000.10.44.2)] on darwin<br>
 Type "help", "copyright", "credits" or "license" for more information.<br>
 `>>>` from unicodex.objects import *<br>
-`>>>` Design.objects.filter(codepoint&#95;&#95;name="Sparkles",<br>
-... vendorversion&#95;&#95;vendor<w>&nbsp;</w><br>
+`>>>` Design.objects.filter(codepoint＿name="Sparkles",<br>
+... vendorversion＿vendor<w>&nbsp;</w><br>
 ---
+### Find the bug
 <div class="shell-wrap"><p class="shell-top-bar">python3.7</p><p class="shell-body">
 <ps>myrtle</ps> <dr>~ $</dr>
 cd project<br>
@@ -2257,21 +2364,23 @@ Python 3.7.0 (default, Sep 24 2018, 20:50:19)<br>
 [Clang 10.0.0 (clang-1000.10.44.2)] on darwin<br>
 Type "help", "copyright", "credits" or "license" for more information.<br>
 `>>>` from unicodex.objects import *<br>
-`>>>` Design.objects.filter(codepoint&#95;&#95;name="Sparkles",<br>
-... vendorversion&#95;&#95;vendor&#95;&#95;name<w>&nbsp;</w><br>
+`>>>` Design.objects.filter(codepoint＿name="Sparkles",<br>
+... vendorversion＿vendor＿name<w>&nbsp;</w><br>
 ---
+### Find the bug
 <div class="shell-wrap"><p class="shell-top-bar">python3.7</p><p class="shell-body">
 <ps>myrtle</ps> <dr>~ $</dr>
 cd project<br>
 <ps>myrtle</ps> <dr>~/project $</dr>
+./manage.py shell<br>
 Python 3.7.0 (default, Sep 24 2018, 20:50:19)<br>
 [Clang 10.0.0 (clang-1000.10.44.2)] on darwin<br>
 Type "help", "copyright", "credits" or "license" for more information.<br>
-./manage.py shell<br>
 `>>>` from unicodex.objects import *<br>
-`>>>` Design.objects.filter(codepoint&#95;&#95;name="Sparkles",<br>
-... vendorversion&#95;&#95;vendor&#95;&#95;name="Twitter")<w>&nbsp;</w><br>
+`>>>` Design.objects.filter(codepoint＿name="Sparkles",<br>
+... vendorversion＿vendor＿name="Twitter")<w>&nbsp;</w><br>
 ---
+### Find the bug
 <div class="shell-wrap"><p class="shell-top-bar">python3.7</p><p class="shell-body">
 <ps>myrtle</ps> <dr>~ $</dr>
 cd project<br>
@@ -2281,11 +2390,12 @@ Python 3.7.0 (default, Sep 24 2018, 20:50:19)<br>
 [Clang 10.0.0 (clang-1000.10.44.2)] on darwin<br>
 Type "help", "copyright", "credits" or "license" for more information.<br>
 `>>>` from unicodex.objects import *<br>
-`>>>` Design.objects.filter(codepoint&#95;&#95;name="Sparkles",<br>
-... vendorversion&#95;&#95;vendor&#95;&#95;name="Twitter")<br>
+`>>>` Design.objects.filter(codepoint＿name="Sparkles",<br>
+... vendorversion＿vendor＿name="Twitter")<br>
 `<`QuerySet [`<`Design: Sparkles Twitter 1.0>, `<`Design: Sparkles Twitter 2.4>]><br>
 `>>>` <w>&nbsp;</w>
 ---
+### Find the bug
 <div class="shell-wrap"><p class="shell-top-bar">python3.7</p><p class="shell-body">
 <ps>myrtle</ps> <dr>~ $</dr>
 cd project<br>
@@ -2295,16 +2405,17 @@ Python 3.7.0 (default, Sep 24 2018, 20:50:19)<br>
 [Clang 10.0.0 (clang-1000.10.44.2)] on darwin<br>
 Type "help", "copyright", "credits" or "license" for more information.<br>
 `>>>` from unicodex.objects import *<br>
-`>>>` Design.objects.filter(codepoint&#95;&#95;name="Sparkles",<br>
-... vendorversion&#95;&#95;vendor&#95;&#95;name="Twitter")<br>
+`>>>` Design.objects.filter(codepoint＿name="Sparkles",<br>
+... vendorversion＿vendor＿name="Twitter")<br>
 `<`QuerySet [`<`Design: Sparkles Twitter 1.0>, `<`Design: Sparkles Twitter 2.4>]><br>
-`>>>` Design.objects.filter(codepoint&#95;&#95;name="Sparkles",<br>
-... vendorversion&#95;&#95;vendor&#95;&#95;name="Twitter")<w>&nbsp;</w><br>
+`>>>` Design.objects.filter(codepoint＿name="Sparkles",<br>
+... vendorversion＿vendor＿name="Twitter")<w>&nbsp;</w><br>
 
 ???
 
 press up to replay the line
 ---
+### Find the bug
 <div class="shell-wrap"><p class="shell-top-bar">python3.7</p><p class="shell-body">
 <ps>myrtle</ps> <dr>~ $</dr>
 cd project<br>
@@ -2314,13 +2425,14 @@ Python 3.7.0 (default, Sep 24 2018, 20:50:19)<br>
 [Clang 10.0.0 (clang-1000.10.44.2)] on darwin<br>
 Type "help", "copyright", "credits" or "license" for more information.<br>
 `>>>` from unicodex.objects import *<br>
-`>>>` Design.objects.filter(codepoint&#95;&#95;name="Sparkles",<br>
-... vendorversion&#95;&#95;vendor&#95;&#95;name="Twitter")<br>
+`>>>` Design.objects.filter(codepoint＿name="Sparkles",<br>
+... vendorversion＿vendor＿name="Twitter")<br>
 `<`QuerySet [`<`Design: Sparkles Twitter 1.0>, `<`Design: Sparkles Twitter 2.4>]><br>
-`>>>` <w>D</w>esign.objects.filter(codepoint&#95;&#95;name="Sparkles",<br>
-... vendorversion&#95;&#95;vendor&#95;&#95;name="Twitter")<br>
+`>>>` <w>D</w>esign.objects.filter(codepoint＿name="Sparkles",<br>
+... vendorversion＿vendor＿name="Twitter")<br>
 
 ---
+### Find the bug
 <div class="shell-wrap"><p class="shell-top-bar">python3.7</p><p class="shell-body">
 <ps>myrtle</ps> <dr>~ $</dr>
 cd project<br>
@@ -2330,13 +2442,14 @@ Python 3.7.0 (default, Sep 24 2018, 20:50:19)<br>
 [Clang 10.0.0 (clang-1000.10.44.2)] on darwin<br>
 Type "help", "copyright", "credits" or "license" for more information.<br>
 `>>>` from unicodex.objects import *<br>
-`>>>` Design.objects.filter(codepoint&#95;&#95;name="Sparkles",<br>
-... vendorversion&#95;&#95;vendor&#95;&#95;name="Twitter")<br>
+`>>>` Design.objects.filter(codepoint＿name="Sparkles",<br>
+... vendorversion＿vendor＿name="Twitter")<br>
 `<`QuerySet [`<`Design: Sparkles Twitter 1.0>, `<`Design: Sparkles Twitter 2.4>]><br>
-`>>>` d =<w>&nbsp;</w>Design.objects.filter(codepoint&#95;&#95;name="Sparkles",<br>
-... vendorversion&#95;&#95;vendor&#95;&#95;name="Twitter")<br>
+`>>>` d =<w>&nbsp;</w>Design.objects.filter(codepoint＿name="Sparkles",<br>
+... vendorversion＿vendor＿name="Twitter")<br>
 
 ---
+### Find the bug
 <div class="shell-wrap"><p class="shell-top-bar">python3.7</p><p class="shell-body">
 <ps>myrtle</ps> <dr>~ $</dr>
 cd project<br>
@@ -2346,17 +2459,18 @@ Python 3.7.0 (default, Sep 24 2018, 20:50:19)<br>
 [Clang 10.0.0 (clang-1000.10.44.2)] on darwin<br>
 Type "help", "copyright", "credits" or "license" for more information.<br>
 `>>>` from unicodex.objects import *<br>
-`>>>` Design.objects.filter(codepoint&#95;&#95;name="Sparkles",<br>
-... vendorversion&#95;&#95;vendor&#95;&#95;name="Twitter")<br>
+`>>>` Design.objects.filter(codepoint＿name="Sparkles",<br>
+... vendorversion＿vendor＿name="Twitter")<br>
 `<`QuerySet [`<`Design: Sparkles Twitter 1.0>, `<`Design: Sparkles Twitter 2.4>]><br>
-`>>>` d = Design.objects.filter(codepoint&#95;&#95;name="Sparkles",<br>
-... vendorversion&#95;&#95;vendor&#95;&#95;name="Twitter")<br>
+`>>>` d = Design.objects.filter(codepoint＿name="Sparkles",<br>
+... vendorversion＿vendor＿name="Twitter")<br>
 `>>>` <w>&nbsp;</w>
 
 ???
 
 now we have our value saved
 ---
+### Find the bug
 <div class="shell-wrap"><p class="shell-top-bar">python3.7</p><p class="shell-body">
 `>>>` <w>&nbsp;</w>
 
@@ -2364,9 +2478,11 @@ now we have our value saved
 
 clear terminal
 ---
+### Find the bug
 <div class="shell-wrap"><p class="shell-top-bar">python3.7</p><p class="shell-body">
 `>>>` d<w>&nbsp;</w>
 ---
+### Find the bug
 <div class="shell-wrap"><p class="shell-top-bar">python3.7</p><p class="shell-body">
 `>>>` d<br>
 `<`QuerySet [`<`Design: Sparkles Twitter 1.0>, `<`Design: Sparkles Twitter 2.4>]><br>
@@ -2376,6 +2492,7 @@ clear terminal
 
 now, we can filter more.
 ---
+### Find the bug
 
 <div class="shell-wrap"><p class="shell-top-bar">python3.7</p><p class="shell-body">
 `>>>` d<br>
@@ -2388,6 +2505,7 @@ we could absolutely just return the first value of this array
 
 That's completely valid
 ---
+### Find the bug
 <div class="shell-wrap"><p class="shell-top-bar">python3.7</p><p class="shell-body">
 `>>>` d<br>
 `<`QuerySet [`<`Design: Sparkles Twitter 1.0>, `<`Design: Sparkles Twitter 2.4>]><br>
@@ -2398,6 +2516,7 @@ That's completely valid
 but let's keep filtering, instead
 
 ---
+### Find the bug
 <div class="shell-wrap"><p class="shell-top-bar">python3.7</p><p class="shell-body">
 `>>>` d<br>
 `<`QuerySet [`<`Design: Sparkles Twitter 1.0>, `<`Design: Sparkles Twitter 2.4>]><br>
@@ -2408,34 +2527,39 @@ but let's keep filtering, instead
 we can chain filters on querysets, remember?
 
 ---
+### Find the bug
 <div class="shell-wrap"><p class="shell-top-bar">python3.7</p><p class="shell-body">
 `>>>` d<br>
 `<`QuerySet [`<`Design: Sparkles Twitter 1.0>, `<`Design: Sparkles Twitter 2.4>]><br>
 `>>>` d.filter(vendorversion<w>&nbsp;</w>
 ---
+### Find the bug
 <div class="shell-wrap"><p class="shell-top-bar">python3.7</p><p class="shell-body">
 `>>>` d<br>
 `<`QuerySet [`<`Design: Sparkles Twitter 1.0>, `<`Design: Sparkles Twitter 2.4>]><br>
-`>>>` d.filter(vendorversion&#95;&#95;name<w>&nbsp;</w>
+`>>>` d.filter(vendorversion＿name<w>&nbsp;</w>
 ---
+### Find the bug
 <div class="shell-wrap"><p class="shell-top-bar">python3.7</p><p class="shell-body">
 `>>>` d<br>
 `<`QuerySet [`<`Design: Sparkles Twitter 1.0>, `<`Design: Sparkles Twitter 2.4>]><br>
-`>>>` d.filter(vendorversion&#95;&#95;name&#95;&#95;contains<w>&nbsp;</w>
+`>>>` d.filter(vendorversion＿name＿contains<w>&nbsp;</w>
 
 ???
 
 contains here, to be save. We know the string will have 1.0 in it, but we aren't 100% sure where
 ---
+### Find the bug
 <div class="shell-wrap"><p class="shell-top-bar">python3.7</p><p class="shell-body">
 `>>>` d<br>
 `<`QuerySet [`<`Design: Sparkles Twitter 1.0>, `<`Design: Sparkles Twitter 2.4>]><br>
-`>>>` d.filter(vendorversion&#95;&#95;name&#95;&#95;contains="1.0")<w>&nbsp;</w>
+`>>>` d.filter(vendorversion＿name＿contains="1.0")<w>&nbsp;</w>
 ---
+### Find the bug
 <div class="shell-wrap"><p class="shell-top-bar">python3.7</p><p class="shell-body">
 `>>>` d<br>
 `<`QuerySet [`<`Design: Sparkles Twitter 1.0>, `<`Design: Sparkles Twitter 2.4>]><br>
-`>>>` d.filter(vendorversion&#95;&#95;name&#95;&#95;contains="1.0")<br>
+`>>>` d.filter(vendorversion＿name＿contains="1.0")<br>
 `<`QuerySet [`<`Design: Sparkles Twitter 1.0>]><br>
 `>>>` <w>&nbsp;</w>
 
@@ -2443,147 +2567,186 @@ contains here, to be save. We know the string will have 1.0 in it, but we aren't
 
 woo!
 ---
+### Find the bug
 <div class="shell-wrap"><p class="shell-top-bar">python3.7</p><p class="shell-body">
 `>>>` d<br>
 `<`QuerySet [`<`Design: Sparkles Twitter 1.0>, `<`Design: Sparkles Twitter 2.4>]><br>
-`>>>` d.filter(vendorversion&#95;&#95;name&#95;&#95;contains="1.0")<br>
+`>>>` d.filter(vendorversion＿name＿contains="1.0")<br>
 `<`QuerySet [`<`Design: Sparkles Twitter 1.0>]><br>
-`>>>` d.filter(vendorversion&#95;&#95;name&#95;&#95;contains="1.0")<w>&nbsp;</w>
+`>>>` d.filter(vendorversion＿name＿contains="1.0")<w>&nbsp;</w>
+???
+
+from here, we want to get just the one record.
+we have a few different options
 ---
+### Find the bug
 <div class="shell-wrap"><p class="shell-top-bar">python3.7</p><p class="shell-body">
 `>>>` d<br>
 `<`QuerySet [`<`Design: Sparkles Twitter 1.0>, `<`Design: Sparkles Twitter 2.4>]><br>
-`>>>` d.filter(vendorversion&#95;&#95;name&#95;&#95;contains="1.0")<br>
+`>>>` d.filter(vendorversion＿name＿contains="1.0")<br>
 `<`QuerySet [`<`Design: Sparkles Twitter 1.0>]><br>
-`>>>` <w>d</w>.filter(vendorversion&#95;&#95;name&#95;&#95;contains="1.0")<br>
+`>>>` d.filter(vendorversion＿name＿contains="1.0").get()<w>&nbsp;</w>
+???
+
+we could just `get()` our one record from our filter
 ---
+### Find the bug
 <div class="shell-wrap"><p class="shell-top-bar">python3.7</p><p class="shell-body">
 `>>>` d<br>
 `<`QuerySet [`<`Design: Sparkles Twitter 1.0>, `<`Design: Sparkles Twitter 2.4>]><br>
-`>>>` d.filter(vendorversion&#95;&#95;name&#95;&#95;contains="1.0")<br>
+`>>>` d.filter(vendorversion＿name＿contains="1.0")<br>
 `<`QuerySet [`<`Design: Sparkles Twitter 1.0>]><br>
-`>>>` d.filte<w>r</w>(vendorversion&#95;&#95;name&#95;&#95;contains="1.0")<br>
+`>>>` d.filter(vendorversion＿name＿contains="1.0")<w>&nbsp;</w>
+???
+
+or, we could
+---
+### Find the bug
+<div class="shell-wrap"><p class="shell-top-bar">python3.7</p><p class="shell-body">
+`>>>` d<br>
+`<`QuerySet [`<`Design: Sparkles Twitter 1.0>, `<`Design: Sparkles Twitter 2.4>]><br>
+`>>>` d.filter(vendorversion＿name＿contains="1.0")<br>
+`<`QuerySet [`<`Design: Sparkles Twitter 1.0>]><br>
+`>>>` <w>d</w>.filter(vendorversion＿name＿contains="1.0")<br>
+---
+### Find the bug
+<div class="shell-wrap"><p class="shell-top-bar">python3.7</p><p class="shell-body">
+`>>>` d<br>
+`<`QuerySet [`<`Design: Sparkles Twitter 1.0>, `<`Design: Sparkles Twitter 2.4>]><br>
+`>>>` d.filter(vendorversion＿name＿contains="1.0")<br>
+`<`QuerySet [`<`Design: Sparkles Twitter 1.0>]><br>
+`>>>` d.filte<w>r</w>(vendorversion＿name＿contains="1.0")<br>
 
 ---
+### Find the bug
 <div class="shell-wrap"><p class="shell-top-bar">python3.7</p><p class="shell-body">
 `>>>` d<br>
 `<`QuerySet [`<`Design: Sparkles Twitter 1.0>, `<`Design: Sparkles Twitter 2.4>]><br>
-`>>>` d.filter(vendorversion&#95;&#95;name&#95;&#95;contains="1.0")<br>
+`>>>` d.filter(vendorversion＿name＿contains="1.0")<br>
 `<`QuerySet [`<`Design: Sparkles Twitter 1.0>]><br>
-`>>>` d.<w>(</w>vendorversion&#95;&#95;name&#95;&#95;contains="1.0")<br>
+`>>>` d.<w>(</w>vendorversion＿name＿contains="1.0")<br>
 ---
+### Find the bug
 <div class="shell-wrap"><p class="shell-top-bar">python3.7</p><p class="shell-body">
 `>>>` d<br>
 `<`QuerySet [`<`Design: Sparkles Twitter 1.0>, `<`Design: Sparkles Twitter 2.4>]><br>
-`>>>` d.filter(vendorversion&#95;&#95;name&#95;&#95;contains="1.0")<br>
+`>>>` d.filter(vendorversion＿name＿contains="1.0")<br>
 `<`QuerySet [`<`Design: Sparkles Twitter 1.0>]><br>
-`>>>` d.get<w>(</w>vendorversion&#95;&#95;name&#95;&#95;contains="1.0")<br>
+`>>>` d.get<w>(</w>vendorversion＿name＿contains="1.0")<br>
 ---
+### Find the bug
 <div class="shell-wrap"><p class="shell-top-bar">python3.7</p><p class="shell-body">
 `>>>` d<br>
 `<`QuerySet [`<`Design: Sparkles Twitter 1.0>, `<`Design: Sparkles Twitter 2.4>]><br>
-`>>>` d.filter(vendorversion&#95;&#95;name&#95;&#95;contains="1.0")<br>
+`>>>` d.filter(vendorversion＿name＿contains="1.0")<br>
 `<`QuerySet [`<`Design: Sparkles Twitter 1.0>]><br>
-`>>>` d.get(vendorversion&#95;&#95;name&#95;&#95;contains="1.0")<br>
+`>>>` d.get(vendorversion＿name＿contains="1.0")<br>
 `<`Design: Sparkles Twitter 1.0><br>
 `>>>` <w>&nbsp;</w>
 ---
+### Find the bug
 <div class="shell-wrap"><p class="shell-top-bar">python3.7</p><p class="shell-body">
 `>>>` d<br>
 `<`QuerySet [`<`Design: Sparkles Twitter 1.0>, `<`Design: Sparkles Twitter 2.4>]><br>
-`>>>` d.filter(vendorversion&#95;&#95;name&#95;&#95;contains="1.0")<br>
+`>>>` d.filter(vendorversion＿name＿contains="1.0")<br>
 `<`QuerySet [`<`Design: Sparkles Twitter 1.0>]><br>
-`>>>` d.get(vendorversion&#95;&#95;name&#95;&#95;contains="1.0")<br>
+`>>>` d.get(vendorversion＿name＿contains="1.0")<br>
 `<`Design: Sparkles Twitter 1.0><br>
-`>>>` d.get(vendorversion&#95;&#95;name&#95;&#95;contains="1.0")<w>&nbsp;</w>
+`>>>` d.get(vendorversion＿name＿contains="1.0")<w>&nbsp;</w>
 
 ---
+### Find the bug
 <div class="shell-wrap"><p class="shell-top-bar">python3.7</p><p class="shell-body">
 `>>>` d<br>
 `<`QuerySet [`<`Design: Sparkles Twitter 1.0>, `<`Design: Sparkles Twitter 2.4>]><br>
-`>>>` d.filter(vendorversion&#95;&#95;name&#95;&#95;contains="1.0")<br>
+`>>>` d.filter(vendorversion＿name＿contains="1.0")<br>
 `<`QuerySet [`<`Design: Sparkles Twitter 1.0>]><br>
-`>>>` d.get(vendorversion&#95;&#95;name&#95;&#95;contains="1.0")<br>
+`>>>` d.get(vendorversion＿name＿contains="1.0")<br>
 `<`Design: Sparkles Twitter 1.0><br>
-`>>>` d.get(vendorversion&#95;&#95;name&#95;&#95;contains="1.0")._meta.get_fields()<w>&nbsp;</w>
+`>>>` d.get(vendorversion＿name＿contains="1.0")._meta.get_fields()<w>&nbsp;</w>
 
 ---
+### Find the bug
 <div class="shell-wrap"><p class="shell-top-bar">python3.7</p><p class="shell-body">
 `>>>` d<br>
 `<`QuerySet [`<`Design: Sparkles Twitter 1.0>, `<`Design: Sparkles Twitter 2.4>]><br>
-`>>>` d.filter(vendorversion&#95;&#95;name&#95;&#95;contains="1.0")<br>
+`>>>` d.filter(vendorversion＿name＿contains="1.0")<br>
 `<`QuerySet [`<`Design: Sparkles Twitter 1.0>]><br>
-`>>>` d.get(vendorversion&#95;&#95;name&#95;&#95;contains="1.0")<br>
+`>>>` d.get(vendorversion＿name＿contains="1.0")<br>
 `<`Design: Sparkles Twitter 1.0><br>
-`>>>` d.get(vendorversion&#95;&#95;name&#95;&#95;contains="1.0")._meta.get_fields()<br>
+`>>>` d.get(vendorversion＿name＿contains="1.0")._meta.get_fields()<br>
 (`<`django.db.models.fields.AutoField: id>,<br>
 `<`django.db.models.fields.related.ForeignKey: vendorversion>, </br>
 `<`django.db.models.fields.related.ForeignKey: codepoint>, <br>
 `<`django.db.models.fields.files.FileField: image>)<br>
 `>>>` <w>&nbsp;</w>
 ---
+### Find the bug
 <div class="shell-wrap"><p class="shell-top-bar">python3.7</p><p class="shell-body">
 `>>>` d<br>
 `<`QuerySet [`<`Design: Sparkles Twitter 1.0>, `<`Design: Sparkles Twitter 2.4>]><br>
-`>>>` d.filter(vendorversion&#95;&#95;name&#95;&#95;contains="1.0")<br>
+`>>>` d.filter(vendorversion＿name＿contains="1.0")<br>
 `<`QuerySet [`<`Design: Sparkles Twitter 1.0>]><br>
-`>>>` d.get(vendorversion&#95;&#95;name&#95;&#95;contains="1.0")<br>
+`>>>` d.get(vendorversion＿name＿contains="1.0")<br>
 `<`Design: Sparkles Twitter 1.0><br>
-`>>>` d.get(vendorversion&#95;&#95;name&#95;&#95;contains="1.0")._meta.get_fields()<br>
+`>>>` d.get(vendorversion＿name＿contains="1.0")._meta.get_fields()<br>
 (`<`django.db.models.fields.AutoField: id>,<br>
 `<`django.db.models.fields.related.ForeignKey: vendorversion>, </br>
 `<`django.db.models.fields.related.ForeignKey: codepoint>, <br>
 `<`django.db.models.fields.files.FileField: image>)<br>
-`>>>` d.get(vendorversion&#95;&#95;name&#95;&#95;contains="1.0")._meta.get_fields()<w>&nbsp;</w>
+`>>>` d.get(vendorversion＿name＿contains="1.0")._meta.get_fields()<w>&nbsp;</w>
 ---
+### Find the bug
 <div class="shell-wrap"><p class="shell-top-bar">python3.7</p><p class="shell-body">
 `>>>` d<br>
 `<`QuerySet [`<`Design: Sparkles Twitter 1.0>, `<`Design: Sparkles Twitter 2.4>]><br>
-`>>>` d.filter(vendorversion&#95;&#95;name&#95;&#95;contains="1.0")<br>
+`>>>` d.filter(vendorversion＿name＿contains="1.0")<br>
 `<`QuerySet [`<`Design: Sparkles Twitter 1.0>]><br>
-`>>>` d.get(vendorversion&#95;&#95;name&#95;&#95;contains="1.0")<br>
+`>>>` d.get(vendorversion＿name＿contains="1.0")<br>
 `<`Design: Sparkles Twitter 1.0><br>
-`>>>` d.get(vendorversion&#95;&#95;name&#95;&#95;contains="1.0")._meta.get_fields()<br>
+`>>>` d.get(vendorversion＿name＿contains="1.0")._meta.get_fields()<br>
 (`<`django.db.models.fields.AutoField: id>,<br>
 `<`django.db.models.fields.related.ForeignKey: vendorversion>, </br>
 `<`django.db.models.fields.related.ForeignKey: codepoint>, <br>
 `<`django.db.models.fields.files.FileField: image>)<br>
-`>>>` d.get(vendorversion&#95;&#95;name&#95;&#95;contains="1.0")<w>&nbsp;</w>
+`>>>` d.get(vendorversion＿name＿contains="1.0")<w>&nbsp;</w>
 
 ---
+### Find the bug
 <div class="shell-wrap"><p class="shell-top-bar">python3.7</p><p class="shell-body">
 `>>>` d<br>
 `<`QuerySet [`<`Design: Sparkles Twitter 1.0>, `<`Design: Sparkles Twitter 2.4>]><br>
-`>>>` d.filter(vendorversion&#95;&#95;name&#95;&#95;contains="1.0")<br>
+`>>>` d.filter(vendorversion＿name＿contains="1.0")<br>
 `<`QuerySet [`<`Design: Sparkles Twitter 1.0>]><br>
-`>>>` d.get(vendorversion&#95;&#95;name&#95;&#95;contains="1.0")<br>
+`>>>` d.get(vendorversion＿name＿contains="1.0")<br>
 `<`Design: Sparkles Twitter 1.0><br>
-`>>>` d.get(vendorversion&#95;&#95;name&#95;&#95;contains="1.0")._meta.get_fields()<br>
+`>>>` d.get(vendorversion＿name＿contains="1.0")._meta.get_fields()<br>
 (`<`django.db.models.fields.AutoField: id>,<br>
 `<`django.db.models.fields.related.ForeignKey: vendorversion>, </br>
 `<`django.db.models.fields.related.ForeignKey: codepoint>, <br>
 `<`django.db.models.fields.files.FileField: image>)<br>
-`>>>` d.get(vendorversion&#95;&#95;name&#95;&#95;contains="1.0").image<w>&nbsp;</w>
+`>>>` d.get(vendorversion＿name＿contains="1.0").image<w>&nbsp;</w>
 ---
+### Find the bug
 <div class="shell-wrap"><p class="shell-top-bar">python3.7</p><p class="shell-body">
 `>>>` d<br>
 `<`QuerySet [`<`Design: Sparkles Twitter 1.0>, `<`Design: Sparkles Twitter 2.4>]><br>
-`>>>` d.filter(vendorversion&#95;&#95;name&#95;&#95;contains="1.0")<br>
+`>>>` d.filter(vendorversion＿name＿contains="1.0")<br>
 `<`QuerySet [`<`Design: Sparkles Twitter 1.0>]><br>
-`>>>` d.get(vendorversion&#95;&#95;name&#95;&#95;contains="1.0")<br>
+`>>>` d.get(vendorversion＿name＿contains="1.0")<br>
 `<`Design: Sparkles Twitter 1.0><br>
-`>>>` d.get(vendorversion&#95;&#95;name&#95;&#95;contains="1.0")._meta.get_fields()<br>
+`>>>` d.get(vendorversion＿name＿contains="1.0")._meta.get_fields()<br>
 (`<`django.db.models.fields.AutoField: id>,<br>
 `<`django.db.models.fields.related.ForeignKey: vendorversion>, </br>
 `<`django.db.models.fields.related.ForeignKey: codepoint>, <br>
 `<`django.db.models.fields.files.FileField: image>)<br>
-`>>>` d.get(vendorversion&#95;&#95;name&#95;&#95;contains="1.0").image<br>
+`>>>` d.get(vendorversion＿name＿contains="1.0").image<br>
 `<`FieldFile: designs/downloads/2728_twitter_twemoji-1.0.png🐛><br>
 `>>>` <w>&nbsp;</w>
 ---
 
 class: title
-## `..twemoji-1.0.png🐛"`
+## `..twemoji-1.0.png🐛`
 
 ???
 
@@ -2627,7 +2790,8 @@ You need to be careful
 If you look up the docs about how to do this
 
 ---
-<div class="left"><span style="font-family: Roboto">Performing raw SQL queries</span><br><br>
+<br>
+.left[.roboto[Performing raw SQL queries]
 <rr>The raw() manager ...</rr><br/>
 <br>⚠️ <rb>You should be very careful whenever you write.</rb><br>
 <br>`Abc.objects.raw('SELECT * FROM myapp_abc')`<br><br>
@@ -2685,73 +2849,6 @@ class: title
 
 seriously, the docs are wonderful. Now that you know some of the general terms of this bit of software, you should be able to find more interesting ways to make the ORM work for you
 ---
-class: title
-# ☝️
-class: title
-## <span style="color: white">`.`</span>
-???
-
-Oh, and just one more note before I go
-If you really want to make the ORM work well for you when developing
----
-
-class: title
-# ☝️
-class: title
-## `echo "ipython" >> Pipfile`
-???
-
-add ipython as a dev requirement in your Pipfile, or requirements.txt or whereever all good python package managers store their requirements.
----
-<div class="shell-wrap"><p class="shell-top-bar">python3.7</p><p class="shell-body">
-<ps>myrtle</ps> <dr>~/project $</dr>
-./manage.py shell<br>
-Python 3.7.0 (default, Sep 24 2018, 20:50:19)<br>
-[Clang 10.0.0 (clang-1000.10.44.2)] on darwin<br>
-Type "help", "copyright", "credits" or "license" for more information.<br>
-`>>>` <w>&nbsp;</w>
-
-???
-
-it will turn your shell from this old and busted
----
-<div class="shell-wrap"><p class="shell-top-bar">python3.7</p><p class="shell-body">
-<ps>myrtle</ps> <dr>~/project $</dr>
-./manage.py shell<br>
-Python 3.7.0 (default, Sep 24 2018, 20:50:19)<br>
-[Clang 10.0.0 (clang-1000.10.44.2)] on darwin<br>
-Type "help", "copyright", "credits" or "license" for more information.<br>
-???
-
-to the new hotness
-
-This is an ipython powered shell, which means
----
-<div class="shell-wrap"><p class="shell-top-bar">python3.7</p><p class="shell-body">
-<ps>myrtle</ps> <dr>~/project $</dr>
-./manage.py shell<br>
-Python 3.7.0 (default, Sep 24 2018, 20:50:19)<br>
-[Clang 10.0.0 (clang-1000.10.44.2)] on darwin<br>
-Type "help", "copyright", "credits" or "license" for more information.<br>
-???
-
-you start typing something, press tab, and
----
-<div class="shell-wrap"><p class="shell-top-bar">python3.7</p><p class="shell-body">
-<ps>myrtle</ps> <dr>~/project $</dr>
-./manage.py shell<br>
-Python 3.7.0 (default, Sep 24 2018, 20:50:19)<br>
-[Clang 10.0.0 (clang-1000.10.44.2)] on darwin<br>
-Type "help", "copyright", "credits" or "license" for more information.<br>
-<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <ww>unicodedata</ww>
-<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <ww>unicodex&nbsp; &nbsp;</ww>
-<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <ww>unittest&nbsp; &nbsp;</ww>
-???
-
-you get autocompleted suggestions.
-
-So cool
----
 
 background-image: url("images/hunterfound.jpg")
 
@@ -2765,17 +2862,11 @@ It might be a new stack to you, it might be old school, but I find the utmost do
 And being able to use your skills gained from other technology sets in new fields is really fun, sometimes a bit interesting, but always great.
 
 ---
-<br>
-<div style='width: 100%; margin: 0 auto;'><p align='center'><img height='160px' src='images/space.svg'><img height='160px' src='images/space.svg'><img height='160px' src='images/claps.svg'><img height='160px' src='images/space.svg'><img height='160px' src='images/space.svg'></p></div>
+class: title
+# <br><br>Thank you for your time!
 ![Image](images/footer.svg)
 .footnotes[Technical reviewers: James Bennett, Russell Keith-Magee]
 
 ???
 
 thank you for your time
----
-background-image: url("images/pyconau18.png")
-<div style="-webkit-transform: rotate(-29deg);color: lightgreen;font-size: 64pt;margin-top: 230px;font-family: 'DTLProkyonST', regular;margin-left: 600px;z-index: 999;width: 500px;"><b>Includes<br>DjangoCon AU</b></div>
-???
-
-PS PyCon AU is a thing that's happening

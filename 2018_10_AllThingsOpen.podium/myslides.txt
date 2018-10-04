@@ -1439,31 +1439,31 @@ The solution?
 ---
 $$# PowerShell
 <br>
-ps- PS> if (4 > 6) { "true" } else { "false" }
+ps- PS> if (36 > 42) { "true" } else { "false" }
 ps false
 
 --
 <br>
-ps- PS> if (4 < 6) { "true" } else { "false" }
+ps- PS> if (36 < 42) { "true" } else { "false" }
 ps .ps-error[The '<' operator is reserved for future use.]
 
 ---
 $$# PowerShell
 <br>
-ps PS> if (4 .red[>] 6) { "true" } else { "false" } # redirection
+ps PS> if (36 .red[>] 42) { "true" } else { "false" } # redirection
 ps false
 <br> 
-ps PS> if (4 .red[<] 6) { "true" } else { "false" } # AVOID 
+ps PS> if (36 .red[<] 42) { "true" } else { "false" } # AVOID 
 ps .ps-error[The '<' operator is reserved for future use.]
 .fix-tilt[AVOID]
 Note: You should avoid using greater than, since the complementary less than doesn't exist.
 ---
 $$# PowerShell
 <br>
-ps PS> if (4 .green[-gt] 6) { "true" } else { "false" }
+ps PS> if (36 .green[-gt] 42) { "true" } else { "false" }
 ps true
 <br> 
-ps PS> if (4 .green[-lt] 6) { "true" } else { "false" }
+ps PS> if (36 .green[-lt] 42) { "true" } else { "false" }
 ps false
 .fix-tilt[FIX]
 
