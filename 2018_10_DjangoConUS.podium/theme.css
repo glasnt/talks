@@ -345,10 +345,21 @@ Added: Zenburn, mostly.
 .comment { color: green }
 .b { font-weight: bold; }
 .lgreen { color: rgb(214, 252, 185) }
+.green { color: rgb(180,251,114)}
 .lblue { color: rgb(165 , 211, 250) }
 .aqua { color: rgb(95,212,231)}
 .mblue { color: rgb(230,231,250)}
 .pink { color: rgb(229,174,255) }
+.keyboard { position: absolute; bottom: 50px; right: 120px; text-align: right; font-family: monospace; background-color: #eff0f19c; padding: 7px; }
+.key { 
+    color: #242729;
+    text-shadow: 0 1px 0 #FFF;
+    background-color: #e1e3e5;
+    border: 1px solid #adb3b9;
+    padding: 7px;
+    border-radius: 3px;
+    box-shadow: 0 1px 0 rgba(12,13,14,0.2), 0 0 0 2px #FFF inset;
+}
 
 .tp { color: rgba(0,0,0,0) }
 

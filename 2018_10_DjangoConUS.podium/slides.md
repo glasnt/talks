@@ -177,10 +177,47 @@ it shows you the emoji from different vendors and the versions.
 So given this website exists, we can start poking around in the shell
 ---
 class: title
-## "Just use the shell"
+## "Just use the shell!"
+---
+
+class: title
+## "🐚?"
 ???
 
 what they mean here is the django shell
+
+The django shell is a command line interface into your project
+
+---
+### The Shell
+<div class="shell-wrap"><p class="shell-top-bar">bash</p><p class="shell-body">
+<ps>myrtle</ps> <dr>~ $</dr>
+
+???
+
+a lot of my examples today are going to be shown in literal terminals - iterm2 on macos mojave, for those playing at home.
+
+So to get to the django shell, we first
+---
+### The Shell
+<div class="shell-wrap"><p class="shell-top-bar">bash</p><p class="shell-body">
+<ps>myrtle</ps> <dr>~ $</dr>
+cd project<w>&nbsp;</w>
+
+???
+
+need to navigate to our project
+---
+### The Shell
+<div class="shell-wrap"><p class="shell-top-bar">bash</p><p class="shell-body">
+<ps>myrtle</ps> <dr>~ $</dr>
+cd project<br>
+<ps>myrtle</ps> <dr>~/project $</dr>
+<w>&nbsp;</w>
+
+???
+
+and then depending on how your project is setup,
 ---
 ### The Shell
 <div class="shell-wrap"><p class="shell-top-bar">bash</p><p class="shell-body">
@@ -191,7 +228,11 @@ cd project<br>
 
 ???
 
-which is available using the manage.py shell command
+call manage.py shell
+
+You may need to preface this with a call to start your virtualenv, pipenv, docker run, whatever.
+
+But you'll get...
 ---
 ### The Shell
 <div class="shell-wrap"><p class="shell-top-bar">python3.7</p><p class="shell-body">
@@ -214,16 +255,30 @@ From here you can interact with your django projet directly.
 
 ---
 class: title
-## "So how do I use this thing?"
+# 🐚💪
 
 ???
 
-but how do I use the shell
+the shell is pretty powerful, but you need to understand how to call django and ORM commands in order to use it.
 
-First things first. For an SQL dev, the first thing they normally do in a foreign system is
+---
+
+class: title
+# 🤔
+
+???
+
+but would I, a database nerd, interact with it?
+
+
+First thing I'd want to do in any new system
 ---
 class: title
 ## Finding all tables
+
+???
+
+I want to know what I'm working with.
 ---
 ### Finding all tables
 
@@ -1272,11 +1327,39 @@ background-image: url("images/uml_screenshot.png")
 
 and here's out diagram
 
-Let me teach out some stuff about unicodex.
+But this diagram, no offense, but it looks a bit.. 2005.
 
-insert explanation here
+Let me clean it up a bit, because it's going to be on the screen for a while
+---
 
-Which means we should be able to do things like just follow the arrows
+background-image: url("images/uml_screenshot_2.png")
+
+.footnotes[Link: [gist code](https://gist.github.com/glasnt/673202a51cef26d98331de85d775cc7c)]
+
+???
+
+From here, we can work out how the different models interact with each other without seeing the code
+
+We can see that the Design has two FKs: Codepoint and VendorVersion
+
+And a VendorVersion has a FK to a vendor
+---
+background-image: url("images/uml_screenshot_3.png")
+
+???
+How this works in reality: an emoji is a codepoint in the Unicode standard. For example the sparkles emoji is referenced by /u2728 everywhere.
+
+But there are multiple different ways sparkles is represented
+
+Depending on your version of android, the sparkle emoji could be black and white, more square golden versions, or just yellow sparkles
+
+Each of these is a version from a vendor
+
+...
+
+SO
+
+Given we now know our model...
 
 So if we wanted to get our longest chain, we can just start in this case, from one end, and work our way across
 
@@ -2245,151 +2328,132 @@ cd project<br>
 <ps>myrtle</ps> <dr>~/project $</dr>
 ./manage.py shell<w>&nbsp;</w>
 
+???
+
+so we want to start up our shell again import stuff, then start querying
+
+But did you know there's a shell that imports things for you?
+---
+### Find the bug
+<div class="shell-wrap"><p class="shell-top-bar">bash</p><p class="shell-body">
+<ps>myrtle</ps> <dr>~ $</dr>
+cd project<br>
+<ps>myrtle</ps> <dr>~/project $</dr>
+./manage.py shell_plus<w>&nbsp;</w>
+
+???
+
+it's called shell plus
+
 ---
 ### Find the bug
 <div class="shell-wrap"><p class="shell-top-bar">python3.7</p><p class="shell-body">
 <ps>myrtle</ps> <dr>~ $</dr>
 cd project<br>
 <ps>myrtle</ps> <dr>~/project $</dr>
-./manage.py shell<br>
+./manage.py shell_plus<br>
+.b[.white[`#` Shell Plus Model Imports]]<br>
+.green[from aldryn_sso.models import AldrynCloudUser]<br>
+.green[from django.contrib.admin.models import LogEntry]<br>
+.green[from django.contrib.auth.models import Group, Permission, User]<br>
+.green[from django.contrib.contenttypes.models import ContentType]<br>
+.green[from django.contrib.sessions.models import Session]<br>
+.green[from django.contrib.sites.models import Site]<br>
+.green[from unicodex.models import Codepoint, Design, Vendor, VendorVersion]<br>
+.b[.white[`#` Shell Plus Django Imports]]<br>
+.green[from django.core.cache import cache]<br>
+.green[from django.conf import settings]<br>
+.green[from django.contrib.auth import get_user_model]<br>
+.green[from django.db import transaction]<br>
+---
+### Find the bug
+<div class="shell-wrap"><p class="shell-top-bar">python3.7</p><p class="shell-body">
+.green[from django.contrib.sites.models import Site]<br>
+.green[from unicodex.models import Codepoint, Design, Vendor, VendorVersion]<br>
+.b[.white[`#` Shell Plus Django Imports]]<br>
+.green[from django.core.cache import cache]<br>
+.green[from django.conf import settings]<br>
+.green[from django.contrib.auth import get_user_model]<br>
+.green[from django.db import transaction]<br>
+.green[from django.db.models import Avg, Case, Count, F, Max, Min, Prefetch, Q, Sum, When, Exists, OuterRef, Subquery]<br>
+.green[from django.utils import timezone]<br>
+.green[from django.urls import reverse]<br>
 Python 3.7.0 (default, Sep 24 2018, 20:50:19)<br>
 [Clang 10.0.0 (clang-1000.10.44.2)] on darwin<br>
 Type "help", "copyright", "credits" or "license" for more information.<br>
 `>>>` <w>&nbsp;</w>
+
+???
+
+that's a lot of output. Let's just clear that up for now.
+
+We can do that by pressing control L
 ---
 ### Find the bug
 <div class="shell-wrap"><p class="shell-top-bar">python3.7</p><p class="shell-body">
-<ps>myrtle</ps> <dr>~ $</dr>
-cd project<br>
-<ps>myrtle</ps> <dr>~/project $</dr>
-./manage.py shell<br>
+.green[from django.contrib.sites.models import Site]<br>
+.green[from unicodex.models import Codepoint, Design, Vendor, VendorVersion]<br>
+.b[.white[`#` Shell Plus Django Imports]]<br>
+.green[from django.core.cache import cache]<br>
+.green[from django.conf import settings]<br>
+.green[from django.contrib.auth import get_user_model]<br>
+.green[from django.db import transaction]<br>
+.green[from django.db.models import Avg, Case, Count, F, Max, Min, Prefetch, Q, Sum, When, Exists, OuterRef, Subquery]<br>
+.green[from django.utils import timezone]<br>
+.green[from django.urls import reverse]<br>
 Python 3.7.0 (default, Sep 24 2018, 20:50:19)<br>
 [Clang 10.0.0 (clang-1000.10.44.2)] on darwin<br>
 Type "help", "copyright", "credits" or "license" for more information.<br>
-`>>>` from unicodex.objects import<w>&nbsp;</w>
----
-### Find the bug
-<div class="shell-wrap"><p class="shell-top-bar">python3.7</p><p class="shell-body">
-<ps>myrtle</ps> <dr>~ $</dr>
-cd project<br>
-<ps>myrtle</ps> <dr>~/project $</dr>
-./manage.py shell<br>
-Python 3.7.0 (default, Sep 24 2018, 20:50:19)<br>
-[Clang 10.0.0 (clang-1000.10.44.2)] on darwin<br>
-Type "help", "copyright", "credits" or "license" for more information.<br>
-`>>>` from unicodex.objects import *<w>&nbsp;</w>
----
-### Find the bug
-<div class="shell-wrap"><p class="shell-top-bar">python3.7</p><p class="shell-body">
-<ps>myrtle</ps> <dr>~ $</dr>
-cd project<br>
-<ps>myrtle</ps> <dr>~/project $</dr>
-./manage.py shell<br>
-Python 3.7.0 (default, Sep 24 2018, 20:50:19)<br>
-[Clang 10.0.0 (clang-1000.10.44.2)] on darwin<br>
-Type "help", "copyright", "credits" or "license" for more information.<br>
-`>>>` from unicodex.objects import *<br>
 `>>>` <w>&nbsp;</w>
+</p></p></div>
+
+.keyboard[.key[control] + .key[l]]
 ---
 ### Find the bug
 <div class="shell-wrap"><p class="shell-top-bar">python3.7</p><p class="shell-body">
-<ps>myrtle</ps> <dr>~ $</dr>
-cd project<br>
-<ps>myrtle</ps> <dr>~/project $</dr>
-./manage.py shell<br>
-Python 3.7.0 (default, Sep 24 2018, 20:50:19)<br>
-[Clang 10.0.0 (clang-1000.10.44.2)] on darwin<br>
-Type "help", "copyright", "credits" or "license" for more information.<br>
-`>>>` from unicodex.objects import *<br>
+`>>>` <w>&nbsp;</w>
+???
+
+much better.
+
+NOW
+
+---
+### Find the bug
+<div class="shell-wrap"><p class="shell-top-bar">python3.7</p><p class="shell-body">
 `>>>` Design.objects.filter(<w>&nbsp;</w>
 ---
 ### Find the bug
 <div class="shell-wrap"><p class="shell-top-bar">python3.7</p><p class="shell-body">
-<ps>myrtle</ps> <dr>~ $</dr>
-cd project<br>
-<ps>myrtle</ps> <dr>~/project $</dr>
-./manage.py shell<br>
-Python 3.7.0 (default, Sep 24 2018, 20:50:19)<br>
-[Clang 10.0.0 (clang-1000.10.44.2)] on darwin<br>
-Type "help", "copyright", "credits" or "license" for more information.<br>
-`>>>` from unicodex.objects import *<br>
 `>>>` Design.objects.filter(codepoint＿name="Sparkles"<w>&nbsp;</w>
 ---
 ### Find the bug
 <div class="shell-wrap"><p class="shell-top-bar">python3.7</p><p class="shell-body">
-<ps>myrtle</ps> <dr>~ $</dr>
-cd project<br>
-<ps>myrtle</ps> <dr>~/project $</dr>
-./manage.py shell<br>
-Python 3.7.0 (default, Sep 24 2018, 20:50:19)<br>
-[Clang 10.0.0 (clang-1000.10.44.2)] on darwin<br>
-Type "help", "copyright", "credits" or "license" for more information.<br>
-`>>>` from unicodex.objects import *<br>
 `>>>` Design.objects.filter(codepoint＿name="Sparkles",<br>
 ... <w>&nbsp;</w><br>
 ---
 ### Find the bug
 <div class="shell-wrap"><p class="shell-top-bar">python3.7</p><p class="shell-body">
-<ps>myrtle</ps> <dr>~ $</dr>
-cd project<br>
-<ps>myrtle</ps> <dr>~/project $</dr>
-./manage.py shell<br>
-Python 3.7.0 (default, Sep 24 2018, 20:50:19)<br>
-[Clang 10.0.0 (clang-1000.10.44.2)] on darwin<br>
-Type "help", "copyright", "credits" or "license" for more information.<br>
-`>>>` from unicodex.objects import *<br>
 `>>>` Design.objects.filter(codepoint＿name="Sparkles",<br>
 ... vendorversion<w>&nbsp;</w><br>
 ---
 ### Find the bug
 <div class="shell-wrap"><p class="shell-top-bar">python3.7</p><p class="shell-body">
-<ps>myrtle</ps> <dr>~ $</dr>
-cd project<br>
-<ps>myrtle</ps> <dr>~/project $</dr>
-./manage.py shell<br>
-Python 3.7.0 (default, Sep 24 2018, 20:50:19)<br>
-[Clang 10.0.0 (clang-1000.10.44.2)] on darwin<br>
-Type "help", "copyright", "credits" or "license" for more information.<br>
-`>>>` from unicodex.objects import *<br>
 `>>>` Design.objects.filter(codepoint＿name="Sparkles",<br>
 ... vendorversion＿vendor<w>&nbsp;</w><br>
 ---
 ### Find the bug
 <div class="shell-wrap"><p class="shell-top-bar">python3.7</p><p class="shell-body">
-<ps>myrtle</ps> <dr>~ $</dr>
-cd project<br>
-<ps>myrtle</ps> <dr>~/project $</dr>
-./manage.py shell<br>
-Python 3.7.0 (default, Sep 24 2018, 20:50:19)<br>
-[Clang 10.0.0 (clang-1000.10.44.2)] on darwin<br>
-Type "help", "copyright", "credits" or "license" for more information.<br>
-`>>>` from unicodex.objects import *<br>
 `>>>` Design.objects.filter(codepoint＿name="Sparkles",<br>
 ... vendorversion＿vendor＿name<w>&nbsp;</w><br>
 ---
 ### Find the bug
 <div class="shell-wrap"><p class="shell-top-bar">python3.7</p><p class="shell-body">
-<ps>myrtle</ps> <dr>~ $</dr>
-cd project<br>
-<ps>myrtle</ps> <dr>~/project $</dr>
-./manage.py shell<br>
-Python 3.7.0 (default, Sep 24 2018, 20:50:19)<br>
-[Clang 10.0.0 (clang-1000.10.44.2)] on darwin<br>
-Type "help", "copyright", "credits" or "license" for more information.<br>
-`>>>` from unicodex.objects import *<br>
 `>>>` Design.objects.filter(codepoint＿name="Sparkles",<br>
 ... vendorversion＿vendor＿name="Twitter")<w>&nbsp;</w><br>
 ---
 ### Find the bug
 <div class="shell-wrap"><p class="shell-top-bar">python3.7</p><p class="shell-body">
-<ps>myrtle</ps> <dr>~ $</dr>
-cd project<br>
-<ps>myrtle</ps> <dr>~/project $</dr>
-./manage.py shell<br>
-Python 3.7.0 (default, Sep 24 2018, 20:50:19)<br>
-[Clang 10.0.0 (clang-1000.10.44.2)] on darwin<br>
-Type "help", "copyright", "credits" or "license" for more information.<br>
-`>>>` from unicodex.objects import *<br>
 `>>>` Design.objects.filter(codepoint＿name="Sparkles",<br>
 ... vendorversion＿vendor＿name="Twitter")<br>
 `<`QuerySet [`<`Design: Sparkles Twitter 1.0>, `<`Design: Sparkles Twitter 2.4>]><br>
@@ -2397,34 +2461,37 @@ Type "help", "copyright", "credits" or "license" for more information.<br>
 ---
 ### Find the bug
 <div class="shell-wrap"><p class="shell-top-bar">python3.7</p><p class="shell-body">
-<ps>myrtle</ps> <dr>~ $</dr>
-cd project<br>
-<ps>myrtle</ps> <dr>~/project $</dr>
-./manage.py shell<br>
-Python 3.7.0 (default, Sep 24 2018, 20:50:19)<br>
-[Clang 10.0.0 (clang-1000.10.44.2)] on darwin<br>
-Type "help", "copyright", "credits" or "license" for more information.<br>
-`>>>` from unicodex.objects import *<br>
+`>>>` Design.objects.filter(codepoint＿name="Sparkles",<br>
+... vendorversion＿vendor＿name="Twitter")<br>
+`<`QuerySet [`<`Design: Sparkles Twitter 1.0>, `<`Design: Sparkles Twitter 2.4>]><br>
+`>>>` <w>&nbsp;</w>
+.keyboard[.key[↑]]
+???
+
+press up
+---
+### Find the bug
+<div class="shell-wrap"><p class="shell-top-bar">python3.7</p><p class="shell-body">
 `>>>` Design.objects.filter(codepoint＿name="Sparkles",<br>
 ... vendorversion＿vendor＿name="Twitter")<br>
 `<`QuerySet [`<`Design: Sparkles Twitter 1.0>, `<`Design: Sparkles Twitter 2.4>]><br>
 `>>>` Design.objects.filter(codepoint＿name="Sparkles",<br>
 ... vendorversion＿vendor＿name="Twitter")<w>&nbsp;</w><br>
-
-???
-
-press up to replay the line
 ---
 ### Find the bug
 <div class="shell-wrap"><p class="shell-top-bar">python3.7</p><p class="shell-body">
-<ps>myrtle</ps> <dr>~ $</dr>
-cd project<br>
-<ps>myrtle</ps> <dr>~/project $</dr>
-./manage.py shell<br>
-Python 3.7.0 (default, Sep 24 2018, 20:50:19)<br>
-[Clang 10.0.0 (clang-1000.10.44.2)] on darwin<br>
-Type "help", "copyright", "credits" or "license" for more information.<br>
-`>>>` from unicodex.objects import *<br>
+`>>>` Design.objects.filter(codepoint＿name="Sparkles",<br>
+... vendorversion＿vendor＿name="Twitter")<br>
+`<`QuerySet [`<`Design: Sparkles Twitter 1.0>, `<`Design: Sparkles Twitter 2.4>]><br>
+`>>>` Design.objects.filter(codepoint＿name="Sparkles",<br>
+... vendorversion＿vendor＿name="Twitter")<w>&nbsp;</w><br>
+.keyboard[.key[Home]]
+???
+
+then go to the start of the line
+---
+### Find the bug
+<div class="shell-wrap"><p class="shell-top-bar">python3.7</p><p class="shell-body">
 `>>>` Design.objects.filter(codepoint＿name="Sparkles",<br>
 ... vendorversion＿vendor＿name="Twitter")<br>
 `<`QuerySet [`<`Design: Sparkles Twitter 1.0>, `<`Design: Sparkles Twitter 2.4>]><br>
@@ -2434,14 +2501,6 @@ Type "help", "copyright", "credits" or "license" for more information.<br>
 ---
 ### Find the bug
 <div class="shell-wrap"><p class="shell-top-bar">python3.7</p><p class="shell-body">
-<ps>myrtle</ps> <dr>~ $</dr>
-cd project<br>
-<ps>myrtle</ps> <dr>~/project $</dr>
-./manage.py shell<br>
-Python 3.7.0 (default, Sep 24 2018, 20:50:19)<br>
-[Clang 10.0.0 (clang-1000.10.44.2)] on darwin<br>
-Type "help", "copyright", "credits" or "license" for more information.<br>
-`>>>` from unicodex.objects import *<br>
 `>>>` Design.objects.filter(codepoint＿name="Sparkles",<br>
 ... vendorversion＿vendor＿name="Twitter")<br>
 `<`QuerySet [`<`Design: Sparkles Twitter 1.0>, `<`Design: Sparkles Twitter 2.4>]><br>
@@ -2451,14 +2510,6 @@ Type "help", "copyright", "credits" or "license" for more information.<br>
 ---
 ### Find the bug
 <div class="shell-wrap"><p class="shell-top-bar">python3.7</p><p class="shell-body">
-<ps>myrtle</ps> <dr>~ $</dr>
-cd project<br>
-<ps>myrtle</ps> <dr>~/project $</dr>
-./manage.py shell<br>
-Python 3.7.0 (default, Sep 24 2018, 20:50:19)<br>
-[Clang 10.0.0 (clang-1000.10.44.2)] on darwin<br>
-Type "help", "copyright", "credits" or "license" for more information.<br>
-`>>>` from unicodex.objects import *<br>
 `>>>` Design.objects.filter(codepoint＿name="Sparkles",<br>
 ... vendorversion＿vendor＿name="Twitter")<br>
 `<`QuerySet [`<`Design: Sparkles Twitter 1.0>, `<`Design: Sparkles Twitter 2.4>]><br>
@@ -2469,6 +2520,20 @@ Type "help", "copyright", "credits" or "license" for more information.<br>
 ???
 
 now we have our value saved
+---
+### Find the bug
+<div class="shell-wrap"><p class="shell-top-bar">python3.7</p><p class="shell-body">
+`>>>` Design.objects.filter(codepoint＿name="Sparkles",<br>
+... vendorversion＿vendor＿name="Twitter")<br>
+`<`QuerySet [`<`Design: Sparkles Twitter 1.0>, `<`Design: Sparkles Twitter 2.4>]><br>
+`>>>` d = Design.objects.filter(codepoint＿name="Sparkles",<br>
+... vendorversion＿vendor＿name="Twitter")<br>
+`>>>` <w>&nbsp;</w>
+.keyboard[.key[control] + .key[l]]
+
+???
+
+we can clear our terminal again
 ---
 ### Find the bug
 <div class="shell-wrap"><p class="shell-top-bar">python3.7</p><p class="shell-body">
