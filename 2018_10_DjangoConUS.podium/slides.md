@@ -1,4 +1,4 @@
-class: title
+Class: title
 # <br>ORM: The Sequel
 ## DjangoCon US 2018
 ![Image](images/footer.svg)
@@ -72,7 +72,7 @@ Now here's where I could start teaching you how the ORM works based on abstract 
 But I'm going to go a different way
 
 ---
-background-image: url("images/thinkpad.jpg")
+background-image: url("images/thinkpad2.jpg")
 .footnotes[[WOCinTech](https://www.flickr.com/photos/wocintechchat/albums)]
 
 ???
@@ -511,6 +511,8 @@ we can ask for the fields
 ---
 ### Showing all table columns
 <div class="shell-wrap"><p class="shell-top-bar">python3.7</p><p class="shell-body">
+<ps>myrtle</ps> <dr>~/project $</dr>
+./manage.py shell<br>
 Python 3.7.0 (default, Sep 24 2018, 20:50:19)<br>
 [Clang 10.0.0 (clang-1000.10.44.2)] on darwin<br>
 Type "help", "copyright", "credits" or "license" for more information.<br>
@@ -1526,8 +1528,8 @@ So, let's start some comparisons...
 ### Equivalent Queries
 <pre><code><c>&num; ORM</c>
 Codepoint.objects.filter(
-&nbsp; <o>name=</o>'Sparkles',
-&nbsp; <o>description=</o>'Shiny!'
+&nbsp; .white[..]<o>name=</o>'Sparkles',
+&nbsp; .white[..]<o>description=</o>'Shiny!'
 )
 
 
@@ -1777,10 +1779,9 @@ and we get the logical and of these two
 
 --
 <pre><code class="python">0b10100000</code></pre>
----
-### Bitmasking Refresher
-<br><br>
-## .code[.white[..]0b0.r[1]0.r[1]0101<br>& 0b1.r[1]1.r[1]0000<br>= 0b0.r[1]0.r[1]0000]
+--
+<br><br><br><br><br>
+.bigright[.code[.white[..]0b0.r[1]0.r[1]0101<br>& 0b1.r[1]1.r[1]0000<br>= 0b0.r[1]0.r[1]0000]]
 ---
 ### Bitmasking Refresher
 <pre><code class="python">>>> x = 0b01010101</code></pre>
@@ -1790,10 +1791,8 @@ and we get the logical and of these two
 <pre><code class="python">>>> bin(x | y)</code></pre>
 --
 <pre><code class="python">0b11110101</code></pre>
----
-### Bitmasking Refresher
-<br><br>
-## .code[.white[..]0b0.r[1]0.r[1]0.r[1]0.r[1]<br>| 0b.r[1111]0000<br>= 0b.r[1111]0.r[1]0.r[1]]
+--
+.bigright[.code[.white[..]0b0.r[1]0.r[1]0.r[1]0.r[1]<br>| 0b.r[1111]0000<br>= 0b.r[1111]0.r[1]0.r[1]]]
 ???
 
 we get all ones at the start, then our stripes
@@ -1811,26 +1810,42 @@ For each row of a table, we want to return it in our result set if BOTH conditio
 ### Equivalent Queries
 <pre><code><c>&num; ORM</c>
 Codepoint.objects.filter(
+&nbsp; Q(<o>name=</o>'Sparkles') &
+&nbsp; Q(<o>name=</o>'Unicorn')
+)<br><br><c>&dash;&dash; SQL</c><br><r>SELECT *
+&nbsp; FROM</r> unicodex_codepoint c <br><r>&nbsp;WHERE</r> <l>c</l>.<l>name</l> <r>=</r> <d>'Sparkles'</d><br><r>&nbsp;&nbsp; AND</r> <l>c</l>.<l>name</l> <r>=</r> <d>'Unicorn'</d>
+
+--
+.venn[![](images/venn_and2.png)]
+???
+
+so in this case, a venn diagram would be if both were true
+---
+### Equivalent Queries
+<pre><code><c>&num; ORM</c>
+Codepoint.objects.filter(
 &nbsp; Q(<o>name=</o>'Sparkles') |
 &nbsp; Q(<o>name=</o>'Unicorn')
 )<br><br><c>&dash;&dash; SQL</c><br><r>SELECT *
 &nbsp; FROM</r> unicodex_codepoint c <br><r>&nbsp;WHERE</r> <l>c</l>.<l>name</l> <r>=</r> <d>'Sparkles'</d><br><r>&nbsp; &nbsp; OR</r> <l>c</l>.<l>name</l> <r>=</r> <d>'Unicorn'</d>
 
----
-### Equivalent Queries
-<pre><code><c>&num; ORM</c>
-Codepoint.objects.filter(
-&nbsp; Q(<o>name=</o>'Sparkles') .red[|]
-&nbsp; Q(<o>name=</o>'Unicorn')
-)<br><br><c>&dash;&dash; SQL</c><br><r>SELECT *
-&nbsp; FROM</r> unicodex_codepoint c <br><r>&nbsp;WHERE</r> <l>c</l>.<l>name</l> <r>=</r> <d>'Sparkles'</d><br><r>&nbsp; &nbsp; .red[OR]</r> <l>c</l>.<l>name</l> <r>=</r> <d>'Unicorn'</d>
+--
 
+.venn[![](images/venn_or.png)]
 
 ???
 
+and in this case, if either are true
+
+
 so, using the and or operators here makes sense, because those are the actions we are performing
 
-But, we're doing these operations on Query objects, not binary. Do how does that work?
+But, we're doing these operations on Query objects, not binary.
+
+
+Do how does that work?
+
+How does our code know to perform logical operations on querysets
 
 What's happening here is metaprogramming. Sometimes confused for magic, it's a funcitonlaity of python that makes it really powerful.
 
@@ -1852,12 +1867,26 @@ I'm going to show you a small snippet of django source code. It won't be scary, 
 ???
 
 django literally overloads the operations that happens when you try and do bitwise operations on the Q class in order for Q to have a logical response to bitwise operations
+---
+<pre><code style="font-size: 20pt !important"><br><r>class</r> <g>Q</g>(<g>tree</g>.<g>Node</g>):
+<c>"""<br>Encapsulate filters as objects that can<br>then be combined logically (using.code[`` `&` ``]and.code[`` `|` ``]).<br>"""</c>
+&nbsp; ...
+&nbsp; <r>def</r> <l>.red[＿or＿]</l>(self, other):
+&nbsp; &nbsp; <r>return</r> <l>self</l>._combine(other, <l>self.OR</l>)
 
-and it means you can do bitwise operations on Q obecjts and it's compeltely valid python
+&nbsp; <r>def</r> <l>.red[＿and＿]</l>(self, other):
+&nbsp; &nbsp; <r>return</r> <l>self</l>._combine(other, <l>self.AND</l>)
+</code></pre>
 
-it's composble, it's functional, and it's intuative.
+.footnotes[[django db/models/utils.py](https://github.com/django/django/blame/5256a805ff1c31e4d5112627846291e91c5dc65d/django/db/models/query_utils.py#L142)]
 
-and it's been in Django for over 10 years
+???
+
+these parts? It's literally saying : if you see an Or operation on a Q object, I want you to do this instead.
+
+the double understore or and and here are pythonic ways to refer the ampersand and pipe characters, which in themselves would not be valid function names.
+
+PS. this code has been in Django for over 10 years
 
 ---
 ### Equivalent Queries

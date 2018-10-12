@@ -384,6 +384,8 @@ rb { font-family: "RedactedB", regular;  }
 rr { font-family: "RedactedR", regular;  }
 /* https://github.com/christiannaths/Redacted-Font */
 
+.venn { position: absolute; right: -50px; top: 100px; }
 @font-face { font-family: "Roboto"; src: url("fonts/Roboto-Regular.ttf") format('truetype'); font-style: normal; }
 .roboto { font-family: "Roboto", regular; }
 
+.bigright { font-size: 40pt; position: absolute; z-index: 100; bottom: 100x; right: 100px; }
