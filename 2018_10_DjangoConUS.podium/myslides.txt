@@ -93,24 +93,31 @@ And when I was first asking questions about the ORM with one of the django core 
 
 Note: 
 
-Context is important. 
+And we've already seem similar talks like this at this very conference. We had a JavaScript for Python devs eralier in the week, and we also had an entire talk on skill transference when switching careers. 
+
+In everything, context is important. 
 
 For a developer coming at a problem from a different tech stack, being able to leverage shared skills into learning this new bit of tech is a fast-pass to understanding. 
 
 Given that, this talk is going to go a bit differently. 
 
-We're not going to start from tech basics, and we're not going to start with a blank project. 
-
-We're going to use our existing SQL knowledge on an existing project. 
-
 ---
-~@ hunterbird.jpg
+
+~@ smol5.jpg 
 
 Note: 
 
-And we're going to go bughunting. 
 
-Now, the expanse in front of us may seem complex and vast, but we're going to start at the beginning and work our way up. 
+We're not going to start from tech basics, and we're not going to start with a blank project. 
+
+We're going to use our existing SQL knowledge on an existing project. If you don't know SQL, I'm not going to teach it from first prinicples, but hopefully you can follow along, 
+
+---
+~@ hunterbird-169.jpg
+
+Note: 
+
+We're going to be a fully grown bird, hunting for a bug in an environment that might seem complex, but is just only a little bit different from what we were used to when we were but a smol bird. 
 
 ---
 #= Context
@@ -1997,7 +2004,7 @@ To do that, put them both in the same filter call. Django will be able to work i
 ---
 
 
-~@ hunterbird.jpg
+~@ hunterbird-169.jpg
 
 Note: so now that we know how to hunt let's find that bug
 
@@ -2548,7 +2555,7 @@ And Eff expressions, which allows you to manipulate fields in a model directly, 
 Note: seriously, the docs are wonderful. Now that you know some of the general terms of this bit of software, you should be able to find more interesting ways to make the ORM work for you
 ---
 
-~@ hunterfound.jpg
+~@ hunterfound-169.jpg
 
 
 Note: 

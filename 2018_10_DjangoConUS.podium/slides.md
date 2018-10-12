@@ -107,24 +107,31 @@ class: title
 
 ???
 
-Context is important.
+And we've already seem similar talks like this at this very conference. We had a JavaScript for Python devs eralier in the week, and we also had an entire talk on skill transference when switching careers.
+
+In everything, context is important.
 
 For a developer coming at a problem from a different tech stack, being able to leverage shared skills into learning this new bit of tech is a fast-pass to understanding.
 
 Given that, this talk is going to go a bit differently.
 
-We're not going to start from tech basics, and we're not going to start with a blank project.
-
-We're going to use our existing SQL knowledge on an existing project.
-
 ---
-background-image: url("images/hunterbird.jpg")
+
+background-image: url("images/smol5.jpg")
 
 ???
 
-And we're going to go bughunting.
 
-Now, the expanse in front of us may seem complex and vast, but we're going to start at the beginning and work our way up.
+We're not going to start from tech basics, and we're not going to start with a blank project.
+
+We're going to use our existing SQL knowledge on an existing project. If you don't know SQL, I'm not going to teach it from first prinicples, but hopefully you can follow along,
+
+---
+background-image: url("images/hunterbird-169.jpg")
+
+???
+
+We're going to be a fully grown bird, hunting for a bug in an environment that might seem complex, but is just only a little bit different from what we were used to when we were but a smol bird.
 
 ---
 class: title
@@ -2259,7 +2266,7 @@ class: title
 ---
 
 
-background-image: url("images/hunterbird.jpg")
+background-image: url("images/hunterbird-169.jpg")
 
 ???
 
@@ -2879,7 +2886,7 @@ class: title
 seriously, the docs are wonderful. Now that you know some of the general terms of this bit of software, you should be able to find more interesting ways to make the ORM work for you
 ---
 
-background-image: url("images/hunterfound.jpg")
+background-image: url("images/hunterfound-169.jpg")
 
 
 ???
