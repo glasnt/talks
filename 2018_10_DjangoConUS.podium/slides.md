@@ -26,36 +26,32 @@ class: middle, center, image
 
 I do a lot of things in and around Django, from being a Director of the Django Software foundation, to having run a DjangoCon, and helped at many more.
 
-But I'm not currently a django developer. My current job is more the on-call, operations and support side of things.
+But I'm not currently a django developer. I'm still new to django
 
 ---
 class: middle, center, image
 ![Image](images/djadmin.png)
 ???
 
-Something about having something like this
-
+But regardless of how much I know or don't know, I still think that this thing right here? The Django Admin is just
 ---
 class: middle, center, image
 ![Image](images/djadmin_sparkles.png)
 
 ???
 
-oh it's just so awesome
+oh so awesome. If I jump into a new project, and I need to do something I can just log into the admin
 ---
 class: middle, center, image
 ![Image](images/djuser_super.png)
 
 ???
 
-The fact I can use a web interface to see and view and manipulate my data? that's awesome
+Navigate to the place I want, and view, update, and delete to my hearts desire.
 
-and what makes this even more awesome?
+But the more I learn about django, the more I learn how the magic works.
 
-you can use the same functionality in your code.
-
-The thing that makes django kind of great?
-
+This lovely insert-model-get-UI is powered by
 
 ---
 <br><br><br><br><br>
@@ -69,8 +65,11 @@ the ORM
 
 The object relational mapper
 
-django is still new to me, but I reckon, if I can work out how the ORM works, I can get a good chunk of django sorted.
-if I can just work out how the engine works.
+It allows us to interact with our data as objects in Python.
+
+Now here's where I could start teaching you how the ORM works based on abstract thoughts
+
+But I'm going to go a different way
 
 ---
 background-image: url("images/thinkpad.jpg")
@@ -78,18 +77,11 @@ background-image: url("images/thinkpad.jpg")
 
 ???
 
-and I don't say this as a novice.
+See, I might be new to django and newish to python, but while I work in ops in these languages, I have many *many* years of development behind me, just not in Python.
 
-I've been in tech going on 12 years next month (woo! I'm old!) and I've worked in a lot of tech stacks, from perl to ruby to haskell and some ones you've never even heard of.
+I've come from an ... ecclectic background, ranging from Ruby to Haskell to Powershell as my 'native languages', but all of these have something in common.
 
-I would have loved to have something like the admin when I was doing my first stint in a web framework.
-
-
-But. As I said, I'm new to django, but I have a solid tech history.
-
-And to learn Django, I can leverage what I already know
-
-And there's one thing I know really well.
+When you're working with data, you need a database, and databases have a shared language
 
 ---
 <br><br><br><br><br>
@@ -105,35 +97,34 @@ Structured Query Language
 
 Select star from table where blah is like blah
 
-SQL is extremely powerful, and although some databases have slightly different flavours, it all has the same foundation.
+Sure, you have graphql now, but SQL is still a fundamental skill.
+
+And when I was first asking questions about the ORM with one of the django core devs (did you know you can just ask them questions? it's awesome!) one of the things they asked is "well, what do you already know?"
 
 ---
 class: title
-# Context
+# Common Context
 
 ???
 
 Context is important.
 
-So for the purposes of this, let's break away from the normal.
+For a developer coming at a problem from a different tech stack, being able to leverage shared skills into learning this new bit of tech is a fast-pass to understanding.
 
-A number of tutorials start with a clean slate, and assume you have little to know dev experience. DjangoGirls is great for complete beginners to development
+Given that, this talk is going to go a bit differently.
 
-But it's not so helpful for developers who come into the space with prior knowledge
+We're not going to start from tech basics, and we're not going to start with a blank project.
 
-It's also not helpful for the way that I came into Django; trying to fix an existing project
+We're going to use our existing SQL knowledge on an existing project.
 
-So for the purposes of this, we're going to use an existing project
 ---
 background-image: url("images/hunterbird.jpg")
 
 ???
 
-We're going to be a noisy myna, and go bughunting.
+And we're going to go bughunting.
 
-We're going to find outselves an existing project, in this case, a field of kale, and hunt about trying to find some delicious bugs.
-
-The field may look daunting, endless complexities that seem impossible to understand, but we'll get there.
+Now, the expanse in front of us may seem complex and vast, but we're going to start at the beginning and work our way up.
 
 ---
 class: title
@@ -141,9 +132,7 @@ class: title
 
 ???
 
-so, our context today isn't going to be the standard blog site or news portal.
-
-It's going to be about something near and dear to my heart
+So for our existing application, we're going to use something near and dear to my heart
 ---
 class: title, emoji
 class: title
@@ -151,17 +140,19 @@ class: title
 ???
 
 emoji
+
+What? You think I wouldn't mention emoji in a talk at a djangocon? :)
+
+
 ---
 class: top, image
 ![Image](images/unicodex_index_desert.png)
 
 ???
 
-If you've seen my {DjangoCon EU 2016 talk,emoji talks before}
+This is our sample project, based on a concept that might be familiar to you, Emojipedia.
 
-this website would be sort of familiar to you.
-
-I call it.. Unicodex. It's a django-backed database of different emoji from different platforms
+I've created a little django application that shows information about emoji appear on different platforms.
 
 On the home page there's a bunch of emoji and if you click on one
 
@@ -174,17 +165,21 @@ class: top, image
 
 it shows you the emoji from different vendors and the versions.
 
-So given this website exists, we can start poking around in the shell
----
-class: title
-## "Just use the shell!"
+We can see taht there's a few listings for versions of Apple, Android, etc..
+
+And as you can see, there's a bug.
+
+There's a broken image in this listing. And it's our job to find out why.
+
+We could use the admin, but instead, we're going to use something called
+
 ---
 
 class: title
-## "🐚?"
+# 🦄🐚
 ???
 
-what they mean here is the django shell
+The django shell
 
 The django shell is a command line interface into your project
 
@@ -411,40 +406,22 @@ But what we're looking for is, in a lovely happenstance, the models that match t
 
 class: title
 ## Finding the table for a model
+
+???
+
+Because I'm interested in the database, I want to see what table a model relates to
 ---
 ### Finding the table for a model
 <pre><code>
 <c># ORM</c>
 Codepoint._meta.db_table
 </code></pre>
----
-### Finding the table for a model
-<div class="shell-wrap"><p class="shell-top-bar">python3.7</p><p class="shell-body">
-<ps>myrtle</ps> <dr>~/project $</dr>
-./manage.py shell<br>
-Python 3.7.0 (default, Sep 24 2018, 20:50:19)<br>
-[Clang 10.0.0 (clang-1000.10.44.2)] on darwin<br>
-Type "help", "copyright", "credits" or "license" for more information.<br>
-`>>>` <w>&nbsp;</w>
----
-### Finding the table for a model
-<div class="shell-wrap"><p class="shell-top-bar">python3.7</p><p class="shell-body">
-<ps>myrtle</ps> <dr>~/project $</dr>
-./manage.py shell<br>
-Python 3.7.0 (default, Sep 24 2018, 20:50:19)<br>
-[Clang 10.0.0 (clang-1000.10.44.2)] on darwin<br>
-Type "help", "copyright", "credits" or "license" for more information.<br>
-`>>>` from unicodex.models import Codepoint<w>&nbsp;</w>
----
-### Finding the table for a model
-<div class="shell-wrap"><p class="shell-top-bar">python3.7</p><p class="shell-body">
-<ps>myrtle</ps> <dr>~/project $</dr>
-./manage.py shell<br>
-Python 3.7.0 (default, Sep 24 2018, 20:50:19)<br>
-[Clang 10.0.0 (clang-1000.10.44.2)] on darwin<br>
-Type "help", "copyright", "credits" or "license" for more information.<br>
-`>>>` from unicodex.models import Codepoint<br>
-`>>>` <w>&nbsp;</w>
+
+???
+
+and to do that, we can query the _meta options for our model.
+
+We used this before to get the object name to import
 ---
 ### Finding the table for a model
 <div class="shell-wrap"><p class="shell-top-bar">python3.7</p><p class="shell-body">
@@ -455,6 +432,10 @@ Python 3.7.0 (default, Sep 24 2018, 20:50:19)<br>
 Type "help", "copyright", "credits" or "license" for more information.<br>
 `>>>` from unicodex.models import Codepoint<br>
 `>>>` Codepoint._meta.db_table<w>&nbsp;</w>
+
+???
+
+so in our terminal, we can import Cdepoint and get value
 ---
 ### Finding the table for a model
 <div class="shell-wrap"><p class="shell-top-bar">python3.7</p><p class="shell-body">
@@ -470,9 +451,32 @@ Type "help", "copyright", "credits" or "license" for more information.<br>
 ---
 class: title
 ## Showing all table columns
+
+???
+
+we can also use meta to show all the columsn on the table
 ---
 ### Showing all table columns
-<pre><code><br><c># ORM</c><br>Codepoint._meta.get_fields()
+
+<pre><code>
+<pre><code class="sql">-- MySQL<br>show table_name;</code></pre>
+<br>
+
+<pre><code class="sql">-- PostgreSQL<br>\d+ table_name</code></pre>
+
+<pre><code class="sql">-- Oracle<br>EXEC sp_columns 'table_name'</code></pre>
+
+???
+
+depending on your database this could be different, but in the ORM you can just use one command
+---
+
+### Showing all table columns
+<br><c># ORM</c><br>Codepoint._meta.get_fields()
+
+???
+
+again, another meta call, asking to get the fields on the model
 ---
 ### Showing all table columns
 <div class="shell-wrap"><p class="shell-top-bar">python3.7</p><p class="shell-body">
@@ -485,6 +489,9 @@ Type "help", "copyright", "credits" or "license" for more information.<br>
 `>>>` Codepoint._meta.db_table<br>
 'unicodex_codepoint'<br>
 `>>>` <w>&nbsp;</w>
+???
+
+so back in our terminal
 ---
 ### Showing all table columns
 <div class="shell-wrap"><p class="shell-top-bar">python3.7</p><p class="shell-body">
@@ -497,6 +504,9 @@ Type "help", "copyright", "credits" or "license" for more information.<br>
 `>>>` Codepoint._meta.db_table<br>
 'unicodex_codepoint'<br>
 `>>>` Codepoint._meta.get_fields()<w>&nbsp;</w>
+???
+
+we can ask for the fields
 ---
 ### Showing all table columns
 <div class="shell-wrap"><p class="shell-top-bar">python3.7</p><p class="shell-body">
@@ -513,27 +523,40 @@ Type "help", "copyright", "credits" or "license" for more information.<br>
 `<`django.db.models.fields.TextField: description>,<br>
 `<`django.db.models.fields.CharField: codepoint>)<br>
 `>>>` <w>&nbsp;</w>
----
-class: title
-## Finding all tables
-### via the database
 
 ???
 
-We can find all this information directly via the database,
-
-and django provides an easy way to get there
+we can get that
 ---
-### Find all tables via the database
+class: title
+## 🤔
+
+???
+
+but what about all those native functions, can we still make use of them?
+
+Well you can always connect directly to the databse, but django has a helpful wrapper for that
+
+---
+### Go directly to the database
+<div class="shell-wrap"><p class="shell-top-bar">bash</p><p class="shell-body">
+<ps>myrtle</ps> <dr>~/project $</dr>
+<w>&nbsp;</w>
+???
+
+in our terminal, instead of calling manage.py shell
+
+---
+### Go directly to the database
 <div class="shell-wrap"><p class="shell-top-bar">bash</p><p class="shell-body">
 <ps>myrtle</ps> <dr>~/project $</dr>
 ./manage.py dbshell<w>&nbsp;</w>
 
 ???
 
-back in our terminal, instead of running manage.py shell, we run DB shell
+we can run managepy db shell
 ---
-### Find all tables via the database
+### Go directly to the database
 <div class="shell-wrap"><p class="shell-top-bar">psql</p><p class="shell-body">
 <ps>myrtle</ps> <dr>~/project $</dr>
 ./manage.py dbshell<br>
@@ -547,6 +570,8 @@ db=#&nbsp;<w>&nbsp;</w>
 and we get an output that will be familiar to postgres devs in the audience
 
 This particular project has a postgres backend
+
+TODO KATIE TODO XXXX YOU HAVEN"T CLEANED UP FROM THERE TODO KATIE
 ---
 ### Find all tables via the database
 <div class="shell-wrap"><p class="shell-top-bar">psql</p><p class="shell-body">

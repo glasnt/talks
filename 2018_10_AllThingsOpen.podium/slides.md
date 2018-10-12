@@ -1651,23 +1651,23 @@ The solution?
 ---
 .righthead[PowerShell]
 <br>
-<pre><code class="powershell">PS> if (4 > 6) { "true" } else { "false" }</code></pre>
+<pre><code class="powershell">PS> if (36 > 42) { "true" } else { "false" }</code></pre>
 --
 <pre><code class="powershell">false</code></pre>
 
 --
 <br>
-<pre><code class="powershell">PS> if (4 < 6) { "true" } else { "false" }</code></pre>
+<pre><code class="powershell">PS> if (36 < 42) { "true" } else { "false" }</code></pre>
 --
 <pre><code class="powershell">.ps-error[The '<' operator is reserved for future use.]</code></pre>
 
 ---
 .righthead[PowerShell]
 <br>
-<pre><code class="powershell">PS> if (4 .red[>] 6) { "true" } else { "false" } # redirection</code></pre>
+<pre><code class="powershell">PS> if (36 .red[>] 42) { "true" } else { "false" } # redirection</code></pre>
 <pre><code class="powershell">false</code></pre>
 <br>
-<pre><code class="powershell">PS> if (4 .red[<] 6) { "true" } else { "false" } # AVOID</code></pre>
+<pre><code class="powershell">PS> if (36 .red[<] 42) { "true" } else { "false" } # AVOID</code></pre>
 <pre><code class="powershell">.ps-error[The '<' operator is reserved for future use.]</code></pre>
 .fix-tilt[AVOID]
 ???
@@ -1676,10 +1676,10 @@ You should avoid using greater than, since the complementary less than doesn't e
 ---
 .righthead[PowerShell]
 <br>
-<pre><code class="powershell">PS> if (4 .green[-gt] 6) { "true" } else { "false" }</code></pre>
+<pre><code class="powershell">PS> if (36 .green[-gt] 42) { "true" } else { "false" }</code></pre>
 <pre><code class="powershell">true</code></pre>
 <br>
-<pre><code class="powershell">PS> if (4 .green[-lt] 6) { "true" } else { "false" }</code></pre>
+<pre><code class="powershell">PS> if (36 .green[-lt] 42) { "true" } else { "false" }</code></pre>
 <pre><code class="powershell">false</code></pre>
 .fix-tilt[FIX]
 
