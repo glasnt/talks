@@ -457,22 +457,16 @@ class: title
 we can also use meta to show all the columsn on the table
 ---
 ### Showing all table columns
-
-<pre><code>
-<pre><code class="sql">-- MySQL<br>show table_name;</code></pre>
-<br>
-
-<pre><code class="sql">-- PostgreSQL<br>\d+ table_name</code></pre>
-
-<pre><code class="sql">-- Oracle<br>EXEC sp_columns 'table_name'</code></pre>
+<pre><code class="sql">-- MySQL<br>show table_name;<br><br>-- PostgreSQL<br>\d+ table_name<br><br>-- Oracle<br>EXEC sp_columns 'table_name'</code></pre>
 
 ???
 
 depending on your database this could be different, but in the ORM you can just use one command
 ---
-
 ### Showing all table columns
-<br><c># ORM</c><br>Codepoint._meta.get_fields()
+
+<pre><code class="python"># ORM</code></pre>
+<pre><code class="python">Codepoint._meta.get_fields()</code></pre>
 
 ???
 
@@ -571,9 +565,8 @@ and we get an output that will be familiar to postgres devs in the audience
 
 This particular project has a postgres backend
 
-TODO KATIE TODO XXXX YOU HAVEN"T CLEANED UP FROM THERE TODO KATIE
 ---
-### Find all tables via the database
+### Show all tables
 <div class="shell-wrap"><p class="shell-top-bar">psql</p><p class="shell-body">
 <ps>myrtle</ps> <dr>~/project $</dr>
 ./manage.py dbshell<br>
@@ -586,7 +579,7 @@ db=# \dt<w>&nbsp;</w>
 
 given we know it's postgres, we cna issue the postgres list table command, and get back
 ---
-### Find all tables via the database
+### Show all tables
 <div class="shell-wrap"><p class="shell-top-bar">psql</p><p class="shell-body">
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; List of relations<br>
 &nbsp;Schema |&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Name&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; | Type&nbsp; |&nbsp; Owner<br>
@@ -609,7 +602,7 @@ given we know it's postgres, we cna issue the postgres list table command, and g
 
 all our tables. Note the usual suspects from earlier, auth, content, sites
 ---
-### Find all tables via the database
+### Show all tables
 <div class="shell-wrap"><p class="shell-top-bar">psql</p><p class="shell-body">
 &nbsp;public | auth_permission&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; | table | postgres<br>
 &nbsp;public | auth_user&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; | table | postgres<br>
@@ -666,45 +659,6 @@ Codepoint.objects.all()
 in the ORM, this maps to Codepoint, the model, dot objects dot all
 
 Just list all of them
----
-### Show all table contents
-<div class="shell-wrap"><p class="shell-top-bar">python3.7</p><p class="shell-body">
-<ps>myrtle</ps> <dr>~/project $</dr>
-./manage.py shell<br>
-Python 3.7.0 (default, Sep 24 2018, 20:50:19)<br>
-[Clang 10.0.0 (clang-1000.10.44.2)] on darwin<br>
-Type "help", "copyright", "credits" or "license" for more information.<br>
-`>>>` <w>&nbsp;</w>
-???
-
-back over in our console, before we can call Codepoint, we need to use that import statement we generated earlier
----
-### Show all table contents
-<div class="shell-wrap"><p class="shell-top-bar">python3.7</p><p class="shell-body">
-<ps>myrtle</ps> <dr>~/project $</dr>
-./manage.py shell<br>
-Python 3.7.0 (default, Sep 24 2018, 20:50:19)<br>
-[Clang 10.0.0 (clang-1000.10.44.2)] on darwin<br>
-Type "help", "copyright", "credits" or "license" for more information.<br>
-`>>>` from unicodex.models import Codepoint<w>&nbsp;</w>
-
-???
-
-from unicodex dot models import codepoint
----
-### Show all table contents
-<div class="shell-wrap"><p class="shell-top-bar">python3.7</p><p class="shell-body">
-<ps>myrtle</ps> <dr>~/project $</dr>
-./manage.py shell<br>
-Python 3.7.0 (default, Sep 24 2018, 20:50:19)<br>
-[Clang 10.0.0 (clang-1000.10.44.2)] on darwin<br>
-Type "help", "copyright", "credits" or "license" for more information.<br>
-`>>>` from unicodex.models import Codepoint<br>
-`>>>` <w>&nbsp;</w>
-
-???
-
-after we hit enter, we'll get no output, which is good, because this was successfully imported.
 ---
 ### Show all table contents
 <div class="shell-wrap"><p class="shell-top-bar">python3.7</p><p class="shell-body">
@@ -917,7 +871,6 @@ Design dot objects dot filter codepoint dunder name equals sparkles.
 
 I know right? so simple!
 
-TODO CLEANUP FROM HERE
 ---
 ### Joins
 <pre><code><c>&dash;&dash; SQL</c><br><r>SELECT</r> d.<r>*</r> <br>&nbsp; <r>FROM</r> unicodex_codepoint c,<br>&nbsp; &nbsp; &nbsp; &nbsp;unicodex_design d<br>&nbsp;<r>WHERE</r> <l>c</l>.<l>name</l> <r>&equals;</r> <d>'Sparkles'</d><BR><r>&nbsp; &nbsp;AND</r> <l>d</l>.<l>codepoint_id</l> <r>=</r> <l>c</l>.<l>id</l>;<br><br><c>&num; ORM</c>
@@ -1034,60 +987,23 @@ and to some extent, you can handcode this URL to do some basic filtering, even i
 
 ---
 class: title
-# Dunderchain
-### .white[.]
+# Longest possible chain?
 ???
+So, what if we want to try and build our longest possible chain
 
-what's really cool, is that we can chain these together
-It's like the blockchain, but actually usable.
+We'd need to be able to find how all our models link together, and then add a lookup on the end.
 
+To do that we need to
 ---
 class: title
-# Dunderchain
-### field, field, field, ... lookup
-???
-
-So long as we know which models are joined other, we can just keep going, ending with a lookup
-
-To do that, we need to know how the different models link together.
-
-We've already done that with our get_fields method earlier.
-
-So we can do that again, and view all the fields we have.
-
-Or we can do things a more clever way.
-
-And don't worry, all my slides will be available online so you can get the code.
-
----
-### Discovering the schema
-<div class="shell-wrap"><p class="shell-top-bar">python3.7</p><p class="shell-body">
-<ps>myrtle</ps> <dr>~/project $</dr>
-./manage.py shell<br>
-Python 3.7.0 (default, Sep 24 2018, 20:50:19)<br>
-[Clang 10.0.0 (clang-1000.10.44.2)] on darwin<br>
-Type "help", "copyright", "credits" or "license" for more information.<br>
-`>>>` <w>&nbsp;</w>
+# Discover the entire schema
 
 ???
 
-back in our django shell, a new, fresh shell
+discover the entire schema
 
-We could forge a path down a different series of foreign keys
+Using the tools we already have, we could go through all the models we know, and for each one, import it, and get the fields
 
----
-### Discovering the schema
-<div class="shell-wrap"><p class="shell-top-bar">python3.7</p><p class="shell-body">
-<ps>myrtle</ps> <dr>~/project $</dr>
-./manage.py shell<br>
-Python 3.7.0 (default, Sep 24 2018, 20:50:19)<br>
-[Clang 10.0.0 (clang-1000.10.44.2)] on darwin<br>
-Type "help", "copyright", "credits" or "license" for more information.<br>
-`>>>` from unicodex.models import Design<w>&nbsp;</w>
-
-???
-
-import our object from earlier
 ---
 ### Discovering the schema
 <div class="shell-wrap"><p class="shell-top-bar">python3.7</p><p class="shell-body">
@@ -1101,7 +1017,7 @@ Type "help", "copyright", "credits" or "license" for more information.<br>
 
 ???
 
-get the fields
+such as this, for design
 ---
 ### Discovering the schema
 <div class="shell-wrap"><p class="shell-top-bar">python3.7</p><p class="shell-body">
@@ -1120,26 +1036,34 @@ Type "help", "copyright", "credits" or "license" for more information.<br>
 
 ???
 
-and we see we have the fields
+which shows other fields we haven't seen before
 
-we could do this for all the other models we know of
+There's a Foreign key there, which we can link back to the Codepoint model,
 
-but there's a better way.
+we also see a special field: FileField. We are looking for a broken image so knowing about this will be useful later.
 
-And I'm sorry, but there's going to be a UML diagram.
+
+Now, we could go through like this for the all the models
+
+But because this is DJango
+
+There's a better way.
+
+But I'm sorry, but there's going to be a UML diagram.
 ---
-
-<h1 style="color: white;text-shadow: 1px 1px 6px black, 0 0 136px aqua, 0 0 51px purple; font-family: arial; font-size: 200pt">UML</h1>
+<br><br><br><br><br>
+.center[.UML[.header[UML]]]
+<br>
+.center[.UML[.tagline[Unified Modeling Language]]]
 
 ???
 
 Unified Modeling Language
 
-These diagrams might bring up some memories from your college days (I know it does for me), but it's a good way to quickly visualise models.
+You might be familiar with a different type of visualisation scheme, but what this essentually is is just a way of seeing how different tables, or in our case, models, link to each other.
 
-And the great thing is, there's a simple way to get this happening in django.
+And the great thing about django is that it can generate this for us! (noticing a trend here?)
 
-Nw, I will point out, so far everything I've mentioned we could have done using only a shell and native django, but for this, we'll need some helpers.
 
 ---
 ### Generate UML diagrams - setup
@@ -1149,51 +1073,63 @@ Nw, I will point out, so far everything I've mentioned we could have done using 
 <w>&nbsp;</w>
 ???
 
-there's a bit of setup required
+The thing is, we will need some setup here, because this functionality isn't native to core django
+
+And as I mentioned, I run a mac, so these instructions will be mac specific.
 ---
 ### Generate UML diagrams - setup
 <div class="shell-wrap"><p class="shell-top-bar">bash</p><p class="shell-body">
 <ps>myrtle</ps> <dr>~/project $</dr>
 brew install graphviz<w>&nbsp;</w>
+
+???
+
+our diagrams will be generated using graphviz, so we'll install that to the system
 ---
 ### Generate UML diagrams - setup
 <div class="shell-wrap"><p class="shell-top-bar">bash</p><p class="shell-body">
 <ps>myrtle</ps> <dr>~/project $</dr>
 brew install graphviz
 <br>
-.lblue[==>] .b[Downloading https`:`//homebrew.bintray.com/bottles/graphviz-2.40.1.hig h_sierra.bottle.1.tar.gz]<br>
+.lblue[==>] .b[Downloading https`:`//homebrew.bintray.com/bottles/graphviz-2.40.1.moj ave.bottle.1.tar.gz]<br>
 .white[############################################################ 100.0%]<br>
-.lblue[==>] .b[Pouring graphviz-2.40.1.high_sierra.bottle.1.tar.gz]<br>
+.lblue[==>] .b[Pouring graphviz-2.40.1.mojave.bottle.1.tar.gz]<br>
 🍺 /usr/local/Cellar/graphviz/2.40.1: 500 files, 11.2MB<br>
 <ps>myrtle</ps> <dr>~/project $</dr>
 <w>&nbsp;</w>
 
 ???
 
-TODO update to mojave signature
+so that's installed
 ---
 ### Generate UML diagrams - setup
 <div class="shell-wrap"><p class="shell-top-bar">bash</p><p class="shell-body">
 <ps>myrtle</ps> <dr>~/project $</dr>
 brew install graphviz
 <br>
-.lblue[==>] .b[Downloading https`:`//homebrew.bintray.com/bottles/graphviz-2.40.1.hig h_sierra.bottle.1.tar.gz]<br>
+.lblue[==>] .b[Downloading https`:`//homebrew.bintray.com/bottles/graphviz-2.40.1.moj ave.bottle.1.tar.gz]<br>
 .white[############################################################ 100.0%]<br>
-.lblue[==>] .b[Pouring graphviz-2.40.1.high_sierra.bottle.1.tar.gz]<br>
+.lblue[==>] .b[Pouring graphviz-2.40.1.mojave.bottle.1.tar.gz]<br>
 🍺 /usr/local/Cellar/graphviz/2.40.1: 500 files, 11.2MB<br>
 <ps>myrtle</ps> <dr>~/project $</dr>
 pip install pygraphviz django-extensions<w>&nbsp;</w>
 ???
+Now we need to install some python packages
 
+graphvuz <pre><code class="python">- the wrapper to our aforeinstalled graphviz</code></pre>
+
+and this wonderful package called django-extenstions
+
+Django extentions adds a bunch of helpful things to django, and UML diagrams is just one bit
 ---
 ### Generate UML diagrams - setup
 <div class="shell-wrap"><p class="shell-top-bar">bash</p><p class="shell-body">
 <ps>myrtle</ps> <dr>~/project $</dr>
 brew install graphviz
 <br>
-.lblue[==>] .b[Downloading https`:`//homebrew.bintray.com/bottles/graphviz-2.40.1.hig h_sierra.bottle.1.tar.gz]<br>
+.lblue[==>] .b[Downloading https`:`//homebrew.bintray.com/bottles/graphviz-2.40.1.moj ave.bottle.1.tar.gz]<br>
 .white[############################################################ 100.0%]<br>
-.lblue[==>] .b[Pouring graphviz-2.40.1.high_sierra.bottle.1.tar.gz]<br>
+.lblue[==>] .b[Pouring graphviz-2.40.1.mojave.bottle.1.tar.gz]<br>
 🍺 /usr/local/Cellar/graphviz/2.40.1: 500 files, 11.2MB<br>
 <ps>myrtle</ps> <dr>~/project $</dr>
 pip install pygraphviz django-extensions<br>
@@ -1201,16 +1137,16 @@ pip install pygraphviz django-extensions<br>
 <ps>myrtle</ps> <dr>~/project $</dr>
 <w>&nbsp;</w>
 ???
-These are the instructions for macOS
+So now that's all installed, there's just one more thing we need to do before we can start making diagrams
 ---
 ### Generate UML diagrams - setup
 <div class="shell-wrap"><p class="shell-top-bar">bash</p><p class="shell-body">
 <ps>myrtle</ps> <dr>~/project $</dr>
 brew install graphviz
 <br>
-.lblue[==>] .b[Downloading https`:`//homebrew.bintray.com/bottles/graphviz-2.40.1.hig h_sierra.bottle.1.tar.gz]<br>
+.lblue[==>] .b[Downloading https`:`//homebrew.bintray.com/bottles/graphviz-2.40.1.moj ave.bottle.1.tar.gz]<br>
 .white[############################################################ 100.0%]<br>
-.lblue[==>] .b[Pouring graphviz-2.40.1.high_sierra.bottle.1.tar.gz]<br>
+.lblue[==>] .b[Pouring graphviz-2.40.1.mojave.bottle.1.tar.gz]<br>
 🍺 /usr/local/Cellar/graphviz/2.40.1: 500 files, 11.2MB<br>
 <ps>myrtle</ps> <dr>~/project $</dr>
 pip install pygraphviz django-extensions<br>
@@ -1218,8 +1154,9 @@ pip install pygraphviz django-extensions<br>
 <ps>myrtle</ps> <dr>~/project $</dr>
 vi settings.py<w>&nbsp;</w>
 ???
+We need to edit our project
 
-You then need to make a small edit to your settings file.
+Everything so far has been able to be completed without even touching our code
 ---
 ### Generate UML diagrams - setup
 <div class="shell-wrap"><p class="shell-top-bar">vim</p><p class="shell-body">
@@ -1243,6 +1180,8 @@ INSTALLED_APPS.extend([<br>
 
 
 ???
+
+so given a configuration that looks something like this in vim
 ---
 ### Generate UML diagrams - setup
 <div class="shell-wrap"><p class="shell-top-bar">vim</p><p class="shell-body">
@@ -1267,15 +1206,23 @@ INSTALLED_APPS.extend([<br>
 
 
 ???
+
+we just need to add django extensions to our list of installed apps.
+
+Django has to be told what's installed in order to load the app on start, and allow us to use it
+
+If we didn't install unicodex, our app wouldn't know about it.
+
+Also note in this case, we installed the package as django HYPHEN extensions, but we add it to the installed_apps as django UNDERSCORE packages
 ---
 ### Generate UML diagrams
 <div class="shell-wrap"><p class="shell-top-bar">bash</p><p class="shell-body">
 <ps>myrtle</ps> <dr>~/project $</dr>
 brew install graphviz
 <br>
-.lblue[==>] .b[Downloading https`:`//homebrew.bintray.com/bottles/graphviz-2.40.1.hig h_sierra.bottle.1.tar.gz]<br>
+.lblue[==>] .b[Downloading https`:`//homebrew.bintray.com/bottles/graphviz-2.40.1.moj ave.bottle.1.tar.gz]<br>
 .white[############################################################ 100.0%]<br>
-.lblue[==>] .b[Pouring graphviz-2.40.1.high_sierra.bottle.1.tar.gz]<br>
+.lblue[==>] .b[Pouring graphviz-2.40.1.mojave.bottle.1.tar.gz]<br>
 🍺 /usr/local/Cellar/graphviz/2.40.1: 500 files, 11.2MB<br>
 <ps>myrtle</ps> <dr>~/project $</dr>
 pip install pygraphviz django-extensions<br>
@@ -1287,7 +1234,7 @@ vi settings.py<br>
 
 ???
 
-and from here, we should just be able to run the darn command :)
+So we save that file, and now, we're ready to generate our diagram
 
 ---
 ### Generate UML diagrams
@@ -1295,9 +1242,9 @@ and from here, we should just be able to run the darn command :)
 <ps>myrtle</ps> <dr>~/project $</dr>
 brew install graphviz
 <br>
-.lblue[==>] .b[Downloading https`:`//homebrew.bintray.com/bottles/graphviz-2.40.1.hig h_sierra.bottle.1.tar.gz]<br>
+.lblue[==>] .b[Downloading https`:`//homebrew.bintray.com/bottles/graphviz-2.40.1.moj ave.bottle.1.tar.gz]<br>
 .white[############################################################ 100.0%]<br>
-.lblue[==>] .b[Pouring graphviz-2.40.1.high_sierra.bottle.1.tar.gz]<br>
+.lblue[==>] .b[Pouring graphviz-2.40.1.mojave.bottle.1.tar.gz]<br>
 🍺 /usr/local/Cellar/graphviz/2.40.1: 500 files, 11.2MB<br>
 <ps>myrtle</ps> <dr>~/project $</dr>
 pip install pygraphviz django-extensions<br>
@@ -1307,15 +1254,29 @@ vi settings.py<br>
 <ps>myrtle</ps> <dr>~/project $</dr>
 ./manage.py graph_models unicodex -o uml.png<w>&nbsp;</w>
 
+???
+
+(read command)
+
+django_extensions added a new command we can run on manage.py
+
+we want to graph_models
+
+against unicodex
+
+and output, hyphen o
+
+to uml.png
+
 ---
 ### Generate UML diagrams
 <div class="shell-wrap"><p class="shell-top-bar">bash</p><p class="shell-body">
 <ps>myrtle</ps> <dr>~/project $</dr>
 brew install graphviz
 <br>
-.lblue[==>] .b[Downloading https`:`//homebrew.bintray.com/bottles/graphviz-2.40.1.hig h_sierra.bottle.1.tar.gz]<br>
+.lblue[==>] .b[Downloading https`:`//homebrew.bintray.com/bottles/graphviz-2.40.1.moj ave.bottle.1.tar.gz]<br>
 .white[############################################################ 100.0%]<br>
-.lblue[==>] .b[Pouring graphviz-2.40.1.high_sierra.bottle.1.tar.gz]<br>
+.lblue[==>] .b[Pouring graphviz-2.40.1.mojave.bottle.1.tar.gz]<br>
 🍺 /usr/local/Cellar/graphviz/2.40.1: 500 files, 11.2MB<br>
 <ps>myrtle</ps> <dr>~/project $</dr>
 pip install pygraphviz django-extensions<br>
@@ -1326,15 +1287,18 @@ vi settings.py<br>
 ./manage.py graph_models unicodex -o uml.png<br>
 <ps>myrtle</ps> <dr>~/project $</dr>
 <w>&nbsp;</w>
+???
+
+once we execute this command, we get no output, but we can then
 ---
 ### Generate UML diagrams
 <div class="shell-wrap"><p class="shell-top-bar">bash</p><p class="shell-body">
 <ps>myrtle</ps> <dr>~/project $</dr>
 brew install graphviz
 <br>
-.lblue[==>] .b[Downloading https`:`//homebrew.bintray.com/bottles/graphviz-2.40.1.hig h_sierra.bottle.1.tar.gz]<br>
+.lblue[==>] .b[Downloading https`:`//homebrew.bintray.com/bottles/graphviz-2.40.1.moj ave.bottle.1.tar.gz]<br>
 .white[############################################################ 100.0%]<br>
-.lblue[==>] .b[Pouring graphviz-2.40.1.high_sierra.bottle.1.tar.gz]<br>
+.lblue[==>] .b[Pouring graphviz-2.40.1.mojave.bottle.1.tar.gz]<br>
 🍺 /usr/local/Cellar/graphviz/2.40.1: 500 files, 11.2MB<br>
 <ps>myrtle</ps> <dr>~/project $</dr>
 pip install pygraphviz django-extensions<br>
@@ -1345,31 +1309,35 @@ vi settings.py<br>
 ./manage.py graph_models unicodex -o uml.png<br>
 <ps>myrtle</ps> <dr>~/project $</dr>
 open uml.png<w>&nbsp;</w>
+???
+
+open the file on our local filesystem
 ---
 background-image: url("images/uml_screenshot.png")
 
 ???
 
-and here's out diagram
+and here's our diagram
 
-But this diagram, no offense, but it looks a bit.. 2005.
+... which matches the django project dot com look and feel
 
-Let me clean it up a bit, because it's going to be on the screen for a while
+the djangoproject website has since had a style update, so let me update the style on this diagram
 ---
 
 background-image: url("images/uml_screenshot_2.png")
 
-.footnotes[Link: [gist code](https://gist.github.com/glasnt/673202a51cef26d98331de85d775cc7c)]
+.footnotes[.smol[.far[.left[[WIP](https://gist.github.com/glasnt/673202a51cef26d98331de85d775cc7c) - Wanna help me PR it? 🔜👟]]]]
 
 ???
 
-From here, we can work out how the different models interact with each other without seeing the code
+In this diagram, we can work out how the different models interact with each other without seeing the code
 
 We can see that the Design has two FKs: Codepoint and VendorVersion
 
 And a VendorVersion has a FK to a vendor
 ---
 background-image: url("images/uml_screenshot_3.png")
+.footnotes[.smol[.far[.left[[WIP](https://gist.github.com/glasnt/673202a51cef26d98331de85d775cc7c) - Wanna help me PR it? 🔜👟]]]]
 
 ???
 How this works in reality: an emoji is a codepoint in the Unicode standard. For example the sparkles emoji is referenced by /u2728 everywhere.
@@ -1391,9 +1359,9 @@ So if we wanted to get our longest chain, we can just start in this case, from o
 ---
 
 class: title
-## Longest filter chain
+# Longest possible chain
 ---
-### Longest filter chain
+### Longest possible chain
 <div class="shell-wrap"><p class="shell-top-bar">python3.7</p><p class="shell-body">
 <ps>myrtle</ps> <dr>~/project $</dr>
 ./manage.py shell<br>
@@ -1406,8 +1374,28 @@ Type "help", "copyright", "credits" or "license" for more information.<br>
 ???
 
 so that longest chain...
+First we need to
+
+
+
 ---
-### Longest filter chain
+### Longest possible chain
+<div class="shell-wrap"><p class="shell-top-bar">python3.7</p><p class="shell-body">
+<ps>myrtle</ps> <dr>~/project $</dr>
+./manage.py shell<br>
+Python 3.7.0 (default, Sep 24 2018, 20:50:19)<br>
+[Clang 10.0.0 (clang-1000.10.44.2)] on darwin<br>
+Type "help", "copyright", "credits" or "license" for more information.<br>
+`>>>` from unicodex.models import<w>&nbsp;</w>
+
+???
+
+import our models
+
+but you wanna know a cheat?
+
+---
+### Longest possible chain
 <div class="shell-wrap"><p class="shell-top-bar">python3.7</p><p class="shell-body">
 <ps>myrtle</ps> <dr>~/project $</dr>
 ./manage.py shell<br>
@@ -1417,15 +1405,12 @@ Type "help", "copyright", "credits" or "license" for more information.<br>
 `>>>` from unicodex.models import *<w>&nbsp;</w>
 
 ???
-
-so we can import our models
-
-and we can cheat here, by importing all
+Just import all of them.
 
 hehe
 
 ---
-### Longest filter chain
+### Longest possible chain
 <div class="shell-wrap"><p class="shell-top-bar">python3.7</p><p class="shell-body">
 <ps>myrtle</ps> <dr>~/project $</dr>
 ./manage.py shell<br>Python 3.7.0 (default, Sep 24 2018, 20:50:19)<br>[Clang 10.0.0 (clang-1000.10.44.2)] on darwin<br>Type "help", "copyright", "credits" or "license" for more information.<br>
@@ -1433,35 +1418,35 @@ hehe
 `>>>` <w>&nbsp;</w>
 
 ---
-### Longest filter chain
+### Longest possible chain
 <div class="shell-wrap"><p class="shell-top-bar">python3.7</p><p class="shell-body">
 <ps>myrtle</ps> <dr>~/project $</dr>
 ./manage.py shell<br>Python 3.7.0 (default, Sep 24 2018, 20:50:19)<br>[Clang 10.0.0 (clang-1000.10.44.2)] on darwin<br>Type "help", "copyright", "credits" or "license" for more information.<br>
 `>>>` from unicodex.models import *<br>
 `>>>` Codepoint.objects.filter(<w>&nbsp;</w>
 ---
-### Longest filter chain
+### Longest possible chain
 <div class="shell-wrap"><p class="shell-top-bar">python3.7</p><p class="shell-body">
 <ps>myrtle</ps> <dr>~/project $</dr>
 ./manage.py shell<br>Python 3.7.0 (default, Sep 24 2018, 20:50:19)<br>[Clang 10.0.0 (clang-1000.10.44.2)] on darwin<br>Type "help", "copyright", "credits" or "license" for more information.<br>
 `>>>` from unicodex.models import *<br>
 `>>>` Codepoint.objects.filter(design`__`<w>&nbsp;</w>
 ---
-### Longest filter chain
+### Longest possible chain
 <div class="shell-wrap"><p class="shell-top-bar">python3.7</p><p class="shell-body">
 <ps>myrtle</ps> <dr>~/project $</dr>
 ./manage.py shell<br>Python 3.7.0 (default, Sep 24 2018, 20:50:19)<br>[Clang 10.0.0 (clang-1000.10.44.2)] on darwin<br>Type "help", "copyright", "credits" or "license" for more information.<br>
 `>>>` from unicodex.models import *<br>
 `>>>` Codepoint.objects.filter(design`__`vendorversion`__`<w>&nbsp;</w>
 ---
-### Longest filter chain
+### Longest possible chain
 <div class="shell-wrap"><p class="shell-top-bar">python3.7</p><p class="shell-body">
 <ps>myrtle</ps> <dr>~/project $</dr>
 ./manage.py shell<br>Python 3.7.0 (default, Sep 24 2018, 20:50:19)<br>[Clang 10.0.0 (clang-1000.10.44.2)] on darwin<br>Type "help", "copyright", "credits" or "license" for more information.<br>
 `>>>` from unicodex.models import *<br>
 `>>>` Codepoint.objects.filter(design`__`vendorversion`__`vendor`__`<w>&nbsp;</w>
 ---
-### Longest filter chain
+### Longest possible chain
 <div class="shell-wrap"><p class="shell-top-bar">python3.7</p><p class="shell-body">
 <ps>myrtle</ps> <dr>~/project $</dr>
 ./manage.py shell<br>Python 3.7.0 (default, Sep 24 2018, 20:50:19)<br>[Clang 10.0.0 (clang-1000.10.44.2)] on darwin<br>Type "help", "copyright", "credits" or "license" for more information.<br>
@@ -1470,7 +1455,7 @@ hehe
 
 
 ---
-### Longest filter chain
+### Longest possible chain
 <div class="shell-wrap"><p class="shell-top-bar">python3.7</p><p class="shell-body">
 <ps>myrtle</ps> <dr>~/project $</dr>
 ./manage.py shell<br>Python 3.7.0 (default, Sep 24 2018, 20:50:19)<br>[Clang 10.0.0 (clang-1000.10.44.2)] on darwin<br>Type "help", "copyright", "credits" or "license" for more information.<br>
@@ -1480,7 +1465,7 @@ hehe
 
 
 ---
-### Longest filter chain
+### Longest possible chain
 <div class="shell-wrap"><p class="shell-top-bar">python3.7</p><p class="shell-body">
 <ps>myrtle</ps> <dr>~/project $</dr>
 ./manage.py shell<br>Python 3.7.0 (default, Sep 24 2018, 20:50:19)<br>[Clang 10.0.0 (clang-1000.10.44.2)] on darwin<br>Type "help", "copyright", "credits" or "license" for more information.<br>
@@ -1488,7 +1473,7 @@ hehe
 `>>>` Codepoint.objects.filter(design`__`vendorversion`__`vendor`__`name`__`contai ns="Microsoft"<w>&nbsp;</w>
 
 ---
-### Longest filter chain
+### Longest possible chain
 <div class="shell-wrap"><p class="shell-top-bar">python3.7</p><p class="shell-body">
 <ps>myrtle</ps> <dr>~/project $</dr>
 ./manage.py shell<br>Python 3.7.0 (default, Sep 24 2018, 20:50:19)<br>[Clang 10.0.0 (clang-1000.10.44.2)] on darwin<br>Type "help", "copyright", "credits" or "license" for more information.<br>
@@ -1496,7 +1481,7 @@ hehe
 `>>>` Codepoint.objects.filter(design`__`vendorversion`__`vendor`__`name`__`contai ns="Microsoft")<w>&nbsp;</w>
 
 ---
-### Longest filter chain
+### Longest possible chain
 <div class="shell-wrap"><p class="shell-top-bar">python3.7</p><p class="shell-body">
 <ps>myrtle</ps> <dr>~/project $</dr>
 ./manage.py shell<br>Python 3.7.0 (default, Sep 24 2018, 20:50:19)<br>[Clang 10.0.0 (clang-1000.10.44.2)] on darwin<br>Type "help", "copyright", "credits" or "license" for more information.<br>
@@ -1507,7 +1492,9 @@ hehe
 
 ---
 class: title
-## ... `AND`?
+# More complex joins
+## `AND` beyond
+
 ???
 
 So far we've dealt with single or chained filters, which will AND together
@@ -1517,15 +1504,13 @@ name equals sparkles AND image ends with png AND AND AND
 If we want to start using OR, we need to get a bit fancy
 ---
 class: title
-# `Q`
+# `Q()`
 
 ???
 
 This is where Q comes in
 
-No, not the race from the great Star Trek sequel, The Next Generation,
-
-Q and in Query
+Q as in Query
 
 With Q, we can build up AND, OR, and NOT statements in our where clause when filtering objects
 
@@ -1548,8 +1533,8 @@ this query would give us codepoints named sparkles with the description shiny
 ### Equivalent Queries
 <pre><code><c>&num; ORM</c>
 Codepoint.objects.filter(
-&nbsp; <o>name=</o>'Sparkles',
-&nbsp; <o>description=</o>'Shiny!'
+&nbsp; .white[..]<o>name=</o>'Sparkles',
+&nbsp; .white[..]<o>description=</o>'Shiny!'
 )<br><br><c>&dash;&dash; SQL</c><br><r>SELECT *
 &nbsp; FROM</r> unicodex_codepoint c <br><r>&nbsp;WHERE</r> <l>c</l>.<l>name</l> <r>=</r> <d>'Sparkles'</d><br><r>&nbsp; &nbsp;AND</r> <l>c</l>.<l>description</l> <r>=</r> <d>'Shiny!'</d>
 
@@ -1560,8 +1545,8 @@ this would be the equvilent SQL
 ### Equivalent Queries
 <pre><code><c>&num; ORM</c>
 Codepoint.objects.filter(
-&nbsp; <o>name＿exact=</o>'Sparkles',
-&nbsp; <o>description＿exact=</o>'Shiny!'
+&nbsp; .white[..]<o>name＿exact=</o>'Sparkles',
+&nbsp; .white[..]<o>description＿exact=</o>'Shiny!'
 )<br><br><c>&dash;&dash; SQL</c><br><r>SELECT *
 &nbsp; FROM</r> unicodex_codepoint c <br><r>&nbsp;WHERE</r> <l>c</l>.<l>name</l> <r>=</r> <d>'Sparkles'</d><br><r>&nbsp; &nbsp;AND</r> <l>c</l>.<l>description</l> <r>=</r> <d>'Shiny!'</d>
 
@@ -1577,8 +1562,8 @@ We can also express this same statement using Q
 ### Equivalent Queries
 <pre><code><c>&num; ORM</c>
 Codepoint.objects.filter(
-&nbsp; <o>name=</o>'Sparkles',
-&nbsp; <o>description=</o>'Shiny!'
+&nbsp; .white[..]<o>name=</o>'Sparkles',
+&nbsp; .white[..]<o>description=</o>'Shiny!'
 )<br><br><c>&dash;&dash; SQL</c><br><r>SELECT *
 &nbsp; FROM</r> unicodex_codepoint c <br><r>&nbsp;WHERE</r> <l>c</l>.<l>name</l> <r>=</r> <d>'Sparkles'</d><br><r>&nbsp; &nbsp;AND</r> <l>c</l>.<l>description</l> <r>=</r> <d>'Shiny!'</d>
 
@@ -1589,27 +1574,14 @@ so going back to our first example,
 ### Equivalent Queries
 <pre><code><c>&num; ORM</c>
 Codepoint.objects.filter(
-&nbsp; <o>name=</o>'Sparkles').filter(
-&nbsp; <o>description=</o>'Shiny!'
+&nbsp; .white[..]<o>name=</o>'Sparkles').filter(
+&nbsp; .white[..]<o>description=</o>'Shiny!'
 )<br><br><c>&dash;&dash; SQL</c><br><r>SELECT *
 &nbsp; FROM</r> unicodex_codepoint c <br><r>&nbsp;WHERE</r> <l>c</l>.<l>name</l> <r>=</r> <d>'Sparkles'</d><br><r>&nbsp; &nbsp;AND</r> <l>c</l>.<l>description</l> <r>=</r> <d>'Shiny!'</d>
 
 ???
 
 we could also have two separate filter clauses.
----
-### Equivalent Queries
-<pre><code><c>&num; ORM</c>
-Codepoint.objects.filter(
-&nbsp; <o>name=</o>'Sparkles',
-&nbsp; <o>description=</o>'Shiny!'
-)<br><br><c>&dash;&dash; SQL</c><br><r>SELECT *
-&nbsp; FROM</r> unicodex_codepoint c <br><r>&nbsp;WHERE</r> <l>c</l>.<l>name</l> <r>=</r> <d>'Sparkles'</d><br><r>&nbsp; &nbsp;AND</r> <l>c</l>.<l>description</l> <r>=</r> <d>'Shiny!'</d>
-
-???
-
-we could also
-
 ---
 ### Equivalent Queries
 <pre><code><c>&num; ORM</c>
@@ -1621,13 +1593,27 @@ Codepoint.objects.filter(
 
 ???
 
-wrap our two filter parameters in Q
+we could alos wrap our two filter parameters in Q
 
 This provides the same result
 
 Notice in all of this, the equivelent SQL hasn't changed.
 
+
+---
+### Equivalent Queries
+<pre><code><c>&num; ORM</c>
+Codepoint.objects.filter(
+&nbsp; Q(<o>name=</o>'Sparkles').red[,]
+&nbsp; Q(<o>description=</o>'Shiny!')
+)<br><br><c>&dash;&dash; SQL</c><br><r>SELECT *
+&nbsp; FROM</r> unicodex_codepoint c <br><r>&nbsp;WHERE</r> <l>c</l>.<l>name</l> <r>=</r> <d>'Sparkles'</d><br><r>&nbsp; &nbsp;AND</r> <l>c</l>.<l>description</l> <r>=</r> <d>'Shiny!'</d>
+???
 With our comma here, we're implying we're using AND here. We can be explicit
+
+But, since we have Q objects, we can do operations on them
+
+We can change this comma
 
 ---
 ### Equivalent Queries
@@ -1640,59 +1626,35 @@ Codepoint.objects.filter(
 
 ???
 
-But, since we have Q objects, we can do operations on them
+Into an implict and
 
-Here, we're saying filter by this Query, and this Query
+and the equivelent sql is the same
 
-And we're using AND here explitictly
 
 We don't have to wrap both in Q, either
 ---
 ### Equivalent Queries
 <pre><code><c>&num; ORM</c>
 Codepoint.objects.filter(
-&nbsp; Q(<o>name=</o>'Sparkles'),</r>
-&nbsp; Q(<o>description=</o>'Shiny!')
-)<br><br><c>&dash;&dash; SQL</c><br><r>SELECT *
-&nbsp; FROM</r> unicodex_codepoint c <br><r>&nbsp;WHERE</r> <l>c</l>.<l>name</l> <r>=</r> <d>'Sparkles'</d><br><r>&nbsp; &nbsp;AND</r> <l>c</l>.<l>description</l> <r>=</r> <d>'Shiny!'</d>
-
-???
-
-going back to our changed example
----
-### Equivalent Queries
-<pre><code><c>&num; ORM</c>
-Codepoint.objects.filter(
 &nbsp; Q(<o>name=</o>'Sparkles'),
-&nbsp; <o>description=</o>'Shiny!'
+&nbsp; .white[..]<o>description=</o>'Shiny!'
 )<br><br><c>&dash;&dash; SQL</c><br><r>SELECT *
 &nbsp; FROM</r> unicodex_codepoint c <br><r>&nbsp;WHERE</r> <l>c</l>.<l>name</l> <r>=</r> <d>'Sparkles'</d><br><r>&nbsp; &nbsp;AND</r> <l>c</l>.<l>description</l> <r>=</r> <d>'Shiny!'</d>
 
-
 ???
 
-we can change our queries with comman, and just wrap the first one and leave thther. Same result
----
-### Equivalent Queries
-<pre><code><c>&num; ORM</c>
-Codepoint.objects.filter(
-&nbsp; <o>name=</o>'Sparkles',
-&nbsp; <o>description=</o>'Shiny!'
-)<br><br><c>&dash;&dash; SQL</c><br><r>SELECT *
-&nbsp; FROM</r> unicodex_codepoint c <br><r>&nbsp;WHERE</r> <l>c</l>.<l>name</l> <r>=</r> <d>'Sparkles'</d><br><r>&nbsp; &nbsp;AND</r> <l>c</l>.<l>description</l> <r>=</r> <d>'Shiny!'</d>
+we could just wrap one in a Q, returning our comma, and then specifying our other filter 'normally'
 
+But can we do it the other way?
 
-???
-
-and we don't have to wrap either. But what if we wrap just the second
-So, we could just wrap the second one, and leave the first one alone, right?
+Having our normal type and *then* our Q type?
 
 
 ---
 ### Not so Equivalent Queries
 <pre><code><c>&num; ORM</c>
 Codepoint.objects.filter(
-&nbsp; <o>name=</o>'Sparkles',
+&nbsp; .white[..]<o>name=</o>'Sparkles',
 &nbsp; Q(<o>description=</o>'Shiny!')
 )<br><br><r>SyntaxError: positional argument follows keyword argument</r>
 
@@ -1712,8 +1674,8 @@ Remembering that even in these new Django concepts, we're still using Python, so
 ### Equivalent Queries
 <pre><code><c>&num; ORM</c>
 Codepoint.objects.filter(
-&nbsp; <o>name=</o>'Sparkles',
-&nbsp; <o>description=</o>'Shiny!'
+&nbsp; .white[..]<o>name=</o>'Sparkles',
+&nbsp; .white[..]<o>description=</o>'Shiny!'
 )<br><br><c>&dash;&dash; SQL</c><br><r>SELECT *
 &nbsp; FROM</r> unicodex_codepoint c <br><r>&nbsp;WHERE</r> <l>c</l>.<l>name</l> <r>=</r> <d>'Sparkles'</d><br><r>&nbsp; &nbsp;AND</r> <l>c</l>.<l>description</l> <r>=</r> <d>'Shiny!'</d>
 
@@ -1728,8 +1690,8 @@ So we search for name equals sparkles and name equals unicorns and
 ### Not so Equivalent Queries
 <pre><code><c>&num; ORM</c>
 Codepoint.objects.filter(
-&nbsp; <o>name=</o>'Sparkles',
-&nbsp; <o>name=</o>'Unicorn'
+&nbsp; .white[..]<o>name=</o>'Sparkles',
+&nbsp; .white[..]<o>name=</o>'Unicorn'
 )<br><br><r>SyntaxError: keyword argument repeated</r>
 
 ???
@@ -1790,91 +1752,41 @@ You may have only seen these operators before in bitmasking
 
 ---
 ### Bitmasking Refresher
-<div class="shell-wrap"><p class="shell-top-bar">python3.7</p><p class="shell-body">
-`>>>` <w>&nbsp;</w>
----
-### Bitmasking Refresher
-<div class="shell-wrap"><p class="shell-top-bar">python3.7</p><p class="shell-body">
-`>>>` x = 0b10101010<w>&nbsp;</w>
+
+<pre><code class="python">>>> x = 0b01010101</code></pre>
+<pre><code class="python">>>> y = 0b11110000</code></pre>
+<pre><code class="python">>>> bin(x & y)</code></pre>
 
 ???
 
-if we have X as a binary string of one zero one zero
+a quick refresher
 
+if we have two binary strings
+one with some 1 and some 0
+
+and then one with a half 1
+
+and we get the logical and of these two
+
+--
+<pre><code class="python">0b10100000</code></pre>
 ---
 ### Bitmasking Refresher
-<div class="shell-wrap"><p class="shell-top-bar">python3.7</p><p class="shell-body">
-`>>>` x = 0b10101010<br>
-`>>>` <w>&nbsp;</w>
-
+<br><br>
+## .code[.white[..]0b0.r[1]0.r[1]0101<br>& 0b1.r[1]1.r[1]0000<br>= 0b0.r[1]0.r[1]0000]
 ---
 ### Bitmasking Refresher
-<div class="shell-wrap"><p class="shell-top-bar">python3.7</p><p class="shell-body">
-`>>>` x = 0b10101010<br>
-`>>>` y = 0b11110000<w>&nbsp;</w>
-
-???
-
-and we have y as one one one zero zero zero zero
-
-we can do something called bit masking
-
+<pre><code class="python">>>> x = 0b01010101</code></pre>
+<pre><code class="python">>>> y = 0b11110000</code></pre>
+<pre><code class="python">>>> bin(x & y)</code></pre>
+<pre><code class="python">0b10100000</code></pre>
+<pre><code class="python">>>> bin(x | y)</code></pre>
+--
+<pre><code class="python">0b11110101</code></pre>
 ---
 ### Bitmasking Refresher
-<div class="shell-wrap"><p class="shell-top-bar">python3.7</p><p class="shell-body">
-`>>>` x = 0b10101010<br>
-`>>>` y = 0b11110000<br>
-`>>>` <w>&nbsp;</w>
-
----
-### Bitmasking Refresher
-<div class="shell-wrap"><p class="shell-top-bar">python3.7</p><p class="shell-body">
-`>>>` x = 0b10101010<br>
-`>>>` y = 0b11110000<br>
-`>>>` bin(x & y)<w>&nbsp;</w>
-
-???
-
-if we ask for x AND y
-
----
-### Bitmasking Refresher
-<div class="shell-wrap"><p class="shell-top-bar">python3.7</p><p class="shell-body">
-`>>>` x = 0b10101010<br>
-`>>>` y = 0b11110000<br>
-`>>>` bin(x & y)<br>
-'0b10100000'<br>
-`>>>` <w>&nbsp;</w>
-
-???
-
-we get 10100000
-
-For each bit, we only return 1 if both are 1
-
----
-### Bitmasking Refresher
-<div class="shell-wrap"><p class="shell-top-bar">python3.7</p><p class="shell-body">
-`>>>` x = 0b10101010<br>
-`>>>` y = 0b11110000<br>
-`>>>` bin(x & y)<br>
-'0b10100000'<br>
-`>>>` bin(x | y)<w>&nbsp;</w>
-
-???
-
-conversely, if we ask for x OR y
-
----
-### Bitmasking Refresher
-<div class="shell-wrap"><p class="shell-top-bar">python3.7</p><p class="shell-body">
-`>>>` x = 0b10101010<br>
-`>>>` y = 0b11110000<br>
-`>>>` bin(x & y)<br>
-'0b10100000'<br>
-`>>>` bin(x | y)<br>
-'0b11110101'
-
+<br><br>
+## .code[.white[..]0b0.r[1]0.r[1]0.r[1]0.r[1]<br>| 0b.r[1111]0000<br>= 0b.r[1111]0.r[1]0.r[1]]
 ???
 
 we get all ones at the start, then our stripes
@@ -1897,6 +1809,15 @@ Codepoint.objects.filter(
 )<br><br><c>&dash;&dash; SQL</c><br><r>SELECT *
 &nbsp; FROM</r> unicodex_codepoint c <br><r>&nbsp;WHERE</r> <l>c</l>.<l>name</l> <r>=</r> <d>'Sparkles'</d><br><r>&nbsp; &nbsp; OR</r> <l>c</l>.<l>name</l> <r>=</r> <d>'Unicorn'</d>
 
+---
+### Equivalent Queries
+<pre><code><c>&num; ORM</c>
+Codepoint.objects.filter(
+&nbsp; Q(<o>name=</o>'Sparkles') .red[|]
+&nbsp; Q(<o>name=</o>'Unicorn')
+)<br><br><c>&dash;&dash; SQL</c><br><r>SELECT *
+&nbsp; FROM</r> unicodex_codepoint c <br><r>&nbsp;WHERE</r> <l>c</l>.<l>name</l> <r>=</r> <d>'Sparkles'</d><br><r>&nbsp; &nbsp; .red[OR]</r> <l>c</l>.<l>name</l> <r>=</r> <d>'Unicorn'</d>
+
 
 ???
 
@@ -1909,7 +1830,7 @@ What's happening here is metaprogramming. Sometimes confused for magic, it's a f
 I'm going to show you a small snippet of django source code. It won't be scary, don't worry.
 
 ---
-<pre><code style="font-size: 24pt !important"><r>class</r> <g>Q</g>(<g>tree</g>.<g>Node</g>):
+<pre><code style="font-size: 20pt !important"><br><r>class</r> <g>Q</g>(<g>tree</g>.<g>Node</g>):
 <c>"""<br>Encapsulate filters as objects that can<br>then be combined logically (using.code[`` `&` ``]and.code[`` `|` ``]).<br>"""</c>
 &nbsp; ...
 &nbsp; <r>def</r> <l>＿or＿</l>(self, other):
@@ -1935,8 +1856,8 @@ and it's been in Django for over 10 years
 ### Equivalent Queries
 <pre><code><c>&num; ORM</c>
 Codepoint.objects.filter(
-&nbsp; Q(<o>name=</o>'Sparkles') |
-&nbsp; Q(<o>name=</o>'Unicorn')
+&nbsp; .white[.]Q(<o>name=</o>'Sparkles') |
+&nbsp; .white[.]Q(<o>name=</o>'Unicorn')
 )<br><br><c>&dash;&dash; SQL</c><br><r>SELECT *
 &nbsp; FROM</r> unicodex_codepoint c <br><r>&nbsp;WHERE</r> <l>c</l>.<l>name</l> <r>=</r> <d>'Sparkles'</d><br><r>&nbsp; &nbsp; OR</r> <l>c</l>.<l>name</l> <r>=</r> <d>'Unicorn'</d>
 
@@ -1950,7 +1871,7 @@ So with our code above
 ### Equivalent Queries
 <pre><code><c>&num; ORM</c>
 Codepoint.objects.filter(
-&nbsp; Q(<o>name=</o>'Sparkles') |
+&nbsp; .white[.]Q(<o>name=</o>'Sparkles') |
 &nbsp; ~Q(<o>name=</o>'Unicorn')
 )<br><br><c>&dash;&dash; SQL</c><br><r>SELECT *
 &nbsp; FROM</r> unicodex_codepoint c <br><r>&nbsp;WHERE</r> <l>c</l>.<l>name</l> <r>=</r> <d>'Sparkles'</d><br><r> &nbsp; &nbsp;OR NOT</r> <l>c</l>.<l>name</l> <r>=</r> <d>'Unicorn'</d>
@@ -1962,10 +1883,18 @@ we can and a tilda negation to invert that part of the query, and add a NOT to o
 
 Using our field lookups and these operations, we can do a lot of things. But are some limitations
 
-Firstly, you need to understand how the joins happen in order avoid confusion
+Firstly, we need to understand how the joins happen in order avoid confusion
 
 ---
-### Equivalent Query?
+
+class: title
+# More filters
+## More results
+???
+
+Here's a new filter to check
+---
+### More filters, more results
 <pre><code><c>&num; ORM</c>
 Codepoint.objects.filter(
 &nbsp; <o>design＿image＿contains=</o>"png",
@@ -1973,53 +1902,16 @@ Codepoint.objects.filter(
 
 ???
 
-Consider the following we want codepoints where their design iages have png and start with design
+Consider the following we want codepoints where their design images have png and start with design
 
-THis is based on the filename I'm using for the iages uploaded to my models
+THis is based on the filename I'm using for the images uploaded to my models
+
+Which means we probably are going to get a lot of results.
 
 Okay. Let's run that and see what happens
 
 ---
-### Equivalent Query?
-<div class="shell-wrap"><p class="shell-top-bar">python3.7</p><p class="shell-body">
-<ps>myrtle</ps> <dr>~/project $</dr>
-./manage.py shell<br>
-Python 3.7.0 (default, Sep 24 2018, 20:50:19)<br>
-[Clang 10.0.0 (clang-1000.10.44.2)] on darwin<br>
-Type "help", "copyright", "credits" or "license" for more information.<br>
-`>>>` <w>&nbsp;</w>
-
-???
-
-so in our terminal
-
----
-### Equivalent Query?
-<div class="shell-wrap"><p class="shell-top-bar">python3.7</p><p class="shell-body">
-<ps>myrtle</ps> <dr>~/project $</dr>
-./manage.py shell<br>
-Python 3.7.0 (default, Sep 24 2018, 20:50:19)<br>
-[Clang 10.0.0 (clang-1000.10.44.2)] on darwin<br>
-Type "help", "copyright", "credits" or "license" for more information.<br>
-`>>>` from unicodex.models import Codepoint<w>&nbsp;</w>
-
----
-### Equivalent Query?
-<div class="shell-wrap"><p class="shell-top-bar">python3.7</p><p class="shell-body">
-<ps>myrtle</ps> <dr>~/project $</dr>
-./manage.py shell<br>
-Python 3.7.0 (default, Sep 24 2018, 20:50:19)<br>
-[Clang 10.0.0 (clang-1000.10.44.2)] on darwin<br>
-Type "help", "copyright", "credits" or "license" for more information.<br>
-`>>>` from unicodex.models import Codepoint<br>
-`>>>` <w>&nbsp;</w>
-
-???
-
-remembering to import our model
-
----
-### Equivalent Query?
+### More filters, more results
 <div class="shell-wrap"><p class="shell-top-bar">python3.7</p><p class="shell-body">
 <ps>myrtle</ps> <dr>~/project $</dr>
 ./manage.py shell<br>
@@ -2034,7 +1926,7 @@ Type "help", "copyright", "credits" or "license" for more information.<br>
 we add our code
 
 ---
-### Equivalent Query?
+### More filters, more results
 <div class="shell-wrap"><p class="shell-top-bar">python3.7</p><p class="shell-body">
 <ps>myrtle</ps> <dr>~/project $</dr>
 ./manage.py shell<br>
@@ -2060,7 +1952,7 @@ Data is still there, if you iterate over the list, but the print representation 
 (this was implemented because of a very real bug at Lawrance Journal World, where they had servers keep crashing, because the debug page was trying to be helpful and show all the data... a million objects worth..)
 
 ---
-### Equivalent Query?
+### More filters, more results
 <div class="shell-wrap"><p class="shell-top-bar">python3.7</p><p class="shell-body">
 <ps>myrtle</ps> <dr>~/project $</dr>
 ./manage.py shell<br>
@@ -2076,7 +1968,7 @@ Type "help", "copyright", "credits" or "license" for more information.<br>
 rewind a step
 
 ---
-### Equivalent Query?
+### More filters, more results
 <div class="shell-wrap"><p class="shell-top-bar">python3.7</p><p class="shell-body">
 <ps>myrtle</ps> <dr>~/project $</dr>
 ./manage.py shell<br>
@@ -2091,7 +1983,7 @@ Type "help", "copyright", "credits" or "license" for more information.<br>
 add a count function on the end
 
 ---
-### Equivalent Query?
+### More filters, more results
 <div class="shell-wrap"><p class="shell-top-bar">python3.7</p><p class="shell-body">
 <ps>myrtle</ps> <dr>~/project $</dr>
 ./manage.py shell<br>
@@ -2108,14 +2000,21 @@ Type "help", "copyright", "credits" or "license" for more information.<br>
 44 results
 
 ---
-### Equivalent Query?
+class: title
+# So what happened?
+???
+
+so what happened there?
+
+---
+### So what happened?
 <pre><code><c>&num; ORM</c>
 Codepoint.objects.filter(
 &nbsp; <o>design＿image＿contains=</o>"png",
 &nbsp; <o>design＿image＿startswith=</o>"design").count()
 
 ---
-### Equivalent Query?
+### So what happened?
 <pre><code><c>&num; ORM</c>
 Codepoint.objects.filter(
 &nbsp; <o>design＿image＿contains=</o>"png",
@@ -2128,14 +2027,14 @@ But what code was run?
 
 We have the ability to check this
 ---
-### Equivalent Query?
+### Inspect the query
 <pre><code><c>&num; ORM</c>
 Codepoint.objects.filter(
 &nbsp; <o>design＿image＿contains=</o>"png",
 &nbsp; <o>design＿image＿startswith=</o>"design").count()<br><br><c>&dash;&dash; SQL</c><br><c>&dash;&dash; ?? </c><br><br><c>&num; ORM</c><br><r>from</r> django.db <r>import</r> connection<br>connection.queries
 </code></pre>
 ---
-### Equivalent Query?
+### Inspect the query
 <div class="shell-wrap"><p class="shell-top-bar">python3.7</p><p class="shell-body">
 <ps>myrtle</ps> <dr>~/project $</dr>
 ./manage.py shell<br>
@@ -2147,8 +2046,7 @@ Type "help", "copyright", "credits" or "license" for more information.<br>
 44<br>
 `>>>` <w>&nbsp;</w>
 ---
-
-### Equivalent Query?
+### Inspect the query
 <div class="shell-wrap"><p class="shell-top-bar">python3.7</p><p class="shell-body">
 <ps>myrtle</ps> <dr>~/project $</dr>
 ./manage.py shell<br>
@@ -2164,8 +2062,7 @@ Type "help", "copyright", "credits" or "license" for more information.<br>
 
 we can import the django database connection modele
 ---
-
-### Equivalent Query?
+### Inspect the query
 <div class="shell-wrap"><p class="shell-top-bar">python3.7</p><p class="shell-body">
 <ps>myrtle</ps> <dr>~/project $</dr>
 ./manage.py shell<br>
@@ -2178,8 +2075,7 @@ Type "help", "copyright", "credits" or "license" for more information.<br>
 `>>>` from django.db import connection<br>
 `>>>` <w>&nbsp;</w>
 ---
-### Equivalent Query?
-
+### Inspect the query
 <div class="shell-wrap"><p class="shell-top-bar">python3.7</p><p class="shell-body">
 <ps>myrtle</ps> <dr>~/project $</dr>
 ./manage.py shell<br>
@@ -2198,10 +2094,8 @@ and inspect the last query run against our databse
 
 
 ---
-### Equivalent Query?
+### Inspect the query
 <div class="shell-wrap"><p class="shell-top-bar">python3.7</p><p class="shell-body">
-<ps>myrtle</ps> <dr>~/project $</dr>
-./manage.py shell<br>
 Python 3.7.0 (default, Sep 24 2018, 20:50:19)<br>
 [Clang 10.0.0 (clang-1000.10.44.2)] on darwin<br>
 Type "help", "copyright", "credits" or "license" for more information.<br>
@@ -2213,7 +2107,7 @@ Type "help", "copyright", "credits" or "license" for more information.<br>
 {'sql': 'SELECT COUNT(&#42;) AS "＿count" FROM "unicodex_codepoint" INNER JOIN "unicodex_design" ON ("unicodex_codepoint"."id" = "unicodex_design"."codepoint_id") WHERE ("unicodex_design"."image"::text LIKE \'%png%\' AND "unicodex_design"."image"::text LIKE \'design%\')', 'time': '0.001'}<br>
 `>>>` <w>&nbsp;</w>
 ---
-### Equivalent Queries
+### Inspect the query
 <pre><code><c>&num; ORM</c>
 Codepoint.objects.filter(
 &nbsp; <o>design＿image＿contains=</o>"png",
@@ -2221,13 +2115,34 @@ Codepoint.objects.filter(
 &nbsp; <r>FROM</r> unicodex_codepoint C<br><r>&nbsp;INNER JOIN</r> unicodex_design D <r>ON</r> (<l>C</l>.<l>id <r>=</r> D</l>.<l>id</l>)<br><r>&nbsp;WHERE</r> (<l>D</l>.<l>image</l> <r>LIKE</r> <d>'%png%'</d>
 &nbsp; &nbsp; <r>AND</r> <l>D</l>.<l>image</l> <r>LIKE</r> <d>'design%'</d>)
 
----
+???
 
+formatted. So it's what we expect.
+
+But what if we start changing things.
+
+---
+### Equivalent Query?
+<pre><code><c>&num; ORM</c>
+Codepoint.objects.filter(
+&nbsp; <o>design＿image＿contains=</o>"png"
+&nbsp; <o>design＿image＿startswith=</o>"design").count()<br><br>
+???
+
+What if we changed this query from one filter
+Note
+---
 ### Equivalent Query?
 <pre><code><c>&num; ORM</c>
 Codepoint.objects.filter(
 &nbsp; <o>design＿image＿contains=</o>"png").filter(
-&nbsp; <o>design＿image＿startswith=</o>"design").count()<br><br><c>&dash;&dash; SQL</c><br><c>&dash;&dash; ??
+&nbsp; <o>design＿image＿startswith=</o>"design").count()<br><br>
+
+???
+
+to two. Would it be the same?
+
+We can run the filter to check.
 
 ---
 ### Equivalent Query?
@@ -2268,6 +2183,10 @@ Codepoint.objects.filter(
 ???
 
 wait, what??
+
+It was 44
+
+Now it's a little bit more than that.
 
 ---
 ### Equivalent Query?
@@ -2315,13 +2234,30 @@ Codepoint.objects.filter(
 ???
 
 Ah.
+---
+### Not an Equivalent Query
+<pre><code><c>&num; ORM</c>
+Codepoint.objects.filter(
+&nbsp; <o>design＿image＿contains=</o>"png").filter(
+&nbsp; <o>design＿image＿startswith=</o>"design").count()<br><br><c>&dash;&dash; SQL</c><br><r>SELECT</r> <l>count</l>(<r>&#42;</r>)
+&nbsp; <r>FROM</r> from unicodex_codepoint C<br><r>&nbsp;INNER JOIN</r> .red[unicodex_design D] <r>ON</r> (<l>C</l>.<l>id <r>=</r> D</l>.<l>id</l>)<br><r>&nbsp;INNER JOIN</r> .red[unicodex_design E] <r>ON</r> (<l>C</l>.<l>id <r>=</r> E</l>.<l>id</l>)<br><r>&nbsp;WHERE</r> (<l>D</l>.<l>image</l> <r>LIKE</r> <d>'%png%'</d>
+&nbsp; &nbsp; <r>AND</r> <l>E</l>.<l>image</l> <r>LIKE</r> <d>'design%'</d>)
 
+???
 We have TWO joins happening here
+
+on the same table
+
+So we're getting a cartesan product, which isn't what we want.
 
 Every time there is a separate filter, it's another join. Which can absolutely be useful, but not when you're matching on the same associated table in both filters, as you can't join those references together.
 
 To do that, put them both in the same filter call. Django will be able to work it out, then.
 ---
+class: title
+# Putting it all together
+---
+
 
 background-image: url("images/hunterbird.jpg")
 
@@ -2849,7 +2785,7 @@ I really should fix that.. meh, after my talk.
 
 ---
 class: title
-## So
+## So.
 
 ???
 
@@ -2923,6 +2859,7 @@ class: title
 ## Creating objects
 ## Field Types
 ## Field Relationships
+## `F()`
 
 ???
 
@@ -2931,6 +2868,8 @@ How to create objects, including from raw SQL
 Field types - things like email fields and image fields
 
 And more field relations, ways that you can call both codepoint attributes on a design object, and design attributes on a codepoint
+
+And Eff expressions, which allows you to manipulate fields in a model directly, for object oriented goodness!
 ---
 class: title
 ## <fl>docs.djangoproject.com</fl>
@@ -2947,15 +2886,17 @@ background-image: url("images/hunterfound.jpg")
 
 So that's all I had. Hopefully with these tips and tricks about how to use the ORM to interact your project, you can start finding those pesky bugs you've been tasked to find.
 
-It might be a new stack to you, it might be old school, but I find the utmost dorkish joy in finding that odd little thing in a technology stack that just a short time ago I had no idea about, and then being able to harness that power.
+And remember that if you have experience before getting into a tech stack, work out what similar things you've done before. if you've worked in any web gramework, you can map that to django. If you've used databases, you can see the similarities
 
-And being able to use your skills gained from other technology sets in new fields is really fun, sometimes a bit interesting, but always great.
+You never start from zero, work from what you already know, and you'll get up to speed quickly.
+
+
 
 ---
 class: title
 # <br><br>Thank you for your time!
 ![Image](images/footer.svg)
-.footnotes[Technical reviewers: James Bennett, Russell Keith-Magee]
+.footnotes[Technical reviewers: James Bennett, Russell Keith-Magee.]
 
 ???
 

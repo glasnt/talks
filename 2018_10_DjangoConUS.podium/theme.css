@@ -3,6 +3,7 @@
  ******************************/
 .hljs-default pre code {
   background-color: #fff !important;
+  padding: 0;
 }
 
 
@@ -362,12 +363,19 @@ Added: Zenburn, mostly.
 }
 
 .tp { color: rgba(0,0,0,0) }
+.code { display: inline-block; }
 
 .ORM { color: white;text-shadow: 1px 1px 6px black, 0 0 136px blue, 0 0 51px green; font-family: arial;}
 .SQL { color: white;text-shadow: 1px 1px 6px black, 0 0 136px red, 0 0 51px yellow; font-family: arial;}
+.UML { color: white;text-shadow: 1px 1px 6px black, 0 0 136px aqua, 0 0 51px purple; font-family: arial;}
 .header { font-size: 200pt; top: 300px; }
 .tagline { font-size: 40pt; padding-top: 100px;}
 .center { text-align: center}
+.far { position: absolute; left: -80px; bottom: 0px; }
+.smol { font-size: 70%; }
+.red   { outline: 4px solid #FF6B6B; outline-offset: 5px; }
+.r { color: red }
+.code { font-family: monospace }
 
 /* redacted font */
 @font-face { font-family: "RedactedB"; src: url("fonts/redacted-script-bold.ttf") format('truetype'); font-style:bold; }
