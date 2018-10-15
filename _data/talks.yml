@@ -1,3 +1,12 @@
+- conference: 
+    name: DjangoCon US 2018
+    date: 2018-10-15
+    link: https://2018.djangocon.us/
+    talks:
+        - type: Lightning Talk
+          name: Emoji Story Time with Katie
+          slides: 2018_10_DjangoConUS_Emoji/index.html
+
 - conference:
     name: Pursuit Podcast
     date: 2018-08-02
