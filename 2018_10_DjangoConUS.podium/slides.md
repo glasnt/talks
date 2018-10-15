@@ -2063,14 +2063,14 @@ But what code was run?
 
 We have the ability to check this
 ---
-### Inspect the query
+### Inspect the executed query
 <pre><code><c>&num; ORM</c>
 Codepoint.objects.filter(
 &nbsp; <o>design＿image＿contains=</o>"png",
 &nbsp; <o>design＿image＿startswith=</o>"design").count()<br><br><c>&dash;&dash; SQL</c><br><c>&dash;&dash; ?? </c><br><br><c>&num; ORM</c><br><r>from</r> django.db <r>import</r> connection<br>connection.queries
 </code></pre>
 ---
-### Inspect the query
+### Inspect the executed query
 <div class="shell-wrap"><p class="shell-top-bar">python3.7</p><p class="shell-body">
 <ps>myrtle</ps> <dr>~/project $</dr>
 ./manage.py shell<br>
@@ -2082,7 +2082,7 @@ Type "help", "copyright", "credits" or "license" for more information.<br>
 44<br>
 `>>>` <w>&nbsp;</w>
 ---
-### Inspect the query
+### Inspect the executed query
 <div class="shell-wrap"><p class="shell-top-bar">python3.7</p><p class="shell-body">
 <ps>myrtle</ps> <dr>~/project $</dr>
 ./manage.py shell<br>
@@ -2098,7 +2098,7 @@ Type "help", "copyright", "credits" or "license" for more information.<br>
 
 we can import the django database connection modele
 ---
-### Inspect the query
+### Inspect the executed query
 <div class="shell-wrap"><p class="shell-top-bar">python3.7</p><p class="shell-body">
 <ps>myrtle</ps> <dr>~/project $</dr>
 ./manage.py shell<br>
@@ -2111,7 +2111,7 @@ Type "help", "copyright", "credits" or "license" for more information.<br>
 `>>>` from django.db import connection<br>
 `>>>` <w>&nbsp;</w>
 ---
-### Inspect the query
+### Inspect the executed query
 <div class="shell-wrap"><p class="shell-top-bar">python3.7</p><p class="shell-body">
 <ps>myrtle</ps> <dr>~/project $</dr>
 ./manage.py shell<br>
@@ -2130,7 +2130,7 @@ and inspect the last query run against our databse
 
 
 ---
-### Inspect the query
+### Inspect the executed query
 <div class="shell-wrap"><p class="shell-top-bar">python3.7</p><p class="shell-body">
 Python 3.7.0 (default, Sep 24 2018, 20:50:19)<br>
 [Clang 10.0.0 (clang-1000.10.44.2)] on darwin<br>
@@ -2143,7 +2143,7 @@ Type "help", "copyright", "credits" or "license" for more information.<br>
 {'sql': 'SELECT COUNT(&#42;) AS "＿count" FROM "unicodex_codepoint" INNER JOIN "unicodex_design" ON ("unicodex_codepoint"."id" = "unicodex_design"."codepoint_id") WHERE ("unicodex_design"."image"::text LIKE \'%png%\' AND "unicodex_design"."image"::text LIKE \'design%\')', 'time': '0.001'}<br>
 `>>>` <w>&nbsp;</w>
 ---
-### Inspect the query
+### Inspect the executed query
 <pre><code><c>&num; ORM</c>
 Codepoint.objects.filter(
 &nbsp; <o>design＿image＿contains=</o>"png",
@@ -2289,6 +2289,267 @@ So we're getting a cartesan product, which isn't what we want.
 Every time there is a separate filter, it's another join. Which can absolutely be useful, but not when you're matching on the same associated table in both filters, as you can't join those references together.
 
 To do that, put them both in the same filter call. Django will be able to work it out, then.
+
+---
+### Inspect the query *before* running it
+
+???
+
+something I picked up just a few days ago at the ORM tutorial by James Bennett
+---
+### Inspect the query *before* running it
+<pre><code><c>&num; ORM</c>
+Codepoint.objects.filter(
+&nbsp; <o>design＿image＿contains=</o>"png").filter(
+&nbsp; <o>design＿image＿startswith=</o>"design")<br><br><c>&dash;&dash; SQL</c><br><c>&dash;&dash; ??</c>
+---
+
+### Inspect the query *before* running it
+<pre><code><c>&num; ORM</c>
+Codepoint.objects.filter(
+&nbsp; <o>design＿image＿contains=</o>"png").filter(
+&nbsp; <o>design＿image＿startswith=</o>"design").query<br><br><c>&dash;&dash; SQL</c>
+<pre><code class="python">＜django.db.models.sql.query.Query object at 0x7f23d237b128></c></code></pre>
+---
+### Inspect the query *before* running it
+<pre><code><c>&num; ORM</c>
+str(Codepoint.objects.filter(
+&nbsp; <o>design＿image＿contains=</o>"png").filter(
+&nbsp; <o>design＿image＿startswith=</o>"design").query<br><br><c>&dash;&dash; SQL</c>
+<pre><code class="sql">.small[SELECT "unicodex_codepoint"."id", "unicodex_codepoint"."name", "unicodex_codepoint"."description", "unicodex_codepoint"."codepoint" FROM "unicodex_codepoint" INNER JOIN "unicodex_design" ON ("unicodex_codepoint"."id" = "unicodex_design"."codepoint_id") INNER JOIN "unicodex_design" T3 ON ("unicodex_codepoint"."id" = T3."codepoint_id") WHERE ("unicodex_design"."image"::text LIKE %png% AND T3."image"::text LIKE design%)']</code></pre>
+---
+class: title
+## Note: `.query` != actual query
+### But it's close
+---
+### `.query` vs actual query
+<div class="shell-wrap"><p class="shell-top-bar">python3.7</p><p class="shell-body">
+<ps>myrtle</ps> <dr>~/project $</dr>
+./manage.py shell<br>
+Python 3.7.0 (default, Sep 24 2018, 20:50:19)<br>
+[Clang 10.0.0 (clang-1000.10.44.2)] on darwin<br>
+Type "help", "copyright", "credits" or "license" for more information.<br>
+`>>>` from unicodex.models import *<br>
+`>>>` from django.db import connection<br>
+`>>>` <w>&nbsp;</w>
+
+???
+
+assuming a new environment
+---
+### `.query` vs actual query
+<div class="shell-wrap"><p class="shell-top-bar">python3.7</p><p class="shell-body">
+<ps>myrtle</ps> <dr>~/project $</dr>
+./manage.py shell<br>
+Python 3.7.0 (default, Sep 24 2018, 20:50:19)<br>
+[Clang 10.0.0 (clang-1000.10.44.2)] on darwin<br>
+Type "help", "copyright", "credits" or "license" for more information.<br>
+`>>>` from unicodex.models import *<br>
+`>>>` from django.db import connection<br>
+`>>>` Codepoint.objects.filter(design＿image＿contains="png").filter(<br>
+... design＿image＿startswith="design")<w>&nbsp;</w><br>
+
+???
+
+Normally, we'd just execute this, but we can save it to compare things.
+
+---
+### `.query` vs actual query
+<div class="shell-wrap"><p class="shell-top-bar">python3.7</p><p class="shell-body">
+<ps>myrtle</ps> <dr>~/project $</dr>
+./manage.py shell<br>
+Python 3.7.0 (default, Sep 24 2018, 20:50:19)<br>
+[Clang 10.0.0 (clang-1000.10.44.2)] on darwin<br>
+Type "help", "copyright", "credits" or "license" for more information.<br>
+`>>>` from unicodex.models import *<br>
+`>>>` from django.db import connection<br>
+`>>>` <w>C</w>odepoint.objects.filter(design＿image＿contains="png").filter(<br>
+... design＿image＿startswith="design")<br>
+---
+### `.query` vs actual query
+<div class="shell-wrap"><p class="shell-top-bar">python3.7</p><p class="shell-body">
+<ps>myrtle</ps> <dr>~/project $</dr>
+./manage.py shell<br>
+Python 3.7.0 (default, Sep 24 2018, 20:50:19)<br>
+[Clang 10.0.0 (clang-1000.10.44.2)] on darwin<br>
+Type "help", "copyright", "credits" or "license" for more information.<br>
+`>>>` from unicodex.models import *<br>
+`>>>` from django.db import connection<br>
+`>>>` qs =<w>&nbsp;</w>Codepoint.objects.filter(design＿image＿contains="png").filter(<br>
+... design＿image＿startswith="design")<br>
+
+
+???
+
+We can save our queryset
+---
+### `.query` vs actual query
+<div class="shell-wrap"><p class="shell-top-bar">python3.7</p><p class="shell-body">
+<ps>myrtle</ps> <dr>~/project $</dr>
+./manage.py shell<br>
+Python 3.7.0 (default, Sep 24 2018, 20:50:19)<br>
+[Clang 10.0.0 (clang-1000.10.44.2)] on darwin<br>
+Type "help", "copyright", "credits" or "license" for more information.<br>
+`>>>` from unicodex.models import *<br>
+`>>>` from django.db import connection<br>
+`>>>` qs = Codepoint.objects.filter(design＿image＿contains="png").filter(<br>
+... design＿image＿startswith="design")<br>
+`>>>` <w>&nbsp;</w>
+
+???
+
+another thing to note - querysets are lazy, we have't executed anything yet
+
+---
+### `.query` vs actual query
+<div class="shell-wrap"><p class="shell-top-bar">python3.7</p><p class="shell-body">
+<ps>myrtle</ps> <dr>~/project $</dr>
+./manage.py shell<br>
+Python 3.7.0 (default, Sep 24 2018, 20:50:19)<br>
+[Clang 10.0.0 (clang-1000.10.44.2)] on darwin<br>
+Type "help", "copyright", "credits" or "license" for more information.<br>
+`>>>` from unicodex.models import *<br>
+`>>>` from django.db import connection<br>
+`>>>` qs = Codepoint.objects.filter(design＿image＿contains="png").filter(<br>
+... design＿image＿startswith="design")<br>
+`>>>` connection.queries`[`-1`]`<w>&nbsp;</w>
+
+???
+
+We can prove this by trying to show the most recent query
+
+---
+### `.query` vs actual query
+<div class="shell-wrap"><p class="shell-top-bar">python3.7</p><p class="shell-body">
+<ps>myrtle</ps> <dr>~/project $</dr>
+./manage.py shell<br>
+Python 3.7.0 (default, Sep 24 2018, 20:50:19)<br>
+[Clang 10.0.0 (clang-1000.10.44.2)] on darwin<br>
+Type "help", "copyright", "credits" or "license" for more information.<br>
+`>>>` from unicodex.models import *<br>
+`>>>` from django.db import connection<br>
+`>>>` qs = Codepoint.objects.filter(design＿image＿contains="png").filter(<br>
+... design＿image＿startswith="design")<br>
+`>>>` connection.queries`[`-1`]`<br>
+Traceback (most recent call last):<br>
+&nbsp; File "＜console>", line 1, in ＜module><br>
+IndexError: list index out of range<br>
+`>>>` <w>&nbsp;</w>
+
+---
+### `.query` vs actual query
+<div class="shell-wrap"><p class="shell-top-bar">python3.7</p><p class="shell-body">
+`>>>` <w>&nbsp;</w>
+
+???
+
+clear the console
+---
+### `.query` vs actual query
+<div class="shell-wrap"><p class="shell-top-bar">python3.7</p><p class="shell-body">
+`>>>` str(qs.query)<w>&nbsp;</w>
+
+???
+
+if we ask for the expected query for the queryset
+---
+### `.query` vs actual query
+<div class="shell-wrap"><p class="shell-top-bar">python3.7</p><p class="shell-body">
+`>>>` str(qs.query)<br>
+'SELECT "unicodex_codepoint"."id", "unicodex_codepoint"."name", "unicodex_codepoint"."description", "unicodex_codepoint"."codepoint" FROM "unicodex_codepoint" INNER JOIN "unicodex_design" ON ("unicodex_codepoint"."id" = "unicodex_design"."codepoint_id") INNER JOIN "unicodex_design" T3 ON ("unicodex_codepoint"."id" = T3."codepoint_id") WHERE ("unicodex_design"."image"::text LIKE %png% AND T3."image"::text LIKE design%)'<br>
+`>>>` <w>&nbsp;</w>
+
+???
+
+we get the antipated query
+---
+### `.query` vs actual query
+<div class="shell-wrap"><p class="shell-top-bar">python3.7</p><p class="shell-body">
+`>>>` str(qs.query)<br>
+'SELECT "unicodex_codepoint"."id", "unicodex_codepoint"."name", "unicodex_codepoint"."description", "unicodex_codepoint"."codepoint" FROM "unicodex_codepoint" INNER JOIN "unicodex_design" ON ("unicodex_codepoint"."id" = "unicodex_design"."codepoint_id") INNER JOIN "unicodex_design" T3 ON ("unicodex_codepoint"."id" = T3."codepoint_id") WHERE ("unicodex_design"."image"::text LIKE %png% AND T3."image"::text LIKE design%)'<br>
+`>>>` qs<w>&nbsp;</w>
+
+???
+
+if we actually get the result
+---
+### `.query` vs actual query
+<div class="shell-wrap"><p class="shell-top-bar">python3.7</p><p class="shell-body">
+"unicodex_codepoint" INNER JOIN "unicodex_design" ON ("unicodex_codepoint"."id"
+= "unicodex_design"."codepoint_id") INNER JOIN "unicodex_design" T3 ON
+("unicodex_codepoint"."id" = T3."codepoint_id") WHERE
+("unicodex_design"."image"::text LIKE %png% AND T3."image"::text LIKE
+design%)'<br>
+`>>>` qs<br>
+`<`QuerySet [`<`Codepoint: Sparkles>, `<`Codepoint: Sparkles>, `<`Codepoint: Sparkles>, `<`Codepoint: Sparkles>, `<`Codepoint: Sparkles>, `<`Codepoint: Sparkles>, `<`Codepoint: Sparkles>, `<`Codepoint: Sparkles>, `<`Codepoint: Sparkles>, `<`Codepoint: Sparkles>, `<`Codepoint: Sparkles>, `<`Codepoint: Sparkles>, `<`Codepoint: Sparkles>, `<`Codepoint: Sparkles>, `<`Codepoint: Sparkles>, `<`Codepoint: Sparkles>, `<`Codepoint: Sparkles>, `<`Codepoint: Sparkles>, `<`Codepoint: Sparkles>, `<`Codepoint: Sparkles>, '...(remaining elements truncated)...']><br>
+`>>>` <w>&nbsp;</w>
+---
+### `.query` vs actual query
+<div class="shell-wrap"><p class="shell-top-bar">python3.7</p><p class="shell-body">
+"unicodex_codepoint" INNER JOIN "unicodex_design" ON ("unicodex_codepoint"."id"
+= "unicodex_design"."codepoint_id") INNER JOIN "unicodex_design" T3 ON
+("unicodex_codepoint"."id" = T3."codepoint_id") WHERE
+("unicodex_design"."image"::text LIKE %png% AND T3."image"::text LIKE
+design%)'<br>
+`>>>` qs<br>
+`<`QuerySet [`<`Codepoint: Sparkles>, `<`Codepoint: Sparkles>, `<`Codepoint: Sparkles>, `<`Codepoint: Sparkles>, `<`Codepoint: Sparkles>, `<`Codepoint: Sparkles>, `<`Codepoint: Sparkles>, `<`Codepoint: Sparkles>, `<`Codepoint: Sparkles>, `<`Codepoint: Sparkles>, `<`Codepoint: Sparkles>, `<`Codepoint: Sparkles>, `<`Codepoint: Sparkles>, `<`Codepoint: Sparkles>, `<`Codepoint: Sparkles>, `<`Codepoint: Sparkles>, `<`Codepoint: Sparkles>, `<`Codepoint: Sparkles>, `<`Codepoint: Sparkles>, `<`Codepoint: Sparkles>, '...(remaining elements truncated)...']><br>
+`>>>` connection.queries`[`-1`]`<w>&nbsp;</w>
+
+---
+### `.query` vs actual query
+<div class="shell-wrap"><p class="shell-top-bar">python3.7</p><p class="shell-body">
+`<`Codepoint: Sparkles>, `<`Codepoint: Sparkles>,
+`<`Codepoint: Sparkles>, `<`Codepoint: Sparkles>, `<`Codepoint: Sparkles>,
+`<`Codepoint: Sparkles>, `<`Codepoint: Sparkles>, `<`Codepoint: Sparkles>,
+`<`Codepoint: Sparkles>, `<`Codepoint: Sparkles>, `<`Codepoint: Sparkles>,
+`<`Codepoint: Sparkles>, `<`Codepoint: Sparkles>, `<`Codepoint: Sparkles>,
+'...(remaining elements truncated)...']><br>
+`>>>` connection.queries`[`-1`]`<br>
+{'sql': 'SELECT "unicodex_codepoint"."id", "unicodex_codepoint"."name", "unicodex_codepoint"."description", "unicodex_codepoint"."codepoint" FROM "unicodex_codepoint" INNER JOIN "unicodex_design" ON ("unicodex_codepoint"."id" = "unicodex_design"."codepoint_id") INNER JOIN "unicodex_design" T3 ON ("unicodex_codepoint"."id" = T3."codepoint_id") WHERE ("unicodex_design"."image"::text LIKE \'%png%\' AND T3."image"::text LIKE \'design%\') LIMIT 21', 'time': '0.002'}<br>
+`>>>` <w>&nbsp;</w>
+---
+### `.query` vs actual query
+<pre><code highlight="sql" style="font-size: 20pt !important">
+SELECT "unicodex_codepoint"."id"
+&nbsp; &nbsp; , "unicodex_codepoint"."name"
+&nbsp; &nbsp; , "unicodex_codepoint"."description"
+&nbsp; &nbsp; , "unicodex_codepoint"."codepoint"
+&nbsp; FROM "unicodex_codepoint" C
+INNER JOIN "unicodex_design" D ON ( C."id" = D."codepoint_id" )
+INNER JOIN "unicodex_design" E ON ( C."id" = E."codepoint_id" )
+WHERE ( D."image" LIKE %png% AND D."image" LIKE design% )
+LIMIT 21
+</code></pre>
+
+???
+
+(after some cleaning up) what's the different?
+---
+### `.query` vs actual query
+<pre><code highlight="sql" style="font-size: 20pt !important">
+SELECT "unicodex_codepoint"."id"
+&nbsp; &nbsp; , "unicodex_codepoint"."name"
+&nbsp; &nbsp; , "unicodex_codepoint"."description"
+&nbsp; &nbsp; , "unicodex_codepoint"."codepoint"
+&nbsp; FROM "unicodex_codepoint" C
+INNER JOIN "unicodex_design" D ON ( C."id" = D."codepoint_id" )
+INNER JOIN "unicodex_design" E ON ( C."id" = E."codepoint_id" )
+WHERE ( D."image" LIKE %png% AND D."image" LIKE design% )
+.red[LIMIT 21]
+</code></pre>
+
+???
+
+this, the limit 21
+
+where's that from?
+
+That's django limiting the results of the query, so you get 21 results, and then if there's more than that, it'll add on the 'truncating results' string.
+
+so, we acn see that there is a difference, at this in this simple example, between the expected and actual queries
+
+Sp while expected will be msotly correct, and you can see issues like bad joins, it's best to also test with actual queries.
+
 ---
 class: title
 # Putting it all together
@@ -2340,7 +2601,7 @@ cd project<br>
 
 ???
 
-it's called shell plus
+it's called shell plus, and **we now have access to it**, because we have **django_extentions**! Neat!
 
 ---
 ### Find the bug
@@ -2831,56 +3092,92 @@ So, the ORM is demonstratably great and all, but what if you have something reee
 class: title
 ## So, what if the ORM doesn't do it?
 
+---
+class: title
+## `raw()`, `extra()`
+
+???
+
+you might have heard of using something like raw or extra, where you can drop down to actual SQL code
+---
+class: title
+## ~~`raw()`, `extra()`~~
+
+???
+
+you do ont have to do this any more.
+---
+class: title
+## But but but...
+
+???
+
+but I hear you say, the ORM doesn't do what I want!
+
+for example...
+--
+class: title
+## The ORM doesn't do aggregation!
+---
+class: title
+# `aggregate()`
+
+.footnotes[[`aggregate()`](https://docs.djangoproject.com/en/2.1/ref/models/querysets/#aggregate)]
+
+---
+
+class: title
+## But but but...
+
+--
+## I want calculated fields!
+---
+class: title
+# `annotate()`
+## New and improved in Django 1.8!
+
+.footnotes[[`annotate()`](https://docs.djangoproject.com/en/2.1/ref/models/querysets/#annotate)]
+
+???
+
+This allows you to add new columns like aggregations but also references to other tables, and much more
+
+This functionlaity was improved back in 1.8
+
+
+---
+
+class: title
+## But but but...
+--
+class: title
+## I want subqueries!
+
+---
+
+class: title
+# `subquery()`
+
+.footnotes[[`subquery()`](https://docs.djangoproject.com/en/2.1/ref/models/expressions/#subquery-expressions)]
+---
+
+class: title
+## But but but...
+--
+class: title
+## The ORM doesn't do explain plans!
 
 ---
 class: title
-## `raw`
-???
+# `explain()`
+## New in Django 2.1
 
-If you really really really need to, you can drop down to raw SQL CODE
----
-class: title
-# ⚠️
-???
-
-but
-
-but but but
-
-You need to be careful
-
-If you look up the docs about how to do this
-
----
-<br>
-.left[.roboto[Performing raw SQL queries]
-<rr>The raw() manager ...</rr><br/>
-<br>⚠️ <rb>You should be very careful whenever you write.</rb><br>
-<br>`Abc.objects.raw('SELECT * FROM myapp_abc')`<br><br>
-🗒 <rr>Where did the name of the Person table come from in that example?</rr>
-<br>⚠️ <rb>No checking is done on the SQL statement that is passed in to .raw().</rb>
-<br>⚠️ <rb>If you are performing queries on MySQL, note that MySQL’s silent type coercion may cause unexpected results when mixing types.</rb>
-<br>⚠️ <rb>While a RawQuerySet instance can be iterated over like a normal QuerySet, RawQuerySet doesn’t implement </rb><br></div>
+.footnotes[[`explain()`](https://docs.djangoproject.com/en/2.1/ref/models/querysets/#explain)]
 
 ???
 
-you'll see it is FULL of warnings and notes and conditions
+this was only released back in August, so it's new
 
-There are specific sections in the docs about how to give raw parameterised arguments to help prevent potential SQL injection, but you should still understand how this functionality works before you try using it.
-
-You also break the ability for your app to be used by multiple databases. Because of the differences in SQL between databases, your postgres flavoured code probably will break if someone wants to run it on an sqlite database
-
----
-class: title
-## Sometimes, the sequels are better.
-
-???
-
-But sometimes, SQL is better
-
-the whole point of the ORM is in the name: the Object Relational Mapper. It's all about mapping objects to relations
-
-the ORM can do 80% of things, but if there's stuff that's easier to do in RAW self, instead of wrangling the ORM, do that instead.
 
 ---
 class: title
@@ -2910,9 +3207,18 @@ And Eff expressions, which allows you to manipulate fields in a model directly, 
 class: title
 ## <fl>docs.djangoproject.com</fl>
 
+.footnotes[[Model Expressions](https://docs.djangoproject.com/en/2.1/ref/models/expressions/)<br>[`QuerySet`](https://docs.djangoproject.com/en/2.1/ref/models/querysets/)]
+
 ???
 
-seriously, the docs are wonderful. Now that you know some of the general terms of this bit of software, you should be able to find more interesting ways to make the ORM work for you
+The API docs have a bunch of this
+
+but there are missing things
+
+and some things are so new that SEO can miss them
+
+If you're interested, we can look at what's missing and try fixing it at the sprints!
+
 ---
 
 background-image: url("images/hunterfound-169.jpg")
