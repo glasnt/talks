@@ -6,6 +6,8 @@
         - type: Lightning Talk
           name: Emoji Story Time with Katie
           slides: 2018_10_DjangoConUS_Emoji/index.html
+        - name: "ORM: The Sequel"
+          slides: 2018_10_DjangoConUS.podium
 
 - conference:
     name: Pursuit Podcast
