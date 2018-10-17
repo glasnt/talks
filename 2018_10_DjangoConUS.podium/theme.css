@@ -111,7 +111,7 @@ li cite {
     font-size: 18pt;
     position: absolute;
     bottom: 2em;
-    right: 4em;
+    right: 5em;
     width: 80%;
     text-align: right;
 }
@@ -231,7 +231,8 @@ ps { color: rgb(212,212,173) }
 dr { color: rgb(201,135,135) }
  .left { text-align: left; }
 
-/* Flux font */ fl { font-family: "DTLProkyonST", regular}
+/* Flux font */ .fl { font-family: "DTLProkyonST", regular; }
+.fl a { color: #0C3C26}
 
 /* redacted font */ 
 @font-face { font-family: "RedactedB"; src: url("redacted-script-bold.ttf") format('truetype'); font-style:bold; }
@@ -345,6 +346,7 @@ Added: Zenburn, mostly.
 .white { color: white}
 .comment { color: green }
 .b { font-weight: bold; }
+.c  {color: grey }
 .lgreen { color: rgb(214, 252, 185) }
 .green { color: rgb(180,251,114)}
 .lblue { color: rgb(165 , 211, 250) }
@@ -372,12 +374,14 @@ Added: Zenburn, mostly.
 .tagline { font-size: 40pt; padding-top: 100px;}
 .center { text-align: center}
 .far { position: absolute; left: -80px; bottom: 0px; }
+.far2 { position: absolute; left: -80px; bottom: -40px; }
 .smol { font-size: 70%; }
-.small { font-size: 60%; line-height: 60%; padding: 0}
+.small { font-size: 14pt; line-height: 0 !important; padding: 0; }
 .red   { outline: 4px solid #FF6B6B; outline-offset: 5px; }
 .r { color: red }
 .code { font-family: monospace }
 
+.big { font-size: 80pt;} 
 /* redacted font */
 @font-face { font-family: "RedactedB"; src: url("fonts/redacted-script-bold.ttf") format('truetype'); font-style:bold; }
 @font-face { font-family: "RedactedR"; src: url("fonts/redacted-script-regular.ttf") format('truetype'); font-style:normal; }
@@ -390,3 +394,31 @@ rr { font-family: "RedactedR", regular;  }
 .roboto { font-family: "Roboto", regular; }
 
 .bigright { font-size: 40pt; position: absolute; z-index: 100; bottom: 100x; right: 100px; }
+.ghigh { background-color: #acf2bd }
+.impact { font-size: 200%;  font-family: Impact; color: white;
+text-shadow: 1px 1px 0 #000,
+    -1px 1px 0 #000,
+    1px -1px 0 #000,
+    -1px -1px 0 #000,
+    0px 1px 0 #000,
+    0px -1px 0 #000,
+    -1px 0px 0 #000,
+    1px 0px 0 #000,
+    2px 2px 0 #000,
+    -2px 2px 0 #000,
+    2px -2px 0 #000,
+    -2px -2px 0 #000,
+    0px 2px 0 #000,
+    0px -2px 0 #000,
+    -2px 0px 0 #000,
+    2px 0px 0 #000,
+    1px 2px 0 #000,
+    -1px 2px 0 #000,
+    1px -2px 0 #000,
+    -1px -2px 0 #000,
+    2px 1px 0 #000,
+    -2px 1px 0 #000,
+    2px -1px 0 #000,
+    -2px -1px 0 #000;
+
+}

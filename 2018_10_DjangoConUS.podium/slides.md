@@ -2,6 +2,10 @@ Class: title
 # <br>ORM: The Sequel
 ## DjangoCon US 2018
 ![Image](images/footer.svg)
+
+???
+
+Breathe.
 ---
 class: middle, center
 ![Image](images/wave.svg)
@@ -16,7 +20,8 @@ background-image: url("images/divio-background.png")
 ???
 
 I'm a site reliability engineer at divio
-We do hosted django as a service, come speak to me later if this interests you.
+
+We do hosted django as a service
 
 ---
 class: middle, center, image
@@ -24,7 +29,7 @@ class: middle, center, image
 
 ???
 
-I do a lot of things in and around Django, from being a Director of the Django Software foundation, to having run a DjangoCon, and helped at many more.
+And I do a lot of things in and around django, including being a DSF Director and a DjangoCon organiser
 
 But I'm not currently a django developer. I'm still new to django
 
@@ -33,25 +38,29 @@ class: middle, center, image
 ![Image](images/djadmin.png)
 ???
 
-But regardless of how much I know or don't know, I still think that this thing right here? The Django Admin is just
+And I think the django admin
+
 ---
 class: middle, center, image
 ![Image](images/djadmin_sparkles.png)
 
 ???
 
-oh so awesome. If I jump into a new project, and I need to do something I can just log into the admin
+is just amazing
+
+If I jump into a new project, and I need to do something I can just log into the admin
 ---
 class: middle, center, image
 ![Image](images/djuser_super.png)
 
 ???
 
-Navigate to the place I want, and view, update, and delete to my hearts desire.
+And jump in and edit something
 
-But the more I learn about django, the more I learn how the magic works.
 
-This lovely insert-model-get-UI is powered by
+But the more I learn about django, the more I learn how the admin works.
+
+It's powered by
 
 ---
 <br><br><br><br><br>
@@ -65,7 +74,9 @@ the ORM
 
 The object relational mapper
 
-It allows us to interact with our data as objects in Python.
+Which allows us to interact with our data as Python objects
+
+
 
 Now here's where I could start teaching you how the ORM works based on abstract thoughts
 
@@ -77,9 +88,11 @@ background-image: url("images/thinkpad2.jpg")
 
 ???
 
-See, I might be new to django and newish to python, but while I work in ops in these languages, I have many *many* years of development behind me, just not in Python.
+See, I might be new to django, but I've been in tech for over a decade now
 
-I've come from an ... ecclectic background, ranging from Ruby to Haskell to Powershell as my 'native languages', but all of these have something in common.
+and I have an... ecclectic background, ranging from Ruby to Haskell to Powershelli
+
+But all of these have something in common
 
 When you're working with data, you need a database, and databases have a shared language
 
@@ -95,11 +108,9 @@ SQL
 
 Structured Query Language
 
-Select star from table where blah is like blah
-
 Sure, you have graphql now, but SQL is still a fundamental skill.
 
-And when I was first asking questions about the ORM with one of the django core devs (did you know you can just ask them questions? it's awesome!) one of the things they asked is "well, what do you already know?"
+And it's a good place to have
 
 ---
 class: title
@@ -107,7 +118,11 @@ class: title
 
 ???
 
-And we've already seem similar talks like this at this very conference. We had a JavaScript for Python devs eralier in the week, and we also had an entire talk on skill transference when switching careers.
+
+TIME 1:30
+
+A common
+
 
 In everything, context is important.
 
@@ -124,14 +139,12 @@ background-image: url("images/smol5.jpg")
 
 We're not going to start from tech basics, and we're not going to start with a blank project.
 
-We're going to use our existing SQL knowledge on an existing project. If you don't know SQL, I'm not going to teach it from first prinicples, but hopefully you can follow along,
 
 ---
 background-image: url("images/hunterbird-169.jpg")
 
 ???
-
-We're going to be a fully grown bird, hunting for a bug in an environment that might seem complex, but is just only a little bit different from what we were used to when we were but a smol bird.
+Instead, we're going to jump into an existing project, and go hunting for bugs, using our SQL skills
 
 ---
 class: title
@@ -197,7 +210,7 @@ The django shell is a command line interface into your project
 
 ???
 
-a lot of my examples today are going to be shown in literal terminals - iterm2 on macos mojave, for those playing at home.
+a lot of my examples today are going to be shown in literal terminals - iterm2 on macos mo-ha-ve, for those playing at home.
 
 So to get to the django shell, we first
 ---
@@ -489,21 +502,6 @@ Type "help", "copyright", "credits" or "license" for more information.<br>
 `>>>` from unicodex.models import Codepoint<br>
 `>>>` Codepoint._meta.db_table<br>
 'unicodex_codepoint'<br>
-`>>>` <w>&nbsp;</w>
-???
-
-so back in our terminal
----
-### Showing all table columns
-<div class="shell-wrap"><p class="shell-top-bar">python3.7</p><p class="shell-body">
-<ps>myrtle</ps> <dr>~/project $</dr>
-./manage.py shell<br>
-Python 3.7.0 (default, Sep 24 2018, 20:50:19)<br>
-[Clang 10.0.0 (clang-1000.10.44.2)] on darwin<br>
-Type "help", "copyright", "credits" or "license" for more information.<br>
-`>>>` from unicodex.models import Codepoint<br>
-`>>>` Codepoint._meta.db_table<br>
-'unicodex_codepoint'<br>
 `>>>` Codepoint._meta.get_fields()<w>&nbsp;</w>
 ???
 
@@ -527,114 +525,6 @@ Type "help", "copyright", "credits" or "license" for more information.<br>
 `<`django.db.models.fields.CharField: codepoint>)<br>
 `>>>` <w>&nbsp;</w>
 
-???
-
-we can get that
----
-class: title
-## 🤔
-
-???
-
-but what about all those native functions, can we still make use of them?
-
-Well you can always connect directly to the databse, but django has a helpful wrapper for that
-
----
-### Go directly to the database
-<div class="shell-wrap"><p class="shell-top-bar">bash</p><p class="shell-body">
-<ps>myrtle</ps> <dr>~/project $</dr>
-<w>&nbsp;</w>
-???
-
-in our terminal, instead of calling manage.py shell
-
----
-### Go directly to the database
-<div class="shell-wrap"><p class="shell-top-bar">bash</p><p class="shell-body">
-<ps>myrtle</ps> <dr>~/project $</dr>
-./manage.py dbshell<w>&nbsp;</w>
-
-???
-
-we can run managepy db shell
----
-### Go directly to the database
-<div class="shell-wrap"><p class="shell-top-bar">psql</p><p class="shell-body">
-<ps>myrtle</ps> <dr>~/project $</dr>
-./manage.py dbshell<br>
-&#112;sql (9.6.5, server 9.6.8)<br>
-Type "help" for help.<br>
-<br>
-db=#&nbsp;<w>&nbsp;</w>
-
-???
-
-and we get an output that will be familiar to postgres devs in the audience
-
-This particular project has a postgres backend
-
----
-### Show all tables
-<div class="shell-wrap"><p class="shell-top-bar">psql</p><p class="shell-body">
-<ps>myrtle</ps> <dr>~/project $</dr>
-./manage.py dbshell<br>
-&#112;sql (9.6.5, server 9.6.8)<br>
-Type "help" for help.<br>
-<br>
-db=# \dt<w>&nbsp;</w>
-
-???
-
-given we know it's postgres, we cna issue the postgres list table command, and get back
----
-### Show all tables
-<div class="shell-wrap"><p class="shell-top-bar">psql</p><p class="shell-body">
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; List of relations<br>
-&nbsp;Schema |&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Name&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; | Type&nbsp; |&nbsp; Owner<br>
-&dash;&dash;&dash;&dash;&dash;&dash;&dash;&dash;+&dash;&dash;&dash;&dash;&dash;&dash;&dash;&dash;&dash;&dash;&dash;&dash;&dash;&dash;&dash;&dash;&dash;&dash;&dash;&dash;&dash;&dash;&dash;&dash;&dash;&dash;&dash;&dash;+&dash;&dash;&dash;&dash;&dash;&dash;&dash;+&dash;&dash;&dash;&dash;&dash;&dash;&dash;&dash;&dash;&dash;<br>
-&nbsp;public | aldryn_sso_aldrynclouduser | table | postgres<br>
-&nbsp;public | auth_group&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; | table | postgres<br>
-&nbsp;public | auth_group_permissions&nbsp; &nbsp; &nbsp;| table | postgres<br>
-&nbsp;public | auth_permission&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; | table | postgres<br>
-&nbsp;public | auth_user&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; | table | postgres<br>
-&nbsp;public | auth_user_groups&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; | table | postgres<br>
-&nbsp;public | auth_user_user_permissions | table | postgres<br>
-&nbsp;public | django_admin_log&nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; | table | postgres<br>
-&nbsp;public | django_content_type&nbsp; &nbsp; &nbsp; &nbsp; | table | postgres<br>
-&nbsp;public&nbsp;|&nbsp;django_migrations&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;table&nbsp;|&nbsp;postgres<br.
-&nbsp;public&nbsp;|&nbsp;django_session&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;table&nbsp;|&nbsp;postgres<br>
-&nbsp;public&nbsp;|&nbsp;django_site&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;table&nbsp;|&nbsp;postgres<br>
-&dash;&dash;More&dash;&dash;
-
-???
-
-all our tables. Note the usual suspects from earlier, auth, content, sites
----
-### Show all tables
-<div class="shell-wrap"><p class="shell-top-bar">psql</p><p class="shell-body">
-&nbsp;public | auth_permission&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; | table | postgres<br>
-&nbsp;public | auth_user&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; | table | postgres<br>
-&nbsp;public | auth_user_groups&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; | table | postgres<br>
-&nbsp;public | auth_user_user_permissions | table | postgres<br>
-&nbsp;public | django_admin_log&nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; | table | postgres<br>
-&nbsp;public | django_content_type&nbsp; &nbsp; &nbsp; &nbsp; | table | postgres<br>
-&nbsp;public&nbsp;|&nbsp;django_migrations&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;table&nbsp;|&nbsp;postgres<br.
-&nbsp;public&nbsp;|&nbsp;django_session&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;table&nbsp;|&nbsp;postgres<br>
-&nbsp;public&nbsp;|&nbsp;django_site&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;table&nbsp;|&nbsp;postgres<br>
-&nbsp;public&nbsp;|&nbsp;unicodex_codepoint&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;table&nbsp;|&nbsp;postgres<br>
-&nbsp;public&nbsp;|&nbsp;unicodex_design&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;table&nbsp;|&nbsp;postgres<br>
-&nbsp;public&nbsp;|&nbsp;unicodex_vendor&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;table&nbsp;|&nbsp;postgres<br>
-&nbsp;public&nbsp;|&nbsp;unicodex_vendorversion&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;table&nbsp;|&nbsp;postgres<br>
-(16 rows)<br>
-<br>
-db=#&nbsp;<w>&nbsp;</w>
-
-???
-
-but also, our own project's tables
-
-We'll take note of these for later.
 ---
 class: title
 ## Show all table contents
@@ -701,10 +591,12 @@ and we get back a queryset of objects
 
 We remember from earlier that there were sparkles, unicorns and hearts on our page, so we're getting the right data!
 
-The return value here is known as a queryset, an unordered objects. QuerySets can be enacted upon further, which we'll see later.
+The return value here is known as a queryset, which can be enacted upon further, which we'll see later.
 
 
 **Query set is not a list**
+
+
 
 ---
 class: title
@@ -896,26 +788,6 @@ which I'll explain more in a moment.
 ---
 ### Joins
 <div class="shell-wrap"><p class="shell-top-bar">python3.7</p><p class="shell-body">
-`>>>` <w>&nbsp;</w>
-
-???
-
-back to our terminal again, to execute this elegant little code snippet
-
-We import the design model this time
----
-### Joins
-<div class="shell-wrap"><p class="shell-top-bar">python3.7</p><p class="shell-body">
-`>>>` from unicodex.models import Design<w>&nbsp;</w>
----
-### Joins
-<div class="shell-wrap"><p class="shell-top-bar">python3.7</p><p class="shell-body">
-`>>>` from unicodex.models import Design<br>
-`>>>` <w>&nbsp;</w>
----
-
-### Joins
-<div class="shell-wrap"><p class="shell-top-bar">python3.7</p><p class="shell-body">
 `>>>` from unicodex.models import Design<br>
 `>>>` Design.objects.filter(codepoint＿name='Sparkles')<w>&nbsp;</w>
 ???
@@ -938,18 +810,16 @@ and we run our filter
 ```python
 # ORM
 Design.objects.filter(codepoint__name='Sparkles')
-# field, lookup
+# field, field
 ```
 
 ???
 
-what we have here is one or more fields and then a lookup, all separated by double underscores
 
-A lookup as an operation on that field
+TIME: 12:00
+In this example, we have two fields: our table name, and the column
 
-If you remember back when we looked up the fields on a model, we know what options we have here.
-
-You'll also note in our example that we end on a field.
+Filters need to end on a lookup, but
 
 By default the look up is an exact match on the string. So effectively, name equals sparkles
 ---
@@ -958,7 +828,7 @@ By default the look up is an exact match on the string. So effectively, name equ
 ```python
 # ORM
 Design.objects.filter(codepoint__name='Sparkles')
-# field, lookup
+# field, field
 
 # ORM
 Design.objects.filter(codepoint__name__exact='Sparkles')
@@ -991,8 +861,6 @@ Look at the URL
 It's our filters
 
 the admin uses field lookups in it's UI
-
-and to some extent, you can handcode this URL to do some basic filtering, even if there isn't any filters on the right hand side panel
 
 ---
 class: title
@@ -1357,6 +1225,8 @@ Depending on your version of android, the sparkle emoji could be black and white
 
 Each of these is a version from a vendor
 
+WE split this up because otherwise we'd have to duplicate information about Apple and Adnroid, etc, everywhere. This is also known as Third Normal Form :)
+
 ...
 
 SO
@@ -1414,6 +1284,9 @@ Type "help", "copyright", "credits" or "license" for more information.<br>
 `>>>` from unicodex.models import *<w>&nbsp;</w>
 
 ???
+
+TIME 15:00
+
 Just import all of them.
 
 hehe
@@ -1500,9 +1373,24 @@ hehe
 `>>>` <w>&nbsp;</w>
 
 ---
+### Lookup Options
+
+<pre><code>
+<table>
+<tr><td style="padding-right: 20px" ><l>contains</l></td><td><o>LIKE "%?%"</o></td></tr>
+<tr><td><l>startswith</l></td><td><o>LIKE "?%"</o></td></tr>
+<tr><td><l>endswith</l></td><td><o>LIKE "%?"</o></td></tr>
+<tr><td><l>in</l></td><td><o>IN (?, ?, ?, ...)</o></td></tr>
+<tr><td><l>lt, le, gt, ge &nbsp; &nbsp; </l></td><td><o>＜, ＜＝, ＞, ＞＝</o></td></tr>
+<tr><td><l>range</l></td><td><o>BETWEEN</o></td></tr>
+<tr><td><l>isnull</l></td><td><o>NULL</o></td></tr></table>
+<c>&num; ... and many more!</c>
+
+.footnotes[[QuerySet Field Lookups](https://docs.djangoproject.com/en/2.1/ref/models/querysets/#field-lookups)]
+---
 class: title
 # More complex joins
-## `AND` beyond
+## `AND` beyond 🚀
 
 ???
 
@@ -1514,6 +1402,7 @@ If we want to start using OR, we need to get a bit fancy
 ---
 class: title
 # `Q()`
+## 🖖
 
 ???
 
@@ -1734,87 +1623,7 @@ Codepoint.objects.filter(
 &nbsp; Q(<o>name=</o>'Sparkles') &
 &nbsp; Q(<o>name=</o>'Unicorn')
 )<br><br><c>&dash;&dash; SQL</c><br><r>SELECT *
-&nbsp; FROM</r> unicodex_codepoint c <br><r>&nbsp;WHERE</r> <l>c</l>.<l>name</l> <r>=</r> <d>'Sparkles'</d><br><r>&nbsp; &nbsp;AND</r> <l>c</l>.<l>name</l> <r>=</r> <d>'Unicorn'</d>
-
-???
-
-Using the comma is equiv to this AND, but with the comma we're giving filter two arguments. Here, we're giving it one. We'll get back to this, because it's really cool
-
-So, to take our AND to and OR, we change the ampersand
-
----
-### Equivalent Queries
-<pre><code><c>&num; ORM</c>
-Codepoint.objects.filter(
-&nbsp; Q(<o>name=</o>'Sparkles') |
-&nbsp; Q(<o>name=</o>'Unicorn')
-)<br><br><c>&dash;&dash; SQL</c><br><r>SELECT *
-&nbsp; FROM</r> unicodex_codepoint c <br><r>&nbsp;WHERE</r> <l>c</l>.<l>name</l> <r>=</r> <d>'Sparkles'</d><br><r>&nbsp; &nbsp; OR</r> <l>c</l>.<l>name</l> <r>=</r> <d>'Unicorn'</d>
-
-???
-
-to a pipe.
-
-This is an or operation
-
-You may have only seen these operators before in bitmasking
-
----
-### Bitmasking Refresher
-
-<pre><code class="python">>>> x = 0b01010101</code></pre>
-<pre><code class="python">>>> y = 0b11110000</code></pre>
-<pre><code class="python">>>> bin(x & y)</code></pre>
-
-???
-
-a quick refresher
-
-if we have two binary strings
-one with some 1 and some 0
-
-and then one with a half 1
-
-and we get the logical and of these two
-
---
-<pre><code class="python">0b10100000</code></pre>
---
-<br><br><br><br><br>
-.bigright[.code[.white[..]0b0.r[1]0.r[1]0101<br>& 0b1.r[1]1.r[1]0000<br>= 0b0.r[1]0.r[1]0000]]
----
-### Bitmasking Refresher
-<pre><code class="python">>>> x = 0b01010101</code></pre>
-<pre><code class="python">>>> y = 0b11110000</code></pre>
-<pre><code class="python">>>> bin(x & y)</code></pre>
-<pre><code class="python">0b10100000</code></pre>
-<pre><code class="python">>>> bin(x | y)</code></pre>
---
-<pre><code class="python">0b11110101</code></pre>
---
-.bigright[.code[.white[..]0b0.r[1]0.r[1]0.r[1]0.r[1]<br>| 0b.r[1111]0000<br>= 0b.r[1111]0.r[1]0.r[1]]]
-???
-
-we get all ones at the start, then our stripes
-
-That's because we return one is either or are 1
-
-
-That's how binary ANDs and binary ORs work
-
-This is very similar to what we do in SQL.
-
-For each row of a table, we want to return it in our result set if BOTH conditions are true on and, or if either are true on and OR
-
----
-### Equivalent Queries
-<pre><code><c>&num; ORM</c>
-Codepoint.objects.filter(
-&nbsp; Q(<o>name=</o>'Sparkles') &
-&nbsp; Q(<o>name=</o>'Unicorn')
-)<br><br><c>&dash;&dash; SQL</c><br><r>SELECT *
 &nbsp; FROM</r> unicodex_codepoint c <br><r>&nbsp;WHERE</r> <l>c</l>.<l>name</l> <r>=</r> <d>'Sparkles'</d><br><r>&nbsp;&nbsp; AND</r> <l>c</l>.<l>name</l> <r>=</r> <d>'Unicorn'</d>
-
 --
 .venn[![](images/venn_and2.png)]
 ???
@@ -1828,9 +1637,7 @@ Codepoint.objects.filter(
 &nbsp; Q(<o>name=</o>'Unicorn')
 )<br><br><c>&dash;&dash; SQL</c><br><r>SELECT *
 &nbsp; FROM</r> unicodex_codepoint c <br><r>&nbsp;WHERE</r> <l>c</l>.<l>name</l> <r>=</r> <d>'Sparkles'</d><br><r>&nbsp; &nbsp; OR</r> <l>c</l>.<l>name</l> <r>=</r> <d>'Unicorn'</d>
-
 --
-
 .venn[![](images/venn_or.png)]
 
 ???
@@ -1853,7 +1660,7 @@ I'm going to show you a small snippet of django source code. It won't be scary, 
 
 ---
 <pre><code style="font-size: 20pt !important"><br><r>class</r> <g>Q</g>(<g>tree</g>.<g>Node</g>):
-<c>"""<br>Encapsulate filters as objects that can<br>then be combined logically (using.code[`` `&` ``]and.code[`` `|` ``]).<br>"""</c>
+<c>"""<br>Encapsulate filters as objects that can<br>then be combined logically (using .code[`` `&` ``]and.code[`` `|` ``]).<br>"""</c>
 &nbsp; ...
 &nbsp; <r>def</r> <l>＿or＿</l>(self, other):
 &nbsp; &nbsp; <r>return</r> <l>self</l>._combine(other, <l>self.OR</l>)
@@ -1869,7 +1676,7 @@ I'm going to show you a small snippet of django source code. It won't be scary, 
 django literally overloads the operations that happens when you try and do bitwise operations on the Q class in order for Q to have a logical response to bitwise operations
 ---
 <pre><code style="font-size: 20pt !important"><br><r>class</r> <g>Q</g>(<g>tree</g>.<g>Node</g>):
-<c>"""<br>Encapsulate filters as objects that can<br>then be combined logically (using.code[`` `&` ``]and.code[`` `|` ``]).<br>"""</c>
+<c>"""<br>Encapsulate filters as objects that can<br>then be combined logically (using .code[`` `&` ``]and.code[`` `|` ``]).<br>"""</c>
 &nbsp; ...
 &nbsp; <r>def</r> <l>.red[＿or＿]</l>(self, other):
 &nbsp; &nbsp; <r>return</r> <l>self</l>._combine(other, <l>self.OR</l>)
@@ -2153,7 +1960,9 @@ Codepoint.objects.filter(
 
 ???
 
-formatted. So it's what we expect.
+formatted. I've changed the table alases here just to conserve space on the slide
+
+So it's what we expect.
 
 But what if we start changing things.
 
@@ -2291,11 +2100,12 @@ Every time there is a separate filter, it's another join. Which can absolutely b
 To do that, put them both in the same filter call. Django will be able to work it out, then.
 
 ---
-### Inspect the query *before* running it
+class: title
+# Inspect the query *before* running it
 
 ???
 
-something I picked up just a few days ago at the ORM tutorial by James Bennett
+we can also check what django will probably end up doing
 ---
 ### Inspect the query *before* running it
 <pre><code><c>&num; ORM</c>
@@ -2315,8 +2125,8 @@ Codepoint.objects.filter(
 <pre><code><c>&num; ORM</c>
 str(Codepoint.objects.filter(
 &nbsp; <o>design＿image＿contains=</o>"png").filter(
-&nbsp; <o>design＿image＿startswith=</o>"design").query<br><br><c>&dash;&dash; SQL</c>
-<pre><code class="sql">.small[SELECT "unicodex_codepoint"."id", "unicodex_codepoint"."name", "unicodex_codepoint"."description", "unicodex_codepoint"."codepoint" FROM "unicodex_codepoint" INNER JOIN "unicodex_design" ON ("unicodex_codepoint"."id" = "unicodex_design"."codepoint_id") INNER JOIN "unicodex_design" T3 ON ("unicodex_codepoint"."id" = T3."codepoint_id") WHERE ("unicodex_design"."image"::text LIKE %png% AND T3."image"::text LIKE design%)']</code></pre>
+&nbsp; <o>design＿image＿startswith=</o>"design").query
+<pre><code class="sql">.c[&dash;&dash; SQL]<br>.small[SELECT "unicodex_codepoint"."id", "unicodex_codepoint"."name", "unicodex_codepoint"."description", "unicodex_codepoint"."codepoint" FROM "unicodex_codepoint" INNER JOIN "unicodex_design" ON ("unicodex_codepoint"."id" = "unicodex_design"."codepoint_id") INNER JOIN "unicodex_design" T3 ON ("unicodex_codepoint"."id" = T3."codepoint_id") WHERE ("unicodex_design"."image"::text LIKE %png% AND T3."image"::text LIKE design%)']</code></pre>
 ---
 class: title
 ## Note: `.query` != actual query
@@ -2510,37 +2320,22 @@ design%)'<br>
 ---
 ### `.query` vs actual query
 <pre><code highlight="sql" style="font-size: 20pt !important">
-SELECT "unicodex_codepoint"."id"
-&nbsp; &nbsp; , "unicodex_codepoint"."name"
-&nbsp; &nbsp; , "unicodex_codepoint"."description"
-&nbsp; &nbsp; , "unicodex_codepoint"."codepoint"
-&nbsp; FROM "unicodex_codepoint" C
-INNER JOIN "unicodex_design" D ON ( C."id" = D."codepoint_id" )
-INNER JOIN "unicodex_design" E ON ( C."id" = E."codepoint_id" )
-WHERE ( D."image" LIKE %png% AND D."image" LIKE design% )
-LIMIT 21
+&nbsp; SELECT "unicodex_codepoint"."id"
+&nbsp;&nbsp; &nbsp; &nbsp; , "unicodex_codepoint"."name"
+&nbsp;&nbsp; &nbsp; &nbsp; , "unicodex_codepoint"."description"
+&nbsp;&nbsp; &nbsp; &nbsp; , "unicodex_codepoint"."codepoint"
+&nbsp; &nbsp; FROM "unicodex_codepoint" C
+&nbsp; &nbsp;INNER JOIN "unicodex_design" D ON ( C."id" = D."codepoint_id" )
+&nbsp; &nbsp;INNER JOIN "unicodex_design" E ON ( C."id" = E."codepoint_id" )
+&nbsp; &nbsp;WHERE ( D."image" LIKE %png% AND D."image" LIKE design% )
+.ghigh[+ &nbsp;LIMIT 21]
 </code></pre>
 
 ???
 
-(after some cleaning up) what's the different?
----
-### `.query` vs actual query
-<pre><code highlight="sql" style="font-size: 20pt !important">
-SELECT "unicodex_codepoint"."id"
-&nbsp; &nbsp; , "unicodex_codepoint"."name"
-&nbsp; &nbsp; , "unicodex_codepoint"."description"
-&nbsp; &nbsp; , "unicodex_codepoint"."codepoint"
-&nbsp; FROM "unicodex_codepoint" C
-INNER JOIN "unicodex_design" D ON ( C."id" = D."codepoint_id" )
-INNER JOIN "unicodex_design" E ON ( C."id" = E."codepoint_id" )
-WHERE ( D."image" LIKE %png% AND D."image" LIKE design% )
-.red[LIMIT 21]
-</code></pre>
+After some cleaning up, this is the difference
 
-???
-
-this, the limit 21
+the limit 21
 
 where's that from?
 
@@ -2573,7 +2368,6 @@ we have a broken image somewhere. We can tell by the page that it's probably the
 
 So let's find that.
 
-Option: 'shout it out'
 
 ---
 class: title
@@ -2649,26 +2443,6 @@ We can do that by pressing control L
 ---
 ### Find the bug
 <div class="shell-wrap"><p class="shell-top-bar">python3.7</p><p class="shell-body">
-.green[from django.contrib.sites.models import Site]<br>
-.green[from unicodex.models import Codepoint, Design, Vendor, VendorVersion]<br>
-.b[.white[`#` Shell Plus Django Imports]]<br>
-.green[from django.core.cache import cache]<br>
-.green[from django.conf import settings]<br>
-.green[from django.contrib.auth import get_user_model]<br>
-.green[from django.db import transaction]<br>
-.green[from django.db.models import Avg, Case, Count, F, Max, Min, Prefetch, Q, Sum, When, Exists, OuterRef, Subquery]<br>
-.green[from django.utils import timezone]<br>
-.green[from django.urls import reverse]<br>
-Python 3.7.0 (default, Sep 24 2018, 20:50:19)<br>
-[Clang 10.0.0 (clang-1000.10.44.2)] on darwin<br>
-Type "help", "copyright", "credits" or "license" for more information.<br>
-`>>>` <w>&nbsp;</w>
-</p></p></div>
-
-.keyboard[.key[control] + .key[l]]
----
-### Find the bug
-<div class="shell-wrap"><p class="shell-top-bar">python3.7</p><p class="shell-body">
 `>>>` <w>&nbsp;</w>
 ???
 
@@ -2722,31 +2496,8 @@ NOW
 `>>>` Design.objects.filter(codepoint＿name="Sparkles",<br>
 ... vendorversion＿vendor＿name="Twitter")<br>
 `<`QuerySet [`<`Design: Sparkles Twitter 1.0>, `<`Design: Sparkles Twitter 2.4>]><br>
-`>>>` <w>&nbsp;</w>
-.keyboard[.key[↑]]
-???
-
-press up
----
-### Find the bug
-<div class="shell-wrap"><p class="shell-top-bar">python3.7</p><p class="shell-body">
-`>>>` Design.objects.filter(codepoint＿name="Sparkles",<br>
-... vendorversion＿vendor＿name="Twitter")<br>
-`<`QuerySet [`<`Design: Sparkles Twitter 1.0>, `<`Design: Sparkles Twitter 2.4>]><br>
 `>>>` Design.objects.filter(codepoint＿name="Sparkles",<br>
 ... vendorversion＿vendor＿name="Twitter")<w>&nbsp;</w><br>
----
-### Find the bug
-<div class="shell-wrap"><p class="shell-top-bar">python3.7</p><p class="shell-body">
-`>>>` Design.objects.filter(codepoint＿name="Sparkles",<br>
-... vendorversion＿vendor＿name="Twitter")<br>
-`<`QuerySet [`<`Design: Sparkles Twitter 1.0>, `<`Design: Sparkles Twitter 2.4>]><br>
-`>>>` Design.objects.filter(codepoint＿name="Sparkles",<br>
-... vendorversion＿vendor＿name="Twitter")<w>&nbsp;</w><br>
-.keyboard[.key[Home]]
-???
-
-then go to the start of the line
 ---
 ### Find the bug
 <div class="shell-wrap"><p class="shell-top-bar">python3.7</p><p class="shell-body">
@@ -2778,20 +2529,6 @@ then go to the start of the line
 ???
 
 now we have our value saved
----
-### Find the bug
-<div class="shell-wrap"><p class="shell-top-bar">python3.7</p><p class="shell-body">
-`>>>` Design.objects.filter(codepoint＿name="Sparkles",<br>
-... vendorversion＿vendor＿name="Twitter")<br>
-`<`QuerySet [`<`Design: Sparkles Twitter 1.0>, `<`Design: Sparkles Twitter 2.4>]><br>
-`>>>` d = Design.objects.filter(codepoint＿name="Sparkles",<br>
-... vendorversion＿vendor＿name="Twitter")<br>
-`>>>` <w>&nbsp;</w>
-.keyboard[.key[control] + .key[l]]
-
-???
-
-we can clear our terminal again
 ---
 ### Find the bug
 <div class="shell-wrap"><p class="shell-top-bar">python3.7</p><p class="shell-body">
@@ -3086,55 +2823,78 @@ class: title
 
 ???
 
-So, the ORM is demonstratably great and all, but what if you have something reeeeeally complex, that you can't easily represent in the ORM?
+So, the ORM is great and all,
+
+
+TIME: T MINUS 3
+
 ---
 
 class: title
 ## So, what if the ORM doesn't do it?
+???
 
+
+but what if you have something reeeeeally complex, that you can't easily represent in the ORM?
+
+you might have heard of raw or extra, where you can insert actual SQL into your code
 ---
 class: title
-## `raw()`, `extra()`
+## ~~`raw(), extra()`~~
+### Never use `raw()` anymore.
+.footnotes[👻]
 
 ???
 
-you might have heard of using something like raw or extra, where you can drop down to actual SQL code
+you dont have to do this any more.
 ---
-class: title
-## ~~`raw()`, `extra()`~~
-
-???
-
-you do ont have to do this any more.
----
-class: title
-## But but but...
+<br><BR><BR><BR>
+## .big[.impact[But but but...]]
 
 ???
 
 but I hear you say, the ORM doesn't do what I want!
 
 for example...
---
-class: title
+---
+<br><BR><BR><BR>
+## .impact[But but but...]
 ## The ORM doesn't do aggregation!
 ---
-class: title
-# `aggregate()`
-
-.footnotes[[`aggregate()`](https://docs.djangoproject.com/en/2.1/ref/models/querysets/#aggregate)]
+### `aggregation()`
+<div class="shell-wrap"><p class="shell-top-bar">python3.7</p><p class="shell-body">
+<ps>myrtle</ps> <dr>~/project $</dr>
+./manage.py shell<br>
+Python 3.7.0 (default, Sep 24 2018, 20:50:19)<br>
+[Clang 10.0.0 (clang-1000.10.44.2)] on darwin<br>
+Type "help", "copyright", "credits" or "license" for more information.<br>
+`>>>` from django.db.models import Count<br>
+`>>>` from unicodex.models import `*`<br>
+`>>>` Codepoint.objects.all().aggregate(Count("design"))<br>
+{'design__count': 28}<br>
+`>>>` <w>&nbsp;</w>
+.footnotes[[Aggregation](https://docs.djangoproject.com/en/2.1/topics/db/aggregation/)]
 
 ---
 
-class: title
-## But but but...
+<br><BR><BR><BR>
+## .impact[But but but...]
 
 --
-## I want calculated fields!
+## I want other calculated fields!
 ---
-class: title
-# `annotate()`
-## New and improved in Django 1.8!
+### `annotate()`
+<div class="shell-wrap"><p class="shell-top-bar">python3.7</p><p class="shell-body">
+<ps>myrtle</ps> <dr>~/project $</dr>
+./manage.py shell<br>
+Python 3.7.0 (default, Sep 24 2018, 20:50:19)<br>
+[Clang 10.0.0 (clang-1000.10.44.2)] on darwin<br>
+Type "help", "copyright", "credits" or "license" for more information.<br>
+`>>>` from django.db.models.functions import Upper<br>
+`>>>` from unicodex.models import `*`<br>
+`>>>` Codepoint.objects.all().annotate(cldr=Upper("name"))[1].cldr<br>
+'UNICORN'<br>
+`>>>` <w>&nbsp;</w>
 
 .footnotes[[`annotate()`](https://docs.djangoproject.com/en/2.1/ref/models/querysets/#annotate)]
 
@@ -3147,10 +2907,8 @@ This functionlaity was improved back in 1.8
 
 ---
 
-class: title
-## But but but...
---
-class: title
+<br><BR><BR><BR>
+## .impact[But but but...]
 ## I want subqueries!
 
 ---
@@ -3161,22 +2919,90 @@ class: title
 .footnotes[[`subquery()`](https://docs.djangoproject.com/en/2.1/ref/models/expressions/#subquery-expressions)]
 ---
 
-class: title
-## But but but...
---
-class: title
+<br><BR><BR><BR>
+## .impact[But but but...]
+
 ## The ORM doesn't do explain plans!
 
 ---
 class: title
 # `explain()`
-## New in Django 2.1
+### New in Django 2.1
 
-.footnotes[[`explain()`](https://docs.djangoproject.com/en/2.1/ref/models/querysets/#explain)]
+.footnotes[[`explain()`](https://docs.djangoproject.com/en/2.1/ref/models/querysets/#explain) - Django 2.1 Docs]
 
 ???
 
 this was only released back in August, so it's new
+
+---
+
+<br><BR><BR><BR>
+## .impact[But but but...]
+
+--
+## The ORM doesn't do<br>(obscure postgres command)!
+
+---
+class: title
+# Write your own<br>Query Expression
+.footnotes[[Custom Query Expressions](https://docs.djangoproject.com/en/2.1/ref/models/expressions/#writing-your-own-query-expressions) - Django 2.1 Docs]
+
+---
+
+<br><BR><BR><BR>
+## .impact[But but but...]
+
+--
+## .fl[[The Docs](https://docs.djangoproject.com/en/2.1/topics/db/sql/)] say you can fall back to raw SQL!
+
+
+???
+
+so, technically, yes, you're right
+---
+
+background-image: url("images/rawhtml.png")
+
+???
+
+the Django 2.1 document does say you can fall back to SQL
+
+WHEN THE MODEL QUERY APIs DONT GO FAR ENOUGH
+
+BECAUSE
+---
+
+background-image: url("images/rawdocs3.png")
+
+???
+
+this part of the documentation
+---
+
+background-image: url("images/rawdocs4.png")
+
+???
+
+hasn't been updated in 9 years
+---
+
+background-image: url("images/rawdocs5.png")
+
+???
+
+heck, the wrning about raw SQL was only added 5 years ago
+
+the model query APIs have improved so much since then
+
+the documentation, especially these pages that are the first links when you search this for this stuff on google, need to be updated. Come find me tomorrow at the sprints if you want to help me with this
+
+
+---
+
+class: title
+# Never use `raw()` anymore.
+### No, really.
 
 
 ---
@@ -3184,16 +3010,26 @@ class: title
 ## Discover more yourself
 ???
 
+
+TIME T MINUS 1
+
 I've only touched the surface of the power of the ORM
 
 If I've caught your interest in the power of this part of django, you can learn more yourself
 ---
 class: title
-## Creating objects
-## Field Types
-## Field Relationships
-## `F()`
-
+## More to `QuerySet`
+### `F()`
+### Funcs()
+### Model Functions
+???
+And Eff expressions, which allows you to manipulate fields in a model directly, for object oriented goodness!
+---
+class: title
+## More to the ORM
+### Creating models
+### Field Types
+### Field Relationships
 ???
 
 How to create objects, including from raw SQL
@@ -3201,23 +3037,6 @@ How to create objects, including from raw SQL
 Field types - things like email fields and image fields
 
 And more field relations, ways that you can call both codepoint attributes on a design object, and design attributes on a codepoint
-
-And Eff expressions, which allows you to manipulate fields in a model directly, for object oriented goodness!
----
-class: title
-## <fl>docs.djangoproject.com</fl>
-
-.footnotes[[Model Expressions](https://docs.djangoproject.com/en/2.1/ref/models/expressions/)<br>[`QuerySet`](https://docs.djangoproject.com/en/2.1/ref/models/querysets/)]
-
-???
-
-The API docs have a bunch of this
-
-but there are missing things
-
-and some things are so new that SEO can miss them
-
-If you're interested, we can look at what's missing and try fixing it at the sprints!
 
 ---
 
@@ -3238,7 +3057,7 @@ You never start from zero, work from what you already know, and you'll get up to
 class: title
 # <br><br>Thank you for your time!
 ![Image](images/footer.svg)
-.footnotes[Technical reviewers: James Bennett, Russell Keith-Magee.]
+.footnotes[.smol[Technical reviewers: James Bennett, Russell Keith-Magee, Carol Willing, Andrew Godwin.]]
 
 ???
 
