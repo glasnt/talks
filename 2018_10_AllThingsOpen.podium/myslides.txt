@@ -1101,7 +1101,7 @@ Note: this has the same sort of effect as in Ruby
 ---
 <br><br><br><br>
 # Pascal
-### ☞ &nbsp;`brew install fpc`<br> &nbsp;`fpc example.pas && ./example`
+### ☞ &nbsp;`brew install fpc`<br> &nbsp;`cd examples && fpc example.pas && ./example`
 
 ---
 $$# cat example.pas
@@ -1204,11 +1204,11 @@ There are flags in erlang to change this, but it's only going to effect our inte
 #= CSS
 ### ☞ &nbsp;`Chrome 69`
 ---
-$$# example.css
+$$# examples/example.css
 css .black { color: black; }
 css .gold &nbsp;{ color: gold; }
 
-$$# example.html
+$$# examples/example.html
 xml .nopad[`<link rel="stylesheet" href="example.css" />`]
 xml `<div class="black gold"> Black Gold </div>`
 xml `<div class="gold black"> Gold Black </div>`
@@ -1311,9 +1311,9 @@ Note: yeah, so this is because scala uses punctuation in a completely different 
 
 for anyone unfamiliar with the conventions of syntax in scala, this might be confusing, but this is absolutely by design
 ---
-
-#= Go
-### ☞ &nbsp;`brew install go`<br> &nbsp;`go run example.go`
+<br><br><BR><BR>
+# Go
+### ☞ &nbsp;`brew install go`<br> &nbsp;`cd examples`<br>`go run example.go`
 ---
 $$# example.go
 
@@ -1366,6 +1366,27 @@ $$# Terminal
 
 
 Note: I can use the full declaration on the variable a, and it's the equivelent of the colon equals I"m performing on B
+
+---
+$$# bad_example.go
+
+go package main
+go func main() {
+go &nbsp;  .red[a = 4]
+go &nbsp;  b := 2
+go &nbsp;  print(a == b)
+go }
+$$# Terminal
+.code[`$ go run bad_example.go`]
+<br>
+--
+<br>
+.code[`./bad_example.go:4:3: undefined: a`<br>`./bad_example.go:6:9: undefined: a`]
+
+
+Note: So if we forget this fact, and we declare a like we would in any other language
+
+the program files to compile 
 
 
 ---
@@ -1457,11 +1478,12 @@ ps .ps-error[The '<' operator is reserved for future use.]
 ---
 $$# PowerShell
 <br>
-ps PS> if (36 .red[>] 42) { "true" } else { "false" } # redirection
-ps false
+ps PS> if (36 .red[>] 42) { "true" } else { "false" } # file
+ps false &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; # redirection
 <br> 
 ps PS> if (36 .red[<] 42) { "true" } else { "false" } # AVOID 
 ps .ps-error[The '<' operator is reserved for future use.]
+--
 .fix-tilt[AVOID]
 Note: You should avoid using greater than, since the complementary less than doesn't exist.
 ---

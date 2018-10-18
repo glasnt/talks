@@ -1263,7 +1263,7 @@ this has the same sort of effect as in Ruby
 ---
 <br><br><br><br>
 # Pascal
-### ☞ &nbsp;`brew install fpc`<br> &nbsp;`fpc example.pas && ./example`
+### ☞ &nbsp;`brew install fpc`<br> &nbsp;`cd examples && fpc example.pas && ./example`
 
 ---
 .righthead[cat example.pas]
@@ -1379,11 +1379,11 @@ class: title
 # CSS
 ### ☞ &nbsp;`Chrome 69`
 ---
-.righthead[example.css]
+.righthead[examples/example.css]
 <pre><code class="css">.black { color: black; }</code></pre>
 <pre><code class="css">.gold &nbsp;{ color: gold; }</code></pre>
 
-.righthead[example.html]
+.righthead[examples/example.html]
 <pre><code class="xml">.nopad[`<link rel="stylesheet" href="example.css" />`]</code></pre>
 <pre><code class="xml">`<div class="black gold"> Black Gold </div>`</code></pre>
 <pre><code class="xml">`<div class="gold black"> Gold Black </div>`</code></pre>
@@ -1502,10 +1502,9 @@ yeah, so this is because scala uses punctuation in a completely different way to
 
 for anyone unfamiliar with the conventions of syntax in scala, this might be confusing, but this is absolutely by design
 ---
-
-class: title
+<br><br><BR><BR>
 # Go
-### ☞ &nbsp;`brew install go`<br> &nbsp;`go run example.go`
+### ☞ &nbsp;`brew install go`<br> &nbsp;`cd examples`<br>`go run example.go`
 ---
 .righthead[example.go]
 
@@ -1562,6 +1561,29 @@ They're shortcuts.
 ???
 
 I can use the full declaration on the variable a, and it's the equivelent of the colon equals I"m performing on B
+
+---
+.righthead[bad_example.go]
+
+<pre><code class="go">package main</code></pre>
+<pre><code class="go">func main() {</code></pre>
+<pre><code class="go">&nbsp; .red[a = 4]</code></pre>
+<pre><code class="go">&nbsp; b := 2</code></pre>
+<pre><code class="go">&nbsp; print(a == b)</code></pre>
+<pre><code class="go">}</code></pre>
+.righthead[Terminal]
+.code[`$ go run bad_example.go`]
+<br>
+--
+<br>
+.code[`./bad_example.go:4:3: undefined: a`<br>`./bad_example.go:6:9: undefined: a`]
+
+
+???
+
+So if we forget this fact, and we declare a like we would in any other language
+
+the program files to compile
 
 
 ---
@@ -1671,11 +1693,12 @@ The solution?
 ---
 .righthead[PowerShell]
 <br>
-<pre><code class="powershell">PS> if (36 .red[>] 42) { "true" } else { "false" } # redirection</code></pre>
-<pre><code class="powershell">false</code></pre>
+<pre><code class="powershell">PS> if (36 .red[>] 42) { "true" } else { "false" } # file</code></pre>
+<pre><code class="powershell">false &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; # redirection</code></pre>
 <br>
 <pre><code class="powershell">PS> if (36 .red[<] 42) { "true" } else { "false" } # AVOID</code></pre>
 <pre><code class="powershell">.ps-error[The '<' operator is reserved for future use.]</code></pre>
+--
 .fix-tilt[AVOID]
 ???
 
