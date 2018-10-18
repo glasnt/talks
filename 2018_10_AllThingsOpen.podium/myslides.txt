@@ -1216,31 +1216,31 @@ xml `<div class="gold black"> Gold Black </div>`
 Note: These two classes have the same specificity, so CSS falls back to source order.
 
 ---
-$$# example.css
+$$# examples/example.css
 css .black { color: black; }
 css .gold &nbsp;{ color: gold; }
 
-$$# example.html
+$$# examples/example.html
 xml .nopad[`<link rel="stylesheet" href="example.css" />`]
 xml `<div class="black gold"> Black Gold </div>`
 xml `<div class="gold black"> Gold Black </div>`
 
-$$# open example.html
+$$# open examples/example.html
 <div class="css-demo">
 <div class="black gold">Black Gold</div>
 <div class="gold black">Gold Black</div>
 </div>
 ---
-$$# example.css
+$$# examples/example.css
 css .black { color: black; }
 css .red[.gold &nbsp;{ color: gold; }] .inline-code[`/* specificity */`]
 
-$$# example.html
+$$# examples/example.html
 xml .nopad[`<link rel="stylesheet" href="example.css" />`]
 xml `<div class="black gold"> Black Gold </div>`
 xml `<div class="gold black"> Gold Black </div>`
 
-$$# open example.html
+$$# open examples/example.html
 <div class="css-demo">
 <div class="black gold">Black Gold</div>
 <div class="gold black">Gold Black</div>
@@ -1250,11 +1250,11 @@ Note: The class order on the element does not matter. These two classes have the
 
 But ah! I hear you cry. What about `!important`
 ---
-$$# example.css
+$$# examples/example.css
 css .black { color: black !important; }
 css .gold &nbsp;{ color: gold; }
 
-$$# example.html
+$$# examples/example.html
 xml .nopad[`<link rel="stylesheet" href="example.css" />`]
 xml `<div class="black gold"> Black Gold </div>`
 xml `<div class="gold black"> Gold Black </div>`
@@ -1262,7 +1262,7 @@ xml `<div class="gold black"> Gold Black </div>`
 Note: Let's just add that here, that'll make sure black actually works!
 --
 
-$$# open example.html
+$$# open examples/example.html
 <div class="css-demo">
 <div class="blacki gold">Black Gold</div>
 <div class="gold blacki">Gold Black</div>
@@ -1467,7 +1467,7 @@ The solution?
 ---
 $$# PowerShell
 <br>
-ps- PS> if (36 > 42) { "true" } else { "false" }
+ps- PS> if (36 > 42) { "true" } else { "false" } 
 ps false
 
 --
@@ -1478,12 +1478,19 @@ ps .ps-error[The '<' operator is reserved for future use.]
 ---
 $$# PowerShell
 <br>
-ps PS> if (36 .red[>] 42) { "true" } else { "false" } # file
-ps false &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; # redirection
+ps PS> if (36 .red[>] 42) { "true" } else { "false" }
+ps false &nbsp;&nbsp; &nbsp; # file redirection
 <br> 
-ps PS> if (36 .red[<] 42) { "true" } else { "false" } # AVOID 
+ps PS> if (36 < 42) { "true" } else { "false" } 
 ps .ps-error[The '<' operator is reserved for future use.]
---
+---
+$$# PowerShell
+<br>
+ps PS> if (36 .red[>] 42) { "true" } else { "false" }
+ps false &nbsp;&nbsp; &nbsp; # file redirection
+<br> 
+ps PS> if (36 .red[<] 42) { "true" } else { "false" } 
+ps .ps-error[The '<' operator is reserved for future use.]
 .fix-tilt[AVOID]
 Note: You should avoid using greater than, since the complementary less than doesn't exist.
 ---

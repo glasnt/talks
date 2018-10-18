@@ -1393,31 +1393,31 @@ class: title
 These two classes have the same specificity, so CSS falls back to source order.
 
 ---
-.righthead[example.css]
+.righthead[examples/example.css]
 <pre><code class="css">.black { color: black; }</code></pre>
 <pre><code class="css">.gold &nbsp;{ color: gold; }</code></pre>
 
-.righthead[example.html]
+.righthead[examples/example.html]
 <pre><code class="xml">.nopad[`<link rel="stylesheet" href="example.css" />`]</code></pre>
 <pre><code class="xml">`<div class="black gold"> Black Gold </div>`</code></pre>
 <pre><code class="xml">`<div class="gold black"> Gold Black </div>`</code></pre>
 
-.righthead[open example.html]
+.righthead[open examples/example.html]
 <div class="css-demo">
 <div class="black gold">Black Gold</div>
 <div class="gold black">Gold Black</div>
 </div>
 ---
-.righthead[example.css]
+.righthead[examples/example.css]
 <pre><code class="css">.black { color: black; }</code></pre>
 <pre><code class="css">.red[.gold &nbsp;{ color: gold; }] .inline-code[`/* specificity */`]</code></pre>
 
-.righthead[example.html]
+.righthead[examples/example.html]
 <pre><code class="xml">.nopad[`<link rel="stylesheet" href="example.css" />`]</code></pre>
 <pre><code class="xml">`<div class="black gold"> Black Gold </div>`</code></pre>
 <pre><code class="xml">`<div class="gold black"> Gold Black </div>`</code></pre>
 
-.righthead[open example.html]
+.righthead[open examples/example.html]
 <div class="css-demo">
 <div class="black gold">Black Gold</div>
 <div class="gold black">Gold Black</div>
@@ -1429,11 +1429,11 @@ The class order on the element does not matter. These two classes have the same 
 
 But ah! I hear you cry. What about `!important`
 ---
-.righthead[example.css]
+.righthead[examples/example.css]
 <pre><code class="css">.black { color: black !important; }</code></pre>
 <pre><code class="css">.gold &nbsp;{ color: gold; }</code></pre>
 
-.righthead[example.html]
+.righthead[examples/example.html]
 <pre><code class="xml">.nopad[`<link rel="stylesheet" href="example.css" />`]</code></pre>
 <pre><code class="xml">`<div class="black gold"> Black Gold </div>`</code></pre>
 <pre><code class="xml">`<div class="gold black"> Gold Black </div>`</code></pre>
@@ -1443,7 +1443,7 @@ But ah! I hear you cry. What about `!important`
 Let's just add that here, that'll make sure black actually works!
 --
 
-.righthead[open example.html]
+.righthead[open examples/example.html]
 <div class="css-demo">
 <div class="blacki gold">Black Gold</div>
 <div class="gold blacki">Gold Black</div>
@@ -1693,12 +1693,19 @@ The solution?
 ---
 .righthead[PowerShell]
 <br>
-<pre><code class="powershell">PS> if (36 .red[>] 42) { "true" } else { "false" } # file</code></pre>
-<pre><code class="powershell">false &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; # redirection</code></pre>
+<pre><code class="powershell">PS> if (36 .red[>] 42) { "true" } else { "false" }</code></pre>
+<pre><code class="powershell">false &nbsp;&nbsp; &nbsp; # file redirection</code></pre>
 <br>
-<pre><code class="powershell">PS> if (36 .red[<] 42) { "true" } else { "false" } # AVOID</code></pre>
+<pre><code class="powershell">PS> if (36 < 42) { "true" } else { "false" }</code></pre>
 <pre><code class="powershell">.ps-error[The '<' operator is reserved for future use.]</code></pre>
---
+---
+.righthead[PowerShell]
+<br>
+<pre><code class="powershell">PS> if (36 .red[>] 42) { "true" } else { "false" }</code></pre>
+<pre><code class="powershell">false &nbsp;&nbsp; &nbsp; # file redirection</code></pre>
+<br>
+<pre><code class="powershell">PS> if (36 .red[<] 42) { "true" } else { "false" }</code></pre>
+<pre><code class="powershell">.ps-error[The '<' operator is reserved for future use.]</code></pre>
 .fix-tilt[AVOID]
 ???
 
