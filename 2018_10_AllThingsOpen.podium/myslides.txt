@@ -1213,16 +1213,23 @@ xml .nopad[`<link rel="stylesheet" href="example.css" />`]
 xml `<div class="black gold"> Black Gold </div>`
 xml `<div class="gold black"> Gold Black </div>`
 
---
+Note: These two classes have the same specificity, so CSS falls back to source order.
+
+---
+$$# example.css
+css .black { color: black; }
+css .gold &nbsp;{ color: gold; }
+
+$$# example.html
+xml .nopad[`<link rel="stylesheet" href="example.css" />`]
+xml `<div class="black gold"> Black Gold </div>`
+xml `<div class="gold black"> Gold Black </div>`
+
 $$# open example.html
-.white[.]
 <div class="css-demo">
 <div class="black gold">Black Gold</div>
 <div class="gold black">Gold Black</div>
 </div>
-
-Note: These two classes have the same specificity, so CSS falls back to source order.
-
 ---
 $$# example.css
 css .black { color: black; }

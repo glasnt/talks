@@ -1388,18 +1388,25 @@ class: title
 <pre><code class="xml">`<div class="black gold"> Black Gold </div>`</code></pre>
 <pre><code class="xml">`<div class="gold black"> Gold Black </div>`</code></pre>
 
---
-.righthead[open example.html]
-.white[.]
-<div class="css-demo">
-<div class="black gold">Black Gold</div>
-<div class="gold black">Gold Black</div>
-</div>
-
 ???
 
 These two classes have the same specificity, so CSS falls back to source order.
 
+---
+.righthead[example.css]
+<pre><code class="css">.black { color: black; }</code></pre>
+<pre><code class="css">.gold &nbsp;{ color: gold; }</code></pre>
+
+.righthead[example.html]
+<pre><code class="xml">.nopad[`<link rel="stylesheet" href="example.css" />`]</code></pre>
+<pre><code class="xml">`<div class="black gold"> Black Gold </div>`</code></pre>
+<pre><code class="xml">`<div class="gold black"> Gold Black </div>`</code></pre>
+
+.righthead[open example.html]
+<div class="css-demo">
+<div class="black gold">Black Gold</div>
+<div class="gold black">Gold Black</div>
+</div>
 ---
 .righthead[example.css]
 <pre><code class="css">.black { color: black; }</code></pre>
