@@ -10,7 +10,7 @@ You got this 💪
 ---
 class: title
 # JavaScript
-### ☞ &nbsp;`Chrome 69 Console`
+### ☞ &nbsp;`Chrome 70 Console`
 ???
 
 Let's talk about javascript
@@ -134,11 +134,14 @@ This next example is to do with the difference in the equality operators
 .righthead[JavaScript]
 <pre><code class="javascript">> 1 .blue[==] "1" // with type coercion</code></pre>
 <pre><code class="javascript">true</code></pre>
+<pre><code class="javascript">> 1 === "1"</code></pre>
+<pre><code class="javascript">false</code></pre>
+---
+.righthead[JavaScript]
+<pre><code class="javascript">> 1 .blue[==] "1" // with type coercion</code></pre>
+<pre><code class="javascript">true</code></pre>
 <pre><code class="javascript">> 1 .blue[===] "1" // without type coercion</code></pre>
 <pre><code class="javascript">false</code></pre>
-???
-
-This next example is to do with the difference in the equality operators
 ---
 .righthead[JavaScript]
 <pre><code class="javascript">.large[> ".emoji[👩🏻‍🚀]".split("")]</code></pre>
@@ -178,7 +181,7 @@ Which means we can also do stuff like string replacement
 ---
 
 .righthead[JavaScript]
-<pre><code class="javascript">.large[> ".emoji[👩🏻‍🚀]".replace(".emoji[👩]",".emoji[👨]")]]</code></pre>
+<pre><code class="javascript">.large[> ".emoji[👩🏻‍🚀]".replace(".emoji[👩]",".emoji[👨]")]</code></pre>
 --
 <pre><code class="javascript">.emoji[👨🏻‍🚀]</code></pre>
 --
@@ -204,13 +207,13 @@ but as for this example...
 
 .righthead[JavaScript]
 <pre><code class="javascript">> [] + []</code></pre>
-<pre><code class="javascript">"" // ???</code></pre>
+<pre><code class="javascript">"" .white[..............] // ???</code></pre>
 <pre><code class="javascript">> [] + {}</code></pre>
 <pre><code class="javascript">"[object Object]" // ???</code></pre>
 <pre><code class="javascript">> {} + []</code></pre>
-<pre><code class="javascript">0 // ???</code></pre>
+<pre><code class="javascript">0 .white[...............] // ???</code></pre>
 <pre><code class="javascript">> {} + {}</code></pre>
-<pre><code class="javascript">NaN // ???</code></pre>
+<pre><code class="javascript">NaN .white[.............] // ???</code></pre>
 ???
 
 This one is a bit more complicated.
@@ -1072,7 +1075,7 @@ class: title
 <pre><code class="java">true</code></pre>
 <pre><code class="java">java> a >= b</code></pre>
 <pre><code class="java">true</code></pre>
-<pre><code class="java">java> a .blue[==] b /* identity ✱ /</code></pre>
+<pre><code class="java">java> a .blue[==] b /* identity .w[✱] /</code></pre>
 <pre><code class="java">false</code></pre>
 --
 .righthead[IntegerCache]
@@ -1263,7 +1266,7 @@ this has the same sort of effect as in Ruby
 ---
 <br><br><br><br>
 # Pascal
-### ☞ &nbsp;`brew install fpc`<br> &nbsp;`cd examples && fpc example.pas && ./example`
+### ☞ &nbsp;`brew install fpc`<br> &nbsp;`cd examples`<br> `fpc example.pas && ./example`
 
 ---
 .righthead[cat example.pas]
@@ -1274,6 +1277,7 @@ this has the same sort of effect as in Ruby
 <pre><code class="delphi">&nbsp; x += 1;</code></pre>
 <pre><code class="delphi">&nbsp; writeln(x = 42);</code></pre>
 <pre><code class="delphi">end.</code></pre>
+--
 .righthead[Terminal]
 .code[`$ fpc example.pas && ./example`]
 --
@@ -1342,9 +1346,6 @@ Let's try a different range
 ---
 .righthead[Elixir]
 <pre><code class="elixir">iex> Enum.map(65..90, fn(x) -> x end)</code></pre>
---
-<pre><code class="elixir">'ABCDEFGHIJKLMNOPQRSTUVWXYZ'</code></pre>
-
 
 ???
 
@@ -1353,6 +1354,11 @@ Let's try say... 65 to 90
 No reason
 
 And let's not to anything, just have each element in the range pass through
+
+--
+<pre><code class="elixir">'ABCDEFGHIJKLMNOPQRSTUVWXYZ'</code></pre>
+
+???
 
 We get a recognisable string.
 
@@ -1375,9 +1381,77 @@ Elixir was built on top of Erlang, which was created in the 80's, and strings in
 There are flags in erlang to change this, but it's only going to effect our interactive interpreter, not the actual data manipulation
 
 ---
-class: title
+<br><BR><BR><BR>
+# C++
+### ☞ &nbsp;`cd examples`<br>`gcc example.cpp -o example`<br>`./example`
+---
+.righthead[examples/example.cpp]
+<pre><code class="cpp">#include ＜cstdio></code></pre>
+<pre><code class="cpp">int main() {</code></pre>
+<pre><code class="cpp">.white[...] printf("wat??!\n");</code></pre>
+<pre><code class="cpp">}</code></pre>
+--
+.righthead[Terminal]
+<pre><code class="bash">$ gcc example.cpp -o example && ./example</code></pre>
+--
+<pre><code class="bash">wat|</code></pre>
+
+???
+
+okay, so I cheated a bit, because this one has been implicitly mitigated.
+---
+.righthead[examples/example.cpp]
+<pre><code class="cpp">#include ＜cstdio></code></pre>
+<pre><code class="cpp">int main() {</code></pre>
+<pre><code class="cpp">.white[...] printf("wat??!\n");</code></pre>
+<pre><code class="cpp">}</code></pre>
+.righthead[Terminal]
+<pre><code class="bash">$ gcc example.cpp -o example .red[-trigraphs] && ./example</code></pre>
+--
+<pre><code class="bash">.smol[warning: trigraph converted to '|' character [-Wtrigraphs]]</code></pre>
+<pre><code class="bash">.smol[.white[....] printf("wat??!\n");]</code></pre>
+<pre><code class="bash">.smol[.white[...............] ^]</code></pre>
+<pre><code class="bash">wat|</code></pre>
+???
+What I actually ran
+
+I came across this one when trying to do some printline debugging, and searching my logs for `wat??!` wasn't returning anything, because it was implicitly changing my output
+
+In some environments this functionality is disabled by default, but in mine it wasn't
+
+The problem here, from what I understand, is that C++ doesn't understand millenial speak
+
+---
+class: table
+<pre><code class="bash"># Character encodings</code></pre>
+
+| .smol[ &nbsp; ] &nbsp;|&nbsp; .smol[121 ] &nbsp;|&nbsp; .smol[ 122 ] &nbsp;|&nbsp; .smol[ 123 ] &nbsp;|&nbsp; .smol[ 124 ] &nbsp;|&nbsp; .smol[ 125 ] &nbsp;|&nbsp; .smol[ 126 ] &nbsp;|&nbsp; .smol[ 126 ] &nbsp;|&nbsp; .smol[ 127 ] &nbsp; |
+|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
+| ISO646 | w | x | y | z | .gg[&nbsp;] | .gg[&nbsp;] |.gg[&nbsp;] | DEL|
+| ASCII | w | x | y | z | { | ┃ | }| DEL |
+
+???
+
+C supports ISO 646, which doesn't have braces or the pipe character, while ascii does
+
+Back in the day keyboards and punch cards didn't have some of these punctuation characters that a lot of keyboards today have
+
+Although not all keyboards have these symbols even now, and if they do, they are in different places. Forget qwerty vs dvorak (d-vor-jack), try using a US-keybord layout then swapping to a UK layout. The differences are subtle, but for programers they are glaringly obvious.
+
+.clear[]
+
+TODO - why is tagline monospace here?!
+
+---
+.righthead[C++]
+.code[.grey[# Trigraph replacements]<br><br>??! → |<br>??< → {<br>??> → }<br>...]
+
+<pre><code class="bash"># -Wtrigraphs</code></pre>
+
+---
+<br><BR><BR><BR>
 # CSS
-### ☞ &nbsp;`Chrome 69`
+### ☞ &nbsp;`Chrome 70`<br>`cd examples`<br>`open example.html`
 ---
 .righthead[examples/example.css]
 <pre><code class="css">.black { color: black; }</code></pre>
@@ -1390,7 +1464,16 @@ class: title
 
 ???
 
-These two classes have the same specificity, so CSS falls back to source order.
+if I have two files, a css file that defines a black and a gold style, and then a HTML div that uses both, but in different orders
+
+
+How will the divs appear
+
+black and gold
+
+or
+
+.gold and black
 
 ---
 .righthead[examples/example.css]
@@ -1407,6 +1490,9 @@ These two classes have the same specificity, so CSS falls back to source order.
 <div class="black gold">Black Gold</div>
 <div class="gold black">Gold Black</div>
 </div>
+???
+
+These two classes have the same specificity, so CSS falls back to source order.
 ---
 .righthead[examples/example.css]
 <pre><code class="css">.black { color: black; }</code></pre>
@@ -1653,22 +1739,29 @@ This is because ternary expressions in PHP are left associative
 
 Like we saw earlier in the ruby example, the assumption of the order of operations is that we'd short cut to "one" here
 
-The solution?
+
+
 ---
 .righthead[PHP]
-<pre><code class="php">php> echo (TRUE &nbsp;? "one" :</code></pre>
-<pre><code class="php">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;TRUE &nbsp;? "two" :</code></pre>
-<pre><code class="php">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; .strike["three"]); .inline-code[`/* left associative */`]</code></pre>
+<pre><code class="php">php> echo (&nbsp;TRUE</code></pre>
+<pre><code class="php">.white[.........] ? "one"</code></pre>
+<pre><code class="php">.white[.........] : (TRUE&nbsp;? "two" : "three")); #assumed</code></pre>
+<pre><code class="php">one</code></pre>
+<pre><code class="php">&nbsp;</code></pre>
+<pre><code class="php">php> echo ((TRUE ? "one" : TRUE) #actual</code></pre>
+<pre><code class="php">.white[.........] ? "two"</code></pre>
+<pre><code class="php">.white[.........] : "three");</code></pre>
 <pre><code class="php">two</code></pre>
+
+???
+The solution?
+--
 .fix-tilt[AVOID]
 
 ???
 
-This is because ternary expressions in PHP are left associative
+Avoid chaining ternary operators
 
-Like we saw earlier in the ruby example, the assumption of the order of operations is that we'd short cut to "one" here
-
-The solution?
 ---
 <br><br><br><br>
 # PowerShell
@@ -1698,6 +1791,12 @@ The solution?
 <br>
 <pre><code class="powershell">PS> if (36 < 42) { "true" } else { "false" }</code></pre>
 <pre><code class="powershell">.ps-error[The '<' operator is reserved for future use.]</code></pre>
+--
+<br>
+<pre><code class="powershell">PS> cat 42</code></pre>
+--
+<pre><code class="bash">36</code></pre>
+
 ---
 .righthead[PowerShell]
 <br>

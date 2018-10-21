@@ -6,7 +6,7 @@
 Note: You got this 💪
 ---
 #= JavaScript
-### ☞ &nbsp;`Chrome 69 Console`
+### ☞ &nbsp;`Chrome 70 Console`
 Note: Let's talk about javascript
 ---
 $$# JavaScript
@@ -103,9 +103,14 @@ Note: This next example is to do with the difference in the equality operators
 $$# JavaScript
 js > 1 .blue[==] "1" // with type coercion
 js true
+js > 1 === "1"
+js  false 
+---
+$$# JavaScript
+js > 1 .blue[==] "1" // with type coercion
+js true
 js > 1 .blue[===] "1"  // without type coercion
 js  false 
-Note: This next example is to do with the difference in the equality operators
 ---
 $$# JavaScript
 js .large[> ".emoji[👩🏻‍🚀]".split("")]
@@ -140,7 +145,7 @@ Which means we can also do stuff like string replacement
 ---
 
 $$# JavaScript
-js- .large[> ".emoji[👩🏻‍🚀]".replace(".emoji[👩]",".emoji[👨]")]]
+js- .large[> ".emoji[👩🏻‍🚀]".replace(".emoji[👩]",".emoji[👨]")]
 js- .emoji[👨🏻‍🚀]
 <br><br><br>
 .center[.lemoji[👩🏻‍🚀 ➡ 👨🏻‍🚀]]
@@ -162,13 +167,13 @@ Note: but as for this example...
 
 $$# JavaScript
 js > [] + []
-js "" // ???
+js "" .white[..............] // ???
 js > [] + {}
 js "[object Object]" // ???
 js > {} + []
-js 0 // ???
+js 0 .white[...............] // ???
 js > {} + {}
-js NaN // ???
+js NaN .white[.............] // ???
 Note: This one is a bit more complicated. 
 ---
 
@@ -931,7 +936,7 @@ java java> a <= b
 java true
 java java> a >= b
 java true
-java java> a .blue[==] b /* identity ✱ /
+java java> a .blue[==] b /* identity .w[✱] /
 java false
 --
 $$# IntegerCache
@@ -1101,7 +1106,7 @@ Note: this has the same sort of effect as in Ruby
 ---
 <br><br><br><br>
 # Pascal
-### ☞ &nbsp;`brew install fpc`<br> &nbsp;`cd examples && fpc example.pas && ./example`
+### ☞ &nbsp;`brew install fpc`<br> &nbsp;`cd examples`<br> `fpc example.pas && ./example`
 
 ---
 $$# cat example.pas
@@ -1112,6 +1117,7 @@ pas &nbsp; x := 41;
 pas  &nbsp; x += 1;
 pas &nbsp; writeln(x = 42);
 pas end.
+--
 $$# Terminal
 .code[`$ fpc example.pas && ./example`]
 -- 
@@ -1172,15 +1178,18 @@ Let's try a different range
 
 ---
 $$# Elixir
-iex- iex> Enum.map(65..90, fn(x) -> x end)
-iex 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
-
+iex iex> Enum.map(65..90, fn(x) -> x end)
 
 Note: Let's try say... 65 to 90
 
 No reason
 
 And let's not to anything, just have each element in the range pass through
+
+--
+iex 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+
+Note:
 
 We get a recognisable string. 
 
@@ -1201,8 +1210,71 @@ Elixir was built on top of Erlang, which was created in the 80's, and strings in
 There are flags in erlang to change this, but it's only going to effect our interactive interpreter, not the actual data manipulation
 
 ---
-#= CSS
-### ☞ &nbsp;`Chrome 69`
+<br><BR><BR><BR>
+# C++
+### ☞ &nbsp;`cd examples`<br>`gcc example.cpp -o example`<br>`./example`
+---
+$$# examples/example.cpp
+cpp #include ＜cstdio>
+cpp int main() {
+cpp .white[...] printf("wat??!\n");
+cpp }
+--
+$$# Terminal
+sh- $ gcc example.cpp -o example && ./example
+sh wat|
+
+Note: okay, so I cheated a bit, because this one has been implicitly mitigated.
+---
+$$# examples/example.cpp
+cpp #include ＜cstdio>
+cpp int main() {
+cpp .white[...] printf("wat??!\n");
+cpp }
+$$# Terminal
+sh- $ gcc example.cpp -o example .red[-trigraphs] && ./example
+sh .smol[warning: trigraph converted to '|' character [-Wtrigraphs]]
+sh .smol[.white[....] printf("wat??!\n");]
+sh .smol[.white[...............] ^]
+sh wat|
+Note: 
+What I actually ran
+
+I came across this one when trying to do some printline debugging, and searching my logs for `wat??!` wasn't returning anything, because it was implicitly changing my output
+
+In some environments this functionality is disabled by default, but in mine it wasn't
+
+The problem here, from what I understand, is that C++ doesn't understand millenial speak
+
+---
+class: table
+sh # Character encodings
+
+| .smol[ &nbsp; ]  &nbsp;|&nbsp;  .smol[121 ]  &nbsp;|&nbsp; .smol[ 122 ]  &nbsp;|&nbsp; .smol[ 123 ]  &nbsp;|&nbsp; .smol[ 124 ]  &nbsp;|&nbsp; .smol[ 125 ]  &nbsp;|&nbsp; .smol[ 126 ]  &nbsp;|&nbsp; .smol[ 126 ]  &nbsp;|&nbsp; .smol[ 127 ]  &nbsp; |
+|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
+| ISO646 | w | x | y | z | .gg[&nbsp;]  | .gg[&nbsp;] |.gg[&nbsp;] | DEL|
+| ASCII | w | x | y | z | { | ┃ | }| DEL |
+
+Note: C supports ISO 646, which doesn't have braces or the pipe character, while ascii does
+
+Back in the day keyboards and punch cards didn't have some of these punctuation characters that a lot of keyboards today have
+
+Although not all keyboards have these symbols even now, and if they do, they are in different places. Forget qwerty vs dvorak (d-vor-jack), try using a US-keybord layout then swapping to a UK layout. The differences are subtle, but for programers they are glaringly obvious. 
+
+.clear[]
+
+TODO - why is tagline monospace here?!
+
+---
+$$# C++
+.code[.grey[# Trigraph replacements]<br><br>??! → |<br>??< → {<br>??> → }<br>...]
+
+sh # -Wtrigraphs
+
+---
+<br><BR><BR><BR>
+# CSS
+### ☞ &nbsp;`Chrome 70`<br>`cd examples`<br>`open example.html`
 ---
 $$# examples/example.css
 css .black { color: black; }
@@ -1213,7 +1285,16 @@ xml .nopad[`<link rel="stylesheet" href="example.css" />`]
 xml `<div class="black gold"> Black Gold </div>`
 xml `<div class="gold black"> Gold Black </div>`
 
-Note: These two classes have the same specificity, so CSS falls back to source order.
+Note: if I have two files, a css file that defines a black and a gold style, and then a HTML div that uses both, but in different orders
+
+
+How will the divs appear
+
+black and gold
+
+or
+
+.gold and black
 
 ---
 $$# examples/example.css
@@ -1230,6 +1311,7 @@ $$# open examples/example.html
 <div class="black gold">Black Gold</div>
 <div class="gold black">Gold Black</div>
 </div>
+Note: These two classes have the same specificity, so CSS falls back to source order.
 ---
 $$# examples/example.css
 css .black { color: black; }
@@ -1442,20 +1524,29 @@ Note: This is because ternary expressions in PHP are left associative
 
 Like we saw earlier in the ruby example, the assumption of the order of operations is that we'd short cut to "one" here
 
-The solution?
+
+
 ---
 $$# PHP
-php php> echo (TRUE &nbsp;? "one" :
-php &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;TRUE &nbsp;? "two" : 
-php &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;  .strike["three"]); .inline-code[`/* left associative */`]
+php php> echo (&nbsp;TRUE 
+php .white[.........] ? "one" 
+php .white[.........] : (TRUE&nbsp;? "two" : "three")); #assumed
+php one
+php &nbsp;
+php php> echo ((TRUE ? "one" : TRUE) #actual 
+php .white[.........] ? "two" 
+php .white[.........] : "three");
 php two
+
+Note:
+The solution?
+--
 .fix-tilt[AVOID]
 
-Note: This is because ternary expressions in PHP are left associative
+Note: 
 
-Like we saw earlier in the ruby example, the assumption of the order of operations is that we'd short cut to "one" here
+Avoid chaining ternary operators
 
-The solution?
 ---
 <br><br><br><br>
 # PowerShell
@@ -1483,6 +1574,12 @@ ps false &nbsp;&nbsp; &nbsp; # file redirection
 <br> 
 ps PS> if (36 < 42) { "true" } else { "false" } 
 ps .ps-error[The '<' operator is reserved for future use.]
+--
+<br>
+ps PS> cat 42
+--
+sh 36
+
 ---
 $$# PowerShell
 <br>

@@ -435,3 +435,7 @@ Added: Zenburn, mostly.
 .nopad { padding: 0; }
 .inline-img img { display: inline-block; height: 50px; padding: 0 5px 0 5px;}
 
+.smol { font-size: 80%; }
+.table { font-size: 32pt; text-align: left; font-family: monospace  }
+.grey { color: grey }
+.gg { background-color: lightgrey }
