@@ -415,6 +415,7 @@ Added: Zenburn, mostly.
 .remark-slides-area .remark-slide-content::after {
     content: "glasnt.com/wat" ;
     font-weight: normal;
+    font-family: "PT Sans" !important; 
     background-color: white;
     color: grey;
     padding: 10px; 

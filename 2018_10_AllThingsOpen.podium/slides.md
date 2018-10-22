@@ -1747,6 +1747,7 @@ Like we saw earlier in the ruby example, the assumption of the order of operatio
 <pre><code class="php">.white[.........] ? "one"</code></pre>
 <pre><code class="php">.white[.........] : (TRUE&nbsp;? "two" : "three")); #assumed</code></pre>
 <pre><code class="php">one</code></pre>
+--
 <pre><code class="php">&nbsp;</code></pre>
 <pre><code class="php">php> echo ((TRUE ? "one" : TRUE) #actual</code></pre>
 <pre><code class="php">.white[.........] ? "two"</code></pre>
@@ -1828,7 +1829,7 @@ It also means you don't hvae to remember which way the crocodile goes
 ???
 INTENTIONALLY BLANK
 
-I've gone through over a dozen programming languages
+I've gone through 15 different programming languages
 
 And shown what could be described in each as a 'wat'
 
@@ -1857,7 +1858,6 @@ class: title
 # .inline-img[Learn something ![](images/sparkles.png).new[new]![](images/sparkles.png)]
 
 ???
->
 
 Because these are all examples that I have personally come across. I have been a polyglot developer for *mumble* years now, in every one of these languages, and I use to think
 
@@ -1873,7 +1873,7 @@ they're tools
 
 they're tools to manipulate data to solve problems, and each of them has their place
 
-If you are proficient at, say, ruby, and only ruby, that's great. But why not try your hand at something else? You might learn something more and help deeper your understanding of your language of choice along the way
+If you are proficient at, say, perl, and only perl; or java and only java, that's great. But why not try your hand at something else? You might learn something more and help deeper your understanding of your language of choice along the way
 
 
 ---
