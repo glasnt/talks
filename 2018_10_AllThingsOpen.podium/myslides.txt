@@ -4,6 +4,8 @@
 @ footer.svg
 
 Note: You got this 💪
+
+⏺ START RECORDING
 ---
 #= JavaScript
 ### ☞ &nbsp;`Chrome 70 Console`

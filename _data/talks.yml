@@ -1,3 +1,12 @@
+- conference:
+    name: All Things Open
+    date: 2018-10-22
+    link: https://allthingsopen.org
+    talks:
+        - name: Turning wat into why
+          slides: 2018_10_AllThingsOpen.podium/index.html
+          twitter: https://twitter.com/FunnelFiasco/status/1054379253289177088
+
 - conference: 
     name: DjangoCon US 2018
     date: 2018-10-15

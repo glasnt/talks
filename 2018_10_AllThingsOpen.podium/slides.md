@@ -7,6 +7,8 @@ class: title
 ???
 
 You got this 💪
+
+⏺ START RECORDING
 ---
 class: title
 # JavaScript
