@@ -1491,10 +1491,10 @@ Each have their own strengths
 ---
 $$# PHP
 php- php> echo (TRUE ? "True" : "False");
-php- true
+php- True
 <br>
 php- php> echo (False ? "True" : "False");
-php false
+php False
 
 Note: Ternary operators
 
