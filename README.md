@@ -20,9 +20,11 @@ For reveal.js and projection.js:
    
 ```
    cd TALK_NAME
-   python3 -m http.server -p 1337
+   python -m http.server -p 1337
    open http://localhost:1337
 ```
+
+If you are running Python 2.7 (which you [really shouldn't](https://pythonclock.org/)), run `python -m SimpleHTTPServer 1337` instead. 
 
 Speaker notes can be viewed by pressing `[s]`. I use the notes mostly for reminders, and should not be assumed to be of any use to anyone wanting a general review of the talk. 
 
