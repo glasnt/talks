@@ -15,8 +15,11 @@
         - type: Lightning Talk
           name: Emoji Story Time with Katie
           slides: 2018_10_DjangoConUS_Emoji/index.html
+          twitter: https://twitter.com/ChloeCondon/status/1052256899557613568
+          photo: https://www.flickr.com/photos/144080672@N05/44722894455/in/datetaken-public/
         - name: "ORM: The Sequel"
           slides: 2018_10_DjangoConUS.podium
+          twitter: https://twitter.com/treyhunner/status/1052688137250516992
 
 - conference:
     name: Pursuit Podcast
