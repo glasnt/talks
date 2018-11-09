@@ -21,6 +21,7 @@
         - name: "ORM: The Sequel"
           slides: 2018_10_DjangoConUS.podium
           twitter: https://twitter.com/treyhunner/status/1052688137250516992
+          video: https://www.youtube.com/watch?v=p9Bgr5VOISo
 
 - conference:
     name: Pursuit Podcast
