@@ -498,8 +498,8 @@
         type: Lightning Talk
         slides: HatRackExtra
       - name: The Power ⚡️ and Responsibility 😓 of Unicode Adoption ✨
-        video: https://opbeat.com/events/djangocon-eu-2016/
-        link: https://djangocon.eu/speakers/11
+        video: https://pyvideo.org/djangocon-europe-2016/the-power-and-responsibility-of-unicode-adoption.html
+        link: https://2016.djangocon.eu/speakers/11
         slides: 2016_03_DjangoConEU
 
 
