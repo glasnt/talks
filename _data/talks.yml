@@ -1,9 +1,10 @@
 - conference:
     name: All Things Open
     date: 2018-10-22
-    link: https://allthingsopen.org
+    link: https://2018.allthingsopen.org
     talks:
         - name: Turning wat into why
+          link: https://2018.allthingsopen.org/talk/turning-wat-into-why/
           slides: 2018_10_AllThingsOpen.podium/index.html
           twitter: https://twitter.com/FunnelFiasco/status/1054379253289177088
 
