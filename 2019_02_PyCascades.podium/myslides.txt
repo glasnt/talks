@@ -1,0 +1,1370 @@
+#= <br>Turning wat into why
+## PyCascades 2019
+@ footer.svg
+---
+#= JavaScript
+### ☞ &nbsp;`Chrome 70 Console`
+Note: Let's talk about javascript
+---
+$$# JavaScript
+js- > 4 + 2
+js- 6
+js- > 4 - 2
+js- 2
+js- > 4 - "2"
+js- 2
+js- > 4 + "2"
+js "42"
+
+---
+$$# JavaScript
+js- > 1 == "1"
+js- true
+js- > 1 === "1"
+js false 
+---
+$$# JavaScript
+js- > [] + []
+js- ""
+js- > [] + {}
+js- "[object Object]"
+js- > {} + []
+js- 0
+js- > {} + {}
+js NaN
+---
+~@ wat.png
+.wat[.wat-pos[wat]]
+---
+~@ wat.png
+.wat[.wat-pos[.strike[wat]]]
+.why[.why-pos[why]]
+---
+#= JavaScript
+Note: Let's talk about javascript
+---
+$$# JavaScript
+js > 4 + 2
+js 6
+js > 4 - 2
+js 2
+js > 4 - "2"
+js 2
+js > 4 + "2"
+js "42"
+
+Note: the problem with this example is to do with types
+---
+$$# JavaScript
+js > 4 + 2
+js 6
+js > 4 - 2
+js 2
+js > 4 .blue[-] "2" // implicit coercion
+js 2
+js > 4 + "2" 
+js "42"
+
+
+Note:
+1: subtraction is only defined for numerics, so it coerces the string into a number
+---
+$$# JavaScript
+js > 4 + 2
+js 6
+js > 4 - 2
+js 2
+js > 4 .blue[-] "2" // implicit coercion
+js 2
+js > 4 .blue[+] "2" // overloaded operand
+js "42"
+
+
+Note:
+
+2: the plus is an overloaded operand. It can act as both numeric addition, or in this case, concatenation
+
+---
+$$# JavaScript
+js > 1 == "1"
+js true
+js > 1 === "1"
+js  false 
+Note: This next example is to do with the difference in the equality operators
+
+---
+$$# JavaScript
+js > 1 .blue[==] "1" // with type coercion
+js true
+js > 1 === "1"
+js  false 
+---
+$$# JavaScript
+js > 1 .blue[==] "1" // with type coercion
+js true
+js > 1 .blue[===] "1"  // without type coercion
+js  false 
+---
+$$# JavaScript
+js > [] + []
+js ""
+js > [] + {}
+js "[object Object]"
+js > {} + []
+js 0
+js > {} + {}
+js NaN
+
+Note: but as for this example... 
+
+---
+
+$$# JavaScript
+js > [] + []
+js "" .white[..............] // ???
+js > [] + {}
+js "[object Object]" // ???
+js > {} + []
+js 0 .white[...............] // ???
+js > {} + {}
+js NaN .white[.............] // ???
+Note: This one is a bit more complicated. 
+---
+
+#= `+`
+
+Note: Remember that overloaded operand I mentioned earlier?
+
+Let's dive into that a bit more. 
+
+---
+class: center
+# .ecma[.ecma-header[ECMA-262, 9th edition]]
+## .ecma[.ecma-header[ECMAScript® 2018 Language Specification]]
+### .ecma[12.8.3 The Addition Operator ( `+` )]
+#### &nbsp;
+
+---
+
+class: center
+# .ecma[.ecma-header[ECMA-262, 9th edition]]
+## .ecma[.ecma-header[ECMAScript® 2018 Language Specification]]
+### .ecma[12.8.3 The Addition Operator ( `+` )]
+#### NOTE The addition operator either performs string concatenation or numeric addition.
+
+---
+$$# ECMAScript
+## .bluef[`a`] `+` .greenf[`b`]
+
+--
+
+.ecma[.bc[Convert .bluef[`a`] and .greenf[`b`] to primatives]]
+ 
+--
+
+ * .ecma[.bc[`typeof()` in `undefined`, `null`, `boolean`, `number`, `string`]]
+ 
+--
+ 
+ * .ecma[Try .bc[`.valueOf()`], else .bc[`.toString()`]]
+
+--
+
+.ecma[Are .bc[.bluef[`a`]] or .bc[.greenf[`b`]] a string?]
+
+--
+
+.ecma[Yes → .bc[Concatenate `String(`.bluef[`a`]`)` and `String(`.greenf[`b`]`)`]]
+
+--
+
+.ecma[No → .bc[Sum `Number(`.bluef[`a`]`)` and `Number(`.greenf[`b`]`)`]]
+---
+$$# ECMAScript
+## .bluef[`[]`] `+` .greenf[`{}`]
+--
+
+.ecma[.bc[Convert .bluef[`[]`] to primative]]
+
+-- 
+
+  * .ecma[.bc[`typeof()` in `undefined`, `null`, `boolean`, `number`, `string`]]
+  * .ecma[Try .bc[`.valueOf()`]]
+
+--
+js- > [].valueOf()
+js- []
+js- > typeof([])
+js "object"
+---
+$$# ECMAScript
+## .bluef[`[]`] `+` .greenf[`{}`]
+
+.ecma[.bc[Convert .bluef[`[]`] to primative]]
+
+  * .ecma[.bc[`typeof()` in `undefined`, `null`, `boolean`, `number`, `string`]]
+  * .ecma[Try .bc[`.valueOf()`, else `.toString()`]]
+
+--
+js- > [].toString()
+js- ""
+js- > typeof("")
+js  "string"
+
+---
+$$# ECMAScript
+## .bluef[`""`] `+` .greenf[`{}`]
+--
+
+.ecma[.bc[Convert .greenf[`{}`] to primative]]
+
+-- 
+
+  * .ecma[.bc[`typeof()` in `undefined`, `null`, `boolean`, `number`, `string`]]
+  * .ecma[Try .bc[`.valueOf()`]]
+
+--
+js- > {}.valueOf()
+js- {}
+js- > typeof({})
+js "object"
+---
+$$# ECMAScript
+## .bluef[`""`] `+` .greenf[`{}`]
+
+.ecma[.bc[Convert .greenf[`{}`] to primative]]
+
+  * .ecma[.bc[`typeof()` in `undefined`, `null`, `boolean`, `number`, `string`]]
+  * .ecma[Try .bc[`.valueOf()`, else `.toString()`]]
+
+--
+js- > {}.toString()
+js- "[object Object]"
+js // ... huh?
+---
+$$# ECMAScript
+
+.fix-tilt[aside]
+js > String({"a": "b"})
+js "[object Object]"
+
+Note: 
+
+As an aside: the default string representation of a object is the string object object
+
+A lot of other languages have printed representations of dictionaries or objects that are more useful, but not javascript.
+
+
+---
+$$# ECMAScript
+
+.fix-tilt[aside]
+js > String({"a": "b"})
+js "[object Object]"
+<br>
+js > JSON.stringify({"a": "b"})
+js '{"a":"b"}'
+
+Note: 
+
+If you do want to get the string representation without altering the functionality of Obejcts, you can use JSON.stringify to natively check
+
+
+Backwards compatibility
+
+---
+$$# ECMAScript
+## .bluef[`""`] `+` .greenf[`{}`]
+
+.ecma[.bc[Convert .greenf[`{}`] to primative]]
+
+  * .ecma[.bc[`typeof()` in `undefined`, `null`, `boolean`, `number`, `string`]]
+  * .ecma[Try .bc[`.valueOf()`, else `.toString()`]]
+
+--
+js- > {}.toString()
+js- "[object Object]"
+js- > typeof("[object Object]")
+js "string"
+
+
+---
+$$# ECMAScript
+## .bluef[`""`] `+` .greenf[`"[object Object]"`]
+--
+
+.ecma[Are .bc[.bluef[`""`]] or .bc[.greenf[`"[object Object]"`]] a string?]
+
+--
+
+.ecma[Yes → .bc[Concatenate `String(`.bluef[`a`]`)` and `String(`.greenf[`b`]`)`]]
+
+--
+js- > "" + "[object Object]"
+js "[object Object]"
+
+---
+$$# ECMAScript
+.bc[.bluef[`[] → ""`]  &nbsp; &nbsp;  .greenf[`{} → "[object Object]"`]]
+--
+js- > [] + []
+.code[.greyf[.bc[`≈ "" + ""`]]]
+--
+js- ""
+<br><br>
+js- > [] + {}
+.code[.greyf[.bc[`≈ "" + "[object Object]"`]]]
+--
+js "[object Object]"
+
+---
+$$# ECMAScript
+.bc[.bluef[`[] → ""`]  &nbsp; &nbsp;  .greenf[`{} → "[object Object]"`]]
+--
+js > {} + []
+---
+$$# ECMAScript
+.bc[.bluef[`[] → ""`]  &nbsp; &nbsp;  .greenf[`{} → "[object Object]"`]]
+js > .blue[{}] + [] // empty block
+
+
+Note: Code blocks are ignored, as a no-op
+
+So we can ignore that side, but the other side
+
+---
+$$# ECMAScript
+.bc[.bluef[`[] → ""`]  &nbsp; &nbsp;  .greenf[`{} → "[object Object]"`]]
+js > .grey[{}] .green[+ []] // unary addition
+
+
+Note: the other side is a unary addition, which casts the object to number
+---
+$$# ECMAScript
+.bc[.bluef[`[] → ""`]  &nbsp; &nbsp;  .greenf[`{} → "[object Object]"`]]
+js > {} + []
+.code[.greyf[.bc[`≈ ` &nbsp &nbsp`+ ""`]]]
+
+Note: this is the equiv of casting the empty string, the primative from earlier, to a number
+
+Which in this case  is zero
+
+~~~~~~~~~~~~
+
+--
+js- 0
+<br><br>
+js- > {} + {}
+
+.code[.greyf[.bc[`≈ ` &nbsp &nbsp`+ "[object Object]"`]]]
+
+Note: unary addition on a string is the same as
+
+casting a string to a number
+
+Which works just about as well as you think
+
+--
+js NaN
+
+Note: Therefore.
+
+---
+$$# ECMAScript
+js- > [] + []
+js- ""
+js- > [] + {}
+js- "[object Object]"
+js- > {} + []
+js- 0
+js- > {} + {}
+js NaN
+
+---
+$$# ECMAScript
+js > [] + []
+js ""
+js > [] + {}
+js "[object Object]"
+js > {} + []
+js 0
+js > {} + {}
+js NaN
+
+.fix-notilt[<img src="images/tada.png">]
+
+Note: tada
+---
+$$# ECMAScript
+js > [] + []
+js ""
+js > [] + {}
+js "[object Object]"
+js > {} + []
+js 0
+js > {} + {}
+js NaN
+
+.fix-notilt[<img src="images/tadoh.png">]
+
+Note: but, technically, this isn't completely right
+
+I mean, everything I've just said is accurate, but the problem is that we were using flawed logic. 
+
+That code block is only intepreted as a codeblock if it's leading the statement
+
+In these examples, we can't rely on the console interpreting things for us. 
+
+We should be using actual IO operations, variables, etc, to replicate what we would get in production code. 
+
+---
+$$# ECMAScript
+
+.code[`> var` .bluef[.bc[`a`]] ` = []; var` .greenf[.bc[`b`]] ` = {}`]
+
+--
+
+.code[.bc[> .bluef[`a`] + .bluef[`a`]]]
+--
+js- ""
+.code[.bc[> .bluef[`a`] + .greenf[`b`]]]
+--
+js- "[object Object]"
+.code[.bc[> .greenf[`b`] + .bluef[`a`]]]
+--
+js- "[object Object]"
+.code[.bc[> .greenf[`b`] + .greenf[`b`]]]
+--
+js NaN
+
+
+---
+
+$$# ECMAScript
+
+.code[`> var` .bluef[.bc[`a`]] ` = []; var` .greenf[.bc[`b`]] ` = {}`]
+
+.code[.bc[> .bluef[`a`] + .bluef[`a`]]]
+js ""
+.code[.bc[> .bluef[`a`] + .greenf[`b`]]]
+js "[object Object]"
+.code[.bc[> .greenf[`b`] + .bluef[`a`]]]
+js "[object Object]"
+.code[.bc[> .greenf[`b`] + .greenf[`b`]]]
+js NaN
+
+.fix-tilt-long[commutative]
+.fix-notilt[<img src="images/tada.png">]
+
+Note: Commutative - same forwards as is backwards
+
+Pron.: Com-ut-a-tive
+---
+#= JavaScript isn't awful
+
+Note: JS isn't awful
+---
+#= JavaScript is awe-ful
+
+Note: 
+
+It's awe-ful, full of awe. 
+
+(
+If you're interseted I have an entire full talk where I dive deeper in to JS, called Javascript is Awe-ful. But to summarise
+)
+
+It's a 22 year old language that is 100% backwards compatible. JavaScript written in 1995 will work today. 
+
+That ye olde space jam website? It still works on modern browsers. 
+
+JavaScript also won the browser-langauge wars, defeating such foes as Flash, Visual basic, JScript and ActiveScript.
+
+However. 
+
+If you don't understand the design constraints and considerations, you might think of these wats as weird little edge cases.
+
+
+---
+#= So don't use it.
+Note: 
+
+There are so many different languages that you can use in the browser!
+
+You can use... JavaScript
+
+Or
+---
+# Languages that compile to JavaScript
+
+---
+# Languages that compile to JavaScript
+
+.tinytext[8ball, acorn, ActionScript, ADsafe, Agda, Alasql, Amber, APL, asm.js, AST, Astring, Babel, Batavia, Bck2Brwsr, bdParse, Bennu, BicaJVM, bison-lalr1.js, BiwaScheme, Bizubee, BlackCoffee, Blade, Block, Blockly, Bonsai-C, Bridge.NET, browserl, Brozula, Brython, Bucklescript, Builder, Bulbul, burrito, Caffeine, Caja, Canopy, Ceylon, Cheerp, Chlorinejs, CilJs, CirruScript, Clamato, ClojureJS, ClojureScript, Clue, CobolScript, Coco, CoffeeScript, CokeScript, ColaScript, ColdRuby, Compiler, ContextJS, Continuation.js, Contracts.coffee, Cor, Cruiser.Parse, Daonode, Dart, defrac, DoctorJS, Doppio, DotNetWebToolkit, DuoCode, E, ecma-ast, EdgeLisp, ElixirScript, Elm, EmberScript, Emscripten, ErlyJS, esast, escodegen, eslisp, esmangle, Esprima, estraverse, Fable, falafel, Fantom, Fargo, fay, Flapjax, Flow, forml, Fun, FunScript, FutureScript, ghcjs, Gnusto, Go2js, GopherJS, GorillaScript, Grey, GrooScript, GWT, Ham, haste, Haxe, heap.coffee, Hodor, HotRuby, IcedCoffeeScript, Idris, Illumination, Limba, Interpreter, Iode, j2js, Jacaranda, jangaroo, Jasy, Java2Script, JavaScript++, JavaScripthon, JEnglish, jison, jisp, jLang, jmacro, Js_of_ocaml, js--, js-scala, js.js, JS/CC, jsc, JScala, JSCL, JScriptSuite, jsForth, JSGLR, jshaskell, JSIL, JsMaker, jsparse, JSPipe, JSweet, JSX, jwacs, Kaffeine, Kal, Kernel, Khan, Khepri, ki, Kotlin, L2, lambdascript, languagejs, Lisp, LispyScript, LiteScript, LiveScript, LLJS, lua.js, LuvvieScript, maja, Mandreel, Mascara, Meemoo, MetaCoffee, mfjs, mobl, Mochiscript, Mode, Moescript, Monkey, MoonScript, Narcissus, NarrativeJS, nconc, nearley, NemerleWeb, Netjs, Nim, node-jvm, NodeScript, NoFlo, O’Browser, Objective-J, Ocamljs, Oia, oj, oK, OMeta/JS, Opa, Opal, Oppo, Outlet, p2js, p4js, Parenscript, parse-js, PearScript, PEG.js, Perlito, PharoJS, php.js, phype, Pit, Plaid, pogoscript, Prefix, Processing.js, Prolog, prolog.js, promiseLand, pseudo-python, PureScript, PyCow, Pygmy, Pyjaco, Pyjamas, Pyjs, PyNarcissus, PyPyJS, PythonScript, pythonscript, PyvaScript, PYXC-PJ, qb.js, Quby, Quixe, QWT, RacketScript, Ralph, RamdaScript, RapydScript, rb2js, rbnarcissus, Reb2Static, Red, RedScript, reflect.js, ReParse, rocambole, Roy, RoyalScript, RPN, ruby-parser.js, Ruby2JS, RubyJS, Rusthon, Saltarelle, Scala.js, scalagwt, Scheje, Scheme, scheme2js, Script#, ScriptBlocks, Scriptjure, SDK, Secure, Shaper, SharpKit, Shen, Sibilant, Six, Skew, Skulpt, Smallscript, Smalltalk, SMLtoJs, smpl.js, Snap, SourceMap, Specification, Specification, Spider, Spiderbasic, Spock, sql-parser, sql.js, sqld3, SqueakJS, STIP.js, Storm, StratifiedJS, Streamline.js, Studio, Studio, Sugar, sweet.js, Swym, Taijilang, TameJS, TARDISgo, TeaVM, TeJaS, TIScript, TLC, ToffeeScript, Topaz, Traceur, Transcrypt, treehugger, Typecast.js, types, TypeScript, Uberscript, UglifyJS, UHC, uilang, uniter, Ur, Waterbear, WebAssembly, WebSharper, wForth, Whalesong, Wind.js, WootzJs, Wortel, XLCC, YHC, YoptaScript, Zeon, ZeParser. So yeah, you have a few different options. Just a few, though.]
+ 
+Note: You could use another language and compile that down to JavaScript
+
+One of those in there is one I helped write, Batavia. Come see me after, I have stickers!
+
+In all seriousness, you can take literally *ANY* another language and convert it to javascript
+
+That'll solve all your problems right?
+---
+##= Using another language won't save you.
+
+Note: Well no. 
+
+Using another language won't save you. 
+---
+#= Ruby
+### ☞ &nbsp;`brew install ruby && irb`
+
+
+Note: let's talk about Ruby
+
+As a note: all the examples are completely reproducable on a macbook, I've included the brew commands and repl invocation, or how to run the example script. The link at the bottom of every slide has all this, don't worry. 
+
+So!
+
+Ruby
+---
+$$# Ruby
+rb- > not true && false
+rb- => true
+rb- > not true and false
+rb => false
+---
+$$# Ruby
+rb > not true && false
+rb => true
+rb > not true and false
+rb => false
+
+<br>
+rb # Order of precedence
+
+rb  && , ||
+rb not
+rb and , or
+
+---
+$$# Ruby
+rb > not .blue[true && false]
+rb => true
+rb > .red[not true] and false
+rb => false 
+
+<br>
+rb # Order of precedence
+
+rb .blue[&&] , ||
+rb not
+rb .red[and] , or
+---
+#= Python
+### ☞ &nbsp;`brew install python && python`
+---
+$$# Python
+py- >>> a = 256
+py- >>> b = 256
+py- >>> a is b
+py True
+---
+$$# Python
+py- >>> a = 257
+py- >>> b = 257
+py- >>> a is b
+py- False
+<br>
+py- >>> a = 257; b = 257
+py- >>> a is b
+py True
+---
+$$# Terminal
+`$ python`
+
+Note: In Python, when you load the interpreter, you're probably loading CPython. An optimisation of CPython is to create a list of integers from -5 to 256 for you.
+--
+$$# CPython
+py >>> .white[a=b]
+py .white[.]
+py .white[.]
+py .white[.]
+$$# CPython Cache
+sh &nbsp;
+
+sh [ -5 ][ -4 ][...][ 254 ][ 255 ][ 256 ]
+Note: 
+An optimisation of CPython is to create a list of integers from -5 to 256 for you.
+---
+$$# Terminal
+`$ python`
+$$# CPython
+py >>> a = 256
+py .white[.]
+py .white[.]
+py .white[.]
+$$# CPython Cache
+sh &nbsp;
+
+sh [ -5 ][ -4 ][...][ 254 ][ 255 ][ 256 ]
+sh .white[.................................]a
+
+Note: so when you assign a variable, it can use one you prepared earlier
+---
+$$# Terminal
+`$ python`
+$$# CPython
+py >>> a = 256
+py >>> b = 256
+py .white[.]
+py .white[.]
+$$# CPython Cache
+sh &nbsp;
+sh [ -5 ][ -4 ][...][ 254 ][ 255 ][ 256 ]
+sh .white[.................................]a b
+
+---
+$$# Terminal
+`$ python`
+$$# CPython
+py >>> a = 256
+py >>> b = 256
+py >>> a is b
+py .white[.]
+$$# CPython Cache
+sh &nbsp;
+sh [ -5 ][ -4 ][...][ 254 ][ 255 ][ 256 ]
+sh .white[.................................]a b
+
+Note: `is` when we talk about "is" here, we're doing an identity check. 
+
+Identity is a check to see if two objects are the same
+---
+$$# Terminal
+`$ python`
+$$# CPython
+py >>> a = 256
+py >>> b = 256
+py >>> a is b
+py .white[.]
+$$# CPython Cache
+sh &nbsp;
+sh [ -5 ][ -4 ][...][ 254 ][ 255 ][ .green[256] ]
+sh .white[.................................]a b
+
+Note: Are A and B the same object. Yes!
+
+---
+
+$$# Terminal
+`$ python`
+$$# CPython
+py >>> a = 256
+py >>> b = 256
+py >>> a is b
+py True
+$$# CPython Cache
+sh &nbsp;
+sh [ -5 ][ -4 ][...][ 254 ][ 255 ][ .green[256] ]
+sh .white[.................................]a b
+
+Note: Are A and B the same object. Yes!
+
+---
+$$# Terminal
+`$ python`
+$$# CPython
+py >>> .white[a=b]
+py .white[.]
+py .white[.]
+py .white[.]
+$$# CPython Cache
+sh &nbsp;
+
+sh [ -5 ][ -4 ][...][ 254 ][ 255 ][ 256 ]
+Note: 
+But when we use integers outside of our cache, things change
+
+---
+$$# Terminal
+`$ python`
+$$# CPython
+py >>> a = 257
+py .white[.]
+py .white[.]
+py .white[.]
+$$# CPython Cache
+sh &nbsp;
+
+sh [ -5 ][ -4 ][...][ 254 ][ 255 ][ 256 ][~][ 257 ]
+sh .white[............................................]a
+Note: 
+When we exceed the predeclared array, the value is assigned somewhere else in memory
+
+
+---
+$$# Terminal
+`$ python`
+$$# CPython
+py >>> a = 257
+py >>> b = 257
+py .white[.]
+py .white[.]
+$$# CPython Cache
+sh &nbsp;
+
+sh [ -5 ][ -4 ][...][ 254 ][ 255 ][ 256 ][~][ 257 ][ 257 ]
+sh .white[............................................]a.white[......]b
+Note: 
+And when we declare B we also store that as it's own value
+
+---
+$$# Terminal
+`$ python`
+$$# CPython
+py >>> a = 257
+py >>> b = 257
+py >>> a is b
+py .white[.]
+$$# CPython Cache
+sh &nbsp;
+
+sh [ -5 ][ -4 ][...][ 254 ][ 255 ][ 256 ][~][ 257 ][ 257 ]
+sh .white[............................................]a.white[......]b
+Note: 
+
+So when we run the check
+---
+$$# Terminal
+`$ python`
+$$# CPython
+py >>> a = 257
+py >>> b = 257
+py >>> a is b
+py .white[.]
+$$# CPython Cache
+sh &nbsp;
+
+sh [ -5 ][ -4 ][...][ 254 ][ 255 ][ 256 ][~][ .red[257] ][ .red[257] ]
+sh .white[............................................]a.white[......]b
+Note: 
+
+The objects aren't the same
+
+---
+$$# Terminal
+`$ python`
+$$# CPython
+py >>> a = 257
+py >>> b = 257
+py >>> a is b
+py False
+$$# CPython Cache
+sh &nbsp;
+
+sh [ -5 ][ -4 ][...][ 254 ][ 255 ][ 256 ][~][ .red[257] ][ .red[257] ]
+sh .white[............................................]a.white[......]b
+Note: 
+
+So the check is false
+Even thought he variables have the same value, they aren't the same value, so the identity check fails. 
+---
+$$# Terminal
+`$ python`
+$$# CPython
+py >>> a = 257; b = 257;
+py .white[.]
+py .white[.]
+py .white[.]
+$$# CPython Cache
+sh &nbsp;
+
+sh [ -5 ][ -4 ][...][ 254 ][ 255 ][ 256 ]
+Note: Here, the one line of code with a semicolon
+
+a quite rare character to see in python code, btw
+
+the interpreter processes this all as one code object
+---
+$$# Terminal
+`$ python`
+$$# CPython
+py >>> a = 257; b = 257;
+py .white[.]
+py .white[.]
+py .white[.]
+$$# CPython Cache
+sh &nbsp;
+
+sh [ -5 ][ -4 ][...][ 254 ][ 255 ][ 256 ][~][ 257 ]
+sh .white[...........................................]a b
+Note: so it's allowed to optimise
+and so it only creates one constant 
+---
+$$# Terminal
+`$ python`
+$$# CPython
+py >>> a = 257; b = 257;
+py >>> a is b
+py .white[.]
+py .white[.]
+$$# CPython Cache
+sh &nbsp;
+
+sh [ -5 ][ -4 ][...][ 254 ][ 255 ][ 256 ][~][ 257 ]
+sh .white[...........................................]a b
+Note: 
+
+So when we do our identity check again
+---
+$$# Terminal
+`$ python`
+$$# CPython
+py >>> a = 257; b = 257;
+py >>> a is b
+py .white[.]
+py .white[.]
+$$# CPython Cache
+sh &nbsp;
+
+sh [ -5 ][ -4 ][...][ 254 ][ 255 ][ 256 ][~][ .green[257] ]
+sh .white[...........................................]a b
+Note: 
+
+The objects are the same
+---
+$$# Terminal
+`$ python`
+$$# CPython
+py >>> a = 257; b = 257;
+py >>> a is b
+py True
+py .white[.]
+$$# CPython Cache
+sh &nbsp;
+
+sh [ -5 ][ -4 ][...][ 254 ][ 255 ][ 256 ][~][ .green[257] ]
+sh .white[...........................................]a b
+Note: 
+So our check succeeds
+
+---
+$$# CPython
+py >>> a = 257
+py >>> b = 257
+py >>> a is b
+py False
+Note: 
+
+if what we wanted to do here was an equality check, checking if the values were equal, 
+---
+$$# CPython
+py >>> a = 257
+py >>> b = 257
+py >>> a .green[==] b
+py True
+
+.fix-tilt[fix]
+Note: 
+we need to use double equals here instead. 
+---
+#= Java
+### ☞ &nbsp;`brew install javarepl && javarepl`
+---
+$$# Java
+java- java> Integer a = 128
+java- java> Integer b = 128
+java- java> a <= b
+java- true
+java- java> a >= b
+java- true
+java- java> a == b
+java false
+
+---
+$$# Java
+java java> Integer a = 128
+java java> Integer b = 128
+java java> a <= b
+java true
+java java> a >= b
+java true
+java java> a .blue[==] b /* identity .w[✱] /
+java false
+--
+$$# IntegerCache
+sh .white[.............................][-127][-126][...][126][127]
+
+Note: 
+---
+$$# Java
+java java> Integer a = 128
+java java> Integer b = 128
+java java> a <= b
+java true
+java java> a >= b
+java true
+java java> a .green[.equals] (b)
+java true
+.fix-tilt[fix #1]
+
+---
+$$# Java
+java java> .green[int] a = 128
+java java> .green[int] b = 128
+java java> a <= b
+java true
+java java> a >= b
+java true
+java java> a == b
+java true
+.fix-tilt[fix #2]
+
+---
+#= All languages have quirks
+
+Note:
+
+All these things might be first taken to be 'quirks'
+
+But if you have a deep understanding of how a language works
+
+it's not a quirks
+
+it's how the language works
+
+---
+
+#= Perl
+### ☞ &nbsp;`brew install perl && perl -de1`
+---
+$$# Perl
+pl > if ("a" == "b") { 
+pl &nbsp; &nbsp; print "true" 
+pl } else { 
+pl &nbsp; &nbsp; print "false" }
+pl- &nbsp; 
+pl true
+
+---
+$$# Perl
+pl > if ("a" .blue[==] "b") { # numeric equality 
+pl &nbsp; &nbsp; print "true" 
+pl } else { 
+pl &nbsp; &nbsp; print "false" }
+pl &nbsp; 
+pl true
+
+---
+$$# Perl
+pl > if ("a" .green[eq] "b") { # string equality 
+pl &nbsp; &nbsp; print "true" 
+pl } else { 
+pl &nbsp; &nbsp; print "false" }
+pl &nbsp; 
+pl false
+---
+#= Bash
+### ☞ &nbsp;`bash`
+---
+$$# Bash
+sh- ~ $ 4 + 2
+sh- bash: 4: command not found
+sh- ~ $ $(4 + 2)
+sh- bash: 4: command not found
+sh- ~ $ $((4 + 2))
+sh- bash: 6: command not found
+sh- ~ $ echo $((4 + 2))
+sh 6
+
+Note: 
+
+Bash isn't designed to do raw arithmetic
+Bash is a shell
+
+2: But it can if we give it the correct syntax
+Ah
+
+3: we need to echo out the result
+
+---
+$$# Bash
+sh ~ $ 4 + 2
+sh bash: 4: command not found
+sh ~ $ $(4 + 2)
+sh bash: 4: command not found
+sh ~ $ $((4 + 2))
+sh bash: 6: command not found
+sh ~ $ echo $((4 + 2))
+sh 6
+
+.fix-tilt[By Design]
+
+Note: Because bash is designed for execution, not returning a string representation of the value of some mathematical equation, like every other example so far
+---
+<br><br><br><br>
+# Haskell
+### ☞ &nbsp;`brew install haskell-platform && ghci`
+vv †&nbsp;`echo ":set prompt "λ> " > ~/.ghci/ghci.conf` .white[................................................]
+---
+$$# Haskell
+hs- λ> let a = 2 + 2
+hs- λ> a
+hs- 4
+hs &nbsp;
+hs- λ> let b = 2 + 2
+hs- &nbsp;&nbsp; &nbsp; &nbsp; where 2 + 2 = 5
+hs- λ> b
+hs 5
+
+---
+
+$$# Haskell
+hs λ> let a = 2 + 2
+hs λ> a
+hs 4
+hs &nbsp;
+hs λ> let b = 2 + 2
+hs &nbsp;&nbsp; &nbsp; &nbsp; where 2 + 2 = 5 # pattern matching
+hs λ> b
+hs 5
+
+.fix-tilt[By Design]
+---
+$$# Haskell
+hs fib :: Int -> Int
+hs fib 0 = 0
+hs fib 1 = 1
+hs fib n = fib (n - 1) + fib (n - 2)
+---
+$$# Haskell
+hs fib :: Int -> Int
+hs .green[fib 0 = 0]
+hs .green[fib 1 = 1]
+hs fib n = fib (n - 1) + fib (n - 2)
+---
+$$# Haskell
+hs fib :: Int -> Int
+hs .green[fib 0 = 0]
+hs .green[fib 1 = 1]
+hs fib n = fib (n - 1) + fib (n - 2)
+<br>
+$$# Ruby
+rb def fib(n)
+rb &nbsp; &nbsp;  .green[return n if (0..1).include? n]
+rb &nbsp; &nbsp; (fib(n - 1) + fib(n - 2))
+rb end
+
+Note: this has the same sort of effect as in Ruby
+---
+<br><br><br><br>
+# Pascal
+### ☞ &nbsp;`brew install fpc`<br> &nbsp;`cd examples`<br> `fpc example.pas && ./example`
+
+---
+$$# cat example.pas
+pas Program example(output);
+pas VAR x: INTEGER;
+pas begin
+pas &nbsp; x := 41;
+pas  &nbsp; x += 1;
+pas &nbsp; writeln(x = 42);
+pas end.
+--
+$$# Terminal
+.code[`$ fpc example.pas && ./example`]
+-- 
+pas  TRUE
+
+---
+$$# cat example.pas
+pas Program example(output);
+pas VAR x: INTEGER;
+pas begin
+pas &nbsp; x .blue[:=] 41; // assignment
+pas  &nbsp; x += 1;
+pas &nbsp; writeln(x .blue[=] 42); // equality
+pas end.
+$$# Terminal
+.code[`$ fpc example.pas && ./example`]
+pas  TRUE
+
+
+Note: that's all I wanted to point out
+
+an assignment operator that doesn't look like equality; bliss
+
+---
+
+#= Elixir
+### ☞ &nbsp;`brew install elixir && iex`
+---
+$$# Elixir
+```elixir
+iex> Enum.map(1..5, fn(x) -> x*x end)
+```
+--
+iex- [1, 4, 9, 16, 25]
+<br>
+iex- iex> Enum.map(6..10, fn(x) -> x&ast;x end)
+iex '$1@Qd'
+
+---
+$$# Elixir
+iex- iex> a = Enum.map(6..10, fn(x) -> x*x end)
+iex- iex> Enum.map(a, fn(x) -> IO.puts x end)
+iex 36
+iex 49
+iex 64
+iex 81
+iex 100
+
+Note: 
+If we were to assign our list as a variable
+then iterate over each element to print it
+
+we get the list we expected
+
+But why did our first example break and the second one not?
+
+Let's try a different range
+
+---
+$$# Elixir
+iex iex> Enum.map(65..90, fn(x) -> x end)
+
+Note: Let's try say... 65 to 90
+
+No reason
+
+And let's not to anything, just have each element in the range pass through
+
+--
+iex 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+
+Note:
+
+We get a recognisable string. 
+
+This is because in ASCII, Capital A starts at sequence 65
+---
+
+$$# Elixir
+iex iex> Enum.map(65..90, fn(x) -> x end)
+iex 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+
+.fix-tilt[By design]
+
+
+Note: The reason for this: 
+
+Elixir was built on top of Erlang, which was created in the 80's, and strings in Erlang are represented as a lists of integers. So, without telling our interpreter any different, it's going to assume that we want to print a string, not a list of numbers
+
+There are flags in erlang to change this, but it's only going to effect our interactive interpreter, not the actual data manipulation
+
+---
+#= Scala
+### ☞ &nbsp;`brew install scala && scala`
+---
+$$# Scala
+sc- scala> println({} + "")
+sc ()
+---
+$$# Scala
+sc scala> println({} + "")
+sc ()
+
+.fix-tilt[By design]
+
+Note: yeah, so this is because scala uses punctuation in a completely different way to javascript and other languages; the braces you're seeing is an empty function, and the concatenation of that to an empty string is an empty result
+
+for anyone unfamiliar with the conventions of syntax in scala, this might be confusing, but this is absolutely by design
+---
+
+#= No language is 'better'
+
+Note: No language is better than any other
+
+The mere fact a programming language exists means years of work by many many people building and developing a common dialect to describe and manipulate the realm in which it lives
+
+Each have their own strengths
+
+---
+
+#= PHP
+### ☞ &nbsp;`brew install php && php -a`
+
+---
+$$# PHP
+php- php> echo (TRUE ? "True" : "False");
+php- True
+<br>
+php- php> echo (FALSE ? "True" : "False");
+php False
+
+Note: Ternary operators
+
+
+but
+
+---
+$$# PHP
+php php> echo (FALSE ? "one" :
+php &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;FALSE ? "two" : 
+php- &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;  "three");
+php three
+
+---
+$$# PHP
+php php> echo (FALSE ? "one" :
+php &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;TRUE &nbsp;? "two" : 
+php- &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;  "three");
+php two
+
+---
+$$# PHP
+php php> echo (TRUE &nbsp;? "one" :
+php &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;TRUE &nbsp;? "two" : 
+php- &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;  "three");
+php two
+
+Note: This is because ternary expressions in PHP are left associative
+
+Like we saw earlier in the ruby example, the assumption of the order of operations is that we'd short cut to "one" here
+
+
+
+---
+$$# PHP
+php php> echo (&nbsp;TRUE 
+php .white[.........] ? "one" 
+php .white[.........] : (TRUE&nbsp;? "two" : "three")); #assumed
+php one
+--
+php &nbsp;
+php php> echo ((TRUE ? "one" : TRUE) #actual 
+php .white[.........] ? "two" 
+php .white[.........] : "three");
+php two
+
+Note:
+The solution?
+--
+.fix-tilt[AVOID]
+
+Note: 
+
+Avoid chaining ternary operators
+
+---
+<br><br><br><br>
+# PowerShell
+### ☞ &nbsp;`brew cask install powershell && pwsh`
+
+---
+$$# PowerShell
+<br>
+ps- PS> if (36 > 42) { "true" } else { "false" } 
+ps false
+
+--
+<br>
+ps- PS> if (36 < 42) { "true" } else { "false" }
+ps .ps-error[The '<' operator is reserved for future use.]
+
+---
+$$# PowerShell
+<br>
+ps PS> if (36 .red[>] 42) { "true" } else { "false" }
+ps false &nbsp;&nbsp; &nbsp; # file redirection
+<br> 
+ps PS> if (36 < 42) { "true" } else { "false" } 
+ps .ps-error[The '<' operator is reserved for future use.]
+--
+<br>
+ps PS> cat 42
+--
+sh 36
+
+---
+$$# PowerShell
+<br>
+ps PS> if (36 .red[>] 42) { "true" } else { "false" }
+ps false &nbsp;&nbsp; &nbsp; # file redirection
+<br> 
+ps PS> if (36 .red[<] 42) { "true" } else { "false" } 
+ps .ps-error[The '<' operator is reserved for future use.]
+.fix-tilt[AVOID]
+Note: You should avoid using greater than, since the complementary less than doesn't exist.
+---
+$$# PowerShell
+<br>
+ps PS> if (36 .green[-gt] 42) { "true" } else { "false" }
+ps true
+<br> 
+ps PS> if (36 .green[-lt] 42) { "true" } else { "false" }
+ps false
+.fix-tilt[FIX]
+
+Note: 
+It also means you don't hvae to remember which way the crocodile goes
+
+---
+&nbsp; 
+
+Note: 
+INTENTIONALLY BLANK
+
+I've gone through a dozen different programming languages
+
+And shown what could be described in each as a 'wat'
+
+But if you have a deep understanding of how a language works
+it's not a wat
+it's how the language works
+---
+
+#= Turn .wat[wat] into .why[why]
+
+Note: 
+
+When ever you find yourself thinking WAT
+turn it into a why
+
+Find out why things are the way they are
+
+Understand the reasoning behind the decision
+
+It will help you get a deeper mastery of the language, and you might just learn something neat along the way
+
+---
+
+#= .inline-img[Learn something ![](images/sparkles.png).new[new]![](images/sparkles.png)]
+
+Note: 
+
+Because these are all examples that I have personally come across. I have been a polyglot developer for *mumble* years now, in every one of these languages, and I use to think
+
+just because I'm a ruby dev, python is terrible
+
+or
+
+I'm doing haskell now, everything that's not functional sucks
+
+But
+
+they're tools
+
+they're tools to manipulate data to solve problems, and each of them has their place
+
+If you are proficient at, say, perl, and only perl; or java and only java, that's great. But why not try your hand at something else? You might learn something more and help deeper your understanding of your language of choice along the way
+
+
+---
+
+#= <br><br>Thanks!
+
+@ footer.svg
+
+Note: thank you for your time
