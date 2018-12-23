@@ -1,6 +1,6 @@
 Class: title
-# <br>Title Here
-## Conference Here.
+# <br>Being kind to 3am you
+## Docs Down Under, LCA 2019
 ![Image](images/footer.svg)
 
 ???
@@ -9,32 +9,82 @@ Words of encouragement here.
 ---
 class: middle, center
 ![Image](images/wave.svg)
----
+???
 
-<div style='width: 100%; margin: 0 auto;' class='middle center'><p align='center'><img height="400px" class="emoji" src="images/wave.svg"><img height="400px" class="emoji" src="images/wave.svg"></p></div>
+Hi! I'm Katie.
+
+---
+class: middle, center
+![Image](images/sleep.svg)
+???
+
+And I like sleep. No really, getting a good night sleep is the best.
+You know what's also really great?
+---
+class: middle, center
+![Image](images/sunrise.svg)
 
 ???
 
-Hi I'm Katie
----
-background-image: url("images/background.png")
+waking up when my body is done, my batteries are at 100% charged, and I can get going with the best possible start to my day.
 
----
-
-# Header 1
-## Header 2
-### Header 3
-
+I can get up, get my coffee and start my day. I can operate to the best of my ability. I can be providive and happy and get things done.
 ---
 
-class: title
-# Center Header 1
-## Header 2
+class: middle, center
+![Image](images/tired.svg)
+
+???
+
+but when I'm tired. Oh when I'm tired..
+
 
 ---
 
-<div style='width: 100%; margin: 0 auto;' class='middle center'><p align='center'><img height="266px" class="emoji" src="images/wave.svg"><img height="266px" class="emoji" src="images/wave.svg"><img height="266px" class="emoji" src="images/wave.svg"></p></div>
-<div style='width: 100%; margin: 0 auto;' class='middle center'><p align='center'><img height="400px" class="emoji" src="images/wave.svg"><img height="400px" class="emoji" src="images/wave.svg"></p></div>
+class: middle, center
+![Image](images/pager.svg)
+???
+
+so when I get paged, especially at night, I'm tired. I'm not operating at my best.
+
+I'm not going to be 100% there, I'm not going to be as quick thinking.
+
+So what I need to do is to set myself up for to be the best I can be when, not if, when, the pager goes off at 3am.
+---
+
+class: middle, center
+![Image](images/warning.svg)
+
+???
+
+Because the 3am pager will probably happen.
+
+Sure, you can be lucky enough to be in a place with Follow the Sun (explain, possibly with maps?)
+
+But you probably won't be, if you're on a small team.
+
+And even if you aren't, you're probably going to get something when you're not at your best, when you're sick or not with it or tired.
+
+So these tips and tricks can help you when you're not 100%, but also you can use the time you are 100% to feedback into this system.
+---
+
+TODO
+
+Multiple Emoji Representations for:
+
+* TODO
+* Essentials - in a search able wiki
+flow into
+* Custom Search Engines - github, confluence, etc
+flow into
+* Integrated links in alerts
+flow into
+* Documentation of edge cases as part of post mortiem
+flow into
+* more detailed docs
+* loops back to first step (it's a cycle, yo!)
+* helps with newer ops who don't know this stuff by rote
+* because you're not at your best when you're tired.
 
 ---
 class: title
