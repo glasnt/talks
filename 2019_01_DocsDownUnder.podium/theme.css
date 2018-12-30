@@ -2,11 +2,10 @@
  * Basic slide layout and colors
  ******************************/
 .hljs-default pre code {
-  background-color: #fff !important;
+  background-color: #000 !important;
   padding: 0;
 }
-
-
+ 
 .remark-slide-content {
     padding: 1em 6em 1em 6em;
     font-family: 'PT Sans';
@@ -18,21 +17,22 @@
  ***********************/
 
 h1, h2, h3 {
-    font-family: 'PT Sans';
+    font-family: 'Staatliches';
     font-weight: 600;
-    text-align: center;
+    color: white;
+    text-align: left;
 }
 
 h1 {
-    font-size: 48pt;
+    font-size: 64pt;
 }
 
 h2 {
-    font-size: 36pt;
+    font-size: 48pt;
 }
 
 h3 {
-    font-size: 28pt;
+    font-size:32pt;
 }
 
 p {
@@ -143,6 +143,14 @@ li cite {
     vertical-align: middle;
 }
 
+.remark-slide-content.bottom {
+    vertical-align: bottom;
+}
+.remark-slide-content.bottom h1 { 
+    text-align: right;
+    margin-right: 50px; 
+}
+
 .title h1 {
     margin: 0.2em;
 }
@@ -200,6 +208,7 @@ li cite {
 .remark-slide-content.image img {
   margin-top: -50px; max-height: 700px
 }
+.remark-slide-content { background: #000 } 
 .remark-slide-content.background-black {
     background: #000;
 }
@@ -391,6 +400,7 @@ rr { font-family: "RedactedR", regular;  }
 
 .venn { position: absolute; right: -50px; top: 100px; }
 @font-face { font-family: "Roboto"; src: url("fonts/Roboto-Regular.ttf") format('truetype'); font-style: normal; }
+@font-face { font-family: "Staatliches"; src: url("fonts/Staatliches-Regular.ttf") format('truetype'); font-style: normal; }
 .roboto { font-family: "Roboto", regular; }
 
 .bigright { font-size: 40pt; position: absolute; z-index: 100; bottom: 100x; right: 100px; }

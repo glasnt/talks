@@ -1,40 +1,34 @@
-Class: title
+~@ moon.jpg
 # <br>Being kind to 3am you
-## Docs Down Under, LCA 2019
-@ footer.svg
+<br><br>
+## Katie McLaughlin<br>Docs Down Under, LCA 2019
 
 Note: Words of encouragement here. 
----
-! wave
-Note: Hi! I'm Katie. 
+
+Hi! I'm Katie
 
 ---
-! sleep 
+class: bottom
+~@ sleeping.jpeg
+# I like sleep.
 Note: And I like sleep. No really, getting a good night sleep is the best. 
 You know what's also really great?
----
-! sunrise
-
-Note: waking up when my body is done, my batteries are at 100% charged, and I can get going with the best possible start to my day. 
+waking up when my body is done, my batteries are at 100% charged, and I can get going with the best possible start to my day. 
 
 I can get up, get my coffee and start my day. I can operate to the best of my ability. I can be providive and happy and get things done. 
 ---
-
-! tired
+class: bottom
+~@ tired.jpeg
+# I don't like tired. 
 
 Note: but when I'm tired. Oh when I'm tired.. 
 
-
----
-
-! pager
-Note: so when I get paged, especially at night, I'm tired. I'm not operating at my best. 
+so when I get paged, especially at night, I'm tired. I'm not operating at my best. 
 
 I'm not going to be 100% there, I'm not going to be as quick thinking. 
 
 So what I need to do is to set myself up for to be the best I can be when, not if, when, the pager goes off at 3am. 
 ---
-
 ! warning
 
 Note: Because the 3am pager will probably happen. 

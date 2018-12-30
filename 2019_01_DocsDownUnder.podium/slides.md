@@ -1,49 +1,33 @@
-Class: title
+background-image: url("images/moon.jpg")
 # <br>Being kind to 3am you
-## Docs Down Under, LCA 2019
-![Image](images/footer.svg)
+<br><br>
+## Katie McLaughlin<br>Docs Down Under, LCA 2019
 
 ???
 
 Words of encouragement here.
----
-class: middle, center
-![Image](images/wave.svg)
-???
 
-Hi! I'm Katie.
+Hi! I'm Katie
 
 ---
-class: middle, center
-![Image](images/sleep.svg)
+class: bottom
+background-image: url("images/sleeping.jpeg")
+# I like sleep.
 ???
 
 And I like sleep. No really, getting a good night sleep is the best.
 You know what's also really great?
----
-class: middle, center
-![Image](images/sunrise.svg)
-
-???
-
 waking up when my body is done, my batteries are at 100% charged, and I can get going with the best possible start to my day.
 
 I can get up, get my coffee and start my day. I can operate to the best of my ability. I can be providive and happy and get things done.
 ---
-
-class: middle, center
-![Image](images/tired.svg)
+class: bottom
+background-image: url("images/tired.jpeg")
+# I don't like tired.
 
 ???
 
 but when I'm tired. Oh when I'm tired..
-
-
----
-
-class: middle, center
-![Image](images/pager.svg)
-???
 
 so when I get paged, especially at night, I'm tired. I'm not operating at my best.
 
@@ -51,7 +35,6 @@ I'm not going to be 100% there, I'm not going to be as quick thinking.
 
 So what I need to do is to set myself up for to be the best I can be when, not if, when, the pager goes off at 3am.
 ---
-
 class: middle, center
 ![Image](images/warning.svg)
 
