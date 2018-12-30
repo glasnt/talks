@@ -87,11 +87,11 @@ Note:
  * Documentation of edge cases as part of post mortiem
 ---
 class: bottom left
-~@ laptop-angle.jpg
+~@ laptop-angle-small.jpg
 # Feedback Loop
 
 ---
-~@ laptop-angle.jpg
+~@ laptop-angle-small.jpg
 ### .big[Recurring Issues]
 
 Note: 
@@ -102,7 +102,7 @@ Now you can tune.
 
 ---
 
-~@ laptop-angle.jpg
+~@ laptop-angle-small.jpg
 
 ### .big[Learning]
 

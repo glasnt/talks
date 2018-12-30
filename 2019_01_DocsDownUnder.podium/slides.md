@@ -99,11 +99,11 @@ background-image: url("images/step.jpg")
 * Documentation of edge cases as part of post mortiem
 ---
 class: bottom left
-background-image: url("images/laptop-angle.jpg")
+background-image: url("images/laptop-angle-small.jpg")
 # Feedback Loop
 
 ---
-background-image: url("images/laptop-angle.jpg")
+background-image: url("images/laptop-angle-small.jpg")
 ### .big[Recurring Issues]
 
 ???
@@ -114,7 +114,7 @@ Now you can tune.
 
 ---
 
-background-image: url("images/laptop-angle.jpg")
+background-image: url("images/laptop-angle-small.jpg")
 
 ### .big[Learning]
 
