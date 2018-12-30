@@ -10,7 +10,7 @@ Words of encouragement here.
 Hi! I'm Katie
 
 ---
-class: bottom
+class: bottom right
 background-image: url("images/sleeping.jpeg")
 # I like sleep.
 ???
@@ -21,9 +21,9 @@ waking up when my body is done, my batteries are at 100% charged, and I can get 
 
 I can get up, get my coffee and start my day. I can operate to the best of my ability. I can be providive and happy and get things done.
 ---
-class: bottom
+class: bottom right
 background-image: url("images/tired.jpeg")
-# I don't like tired.
+# I dislike tired.
 
 ???
 
@@ -34,9 +34,12 @@ so when I get paged, especially at night, I'm tired. I'm not operating at my bes
 I'm not going to be 100% there, I'm not going to be as quick thinking.
 
 So what I need to do is to set myself up for to be the best I can be when, not if, when, the pager goes off at 3am.
+
+
 ---
-class: middle, center
-![Image](images/warning.svg)
+class: bottom right
+background-image: url("images/bedlaptop.jpeg")
+# I hate this.
 
 ???
 
@@ -50,29 +53,88 @@ And even if you aren't, you're probably going to get something when you're not a
 
 So these tips and tricks can help you when you're not 100%, but also you can use the time you are 100% to feedback into this system.
 ---
+class: bottom left
+background-image: url("images/basics.jpg")
+# The Essentials
+---
+background-image: url("images/basics.jpg")
+### .big[Editable]
 
-TODO
-
-Multiple Emoji Representations for:
-
-* TODO
+???
 * Essentials - in a search able wiki
-flow into
-* Custom Search Engines - github, confluence, etc
-flow into
-* Integrated links in alerts
-flow into
-* Documentation of edge cases as part of post mortiem
-flow into
-* more detailed docs
-* loops back to first step (it's a cycle, yo!)
-* helps with newer ops who don't know this stuff by rote
-* because you're not at your best when you're tired.
+---
+background-image: url("images/basics.jpg")
+### .big[Searchable]
+???
 
+custom search engine
+---
+background-image: url("images/basics.jpg")
+### .big[Discoverable]
+
+???
+
+make it easy to find for others, tags, keywords, etc.
+---
+class: bottom left
+background-image: url("images/step.jpg")
+# Stepping Up
+
+---
+
+background-image: url("images/step.jpg")
+
+### .big[Integration]
+
+???
+Integrated links in alerts
+TODO MORE??
+
+---
+background-image: url("images/step.jpg")
+
+### .big[Post Mortem]
+
+???
+* Documentation of edge cases as part of post mortiem
+---
+class: bottom left
+background-image: url("images/laptop-angle.jpg")
+# Feedback Loop
+
+---
+background-image: url("images/laptop-angle.jpg")
+### .big[Recurring Issues]
+
+???
+
+Have you already got docs for this? Why is it still happening?
+
+Now you can tune.
+
+---
+
+background-image: url("images/laptop-angle.jpg")
+
+### .big[Learning]
+
+???
+
+juniors/newer ops - knowing the 'weather' before they can influence the climate.
+
+---
+class: bottom right
+background-image: url("images/blank.jpg")
+# Get started
+
+???
+* because you're not at your best when you're tired.
 ---
 class: title
 # <br><br>Thanks!
-![Image](images/footer.svg)
+### katie@glasnt.com
+
+.footnotes[Images from: Unsplash, WOCinTech]
 ???
 
 thank you for your time

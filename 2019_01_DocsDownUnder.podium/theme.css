@@ -16,7 +16,7 @@
  * Common content markup
  ***********************/
 
-h1, h2, h3 {
+h1, h2, h3, h4 {
     font-family: 'Staatliches';
     font-weight: 600;
     color: white;
@@ -36,9 +36,12 @@ h3 {
 }
 
 p {
+    color: white;
+    font-family: Raleway;  
     font-size: 24pt;
     line-height: 1.4em;
 }
+
 
 li {
     font-size: 24pt;
@@ -139,14 +142,21 @@ li cite {
 /* Title slides */
 /****************/
 
-.remark-slide-content.title {
-    vertical-align: middle;
+.remark-slide-content h3 {
+    text-align: center;
+    margin-top: 250px; 
+    font-family: Raleway !important; 
 }
 
-.remark-slide-content.bottom {
+.remark-slide-content.bottom h1 {
     vertical-align: bottom;
 }
-.remark-slide-content.bottom h1 { 
+.remark-slide-content.left h1 { 
+    text-align: left;
+    margin-left: 50px; 
+}
+
+.remark-slide-content.right h1 { 
     text-align: right;
     margin-right: 50px; 
 }
@@ -401,6 +411,7 @@ rr { font-family: "RedactedR", regular;  }
 .venn { position: absolute; right: -50px; top: 100px; }
 @font-face { font-family: "Roboto"; src: url("fonts/Roboto-Regular.ttf") format('truetype'); font-style: normal; }
 @font-face { font-family: "Staatliches"; src: url("fonts/Staatliches-Regular.ttf") format('truetype'); font-style: normal; }
+@font-face { font-family: "Raleway"; src: url("fonts/Raleway-Medium.ttf") format('truetype'); font-style: normal; }
 .roboto { font-family: "Roboto", regular; }
 
 .bigright { font-size: 40pt; position: absolute; z-index: 100; bottom: 100x; right: 100px; }
