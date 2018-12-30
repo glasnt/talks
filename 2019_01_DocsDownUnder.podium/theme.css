@@ -114,9 +114,9 @@ li cite {
     font-size: 18pt;
     position: absolute;
     bottom: 2em;
-    right: 5em;
     width: 80%;
-    text-align: right;
+    margin-left: 20px; 
+    text-align: left;
 }
 
 .footnotes a { color: grey }

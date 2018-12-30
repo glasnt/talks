@@ -124,15 +124,15 @@ juniors/newer ops - knowing the 'weather' before they can influence the climate.
 
 ---
 class: bottom right
-background-image: url("images/blank.jpg")
+background-image: url("images/blank-small.jpg")
 # Get started
 
 ???
 * because you're not at your best when you're tired.
 ---
+class: bottom left
 class: title
 # <br><br>Thanks!
-### katie@glasnt.com
 
 .footnotes[Images from: Unsplash, WOCinTech]
 ???

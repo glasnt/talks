@@ -110,14 +110,14 @@ Note: juniors/newer ops - knowing the 'weather' before they can influence the cl
 
 ---
 class: bottom right
-~@ blank.jpg
+~@ blank-small.jpg
 # Get started
 
 Note: 
   * because you're not at your best when you're tired. 
 ---
+class: bottom left
 #= <br><br>Thanks!
-### katie@glasnt.com
 
 .footnotes[Images from: Unsplash, WOCinTech]
 Note: thank you for your time
