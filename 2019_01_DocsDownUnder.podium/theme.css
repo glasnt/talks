@@ -110,8 +110,11 @@ li cite {
     width: 80%;
     margin-left: 20px; 
     text-align: left;
+    color: white; 
 }
 
+.tpad { margin-top: 30px} 
+.stpad { padding-top: 160px; }
 .footnotes a { color: grey }
 .footnotes p {
     font-size: 18pt;
@@ -394,6 +397,8 @@ Added: Zenburn, mostly.
 .code { font-family: monospace }
 
 .big { font-size: 80pt;} 
+.bigx { font-size: 65pt;} 
+.uber { font-size: 150%;  }
 /* redacted font */
 @font-face { font-family: "RedactedB"; src: url("fonts/redacted-script-bold.ttf") format('truetype'); font-style:bold; }
 @font-face { font-family: "RedactedR"; src: url("fonts/redacted-script-regular.ttf") format('truetype'); font-style:normal; }

@@ -1,7 +1,7 @@
+class: bottom left
 background-image: url("images/moon.jpg")
-# <br>Being kind to 3am you
-<br><br>
-## Katie McLaughlin<br>Docs Down Under, LCA 2019
+# .uber[Being kind to 3am you]
+## .stpad[Katie McLaughlin<br>Docs Down Under, LCA 2019]
 
 ???
 
@@ -143,6 +143,8 @@ Having A copy-pastable command that does something like: show me all the loadbal
 class: bottom left
 background-image: url("images/knife.jpg")
 # Your tools
+
+???
 It really depends on your environment, but having sharpened tools are really useful.
 
 And also remembering that when you're storing these, ensuring they're easily copy-pasteable. There's nothing worse than having those leading dollar signs or non-obvious environment variables in your stored commands that means you have to think about editing them.
@@ -181,7 +183,7 @@ Making it available and useful.
 
 ---
 background-image: url("images/step.jpg")
-### .big[Contextual Integration]
+### .bigx[Contextual Integration]
 
 ???
 
@@ -334,6 +336,7 @@ A bashhistory, an odd command here and there, just start somewhere. Evolve it, a
 
 ---
 class: bottom left
+background-image: url("images/moon.jpg")
 class: title
 # <br><br>Thanks!
 
