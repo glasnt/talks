@@ -16,7 +16,11 @@ You know what's also really great?
 
 Waking up when my body is done, my batteries are at 100% charged, and I can get going with the best possible start to my day. 
 
-I can get up, get my coffee, a bit of exercise, and start my day. I can operate to the best of my ability. I can be providive and happy and get things done. 
+I can get up, do a bit of exercise,  get my coffee, and start my day. 
+
+I can operate to the best of my ability. 
+
+I can be productive and happy and get things done. 
 
 but when I'm tired. Oh when I'm tired.. 
 ---
@@ -25,9 +29,15 @@ class: bottom right
 
 Note: 
 
-so when I get paged, especially at night, I'm tired. I'm not operating at my best. 
+I don't operate well when I'm tired. 
+
+Being unable to focus or see properly or think straight really inhibits my ability to be productive.
+
+So when I get paged, especially at night, I'm tired. I'm not operating at my best. 
 
 I'm not going to be 100% there, I'm not going to be as quick thinking. 
+
+But if I'm paged, stuff be broken, yo, so I have to get it fixed. 
 
 So what I need to do is to set myself up for to be the best I can be when, not if, when, the pager goes off at 3am. 
 
@@ -42,9 +52,12 @@ Sure, you can be lucky enough to be in a place with Follow the Sun (explain, pos
 
 But you probably won't be, if you're on a small team. 
 
-And even if you aren't, you're probably going to get something when you're not at your best, when you're sick or not with it or tired. 
+And it might not be an actual "3am pager", but it would be the apocryphl 3am pager. 
+
+Something is going to come by which means you'll not at your best, when you're sick, or not with it, or tired. 
 
 So these tips and tricks can help you when you're not 100%, but also you can use the time you are 100% to feedback into this system. 
+
 ---
 ~@ triple.jpg
 
@@ -54,6 +67,8 @@ Note: I'll be splitting this up into three sections
 
 Essentials, Next Steps, and Feedback 
 
+(Each with their own clever visuals :) )
+
 ---
 
 class: bottom left
@@ -61,19 +76,17 @@ class: bottom left
 # The Essentials
 Note: so, the essential documentation. 
 
+Not yet what you need to write down, but where to write it. 
+
 You could go whole hog and do a full knowledge base and documentation management system, but that all requires buy-in and resources. Sometime, you can't get that. 
 
 And what you really want is a good night's sleep. 
 
-So, the essentials. You just want to throw some notes down. 
+You just want to throw some notes down. 
 
-Examples here would be the wiki on your github pages, or say under your username on your Confluence page. 
+Places you could do this include: the wiki on your github pages, or say under your username on your Confluence page. 
 
-How to ssh into machines using your fancy jump boxes
-
-The configuration settings for special clients. 
-
-And for that, you need something that is basic, but has a few important features
+But, where you put these notes needs to have some important features. 
 
 ---
 ~@ basics.jpg
@@ -83,32 +96,48 @@ Note:
 
 It needs to be editable. Yes, sure, but editable means something important here. 
 
-Whereever you're storing this stuff, it needs to be able to be edited. 
+Whereever you're storing this stuff, it needs to be able to be edited easily. 
 
-Very basic bottom level is you just need something where you can dump your data. 
+You need to be able to readily add new information, and remove out of date information. 
 
-But more than that.
+This might seem obvious, but it's such an important feature that if you are stuck with, say, having a
+
+"documentation repo" that needs to have content approved before it can be merged, it's a huge blocker. 
+
 ---
 ~@ basics.jpg
 ### .big[Searchable]
 Note: it needs to be searchable. 
 
-Paper doesn't work here. You need to have something you can Control-F at 3am, whereever you are inthe world. This is especially useful for those road warriors. 
+Paper doesn't work here. You need to have something you can Control-F at 3am, where ever you are in the world. 
 
-Given the amount of data you're probably going to be having in here, having it authenticated against your company credentials is probably a good thing, but it doesn't always have to be. But if it is publially accessible, just be wary of what goes in there. Your 2FA backup codes.. probably not the best thing to be in there. 
-
+This is especially useful for those road warriors. 
 
 What I've also found super useful is creating a Custom Search Engine here. 
 
-TODO
+Having a keyword I can throw into a new tab of by browser to search my notes wiki is so helpful. 
+
+I personally have custom search keywords for a number of services like wikipedia or twitter, 
+
+but also a keyword for my company wiki, and also one for the code store. 
+
+If I come across something new across something and it's not in one of those two places, then probably something third party and I just have to search the public internet, or worse: knowledge is either trapped inside someone's head. At 3am, this is the worst. 
+
 ---
 ~@ basics.jpg
 ### .big[Discoverable]
 
 Note: 
+
+And this is where the third tier comes in. Discoverability.
+
 This is where the wiki excels here. Having the system being web based means that your coworkers can see it to. 
 
-But the question is, what do you use? What do you want to be able to discover at 3am?
+And they can also use your custom search engines to find your notes, and perhaps CoLlAbOrAtE?!
+
+
+But the question is, what do you write down? What do you want to be able to discover at 3am?
+
 
 ---
 class: bottom left
