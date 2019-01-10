@@ -198,6 +198,8 @@ Stepping up this repository of useful hints, how can you make it work for you?
 
 Again, your milage may vary, but I can offer advice for what I've seen work.
 
+I am an operations engineer, I am not your operations engineer.
+
 ---
 background-image: url("images/step.jpg")
 ### .big[Integration]
@@ -206,7 +208,9 @@ background-image: url("images/step.jpg")
 
 Integration is a big step. And so so useful.
 
-Having your cache end up being moved into an "SRE Tips" page that appears on the home page for your rota information. Having it linked up in the channel topic of your firehouse chat channel.
+Having your cache end up being moved into an "SRE Tips" page that appears on the home page for your rota information.
+
+Having it linked up in the channel topic of your firehouse chat channel.
 
 Making it available and useful.
 
