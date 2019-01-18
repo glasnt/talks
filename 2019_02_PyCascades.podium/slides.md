@@ -1440,19 +1440,23 @@ Avoid chaining ternary operators
 <br><br><br><br>
 # PowerShell
 ### ☞ &nbsp;`brew cask install powershell && pwsh`
-
 ---
 .righthead[PowerShell]
 <br>
 <pre><code class="powershell">PS> if (36 > 42) { "true" } else { "false" }</code></pre>
 --
 <pre><code class="powershell">false</code></pre>
-
 --
 <br>
 <pre><code class="powershell">PS> if (36 < 42) { "true" } else { "false" }</code></pre>
 --
 <pre><code class="powershell">.ps-error[The '<' operator is reserved for future use.]</code></pre>
+
+???
+
+the problem here is that powershell is a compiler, and an interpreter.
+
+It's a combination compiler and interpreter
 
 ---
 .righthead[PowerShell]
@@ -1462,6 +1466,10 @@ Avoid chaining ternary operators
 <br>
 <pre><code class="powershell">PS> if (36 < 42) { "true" } else { "false" }</code></pre>
 <pre><code class="powershell">.ps-error[The '<' operator is reserved for future use.]</code></pre>
+
+???
+
+So when you use greater than, it's being interpreted as a file redirection.
 --
 <br>
 <pre><code class="powershell">PS> cat 42</code></pre>

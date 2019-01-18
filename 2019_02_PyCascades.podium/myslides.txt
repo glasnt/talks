@@ -1261,17 +1261,19 @@ Avoid chaining ternary operators
 <br><br><br><br>
 # PowerShell
 ### ☞ &nbsp;`brew cask install powershell && pwsh`
-
 ---
 $$# PowerShell
 <br>
 ps- PS> if (36 > 42) { "true" } else { "false" } 
 ps false
-
 --
 <br>
 ps- PS> if (36 < 42) { "true" } else { "false" }
 ps .ps-error[The '<' operator is reserved for future use.]
+
+Note: the problem here is that powershell is a compiler, and an interpreter. 
+
+It's a combination compiler and interpreter
 
 ---
 $$# PowerShell
@@ -1281,6 +1283,8 @@ ps false &nbsp;&nbsp; &nbsp; # file redirection
 <br> 
 ps PS> if (36 < 42) { "true" } else { "false" } 
 ps .ps-error[The '<' operator is reserved for future use.]
+
+Note: So when you use greater than, it's being interpreted as a file redirection. 
 --
 <br>
 ps PS> cat 42
