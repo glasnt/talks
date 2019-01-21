@@ -16,8 +16,6 @@ background-image: url("images/sleeping.jpeg")
 
 And I like sleep. No really, getting a good night sleep is the best.
 
-You know what's also really great?
-
 Waking up when my body is done, my batteries are at 100% charged, and I can get going with the best possible start to my day.
 
 I can get up, do a bit of exercise, get my coffee, and start my day.
@@ -54,7 +52,7 @@ background-image: url("images/bedlaptop.jpeg")
 
 Because the 3am pager will probably happen.
 
-Sure, you can be lucky enough to be in a place with Follow the Sun (explain, possibly with maps?)
+Sure, you can be lucky enough to be in a place with Follow the Sun
 
 But you probably won't be, if you're on a small team.
 
@@ -86,7 +84,9 @@ background-image: url("images/basics.jpg")
 
 so, the essential documentation.
 
-Not yet what you need to write down, but where to write it.
+You should really write down something. It's useful to have documentation.
+
+But, where to have that documentation is also important to consider.
 
 You could go whole hog and do a full knowledge base and documentation management system, but that all requires buy-in and resources. Sometime, you can't get that.
 
@@ -176,9 +176,15 @@ background-image: url("images/knife.jpg")
 ???
 It really depends on your environment, but having sharpened tools are really useful.
 
-And also remembering that when you're storing these, ensuring they're easily copy-pasteable. There's nothing worse than having those leading dollar signs or non-obvious environment variables in your stored commands that means you have to think about editing them.
+And also remembering that when you're storing these, ensuring they're easily usable. There's nothing worse than having those leading dollar signs or non-obvious environment variables in your stored commands that means you have to think about editing them.
 
 And also, making sure these commands are safe. Don't put any descructive commands in these caches unless they're clearly marked as such, have big red warning signs.
+
+Especially not storing destructive chains of commands that start with basic search commands. For instance, show me all the docker containers... then delete them all.
+
+You want to make sure that 3am you isn't blindly using a tool that's going to make things worse.
+
+Don't run with scissors, etc.
 ---
 class: bottom left
 background-image: url("images/basics.jpg")
@@ -195,6 +201,8 @@ background-image: url("images/step.jpg")
 ???
 
 Stepping up this repository of useful hints, how can you make it work for you?
+
+
 
 Again, your milage may vary, but I can offer advice for what I've seen work.
 
