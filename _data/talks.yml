@@ -1,3 +1,14 @@
+- conference: 
+    name: Docs Down Under
+    date: 2019-01-22
+    link: https://linux.conf.au/programme/miniconfs/docs/
+    talks: 
+        - name: Being kind to 3am you
+          link: https://linux.conf.au/schedule/presentation/230/
+          slides: 2019_01_DocsDownUnder.podium/
+          video:  https://www.youtube.com/watch?v=MpU56csfNmM
+          twitter: https://twitter.com/betsybookworm/status/1087470635826073600
+        
 - conference:
     name: All Things Open
     date: 2018-10-22

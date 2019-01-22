@@ -52,9 +52,11 @@ background-image: url("images/bedlaptop.jpeg")
 
 Because the 3am pager will probably happen.
 
-Sure, you can be lucky enough to be in a place with Follow the Sun
+Oh, you have an on call rotation? Or Follow the sun?
 
-But you probably won't be, if you're on a small team.
+Good for you. A lot of places don't
+
+[Sure, you can be lucky enough to be in a place with Follow the Sun. But you probably won't be, if you're on a small team. ]
 
 And it might not be an actual "3am pager", but it would be the apocryphl 3am pager.
 
@@ -361,6 +363,10 @@ Showing self-care by giving yourself the tools to help you get your job done so 
 
 Making sure your junior or new on call engineers don't freak out in the middle of the night because you left them a note about that upgrade, so those new errors they're seeing are totally okay (well, not okay, but not unexpected)
 
+Thinking more about how less pages makes every one sleep easier, and what can be done to achieve that.
+
+TODO MORE HERE
+
 Working in a team is hard, but as soon as you start expecting work out of hours, especially when on-call is involved, practicing explicit empathy makes things so much easier for everyone involved.
 
 ---
@@ -375,6 +381,21 @@ you're not your best when you're tired, but you'll do your future self a favour 
 A bashhistory, an odd command here and there, just start somewhere. Evolve it, and it'll help you on those early morning calls so you can get back to sleep.
 
 
+CYO ADVENTURE
+
+IF DISCCUSION: NEXT
+
+ELSE: END
+
+---
+class: bottom left
+background-image: url("images/blank-small.jpg")
+# What are your tips?
+
+
+???
+
+open discussion time.
 ---
 class: bottom left
 background-image: url("images/moon.jpg")
