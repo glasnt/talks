@@ -97,6 +97,51 @@
 
 ^ If you can throw together a cronjob that means you don't have to wake up at 3am to fix something, go, do that. You're awesome.  
 
+
+
+---
+
+> But **PHP** is objectively bad! It's insecure af!
+-- Hacker News, StackOverflow, etc
+
+---
+
+# [fit] **PHP** *was* the
+# [fit] **ONLY** way to do things
+
+^ Back in the back in the day, if you wanted to do any server side functionality. It was and still is accessible and popular. 
+
+---
+
+# [fit] **PHP** is getting
+# [fit] *better*
+
+^ and it's that popularity that's helped drive dramatic improvements over recent years. 
+
+^ PHP7 is the bees knees by all reports, with improvements to security and efficiency. 
+
+^ but it's critical to remember that
+
+---
+
+# [fit] The more **USERS**
+# [fit] the more *MISUSERS*
+
+^ The more users a product have, the more misuses are popular. 
+
+^ Consider that you hear about all the "problems" with PHP because it's used by more people. You don't hear "problems" about less popular languages. 
+
+^ and having a popular language means you'll have more experts but also more beginners. Begineers who don't know any better. 
+
+---
+
+# [fit] *Education* lifts
+# [fit] **ALL OF US**
+
+^ Educating these beginners to know about the pitfalls and how to work around them. how to build secure apps, is paramount to lifting up the community as a whole
+
+^ the point and laugh method is not a valid way of improving things. 
+
 ---
 
 > You're not a Python developer.
@@ -125,6 +170,14 @@
 # [fit] Don't be a *gatekeeping*
 # [fit] **MOTHERFUCKER**
 
+
+---
+
+# [fit] "You're not a real programmer unless..."
+# [fit] **IS BULLSHIT**
+
+^ There's nothing more degrading than having a random dudebro tell you your work is invalid. It's demoralising. I've gotten a thick skin over the years, but it still cuts. Imagine those who have only heard this. We have lost so much talent due to this bullshit. 
+
 ---
 
 # [fit] **CONTEMPT CULTURE**
@@ -132,6 +185,19 @@
 
 ^ By saying that folks aren't real programmers, they aren't as likely to keep at it, thus they don't continue in the industry, and that's bad. 
 
+
+---
+
+# [fit] We are *humans*
+# [fit] working with *humans*
+# [fit] to develop software
+# [fit] for the **BENEFIT OF** *humans*
+
+^ There are many tools in our industry; languages, operating systems, environments; 
+
+^ But at the end of the day, whatever we made is for the benefit of humans. We are making lives earlier, information more easily accessible, live more pleasent. 
+
+^ this insidious infighting will be the death of us all. Stop that shit. 
 
 ---
 
