@@ -111,15 +111,6 @@
 
 ^ Back in the back in the day, if you wanted to do any server side functionality. It was and still is accessible and popular. 
 
----
-
-# [fit] **PHP** is getting
-# [fit] *better*
-
-^ and it's that popularity that's helped drive dramatic improvements over recent years. 
-
-^ PHP7 is the bees knees by all reports, with improvements to security and efficiency. 
-
 ^ but it's critical to remember that
 
 ---
@@ -148,6 +139,10 @@
 -- My boss.
 
 ^ I was working as a site reliability engineer, in a shop where the only language was Python. This was said at my annual review. 
+
+^ OR
+
+^ Oh, did I mention the fact that I'm also: PSF, PyConAU Director?
 
 ^ Oh, sorry, that's not entirely right. 
 
