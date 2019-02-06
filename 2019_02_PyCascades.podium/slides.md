@@ -191,29 +191,64 @@ class: center
 .righthead[ECMAScript]
 ## .bluef[`a`] `+` .greenf[`b`]
 
+???
+
+Consider two variables, a and b
+
+In order to do the plus operation, we need to work out which operation that is: addition or conccatenation
+
+In order to do that
+
+
 --
 
 .ecma[.bc[Convert .bluef[`a`] and .greenf[`b`] to primatives]]
+
+???
+
+we need to first reduce both sides of the operand to their primative forms
 
 --
 
 * .ecma[.bc[`typeof()` in `undefined`, `null`, `boolean`, `number`, `string`]]
 
+???
+
+That is, the type of the variable is undefined, null, bool, number, or string
+
+To do that, we have two options
+
 --
 
 * .ecma[Try .bc[`.valueOf()`], else .bc[`.toString()`]]
 
+???
+
+We have `valueOf`, or `toString`
+
+After both operands are in their primative forms, we then have a choice
 --
 
 .ecma[Are .bc[.bluef[`a`]] or .bc[.greenf[`b`]] a string?]
 
+???
+
+If either of the sides are a string,
 --
 
 .ecma[Yes → .bc[Concatenate `String(`.bluef[`a`]`)` and `String(`.greenf[`b`]`)`]]
 
+???
+
+then we perform a concatenation
+
 --
 
 .ecma[No → .bc[Sum `Number(`.bluef[`a`]`)` and `Number(`.greenf[`b`]`)`]]
+
+???
+
+otherwise, we convert both sides to a number, and add them.
 ---
 .righthead[ECMAScript]
 ## .bluef[`[]`] `+` .greenf[`{}`]
@@ -1333,6 +1368,10 @@ class: title
 <pre><code class="scala">scala> println({} + "")</code></pre>
 --
 <pre><code class="scala">()</code></pre>
+
+???
+
+what is the printed result of the concatenation of an object and an empty string
 ---
 .righthead[Scala]
 <pre><code class="scala">scala> println({} + "")</code></pre>
