@@ -76,13 +76,13 @@ js > 4 - 2
 js 2
 js > 4 .blue[-] "2" // implicit coercion
 js 2
-js > 4 .blue[+] "2" // overloaded operand
+js > 4 .blue[+] "2" // overloaded operator
 js "42"
 
 
 Note:
 
-2: the plus is an overloaded operand. It can act as both numeric addition, or in this case, concatenation
+2: the plus is an overloaded operator. It can act as both numeric addition, or in this case, concatenation
 
 ---
 $$# JavaScript
@@ -133,7 +133,7 @@ Note: This one is a bit more complicated.
 
 #= `+`
 
-Note: Remember that overloaded operand I mentioned earlier?
+Note: Remember that overloaded operator I mentioned earlier?
 
 Let's dive into that a bit more. 
 
@@ -167,7 +167,7 @@ In order to do that
 
 .ecma[.bc[Convert .bluef[`a`] and .greenf[`b`] to primatives]]
 
-Note:  we need to first reduce both sides of the operand to their primative forms
+Note:  we need to first reduce both sides of the operator to their primative forms
  
 --
 

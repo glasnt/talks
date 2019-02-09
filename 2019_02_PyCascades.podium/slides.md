@@ -102,13 +102,13 @@ the problem with this example is to do with types
 <pre><code class="javascript">2</code></pre>
 <pre><code class="javascript">> 4 .blue[-] "2" // implicit coercion</code></pre>
 <pre><code class="javascript">2</code></pre>
-<pre><code class="javascript">> 4 .blue[+] "2" // overloaded operand</code></pre>
+<pre><code class="javascript">> 4 .blue[+] "2" // overloaded operator</code></pre>
 <pre><code class="javascript">"42"</code></pre>
 
 
 ???
 
-2: the plus is an overloaded operand. It can act as both numeric addition, or in this case, concatenation
+2: the plus is an overloaded operator. It can act as both numeric addition, or in this case, concatenation
 
 ---
 .righthead[JavaScript]
@@ -168,7 +168,7 @@ class: title
 
 ???
 
-Remember that overloaded operand I mentioned earlier?
+Remember that overloaded operator I mentioned earlier?
 
 Let's dive into that a bit more.
 
@@ -206,7 +206,7 @@ In order to do that
 
 ???
 
-we need to first reduce both sides of the operand to their primative forms
+we need to first reduce both sides of the operator to their primative forms
 
 --
 
