@@ -890,6 +890,93 @@ py True
 Note: 
 we need to use double equals here instead. 
 ---
+#= Python
+### ☞ &nbsp;`brew install python@2 && python2`
+---
+$$# Python 2
+py- >>> 4 < 2
+py- False
+py- >>> 4 > 2
+py- True
+
+py- >>> 4 > '2'
+py- False
+py- >>> '4' > [2]
+py True
+
+---
+$$# Python 2
+
+py- >>> '4' > [4]
+py- True
+py- >>> '4' < [4]
+py- False
+py- >>> '4' < 4
+py- False
+py- >>> [4] < 4
+py- False 
+py- >>> 4 < [4] < '4'
+py True
+
+
+Note: 5 examples
+
+Why is it so? To the Specifications!
+
+---
+
+# .pydocs[Python 2.7.15]
+## .pydocs[5.3. Comparisons]
+
+--
+Objects of different types, except different numeric types and different string types, never compare equal
+
+Note: Okay, this makes sense. In JS we saw that there was implicit casting of types going on. Python doesn't do that. But
+--
+; such objects are ordered consistently but arbitrarily (so that sorting a heterogeneous array yields a consistent result).
+
+Note: This also makes sense. Having consistant results is sort of important. But, it doesn't say how they should be ordered. But the docs go on. 
+--
+<br>
+<br>
+**CPython implementation detail**: Objects of different types except numbers are ordered by their type names; objects of the same types that don’t support proper comparison are ordered by their address.
+
+Note: Different types of numbers (integers, floats, etc) can be ordered, but otherwise, **(click for highlight)**
+---
+
+# .pydocs[Python 2.7.15]
+## .pydocs[5.3. Comparisons]
+Objects of different types, except different numeric types and different string types, never compare equal
+; such objects are ordered consistently but arbitrarily (so that sorting a heterogeneous array yields a consistent result).
+<br>
+<br>
+**CPython implementation detail**: Objects of different types except numbers are .red[ordered by their type names]; objects of the same types that don’t support proper comparison are ordered by their address.
+
+Note: CPython uses the name of the type(!!!)
+
+---
+$$# Python 2
+
+py >>> 4 < [4] < '4'
+py- True
+py- >>> type(4); type([4]); type('4')
+py ＜type 'int'＞
+py ＜type 'list'＞
+py ＜type 'str'＞
+
+
+Note: .. h **i** j k **l** m n o p q r **S** 
+--
+$$# Python 3
+py- >>> 4 < [4] < '4'
+co TypeError: '＜' not supported between instances of 'int' and 'list'
+--
+.pyeol[EOL in 312 days]
+
+Note: just another reason why you reeeeeallly shouldn't be using Python2 
+
+Author note - EOL based on original presentation date. 
+---
 #= Java
 ### ☞ &nbsp;`brew install javarepl && javarepl`
 ---
@@ -1390,8 +1477,10 @@ If you are proficient at, say, perl, and only perl; or java and only java, that'
 
 ---
 
-#= <br><br>Thanks!
+#= <br>Thanks!
 
+### References: glasnt.com/wat
 @ footer.svg
+
 
 Note: thank you for your time

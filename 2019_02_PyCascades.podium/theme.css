@@ -119,6 +119,9 @@ li cite {
 .ecma { font-family: Cambria, Palatino Linotype, Palatino, Liberation Serif,  serif }
 .ecma-header { color: #f60}
 
+.pydocs { font-family: "Trebuchet MS", sans-serif; color: #1f435c; font-weight: 400; } 
+
+
 .tinytext { 
     margin: 0;
 	padding: 0;
@@ -173,6 +176,28 @@ li cite {
     -o-transform: rotate(-30deg);
     filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
 }   
+.pyeol { 
+    white-space: nowrap;
+    position: absolute;
+    font-size: 64pt;
+    max-width: 400px;
+    right: 5em;
+    line-height: 1;
+    bottom: 4em;
+    z-index: 111;
+    color: RED; 
+    font-family: monospace; 
+    font-weight: bold;
+    width: 100%;
+    text-align: center;
+    -webkit-transform: rotate(-15deg);
+    -moz-transform: rotate(-15deg);
+    -ms-transform: rotate(-15deg);
+    -o-transform: rotate(-15deg);
+    filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+
+ }
+
 .righthead { 
     font-size: 34pt;
     float: right;

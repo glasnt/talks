@@ -1026,6 +1026,127 @@ if what we wanted to do here was an equality check, checking if the values were 
 we need to use double equals here instead.
 ---
 class: title
+# Python
+### ☞ &nbsp;`brew install python@2 && python2`
+---
+.righthead[Python 2]
+<pre><code class="python">>>> 4 < 2</code></pre>
+--
+<pre><code class="python">False</code></pre>
+--
+<pre><code class="python">>>> 4 > 2</code></pre>
+--
+<pre><code class="python">True</code></pre>
+--
+
+<pre><code class="python">>>> 4 > '2'</code></pre>
+--
+<pre><code class="python">False</code></pre>
+--
+<pre><code class="python">>>> '4' > [2]</code></pre>
+--
+<pre><code class="python">True</code></pre>
+
+---
+.righthead[Python 2]
+
+<pre><code class="python">>>> '4' > [4]</code></pre>
+--
+<pre><code class="python">True</code></pre>
+--
+<pre><code class="python">>>> '4' < [4]</code></pre>
+--
+<pre><code class="python">False</code></pre>
+--
+<pre><code class="python">>>> '4' < 4</code></pre>
+--
+<pre><code class="python">False</code></pre>
+--
+<pre><code class="python">>>> [4] < 4</code></pre>
+--
+<pre><code class="python">False</code></pre>
+--
+<pre><code class="python">>>> 4 < [4] < '4'</code></pre>
+--
+<pre><code class="python">True</code></pre>
+
+
+???
+
+5 examples
+
+Why is it so? To the Specifications!
+
+---
+
+# .pydocs[Python 2.7.15]
+## .pydocs[5.3. Comparisons]
+
+--
+Objects of different types, except different numeric types and different string types, never compare equal
+
+???
+
+Okay, this makes sense. In JS we saw that there was implicit casting of types going on. Python doesn't do that. But
+--
+; such objects are ordered consistently but arbitrarily (so that sorting a heterogeneous array yields a consistent result).
+
+???
+
+This also makes sense. Having consistant results is sort of important. But, it doesn't say how they should be ordered. But the docs go on.
+--
+<br>
+<br>
+**CPython implementation detail**: Objects of different types except numbers are ordered by their type names; objects of the same types that don’t support proper comparison are ordered by their address.
+
+???
+
+Different types of numbers (integers, floats, etc) can be ordered, but otherwise, **(click for highlight)**
+---
+
+# .pydocs[Python 2.7.15]
+## .pydocs[5.3. Comparisons]
+Objects of different types, except different numeric types and different string types, never compare equal
+; such objects are ordered consistently but arbitrarily (so that sorting a heterogeneous array yields a consistent result).
+<br>
+<br>
+**CPython implementation detail**: Objects of different types except numbers are .red[ordered by their type names]; objects of the same types that don’t support proper comparison are ordered by their address.
+
+???
+
+CPython uses the name of the type(!!!)
+
+---
+.righthead[Python 2]
+
+<pre><code class="python">>>> 4 < [4] < '4'</code></pre>
+<pre><code class="python">True</code></pre>
+--
+<pre><code class="python">>>> type(4); type([4]); type('4')</code></pre>
+--
+<pre><code class="python">＜type 'int'＞</code></pre>
+<pre><code class="python">＜type 'list'＞</code></pre>
+<pre><code class="python">＜type 'str'＞</code></pre>
+
+
+???
+
+.. h **i** j k **l** m n o p q r **S**
+--
+.righthead[Python 3]
+<pre><code class="python">>>> 4 < [4] < '4'</code></pre>
+--
+<pre><code class="">TypeError: '＜' not supported between instances of 'int' and 'list'</code></pre>
+--
+.pyeol[EOL in 312 days]
+
+???
+
+just another reason why you reeeeeallly shouldn't be using Python2
+
+Author note - EOL based on original presentation date.
+---
+class: title
 # Java
 ### ☞ &nbsp;`brew install javarepl && javarepl`
 ---
@@ -1596,9 +1717,11 @@ If you are proficient at, say, perl, and only perl; or java and only java, that'
 ---
 
 class: title
-# <br><br>Thanks!
+# <br>Thanks!
 
+### References: glasnt.com/wat
 ![Image](images/footer.svg)
+
 
 ???
 
