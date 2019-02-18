@@ -465,3 +465,5 @@ Added: Zenburn, mostly.
 .table { font-size: 32pt; text-align: left; font-family: monospace  }
 .grey { color: grey }
 .gg { background-color: lightgrey }
+
+.paddown { padding-top: 20px }

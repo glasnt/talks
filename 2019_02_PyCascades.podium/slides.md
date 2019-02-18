@@ -1031,21 +1031,49 @@ class: title
 ---
 .righthead[Python 2]
 <pre><code class="python">>>> 4 < 2</code></pre>
+???
+
+is four less than two. Well, no.
 --
 <pre><code class="python">False</code></pre>
 --
 <pre><code class="python">>>> 4 > 2</code></pre>
+???
+
+so 4 is greater than two, right?
 --
 <pre><code class="python">True</code></pre>
---
 
+???
+
+Yes.
+
+There are no trick questions here.
+--
 <pre><code class="python">>>> 4 > '2'</code></pre>
+???
+
+but is four greater than the string 2?
 --
 <pre><code class="python">False</code></pre>
+???
+
+no.
 --
 <pre><code class="python">>>> '4' > [2]</code></pre>
+???
+
+but what about the string four, is it greater than an array of only 2?
 --
 <pre><code class="python">True</code></pre>
+???
+
+yes.
+
+*pause for thought*
+
+Let's go a bit deeper.
+
 
 ---
 .righthead[Python 2]
@@ -1083,13 +1111,18 @@ Why is it so? To the Specifications!
 ## .pydocs[5.3. Comparisons]
 
 --
-Objects of different types, except different numeric types and different string types, never compare equal
+Objects of different types<sup>1</sup>
+never compare equal
+
+
+.footnotes[[1] except different numeric types and different string types]
 
 ???
 
 Okay, this makes sense. In JS we saw that there was implicit casting of types going on. Python doesn't do that. But
 --
-; such objects are ordered consistently but arbitrarily (so that sorting a heterogeneous array yields a consistent result).
+
+Such objects are ordered consistently but arbitrarily (so that sorting a heterogeneous array yields a consistent result).
 
 ???
 
@@ -1097,7 +1130,7 @@ This also makes sense. Having consistant results is sort of important. But, it d
 --
 <br>
 <br>
-**CPython implementation detail**: Objects of different types except numbers are ordered by their type names; objects of the same types that don’t support proper comparison are ordered by their address.
+**CPython implementation detail**: <br>Objects of different types except numbers are ordered by their type names; [..]
 
 ???
 
@@ -1106,21 +1139,29 @@ Different types of numbers (integers, floats, etc) can be ordered, but otherwise
 
 # .pydocs[Python 2.7.15]
 ## .pydocs[5.3. Comparisons]
-Objects of different types, except different numeric types and different string types, never compare equal
-; such objects are ordered consistently but arbitrarily (so that sorting a heterogeneous array yields a consistent result).
+
+Objects of different types<sup>1</sup>
+never compare equal
+.footnotes[[1] except different numeric types and different string types]
+
+Such objects are ordered consistently but arbitrarily (so that sorting a heterogeneous array yields a consistent result).
 <br>
 <br>
-**CPython implementation detail**: Objects of different types except numbers are .red[ordered by their type names]; objects of the same types that don’t support proper comparison are ordered by their address.
+**CPython implementation detail**: <br>Objects of different types except numbers .red[are ordered by their type names]; [..]
 
 ???
 
-CPython uses the name of the type(!!!)
+this is specific to cpython, which you're *probably* using.
 
 ---
 .righthead[Python 2]
 
 <pre><code class="python">>>> 4 < [4] < '4'</code></pre>
 <pre><code class="python">True</code></pre>
+
+???
+
+So if we go back to our python2 code, we can see why this statement is true by checking the types of our objects
 --
 <pre><code class="python">>>> type(4); type([4]); type('4')</code></pre>
 --
@@ -1128,15 +1169,22 @@ CPython uses the name of the type(!!!)
 <pre><code class="python">＜type 'list'＞</code></pre>
 <pre><code class="python">＜type 'str'＞</code></pre>
 
-
 ???
+
+int comes before list comes before str, which is the only reason why this works.
 
 .. h **i** j k **l** m n o p q r **S**
 --
 .righthead[Python 3]
 <pre><code class="python">>>> 4 < [4] < '4'</code></pre>
+???
+
+compare this to the result you get when you try this in python three
 --
 <pre><code class="">TypeError: '＜' not supported between instances of 'int' and 'list'</code></pre>
+
+???
+Which is very clearly and error, and it tells you why.
 --
 .pyeol[EOL in 312 days]
 
@@ -1354,15 +1402,15 @@ Because bash is designed for execution, not returning a string representation of
 <pre><code class="haskell">.green[fib 1 = 1]</code></pre>
 <pre><code class="haskell">fib n = fib (n - 1) + fib (n - 2)</code></pre>
 <br>
-.righthead[Ruby]
-<pre><code class="ruby">def fib(n)</code></pre>
-<pre><code class="ruby">&nbsp; &nbsp; .green[return n if (0..1).include? n]</code></pre>
-<pre><code class="ruby">&nbsp; &nbsp; (fib(n - 1) + fib(n - 2))</code></pre>
-<pre><code class="ruby">end</code></pre>
+.righthead[Python]
+<pre><code class="python">def fib(n):</code></pre>
+<pre><code class="python">&nbsp; &nbsp; .green[if n = 0: return 0]</code></pre>
+<pre><code class="python">&nbsp; &nbsp; .green[if n = 1: return 1]</code></pre>
+<pre><code class="python">&nbsp; &nbsp; return fib(n - 1) + fib(n - 2)</code></pre>
 
 ???
 
-this has the same sort of effect as in Ruby
+this has the same sort of effect as in Python
 ---
 <br><br><br><br>
 # Pascal
@@ -1711,7 +1759,7 @@ they're tools
 
 they're tools to manipulate data to solve problems, and each of them has their place
 
-If you are proficient at, say, perl, and only perl; or java and only java, that's great. But why not try your hand at something else? You might learn something more and help deeper your understanding of your language of choice along the way
+If you are only proficient at Python, that's great. But why not try your hand at something else? You might learn something more and help deeper your understanding of your language of choice along the way
 
 
 ---
