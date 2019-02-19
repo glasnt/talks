@@ -3,7 +3,7 @@
 @ footer.svg
 ---
 #= JavaScript
-### ☞ &nbsp;`Chrome 70 Console`
+### ☞ &nbsp;`Chrome Console`
 Note: Let's talk about javascript
 ---
 $$# JavaScript

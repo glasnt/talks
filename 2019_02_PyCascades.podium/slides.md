@@ -5,7 +5,7 @@ class: title
 ---
 class: title
 # JavaScript
-### ☞ &nbsp;`Chrome 70 Console`
+### ☞ &nbsp;`Chrome Console`
 ???
 
 Let's talk about javascript
@@ -1026,7 +1026,7 @@ if what we wanted to do here was an equality check, checking if the values were 
 we need to use double equals here instead.
 ---
 class: title
-# Python
+# Python 2
 ### ☞ &nbsp;`brew install python@2 && python2`
 ---
 .righthead[Python 2]
