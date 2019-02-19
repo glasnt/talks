@@ -890,7 +890,7 @@ py True
 Note: 
 we need to use double equals here instead. 
 ---
-#= Python
+#= Python 2
 ### ☞ &nbsp;`brew install python@2 && python2`
 ---
 $$# Python 2
