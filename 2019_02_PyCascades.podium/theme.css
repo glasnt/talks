@@ -99,8 +99,10 @@ li cite {
 .why { font-family: 'American Typewriter'; color: #45E768; font-weight: bold;}
 .strike { text-decoration: line-through;}
 
-.wat-pos { font-size: 80pt; position:absolute; bottom: 4em; left: 2em;}
-.why-pos { font-size: 120pt; position:absolute; bottom: 1em; right: 1em;}
+.wat-pos { font-size: 120pt; position:absolute; bottom: 3em; left: 1em;}
+.why-pos { font-size: 180pt; position:absolute; bottom: 0.5em; right: 0.5em;}
+.psg { font-weight: normal !important; color: rgb(0,136,0) }
+.cc { color: rgb(140,140,140)}
 
 .w { font-family: "American Typewriter"}
 .large { font-size: 35pt; line-height: 1; }
@@ -279,6 +281,8 @@ li cite {
 .remark-slide-content.logo img {
   margin-top: 15%;
 }
+
+
 
 /*********************/
 /* Screenshot slides */

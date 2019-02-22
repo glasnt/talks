@@ -3,7 +3,7 @@
 @ footer.svg
 ---
 #= JavaScript
-### ☞ &nbsp;`Chrome Console`
+### ☞ &nbsp;`Google Chrome Developer Console`
 Note: Let's talk about javascript
 ---
 $$# JavaScript
@@ -94,13 +94,13 @@ Note: This next example is to do with the difference in the equality operators
 
 ---
 $$# JavaScript
-js > 1 .blue[==] "1" // with type coercion
+js > 1 .blue[==] "1" &nbsp;// with type coercion
 js true
 js > 1 === "1"
 js  false 
 ---
 $$# JavaScript
-js > 1 .blue[==] "1" // with type coercion
+js > 1 .blue[==] "1" &nbsp;// with type coercion
 js true
 js > 1 .blue[===] "1"  // without type coercion
 js  false 
@@ -215,7 +215,7 @@ $$# ECMAScript
 --
 js- > [].valueOf()
 js- []
-js- > typeof([])
+js- > typeof([].valueOf())
 js "object"
 ---
 $$# ECMAScript
@@ -229,7 +229,7 @@ $$# ECMAScript
 --
 js- > [].toString()
 js- ""
-js- > typeof("")
+js- > typeof([].toString())
 js  "string"
 
 ---
@@ -247,7 +247,7 @@ $$# ECMAScript
 --
 js- > {}.valueOf()
 js- {}
-js- > typeof({})
+js- > typeof({}.valueOf())
 js "object"
 ---
 $$# ECMAScript
@@ -305,7 +305,7 @@ $$# ECMAScript
 --
 js- > {}.toString()
 js- "[object Object]"
-js- > typeof("[object Object]")
+js- > typeof({}.toString())
 js "string"
 
 
@@ -602,7 +602,7 @@ py- >>> a is b
 py True
 ---
 $$# Terminal
-`$ python`
+`~ $ python`
 
 Note: In Python, when you load the interpreter, you're probably loading CPython. An optimisation of CPython is to create a list of integers from -5 to 256 for you.
 --
@@ -619,7 +619,7 @@ Note:
 An optimisation of CPython is to create a list of integers from -5 to 256 for you.
 ---
 $$# Terminal
-`$ python`
+`~ $ python`
 $$# CPython
 py >>> a = 256
 py .white[.]
@@ -634,7 +634,7 @@ sh .white[.................................]a
 Note: so when you assign a variable, it can use one you prepared earlier
 ---
 $$# Terminal
-`$ python`
+`~ $ python`
 $$# CPython
 py >>> a = 256
 py >>> b = 256
@@ -647,7 +647,7 @@ sh .white[.................................]a b
 
 ---
 $$# Terminal
-`$ python`
+`~ $ python`
 $$# CPython
 py >>> a = 256
 py >>> b = 256
@@ -663,7 +663,7 @@ Note: `is` when we talk about "is" here, we're doing an identity check.
 Identity is a check to see if two objects are the same
 ---
 $$# Terminal
-`$ python`
+`~ $ python`
 $$# CPython
 py >>> a = 256
 py >>> b = 256
@@ -679,7 +679,7 @@ Note: Are A and B the same object. Yes!
 ---
 
 $$# Terminal
-`$ python`
+`~ $ python`
 $$# CPython
 py >>> a = 256
 py >>> b = 256
@@ -694,7 +694,7 @@ Note: Are A and B the same object. Yes!
 
 ---
 $$# Terminal
-`$ python`
+`~ $ python`
 $$# CPython
 py >>> .white[a=b]
 py .white[.]
@@ -709,7 +709,7 @@ But when we use integers outside of our cache, things change
 
 ---
 $$# Terminal
-`$ python`
+`~ $ python`
 $$# CPython
 py >>> a = 257
 py .white[.]
@@ -726,7 +726,7 @@ When we exceed the predeclared array, the value is assigned somewhere else in me
 
 ---
 $$# Terminal
-`$ python`
+`~ $ python`
 $$# CPython
 py >>> a = 257
 py >>> b = 257
@@ -742,7 +742,7 @@ And when we declare B we also store that as it's own value
 
 ---
 $$# Terminal
-`$ python`
+`~ $ python`
 $$# CPython
 py >>> a = 257
 py >>> b = 257
@@ -758,7 +758,7 @@ Note:
 So when we run the check
 ---
 $$# Terminal
-`$ python`
+`~ $ python`
 $$# CPython
 py >>> a = 257
 py >>> b = 257
@@ -775,7 +775,7 @@ The objects aren't the same
 
 ---
 $$# Terminal
-`$ python`
+`~ $ python`
 $$# CPython
 py >>> a = 257
 py >>> b = 257
@@ -792,7 +792,7 @@ So the check is false
 Even thought he variables have the same value, they aren't the same value, so the identity check fails. 
 ---
 $$# Terminal
-`$ python`
+`~ $ python`
 $$# CPython
 py >>> a = 257; b = 257;
 py .white[.]
@@ -809,7 +809,7 @@ a quite rare character to see in python code, btw
 the interpreter processes this all as one code object
 ---
 $$# Terminal
-`$ python`
+`~ $ python`
 $$# CPython
 py >>> a = 257; b = 257;
 py .white[.]
@@ -824,7 +824,7 @@ Note: so it's allowed to optimise
 and so it only creates one constant 
 ---
 $$# Terminal
-`$ python`
+`~ $ python`
 $$# CPython
 py >>> a = 257; b = 257;
 py >>> a is b
@@ -840,7 +840,7 @@ Note:
 So when we do our identity check again
 ---
 $$# Terminal
-`$ python`
+`~ $ python`
 $$# CPython
 py >>> a = 257; b = 257;
 py >>> a is b
@@ -856,7 +856,7 @@ Note:
 The objects are the same
 ---
 $$# Terminal
-`$ python`
+`~ $ python`
 $$# CPython
 py >>> a = 257; b = 257;
 py >>> a is b
@@ -959,7 +959,7 @@ never compare equal
 Note: Okay, this makes sense. In JS we saw that there was implicit casting of types going on. Python doesn't do that. But
 --
 
-Such objects are ordered consistently but arbitrarily (so that sorting a heterogeneous array yields a consistent result).
+Such objects are ordered consistently but arbitrarily<br>(so that sorting a heterogeneous array yields a consistent result).
 
 Note: This also makes sense. Having consistant results is sort of important. But, it doesn't say how they should be ordered. But the docs go on. 
 --
@@ -977,7 +977,7 @@ Objects of different types<sup>1</sup>
 never compare equal
 .footnotes[[1] except different numeric types and different string types]
 
-Such objects are ordered consistently but arbitrarily (so that sorting a heterogeneous array yields a consistent result).
+Such objects are ordered consistently but arbitrarily<br>(so that sorting a heterogeneous array yields a consistent result).
 <br>
 <br>
 **CPython implementation detail**: <br>Objects of different types except numbers .red[are ordered by their type names]; [..]
@@ -1430,7 +1430,7 @@ It's a combination compiler and interpreter
 $$# PowerShell
 <br>
 ps PS> if (36 .red[>] 42) { "true" } else { "false" }
-ps false &nbsp;&nbsp; &nbsp; # file redirection
+co .psg[false] &nbsp;&nbsp; &nbsp; .cc[# file redirection]
 <br> 
 ps PS> if (36 < 42) { "true" } else { "false" } 
 ps .ps-error[The '<' operator is reserved for future use.]
@@ -1446,7 +1446,7 @@ sh 36
 $$# PowerShell
 <br>
 ps PS> if (36 .red[>] 42) { "true" } else { "false" }
-ps false &nbsp;&nbsp; &nbsp; # file redirection
+co .psg[false] &nbsp;&nbsp; &nbsp; .cc[# file redirection]
 <br> 
 ps PS> if (36 .red[<] 42) { "true" } else { "false" } 
 ps .ps-error[The '<' operator is reserved for future use.]

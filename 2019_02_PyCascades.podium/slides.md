@@ -5,7 +5,7 @@ class: title
 ---
 class: title
 # JavaScript
-### ☞ &nbsp;`Chrome Console`
+### ☞ &nbsp;`Google Chrome Developer Console`
 ???
 
 Let's talk about javascript
@@ -122,13 +122,13 @@ This next example is to do with the difference in the equality operators
 
 ---
 .righthead[JavaScript]
-<pre><code class="javascript">> 1 .blue[==] "1" // with type coercion</code></pre>
+<pre><code class="javascript">> 1 .blue[==] "1" &nbsp;// with type coercion</code></pre>
 <pre><code class="javascript">true</code></pre>
 <pre><code class="javascript">> 1 === "1"</code></pre>
 <pre><code class="javascript">false</code></pre>
 ---
 .righthead[JavaScript]
-<pre><code class="javascript">> 1 .blue[==] "1" // with type coercion</code></pre>
+<pre><code class="javascript">> 1 .blue[==] "1" &nbsp;// with type coercion</code></pre>
 <pre><code class="javascript">true</code></pre>
 <pre><code class="javascript">> 1 .blue[===] "1" // without type coercion</code></pre>
 <pre><code class="javascript">false</code></pre>
@@ -266,7 +266,7 @@ otherwise, we convert both sides to a number, and add them.
 --
 <pre><code class="javascript">[]</code></pre>
 --
-<pre><code class="javascript">> typeof([])</code></pre>
+<pre><code class="javascript">> typeof([].valueOf())</code></pre>
 --
 <pre><code class="javascript">"object"</code></pre>
 ---
@@ -283,7 +283,7 @@ otherwise, we convert both sides to a number, and add them.
 --
 <pre><code class="javascript">""</code></pre>
 --
-<pre><code class="javascript">> typeof("")</code></pre>
+<pre><code class="javascript">> typeof([].toString())</code></pre>
 --
 <pre><code class="javascript">"string"</code></pre>
 
@@ -304,7 +304,7 @@ otherwise, we convert both sides to a number, and add them.
 --
 <pre><code class="javascript">{}</code></pre>
 --
-<pre><code class="javascript">> typeof({})</code></pre>
+<pre><code class="javascript">> typeof({}.valueOf())</code></pre>
 --
 <pre><code class="javascript">"object"</code></pre>
 ---
@@ -367,7 +367,7 @@ Backwards compatibility
 --
 <pre><code class="javascript">"[object Object]"</code></pre>
 --
-<pre><code class="javascript">> typeof("[object Object]")</code></pre>
+<pre><code class="javascript">> typeof({}.toString())</code></pre>
 --
 <pre><code class="javascript">"string"</code></pre>
 
@@ -723,7 +723,7 @@ class: title
 <pre><code class="python">True</code></pre>
 ---
 .righthead[Terminal]
-`$ python`
+`~ $ python`
 
 ???
 
@@ -742,7 +742,7 @@ In Python, when you load the interpreter, you're probably loading CPython. An op
 An optimisation of CPython is to create a list of integers from -5 to 256 for you.
 ---
 .righthead[Terminal]
-`$ python`
+`~ $ python`
 .righthead[CPython]
 <pre><code class="python">>>> a = 256</code></pre>
 <pre><code class="python">.white[.]</code></pre>
@@ -759,7 +759,7 @@ An optimisation of CPython is to create a list of integers from -5 to 256 for yo
 so when you assign a variable, it can use one you prepared earlier
 ---
 .righthead[Terminal]
-`$ python`
+`~ $ python`
 .righthead[CPython]
 <pre><code class="python">>>> a = 256</code></pre>
 <pre><code class="python">>>> b = 256</code></pre>
@@ -772,7 +772,7 @@ so when you assign a variable, it can use one you prepared earlier
 
 ---
 .righthead[Terminal]
-`$ python`
+`~ $ python`
 .righthead[CPython]
 <pre><code class="python">>>> a = 256</code></pre>
 <pre><code class="python">>>> b = 256</code></pre>
@@ -790,7 +790,7 @@ so when you assign a variable, it can use one you prepared earlier
 Identity is a check to see if two objects are the same
 ---
 .righthead[Terminal]
-`$ python`
+`~ $ python`
 .righthead[CPython]
 <pre><code class="python">>>> a = 256</code></pre>
 <pre><code class="python">>>> b = 256</code></pre>
@@ -808,7 +808,7 @@ Are A and B the same object. Yes!
 ---
 
 .righthead[Terminal]
-`$ python`
+`~ $ python`
 .righthead[CPython]
 <pre><code class="python">>>> a = 256</code></pre>
 <pre><code class="python">>>> b = 256</code></pre>
@@ -825,7 +825,7 @@ Are A and B the same object. Yes!
 
 ---
 .righthead[Terminal]
-`$ python`
+`~ $ python`
 .righthead[CPython]
 <pre><code class="python">>>> .white[a=b]</code></pre>
 <pre><code class="python">.white[.]</code></pre>
@@ -840,7 +840,7 @@ But when we use integers outside of our cache, things change
 
 ---
 .righthead[Terminal]
-`$ python`
+`~ $ python`
 .righthead[CPython]
 <pre><code class="python">>>> a = 257</code></pre>
 <pre><code class="python">.white[.]</code></pre>
@@ -857,7 +857,7 @@ When we exceed the predeclared array, the value is assigned somewhere else in me
 
 ---
 .righthead[Terminal]
-`$ python`
+`~ $ python`
 .righthead[CPython]
 <pre><code class="python">>>> a = 257</code></pre>
 <pre><code class="python">>>> b = 257</code></pre>
@@ -873,7 +873,7 @@ And when we declare B we also store that as it's own value
 
 ---
 .righthead[Terminal]
-`$ python`
+`~ $ python`
 .righthead[CPython]
 <pre><code class="python">>>> a = 257</code></pre>
 <pre><code class="python">>>> b = 257</code></pre>
@@ -889,7 +889,7 @@ And when we declare B we also store that as it's own value
 So when we run the check
 ---
 .righthead[Terminal]
-`$ python`
+`~ $ python`
 .righthead[CPython]
 <pre><code class="python">>>> a = 257</code></pre>
 <pre><code class="python">>>> b = 257</code></pre>
@@ -906,7 +906,7 @@ The objects aren't the same
 
 ---
 .righthead[Terminal]
-`$ python`
+`~ $ python`
 .righthead[CPython]
 <pre><code class="python">>>> a = 257</code></pre>
 <pre><code class="python">>>> b = 257</code></pre>
@@ -923,7 +923,7 @@ So the check is false
 Even thought he variables have the same value, they aren't the same value, so the identity check fails.
 ---
 .righthead[Terminal]
-`$ python`
+`~ $ python`
 .righthead[CPython]
 <pre><code class="python">>>> a = 257; b = 257;</code></pre>
 <pre><code class="python">.white[.]</code></pre>
@@ -942,7 +942,7 @@ a quite rare character to see in python code, btw
 the interpreter processes this all as one code object
 ---
 .righthead[Terminal]
-`$ python`
+`~ $ python`
 .righthead[CPython]
 <pre><code class="python">>>> a = 257; b = 257;</code></pre>
 <pre><code class="python">.white[.]</code></pre>
@@ -959,7 +959,7 @@ so it's allowed to optimise
 and so it only creates one constant
 ---
 .righthead[Terminal]
-`$ python`
+`~ $ python`
 .righthead[CPython]
 <pre><code class="python">>>> a = 257; b = 257;</code></pre>
 <pre><code class="python">>>> a is b</code></pre>
@@ -975,7 +975,7 @@ and so it only creates one constant
 So when we do our identity check again
 ---
 .righthead[Terminal]
-`$ python`
+`~ $ python`
 .righthead[CPython]
 <pre><code class="python">>>> a = 257; b = 257;</code></pre>
 <pre><code class="python">>>> a is b</code></pre>
@@ -991,7 +991,7 @@ So when we do our identity check again
 The objects are the same
 ---
 .righthead[Terminal]
-`$ python`
+`~ $ python`
 .righthead[CPython]
 <pre><code class="python">>>> a = 257; b = 257;</code></pre>
 <pre><code class="python">>>> a is b</code></pre>
@@ -1122,7 +1122,7 @@ never compare equal
 Okay, this makes sense. In JS we saw that there was implicit casting of types going on. Python doesn't do that. But
 --
 
-Such objects are ordered consistently but arbitrarily (so that sorting a heterogeneous array yields a consistent result).
+Such objects are ordered consistently but arbitrarily<br>(so that sorting a heterogeneous array yields a consistent result).
 
 ???
 
@@ -1144,7 +1144,7 @@ Objects of different types<sup>1</sup>
 never compare equal
 .footnotes[[1] except different numeric types and different string types]
 
-Such objects are ordered consistently but arbitrarily (so that sorting a heterogeneous array yields a consistent result).
+Such objects are ordered consistently but arbitrarily<br>(so that sorting a heterogeneous array yields a consistent result).
 <br>
 <br>
 **CPython implementation detail**: <br>Objects of different types except numbers .red[are ordered by their type names]; [..]
@@ -1670,7 +1670,7 @@ It's a combination compiler and interpreter
 .righthead[PowerShell]
 <br>
 <pre><code class="powershell">PS> if (36 .red[>] 42) { "true" } else { "false" }</code></pre>
-<pre><code class="powershell">false &nbsp;&nbsp; &nbsp; # file redirection</code></pre>
+<pre><code class="">.psg[false] &nbsp;&nbsp; &nbsp; .cc[# file redirection]</code></pre>
 <br>
 <pre><code class="powershell">PS> if (36 < 42) { "true" } else { "false" }</code></pre>
 <pre><code class="powershell">.ps-error[The '<' operator is reserved for future use.]</code></pre>
@@ -1688,7 +1688,7 @@ So when you use greater than, it's being interpreted as a file redirection.
 .righthead[PowerShell]
 <br>
 <pre><code class="powershell">PS> if (36 .red[>] 42) { "true" } else { "false" }</code></pre>
-<pre><code class="powershell">false &nbsp;&nbsp; &nbsp; # file redirection</code></pre>
+<pre><code class="">.psg[false] &nbsp;&nbsp; &nbsp; .cc[# file redirection]</code></pre>
 <br>
 <pre><code class="powershell">PS> if (36 .red[<] 42) { "true" } else { "false" }</code></pre>
 <pre><code class="powershell">.ps-error[The '<' operator is reserved for future use.]</code></pre>
