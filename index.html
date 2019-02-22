@@ -6,6 +6,18 @@ layout: page
     <div class="container">
       <h2>Talk history</h2>
       <h4>🇦🇺 🇳🇿 🇭🇺 🇺🇸 🇬🇧 🇩🇪 🇹🇼</h4>
+
+        {% assign talk_total = 0 %}
+        {% for c in site.data.talks %}
+          {% for t in c.conference.talks %}
+            {% if t.type != "Podcast" %}
+            {% assign talk_total = talk_total | plus: 1 %}
+            {% endif %}
+        {% endfor %}
+        {% endfor %}
+
+        {% assign talk_num = talk_total %}
+
         {% for c in site.data.talks %} 
           <div class="row">&nbsp;</div>
           <div class="row">
@@ -20,8 +32,9 @@ layout: page
           </div>
           {% for talk in c.conference.talks %} 
           <div class="row">
-            <div class="one column" style="margin-left: 6%; width: 11%; margin-right: -2%">{{talk.type | default: "Talk"}}</div>
-            <div class="six columns" style="width: 55%">
+            <div class="one column">{% if talk.type != "Podcast" %}{{ talk_num }}{%else%}&nbsp;{% endif %}</div>
+            <div class="one column">{{talk.type | default: "Talk"}}</div>
+            <div class="one columns" style="width: 55%">
                 {% if talk.link%}<a href="{{talk.link}}">{{talk.name}}</a>{%else%}{{talk.name}}{%endif%}</div>
             <div class="three columns">
                   {% if talk.slides %} <a href="{{talk.slides}}">Slides</a>{% endif %}
@@ -33,6 +46,9 @@ layout: page
                   {% if talk.photo %} <a href="{{talk.photo}}">Photo</a>{% endif %}
             </div>
           </div>
+          {% if talk.type != "Podcast" %}
+          {% assign talk_num = talk_num | minus: 1 %}
+          {% endif %}
         {% endfor %}
         {% endfor %}
         <div class="row">&nbsp;</div>
