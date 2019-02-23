@@ -1072,8 +1072,7 @@ yes.
 
 *pause for thought*
 
-Let's go a bit deeper.
-
+Let's go a bit deeper with some more comparisons
 
 ---
 .righthead[Python 2]
@@ -1223,7 +1222,7 @@ class: title
 <pre><code class="java">true</code></pre>
 <pre><code class="java">java> a >= b</code></pre>
 <pre><code class="java">true</code></pre>
-<pre><code class="java">java> a .blue[==] b /* identity .w[✱] /</code></pre>
+<pre><code class="java">java> a .blue[==] b .grey[/.w[✱] identity .w[✱]/]</code></pre>
 <pre><code class="java">false</code></pre>
 --
 .righthead[IntegerCache]
@@ -1626,17 +1625,28 @@ Like we saw earlier in the ruby example, the assumption of the order of operatio
 .righthead[PHP]
 <pre><code class="php">php> echo (&nbsp;TRUE</code></pre>
 <pre><code class="php">.white[.........] ? "one"</code></pre>
-<pre><code class="php">.white[.........] : (TRUE&nbsp;? "two" : "three")); #assumed</code></pre>
+<pre><code class="php">.white[.........] : (TRUE&nbsp;? "two" : "three")); # assumed</code></pre>
 <pre><code class="php">one</code></pre>
+???
+
+we assume that the order of operations will be that the truthy side of the first ternary statement would execute, so the result would be one
+
+Which is what would happen if we manually place the brackets to force the order of operations.
+
+But
 --
 <pre><code class="php">&nbsp;</code></pre>
-<pre><code class="php">php> echo ((TRUE ? "one" : TRUE) #actual</code></pre>
+<pre><code class="php">php> echo ((TRUE ? "one" : TRUE) # actual</code></pre>
 <pre><code class="php">.white[.........] ? "two"</code></pre>
 <pre><code class="php">.white[.........] : "three");</code></pre>
 <pre><code class="php">two</code></pre>
 
 ???
-The solution?
+What actually happens is this.
+
+The chaining of the ternary statement is left assosiative, so the weighting of the order of operations forces this behaviour which doesn't match what happens in other langues, where we assume the first truthy statement will fall out.
+
+The solution to this:
 --
 .fix-tilt[AVOID]
 
@@ -1682,7 +1692,7 @@ So when you use greater than, it's being interpreted as a file redirection.
 <br>
 <pre><code class="powershell">PS> cat 42</code></pre>
 --
-<pre><code class="bash">36</code></pre>
+<pre><code class="">36</code></pre>
 
 ---
 .righthead[PowerShell]

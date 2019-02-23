@@ -922,8 +922,7 @@ Note: yes.
 
 *pause for thought*
 
-Let's go a bit deeper. 
-
+Let's go a bit deeper with some more comparisons
 
 ---
 $$# Python 2
@@ -1039,7 +1038,7 @@ java java> a <= b
 java true
 java java> a >= b
 java true
-java java> a .blue[==] b /* identity .w[✱] /
+java java> a .blue[==] b .grey[/.w[✱] identity .w[✱]/]
 java false
 --
 $$# IntegerCache
@@ -1390,17 +1389,26 @@ Like we saw earlier in the ruby example, the assumption of the order of operatio
 $$# PHP
 php php> echo (&nbsp;TRUE 
 php .white[.........] ? "one" 
-php .white[.........] : (TRUE&nbsp;? "two" : "three")); #assumed
+php .white[.........] : (TRUE&nbsp;? "two" : "three")); # assumed
 php one
+Note: we assume that the order of operations will be that the truthy side of the first ternary statement would execute, so the result would be one
+
+Which is what would happen if we manually place the brackets to force the order of operations. 
+
+But
 --
 php &nbsp;
-php php> echo ((TRUE ? "one" : TRUE) #actual 
+php php> echo ((TRUE ? "one" : TRUE) # actual 
 php .white[.........] ? "two" 
 php .white[.........] : "three");
 php two
 
 Note:
-The solution?
+What actually happens is this. 
+
+The chaining of the ternary statement is left assosiative, so the weighting of the order of operations forces this behaviour which doesn't match what happens in other langues, where we assume the first truthy statement will fall out. 
+
+The solution to this: 
 --
 .fix-tilt[AVOID]
 
@@ -1440,7 +1448,7 @@ Note: So when you use greater than, it's being interpreted as a file redirection
 <br>
 ps PS> cat 42
 --
-sh 36
+co 36
 
 ---
 $$# PowerShell
