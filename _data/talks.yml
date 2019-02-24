@@ -1,4 +1,15 @@
 - conference:
+    name: PyCascades
+    date: 2019-02-23
+    link: https://2019.pycascades.com
+    location: Seattle, WA
+    talks: 
+        - name: Turning 'wat' into 'why'
+          link: https://2019.pycascades.com/talks/turning-wat-into-why/
+          slides: 2019_02_PyCascades.podium
+          twitter: https://twitter.com/cfactoid/status/1099374287708860416
+
+- conference:
     name: FFS Conf Down Under
     date: 2019-02-02
     link: https://ffsconfdownunder.com/
