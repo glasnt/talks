@@ -1,6 +1,13 @@
-#= A Right Stitchup
-### 🖼❤️💻
+#= <br>A Right Stitchup
 @ footer.svg
+
+Note: 
+
+FULL SCREEN ME! 
+
+⌘ + SHIFT + P
+
+Monitors wrong? ⌘ + TAB
 ---
 
 ##= ~~ <br>A long time ago <br> at a conference far away<br> ~~

@@ -1,7 +1,14 @@
 class: title
-# A Right Stitchup
-### 🖼❤️💻
+# <br>A Right Stitchup
 ![Image](images/footer.svg)
+
+???
+
+FULL SCREEN ME!
+
+⌘ + SHIFT + P
+
+Monitors wrong? ⌘ + TAB
 ---
 
 class: title
