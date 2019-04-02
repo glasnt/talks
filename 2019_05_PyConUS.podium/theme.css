@@ -471,3 +471,4 @@ Added: Zenburn, mostly.
 .gg { background-color: lightgrey }
 
 .paddown { padding-top: 20px }
+.right-image { float: right; max-width: 400px; padding: 20px;} 
