@@ -276,22 +276,134 @@ This mades sense. This is a company trade secret, from the 1800's.
 
 It could allow competitors to "steal" and cheaply reproduce the colours.
 ---
-##= *cough*
+
+##= however
+
+Note: however. There are ways around this. 
+
+You can find, with a lot of searching, someone's unofficial mapping of colours. I've used it before. 
+
+However. 
+
+You could always create your own. 
 ---
-##= 454 RGB Codes for DMC floss
-## 293 RGB Codes for DMC wool
 
-Note: so there are 454 codes for floss and 293 for wool. 
+##= however
 
-The cache I found is a very rough approximation. I can't find much about how it was produced, but it's a good rough guide for our purposes. 
+Note: 
+You could go through every available thread, take a picture of the thread, work out the best colour, and go from there. 
 
-With this we can convert from an RGB colour to an approximate thread. 
+Now, you'll have to deal with a bunch of variables
 
-So that's the colour setting down. But we have another problem
+lighting, the camera being used, the environment the picture was taken. 
+
+If these are consistent throughout the entire photoshoot, you can get a pretty good average colour. 
+
+And even then, you should always use these sort of things as a guide only. 
+
+The threads will change per dye lot, the colurs you have in your design may not look the nicest together. 
+
+But it gets a lot of the job done. 
+
+Lucky for me, since I first started looking into this problem space, DMC has updated their website. 
+
+---
+
+~@ dmc_floss_pink.png
+
+Note: They have all the colours available for their threads with their codes on their website. 
+
+We can see here, the 600 thread from the cranberry series. Except for a few things -- 
+
+It doesn't use the names any more. 
+
+The actual skein doesn't list any color, only the code; the color name is helpful, but is not a primary identifier. 
+
+The other thing?
+
+---
+
+~@ dmc_wool_pink.png
+
+Note: the equivelent colour in wool doesn't exist any more. 
+
+Indeed, in the old mapping I found, there was about 450 floss threads, and just under 300 wool threads. 
+
+According to their website now, 
+---
+
+@ dmc_floss_count.png
+@ dmc_wool_count.png
+
+Note: there's 489 floss threads, and only 100 tapestry wool threads left. 
+
+That's not a lot.  We'll touch on this later; as both these numbers cause us issues. 
+
+---
+
+~@ dmc_wool_pink.png
+
+Note: back to this page. 
+
+we can see that they've captured both swatches and the full skein for each thread. 
+
+From here, we can download these images, and use them to work out the average colour. 
+
+How?
+
+---
+
+##= `getpixel((x,y))`
+---
+
+$$# PIL.getpixel()
+.right-image[![img](images/486_e_7202_150x150.jpg)]
+<BR>
+py- >>> from PIL import Image
+py >>> im = Image.open("486_e_7202_150x150.jpg")
+
+Note: we can import our image like before
+
+and then... 
+
+--
+py >>> count, r, g, b = [0,0,0,0]
+py >>> for x in range(0, im.width):
+py >>> &nbsp; &nbsp; for y in range(0, im.height):
+py >>> &nbsp; &nbsp; &nbsp; &nbsp; i, j, k = im.getpixel((x, y))
+--
+py >>> &nbsp; &nbsp; &nbsp; &nbsp; r += i; g += j; b += k;
+py >>> &nbsp; &nbsp; &nbsp; &nbsp; count += 1
+--
+py- >>> print int(r/count), int(g/count), int(b/count)
+py (210, 138, 149)
+
+---
+
+##= <span style="color: rgb(210, 138, 149); background-color: rgb(210, 138, 149); padding: 50px">....</span>
+@ 486_e_7202_150x150.jpg
+
+Note: I mean, I guess this is pretty close?
+
+But if we repeat this cross all the images we have access to, we can at least process them all in the same way. 
+
+
+We can then get a list of color codes, and their aproxx rgb colors. 
+
+This is useful for later. 
+
+SO
+
+the third issue. 
+
+
+
 ---
 ##= Reducing picture to only available colours
 
-Note: there are more than 450, or even 300, colours in RGB. We only have a certain number of colours we can physically use, save for dying our own, but that's a problem for another medium.
+Note: We have up to 489 colours.  We only have a certain number of colours we can physically use, save for dying our own, but that's a problem for another medium.
+
+TODO MORE HERE BAD KATIE
 
 Thankfully, we can solve this problem with a little bit of python
 ---

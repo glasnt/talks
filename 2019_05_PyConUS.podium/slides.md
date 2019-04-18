@@ -341,29 +341,157 @@ This mades sense. This is a company trade secret, from the 1800's.
 
 It could allow competitors to "steal" and cheaply reproduce the colours.
 ---
+
 class: title
-## *cough*
----
-class: title
-## 454 RGB Codes for DMC floss
-## 293 RGB Codes for DMC wool
+## however
 
 ???
 
-so there are 454 codes for floss and 293 for wool.
+however. There are ways around this.
 
-The cache I found is a very rough approximation. I can't find much about how it was produced, but it's a good rough guide for our purposes.
+You can find, with a lot of searching, someone's unofficial mapping of colours. I've used it before.
 
-With this we can convert from an RGB colour to an approximate thread.
+However.
 
-So that's the colour setting down. But we have another problem
+You could always create your own.
+---
+
+class: title
+## however
+
+???
+You could go through every available thread, take a picture of the thread, work out the best colour, and go from there.
+
+Now, you'll have to deal with a bunch of variables
+
+lighting, the camera being used, the environment the picture was taken.
+
+If these are consistent throughout the entire photoshoot, you can get a pretty good average colour.
+
+And even then, you should always use these sort of things as a guide only.
+
+The threads will change per dye lot, the colurs you have in your design may not look the nicest together.
+
+But it gets a lot of the job done.
+
+Lucky for me, since I first started looking into this problem space, DMC has updated their website.
+
+---
+
+background-image: url("images/dmc_floss_pink.png")
+
+???
+
+They have all the colours available for their threads with their codes on their website.
+
+We can see here, the 600 thread from the cranberry series. Except for a few things --
+
+It doesn't use the names any more.
+
+The actual skein doesn't list any color, only the code; the color name is helpful, but is not a primary identifier.
+
+The other thing?
+
+---
+
+background-image: url("images/dmc_wool_pink.png")
+
+???
+
+the equivelent colour in wool doesn't exist any more.
+
+Indeed, in the old mapping I found, there was about 450 floss threads, and just under 300 wool threads.
+
+According to their website now,
+---
+
+![Image](images/dmc_floss_count.png)
+![Image](images/dmc_wool_count.png)
+
+???
+
+there's 489 floss threads, and only 100 tapestry wool threads left.
+
+That's not a lot. We'll touch on this later; as both these numbers cause us issues.
+
+---
+
+background-image: url("images/dmc_wool_pink.png")
+
+???
+
+back to this page.
+
+we can see that they've captured both swatches and the full skein for each thread.
+
+From here, we can download these images, and use them to work out the average colour.
+
+How?
+
+---
+
+class: title
+## `getpixel((x,y))`
+---
+
+.righthead[PIL.getpixel()]
+.right-image[![img](images/486_e_7202_150x150.jpg)]
+<BR>
+<pre><code class="python">>>> from PIL import Image</code></pre>
+--
+<pre><code class="python">>>> im = Image.open("486_e_7202_150x150.jpg")</code></pre>
+
+???
+
+we can import our image like before
+
+and then...
+
+--
+<pre><code class="python">>>> count, r, g, b = [0,0,0,0]</code></pre>
+<pre><code class="python">>>> for x in range(0, im.width):</code></pre>
+<pre><code class="python">>>> &nbsp; &nbsp; for y in range(0, im.height):</code></pre>
+<pre><code class="python">>>> &nbsp; &nbsp; &nbsp; &nbsp; i, j, k = im.getpixel((x, y))</code></pre>
+--
+<pre><code class="python">>>> &nbsp; &nbsp; &nbsp; &nbsp; r += i; g += j; b += k;</code></pre>
+<pre><code class="python">>>> &nbsp; &nbsp; &nbsp; &nbsp; count += 1</code></pre>
+--
+<pre><code class="python">>>> print int(r/count), int(g/count), int(b/count)</code></pre>
+--
+<pre><code class="python">(210, 138, 149)</code></pre>
+
+---
+
+class: title
+## <span style="color: rgb(210, 138, 149); background-color: rgb(210, 138, 149); padding: 50px">....</span>
+![Image](images/486_e_7202_150x150.jpg)
+
+???
+
+I mean, I guess this is pretty close?
+
+But if we repeat this cross all the images we have access to, we can at least process them all in the same way.
+
+
+We can then get a list of color codes, and their aproxx rgb colors.
+
+This is useful for later.
+
+SO
+
+the third issue.
+
+
+
 ---
 class: title
 ## Reducing picture to only available colours
 
 ???
 
-there are more than 450, or even 300, colours in RGB. We only have a certain number of colours we can physically use, save for dying our own, but that's a problem for another medium.
+We have up to 489 colours. We only have a certain number of colours we can physically use, save for dying our own, but that's a problem for another medium.
+
+TODO MORE HERE BAD KATIE
 
 Thankfully, we can solve this problem with a little bit of python
 ---
