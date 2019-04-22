@@ -341,29 +341,157 @@ This mades sense. This is a company trade secret, from the 1800's.
 
 It could allow competitors to "steal" and cheaply reproduce the colours.
 ---
+
 class: title
-## *cough*
----
-class: title
-## 454 RGB Codes for DMC floss
-## 293 RGB Codes for DMC wool
+## however
 
 ???
 
-so there are 454 codes for floss and 293 for wool.
+however. There are ways around this.
 
-The cache I found is a very rough approximation. I can't find much about how it was produced, but it's a good rough guide for our purposes.
+You can find, with a lot of searching, someone's unofficial mapping of colours. I've used it before.
 
-With this we can convert from an RGB colour to an approximate thread.
+However.
 
-So that's the colour setting down. But we have another problem
+You could always create your own.
+---
+
+class: title
+## however
+
+???
+You could go through every available thread, take a picture of the thread, work out the best colour, and go from there.
+
+Now, you'll have to deal with a bunch of variables
+
+lighting, the camera being used, the environment the picture was taken.
+
+If these are consistent throughout the entire photoshoot, you can get a pretty good average colour.
+
+And even then, you should always use these sort of things as a guide only.
+
+The threads will change per dye lot, the colurs you have in your design may not look the nicest together.
+
+But it gets a lot of the job done.
+
+Lucky for me, since I first started looking into this problem space, DMC has updated their website.
+
+---
+
+background-image: url("images/dmc_floss_pink.png")
+
+???
+
+They have all the colours available for their threads with their codes on their website.
+
+We can see here, the 600 thread from the cranberry series. Except for a few things --
+
+It doesn't use the names any more.
+
+The actual skein doesn't list any color, only the code; the color name is helpful, but is not a primary identifier.
+
+The other thing?
+
+---
+
+background-image: url("images/dmc_wool_pink.png")
+
+???
+
+the equivelent colour in wool doesn't exist any more.
+
+Indeed, in the old mapping I found, there was about 450 floss threads, and just under 300 wool threads.
+
+According to their website now,
+---
+
+![Image](images/dmc_floss_count.png)
+![Image](images/dmc_wool_count.png)
+
+???
+
+there's 489 floss threads, and only 100 tapestry wool threads left.
+
+That's not a lot. We'll touch on this later; as both these numbers cause us issues.
+
+---
+
+background-image: url("images/dmc_wool_pink.png")
+
+???
+
+back to this page.
+
+we can see that they've captured both swatches and the full skein for each thread.
+
+From here, we can download these images, and use them to work out the average colour.
+
+How?
+
+---
+
+class: title
+## `getpixel((x,y))`
+---
+
+.righthead[PIL.getpixel()]
+.right-image[![img](images/486_e_7202_150x150.jpg)]
+<BR>
+<pre><code class="python">>>> from PIL import Image</code></pre>
+--
+<pre><code class="python">>>> im = Image.open("486_e_7202_150x150.jpg")</code></pre>
+
+???
+
+we can import our image like before
+
+and then...
+
+--
+<pre><code class="python">>>> count, r, g, b = [0,0,0,0]</code></pre>
+<pre><code class="python">>>> for x in range(0, im.width):</code></pre>
+<pre><code class="python">>>> &nbsp; &nbsp; for y in range(0, im.height):</code></pre>
+<pre><code class="python">>>> &nbsp; &nbsp; &nbsp; &nbsp; i, j, k = im.getpixel((x, y))</code></pre>
+--
+<pre><code class="python">>>> &nbsp; &nbsp; &nbsp; &nbsp; r += i; g += j; b += k;</code></pre>
+<pre><code class="python">>>> &nbsp; &nbsp; &nbsp; &nbsp; count += 1</code></pre>
+--
+<pre><code class="python">>>> print int(r/count), int(g/count), int(b/count)</code></pre>
+--
+<pre><code class="python">(210, 138, 149)</code></pre>
+
+---
+
+class: title
+## <span style="color: rgb(210, 138, 149); background-color: rgb(210, 138, 149); padding: 50px">....</span>
+![Image](images/486_e_7202_150x150.jpg)
+
+???
+
+I mean, I guess this is pretty close?
+
+But if we repeat this cross all the images we have access to, we can at least process them all in the same way.
+
+
+We can then get a list of color codes, and their aproxx rgb colors.
+
+This is useful for later.
+
+SO
+
+the third issue.
+
+
+
 ---
 class: title
 ## Reducing picture to only available colours
 
 ???
 
-there are more than 450, or even 300, colours in RGB. We only have a certain number of colours we can physically use, save for dying our own, but that's a problem for another medium.
+We have up to 489 colours. We only have a certain number of colours we can physically use, save for dying our own, but that's a problem for another medium.
+
+TODO MORE HERE BAD KATIE
 
 Thankfully, we can solve this problem with a little bit of python
 ---
@@ -430,70 +558,7 @@ Perceptual uniformity
 
 praise scikit
 ---
-<table class="difftable"><tr><th>deltaE ciede2000</th><th>Colour A</th><th>Hex A</th><th>Swatch A</th><th>Swatch B</th><th>Hex B</th><th>Colour B</th></tr>
-<tr><td>0.5026168399946604</td><td>Beige Gray Dark</td><td>#A49878</td><td style='background-color: #A49878'>&nbsp; &nbsp; &nbsp; &nbsp;</td><td style='background-color: #C4DECC'>&nbsp; &nbsp; &nbsp; &nbsp; </td><td>#C4DECC</td><td>Blue Green Vy Lt</td></tr>
-<tr><td>0.5026168399946604</td><td>Blue Green Vy Lt</td><td>#C4DECC</td><td style='background-color: #C4DECC'>&nbsp; &nbsp; &nbsp; &nbsp;</td><td style='background-color: #A49878'>&nbsp; &nbsp; &nbsp; &nbsp; </td><td>#A49878</td><td>Beige Gray Dark</td></tr>
-<tr><td>0.502616850208514</td><td>Cranberry</td><td>#FFA4BE</td><td style='background-color: #FFA4BE'>&nbsp; &nbsp; &nbsp; &nbsp;</td><td style='background-color: #946083'>&nbsp; &nbsp; &nbsp; &nbsp; </td><td>#946083</td><td>Grape Medium</td></tr>
-<tr><td>0.502616850208514</td><td>Grape Medium</td><td>#946083</td><td style='background-color: #946083'>&nbsp; &nbsp; &nbsp; &nbsp;</td><td style='background-color: #FFA4BE'>&nbsp; &nbsp; &nbsp; &nbsp; </td><td>#FFA4BE</td><td>Cranberry</td></tr>
-<tr><td>0.5026269549802299</td><td>Lavender Blue Dark</td><td>#5C7294</td><td style='background-color: #5C7294'>&nbsp; &nbsp; &nbsp; &nbsp;</td><td style='background-color: #D8BC9A'>&nbsp; &nbsp; &nbsp; &nbsp; </td><td>#D8BC9A</td><td>Yellow Beige Md</td></tr>
-<tr><td>0.5026269549802299</td><td>Yellow Beige Md</td><td>#D8BC9A</td><td style='background-color: #D8BC9A'>&nbsp; &nbsp; &nbsp; &nbsp;</td><td style='background-color: #5C7294'>&nbsp; &nbsp; &nbsp; &nbsp; </td><td>#5C7294</td><td>Lavender Blue Dark</td></tr>
-<tr><td>0.502628951120124</td><td>Hazelnut Brown</td><td>#B78B61</td><td style='background-color: #B78B61'>&nbsp; &nbsp; &nbsp; &nbsp;</td><td style='background-color: #59C7B4'>&nbsp; &nbsp; &nbsp; &nbsp; </td><td>#59C7B4</td><td>Sea Green Med</td></tr>
-<tr><td>0.502628951120124</td><td>Sea Green Med</td><td>#59C7B4</td><td style='background-color: #59C7B4'>&nbsp; &nbsp; &nbsp; &nbsp;</td><td style='background-color: #B78B61'>&nbsp; &nbsp; &nbsp; &nbsp; </td><td>#B78B61</td><td>Hazelnut Brown</td></tr>
-<tr><td>0.5026301870741252</td><td>Dusty Rose Med Vy Lt</td><td>#FFBDBD</td><td style='background-color: #FFBDBD'>&nbsp; &nbsp; &nbsp; &nbsp;</td><td style='background-color: #AA8F56'>&nbsp; &nbsp; &nbsp; &nbsp; </td><td>#AA8F56</td><td>Golden Olive Md</td></tr>
-<tr><td>0.5026301870741252</td><td>Golden Olive Md</td><td>#AA8F56</td><td style='background-color: #AA8F56'>&nbsp; &nbsp; &nbsp; &nbsp;</td><td style='background-color: #FFBDBD'>&nbsp; &nbsp; &nbsp; &nbsp; </td><td>#FFBDBD</td><td>Dusty Rose Med Vy Lt</td></tr>
-<tr><td>0.5026302897414802</td><td>Hunter Green Vy Dk</td><td>#1B5300</td><td style='background-color: #1B5300'>&nbsp; &nbsp; &nbsp; &nbsp;</td><td style='background-color: #B71F33'>&nbsp; &nbsp; &nbsp; &nbsp; </td><td>#B71F33</td><td>Red Medium</td></tr>
-<tr><td>0.5026302897414802</td><td>Red Medium</td><td>#B71F33</td><td style='background-color: #B71F33'>&nbsp; &nbsp; &nbsp; &nbsp;</td><td style='background-color: #1B5300'>&nbsp; &nbsp; &nbsp; &nbsp; </td><td>#1B5300</td><td>Hunter Green Vy Dk</td></tr>
-<tr><td>0.5026358009581365</td><td>Plum Light</td><td>#C54989</td><td style='background-color: #C54989'>&nbsp; &nbsp; &nbsp; &nbsp;</td><td style='background-color: #E2A099'>&nbsp; &nbsp; &nbsp; &nbsp; </td><td>#E2A099</td><td>Shell Pink Med Light</td></tr>
-<tr><td>0.5026358009581365</td><td>Shell Pink Med Light</td><td>#E2A099</td><td style='background-color: #E2A099'>&nbsp; &nbsp; &nbsp; &nbsp;</td><td style='background-color: #C54989'>&nbsp; &nbsp; &nbsp; &nbsp; </td><td>#C54989</td><td>Plum Light</td></tr>
-<tr><td>0.5026396562917449</td><td>Carnation Dark</td><td>#FF5773</td><td style='background-color: #FF5773'>&nbsp; &nbsp; &nbsp; &nbsp;</td><td style='background-color: #D0A53E'>&nbsp; &nbsp; &nbsp; &nbsp; </td><td>#D0A53E</td><td>Old Gold Medium</td></tr>
-<tr><td>0.5026396562917449</td><td>Old Gold Medium</td><td>#D0A53E</td><td style='background-color: #D0A53E'>&nbsp; &nbsp; &nbsp; &nbsp;</td><td style='background-color: #FF5773'>&nbsp; &nbsp; &nbsp; &nbsp; </td><td>#FF5773</td><td>Carnation Dark</td></tr>
-<tr><td>0.5026467750409492</td><td>Golden Brown Dk</td><td>#914F12</td><td style='background-color: #914F12'>&nbsp; &nbsp; &nbsp; &nbsp;</td><td style='background-color: #889268'>&nbsp; &nbsp; &nbsp; &nbsp; </td><td>#889268</td><td>Green Gray Md</td></tr>
-<tr><td>0.5026467750409492</td><td>Green Gray Md</td><td>#889268</td><td style='background-color: #889268'>&nbsp; &nbsp; &nbsp; &nbsp;</td><td style='background-color: #914F12'>&nbsp; &nbsp; &nbsp; &nbsp; </td><td>#914F12</td><td>Golden Brown Dk</td></tr>
-</table>
-</section>
----
-<table class="difftable"><tr><th>deltaE ciede2000</th><th>Colour A</th><th>Hex A</th><th>Swatch A</th><th>Swatch B</th><th>Hex B</th><th>Colour B</th></tr>
-<tr><td>0.0069134420593650195</td><td>Mocha Brn Ult Vy Lt</td><td>#FAF6F0</td><td style='background-color: #FAF6F0'>&nbsp; &nbsp; &nbsp; &nbsp;</td><td style='background-color: #F9F7F1'>&nbsp; &nbsp; &nbsp; &nbsp; </td><td>#F9F7F1</td><td>Winter White</td></tr>
-<tr><td>0.0069134420593650195</td><td>Winter White</td><td>#F9F7F1</td><td style='background-color: #F9F7F1'>&nbsp; &nbsp; &nbsp; &nbsp;</td><td style='background-color: #FAF6F0'>&nbsp; &nbsp; &nbsp; &nbsp; </td><td>#FAF6F0</td><td>Mocha Brn Ult Vy Lt</td></tr>
-<tr><td>0.0072345914037694</td><td>Olive Green Dk</td><td>#938B37</td><td style='background-color: #938B37'>&nbsp; &nbsp; &nbsp; &nbsp;</td><td style='background-color: #948C36'>&nbsp; &nbsp; &nbsp; &nbsp; </td><td>#948C36</td><td>Olive Green</td></tr>
-<tr><td>0.0072345914037694</td><td>Olive Green</td><td>#948C36</td><td style='background-color: #948C36'>&nbsp; &nbsp; &nbsp; &nbsp;</td><td style='background-color: #938B37'>&nbsp; &nbsp; &nbsp; &nbsp; </td><td>#938B37</td><td>Olive Green Dk</td></tr>
-<tr><td>0.007566102478952069</td><td>Baby Pink</td><td>#FFDFD9</td><td style='background-color: #FFDFD9'>&nbsp; &nbsp; &nbsp; &nbsp;</td><td style='background-color: #FFDFD7'>&nbsp; &nbsp; &nbsp; &nbsp; </td><td>#FFDFD7</td><td>Shell Pink Ult Vy Lt</td></tr>
-<tr><td>0.007566102478952069</td><td>Shell Pink Ult Vy Lt</td><td>#FFDFD7</td><td style='background-color: #FFDFD7'>&nbsp; &nbsp; &nbsp; &nbsp;</td><td style='background-color: #FFDFD9'>&nbsp; &nbsp; &nbsp; &nbsp; </td><td>#FFDFD9</td><td>Baby Pink</td></tr>
-<tr><td>0.00918721318108803</td><td>Apricot Very Light</td><td>#FFDED5</td><td style='background-color: #FFDED5'>&nbsp; &nbsp; &nbsp; &nbsp;</td><td style='background-color: #FFDFD7'>&nbsp; &nbsp; &nbsp; &nbsp; </td><td>#FFDFD7</td><td>Shell Pink Ult Vy Lt</td></tr>
-<tr><td>0.00918721318108803</td><td>Shell Pink Ult Vy Lt</td><td>#FFDFD7</td><td style='background-color: #FFDFD7'>&nbsp; &nbsp; &nbsp; &nbsp;</td><td style='background-color: #FFDED5'>&nbsp; &nbsp; &nbsp; &nbsp; </td><td>#FFDED5</td><td>Apricot Very Light</td></tr>
-<tr><td>0.00962148915492655</td><td>Cream</td><td>#FFFBEF</td><td style='background-color: #FFFBEF'>&nbsp; &nbsp; &nbsp; &nbsp;</td><td style='background-color: #FCFCEE'>&nbsp; &nbsp; &nbsp; &nbsp; </td><td>#FCFCEE</td><td>Off White</td></tr>
-<tr><td>0.00962148915492655</td><td>Off White</td><td>#FCFCEE</td><td style='background-color: #FCFCEE'>&nbsp; &nbsp; &nbsp; &nbsp;</td><td style='background-color: #FFFBEF'>&nbsp; &nbsp; &nbsp; &nbsp; </td><td>#FFFBEF</td><td>Cream</td></tr>
-<tr><td>0.010399465066750093</td><td>Dusty Rose</td><td>#E8879B</td><td style='background-color: #E8879B'>&nbsp; &nbsp; &nbsp; &nbsp;</td><td style='background-color: #EA8699'>&nbsp; &nbsp; &nbsp; &nbsp; </td><td>#EA8699</td><td>Raspberry Light</td></tr>
-<tr><td>0.010399465066750093</td><td>Raspberry Light</td><td>#EA8699</td><td style='background-color: #EA8699'>&nbsp; &nbsp; &nbsp; &nbsp;</td><td style='background-color: #E8879B'>&nbsp; &nbsp; &nbsp; &nbsp; </td><td>#E8879B</td><td>Dusty Rose</td></tr>
-<tr><td>0.013177163652826163</td><td>Beaver Gray Lt</td><td>#BCB4AC</td><td style='background-color: #BCB4AC'>&nbsp; &nbsp; &nbsp; &nbsp;</td><td style='background-color: #C0B3AE'>&nbsp; &nbsp; &nbsp; &nbsp; </td><td>#C0B3AE</td><td>Shell Gray Med</td></tr>
-<tr><td>0.013177163652826163</td><td>Shell Gray Med</td><td>#C0B3AE</td><td style='background-color: #C0B3AE'>&nbsp; &nbsp; &nbsp; &nbsp;</td><td style='background-color: #BCB4AC'>&nbsp; &nbsp; &nbsp; &nbsp; </td><td>#BCB4AC</td><td>Beaver Gray Lt</td></tr>
-<tr><td>0.014038710824153958</td><td>Beige Gray Med</td><td>#DDD8CB</td><td style='background-color: #DDD8CB'>&nbsp; &nbsp; &nbsp; &nbsp;</td><td style='background-color: #E3D8CC'>&nbsp; &nbsp; &nbsp; &nbsp; </td><td>#E3D8CC</td><td>Mocha Brown Vy Lt</td></tr>
-<tr><td>0.014038710824153958</td><td>Mocha Brown Vy Lt</td><td>#E3D8CC</td><td style='background-color: #E3D8CC'>&nbsp; &nbsp; &nbsp; &nbsp;</td><td style='background-color: #DDD8CB'>&nbsp; &nbsp; &nbsp; &nbsp; </td><td>#DDD8CB</td><td>Beige Gray Med</td></tr>
-<tr><td>0.014944343254283848</td><td>Carnation Very Light</td><td>#FFB2BB</td><td style='background-color: #FFB2BB'>&nbsp; &nbsp; &nbsp; &nbsp;</td><td style='background-color: #FCB0B9'>&nbsp; &nbsp; &nbsp; &nbsp; </td><td>#FCB0B9</td><td>Pink Medium</td></tr>
-<tr><td>0.014944343254283848</td><td>Pink Medium</td><td>#FCB0B9</td><td style='background-color: #FCB0B9'>&nbsp; &nbsp; &nbsp; &nbsp;</td><td style='background-color: #FFB2BB'>&nbsp; &nbsp; &nbsp; &nbsp; </td><td>#FFB2BB</td><td>Carnation Very Light</td></tr>
-</table>
----
-<table class="difftable"><tr><th>deltaE ciede2000</th><th>Colour A</th><th>Hex A</th><th>Swatch A</th><th>Swatch B</th><th>Hex B</th><th>Colour B</th></tr>
-<tr><td>0.04989602021800601</td><td>Cranberry Dark</td><td>#D1286A</td><td style='background-color: #D1286A'>&nbsp; &nbsp; &nbsp; &nbsp;</td><td style='background-color: #CD2F63'>&nbsp; &nbsp; &nbsp; &nbsp; </td><td>#CD2F63</td><td>Cranberry Very Dark</td></tr>
-<tr><td>0.04989602021800601</td><td>Cranberry Very Dark</td><td>#CD2F63</td><td style='background-color: #CD2F63'>&nbsp; &nbsp; &nbsp; &nbsp;</td><td style='background-color: #D1286A'>&nbsp; &nbsp; &nbsp; &nbsp; </td><td>#D1286A</td><td>Cranberry Dark</td></tr>
-<tr><td>0.06759176350122559</td><td>Cranberry Light</td><td>#FFB0BE</td><td style='background-color: #FFB0BE'>&nbsp; &nbsp; &nbsp; &nbsp;</td><td style='background-color: #FFA4BE'>&nbsp; &nbsp; &nbsp; &nbsp; </td><td>#FFA4BE</td><td>Cranberry</td></tr>
-<tr><td>0.06759176350122559</td><td>Cranberry</td><td>#FFA4BE</td><td style='background-color: #FFA4BE'>&nbsp; &nbsp; &nbsp; &nbsp;</td><td style='background-color: #FFB0BE'>&nbsp; &nbsp; &nbsp; &nbsp; </td><td>#FFB0BE</td><td>Cranberry Light</td></tr>
-<tr><td>0.1043483831009906</td><td>Cranberry Light</td><td>#FFB0BE</td><td style='background-color: #FFB0BE'>&nbsp; &nbsp; &nbsp; &nbsp;</td><td style='background-color: #FFC0CD'>&nbsp; &nbsp; &nbsp; &nbsp; </td><td>#FFC0CD</td><td>Cranberry Very Light</td></tr>
-<tr><td>0.1043483831009906</td><td>Cranberry Very Light</td><td>#FFC0CD</td><td style='background-color: #FFC0CD'>&nbsp; &nbsp; &nbsp; &nbsp;</td><td style='background-color: #FFB0BE'>&nbsp; &nbsp; &nbsp; &nbsp; </td><td>#FFB0BE</td><td>Cranberry Light</td></tr>
-<tr><td>0.16450628922209645</td><td>Cranberry Medium</td><td>#E24874</td><td style='background-color: #E24874'>&nbsp; &nbsp; &nbsp; &nbsp;</td><td style='background-color: #CD2F63'>&nbsp; &nbsp; &nbsp; &nbsp; </td><td>#CD2F63</td><td>Cranberry Very Dark</td></tr>
-<tr><td>0.16450628922209645</td><td>Cranberry Very Dark</td><td>#CD2F63</td><td style='background-color: #CD2F63'>&nbsp; &nbsp; &nbsp; &nbsp;</td><td style='background-color: #E24874'>&nbsp; &nbsp; &nbsp; &nbsp; </td><td>#E24874</td><td>Cranberry Medium</td></tr>
-<tr><td>0.16521369601575045</td><td>Cranberry Very Light</td><td>#FFC0CD</td><td style='background-color: #FFC0CD'>&nbsp; &nbsp; &nbsp; &nbsp;</td><td style='background-color: #FFA4BE'>&nbsp; &nbsp; &nbsp; &nbsp; </td><td>#FFA4BE</td><td>Cranberry</td></tr>
-<tr><td>0.16521369601575045</td><td>Cranberry</td><td>#FFA4BE</td><td style='background-color: #FFA4BE'>&nbsp; &nbsp; &nbsp; &nbsp;</td><td style='background-color: #FFC0CD'>&nbsp; &nbsp; &nbsp; &nbsp; </td><td>#FFC0CD</td><td>Cranberry Very Light</td></tr>
-<tr><td>0.19236698179290798</td><td>Cranberry Dark</td><td>#D1286A</td><td style='background-color: #D1286A'>&nbsp; &nbsp; &nbsp; &nbsp;</td><td style='background-color: #E24874'>&nbsp; &nbsp; &nbsp; &nbsp; </td><td>#E24874</td><td>Cranberry Medium</td></tr>
-<tr><td>0.19236698179290798</td><td>Cranberry Medium</td><td>#E24874</td><td style='background-color: #E24874'>&nbsp; &nbsp; &nbsp; &nbsp;</td><td style='background-color: #D1286A'>&nbsp; &nbsp; &nbsp; &nbsp; </td><td>#D1286A</td><td>Cranberry Dark</td></tr>
-<tr><td>0.5920647937529571</td><td>Cranberry Medium</td><td>#E24874</td><td style='background-color: #E24874'>&nbsp; &nbsp; &nbsp; &nbsp;</td><td style='background-color: #FFA4BE'>&nbsp; &nbsp; &nbsp; &nbsp; </td><td>#FFA4BE</td><td>Cranberry</td></tr>
-<tr><td>0.5920647937529571</td><td>Cranberry</td><td>#FFA4BE</td><td style='background-color: #FFA4BE'>&nbsp; &nbsp; &nbsp; &nbsp;</td><td style='background-color: #E24874'>&nbsp; &nbsp; &nbsp; &nbsp; </td><td>#E24874</td><td>Cranberry Medium</td></tr>
-<tr><td>0.6516599170662192</td><td>Cranberry Light</td><td>#FFB0BE</td><td style='background-color: #FFB0BE'>&nbsp; &nbsp; &nbsp; &nbsp;</td><td style='background-color: #E24874'>&nbsp; &nbsp; &nbsp; &nbsp; </td><td>#E24874</td><td>Cranberry Medium</td></tr>
-<tr><td>0.6516599170662192</td><td>Cranberry Medium</td><td>#E24874</td><td style='background-color: #E24874'>&nbsp; &nbsp; &nbsp; &nbsp;</td><td style='background-color: #FFB0BE'>&nbsp; &nbsp; &nbsp; &nbsp; </td><td>#FFB0BE</td><td>Cranberry Light</td></tr>
-<tr><td>0.7542495972356424</td><td>Cranberry Very Dark</td><td>#CD2F63</td><td style='background-color: #CD2F63'>&nbsp; &nbsp; &nbsp; &nbsp;</td><td style='background-color: #FFA4BE'>&nbsp; &nbsp; &nbsp; &nbsp; </td><td>#FFA4BE</td><td>Cranberry</td></tr>
-<tr><td>0.7542495972356424</td><td>Cranberry</td><td>#FFA4BE</td><td style='background-color: #FFA4BE'>&nbsp; &nbsp; &nbsp; &nbsp;</td><td style='background-color: #CD2F63'>&nbsp; &nbsp; &nbsp; &nbsp; </td><td>#CD2F63</td><td>Cranberry Very Dark</td></tr>
-</table>
-
+# TODO INsert Things
 ---
 class: title
 ## Cross-stitch charts
@@ -507,14 +572,20 @@ class: title
 class: title
 ## Result
 ---
-
 class: title
-## github.com/glasnt/626
+## ~~github.com/glasnt/626~~
+???
+
+it was this
+
+But now, it's
+---
+class: title
+## `pip install ih`
 ---
 class: image-main
 ![Image](images/green_chart_new.png)
 ---
-
 background-image: url("images/green_chart_new_clip.png")
 ---
 class: title
