@@ -115,7 +115,7 @@ Note: so, by my own unscripted ramblings 5 years ago, I set myself three problem
 
 ---
 
-##= Image manipulation
+##= Problem 1:<br>Image manipulation
 
 Note: first step, image manipulation. 
 
@@ -160,7 +160,7 @@ This will be useful later on.
 
 But, onto the next problem
 ---
-#= Colour setting 
+#= Problem 2:<br>Colour setting 
 
 Note: colour setting. Yes, colour with a "U"
 
@@ -401,9 +401,7 @@ the third issue.
 ---
 ##= Reducing picture to only available colours
 
-Note: We have up to 489 colours.  We only have a certain number of colours we can physically use, save for dying our own, but that's a problem for another medium.
-
-TODO MORE HERE BAD KATIE
+Note: We have 100 wool colours to work with. So, we need to ensure that our source images only use these colours
 
 Thankfully, we can solve this problem with a little bit of python
 ---
@@ -412,30 +410,82 @@ Note: pillow, again!
 ---
 ##= `putpalette(data)`
 
-Note: there's a tiny function in Pillow called `putpalette()`
+Note: there's a tiny function in Pillow called `putpalette()` that's somewhat underdocumented. 
+
+I'm including the code here as this is method that worked for me, and hopefully works for someone else.  
 ---
 $$# PIL.putpalette()
 <BR>
-py >>> im.convert('P'
-py &nbsp; &nbsp; &nbsp; , palette=Image.ADAPTIVE
-py &nbsp;  &nbsp; &nbsp; , colors=16)
+py- >>> def get_palette_image(palette):
+py- >>> &nbsp; data = # [ .. ]
+py- >>> &nbsp; image = Image.new("P", (16, 16))
+py- >>> &nbsp; image.putpalette(data)
+py- >>> &nbsp; return image
+
+Note: we have to define a palette. Do do that, we have to set the palette on a new image. 
+
+The data in this case is a list of 768 integers. 
+
+That is, 256 triples of RGB values. 
+
 ---
-# TODO
+$$# Image.im.convert()
+<BR>
+py- >>> im = Image.open("source.png")
+py- >>> palette_image = get_palette_image(palette)
+py- >>> _im = im.im.convert("P", 0, palette_image.im)
+py- >>> return im._new(_im).convert("RGB")
 
-palette of reduced colours
-palette of *my* colours
-palette of *my* reduced colours
+Note: from there, we have to use the primative convert function to use our palette only. 
 
-https://github.com/python-pillow/Pillow/commit/0b63579f39b0c908239957683a8a70d24e3b07f1
+This isn't a typo: there is a convert function ont he image object itself, but this is the C-level convert function. I haven't found a better way to do this functionality, although I do have some activity upstream in pillow to try and resolve this. 
 
-Quantize? Palette?
+You may have noticed another issue here, tho
+
 ---
 ##= Problem: 256
-Note: pillow palette limited to 256
+Note: pillow palette limited to 256 colours. 
 
-TODO - this is superseeded by the reduction of the tapestry palette to 104
-(Mention later)
-(Also also, ensure that ih has both new and old palettes **documented**)
+We have 100 colours in our Wool palette, so that's fine, we only define 100 colours, right? 
+
+---
+##= Problem: 256 exactly.
+Note: Well, no. 
+
+See, turns out here is where I was going to mention that there was this weird bug in pillow where when I defined my palette, the previous function I showed was allowing these weird grey colours to turn up. 
+
+Turns out that the default palette for any image is a 256-length sliding greyscale. That is, RGB values 0,0,0; 1,1,1; all the way up to 255,255,255. 
+
+Which means that if you don't override these values, you end up having greyscale colours in your resulting image. 
+
+The solution here is to always define exactly 256 colours. In my implementation, I pad out the palette by taking whatever the last colour is and repeating that until I have a complete palette. 
+
+---
+
+##= Problem: 256 only.
+
+Note: but on the other end of the scale, we have the problem that we have too many colours in our floss palette. We have 489 colours of floss, but we can only use 256. So instead of padding out our palette, we have to truncate it. 
+
+But how can we choose what colours to remove? 
+
+---
+
+##= ⚠️
+
+Note: now, this section might be a bit contraversial. 
+
+I want to remove colours from my floss palette. 
+
+And the problem is: all floss colours are different. Even colour that are by RGB value 'reasonably close' are in fact different colours. And removing any colours will reduce the fidelity of our image in floss. 
+
+I understand and acknowlege this, but I mean, having too many colours vs not having enough colours? Wool stitchers have a harder time, imho. 
+
+---
+
+##= Reduce the colour palette. 
+
+Note: so, to reduce our colour palette, it makes sense to prune colours that are super close to each other. 
+
 ---
 @= ciede2000.jpg
 ## CIEDE2000
@@ -445,84 +495,208 @@ Note: Luckily there's math for that!
 
 latest revision of the forumula from  International Commission on Illumination (CIE) 
 
-Perceptual uniformity
+Perceptual uniformity, in a function of colour distance. The smaller the number, the closer the colours. 
+
+Fun fact - largely based on experience with automotive paint on smooth surfaces.
+
+And thankfully, because this is a fairly complex formula, we don't have to try and implement it ourselves, because it's already in scikit!
 
 ---
 $$# deltaE_ciede2000
 <br>
 sh $ pip install numpy scikit-image
 sh $ python
-py >>> from skimage.color<br>&nbsp; &nbsp; &nbsp;import deltaE_ciede2000
-
+py- >>> from skimage.color<br>&nbsp; &nbsp; &nbsp;import deltaE_ciede2000
+py- >>> deltaE_ciede2000(color1, color2)
 Note: praise scikit
+
+Color 1 and color 2 must be in a specific format here, but there are conversion helps to get us from RGB
 ---
-# TODO INsert Things
+~@ similar-top-floss.png
+Note: checking all the permutations and sorting by the smallest number from this formula, we can see which colours are extremely similar. 
+
+What's super interesting here is when the flosses are super similar but have different numbers
+
 ---
-##= Cross-stitch charts
+
+~@ floss-comparisons.png
+
+Note: based on the website images, we can barely see any difference between these threads. 
+
+In these three examples, the center set are from the same series - they are 640 and 642, but the difference are so minute that they allow for some extreme precision in the artwork; but for our perposes, we could remove 
+
+---
+
+~@ floss-thanos.png
+
+Note: we could go full thanos and still get a pretty good palette. 
+
+So I took the 489 floss colours, and remove one of each of the similar pairs until I ended up with only 256 colours. 
+
+Again, not the best solution in the world, but as I've said, I have reasons. 
+
+---
+##= Problem 3:<br>Cross-stitch charts
+
+Note: so with our color setting problem solved, we can move onto problem three. Charts. 
+
+Turns out, there's a, at first, simple solution to this
 ---
 ##= `<span>`
+
+Note: HTML and span objects. 
+
+If I just use span images with background colors, formed into rows of colours, I can create a chart. 
 ---
-##= `box-shadow: inset`
+##= `box-shadow: inset 0 0 0 0.5px`
+
+Note: and by using inset box shadows, I can have a half pixel border around every span, which when they are placed side by side by side, creates a 1 pixel border around all the cells. 
+
+Simple right? 
+
+Right? 
+
+---
+
+##= ~~`box-shadow: inset 0 0 0 0.5px`~~
+
+Note: well, unfortunately, no, this isn't that simple. 
+
+The problem is, of cource, because CSS, cross-browser compatibility. 
+
+Turns out that webkit and blink browser engines intepret this differently. Blink ends up with 1px around the spans. But webkit ignores it. 
+
+So instead: 
+
+---
+
+##= border-right: 1px solid black; <br>border-bottom: 1px solid black;
+
+Note: i had to hack it up using terrible CSS. 
+
+BUT. 
+
+
 ---
 ##= Result
----
-##= ~~github.com/glasnt/626~~
-Note: it was this
 
-But now, it's 
+Note: the result of solving all these problems is 
 ---
 ##= `pip install ih` 
+
+Note: A pip-installable package called Ih
 ---
-@^^ green_chart_new.png
+@^^ green-ih.png
+
+Note: I can now generate a chart that looks exceedingly similar 
+
+it also has some good features that I like, including giving me the actual amount of stitches. 
+
 ---
-~@ green_chart_new_clip.png
----
-##= Here's one I prepared earlier
----
-@^ sweet_large.png
-<span class="foot" style="top: 700px">[tumblr](http://probertson.tumblr.com/post/161081154009/australian-pokedex-30-57)</span>
----
-<pre><code style="font-size: 36px; line-height: 1.5;">
-$ ./ih sweetsail.png -s2
-</pre></code>
----
-~@ sweet_chart.png
----
-<pre><code style="font-size: 36px; line-height: 1.5;">
-$ ./ih sweetsail.png -s2 -t
-</code></pre>
----
-~@ sweet_mock.png
----
-~@ sweet_progress.jpg
----
-~@ sweet_finished.jpg
+##= Here's something I prepared earlier. 
+
+Note: as an example of how I can use this in practice. 
+
+Here's something you might recognise
+
 ---
 
+~@ pycon-banner.png
+
+Note: The conference iconography for this year is pretty. Very pretty. And it has a distinct set of colours. Bold colours. .. We could cross-stitch this. 
+
+---
+
+@= pyconlogo.jpg
+
+Note: the pycon twitter logo is a nice little square.. well circle.. representation of this ... 
+
+We can pass it through ih and get a chart. 
+
+--- 
+
+# TODO - get screenshot of working pyconlogo chart
+
+Note: using this chart, we know exactly how many stitches we need, the size of the image, etc. We can then go out and get our supplies
+
+
+---
+
+~@ pyconlogo-progress.png
+
+Note: sit down, put on some netflix, and craft away
+
+---
+
+~@ pyconlogo-final.png
+
+Note: 
+
+And make this. 
+
+IF AVAILABLE - show real tapestry now. 
+
+In what is now a tradition, this tapestry will be auctioned off tomorrow night at the PyLadies charity auction. Proceeds will go to PyLadies, so if you've got a ticket, I hope to see you there!
+
+---
+
+~@ tinypycon10.png
+
+Note: for smaller images, it's more useful to do manual pixel art of the source, and then feed that into ih without any scaling. I used piskel app for this, but sadly I cannot automate art. 
+
+---
+
+~@ tinypyconchart.png
+
+Note: Here's the tiny pocket version, which (is going/has gone) to Ernest, the conf director.  
+
+---
 ##= Practical Applications
 
-Note: if time permits
+Note: **if time permits**
 
-Stringly typed
+You can also use this for practical applications. 
 
-String a string to string a string
+For example, say you wanted to create a scannable QR code for your home wifi
 ---
-<pre><code style="font-size: 36px; line-height: 1.5;">
-$ pip install qrcode
-$ qrcode "YourWifiPassword" > wifi.png
-$ ./ih wifi.png -s10 -t
-</code></pre>
+
+
+$$# qrcode + ih
+<br>
+sh $ pip install qrcode
+sh $ qr "YourWifiPassword" > wifi.png
+sh $ ih wifi.png -s10 -t
+
+Note: you can use the qrcode package, generate an image of the code, then pass that into ih
+
 ---
-@^^ wifi_mock.png
+~@ wifi-mock2.png
+
+Note: If you stitch this, then it is scannable. I have this at home.  
 ---
 @^^ snap.png
+
+Note: apparently this is a really good idea, because I tweeted about it earlier last year
 ---
 @= popular.png
+
+Note: and it got a little bit of attention. 
+
+So, because peer pressure, I've turned it into a service
 ---
-##= glasnt.com/qr
+##= qr.glasnt.com
+
+Note: you can go to this URL and generate your own. 
+
 ---
-@^^ qrgen.png
----
-##= github.com/glasnt/626 
-## glasnt.com/qr
+
+##= pip install ih
+## qr.glasnt.com
+
 @ footer.svg
+
+Note: So that's all I had. For those of you with a ticket, I hope to see you at the auction tomorrow night. 
+
+Thank you all for your time~!
+
+

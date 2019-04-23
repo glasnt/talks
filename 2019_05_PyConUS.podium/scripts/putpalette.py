@@ -6,13 +6,11 @@ from PIL import Image
 # example with quantize and dither feature not yet cut, requires install from source, requires above to install
 
 RGBBW = [(255,0,0), (0,255,0), (0,0,255), (0,0,0), (255,255,255)]
-data = sum([list(x) for x in RGBBW], [])[:256]
-
-BW = [(0,0,0), (255,255,255)]
-bwdata = sum([list(x) for x in BW], [])[:256]
+data = (sum([list(x) for x in RGBBW], []) + list(RGBBW[-1]) * (256 - len(RGBBW)))[:256 * 3]
 
 pimg = Image.new("P",(16,16))
 pimg.putpalette(data)
+
 
 def colours(im):
     cs = []
@@ -71,3 +69,20 @@ imp6 = imrgb.convert("P", palette=Image.ADAPTIVE)
 imp6.save("3x3_imp6.png")
 print("image 6: adaptive palette")
 analyze(imp6)
+
+imp7 = imrgb.convert("RGB").convert("P", palette=Image.ADAPTIVE, colors=4).convert("RGB")
+imp7 = imp7.quantize(palette=pimg)
+imp7.save("3x3_imp7.png")
+print("image 7: reduce to 4, then palette")
+analyze(imp7)
+
+
+imp8 = imrgb.quantize(palette=pimg)
+#imp8 = imp8.convert("P", palette=Image.ADAPTIVE, colors=4)
+imp8.save("3x3_imp8.png")
+print("image 8: palette, then reduce")
+analyze(imp8)
+
+imp9 = imp8.convert("P", palette=Image.ADAPTIVE, colors=4)
+print("image 9: adapt")
+analyze(imp9)

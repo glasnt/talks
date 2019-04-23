@@ -138,7 +138,7 @@ so, by my own unscripted ramblings 5 years ago, I set myself three problems to s
 ---
 
 class: title
-## Image manipulation
+## Problem 1:<br>Image manipulation
 
 ???
 
@@ -197,7 +197,7 @@ This will be useful later on.
 But, onto the next problem
 ---
 class: title
-# Colour setting
+# Problem 2:<br>Colour setting
 
 ???
 
@@ -489,9 +489,7 @@ class: title
 
 ???
 
-We have up to 489 colours. We only have a certain number of colours we can physically use, save for dying our own, but that's a problem for another medium.
-
-TODO MORE HERE BAD KATIE
+We have 100 wool colours to work with. So, we need to ensure that our source images only use these colours
 
 Thankfully, we can solve this problem with a little bit of python
 ---
@@ -506,33 +504,110 @@ class: title
 
 ???
 
-there's a tiny function in Pillow called `putpalette()`
+there's a tiny function in Pillow called `putpalette()` that's somewhat underdocumented.
+
+I'm including the code here as this is method that worked for me, and hopefully works for someone else.
 ---
 .righthead[PIL.putpalette()]
 <BR>
-<pre><code class="python">>>> im.convert('P'</code></pre>
-<pre><code class="python">&nbsp; &nbsp; &nbsp; , palette=Image.ADAPTIVE</code></pre>
-<pre><code class="python">&nbsp; &nbsp; &nbsp; , colors=16)</code></pre>
+<pre><code class="python">>>> def get_palette_image(palette):</code></pre>
+--
+<pre><code class="python">>>> &nbsp; data = # [ .. ]</code></pre>
+--
+<pre><code class="python">>>> &nbsp; image = Image.new("P", (16, 16))</code></pre>
+--
+<pre><code class="python">>>> &nbsp; image.putpalette(data)</code></pre>
+--
+<pre><code class="python">>>> &nbsp; return image</code></pre>
+--
+
+???
+
+we have to define a palette. Do do that, we have to set the palette on a new image.
+
+The data in this case is a list of 768 integers.
+
+That is, 256 triples of RGB values.
+
 ---
-# TODO
+.righthead[Image.im.convert()]
+<BR>
+<pre><code class="python">>>> im = Image.open("source.png")</code></pre>
+--
+<pre><code class="python">>>> palette_image = get_palette_image(palette)</code></pre>
+--
+<pre><code class="python">>>> _im = im.im.convert("P", 0, palette_image.im)</code></pre>
+--
+<pre><code class="python">>>> return im._new(_im).convert("RGB")</code></pre>
+--
 
-palette of reduced colours
-palette of *my* colours
-palette of *my* reduced colours
+???
 
-https://github.com/python-pillow/Pillow/commit/0b63579f39b0c908239957683a8a70d24e3b07f1
+from there, we have to use the primative convert function to use our palette only.
 
-Quantize? Palette?
+This isn't a typo: there is a convert function ont he image object itself, but this is the C-level convert function. I haven't found a better way to do this functionality, although I do have some activity upstream in pillow to try and resolve this.
+
+You may have noticed another issue here, tho
+
 ---
 class: title
 ## Problem: 256
 ???
 
-pillow palette limited to 256
+pillow palette limited to 256 colours.
 
-TODO - this is superseeded by the reduction of the tapestry palette to 104
-(Mention later)
-(Also also, ensure that ih has both new and old palettes **documented**)
+We have 100 colours in our Wool palette, so that's fine, we only define 100 colours, right?
+
+---
+class: title
+## Problem: 256 exactly.
+???
+
+Well, no.
+
+See, turns out here is where I was going to mention that there was this weird bug in pillow where when I defined my palette, the previous function I showed was allowing these weird grey colours to turn up.
+
+Turns out that the default palette for any image is a 256-length sliding greyscale. That is, RGB values 0,0,0; 1,1,1; all the way up to 255,255,255.
+
+Which means that if you don't override these values, you end up having greyscale colours in your resulting image.
+
+The solution here is to always define exactly 256 colours. In my implementation, I pad out the palette by taking whatever the last colour is and repeating that until I have a complete palette.
+
+---
+
+class: title
+## Problem: 256 only.
+
+???
+
+but on the other end of the scale, we have the problem that we have too many colours in our floss palette. We have 489 colours of floss, but we can only use 256. So instead of padding out our palette, we have to truncate it.
+
+But how can we choose what colours to remove?
+
+---
+
+class: title
+## ⚠️
+
+???
+
+now, this section might be a bit contraversial.
+
+I want to remove colours from my floss palette.
+
+And the problem is: all floss colours are different. Even colour that are by RGB value 'reasonably close' are in fact different colours. And removing any colours will reduce the fidelity of our image in floss.
+
+I understand and acknowlege this, but I mean, having too many colours vs not having enough colours? Wool stitchers have a harder time, imho.
+
+---
+
+class: title
+## Reduce the colour palette.
+
+???
+
+so, to reduce our colour palette, it makes sense to prune colours that are super close to each other.
+
 ---
 class: middle, center, image
 ![Image](images/ciede2000.jpg)
@@ -545,7 +620,11 @@ Luckily there's math for that!
 
 latest revision of the forumula from International Commission on Illumination (CIE)
 
-Perceptual uniformity
+Perceptual uniformity, in a function of colour distance. The smaller the number, the closer the colours.
+
+Fun fact - largely based on experience with automotive paint on smooth surfaces.
+
+And thankfully, because this is a fairly complex formula, we don't have to try and implement it ourselves, because it's already in scikit!
 
 ---
 .righthead[deltaE_ciede2000]
@@ -553,98 +632,263 @@ Perceptual uniformity
 <pre><code class="bash">$ pip install numpy scikit-image</code></pre>
 <pre><code class="bash">$ python</code></pre>
 <pre><code class="python">>>> from skimage.color<br>&nbsp; &nbsp; &nbsp;import deltaE_ciede2000</code></pre>
-
+--
+<pre><code class="python">>>> deltaE_ciede2000(color1, color2)</code></pre>
+--
 ???
 
 praise scikit
+
+Color 1 and color 2 must be in a specific format here, but there are conversion helps to get us from RGB
 ---
-# TODO INsert Things
+background-image: url("images/similar-top-floss.png")
+???
+
+checking all the permutations and sorting by the smallest number from this formula, we can see which colours are extremely similar.
+
+What's super interesting here is when the flosses are super similar but have different numbers
+
+---
+
+background-image: url("images/floss-comparisons.png")
+
+???
+
+based on the website images, we can barely see any difference between these threads.
+
+In these three examples, the center set are from the same series - they are 640 and 642, but the difference are so minute that they allow for some extreme precision in the artwork; but for our perposes, we could remove
+
+---
+
+background-image: url("images/floss-thanos.png")
+
+???
+
+we could go full thanos and still get a pretty good palette.
+
+So I took the 489 floss colours, and remove one of each of the similar pairs until I ended up with only 256 colours.
+
+Again, not the best solution in the world, but as I've said, I have reasons.
+
 ---
 class: title
-## Cross-stitch charts
+## Problem 3:<br>Cross-stitch charts
+
+???
+
+so with our color setting problem solved, we can move onto problem three. Charts.
+
+Turns out, there's a, at first, simple solution to this
 ---
 class: title
 ## `<span>`
+
+???
+
+HTML and span objects.
+
+If I just use span images with background colors, formed into rows of colours, I can create a chart.
 ---
 class: title
-## `box-shadow: inset`
+## `box-shadow: inset 0 0 0 0.5px`
+
+???
+
+and by using inset box shadows, I can have a half pixel border around every span, which when they are placed side by side by side, creates a 1 pixel border around all the cells.
+
+Simple right?
+
+Right?
+
+---
+
+class: title
+## ~~`box-shadow: inset 0 0 0 0.5px`~~
+
+???
+
+well, unfortunately, no, this isn't that simple.
+
+The problem is, of cource, because CSS, cross-browser compatibility.
+
+Turns out that webkit and blink browser engines intepret this differently. Blink ends up with 1px around the spans. But webkit ignores it.
+
+So instead:
+
+---
+
+class: title
+## border-right: 1px solid black; <br>border-bottom: 1px solid black;
+
+???
+
+i had to hack it up using terrible CSS.
+
+BUT.
+
+
 ---
 class: title
 ## Result
----
-class: title
-## ~~github.com/glasnt/626~~
+
 ???
 
-it was this
-
-But now, it's
+the result of solving all these problems is
 ---
 class: title
 ## `pip install ih`
+
+???
+
+A pip-installable package called Ih
 ---
 class: image-main
-![Image](images/green_chart_new.png)
----
-background-image: url("images/green_chart_new_clip.png")
+![Image](images/green-ih.png)
+
+???
+
+I can now generate a chart that looks exceedingly similar
+
+it also has some good features that I like, including giving me the actual amount of stitches.
+
 ---
 class: title
-## Here's one I prepared earlier
----
-class: top, image
-![Image](images/sweet_large.png)
-<span class="foot" style="top: 700px">[tumblr](http://probertson.tumblr.com/post/161081154009/australian-pokedex-30-57)</span>
----
-<pre><code style="font-size: 36px; line-height: 1.5;">
-$ ./ih sweetsail.png -s2
-</pre></code>
----
-background-image: url("images/sweet_chart.png")
----
-<pre><code style="font-size: 36px; line-height: 1.5;">
-$ ./ih sweetsail.png -s2 -t
-</code></pre>
----
-background-image: url("images/sweet_mock.png")
----
-background-image: url("images/sweet_progress.jpg")
----
-background-image: url("images/sweet_finished.jpg")
+## Here's something I prepared earlier.
+
+???
+
+as an example of how I can use this in practice.
+
+Here's something you might recognise
+
 ---
 
+background-image: url("images/pycon-banner.png")
+
+???
+
+The conference iconography for this year is pretty. Very pretty. And it has a distinct set of colours. Bold colours. .. We could cross-stitch this.
+
+---
+
+class: middle, center, image
+![Image](images/pyconlogo.jpg)
+
+???
+
+the pycon twitter logo is a nice little square.. well circle.. representation of this ...
+
+We can pass it through ih and get a chart.
+
+---
+
+# TODO - get screenshot of working pyconlogo chart
+
+???
+
+using this chart, we know exactly how many stitches we need, the size of the image, etc. We can then go out and get our supplies
+
+
+---
+
+background-image: url("images/pyconlogo-progress.png")
+
+???
+
+sit down, put on some netflix, and craft away
+
+---
+
+background-image: url("images/pyconlogo-final.png")
+
+???
+
+And make this.
+
+IF AVAILABLE - show real tapestry now.
+
+In what is now a tradition, this tapestry will be auctioned off tomorrow night at the PyLadies charity auction. Proceeds will go to PyLadies, so if you've got a ticket, I hope to see you there!
+
+---
+
+background-image: url("images/tinypycon10.png")
+
+???
+
+for smaller images, it's more useful to do manual pixel art of the source, and then feed that into ih without any scaling. I used piskel app for this, but sadly I cannot automate art.
+
+---
+
+background-image: url("images/tinypyconchart.png")
+
+???
+
+Here's the tiny pocket version, which (is going/has gone) to Ernest, the conf director.
+
+---
 class: title
 ## Practical Applications
 
 ???
 
-if time permits
+**if time permits**
 
-Stringly typed
+You can also use this for practical applications.
 
-String a string to string a string
+For example, say you wanted to create a scannable QR code for your home wifi
 ---
-<pre><code style="font-size: 36px; line-height: 1.5;">
-$ pip install qrcode
-$ qrcode "YourWifiPassword" > wifi.png
-$ ./ih wifi.png -s10 -t
-</code></pre>
+
+
+.righthead[qrcode + ih]
+<br>
+<pre><code class="bash">$ pip install qrcode</code></pre>
+<pre><code class="bash">$ qr "YourWifiPassword" > wifi.png</code></pre>
+<pre><code class="bash">$ ih wifi.png -s10 -t</code></pre>
+
+???
+
+you can use the qrcode package, generate an image of the code, then pass that into ih
+
 ---
-class: image-main
-![Image](images/wifi_mock.png)
+background-image: url("images/wifi-mock2.png")
+
+???
+
+If you stitch this, then it is scannable. I have this at home.
 ---
 class: image-main
 ![Image](images/snap.png)
+
+???
+
+apparently this is a really good idea, because I tweeted about it earlier last year
 ---
 class: middle, center, image
 ![Image](images/popular.png)
+
+???
+
+and it got a little bit of attention.
+
+So, because peer pressure, I've turned it into a service
 ---
 class: title
-## glasnt.com/qr
+## qr.glasnt.com
+
+???
+
+you can go to this URL and generate your own.
+
 ---
-class: image-main
-![Image](images/qrgen.png)
----
+
 class: title
-## github.com/glasnt/626
-## glasnt.com/qr
+## pip install ih
+## qr.glasnt.com
+
 ![Image](images/footer.svg)
+
+???
+
+So that's all I had. For those of you with a ticket, I hope to see you at the auction tomorrow night.
+
+Thank you all for your time~!
