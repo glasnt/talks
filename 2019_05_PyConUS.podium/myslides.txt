@@ -416,31 +416,34 @@ I'm including the code here as this is method that worked for me, and hopefully 
 ---
 $$# PIL.putpalette()
 <BR>
-py- >>> def get_palette_image(palette):
-py- >>> &nbsp; data = # [ .. ]
-py- >>> &nbsp; image = Image.new("P", (16, 16))
-py- >>> &nbsp; image.putpalette(data)
-py- >>> &nbsp; return image
-
+py >>> def get_palette_image(palette):
 Note: we have to define a palette. Do do that, we have to set the palette on a new image. 
 
 The data in this case is a list of 768 integers. 
 
 That is, 256 triples of RGB values. 
+--
+py- >>> &nbsp; data = # [ .. ]
+py- >>> &nbsp; image = Image.new("P", (16, 16))
+py- >>> &nbsp; image.putpalette(data)
+py- >>> &nbsp; return image
 
 ---
 $$# Image.im.convert()
 <BR>
-py- >>> im = Image.open("source.png")
-py- >>> palette_image = get_palette_image(palette)
-py- >>> _im = im.im.convert("P", 0, palette_image.im)
-py- >>> return im._new(_im).convert("RGB")
+py >>> im = Image.open("source.png")
 
 Note: from there, we have to use the primative convert function to use our palette only. 
 
 This isn't a typo: there is a convert function ont he image object itself, but this is the C-level convert function. I haven't found a better way to do this functionality, although I do have some activity upstream in pillow to try and resolve this. 
 
 You may have noticed another issue here, tho
+--
+
+py- >>> palette_image = get_palette_image(palette)
+py- >>> _im = im.im.convert("P", 0, palette_image.im)
+py- >>> return im._new(_im).convert("RGB")
+
 
 ---
 ##= Problem: 256
@@ -489,7 +492,7 @@ Note: so, to reduce our colour palette, it makes sense to prune colours that are
 ---
 @= ciede2000.jpg
 ## CIEDE2000
-<span class="foot" style="top: 515px">[wikipedia](https://en.wikipedia.org/wiki/Color_difference)</span>
+.footnotes[[wikipedia](https://en.wikipedia.org/wiki/Color_difference)]
 
 Note: Luckily there's math for that!
 
@@ -650,6 +653,25 @@ Note: for smaller images, it's more useful to do manual pixel art of the source,
 
 Note: Here's the tiny pocket version, which (is going/has gone) to Ernest, the conf director.  
 
+
+---
+
+##= `pip install ih`
+Note: the package is up on pypi now, but if CLIs aren't your style
+--
+
+## ih-aas.glasnt.com
+
+Note: I've got a hosted ih as a service also available. 
+
+---
+~@ ihaas.png
+
+Note: you can either give it a URL of an image with a bunch of parameters like the scale, or the colours to use; or you can upload an image. 
+
+TODO - This is cloud run. Words here??
+
+
 ---
 ##= Practical Applications
 
@@ -668,6 +690,7 @@ sh $ qr "YourWifiPassword" > wifi.png
 sh $ ih wifi.png -s10 -t
 
 Note: you can use the qrcode package, generate an image of the code, then pass that into ih
+
 
 ---
 ~@ wifi-mock2.png
@@ -690,8 +713,7 @@ Note: you can go to this URL and generate your own.
 
 ---
 
-##= pip install ih
-## qr.glasnt.com
+##= `pip install ih`<br>ih-aas.glasnt.com<br>qr.glasnt.com
 
 @ footer.svg
 

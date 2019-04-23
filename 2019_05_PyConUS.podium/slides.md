@@ -511,6 +511,13 @@ I'm including the code here as this is method that worked for me, and hopefully 
 .righthead[PIL.putpalette()]
 <BR>
 <pre><code class="python">>>> def get_palette_image(palette):</code></pre>
+???
+
+we have to define a palette. Do do that, we have to set the palette on a new image.
+
+The data in this case is a list of 768 integers.
+
+That is, 256 triples of RGB values.
 --
 <pre><code class="python">>>> &nbsp; data = # [ .. ]</code></pre>
 --
@@ -521,25 +528,10 @@ I'm including the code here as this is method that worked for me, and hopefully 
 <pre><code class="python">>>> &nbsp; return image</code></pre>
 --
 
-???
-
-we have to define a palette. Do do that, we have to set the palette on a new image.
-
-The data in this case is a list of 768 integers.
-
-That is, 256 triples of RGB values.
-
 ---
 .righthead[Image.im.convert()]
 <BR>
 <pre><code class="python">>>> im = Image.open("source.png")</code></pre>
---
-<pre><code class="python">>>> palette_image = get_palette_image(palette)</code></pre>
---
-<pre><code class="python">>>> _im = im.im.convert("P", 0, palette_image.im)</code></pre>
---
-<pre><code class="python">>>> return im._new(_im).convert("RGB")</code></pre>
---
 
 ???
 
@@ -548,6 +540,15 @@ from there, we have to use the primative convert function to use our palette onl
 This isn't a typo: there is a convert function ont he image object itself, but this is the C-level convert function. I haven't found a better way to do this functionality, although I do have some activity upstream in pillow to try and resolve this.
 
 You may have noticed another issue here, tho
+--
+
+<pre><code class="python">>>> palette_image = get_palette_image(palette)</code></pre>
+--
+<pre><code class="python">>>> _im = im.im.convert("P", 0, palette_image.im)</code></pre>
+--
+<pre><code class="python">>>> return im._new(_im).convert("RGB")</code></pre>
+--
+
 
 ---
 class: title
@@ -612,7 +613,7 @@ so, to reduce our colour palette, it makes sense to prune colours that are super
 class: middle, center, image
 ![Image](images/ciede2000.jpg)
 ## CIEDE2000
-<span class="foot" style="top: 515px">[wikipedia](https://en.wikipedia.org/wiki/Color_difference)</span>
+.footnotes[[wikipedia](https://en.wikipedia.org/wiki/Color_difference)]
 
 ???
 
@@ -825,6 +826,32 @@ background-image: url("images/tinypyconchart.png")
 
 Here's the tiny pocket version, which (is going/has gone) to Ernest, the conf director.
 
+
+---
+
+class: title
+## `pip install ih`
+???
+
+the package is up on pypi now, but if CLIs aren't your style
+--
+
+## ih-aas.glasnt.com
+
+???
+
+I've got a hosted ih as a service also available.
+
+---
+background-image: url("images/ihaas.png")
+
+???
+
+you can either give it a URL of an image with a bunch of parameters like the scale, or the colours to use; or you can upload an image.
+
+TODO - This is cloud run. Words here??
+
+
 ---
 class: title
 ## Practical Applications
@@ -848,6 +875,7 @@ For example, say you wanted to create a scannable QR code for your home wifi
 ???
 
 you can use the qrcode package, generate an image of the code, then pass that into ih
+
 
 ---
 background-image: url("images/wifi-mock2.png")
@@ -882,8 +910,7 @@ you can go to this URL and generate your own.
 ---
 
 class: title
-## pip install ih
-## qr.glasnt.com
+## `pip install ih`<br>ih-aas.glasnt.com<br>qr.glasnt.com
 
 ![Image](images/footer.svg)
 
