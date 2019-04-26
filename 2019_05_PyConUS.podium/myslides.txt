@@ -35,10 +35,13 @@ Note: I was talking about this cross-stitch I made
 
 ~@ pokebros.gif
 
+.footnotes[[Water](https://www.instagram.com/p/BjDp1eMFY3O/), [Grass](https://www.instagram.com/p/BjDpt4cFhh6/), [Fire](https://www.instagram.com/p/BjDpyXOFW1m/) Bros, Paul Robertson, 2011]
+
 Note: the original artwork was created by a pixel artist from Melbourne, Paul Robertson. He's known for his work on things like the Scott Pilgrim vs the World game, Mercenary Kings, and the videoclip for Architecture in Helsinki's Do the Whirlwind. 
 
 ---
 ~@ pokebros_green.gif
+.footnotes[[Grass Bros](https://www.instagram.com/p/BjDpt4cFhh6/), Paul Robertson, 2011]
 
 Note: Pixel art, especially those with distinct colour palettes, map really well to cross-stitching
 
@@ -59,6 +62,8 @@ Note: you then take that design, that chart, that graph, whatever you wish to ca
 ---
 
 ~@ green_lynn.jpg
+
+.white[.footnotes[[Mike Pirnat](https://www.flickr.com/photos/mikepirnat/34782968461/in/photostream/)]]
 
 Note: Years after my original lightning talk, This particular design, well, all three of them, were auctioned off atht the PyLadies fundraising auction in 2017
 
@@ -168,7 +173,8 @@ But first.
 ---
 ##= Let's learn about floss
 ---
-@= dmc-logo.jpg
+#= Dollfus-Mieg et Compagnie
+### (DMC)
 
 Note: Dollfus-Mieg et Compagnie
 
@@ -221,7 +227,7 @@ And, as I said, a lot of charts only refer to the floss. So, we need to convert 
 The colours you're seeing now are part of the set called 'Cranberry'
 ---
 
-@ dmc-cranberry.png
+~@ dmc-cranberry2.png
 Note: while the names aren't strictly official, the codes are important. 
 
 There is a cross-compatibility chart, which is somewhat official as it has a terribly pjeg artefacted DMC logo, but it states that it's supposed to be used as a guide only. However, it does give us an aproximation of how to compare skeins of different medium (a skein being one 'spool')
@@ -426,7 +432,7 @@ That is, 256 triples of RGB values.
 py- >>> &nbsp; data = # [ .. ]
 py- >>> &nbsp; image = Image.new("P", (16, 16))
 py- >>> &nbsp; image.putpalette(data)
-py- >>> &nbsp; return image
+py >>> &nbsp; return image
 
 ---
 $$# Image.im.convert()
@@ -442,7 +448,7 @@ You may have noticed another issue here, tho
 
 py- >>> palette_image = get_palette_image(palette)
 py- >>> _im = im.im.convert("P", 0, palette_image.im)
-py- >>> return im._new(_im).convert("RGB")
+py >>> return im._new(_im).convert("RGB")
 
 
 ---
@@ -510,7 +516,7 @@ $$# deltaE_ciede2000
 sh $ pip install numpy scikit-image
 sh $ python
 py- >>> from skimage.color<br>&nbsp; &nbsp; &nbsp;import deltaE_ciede2000
-py- >>> deltaE_ciede2000(color1, color2)
+py >>> deltaE_ciede2000(color1, color2)
 Note: praise scikit
 
 Color 1 and color 2 must be in a specific format here, but there are conversion helps to get us from RGB
@@ -545,15 +551,41 @@ Note: so with our color setting problem solved, we can move onto problem three. 
 
 Turns out, there's a, at first, simple solution to this
 ---
-##= `<span>`
+##= `html`
 
-Note: HTML and span objects. 
+Note: I ended up making the charts in HTML. 
 
-If I just use span images with background colors, formed into rows of colours, I can create a chart. 
+Simple, right? Well, not really. 
+
+The CSS I had to write in order to make the charts work was a bunch of trial and error, because, well, I'm not a css developer. I have absolutely respect for the people that can code in CSS, because that's hard. 
+
+---
+
+##= `webkit` vs `blink`
+
+Note: Turns out webkit and blink, the two major engines of today, are 99.9% identical... and some of the CSS I was writing was show differently in these engines. 
+
+I have to use both, because since I'm chosing HTML as my rendering engine, I need a way to export images. 
+
+
+
+---
+
+##= Google Chrome
+### Was `webkit`, now `blink`
+
+Note: Chrome is my browser of choice, and that uses blink
+
+But for image exporting
+---
+
+##= `imgkit`
+Note: I use imgkit, a python wrapper for  wkhtmltopdf.. where wk is webkit
+
 ---
 ##= `box-shadow: inset 0 0 0 0.5px`
 
-Note: and by using inset box shadows, I can have a half pixel border around every span, which when they are placed side by side by side, creates a 1 pixel border around all the cells. 
+Note: what I thought I could do was use inset box shadows, I can have a half pixel border around every span, which when they are placed side by side by side, creates a 1 pixel border around all the cells. 
 
 Simple right? 
 
@@ -567,19 +599,24 @@ Note: well, unfortunately, no, this isn't that simple.
 
 The problem is, of cource, because CSS, cross-browser compatibility. 
 
-Turns out that webkit and blink browser engines intepret this differently. Blink ends up with 1px around the spans. But webkit ignores it. 
+Turns out that webkit and blink rendering engines intepret this differently. Blink ends up with 1px around the spans. But webkit ignores it. 
 
 So instead: 
 
 ---
 
-##= border-right: 1px solid black; <br>border-bottom: 1px solid black;
+##= `border-right: 1px solid black;`<br>`border-bottom: 1px solid black;`
 
 Note: i had to hack it up using terrible CSS. 
 
 BUT. 
 
 
+---
+
+##= &nbsp; 
+
+Note: but now, finally. I've solve the three problems.  
 ---
 ##= Result
 
@@ -589,7 +626,7 @@ Note: the result of solving all these problems is
 
 Note: A pip-installable package called Ih
 ---
-@^^ green-ih.png
+@^^ green_screenshot.png
 
 Note: I can now generate a chart that looks exceedingly similar 
 
@@ -616,18 +653,87 @@ Note: the pycon twitter logo is a nice little square.. well circle.. representat
 
 We can pass it through ih and get a chart. 
 
+
 --- 
+$$# ih
+<br>
+sh $ ih pyconlogo.jpg
+Note: so we load up our chart.. and because it's so big.. 
+---
+$$# ih
+<br>
+sh $ ih pyconlogo.jpg -s6
+Note: 
 
-# TODO - get screenshot of working pyconlogo chart
+we reduce the scale by 6 times
+---
+$$# ih
+<br>
+sh $ ih pyconlogo.jpg -s6 -c8 
+Note: 
 
-Note: using this chart, we know exactly how many stitches we need, the size of the image, etc. We can then go out and get our supplies
+and we use ony 8 colours. 
+
+AND WE GET
+
+---
+
+~@ pyconchart.png
+
+Note: something that looks a little bit crap, to be honest. 
+---
+
+~@ pyconchart-and-original.png
+
+Note: the original logo has a gradient going on in the skyline, which doesn't work well. 
+It's also the JPG uploaded to twitter, which has artefacts, which is being picked up. 
+
+Unforunately my app is only as good as it's input data. 
+
+So let's clean up that image. 
 
 
 ---
 
-~@ pyconlogo-progress.png
+~@ tinypycon10-border.png
+Note: I mean, I'm no Paul Robertson, but I think this is pretty good pixel art. 
 
-Note: sit down, put on some netflix, and craft away
+If we throw this into our app
+
+---
+~@ tinychart.png
+
+Note: we get something quite good. 
+
+From there, I'm afraid it's a manual process. 
+
+---
+~@ littletrees/pyconmini_1.png
+---
+~@ littletrees/pyconmini_2.png
+---
+~@ littletrees/pyconmini_3.png
+---
+~@ littletrees/pyconmini_4.png
+---
+~@ littletrees/pyconmini_5.png
+---
+~@ littletrees/pyconmini_6.png
+---
+~@ littletrees/pyconmini_7.png
+
+Note: tada!
+
+IF PROP - SHOW
+
+
+---
+
+# &nbsp; 
+
+Note: but you know what? that's boring. 
+
+We can go bigger. 
 
 ---
 
@@ -635,24 +741,9 @@ Note: sit down, put on some netflix, and craft away
 
 Note: 
 
-And make this. 
-
 IF AVAILABLE - show real tapestry now. 
 
 In what is now a tradition, this tapestry will be auctioned off tomorrow night at the PyLadies charity auction. Proceeds will go to PyLadies, so if you've got a ticket, I hope to see you there!
-
----
-
-~@ tinypycon10.png
-
-Note: for smaller images, it's more useful to do manual pixel art of the source, and then feed that into ih without any scaling. I used piskel app for this, but sadly I cannot automate art. 
-
----
-
-~@ tinypyconchart.png
-
-Note: Here's the tiny pocket version, which (is going/has gone) to Ernest, the conf director.  
-
 
 ---
 
@@ -665,7 +756,7 @@ Note: the package is up on pypi now, but if CLIs aren't your style
 Note: I've got a hosted ih as a service also available. 
 
 ---
-~@ ihaas.png
+~@ ih-aas.png
 
 Note: you can either give it a URL of an image with a bunch of parameters like the scale, or the colours to use; or you can upload an image. 
 

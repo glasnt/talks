@@ -41,12 +41,15 @@ I was talking about this cross-stitch I made
 
 background-image: url("images/pokebros.gif")
 
+.footnotes[[Water](https://www.instagram.com/p/BjDp1eMFY3O/), [Grass](https://www.instagram.com/p/BjDpt4cFhh6/), [Fire](https://www.instagram.com/p/BjDpyXOFW1m/) Bros, Paul Robertson, 2011]
+
 ???
 
 the original artwork was created by a pixel artist from Melbourne, Paul Robertson. He's known for his work on things like the Scott Pilgrim vs the World game, Mercenary Kings, and the videoclip for Architecture in Helsinki's Do the Whirlwind.
 
 ---
 background-image: url("images/pokebros_green.gif")
+.footnotes[[Grass Bros](https://www.instagram.com/p/BjDpt4cFhh6/), Paul Robertson, 2011]
 
 ???
 
@@ -73,6 +76,8 @@ you then take that design, that chart, that graph, whatever you wish to call it,
 ---
 
 background-image: url("images/green_lynn.jpg")
+
+.white[.footnotes[[Mike Pirnat](https://www.flickr.com/photos/mikepirnat/34782968461/in/photostream/)]]
 
 ???
 
@@ -208,8 +213,9 @@ But first.
 class: title
 ## Let's learn about floss
 ---
-class: middle, center, image
-![Image](images/dmc-logo.jpg)
+class: title
+# Dollfus-Mieg et Compagnie
+### (DMC)
 
 ???
 
@@ -275,7 +281,7 @@ And, as I said, a lot of charts only refer to the floss. So, we need to convert 
 The colours you're seeing now are part of the set called 'Cranberry'
 ---
 
-![Image](images/dmc-cranberry.png)
+background-image: url("images/dmc-cranberry2.png")
 ???
 
 while the names aren't strictly official, the codes are important.
@@ -526,7 +532,6 @@ That is, 256 triples of RGB values.
 <pre><code class="python">>>> &nbsp; image.putpalette(data)</code></pre>
 --
 <pre><code class="python">>>> &nbsp; return image</code></pre>
---
 
 ---
 .righthead[Image.im.convert()]
@@ -547,7 +552,6 @@ You may have noticed another issue here, tho
 <pre><code class="python">>>> _im = im.im.convert("P", 0, palette_image.im)</code></pre>
 --
 <pre><code class="python">>>> return im._new(_im).convert("RGB")</code></pre>
---
 
 
 ---
@@ -635,7 +639,6 @@ And thankfully, because this is a fairly complex formula, we don't have to try a
 <pre><code class="python">>>> from skimage.color<br>&nbsp; &nbsp; &nbsp;import deltaE_ciede2000</code></pre>
 --
 <pre><code class="python">>>> deltaE_ciede2000(color1, color2)</code></pre>
---
 ???
 
 praise scikit
@@ -682,20 +685,55 @@ so with our color setting problem solved, we can move onto problem three. Charts
 Turns out, there's a, at first, simple solution to this
 ---
 class: title
-## `<span>`
+## `html`
 
 ???
 
-HTML and span objects.
+I ended up making the charts in HTML.
 
-If I just use span images with background colors, formed into rows of colours, I can create a chart.
+Simple, right? Well, not really.
+
+The CSS I had to write in order to make the charts work was a bunch of trial and error, because, well, I'm not a css developer. I have absolutely respect for the people that can code in CSS, because that's hard.
+
+---
+
+class: title
+## `webkit` vs `blink`
+
+???
+
+Turns out webkit and blink, the two major engines of today, are 99.9% identical... and some of the CSS I was writing was show differently in these engines.
+
+I have to use both, because since I'm chosing HTML as my rendering engine, I need a way to export images.
+
+
+
+---
+
+class: title
+## Google Chrome
+### Was `webkit`, now `blink`
+
+???
+
+Chrome is my browser of choice, and that uses blink
+
+But for image exporting
+---
+
+class: title
+## `imgkit`
+???
+
+I use imgkit, a python wrapper for wkhtmltopdf.. where wk is webkit
+
 ---
 class: title
 ## `box-shadow: inset 0 0 0 0.5px`
 
 ???
 
-and by using inset box shadows, I can have a half pixel border around every span, which when they are placed side by side by side, creates a 1 pixel border around all the cells.
+what I thought I could do was use inset box shadows, I can have a half pixel border around every span, which when they are placed side by side by side, creates a 1 pixel border around all the cells.
 
 Simple right?
 
@@ -712,14 +750,14 @@ well, unfortunately, no, this isn't that simple.
 
 The problem is, of cource, because CSS, cross-browser compatibility.
 
-Turns out that webkit and blink browser engines intepret this differently. Blink ends up with 1px around the spans. But webkit ignores it.
+Turns out that webkit and blink rendering engines intepret this differently. Blink ends up with 1px around the spans. But webkit ignores it.
 
 So instead:
 
 ---
 
 class: title
-## border-right: 1px solid black; <br>border-bottom: 1px solid black;
+## `border-right: 1px solid black;`<br>`border-bottom: 1px solid black;`
 
 ???
 
@@ -728,6 +766,14 @@ i had to hack it up using terrible CSS.
 BUT.
 
 
+---
+
+class: title
+## &nbsp;
+
+???
+
+but now, finally. I've solve the three problems.
 ---
 class: title
 ## Result
@@ -744,7 +790,7 @@ class: title
 A pip-installable package called Ih
 ---
 class: image-main
-![Image](images/green-ih.png)
+![Image](images/green_screenshot.png)
 
 ???
 
@@ -781,22 +827,101 @@ the pycon twitter logo is a nice little square.. well circle.. representation of
 
 We can pass it through ih and get a chart.
 
+
+---
+.righthead[ih]
+<br>
+<pre><code class="bash">$ ih pyconlogo.jpg</code></pre>
+???
+
+so we load up our chart.. and because it's so big..
+---
+.righthead[ih]
+<br>
+<pre><code class="bash">$ ih pyconlogo.jpg -s6</code></pre>
+???
+
+we reduce the scale by 6 times
+---
+.righthead[ih]
+<br>
+<pre><code class="bash">$ ih pyconlogo.jpg -s6 -c8</code></pre>
+???
+
+and we use ony 8 colours.
+
+AND WE GET
+
 ---
 
-# TODO - get screenshot of working pyconlogo chart
+background-image: url("images/pyconchart.png")
 
 ???
 
-using this chart, we know exactly how many stitches we need, the size of the image, etc. We can then go out and get our supplies
+something that looks a little bit crap, to be honest.
+---
+
+background-image: url("images/pyconchart-and-original.png")
+
+???
+
+the original logo has a gradient going on in the skyline, which doesn't work well.
+It's also the JPG uploaded to twitter, which has artefacts, which is being picked up.
+
+Unforunately my app is only as good as it's input data.
+
+So let's clean up that image.
 
 
 ---
 
-background-image: url("images/pyconlogo-progress.png")
+background-image: url("images/tinypycon10-border.png")
+???
+
+I mean, I'm no Paul Robertson, but I think this is pretty good pixel art.
+
+If we throw this into our app
+
+---
+background-image: url("images/tinychart.png")
 
 ???
 
-sit down, put on some netflix, and craft away
+we get something quite good.
+
+From there, I'm afraid it's a manual process.
+
+---
+background-image: url("images/littletrees/pyconmini_1.png")
+---
+background-image: url("images/littletrees/pyconmini_2.png")
+---
+background-image: url("images/littletrees/pyconmini_3.png")
+---
+background-image: url("images/littletrees/pyconmini_4.png")
+---
+background-image: url("images/littletrees/pyconmini_5.png")
+---
+background-image: url("images/littletrees/pyconmini_6.png")
+---
+background-image: url("images/littletrees/pyconmini_7.png")
+
+???
+
+tada!
+
+IF PROP - SHOW
+
+
+---
+
+# &nbsp;
+
+???
+
+but you know what? that's boring.
+
+We can go bigger.
 
 ---
 
@@ -804,28 +929,9 @@ background-image: url("images/pyconlogo-final.png")
 
 ???
 
-And make this.
-
 IF AVAILABLE - show real tapestry now.
 
 In what is now a tradition, this tapestry will be auctioned off tomorrow night at the PyLadies charity auction. Proceeds will go to PyLadies, so if you've got a ticket, I hope to see you there!
-
----
-
-background-image: url("images/tinypycon10.png")
-
-???
-
-for smaller images, it's more useful to do manual pixel art of the source, and then feed that into ih without any scaling. I used piskel app for this, but sadly I cannot automate art.
-
----
-
-background-image: url("images/tinypyconchart.png")
-
-???
-
-Here's the tiny pocket version, which (is going/has gone) to Ernest, the conf director.
-
 
 ---
 
@@ -843,7 +949,7 @@ the package is up on pypi now, but if CLIs aren't your style
 I've got a hosted ih as a service also available.
 
 ---
-background-image: url("images/ihaas.png")
+background-image: url("images/ih-aas.png")
 
 ???
 
