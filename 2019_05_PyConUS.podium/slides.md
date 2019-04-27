@@ -682,18 +682,63 @@ class: title
 
 so with our color setting problem solved, we can move onto problem three. Charts.
 
-Turns out, there's a, at first, simple solution to this
+How do I easily turn all this data into a nice, clear, zoomable, copyable, exportable image?
+
+
+---
+
+class: title
+# `pillow`?
+
+???
+
+Why not Pillow? It's been the solution to every other problem so far.
+
+Well, I tried. I did.
+
+I was using ImageDraw all over the place to try and build up a chart, trying to make tables and concatenate squares together.
+
+And the results weren't what I wanted. It had weird fonts, I couldn't use unicode charactars for the image symbols, and I was sitting there thinking... there's gotta be a better way. A way you can typeset any character, use whatever fonts you want, make tables...
+
+
 ---
 class: title
 ## `html`
 
 ???
 
-I ended up making the charts in HTML.
+turns out that's HTML
 
-Simple, right? Well, not really.
+I can build up a page using divs and spans, the odd table here and there, whatever CSS styling I want. Test it in chrome, and it's great.
 
-The CSS I had to write in order to make the charts work was a bunch of trial and error, because, well, I'm not a css developer. I have absolutely respect for the people that can code in CSS, because that's hard.
+And if I need to create an image from that,
+
+---
+
+class: title
+## `imgkit`
+### `wkhtmltopdf` wrapper
+
+???
+
+I can use the python package imgkit which is a nice pythonic wrapper around wkhtmltopdf, which can generate images from html.
+
+And that's great.
+
+Except for the CSS part.
+
+---
+
+class: title
+## `imgkit`
+# class: title
+## w(eb)k(it)htmltopdf
+
+???
+
+See, imgkit uses a webkit converter.
+
+Chrome uses blink.
 
 ---
 
@@ -702,30 +747,14 @@ class: title
 
 ???
 
-Turns out webkit and blink, the two major engines of today, are 99.9% identical... and some of the CSS I was writing was show differently in these engines.
-
-I have to use both, because since I'm chosing HTML as my rendering engine, I need a way to export images.
+Webkit and blink are the two biggest web rendering engines today. Blink was originally a fork of webkit, and a lot of folks are now migrating to one of the two implementations. In fact Microsoft Edge is now powered by Blink.
 
 
+For those who were around for the browser wars, and remember the hellscape that was cross-browser compatibility, having only two engines is great! Your code will work everywhere, right? They're basically the same engine, right?
 
----
+Well, heh, no.
 
-class: title
-## Google Chrome
-### Was `webkit`, now `blink`
-
-???
-
-Chrome is my browser of choice, and that uses blink
-
-But for image exporting
----
-
-class: title
-## `imgkit`
-???
-
-I use imgkit, a python wrapper for wkhtmltopdf.. where wk is webkit
+Turns out I found a few of those lovely edgecases where I can still get css to display differently in different browser.
 
 ---
 class: title
@@ -733,11 +762,7 @@ class: title
 
 ???
 
-what I thought I could do was use inset box shadows, I can have a half pixel border around every span, which when they are placed side by side by side, creates a 1 pixel border around all the cells.
-
-Simple right?
-
-Right?
+I was using this: an inset box shadow. What I thought this would do was allow me to have rows and rows of spans, each with their own inset half-pixel border, which meant when placed next to each other it'd be 1px total, making everything lineup nicely in rows and columns.
 
 ---
 
@@ -746,13 +771,13 @@ class: title
 
 ???
 
-well, unfortunately, no, this isn't that simple.
+Turns out that no, this isn't the case. Both engines implement box-shadow inset, but they differ in their intepretation of what to do with sub-pixel borders.
 
-The problem is, of cource, because CSS, cross-browser compatibility.
+Blink works, and testing in Chrome my charts looked great.
 
-Turns out that webkit and blink rendering engines intepret this differently. Blink ends up with 1px around the spans. But webkit ignores it.
+Webkit, Safari and the image generation section? Not so much. Webkit ignored this styling. Which was annoying.
 
-So instead:
+But I worked around it.
 
 ---
 
@@ -761,10 +786,13 @@ class: title
 
 ???
 
-i had to hack it up using terrible CSS.
+With some terrible CSS hacks.
 
-BUT.
+This around every cell of the chart, then a border around the entire chart itself works.
 
+Mostly.
+
+But it works!
 
 ---
 
@@ -932,6 +960,12 @@ background-image: url("images/pyconlogo-final.png")
 IF AVAILABLE - show real tapestry now.
 
 In what is now a tradition, this tapestry will be auctioned off tomorrow night at the PyLadies charity auction. Proceeds will go to PyLadies, so if you've got a ticket, I hope to see you there!
+
+It makes me really happy to see that the python community really embraces physical crafts. It's great that we can be a community that can share interests outside of code. That OtherSkills lightning talks back in 2014, the auction now? It's really nice.
+
+I mean I'm going to do some acroyoga later, at a tech conf. It's awesome.
+
+ANYWAY.
 
 ---
 
