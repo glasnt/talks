@@ -130,8 +130,18 @@ And we can do that in Python with
 ---
 #= `pillow`
 ### Python Imaging Library
+
+Note: Pillow is the go-to package for image manipulation in Python.
+
+You can load images, resize them, rotate them, and then save the result. 
+
+But you can also interrogate an image...
+
+
 ---
 ##= `Image.getpixel((x,y))`
+
+Note: which does pretty much what it says on the tin
 ---
 
 @ getpixel/large_3x3-2.png
@@ -156,7 +166,7 @@ py- >>>  im.getpixel((0,2))
 py- (255, 0, 0)
 sh #  R .white[.] G.white[.] B
 ---
-$$# PIL.getpixel()
+$$# Image.getpixel()
 .right-image[![img](images/getpixel/large_3x3-4-highlight.png)<br>.center[.b[3x3.png]]]
 <BR>
 sh $ pip install pillow
@@ -223,16 +233,9 @@ You see, floss and wool are not cross-compatible. They don't share codes, and th
 And, as I said, a lot of charts only refer to the floss. So, we need to convert from floss to wool.
 
 The colours you're seeing now are part of the set called 'Cranberry'
----
 
-~@ dmc-cranberry2.png
-Note: while the names aren't strictly official, the codes are important. 
+while the names aren't strictly official, the codes are important. 
 
-There is a cross-compatibility chart, which is somewhat official as it has a terribly pjeg artefacted DMC logo, but it states that it's supposed to be used as a guide only. However, it does give us an aproximation of how to compare skeins of different medium (a skein being one 'spool')
-
-The 'floss' from before has 600-series numbers for cranberry. And with this DF, you can see that the tapestry wool equivelent has a 7600 series
-
-But they don't exactly match. 
 ---
 ## The Cranberries - Analyze
 .right-image[![pic](images/wool_6floss_crop.jpg)]
@@ -246,7 +249,13 @@ LT Cranberry&nbsp;&nbsp;&nbsp;&nbsp;604&nbsp;&nbsp;&nbsp;&nbsp;7605
 V LT Cranberry&nbsp;&nbsp;605
 </code></pre>
 
-Note: if we go through the chart, we can see that there are many more floss threads available than wool. 
+Note:
+
+There is a guide-only cross-compatibility chart you can find, but it's abslutely meant as a guide only. 
+
+So there is a way to roughly translate between the different mediums. 
+
+But we start to see a problem here of missing colours. 
 
 For the Cranberry series, there are 6 available floss threads, but only four wool. And in this picture, my local craft-store was even completely out of one of the wool skeins. 
 
@@ -363,6 +372,7 @@ How?
 
 $$# ImageStat.Stat()
 .right-image[![img](images/486_e_7202_150x150.jpg)]
+.footnotes[[thread-bare.com](https://www.thread-bare.com/2017/09/20/creating-cross-stitch-charts-with-consistent-colors)]
 <BR>
 py- >>> from PIL import Image, ImageStat
 py >>> im = Image.open("486_e_7202_150x150.jpg")
@@ -380,6 +390,7 @@ py [211, 139, 150]
 
 ##= <span style="color: rgb(211, 139, 150); background-color: rgb(211, 139, 150); padding: 50px">....</span>
 @ 486_e_7202_150x150.jpg
+.footnotes[[thread-bare.com](https://www.thread-bare.com/2017/09/20/creating-cross-stitch-charts-with-consistent-colors)]
 
 Note: I mean, I guess this is pretty close?
 
@@ -443,7 +454,10 @@ py >>> _im = im.im.convert("P", 0, palette_image.im)
 
 Note: then we convert our image to use the palette we're previously defined. 
 
-(And yes, that's not a typo, we're having to use the primative convert version to force our palette in place. )
+That's not a typo
+
+the publc interface doesn't expose all the features of the lower level interface
+
 
 --
 
@@ -490,6 +504,7 @@ But how can we choose what colours to remove?
 ---
 
 ##= ⚠️
+
 
 Note: now, this section might be a bit contraversial. 
 
@@ -661,12 +676,12 @@ Note: The twitter logo is a pretty good consice image to work with.
 
 The image itself won't work well here. There's a graident going on, and it's a bit big. 
 
-But I'm a fan of pixel art, so I can manually create pixel art based on this iamge. 
+But I'm a fan of pixel art, so I created my own 
 
 ---
 
 ~@ tinypycon10-border.png
-Note: I mean, I'm no Paul Robertson, but this is pretty close.  
+Note: I mean, I'm no Paul Robertson, but I think this is a pretty good pixel art replication of the pycon logo 
 
 We can take this image and throw it in `ih`. 
 
@@ -743,7 +758,8 @@ Note: the package is up on the Warehouse now, but if CLIs aren't your style
 Note: I've wrapped this up in a Docker container and hosted it for you on google cloud run 
 
 ---
-~@ ih-aas.png
+## ih-aas.glasnt.com
+@ ih-aas2.png
 
 Note: you can either give it a URL of an image with a bunch of parameters like the scale, or the colours to use; or you can upload an image. 
 
@@ -765,7 +781,7 @@ $$# qrcode + ih
 <br>
 sh $ pip install qrcode
 sh $ qr "YourWifiPassword" > wifi.png
-sh $ ih wifi.png -s10 -t
+sh $ ih wifi.png -s10 -r
 
 Note: you can use the qrcode package, generate an image of the code, then pass that into ih
 
@@ -795,7 +811,26 @@ Note: you can go to this URL and generate your own.
 
 @ footer.svg
 
-Note: So that's all I had. For those of you with a ticket, I hope to see you at the auction tomorrow night. 
+Note: 
+
+If time: 
+
+I have also extended the functionality of ih over the years
+
+it supports: 
+floss
+wool
+alpaca
+lego
+perler
+
+It renders previews in all these things. 
+
+I've also got some twitter bots. 
+
+...
+
+So that's all I had. For those of you with a ticket, I hope to see you at the auction tomorrow night. 
 
 Thank you all for your time~!
 
