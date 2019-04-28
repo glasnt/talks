@@ -351,7 +351,7 @@ Note: back to this page.
 
 we can see that they've captured both swatches and the full skein for each thread. 
 
-From here, we can download these images, and use them to work out the average colour. 
+So we can use these images to work out the average color
 
 How?
 
@@ -457,6 +457,12 @@ Note: and then we use our image primative and convert it into a regular image, c
 ##= Issue: 256
 Note: We have another issue tho. 
 
+256 is a special number in this domain. 
+
+you have a range of 256 integers to define each element of your RGB colour. 
+
+Also
+
 Pillow palettes are limited to 256 colours. 
 
 We have 100 colours in our Wool palette, so that's fine, we only define 100 colours, right? 
@@ -531,7 +537,13 @@ Color 1 and color 2 must be in a specific format here, but there are conversion 
 ~@ similar-top-floss2.png
 Note: checking all the permutations and sorting by the smallest number from this formula, we can see which colours are extremely similar. 
 
-What's super interesting here is when the flosses are super similar but have different numbers
+This table shows: the distance of the colours, then the code, hex color and color swatch for each strand. 
+
+I've sorted this table by distance descending, which is why we have two rows per comparison. 
+
+What this data shows is is super interesting. 
+
+There are multiple threads in the DMC set that, according to our source images, are nigh-indistinguishable. 
 
 ---
 
