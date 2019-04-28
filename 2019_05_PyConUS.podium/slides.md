@@ -158,7 +158,7 @@ class: title
 ### Python Imaging Library
 ---
 class: title
-## `getpixel((x,y))`
+## `Image.getpixel((x,y))`
 ---
 
 ![Image](images/getpixel/large_3x3-2.png)
@@ -176,20 +176,33 @@ If I have a 3x3 image, with 9 pixels, all different colours, we can use this as 
 
 the co-ordinate system in Pillow starts in the top left, and works it's way across and down
 ---
-.righthead[PIL.getpixel()]
-.right-image[![img](images/getpixel/large_3x3-4.png)]
+.righthead[Image.getpixel()]
+.right-image[![img](images/getpixel/large_3x3-4.png)<br>.center[.b[3x3.png]]]
 <BR>
+<pre><code class="bash">$ pip install pillow</code></pre>
+--
+<pre><code class="bash">$ python</code></pre>
+--
 <pre><code class="python">>>> from PIL import Image</code></pre>
 --
 <pre><code class="python">>>> im = Image.open("3x3.png")</code></pre>
 --
 <pre><code class="python">>>> im.getpixel((0,2))</code></pre>
 --
-<pre><code class="python">(255, 0, 0, 255)</code></pre>
+<pre><code class="python">(255, 0, 0)</code></pre>
 --
-<pre><code class="bash"># R .white[.] G.white[.] B .white[.] A</code></pre>
---
-<pre><code class="bash"><br># (0,2) == red .white[ . . . . . . ] --></code></pre>
+<pre><code class="bash"># R .white[.] G.white[.] B</code></pre>
+---
+.righthead[PIL.getpixel()]
+.right-image[![img](images/getpixel/large_3x3-4-highlight.png)<br>.center[.b[3x3.png]]]
+<BR>
+<pre><code class="bash">$ pip install pillow</code></pre>
+<pre><code class="bash">$ python</code></pre>
+<pre><code class="python">>>> from PIL import Image</code></pre>
+<pre><code class="python">>>> im = Image.open("3x3.png")</code></pre>
+<pre><code class="python">>>> im.getpixel((0,2))</code></pre>
+<pre><code class="python">(255, 0, 0)</code></pre>
+<pre><code class="bash"># R .white[.] G.white[.] B</code></pre>
 
 ???
 
@@ -232,7 +245,7 @@ background-image: url("images/dmc-rack.jpg")
 
 this stuff.
 
-If you're Australian, you'll find a setup like this in your local Spotlight or Lincraft. In America, think Michaels, or Hobby Lobby
+If you're Australian, you'll find a setup like this in your local Spotlight or Lincraft. In America, think Michaels, or Jo-anne.
 ---
 background-image: url("images/floss_macro.jpg")
 
@@ -249,28 +262,9 @@ However, they sell more than Floss
 background-image: url("images/wool_macro.jpg")
 ???
 
-they also sell wool. DMC Tapestry Wool is a thicker medium, and while I've been using the word "cross-stitch" so far, technically you can't really use it for Cross-stitch.
+they also sell wool. DMC Tapestry Wool is a thicker medium, and the one I prefer to work in.
 
-The physical medium of these thread is interesting.
----
-
-class: title
-# ⊠⊠⊠
-### Cross Stitch
-# ⧄⧄⧄
-### Half Stitch
-
-???
-
-if you have a very tight canvas; in cross-stitch you'll have say an Aida 14ct Cloth, to fill a square you would use, say, three ply of the floss in a cross-pattern. Complete this around your canvas, and you fill in all the gaps and create a complete image.
-
-With the wool, however, it's too thick to use 14ct. I personally work in 10ct canvas, and with this medium I can only use half-sttich. A single half-stitch fills the square, so it works at scale.
-
----
-
-background-image: url("images/wool_macro.jpg")
-
-???
+I prefer to work in it because, well, my eyesight is already going, and I prefer the chunky effect it has.
 
 but this is where the fun comes in.
 
@@ -343,7 +337,7 @@ It's 'proprietary information', colours can drift over time
 
 Indeed, it's recommended that you buy your threads from the same dyelot to ensure they are from the same manufactured batch.
 
-This mades sense. This is a company trade secret, from the 1800's.
+This mades sense. This is a company trade secret, from the 1700's.
 
 It could allow competitors to "steal" and cheaply reproduce the colours.
 ---
@@ -435,15 +429,17 @@ From here, we can download these images, and use them to work out the average co
 How?
 
 ---
-
 class: title
-## `getpixel((x,y))`
+# `pillow`
+---
+class: title
+## `ImageStat.Stat()`
 ---
 
-.righthead[PIL.getpixel()]
+.righthead[ImageStat.Stat()]
 .right-image[![img](images/486_e_7202_150x150.jpg)]
 <BR>
-<pre><code class="python">>>> from PIL import Image</code></pre>
+<pre><code class="python">>>> from PIL import Image, ImageStat</code></pre>
 --
 <pre><code class="python">>>> im = Image.open("486_e_7202_150x150.jpg")</code></pre>
 
@@ -454,22 +450,16 @@ we can import our image like before
 and then...
 
 --
-<pre><code class="python">>>> count, r, g, b = [0,0,0,0]</code></pre>
-<pre><code class="python">>>> for x in range(0, im.width):</code></pre>
-<pre><code class="python">>>> &nbsp; &nbsp; for y in range(0, im.height):</code></pre>
-<pre><code class="python">>>> &nbsp; &nbsp; &nbsp; &nbsp; i, j, k = im.getpixel((x, y))</code></pre>
+<pre><code class="python">>>> stats = ImageStat.Stat(im)</code></pre>
 --
-<pre><code class="python">>>> &nbsp; &nbsp; &nbsp; &nbsp; r += i; g += j; b += k;</code></pre>
-<pre><code class="python">>>> &nbsp; &nbsp; &nbsp; &nbsp; count += 1</code></pre>
+<pre><code class="python">>>> stats.median</code></pre>
 --
-<pre><code class="python">>>> print int(r/count), int(g/count), int(b/count)</code></pre>
---
-<pre><code class="python">(210, 138, 149)</code></pre>
+<pre><code class="python">[211, 139, 150]</code></pre>
 
 ---
 
 class: title
-## <span style="color: rgb(210, 138, 149); background-color: rgb(210, 138, 149); padding: 50px">....</span>
+## <span style="color: rgb(211, 139, 150); background-color: rgb(211, 139, 150); padding: 50px">....</span>
 ![Image](images/486_e_7202_150x150.jpg)
 
 ???
@@ -483,11 +473,7 @@ We can then get a list of color codes, and their aproxx rgb colors.
 
 This is useful for later.
 
-SO
-
-the third issue.
-
-
+New problem, tho.
 
 ---
 class: title
@@ -500,13 +486,13 @@ We have 100 wool colours to work with. So, we need to ensure that our source ima
 Thankfully, we can solve this problem with a little bit of python
 ---
 class: title
-## `pillow`
+# `pillow`
 ???
 
 pillow, again!
 ---
 class: title
-## `putpalette(data)`
+## `Image.putpalette(data)`
 
 ???
 
@@ -514,7 +500,7 @@ there's a tiny function in Pillow called `putpalette()` that's somewhat underdoc
 
 I'm including the code here as this is method that worked for me, and hopefully works for someone else.
 ---
-.righthead[PIL.putpalette()]
+.righthead[Image.putpalette()]
 <BR>
 <pre><code class="python">>>> def get_palette_image(palette):</code></pre>
 ???
@@ -533,6 +519,11 @@ That is, 256 triples of RGB values.
 --
 <pre><code class="python">>>> &nbsp; return image</code></pre>
 
+???
+
+What we're doing here is creating a new image, in the P mode. This means instead of the image having RGB values defineing the pixel, it uses palette indexes, which we're providing.
+
+
 ---
 .righthead[Image.im.convert()]
 <BR>
@@ -540,32 +531,49 @@ That is, 256 triples of RGB values.
 
 ???
 
-from there, we have to use the primative convert function to use our palette only.
+from here, we can set the palette of our original source image to the palette of the image we just created.
 
-This isn't a typo: there is a convert function ont he image object itself, but this is the C-level convert function. I haven't found a better way to do this functionality, although I do have some activity upstream in pillow to try and resolve this.
-
-You may have noticed another issue here, tho
 --
 
 <pre><code class="python">>>> palette_image = get_palette_image(palette)</code></pre>
+
+???
+
+we get our image from our previously defined function.
+
 --
 <pre><code class="python">>>> _im = im.im.convert("P", 0, palette_image.im)</code></pre>
+
+???
+
+then we convert our image to use the palette we're previously defined.
+
+(And yes, that's not a typo, we're having to use the primative convert version to force our palette in place. )
+
 --
+
 <pre><code class="python">>>> return im._new(_im).convert("RGB")</code></pre>
+
+???
+
+and then we use our image primative and convert it into a regular image, converting it back to RGB while re'we're at it.
+
 
 
 ---
 class: title
-## Problem: 256
+## Issue: 256
 ???
 
-pillow palette limited to 256 colours.
+We have another issue tho.
+
+Pillow palettes are limited to 256 colours.
 
 We have 100 colours in our Wool palette, so that's fine, we only define 100 colours, right?
 
 ---
 class: title
-## Problem: 256 exactly.
+## Issue: 256 exactly.
 ???
 
 Well, no.
@@ -581,7 +589,7 @@ The solution here is to always define exactly 256 colours. In my implementation,
 ---
 
 class: title
-## Problem: 256 only.
+## Issue: 256 only.
 
 ???
 
@@ -630,22 +638,28 @@ Perceptual uniformity, in a function of colour distance. The smaller the number,
 Fun fact - largely based on experience with automotive paint on smooth surfaces.
 
 And thankfully, because this is a fairly complex formula, we don't have to try and implement it ourselves, because it's already in scikit!
-
 ---
-.righthead[deltaE_ciede2000]
+class: title
+# `scikit-image`
+---
+class: title
+## `skimage.color.deltaE_ciede2000()`
+---
+.righthead[skimage.color.deltaE_ciede2000()]
 <br>
 <pre><code class="bash">$ pip install numpy scikit-image</code></pre>
 <pre><code class="bash">$ python</code></pre>
-<pre><code class="python">>>> from skimage.color<br>&nbsp; &nbsp; &nbsp;import deltaE_ciede2000</code></pre>
 --
-<pre><code class="python">>>> deltaE_ciede2000(color1, color2)</code></pre>
+<pre><code class="python">>>> from skimage.color import deltaE_ciede2000</code></pre>
+--
+<pre><code class="python">>>> deltaE_ciede2000( .. , .. )</code></pre>
 ???
 
 praise scikit
 
 Color 1 and color 2 must be in a specific format here, but there are conversion helps to get us from RGB
 ---
-background-image: url("images/similar-top-floss.png")
+background-image: url("images/similar-top-floss2.png")
 ???
 
 checking all the permutations and sorting by the smallest number from this formula, we can see which colours are extremely similar.
@@ -684,7 +698,6 @@ so with our color setting problem solved, we can move onto problem three. Charts
 
 How do I easily turn all this data into a nice, clear, zoomable, copyable, exportable image?
 
-
 ---
 
 class: title
@@ -703,96 +716,13 @@ And the results weren't what I wanted. It had weird fonts, I couldn't use unicod
 
 ---
 class: title
-## `html`
+# `html`
 
 ???
 
 turns out that's HTML
 
-I can build up a page using divs and spans, the odd table here and there, whatever CSS styling I want. Test it in chrome, and it's great.
-
-And if I need to create an image from that,
-
----
-
-class: title
-## `imgkit`
-### `wkhtmltopdf` wrapper
-
-???
-
-I can use the python package imgkit which is a nice pythonic wrapper around wkhtmltopdf, which can generate images from html.
-
-And that's great.
-
-Except for the CSS part.
-
----
-
-class: title
-## `imgkit`
-# class: title
-## w(eb)k(it)htmltopdf
-
-???
-
-See, imgkit uses a webkit converter.
-
-Chrome uses blink.
-
----
-
-class: title
-## `webkit` vs `blink`
-
-???
-
-Webkit and blink are the two biggest web rendering engines today. Blink was originally a fork of webkit, and a lot of folks are now migrating to one of the two implementations. In fact Microsoft Edge is now powered by Blink.
-
-
-For those who were around for the browser wars, and remember the hellscape that was cross-browser compatibility, having only two engines is great! Your code will work everywhere, right? They're basically the same engine, right?
-
-Well, heh, no.
-
-Turns out I found a few of those lovely edgecases where I can still get css to display differently in different browser.
-
----
-class: title
-## `box-shadow: inset 0 0 0 0.5px`
-
-???
-
-I was using this: an inset box shadow. What I thought this would do was allow me to have rows and rows of spans, each with their own inset half-pixel border, which meant when placed next to each other it'd be 1px total, making everything lineup nicely in rows and columns.
-
----
-
-class: title
-## ~~`box-shadow: inset 0 0 0 0.5px`~~
-
-???
-
-Turns out that no, this isn't the case. Both engines implement box-shadow inset, but they differ in their intepretation of what to do with sub-pixel borders.
-
-Blink works, and testing in Chrome my charts looked great.
-
-Webkit, Safari and the image generation section? Not so much. Webkit ignored this styling. Which was annoying.
-
-But I worked around it.
-
----
-
-class: title
-## `border-right: 1px solid black;`<br>`border-bottom: 1px solid black;`
-
-???
-
-With some terrible CSS hacks.
-
-This around every cell of the chart, then a border around the entire chart itself works.
-
-Mostly.
-
-But it works!
+I can build up a page using divs and spans, the odd table here and there, whatever CSS styling I want!
 
 ---
 
@@ -803,6 +733,26 @@ class: title
 
 but now, finally. I've solve the three problems.
 ---
+### "image manipulation"
+--
+
+### `Image.getpixel()`
+--
+
+### "colour setting"
+--
+
+### `ImageStat.Stat()`, `Image.putpalette()`, `skimage.color.deltaE_ciede2000()`
+
+--
+
+### "cross stitch charts"
+
+--
+
+### `html`
+
+---
 class: title
 ## Result
 
@@ -812,10 +762,21 @@ the result of solving all these problems is
 ---
 class: title
 ## `pip install ih`
+### github.com/glasnt/ih
 
 ???
 
 A pip-installable package called Ih
+
+Why is it called ih?
+
+Well, it's a cross-stitching app. There's a Disney movie called Lilo and Stitch. And There's a scene where Stitch is able to convince a a main character to change their mind by saying: "ih".
+
+Plus, it's a super short name that was available on the warehouse, so that's a good of a reason as anything.
+
+My work in progress for this project was called Experiment 626 for similar reasons.
+
+
 ---
 class: image-main
 ![Image](images/green_screenshot.png)
@@ -845,79 +806,47 @@ background-image: url("images/pycon-banner.png")
 The conference iconography for this year is pretty. Very pretty. And it has a distinct set of colours. Bold colours. .. We could cross-stitch this.
 
 ---
-
 class: middle, center, image
 ![Image](images/pyconlogo.jpg)
 
 ???
 
-the pycon twitter logo is a nice little square.. well circle.. representation of this ...
+The twitter logo is a pretty good consice image to work with.
 
-We can pass it through ih and get a chart.
+The image itself won't work well here. There's a graident going on, and it's a bit big.
 
-
----
-.righthead[ih]
-<br>
-<pre><code class="bash">$ ih pyconlogo.jpg</code></pre>
-???
-
-so we load up our chart.. and because it's so big..
----
-.righthead[ih]
-<br>
-<pre><code class="bash">$ ih pyconlogo.jpg -s6</code></pre>
-???
-
-we reduce the scale by 6 times
----
-.righthead[ih]
-<br>
-<pre><code class="bash">$ ih pyconlogo.jpg -s6 -c8</code></pre>
-???
-
-and we use ony 8 colours.
-
-AND WE GET
-
----
-
-background-image: url("images/pyconchart.png")
-
-???
-
-something that looks a little bit crap, to be honest.
----
-
-background-image: url("images/pyconchart-and-original.png")
-
-???
-
-the original logo has a gradient going on in the skyline, which doesn't work well.
-It's also the JPG uploaded to twitter, which has artefacts, which is being picked up.
-
-Unforunately my app is only as good as it's input data.
-
-So let's clean up that image.
-
+But I'm a fan of pixel art, so I can manually create pixel art based on this iamge.
 
 ---
 
 background-image: url("images/tinypycon10-border.png")
 ???
 
-I mean, I'm no Paul Robertson, but I think this is pretty good pixel art.
+I mean, I'm no Paul Robertson, but this is pretty close.
 
-If we throw this into our app
+We can take this image and throw it in `ih`.
+
+---
+.righthead[ih]
+<br>
+<pre><code class="bash">$ pip install ih</code></pre>
+--
+<pre><code class="bash">$ ih tinypycon.png</code></pre>
+--
+<pre><code class="bash">Result: tinypycon.html</code></pre>
+--
+<pre><code class="bash">$ open tinypycon.html</code></pre>
 
 ---
 background-image: url("images/tinychart.png")
 
 ???
 
-we get something quite good.
+And we get, a chart
 
-From there, I'm afraid it's a manual process.
+Then I go and stitch it
+
+And share the progress on my instagram story
 
 ---
 background-image: url("images/littletrees/pyconmini_1.png")
@@ -932,7 +861,7 @@ background-image: url("images/littletrees/pyconmini_5.png")
 ---
 background-image: url("images/littletrees/pyconmini_6.png")
 ---
-background-image: url("images/littletrees/pyconmini_7.png")
+background-image: url("images/littletrees/pyconmini_7a.png")
 
 ???
 
@@ -968,19 +897,18 @@ I mean I'm going to do some acroyoga later, at a tech conf. It's awesome.
 ANYWAY.
 
 ---
-
 class: title
-## `pip install ih`
+## pypi.org/project/ih
 ???
 
-the package is up on pypi now, but if CLIs aren't your style
+the package is up on the Warehouse now, but if CLIs aren't your style
 --
 
 ## ih-aas.glasnt.com
 
 ???
 
-I've got a hosted ih as a service also available.
+I've wrapped this up in a Docker container and hosted it for you on google cloud run
 
 ---
 background-image: url("images/ih-aas.png")
@@ -989,7 +917,7 @@ background-image: url("images/ih-aas.png")
 
 you can either give it a URL of an image with a bunch of parameters like the scale, or the colours to use; or you can upload an image.
 
-TODO - This is cloud run. Words here??
+If hosted stateless HTTP containers interests you, come talk to me afterwards.
 
 
 ---
@@ -1018,7 +946,7 @@ you can use the qrcode package, generate an image of the code, then pass that in
 
 
 ---
-background-image: url("images/wifi-mock2.png")
+background-image: url("images/wifi-.png")
 
 ???
 
@@ -1050,7 +978,7 @@ you can go to this URL and generate your own.
 ---
 
 class: title
-## `pip install ih`<br>ih-aas.glasnt.com<br>qr.glasnt.com
+## pypi.org/project/ih<br>ih-aas.glasnt.com<br>qr.glasnt.com
 
 ![Image](images/footer.svg)
 

@@ -447,11 +447,12 @@ Added: Zenburn, mostly.
     font-family: "PT Sans" !important; 
     background-color: white;
     color: grey;
+    content: "@glasnt";
     padding: 10px; 
     font-size: 18pt;
     position: absolute;
-    bottom: 16px;
-    right: 24px;
+    top: 16px;
+    left: 24px;
     opacity: 0.9;
 }
 
@@ -473,3 +474,4 @@ Added: Zenburn, mostly.
 .paddown { padding-top: 20px }
 .right-image { float: right; max-width: 400px; padding: 20px;} 
 .white a { color: white }
+.b { font-weight: bold; }
