@@ -457,45 +457,58 @@ Note: pillow, again!
 ---
 ##= `Image.putpalette(data)`
 
-Note: there's a tiny function in Pillow called `putpalette()` that's somewhat underdocumented. 
+Note: there's a tiny function in Pillow called `putpalette()` that's somewhat underdocumented, but this works for me in Pillow 6.0 
 
-I'm including the code here as this is method that worked for me, and hopefully works for someone else.  
 ---
 $$# Image.putpalette()
 <BR>
 sh $ python
 py >>> from PIL import Image
-Note: we have to define a palette. Do do that, we have to set the palette on a new image. 
+Note: So
+
+From our fresh terminal, we first have to define the palette. 
 
 The data in this case is a list of 768 integers. 
 
 That is, 256 triples of RGB values. 
 --
-py- >>> data = [0,0,0, 255,255,255, ... ] # len(data) == 768
-py- >>> image = Image.new("P", (16, 16))
-py >>> image.putpalette(data)
+py >>> data = [0,0,0, 255,255,255, ... ] # len(data) == 768
 
-Note: What we're doing here is creating a new image, in the P mode. This means instead of the image having RGB values defineing the pixel, it uses palette indexes, which we're providing. 
+Note: so we define this list
+
+
+--
+py >>> palette = Image.new("P", (1,1))
+
+
+Note: then we create a new image object, defining the mode of P for palette
+
+This mode allows us to define our own palette of colours we want to use.  
+
+--
+py >>> palette.putpalette(data)
+
+Note: we then use our defined data as our palette. 
+
+From here, we need to load our source image, change it's palette to the one we've defined, and save it. 
 
 --
 py >>> im = Image.open("source.png")
 
-Note: from here, we can set the palette of our original source image to the palette of the image we just created.  
+Note: So, open the image from file
 
 --
 
-py >>> palette_image = get_palette_image(palette)
+py >>> _im = im.im.convert("P", 0, palette.im)
 
-Note: we get our image from our previously defined function. 
+Note: Then convert it. 
 
---
-py >>> _im = im.im.convert("P", 0, palette_image.im)
 
-Note: then we convert our image to use the palette we're previously defined. 
-
-That's not a typo
+The reason we're doing it this way because of how the pillow API works. 
 
 the publc interface doesn't expose all the features of the lower level interface
+
+because of this, this convert method is C level, and we need to provide our palette as an argument, which is why we couldn't do all this all in one step
 
 
 --
@@ -503,6 +516,11 @@ the publc interface doesn't expose all the features of the lower level interface
 py >>> im = im._new(_im).convert("RGB")
 
 Note: finally, we need to re-establish our image as an object of the high level image type, converting the palette back to RGB (thus removing our palette pointers and allowing us to reference the raw RGB values, as we were doing previously with our getpixel function)
+
+
+. . . 
+
+This might be a bit convoluted, but I've found this method works for what I need to do.
 
 ---
 ## <br><BR><BR><BR> Issue: 256

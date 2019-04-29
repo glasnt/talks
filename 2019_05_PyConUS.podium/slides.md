@@ -550,9 +550,8 @@ class: title
 
 ???
 
-there's a tiny function in Pillow called `putpalette()` that's somewhat underdocumented.
+there's a tiny function in Pillow called `putpalette()` that's somewhat underdocumented, but this works for me in Pillow 6.0
 
-I'm including the code here as this is method that worked for me, and hopefully works for someone else.
 ---
 .righthead[Image.putpalette()]
 <BR>
@@ -560,47 +559,61 @@ I'm including the code here as this is method that worked for me, and hopefully 
 <pre><code class="python">>>> from PIL import Image</code></pre>
 ???
 
-we have to define a palette. Do do that, we have to set the palette on a new image.
+So
+
+From our fresh terminal, we first have to define the palette.
 
 The data in this case is a list of 768 integers.
 
 That is, 256 triples of RGB values.
 --
 <pre><code class="python">>>> data = [0,0,0, 255,255,255, ... ] # len(data) == 768</code></pre>
---
-<pre><code class="python">>>> image = Image.new("P", (16, 16))</code></pre>
---
-<pre><code class="python">>>> image.putpalette(data)</code></pre>
 
 ???
 
-What we're doing here is creating a new image, in the P mode. This means instead of the image having RGB values defineing the pixel, it uses palette indexes, which we're providing.
+so we define this list
+
+
+--
+<pre><code class="python">>>> palette = Image.new("P", (1,1))</code></pre>
+
+
+???
+
+then we create a new image object, defining the mode of P for palette
+
+This mode allows us to define our own palette of colours we want to use.
+
+--
+<pre><code class="python">>>> palette.putpalette(data)</code></pre>
+
+???
+
+we then use our defined data as our palette.
+
+From here, we need to load our source image, change it's palette to the one we've defined, and save it.
 
 --
 <pre><code class="python">>>> im = Image.open("source.png")</code></pre>
 
 ???
 
-from here, we can set the palette of our original source image to the palette of the image we just created.
+So, open the image from file
 
 --
 
-<pre><code class="python">>>> palette_image = get_palette_image(palette)</code></pre>
+<pre><code class="python">>>> _im = im.im.convert("P", 0, palette.im)</code></pre>
 
 ???
 
-we get our image from our previously defined function.
+Then convert it.
 
---
-<pre><code class="python">>>> _im = im.im.convert("P", 0, palette_image.im)</code></pre>
 
-???
-
-then we convert our image to use the palette we're previously defined.
-
-That's not a typo
+The reason we're doing it this way because of how the pillow API works.
 
 the publc interface doesn't expose all the features of the lower level interface
+
+because of this, this convert method is C level, and we need to provide our palette as an argument, which is why we couldn't do all this all in one step
 
 
 --
@@ -610,6 +623,11 @@ the publc interface doesn't expose all the features of the lower level interface
 ???
 
 finally, we need to re-establish our image as an object of the high level image type, converting the palette back to RGB (thus removing our palette pointers and allowing us to reference the raw RGB values, as we were doing previously with our getpixel function)
+
+
+. . .
+
+This might be a bit convoluted, but I've found this method works for what I need to do.
 
 ---
 ## <br><BR><BR><BR> Issue: 256
