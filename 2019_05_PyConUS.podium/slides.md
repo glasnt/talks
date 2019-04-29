@@ -180,7 +180,7 @@ which does pretty much what it says on the tin
 ### 3x3.png
 ???
 
-If I have a 3x3 image, with 9 pixels, all different colours, we can use this as a solid testing platform for testing getpixel
+If I have a 3x3 image (on extreme zoom here) with 9 pixels, all different colours, we can use this as a solid testing platform for testing getpixel
 
 ---
 
@@ -310,7 +310,9 @@ There is a guide-only cross-compatibility chart you can find, but it's abslutely
 
 So there is a way to roughly translate between the different mediums.
 
-This is useful if we are working with charts that only define the floss colours.
+**This is useful if we are working with charts that only define the floss colours.**
+
+*If we're creating new charts, we don't care as much*
 
 But we start to see a problem here of missing colours between the two medium
 
@@ -325,7 +327,7 @@ As a matter of numbers, there's on average about a 3 to 2 ratio of floss to wool
 
 ???
 
-However, we're working with computers here. We can't use arbirary codes, we need RGB values. `
+However, we're working with computers here. We can't use arbirary codes, we need RGB values.
 
 --
 
