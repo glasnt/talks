@@ -31,7 +31,7 @@ There were talks about: bread, choirs, and me, about cross-stitching
 
 ---
 
-background-image: url("images/green_display.jpg")
+background-image: url("images/green_display_43.jpg")
 
 ???
 
@@ -48,7 +48,8 @@ background-image: url("images/pokebros.gif")
 the original artwork was created by a pixel artist from Melbourne, Paul Robertson. He's known for his work on things like the Scott Pilgrim vs the World game, Mercenary Kings, and the videoclip for Architecture in Helsinki's Do the Whirlwind.
 
 ---
-background-image: url("images/pokebros_green.gif")
+class: middle, center, image
+![Image](images/pokebros_green.gif)
 .footnotes[[Grass Bros](https://www.instagram.com/p/BjDpt4cFhh6/), Paul Robertson, 2011]
 
 ???
@@ -67,7 +68,7 @@ Each cell has a colour and a symbol which maps to a specific thread colour.
 
 ---
 
-background-image: url("images/green_working.jpg")
+background-image: url("images/green_working_169.jpg")
 
 ???
 
@@ -75,7 +76,7 @@ you then take that design, that chart, that graph, whatever you wish to call it,
 
 ---
 
-background-image: url("images/green_lynn.jpg")
+background-image: url("images/green_lynn_169.jpg")
 
 .white[.footnotes[[Mike Pirnat](https://www.flickr.com/photos/mikepirnat/34782968461/in/photostream/)]]
 
@@ -254,14 +255,14 @@ Not to be confused with the hiphop group.
 
 When I talk about DMC, I mean
 ---
-background-image: url("images/dmc-rack.jpg")
+background-image: url("images/dmc-rack_169.jpg")
 ???
 
 this stuff.
 
 If you're Australian, you'll find a setup like this in your local Spotlight or Lincraft. In America, think Michaels, or Jo-anne.
 ---
-background-image: url("images/floss_macro.jpg")
+background-image: url("images/floss_macro_169.jpg")
 
 ???
 
@@ -273,7 +274,7 @@ Most pre-made cross-stitch charts and software will refer to DMC as the floss on
 
 However, they sell more than Floss
 ---
-background-image: url("images/wool_macro.jpg")
+background-image: url("images/wool_macro_169.jpg")
 ???
 
 they also sell wool. DMC Tapestry Wool is a thicker medium, and the one I prefer to work in.
@@ -467,10 +468,16 @@ and then...
 <pre><code class="python">[211, 139, 150]</code></pre>
 
 ---
+.righthead[ImageStat.Stat()]
+.right-image[![img](images/486_e_7202_150x150.jpg)<br><span style="color: rgb(211, 139, 150); background-color: rgb(211, 139, 150); ">. . . . . . . . . . . .<br>. . . . . . . . . . . .<br>. . . . . . . . . . . .<br>. . . . . . . . . . . .<br></span>]
+.footnotes[[thread-bare.com](https://www.thread-bare.com/2017/09/20/creating-cross-stitch-charts-with-consistent-colors)]
+<BR>
+<pre><code class="python">>>> from PIL import Image, ImageStat</code></pre>
+<pre><code class="python">>>> im = Image.open("486_e_7202_150x150.jpg")</code></pre>
+<pre><code class="python">>>> stats = ImageStat.Stat(im)</code></pre>
+<pre><code class="python">>>> stats.median</code></pre>
+<pre><code class="python">[211, 139, 150]</code></pre>
 
-class: title
-## <span style="color: rgb(211, 139, 150); background-color: rgb(211, 139, 150); padding: 50px">....</span>
-![Image](images/486_e_7202_150x150.jpg)
 .footnotes[[thread-bare.com](https://www.thread-bare.com/2017/09/20/creating-cross-stitch-charts-with-consistent-colors)]
 
 ???
@@ -943,7 +950,11 @@ I've wrapped this up in a Docker container and hosted it for you on google cloud
 
 ???
 
-you can either give it a URL of an image with a bunch of parameters like the scale, or the colours to use; or you can upload an image.
+you can either give it a URL of an image with a bunch of parameters like the scale, or the colours to use
+
+You can also ask it to render the result for you.
+
+Semi-transparent PNG images, let the colour partially through.
 
 If hosted stateless HTTP containers interests you, come talk to me afterwards.
 

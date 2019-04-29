@@ -27,7 +27,7 @@ There were talks about: bread, choirs, and me, about cross-stitching
 
 ---
 
-~@ green_display.jpg
+~@ green_display_43.jpg
 
 Note: I was talking about this cross-stitch I made
 
@@ -40,7 +40,7 @@ Note: I was talking about this cross-stitch I made
 Note: the original artwork was created by a pixel artist from Melbourne, Paul Robertson. He's known for his work on things like the Scott Pilgrim vs the World game, Mercenary Kings, and the videoclip for Architecture in Helsinki's Do the Whirlwind. 
 
 ---
-~@ pokebros_green.gif
+@= pokebros_green.gif
 .footnotes[[Grass Bros](https://www.instagram.com/p/BjDpt4cFhh6/), Paul Robertson, 2011]
 
 Note: Pixel art, especially those with distinct colour palettes, map really well to cross-stitching
@@ -55,13 +55,13 @@ Each cell has a colour and a symbol which maps to a specific thread colour.
 
 ---
 
-~@ green_working.jpg
+~@ green_working_169.jpg
 
 Note: you then take that design, that chart, that graph, whatever you wish to call it, and one by one fill in the pattern onto your fabric, or canvas. 
 
 ---
 
-~@ green_lynn.jpg
+~@ green_lynn_169.jpg
 
 .white[.footnotes[[Mike Pirnat](https://www.flickr.com/photos/mikepirnat/34782968461/in/photostream/)]]
 
@@ -206,12 +206,12 @@ Not to be confused with the hiphop group.
 
 When I talk about DMC, I mean 
 ---
-~@ dmc-rack.jpg
+~@ dmc-rack_169.jpg
 Note: this stuff. 
 
 If you're Australian, you'll find a setup like this in your local Spotlight or Lincraft. In America, think Michaels, or Jo-anne.
 ---
-~@ floss_macro.jpg
+~@ floss_macro_169.jpg
 
 Note: this is the DMC Floss, floss like the stuff you use to get food out from between yur teeth. 
 
@@ -221,7 +221,7 @@ Most pre-made cross-stitch charts and software will refer to DMC as the floss on
 
 However, they sell more than Floss
 ---
-~@ wool_macro.jpg
+~@ wool_macro_169.jpg
 Note: they also sell wool. DMC Tapestry Wool is a thicker medium, and the one I prefer to work in. 
 
 I prefer to work in it because, well, my eyesight is already going, and I prefer the chunky effect it has. 
@@ -387,9 +387,16 @@ py- >>> stats.median
 py [211, 139, 150]
 
 ---
+$$# ImageStat.Stat()
+.right-image[![img](images/486_e_7202_150x150.jpg)<br><span style="color: rgb(211, 139, 150); background-color: rgb(211, 139, 150); ">. . . . . . . .  . . .  .<br>. . . . . . . .  . . .  .<br>. . . . . . . .  . . .  .<br>. . . . . . . .  . . .  .<br></span>]
+.footnotes[[thread-bare.com](https://www.thread-bare.com/2017/09/20/creating-cross-stitch-charts-with-consistent-colors)]
+<BR>
+py >>> from PIL import Image, ImageStat
+py >>> im = Image.open("486_e_7202_150x150.jpg")
+py >>> stats = ImageStat.Stat(im)
+py >>> stats.median
+py [211, 139, 150]
 
-##= <span style="color: rgb(211, 139, 150); background-color: rgb(211, 139, 150); padding: 50px">....</span>
-@ 486_e_7202_150x150.jpg
 .footnotes[[thread-bare.com](https://www.thread-bare.com/2017/09/20/creating-cross-stitch-charts-with-consistent-colors)]
 
 Note: I mean, I guess this is pretty close?
@@ -761,7 +768,11 @@ Note: I've wrapped this up in a Docker container and hosted it for you on google
 ## ih-aas.glasnt.com
 @ ih-aas2.png
 
-Note: you can either give it a URL of an image with a bunch of parameters like the scale, or the colours to use; or you can upload an image. 
+Note: you can either give it a URL of an image with a bunch of parameters like the scale, or the colours to use
+
+You can also ask it to render the result for you. 
+
+Semi-transparent PNG images, let the colour partially through.  
 
 If hosted stateless HTTP containers interests you, come talk to me afterwards. 
 
