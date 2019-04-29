@@ -310,7 +310,9 @@ There is a guide-only cross-compatibility chart you can find, but it's abslutely
 
 So there is a way to roughly translate between the different mediums.
 
-But we start to see a problem here of missing colours.
+This is useful if we are working with charts that only define the floss colours.
+
+But we start to see a problem here of missing colours between the two medium
 
 For the Cranberry series, there are 6 available floss threads, but only four wool. And in this picture, my local craft-store was even completely out of one of the wool skeins.
 
@@ -318,25 +320,25 @@ This out of stock issue will come up later.
 
 As a matter of numbers, there's on average about a 3 to 2 ratio of floss to wool mappings.
 
+
 ---
 
-## <br><BR><br> Floss → Wool ✓*
 ???
 
-so, we can, mostly, convert a floss thread to it's wool equiv. That's great.
+However, we're working with computers here. We can't use arbirary codes, we need RGB values. `
 
-But we're working with computers. Pillow can get us RGB values
 --
 
+class: title
 ## DMC → RGB ??
 
 ???
 
-so how can we
+so how can we get the RGB values for FLOSS, OR for WOOL
 
 ---
 class: title
-# No official mapping exists
+# No DMC → RGB mapping exists.
 ### 'proprietary information'
 .footnotes[[thread-bare.com](https://www.thread-bare.com/2017/09/20/creating-cross-stitch-charts-with-consistent-colors)]
 ???
@@ -484,22 +486,54 @@ and then...
 
 I mean, I guess this is pretty close?
 
-But if we repeat this cross all the images we have access to, we can at least process them all in the same way.
+We can then go through all the images on the website, perform this analysis, and get a workable RGB palette.
 
+For visualisation, I used a matplotlib 3d scatter chart, with red, green and blue on each axis.
 
-We can then get a list of color codes, and their aproxx rgb colors.
+And mapped the palettes.
 
-This is useful for later.
+---
 
-New problem, tho.
+background-image: url("images/DMCFloss.png")
+
+???
+LIVE - FLIP BETWEEN
+> Such gaps, much limitation.
+
+. . .
+
+so we have our RGB palettes.
+
+Here in Floss
+
+---
+
+background-image: url("images/DMCWool.png")
+
+???
+
+LIVE - FLIP BETWEEN
+> Such gaps, much limitation.
+
+. . .
+
+And here in wool
+
+TODO - switch between the two screens to show differences
+YAY
+
+New problem.
+
 
 ---
 class: title
-## Reducing picture to only available colours
+## Problem 2a:<br>Reducing picture to only available colours
 
 ???
 
 We have 100 wool colours to work with. So, we need to ensure that our source images only use these colours
+
+This is a physical limitation problem. We have to physically go buy the colours we need, so we need to limit our source image to only the colours we can use.
 
 Thankfully, we can solve this problem with a little bit of python
 ---
@@ -520,7 +554,8 @@ I'm including the code here as this is method that worked for me, and hopefully 
 ---
 .righthead[Image.putpalette()]
 <BR>
-<pre><code class="python">>>> def get_palette_image(palette):</code></pre>
+<pre><code class="bash">$ python</code></pre>
+<pre><code class="python">>>> from PIL import Image</code></pre>
 ???
 
 we have to define a palette. Do do that, we have to set the palette on a new image.
@@ -529,22 +564,17 @@ The data in this case is a list of 768 integers.
 
 That is, 256 triples of RGB values.
 --
-<pre><code class="python">>>> &nbsp; data = # [ .. ]</code></pre>
+<pre><code class="python">>>> data = [0,0,0, 255,255,255, ... ] # len(data) == 768</code></pre>
 --
-<pre><code class="python">>>> &nbsp; image = Image.new("P", (16, 16))</code></pre>
+<pre><code class="python">>>> image = Image.new("P", (16, 16))</code></pre>
 --
-<pre><code class="python">>>> &nbsp; image.putpalette(data)</code></pre>
---
-<pre><code class="python">>>> &nbsp; return image</code></pre>
+<pre><code class="python">>>> image.putpalette(data)</code></pre>
 
 ???
 
 What we're doing here is creating a new image, in the P mode. This means instead of the image having RGB values defineing the pixel, it uses palette indexes, which we're providing.
 
-
----
-.righthead[Image.im.convert()]
-<BR>
+--
 <pre><code class="python">>>> im = Image.open("source.png")</code></pre>
 
 ???
@@ -573,17 +603,14 @@ the publc interface doesn't expose all the features of the lower level interface
 
 --
 
-<pre><code class="python">>>> return im._new(_im).convert("RGB")</code></pre>
+<pre><code class="python">>>> im = im._new(_im).convert("RGB")</code></pre>
 
 ???
 
-and then we use our image primative and convert it into a regular image, converting it back to RGB while re'we're at it.
-
-
+finally, we need to re-establish our image as an object of the high level image type, converting the palette back to RGB (thus removing our palette pointers and allowing us to reference the raw RGB values, as we were doing previously with our getpixel function)
 
 ---
-class: title
-## Issue: 256
+## <br><BR><BR><BR> Issue: 256
 ???
 
 We have another issue tho.
@@ -599,8 +626,8 @@ Pillow palettes are limited to 256 colours.
 We have 100 colours in our Wool palette, so that's fine, we only define 100 colours, right?
 
 ---
-class: title
-## Issue: 256 exactly.
+## <br><BR><BR><br>Issue: 256 exactly.
+### .grey[.code[len(data) == 768]]
 ???
 
 Well, no.
@@ -615,8 +642,7 @@ The solution here is to always define exactly 256 colours. In my implementation,
 
 ---
 
-class: title
-## Issue: 256 only.
+## <br><BR><BR><BR> Issue: 256 only.
 
 ???
 
@@ -723,6 +749,29 @@ So I took the 489 floss colours, and remove one of each of the similar pairs unt
 Again, not the best solution in the world, but as I've said, I have reasons.
 
 ---
+
+background-image: url("images/DMCFloss.png")
+
+???
+
+>> NOT THAT MUCH DIFFERENCE
+
+so before we have our full palette
+
+---
+
+background-image: url("images/ReducedDMCFloss.png")
+
+???
+
+>> NOT THAT MUCH DIFFERENCE
+
+and here is our reduced palette.
+
+TODO flip between the two
+
+
+---
 class: title
 ## Problem 3:<br>Cross-stitch charts
 
@@ -796,7 +845,6 @@ the result of solving all these problems is
 ---
 class: title
 ## `pip install ih`
-### github.com/glasnt/ih
 
 ???
 
@@ -813,13 +861,15 @@ My work in progress for this project was called Experiment 626 for similar reaso
 
 ---
 class: image-main
-![Image](images/green_screenshot.png)
+![Image](images/green_screenshot_2.png)
 
 ???
 
 I can now generate a chart that looks exceedingly similar
 
 it also has some good features that I like, including giving me the actual amount of stitches.
+
+And having *blanc* always use the smallest symbol on the chart.
 
 ---
 class: title
@@ -868,11 +918,9 @@ We can take this image and throw it in `ih`.
 <pre><code class="bash">$ ih tinypycon.png</code></pre>
 --
 <pre><code class="bash">Result: tinypycon.html</code></pre>
---
-<pre><code class="bash">$ open tinypycon.html</code></pre>
 
 ---
-background-image: url("images/tinychart.png")
+background-image: url("images/tinychart2.png")
 
 ???
 
