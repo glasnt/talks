@@ -1,3 +1,21 @@
+- conference: 
+    name: PyCon US
+    date: 2019-05-01
+    link: https://us.pycon.org/2019/
+    location: Cleveland, OH
+    talks: 
+       - name: "A Right Stitch-up: Creating embroidery patterns with Pillow"
+         link: https://us.pycon.org/2019/schedule/presentation/229/
+         slides: 2019_05_PyConUS.podium
+         twitter: https://twitter.com/treyhunner/status/1124331430081957889 
+         video: https://www.youtube.com/watch?v=Fllch-WwzWM
+       - name: Wrangling Enthusiastic Hordes (Maintainer's Summit)
+         link: https://us.pycon.org/2019/hatchery/maintainers/
+         slides: 2019_05_MaintainersSummit
+       - name: I am the very model of a PyCon AU CFP
+         video: https://youtu.be/bnxxoTx9Sko?t=1856
+         twitter: https://twitter.com/glasnt/status/1125027351996313600
+
 - conference:
     name: PyCascades
     date: 2019-02-23
