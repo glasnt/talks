@@ -7,7 +7,7 @@
        - name: "How Python Can Excel"
          link: https://th.pycon.org/en/#keynotes
          slides: 2019_06_PyConTH.podium
-         resources: 2019_06_PyConTH.podium/resources.md
+         resources: https://github.com/glasnt/talks/blob/gh-pages/2019_06_PyConTH.podium/resources.md
 
 - conference: 
     name: PyCon
