@@ -1,5 +1,16 @@
 - conference: 
-    name: PyCon US
+    name: PyCon Thailand
+    date: 2019-06-16
+    link: https://twitter.com/shaysler/status/1136680378398171136
+    location: Bangkok, Thailand
+    talks: 
+       - name: "How Python Can Excel"
+         link: https://th.pycon.org/en/#keynotes
+         slides: 2019_06_PyConTH.podium
+         resources: 2019_06_PyConTH.podium/resources.md
+
+- conference: 
+    name: PyCon
     date: 2019-05-01
     link: https://us.pycon.org/2019/
     location: Cleveland, OH

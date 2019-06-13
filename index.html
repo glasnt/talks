@@ -5,7 +5,7 @@ layout: page
   <div class="section">
     <div class="container">
       <h2>Talk history</h2>
-      <h4>🇦🇺 🇳🇿 🇭🇺 🇺🇸 🇬🇧 🇩🇪 🇹🇼</h4>
+      <h4>🇦🇺 🇳🇿 🇭🇺 🇺🇸 🇬🇧 🇩🇪 🇹🇼 🇹🇭</h4>
 
         {% assign talk_total = 0 %}
         {% for c in site.data.talks %}
@@ -41,6 +41,7 @@ layout: page
                   {% if talk.video %} <a href="{{talk.video}}">Video</a>{% endif %}
                   {% if talk.twitter %} <a href="{{talk.twitter}}">Twitter</a>{% endif %}
                   {% if talk.transcript %} <a href="{{talk.transcript}}">Transcript</a>{% endif %}
+                  {% if talk.resources %} <a href="{{talk.resources}}">Resources</a>{% endif %}
                   {% if talk.feedback %} <a href="{{talk.feedback}}">Feedback</a>{% endif %}
                   {% if talk.article %} <a href="{{talk.article}}">Article</a>{% endif %}
                   {% if talk.photo %} <a href="{{talk.photo}}">Photo</a>{% endif %}

@@ -1,0 +1,231 @@
+#= <br>How Python Can Excel
+## PyCon Thailand 2019
+@ footer.png
+
+Note: 
+
+FULL SCREEN ME! 
+
+⌘  + P
+
+Monitors wrong? ⌘ + TAB
+---
+
+! wave
+
+Note: Hi! I'm Katie
+
+---
+
+! thankyou
+
+Note: Thank you so much for inviting me to close your conference. 
+
+---
+
+#= TODO INSERT MORE
+---
+
+
+#= 👩🏾‍🔬👩🏼‍🏫👩🏻‍🎨👩🏽‍🚀
+
+
+---
+
+#= TODO: following is draft
+
+---
+
+#= How Python Can Excel
+
+Note: this talk title is a pun. 
+
+Let me explain. 
+
+---
+
+#= How .pb[Python] Can .eg[Excel]
+
+---
+
+#= .in[How .w[ . . ] ![](images/python.png) .w[. .] Can .eg[Excel]]
+
+Note: python relates to Python, which is sort of obvious. 
+
+
+TODO -- "I'll get back to this"
+---
+#= .in[How .w[ . . ] ![](images/python.png) .w[. .] Can .w[. ] ![](images/excel.png) .w[.]]
+
+---
+
+! python.png | aproxx.png | excel.png 
+
+Note: Python should be as 'go-to' as Excel. You shouldn't have to think. 
+
+---
+! excel.png | sheets.png | numbers.png | openoffice.png
+
+Note: substitute your preferred spreadsheet here. 
+---
+
+! space | excel.png | flex.png | space
+
+Note: Excel is powerful as heck
+
+---
+! technologist.png | aproxx.png | space | two | five | m
+
+.footnotes[[Source](https://evansdata.com/reports/viewRelease.php?reportID=9)]
+
+Note: Recent estimates
+
+25 million software developers. 
+
+---
+
+
+
+! excel.png | aproxx.png | eight | zero | zero | m
+
+.footnotes[[Source](https://medium.com/grid-spreadsheets-run-the-world/excel-vs-google-sheets-usage-nature-and-numbers-9dfa5d1cadbd)]
+---
+
+! three | two | x
+
+Note: thirty two times the amount
+
+---
+
+##= We are .p[humans]<br>working with .p[humans]<br>to develop software<br>for the benefit of .p[humans].
+
+.footnotes[[humanedevelopment.org](http://humanedevelopment.org)]
+---
+
+@^ empathy-talk.png
+
+.footnotes[[youtube.com](https://www.youtube.com/watch?v=yeBpknHjyGo) | [erni.io](https://ernie.io/2016/03/15/talk-humane-development-empathy-unpacked/) .w[. . . . . . ]]
+
+---
+
+~@ woman_sad.jpg
+
+Note: He gave an example of a user experience 
+
+word count - copying into word itself, instead of using wordpress
+
+so he fixed it
+
+---
+
+~@ woman_happy.jpg
+
+Note: and that one bit of empathy
+
+helped that one user
+
+so much
+
+**THINK ABOUT A TIME** you did the same. 
+
+I'll tell you some of mine. 
+
+---
+
+~@ office_169.jpg
+
+Note: User wanted me to build them an app
+
+Show part of a video, pause, then allow them to ask the group for an answer, then show the answer
+
+that was just powerpoint. 
+
+---
+
+~@ presentation_169.jpg
+
+Note: another one
+
+a group giving a talk at a conference
+
+expressing their frustrations at the limitations of a piece of software
+
+after the talk, half a dozen people came up to tell them the answer. 
+
+
+---
+
+# TODO
+
+---
+
+
+~@ blackhole_169.jpg
+
+Note: Remember that image from a few months ago?
+
+---
+
+~@ drkatie-joy.png
+
+Note: Doctor katie Bouman ("bow-mn") 
+
+---
+
+# TODO - TED TALK
+## https://www.youtube.com/watch?v=BIvezCVcsYs
+---
+
+@^ eht-imaging.png
+
+.footnotes[[github.com/achael/eht-imaging](https://github.com/achael/eht-imaging)]
+
+Note: the code is open source
+---
+
+@^ eht-imaging-python.png
+.footnotes[[github.com/achael/eht-imaging](https://github.com/achael/eht-imaging)]
+
+Note: the code is 100% python
+
+---
+
+@^ empathy-talk.png
+
+Note: fun aside about this talk
+---
+
+@^ rubyconfau-2016.png
+
+Note: talk given at rubyconfau 2016
+---
+
+@^ rubyconfau-2017.png
+Note: I headlined the next year. 
+TODO - I now get to work with Aja. SQUEE
+---
+TODO
+
+we don't scale
+
+example from: 
+ - leigh, powerpoint
+ - sawdap, excel colours
+
+empower users
+
+e.g. astropy
+
+
+datasette
+
+---
+
+! space | thanks.png | space
+
+@ footer.png
+
+Note: 
+Thank you all for your time~!
+
+
