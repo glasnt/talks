@@ -644,14 +644,14 @@ There are so many places that are teaching kids to code
 ---
 
 class: middle, center, image
-![Image](images/grok_codeclub.png)
+![Image](images/grok_codeclub_dojo.png)
 ???
 
 Grok Learning for one is a Sydney-based platform that has taught thousands of students across Australia to program.
 
 And Code Clubs exist through out the world, giving students ages 9 to 13 the opportunity to learn to code.
 
-NOTE - dropped girlswhodev (not for children)
+There is also Coderdojo which has multiple local dojos, as we heard in the lightnig talks yesteday.
 
 ---
 class: title
