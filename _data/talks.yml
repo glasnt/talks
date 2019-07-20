@@ -1,3 +1,13 @@
+- conference:
+    name: Django Chat
+    date: 2019-07-04
+    link: https://twitter.com/ChatDjango
+    talks:
+      - link: https://djangochat.com/#ep19
+        type: Podcast
+        name: Katie McLaughlin
+        twitter: https://twitter.com/glasnt/status/1146558903997460481
+
 - conference: 
     name: PyCon Thailand
     date: 2019-06-16
