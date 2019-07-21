@@ -1,0 +1,10 @@
+- talk:
+    title: Turning 'wat' into 'why'
+    abstract: Take a trip through a dozen different programming languages and understand the 'why' behind the 'wat'.
+    description: |
+
+        Programming languages are repeatedly touted to have strange edge cases. Footguns. Wats. The [canonical ‘wat’ talk](https://www.destroyallsoftware.com/talks/wat) shows some of these for Ruby and JavaScript, but doesn’t go into any detail into the ‘why’
+
+        In this talk, take a tour through a multitude of programming languages; and see not only the ‘wat’, but the ‘why’: is it a misunderstanding based on an assumption from another programming language? A compiler optimisation? A known bug that can’t be fixed due to backward compatibility concerns?
+
+        Attendees will come away from this talk with a greater understanding about how to turn a ‘wat’ into a ‘why’.

@@ -1,0 +1,33 @@
+---
+title: Portfolio
+layout: page 
+---
+
+<div class="section">
+    <div class="container">
+      <p><a href="https://glasnt.com/talks">&lt; Back to /talks</a></p>
+
+      <h2>Ready-made talks</h2>
+    
+      {% for t in site.data.readymade %}
+        {% include portfolio-node.html %}
+      {% endfor%}
+
+      <h2>Made-to-order talks</h2>
+      <div class="row"><div class="twelve columns"><i>Talks in this category are presented with the most up-to-date information on the topic as possible, and thus take more time to prepare</i></div></div>
+      <br>
+    
+      {% for t in site.data.madetoorder %}
+        {% include portfolio-node.html %}
+      {% endfor%}
+      <div class="row"><div class="twelve columns">Do any of these talks sound like something you would like to have for your conference? <a href="mailto:katie@glasnt.com?subject=Please come speak at our awesome event?">Get in touch!</a></div></div>
+      <hr>
+      <div class="row">
+        <p>All slides are hosted on <a href="https://github.com/glasnt/talks">GitHub</a>. See also: <a href="http://pyvideo.org/speaker/katie-mclaughlin.html">pyvideo profile</a>
+<br>
+        <a href="https://www.flickr.com/photos/140681500@N07/27775305387/in/album-72157669873315198/">Header</a> and <a href="https://www.flickr.com/photos/140681500@N07/25783265643/in/dateposted/">footer</a> images by <a href="https://www.flickr.com/photos/140681500@N07/">Bartek Pawlik</a>, used under <a href="https://creativecommons.org/licenses/by-nc/2.0/">CC BY-NC 2.0</a>
+    </div>
+  </div>
+    <div class="section intro-header" style="margin-bottom: 0; background-image: url('{{site.url}}/img/footer_image.jpg')">
+    <div class="container">&nbsp; </div>
+  </div>

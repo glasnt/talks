@@ -1,0 +1,15 @@
+- talk:
+    title: The Power ⚡️ and Responsibility 😓 of Unicode Adoption ✨
+    abstract: Emoji have a rich history, and a recent resurgence in Western culture. However, as social networks feverishly try and clamber into this bandwagon, their implementations create issues with miscommunication. From the technical to the social aspects, this talk will cover why the extended character set provided by Unicode needs to be treated with responsibility by users and platforms alike.
+    description: |
+
+      Communication is difficult. Whether between humans, machines, or a combination of the two, trying to translate meaningful information is a lossy process.
+
+      Converting programming languages to use the new Unicode standard is hard, but once it’s in place, you get this marvelous feature-add: emoji compatibility. No longer do we have to make faces with symbols or use platform-specific emoticons. Rejoice in the extended character set.
+
+      Emoji have a rich history as a way to allow the communication of ideas in a reduced amount of data. They date back to a time where this was important: SMS communications in Japan. However, as social networks feverishly try to clamber onto this bandwagon, their implementations of the standard are rife with potential for miscommunication.
+
+      We will discusses the history of emoji, cross-platform adoption, the Unicode standard, and emoji accessibility in web applications. ✨
+
+
+    
