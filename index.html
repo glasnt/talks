@@ -2,57 +2,87 @@
 layout: page 
 ---
 
-  <div class="section">
+<div class="section">
     <div class="container">
-      <h2>Talk history</h2>
-      <h4>🇦🇺 🇳🇿 🇭🇺 🇺🇸 🇬🇧 🇩🇪 🇹🇼 🇹🇭</h4>
 
-        {% assign talk_total = 0 %}
-        {% for c in site.data.talks %}
-          {% for t in c.conference.talks %}
-            {% if t.type != "Podcast" %}
-            {% assign talk_total = talk_total | plus: 1 %}
+      <h3>Upcoming talks</h3>
+
+      {% for c in site.data.upcoming %} 
+      <div class="row">&nbsp;</div>
+      <div class="row">
+        <div class="eight columns">
+            {% if c.conference.link %}
+            <a href="{{c.conference.link}}">{{c.conference.name}}</a>,
+            {% else %}
+                {{c.conference.name}},
             {% endif %}
-        {% endfor %}
-        {% endfor %}
+                {% if c.conference.location %}{{c.conference.location}}, {%endif%}
+                {{c.conference.date | date: "%b %Y"}}
+        </div>
+        <div class="four columns">
+          {%if c.conference.tickets%}<a href="{{c.conference.tickets}}">Tickets on sale!</a>{%endif%}
+        </div>
+      </div>
+      {% for talk in c.conference.talks %} 
+      <div class="row">
+        <div class="eight columns">
+        {% if talk.link%}<a href="{{talk.link}}">{{talk.name}}</a>{%else%}{{talk.name}}{%endif%}
+        </div>
+      </div>
+      {% endfor%}
+      {% endfor%}
 
-        {% assign talk_num = talk_total %}
+      <br><BR>
 
-        {% for c in site.data.talks %} 
-          <div class="row">&nbsp;</div>
-          <div class="row">
-            <div class="eight columns">
-                {% if c.conference.link %}
-                <a href="{{c.conference.link}}">{{c.conference.name}}</a>,
-                {% else %}
-                    {{c.conference.name}},
-                {% endif %}
-                    {% if c.conference.location %}{{c.conference.location}}, {%endif%}
-                    {{c.conference.date | date: "%b %Y"}}</div>
-          </div>
-          {% for talk in c.conference.talks %} 
-          <div class="row">
-            <div class="one column">{% if talk.type != "Podcast" %}{{ talk_num }}{%else%}&nbsp;{% endif %}</div>
-            <div class="one column">{{talk.type | default: "Talk"}}</div>
-            <div class="one columns" style="width: 55%">
-                {% if talk.link%}<a href="{{talk.link}}">{{talk.name}}</a>{%else%}{{talk.name}}{%endif%}</div>
-            <div class="three columns">
-                  {% if talk.slides %} <a href="{{talk.slides}}">Slides</a>{% endif %}
-                  {% if talk.video %} <a href="{{talk.video}}">Video</a>{% endif %}
-                  {% if talk.twitter %} <a href="{{talk.twitter}}">Twitter</a>{% endif %}
-                  {% if talk.transcript %} <a href="{{talk.transcript}}">Transcript</a>{% endif %}
-                  {% if talk.resources %} <a href="{{talk.resources}}">Resources</a>{% endif %}
-                  {% if talk.feedback %} <a href="{{talk.feedback}}">Feedback</a>{% endif %}
-                  {% if talk.article %} <a href="{{talk.article}}">Article</a>{% endif %}
-                  {% if talk.photo %} <a href="{{talk.photo}}">Photo</a>{% endif %}
-            </div>
-          </div>
-          {% if talk.type != "Podcast" %}
-          {% assign talk_num = talk_num | minus: 1 %}
-          {% endif %}
-        {% endfor %}
-        {% endfor %}
+      <h2>Talk history</h2>
+
+      <h4>🇦🇺 🇳🇿 🇭🇺 🇺🇸 🇬🇧 🇩🇪 🇹🇼 🇹🇭</h4>
+      {% assign talk_total = 0 %}
+      {% for c in site.data.talks %}
+      {% for t in c.conference.talks %}
+      {% if t.type != "Podcast" %}
+      {% assign talk_total = talk_total | plus: 1 %}
+      {% endif %}
+      {% endfor %}
+      {% endfor %}
+
+      {% assign talk_num = talk_total %}
+
+      {% for c in site.data.talks %} 
         <div class="row">&nbsp;</div>
+        <div class="row">
+          <div class="eight columns">
+              {% if c.conference.link %}
+              <a href="{{c.conference.link}}">{{c.conference.name}}</a>,
+              {% else %}
+                  {{c.conference.name}},
+              {% endif %}
+                  {% if c.conference.location %}{{c.conference.location}}, {%endif%}
+                  {{c.conference.date | date: "%b %Y"}}</div>
+        </div>
+        {% for talk in c.conference.talks %} 
+        <div class="row">
+          <div class="one column">{% if talk.type != "Podcast" %}{{ talk_num }}{%else%}&nbsp;{% endif %}</div>
+          <div class="one column">{{talk.type | default: "Talk"}}</div>
+          <div class="one columns" style="width: 55%">
+              {% if talk.link%}<a href="{{talk.link}}">{{talk.name}}</a>{%else%}{{talk.name}}{%endif%}</div>
+          <div class="three columns">
+                {% if talk.slides %} <a href="{{talk.slides}}">Slides</a>{% endif %}
+                {% if talk.video %} <a href="{{talk.video}}">Video</a>{% endif %}
+                {% if talk.twitter %} <a href="{{talk.twitter}}">Twitter</a>{% endif %}
+                {% if talk.transcript %} <a href="{{talk.transcript}}">Transcript</a>{% endif %}
+                {% if talk.resources %} <a href="{{talk.resources}}">Resources</a>{% endif %}
+                {% if talk.feedback %} <a href="{{talk.feedback}}">Feedback</a>{% endif %}
+                {% if talk.article %} <a href="{{talk.article}}">Article</a>{% endif %}
+                {% if talk.photo %} <a href="{{talk.photo}}">Photo</a>{% endif %}
+          </div>
+        </div>
+        {% if talk.type != "Podcast" %}
+        {% assign talk_num = talk_num | minus: 1 %}
+        {% endif %}
+      {% endfor %}
+      {% endfor %}
+      <div class="row">&nbsp;</div>
         <div class="row">
         <p>
 All slides are hosted on <a href="https://github.com/glasnt/talks">GitHub</a>. See also: <a href="http://pyvideo.org/speaker/katie-mclaughlin.html">pyvideo profile</a>

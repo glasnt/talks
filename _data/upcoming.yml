@@ -1,0 +1,29 @@
+- conference: 
+    name: Kiwi PyCon X
+    date: 2019-08-23
+    location: Wellington, NZ
+    link: https://python.nz/
+    tickets: https://python.nz/kiwipycon.register
+    talks: 
+        - name: Turning 'wat' into 'why'
+
+- conference:
+    name: YOW! Perth
+    location: Perth, Australia
+    date: 2019-09-04
+    link: https://yowconference.com/perth
+    tickets: https://yowperth2019.eventbrite.com.au/
+    talks: 
+       - name: Turning 'wat' into 'why'
+         link: https://yowconference.com/talks/katie-mclaughlin/yow-perth-2019/turning-wat-into-why-10456
+
+- conference:
+    name: PyGotham 2019
+    location: New York, USA
+    date: 2019-10-04
+    link: https://pygotham.org/
+    tickets: https://www.eventbrite.com/e/pygotham-2019-tickets-59610423381
+    talks: 
+        - name: "What is deployment, anyway?"
+          link: https://2019.pygotham.org/talks/what-is-deployment-anyway/
+
