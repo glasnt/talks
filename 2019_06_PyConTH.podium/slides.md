@@ -32,6 +32,14 @@ We'll be covering a lot in this talk, but don't worry, I'll share the notes afte
 ---
 
 class: title
+# .e3[🐦👍✨]
+
+???
+
+But tweeting is totally okay. My twitter handle and the conference hashtag are up in the top left of every side.
+---
+
+class: title
 <div style="width: 100%; margin: 0 auto;" class="title"><p align="center"><img height="266px" class="emoji" src="images/space.svg"><img height="266px" class="emoji" src="images/wave.svg"><img height="266px" class="emoji" src="images/space.svg"></p></div>
 
 ???
