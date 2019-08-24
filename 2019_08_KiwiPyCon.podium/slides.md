@@ -78,7 +78,7 @@ Let's talk about javascript
 
 ???
 
-the problem with this example is to do with types
+Implicit coersion, depending on the operator
 ---
 .righthead[JavaScript]
 <pre><code class="javascript">> 4 + 2</code></pre>
@@ -169,20 +169,22 @@ class: title
 
 Remember that overloaded operator I mentioned earlier?
 
-Let's dive into that a bit more.
+I sort of handwaved that.
+
+Let's dive into exactly what this does.
 
 ---
 class: center
-# .ecma[.ecma-header[ECMA-262, 9th edition]]
-## .ecma[.ecma-header[ECMAScript® 2018 Language Specification]]
+# .ecma[.ecma-header[ECMA-262, 10th edition]]
+## .ecma[.ecma-header[ECMAScript® 2019 Language Specification]]
 ### .ecma[12.8.3 The Addition Operator ( `+` )]
 #### &nbsp;
 
 ---
 
 class: center
-# .ecma[.ecma-header[ECMA-262, 9th edition]]
-## .ecma[.ecma-header[ECMAScript® 2018 Language Specification]]
+# .ecma[.ecma-header[ECMA-262, 10th edition]]
+## .ecma[.ecma-header[ECMAScript® 2019 Language Specification]]
 ### .ecma[12.8.3 The Addition Operator ( `+` )]
 #### NOTE The addition operator either performs string concatenation or numeric addition.
 
@@ -209,7 +211,7 @@ we need to first reduce both sides of the operator to their primative forms
 
 --
 
-* .ecma[.bc[`typeof()` in `undefined`, `null`, `boolean`, `number`, `string`]]
+* .ecma[.bc[that is, `typeof()` in `undefined`, `null`, `boolean`, `number`, `string`]]
 
 ???
 
@@ -219,7 +221,7 @@ To do that, we have two options
 
 --
 
-* .ecma[Try .bc[`.valueOf()`], else .bc[`.toString()`]]
+* .ecma[First try, .bc[`.valueOf()`], otherwise .bc[`.toString()`]]
 
 ???
 
@@ -228,7 +230,7 @@ We have `valueOf`, or `toString`
 After both operands are in their primative forms, we then have a choice
 --
 
-.ecma[Are .bc[.bluef[`a`]] or .bc[.greenf[`b`]] a string?]
+.ecma[Are either .bc[.bluef[`a`]] or .bc[.greenf[`b`]] a string?]
 
 ???
 
@@ -243,7 +245,7 @@ then we perform a concatenation
 
 --
 
-.ecma[No → .bc[Sum `Number(`.bluef[`a`]`)` and `Number(`.greenf[`b`]`)`]]
+.ecma[No → .bc[Add `Number(`.bluef[`a`]`)` and `Number(`.greenf[`b`]`)`]]
 
 ???
 
@@ -257,8 +259,8 @@ otherwise, we convert both sides to a number, and add them.
 
 --
 
-* .ecma[.bc[`typeof()` in `undefined`, `null`, `boolean`, `number`, `string`]]
-* .ecma[Try .bc[`.valueOf()`]]
+* .ecma[.bc[that is, `typeof()` in `undefined`, `null`, `boolean`, `number`, `string`]]
+* .ecma[First try, .bc[`.valueOf()`]]
 
 --
 <pre><code class="javascript">> [].valueOf()</code></pre>
@@ -274,8 +276,8 @@ otherwise, we convert both sides to a number, and add them.
 
 .ecma[.bc[Convert .bluef[`[]`] to primative]]
 
-* .ecma[.bc[`typeof()` in `undefined`, `null`, `boolean`, `number`, `string`]]
-* .ecma[Try .bc[`.valueOf()`, else `.toString()`]]
+* .ecma[.bc[that is, `typeof()` in `undefined`, `null`, `boolean`, `number`, `string`]]
+* .ecma[First try, .bc[`.valueOf()`, else `.toString()`]]
 
 --
 <pre><code class="javascript">> [].toString()</code></pre>
@@ -295,8 +297,8 @@ otherwise, we convert both sides to a number, and add them.
 
 --
 
-* .ecma[.bc[`typeof()` in `undefined`, `null`, `boolean`, `number`, `string`]]
-* .ecma[Try .bc[`.valueOf()`]]
+* .ecma[.bc[that is, `typeof()` in `undefined`, `null`, `boolean`, `number`, `string`]]
+* .ecma[First try, .bc[`.valueOf()`]]
 
 --
 <pre><code class="javascript">> {}.valueOf()</code></pre>
@@ -312,8 +314,8 @@ otherwise, we convert both sides to a number, and add them.
 
 .ecma[.bc[Convert .greenf[`{}`] to primative]]
 
-* .ecma[.bc[`typeof()` in `undefined`, `null`, `boolean`, `number`, `string`]]
-* .ecma[Try .bc[`.valueOf()`, else `.toString()`]]
+* .ecma[.bc[that is, `typeof()` in `undefined`, `null`, `boolean`, `number`, `string`]]
+* .ecma[First try, .bc[`.valueOf()`, else `.toString()`]]
 
 --
 <pre><code class="javascript">> {}.toString()</code></pre>
@@ -358,8 +360,8 @@ Backwards compatibility
 
 .ecma[.bc[Convert .greenf[`{}`] to primative]]
 
-* .ecma[.bc[`typeof()` in `undefined`, `null`, `boolean`, `number`, `string`]]
-* .ecma[Try .bc[`.valueOf()`, else `.toString()`]]
+* .ecma[.bc[that is, `typeof()` in `undefined`, `null`, `boolean`, `number`, `string`]]
+* .ecma[First try, .bc[`.valueOf()`, else `.toString()`]]
 
 --
 <pre><code class="javascript">> {}.toString()</code></pre>
@@ -723,7 +725,7 @@ class: title
 
 ???
 
-In Python, when you load the interpreter, you're probably loading CPython. An optimisation of CPython is to create a list of integers from -5 to 256 for you.
+In Python, when you load the interpreter, you're probably loading CPython.
 --
 .righthead[CPython]
 <pre><code class="python">>>> .white[a=b]</code></pre>
@@ -780,8 +782,7 @@ so when you assign a variable, it can use one you prepared earlier
 <pre><code class="bash">.white[.................................]a b</code></pre>
 
 ???
-
-`is` when we talk about "is" here, we're doing an identity check.
+So `is` when we talk about "is" here, we're doing an identity check.
 
 Identity is a check to see if two objects are the same
 ---

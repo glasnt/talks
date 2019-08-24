@@ -52,7 +52,7 @@ js 2
 js > 4 + "2"
 js "42"
 
-Note: the problem with this example is to do with types
+Note: Implicit coersion, depending on the operator
 ---
 $$# JavaScript
 js > 4 + 2
@@ -134,20 +134,22 @@ Note: This one is a bit more complicated.
 
 Note: Remember that overloaded operator I mentioned earlier?
 
-Let's dive into that a bit more. 
+I sort of handwaved that. 
+
+Let's dive into exactly what this does. 
 
 ---
 class: center
-# .ecma[.ecma-header[ECMA-262, 9th edition]]
-## .ecma[.ecma-header[ECMAScript® 2018 Language Specification]]
+# .ecma[.ecma-header[ECMA-262, 10th edition]]
+## .ecma[.ecma-header[ECMAScript® 2019 Language Specification]]
 ### .ecma[12.8.3 The Addition Operator ( `+` )]
 #### &nbsp;
 
 ---
 
 class: center
-# .ecma[.ecma-header[ECMA-262, 9th edition]]
-## .ecma[.ecma-header[ECMAScript® 2018 Language Specification]]
+# .ecma[.ecma-header[ECMA-262, 10th edition]]
+## .ecma[.ecma-header[ECMAScript® 2019 Language Specification]]
 ### .ecma[12.8.3 The Addition Operator ( `+` )]
 #### NOTE The addition operator either performs string concatenation or numeric addition.
 
@@ -170,7 +172,7 @@ Note:  we need to first reduce both sides of the operator to their primative for
  
 --
 
- * .ecma[.bc[`typeof()` in `undefined`, `null`, `boolean`, `number`, `string`]]
+ * .ecma[.bc[that is, `typeof()` in `undefined`, `null`, `boolean`, `number`, `string`]]
 
 Note: That is, the type of the variable is undefined, null, bool, number, or string
 
@@ -178,14 +180,14 @@ To do that, we have two options
 
 --
  
- * .ecma[Try .bc[`.valueOf()`], else .bc[`.toString()`]]
+ * .ecma[First try, .bc[`.valueOf()`], otherwise .bc[`.toString()`]]
 
 Note: We have `valueOf`, or `toString`
 
 After both operands are in their primative forms, we then have a choice
 --
 
-.ecma[Are .bc[.bluef[`a`]] or .bc[.greenf[`b`]] a string?]
+.ecma[Are either .bc[.bluef[`a`]] or .bc[.greenf[`b`]] a string?]
 
 Note: If either of the sides are a string, 
 --
@@ -196,7 +198,7 @@ Note: then we perform a concatenation
 
 --
 
-.ecma[No → .bc[Sum `Number(`.bluef[`a`]`)` and `Number(`.greenf[`b`]`)`]]
+.ecma[No → .bc[Add `Number(`.bluef[`a`]`)` and `Number(`.greenf[`b`]`)`]]
 
 Note: otherwise, we convert both sides to a number, and add them. 
 ---
@@ -208,8 +210,8 @@ $$# ECMAScript
 
 -- 
 
-  * .ecma[.bc[`typeof()` in `undefined`, `null`, `boolean`, `number`, `string`]]
-  * .ecma[Try .bc[`.valueOf()`]]
+ * .ecma[.bc[that is, `typeof()` in `undefined`, `null`, `boolean`, `number`, `string`]]
+ * .ecma[First try, .bc[`.valueOf()`]]
 
 --
 js- > [].valueOf()
@@ -222,8 +224,8 @@ $$# ECMAScript
 
 .ecma[.bc[Convert .bluef[`[]`] to primative]]
 
-  * .ecma[.bc[`typeof()` in `undefined`, `null`, `boolean`, `number`, `string`]]
-  * .ecma[Try .bc[`.valueOf()`, else `.toString()`]]
+ * .ecma[.bc[that is, `typeof()` in `undefined`, `null`, `boolean`, `number`, `string`]]
+ * .ecma[First try, .bc[`.valueOf()`, else `.toString()`]]
 
 --
 js- > [].toString()
@@ -240,8 +242,8 @@ $$# ECMAScript
 
 -- 
 
-  * .ecma[.bc[`typeof()` in `undefined`, `null`, `boolean`, `number`, `string`]]
-  * .ecma[Try .bc[`.valueOf()`]]
+ * .ecma[.bc[that is, `typeof()` in `undefined`, `null`, `boolean`, `number`, `string`]]
+ * .ecma[First try, .bc[`.valueOf()`]]
 
 --
 js- > {}.valueOf()
@@ -254,8 +256,8 @@ $$# ECMAScript
 
 .ecma[.bc[Convert .greenf[`{}`] to primative]]
 
-  * .ecma[.bc[`typeof()` in `undefined`, `null`, `boolean`, `number`, `string`]]
-  * .ecma[Try .bc[`.valueOf()`, else `.toString()`]]
+ * .ecma[.bc[that is, `typeof()` in `undefined`, `null`, `boolean`, `number`, `string`]]
+ * .ecma[First try, .bc[`.valueOf()`, else `.toString()`]]
 
 --
 js- > {}.toString()
@@ -298,8 +300,8 @@ $$# ECMAScript
 
 .ecma[.bc[Convert .greenf[`{}`] to primative]]
 
-  * .ecma[.bc[`typeof()` in `undefined`, `null`, `boolean`, `number`, `string`]]
-  * .ecma[Try .bc[`.valueOf()`, else `.toString()`]]
+ * .ecma[.bc[that is, `typeof()` in `undefined`, `null`, `boolean`, `number`, `string`]]
+ * .ecma[First try, .bc[`.valueOf()`, else `.toString()`]]
 
 --
 js- > {}.toString()
@@ -600,7 +602,7 @@ py True
 $$# Terminal
 `~ $ python`
 
-Note: In Python, when you load the interpreter, you're probably loading CPython. An optimisation of CPython is to create a list of integers from -5 to 256 for you.
+Note: In Python, when you load the interpreter, you're probably loading CPython. 
 --
 $$# CPython
 py >>> .white[a=b]
@@ -654,7 +656,8 @@ sh &nbsp;
 sh [ -5 ][ -4 ][...][ 254 ][ 255 ][ 256 ]
 sh .white[.................................]a b
 
-Note: `is` when we talk about "is" here, we're doing an identity check. 
+Note: 
+So `is` when we talk about "is" here, we're doing an identity check. 
 
 Identity is a check to see if two objects are the same
 ---
