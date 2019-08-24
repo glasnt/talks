@@ -1023,6 +1023,466 @@ if what we wanted to do here was an equality check, checking if the values were 
 we need to use double equals here instead.
 ---
 class: title
+# Python
+???
+
+let's talk a bit more about python
+---
+.righthead[KiwiPyCon 2019 Quiz, Round 3, Q8]
+<pre><code class="python">&nbsp;</code></pre>
+<pre><code class="python">a, b = 250, 250</code></pre>
+<pre><code class="python">for _ in range(250, 260):</code></pre>
+<pre><code class="python">&nbsp; if a is not b:</code></pre>
+<pre><code class="python">&nbsp; &nbsp; break</code></pre>
+<pre><code class="python">&nbsp; a += 1</code></pre>
+<pre><code class="python">&nbsp; b += 1</code></pre>
+<pre><code class="python">print(a)</code></pre>
+--
+<br>
+<pre><code class="python">257</code></pre>
+
+???
+
+This question also happens to be because of the integer cache
+---
+.righthead[KiwiPyCon 2019 Quiz, Round 3, Q8]
+<pre><code class="python">&nbsp;</code></pre>
+<pre><code class="python">a, b = 250, 250</code></pre>
+<pre><code class="python">for .red[_] in range(250, 260): # 'throwaway' variable</code></pre>
+<pre><code class="python">&nbsp; if a is not b:</code></pre>
+<pre><code class="python">&nbsp; &nbsp; break</code></pre>
+<pre><code class="python">&nbsp; a += 1</code></pre>
+<pre><code class="python">&nbsp; b += 1</code></pre>
+<pre><code class="python">print(a)</code></pre>
+---
+.righthead[KiwiPyCon 2019 Quiz, Round 3, Q8]
+<pre><code class="python">&nbsp;</code></pre>
+<pre><code class="python">a, b = 250, 250</code></pre>
+<pre><code class="python">for _ in .red[range(250, 260)] : #[250, .., 256, 257, .. 259]</code></pre>
+<pre><code class="python">&nbsp; if a is not b:</code></pre>
+<pre><code class="python">&nbsp; &nbsp; break</code></pre>
+<pre><code class="python">&nbsp; a += 1</code></pre>
+<pre><code class="python">&nbsp; b += 1</code></pre>
+<pre><code class="python">print(a)</code></pre>
+
+
+---
+.righthead[KiwiPyCon 2019 Quiz, Round 3, Q8]
+<pre><code class="python">&nbsp;</code></pre>
+<pre><code class="python">a, b = 250, 250</code></pre>
+<pre><code class="python">for _ in range(250, 260):</code></pre>
+<pre><code class="python">&nbsp; if a .red[is] not b: # remember, identity!</code></pre>
+<pre><code class="python">&nbsp; &nbsp; break</code></pre>
+<pre><code class="python">&nbsp; a += 1</code></pre>
+<pre><code class="python">&nbsp; b += 1</code></pre>
+<pre><code class="python">print(a)</code></pre>
+---
+.righthead[KiwiPyCon 2019 Quiz, Round 3, Q8]
+<pre><code class="python">&nbsp;</code></pre>
+<pre><code class="python">a, b = 250, 250</code></pre>
+<pre><code class="python">for _ in range(250, 260):</code></pre>
+<pre><code class="python">&nbsp; if a is not b:</code></pre>
+<pre><code class="python">&nbsp; &nbsp; .red[break] # exit for loop</code></pre>
+<pre><code class="python">&nbsp; a += 1</code></pre>
+<pre><code class="python">&nbsp; b += 1</code></pre>
+<pre><code class="python">print(a)</code></pre>
+
+???
+
+as soon as a is no longer the exact same object as B, then we quit our for loop and print the result.
+---
+.righthead[KiwiPyCon 2019 Quiz, Round 3, Q8]
+<pre><code class="python">&nbsp;</code></pre>
+<pre><code class="python">a, b = 250, 250</code></pre>
+<pre><code class="python">for _ in range(250, 260):</code></pre>
+<pre><code class="python">&nbsp; if a is not b:</code></pre>
+<pre><code class="python">&nbsp; &nbsp; break</code></pre>
+<pre><code class="python">&nbsp; a += 1</code></pre>
+<pre><code class="python">&nbsp; b += 1</code></pre>
+<pre><code class="python">print(a)</code></pre>
+???
+
+so now the return of our good friend - the cpython cache.
+--
+.righthead[CPython Cache]
+<pre><code class="bash">[ -5 ][ -4 ][...][ 254 ][ 255 ][ 256 ]</code></pre>
+<pre><code class="bash">.white[.............................]</code></pre>
+---
+.righthead[KiwiPyCon 2019 Quiz, Round 3, Q8]
+<pre><code class="python">&nbsp;</code></pre>
+<pre><code class="python">a, b = 250, 250</code></pre>
+<pre><code class="python">for _ in range(250, 260):</code></pre>
+<pre><code class="python">&nbsp; if a is not b:</code></pre>
+<pre><code class="python">&nbsp; &nbsp; break</code></pre>
+<pre><code class="python">&nbsp; a += 1</code></pre>
+<pre><code class="python">&nbsp; b += 1</code></pre>
+<pre><code class="python">print(a)</code></pre>
+.righthead[CPython Cache]
+<pre><code class="bash">.. [ 250 ][ 251 ][ 252 ][ 253 ][ 254 ][ 255 ][ 256 ]</code></pre>
+<pre><code class="bash">.white[.............................]</code></pre>
+
+???
+
+let's just show the bits we're proper interested in.
+
+---
+.righthead[KiwiPyCon 2019 Quiz, Round 3, Q8]
+<pre><code class="python">&nbsp;</code></pre>
+<pre><code class="python">a, b = 250, 250</code></pre>
+<pre><code class="python">for _ in range(250, 260): # 250</code></pre>
+<pre><code class="python">&nbsp; if a is not b:</code></pre>
+<pre><code class="python">&nbsp; &nbsp; break</code></pre>
+<pre><code class="python">&nbsp; a += 1</code></pre>
+<pre><code class="python">&nbsp; b += 1</code></pre>
+<pre><code class="python">print(a)</code></pre>
+.righthead[CPython Cache]
+<pre><code class="bash">.. [ 250 ][ 251 ][ 252 ][ 253 ][ 254 ][ 255 ][ 256 ]</code></pre>
+<pre><code class="bash">.white[....] a b</code></pre>
+
+---
+.righthead[KiwiPyCon 2019 Quiz, Round 3, Q8]
+<pre><code class="python">&nbsp;</code></pre>
+<pre><code class="python">a, b = 250, 250</code></pre>
+<pre><code class="python">for _ in range(250, 260): # 250</code></pre>
+<pre><code class="python">&nbsp; .blue[if a is not b:]</code></pre>
+<pre><code class="python">&nbsp; &nbsp; break</code></pre>
+<pre><code class="python">&nbsp; a += 1</code></pre>
+<pre><code class="python">&nbsp; b += 1</code></pre>
+<pre><code class="python">print(a)</code></pre>
+.righthead[CPython Cache]
+<pre><code class="bash">.. [ 250 ][ 251 ][ 252 ][ 253 ][ 254 ][ 255 ][ 256 ]</code></pre>
+<pre><code class="bash">.white[....] a b</code></pre>
+
+???
+
+and so we first test, is a b
+---
+.righthead[KiwiPyCon 2019 Quiz, Round 3, Q8]
+<pre><code class="python">&nbsp;</code></pre>
+<pre><code class="python">a, b = 250, 250</code></pre>
+<pre><code class="python">for _ in range(250, 260): # 250</code></pre>
+<pre><code class="python">&nbsp; .blue[if a is not b:]</code></pre>
+<pre><code class="python">&nbsp; &nbsp; break</code></pre>
+<pre><code class="python">&nbsp; a += 1</code></pre>
+<pre><code class="python">&nbsp; b += 1</code></pre>
+<pre><code class="python">print(a)</code></pre>
+.righthead[CPython Cache]
+<pre><code class="bash">.. [ .green[250] ][ 251 ][ 252 ][ 253 ][ 254 ][ 255 ][ 256 ]</code></pre>
+<pre><code class="bash">.white[....] a b</code></pre>
+
+???
+
+yes.
+
+
+---
+.righthead[KiwiPyCon 2019 Quiz, Round 3, Q8]
+<pre><code class="python">&nbsp;</code></pre>
+<pre><code class="python">a, b = 250, 250</code></pre>
+<pre><code class="python">for _ in range(250, 260): # 250</code></pre>
+<pre><code class="python">&nbsp; if a is not b:</code></pre>
+<pre><code class="python">&nbsp; &nbsp; break</code></pre>
+<pre><code class="python">&nbsp; .green[a += 1]</code></pre>
+<pre><code class="python">&nbsp; .green[b += 1]</code></pre>
+<pre><code class="python">print(a)</code></pre>
+.righthead[CPython Cache]
+<pre><code class="bash">.. [ .green[250] ][ 251 ][ 252 ][ 253 ][ 254 ][ 255 ][ 256 ]</code></pre>
+<pre><code class="bash">.white[....] a b</code></pre>
+
+???
+
+so we increment.
+---
+.righthead[KiwiPyCon 2019 Quiz, Round 3, Q8]
+<pre><code class="python">&nbsp;</code></pre>
+<pre><code class="python">a, b = 250, 250</code></pre>
+<pre><code class="python">for _ in range(250, 260): # 250</code></pre>
+<pre><code class="python">&nbsp; if a is not b:</code></pre>
+<pre><code class="python">&nbsp; &nbsp; break</code></pre>
+<pre><code class="python">&nbsp; a += 1</code></pre>
+<pre><code class="python">&nbsp; b += 1</code></pre>
+<pre><code class="python">print(a)</code></pre>
+.righthead[CPython Cache]
+<pre><code class="bash">.. [ 250 ][ 251 ][ 252 ][ 253 ][ 254 ][ 255 ][ 256 ]</code></pre>
+<pre><code class="bash">.white[...........] a b</code></pre>
+
+???
+
+our values increase
+---
+.righthead[KiwiPyCon 2019 Quiz, Round 3, Q8]
+<pre><code class="python">&nbsp;</code></pre>
+<pre><code class="python">a, b = 250, 250</code></pre>
+<pre><code class="python">for _ in range(250, 260): # 251</code></pre>
+<pre><code class="python">&nbsp; if a is not b:</code></pre>
+<pre><code class="python">&nbsp; &nbsp; break</code></pre>
+<pre><code class="python">&nbsp; a += 1</code></pre>
+<pre><code class="python">&nbsp; b += 1</code></pre>
+<pre><code class="python">print(a)</code></pre>
+.righthead[CPython Cache]
+<pre><code class="bash">.. [ 250 ][ 251 ][ 252 ][ 253 ][ 254 ][ 255 ][ 256 ]</code></pre>
+<pre><code class="bash">.white[...........] a b</code></pre>
+
+???
+
+and we continue our loop
+---
+.righthead[KiwiPyCon 2019 Quiz, Round 3, Q8]
+<pre><code class="python">&nbsp;</code></pre>
+<pre><code class="python">a, b = 250, 250</code></pre>
+<pre><code class="python">for _ in range(250, 260): # 251</code></pre>
+<pre><code class="python">&nbsp; .blue[if a is not b:]</code></pre>
+<pre><code class="python">&nbsp; &nbsp; break</code></pre>
+<pre><code class="python">&nbsp; a += 1</code></pre>
+<pre><code class="python">&nbsp; b += 1</code></pre>
+<pre><code class="python">print(a)</code></pre>
+.righthead[CPython Cache]
+<pre><code class="bash">.. [ 250 ][ 251 ][ 252 ][ 253 ][ 254 ][ 255 ][ 256 ]</code></pre>
+<pre><code class="bash">.white[...........] a b</code></pre>
+
+---
+.righthead[KiwiPyCon 2019 Quiz, Round 3, Q8]
+<pre><code class="python">&nbsp;</code></pre>
+<pre><code class="python">a, b = 250, 250</code></pre>
+<pre><code class="python">for _ in range(250, 260): # 251</code></pre>
+<pre><code class="python">&nbsp; .blue[if a is not b:]</code></pre>
+<pre><code class="python">&nbsp; &nbsp; break</code></pre>
+<pre><code class="python">&nbsp; a += 1</code></pre>
+<pre><code class="python">&nbsp; b += 1</code></pre>
+<pre><code class="python">print(a)</code></pre>
+.righthead[CPython Cache]
+<pre><code class="bash">.. [ 250 ][ .green[251] ][ 252 ][ 253 ][ 254 ][ 255 ][ 256 ]</code></pre>
+<pre><code class="bash">.white[...........] a b</code></pre>
+---
+.righthead[KiwiPyCon 2019 Quiz, Round 3, Q8]
+<pre><code class="python">&nbsp;</code></pre>
+<pre><code class="python">a, b = 250, 250</code></pre>
+<pre><code class="python">for _ in range(250, 260): # 251</code></pre>
+<pre><code class="python">&nbsp; if a is not b:</code></pre>
+<pre><code class="python">&nbsp; &nbsp; break</code></pre>
+<pre><code class="python">&nbsp; .green[a += 1]</code></pre>
+<pre><code class="python">&nbsp; .green[b += 1]</code></pre>
+<pre><code class="python">print(a)</code></pre>
+.righthead[CPython Cache]
+<pre><code class="bash">.. [ 250 ][ 251 ][ 252 ][ 253 ][ 254 ][ 255 ][ 256 ]</code></pre>
+<pre><code class="bash">.white[..................] a b</code></pre>
+---
+.righthead[KiwiPyCon 2019 Quiz, Round 3, Q8]
+<pre><code class="python">&nbsp;</code></pre>
+<pre><code class="python">a, b = 250, 250</code></pre>
+<pre><code class="python">for _ in range(250, 260): # 252</code></pre>
+<pre><code class="python">&nbsp; if a is not b:</code></pre>
+<pre><code class="python">&nbsp; &nbsp; break</code></pre>
+<pre><code class="python">&nbsp; a += 1</code></pre>
+<pre><code class="python">&nbsp; b += 1</code></pre>
+<pre><code class="python">print(a)</code></pre>
+.righthead[CPython Cache]
+<pre><code class="bash">.. [ 250 ][ 251 ][ .green[252] ][ 253 ][ 254 ][ 255 ][ 256 ]</code></pre>
+<pre><code class="bash">.white[..................] a b</code></pre>
+???
+
+and so on.
+---
+.righthead[KiwiPyCon 2019 Quiz, Round 3, Q8]
+<pre><code class="python">&nbsp;</code></pre>
+<pre><code class="python">a, b = 250, 250</code></pre>
+<pre><code class="python">for _ in range(250, 260): # 253</code></pre>
+<pre><code class="python">&nbsp; if a is not b:</code></pre>
+<pre><code class="python">&nbsp; &nbsp; break</code></pre>
+<pre><code class="python">&nbsp; a += 1</code></pre>
+<pre><code class="python">&nbsp; b += 1</code></pre>
+<pre><code class="python">print(a)</code></pre>
+.righthead[CPython Cache]
+<pre><code class="bash">.. [ 250 ][ 251 ][ 252 ][ .green[253] ][ 254 ][ 255 ][ 256 ]</code></pre>
+<pre><code class="bash">.white[.........................] a b</code></pre>
+???
+
+and so on.
+---
+.righthead[KiwiPyCon 2019 Quiz, Round 3, Q8]
+<pre><code class="python">&nbsp;</code></pre>
+<pre><code class="python">a, b = 250, 250</code></pre>
+<pre><code class="python">for _ in range(250, 260): # 254</code></pre>
+<pre><code class="python">&nbsp; if a is not b:</code></pre>
+<pre><code class="python">&nbsp; &nbsp; break</code></pre>
+<pre><code class="python">&nbsp; a += 1</code></pre>
+<pre><code class="python">&nbsp; b += 1</code></pre>
+<pre><code class="python">print(a)</code></pre>
+.righthead[CPython Cache]
+<pre><code class="bash">.. [ 250 ][ 251 ][ 252 ][ 253 ][ .green[254] ][ 255 ][ 256 ]</code></pre>
+<pre><code class="bash">.white[................................] a b</code></pre>
+???
+
+and so on.
+---
+.righthead[KiwiPyCon 2019 Quiz, Round 3, Q8]
+<pre><code class="python">&nbsp;</code></pre>
+<pre><code class="python">a, b = 250, 250</code></pre>
+<pre><code class="python">for _ in range(250, 260): # 255</code></pre>
+<pre><code class="python">&nbsp; if a is not b:</code></pre>
+<pre><code class="python">&nbsp; &nbsp; break</code></pre>
+<pre><code class="python">&nbsp; a += 1</code></pre>
+<pre><code class="python">&nbsp; b += 1</code></pre>
+<pre><code class="python">print(a)</code></pre>
+.righthead[CPython Cache]
+<pre><code class="bash">.. [ 250 ][ 251 ][ 252 ][ 253 ][ 254 ][ .green[255] ][ 256 ]</code></pre>
+<pre><code class="bash">.white[.......................................] a b</code></pre>
+???
+
+and so on.
+---
+.righthead[KiwiPyCon 2019 Quiz, Round 3, Q8]
+<pre><code class="python">&nbsp;</code></pre>
+<pre><code class="python">a, b = 250, 250</code></pre>
+<pre><code class="python">for _ in range(250, 260): # 256</code></pre>
+<pre><code class="python">&nbsp; if a is not b:</code></pre>
+<pre><code class="python">&nbsp; &nbsp; break</code></pre>
+<pre><code class="python">&nbsp; a += 1</code></pre>
+<pre><code class="python">&nbsp; b += 1</code></pre>
+<pre><code class="python">print(a)</code></pre>
+.righthead[CPython Cache]
+<pre><code class="bash">.. [ 250 ][ 251 ][ 252 ][ 253 ][ 254 ][ 255 ][ .green[256] ]</code></pre>
+<pre><code class="bash">.white[..............................................] a b</code></pre>
+???
+
+and so on. UNTIL
+---
+.righthead[KiwiPyCon 2019 Quiz, Round 3, Q8]
+<pre><code class="python">&nbsp;</code></pre>
+<pre><code class="python">a, b = 250, 250</code></pre>
+<pre><code class="python">for _ in range(250, 260): # 256</code></pre>
+<pre><code class="python">&nbsp; if a is not b:</code></pre>
+<pre><code class="python">&nbsp; &nbsp; break</code></pre>
+<pre><code class="python">&nbsp; a += 1</code></pre>
+<pre><code class="python">&nbsp; b += 1</code></pre>
+<pre><code class="python">print(a)</code></pre>
+.righthead[CPython Cache]
+<pre><code class="bash">.. [ 250 ][ 251 ][ 252 ][ 253 ][ 254 ][ 255 ][ .green[256] ] .red[.white[.]]</code></pre>
+<pre><code class="bash">.white[..............................................] a b</code></pre>
+???
+
+We get to the end of the cache.
+And then when we increment.
+---
+.righthead[KiwiPyCon 2019 Quiz, Round 3, Q8]
+<pre><code class="python">&nbsp;</code></pre>
+<pre><code class="python">a, b = 250, 250</code></pre>
+<pre><code class="python">for _ in range(250, 260): # 256</code></pre>
+<pre><code class="python">&nbsp; if a is not b:</code></pre>
+<pre><code class="python">&nbsp; &nbsp; break</code></pre>
+<pre><code class="python">&nbsp; .green[a += 1]</code></pre>
+<pre><code class="python">&nbsp; .green[b += 1]</code></pre>
+<pre><code class="python">print(a)</code></pre>
+.righthead[CPython Cache]
+<pre><code class="bash">.. [ 250 ][ 251 ][ 252 ][ 253 ][ 254 ][ 255 ][ 256 ]</code></pre>
+<pre><code class="bash">[ 257 ][ 257 ]</code></pre>
+<pre><code class="bash">.white[..] a .white[....] b</code></pre>
+???
+
+We increment our integers outside of our integer cache
+
+---
+.righthead[KiwiPyCon 2019 Quiz, Round 3, Q8]
+<pre><code class="python">&nbsp;</code></pre>
+<pre><code class="python">a, b = 250, 250</code></pre>
+<pre><code class="python">for _ in range(250, 260): # .b[257]</code></pre>
+<pre><code class="python">&nbsp; if a is not b:</code></pre>
+<pre><code class="python">&nbsp; &nbsp; break</code></pre>
+<pre><code class="python">&nbsp; a += 1</code></pre>
+<pre><code class="python">&nbsp; b += 1</code></pre>
+<pre><code class="python">print(a)</code></pre>
+.righthead[CPython Cache]
+<pre><code class="bash">.. [ 250 ][ 251 ][ 252 ][ 253 ][ 254 ][ 255 ][ 256 ]</code></pre>
+<pre><code class="bash">[ 257 ][ 257 ]</code></pre>
+<pre><code class="bash">.white[..] a .white[....] b</code></pre>
+???
+
+We get to the next loop
+
+---
+.righthead[KiwiPyCon 2019 Quiz, Round 3, Q8]
+<pre><code class="python">&nbsp;</code></pre>
+<pre><code class="python">a, b = 250, 250</code></pre>
+<pre><code class="python">for _ in range(250, 260): # 257</code></pre>
+<pre><code class="python">&nbsp; .blue[if a is not b:]</code></pre>
+<pre><code class="python">&nbsp; &nbsp; break</code></pre>
+<pre><code class="python">&nbsp; a += 1</code></pre>
+<pre><code class="python">&nbsp; b += 1</code></pre>
+<pre><code class="python">print(a)</code></pre>
+.righthead[CPython Cache]
+<pre><code class="bash">.. [ 250 ][ 251 ][ 252 ][ 253 ][ 254 ][ 255 ][ 256 ]</code></pre>
+<pre><code class="bash">[ 257 ][ 257 ]</code></pre>
+<pre><code class="bash">.white[..] a .white[....] b</code></pre>
+???
+
+Test the identity of our objects
+
+---
+.righthead[KiwiPyCon 2019 Quiz, Round 3, Q8]
+<pre><code class="python">&nbsp;</code></pre>
+<pre><code class="python">a, b = 250, 250</code></pre>
+<pre><code class="python">for _ in range(250, 260): # 257</code></pre>
+<pre><code class="python">&nbsp; .blue[if a is not b:]</code></pre>
+<pre><code class="python">&nbsp; &nbsp; break</code></pre>
+<pre><code class="python">&nbsp; a += 1</code></pre>
+<pre><code class="python">&nbsp; b += 1</code></pre>
+<pre><code class="python">print(a)</code></pre>
+.righthead[CPython Cache]
+<pre><code class="bash">.. [ 250 ][ 251 ][ 252 ][ 253 ][ 254 ][ 255 ][ 256 ]</code></pre>
+<pre><code class="bash">[ .red[257] ][ .red[257] ]</code></pre>
+<pre><code class="bash">.white[..] a .white[....] b</code></pre>
+???
+
+which they aren't identical any more
+
+---
+.righthead[KiwiPyCon 2019 Quiz, Round 3, Q8]
+<pre><code class="python">&nbsp;</code></pre>
+<pre><code class="python">a, b = 250, 250</code></pre>
+<pre><code class="python">for _ in range(250, 260): # 257</code></pre>
+<pre><code class="python">&nbsp; if a is not b:</code></pre>
+<pre><code class="python">&nbsp; &nbsp; .blue[break]</code></pre>
+<pre><code class="python">&nbsp; a += 1</code></pre>
+<pre><code class="python">&nbsp; b += 1</code></pre>
+<pre><code class="python">print(a)</code></pre>
+???
+
+so we break
+
+---
+.righthead[KiwiPyCon 2019 Quiz, Round 3, Q8]
+<pre><code class="python">&nbsp;</code></pre>
+<pre><code class="python">a, b = 250, 250</code></pre>
+<pre><code class="python">for _ in range(250, 260): # 257</code></pre>
+<pre><code class="python">&nbsp; if a is not b:</code></pre>
+<pre><code class="python">&nbsp; &nbsp; break</code></pre>
+<pre><code class="python">&nbsp; a += 1</code></pre>
+<pre><code class="python">&nbsp; b += 1</code></pre>
+<pre><code class="python">.blue[print(a)]</code></pre>
+
+???
+
+and print out a
+---
+.righthead[KiwiPyCon 2019 Quiz, Round 3, Q8]
+<pre><code class="python">&nbsp;</code></pre>
+<pre><code class="python">a, b = 250, 250</code></pre>
+<pre><code class="python">for _ in range(250, 260): # 257</code></pre>
+<pre><code class="python">&nbsp; if a is not b:</code></pre>
+<pre><code class="python">&nbsp; &nbsp; break</code></pre>
+<pre><code class="python">&nbsp; a += 1</code></pre>
+<pre><code class="python">&nbsp; b += 1</code></pre>
+<pre><code class="python">print(a)</code></pre>
+<br>
+<pre><code class="python">257</code></pre>
+
+???
+
+which is 257.
+
+tada
+---
+class: title
 # Python 2
 ---
 .righthead[Python 2]
