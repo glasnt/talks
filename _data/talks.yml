@@ -1,4 +1,13 @@
 - conference:
+    name: Kiwi PyCon X
+    date: 2019-08-23
+    location: Wellington, NZ
+    link: https://python.nz/
+    talks:
+        - name: Turning 'wat' into 'why'
+
+
+- conference:
     name: Django Chat
     date: 2019-07-04
     link: https://twitter.com/ChatDjango
