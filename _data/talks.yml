@@ -5,6 +5,8 @@
     link: https://python.nz/
     talks:
         - name: Turning 'wat' into 'why'
+          video: https://www.youtube.com/watch?v=AxJB2sWMS-k
+          resources: https://glasnt.com/wat
 
 
 - conference:
@@ -59,6 +61,7 @@
           slides: 2019_02_PyCascades.podium
           twitter: https://twitter.com/cfactoid/status/1099374287708860416
           video: https://www.youtube.com/watch?v=1lVBSDcYhw0
+          resources: https://glasnt.com/wat
 
 - conference:
     name: FFS Conf Down Under
@@ -89,6 +92,7 @@
     location: Raleigh, NC
     talks:
         - name: Turning wat into why
+          resources: https://glasnt.com/wat
           link: https://2018.allthingsopen.org/talk/turning-wat-into-why/
           slides: 2018_10_AllThingsOpen.podium/index.html
           twitter: https://twitter.com/FunnelFiasco/status/1054379253289177088

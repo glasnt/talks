@@ -21,7 +21,7 @@ layout: page
                 {{c.conference.date | date: "%b %Y"}}
         </div>
         <div class="four columns">
-          {%if c.conference.tickets%}<a href="{{c.conference.tickets}}">Tickets on sale!</a>{%endif%}
+          {%if c.conference.tickets%}<a href="{{c.conference.tickets}}">Tickets</a>{%endif%}
         </div>
       </div>
       {% for talk in c.conference.talks %} 
