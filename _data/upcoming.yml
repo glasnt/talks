@@ -1,12 +1,3 @@
-- conference: 
-    name: Kiwi PyCon X
-    date: 2019-08-23
-    location: Wellington, NZ
-    link: https://python.nz/
-    tickets: https://python.nz/kiwipycon.register
-    talks: 
-        - name: Turning 'wat' into 'why'
-
 - conference:
     name: YOW! Perth
     location: Perth, Australia
