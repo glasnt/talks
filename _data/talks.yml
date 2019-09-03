@@ -6,6 +6,7 @@
     talks:
         - name: Turning 'wat' into 'why'
           video: https://www.youtube.com/watch?v=AxJB2sWMS-k
+          slides: 2019_08_KiwiPyCon.podium
           resources: https://glasnt.com/wat
 
 
