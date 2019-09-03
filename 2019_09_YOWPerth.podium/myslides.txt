@@ -130,7 +130,7 @@ js NaN .white[.............] // ???
 Note: This one is a bit more complicated. 
 ---
 
-#= `+`
+#= +
 
 Note: Remember that overloaded operator I mentioned earlier?
 
@@ -918,26 +918,23 @@ Note: but what about the string four, is it greater than an array of only 2?
 py True
 Note: yes. 
 
-*pause for thought*
-
-Let's go a bit deeper with some more comparisons
+So let's try something here...
 
 ---
 $$# Python 2
 
-py- >>> '4' > [4]
+Note: let's try and work out if there's some sort of order to this...
+--
+py- >>> [4] < '4'
 py- True
-py- >>> '4' < [4]
-py- False
-py- >>> '4' < 4
-py- False
-py- >>> [4] < 4
-py- False 
+py- >>> 4 < '4'
+py- True
+py- >>> 4 < [4] 
+py- True 
 py- >>> 4 < [4] < '4'
 py True
 
-
-Note: 5 examples
+Note:
 
 Why is it so? To the Specifications!
 
@@ -1108,6 +1105,7 @@ pl } else {
 pl &nbsp; &nbsp; print "false" }
 pl &nbsp; 
 pl false
+Note: note - no perl 6 here, on purpose. outside of scope. 
 ---
 #= Bash
 ---

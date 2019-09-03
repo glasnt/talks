@@ -163,7 +163,7 @@ This one is a bit more complicated.
 ---
 
 class: title
-# `+`
+# +
 
 ???
 
@@ -1066,37 +1066,32 @@ but what about the string four, is it greater than an array of only 2?
 
 yes.
 
-*pause for thought*
-
-Let's go a bit deeper with some more comparisons
+So let's try something here...
 
 ---
 .righthead[Python 2]
 
-<pre><code class="python">>>> '4' > [4]</code></pre>
+???
+
+let's try and work out if there's some sort of order to this...
+--
+<pre><code class="python">>>> [4] < '4'</code></pre>
 --
 <pre><code class="python">True</code></pre>
 --
-<pre><code class="python">>>> '4' < [4]</code></pre>
+<pre><code class="python">>>> 4 < '4'</code></pre>
 --
-<pre><code class="python">False</code></pre>
+<pre><code class="python">True</code></pre>
 --
-<pre><code class="python">>>> '4' < 4</code></pre>
+<pre><code class="python">>>> 4 < [4]</code></pre>
 --
-<pre><code class="python">False</code></pre>
---
-<pre><code class="python">>>> [4] < 4</code></pre>
---
-<pre><code class="python">False</code></pre>
+<pre><code class="python">True</code></pre>
 --
 <pre><code class="python">>>> 4 < [4] < '4'</code></pre>
 --
 <pre><code class="python">True</code></pre>
 
-
 ???
-
-5 examples
 
 Why is it so? To the Specifications!
 
@@ -1293,6 +1288,9 @@ class: title
 <pre><code class="perl">&nbsp; &nbsp; print "false" }</code></pre>
 <pre><code class="perl">&nbsp;</code></pre>
 <pre><code class="perl">false</code></pre>
+???
+
+note - no perl 6 here, on purpose. outside of scope.
 ---
 class: title
 # Bash
