@@ -1181,7 +1181,7 @@ compare this to the result you get when you try this in python three
 ???
 Which is very clearly and error, and it tells you why.
 --
-.pyeol[EOL in 129 days]
+.pyeol[EOL in 119 days]
 
 ???
 
@@ -1439,6 +1439,106 @@ that's all I wanted to point out
 
 an assignment operator that doesn't look like equality; bliss
 
+
+<br><br><BR><BR>
+# Go
+### ☞ &nbsp;`brew install go`<br> &nbsp;`cd examples`<br>`go run example.go`
+---
+.righthead[example.go]
+
+<pre><code class="go">package main</code></pre>
+<pre><code class="go">func main() {</code></pre>
+<pre><code class="go">&nbsp; a := 4</code></pre>
+<pre><code class="go">&nbsp; b := 2</code></pre>
+<pre><code class="go">&nbsp; print(a == b)</code></pre>
+<pre><code class="go">}</code></pre>
+
+???
+
+So here we have some go
+
+and we can see those lovely colon equals operators
+
+They look like the pascal operators, so they should be assignment, right?
+--
+.righthead[Terminal]
+.code[`$ go run example.go`]
+
+???
+
+so if we run this code, we expect a to not equal b
+--
+<br>
+.code[`false`]
+???
+
+and it doesn't.
+
+But.
+---
+.righthead[example.go]
+
+<pre><code class="go">package main</code></pre>
+<pre><code class="go">func main() {</code></pre>
+<pre><code class="go">&nbsp; a .blue[:=] 4 // assignment</code></pre>
+<pre><code class="go">&nbsp; b .blue[:=] 2 // ... right?</code></pre>
+<pre><code class="go">&nbsp; print(a == b)</code></pre>
+<pre><code class="go">}</code></pre>
+.righthead[Terminal]
+.code[`$ go run example.go`]
+<br>
+.code[`false`]
+
+???
+
+These.. they're assignment operators, right?
+
+No. They're not.
+
+They're just shortcuts.
+
+---
+.righthead[example.go]
+
+<pre><code class="go">package main</code></pre>
+<pre><code class="go">func main() {</code></pre>
+<pre><code class="go">&nbsp; .green[var a = 4] // standard assignment</code></pre>
+<pre><code class="go">&nbsp; b .blue[:=] 2 .white[..] // short variable declaration</code></pre>
+<pre><code class="go">&nbsp; print(a == b)</code></pre>
+<pre><code class="go">}</code></pre>
+.righthead[Terminal]
+.code[`$ go run example.go`]
+<br>
+.code[`false`]
+
+
+???
+
+I can use the full declaration on the variable a, and it's the equivelent of the colon equals I"m performing on B
+
+---
+.righthead[bad_example.go]
+
+<pre><code class="go">package main</code></pre>
+<pre><code class="go">func main() {</code></pre>
+<pre><code class="go">&nbsp; .red[a = 4]</code></pre>
+<pre><code class="go">&nbsp; b := 2</code></pre>
+<pre><code class="go">&nbsp; print(a == b)</code></pre>
+<pre><code class="go">}</code></pre>
+.righthead[Terminal]
+.code[`$ go run bad_example.go`]
+<br>
+???
+
+So if we forget this fact, and we declare a like we would in any other language
+--
+<br>
+.code[`./bad_example.go:4:3: undefined: a`<br>`./bad_example.go:6:9: undefined: a`]
+
+???
+
+the program fails to compile
+
 ---
 
 class: title
@@ -1514,6 +1614,182 @@ The reason for this:
 Elixir was built on top of Erlang, which was created in the 80's, and strings in Erlang are represented as a lists of integers. So, without telling our interpreter any different, it's going to assume that we want to print a string, not a list of numbers
 
 There are flags in erlang to change this, but it's only going to effect our interactive interpreter, not the actual data manipulation
+---
+class: title
+# C++
+---
+.righthead[examples/example.cpp]
+<pre><code class="cpp">#include ＜cstdio></code></pre>
+<pre><code class="cpp">int main() {</code></pre>
+<pre><code class="cpp">.white[...] printf("wat??!\n");</code></pre>
+<pre><code class="cpp">}</code></pre>
+--
+.righthead[Terminal]
+<pre><code class="bash">$ gcc example.cpp -o example && ./example</code></pre>
+--
+<pre><code class="bash">wat|</code></pre>
+
+???
+
+okay, so I cheated a bit, because this one has been implicitly mitigated.
+---
+.righthead[examples/example.cpp]
+<pre><code class="cpp">#include ＜cstdio></code></pre>
+<pre><code class="cpp">int main() {</code></pre>
+<pre><code class="cpp">.white[...] printf("wat??!\n");</code></pre>
+<pre><code class="cpp">}</code></pre>
+.righthead[Terminal]
+<pre><code class="bash">$ gcc example.cpp -o example .red[-trigraphs] && ./example</code></pre>
+--
+<pre><code class="bash">.smol[warning: trigraph converted to '|' character [-Wtrigraphs]]</code></pre>
+<pre><code class="bash">.smol[.white[....] printf("wat??!\n");]</code></pre>
+<pre><code class="bash">.smol[.white[...............] ^]</code></pre>
+<pre><code class="bash">wat|</code></pre>
+???
+What I actually ran
+
+I came across this one when trying to do some printline debugging, and searching my logs for {wat??!" wasn't returning anything, because it was implicitly changing my output
+
+In some environments this functionality is disabled by default, but in mine it wasn't
+
+The problem here, from what I understand, is that C++ doesn't understand millenial speak
+
+---
+class: table
+<br>
+<pre><code class="bash"># Character encodings</code></pre>
+
+| .smol[ &nbsp; ] &nbsp;|&nbsp; .smol[121 ] &nbsp;|&nbsp; .smol[ 122 ] &nbsp;|&nbsp; .smol[ 123 ] &nbsp;|&nbsp; .smol[ 124 ] &nbsp;|&nbsp; .smol[ 125 ] &nbsp;|&nbsp; .smol[ 126 ] &nbsp;|&nbsp; .smol[ 126 ] &nbsp;|&nbsp; .smol[ 127 ] &nbsp; |
+|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
+| ISO646 | w | x | y | z | .gg[&nbsp;] | .gg[&nbsp;] |.gg[&nbsp;] | DEL|
+| ASCII | w | x | y | z | { | ┃ | }| DEL |
+
+???
+
+C supports ISO 646, which doesn't have braces or the pipe character, while ascii does
+
+Back in the day keyboards and punch cards didn't have some of these punctuation characters that a lot of keyboards today have
+
+Although not all keyboards have these symbols even now, and if they do, they are in different places. Forget qwerty vs dvorak (d-vor-jack), try using a US-keybord layout then swapping to a UK layout. The differences are subtle, but for programers they are glaringly obvious.
+
+.clear[]
+
+---
+.righthead[C++]
+.code[.grey[# Trigraph replacements]<br><br>??! → |<br>??< → {<br>??> → }<br>...]
+
+<pre><code class="bash"># -Wtrigraphs</code></pre>
+
+---
+class: title
+# CSS
+---
+.righthead[examples/example.css]
+
+<pre><code class="css">.black { color: black; }</code></pre>
+<pre><code class="css">.gold &nbsp;{ color: gold; }</code></pre>
+
+.righthead[examples/example.html]
+<pre><code class="xml">.nopad[`<link rel="stylesheet" href="example.css" />`]</code></pre>
+<pre><code class="xml">`<div class="black gold"> Black Gold </div>`</code></pre>
+<pre><code class="xml">`<div class="gold black"> Gold Black </div>`</code></pre>
+
+???
+
+if I have two files, a css file that defines a black and a gold style, and then a HTML div that uses both, but in different orders
+
+How will the divs appear
+
+black and gold
+
+or
+
+.gold and black
+
+--
+
+.righthead[open examples/example.html]
+<div class="css-demo">
+<div class="black gold">Black Gold</div>
+<div class="gold black">Gold Black</div>
+</div>
+???
+
+These two classes have the same specificity, so CSS falls back to source order.
+---
+.righthead[examples/example.css]
+<pre><code class="css">.black { color: black; }</code></pre>
+<pre><code class="css">.red[.gold &nbsp;{ color: gold; }] .inline-code[`/* specificity */`]</code></pre>
+
+.righthead[examples/example.html]
+<pre><code class="xml">.nopad[`<link rel="stylesheet" href="example.css" />`]</code></pre>
+<pre><code class="xml">`<div class="black gold"> Black Gold </div>`</code></pre>
+<pre><code class="xml">`<div class="gold black"> Gold Black </div>`</code></pre>
+
+.righthead[open examples/example.html]
+<div class="css-demo">
+<div class="black gold">Black Gold</div>
+<div class="gold black">Gold Black</div>
+</div>
+
+???
+
+The class order on the element does not matter. These two classes have the same specificity, so CSS falls back to source order.
+
+But ah! I hear you cry. What about `!important`
+---
+.righthead[examples/example.css]
+<pre><code class="css">.black { color: black !important; }</code></pre>
+<pre><code class="css">.gold &nbsp;{ color: gold; }</code></pre>
+
+.righthead[examples/example.html]
+<pre><code class="xml">.nopad[`<link rel="stylesheet" href="example.css" />`]</code></pre>
+<pre><code class="xml">`<div class="black gold"> Black Gold </div>`</code></pre>
+<pre><code class="xml">`<div class="gold black"> Gold Black </div>`</code></pre>
+
+???
+
+Let's just add that here, that'll make sure black actually works!
+--
+
+.righthead[open examples/example.html]
+<div class="css-demo">
+<div class="blacki gold">Black Gold</div>
+<div class="gold blacki">Gold Black</div>
+</div>
+
+???
+
+well yes, but it'll also override Gold
+---
+.righthead[CSS Specificity]
+<br><br>
+Type selector .bc[.row2[`h1, h2, p`]] .row3[`# lowest`]
+
+Class selector .bc[.row2[`.black, .gold`]]
+
+ID selector .bc[.row2[`#specific, #example`]] .row3[`# highest`]
+
+???
+
+the specificity of the CSS selector in lowest to highest
+
+types, classes, then specific identifers
+
+
+
+--
+<br><br>
+<br><br>
+**Bad Practice** .bc[.row2[.red[`!important`]]]
+
+???
+
+Important will override, but you should avoid using it where possible. There are some situations were it's the only way to get things working, such as overriding inline CSS, but using inline css is VERY bad practice.
+
+CSS is literally cascading style sheets. It should naturally cascade
+
+
 
 ---
 class: title

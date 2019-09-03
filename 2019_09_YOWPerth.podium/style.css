@@ -361,7 +361,9 @@ span.foot a { color: grey !important}
 Adapted from https://guides.codechewing.com/mac-terminal-shell-css-html
 Added: Zenburn, mostly. 
 ***/
-
+table { margin-left: -80px }
+table th { font-family: "SFMono-Regular",Consolas,"Liberation Mono",Menlo,Courier,monospace !important; }
+table th { line-height: 100%; padding: 0 0.5em;}
 .shell-wrap {
   width: 1000px;
   margin: 20px auto 0 auto !important;
@@ -473,3 +475,4 @@ Added: Zenburn, mostly.
 .right-image { float: right; max-width: 400px; padding: 20px;} 
 .white a { color: white }
 .b { font-weight: bold; }
+.smol { font-size: 80%; }

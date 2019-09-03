@@ -1009,7 +1009,7 @@ co TypeError: '＜' not supported between instances of 'int' and 'list'
 Note: 
 Which is very clearly and error, and it tells you why. 
 --
-.pyeol[EOL in 129 days]
+.pyeol[EOL in 119 days]
 
 Note: just another reason why you reeeeeallly shouldn't be using Python2 
 
@@ -1234,6 +1234,92 @@ Note: that's all I wanted to point out
 
 an assignment operator that doesn't look like equality; bliss
 
+
+<br><br><BR><BR>
+# Go
+### ☞ &nbsp;`brew install go`<br> &nbsp;`cd examples`<br>`go run example.go`
+---
+$$# example.go
+
+go package main
+go func main() {
+go &nbsp;  a := 4
+go &nbsp;  b := 2
+go &nbsp;  print(a == b)
+go }
+
+Note: So here we have some go
+
+and we can see those lovely colon equals operators
+
+They look like the pascal operators, so they should be assignment, right?
+--
+$$# Terminal
+.code[`$ go run example.go`]
+
+Note: so if we run this code, we expect a to not equal b
+--
+<br>
+.code[`false`]
+Note: and it doesn't. 
+
+But. 
+---
+$$# example.go
+
+go package main
+go func main() {
+go &nbsp;  a .blue[:=] 4 // assignment
+go &nbsp;  b .blue[:=] 2 // ... right?
+go &nbsp;  print(a == b)
+go }
+$$# Terminal
+.code[`$ go run example.go`]
+<br>
+.code[`false`]
+
+Note: These.. they're assignment operators, right? 
+
+No. They're not. 
+
+They're just shortcuts.
+
+---
+$$# example.go
+
+go package main
+go func main() {
+go &nbsp;  .green[var a = 4] // standard assignment
+go &nbsp;  b .blue[:=] 2 .white[..] // short variable declaration
+go &nbsp;  print(a == b)
+go }
+$$# Terminal
+.code[`$ go run example.go`]
+<br>
+.code[`false`]
+
+
+Note: I can use the full declaration on the variable a, and it's the equivelent of the colon equals I"m performing on B
+
+---
+$$# bad_example.go
+
+go package main
+go func main() {
+go &nbsp;  .red[a = 4]
+go &nbsp;  b := 2
+go &nbsp;  print(a == b)
+go }
+$$# Terminal
+.code[`$ go run bad_example.go`]
+<br>
+Note: So if we forget this fact, and we declare a like we would in any other language
+--
+<br>
+.code[`./bad_example.go:4:3: undefined: a`<br>`./bad_example.go:6:9: undefined: a`]
+
+Note: the program fails to compile
+
 ---
 
 #= Elixir
@@ -1300,6 +1386,160 @@ Note: The reason for this:
 Elixir was built on top of Erlang, which was created in the 80's, and strings in Erlang are represented as a lists of integers. So, without telling our interpreter any different, it's going to assume that we want to print a string, not a list of numbers
 
 There are flags in erlang to change this, but it's only going to effect our interactive interpreter, not the actual data manipulation
+---
+#= C++
+---
+$$# examples/example.cpp
+cpp #include ＜cstdio>
+cpp int main() {
+cpp .white[...] printf("wat??!\n");
+cpp }
+--
+$$# Terminal
+sh- $ gcc example.cpp -o example && ./example
+sh wat|
+
+Note: okay, so I cheated a bit, because this one has been implicitly mitigated.
+---
+$$# examples/example.cpp
+cpp #include ＜cstdio>
+cpp int main() {
+cpp .white[...] printf("wat??!\n");
+cpp }
+$$# Terminal
+sh- $ gcc example.cpp -o example .red[-trigraphs] && ./example
+sh .smol[warning: trigraph converted to '|' character [-Wtrigraphs]]
+sh .smol[.white[....] printf("wat??!\n");]
+sh .smol[.white[...............] ^]
+sh wat|
+Note:
+What I actually ran
+
+I came across this one when trying to do some printline debugging, and searching my logs for {wat??!" wasn't returning anything, because it was implicitly changing my output
+
+In some environments this functionality is disabled by default, but in mine it wasn't
+
+The problem here, from what I understand, is that C++ doesn't understand millenial speak
+
+---
+class: table
+<br>
+sh # Character encodings
+
+| .smol[ &nbsp; ]  &nbsp;|&nbsp;  .smol[121 ]  &nbsp;|&nbsp; .smol[ 122 ]  &nbsp;|&nbsp; .smol[ 123 ]  &nbsp;|&nbsp; .smol[ 124 ]  &nbsp;|&nbsp; .smol[ 125 ]  &nbsp;|&nbsp; .smol[ 126 ]  &nbsp;|&nbsp; .smol[ 126 ]  &nbsp;|&nbsp; .smol[ 127 ]  &nbsp; |
+|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
+| ISO646 | w | x | y | z | .gg[&nbsp;]  | .gg[&nbsp;] |.gg[&nbsp;] | DEL|
+| ASCII | w | x | y | z | { | ┃ | }| DEL |
+
+Note: C supports ISO 646, which doesn't have braces or the pipe character, while ascii does
+
+Back in the day keyboards and punch cards didn't have some of these punctuation characters that a lot of keyboards today have
+
+Although not all keyboards have these symbols even now, and if they do, they are in different places. Forget qwerty vs dvorak (d-vor-jack), try using a US-keybord layout then swapping to a UK layout. The differences are subtle, but for programers they are glaringly obvious.
+
+.clear[]
+
+---
+$$# C++
+.code[.grey[# Trigraph replacements]<br><br>??! → |<br>??< → {<br>??> → }<br>...]
+
+sh # -Wtrigraphs
+
+---
+#= CSS
+---
+$$# examples/example.css
+
+css .black { color: black; }
+css .gold &nbsp;{ color: gold; }
+
+$$# examples/example.html
+xml .nopad[`<link rel="stylesheet" href="example.css" />`]
+xml `<div class="black gold"> Black Gold </div>`
+xml `<div class="gold black"> Gold Black </div>`
+
+Note: if I have two files, a css file that defines a black and a gold style, and then a HTML div that uses both, but in different orders
+
+How will the divs appear
+
+black and gold
+
+or
+
+.gold and black
+
+--
+
+$$# open examples/example.html
+<div class="css-demo">
+<div class="black gold">Black Gold</div>
+<div class="gold black">Gold Black</div>
+</div>
+Note: These two classes have the same specificity, so CSS falls back to source order.
+---
+$$# examples/example.css
+css .black { color: black; }
+css .red[.gold &nbsp;{ color: gold; }] .inline-code[`/* specificity */`]
+
+$$# examples/example.html
+xml .nopad[`<link rel="stylesheet" href="example.css" />`]
+xml `<div class="black gold"> Black Gold </div>`
+xml `<div class="gold black"> Gold Black </div>`
+
+$$# open examples/example.html
+<div class="css-demo">
+<div class="black gold">Black Gold</div>
+<div class="gold black">Gold Black</div>
+</div>
+
+Note: The class order on the element does not matter. These two classes have the same specificity, so CSS falls back to source order.
+
+But ah! I hear you cry. What about `!important`
+---
+$$# examples/example.css
+css .black { color: black !important; }
+css .gold &nbsp;{ color: gold; }
+
+$$# examples/example.html
+xml .nopad[`<link rel="stylesheet" href="example.css" />`]
+xml `<div class="black gold"> Black Gold </div>`
+xml `<div class="gold black"> Gold Black </div>`
+
+Note: Let's just add that here, that'll make sure black actually works!
+--
+
+$$# open examples/example.html
+<div class="css-demo">
+<div class="blacki gold">Black Gold</div>
+<div class="gold blacki">Gold Black</div>
+</div>
+
+Note: well yes, but it'll also override Gold
+---
+$$# CSS Specificity
+<br><br>
+Type selector  .bc[.row2[`h1, h2, p`]] .row3[`# lowest`]
+
+Class selector  .bc[.row2[`.black, .gold`]]
+
+ID selector    .bc[.row2[`#specific, #example`]] .row3[`# highest`]
+
+Note: the specificity of the CSS selector in lowest to highest
+
+types, classes, then specific identifers
+
+
+
+--
+<br><br>
+<br><br>
+**Bad Practice** .bc[.row2[.red[`!important`]]]
+
+Note: Important will override, but you should avoid using it where possible. There are some situations were it's the only way to get things working, such as overriding inline CSS, but using inline css is VERY bad practice.
+
+CSS is literally cascading style sheets. It should naturally cascade
+
+
 
 ---
 #= Scala
