@@ -1791,31 +1791,6 @@ CSS is literally cascading style sheets. It should naturally cascade
 
 ---
 class: title
-# Scala
----
-.righthead[Scala]
-<pre><code class="scala">scala> println({} + "")</code></pre>
---
-<pre><code class="scala">()</code></pre>
-
-???
-
-what is the printed result of the concatenation of an object and an empty string
----
-.righthead[Scala]
-<pre><code class="scala">scala> println({} + "")</code></pre>
-<pre><code class="scala">()</code></pre>
-
-.fix-tilt[By design]
-
-???
-
-yeah, so this is because scala uses punctuation in a completely different way to javascript and other languages; the braces you're seeing is an empty function, and the concatenation of that to an empty string is an empty result
-
-for anyone unfamiliar with the conventions of syntax in scala, this might be confusing, but this is absolutely by design
----
-
-class: title
 # No language is 'better'
 
 ???
