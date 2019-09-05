@@ -1,1 +1,1 @@
-Code file examples in `examples/`
+glasnt.com/wat for all references
