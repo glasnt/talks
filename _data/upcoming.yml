@@ -1,13 +1,4 @@
 - conference:
-    name: YOW! Perth
-    location: Perth, Australia
-    date: 2019-09-04
-    link: https://yowconference.com/perth
-    talks: 
-       - name: Turning 'wat' into 'why'
-         link: https://yowconference.com/talks/katie-mclaughlin/yow-perth-2019/turning-wat-into-why-10456
-
-- conference:
     name: Perth Django and Python Developers
     location: Perth, Australia
     date: 2019-09-05
