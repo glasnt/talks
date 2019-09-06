@@ -1,4 +1,15 @@
 - conference:
+    name: Perth Django and Python Developers
+    location: Perth, Australia
+    date: 2019-09-05
+    link: https://www.meetup.com/Perth-Django-Users-Group/
+    talks:
+       - name: Turning 'wat' into 'why'
+         link: https://www.meetup.com/Perth-Django-Users-Group/events/263850032/
+         twitter: https://twitter.com/slevins_/status/1169580358666354688
+         slides: 2019_09_PDPD.podium
+
+- conference:
     name: YOW! Perth
     location: Perth, Australia
     date: 2019-09-04

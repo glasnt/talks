@@ -233,11 +233,11 @@ In order to do that
 
 --
 
-.ecma[.bc[Convert .bluef[`a`] and .greenf[`b`] to primatives]]
+.ecma[.bc[Convert .bluef[`a`] and .greenf[`b`] to primitives]]
 
 ???
 
-we need to first reduce both sides of the operator to their primative forms
+we need to first reduce both sides of the operator to their primitive forms
 
 --
 
@@ -257,7 +257,7 @@ To do that, we have two options
 
 We have `valueOf`, or `toString`
 
-After both operands are in their primative forms, we then have a choice
+After both operands are in their primitive forms, we then have a choice
 --
 
 .ecma[Are either .bc[.bluef[`a`]] or .bc[.greenf[`b`]] a string?]
@@ -285,7 +285,7 @@ otherwise, we convert both sides to a number, and add them.
 ## .bluef[`[]`] `+` .greenf[`{}`]
 --
 
-.ecma[.bc[Convert .bluef[`[]`] to primative]]
+.ecma[.bc[Convert .bluef[`[]`] to primitive]]
 
 --
 
@@ -304,7 +304,7 @@ otherwise, we convert both sides to a number, and add them.
 .righthead[ECMAScript]
 ## .bluef[`[]`] `+` .greenf[`{}`]
 
-.ecma[.bc[Convert .bluef[`[]`] to primative]]
+.ecma[.bc[Convert .bluef[`[]`] to primitive]]
 
 * .ecma[.bc[that is, `typeof()` in `undefined`, `null`, `boolean`, `number`, `string`]]
 * .ecma[First try, .bc[`.valueOf()`, else `.toString()`]]
@@ -323,7 +323,7 @@ otherwise, we convert both sides to a number, and add them.
 ## .bluef[`""`] `+` .greenf[`{}`]
 --
 
-.ecma[.bc[Convert .greenf[`{}`] to primative]]
+.ecma[.bc[Convert .greenf[`{}`] to primitive]]
 
 --
 
@@ -342,7 +342,7 @@ otherwise, we convert both sides to a number, and add them.
 .righthead[ECMAScript]
 ## .bluef[`""`] `+` .greenf[`{}`]
 
-.ecma[.bc[Convert .greenf[`{}`] to primative]]
+.ecma[.bc[Convert .greenf[`{}`] to primitive]]
 
 * .ecma[.bc[that is, `typeof()` in `undefined`, `null`, `boolean`, `number`, `string`]]
 * .ecma[First try, .bc[`.valueOf()`, else `.toString()`]]
@@ -388,7 +388,7 @@ Backwards compatibility
 .righthead[ECMAScript]
 ## .bluef[`""`] `+` .greenf[`{}`]
 
-.ecma[.bc[Convert .greenf[`{}`] to primative]]
+.ecma[.bc[Convert .greenf[`{}`] to primitive]]
 
 * .ecma[.bc[that is, `typeof()` in `undefined`, `null`, `boolean`, `number`, `string`]]
 * .ecma[First try, .bc[`.valueOf()`, else `.toString()`]]
@@ -470,7 +470,7 @@ the other side is a unary addition, which casts the object to number
 
 ???
 
-this is the equiv of casting the empty string, the primative from earlier, to a number
+this is the equiv of casting the empty string, the primitive from earlier, to a number
 
 Which in this case is zero
 
@@ -1211,7 +1211,7 @@ compare this to the result you get when you try this in python three
 ???
 Which is very clearly and error, and it tells you why.
 --
-.pyeol[EOL in 119 days]
+.pyeol[EOL in 118 days]
 
 ???
 

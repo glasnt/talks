@@ -1,14 +1,4 @@
 - conference:
-    name: Perth Django and Python Developers
-    location: Perth, Australia
-    date: 2019-09-05
-    link: https://www.meetup.com/Perth-Django-Users-Group/
-    tickets: https://www.meetup.com/Perth-Django-Users-Group/events/263850032/
-    talks: 
-       - name: Turning 'wat' into 'why'
-         link: https://www.meetup.com/Perth-Django-Users-Group/events/263850032/
-
-- conference:
     name: PyGotham 2019
     location: New York, USA
     date: 2019-10-04

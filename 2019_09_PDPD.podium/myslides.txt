@@ -184,9 +184,9 @@ In order to do that
 
 --
 
-.ecma[.bc[Convert .bluef[`a`] and .greenf[`b`] to primatives]]
+.ecma[.bc[Convert .bluef[`a`] and .greenf[`b`] to primitives]]
 
-Note:  we need to first reduce both sides of the operator to their primative forms
+Note:  we need to first reduce both sides of the operator to their primitive forms
  
 --
 
@@ -202,7 +202,7 @@ To do that, we have two options
 
 Note: We have `valueOf`, or `toString`
 
-After both operands are in their primative forms, we then have a choice
+After both operands are in their primitive forms, we then have a choice
 --
 
 .ecma[Are either .bc[.bluef[`a`]] or .bc[.greenf[`b`]] a string?]
@@ -224,7 +224,7 @@ $$# ECMAScript
 ## .bluef[`[]`] `+` .greenf[`{}`]
 --
 
-.ecma[.bc[Convert .bluef[`[]`] to primative]]
+.ecma[.bc[Convert .bluef[`[]`] to primitive]]
 
 -- 
 
@@ -240,7 +240,7 @@ js "object"
 $$# ECMAScript
 ## .bluef[`[]`] `+` .greenf[`{}`]
 
-.ecma[.bc[Convert .bluef[`[]`] to primative]]
+.ecma[.bc[Convert .bluef[`[]`] to primitive]]
 
  * .ecma[.bc[that is, `typeof()` in `undefined`, `null`, `boolean`, `number`, `string`]]
  * .ecma[First try, .bc[`.valueOf()`, else `.toString()`]]
@@ -256,7 +256,7 @@ $$# ECMAScript
 ## .bluef[`""`] `+` .greenf[`{}`]
 --
 
-.ecma[.bc[Convert .greenf[`{}`] to primative]]
+.ecma[.bc[Convert .greenf[`{}`] to primitive]]
 
 -- 
 
@@ -272,7 +272,7 @@ js "object"
 $$# ECMAScript
 ## .bluef[`""`] `+` .greenf[`{}`]
 
-.ecma[.bc[Convert .greenf[`{}`] to primative]]
+.ecma[.bc[Convert .greenf[`{}`] to primitive]]
 
  * .ecma[.bc[that is, `typeof()` in `undefined`, `null`, `boolean`, `number`, `string`]]
  * .ecma[First try, .bc[`.valueOf()`, else `.toString()`]]
@@ -316,7 +316,7 @@ Backwards compatibility
 $$# ECMAScript
 ## .bluef[`""`] `+` .greenf[`{}`]
 
-.ecma[.bc[Convert .greenf[`{}`] to primative]]
+.ecma[.bc[Convert .greenf[`{}`] to primitive]]
 
  * .ecma[.bc[that is, `typeof()` in `undefined`, `null`, `boolean`, `number`, `string`]]
  * .ecma[First try, .bc[`.valueOf()`, else `.toString()`]]
@@ -385,7 +385,7 @@ $$# ECMAScript
 js > {} + []
 .code[.greyf[.bc[`≈ ` &nbsp &nbsp`+ ""`]]]
 
-Note: this is the equiv of casting the empty string, the primative from earlier, to a number
+Note: this is the equiv of casting the empty string, the primitive from earlier, to a number
 
 Which in this case  is zero
 
@@ -1027,7 +1027,7 @@ co TypeError: '＜' not supported between instances of 'int' and 'list'
 Note: 
 Which is very clearly and error, and it tells you why. 
 --
-.pyeol[EOL in 119 days]
+.pyeol[EOL in 118 days]
 
 Note: just another reason why you reeeeeallly shouldn't be using Python2 
 
