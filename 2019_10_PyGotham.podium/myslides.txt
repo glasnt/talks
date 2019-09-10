@@ -1,0 +1,212 @@
+#= <br>What is deployment, anyway?
+## PyGotham 2019
+@ footer.svg
+
+Note: breathe, Katie!
+
+You got this
+
+# 💪
+---
+@ whatis_copy.png
+
+Note: on conference theme 
+
+Before I start, a bit about me. 
+---
+#= .e[👩🏻‍🔧]
+
+Note: Over the years I've had a number of different jobs titles
+
+system adminstrator
+automation engineer
+operations engineer
+site reliability engineer
+
+but in all of these roles, I've had one general job requirement
+
+---
+
+#= .e[🔧]
+Note: I've been the person that keeps your website up. 
+
+More importantly, 
+
+---
+
+#= .e[⏰]
+
+Note: I'm the one that got woken up in the middle of the night if your website went down. 
+
+---
+
+#= .e[👩🏼‍💻👨🏽‍💻 ➡ 👩🏻‍🔧]
+
+Note: You develop your website, I make sure it stays up. 
+
+For todays's talk. 
+---
+#= .e[👩🏼‍💻👨🏽‍💻 ➡ 👩🏻‍🔧]
+#   ↑ you ↑.w[...................]
+
+Note: I'm going to make the assumption that you're a developer
+
+and given you're at PyGotham
+
+---
+#= .e[👩🏼‍💻🐍 ➡ 👩🏻‍🔧]
+#   ↑ you ↑.w[...................]
+
+Note: I'm going to assume you're a Python developer. 
+
+And, if I make take it a step further
+
+---
+
+#= .e[👩🏼‍💻🦄 ➡ 👩🏻‍🔧]
+#   ↑ you ↑.w[...................]
+
+Note: a Django developer. 
+
+---
+
+#= .e[👩🏼‍💻🦄]
+
+Note: say, you've just made your first django website. 
+
+You've spent the day at a django girls workshop, and you have yourself a really nice little application. 
+---
+
+@= sprout_localhost_00.png
+
+Note: and it's great! you can open it in your browser! 
+
+Problem. It's only available in your browser. 
+
+---
+
+@= sprout_localhost_01.png
+
+Note: the website your looking at is, literally, your local host. 
+
+This is your machine. 
+
+The djangogirl next to you can't open your website on her machine. 
+---
+
+$$terminal python3.7
+$$prompt ~/my_project
+.noop[python] manage.py runserver<br>
+Watching for file changes with StatReloader<br>
+Performing system checks...<br><br>
+System check identified no issues (0 silenced).<br>
+October 5, 2019 - 13:06:37<br>
+Django version 2.2.5, using settings 'my_project.settings'<br>
+Starting development server at http:/.noop[/]127.0.0.1:8000/<br>Quit the server with CONTROL-C.<br>
+[05/Oct/2019 13:06:42] "GET / HTTP/1.1" 200 193<br>
+$$w
+
+Note: that's because you're running something like this on your machine. 
+
+---
+$$terminal python3.7
+$$prompt ~/my_project
+.noop[python] manage.py runserver<br>
+Watching for file changes with StatReloader<br>
+Performing system checks...<br><br>
+System check identified no issues (0 silenced).<br>
+October 5, 2019 - 13:06:37<br>
+Django version 2.2.5, using settings 'my_project.settings'<br>
+.red[Starting development server at http:/.noop[/]127.0.0.1:8000/]<br>Quit the server with CONTROL-C.<br>
+[05/Oct/2019 13:06:42] "GET / HTTP/1.1" 200 193<br>
+$$w
+
+Note: you are running a development server. On your laptop. 
+
+So of course noone else can access it!
+
+---
+
+#= .e[🦄]
+
+Note: so you need to take your little django app, and put it somewhere that other can access it. 
+---
+
+#= .e[💻]
+Note: instead of your laptop
+
+---
+
+#= .e[☁️]
+Note: it needs to be in the cloud
+---
+
+#= .caps[The Cloud]
+### someone else's computer
+
+Note: and by that I mean literally. 
+---
+#= .sup[🔜].e[☁️].sup[✨]
+
+Note: and to get it there, that's deployment!
+---
+
+#= .caps[Deployment]
+### your code on someone else's computer
+---
+#= .e[🤭]
+Note: 
+
+I know right. Shock. But that's the spoiler. 
+---
+
+#= .e[☁️]
+
+Note: while the way you used to host a website was, literally, your desktop in your house, the new vogue is using a dedicated platform designed to do such a thing. 
+
+---
+
+#= .e[🔌]
+
+Note: heck, I've worked for clients were their website was a desktop computer, plugged into dedicated redundant power in our datacentre, connected to our network. 
+
+Literally a beige box sitting in a data center, as the server. 
+
+---
+#= .e[☁️]
+
+Note: but that's all the cloud is. Someone else's machine. 
+
+We've just spent the last how many years abstracting that more, making your website take up less space, putting more websites onto, sometimes the same machines, and slowly making it easier for you to do so. 
+
+---
+
+#= e.[🦄☁️]
+
+Note: so while I'm going to take a bit about the things you need to think about when deploying a django-powered website, I am also going to take more about how you deploy websites in general. 
+
+---
+
+TODO
+
+so why can't I just copy what I have directly onto someone else's machine?
+
+runserver bad
+
+how to deploy in productoin
+
+wsgi.py file!
+
+PaaS vs IaaS
+
+Deploying to PyThonAnywhere
+Deploying to Cloud Run
+
+
+
+
+
+---
+#= <br>Thanks!
+@ footer.svg
+
