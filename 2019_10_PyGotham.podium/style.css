@@ -4,6 +4,7 @@
 @import url("highlightjs.css");
 @import url("fonts/pt-sans.css");
 @import url("fonts/pt-serif.css");
+@import url("fonts/roboto.css");
 
 .caps { font-family: "PT Serif", serif;  font-variant: small-caps;}
 
@@ -131,20 +132,13 @@ li cite {
  }
 .ps-error { color: red !important; font-weight: bold; }
 
-.fix-notilt {  /* for shooting star only */ 
-    position: absolute;
-    max-width: 400px;
-    right: 0em;
-    bottom: 1.1em;
-    text-align: center;
-}
 .fix-tilt-long { 
     position: absolute;
-    font-size: 64pt;
+    font-size: 48pt;
     max-width: 400px;
-    right: 2em;
+    right: 1em;
     line-height: 1;
-    bottom: 1em;
+    bottom: 0.5em;
     z-index: 111;
     color: grey;
     font-family: monospace; 
@@ -329,7 +323,9 @@ dr { color: rgb(201,135,135) }
 */
  .left { text-align: left; }
 
-/* Flux font */ fl { font-family: "DTLProkyonST", regular}
+/* Flux font */ .flux { font-family: "DTLProkyonST", regular}
+/* Flux font */ .roboto { font-family: "Roboto", regular}
+ .djangobackground { background-color: "#0C3C26" }
 
 /* redacted font */ 
 @font-face { font-family: "RedactedB"; src: url("redacted-script-bold.ttf") format('truetype'); font-style:bold; }
@@ -447,7 +443,6 @@ table th { line-height: 100%; padding: 0 0.5em;}
 .remark-slides-area .remark-slide-content::after {
     font-weight: normal;
     font-family: "PT Sans" !important; 
-    background-color: white;
     color: grey;
     content: "@glasnt";
     padding: 10px; 
@@ -492,3 +487,4 @@ dr { color: rgb(201,135,135) }
 .sup { vertical-align: super}
 .slim { margin: 0}
 .h2 { font-size: 4em; }
+

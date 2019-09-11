@@ -10,88 +10,78 @@ You got this
 ---
 @ whatis_copy.png
 
-Note: on conference theme 
-
-Before I start, a bit about me. 
+Note: this is What is deployment, anyway. 
 ---
+
+#= .e[👋]
+
+Note: Hi! I'm katie
+---
+
 #= .e[👩🏻‍🔧]
 
-Note: Over the years I've had a number of different jobs titles
+Note: for the last 8 years, on and off, I've worked as a 
 
-system adminstrator
+systems administrator
+
 automation engineer
+
 operations engineer
-site reliability engineer
 
-but in all of these roles, I've had one general job requirement
+site reliabiltiy engineer
 
----
+For a bunch of different places, including web hosting providers. 
 
-#= .e[🔧]
-Note: I've been the person that keeps your website up. 
+It was my job to make sure not only did your website stay up, but also
 
-More importantly, 
+if you paid enough money
 
 ---
 
 #= .e[⏰]
 
-Note: I'm the one that got woken up in the middle of the night if your website went down. 
+Note: I'd get woken up in the middle of the night if your website was down. 
+
+Given that context. 
 
 ---
 
-#= .e[👩🏼‍💻👨🏽‍💻 ➡ 👩🏻‍🔧]
+#= .e[👩🏼‍💻]
 
-Note: You develop your website, I make sure it stays up. 
-
-For todays's talk. 
----
-#= .e[👩🏼‍💻👨🏽‍💻 ➡ 👩🏻‍🔧]
-#   ↑ you ↑.w[...................]
-
-Note: I'm going to make the assumption that you're a developer
-
-and given you're at PyGotham
-
----
-#= .e[👩🏼‍💻🐍 ➡ 👩🏻‍🔧]
-#   ↑ you ↑.w[...................]
-
-Note: I'm going to assume you're a Python developer. 
-
-And, if I make take it a step further
+Note: Today we're going to discuss how we can get your django app
 
 ---
 
-#= .e[👩🏼‍💻🦄 ➡ 👩🏻‍🔧]
-#   ↑ you ↑.w[...................]
+#= .e[☁️]
 
-Note: a Django developer. 
+Note: 
 
----
+Onto the internet. 
 
-#= .e[👩🏼‍💻🦄]
-
-Note: say, you've just made your first django website. 
-
-You've spent the day at a django girls workshop, and you have yourself a really nice little application. 
----
-
-@= sprout_localhost_00.png
-
-Note: and it's great! you can open it in your browser! 
-
-Problem. It's only available in your browser. 
+There's going to be a few major sections to that: 
 
 ---
 
-@= sprout_localhost_01.png
+#= .e[🦄<br>🏢<br>🚚]
 
-Note: the website your looking at is, literally, your local host. 
+Note: 
 
-This is your machine. 
+A bit about how django works
 
-The djangogirl next to you can't open your website on her machine. 
+Some of the current hosting options that are available
+
+And how you get your website off your laptop and onto one of these hosting providers. 
+
+in other words, what, where and how
+
+--- 
+
+#= .e[🦄]
+
+Note: chapter one. Django. The what. 
+
+If you've been to a djangogirls workshop or have ever otherwise built your own django application before, you would be familiar with 
+
 ---
 
 $$terminal python3.7
@@ -106,7 +96,23 @@ Starting development server at http:/.noop[/]127.0.0.1:8000/<br>Quit the server 
 [05/Oct/2019 13:06:42] "GET / HTTP/1.1" 200 193<br>
 $$w
 
-Note: that's because you're running something like this on your machine. 
+Note: a terminal that looks something like this. 
+
+
+---
+$$terminal python3.7
+$$prompt ~/my_project
+.red[.noop[python] manage.py runserver]<br>
+Watching for file changes with StatReloader<br>
+Performing system checks...<br><br>
+System check identified no issues (0 silenced).<br>
+October 5, 2019 - 13:06:37<br>
+Django version 2.2.5, using settings 'my_project.settings'<br>
+Starting development server at http:/.noop[/]127.0.0.1:8000/<br>Quit the server with CONTROL-C.<br>
+[05/Oct/2019 13:06:42] "GET / HTTP/1.1" 200 193<br>
+$$w
+
+Note: you would have run the command python manage.py runserver
 
 ---
 $$terminal python3.7
@@ -121,88 +127,331 @@ Django version 2.2.5, using settings 'my_project.settings'<br>
 [05/Oct/2019 13:06:42] "GET / HTTP/1.1" 200 193<br>
 $$w
 
-Note: you are running a development server. On your laptop. 
+Note: which would have said it was starting a development server on port 8000
 
-So of course noone else can access it!
-
----
-
-#= .e[🦄]
-
-Note: so you need to take your little django app, and put it somewhere that other can access it. 
----
-
-#= .e[💻]
-Note: instead of your laptop
+Which if you open up your web browser
 
 ---
 
-#= .e[☁️]
-Note: it needs to be in the cloud
+@= sprout_localhost_0.png
+
+Note: you can see your django site. 
+
+And that works fine for you. 
+
+the problem is that the djangogirl next to you
+
+
 ---
+@= localhost_404.png
 
-#= .caps[The Cloud]
-### someone else's computer
+Note: she won't be able to see your website
 
-Note: and by that I mean literally. 
----
-#= .sup[🔜].e[☁️].sup[✨]
+This is because your website is running just on your laptop. 
 
-Note: and to get it there, that's deployment!
----
-
-#= .caps[Deployment]
-### your code on someone else's computer
----
-#= .e[🤭]
-Note: 
-
-I know right. Shock. But that's the spoiler. 
----
-
-#= .e[☁️]
-
-Note: while the way you used to host a website was, literally, your desktop in your house, the new vogue is using a dedicated platform designed to do such a thing. 
+So what we need to do is Deploy it. 
 
 ---
 
-#= .e[🔌]
+#= "🦄 🚚 ☁️❓"
 
-Note: heck, I've worked for clients were their website was a desktop computer, plugged into dedicated redundant power in our datacentre, connected to our network. 
+Note: so I can just take a copy of what I have on my machine, and put it on the cloud, right? 
 
-Literally a beige box sitting in a data center, as the server. 
+Well, no. 
 
----
-#= .e[☁️]
-
-Note: but that's all the cloud is. Someone else's machine. 
-
-We've just spent the last how many years abstracting that more, making your website take up less space, putting more websites onto, sometimes the same machines, and slowly making it easier for you to do so. 
+There is one major issue. 
 
 ---
 
-#= e.[🦄☁️]
+$$terminal python3.7
+$$prompt ~/my_project
+.red[.noop[python] manage.py runserver]<br>
+Watching for file changes with StatReloader<br>
+Performing system checks...<br><br>
+System check identified no issues (0 silenced).<br>
+October 5, 2019 - 13:06:37<br>
+Django version 2.2.5, using settings 'my_project.settings'<br>
+Starting development server at http:/.noop[/]127.0.0.1:8000/<br>Quit the server with CONTROL-C.<br>
+[05/Oct/2019 13:06:42] "GET / HTTP/1.1" 200 193<br>
+$$w
 
-Note: so while I'm going to take a bit about the things you need to think about when deploying a django-powered website, I am also going to take more about how you deploy websites in general. 
+Note: runserver
+
+you know
+
+that one that 
 
 ---
 
-TODO
+$$terminal python3.7
+$$prompt ~/my_project
+.noop[python] manage.py runserver<br>
+Watching for file changes with StatReloader<br>
+Performing system checks...<br><br>
+System check identified no issues (0 silenced).<br>
+October 5, 2019 - 13:06:37<br>
+Django version 2.2.5, using settings 'my_project.settings'<br>
+Starting .red[development server] at http:/.noop[/]127.0.0.1:8000/<br>Quit the server with CONTROL-C.<br>
+[05/Oct/2019 13:06:42] "GET / HTTP/1.1" 200 193<br>
+$$w
 
-so why can't I just copy what I have directly onto someone else's machine?
-
-runserver bad
-
-how to deploy in productoin
-
-wsgi.py file!
-
-PaaS vs IaaS
-
-Deploying to PyThonAnywhere
-Deploying to Cloud Run
+Note: started a development server on your local machine. 
 
 
+---
+@= runserver_00.png
+
+Note: the django documentation clearly describes that you should not 
+
+---
+
+@= runserver_01.png
+
+Note: use this in a production setting.
+
+It has not gone through security audits or performance tests. 
+
+And there's even a super helpful note. 
+
+And that’s how it’s gonna stay. We’re in the business of making Web frameworks, not Web servers, so improving this server to be able to handle a production environment is outside the scope of Django.
+
+Which is a very important distinction. 
+
+---
+
+@= django_framework_00.png
+
+Note: I mean, it says it right there at the top of any page. 
+
+---
+
+~@ django_framework_01_169.png
+
+Note: django is the web framework for perfectionists with deadlines 
+---
+~@ django_framework_02_169.png
+
+Note: emphasis on framework. 
+
+what we need, is a web server. 
+
+
+
+---
+
+@= webserver_logos_old.png
+
+Note: there are a few major web servers that you may have heard mention of. 
+
+Apache, Nginx, or IIS (internet information server)
+---
+@= webserver_logos_new.png
+.fix-tilt-long[.w[....]and&nbsp;more!]
+Note: they've all got new logos now, so maybe one of these versions is more familiar to you. 
+
+There's also Caddy now that's picking up steam
+
+All these web servers talk HTTP
+
+Hyper Text Transfer Protocol
+
+as in
+
+---
+@= http.svg
+
+Note: that HTTP
+
+The http you type into your browser. 
+
+---
+
+#= &nbsp;
+
+Note: but these web servers have a problem. 
+
+---
+
+#= .e[🐍❌]
+
+Note: they don't talk python. Not directly. 
+
+You need an interface that can talk to python and to a web server
+
+---
+
+#= WSGI
+## Web Server Gateway Interface
+### &nbsp;
+
+Note: that's where w.s.g.i comes in. Or, "whis-gee". 
+
+---
+#= WSGI
+## Web Server Gateway Interface
+### `PEP-0333`, `PEP-3333`
+
+Note: there are PEPs - Python Enhancement proposals - which define 
+
+If your web framework (django) can talk WSGI, then you can use any wsgi server you like. 
+
+And thankfully, django supports wsgi
+
+---
+$$terminal bash
+$$prompt ~/my_project 
+$$w ls my_project/
+
+Note: if you check your python project
+
+
+---
+$$terminal bash
+$$prompt ~/my_project
+ls my_project/<br>
+⎽⎽init⎽⎽.py<br>settings.py<br>urls.py<br>wsgi.py<br>
+$$prompt ~/my_project 
+$$w
+
+Note: you'll see that you'll have
+
+---
+$$terminal bash
+$$prompt ~/my_project
+ls my_project/<br>
+⎽⎽init⎽⎽.py<br>settings.py<br>urls.py<br>.red[wsgi.py]<br>
+$$prompt ~/my_project 
+$$w
+
+Note: a convenient wsgi.py file. 
+
+---
+$$terminal bash
+$$prompt ~/my_project
+ls my_project/<br>
+⎽⎽init⎽⎽.py<br>settings.py<br>urls.py<br>wsgi.py<br>
+$$prompt ~/my_project 
+$$w cat wsgi.py
+
+Note: which was automatically generated when you created your django project. 
+
+It'll contain 
+---
+$$terminal bash
+$$prompt ~/my_project
+ls my_project/<br>
+⎽⎽init⎽⎽.py<br>settings.py<br>urls.py<br>wsgi.py<br>
+$$prompt ~/my_project 
+cat wsgi.py<br>
+import os<br><br>from django.core.wsgi import get_wsgi_application<br><br>os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'my_project.settings')<br><br>application = get_wsgi_application()<br>
+$$prompt ~/my_project 
+$$w
+
+Note: some template code that exposes the wsgi callable as a module-level variable named application. 
+
+This will be important later. 
+
+So we know django talks wsgi, so we can use one of the many wsgi servers
+
+
+---
+
+@= wsgi_logos.png
+
+.fix-tilt-long[.w[....]and&nbsp;more!]
+
+Note: there's ones like micro-wsgi or gunicorn. 
+
+These are super interesting in themselves, and there's a great many talks on them
+
+---
+
+@= philip_uwsgi.png
+vv [Type UWSGI; Press Enter; What happens?](https://www.youtube.com/watch?v=YoUZIzPGKT8) DjangoCon US 2017
+
+Note: Philip James gave a great talk about microwsgi at djangocon a few years ago. 
+
+---
+
+@= graham_modwsgi.png
+
+vv [Secrets of a WSGI master](https://www.youtube.com/watch?v=CPz0s1CQsTE), PyCon 2018
+
+Note: There's also Graham Dumpleton's talk from PyCon Secrets of a wsgi master. 
+
+
+---
+
+@= logo_mess.png
+
+Note: so we have this whole mess of logos. 
+
+It's complicated. 
+
+So how do we actually deploy thing? 
+
+---
+
+#= .e[🏢]
+
+Note: chapter two 
+
+Infrastrucutre. The where.  
+
+Because if you choose the right kind of setup, you can ignore most of those logos. 
+
+I know. 
+
+---
+
+#= TODO
+
+used to be physical servers
+one per person
+scale. 
+you'd have to worry about everything.
+
+then virtual servers (iaas)
+several per machine
+you'd still have to worry about things, but not hardware
+
+
+then platforms (paas)
+heroku, pythonanywhere, divio
+sepcific to a language 
+
+and now containers
+as containers are now standardised
+
+
+---
+
+#= .e[🚚]
+
+Note: chapter three
+
+Deployment. The how. 
+
+
+---
+
+#= TODO
+
+depends on which platform you selected
+
+sometimes it's a manual copy and paste
+
+services like python anywhere pull from yourt github
+
+source control is a good idea
+
+others can push from your github. webhooks!
+
+but
+
+there's your code
+youer database
+and your assets
 
 
 
