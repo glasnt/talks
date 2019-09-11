@@ -424,6 +424,9 @@ and now containers
 as containers are now standardised
 
 
+For the VMS and the containers you also have to worry about 
+Configuration management. Ansible chef terraform logo mess. This is too much for today's talk
+
 ---
 
 #= .e[🚚]
@@ -452,6 +455,33 @@ but
 there's your code
 youer database
 and your assets
+
+---
+#todo summary
+
+It's complicated
+
+So what do you choose?
+
+~~It depends~~
+
+I am an Operations engineer, I'm not your operations engineer
+
+My recommendation?
+
+How big is your team
+
+Just you? A platform 
+
+Do you have a team? Go with their expertise.
+
+These choices are many and varied,and it'll mostly be a case
+Of using whatever proper knowledge you have
+
+Deployment. It's not easy.
+
+---
+
 
 
 
