@@ -1,5 +1,5 @@
-#= <br>What is deployment, anyway?
-## PyGotham 2019
+#= <br>.thick[What is deployment, anyway?]
+## .thick[PyGotham 2019]
 @ footer.svg
 
 Note: breathe, Katie!
@@ -10,450 +10,372 @@ You got this
 ---
 @ whatis_copy.png
 
-Note: this is What is deployment, anyway. 
----
-
-#= .e[👋]
-
-Note: Hi! I'm katie
----
-
-#= .e[👩🏻‍🔧]
-
-Note: for the last 8 years, on and off, I've worked as a 
-
-systems administrator
-
-automation engineer
-
-operations engineer
-
-site reliabiltiy engineer
-
-For a bunch of different places, including web hosting providers. 
-
-It was my job to make sure not only did your website stay up, but also
-
-if you paid enough money
-
----
-
-#= .e[⏰]
-
-Note: I'd get woken up in the middle of the night if your website was down. 
-
-Given that context. 
-
----
-
-#= .e[👩🏼‍💻]
-
-Note: Today we're going to discuss how we can get your django app
-
----
-
-#= .e[☁️]
 
 Note: 
-
-Onto the internet. 
-
-There's going to be a few major sections to that: 
+Hi! I'm katie, and this isn't the talk you're expecting. 
 
 ---
 
-#= .e[🦄<br>🏢<br>🚚]
+##= .thin[What this talk isn't.]
 
 Note: 
+this isn't a talk about "the way" to deploy your django app
+this is a cursory overview of the state of the world as it is today
 
-A bit about how django works
+TODO: ENSURE SLIDE ACCURATLY REFLECTS SCOPE
 
-Some of the current hosting options that are available
-
-And how you get your website off your laptop and onto one of these hosting providers. 
-
-in other words, what, where and how
-
---- 
-
-#= .e[🦄]
-
-Note: chapter one. Django. The what. 
-
-If you've been to a djangogirls workshop or have ever otherwise built your own django application before, you would be familiar with 
+In essense, 
 
 ---
 
-$$terminal python3.7
-$$prompt ~/my_project
-.noop[python] manage.py runserver<br>
-Watching for file changes with StatReloader<br>
-Performing system checks...<br><br>
-System check identified no issues (0 silenced).<br>
-October 5, 2019 - 13:06:37<br>
-Django version 2.2.5, using settings 'my_project.settings'<br>
-Starting development server at http:/.noop[/]127.0.0.1:8000/<br>Quit the server with CONTROL-C.<br>
-[05/Oct/2019 13:06:42] "GET / HTTP/1.1" 200 193<br>
-$$w
+#= .thin[What .b[is] deployment, anyway?]
 
-Note: a terminal that looks something like this. 
 
+
+Note: 
+We'll discuss, well ,what is deployment, anyway? 
+
+For our context today
 
 ---
-$$terminal python3.7
-$$prompt ~/my_project
-.red[.noop[python] manage.py runserver]<br>
-Watching for file changes with StatReloader<br>
-Performing system checks...<br><br>
-System check identified no issues (0 silenced).<br>
-October 5, 2019 - 13:06:37<br>
-Django version 2.2.5, using settings 'my_project.settings'<br>
-Starting development server at http:/.noop[/]127.0.0.1:8000/<br>Quit the server with CONTROL-C.<br>
-[05/Oct/2019 13:06:42] "GET / HTTP/1.1" 200 193<br>
-$$w
+<br><br>
+# .prokyon[django] 2.2.5
+# .flux[python] 3.7.4
 
-Note: you would have run the command python manage.py runserver
+Note: the versions I'm targetting today are specifically django 2.2.5 and python 3.7.4
 
----
-$$terminal python3.7
-$$prompt ~/my_project
-.noop[python] manage.py runserver<br>
-Watching for file changes with StatReloader<br>
-Performing system checks...<br><br>
-System check identified no issues (0 silenced).<br>
-October 5, 2019 - 13:06:37<br>
-Django version 2.2.5, using settings 'my_project.settings'<br>
-.red[Starting development server at http:/.noop[/]127.0.0.1:8000/]<br>Quit the server with CONTROL-C.<br>
-[05/Oct/2019 13:06:42] "GET / HTTP/1.1" 200 193<br>
-$$w
+If you're joining me on YouTube from the year 2027, I'm sorry, things have changed since, but hopefully you find value in this talk!
 
-Note: which would have said it was starting a development server on port 8000
+--
+## no extra addons
 
-Which if you open up your web browser
+Note: we're also just going to stick to base django
+
+No addons, no cookiecutter templates. This talk should be useful if you're anywhere from looking at django
+
+to having your djangogirls tutorial project working on your laptop
+
+to a more complex setup, but no extra complexities. 
+
+TODO: is "addons" the best word here?
 
 ---
 
-@= sprout_localhost_0.png
+##= Let's go!
 
-Note: you can see your django site. 
-
-And that works fine for you. 
-
-the problem is that the djangogirl next to you
-
-
----
-@= localhost_404.png
-
-Note: she won't be able to see your website
-
-This is because your website is running just on your laptop. 
-
-So what we need to do is Deploy it. 
-
----
-
-#= "🦄 🚚 ☁️❓"
-
-Note: so I can just take a copy of what I have on my machine, and put it on the cloud, right? 
-
-Well, no. 
-
-There is one major issue. 
-
----
-
-$$terminal python3.7
-$$prompt ~/my_project
-.red[.noop[python] manage.py runserver]<br>
-Watching for file changes with StatReloader<br>
-Performing system checks...<br><br>
-System check identified no issues (0 silenced).<br>
-October 5, 2019 - 13:06:37<br>
-Django version 2.2.5, using settings 'my_project.settings'<br>
-Starting development server at http:/.noop[/]127.0.0.1:8000/<br>Quit the server with CONTROL-C.<br>
-[05/Oct/2019 13:06:42] "GET / HTTP/1.1" 200 193<br>
-$$w
-
-Note: runserver
-
-you know
-
-that one that 
-
----
-
-$$terminal python3.7
-$$prompt ~/my_project
-.noop[python] manage.py runserver<br>
-Watching for file changes with StatReloader<br>
-Performing system checks...<br><br>
-System check identified no issues (0 silenced).<br>
-October 5, 2019 - 13:06:37<br>
-Django version 2.2.5, using settings 'my_project.settings'<br>
-Starting .red[development server] at http:/.noop[/]127.0.0.1:8000/<br>Quit the server with CONTROL-C.<br>
-[05/Oct/2019 13:06:42] "GET / HTTP/1.1" 200 193<br>
-$$w
-
-Note: started a development server on your local machine. 
-
-
----
-@= runserver_00.png
-
-Note: the django documentation clearly describes that you should not 
-
----
-
-@= runserver_01.png
-
-Note: use this in a production setting.
-
-It has not gone through security audits or performance tests. 
-
-And there's even a super helpful note. 
-
-And that’s how it’s gonna stay. We’re in the business of making Web frameworks, not Web servers, so improving this server to be able to handle a production environment is outside the scope of Django.
-
-Which is a very important distinction. 
-
----
-
-@= django_framework_00.png
-
-Note: I mean, it says it right there at the top of any page. 
-
----
-
-~@ django_framework_01_169.png
-
-Note: django is the web framework for perfectionists with deadlines 
----
-~@ django_framework_02_169.png
-
-Note: emphasis on framework. 
-
-what we need, is a web server. 
-
-
-
----
-
-@= webserver_logos_old.png
-
-Note: there are a few major web servers that you may have heard mention of. 
-
-Apache, Nginx, or IIS (internet information server)
----
-@= webserver_logos_new.png
-.fix-tilt-long[.w[....]and&nbsp;more!]
-Note: they've all got new logos now, so maybe one of these versions is more familiar to you. 
-
-There's also Caddy now that's picking up steam
-
-All these web servers talk HTTP
-
-Hyper Text Transfer Protocol
-
-as in
-
----
-@= http.svg
-
-Note: that HTTP
-
-The http you type into your browser. 
-
----
-
-#= &nbsp;
-
-Note: but these web servers have a problem. 
-
----
-
-#= .e[🐍❌]
-
-Note: they don't talk python. Not directly. 
-
-You need an interface that can talk to python and to a web server
-
----
-
-#= WSGI
-## Web Server Gateway Interface
-### &nbsp;
-
-Note: that's where w.s.g.i comes in. Or, "whis-gee". 
-
----
-#= WSGI
-## Web Server Gateway Interface
-### `PEP-0333`, `PEP-3333`
-
-Note: there are PEPs - Python Enhancement proposals - which define 
-
-If your web framework (django) can talk WSGI, then you can use any wsgi server you like. 
-
-And thankfully, django supports wsgi
+Note: so let's get started!
 
 ---
 $$terminal bash
-$$prompt ~/my_project 
-$$w ls my_project/
+$$prompt ~/git/glasnt/ 
+$$w
+---
+$$terminal bash
+$$prompt ~/git/glasnt/ 
+$$w pip install django
+---
+$$terminal bash
+$$prompt ~/git/glasnt/
+pip install django<br> 
+Collecting django<br>
+...<br>
+Successfully installed django-2.2.5<br>
+$$prompt ~/git/glasnt
+$$w 
+---
+$$terminal bash
+$$prompt ~/git/glasnt/
+pip install django<br> 
+Collecting django<br>
+...<br>
+Successfully installed django-2.2.5<br>
+$$prompt ~/git/glasnt
+$$w django-admin startproject myproject
+---
+$$terminal bash
+$$prompt ~/git/glasnt/
+pip install django<br> 
+Collecting django<br>
+...<br>
+Successfully installed django-2.2.5<br>
+$$prompt ~/git/glasnt
+django-admin startproject myproject<br>
+$$prompt ~/git/glasnt
+$$w 
+---
+$$terminal bash
+$$prompt ~/git/glasnt/
+pip install django<br> 
+Collecting django<br>
+...<br>
+Successfully installed django-2.2.5<br>
+$$prompt ~/git/glasnt
+django-admin startproject myproject<br>
+$$prompt ~/git/glasnt
+$$w cd myproject
+---
+$$terminal bash
+$$prompt ~/git/glasnt/
+pip install django<br> 
+Collecting django<br>
+...<br>
+Successfully installed django-2.2.5<br>
+$$prompt ~/git/glasnt
+django-admin startproject myproject<br>
+$$prompt ~/git/glasnt
+cd myproject<br>
+$$prompt ~/git/glasnt/myproject
+$$w
+---
+$$terminal bash
+$$prompt ~/git/glasnt/
+pip install django<br> 
+Collecting django<br>
+...<br>
+Successfully installed django-2.2.5<br>
+$$prompt ~/git/glasnt
+django-admin startproject myproject<br>
+$$prompt ~/git/glasnt
+cd myproject<br>
+$$prompt ~/git/glasnt/myproject
+$$w ls -R
+---
+$$terminal bash
+$$prompt ~/git/glasnt/
+pip install django<br> 
+Collecting django<br>
+...<br>
+Successfully installed django-2.2.5<br>
+$$prompt ~/git/glasnt
+django-admin startproject myproject<br>
+$$prompt ~/git/glasnt
+cd myproject<br>
+$$prompt ~/git/glasnt/myproject
+ls -R<br>
+.:<br>
+manage.py  myproject<br>
+<br>
+./myproject:<br>
+⎽⎽init__.py  settings.py  urls.py  wsgi.py<br>
+$$prompt ~/git/glasnt/myproject
+$$w
+---
+$$terminal bash
+$$prompt ~/git/glasnt/myproject
+$$w 
+---
+$$terminal bash
+$$prompt ~/git/glasnt/myproject
+$$w python manage.py runserver
 
-Note: if you check your python project
-
+Note: so we can just runserver, right?
+---
+$$terminal bash
+$$prompt ~/git/glasnt/myproject
+.noop[p]ython manage.py runserver<br>
+Watching for file changes with StatReloader<br>
+Performing system checks...<br>
+System check identified no issues (0 silenced).<br><br>
+.rf[You have 17 unapplied migration(s). Your project may not work properly until you apply the migrations for app(s): admin, auth, contenttypes, sessions.<br>Run 'python manage.py migrate' to apply them.]<br<br><br><br>October 04, 2019 - 17:05:24<br>
+Django version 2.2.5, using settings 'myproject.settings'<br>
+Starting development server at http:.noop[/]/127.0.0.1:8000/<br>
+Quit the server with CONTROL-C.<br>
+$$w
+Note: oh, nope, big red error. 
 
 ---
 $$terminal bash
-$$prompt ~/my_project
-ls my_project/<br>
-⎽⎽init⎽⎽.py<br>settings.py<br>urls.py<br>wsgi.py<br>
-$$prompt ~/my_project 
+$$prompt ~/git/glasnt/myproject
+.noop[p]ython manage.py runserver<br>
+Watching for file changes with StatReloader<br>
+Performing system checks...<br>
+System check identified no issues (0 silenced).<br><br>
+.rf[You have 17 unapplied migration(s). Your project may not work properly until you apply the migrations for app(s): admin, auth, contenttypes, sessions.<br>Run .red['python manage.py migrate'] to apply them.]<br<br><br><br>October 04, 2019 - 17:05:24<br>
+Django version 2.2.5, using settings 'myproject.settings'<br>
+Starting development server at http:.noop[/]/127.0.0.1:8000/<br>
+Quit the server with CONTROL-C.<br>
 $$w
 
-Note: you'll see that you'll have
+Note: oh yay, big red error with a helpful command!
 
 ---
 $$terminal bash
-$$prompt ~/my_project
-ls my_project/<br>
-⎽⎽init⎽⎽.py<br>settings.py<br>urls.py<br>.red[wsgi.py]<br>
-$$prompt ~/my_project 
+$$prompt ~/git/glasnt/myproject
+.noop[p]ython manage.py runserver<br>
+Watching for file changes with StatReloader<br>
+Performing system checks...<br>
+System check identified no issues (0 silenced).<br><br>
+.rf[You have 17 unapplied migration(s). Your project may not work properly until you apply the migrations for app(s): admin, auth, contenttypes, sessions.<br>Run 'python manage.py migrate' to apply them.]<br<br><br><br>October 04, 2019 - 17:05:24<br>
+Django version 2.2.5, using settings 'myproject.settings'<br>
+Starting development server at http:.noop[/]/127.0.0.1:8000/<br>
+Quit the server with CONTROL-C.<br>
+$$prompt ~/git/glasnt/myproject
 $$w
 
-Note: a convenient wsgi.py file. 
+Note: okay, cancel out of that..
+---
+$$terminal bash
+$$prompt ~/git/glasnt/myproject
+.noop[p]ython manage.py runserver<br>
+Watching for file changes with StatReloader<br>
+Performing system checks...<br>
+System check identified no issues (0 silenced).<br><br>
+.rf[You have 17 unapplied migration(s). Your project may not work properly until you apply the migrations for app(s): admin, auth, contenttypes, sessions.<br>Run 'python manage.py migrate' to apply them.]<br<br><br><br>October 04, 2019 - 17:05:24<br>
+Django version 2.2.5, using settings 'myproject.settings'<br>
+Starting development server at http:.noop[/]/127.0.0.1:8000/<br>
+Quit the server with CONTROL-C.<br>
+$$prompt ~/git/glasnt/myproject
+$$w python manage.py migrate
+---
+$$terminal bash
+.cf[Operations to perform:]<br>
+&nbsp; .tb[Apply all migrations:] admin, auth, contenttypes, sessions<br>
+.cf[Running migrations:]<br>
+&nbsp; Applying contenttypes.0001_initial... .gf[OK]<br>
+&nbsp;  Applying auth.0001_initial... .gf[OK]<br>
+&nbsp;  Applying admin.0001_initial... .gf[OK]<br>
+&nbsp;  Applying admin.0002_logentry_remove_auto_add... .gf[OK]<br>
+&nbsp;  Applying admin.0003_logentry_add_action_flag_choices... .gf[OK]<br>
+&nbsp;  Applying contenttypes.0002_remove_content_type_name... .gf[OK]<br>
+...<br>
+&nbsp;  Applying auth.0009_alter_user_last_name_max_length... .gf[OK]<br>
+&nbsp;  Applying auth.0010_alter_group_name_max_length... .gf[OK]<br>
+&nbsp;  Applying auth.0011_update_proxy_permissions... .gf[OK]<br>
+&nbsp;  Applying sessions.0001_initial... .gf[OK]<br>
+$$prompt ~/git/glasnt/myproject
+$$w
+Note: oh wow, that's a lot of output. 
+
+has anything changed? 
+---
+$$terminal bash
+$$prompt ~/git/glasnt/myproject
+$$w
+---
+$$terminal bash
+$$prompt ~/git/glasnt/myproject
+$$w ls -R
 
 ---
 $$terminal bash
-$$prompt ~/my_project
-ls my_project/<br>
-⎽⎽init⎽⎽.py<br>settings.py<br>urls.py<br>wsgi.py<br>
-$$prompt ~/my_project 
-$$w cat wsgi.py
-
-Note: which was automatically generated when you created your django project. 
-
-It'll contain 
----
-$$terminal bash
-$$prompt ~/my_project
-ls my_project/<br>
-⎽⎽init⎽⎽.py<br>settings.py<br>urls.py<br>wsgi.py<br>
-$$prompt ~/my_project 
-cat wsgi.py<br>
-import os<br><br>from django.core.wsgi import get_wsgi_application<br><br>os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'my_project.settings')<br><br>application = get_wsgi_application()<br>
-$$prompt ~/my_project 
+$$prompt ~/git/glasnt/myproject
+ls -R<br>
+.:<br>
+db.sqlite3  manage.py  myproject<br>
+<br>
+./myproject:<br>
+__init__.py  settings.py  urls.py  wsgi.py<br>
+$$prompt ~/git/glasnt/myproject
 $$w
 
-Note: some template code that exposes the wsgi callable as a module-level variable named application. 
 
-This will be important later. 
+---
+$$terminal bash
+$$prompt ~/git/glasnt/myproject
+ls -R<br>
+.:<br>
+.red[db.sqlite3]  manage.py  myproject<br>
+<br>
+./myproject:<br>
+__init__.py  settings.py  urls.py  wsgi.py<br>
+$$prompt ~/git/glasnt/myproject
+$$w
+Note: oh sweet, we have a database.. I guess, based on that name. 
 
-So we know django talks wsgi, so we can use one of the many wsgi servers
+---
+$$terminal bash
+$$prompt ~/git/glasnt/myproject
+$$w
+
+Note: Okay. Let's clear that away. 
+
+---
+$$terminal bash
+$$prompt ~/git/glasnt/myproject
+$$w python manage.py runserver
+
+Note: will my project run now? 
+---
+$$terminal bash
+$$prompt ~/git/glasnt/myproject
+.noop[p]ython manage.py runserver<br>
+Watching for file changes with StatReloader<br>
+Performing system checks...<br><br>
+System check identified no issues (0 silenced).<br>
+<br>October 04, 2019 - 17:05:54<br>
+Django version 2.2.5, using settings 'myproject.settings'<br>
+Starting development server at http:.noop[/]/127.0.0.1:8000/<br>
+Quit the server with CONTROL-C.<br>
+$$w
+
+Note: Oh neat, no more error.  
+---
+$$terminal bash
+$$prompt ~/git/glasnt/myproject
+.noop[p]ython manage.py runserver<br>
+Watching for file changes with StatReloader<br>
+Performing system checks...<br><br>
+System check identified no issues (0 silenced).<br>
+<br>October 04, 2019 - 17:05:54<br>
+Django version 2.2.5, using settings 'myproject.settings'<br>
+Starting development server at .red[http:.noop[/]/127.0.0.1:8000/]<br>
+Quit the server with CONTROL-C.<br>
+$$w
+
+Note: and a helpful little message telling us where we're running
+---
+@= djangorocket.png
+Note: sweet!
+
+So now we know which bits we need
+---
+@= djangoadmin.png
+Note: and we have the much loved django admin
+
+---
+#= .prokyon[django]
+## very good local development setup
+
+Note: we can get our app running locally really well. 
+and here is why
+
+---
+runserver
+https://docs.djangoproject.com/en/2.2/ref/django-admin/#runserver
+do not run in production
+---
+> We're in the business of making Web frameworks, not Web servers
+---
+and also 
+
+viewsource
+
+staticfiles
+https://docs.djangoproject.com/en/2.2/howto/static-files/
+
+do not use in production
+
+---
+
+run django
+connect to database
+serve static files
+
+---
+
+run web framework
+connect to database
+serve static files
+
+Note: very general for any web framework. 
+
+same for a lot of things, python, or any language. 
 
 
 ---
 
-@= wsgi_logos.png
-
-.fix-tilt-long[.w[....]and&nbsp;more!]
-
-Note: there's ones like micro-wsgi or gunicorn. 
-
-These are super interesting in themselves, and there's a great many talks on them
-
+go to layaercacke
 ---
-
-@= philip_uwsgi.png
-vv [Type UWSGI; Press Enter; What happens?](https://www.youtube.com/watch?v=YoUZIzPGKT8) DjangoCon US 2017
-
-Note: Philip James gave a great talk about microwsgi at djangocon a few years ago. 
-
----
-
-@= graham_modwsgi.png
-
-vv [Secrets of a WSGI master](https://www.youtube.com/watch?v=CPz0s1CQsTE), PyCon 2018
-
-Note: There's also Graham Dumpleton's talk from PyCon Secrets of a wsgi master. 
-
-
----
-
-@= logo_mess.png
-
-Note: so we have this whole mess of logos. 
-
-It's complicated. 
-
-So how do we actually deploy thing? 
-
----
-
-#= .e[🏢]
-
-Note: chapter two 
-
-Infrastrucutre. The where.  
-
-Because if you choose the right kind of setup, you can ignore most of those logos. 
-
-I know. 
-
----
-
-#= TODO
-
-used to be physical servers
-one per person
-scale. 
-you'd have to worry about everything.
-
-then virtual servers (iaas)
-several per machine
-you'd still have to worry about things, but not hardware
-
-
-then platforms (paas)
-heroku, pythonanywhere, divio
-sepcific to a language 
-
-and now containers
-as containers are now standardised
-
-
----
-
-#= .e[🚚]
-
-Note: chapter three
-
-Deployment. The how. 
-
-
----
-
-#= TODO
-
-depends on which platform you selected
-
-sometimes it's a manual copy and paste
-
-services like python anywhere pull from yourt github
-
-source control is a good idea
-
-others can push from your github. webhooks!
-
-but
-
-there's your code
-youer database
-and your assets
-
-
 
 ---
 #= <br>Thanks!

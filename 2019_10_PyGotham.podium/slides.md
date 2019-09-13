@@ -1,6 +1,6 @@
 class: title
-# <br>What is deployment, anyway?
-## PyGotham 2019
+# <br>.thick[What is deployment, anyway?]
+## .thick[PyGotham 2019]
 ![Image](images/footer.svg)
 
 ???
@@ -13,552 +13,412 @@ You got this
 ---
 ![Image](images/whatis_copy.png)
 
-???
-
-this is What is deployment, anyway.
----
-
-class: title
-# .e[👋]
 
 ???
-
-Hi! I'm katie
----
-
-class: title
-# .e[👩🏻‍🔧]
-
-???
-
-for the last 8 years, on and off, I've worked as a
-
-systems administrator
-
-automation engineer
-
-operations engineer
-
-site reliabiltiy engineer
-
-For a bunch of different places, including web hosting providers.
-
-It was my job to make sure not only did your website stay up, but also
-
-if you paid enough money
+Hi! I'm katie, and this isn't the talk you're expecting.
 
 ---
 
 class: title
-# .e[⏰]
+## .thin[What this talk isn't.]
 
 ???
+this isn't a talk about "the way" to deploy your django app
+this is a cursory overview of the state of the world as it is today
 
-I'd get woken up in the middle of the night if your website was down.
+TODO: ENSURE SLIDE ACCURATLY REFLECTS SCOPE
 
-Given that context.
+In essense,
 
 ---
 
 class: title
-# .e[👩🏼‍💻]
+# .thin[What .b[is] deployment, anyway?]
+
+
+
+???
+We'll discuss, well ,what is deployment, anyway?
+
+For our context today
+
+---
+<br><br>
+# .prokyon[django] 2.2.5
+# .flux[python] 3.7.4
 
 ???
 
-Today we're going to discuss how we can get your django app
+the versions I'm targetting today are specifically django 2.2.5 and python 3.7.4
+
+If you're joining me on YouTube from the year 2027, I'm sorry, things have changed since, but hopefully you find value in this talk!
+
+--
+## no extra addons
+
+???
+
+we're also just going to stick to base django
+
+No addons, no cookiecutter templates. This talk should be useful if you're anywhere from looking at django
+
+to having your djangogirls tutorial project working on your laptop
+
+to a more complex setup, but no extra complexities.
+
+TODO: is "addons" the best word here?
 
 ---
 
 class: title
-# .e[☁️]
+## Let's go!
 
 ???
 
-Onto the internet.
-
-There's going to be a few major sections to that:
+so let's get started!
 
 ---
-
-class: title
-# .e[🦄<br>🏢<br>🚚]
+<div class="shell-wrap"><p class="shell-top-bar">bash</p><p class="shell-body">
+<ps>myrtle</ps> <dr>~/git/glasnt/ $</dr>
+<w>&nbsp;</w>
+---
+<div class="shell-wrap"><p class="shell-top-bar">bash</p><p class="shell-body">
+<ps>myrtle</ps> <dr>~/git/glasnt/ $</dr>
+pip install django<w>&nbsp;</w>
+---
+<div class="shell-wrap"><p class="shell-top-bar">bash</p><p class="shell-body">
+<ps>myrtle</ps> <dr>~/git/glasnt/ $</dr>
+pip install django<br>
+Collecting django<br>
+...<br>
+Successfully installed django-2.2.5<br>
+<ps>myrtle</ps> <dr>~/git/glasnt $</dr>
+<w>&nbsp;</w>
+---
+<div class="shell-wrap"><p class="shell-top-bar">bash</p><p class="shell-body">
+<ps>myrtle</ps> <dr>~/git/glasnt/ $</dr>
+pip install django<br>
+Collecting django<br>
+...<br>
+Successfully installed django-2.2.5<br>
+<ps>myrtle</ps> <dr>~/git/glasnt $</dr>
+django-admin startproject myproject<w>&nbsp;</w>
+---
+<div class="shell-wrap"><p class="shell-top-bar">bash</p><p class="shell-body">
+<ps>myrtle</ps> <dr>~/git/glasnt/ $</dr>
+pip install django<br>
+Collecting django<br>
+...<br>
+Successfully installed django-2.2.5<br>
+<ps>myrtle</ps> <dr>~/git/glasnt $</dr>
+django-admin startproject myproject<br>
+<ps>myrtle</ps> <dr>~/git/glasnt $</dr>
+<w>&nbsp;</w>
+---
+<div class="shell-wrap"><p class="shell-top-bar">bash</p><p class="shell-body">
+<ps>myrtle</ps> <dr>~/git/glasnt/ $</dr>
+pip install django<br>
+Collecting django<br>
+...<br>
+Successfully installed django-2.2.5<br>
+<ps>myrtle</ps> <dr>~/git/glasnt $</dr>
+django-admin startproject myproject<br>
+<ps>myrtle</ps> <dr>~/git/glasnt $</dr>
+cd myproject<w>&nbsp;</w>
+---
+<div class="shell-wrap"><p class="shell-top-bar">bash</p><p class="shell-body">
+<ps>myrtle</ps> <dr>~/git/glasnt/ $</dr>
+pip install django<br>
+Collecting django<br>
+...<br>
+Successfully installed django-2.2.5<br>
+<ps>myrtle</ps> <dr>~/git/glasnt $</dr>
+django-admin startproject myproject<br>
+<ps>myrtle</ps> <dr>~/git/glasnt $</dr>
+cd myproject<br>
+<ps>myrtle</ps> <dr>~/git/glasnt/myproject $</dr>
+<w>&nbsp;</w>
+---
+<div class="shell-wrap"><p class="shell-top-bar">bash</p><p class="shell-body">
+<ps>myrtle</ps> <dr>~/git/glasnt/ $</dr>
+pip install django<br>
+Collecting django<br>
+...<br>
+Successfully installed django-2.2.5<br>
+<ps>myrtle</ps> <dr>~/git/glasnt $</dr>
+django-admin startproject myproject<br>
+<ps>myrtle</ps> <dr>~/git/glasnt $</dr>
+cd myproject<br>
+<ps>myrtle</ps> <dr>~/git/glasnt/myproject $</dr>
+ls -R<w>&nbsp;</w>
+---
+<div class="shell-wrap"><p class="shell-top-bar">bash</p><p class="shell-body">
+<ps>myrtle</ps> <dr>~/git/glasnt/ $</dr>
+pip install django<br>
+Collecting django<br>
+...<br>
+Successfully installed django-2.2.5<br>
+<ps>myrtle</ps> <dr>~/git/glasnt $</dr>
+django-admin startproject myproject<br>
+<ps>myrtle</ps> <dr>~/git/glasnt $</dr>
+cd myproject<br>
+<ps>myrtle</ps> <dr>~/git/glasnt/myproject $</dr>
+ls -R<br>
+.:<br>
+manage.py myproject<br>
+<br>
+./myproject:<br>
+⎽⎽init__.py settings.py urls.py wsgi.py<br>
+<ps>myrtle</ps> <dr>~/git/glasnt/myproject $</dr>
+<w>&nbsp;</w>
+---
+<div class="shell-wrap"><p class="shell-top-bar">bash</p><p class="shell-body">
+<ps>myrtle</ps> <dr>~/git/glasnt/myproject $</dr>
+<w>&nbsp;</w>
+---
+<div class="shell-wrap"><p class="shell-top-bar">bash</p><p class="shell-body">
+<ps>myrtle</ps> <dr>~/git/glasnt/myproject $</dr>
+python manage.py runserver<w>&nbsp;</w>
 
 ???
 
-A bit about how django works
-
-Some of the current hosting options that are available
-
-And how you get your website off your laptop and onto one of these hosting providers.
-
-in other words, what, where and how
-
+so we can just runserver, right?
 ---
-
-class: title
-# .e[🦄]
-
-???
-
-chapter one. Django. The what.
-
-If you've been to a djangogirls workshop or have ever otherwise built your own django application before, you would be familiar with
-
----
-
-<div class="shell-wrap"><p class="shell-top-bar">python3.7</p><p class="shell-body">
-<ps>myrtle</ps> <dr>~/my_project $</dr>
-.noop[python] manage.py runserver<br>
+<div class="shell-wrap"><p class="shell-top-bar">bash</p><p class="shell-body">
+<ps>myrtle</ps> <dr>~/git/glasnt/myproject $</dr>
+.noop[p]ython manage.py runserver<br>
 Watching for file changes with StatReloader<br>
-Performing system checks...<br><br>
-System check identified no issues (0 silenced).<br>
-October 5, 2019 - 13:06:37<br>
-Django version 2.2.5, using settings 'my_project.settings'<br>
-Starting development server at http:/.noop[/]127.0.0.1:8000/<br>Quit the server with CONTROL-C.<br>
-[05/Oct/2019 13:06:42] "GET / HTTP/1.1" 200 193<br>
+Performing system checks...<br>
+System check identified no issues (0 silenced).<br><br>
+.rf[You have 17 unapplied migration(s). Your project may not work properly until you apply the migrations for app(s): admin, auth, contenttypes, sessions.<br>Run 'python manage.py migrate' to apply them.]<br<br><br><br>October 04, 2019 - 17:05:24<br>
+Django version 2.2.5, using settings 'myproject.settings'<br>
+Starting development server at http:.noop[/]/127.0.0.1:8000/<br>
+Quit the server with CONTROL-C.<br>
+<w>&nbsp;</w>
+???
+
+oh, nope, big red error.
+
+---
+<div class="shell-wrap"><p class="shell-top-bar">bash</p><p class="shell-body">
+<ps>myrtle</ps> <dr>~/git/glasnt/myproject $</dr>
+.noop[p]ython manage.py runserver<br>
+Watching for file changes with StatReloader<br>
+Performing system checks...<br>
+System check identified no issues (0 silenced).<br><br>
+.rf[You have 17 unapplied migration(s). Your project may not work properly until you apply the migrations for app(s): admin, auth, contenttypes, sessions.<br>Run .red['python manage.py migrate'] to apply them.]<br<br><br><br>October 04, 2019 - 17:05:24<br>
+Django version 2.2.5, using settings 'myproject.settings'<br>
+Starting development server at http:.noop[/]/127.0.0.1:8000/<br>
+Quit the server with CONTROL-C.<br>
 <w>&nbsp;</w>
 
 ???
 
-a terminal that looks something like this.
-
+oh yay, big red error with a helpful command!
 
 ---
-<div class="shell-wrap"><p class="shell-top-bar">python3.7</p><p class="shell-body">
-<ps>myrtle</ps> <dr>~/my_project $</dr>
-.red[.noop[python] manage.py runserver]<br>
+<div class="shell-wrap"><p class="shell-top-bar">bash</p><p class="shell-body">
+<ps>myrtle</ps> <dr>~/git/glasnt/myproject $</dr>
+.noop[p]ython manage.py runserver<br>
 Watching for file changes with StatReloader<br>
-Performing system checks...<br><br>
-System check identified no issues (0 silenced).<br>
-October 5, 2019 - 13:06:37<br>
-Django version 2.2.5, using settings 'my_project.settings'<br>
-Starting development server at http:/.noop[/]127.0.0.1:8000/<br>Quit the server with CONTROL-C.<br>
-[05/Oct/2019 13:06:42] "GET / HTTP/1.1" 200 193<br>
+Performing system checks...<br>
+System check identified no issues (0 silenced).<br><br>
+.rf[You have 17 unapplied migration(s). Your project may not work properly until you apply the migrations for app(s): admin, auth, contenttypes, sessions.<br>Run 'python manage.py migrate' to apply them.]<br<br><br><br>October 04, 2019 - 17:05:24<br>
+Django version 2.2.5, using settings 'myproject.settings'<br>
+Starting development server at http:.noop[/]/127.0.0.1:8000/<br>
+Quit the server with CONTROL-C.<br>
+<ps>myrtle</ps> <dr>~/git/glasnt/myproject $</dr>
 <w>&nbsp;</w>
 
 ???
 
-you would have run the command python manage.py runserver
+okay, cancel out of that..
+---
+<div class="shell-wrap"><p class="shell-top-bar">bash</p><p class="shell-body">
+<ps>myrtle</ps> <dr>~/git/glasnt/myproject $</dr>
+.noop[p]ython manage.py runserver<br>
+Watching for file changes with StatReloader<br>
+Performing system checks...<br>
+System check identified no issues (0 silenced).<br><br>
+.rf[You have 17 unapplied migration(s). Your project may not work properly until you apply the migrations for app(s): admin, auth, contenttypes, sessions.<br>Run 'python manage.py migrate' to apply them.]<br<br><br><br>October 04, 2019 - 17:05:24<br>
+Django version 2.2.5, using settings 'myproject.settings'<br>
+Starting development server at http:.noop[/]/127.0.0.1:8000/<br>
+Quit the server with CONTROL-C.<br>
+<ps>myrtle</ps> <dr>~/git/glasnt/myproject $</dr>
+python manage.py migrate<w>&nbsp;</w>
+---
+<div class="shell-wrap"><p class="shell-top-bar">bash</p><p class="shell-body">
+.cf[Operations to perform:]<br>
+&nbsp; .tb[Apply all migrations:] admin, auth, contenttypes, sessions<br>
+.cf[Running migrations:]<br>
+&nbsp; Applying contenttypes.0001_initial... .gf[OK]<br>
+&nbsp; Applying auth.0001_initial... .gf[OK]<br>
+&nbsp; Applying admin.0001_initial... .gf[OK]<br>
+&nbsp; Applying admin.0002_logentry_remove_auto_add... .gf[OK]<br>
+&nbsp; Applying admin.0003_logentry_add_action_flag_choices... .gf[OK]<br>
+&nbsp; Applying contenttypes.0002_remove_content_type_name... .gf[OK]<br>
+...<br>
+&nbsp; Applying auth.0009_alter_user_last_name_max_length... .gf[OK]<br>
+&nbsp; Applying auth.0010_alter_group_name_max_length... .gf[OK]<br>
+&nbsp; Applying auth.0011_update_proxy_permissions... .gf[OK]<br>
+&nbsp; Applying sessions.0001_initial... .gf[OK]<br>
+<ps>myrtle</ps> <dr>~/git/glasnt/myproject $</dr>
+<w>&nbsp;</w>
+???
+
+oh wow, that's a lot of output.
+
+has anything changed?
+---
+<div class="shell-wrap"><p class="shell-top-bar">bash</p><p class="shell-body">
+<ps>myrtle</ps> <dr>~/git/glasnt/myproject $</dr>
+<w>&nbsp;</w>
+---
+<div class="shell-wrap"><p class="shell-top-bar">bash</p><p class="shell-body">
+<ps>myrtle</ps> <dr>~/git/glasnt/myproject $</dr>
+ls -R<w>&nbsp;</w>
 
 ---
-<div class="shell-wrap"><p class="shell-top-bar">python3.7</p><p class="shell-body">
-<ps>myrtle</ps> <dr>~/my_project $</dr>
-.noop[python] manage.py runserver<br>
-Watching for file changes with StatReloader<br>
-Performing system checks...<br><br>
-System check identified no issues (0 silenced).<br>
-October 5, 2019 - 13:06:37<br>
-Django version 2.2.5, using settings 'my_project.settings'<br>
-.red[Starting development server at http:/.noop[/]127.0.0.1:8000/]<br>Quit the server with CONTROL-C.<br>
-[05/Oct/2019 13:06:42] "GET / HTTP/1.1" 200 193<br>
+<div class="shell-wrap"><p class="shell-top-bar">bash</p><p class="shell-body">
+<ps>myrtle</ps> <dr>~/git/glasnt/myproject $</dr>
+ls -R<br>
+.:<br>
+db.sqlite3 manage.py myproject<br>
+<br>
+./myproject:<br>
+__init__.py settings.py urls.py wsgi.py<br>
+<ps>myrtle</ps> <dr>~/git/glasnt/myproject $</dr>
+<w>&nbsp;</w>
+
+
+---
+<div class="shell-wrap"><p class="shell-top-bar">bash</p><p class="shell-body">
+<ps>myrtle</ps> <dr>~/git/glasnt/myproject $</dr>
+ls -R<br>
+.:<br>
+.red[db.sqlite3] manage.py myproject<br>
+<br>
+./myproject:<br>
+__init__.py settings.py urls.py wsgi.py<br>
+<ps>myrtle</ps> <dr>~/git/glasnt/myproject $</dr>
+<w>&nbsp;</w>
+???
+
+oh sweet, we have a database.. I guess, based on that name.
+
+---
+<div class="shell-wrap"><p class="shell-top-bar">bash</p><p class="shell-body">
+<ps>myrtle</ps> <dr>~/git/glasnt/myproject $</dr>
 <w>&nbsp;</w>
 
 ???
 
-which would have said it was starting a development server on port 8000
-
-Which if you open up your web browser
+Okay. Let's clear that away.
 
 ---
+<div class="shell-wrap"><p class="shell-top-bar">bash</p><p class="shell-body">
+<ps>myrtle</ps> <dr>~/git/glasnt/myproject $</dr>
+python manage.py runserver<w>&nbsp;</w>
 
+???
+
+will my project run now?
+---
+<div class="shell-wrap"><p class="shell-top-bar">bash</p><p class="shell-body">
+<ps>myrtle</ps> <dr>~/git/glasnt/myproject $</dr>
+.noop[p]ython manage.py runserver<br>
+Watching for file changes with StatReloader<br>
+Performing system checks...<br><br>
+System check identified no issues (0 silenced).<br>
+<br>October 04, 2019 - 17:05:54<br>
+Django version 2.2.5, using settings 'myproject.settings'<br>
+Starting development server at http:.noop[/]/127.0.0.1:8000/<br>
+Quit the server with CONTROL-C.<br>
+<w>&nbsp;</w>
+
+???
+
+Oh neat, no more error.
+---
+<div class="shell-wrap"><p class="shell-top-bar">bash</p><p class="shell-body">
+<ps>myrtle</ps> <dr>~/git/glasnt/myproject $</dr>
+.noop[p]ython manage.py runserver<br>
+Watching for file changes with StatReloader<br>
+Performing system checks...<br><br>
+System check identified no issues (0 silenced).<br>
+<br>October 04, 2019 - 17:05:54<br>
+Django version 2.2.5, using settings 'myproject.settings'<br>
+Starting development server at .red[http:.noop[/]/127.0.0.1:8000/]<br>
+Quit the server with CONTROL-C.<br>
+<w>&nbsp;</w>
+
+???
+
+and a helpful little message telling us where we're running
+---
 class: middle, center, image
-![Image](images/sprout_localhost_0.png)
-
+![Image](images/djangorocket.png)
 ???
 
-you can see your django site.
+sweet!
 
-And that works fine for you.
-
-the problem is that the djangogirl next to you
-
-
+So now we know which bits we need
 ---
 class: middle, center, image
-![Image](images/localhost_404.png)
-
+![Image](images/djangoadmin.png)
 ???
 
-she won't be able to see your website
-
-This is because your website is running just on your laptop.
-
-So what we need to do is Deploy it.
+and we have the much loved django admin
 
 ---
-
 class: title
-# "🦄 🚚 ☁️❓"
+# .prokyon[django]
+## very good local development setup
 
 ???
 
-so I can just take a copy of what I have on my machine, and put it on the cloud, right?
-
-Well, no.
-
-There is one major issue.
+we can get our app running locally really well.
+and here is why
 
 ---
-
-<div class="shell-wrap"><p class="shell-top-bar">python3.7</p><p class="shell-body">
-<ps>myrtle</ps> <dr>~/my_project $</dr>
-.red[.noop[python] manage.py runserver]<br>
-Watching for file changes with StatReloader<br>
-Performing system checks...<br><br>
-System check identified no issues (0 silenced).<br>
-October 5, 2019 - 13:06:37<br>
-Django version 2.2.5, using settings 'my_project.settings'<br>
-Starting development server at http:/.noop[/]127.0.0.1:8000/<br>Quit the server with CONTROL-C.<br>
-[05/Oct/2019 13:06:42] "GET / HTTP/1.1" 200 193<br>
-<w>&nbsp;</w>
-
-???
-
 runserver
+https://docs.djangoproject.com/en/2.2/ref/django-admin/#runserver
+do not run in production
+---
+> We're in the business of making Web frameworks, not Web servers
+---
+and also
 
-you know
+viewsource
 
-that one that
+staticfiles
+https://docs.djangoproject.com/en/2.2/howto/static-files/
+
+do not use in production
 
 ---
 
-<div class="shell-wrap"><p class="shell-top-bar">python3.7</p><p class="shell-body">
-<ps>myrtle</ps> <dr>~/my_project $</dr>
-.noop[python] manage.py runserver<br>
-Watching for file changes with StatReloader<br>
-Performing system checks...<br><br>
-System check identified no issues (0 silenced).<br>
-October 5, 2019 - 13:06:37<br>
-Django version 2.2.5, using settings 'my_project.settings'<br>
-Starting .red[development server] at http:/.noop[/]127.0.0.1:8000/<br>Quit the server with CONTROL-C.<br>
-[05/Oct/2019 13:06:42] "GET / HTTP/1.1" 200 193<br>
-<w>&nbsp;</w>
+run django
+nnect <pre><code class="">to database</code></pre>
+serve static files
+
+---
+
+run web framework
+nnect <pre><code class="">to database</code></pre>
+serve static files
 
 ???
 
-started a development server on your local machine.
+very general for any web framework.
 
-
----
-class: middle, center, image
-![Image](images/runserver_00.png)
-
-???
-
-the django documentation clearly describes that you should not
-
----
-
-class: middle, center, image
-![Image](images/runserver_01.png)
-
-???
-
-use this in a production setting.
-
-It has not gone through security audits or performance tests.
-
-And there's even a super helpful note.
-
-And that’s how it’s gonna stay. We’re in the business of making Web frameworks, not Web servers, so improving this server to be able to handle a production environment is outside the scope of Django.
-
-Which is a very important distinction.
-
----
-
-class: middle, center, image
-![Image](images/django_framework_00.png)
-
-???
-
-I mean, it says it right there at the top of any page.
-
----
-
-background-image: url("images/django_framework_01_169.png")
-
-???
-
-django is the web framework for perfectionists with deadlines
----
-background-image: url("images/django_framework_02_169.png")
-
-???
-
-emphasis on framework.
-
-what we need, is a web server.
-
+same for a lot of things, python, or any language.
 
 
 ---
 
-class: middle, center, image
-![Image](images/webserver_logos_old.png)
-
-???
-
-there are a few major web servers that you may have heard mention of.
-
-Apache, Nginx, or IIS (internet information server)
+<pre><code class="go">to layaercacke</code></pre>
 ---
-class: middle, center, image
-![Image](images/webserver_logos_new.png)
-.fix-tilt-long[.w[....]and&nbsp;more!]
-???
-
-they've all got new logos now, so maybe one of these versions is more familiar to you.
-
-There's also Caddy now that's picking up steam
-
-All these web servers talk HTTP
-
-Hyper Text Transfer Protocol
-
-as in
-
----
-class: middle, center, image
-![Image](images/http.svg)
-
-???
-
-that HTTP
-
-The http you type into your browser.
-
----
-
-class: title
-# &nbsp;
-
-???
-
-but these web servers have a problem.
-
----
-
-class: title
-# .e[🐍❌]
-
-???
-
-they don't talk python. Not directly.
-
-You need an interface that can talk to python and to a web server
-
----
-
-class: title
-# WSGI
-## Web Server Gateway Interface
-### &nbsp;
-
-???
-
-that's where w.s.g.i comes in. Or, "whis-gee".
-
----
-class: title
-# WSGI
-## Web Server Gateway Interface
-### `PEP-0333`, `PEP-3333`
-
-???
-
-there are PEPs - Python Enhancement proposals - which define
-
-If your web framework (django) can talk WSGI, then you can use any wsgi server you like.
-
-And thankfully, django supports wsgi
-
----
-<div class="shell-wrap"><p class="shell-top-bar">bash</p><p class="shell-body">
-<ps>myrtle</ps> <dr>~/my_project $</dr>
-ls my_project/<w>&nbsp;</w>
-
-???
-
-if you check your python project
-
-
----
-<div class="shell-wrap"><p class="shell-top-bar">bash</p><p class="shell-body">
-<ps>myrtle</ps> <dr>~/my_project $</dr>
-ls my_project/<br>
-⎽⎽init⎽⎽.py<br>settings.py<br>urls.py<br>wsgi.py<br>
-<ps>myrtle</ps> <dr>~/my_project $</dr>
-<w>&nbsp;</w>
-
-???
-
-you'll see that you'll have
-
----
-<div class="shell-wrap"><p class="shell-top-bar">bash</p><p class="shell-body">
-<ps>myrtle</ps> <dr>~/my_project $</dr>
-ls my_project/<br>
-⎽⎽init⎽⎽.py<br>settings.py<br>urls.py<br>.red[wsgi.py]<br>
-<ps>myrtle</ps> <dr>~/my_project $</dr>
-<w>&nbsp;</w>
-
-???
-
-a convenient wsgi.py file.
-
----
-<div class="shell-wrap"><p class="shell-top-bar">bash</p><p class="shell-body">
-<ps>myrtle</ps> <dr>~/my_project $</dr>
-ls my_project/<br>
-⎽⎽init⎽⎽.py<br>settings.py<br>urls.py<br>wsgi.py<br>
-<ps>myrtle</ps> <dr>~/my_project $</dr>
-cat wsgi.py<w>&nbsp;</w>
-
-???
-
-which was automatically generated when you created your django project.
-
-It'll contain
----
-<div class="shell-wrap"><p class="shell-top-bar">bash</p><p class="shell-body">
-<ps>myrtle</ps> <dr>~/my_project $</dr>
-ls my_project/<br>
-⎽⎽init⎽⎽.py<br>settings.py<br>urls.py<br>wsgi.py<br>
-<ps>myrtle</ps> <dr>~/my_project $</dr>
-cat wsgi.py<br>
-import os<br><br>from django.core.wsgi import get_wsgi_application<br><br>os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'my_project.settings')<br><br>application = get_wsgi_application()<br>
-<ps>myrtle</ps> <dr>~/my_project $</dr>
-<w>&nbsp;</w>
-
-???
-
-some template code that exposes the wsgi callable as a module-level variable named application.
-
-This will be important later.
-
-So we know django talks wsgi, so we can use one of the many wsgi servers
-
-
----
-
-class: middle, center, image
-![Image](images/wsgi_logos.png)
-
-.fix-tilt-long[.w[....]and&nbsp;more!]
-
-???
-
-there's ones like micro-wsgi or gunicorn.
-
-These are super interesting in themselves, and there's a great many talks on them
-
----
-
-class: middle, center, image
-![Image](images/philip_uwsgi.png)
-.footnotes[[Type UWSGI; Press Enter; What happens?](https://www.youtube.com/watch?v=YoUZIzPGKT8) DjangoCon US 2017]
-
-???
-
-Philip James gave a great talk about microwsgi at djangocon a few years ago.
-
----
-
-class: middle, center, image
-![Image](images/graham_modwsgi.png)
-
-.footnotes[[Secrets of a WSGI master](https://www.youtube.com/watch?v=CPz0s1CQsTE), PyCon 2018]
-
-???
-
-There's also Graham Dumpleton's talk from PyCon Secrets of a wsgi master.
-
-
----
-
-class: middle, center, image
-![Image](images/logo_mess.png)
-
-???
-
-so we have this whole mess of logos.
-
-It's complicated.
-
-So how do we actually deploy thing?
-
----
-
-class: title
-# .e[🏢]
-
-???
-
-chapter two
-
-Infrastrucutre. The where.
-
-Because if you choose the right kind of setup, you can ignore most of those logos.
-
-I know.
-
----
-
-class: title
-# TODO
-
-used to be physical servers
-one per person
-ale. <pre><code class="scala"></code></pre>
-you'd have to worry about everything.
-
-then virtual servers (iaas)
-several per machine
-you'd still have to worry about things, but not hardware
-
-
-then platforms (paas)
-heroku, pythonanywhere, divio
-sepcific to a language
-
-and now containers
-as containers are now standardised
-
-
----
-
-class: title
-# .e[🚚]
-
-???
-
-chapter three
-
-Deployment. The how.
-
-
----
-
-class: title
-# TODO
-
-depends on which platform you selected
-
-sometimes it's a manual copy and paste
-
-services like python anywhere pull from yourt github
-
-source control is a good idea
-
-others can push from your github. webhooks!
-
-but
-
-there's your code
-youer database
-and your assets
-
-
 
 ---
 class: title

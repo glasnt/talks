@@ -7,6 +7,8 @@
 @import url("fonts/roboto.css");
 
 .caps { font-family: "PT Serif", serif;  font-variant: small-caps;}
+.thin { font-weight: normal }
+.thick { font-weight: 600 }
 
 .hljs-default pre code, .code, .remark-code{
   border: none;
@@ -27,7 +29,7 @@
 
 h1, h2, h3, .title h1, .title h2, .title h3 {
     font-family: 'PT Sans';
-    font-weight: 600;
+    font-weight: 400;
     text-align: center;
 }
 
@@ -115,6 +117,11 @@ li cite {
 .blue  { outline: 4px solid #4ECDC4; outline-offset: 5px; }
 .bluef  { color: #4ECDC4; }
 .red   { outline: 4px solid #FF6B6B; outline-offset: 5px; }
+.rf  { color: #FF6B6B; }
+.red   { outline: 4px solid #FF6B6B; outline-offset: 5px; }
+.cf { color: cyan; font-weight: bold}
+.tb { font-weight: bold; color: white}
+.gf { color: green }
 .purple { outline: 4px solid #70568F; outline-offset: 5px; }
 
 .ecma { font-family: Cambria, Palatino Linotype, Palatino, Liberation Serif,  serif }
@@ -323,8 +330,9 @@ dr { color: rgb(201,135,135) }
 */
  .left { text-align: left; }
 
-/* Flux font */ .flux { font-family: "DTLProkyonST", regular}
-/* Flux font */ .roboto { font-family: "Roboto", regular}
+.prokyon { font-family: "DTLProkyonST", regular}
+.flux { font-family: "Flux", regular}
+.roboto { font-family: "Roboto", regular}
  .djangobackground { background-color: "#0C3C26" }
 
 /* redacted font */ 
