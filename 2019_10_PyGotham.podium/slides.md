@@ -385,7 +385,35 @@ runserver
 https://docs.djangoproject.com/en/2.2/ref/django-admin/#runserver
 do not run in production
 ---
+<<<<<<< HEAD
 > We're in the business of making Web frameworks, not Web servers
+=======
+
+class: title
+# TODO
+
+used to be physical servers
+one per person
+ale. <pre><code class="scala"></code></pre>
+you'd have to worry about everything.
+
+then virtual servers (iaas)
+several per machine
+you'd still have to worry about things, but not hardware
+
+
+then platforms (paas)
+heroku, pythonanywhere, divio
+sepcific to a language
+
+and now containers
+as containers are now standardised
+
+
+For the VMS and the containers you also have to worry about
+Configuration management. Ansible chef terraform logo mess. This is too much for today's talk
+
+>>>>>>> 579e94526fdbcec1305308a3e308dc706da57994
 ---
 and also
 
