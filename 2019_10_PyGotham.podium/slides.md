@@ -25,6 +25,8 @@ class: title
 ???
 this isn't a talk about "the one true way" to deploy your app
 
+This talk doesn't give specific answers, mostly, but describes the ecosystem
+
 This talk is diving into the complexities of deployment, in essense
 
 ---
@@ -385,6 +387,7 @@ class: title
 ???
 
 we can get our app running locally really well.
+
 and a lot of this boils down to
 ---
 <br><br><br>
@@ -416,6 +419,7 @@ class: middle, center, image
 ???
 
 do not use this server in a production setting.
+
 ---
 class: middle, center, image
 ![Image](images/runserver_02.png)
@@ -586,7 +590,14 @@ class: title
 
 which makes our production use.. complex.
 
-django doesn't provide you with a webserver or database that's production ready, so you have yo use your own, but store bought is fine. We'll get to the store later.
+django doesn't provide you with a webserver or database that's production ready
+
+So you have to provide your own.
+
+We'll get into some of the options in a moment.
+
+But first I want to mention something important
+
 ---
 <br><BR><BR>
 # .poly[Flask]
@@ -1192,7 +1203,7 @@ not all databases backends are alike, and there have been some design considerat
 <br>
 # Supported databases
 ## PostgreSQL 9.4+ (psycopg2 2.5.4+)<br>MySQL 5.6+ (InnoDB)<br>Oracle 12.1+<br>SQLite 3.8.3
-.footnotes[[limitations](https://docs.djangoproject.com/en/2.2/ref/databases/)]
+.footnotes[[limitations](https://docs.djangoproject.com/en/2.2/ref/databases/), [oracle + django](https://slides.com/iqbaltalaatbhatti/oracle-django)]
 
 ???
 
