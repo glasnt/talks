@@ -23,13 +23,10 @@ class: title
 ## .thin[What this talk isn't.]
 
 ???
-this isn't a talk about "the way" to deploy your app
+this isn't a talk about "the one true way" to deploy your app
 
-This isn't a state of the union, a dive into any particualr
-part of the process.
+This talk is diving into the complexities of deployment, in essense
 
-This talk is more describing the complexities around the process, and, inessense.
-TODO: Ensure this is accurate
 ---
 
 
@@ -57,7 +54,14 @@ class: title
 ???
 
 we'll be taking a journey today, so instead of an agenda, here are at least a few points of interest along our trip.
-TODO: ensure this is accurate
+
+We'll start by looking at exactly what comes out of the box with django
+
+and from there discuss the complexities django has compared to other frameworks when it comes to deployment
+
+not the complications, just the complexities.
+
+and discuss the helpers django has to assist you.
 
 ---
 class: title
@@ -78,13 +82,15 @@ class: title
 
 we're also just going to stick to base django
 
-No addons, no cookiecutter templates. This talk should be useful if you're anywhere from looking at django
+No additional features, no task management, no other helpers
+
+Just whatever comes in stock standard django
+
+This talk should be useful if you're anywhere from looking at django
 
 to having your djangogirls tutorial project working on your laptop
 
 to a more complex setup, but no extra complexities.
-
-TODO: is "addons" the best word here?
 
 ---
 
@@ -97,15 +103,15 @@ so let's get started, by taking a look at django as it comes out of the box
 
 ---
 <div class="shell-wrap"><p class="shell-top-bar">bash</p><p class="shell-body">
-<ps>myrtle</ps> <dr>~/git/glasnt/ $</dr>
+<ps>myrtle</ps> <dr>~/git/glasnt $</dr>
 <w>&nbsp;</w>
 ---
 <div class="shell-wrap"><p class="shell-top-bar">bash</p><p class="shell-body">
-<ps>myrtle</ps> <dr>~/git/glasnt/ $</dr>
+<ps>myrtle</ps> <dr>~/git/glasnt $</dr>
 pip install django<w>&nbsp;</w>
 ---
 <div class="shell-wrap"><p class="shell-top-bar">bash</p><p class="shell-body">
-<ps>myrtle</ps> <dr>~/git/glasnt/ $</dr>
+<ps>myrtle</ps> <dr>~/git/glasnt $</dr>
 pip install django<br>
 Collecting django<br>
 ...<br>
@@ -114,7 +120,7 @@ Successfully installed django-2.2.5<br>
 <w>&nbsp;</w>
 ---
 <div class="shell-wrap"><p class="shell-top-bar">bash</p><p class="shell-body">
-<ps>myrtle</ps> <dr>~/git/glasnt/ $</dr>
+<ps>myrtle</ps> <dr>~/git/glasnt $</dr>
 pip install django<br>
 Collecting django<br>
 ...<br>
@@ -123,7 +129,7 @@ Successfully installed django-2.2.5<br>
 django-admin startproject myproject<w>&nbsp;</w>
 ---
 <div class="shell-wrap"><p class="shell-top-bar">bash</p><p class="shell-body">
-<ps>myrtle</ps> <dr>~/git/glasnt/ $</dr>
+<ps>myrtle</ps> <dr>~/git/glasnt $</dr>
 pip install django<br>
 Collecting django<br>
 ...<br>
@@ -134,7 +140,7 @@ django-admin startproject myproject<br>
 <w>&nbsp;</w>
 ---
 <div class="shell-wrap"><p class="shell-top-bar">bash</p><p class="shell-body">
-<ps>myrtle</ps> <dr>~/git/glasnt/ $</dr>
+<ps>myrtle</ps> <dr>~/git/glasnt $</dr>
 pip install django<br>
 Collecting django<br>
 ...<br>
@@ -145,7 +151,7 @@ django-admin startproject myproject<br>
 cd myproject<w>&nbsp;</w>
 ---
 <div class="shell-wrap"><p class="shell-top-bar">bash</p><p class="shell-body">
-<ps>myrtle</ps> <dr>~/git/glasnt/ $</dr>
+<ps>myrtle</ps> <dr>~/git/glasnt $</dr>
 pip install django<br>
 Collecting django<br>
 ...<br>
@@ -158,7 +164,7 @@ cd myproject<br>
 <w>&nbsp;</w>
 ---
 <div class="shell-wrap"><p class="shell-top-bar">bash</p><p class="shell-body">
-<ps>myrtle</ps> <dr>~/git/glasnt/ $</dr>
+<ps>myrtle</ps> <dr>~/git/glasnt $</dr>
 pip install django<br>
 Collecting django<br>
 ...<br>
@@ -171,7 +177,7 @@ cd myproject<br>
 ls -R<w>&nbsp;</w>
 ---
 <div class="shell-wrap"><p class="shell-top-bar">bash</p><p class="shell-body">
-<ps>myrtle</ps> <dr>~/git/glasnt/ $</dr>
+<ps>myrtle</ps> <dr>~/git/glasnt $</dr>
 pip install django<br>
 Collecting django<br>
 ...<br>
@@ -282,11 +288,7 @@ python manage.py migrate<w>&nbsp;</w>
 &nbsp; Applying sessions.0001_initial... .gf[OK]<br>
 <ps>myrtle</ps> <dr>~/git/glasnt/myproject $</dr>
 <w>&nbsp;</w>
-???
 
-oh wow, that's a lot of output.
-
-has anything changed?
 ---
 <div class="shell-wrap"><p class="shell-top-bar">bash</p><p class="shell-body">
 <ps>myrtle</ps> <dr>~/git/glasnt/myproject $</dr>
@@ -319,18 +321,11 @@ ls -R<br>
 __init__.py settings.py urls.py wsgi.py<br>
 <ps>myrtle</ps> <dr>~/git/glasnt/myproject $</dr>
 <w>&nbsp;</w>
-???
-
-oh sweet, we have a database!
 
 ---
 <div class="shell-wrap"><p class="shell-top-bar">bash</p><p class="shell-body">
 <ps>myrtle</ps> <dr>~/git/glasnt/myproject $</dr>
 <w>&nbsp;</w>
-
-???
-
-Okay. Let's clear that away.
 
 ---
 <div class="shell-wrap"><p class="shell-top-bar">bash</p><p class="shell-body">
@@ -375,11 +370,6 @@ and a helpful little message telling us where we're running
 ---
 class: middle, center, image
 ![Image](images/djangorocket.png)
-???
-
-sweet!
-
-So now we know which bits we need
 ---
 class: middle, center, image
 ![Image](images/djangoadmin.png)
@@ -444,7 +434,7 @@ Django is very good at being a web framework.
 
 The fact that it provides any local web server functionality at all is amazing, but the fact that it calls out that it's not for production is also very very good.
 
-There are other webservers you can use in production. We'll get to that. TODO ENSURE WE GET TO THIS.
+We'll discuss a selection of webservers you should use in production a bit later.
 ---
 <br><br><br>
 # .code[runserver]
@@ -595,15 +585,8 @@ class: title
 ???
 
 which makes our production use.. complex.
----
-class: title
-## byo web server
-## byo static server
-## byo database
 
-???
-
-django doesn't provide you wiht a webserver or database that's production ready, so you have yo use your own, but store bought is fine. We'll get to the store later.
+django doesn't provide you with a webserver or database that's production ready, so you have yo use your own, but store bought is fine. We'll get to the store later.
 ---
 <br><BR><BR>
 # .poly[Flask]
@@ -781,7 +764,7 @@ But, thankfully for us using django, we have some helpers.
 
 in order they are wsgi compatitbility, the migrate command, and the collect static command.
 
-The rest (TODO) of this talk will be describing how these helpers work.
+The rest of this talk will be describing how these helpers work.
 
 Which will help us in exploring the options we have for deployment
 ---
@@ -1078,14 +1061,40 @@ Oh, I mean having a dynamic web admin is pretty sweet, but these two commands ar
 ---
 
 class: title
-# .code[migrate] reduces toil
+# .code[migrate] created to<br>reduce developer toil
 
 ???
-TODO CITATION (DJANGO CHAT?)
+TODO CITATION (DJANGO CHAT?, Andrew Godwin mentioned this **somewhere**)
 
 The whole concept of automating the migration framework was design to reduce developer toil
 
 Indeed django is a database agnostic web framework, so you houldn't have to worry
+
+---
+<div class="shell-wrap"><p class="shell-top-bar">bash</p><p class="shell-body">
+.cf[Operations to perform:]<br>
+&nbsp; .tb[Apply all migrations:] admin, auth, contenttypes, sessions<br>
+.cf[Running migrations:]<br>
+&nbsp; Applying contenttypes.0001_initial... .gf[OK]<br>
+&nbsp; Applying auth.0001_initial... .gf[OK]<br>
+&nbsp; Applying admin.0001_initial... .gf[OK]<br>
+&nbsp; Applying admin.0002_logentry_remove_auto_add... .gf[OK]<br>
+&nbsp; Applying admin.0003_logentry_add_action_flag_choices... .gf[OK]<br>
+&nbsp; Applying contenttypes.0002_remove_content_type_name... .gf[OK]<br>
+...<br>
+&nbsp; Applying auth.0009_alter_user_last_name_max_length... .gf[OK]<br>
+&nbsp; Applying auth.0010_alter_group_name_max_length... .gf[OK]<br>
+&nbsp; Applying auth.0011_update_proxy_permissions... .gf[OK]<br>
+&nbsp; Applying sessions.0001_initial... .gf[OK]<br>
+<ps>myrtle</ps> <dr>~/git/glasnt/myproject $</dr>
+<w>&nbsp;</w>
+???
+
+These are the migrations we generated earlier
+
+these create the data strcutures required for the the django admin to work
+
+you can see it in the filenames - admin, auth (authentication), sessions.
 
 But to migrate data, you need a database.
 
@@ -1102,15 +1111,24 @@ whatever bucket you want to put them in depends on your definition, if they IaaS
 
 ---
 <br><BR>
-## Managed database
+## Managed databases
 ### worry about:<br> your data models
 .footnotes[Example providers: your PaaS or IaaS provider]
 ???
 
 you define your data models in your app
 ---
+
 <br><BR>
-## Managed database
+## Managed databases
+### .prokyon[django] worries about:<br>generating and applying migrations
+.footnotes[Example providers: your PaaS or IaaS provider]
+???
+
+making the migrations and applying them to whatever database you choose is django's problem. More on that a bit later.
+---
+<br><BR>
+## Managed databases
 ### managed for you:<br>storage, backups, persistence, maintenance...
 
 .footnotes[Example providers: your PaaS or IaaS provider]
@@ -1244,14 +1262,28 @@ and the more complex asset compilation ption
 
 if you chose a chose a IaaS provider earlier, they probably offer some sort of cloud storage, which is super useful to have, again, to keep everything physically close.
 
+If you went with the PaaS, perhaps the simple asset solution is for you.
+
 ---
 
+<br><br>
+# to deploy .prokyon[django]:
+## .so[run django<br>connect to a database<br>serve static files]
+???
+
+so we've covered each of the three major tenants.
+
+So
+
+---
 class: title
 # actually deploying
 
 ???
 
-so we're finally there.
+actually deploying.
+
+we're finally there.
 
 ---
 class: title
@@ -1276,7 +1308,7 @@ But given the last XX minutes I spent describing all this, hopefully you now hav
 there's so much more to this topic that I just can't even hope to cover.
 --
 
-### continuous deployment, monitoring, scaling, logging,<br>high availablilty, load balancing, kubernetes,<br>multi-region, zero downtime deployments,<br>blue/green deployments, A/B testing, containers,<br>configuration management, automation...
+### continuous deployment, monitoring, scaling, logging,<br>high availablilty, load balancing, secrets,<br>orchestration, zero downtime deployments,<br>blue/green deployments, A/B testing, containers,<br>configuration management, automation...
 
 ???
 Nearly each of these topics is their own entire *conference* worth of material.
