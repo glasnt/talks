@@ -880,7 +880,7 @@ class: title
 ## .nl[[gunicorn](https://gunicorn.org)]
 
 
-.footnotes[🎥: [μ](https://www.youtube.com/watch?v=YoUZIzPGKT8), [wsgi](https://www.youtube.com/watch?v=CPz0s1CQsTE)]
+.footnotes[[Type UWSGI, Press Enter, what happens?](https://www.youtube.com/watch?v=YoUZIzPGKT8) P. James, [Secrets of a WSGI master](https://www.youtube.com/watch?v=CPz0s1CQsTE) G. Dumpleton]
 ???
 
 some of the options you have include microwshi and gunicorn
@@ -1201,7 +1201,7 @@ django does support a number of databases, including postgresql, mysql, oracle, 
 There is also third party support for a number of other databases, but again
 
 ---
-class: title
+<br><BR>
 ## What<br>do you want<br>to worry about?
 
 ???
