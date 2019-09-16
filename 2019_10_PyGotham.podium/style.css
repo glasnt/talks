@@ -36,6 +36,7 @@ h1, h2, h3, .title h1, .title h2, .title h3 {
 h1, .title h1 { font-size: 5em; }
 h2, .title h2 { font-size: 4em; } 
 h3, .title h3 { font-size: 3em; }
+.h3 { font-size: 32pt; }
 
 p {
     font-size: 24pt;
@@ -332,6 +333,7 @@ dr { color: rgb(201,135,135) }
 
 .prokyon { font-family: "DTLProkyonST", regular}
 .flux { font-family: "Flux", regular}
+.poly { font-family: "Poly", regular}
 .roboto { font-family: "Roboto", regular}
  .djangobackground { background-color: "#0C3C26" }
 
@@ -341,11 +343,12 @@ dr { color: rgb(201,135,135) }
 rb { font-family: "RedactedB", regular;  }
 rr { font-family: "RedactedR", regular;  }
 
+.c { font-family: monospace }
 .code { 
-   font-family: "SFMono-Regular",Consolas,"Liberation Mono",Menlo,Courier,monospace !important;
+   font-family: monospace !important;
    margin: 0;
    padding: -10px;
-   font-size: 24pt !important; 
+   font-size: 48pt !important; 
    line-height: 32pt !important; 
  
 } 
@@ -495,4 +498,5 @@ dr { color: rgb(201,135,135) }
 .sup { vertical-align: super}
 .slim { margin: 0}
 .h2 { font-size: 4em; }
-
+.nl a { color: black}
+.so { text-decoration: line-through }
