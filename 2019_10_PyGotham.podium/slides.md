@@ -789,7 +789,7 @@ django's proimary deployment platform
 
 is wsgi
 
-class: middle, center
+class: title
 ![Image](images/as of django 2.2!!.svg)
 
 
@@ -1139,6 +1139,30 @@ your database host will often handle everyhitng from backups to storage (includi
 
 These will often be available from your web server provider, which is often a very good idea because the closer your web server and database the faster you can send data between the two parts of your application.
 
+TODO
+
+more here something along the lines of
+
+there is no reason not to use a managed database any more
+
+managed databases are a solved problem, pay for one and get the benefits
+
+a lot of people use databases, so a lot of work has gone into them
+
+pay just a little bit and you often get:
+
+- persistence
+- backups
+- maintenance windows
+- more so: you don't have to manage it.
+
+heck, some now days even automatically expand and the providers handle this without downtime for you
+
+this and your domain name might be the only thing you end up paying for in a smaller stack, but it's worth it.
+
+ENDTODO
+
+
 ---
 <br><BR>
 # Which database?
@@ -1263,6 +1287,28 @@ and the more complex asset compilation ption
 if you chose a chose a IaaS provider earlier, they probably offer some sort of cloud storage, which is super useful to have, again, to keep everything physically close.
 
 If you went with the PaaS, perhaps the simple asset solution is for you.
+
+TODO
+
+more here, something long the lines of:
+
+out of all the tech I've discussed so far, cloud storage is the oldest and most solid
+
+AWS literally launched S3 in 20XX. That's YY years ago.
+
+storing media objects is a foundational service provided by any cloud provider.
+and it's totally okay to use
+
+the scariest thing when I first came across s3 was the fact that I had to use a global bucket name. Like, a name that had never been used before
+but that's okay
+
+the way this works means that the name must be unique for every reference
+
+use this foundational service of the current internet age
+
+and make sure that when you name your bucket it's not just your app's name or your internet name because once you use that name it's gone forever and you'll probably want to change your naming scheme at once point so if it's your first one just make sure it's not a super cool name.
+
+ENDTODO
 
 ---
 
