@@ -616,7 +616,7 @@ And each and every deployment is different and unqiue and beautiful and complex.
 
 --- 
 <br><br>
-# to deploy a stateful app 
+# to deploy a stateful app: 
 Note: and for any stateful application, you have at the bare minimum three major segments
 ---
 <br><br>
@@ -840,7 +840,7 @@ I'm going to focus on the ones that are much more suited for django
 # Platform as a Service
 ### worry about:<br>your .prokyon[django] app, data 
 
-vv Example providers: Heroku, Divio, PythonAnywhere
+vv Example providers: Heroku, Divio, Google Cloud, PythonAnywhere
 
 Note: in general your platforms as service are going to be places where you provide your code to them, often fit to some sort of template, which normally includes the command to run to get your app working. This will often be uwsgi or guniconr
 
@@ -848,7 +848,7 @@ Note: in general your platforms as service are going to be places where you prov
 <br><BR>
 # Platform as a Service
 ### managed for you: <br>web server, operating system,<br>hardware, storage, networking...
-vv Example providers: Heroku, Divio, PythonAnywhere
+vv Example providers: Heroku, Divio, Google Cloud, PythonAnywhere
 
 Note: the things that will be managed for you include the web server (often included in whatever template you have), the operating system, the physical hardware, the storage, networking, and a whole host of other things. 
 
@@ -886,6 +886,28 @@ Note: we've covered one
 And the next one is a database. 
 and here's the secret
 ---
+
+#= .code[makemigrations<br>migrate]
+
+Note: these two commands, in my own personal opinion, two of the greatest features of django
+
+Oh, I mean having a dynamic web admin is pretty sweet, but these two commands are just choice. 
+
+---
+
+#= .code[migrate] reduces toil
+
+Note: 
+TODO CITATION (DJANGO CHAT?)
+
+The whole concept of automating the migration framework was design to reduce developer toil 
+
+Indeed django is a database agnostic web framework, so you houldn't have to worry
+
+But to migrate data, you need a database.  
+
+and here's the secret. 
+---
 ##= Managed databases<br>are just a specialised<br>aaS
 
 Note: managed databases are just specalised "as a service"
@@ -910,34 +932,130 @@ Note: your database host will often handle everyhitng from backups to storage (i
 These will often be available from your web server provider, which is often a very good idea because the closer your web server and database the faster you can send data between the two parts of your application. 
 
 ---
+<br><BR>
+# Which database?
+---
 
-migrate command
 
-applying migrate to your database
+@= database_00.png
+vv [➚](https://docs.djangoproject.com/en/2.2/ref/databases/)
 
-static
-
-just about platform as a service
-
-collectstatic
-
-applying colectstatic to your app
+Note: the docs are useful here, expect there's a super important note
 
 ---
 
-actually deploying
+@= database_01.png
 
-running these commands
-but also copying your code to your server
+vv [➚](https://docs.djangoproject.com/en/2.2/ref/databases/)
+
+Note: not all databases backends are alike, and there have been some design considerations. 
+
+---
+<br>
+# Supported databases
+## PostgreSQL 9.4+ (psycopg2 2.5.4+)<br>MySQL 5.6+ (InnoDB)<br>Oracle 12.1+<br>SQLite 3.8.3
+vv [limitations](https://docs.djangoproject.com/en/2.2/ref/databases/)
+
+Note: django does support a number of databases, including postgresql, mysql, oracle, and sqlite. 
+
+There is also third party support for a number of other databases, but again
+
+--- 
+##= What<br>do you want<br>to worry about?
+
+Note: what do you want to worry about? 
+
+If you already have a database expert, choose the one they know. 
+If you have a preferred one, choose that. 
+
+Otherwise
+
+---
+
+##= No opinion?
+### choose PostgreSQL
+
+Note: choose postgresql
+
+Shock I know right. I'm actually telling you something solid. 
+
+But it's not without reason. 
+
+---
+
+@= database_02.png
+
+Note: the docs specifically point this out. 
+
+django is a database agnostic web framework
+
+but django provides support for a number of datatypes that only work in postgressql. 
+---
+#= to deploy .prokyon[django]: 
+## .so[run django<br>connect to a database]<br>serve static files
+---
+
+#= .code[collectstatic]
+
+Note: the helper here is collectstatic
+
+---
+
+#= static asset management
+## an entire talk
+
+vv ["Assets in Django without losing your hair" by Jacob Kaplan-Moss](https://www.youtube.com/watch?v=E613X3RBegI)
+
+---
+
+#= asset management options:
+
+## simple assets
+## cloud storage
+## media uploads
+## asset compilation
+vv ["Assets in Django without losing your hair" by Jacob Kaplan-Moss](https://www.youtube.com/watch?v=E613X3RBegI)
+
+
+Note: he details four scenarios, 
+
+simple assets
+
+cloud storage
+
+media uploads
+
+and the more complex asset compilation ption
+
+if you chose a chose a IaaS provider earlier, they probably offer some sort of cloud storage, which is super useful to have, again, to keep everything physically close. 
+
+--- 
+
+#= actually deploying
+
+Note: so we're finally there. 
+
+---
+##= [copy code to host]<br>.c[python manage.py migrate]<br>.c[python manage.py collectstatic]<br>[start web server]
+
+Note: here it is. 
+
+- copy your code to wherever you're hosting
+- run your two management commands
+- and start your web server, whichever that is. 
+
+I know. This doesn't seem like a lot. 
+
+But given the last XX minutes I spent describing all this, hopefully you now have a greater understanding of the complexity. 
 ---
 <br><br><BR>
 # Things I didn't mention
+Note: there's so much more to this topic that I just can't even hope to cover. 
 --
 
 ### continuous deployment, monitoring, scaling, logging,<br>high availablilty, load balancing, kubernetes,<br>multi-region, zero downtime deployments,<br>blue/green deployments, A/B testing, containers,<br>configuration management, automation... 
 
-Note: there's so much more to this topic that I just can't even hope to cover. 
-
+Note: 
 Nearly each of these topics is their own entire *conference* worth of material. 
 
 But hopefuully I've been able to help you just see a bit behind the curtain of deployment. 

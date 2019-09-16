@@ -729,7 +729,7 @@ And each and every deployment is different and unqiue and beautiful and complex.
 
 ---
 <br><br>
-# to deploy a stateful app
+# to deploy a stateful app:
 ???
 
 and for any stateful application, you have at the bare minimum three major segments
@@ -806,7 +806,7 @@ django's proimary deployment platform
 
 is wsgi
 
-class: title
+class: middle, center
 ![Image](images/as of django 2.2!!.svg)
 
 
@@ -1007,7 +1007,7 @@ I'm going to focus on the ones that are much more suited for django
 # Platform as a Service
 ### worry about:<br>your .prokyon[django] app, data
 
-.footnotes[Example providers: Heroku, Divio, PythonAnywhere]
+.footnotes[Example providers: Heroku, Divio, Google Cloud, PythonAnywhere]
 
 ???
 
@@ -1017,7 +1017,7 @@ in general your platforms as service are going to be places where you provide yo
 <br><BR>
 # Platform as a Service
 ### managed for you: <br>web server, operating system,<br>hardware, storage, networking...
-.footnotes[Example providers: Heroku, Divio, PythonAnywhere]
+.footnotes[Example providers: Heroku, Divio, Google Cloud, PythonAnywhere]
 
 ???
 
@@ -1065,6 +1065,32 @@ we've covered one
 And the next one is a database.
 and here's the secret
 ---
+
+class: title
+# .code[makemigrations<br>migrate]
+
+???
+
+these two commands, in my own personal opinion, two of the greatest features of django
+
+Oh, I mean having a dynamic web admin is pretty sweet, but these two commands are just choice.
+
+---
+
+class: title
+# .code[migrate] reduces toil
+
+???
+TODO CITATION (DJANGO CHAT?)
+
+The whole concept of automating the migration framework was design to reduce developer toil
+
+Indeed django is a database agnostic web framework, so you houldn't have to worry
+
+But to migrate data, you need a database.
+
+and here's the secret.
+---
 class: title
 ## Managed databases<br>are just a specialised<br>aaS
 
@@ -1096,36 +1122,163 @@ your database host will often handle everyhitng from backups to storage (includi
 These will often be available from your web server provider, which is often a very good idea because the closer your web server and database the faster you can send data between the two parts of your application.
 
 ---
+<br><BR>
+# Which database?
+---
 
-migrate command
 
-applying migrate to your database
+class: middle, center, image
+![Image](images/database_00.png)
+.footnotes[[➚](https://docs.djangoproject.com/en/2.2/ref/databases/)]
 
-static
+???
 
-just about platform as a service
-
-llectstatic <pre><code class=""></code></pre>
-
-applying colectstatic to your app
+the docs are useful here, expect there's a super important note
 
 ---
 
-actually deploying
+class: middle, center, image
+![Image](images/database_01.png)
 
-running these commands
-but also copying your code to your server
+.footnotes[[➚](https://docs.djangoproject.com/en/2.2/ref/databases/)]
+
+???
+
+not all databases backends are alike, and there have been some design considerations.
+
+---
+<br>
+# Supported databases
+## PostgreSQL 9.4+ (psycopg2 2.5.4+)<br>MySQL 5.6+ (InnoDB)<br>Oracle 12.1+<br>SQLite 3.8.3
+.footnotes[[limitations](https://docs.djangoproject.com/en/2.2/ref/databases/)]
+
+???
+
+django does support a number of databases, including postgresql, mysql, oracle, and sqlite.
+
+There is also third party support for a number of other databases, but again
+
+---
+class: title
+## What<br>do you want<br>to worry about?
+
+???
+
+what do you want to worry about?
+
+If you already have a database expert, choose the one they know.
+If you have a preferred one, choose that.
+
+Otherwise
+
+---
+
+class: title
+## No opinion?
+### choose PostgreSQL
+
+???
+
+choose postgresql
+
+Shock I know right. I'm actually telling you something solid.
+
+But it's not without reason.
+
+---
+
+class: middle, center, image
+![Image](images/database_02.png)
+
+???
+
+the docs specifically point this out.
+
+django is a database agnostic web framework
+
+but django provides support for a number of datatypes that only work in postgressql.
+---
+class: title
+# to deploy .prokyon[django]:
+## .so[run django<br>connect to a database]<br>serve static files
+---
+
+class: title
+# .code[collectstatic]
+
+???
+
+the helper here is collectstatic
+
+---
+
+class: title
+# static asset management
+## an entire talk
+
+.footnotes[["Assets in Django without losing your hair" by Jacob Kaplan-Moss](https://www.youtube.com/watch?v=E613X3RBegI)]
+
+---
+
+class: title
+# asset management options:
+
+## simple assets
+## cloud storage
+## media uploads
+## asset compilation
+.footnotes[["Assets in Django without losing your hair" by Jacob Kaplan-Moss](https://www.youtube.com/watch?v=E613X3RBegI)]
+
+
+???
+
+he details four scenarios,
+
+simple assets
+
+cloud storage
+
+media uploads
+
+and the more complex asset compilation ption
+
+if you chose a chose a IaaS provider earlier, they probably offer some sort of cloud storage, which is super useful to have, again, to keep everything physically close.
+
+---
+
+class: title
+# actually deploying
+
+???
+
+so we're finally there.
+
+---
+class: title
+## [copy code to host]<br>.c[python manage.py migrate]<br>.c[python manage.py collectstatic]<br>[start web server]
+
+???
+
+here it is.
+
+- copy your code to wherever you're hosting
+- run your two management commands
+- and start your web server, whichever that is.
+
+I know. This doesn't seem like a lot.
+
+But given the last XX minutes I spent describing all this, hopefully you now have a greater understanding of the complexity.
 ---
 <br><br><BR>
 # Things I didn't mention
+???
+
+there's so much more to this topic that I just can't even hope to cover.
 --
 
 ### continuous deployment, monitoring, scaling, logging,<br>high availablilty, load balancing, kubernetes,<br>multi-region, zero downtime deployments,<br>blue/green deployments, A/B testing, containers,<br>configuration management, automation...
 
 ???
-
-there's so much more to this topic that I just can't even hope to cover.
-
 Nearly each of these topics is their own entire *conference* worth of material.
 
 But hopefuully I've been able to help you just see a bit behind the curtain of deployment.
