@@ -439,6 +439,21 @@ Django is very good at being a web framework.
 The fact that it provides any local web server functionality at all is amazing, but the fact that it calls out that it's not for production is also very very good.
 
 We'll discuss a selection of webservers you should use in production a bit later.
+
+But, there are a few new terms that we've just hit that we should take time to clarify.
+---
+class: title
+# What is 'production'?
+
+???
+
+TODO
+---
+class: title
+# What is a web server?
+???
+
+TODO
 ---
 <br><br><br>
 # .code[runserver]
@@ -607,6 +622,8 @@ Compare the out of the box functionality of django to something like flask
 
 A lot of tutorials you see out there use flask as the target of a python web server deployment demonstration
 
+Just copy up your code somewhere and run. Easy!
+
 This is because of one simple fact
 ---
 class: title
@@ -696,14 +713,14 @@ But I'm not going to use that line. I'm going to use another one.
 ---
 
 class: title
-# .quote["I'm an operations engineer. I'm not your operations engineer."]
+# .quote["I'm a sysadmin,<br>I'm not your sysadmin."]
 ### - @glasnt
 
 ???
 
 I prefer this line.
 
-I'm an operations engineer, I'm not your operations engineer.
+I'm a sysadmin, I'm not your sysadmin.
 
 I've been a sysadmin, operations engineer, SRE, whatever you want to call it
 
@@ -1120,6 +1137,9 @@ managed databases are just specalised "as a service"
 
 whatever bucket you want to put them in depends on your definition, if they IaaS or Paas or even Software as a service, but either way, they're a service.
 
+
+
+
 ---
 <br><BR>
 ## Managed databases
@@ -1149,6 +1169,12 @@ making the migrations and applying them to whatever database you choose is djang
 your database host will often handle everyhitng from backups to storage (including scaling storage, which is often very good.
 
 These will often be available from your web server provider, which is often a very good idea because the closer your web server and database the faster you can send data between the two parts of your application.
+
+ALTTODO
+Are you a pyhton developer or a Database adminsitrator?
+
+If you'd rather have more time for python, use the managed database.
+ENDALTTODO
 
 TODO
 
