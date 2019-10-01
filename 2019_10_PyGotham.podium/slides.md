@@ -11,6 +11,21 @@ You got this
 
 # 💪
 ---
+class: title
+# <br>.thick[What is deployment, anyway?]
+## .thick[PyGotham 2019]
+![Image](images/footer.svg)
+
+???
+
+breathe, Katie!
+
+You got this
+
+# 💪
+
+**Duplicate slide, for your convenience!**
+---
 ![Image](images/whatis_copy.png)
 
 
@@ -95,9 +110,9 @@ to having your djangogirls tutorial project working on your laptop
 to a more complex setup, but no extra complexities.
 
 ---
-
-class: title
+<br><BR><BR><br><BR>
 ## Let's look at .prokyon[django]
+### as it comes<br>out of the box
 
 ???
 
@@ -446,35 +461,77 @@ class: title
 # What is 'production'?
 
 ???
+What is production, anyway?
 
-TODO
+I've asked this question to a bunch of python practioneres, many of whom have a decade or more of experience
+
+And the question leaves them thinking.
+
+Why do we call it production?
+
+_ _Riff here_ _
+
+1950's paper comparing to a production line.
+
+In the current web sense, you could compare it to a theatre production.
+
+_ _End riff_ _
+
+In essense: production is live is the one your users access.
+
 ---
 class: title
 # What is a web server?
 ???
+Also, what is a web server?
 
-TODO
+Thankfully this one is more aptly named.
+
+A web server serves websites.
+
+There are local web servers, like runserver, or there are production-grade web servers, that we'll discuss later.
+
+The website is the service that responds when you enter a website URL into your browser, and deals with the HTTP protocol, handshakes, content types, .
+
+
 ---
 <br><br><br>
 # .code[runserver]
 ### local web server<br>+ static server
 ???
 
-on top of runserver being a local web server, it also serves our static.
+Runserver is our local web server, but runserver also handles serves our static.
+---
+class: title
+# What is 'static'?
+### or 'static assets', or 'assets'
+
+???
+
+Static, assets, or static assets
+
+refers to the unmoving parts of our web site, relative to the dynamic parts.
+
+Assets miight be pictures, video, uploaded user files
+
+that we can store locally on disk and serve as we need them.
+
+
 ---
 class: middle, center, image
 ![Image](images/staticfiles_00.png)
 .footnotes[[➚](https://docs.djangoproject.com/en/2.2/howto/static-files/#serving-static-files-during-development)]
 ???
 
-again as per the documentation we have a local static files server
+but only if
 ---
 class: middle, center, image
 ![Image](images/staticfiles_00a.png)
 .footnotes[[➚](https://docs.djangoproject.com/en/2.2/howto/static-files/#serving-static-files-during-development)]
 
 ???
-it does say that this is only if we have the staticfiles app and debug set to trtrue
+we have our debug set to true and we're using the staticfiles middleware.
+
 ---
 <div class="shell-wrap"><p class="shell-top-bar">bash</p><p class="shell-body">
 <ps>myrtle</ps> <dr>~/git/glasnt/myproject $</dr>
@@ -526,7 +583,9 @@ class: middle, center, image
 
 this is not for production use.
 
-While we're also looking at our default settings file
+This is a helper for local development, so we'll need to substitute with something production grade later on,.
+
+While we're also looking at our default settings file for our other helper
 ---
 <br><br><br>
 # .code[DATABASES]
@@ -597,7 +656,7 @@ in production.
 so we can't use any of these helpers
 ---
 
-class: title
+<br><BR><BR>
 # .prokyon[django]
 ## complex in production
 
@@ -605,13 +664,19 @@ class: title
 
 which makes our production use.. complex.
 
+not complicated, but just complex.
+
 django doesn't provide you with a webserver or database that's production ready
 
 So you have to provide your own.
 
-We'll get into some of the options in a moment.
+And if you aren't familiar with the production-grade offerings here, you'll end up confused.
 
-But first I want to mention something important
+Or worse, leaning towards using the development systems in production.
+
+However,
+
+Now is an important time to mention something important.
 
 ---
 <br><BR><BR>
@@ -620,7 +685,11 @@ But first I want to mention something important
 ???
 Compare the out of the box functionality of django to something like flask
 
-A lot of tutorials you see out there use flask as the target of a python web server deployment demonstration
+A lot of tutorials you see out there that say
+
+"How to deploy python in production!"
+
+Often use flask as the target.
 
 Just copy up your code somewhere and run. Easy!
 
@@ -633,7 +702,7 @@ class: title
 
 django is a stateful application. It has a database out of the box and static assets.
 
-Flask by default does not. It can, but out of the box, it doesn't
+Flask, by default, does not. The sample "Hello world" doesnt' require a database or images, so it's so simpler to deploy.
 
 ---
 
@@ -660,7 +729,7 @@ class: middle, center, image
 
 ???
 
-This section which discusses static deployment has this wonnderful gem
+This section which discusses static deployment has this **wonderful gem**
 
 ---
 
@@ -700,11 +769,11 @@ class: title
 
 ???
 
-Nearly every talk I've seen on deployment includes a line likee
+Nearly every talk I've seen on deployment includes a line like
 
 it depends
 
-When trying to tell you the "one true way" to do django deployments.
+When trying to tell you the "one true way" to do django deployments. Heck, I've seen a talk with this exact title.
 
 Because it's true.
 
@@ -721,6 +790,8 @@ class: title
 I prefer this line.
 
 I'm a sysadmin, I'm not your sysadmin.
+
+being a play on the line "I'm a lawyer I'm not your lawyer".
 
 I've been a sysadmin, operations engineer, SRE, whatever you want to call it
 
@@ -803,7 +874,26 @@ class: title
 
 ???
 
-the web server gateway interface is a python standard for web servers
+WSGI is an acronym for
+
+the web server gateway interface
+
+and is python standard for web servers
+
+---
+
+class: title
+# What is WSGI?
+
+???
+
+WSGI is a standard interface for python applications to talk to a webserver.
+
+
+The standard was proposed back in 2003 as PEP-333, as a prompt to standardaise the interface between web servers and python web frameworks.
+
+
+
 ---
 class: middle, center, image
 ![Image](images/wsgi_00.png)
@@ -813,14 +903,14 @@ again, as per the docs
 
 i love the docs
 
-django's proimary deployment platform
+django's primary deployment platform
 
 is wsgi
 
 class: title
 ![Image](images/as of django 2.2!!.svg)
 
-
+And as stated earlier, we are looking at Django 2.2, so for those on the recording, there may be something different now :D *wink*
 
 ---
 class: middle, center, image
@@ -911,7 +1001,7 @@ class: title
 .footnotes[[Type UWSGI, Press Enter, what happens?](https://www.youtube.com/watch?v=YoUZIzPGKT8) P. James, [Secrets of a WSGI master](https://www.youtube.com/watch?v=CPz0s1CQsTE) G. Dumpleton]
 ???
 
-some of the options you have include microwshi and gunicorn
+some of the options you have include microwsgi and gunicorn
 
 Both of these webservers have their own cache of documentation, talks, and resources, which my slides link to.
 
@@ -968,20 +1058,26 @@ If you are a django developer, then you probably want to develop django
 
 you don't want to be spending your time trying to manage your infrastrcture
 
-it's super interesting, sure, but when you want is just to get your application online, then why not pay someone who has spent the time to setup a way that works for 80% of websites
+it's super interesting, sure, to setup your own physical server, your own network, your own server, your own redunant power, your own everything.
 
-In our setup, we don't have anything custom, so why not let someone else manage tings for you?
+but when you want is just to get your application online, then why not pay someone who has spent the time to setup a way that works for 80% of websites
+
+In our setup, we don't have anything custom, and we don't have any strong opinions about anything (yet), so why not let someone else manage things for you?
 
 put in more simpler terms
 
 ---
-<br><BR>
+class: title
 ## What<br>do you want<br>to worry about?
 
 
 ???
 
 what do you want to worry about
+
+
+Thankfully, you can pay to take your worry away.
+
 ---
 
 class: title
@@ -1008,10 +1104,21 @@ class: title
 you'll often seen these abbreviated as Paas or IaaS, because words are getting long and we're busy technologists.
 
 And yes, this is non-exhaustive. Within the scope of deploying a django application, these are the two major options.
+---
 
-You could go as detailed as running your app on a server you have in your own home or business ("on-prem"), or trying to squeeze django into a function as a service, but these are the 20% of cases.
+class: title
+# Other options:
+## ~~Functions as a Service~~
+## ~~Custom hardware~~
 
-I'm going to focus on the ones that are much more suited for django
+???
+You could go as detailed as running your app on a server you have in your own home or business ("on-prem") (that make your own everything scenario I mentioned earlier)
+
+or trying to squeeze django into a function as a service,
+
+but these are the 20% of cases. The non-standard cases.
+
+I'm going to focus on the ones that are much more suited for django, and more suited to our unopinionated django app
 
 ---
 <BR><BR>
@@ -1129,7 +1236,7 @@ But to migrate data, you need a database.
 and here's the secret.
 ---
 class: title
-## Managed databases<br>are just a specialised<br>aaS
+## Managed databases<br>are just a specialised<br>*aaS
 
 ???
 
@@ -1186,12 +1293,7 @@ managed databases are a solved problem, pay for one and get the benefits
 
 a lot of people use databases, so a lot of work has gone into them
 
-pay just a little bit and you often get:
-
-- persistence
-- backups
-- maintenance windows
-- more so: you don't have to manage it.
+pay just a little bit and you often get: persistence, backups, maintenance windows, more so: you don't have to manage it.
 
 heck, some now days even automatically expand and the providers handle this without downtime for you
 
@@ -1295,7 +1397,7 @@ class: title
 # static asset management
 ## an entire talk
 
-.footnotes[["Assets in Django without losing your hair" by Jacob Kaplan-Moss](https://www.youtube.com/watch?v=E613X3RBegI)]
+.footnotes[["Assets in Django without losing your hair", J. Kaplan-Moss](https://www.youtube.com/watch?v=E613X3RBegI)]
 
 ---
 
@@ -1306,7 +1408,7 @@ class: title
 ## cloud storage
 ## media uploads
 ## asset compilation
-.footnotes[["Assets in Django without losing your hair" by Jacob Kaplan-Moss](https://www.youtube.com/watch?v=E613X3RBegI)]
+.footnotes[["Assets in Django without losing your hair", J. Kaplan-Moss](https://www.youtube.com/watch?v=E613X3RBegI)]
 
 
 ???
@@ -1331,9 +1433,10 @@ more here, something long the lines of:
 
 out of all the tech I've discussed so far, cloud storage is the oldest and most solid
 
-AWS literally launched S3 in 20XX. That's YY years ago.
+AWS S3 launched in 2006. That's 13 years ago.
 
 storing media objects is a foundational service provided by any cloud provider.
+
 and it's totally okay to use
 
 the scariest thing when I first came across s3 was the fact that I had to use a global bucket name. Like, a name that had never been used before
@@ -1376,9 +1479,15 @@ class: title
 
 here it is.
 
-- copy your code to wherever you're hosting
-- run your two management commands
-- and start your web server, whichever that is.
+~
+
+.noop[c]opy your code to wherever you're hosting
+
+run your two management commands
+
+and start your web server, whichever that is.
+
+~
 
 I know. This doesn't seem like a lot.
 
@@ -1396,7 +1505,11 @@ there's so much more to this topic that I just can't even hope to cover.
 ???
 Nearly each of these topics is their own entire *conference* worth of material.
 
+And there are many many opinions about *when* to run the four commands I mentioned earlier.
+
 But hopefuully I've been able to help you just see a bit behind the curtain of deployment.
+
+And shown you that is it is complex, but not as complicated as you might think.
 
 ---
 class: title
