@@ -1196,14 +1196,14 @@ Oh, I mean having a dynamic web admin is pretty sweet, but these two commands ar
 ---
 
 class: title
-# .code[migrate] created to<br>reduce developer toil
+# .code[migrate/makemigrations] created to<br>reduce developer toil
 
 ???
-TODO CITATION (DJANGO CHAT?, Andrew Godwin mentioned this **somewhere**)
-
 The whole concept of automating the migration framework was design to reduce developer toil
 
-Indeed django is a database agnostic web framework, so you houldn't have to worry
+the migrations framework is designed to create the required database commands in order to make your models into real tables.
+
+And it doesn't matter which database you choose, django is a database agnostic web framework, so you don't have to worry.
 
 ---
 <div class="shell-wrap"><p class="shell-top-bar">bash</p><p class="shell-body">
@@ -1303,7 +1303,7 @@ ENDTODO
 
 
 ---
-<br><BR>
+class: title
 # Which database?
 ---
 
@@ -1340,7 +1340,7 @@ django does support a number of databases, including postgresql, mysql, oracle, 
 There is also third party support for a number of other databases, but again
 
 ---
-<br><BR>
+class: title
 ## What<br>do you want<br>to worry about?
 
 ???
@@ -1353,10 +1353,9 @@ If you have a preferred one, choose that.
 Otherwise
 
 ---
-
-class: title
-## No opinion?
-### choose PostgreSQL
+<br><BR><BR>
+### No opinion?
+# Choose PostgreSQL
 
 ???
 
@@ -1378,10 +1377,21 @@ the docs specifically point this out.
 django is a database agnostic web framework
 
 but django provides support for a number of datatypes that only work in postgressql.
+
+The ability for other databases to have as much bredth in functionality is limited only by community contribution
+
+at the time of recording, postgres has the most contribution
+
+If you want your preferred database to have more support, help support it by writing the functionality :)
+
 ---
 class: title
 # to deploy .prokyon[django]:
 ## .so[run django<br>connect to a database]<br>serve static files
+
+???
+
+and now to the last section in our deployment trifecta
 ---
 
 class: title
@@ -1399,6 +1409,10 @@ class: title
 
 .footnotes[["Assets in Django without losing your hair", J. Kaplan-Moss](https://www.youtube.com/watch?v=E613X3RBegI)]
 
+???
+
+this is literally an entire talk, and thankfully there was a talk focussing only on this at PyCon this year
+
 ---
 
 class: title
@@ -1413,7 +1427,7 @@ class: title
 
 ???
 
-he details four scenarios,
+Jacob Kalplan-Moss details four scenarios,
 
 simple assets
 
@@ -1421,7 +1435,9 @@ cloud storage
 
 media uploads
 
-and the more complex asset compilation ption
+and the more complex asset compilation
+
+as ways of hosting static assets.
 
 if you chose a chose a IaaS provider earlier, they probably offer some sort of cloud storage, which is super useful to have, again, to keep everything physically close.
 
@@ -1517,4 +1533,12 @@ class: title
 ![Image](images/footer.svg)
 ???
 
-I'm happy to take questions in the hallway, so we can let the next speaker get setup. Thanks!
+I am sure there are many opinions that this talk has surfaced
+
+so for the comfort of the audience and the next speaker
+
+.noop[p]lease follow me out in to the hallway and we can have a chat.
+
+I'm also available on email and twitter if you want to discuss more later.
+
+Thanks!
