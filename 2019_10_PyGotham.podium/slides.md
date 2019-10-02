@@ -40,7 +40,7 @@ class: title
 ???
 this isn't a talk about "the one true way" to deploy your app
 
-This talk doesn't give specific answers, mostly, but describes the ecosystem
+I will express some opinions, but mostly this is a review of the world as at 2019
 
 This talk is diving into the complexities of deployment, in essense
 
@@ -1277,15 +1277,20 @@ your database host will often handle everyhitng from backups to storage (includi
 
 These will often be available from your web server provider, which is often a very good idea because the closer your web server and database the faster you can send data between the two parts of your application.
 
-ALTTODO
 Are you a pyhton developer or a Database adminsitrator?
 
 If you'd rather have more time for python, use the managed database.
-ENDALTTODO
 
-TODO
+class: background-black
 
-more here something along the lines of
+AND honestly.
+
+---
+<br><BR>
+## Managed databases
+### A stonkingly good idea.
+
+???
 
 there is no reason not to use a managed database any more
 
@@ -1296,6 +1301,8 @@ a lot of people use databases, so a lot of work has gone into them
 pay just a little bit and you often get: persistence, backups, maintenance windows, more so: you don't have to manage it.
 
 heck, some now days even automatically expand and the providers handle this without downtime for you
+
+And as someone who used to get paid to have to do this manually out of hours, this is a very very good feature to have!
 
 this and your domain name might be the only thing you end up paying for in a smaller stack, but it's worth it.
 
@@ -1329,7 +1336,7 @@ not all databases backends are alike, and there have been some design considerat
 
 ---
 <br>
-# Supported databases
+# .prokyon[django] supported databases
 ## PostgreSQL 9.4+ (psycopg2 2.5.4+)<br>MySQL 5.6+ (InnoDB)<br>Oracle 12.1+<br>SQLite 3.8.3
 .footnotes[[limitations](https://docs.djangoproject.com/en/2.2/ref/databases/), [oracle + django](https://slides.com/iqbaltalaatbhatti/oracle-django)]
 
@@ -1355,7 +1362,7 @@ Otherwise
 ---
 <br><BR><BR>
 ### No opinion?
-# Choose PostgreSQL
+# Choose PostgreSQL.
 
 ???
 
@@ -1443,9 +1450,15 @@ if you chose a chose a IaaS provider earlier, they probably offer some sort of c
 
 If you went with the PaaS, perhaps the simple asset solution is for you.
 
-TODO
+---
 
-more here, something long the lines of:
+class: title
+# static options:
+
+## cloud storage
+## media uploads
+
+???
 
 out of all the tech I've discussed so far, cloud storage is the oldest and most solid
 
@@ -1507,7 +1520,32 @@ and start your web server, whichever that is.
 
 I know. This doesn't seem like a lot.
 
-But given the last XX minutes I spent describing all this, hopefully you now have a greater understanding of the complexity.
+But given the last XX minutes I spent describing all this, hopefully you now have a greater understanding of the complexity
+
+of what needs to be done
+
+but not how to do it, explicitly.
+---
+
+class: title
+# The reason there's<br>no one answer.
+
+???
+
+The main reason why there's no one answer on how do to do any of this
+
+is because the way you do deployments, the way you setup production
+
+has to be right for you
+
+because you have to maintain it.
+
+and if we tell you a solution, you may not like it, or understand it
+
+which means you won't be able to maintain it
+
+and that is far worse.
+
 ---
 <br><br><BR>
 # Things I didn't mention
