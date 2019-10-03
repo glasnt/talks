@@ -1,0 +1,9 @@
+- conference: 
+    name: DevOpsDays Auckland 2019
+    location: Auckland, NZ
+    date: 2019-10-20
+    link: https://devopsdays.org/events/2019-auckland
+    talks: 
+        name: Being Kind to 3am you
+        link: https://devopsdays.org/events/2019-auckland/program
+
