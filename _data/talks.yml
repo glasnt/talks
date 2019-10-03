@@ -1,3 +1,15 @@
+
+- conference:
+    name: PyGotham 2019
+    location: New York, USA
+    date: 2019-10-04
+    link: https://pygotham.org/
+    talks:
+        - name: "What is deployment, anyway?"
+          link: https://2019.pygotham.org/talks/what-is-deployment-anyway/
+          slides: 2019_10_PyGotham.podium
+          resources: https://github.com/glasnt/talks/tree/gh-pages/2019_10_PyGotham.podium#resources
+
 - conference:
     name: Perth Django and Python Developers
     location: Perth, Australia
