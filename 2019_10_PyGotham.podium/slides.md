@@ -144,6 +144,14 @@ Collecting django<br>
 Successfully installed django-2.2.5<br>
 <ps>myrtle</ps> <dr>~/git/glasnt $</dr>
 django-admin startproject myproject<w>&nbsp;</w>
+
+???
+
+then we can run the super super helpful
+
+stat project management command.
+
+
 ---
 <div class="shell-wrap"><p class="shell-top-bar">bash</p><p class="shell-body">
 <ps>myrtle</ps> <dr>~/git/glasnt $</dr>
@@ -155,6 +163,12 @@ Successfully installed django-2.2.5<br>
 django-admin startproject myproject<br>
 <ps>myrtle</ps> <dr>~/git/glasnt $</dr>
 <w>&nbsp;</w>
+
+???
+
+and while this doesn't return any output
+
+it did create a template project for us.
 ---
 <div class="shell-wrap"><p class="shell-top-bar">bash</p><p class="shell-body">
 <ps>myrtle</ps> <dr>~/git/glasnt $</dr>
@@ -166,6 +180,10 @@ Successfully installed django-2.2.5<br>
 django-admin startproject myproject<br>
 <ps>myrtle</ps> <dr>~/git/glasnt $</dr>
 cd myproject<w>&nbsp;</w>
+
+???
+
+we can see it in the newly created 'myproject' folder.
 ---
 <div class="shell-wrap"><p class="shell-top-bar">bash</p><p class="shell-body">
 <ps>myrtle</ps> <dr>~/git/glasnt $</dr>
@@ -421,33 +439,54 @@ runserver does everything we need to in our local system.
 ### local web server
 ---
 class: middle, center, image
-![Image](images/runserver_00.png)
+![Image](images/runservers_00.png)
 .footnotes[[➚](https://docs.djangoproject.com/en/2.2/ref/django-admin/#runserver)]
 ---
 class: middle, center, image
-![Image](images/runserver_00a.png)
+![Image](images/runservers_00a.png)
 .footnotes[[➚](https://docs.djangoproject.com/en/2.2/ref/django-admin/#runserver)]
 ???
 
-As the documentation says, runserver starts a lightweight development web server on your ocal machine.
+As the documentation says
+
+> runserver starts a lightweight development web server on your ocal machine.
+
 But. And there's a big but.
 ---
 class: middle, center, image
-![Image](images/runserver_01.png)
+![Image](images/runservers_01.png)
 .footnotes[[➚](https://docs.djangoproject.com/en/2.2/ref/django-admin/#runserver)]
 ???
 
-do not use this server in a production setting.
+> do 👏 not 👏 use 👏 this 👏 server 👏 in 👏 a 👏 production 👏 setting.
 
 ---
 class: middle, center, image
-![Image](images/runserver_02.png)
+![Image](images/runservers_01a.png)
 .footnotes[[➚](https://docs.djangoproject.com/en/2.2/ref/django-admin/#runserver)]
+
+???
+
+> It has not gone through security audits or performance tests. (And that’s how it’s gonna stay.
+
+---
+class: middle, center, image
+![Image](images/runservers_01b.png)
+
+.footnotes[[➚](https://docs.djangoproject.com/en/2.2/ref/django-admin/#runserver)]
+
+
+???
+> We’re in the business of making Web frameworks, not Web servers
+
+That deserves it's own slide
 ---
 <br>
 # .quote["We're in the business of<br>making Web frameworks,<br>not Web servers"]
 ### - .prokyon[django] documentation
 ???
+
+⏰ 04:00
 
 I want to pull this out and elaborate.
 
@@ -500,6 +539,9 @@ Another term we came across.
 class: title
 # What is a web server,<br>anyway?
 ???
+
+⏰ 05:00
+
 Also, what is a web server?
 
 Thankfully this one is more aptly named.
@@ -523,7 +565,9 @@ class: title
 # What is "static",<br>anyway?
 
 ???
+
 ⏰ 06:00
+
 Static, assets, or static assets
 
 refers to the unmoving parts of our web site, relative to the dynamic parts.
@@ -532,6 +576,8 @@ Assets miight be pictures, video, uploaded user files
 
 that we can store locally on disk and serve as we need them.
 
+And looking at the docs, we can see
+
 
 ---
 class: middle, center, image
@@ -539,14 +585,18 @@ class: middle, center, image
 .footnotes[[➚](https://docs.djangoproject.com/en/2.2/howto/static-files/#serving-static-files-during-development)]
 ???
 
-but only if
+that if we are using django contrib staticfiles
 ---
 class: middle, center, image
 ![Image](images/staticfiles_00a.png)
 .footnotes[[➚](https://docs.djangoproject.com/en/2.2/howto/static-files/#serving-static-files-during-development)]
 
 ???
-we have our debug set to true and we're using the staticfiles middleware.
+with debug enabled
+
+that runserver will act as our staticfile server.
+
+we can confirm this is the case with our default django projkect.
 
 ---
 <div class="shell-wrap"><p class="shell-top-bar">bash</p><p class="shell-body">
@@ -554,12 +604,15 @@ we have our debug set to true and we're using the staticfiles middleware.
 <w>&nbsp;</w>
 ???
 
-Which if we check out settings file we have both.
+back in our terminal
 ---
 
 <div class="shell-wrap"><p class="shell-top-bar">bash</p><p class="shell-body">
 <ps>myrtle</ps> <dr>~/git/glasnt/myproject $</dr>
 cat myproject/settings.py |grep staticf<w>&nbsp;</w>
+???
+
+we can check for that staticfiles reference in our settings
 ---
 <div class="shell-wrap"><p class="shell-top-bar">bash</p><p class="shell-body">
 <ps>myrtle</ps> <dr>~/git/glasnt/myproject $</dr>
@@ -567,6 +620,10 @@ cat myproject/settings.py |grep staticf<br>
 &nbsp; &nbsp; 'django.contrib.staticfiles',<br>
 <ps>myrtle</ps> <dr>~/git/glasnt/myproject $</dr>
 <w>&nbsp;</w>
+
+???
+
+which is there
 ---
 <div class="shell-wrap"><p class="shell-top-bar">bash</p><p class="shell-body">
 <ps>myrtle</ps> <dr>~/git/glasnt/myproject $</dr>
@@ -574,6 +631,14 @@ cat myproject/settings.py |grep staticf<br>
 &nbsp; &nbsp; 'django.contrib.staticfiles',<br>
 <ps>myrtle</ps> <dr>~/git/glasnt/myproject $</dr>
 cat myproject/settings.py | grep DEBUG<w>&nbsp;</w>
+</p></p></div>
+
+.lownote[[Django settings in production](https://djangochat.com/episodes/deployments), W. Vincent]
+
+
+???
+
+and our DEBUG setting
 ---
 <div class="shell-wrap"><p class="shell-top-bar">bash</p><p class="shell-body">
 <ps>myrtle</ps> <dr>~/git/glasnt/myproject $</dr>
@@ -584,6 +649,12 @@ cat myproject/settings.py | grep DEBUG<br>
 DEBUG = True<br>
 <ps>myrtle</ps> <dr>~/git/glasnt/myproject $</dr>
 <w>&nbsp;</w>
+</p></p></div>
+.lownote[[Django settings in production](https://djangochat.com/episodes/deployments), W. Vincent]
+
+???
+
+which is true by default.
 ---
 class: middle, center, image
 ![Image](images/staticfiles_00.png)
@@ -597,7 +668,7 @@ class: middle, center, image
 .footnotes[[➚](https://docs.djangoproject.com/en/2.2/howto/static-files/#serving-static-files-during-development)]
 ???
 
-this is not for production use.
+> this is not for production use.
 
 This is a helper for local development, so we'll need to substitute with something production grade later on,.
 
@@ -609,8 +680,26 @@ While we're also looking at our default settings file for our other helper
 
 ???
 
+
+⏰ 07:00
+
+
 the default for our database has already been set for a local sqlite database.
 
+---
+<div class="shell-wrap"><p class="shell-top-bar">bash</p><p class="shell-body">
+<ps>myrtle</ps> <dr>~/git/glasnt/myproject $</dr>
+ls -R<br>
+.:<br>
+db.sqlite3 manage.py myproject<br>
+<br>
+./myproject:<br>
+__init__.py settings.py urls.py wsgi.py<br>
+<ps>myrtle</ps> <dr>~/git/glasnt/myproject $</dr>
+<w>&nbsp;</w>
+???
+
+We saw this earlier in our files.
 ---
 <div class="shell-wrap"><p class="shell-top-bar">bash</p><p class="shell-body">
 <ps>myrtle</ps> <dr>~/git/glasnt/myproject $</dr>
@@ -624,10 +713,19 @@ __init__.py settings.py urls.py wsgi.py<br>
 <w>&nbsp;</w>
 ???
 
-We saw this earlier in our files.
+That automatically created db.sqlite3 file
+
+That's our development database.
 
 ---
 <div class="shell-wrap"><p class="shell-top-bar">bash</p><p class="shell-body">
+<ps>myrtle</ps> <dr>~/git/glasnt/myproject $</dr>
+ls -R<br>
+.:<br>
+db.sqlite3 manage.py myproject<br>
+<br>
+./myproject:<br>
+__init__.py settings.py urls.py wsgi.py<br>
 <ps>myrtle</ps> <dr>~/git/glasnt/myproject $</dr>
 cat myproject/settings.py | grep sqlite -C2<w>&nbsp;</w>
 ???
@@ -636,6 +734,13 @@ if we take a look at our settings
 
 ---
 <div class="shell-wrap"><p class="shell-top-bar">bash</p><p class="shell-body">
+<ps>myrtle</ps> <dr>~/git/glasnt/myproject $</dr>
+ls -R<br>
+.:<br>
+db.sqlite3 manage.py myproject<br>
+<br>
+./myproject:<br>
+__init__.py settings.py urls.py wsgi.py<br>
 <ps>myrtle</ps> <dr>~/git/glasnt/myproject $</dr>
 cat myproject/settings.py | grep sqlite -C2<br>
 DATABASES = {<br>
@@ -707,7 +812,10 @@ Now is an important time to mention something important.
 # .poly[Flask]
 ## simpler in production<br>.h3[(comparatively)]
 ???
-⏰ 09:00
+
+⏰ 08:30
+
+
 Compare the out of the box functionality of django to something like flask
 
 A lot of tutorials you see out there that say
@@ -736,6 +844,11 @@ Flask, by default, does not. The sample "Hello world" doesnt' require a database
 ## complex in production
 
 ???
+
+
+⏰ 09:00
+
+
 
 any application that has state is complex in production.
 
@@ -872,6 +985,10 @@ this exact trifecta is the same for Django.
 ## run django<br>connect to a database<br>serve static files
 ???
 
+
+⏰ 11:00
+
+
 you need to run the web framework, connect to a database, and serve the static.
 
 These are the same requirements are for any stateful application
@@ -956,8 +1073,7 @@ django's primary deployment platform
 
 is wsgi
 
-class: title
-![Image](images/as of django 2.2!!.svg)
+as of django 2.2!!
 
 There is a new one coming
 
@@ -976,21 +1092,6 @@ but as noted: the start project command sets up a simple default WSGI condig for
 Which we can see from our project earlier.
 
 ---
-
-<div class="shell-wrap"><p class="shell-top-bar">bash</p><p class="shell-body">
-<ps>myrtle</ps> <dr>~/git/glasnt/myproject $</dr>
-<w>&nbsp;</w>
-???
-
-in our terminal, looking at the files we have
----
-<div class="shell-wrap"><p class="shell-top-bar">bash</p><p class="shell-body">
-<ps>myrtle</ps> <dr>~/git/glasnt/myproject $</dr>
-ls -R<w>&nbsp;</w>
-???
-
-we can list our files
----
 <div class="shell-wrap"><p class="shell-top-bar">bash</p><p class="shell-body">
 <ps>myrtle</ps> <dr>~/git/glasnt/myproject $</dr>
 ls -R<br>
@@ -1003,6 +1104,8 @@ db.sqlite3 manage.py myproject<br>
 <w>&nbsp;</w>
 
 ???
+
+again, looking at those default files that were created.
 ---
 <div class="shell-wrap"><p class="shell-top-bar">bash</p><p class="shell-body">
 <ps>myrtle</ps> <dr>~/git/glasnt/myproject $</dr>
@@ -1017,7 +1120,7 @@ db.sqlite3 manage.py myproject<br>
 
 ???
 
-and see indeed there is a wsgi.py file
+we can see the default created WSGI file
 ---
 <div class="shell-wrap"><p class="shell-top-bar">bash</p><p class="shell-body">
 <ps>myrtle</ps> <dr>~/git/glasnt/myproject $</dr>
@@ -1095,6 +1198,10 @@ but I have a better question
 <br><BR>
 ## How much<br>custom infrastructure<br>do you want?
 ???
+
+
+⏰ 14:00
+
 
 how much custom infrastrcutre do you want?
 
@@ -1278,7 +1385,7 @@ And the next one is a database.
 ## .code[makemigrations<br>migrate]
 
 ???
-⏰ 17:00
+⏰ ~~17:00
 
 
 
@@ -1293,8 +1400,6 @@ Oh, I mean having a dynamic web admin is pretty sweet, but these two commands ar
 The whole concept of automating the migration framework was design to reduce developer toil
 
 the migrations framework is designed to create the required database commands in order to make your models into real tables.
-
-And it doesn't matter which database you choose, django is a database agnostic web framework, so you don't have to worry.
 
 ---
 <div class="shell-wrap"><p class="shell-top-bar">bash</p><p class="shell-body">
@@ -1318,13 +1423,19 @@ And it doesn't matter which database you choose, django is a database agnostic w
 
 These are the migrations we generated earlier
 
-these create the data strcutures required for the the django admin to work
+These are the base migrations for the base django data structures
 
-you can see it in the filenames - admin, auth (authentication), sessions.
+ntenttypes <pre><code class=""></code></pre>
 
-But to migrate data, you need a database.
+auth
 
-K-NOTE: section rearranged
+admin
+
+sessions
+
+etc.
+
+The contents of these files are used to generate SQL based on your database
 
 ---
 class: title
@@ -1335,28 +1446,30 @@ so which databsae?
 ---
 
 class: middle, center, image
-![Image](images/database_00.png)
+![Image](images/databases_00.png)
 .footnotes[[➚](https://docs.djangoproject.com/en/2.2/ref/databases/)]
 
 ???
 
-the docs are useful here, expect there's a super important note
+the docs are useful here
 
 ---
 
 class: middle, center, image
-![Image](images/database_01.png)
+![Image](images/databases_01.png)
 
 .footnotes[[➚](https://docs.djangoproject.com/en/2.2/ref/databases/)]
 
 ???
 
-not all databases backends are alike, and there have been some design considerations.
+> Django attempts to support as many features as possible.
+
+Django is a database agnostic framework.
 
 ---
 <br>
-# .prokyon[django] supported databases
-## PostgreSQL 9.4+ (psycopg2 2.5.4+)<br>MySQL 5.6+ (InnoDB)<br>Oracle 12.1+<br>SQLite 3.8.3
+## .prokyon[django] supported databases
+### PostgreSQL<br>MySQL<br>Oracle<br>SQLite
 .footnotes[[limitations](https://docs.djangoproject.com/en/2.2/ref/databases/), [oracle + django](https://slides.com/iqbaltalaatbhatti/oracle-django)]
 
 ???
@@ -1394,15 +1507,33 @@ But it's not without reason.
 ---
 
 class: middle, center, image
-![Image](images/database_02.png)
+![Image](images/postgres_00.png)
 
 ???
 
 the docs specifically point this out.
 
+---
+
+
+class: middle, center, image
+![Image](images/postgres_01.png)
+
+???
+
 django is a database agnostic web framework
 
-but django provides support for a number of datatypes that only work in postgressql.
+but
+
+---
+
+class: middle, center, image
+![Image](images/postgres_02.png)
+
+???
+
+
+> PostgreSQL has a number of features which are not shared by the other databases Django supports.
 
 The ability for other databases to have as much bredth in functionality is limited only by community contribution
 
@@ -1529,7 +1660,7 @@ managed databases are a really good idea.
 ### A stonkingly good idea.<br>Even if they cost money.
 ???
 
-⏰ ~19:00
+⏰ ~20:00
 
 
 Even if they cost you money.
@@ -1633,7 +1764,7 @@ class: title
 # static options:
 
 ## cloud storage
-## media uploads
+## for static and media
 
 ???
 
@@ -1745,7 +1876,7 @@ And shown you that is it is complex, but not as complicated as you might think.
 
 ---
 class: title
-# <br>Thanks!
+# <br><BR>Thanks!
 ![Image](images/footer.svg)
 ???
 

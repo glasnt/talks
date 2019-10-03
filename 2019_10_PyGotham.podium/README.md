@@ -17,6 +17,7 @@
 [Secrets of a WSGI master](https://www.youtube.com/watch?v=CPz0s1CQsTE) Graham Dumpleton, PyCon 2018
 [Assets in Django without losing your hair](https://www.youtube.com/watch?v=E613X3RBegI), Jacob Kaplan-Moss, PyCon 2019
 [oracle + django](https://slides.com/iqbaltalaatbhatti/oracle-django), Iqbal Talaat Bhatti, SyDjango August 2019
+[Django deployment](https://djangochat.com/episodes/deployments), William Vincent, Django Chat June 2019
 
 
 <small>Resources can be searched by looking up the footnotes: `grep '^vv' myslides.txt | uniq`</small>

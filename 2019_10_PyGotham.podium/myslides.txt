@@ -122,6 +122,12 @@ Collecting django<br>
 Successfully installed django-2.2.5<br>
 $$prompt ~/git/glasnt
 $$w django-admin startproject myproject
+
+Note: then we can run the super super helpful 
+
+stat project management command. 
+
+
 ---
 $$terminal bash
 $$prompt ~/git/glasnt
@@ -133,6 +139,10 @@ $$prompt ~/git/glasnt
 django-admin startproject myproject<br>
 $$prompt ~/git/glasnt
 $$w 
+
+Note: and while this doesn't return any output
+
+it did create a template project for us. 
 ---
 $$terminal bash
 $$prompt ~/git/glasnt
@@ -144,6 +154,8 @@ $$prompt ~/git/glasnt
 django-admin startproject myproject<br>
 $$prompt ~/git/glasnt
 $$w cd myproject
+
+Note: we can see it in the newly created 'myproject' folder. 
 ---
 $$terminal bash
 $$prompt ~/git/glasnt
@@ -375,26 +387,50 @@ Note: runserver does everything we need to in our local system.
 # .code[runserver]
 ### local web server 
 ---
-@= runserver_00.png
+@= runservers_00.png
 vv [➚](https://docs.djangoproject.com/en/2.2/ref/django-admin/#runserver)
 ---
-@= runserver_00a.png
+@= runservers_00a.png
 vv [➚](https://docs.djangoproject.com/en/2.2/ref/django-admin/#runserver)
-Note: As the documentation says, runserver starts a lightweight development web server on your ocal machine. 
+Note: As the documentation says
+
+> runserver starts a lightweight development web server on your ocal machine. 
+
 But. And there's a big but.
 ---
-@= runserver_01.png
+@= runservers_01.png
 vv [➚](https://docs.djangoproject.com/en/2.2/ref/django-admin/#runserver)
-Note: do not use this server in a production setting. 
+Note: 
+
+> do 👏 not 👏  use 👏  this 👏 server 👏 in 👏 a 👏 production 👏 setting. 
 
 ---
-@= runserver_02.png 
+@= runservers_01a.png 
 vv [➚](https://docs.djangoproject.com/en/2.2/ref/django-admin/#runserver)
+
+Note: 
+
+>  It has not gone through security audits or performance tests. (And that’s how it’s gonna stay.
+
+---
+@= runservers_01b.png
+
+vv [➚](https://docs.djangoproject.com/en/2.2/ref/django-admin/#runserver)
+
+
+Note: 
+> We’re in the business of making Web frameworks, not Web servers
+
+That deserves it's own slide
 ---
 <br>
 # .quote["We're in the business of<br>making Web frameworks,<br>not Web servers"]
 ### - .prokyon[django] documentation
-Note: I want to pull this out and elaborate. 
+Note: 
+
+⏰ 04:00
+
+I want to pull this out and elaborate. 
 
 Django is an extremely stable, production ready, web framework.
 
@@ -442,6 +478,9 @@ Another term we came across.
 ---
 #= What is a web server,<br>anyway?
 Note: 
+
+⏰ 05:00
+
 Also, what is a web server? 
 
 Thankfully this one is more aptly named. 
@@ -462,7 +501,9 @@ Note: Runserver is our local web server, but runserver also handles serves our s
 #= What is "static",<br>anyway?
 
 Note: 
+
 ⏰ 06:00
+
 Static, assets, or static assets 
 
 refers to the unmoving parts of our web site, relative to the dynamic parts. 
@@ -471,28 +512,35 @@ Assets miight be pictures, video, uploaded user files
 
 that we can store locally on disk and serve as we need them. 
 
+And looking at the docs, we can see
+
 
 ---
 @= staticfiles_00.png
 vv [➚](https://docs.djangoproject.com/en/2.2/howto/static-files/#serving-static-files-during-development)
-Note: but only if
+Note: that if we are using django contrib staticfiles
 ---
 @= staticfiles_00a.png
 vv [➚](https://docs.djangoproject.com/en/2.2/howto/static-files/#serving-static-files-during-development)
 
 Note:
-we have our debug set to true and we're using the staticfiles middleware. 
+with debug enabled
+
+that runserver will act as our staticfile server. 
+
+we can confirm this is the case with our default django projkect. 
 
 ---
 $$terminal bash
 $$prompt ~/git/glasnt/myproject
 $$w 
-Note: Which if we check out settings file we have both.  
+Note: back in our terminal 
 ---
 
 $$terminal bash
 $$prompt ~/git/glasnt/myproject
 $$w cat myproject/settings.py |grep staticf
+Note: we can check for that staticfiles reference in our settings
 ---
 $$terminal bash
 $$prompt ~/git/glasnt/myproject
@@ -500,6 +548,8 @@ cat myproject/settings.py |grep staticf<br>
 &nbsp; &nbsp; 'django.contrib.staticfiles',<br>
 $$prompt ~/git/glasnt/myproject
 $$w
+
+Note: which is there
 ---
 $$terminal bash
 $$prompt ~/git/glasnt/myproject
@@ -507,6 +557,12 @@ cat myproject/settings.py |grep staticf<br>
 &nbsp; &nbsp; 'django.contrib.staticfiles',<br>
 $$prompt ~/git/glasnt/myproject
 $$w cat myproject/settings.py | grep DEBUG
+$$end
+
+.lownote[[Django settings in production](https://djangochat.com/episodes/deployments), W. Vincent]
+
+
+Note: and our DEBUG setting
 ---
 $$terminal bash
 $$prompt ~/git/glasnt/myproject
@@ -517,6 +573,10 @@ cat myproject/settings.py | grep DEBUG<br>
 DEBUG = True<br>
 $$prompt ~/git/glasnt/myproject
 $$w
+$$end
+.lownote[[Django settings in production](https://djangochat.com/episodes/deployments), W. Vincent]
+
+Note: which is true by default. 
 ---
 @= staticfiles_00.png
 vv [➚](https://docs.djangoproject.com/en/2.2/howto/static-files/#serving-static-files-during-development)
@@ -524,7 +584,9 @@ Note: but, as with the runserver, there's a note telling us
 ---
 @= staticfiles_01.png
 vv [➚](https://docs.djangoproject.com/en/2.2/howto/static-files/#serving-static-files-during-development)
-Note: this is not for production use. 
+Note: 
+
+> this is not for production use. 
 
 This is a helper for local development, so we'll need to substitute with something production grade later on,. 
 
@@ -534,8 +596,26 @@ While we're also looking at our default settings file for our other helper
 # .code[DATABASES]
 ### default: sqlite
 
-Note: the default for our database has already been set for a local sqlite database. 
+Note: 
 
+
+⏰ 07:00
+
+
+the default for our database has already been set for a local sqlite database. 
+
+---
+$$terminal bash
+$$prompt ~/git/glasnt/myproject
+ls -R<br>
+.:<br>
+db.sqlite3  manage.py  myproject<br>
+<br>
+./myproject:<br>
+__init__.py  settings.py  urls.py  wsgi.py<br>
+$$prompt ~/git/glasnt/myproject
+$$w
+Note: We saw this earlier in our files. 
 ---
 $$terminal bash
 $$prompt ~/git/glasnt/myproject
@@ -547,16 +627,32 @@ ls -R<br>
 __init__.py  settings.py  urls.py  wsgi.py<br>
 $$prompt ~/git/glasnt/myproject
 $$w
-Note: We saw this earlier in our files. 
+Note: That automatically created db.sqlite3 file
+
+That's our development database. 
 
 ---
 $$terminal bash
+$$prompt ~/git/glasnt/myproject
+ls -R<br>
+.:<br>
+db.sqlite3  manage.py  myproject<br>
+<br>
+./myproject:<br>
+__init__.py  settings.py  urls.py  wsgi.py<br>
 $$prompt ~/git/glasnt/myproject
 $$w cat myproject/settings.py | grep sqlite -C2
 Note: if we take a look at our settings
 
 ---
 $$terminal bash
+$$prompt ~/git/glasnt/myproject
+ls -R<br>
+.:<br>
+db.sqlite3  manage.py  myproject<br>
+<br>
+./myproject:<br>
+__init__.py  settings.py  urls.py  wsgi.py<br>
 $$prompt ~/git/glasnt/myproject
 cat myproject/settings.py | grep sqlite -C2<br>
 DATABASES = {<br>
@@ -616,7 +712,10 @@ Now is an important time to mention something important.
 # .poly[Flask]
 ## simpler in production<br>.h3[(comparatively)]
 Note: 
-⏰ 09:00
+
+⏰ 08:30
+
+
 Compare the out of the box functionality of django to something like flask
 
 A lot of tutorials you see out there that say
@@ -641,7 +740,14 @@ Flask, by default, does not. The sample "Hello world" doesnt' require a database
 # stateful applications
 ## complex in production
 
-Note: any application that has state is complex in production. 
+Note:
+
+
+⏰ 09:00
+
+
+
+ any application that has state is complex in production. 
 
 This is why I chose to use django for my context
 
@@ -755,7 +861,13 @@ this exact trifecta is the same for Django.
 <br><br>
 # to deploy .prokyon[django]: 
 ## run django<br>connect to a database<br>serve static files
-Note: you need to run the web  framework, connect to a database, and serve the static. 
+Note: 
+
+
+⏰ 11:00
+
+
+you need to run the web  framework, connect to a database, and serve the static. 
 
 These are the same requirements are for any stateful application
 
@@ -826,7 +938,7 @@ django's primary deployment platform
 
 is wsgi 
 
-! as of django 2.2!!
+as of django 2.2!!
 
 There is a new one coming 
 
@@ -842,17 +954,6 @@ Note: but as noted: the start project command sets up a simple default WSGI cond
 Which we can see from our project earlier. 
 
 ---
-
-$$terminal bash
-$$prompt ~/git/glasnt/myproject
-$$w
-Note: in our terminal, looking at the files we have 
----
-$$terminal bash
-$$prompt ~/git/glasnt/myproject
-$$w ls -R
-Note: we can list our files
----
 $$terminal bash
 $$prompt ~/git/glasnt/myproject
 ls -R<br>
@@ -864,7 +965,7 @@ db.sqlite3 manage.py  myproject<br>
 $$prompt ~/git/glasnt/myproject
 $$w
 
-Note: 
+Note:  again, looking at those default files that were created. 
 ---
 $$terminal bash
 $$prompt ~/git/glasnt/myproject
@@ -877,7 +978,7 @@ db.sqlite3 manage.py  myproject<br>
 $$prompt ~/git/glasnt/myproject
 $$w
 
-Note: and see indeed there is a wsgi.py file 
+Note: we can see the default created WSGI file
 ---
 $$terminal bash
 $$prompt ~/git/glasnt/myproject
@@ -942,7 +1043,13 @@ Note: but I have a better question
 ---
 <br><BR>
 ## How much<br>custom infrastructure<br>do you want?
-Note: how much custom infrastrcutre do you want? 
+Note:
+
+
+⏰ 14:00
+
+
+ how much custom infrastrcutre do you want? 
 
 Because as we saw before, every production setup is a bit different
 
@@ -1095,7 +1202,7 @@ And the next one is a database.
 ## .code[makemigrations<br>migrate]
 
 Note: 
-⏰ 17:00
+⏰ ~~17:00
 
 
 
@@ -1110,8 +1217,6 @@ Note:
 The whole concept of automating the migration framework was design to reduce developer toil 
 
 the migrations framework is designed to create the required database commands in order to make your models into real tables. 
-
-And it doesn't matter which database you choose, django is a database agnostic web framework, so you don't have to worry.
 
 ---
 $$terminal bash
@@ -1135,36 +1240,46 @@ Note:
 
 These are the migrations we generated earlier
 
-these create the data strcutures required for the the django admin to work
+These are the base migrations for the base django data structures 
 
-you can see it in the filenames - admin, auth (authentication), sessions. 
+contenttypes
 
-But to migrate data, you need a database.  
+auth
 
-K-NOTE: section rearranged
+admin
+
+sessions
+
+etc. 
+
+The contents of these files are used to generate SQL based on your database
 
 ---
 #= Which database?
 Note: so which databsae?
 ---
 
-@= database_00.png
+@= databases_00.png
 vv [➚](https://docs.djangoproject.com/en/2.2/ref/databases/)
 
-Note: the docs are useful here, expect there's a super important note
+Note: the docs are useful here
 
 ---
 
-@= database_01.png
+@= databases_01.png
 
 vv [➚](https://docs.djangoproject.com/en/2.2/ref/databases/)
 
-Note: not all databases backends are alike, and there have been some design considerations. 
+Note: 
+
+> Django attempts to support as many features as possible. 
+
+Django is a database agnostic framework. 
 
 ---
 <br>
-# .prokyon[django] supported databases
-## PostgreSQL 9.4+ (psycopg2 2.5.4+)<br>MySQL 5.6+ (InnoDB)<br>Oracle 12.1+<br>SQLite 3.8.3
+## .prokyon[django] supported databases
+### PostgreSQL<br>MySQL<br>Oracle<br>SQLite
 vv [limitations](https://docs.djangoproject.com/en/2.2/ref/databases/), [oracle + django](https://slides.com/iqbaltalaatbhatti/oracle-django)
 
 Note: django does support a number of databases, including postgresql, mysql, oracle, and sqlite. 
@@ -1194,13 +1309,29 @@ But it's not without reason.
 
 ---
 
-@= database_02.png
+@= postgres_00.png
 
 Note: the docs specifically point this out. 
 
+---
+
+
+@= postgres_01.png
+
+Note: 
+
 django is a database agnostic web framework
 
-but django provides support for a number of datatypes that only work in postgressql. 
+but 
+
+---
+
+@= postgres_02.png
+
+Note: 
+
+
+> PostgreSQL has a number of features which are not shared by the other databases Django supports. 
 
 The ability for other databases to have as much bredth in functionality is limited only by community contribution
 
@@ -1310,7 +1441,7 @@ Note: managed databases are a really good idea.
 ### A stonkingly good idea.<br>Even if they cost money.
 Note:
 
-⏰ ~19:00
+⏰ ~20:00
 
 
 Even if they cost you money. 
@@ -1398,7 +1529,7 @@ If you went with the PaaS, perhaps the simple asset solution is for you.
 #= static options:
 
 ## cloud storage
-## media uploads
+## for static and media 
 
 Note: 
 
@@ -1498,7 +1629,7 @@ But hopefuully I've been able to help you just see a bit behind the curtain of d
 And shown you that is it is complex, but not as complicated as you might think. 
 
 ---
-#= <br>Thanks!
+#= <br><BR>Thanks!
 @ footer.svg
 Note: I am sure there are many opinions that this talk has surfaced
 
