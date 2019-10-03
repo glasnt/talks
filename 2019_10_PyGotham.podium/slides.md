@@ -40,7 +40,9 @@ class: title
 ???
 this isn't a talk about "the one true way" to deploy your app
 
-I will express some opinions, but mostly this is a review of the world as at 2019
+I will express some opinions, giving you some background around some of those opinions
+
+but mostly this is a review of the world as at 2019
 
 This talk is diving into the complexities of deployment, in essense
 
@@ -241,7 +243,7 @@ python manage.py runserver<w>&nbsp;</w>
 
 ???
 
-we can launch our app locally, using runserver
+we can launch our app locally, using python manage.py runserver
 ---
 <div class="shell-wrap"><p class="shell-top-bar">bash</p><p class="shell-body">
 <ps>myrtle</ps> <dr>~/git/glasnt/myproject $</dr>
@@ -324,10 +326,19 @@ python manage.py migrate<w>&nbsp;</w>
 <ps>myrtle</ps> <dr>~/git/glasnt/myproject $</dr>
 <w>&nbsp;</w>
 
+???
+
+so a whole bunch o' stuff that's been applied.
+
+but what has changed in our filesystem?
 ---
 <div class="shell-wrap"><p class="shell-top-bar">bash</p><p class="shell-body">
 <ps>myrtle</ps> <dr>~/git/glasnt/myproject $</dr>
 <w>&nbsp;</w>
+
+???
+
+let's check.
 ---
 <div class="shell-wrap"><p class="shell-top-bar">bash</p><p class="shell-body">
 <ps>myrtle</ps> <dr>~/git/glasnt/myproject $</dr>
@@ -345,6 +356,9 @@ __init__.py settings.py urls.py wsgi.py<br>
 <ps>myrtle</ps> <dr>~/git/glasnt/myproject $</dr>
 <w>&nbsp;</w>
 
+???
+
+oh hey, a new file!
 ---
 <div class="shell-wrap"><p class="shell-top-bar">bash</p><p class="shell-body">
 <ps>myrtle</ps> <dr>~/git/glasnt/myproject $</dr>
@@ -361,19 +375,21 @@ __init__.py settings.py urls.py wsgi.py<br>
 <div class="shell-wrap"><p class="shell-top-bar">bash</p><p class="shell-body">
 <ps>myrtle</ps> <dr>~/git/glasnt/myproject $</dr>
 <w>&nbsp;</w>
+???
 
+so clearing that away, we can try running our server again
 ---
 <div class="shell-wrap"><p class="shell-top-bar">bash</p><p class="shell-body">
 <ps>myrtle</ps> <dr>~/git/glasnt/myproject $</dr>
-python manage.py runserver<w>&nbsp;</w>
+./manage.py runserver<w>&nbsp;</w>
 
 ???
 
-will my project run now?
+using the shorter version, manage.py runserver
 ---
 <div class="shell-wrap"><p class="shell-top-bar">bash</p><p class="shell-body">
 <ps>myrtle</ps> <dr>~/git/glasnt/myproject $</dr>
-.noop[p]ython manage.py runserver<br>
+./manage.py runserver<br>
 Watching for file changes with StatReloader<br>
 Performing system checks...<br><br>
 System check identified no issues (0 silenced).<br>
@@ -385,11 +401,11 @@ Quit the server with CONTROL-C.<br>
 
 ???
 
-Oh neat, no more error.
+Oh neat, no more error!
 ---
 <div class="shell-wrap"><p class="shell-top-bar">bash</p><p class="shell-body">
 <ps>myrtle</ps> <dr>~/git/glasnt/myproject $</dr>
-.noop[p]ython manage.py runserver<br>
+./manage.py runserver<br>
 Watching for file changes with StatReloader<br>
 Performing system checks...<br><br>
 System check identified no issues (0 silenced).<br>
@@ -428,14 +444,14 @@ we can get our app running locally really well.
 and a lot of this boils down to
 ---
 <br><br><br>
-# .code[runserver]
+# .code[./manage.py runserver]
 
 ???
 
 runserver does everything we need to in our local system.
 ---
 <br><br><br>
-# .code[runserver]
+# .code[./manage.py runserver]
 ### local web server
 ---
 class: middle, center, image
@@ -555,7 +571,7 @@ The website is the service that responds when you enter a website URL into your 
 
 ---
 <br><br><br>
-# .code[runserver]
+# .code[./manage.py runserver]
 ### local web server<br>+ static server
 ???
 
@@ -829,9 +845,11 @@ Just copy up your code somewhere and run. Easy!
 This is because of one simple fact
 ---
 class: title
-# .b[state]
+# .big[state]
 
 ???
+
+state.
 
 django is a stateful application. It has a database out of the box and static assets.
 
@@ -1001,7 +1019,7 @@ But, thankfully for us using django, we have some helpers.
 ---
 <br><BR>
 # .prokyon[django] helpers
-## WSGI<br>.c[migrate]<br>.c[collectstatic]
+### WSGI<br>.c[./manage.py migrate]<br>.c[./manage.py collectstatic]
 
 ???
 
@@ -1382,14 +1400,19 @@ And the next one is a database.
 ---
 <br><BR>
 # db helpers:
-## .code[makemigrations<br>migrate]
+### .code[./manage.py makemigrations]
+### .code[./manage.py migrate]
 
 ???
 ⏰ ~~17:00
 
 
 
-these two commands, in my own personal opinion, two of the greatest features of django
+these two management commands,
+
+in my own personal opinion,
+
+are two of the greatest features of django
 
 Oh, I mean having a dynamic web admin is pretty sweet, but these two commands are just choice.
 --
@@ -1710,7 +1733,7 @@ serving staatic files.
 ---
 class: title
 # static helper:
-## .code[collectstatic]
+### .code[./manage.py collectstatic]
 
 ???
 
@@ -1811,7 +1834,7 @@ we're finally there.
 
 ---
 class: title
-## [copy code to host]<br>.c[python manage.py migrate]<br>.c[python manage.py collectstatic]<br>[start web server]
+## [copy code to host]<br>.c[./manage.py migrate]<br>.c[./manage.py collectstatic]<br>[start web server]
 
 ???
 
