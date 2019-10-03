@@ -348,8 +348,6 @@ rr { font-family: "RedactedR", regular;  }
    font-family: monospace !important;
    margin: 0;
    padding: -10px;
-   font-size: 48pt !important; 
-   line-height: 32pt !important; 
  
 } 
 .inline-code { display: inline-block; }

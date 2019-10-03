@@ -1019,7 +1019,7 @@ But, thankfully for us using django, we have some helpers.
 ---
 <br><BR>
 # .prokyon[django] helpers
-### WSGI<br>.c[./manage.py migrate]<br>.c[./manage.py collectstatic]
+## WSGI<br>.c[./manage.py migrate]<br>.c[./manage.py collectstatic]
 
 ???
 
@@ -1400,8 +1400,7 @@ And the next one is a database.
 ---
 <br><BR>
 # db helpers:
-### .code[./manage.py makemigrations]
-### .code[./manage.py migrate]
+## .code[./manage.py makemigrations<br>./manage.py migrate]
 
 ???
 ⏰ ~~17:00
@@ -1733,7 +1732,7 @@ serving staatic files.
 ---
 class: title
 # static helper:
-### .code[./manage.py collectstatic]
+## .code[./manage.py collectstatic]
 
 ???
 
@@ -1756,10 +1755,7 @@ this is literally an entire talk, and thankfully there was a talk focussing only
 class: title
 # asset management options:
 
-## simple assets
-## cloud storage
-## media uploads
-## asset compilation
+## simple assets<br>cloud storage<br>media uploads<br>asset compilation
 .footnotes[["Assets in Django without losing your hair", J. Kaplan-Moss](https://www.youtube.com/watch?v=E613X3RBegI)]
 
 
@@ -1787,7 +1783,7 @@ class: title
 # static options:
 
 ## cloud storage
-## for static and media
+### for static and media
 
 ???
 
@@ -1899,7 +1895,8 @@ And shown you that is it is complex, but not as complicated as you might think.
 
 ---
 class: title
-# <br><BR>Thanks!
+# <br>Thanks!
+### <br>glasnt.com/talks<br><br>
 ![Image](images/footer.svg)
 ???
 

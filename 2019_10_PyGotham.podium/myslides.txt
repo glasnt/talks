@@ -891,7 +891,7 @@ But, thankfully for us using django, we have some helpers.
 ---
 <br><BR>
 # .prokyon[django] helpers
-### WSGI<br>.c[./manage.py migrate]<br>.c[./manage.py collectstatic]
+## WSGI<br>.c[./manage.py migrate]<br>.c[./manage.py collectstatic]
 
 Note: in order they are wsgi compatitbility, the migrate command, and the collect static command. 
 
@@ -1211,8 +1211,7 @@ And the next one is a database.
 ---
 <br><BR>
 # db helpers: 
-### .code[./manage.py makemigrations]
-### .code[./manage.py migrate]
+## .code[./manage.py makemigrations<br>./manage.py migrate]
 
 Note: 
 ⏰ ~~17:00
@@ -1501,7 +1500,7 @@ Note: and now to the last section in our deployment trifecta
 Note: serving staatic files. 
 ---
 #= static helper:
-### .code[./manage.py collectstatic]
+## .code[./manage.py collectstatic]
 
 Note: the helper here is collectstatic
 
@@ -1518,10 +1517,7 @@ Note: this is literally an entire talk, and thankfully there was a talk focussin
 
 #= asset management options:
 
-## simple assets
-## cloud storage
-## media uploads
-## asset compilation
+## simple assets<br>cloud storage<br>media uploads<br>asset compilation
 vv ["Assets in Django without losing your hair", J. Kaplan-Moss](https://www.youtube.com/watch?v=E613X3RBegI)
 
 
@@ -1546,7 +1542,7 @@ If you went with the PaaS, perhaps the simple asset solution is for you.
 #= static options:
 
 ## cloud storage
-## for static and media 
+### for static and media 
 
 Note: 
 
@@ -1646,7 +1642,8 @@ But hopefuully I've been able to help you just see a bit behind the curtain of d
 And shown you that is it is complex, but not as complicated as you might think. 
 
 ---
-#= <br><BR>Thanks!
+#= <br>Thanks!
+### <br>glasnt.com/talks<br><br>
 @ footer.svg
 Note: I am sure there are many opinions that this talk has surfaced
 
