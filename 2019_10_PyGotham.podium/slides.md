@@ -387,6 +387,10 @@ and a helpful little message telling us where we're running
 ---
 class: middle, center, image
 ![Image](images/djangorocket.png)
+
+???
+
+⏰ 03:00
 ---
 class: middle, center, image
 ![Image](images/djangoadmin.png)
@@ -458,16 +462,29 @@ We'll discuss a selection of webservers you should use in production a bit later
 But, there are a few new terms that we've just hit that we should take time to clarify.
 ---
 class: title
-# What is 'production'?
+# *What* is production,<br>anyway?
 
 ???
 What is production, anyway?
 
+well, production is the live environment.
+
+But
+
+---
+
+class: title
+# Why is it called<br>"production"?
+
+???
+
+why is it called production, anywy?
+
+PAUSE
+
 I've asked this question to a bunch of python practioneres, many of whom have a decade or more of experience
 
 And the question leaves them thinking.
-
-Why do we call it production?
 
 _ _Riff here_ _
 
@@ -477,11 +494,11 @@ In the current web sense, you could compare it to a theatre production.
 
 _ _End riff_ _
 
-In essense: production is live is the one your users access.
+Another term we came across.
 
 ---
 class: title
-# What is a web server?
+# What is a web server,<br>anyway?
 ???
 Also, what is a web server?
 
@@ -503,11 +520,10 @@ The website is the service that responds when you enter a website URL into your 
 Runserver is our local web server, but runserver also handles serves our static.
 ---
 class: title
-# What is 'static'?
-### or 'static assets', or 'assets'
+# What is "static",<br>anyway?
 
 ???
-
+⏰ 06:00
 Static, assets, or static assets
 
 refers to the unmoving parts of our web site, relative to the dynamic parts.
@@ -613,6 +629,14 @@ We saw this earlier in our files.
 ---
 <div class="shell-wrap"><p class="shell-top-bar">bash</p><p class="shell-body">
 <ps>myrtle</ps> <dr>~/git/glasnt/myproject $</dr>
+cat myproject/settings.py | grep sqlite -C2<w>&nbsp;</w>
+???
+
+if we take a look at our settings
+
+---
+<div class="shell-wrap"><p class="shell-top-bar">bash</p><p class="shell-body">
+<ps>myrtle</ps> <dr>~/git/glasnt/myproject $</dr>
 cat myproject/settings.py | grep sqlite -C2<br>
 DATABASES = {<br>
 &nbsp; &nbsp; 'default': {<br>
@@ -643,7 +667,7 @@ class: middle, center, image
 
 development environment.
 ---
-class: title
+<br><BR><BR>
 # .prokyon[django]
 ## ease of use in development
 ???
@@ -683,6 +707,7 @@ Now is an important time to mention something important.
 # .poly[Flask]
 ## simpler in production<br>.h3[(comparatively)]
 ???
+⏰ 09:00
 Compare the out of the box functionality of django to something like flask
 
 A lot of tutorials you see out there that say
@@ -706,7 +731,7 @@ Flask, by default, does not. The sample "Hello world" doesnt' require a database
 
 ---
 
-class: title
+<br><BR><BR>
 # stateful applications
 ## complex in production
 
@@ -768,6 +793,8 @@ class: title
 ### - every deployment talk ever
 
 ???
+
+⏰ 10:00
 
 Nearly every talk I've seen on deployment includes a line like
 
@@ -867,6 +894,24 @@ The rest of this talk will be describing how these helpers work.
 
 Which will help us in exploring the options we have for deployment
 ---
+<br><br>
+# to deploy .prokyon[django]:
+## run django<br>connect to a database<br>serve static files
+
+???
+
+so first item to get sorted to deploy our django app
+
+
+---
+<br><br>
+# to deploy .prokyon[django]:
+## **run django**<br>connect to a database<br>serve static files
+
+???
+
+running django itself
+---
 class: title
 # WSGI
 ## Web Server Gateway Interface
@@ -880,18 +925,22 @@ the web server gateway interface
 
 and is python standard for web servers
 
+Yeah, but, like...
+
 ---
 
 class: title
-# What is WSGI?
+# What *is* "WSGI",<br>anyway?
 
 ???
 
-WSGI is a standard interface for python applications to talk to a webserver.
+⏰ 12:00
 
+WSGI is a standard interface for python applications to talk to a webserver.
 
 The standard was proposed back in 2003 as PEP-333, as a prompt to standardaise the interface between web servers and python web frameworks.
 
+It allows us to choose any web server we want that understands WSGI and use it with Django
 
 
 ---
@@ -910,7 +959,11 @@ is wsgi
 class: title
 ![Image](images/as of django 2.2!!.svg)
 
-And as stated earlier, we are looking at Django 2.2, so for those on the recording, there may be something different now :D *wink*
+There is a new one coming
+
+*SPOILERS* 😁
+
+But WSGI is whata we care about now.
 
 ---
 class: middle, center, image
@@ -985,6 +1038,18 @@ the contents of which...
 WSGI config for myproject project.<br><br>It exposes the WSGI callable as a module-level variable named 'application'.<br>For more information on this file, see<br>https:.noop[/]/docs.djangoproject.com/en/2.2/howto/deployment/wsgi/<br>"""<br>import os<br><br>from django.core.wsgi import get_wsgi_application<br><BR>os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'myproject.settings')<br><BR>application = get_wsgi_application()<br>
 <ps>myrtle</ps> <dr>~/git/glasnt/myproject $</dr>
 <w>&nbsp;</w>
+</p></p></div>
+.lownote[[Hacking on the HTTP handlers and middleware](https://2019.djangocon.us/talks/using-django-as-a-micro-framework-on-the/) C. Gibson]
+
+???
+
+There's a full talk which dives into what this script
+
+but in essense
+
+it means we can choose any WSGI web server
+
+and django will work.
 
 ---
 
@@ -1075,8 +1140,13 @@ class: title
 
 what do you want to worry about
 
+~first instance, pause~
 
-Thankfully, you can pay to take your worry away.
+As a sysadmin, I got paid to worry.
+
+You are a developer. A little worry is good, but thankfully,
+
+you can pay to take your worry away.
 
 ---
 
@@ -1108,8 +1178,8 @@ And yes, this is non-exhaustive. Within the scope of deploying a django applicat
 
 class: title
 # Other options:
-## ~~Functions as a Service~~
 ## ~~Custom hardware~~
+## ~~Functions as a Service~~
 
 ???
 You could go as detailed as running your app on a server you have in your own home or business ("on-prem") (that make your own everything scenario I mentioned earlier)
@@ -1141,6 +1211,7 @@ in general your platforms as service are going to be places where you provide yo
 
 the things that will be managed for you include the web server (often included in whatever template you have), the operating system, the physical hardware, the storage, networking, and a whole host of other things.
 
+
 On the otherhand, if you have opinions about some of the earlier elements in this, you can jump down into
 ---
 <BR><BR>
@@ -1150,6 +1221,8 @@ On the otherhand, if you have opinions about some of the earlier elements in thi
 ???
 
 IaaS. Where you can worry about your web server and operating system.
+
+Often as a container or some other sort of isolation model, but you do get a choice here.
 
 ---
 <BR><BR>
@@ -1163,6 +1236,19 @@ and you pay for someone else to manage the hardware, storage, etc.
 Now this is very very much an overgeneralisation, as there is an entire other talk on the complexities of infrastrcutre as a service.
 
 but there is a reason I mentioned this
+---
+class: title
+## What<br>do you want<br>to worry about?
+???
+
+what do you want to worry about
+
+if you don't have an opinion, choose a platform as a service.
+
+if you have opinions or requirements, choose infrastructure as a service.
+
+
+
 
 ---
 <br><br>
@@ -1179,24 +1265,29 @@ our list of things we need to deploy a django app
 ???
 
 we've covered one
+---
+<br><br>
+# to deploy .prokyon[django]:
+## .so[run django]<br>**connect to a database**<br>serve static files
+???
 
 And the next one is a database.
-and here's the secret
 ---
-
-class: title
-# .code[makemigrations<br>migrate]
+<br><BR>
+# db helpers:
+## .code[makemigrations<br>migrate]
 
 ???
+⏰ 17:00
+
+
 
 these two commands, in my own personal opinion, two of the greatest features of django
 
 Oh, I mean having a dynamic web admin is pretty sweet, but these two commands are just choice.
+--
 
----
-
-class: title
-# .code[migrate/makemigrations] created to<br>reduce developer toil
+### created to reduce developer toil
 
 ???
 The whole concept of automating the migration framework was design to reduce developer toil
@@ -1233,87 +1324,15 @@ you can see it in the filenames - admin, auth (authentication), sessions.
 
 But to migrate data, you need a database.
 
-and here's the secret.
----
-class: title
-## Managed databases<br>are just a specialised<br>*aaS
-
-???
-
-managed databases are just specalised "as a service"
-
-whatever bucket you want to put them in depends on your definition, if they IaaS or Paas or even Software as a service, but either way, they're a service.
-
-
-
-
----
-<br><BR>
-## Managed databases
-### worry about:<br> your data models
-.footnotes[Example providers: your PaaS or IaaS provider]
-???
-
-you define your data models in your app
----
-
-<br><BR>
-## Managed databases
-### .prokyon[django] worries about:<br>generating and applying migrations
-.footnotes[Example providers: your PaaS or IaaS provider]
-???
-
-making the migrations and applying them to whatever database you choose is django's problem. More on that a bit later.
----
-<br><BR>
-## Managed databases
-### managed for you:<br>storage, backups, persistence, maintenance...
-
-.footnotes[Example providers: your PaaS or IaaS provider]
-
-???
-
-your database host will often handle everyhitng from backups to storage (including scaling storage, which is often very good.
-
-These will often be available from your web server provider, which is often a very good idea because the closer your web server and database the faster you can send data between the two parts of your application.
-
-Are you a pyhton developer or a Database adminsitrator?
-
-If you'd rather have more time for python, use the managed database.
-
-class: background-black
-
-AND honestly.
-
----
-<br><BR>
-## Managed databases
-### A stonkingly good idea.
-
-???
-
-there is no reason not to use a managed database any more
-
-managed databases are a solved problem, pay for one and get the benefits
-
-a lot of people use databases, so a lot of work has gone into them
-
-pay just a little bit and you often get: persistence, backups, maintenance windows, more so: you don't have to manage it.
-
-heck, some now days even automatically expand and the providers handle this without downtime for you
-
-And as someone who used to get paid to have to do this manually out of hours, this is a very very good feature to have!
-
-this and your domain name might be the only thing you end up paying for in a smaller stack, but it's worth it.
-
-ENDTODO
-
+K-NOTE: section rearranged
 
 ---
 class: title
 # Which database?
----
+???
 
+so which databsae?
+---
 
 class: middle, center, image
 ![Image](images/database_00.png)
@@ -1390,19 +1409,177 @@ The ability for other databases to have as much bredth in functionality is limit
 at the time of recording, postgres has the most contribution
 
 If you want your preferred database to have more support, help support it by writing the functionality :)
+---
+class: title
+# Databases hosting
+
+
+???
+
+now that you've chosen your database, now you gotta host it.
+
+There are a few options here.
+
+You could setup one of your containers or VMs to be a postgres database, so you'd end up with two servers.
+
+But again
+---
+class: title
+## What<br>do you want<br>to worry about?
+
+???
+
+what do you want to worry about
+
+
+are you a python developer, or a database administrator?
+
+
+
+
+---
+class: title
+# Managed databases
+## a.k.a. "DBaaS"
+
+???
+
+managed databases are just specalised "as a service"
+
+which some people call "DBaaS" which I think is... a bit much.
+
+however you want to define them
+
+a lot of applications across a lot of programming languages and formats -- web, mobile, etc -- use database
+
+so many infrastructure providers now offer managed databases.
+
+
+---
+<br><BR>
+## Managed databases
+### worry about:<br> your data models
+.footnotes[Example providers: your PaaS or IaaS provider]
+
+
+???
+
+In managed databases,
+
+you define your data models in your app
+
+and then
+---
+
+<br><BR>
+## Managed databases
+### .prokyon[django] worries about:<br>generating and applying migrations
+.footnotes[Example providers: your PaaS or IaaS provider]
+???
+
+django handles making your datamodels into usable SQL for your database of choice.
+
+You just have to run the migrate command.
+
+---
+<br><BR>
+## Managed databases
+### managed for you:<br>storage, backups, persistence, maintenance...
+
+.footnotes[Example providers: your PaaS or IaaS provider]
+
+???
+
+and your managed datbase provider,
+
+probably the same provider your web server uses
+
+will handle everything about your databse for you.
+
+And it's a good idea to have your web server and database located in the same network, physically close if at all possible.
+
+This will help make sure they can talk to each other as quickly as possible.
+
+Because you know
+
+light only travels so fast.
+
+your database host will often handle everyhitng from backups to storage (including scaling storage, which is often very good.
+
+class: background-black
+
+AND honestly.
+
+---
+<br><BR>
+## Managed databases
+### A stonkingly good idea.
+
+???
+
+managed databases are a really good idea.
+
+...
+
+
+
+---
+<br><BR>
+## Managed databases
+### A stonkingly good idea.<br>Even if they cost money.
+???
+
+⏰ ~19:00
+
+
+Even if they cost you money.
+
+Because at the end of the day, your website code is probably going to have a copy somewhere else
+
+your laptop, github, whatever
+
+but your user data
+
+that's your only copy
+
+so it's a really good idea to pay someone to store that properly.
+
+and the ease that having someone else worry about maintenance and backups and heck, even zero down time disk size expanding...
+
+And as someone who used to get paid to have to do this manually out of hours, this is a very very good feature to have!
+
+For a django application hosted on, say, google cloud, or another cloud provider, your managed database may end up being your *only* cost.
+
+
+what with all the free tiers and included credits and what not.
+
+But paying for that piece of mind
+
+it might just be worth it.
+
+Okay, it might not be your only cost. Custom domain names, other non-free items, but we're not going to explore that complexity today.
+
+
+
 
 ---
 class: title
 # to deploy .prokyon[django]:
 ## .so[run django<br>connect to a database]<br>serve static files
-
 ???
 
 and now to the last section in our deployment trifecta
 ---
-
 class: title
-# .code[collectstatic]
+# to deploy .prokyon[django]:
+## .so[run django<br>connect to a database]<br>**serve static files**
+???
+
+serving staatic files.
+---
+class: title
+# static helper:
+## .code[collectstatic]
 
 ???
 
@@ -1492,9 +1669,10 @@ So
 
 ---
 class: title
-# actually deploying
+# What is .prokyon[django] deployment, *anyway*?
 
 ???
+⏰ 23:00
 
 actually deploying.
 
@@ -1579,4 +1757,4 @@ so for the comfort of the audience and the next speaker
 
 I'm also available on email and twitter if you want to discuss more later.
 
-Thanks!
+Thank you for your time.

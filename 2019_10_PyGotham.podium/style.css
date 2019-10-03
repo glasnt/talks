@@ -500,3 +500,15 @@ dr { color: rgb(201,135,135) }
 .h2 { font-size: 4em; }
 .nl a { color: black}
 .so { text-decoration: line-through }
+.lownote {
+    font-size: 18pt;
+    position: absolute;
+    bottom: 1.3em;
+    right: 4em;
+    width: 80%;
+    text-align: right;}
+.lownote a { color: grey }
+.lownote p {
+    font-size: 18pt;
+    margin: 0.2em 0;
+}
