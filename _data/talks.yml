@@ -1,4 +1,13 @@
-
+- conference:
+    name: Sydney Serverless
+    location: Sydney, NSW
+    date: 2019-10-16
+    link: https://www.meetup.com/Sydney-Serverless-Meetup-Group/
+    talks: 
+        - link: https://www.meetup.com/Sydney-Serverless-Meetup-Group/events/265107528/
+          talk: Complexity in Deployments: Django on GCP
+          slides: 2019_10_SydServ
+          twitter: https://twitter.com/SydServerless/status/1184372482515460096
 - conference:
     name: PyGotham 2019
     location: New York, USA
@@ -9,6 +18,7 @@
           link: https://2019.pygotham.org/talks/what-is-deployment-anyway/
           slides: 2019_10_PyGotham.podium
           resources: https://github.com/glasnt/talks/tree/gh-pages/2019_10_PyGotham.podium#resources
+          twitter: https://twitter.com/jessicagarson/status/1180531644354191360
 
 - conference:
     name: Perth Django and Python Developers
