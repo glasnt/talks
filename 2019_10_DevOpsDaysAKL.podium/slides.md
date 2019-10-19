@@ -54,9 +54,11 @@ Because the 3am pager will probably happen.
 
 Oh, you have an on call rotation? Or Follow the sun?
 
-Good for you. A lot of places don't
+Good for you. Keep doing that.
 
-[Sure, you can be lucky enough to be in a place with Follow the Sun. But you probably won't be, if you're on a small team. ]
+Having the people who are already awake being paged? that's great.
+
+A lot of places don't have that luxury.
 
 And it might not be an actual "3am pager", but it would be the apocryphl 3am pager.
 
@@ -71,11 +73,11 @@ background-image: url("images/triple.jpg")
 
 ???
 
-I'll be splitting this up into three sections
+I'll be splitting this up into three rough sections.
 
 Essentials, Next Steps, and Feedback
 
-(Each with their own clever visuals :) )
+And each will be segemented by clever creative commons stock imagery.
 
 ---
 
@@ -86,7 +88,11 @@ background-image: url("images/basics.jpg")
 
 so, the essential documentation.
 
-You should really write down something. It's useful to have documentation.
+You should really write down something.
+
+**PAUSE**
+
+I mean, it's useful to have documentation.
 
 But, where to have that documentation is also important to consider.
 
@@ -96,7 +102,10 @@ And what you really want is a good night's sleep.
 
 You just want to throw some notes down.
 
-Places you could do this include: the wiki on your github pages, or say under your username on your Confluence page.
+Your tools to use this could be anything: a google doc, onenote, emacs, vim, vscode...
+
+But also consider where these docs live. Making sure that your oncall rotor can access your google or one drive.
+Or consider putting the docs closer to your working space: the wiki on your github pages, or say under your username on your Confluence page. Or even a text file in a private project repo, in a pinch.
 
 But, where you put these notes needs to have some important features.
 
@@ -150,9 +159,20 @@ This is where the wiki excels here. Having the system being web based means that
 And they can also use your custom search engines to find your notes, and perhaps CoLlAbOrAtE?!
 
 
+
+---
+background-image: url("images/basics.jpg")
+### .big[Access control]
+
+???
+
+But also consider that you probably don't want your terraform docs in your public github repo.
+
+Your sysadmins who have the credentials to be able to provision should probably be able to see those docs, especially the docs of where to find that magic sshkey that enables the ability to deploy from anisble.
+
+This is going to be highly context specific, but it's probably a good idea to have this within your company's authentication barrier (or "firewall", if you still have one of those).
+
 But the question is, what do you write down? What do you want to be able to discover at 3am?
-
-
 ---
 class: bottom left
 background-image: url("images/knife.jpg")
@@ -204,11 +224,9 @@ background-image: url("images/step.jpg")
 
 Stepping up this repository of useful hints, how can you make it work for you?
 
-
-
 Again, your milage may vary, but I can offer advice for what I've seen work.
 
-I am an operations engineer, I am not your operations engineer.
+I'm a sysadmin, I'm not your sysadmin.
 
 ---
 background-image: url("images/step.jpg")
@@ -223,6 +241,17 @@ Having your cache end up being moved into an "SRE Tips" page that appears on the
 Having it linked up in the channel topic of your firehouse chat channel.
 
 Making it available and useful.
+
+---
+background-image: url("images/step.jpg")
+
+### .bigx[Templates]
+
+Templates! Templates are great
+
+Say you have pet servers, that you occasionally deploy. Or clients, or other widgets that come into your perview at a rate, but that also need custom care and attention to detail
+
+Make a template in your system that you fill out. Even something as simple as making sure you link to the ec2 search for the name of the server, and then any custom notes. Especially if one of these widgets has custom configurations outside of your provisioning automation that could be overwritten if you aren't careful (ask me how I know)
 
 ---
 background-image: url("images/step.jpg")
@@ -322,14 +351,13 @@ turn this into a learning oppourtinuty for the members of your team.
 
 This feeds back into the discoverability and feedback loop steps, but making sure that juniors or other team members "learn the weather".
 
-I'm the first speaker today, so there are other talks in this miniconf that will deal with this, so I'll just handwave here.
-
 Again, depending on your setup, if you have a junior that's starting to shadow, showing them the iffy machines; giving them a chance to debug things themselves, but working with them to solve issues in a timely manner.
-
 
 But making sure that any of those "We'll fix that soon" are noted. This is so so important so that people know what to expect.
 
 And when you finally get to fixing things, please make sure you communicate this.
+
+Having one sysadmin, or heaven forbid, a BOFH, being the only one that knows the temprement of your system doesn't scale. And there's a certain joy when your entire oncall rotation are able to be psudo-meteorologists and can just sortta *tell* what might be going on.
 
 ---
 background-image: url("images/laptop-angle-small.jpg")
@@ -342,11 +370,18 @@ While it might be great that things finally get fixed, that those alerts go away
 
 Infra changes almost always cause other issues down the line. Make sure you communicate these with your team, and in your cache.
 
-Especailly if any of your cool scripts get deprecated.
-
 And, bonus points: especailly if you're lucky enough to be on a distributed team, if you're going to be personally make big changes that might have the slightest change of raising alerts, please take the pager.
 
 Especially if it's your workday, and you're not already on call.
+
+
+---
+background-image: url("images/laptop-angle-small.jpg")
+
+### .big[Deprecate and delete]
+???
+
+this is
 
 ---
 class: bottom right
@@ -355,7 +390,7 @@ background-image: url("images/empathy.jpg")
 
 ???
 
-And a small sidenote here:
+Because at the end of the day, empathy is critical
 
 Showing empathy for your fellow engineer who is going to be thankful for that full night sleep is paid back in kind.
 
@@ -364,8 +399,6 @@ Showing self-care by giving yourself the tools to help you get your job done so 
 Making sure your junior or new on call engineers don't freak out in the middle of the night because you left them a note about that upgrade, so those new errors they're seeing are totally okay (well, not okay, but not unexpected)
 
 Thinking more about how less pages makes every one sleep easier, and what can be done to achieve that.
-
-TODO MORE HERE
 
 Working in a team is hard, but as soon as you start expecting work out of hours, especially when on-call is involved, practicing explicit empathy makes things so much easier for everyone involved.
 
@@ -380,22 +413,19 @@ you're not your best when you're tired, but you'll do your future self a favour 
 
 A bashhistory, an odd command here and there, just start somewhere. Evolve it, and it'll help you on those early morning calls so you can get back to sleep.
 
-
-CYO ADVENTURE
-
-IF DISCCUSION: NEXT
-
-ELSE: END
-
 ---
 class: bottom left
 background-image: url("images/blank-small.jpg")
 # What are your tips?
 
-
 ???
 
-open discussion time.
+This entire talk has been from my own experiences, and while I was on call for years, I didn't do everything. And I did, finally, handback my pager around a year ago now.
+
+So I want to hear what you all have experienced, and what works for you. What did you find worked, and more importantly, what didn't work? If you can save just one person a frightful evening of anxiety with your tip, that'd be kinda neat.
+
+I'll be submitting this as an open space for this afternoon, so if you're interested in discussing this more, come along.
+
 ---
 class: bottom left
 background-image: url("images/moon.jpg")
