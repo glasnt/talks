@@ -1,3 +1,13 @@
+- conference: 
+    name: PubConf Sydney 2019
+    location: Sydney, NSW
+    date: 2019-10-18
+    link: https://pubconf.io/events/2019/sydney/
+    talks: 
+        - link: https://pubconf.io/speakers/katie_mclaughlin/
+          talk: "A profane guide to containers"
+          twitter: https://twitter.com/robdcrowley/status/1185414741503512577
+
 - conference:
     name: Sydney Serverless
     location: Sydney, NSW
