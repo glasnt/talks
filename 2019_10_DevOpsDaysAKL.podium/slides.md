@@ -247,6 +247,8 @@ background-image: url("images/step.jpg")
 
 ### .bigx[Templates]
 
+???
+
 Templates! Templates are great
 
 Say you have pet servers, that you occasionally deploy. Or clients, or other widgets that come into your perview at a rate, but that also need custom care and attention to detail
@@ -378,7 +380,7 @@ Especially if it's your workday, and you're not already on call.
 ---
 background-image: url("images/laptop-angle-small.jpg")
 
-### .big[Deprecate and delete]
+### .big[Deprecate & Delete]
 ???
 
 this is

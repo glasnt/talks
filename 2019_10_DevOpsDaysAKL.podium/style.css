@@ -106,10 +106,10 @@ li cite {
 .footnotes {
     font-size: 18pt;
     position: absolute;
+    right: 2em;
     bottom: 2em;
     width: 80%;
     margin-left: 20px; 
-    text-align: left;
     color: white; 
 }
 
