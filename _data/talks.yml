@@ -5,7 +5,7 @@
     link: https://pubconf.io/events/2019/sydney/
     talks: 
         - link: https://pubconf.io/speakers/katie_mclaughlin/
-          talk: "A profane guide to containers"
+          name: "A profane guide to containers"
           twitter: https://twitter.com/robdcrowley/status/1185414741503512577
 
 - conference:
@@ -15,7 +15,7 @@
     link: https://www.meetup.com/Sydney-Serverless-Meetup-Group/
     talks: 
         - link: https://www.meetup.com/Sydney-Serverless-Meetup-Group/events/265107528/
-          talk: "Complexity in Deployments: Django on GCP"
+          name: "Complexity in Deployments: Django on GCP"
           slides: 2019_10_SydServ
           twitter: https://twitter.com/SydServerless/status/1184372482515460096
 - conference:
