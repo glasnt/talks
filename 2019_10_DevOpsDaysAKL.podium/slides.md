@@ -261,7 +261,7 @@ I'm a sysadmin, I'm not your sysadmin.
 
 ---
 background-image: url("images/step.jpg")
-### .big[Integration]
+### .bigx[Integration]
 
 ???
 
@@ -307,7 +307,7 @@ Which brings me to another important point
 ---
 background-image: url("images/step.jpg")
 
-### .big[Post Mortem]
+### .bigx[Postmortem]
 
 ???
 

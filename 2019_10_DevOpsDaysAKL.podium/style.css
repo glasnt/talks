@@ -443,3 +443,17 @@ text-shadow: 1px 1px 0 #000,
 }
 
 .emoji { display: inline-block !important; }
+
+
+.remark-slides-area .remark-slide-content::after {
+    font-weight: normal;
+    font-family: "PT Sans" !important;
+    color: white;
+    content: "@glasnt";
+    padding: 10px;
+    font-size: 18pt;
+    position: absolute;
+    top: 16px;
+    left: 24px;
+    opacity: 0.9;
+}

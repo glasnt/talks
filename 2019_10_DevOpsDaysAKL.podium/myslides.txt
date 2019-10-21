@@ -247,7 +247,7 @@ I'm a sysadmin, I'm not your sysadmin.
 
 ---
 ~@ step.jpg
-### .big[Integration]
+### .bigx[Integration]
 
 Note:
 
@@ -293,7 +293,7 @@ Which brings me to another important point
 ---
 ~@ step.jpg
 
-### .big[Post Mortem]
+### .bigx[Postmortem]
 
 Note: 
 
