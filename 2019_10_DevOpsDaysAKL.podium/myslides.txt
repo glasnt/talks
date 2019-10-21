@@ -40,7 +40,7 @@ But if I'm paged, stuff be broken, yo, so I have to get it fixed.
 
 So what I need to do is to set myself up for to be the best I can be when, not if, when, the pager goes off at 3am. 
 
-By "being paged" I mean that my wonderful PagerDuty app had told me by way of a very loud noise that "SOMETHING IS BROKEN"
+By "being paged" I mean that my phone has decided to make loud noises in the middle of the night to tell me that something is wrong. 
 
 Because I have previously setup system monitoring for my servers that tell me if they arne't responding to ping and are immediately offline
 
@@ -83,7 +83,7 @@ Essentials, Next Steps, and Feedback
 
 And each will be segemented by clever creative commons stock imagery. 
 
-These are all based on my personal experiences of being the gal with the pager for years, across many envirinments, many roles and many companies. From colocation to webhosting to machine learning pipelines to platforms as a service. I have _just_ a bit of experience at being awake at 3am in front of a laptop because an evil little app on my mobile said: "The servers on fiiiirrreee". (Sorry Julie <3)
+These are all based on my personal experiences of being the gal with the pager for years, across many envirinments, many roles and many companies. From colocation to webhosting to machine learning pipelines to platforms as a service. I have _just_ a bit of experience at being awake at 3am in front of a laptop because an evil little app on my mobile said: "The servers are on fiiiirrreee". (Sorry Julie <3)
 
 ---
 

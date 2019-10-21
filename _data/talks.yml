@@ -1,3 +1,13 @@
+- conference:
+    name: DevOpsDays New Zealand 2019
+    location: Auckland, NZ
+    date: 2019-10-22
+    link: https://devopsdays.org/events/2019-auckland/welcome/
+    talks:
+        - link: https://devopsdays.org/events/2019-auckland/program/katie-mclaughlin
+          name: "Being kind to 3am you"
+          twitter: https://twitter.com/toolmantim/status/1186388042753265664
+
 - conference: 
     name: PubConf Sydney 2019
     location: Sydney, NSW
