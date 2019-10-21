@@ -3,14 +3,15 @@ class: bottom left
 # .uber[Being kind to 3am you]
 ## .stpad[Katie McLaughlin<br>DevOpsDays Auckland, 2019]
 
-Note: Words of encouragement here. 
+Note: 💪
 
-Hi! I'm Katie
 
 ---
 class: bottom right
 ~@ sleeping.jpeg
-Note: And I like sleep. No really, getting a good night sleep is the best. 
+Note: I like sleep. 
+
+Sleep is just the best. 
 
 Waking up when my body is done, my batteries are at 100% charged, and I can get going with the best possible start to my day. 
 
