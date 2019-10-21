@@ -39,6 +39,17 @@ But if I'm paged, stuff be broken, yo, so I have to get it fixed.
 
 So what I need to do is to set myself up for to be the best I can be when, not if, when, the pager goes off at 3am. 
 
+By "being paged" I mean that my wonderful PagerDuty app had told me by way of a very loud noise that "SOMETHING IS BROKEN"
+
+Because I have previously setup system monitoring for my servers that tell me if they arne't responding to ping and are immediately offline
+
+or if they are at high diskspace and are at risk of becoming unable to respond to alerts
+
+Or if my inbound traffic is causing autoscaling that isn't able to handle the load. 
+
+Alerts that IMMEDIATLEY require human intervention. 
+
+Even at 3am. 
 
 ---
 class: bottom right
@@ -71,16 +82,34 @@ Essentials, Next Steps, and Feedback
 
 And each will be segemented by clever creative commons stock imagery. 
 
+These are all based on my personal experiences of being the gal with the pager for years, across many envirinments, many roles and many companies. From colocation to webhosting to machine learning pipelines to platforms as a service. I have _just_ a bit of experience at being awake at 3am in front of a laptop because an evil little app on my mobile said: "The servers on fiiiirrreee". (Sorry Julie <3)
+
 ---
 
 class: bottom left
 ~@ basics.jpg
 # The Essentials
-Note: so, the essential documentation. 
+Note: so, the essentials. 
+
+Basically:  documentation. 
 
 You should really write down something. 
 
 **PAUSE**
+
+A lot of this talk is going to be about documentation. 
+
+Docuemntation scales. 
+
+Documentation is there when none of your coworkers are. 
+
+Documentation is there when your senior DBA is on leave. 
+
+Documentation is there after your contractors leave. 
+
+Documentation scales. 
+
+**PA*SE**
 
 I mean, it's useful to have documentation. 
 
@@ -92,9 +121,10 @@ And what you really want is a good night's sleep.
 
 You just want to throw some notes down. 
 
-Your tools to use this could be anything: a google doc, onenote, emacs, vim, vscode... 
+Your tools to write this down this could be anything: a google doc, onenote, emacs, vim, vscode... 
 
-But also consider where these docs live. Making sure that your oncall rotor can access your google or one drive. 
+But also consider where these docs live. Making sure that your oncall rotor can access your google drive or one drive. 
+
 Or consider putting the docs closer to your working space: the wiki on your github pages, or say under your username on your Confluence page. Or even a text file in a private project repo, in a pinch.  
 
 But, where you put these notes needs to have some important features. 
@@ -361,7 +391,15 @@ Especially if it's your workday, and you're not already on call.
 ~@ laptop-angle-small.jpg
 
 ### .big[Deprecate & Delete]
-Note: this is 
+Note: this is so important. 
+
+Having a cache of information that is out of date isn't just annoying, it can be catastrophic. Your oncall engineer that finds the *old* fix everything command that used to be the silver bullet that is now the WORST THING TO RUN... they shuld not be finding that in their search cache. 
+
+Deprecating content could be as simple as moving into a cache that's *not* searchable in your main search keyword, but still keeping it around in a secondary system. 
+
+Or, once considered in the light of day, deleting it entirely. 
+
+Having a lack of information at 3am is bad. Having actively harmful inforamtion is worse.  
 
 ---
 class: bottom right
