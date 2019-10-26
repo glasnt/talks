@@ -38,6 +38,7 @@
     talks:
         - name: "What is deployment, anyway?"
           link: https://2019.pygotham.org/talks/what-is-deployment-anyway/
+          video: https://www.youtube.com/watch?v=S7dOCEBoX1w
           slides: 2019_10_PyGotham.podium
           resources: https://github.com/glasnt/talks/tree/gh-pages/2019_10_PyGotham.podium#resources
           twitter: https://twitter.com/jessicagarson/status/1180531644354191360
