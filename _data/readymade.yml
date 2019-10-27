@@ -1,10 +1,24 @@
 - talk:
+    title: "What is deployment, anyway?"
+    abstract: "Terminology variety half-hour, with ponies!"
+    description: |
+        So you've finished the DjangoGirls tutorial, but now you want to share it with the outside world, but how do you go about that?
+
+        In this presentation, we will discuss the basics beyond running a django project locally, and discuss the concepts and strategies around how to host your project.
+
+- talk:
     title: Turning 'wat' into 'why'
     abstract: Take a trip through a dozen different programming languages and understand the 'why' behind the 'wat'.
     description: |
 
-        Programming languages are repeatedly touted to have strange edge cases. Footguns. Wats. The [canonical ‘wat’ talk](https://www.destroyallsoftware.com/talks/wat) shows some of these for Ruby and JavaScript, but doesn’t go into any detail into the ‘why’
+        Programming languages are repeatedly touted to have strange edge cases. Footguns. Wats. The [canonical 'wat' talk](https://www.destroyallsoftware.com/talks/wat) shows some of these for Ruby and JavaScript, but doesn't go into any detail into the 'why'
 
-        In this talk, take a tour through a multitude of programming languages; and see not only the ‘wat’, but the ‘why’: is it a misunderstanding based on an assumption from another programming language? A compiler optimisation? A known bug that can’t be fixed due to backward compatibility concerns?
+        In this talk, take a tour through a multitude of programming languages; and see not only the 'wat', but the 'why': is it a misunderstanding based on an assumption from another programming language? A compiler optimisation? A known bug that can't be fixed due to backward compatibility concerns?
 
-        Attendees will come away from this talk with a greater understanding about how to turn a ‘wat’ into a ‘why’.
+        Attendees will come away from this talk with a greater understanding about how to turn a 'wat' into a 'why'.
+
+- talk:
+    title: Being kind to 3am you
+    abstract: You aren't at your best when you're tired.
+    description: |
+        For engineers who participate in on-call rotations, documentation is critical to resolving issues. Especially when, at 3am, the responding engineer will be on their own and not performing at their peak. From documentation to empathy, let's discuss strategies implemented by a veteran on-call sysadmin and how to be kind to 3am you. 
