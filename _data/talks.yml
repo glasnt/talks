@@ -1,4 +1,15 @@
 - conference:
+    name: DevFest Dublin 2019
+    location: Dublin, Ireland
+    date: 2019-11-16
+    link: https://devfest-dublin.gdgcloud.dev/
+    talks: 
+      - slides: https://noti.st/glasnt/KYrUGY/slides
+        link: https://devfest-dublin.gdgcloud.dev/schedule/2019-11-16?sessionId=103
+        name: "Where should I run my code?"
+        twitter: https://twitter.com/gdgclouddublin/status/1195653565446004737
+
+- conference:
     name: DevOpsDays New Zealand 2019
     location: Auckland, NZ
     date: 2019-10-22
