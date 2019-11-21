@@ -1,4 +1,17 @@
 - conference:
+    name: "Cloud Next UK '19"
+    location: London, England
+    date: 2019-11-20
+    link: https://cloud.withgoogle.com/next/uk
+    talks:
+        - name: "Corralling a Serverless Django Deployment on GCP"
+          link: https://cloud.withgoogle.com/next/uk/speakers?session=DZ225
+          twitter: https://twitter.com/kwazrunner/status/1197135404253745152
+        - name: "Panel Discussion: Application Development on Google Cloud"
+          link: https://cloud.withgoogle.com/next/uk/speakers?session=DZ212
+          twitter: https://twitter.com/GabeWeiss_/status/1197516014302437378
+
+- conference:
     name: DevFest Dublin 2019
     location: Dublin, Ireland
     date: 2019-11-16
