@@ -1,3 +1,10 @@
+- conference: 
+    name: PyCascades 2020
+    date: 2020-02-08
+    talks: 
+        - name: Django translations for the next generation
+          link: https://docs.google.com/presentation/d/1yG8Cr1GcVcWUroPcIGHr4eqZblk5qQWIR1j0iGCuY6k/edit?usp=sharing
+
 - conference:
     name: "Cloud Next UK '19"
     location: London, England
