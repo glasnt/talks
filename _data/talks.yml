@@ -5,7 +5,9 @@
     talks: 
         - name: Django translations for the next generation
           link: https://2020.pycascades.com/lightning-talks/
+          type: Lightning Talk
           slides: https://docs.google.com/presentation/d/1yG8Cr1GcVcWUroPcIGHr4eqZblk5qQWIR1j0iGCuY6k/edit?usp=sharing
+          twitter: https://twitter.com/di_codes/status/1226263772613885952
 
 - conference:
     name: "Cloud Next UK '19"
