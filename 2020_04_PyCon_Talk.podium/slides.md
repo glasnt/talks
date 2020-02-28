@@ -72,11 +72,11 @@ and discuss the helpers django has to assist you.
 ---
 class: title
 # .prokyon[django] 3.0.3
-# .flux[python] 3.8.1
+# .flux[python] 3.8.2
 
 ???
 
-the versions I'm targetting today are specifically django 3.0.3 and python 3.8.1
+the versions I'm targetting today are specifically django 3.0.3 and python 3.8.2
 
 If you're joining me on YouTube from the year 2027, I'm sorry, things have changed since, but hopefully you find value in this talk!
 
@@ -1354,6 +1354,7 @@ if you don't have an opinion, choose a platform as a service.
 if you have opinions or requirements, choose infrastructure as a service.
 
 
+TODO(glasnt): insert a little tiny "what bout that asgi file?!"
 
 
 ---
