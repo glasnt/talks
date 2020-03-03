@@ -836,9 +836,9 @@ class: title
 
 state.
 
-django is a stateful application. It has a database out of the box and static assets.
+django is a stateful application. It has a database requirement out of the box and static assets.
 
-Flask, by default, does not. The sample "Hello world" doesnt' require a database or images, so it's so simpler to deploy.
+Flask, by default, does not. The sample "Hello world" doesnt' *require* a database or images, so it's so simpler to deploy.
 
 ---
 
@@ -1288,7 +1288,7 @@ class: title
 ## ~~Functions as a Service~~
 
 ???
-You could go as detailed as running your app on a server you have in your own home or business ("on-prem") (that make your own everything scenario I mentioned earlier)
+You could go as detailed as running your app on a server you have in your own home or business (that make your own everything scenario I mentioned earlier)
 
 or trying to squeeze django into a function as a service,
 
@@ -1538,6 +1538,9 @@ The ability for other databases to have as much bredth in functionality is limit
 at the time of recording, postgres has the most contribution
 
 If you want your preferred database to have more support, help support it by writing the functionality :)
+
+Or even consider contributing to the databases themselves -- postgres and mysql and mariadb are all actively maintained open source projects, that are only as strong as their contributions.
+
 ---
 class: title
 # Databases hosting
@@ -1858,7 +1861,7 @@ and that is far worse.
 there's so much more to this topic that I just can't even hope to cover.
 --
 
-### continuous deployment, monitoring, scaling, logging,<br>high availablilty, load balancing, secrets,<br>orchestration, zero downtime deployments,<br>blue/green deployments, A/B testing, containers,<br>configuration management, automation...
+### continuous deployment, monitoring, scaling, logging,<br>high availability, load balancing, secrets,<br>orchestration, zero downtime deployments,<br>blue/green deployments, A/B testing, containers,<br>configuration management, automation...
 
 ???
 Nearly each of these topics is their own entire *conference* worth of material.
