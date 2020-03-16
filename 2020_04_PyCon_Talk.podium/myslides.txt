@@ -58,10 +58,10 @@ not the complications, just the complexities.
 and discuss the helpers django has to assist you. 
 
 ---
-#= .prokyon[django] 3.0.3
+#= .prokyon[django] 3.0.4
 # .flux[python] 3.8.2
 
-Note: the versions I'm targetting today are specifically django 3.0.3 and python 3.8.2
+Note: the versions I'm targetting today are specifically django 3.0.4 and python 3.8.2
 
 If you're joining me on YouTube from the year 2027, I'm sorry, things have changed since, but hopefully you find value in this talk!
 
@@ -101,7 +101,7 @@ $$prompt ~/git/glasnt
 pip install django<br> 
 Collecting django<br>
 ...<br>
-Successfully installed django-3.0.3<br>
+Successfully installed django-3.0.4<br>
 $$prompt ~/git/glasnt
 $$w 
 ---
@@ -110,7 +110,7 @@ $$prompt ~/git/glasnt
 pip install django<br> 
 Collecting django<br>
 ...<br>
-Successfully installed django-3.0.3<br>
+Successfully installed django-3.0.4<br>
 $$prompt ~/git/glasnt
 $$w django-admin startproject myproject
 
@@ -125,7 +125,7 @@ $$prompt ~/git/glasnt
 pip install django<br> 
 Collecting django<br>
 ...<br>
-Successfully installed django-3.0.3<br>
+Successfully installed django-3.0.4<br>
 $$prompt ~/git/glasnt
 django-admin startproject myproject<br>
 $$prompt ~/git/glasnt
@@ -140,7 +140,7 @@ $$prompt ~/git/glasnt
 pip install django<br> 
 Collecting django<br>
 ...<br>
-Successfully installed django-3.0.3<br>
+Successfully installed django-3.0.4<br>
 $$prompt ~/git/glasnt
 django-admin startproject myproject<br>
 $$prompt ~/git/glasnt
@@ -153,7 +153,7 @@ $$prompt ~/git/glasnt
 pip install django<br> 
 Collecting django<br>
 ...<br>
-Successfully installed django-3.0.3<br>
+Successfully installed django-3.0.4<br>
 $$prompt ~/git/glasnt
 django-admin startproject myproject<br>
 $$prompt ~/git/glasnt
@@ -166,7 +166,7 @@ $$prompt ~/git/glasnt
 pip install django<br> 
 Collecting django<br>
 ...<br>
-Successfully installed django-3.0.3<br>
+Successfully installed django-3.0.4<br>
 $$prompt ~/git/glasnt
 django-admin startproject myproject<br>
 $$prompt ~/git/glasnt
@@ -179,7 +179,7 @@ $$prompt ~/git/glasnt
 pip install django<br> 
 Collecting django<br>
 ...<br>
-Successfully installed django-3.0.3<br>
+Successfully installed django-3.0.4<br>
 $$prompt ~/git/glasnt
 django-admin startproject myproject<br>
 $$prompt ~/git/glasnt
@@ -211,7 +211,7 @@ Watching for file changes with StatReloader<br>
 Performing system checks...<br>
 System check identified no issues (0 silenced).<br><br>
 .rf[You have 17 unapplied migration(s). Your project may not work properly until you apply the migrations for app(s): admin, auth, contenttypes, sessions.<br>Run 'python manage.py migrate' to apply them.]<br<br><br>
-Django version 3.0.3, using settings 'myproject.settings'<br>
+Django version 3.0.4, using settings 'myproject.settings'<br>
 Starting development server at http:.noop[/]/127.0.0.1:8000/<br>
 Quit the server with CONTROL-C.<br>
 $$w
@@ -225,7 +225,7 @@ Watching for file changes with StatReloader<br>
 Performing system checks...<br>
 System check identified no issues (0 silenced).<br><br>
 .rf[You have 17 unapplied migration(s). Your project may not work properly until you apply the migrations for app(s): admin, auth, contenttypes, sessions.<br>Run .red['python manage.py migrate'] to apply them.]<br<br><br>
-Django version 3.0.3, using settings 'myproject.settings'<br>
+Django version 3.0.4, using settings 'myproject.settings'<br>
 Starting development server at http:.noop[/]/127.0.0.1:8000/<br>
 Quit the server with CONTROL-C.<br>
 $$w
@@ -240,7 +240,7 @@ Watching for file changes with StatReloader<br>
 Performing system checks...<br>
 System check identified no issues (0 silenced).<br><br>
 .rf[You have 17 unapplied migration(s). Your project may not work properly until you apply the migrations for app(s): admin, auth, contenttypes, sessions.<br>Run 'python manage.py migrate' to apply them.]<br<br><br>
-Django version 3.0.3, using settings 'myproject.settings'<br>
+Django version 3.0.4, using settings 'myproject.settings'<br>
 Starting development server at http:.noop[/]/127.0.0.1:8000/<br>
 Quit the server with CONTROL-C.<br>
 $$prompt ~/git/glasnt/myproject
@@ -255,7 +255,7 @@ Watching for file changes with StatReloader<br>
 Performing system checks...<br>
 System check identified no issues (0 silenced).<br><br>
 .rf[You have 17 unapplied migration(s). Your project may not work properly until you apply the migrations for app(s): admin, auth, contenttypes, sessions.<br>Run 'python manage.py migrate' to apply them.]<br<br><br>
-Django version 3.0.3, using settings 'myproject.settings'<br>
+Django version 3.0.4, using settings 'myproject.settings'<br>
 Starting development server at http:.noop[/]/127.0.0.1:8000/<br>
 Quit the server with CONTROL-C.<br>
 $$prompt ~/git/glasnt/myproject
@@ -336,7 +336,7 @@ $$prompt ~/git/glasnt/myproject
 Watching for file changes with StatReloader<br>
 Performing system checks...<br><br>
 System check identified no issues (0 silenced).<br>
-Django version 3.0.3, using settings 'myproject.settings'<br>
+Django version 3.0.4, using settings 'myproject.settings'<br>
 Starting development server at http:.noop[/]/127.0.0.1:8000/<br>
 Quit the server with CONTROL-C.<br>
 $$w
@@ -349,7 +349,7 @@ $$prompt ~/git/glasnt/myproject
 Watching for file changes with StatReloader<br>
 Performing system checks...<br><br>
 System check identified no issues (0 silenced).<br>
-Django version 3.0.3, using settings 'myproject.settings'<br>
+Django version 3.0.4, using settings 'myproject.settings'<br>
 Starting development server at .red[http:.noop[/]/127.0.0.1:8000/]<br>
 Quit the server with CONTROL-C.<br>
 $$w
