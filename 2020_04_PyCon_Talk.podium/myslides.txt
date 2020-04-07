@@ -58,10 +58,10 @@ not the complications, just the complexities.
 and discuss the helpers django has to assist you. 
 
 ---
-#= .prokyon[django] 3.0.4
+#= .prokyon[django] 3.0.5
 # .flux[python] 3.8.2
 
-Note: the versions I'm targetting today are specifically django 3.0.4 and python 3.8.2
+Note: the versions I'm targetting today are specifically django 3.0.5 and python 3.8.2
 
 If you're joining me on YouTube from the year 2027, I'm sorry, things have changed since, but hopefully you find value in this talk!
 
@@ -89,46 +89,46 @@ Note: so let's get started, by taking a look at django as it comes out of the bo
 
 ---
 $$terminal bash
-$$prompt ~/git/glasnt 
+$$prompt ~/code 
 $$w
 ---
 $$terminal bash
-$$prompt ~/git/glasnt 
+$$prompt ~/code 
 $$w pip install django
 ---
 $$terminal bash
-$$prompt ~/git/glasnt
+$$prompt ~/code
 pip install django<br> 
 Collecting django<br>
 ...<br>
-Successfully installed django-3.0.4<br>
-$$prompt ~/git/glasnt
+Successfully installed django-3.0.5<br>
+$$prompt ~/code
 $$w 
 ---
 $$terminal bash
-$$prompt ~/git/glasnt
+$$prompt ~/code
 pip install django<br> 
 Collecting django<br>
 ...<br>
-Successfully installed django-3.0.4<br>
-$$prompt ~/git/glasnt
-$$w django-admin startproject myproject
+Successfully installed django-3.0.5<br>
+$$prompt ~/code
+$$w django-admin startproject myproject .
 
 Note: then we can run the super super helpful 
 
-stat project management command. 
+start project management command, telling it to use the current directory. 
 
 
 ---
 $$terminal bash
-$$prompt ~/git/glasnt
+$$prompt ~/code
 pip install django<br> 
 Collecting django<br>
 ...<br>
-Successfully installed django-3.0.4<br>
-$$prompt ~/git/glasnt
-django-admin startproject myproject<br>
-$$prompt ~/git/glasnt
+Successfully installed django-3.0.5<br>
+$$prompt ~/code
+django-admin startproject myproject .<br>
+$$prompt ~/code
 $$w 
 
 Note: and while this doesn't return any output
@@ -136,82 +136,56 @@ Note: and while this doesn't return any output
 it did create a template project for us. 
 ---
 $$terminal bash
-$$prompt ~/git/glasnt
+$$prompt ~/code
 pip install django<br> 
 Collecting django<br>
 ...<br>
-Successfully installed django-3.0.4<br>
-$$prompt ~/git/glasnt
-django-admin startproject myproject<br>
-$$prompt ~/git/glasnt
-$$w cd myproject
-
-Note: we can see it in the newly created 'myproject' folder. 
----
-$$terminal bash
-$$prompt ~/git/glasnt
-pip install django<br> 
-Collecting django<br>
-...<br>
-Successfully installed django-3.0.4<br>
-$$prompt ~/git/glasnt
-django-admin startproject myproject<br>
-$$prompt ~/git/glasnt
-cd myproject<br>
-$$prompt ~/git/glasnt/myproject
-$$w
----
-$$terminal bash
-$$prompt ~/git/glasnt
-pip install django<br> 
-Collecting django<br>
-...<br>
-Successfully installed django-3.0.4<br>
-$$prompt ~/git/glasnt
-django-admin startproject myproject<br>
-$$prompt ~/git/glasnt
-cd myproject<br>
-$$prompt ~/git/glasnt/myproject
+Successfully installed django-3.0.5<br>
+$$prompt ~/code
+django-admin startproject myproject .<br>
+$$prompt ~/code
 $$w ls -R
+Note: our directory is now
 ---
 $$terminal bash
-$$prompt ~/git/glasnt
+$$prompt ~/code
 pip install django<br> 
 Collecting django<br>
 ...<br>
-Successfully installed django-3.0.4<br>
-$$prompt ~/git/glasnt
-django-admin startproject myproject<br>
-$$prompt ~/git/glasnt
+Successfully installed django-3.0.5<br>
+$$prompt ~/code
+django-admin startproject myproject .<br>
+$$prompt ~/code
 cd myproject<br>
-$$prompt ~/git/glasnt/myproject
+$$prompt ~/code
 ls -R<br>
 .:<br>
 manage.py  myproject<br>
 <br>
 ./myproject:<br>
 ⎽⎽init__.py  asgi.py settings.py  urls.py  wsgi.py<br>
-$$prompt ~/git/glasnt/myproject
+$$prompt ~/code
 $$w
+Note: full of stuff. 
 ---
 $$terminal bash
-$$prompt ~/git/glasnt/myproject
+$$prompt ~/code
 $$w 
 ---
 $$terminal bash
-$$prompt ~/git/glasnt/myproject
+$$prompt ~/code
 $$w python manage.py runserver
 
 Note: we can launch our app locally, using python manage.py runserver
 ---
 $$terminal bash
-$$prompt ~/git/glasnt/myproject
+$$prompt ~/code
 .noop[p]ython manage.py runserver<br>
 Watching for file changes with StatReloader<br>
 Performing system checks...<br>
 System check identified no issues (0 silenced).<br><br>
 .rf[You have 17 unapplied migration(s). Your project may not work properly until you apply the migrations for app(s): admin, auth, contenttypes, sessions.<br>Run 'python manage.py migrate' to apply them.]<br<br><br>
-Django version 3.0.4, using settings 'myproject.settings'<br>
+Django version 3.0.5, using settings 'myproject.settings'<br>
 Starting development server at http:.noop[/]/127.0.0.1:8000/<br>
 Quit the server with CONTROL-C.<br>
 $$w
@@ -219,13 +193,13 @@ Note: but we get this error
 
 ---
 $$terminal bash
-$$prompt ~/git/glasnt/myproject
+$$prompt ~/code
 .noop[p]ython manage.py runserver<br>
 Watching for file changes with StatReloader<br>
 Performing system checks...<br>
 System check identified no issues (0 silenced).<br><br>
 .rf[You have 17 unapplied migration(s). Your project may not work properly until you apply the migrations for app(s): admin, auth, contenttypes, sessions.<br>Run .red['python manage.py migrate'] to apply them.]<br<br><br>
-Django version 3.0.4, using settings 'myproject.settings'<br>
+Django version 3.0.5, using settings 'myproject.settings'<br>
 Starting development server at http:.noop[/]/127.0.0.1:8000/<br>
 Quit the server with CONTROL-C.<br>
 $$w
@@ -234,31 +208,31 @@ Note: oh yay, big red error with a helpful command!
 
 ---
 $$terminal bash
-$$prompt ~/git/glasnt/myproject
+$$prompt ~/code
 .noop[p]ython manage.py runserver<br>
 Watching for file changes with StatReloader<br>
 Performing system checks...<br>
 System check identified no issues (0 silenced).<br><br>
 .rf[You have 17 unapplied migration(s). Your project may not work properly until you apply the migrations for app(s): admin, auth, contenttypes, sessions.<br>Run 'python manage.py migrate' to apply them.]<br<br><br>
-Django version 3.0.4, using settings 'myproject.settings'<br>
+Django version 3.0.5, using settings 'myproject.settings'<br>
 Starting development server at http:.noop[/]/127.0.0.1:8000/<br>
 Quit the server with CONTROL-C.<br>
-$$prompt ~/git/glasnt/myproject
+$$prompt ~/code
 $$w
 
 Note: okay, cancel out of that..
 ---
 $$terminal bash
-$$prompt ~/git/glasnt/myproject
+$$prompt ~/code
 .noop[p]ython manage.py runserver<br>
 Watching for file changes with StatReloader<br>
 Performing system checks...<br>
 System check identified no issues (0 silenced).<br><br>
 .rf[You have 17 unapplied migration(s). Your project may not work properly until you apply the migrations for app(s): admin, auth, contenttypes, sessions.<br>Run 'python manage.py migrate' to apply them.]<br<br><br>
-Django version 3.0.4, using settings 'myproject.settings'<br>
+Django version 3.0.5, using settings 'myproject.settings'<br>
 Starting development server at http:.noop[/]/127.0.0.1:8000/<br>
 Quit the server with CONTROL-C.<br>
-$$prompt ~/git/glasnt/myproject
+$$prompt ~/code
 $$w python manage.py migrate
 ---
 $$terminal bash
@@ -276,7 +250,7 @@ $$terminal bash
 &nbsp;  Applying auth.0010_alter_group_name_max_length... .gf[OK]<br>
 &nbsp;  Applying auth.0011_update_proxy_permissions... .gf[OK]<br>
 &nbsp;  Applying sessions.0001_initial... .gf[OK]<br>
-$$prompt ~/git/glasnt/myproject
+$$prompt ~/code
 $$w
 
 Note: so a whole bunch o' stuff that's been applied. 
@@ -284,59 +258,59 @@ Note: so a whole bunch o' stuff that's been applied.
 but what has changed in our filesystem?
 ---
 $$terminal bash
-$$prompt ~/git/glasnt/myproject
+$$prompt ~/code
 $$w
 
 Note: let's check.
 ---
 $$terminal bash
-$$prompt ~/git/glasnt/myproject
+$$prompt ~/code
 $$w ls -R
 
 ---
 $$terminal bash
-$$prompt ~/git/glasnt/myproject
+$$prompt ~/code
 ls -R<br>
 .:<br>
 db.sqlite3  manage.py  myproject<br>
 <br>
 ./myproject:<br>
 __init__.py  asgi.py settings.py  urls.py  wsgi.py<br>
-$$prompt ~/git/glasnt/myproject
+$$prompt ~/code
 $$w
 
 Note: oh hey, a new file!
 ---
 $$terminal bash
-$$prompt ~/git/glasnt/myproject
+$$prompt ~/code
 ls -R<br>
 .:<br>
 .red[db.sqlite3]  manage.py  myproject<br>
 <br>
 ./myproject:<br>
 __init__.py  asgi.py settings.py  urls.py  wsgi.py<br>
-$$prompt ~/git/glasnt/myproject
+$$prompt ~/code
 $$w
 
 ---
 $$terminal bash
-$$prompt ~/git/glasnt/myproject
+$$prompt ~/code
 $$w
 Note: so clearing that away, we can try running our server again
 ---
 $$terminal bash
-$$prompt ~/git/glasnt/myproject
-$$w ./manage.py runserver
+$$prompt ~/code
+$$w python manage.py runserver
 
 Note: using the shorter version, manage.py runserver
 ---
 $$terminal bash
-$$prompt ~/git/glasnt/myproject
-./manage.py runserver<br>
+$$prompt ~/code
+.noop[p]ython manage.py runserver<br>
 Watching for file changes with StatReloader<br>
 Performing system checks...<br><br>
 System check identified no issues (0 silenced).<br>
-Django version 3.0.4, using settings 'myproject.settings'<br>
+Django version 3.0.5, using settings 'myproject.settings'<br>
 Starting development server at http:.noop[/]/127.0.0.1:8000/<br>
 Quit the server with CONTROL-C.<br>
 $$w
@@ -344,12 +318,12 @@ $$w
 Note: Oh neat, no more error!  
 ---
 $$terminal bash
-$$prompt ~/git/glasnt/myproject
-./manage.py runserver<br>
+$$prompt ~/code
+.noop[p]ython manage.py runserver<br>
 Watching for file changes with StatReloader<br>
 Performing system checks...<br><br>
 System check identified no issues (0 silenced).<br>
-Django version 3.0.4, using settings 'myproject.settings'<br>
+Django version 3.0.5, using settings 'myproject.settings'<br>
 Starting development server at .red[http:.noop[/]/127.0.0.1:8000/]<br>
 Quit the server with CONTROL-C.<br>
 $$w
@@ -374,13 +348,13 @@ Note: we can get our app running locally really well.
 and a lot of this boils down to
 ---
 <br><br><br>
-# .code[./manage.py runserver]
+## .code[python manage.py runserver]
 
 Note: runserver does everything we need to in our local system. 
 ---
 <br><br><br>
-# .code[./manage.py runserver]
-### local web server 
+## .code[python manage.py runserver]
+## local web server 
 ---
 @= 2-runserver-1.png
 vv [➚](https://docs.djangoproject.com/en/3.0/ref/django-admin/#runserver)
@@ -489,8 +463,8 @@ The website is the service that responds when you enter a website URL into your 
 
 ---
 <br><br><br>
-# .code[./manage.py runserver]
-### local web server<br>+ static server 
+## .code[python manage.py runserver]
+## local web server<br>+ static server 
 Note: Runserver is our local web server, but runserver also handles serves our static. 
 ---
 #= What is "static",<br>anyway?
@@ -527,30 +501,30 @@ we can confirm this is the case with our default django projkect.
 
 ---
 $$terminal bash
-$$prompt ~/git/glasnt/myproject
+$$prompt ~/code
 $$w 
 Note: back in our terminal 
 ---
 
 $$terminal bash
-$$prompt ~/git/glasnt/myproject
-$$w cat myproject/settings.py |grep staticf
+$$prompt ~/code
+$$w cat myproject/settings.py | grep staticfiles
 Note: we can check for that staticfiles reference in our settings
 ---
 $$terminal bash
-$$prompt ~/git/glasnt/myproject
-cat myproject/settings.py |grep staticf<br>
+$$prompt ~/code
+cat myproject/settings.py | grep staticfiles<br>
 &nbsp; &nbsp; 'django.contrib.staticfiles',<br>
-$$prompt ~/git/glasnt/myproject
+$$prompt ~/code
 $$w
 
 Note: which is there
 ---
 $$terminal bash
-$$prompt ~/git/glasnt/myproject
-cat myproject/settings.py |grep staticf<br>
+$$prompt ~/code
+cat myproject/settings.py | grep staticfiles<br>
 &nbsp; &nbsp; 'django.contrib.staticfiles',<br>
-$$prompt ~/git/glasnt/myproject
+$$prompt ~/code
 $$w cat myproject/settings.py | grep DEBUG
 $$end
 
@@ -560,13 +534,13 @@ $$end
 Note: and our DEBUG setting
 ---
 $$terminal bash
-$$prompt ~/git/glasnt/myproject
-cat myproject/settings.py |grep staticf<br>
+$$prompt ~/code
+cat myproject/settings.py | grep staticfiles<br>
 &nbsp; &nbsp; 'django.contrib.staticfiles',<br>
-$$prompt ~/git/glasnt/myproject
+$$prompt ~/code
 cat myproject/settings.py | grep DEBUG<br>
 DEBUG = True<br>
-$$prompt ~/git/glasnt/myproject
+$$prompt ~/code
 $$w
 $$end
 .lownote[[Django settings in production](https://djangochat.com/episodes/deployments), W. Vincent]
@@ -588,8 +562,8 @@ This is a helper for local development, so we'll need to substitute with somethi
 While we're also looking at our default settings file for our other helper
 ---
 <br><br><br>
-# .code[DATABASES]
-### default: sqlite
+## .code[DATABASES]
+## default: sqlite
 
 Note: 
 
@@ -601,26 +575,26 @@ the default for our database has already been set for a local sqlite database.
 
 ---
 $$terminal bash
-$$prompt ~/git/glasnt/myproject
+$$prompt ~/code
 ls -R<br>
 .:<br>
 db.sqlite3  manage.py  myproject<br>
 <br>
 ./myproject:<br>
 __init__.py  asgi.py settings.py  urls.py  wsgi.py<br>
-$$prompt ~/git/glasnt/myproject
+$$prompt ~/code
 $$w
 Note: We saw this earlier in our files. 
 ---
 $$terminal bash
-$$prompt ~/git/glasnt/myproject
+$$prompt ~/code
 ls -R<br>
 .:<br>
 .red[db.sqlite3]  manage.py  myproject<br>
 <br>
 ./myproject:<br>
 __init__.py  asgi.py settings.py  urls.py  wsgi.py<br>
-$$prompt ~/git/glasnt/myproject
+$$prompt ~/code
 $$w
 Note: That automatically created db.sqlite3 file
 
@@ -628,27 +602,27 @@ That's our development database.
 
 ---
 $$terminal bash
-$$prompt ~/git/glasnt/myproject
+$$prompt ~/code
 ls -R<br>
 .:<br>
 db.sqlite3  manage.py  myproject<br>
 <br>
 ./myproject:<br>
 __init__.py  asgi.py settings.py  urls.py  wsgi.py<br>
-$$prompt ~/git/glasnt/myproject
+$$prompt ~/code
 $$w cat myproject/settings.py | grep sqlite -C2
 Note: if we take a look at our settings
 
 ---
 $$terminal bash
-$$prompt ~/git/glasnt/myproject
+$$prompt ~/code
 ls -R<br>
 .:<br>
 db.sqlite3  manage.py  myproject<br>
 <br>
 ./myproject:<br>
 __init__.py  asgi.py settings.py  urls.py  wsgi.py<br>
-$$prompt ~/git/glasnt/myproject
+$$prompt ~/code
 cat myproject/settings.py | grep sqlite -C2<br>
 DATABASES = {<br>
 &nbsp; &nbsp; 'default': {<br>
@@ -656,7 +630,7 @@ DATABASES = {<br>
 &nbsp; &nbsp; &nbsp; 'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),<br>
 &nbsp; &nbsp; }<br>
 }<br>
-$$prompt ~/git/glasnt/myproject
+$$prompt ~/code
 $$w
 Note: this was created due to the default DATABASES setting where sqlite is defined as the default backend. 
 
@@ -878,7 +852,7 @@ But, thankfully for us using django, we have some helpers.
 ---
 <br><BR>
 # .prokyon[django] helpers
-## WSGI<br>.c[./manage.py migrate]<br>.c[./manage.py collectstatic]
+## WSGI<br>.c[python manage.py migrate]<br>.c[python manage.py collectstatic]
 
 Note: in order they are wsgi compatitbility, the migrate command, and the collect static command. 
 
@@ -950,47 +924,47 @@ Which we can see from our project earlier.
 
 ---
 $$terminal bash
-$$prompt ~/git/glasnt/myproject
+$$prompt ~/code
 ls -R<br>
 .:<br>
 db.sqlite3 manage.py  myproject<br>
 <br>
 ./myproject:<br>
 ⎽⎽init__.py  asgi.py settings.py  urls.py  wsgi.py<br>
-$$prompt ~/git/glasnt/myproject
+$$prompt ~/code
 $$w
 
 Note:  again, looking at those default files that were created. 
 ---
 $$terminal bash
-$$prompt ~/git/glasnt/myproject
+$$prompt ~/code
 ls -R<br>
 .:<br>
 db.sqlite3 manage.py  myproject<br>
 <br>
 ./myproject:<br>
 ⎽⎽init__.py  asgi.py settings.py  urls.py  .red[wsgi.py]<br>
-$$prompt ~/git/glasnt/myproject
+$$prompt ~/code
 $$w
 
 Note: we can see the default created WSGI file
 ---
 $$terminal bash
-$$prompt ~/git/glasnt/myproject
+$$prompt ~/code
 ls -R<br>
 .:<br>
 db.sqlite3 manage.py  myproject<br>
 <br>
 ./myproject:<br>
 ⎽⎽init__.py  asgi.py settings.py  urls.py  wsgi.py<br>
-$$prompt ~/git/glasnt/myproject
+$$prompt ~/code
 $$w cat myproject/wsgi.py
 
 Note: the contents of which... 
 ---
 $$terminal bash
 WSGI config for myproject project.<br><br>It exposes the WSGI callable as a module-level variable named 'application'.<br>For more information on this file, see<br>https:.noop[/]/docs.djangoproject.com/en/3.0/howto/deployment/wsgi/<br>"""<br>import os<br><br>from django.core.wsgi import get_wsgi_application<br><BR>os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'myproject.settings')<br><BR>application = get_wsgi_application()<br>
-$$prompt ~/git/glasnt/myproject
+$$prompt ~/code
 $$w
 $$end
 .lownote[[Hacking on the HTTP handlers and middleware](https://2019.djangocon.us/talks/using-django-as-a-micro-framework-on-the/) C. Gibson]
@@ -1195,7 +1169,7 @@ And the next one is a database.
 ---
 <br><BR>
 # db helpers: 
-## .code[./manage.py makemigrations<br>./manage.py migrate]
+## .code[python manage.py makemigrations<br>python manage.py migrate]
 
 Note: 
 ⏰ ~~17:00
@@ -1209,9 +1183,10 @@ in my own personal opinion,
 are two of the greatest features of django
 
 Oh, I mean having a dynamic web admin is pretty sweet, but these two commands are just choice. 
---
-
-### created to reduce developer toil
+---
+<br><BR>
+# db helpers: 
+## created to reduce developer toil
 
 Note: 
 The whole concept of automating the migration framework was design to reduce developer toil 
@@ -1234,7 +1209,7 @@ $$terminal bash
 &nbsp;  Applying auth.0010_alter_group_name_max_length... .gf[OK]<br>
 &nbsp;  Applying auth.0011_update_proxy_permissions... .gf[OK]<br>
 &nbsp;  Applying sessions.0001_initial... .gf[OK]<br>
-$$prompt ~/git/glasnt/myproject
+$$prompt ~/code
 $$w
 Note: 
 
@@ -1483,7 +1458,7 @@ Note: and now to the last section in our deployment trifecta
 Note: serving staatic files. 
 ---
 #= static helper:
-## .code[./manage.py collectstatic]
+## .code[python manage.py collectstatic]
 
 Note: the helper here is collectstatic
 
@@ -1568,7 +1543,7 @@ actually deploying.
 we're finally there. 
 
 ---
-##= [copy code to host]<br>.c[./manage.py migrate]<br>.c[./manage.py collectstatic]<br>[start web server]
+##= [copy code to host]<br>[update database, if needed] <br> [update static, if needed]<br>[start web server]
 
 Note: here it is. 
 

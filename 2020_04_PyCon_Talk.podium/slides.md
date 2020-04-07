@@ -71,12 +71,12 @@ and discuss the helpers django has to assist you.
 
 ---
 class: title
-# .prokyon[django] 3.0.3
+# .prokyon[django] 3.0.5
 # .flux[python] 3.8.2
 
 ???
 
-the versions I'm targetting today are specifically django 3.0.3 and python 3.8.2
+the versions I'm targetting today are specifically django 3.0.5 and python 3.8.2
 
 If you're joining me on YouTube from the year 2027, I'm sorry, things have changed since, but hopefully you find value in this talk!
 
@@ -109,48 +109,48 @@ so let's get started, by taking a look at django as it comes out of the box
 
 ---
 <div class="shell-wrap"><p class="shell-top-bar">bash</p><p class="shell-body">
-<ps>myrtle</ps> <dr>~/git/glasnt $</dr>
+<ps>myrtle</ps> <dr>~/code $</dr>
 <w>&nbsp;</w>
 ---
 <div class="shell-wrap"><p class="shell-top-bar">bash</p><p class="shell-body">
-<ps>myrtle</ps> <dr>~/git/glasnt $</dr>
+<ps>myrtle</ps> <dr>~/code $</dr>
 pip install django<w>&nbsp;</w>
 ---
 <div class="shell-wrap"><p class="shell-top-bar">bash</p><p class="shell-body">
-<ps>myrtle</ps> <dr>~/git/glasnt $</dr>
+<ps>myrtle</ps> <dr>~/code $</dr>
 pip install django<br>
 Collecting django<br>
 ...<br>
-Successfully installed django-3.0.3<br>
-<ps>myrtle</ps> <dr>~/git/glasnt $</dr>
+Successfully installed django-3.0.5<br>
+<ps>myrtle</ps> <dr>~/code $</dr>
 <w>&nbsp;</w>
 ---
 <div class="shell-wrap"><p class="shell-top-bar">bash</p><p class="shell-body">
-<ps>myrtle</ps> <dr>~/git/glasnt $</dr>
+<ps>myrtle</ps> <dr>~/code $</dr>
 pip install django<br>
 Collecting django<br>
 ...<br>
-Successfully installed django-3.0.3<br>
-<ps>myrtle</ps> <dr>~/git/glasnt $</dr>
-django-admin startproject myproject<w>&nbsp;</w>
+Successfully installed django-3.0.5<br>
+<ps>myrtle</ps> <dr>~/code $</dr>
+django-admin startproject myproject .<w>&nbsp;</w>
 
 ???
 
 then we can run the super super helpful
 
-stat project management command.
+start project management command, telling it to use the current directory.
 
 
 ---
 <div class="shell-wrap"><p class="shell-top-bar">bash</p><p class="shell-body">
-<ps>myrtle</ps> <dr>~/git/glasnt $</dr>
+<ps>myrtle</ps> <dr>~/code $</dr>
 pip install django<br>
 Collecting django<br>
 ...<br>
-Successfully installed django-3.0.3<br>
-<ps>myrtle</ps> <dr>~/git/glasnt $</dr>
-django-admin startproject myproject<br>
-<ps>myrtle</ps> <dr>~/git/glasnt $</dr>
+Successfully installed django-3.0.5<br>
+<ps>myrtle</ps> <dr>~/code $</dr>
+django-admin startproject myproject .<br>
+<ps>myrtle</ps> <dr>~/code $</dr>
 <w>&nbsp;</w>
 
 ???
@@ -160,72 +160,48 @@ and while this doesn't return any output
 it did create a template project for us.
 ---
 <div class="shell-wrap"><p class="shell-top-bar">bash</p><p class="shell-body">
-<ps>myrtle</ps> <dr>~/git/glasnt $</dr>
+<ps>myrtle</ps> <dr>~/code $</dr>
 pip install django<br>
 Collecting django<br>
 ...<br>
-Successfully installed django-3.0.3<br>
-<ps>myrtle</ps> <dr>~/git/glasnt $</dr>
-django-admin startproject myproject<br>
-<ps>myrtle</ps> <dr>~/git/glasnt $</dr>
-cd myproject<w>&nbsp;</w>
-
+Successfully installed django-3.0.5<br>
+<ps>myrtle</ps> <dr>~/code $</dr>
+django-admin startproject myproject .<br>
+<ps>myrtle</ps> <dr>~/code $</dr>
+ls -R<w>&nbsp;</w>
 ???
 
-we can see it in the newly created 'myproject' folder.
+our directory is now
 ---
 <div class="shell-wrap"><p class="shell-top-bar">bash</p><p class="shell-body">
-<ps>myrtle</ps> <dr>~/git/glasnt $</dr>
+<ps>myrtle</ps> <dr>~/code $</dr>
 pip install django<br>
 Collecting django<br>
 ...<br>
-Successfully installed django-3.0.3<br>
-<ps>myrtle</ps> <dr>~/git/glasnt $</dr>
-django-admin startproject myproject<br>
-<ps>myrtle</ps> <dr>~/git/glasnt $</dr>
+Successfully installed django-3.0.5<br>
+<ps>myrtle</ps> <dr>~/code $</dr>
+django-admin startproject myproject .<br>
+<ps>myrtle</ps> <dr>~/code $</dr>
 cd myproject<br>
-<ps>myrtle</ps> <dr>~/git/glasnt/myproject $</dr>
-<w>&nbsp;</w>
----
-<div class="shell-wrap"><p class="shell-top-bar">bash</p><p class="shell-body">
-<ps>myrtle</ps> <dr>~/git/glasnt $</dr>
-pip install django<br>
-Collecting django<br>
-...<br>
-Successfully installed django-3.0.3<br>
-<ps>myrtle</ps> <dr>~/git/glasnt $</dr>
-django-admin startproject myproject<br>
-<ps>myrtle</ps> <dr>~/git/glasnt $</dr>
-cd myproject<br>
-<ps>myrtle</ps> <dr>~/git/glasnt/myproject $</dr>
-ls -R<w>&nbsp;</w>
----
-<div class="shell-wrap"><p class="shell-top-bar">bash</p><p class="shell-body">
-<ps>myrtle</ps> <dr>~/git/glasnt $</dr>
-pip install django<br>
-Collecting django<br>
-...<br>
-Successfully installed django-3.0.3<br>
-<ps>myrtle</ps> <dr>~/git/glasnt $</dr>
-django-admin startproject myproject<br>
-<ps>myrtle</ps> <dr>~/git/glasnt $</dr>
-cd myproject<br>
-<ps>myrtle</ps> <dr>~/git/glasnt/myproject $</dr>
+<ps>myrtle</ps> <dr>~/code $</dr>
 ls -R<br>
 .:<br>
 manage.py myproject<br>
 <br>
 ./myproject:<br>
 ⎽⎽init__.py asgi.py settings.py urls.py wsgi.py<br>
-<ps>myrtle</ps> <dr>~/git/glasnt/myproject $</dr>
+<ps>myrtle</ps> <dr>~/code $</dr>
+<w>&nbsp;</w>
+???
+
+full of stuff.
+---
+<div class="shell-wrap"><p class="shell-top-bar">bash</p><p class="shell-body">
+<ps>myrtle</ps> <dr>~/code $</dr>
 <w>&nbsp;</w>
 ---
 <div class="shell-wrap"><p class="shell-top-bar">bash</p><p class="shell-body">
-<ps>myrtle</ps> <dr>~/git/glasnt/myproject $</dr>
-<w>&nbsp;</w>
----
-<div class="shell-wrap"><p class="shell-top-bar">bash</p><p class="shell-body">
-<ps>myrtle</ps> <dr>~/git/glasnt/myproject $</dr>
+<ps>myrtle</ps> <dr>~/code $</dr>
 python manage.py runserver<w>&nbsp;</w>
 
 ???
@@ -233,13 +209,13 @@ python manage.py runserver<w>&nbsp;</w>
 we can launch our app locally, using python manage.py runserver
 ---
 <div class="shell-wrap"><p class="shell-top-bar">bash</p><p class="shell-body">
-<ps>myrtle</ps> <dr>~/git/glasnt/myproject $</dr>
+<ps>myrtle</ps> <dr>~/code $</dr>
 .noop[p]ython manage.py runserver<br>
 Watching for file changes with StatReloader<br>
 Performing system checks...<br>
 System check identified no issues (0 silenced).<br><br>
 .rf[You have 17 unapplied migration(s). Your project may not work properly until you apply the migrations for app(s): admin, auth, contenttypes, sessions.<br>Run 'python manage.py migrate' to apply them.]<br<br><br>
-Django version 3.0.3, using settings 'myproject.settings'<br>
+Django version 3.0.5, using settings 'myproject.settings'<br>
 Starting development server at http:.noop[/]/127.0.0.1:8000/<br>
 Quit the server with CONTROL-C.<br>
 <w>&nbsp;</w>
@@ -249,13 +225,13 @@ but we get this error
 
 ---
 <div class="shell-wrap"><p class="shell-top-bar">bash</p><p class="shell-body">
-<ps>myrtle</ps> <dr>~/git/glasnt/myproject $</dr>
+<ps>myrtle</ps> <dr>~/code $</dr>
 .noop[p]ython manage.py runserver<br>
 Watching for file changes with StatReloader<br>
 Performing system checks...<br>
 System check identified no issues (0 silenced).<br><br>
 .rf[You have 17 unapplied migration(s). Your project may not work properly until you apply the migrations for app(s): admin, auth, contenttypes, sessions.<br>Run .red['python manage.py migrate'] to apply them.]<br<br><br>
-Django version 3.0.3, using settings 'myproject.settings'<br>
+Django version 3.0.5, using settings 'myproject.settings'<br>
 Starting development server at http:.noop[/]/127.0.0.1:8000/<br>
 Quit the server with CONTROL-C.<br>
 <w>&nbsp;</w>
@@ -266,16 +242,16 @@ oh yay, big red error with a helpful command!
 
 ---
 <div class="shell-wrap"><p class="shell-top-bar">bash</p><p class="shell-body">
-<ps>myrtle</ps> <dr>~/git/glasnt/myproject $</dr>
+<ps>myrtle</ps> <dr>~/code $</dr>
 .noop[p]ython manage.py runserver<br>
 Watching for file changes with StatReloader<br>
 Performing system checks...<br>
 System check identified no issues (0 silenced).<br><br>
 .rf[You have 17 unapplied migration(s). Your project may not work properly until you apply the migrations for app(s): admin, auth, contenttypes, sessions.<br>Run 'python manage.py migrate' to apply them.]<br<br><br>
-Django version 3.0.3, using settings 'myproject.settings'<br>
+Django version 3.0.5, using settings 'myproject.settings'<br>
 Starting development server at http:.noop[/]/127.0.0.1:8000/<br>
 Quit the server with CONTROL-C.<br>
-<ps>myrtle</ps> <dr>~/git/glasnt/myproject $</dr>
+<ps>myrtle</ps> <dr>~/code $</dr>
 <w>&nbsp;</w>
 
 ???
@@ -283,16 +259,16 @@ Quit the server with CONTROL-C.<br>
 okay, cancel out of that..
 ---
 <div class="shell-wrap"><p class="shell-top-bar">bash</p><p class="shell-body">
-<ps>myrtle</ps> <dr>~/git/glasnt/myproject $</dr>
+<ps>myrtle</ps> <dr>~/code $</dr>
 .noop[p]ython manage.py runserver<br>
 Watching for file changes with StatReloader<br>
 Performing system checks...<br>
 System check identified no issues (0 silenced).<br><br>
 .rf[You have 17 unapplied migration(s). Your project may not work properly until you apply the migrations for app(s): admin, auth, contenttypes, sessions.<br>Run 'python manage.py migrate' to apply them.]<br<br><br>
-Django version 3.0.3, using settings 'myproject.settings'<br>
+Django version 3.0.5, using settings 'myproject.settings'<br>
 Starting development server at http:.noop[/]/127.0.0.1:8000/<br>
 Quit the server with CONTROL-C.<br>
-<ps>myrtle</ps> <dr>~/git/glasnt/myproject $</dr>
+<ps>myrtle</ps> <dr>~/code $</dr>
 python manage.py migrate<w>&nbsp;</w>
 ---
 <div class="shell-wrap"><p class="shell-top-bar">bash</p><p class="shell-body">
@@ -310,7 +286,7 @@ python manage.py migrate<w>&nbsp;</w>
 &nbsp; Applying auth.0010_alter_group_name_max_length... .gf[OK]<br>
 &nbsp; Applying auth.0011_update_proxy_permissions... .gf[OK]<br>
 &nbsp; Applying sessions.0001_initial... .gf[OK]<br>
-<ps>myrtle</ps> <dr>~/git/glasnt/myproject $</dr>
+<ps>myrtle</ps> <dr>~/code $</dr>
 <w>&nbsp;</w>
 
 ???
@@ -320,7 +296,7 @@ so a whole bunch o' stuff that's been applied.
 but what has changed in our filesystem?
 ---
 <div class="shell-wrap"><p class="shell-top-bar">bash</p><p class="shell-body">
-<ps>myrtle</ps> <dr>~/git/glasnt/myproject $</dr>
+<ps>myrtle</ps> <dr>~/code $</dr>
 <w>&nbsp;</w>
 
 ???
@@ -328,19 +304,19 @@ but what has changed in our filesystem?
 let's check.
 ---
 <div class="shell-wrap"><p class="shell-top-bar">bash</p><p class="shell-body">
-<ps>myrtle</ps> <dr>~/git/glasnt/myproject $</dr>
+<ps>myrtle</ps> <dr>~/code $</dr>
 ls -R<w>&nbsp;</w>
 
 ---
 <div class="shell-wrap"><p class="shell-top-bar">bash</p><p class="shell-body">
-<ps>myrtle</ps> <dr>~/git/glasnt/myproject $</dr>
+<ps>myrtle</ps> <dr>~/code $</dr>
 ls -R<br>
 .:<br>
 db.sqlite3 manage.py myproject<br>
 <br>
 ./myproject:<br>
 __init__.py asgi.py settings.py urls.py wsgi.py<br>
-<ps>myrtle</ps> <dr>~/git/glasnt/myproject $</dr>
+<ps>myrtle</ps> <dr>~/code $</dr>
 <w>&nbsp;</w>
 
 ???
@@ -348,39 +324,39 @@ __init__.py asgi.py settings.py urls.py wsgi.py<br>
 oh hey, a new file!
 ---
 <div class="shell-wrap"><p class="shell-top-bar">bash</p><p class="shell-body">
-<ps>myrtle</ps> <dr>~/git/glasnt/myproject $</dr>
+<ps>myrtle</ps> <dr>~/code $</dr>
 ls -R<br>
 .:<br>
 .red[db.sqlite3] manage.py myproject<br>
 <br>
 ./myproject:<br>
 __init__.py asgi.py settings.py urls.py wsgi.py<br>
-<ps>myrtle</ps> <dr>~/git/glasnt/myproject $</dr>
+<ps>myrtle</ps> <dr>~/code $</dr>
 <w>&nbsp;</w>
 
 ---
 <div class="shell-wrap"><p class="shell-top-bar">bash</p><p class="shell-body">
-<ps>myrtle</ps> <dr>~/git/glasnt/myproject $</dr>
+<ps>myrtle</ps> <dr>~/code $</dr>
 <w>&nbsp;</w>
 ???
 
 so clearing that away, we can try running our server again
 ---
 <div class="shell-wrap"><p class="shell-top-bar">bash</p><p class="shell-body">
-<ps>myrtle</ps> <dr>~/git/glasnt/myproject $</dr>
-./manage.py runserver<w>&nbsp;</w>
+<ps>myrtle</ps> <dr>~/code $</dr>
+python manage.py runserver<w>&nbsp;</w>
 
 ???
 
 using the shorter version, manage.py runserver
 ---
 <div class="shell-wrap"><p class="shell-top-bar">bash</p><p class="shell-body">
-<ps>myrtle</ps> <dr>~/git/glasnt/myproject $</dr>
-./manage.py runserver<br>
+<ps>myrtle</ps> <dr>~/code $</dr>
+.noop[p]ython manage.py runserver<br>
 Watching for file changes with StatReloader<br>
 Performing system checks...<br><br>
 System check identified no issues (0 silenced).<br>
-Django version 3.0.3, using settings 'myproject.settings'<br>
+Django version 3.0.5, using settings 'myproject.settings'<br>
 Starting development server at http:.noop[/]/127.0.0.1:8000/<br>
 Quit the server with CONTROL-C.<br>
 <w>&nbsp;</w>
@@ -390,12 +366,12 @@ Quit the server with CONTROL-C.<br>
 Oh neat, no more error!
 ---
 <div class="shell-wrap"><p class="shell-top-bar">bash</p><p class="shell-body">
-<ps>myrtle</ps> <dr>~/git/glasnt/myproject $</dr>
-./manage.py runserver<br>
+<ps>myrtle</ps> <dr>~/code $</dr>
+.noop[p]ython manage.py runserver<br>
 Watching for file changes with StatReloader<br>
 Performing system checks...<br><br>
 System check identified no issues (0 silenced).<br>
-Django version 3.0.3, using settings 'myproject.settings'<br>
+Django version 3.0.5, using settings 'myproject.settings'<br>
 Starting development server at .red[http:.noop[/]/127.0.0.1:8000/]<br>
 Quit the server with CONTROL-C.<br>
 <w>&nbsp;</w>
@@ -429,15 +405,15 @@ we can get our app running locally really well.
 and a lot of this boils down to
 ---
 <br><br><br>
-# .code[./manage.py runserver]
+## .code[python manage.py runserver]
 
 ???
 
 runserver does everything we need to in our local system.
 ---
 <br><br><br>
-# .code[./manage.py runserver]
-### local web server
+## .code[python manage.py runserver]
+## local web server
 ---
 class: middle, center, image
 ![Image](images/2-runserver-1.png)
@@ -556,8 +532,8 @@ The website is the service that responds when you enter a website URL into your 
 
 ---
 <br><br><br>
-# .code[./manage.py runserver]
-### local web server<br>+ static server
+## .code[python manage.py runserver]
+## local web server<br>+ static server
 ???
 
 Runserver is our local web server, but runserver also handles serves our static.
@@ -601,7 +577,7 @@ we can confirm this is the case with our default django projkect.
 
 ---
 <div class="shell-wrap"><p class="shell-top-bar">bash</p><p class="shell-body">
-<ps>myrtle</ps> <dr>~/git/glasnt/myproject $</dr>
+<ps>myrtle</ps> <dr>~/code $</dr>
 <w>&nbsp;</w>
 ???
 
@@ -609,17 +585,17 @@ back in our terminal
 ---
 
 <div class="shell-wrap"><p class="shell-top-bar">bash</p><p class="shell-body">
-<ps>myrtle</ps> <dr>~/git/glasnt/myproject $</dr>
-cat myproject/settings.py |grep staticf<w>&nbsp;</w>
+<ps>myrtle</ps> <dr>~/code $</dr>
+cat myproject/settings.py | grep staticfiles<w>&nbsp;</w>
 ???
 
 we can check for that staticfiles reference in our settings
 ---
 <div class="shell-wrap"><p class="shell-top-bar">bash</p><p class="shell-body">
-<ps>myrtle</ps> <dr>~/git/glasnt/myproject $</dr>
-cat myproject/settings.py |grep staticf<br>
+<ps>myrtle</ps> <dr>~/code $</dr>
+cat myproject/settings.py | grep staticfiles<br>
 &nbsp; &nbsp; 'django.contrib.staticfiles',<br>
-<ps>myrtle</ps> <dr>~/git/glasnt/myproject $</dr>
+<ps>myrtle</ps> <dr>~/code $</dr>
 <w>&nbsp;</w>
 
 ???
@@ -627,10 +603,10 @@ cat myproject/settings.py |grep staticf<br>
 which is there
 ---
 <div class="shell-wrap"><p class="shell-top-bar">bash</p><p class="shell-body">
-<ps>myrtle</ps> <dr>~/git/glasnt/myproject $</dr>
-cat myproject/settings.py |grep staticf<br>
+<ps>myrtle</ps> <dr>~/code $</dr>
+cat myproject/settings.py | grep staticfiles<br>
 &nbsp; &nbsp; 'django.contrib.staticfiles',<br>
-<ps>myrtle</ps> <dr>~/git/glasnt/myproject $</dr>
+<ps>myrtle</ps> <dr>~/code $</dr>
 cat myproject/settings.py | grep DEBUG<w>&nbsp;</w>
 </p></p></div>
 
@@ -642,13 +618,13 @@ cat myproject/settings.py | grep DEBUG<w>&nbsp;</w>
 and our DEBUG setting
 ---
 <div class="shell-wrap"><p class="shell-top-bar">bash</p><p class="shell-body">
-<ps>myrtle</ps> <dr>~/git/glasnt/myproject $</dr>
-cat myproject/settings.py |grep staticf<br>
+<ps>myrtle</ps> <dr>~/code $</dr>
+cat myproject/settings.py | grep staticfiles<br>
 &nbsp; &nbsp; 'django.contrib.staticfiles',<br>
-<ps>myrtle</ps> <dr>~/git/glasnt/myproject $</dr>
+<ps>myrtle</ps> <dr>~/code $</dr>
 cat myproject/settings.py | grep DEBUG<br>
 DEBUG = True<br>
-<ps>myrtle</ps> <dr>~/git/glasnt/myproject $</dr>
+<ps>myrtle</ps> <dr>~/code $</dr>
 <w>&nbsp;</w>
 </p></p></div>
 .lownote[[Django settings in production](https://djangochat.com/episodes/deployments), W. Vincent]
@@ -676,8 +652,8 @@ This is a helper for local development, so we'll need to substitute with somethi
 While we're also looking at our default settings file for our other helper
 ---
 <br><br><br>
-# .code[DATABASES]
-### default: sqlite
+## .code[DATABASES]
+## default: sqlite
 
 ???
 
@@ -689,28 +665,28 @@ the default for our database has already been set for a local sqlite database.
 
 ---
 <div class="shell-wrap"><p class="shell-top-bar">bash</p><p class="shell-body">
-<ps>myrtle</ps> <dr>~/git/glasnt/myproject $</dr>
+<ps>myrtle</ps> <dr>~/code $</dr>
 ls -R<br>
 .:<br>
 db.sqlite3 manage.py myproject<br>
 <br>
 ./myproject:<br>
 __init__.py asgi.py settings.py urls.py wsgi.py<br>
-<ps>myrtle</ps> <dr>~/git/glasnt/myproject $</dr>
+<ps>myrtle</ps> <dr>~/code $</dr>
 <w>&nbsp;</w>
 ???
 
 We saw this earlier in our files.
 ---
 <div class="shell-wrap"><p class="shell-top-bar">bash</p><p class="shell-body">
-<ps>myrtle</ps> <dr>~/git/glasnt/myproject $</dr>
+<ps>myrtle</ps> <dr>~/code $</dr>
 ls -R<br>
 .:<br>
 .red[db.sqlite3] manage.py myproject<br>
 <br>
 ./myproject:<br>
 __init__.py asgi.py settings.py urls.py wsgi.py<br>
-<ps>myrtle</ps> <dr>~/git/glasnt/myproject $</dr>
+<ps>myrtle</ps> <dr>~/code $</dr>
 <w>&nbsp;</w>
 ???
 
@@ -720,14 +696,14 @@ That's our development database.
 
 ---
 <div class="shell-wrap"><p class="shell-top-bar">bash</p><p class="shell-body">
-<ps>myrtle</ps> <dr>~/git/glasnt/myproject $</dr>
+<ps>myrtle</ps> <dr>~/code $</dr>
 ls -R<br>
 .:<br>
 db.sqlite3 manage.py myproject<br>
 <br>
 ./myproject:<br>
 __init__.py asgi.py settings.py urls.py wsgi.py<br>
-<ps>myrtle</ps> <dr>~/git/glasnt/myproject $</dr>
+<ps>myrtle</ps> <dr>~/code $</dr>
 cat myproject/settings.py | grep sqlite -C2<w>&nbsp;</w>
 ???
 
@@ -735,14 +711,14 @@ if we take a look at our settings
 
 ---
 <div class="shell-wrap"><p class="shell-top-bar">bash</p><p class="shell-body">
-<ps>myrtle</ps> <dr>~/git/glasnt/myproject $</dr>
+<ps>myrtle</ps> <dr>~/code $</dr>
 ls -R<br>
 .:<br>
 db.sqlite3 manage.py myproject<br>
 <br>
 ./myproject:<br>
 __init__.py asgi.py settings.py urls.py wsgi.py<br>
-<ps>myrtle</ps> <dr>~/git/glasnt/myproject $</dr>
+<ps>myrtle</ps> <dr>~/code $</dr>
 cat myproject/settings.py | grep sqlite -C2<br>
 DATABASES = {<br>
 &nbsp; &nbsp; 'default': {<br>
@@ -750,7 +726,7 @@ DATABASES = {<br>
 &nbsp; &nbsp; &nbsp; 'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),<br>
 &nbsp; &nbsp; }<br>
 }<br>
-<ps>myrtle</ps> <dr>~/git/glasnt/myproject $</dr>
+<ps>myrtle</ps> <dr>~/code $</dr>
 <w>&nbsp;</w>
 ???
 
@@ -1004,7 +980,7 @@ But, thankfully for us using django, we have some helpers.
 ---
 <br><BR>
 # .prokyon[django] helpers
-## WSGI<br>.c[./manage.py migrate]<br>.c[./manage.py collectstatic]
+## WSGI<br>.c[python manage.py migrate]<br>.c[python manage.py collectstatic]
 
 ???
 
@@ -1092,14 +1068,14 @@ Which we can see from our project earlier.
 
 ---
 <div class="shell-wrap"><p class="shell-top-bar">bash</p><p class="shell-body">
-<ps>myrtle</ps> <dr>~/git/glasnt/myproject $</dr>
+<ps>myrtle</ps> <dr>~/code $</dr>
 ls -R<br>
 .:<br>
 db.sqlite3 manage.py myproject<br>
 <br>
 ./myproject:<br>
 ⎽⎽init__.py asgi.py settings.py urls.py wsgi.py<br>
-<ps>myrtle</ps> <dr>~/git/glasnt/myproject $</dr>
+<ps>myrtle</ps> <dr>~/code $</dr>
 <w>&nbsp;</w>
 
 ???
@@ -1107,14 +1083,14 @@ db.sqlite3 manage.py myproject<br>
 again, looking at those default files that were created.
 ---
 <div class="shell-wrap"><p class="shell-top-bar">bash</p><p class="shell-body">
-<ps>myrtle</ps> <dr>~/git/glasnt/myproject $</dr>
+<ps>myrtle</ps> <dr>~/code $</dr>
 ls -R<br>
 .:<br>
 db.sqlite3 manage.py myproject<br>
 <br>
 ./myproject:<br>
 ⎽⎽init__.py asgi.py settings.py urls.py .red[wsgi.py]<br>
-<ps>myrtle</ps> <dr>~/git/glasnt/myproject $</dr>
+<ps>myrtle</ps> <dr>~/code $</dr>
 <w>&nbsp;</w>
 
 ???
@@ -1122,14 +1098,14 @@ db.sqlite3 manage.py myproject<br>
 we can see the default created WSGI file
 ---
 <div class="shell-wrap"><p class="shell-top-bar">bash</p><p class="shell-body">
-<ps>myrtle</ps> <dr>~/git/glasnt/myproject $</dr>
+<ps>myrtle</ps> <dr>~/code $</dr>
 ls -R<br>
 .:<br>
 db.sqlite3 manage.py myproject<br>
 <br>
 ./myproject:<br>
 ⎽⎽init__.py asgi.py settings.py urls.py wsgi.py<br>
-<ps>myrtle</ps> <dr>~/git/glasnt/myproject $</dr>
+<ps>myrtle</ps> <dr>~/code $</dr>
 cat myproject/wsgi.py<w>&nbsp;</w>
 
 ???
@@ -1138,7 +1114,7 @@ the contents of which...
 ---
 <div class="shell-wrap"><p class="shell-top-bar">bash</p><p class="shell-body">
 WSGI config for myproject project.<br><br>It exposes the WSGI callable as a module-level variable named 'application'.<br>For more information on this file, see<br>https:.noop[/]/docs.djangoproject.com/en/3.0/howto/deployment/wsgi/<br>"""<br>import os<br><br>from django.core.wsgi import get_wsgi_application<br><BR>os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'myproject.settings')<br><BR>application = get_wsgi_application()<br>
-<ps>myrtle</ps> <dr>~/git/glasnt/myproject $</dr>
+<ps>myrtle</ps> <dr>~/code $</dr>
 <w>&nbsp;</w>
 </p></p></div>
 .lownote[[Hacking on the HTTP handlers and middleware](https://2019.djangocon.us/talks/using-django-as-a-micro-framework-on-the/) C. Gibson]
@@ -1382,7 +1358,7 @@ And the next one is a database.
 ---
 <br><BR>
 # db helpers:
-## .code[./manage.py makemigrations<br>./manage.py migrate]
+## .code[python manage.py makemigrations<br>python manage.py migrate]
 
 ???
 ⏰ ~~17:00
@@ -1396,9 +1372,10 @@ in my own personal opinion,
 are two of the greatest features of django
 
 Oh, I mean having a dynamic web admin is pretty sweet, but these two commands are just choice.
---
-
-### created to reduce developer toil
+---
+<br><BR>
+# db helpers:
+## created to reduce developer toil
 
 ???
 The whole concept of automating the migration framework was design to reduce developer toil
@@ -1421,7 +1398,7 @@ the migrations framework is designed to create the required database commands in
 &nbsp; Applying auth.0010_alter_group_name_max_length... .gf[OK]<br>
 &nbsp; Applying auth.0011_update_proxy_permissions... .gf[OK]<br>
 &nbsp; Applying sessions.0001_initial... .gf[OK]<br>
-<ps>myrtle</ps> <dr>~/git/glasnt/myproject $</dr>
+<ps>myrtle</ps> <dr>~/code $</dr>
 <w>&nbsp;</w>
 ???
 
@@ -1711,7 +1688,7 @@ serving staatic files.
 ---
 class: title
 # static helper:
-## .code[./manage.py collectstatic]
+## .code[python manage.py collectstatic]
 
 ???
 
@@ -1809,7 +1786,7 @@ we're finally there.
 
 ---
 class: title
-## [copy code to host]<br>.c[./manage.py migrate]<br>.c[./manage.py collectstatic]<br>[start web server]
+## [copy code to host]<br>[update database, if needed] <br> [update static, if needed]<br>[start web server]
 
 ???
 
