@@ -17,7 +17,9 @@ class: title
 ![Image](images/footer.svg)
 
 ???
-Hi! I'm katie, and this isn't the talk you're expecting.
+Hi! I'm Katie, and this is "what is deployment, anyway?"
+
+This isn't the talk you're expecting.
 
 ---
 
@@ -25,14 +27,14 @@ class: title
 ## .thin[What this talk isn't.]
 
 ???
+
 this isn't a talk about "the one true way" to deploy your app
 
-I will express some opinions, giving you some background around some of those opinions
+This talk is full of opinions, but
 
-but mostly this is a review of the world as at 2019
+but mostly this is a review of the world of deployment as it is in 2020
 
-This talk is diving into the complexities of deployment, in essense
-
+This talk is diving into the complexities of deployment, in essense answering the question
 ---
 
 
@@ -40,34 +42,38 @@ class: title
 # .thin[What .b[is] deployment,<br>anyway?]
 
 ???
-We'll discuss, well, what is deployment, anyway?
+
+what is deployment, anyway?
+
+more specifically
 
 ---
 class: title
 # .thin[What is .prokyon[django] deployment,<br>anyway?]
 ???
 
-and specifically within the context of deploying a django application.
+what is django deployment anyway.
 
-But I'm choosing django here for a reason, which will become apparaent later.
+I'm choosing Django here for a reason.
+
 ---
 class: title
-# Points of interest
+# points of interest
 ## out of the box .prokyon[django]
 ## complexities
 ## helpers
 
 ???
 
-we'll be taking a journey today, so instead of an agenda, here are at least a few points of interest along our trip.
+Some of the points of interest on our jounry today:
 
-We'll start by looking at exactly what comes out of the box with django
+we'll start by looking at exactly what comes out of the box with django
 
 and from there discuss the complexities django has compared to other frameworks when it comes to deployment
 
 not the complications, just the complexities.
 
-and discuss the helpers django has to assist you.
+and we'll discuss the helpers django has to assist you.
 
 ---
 class: title
@@ -76,9 +82,17 @@ class: title
 
 ???
 
-the versions I'm targetting today are specifically django 3.0.5 and python 3.8.2
+This talk and the code examples in this talk are specifically
 
-If you're joining me on YouTube from the year 2027, I'm sorry, things have changed since, but hopefully you find value in this talk!
+django 305
+and Python 3.8.2
+
+
+If you're joining me on YouTube from the year 2028
+
+I'm sorry, this talk might be a little bit out of date.
+
+But hopefully you still learn something.
 
 ---
 class: title
@@ -88,7 +102,7 @@ class: title
 
 we're also just going to stick to base django
 
-No additional features, no task management, no other helpers
+No additional features, nothing async, no task management, no other helpers
 
 Just whatever comes in stock standard django
 
@@ -105,7 +119,7 @@ to a more complex setup, but no extra complexities.
 
 ???
 
-so let's get started, by taking a look at django as it comes out of the box
+So, ;et's look at Django, as it comes out of the box.
 
 ---
 <div class="shell-wrap"><p class="shell-top-bar">bash</p><p class="shell-body">
@@ -181,8 +195,6 @@ Collecting django<br>
 Successfully installed django-3.0.5<br>
 <ps>myrtle</ps> <dr>~/code $</dr>
 django-admin startproject myproject .<br>
-<ps>myrtle</ps> <dr>~/code $</dr>
-cd myproject<br>
 <ps>myrtle</ps> <dr>~/code $</dr>
 ls -R<br>
 .:<br>
@@ -575,59 +587,6 @@ that runserver will act as our staticfile server.
 
 we can confirm this is the case with our default django projkect.
 
----
-<div class="shell-wrap"><p class="shell-top-bar">bash</p><p class="shell-body">
-<ps>myrtle</ps> <dr>~/code $</dr>
-<w>&nbsp;</w>
-???
-
-back in our terminal
----
-
-<div class="shell-wrap"><p class="shell-top-bar">bash</p><p class="shell-body">
-<ps>myrtle</ps> <dr>~/code $</dr>
-cat myproject/settings.py | grep staticfiles<w>&nbsp;</w>
-???
-
-we can check for that staticfiles reference in our settings
----
-<div class="shell-wrap"><p class="shell-top-bar">bash</p><p class="shell-body">
-<ps>myrtle</ps> <dr>~/code $</dr>
-cat myproject/settings.py | grep staticfiles<br>
-&nbsp; &nbsp; 'django.contrib.staticfiles',<br>
-<ps>myrtle</ps> <dr>~/code $</dr>
-<w>&nbsp;</w>
-
-???
-
-which is there
----
-<div class="shell-wrap"><p class="shell-top-bar">bash</p><p class="shell-body">
-<ps>myrtle</ps> <dr>~/code $</dr>
-cat myproject/settings.py | grep staticfiles<br>
-&nbsp; &nbsp; 'django.contrib.staticfiles',<br>
-<ps>myrtle</ps> <dr>~/code $</dr>
-cat myproject/settings.py | grep DEBUG<w>&nbsp;</w>
-</p></p></div>
-
-.lownote[[Django settings in production](https://djangochat.com/episodes/deployments), W. Vincent]
-
-
-???
-
-and our DEBUG setting
----
-<div class="shell-wrap"><p class="shell-top-bar">bash</p><p class="shell-body">
-<ps>myrtle</ps> <dr>~/code $</dr>
-cat myproject/settings.py | grep staticfiles<br>
-&nbsp; &nbsp; 'django.contrib.staticfiles',<br>
-<ps>myrtle</ps> <dr>~/code $</dr>
-cat myproject/settings.py | grep DEBUG<br>
-DEBUG = True<br>
-<ps>myrtle</ps> <dr>~/code $</dr>
-<w>&nbsp;</w>
-</p></p></div>
-.lownote[[Django settings in production](https://djangochat.com/episodes/deployments), W. Vincent]
 
 ???
 
@@ -1230,6 +1189,8 @@ You are a developer. A little worry is good, but thankfully,
 
 you can pay to take your worry away.
 
+This is known as Managed hosting, because you pay to have it managed for you.
+
 ---
 
 class: title
@@ -1739,28 +1700,20 @@ class: title
 # static options:
 
 ## cloud storage
-### for static and media
+### `django-storages`
 
 ???
 
 out of all the tech I've discussed so far, cloud storage is the oldest and most solid
 
-AWS S3 launched in 2006. That's 13 years ago.
+AWS S3 launched in 2006. That's 14 years ago.
 
 storing media objects is a foundational service provided by any cloud provider.
 
-and it's totally okay to use
+and many of them are supported by the django-storages package, which allows you to seemlessly use a cloud storage provider with your django application.
 
-the scariest thing when I first came across s3 was the fact that I had to use a global bucket name. Like, a name that had never been used before
-but that's okay
+Like databases, object storage is one of those foundational infrastructure services shared by many languages and frameworks, so robust generic solutions already exist. Leverage these where you can.
 
-the way this works means that the name must be unique for every reference
-
-use this foundational service of the current internet age
-
-and make sure that when you name your bucket it's not just your app's name or your internet name because once you use that name it's gone forever and you'll probably want to change your naming scheme at once point so if it's your first one just make sure it's not a super cool name.
-
-ENDTODO
 
 ---
 
