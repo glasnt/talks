@@ -1,4 +1,30 @@
 - conference: 
+    name: PyCon 2020 Online
+    date: 2020-04-17
+    link: https://us.pycon.org/2020/online/
+    talks: 
+        - link: https://us.pycon.org/2020/schedule/presentation/62/
+          type: Tutorial
+          name: Deploying Django on Serverless Infrastructure
+          resources: https://glasnt.com/pycon2020-tutorial
+        - link: https://us.pycon.org/2020/schedule/presentation/95/
+          name: What is deployment, anyway?
+          video: https://www.youtube.com/watch?v=8vstov3Y7uE
+          twitter: https://twitter.com/glasnt/status/1250597839735943168
+          slides: https://glasnt.com/talks/2020_04_PyCon_Talk.podium
+
+
+- conference:
+    name: Django Chat
+    date: 2020-04-23
+    link: https://twitter.com/ChatDjango
+    talks:
+      - link: https://djangochat.com/#ep60
+        type: Podcast
+        name: Advanced Deployment
+        twitter: https://twitter.com/ChatDjango/status/1253015132428435457
+
+- conference: 
     name: PyCascades 2020
     link: https://2020.pycascades.com/
     date: 2020-02-08
