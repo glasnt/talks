@@ -7,11 +7,13 @@
           type: Tutorial
           name: Deploying Django on Serverless Infrastructure
           resources: https://glasnt.com/pycon2020-tutorial
+          video: https://www.youtube.com/watch?v=oYy9_4fm56o
+          slides: https://glasnt.com/pycon2020-tutorial/slides.podium/
         - link: https://us.pycon.org/2020/schedule/presentation/95/
           name: What is deployment, anyway?
           video: https://www.youtube.com/watch?v=8vstov3Y7uE
           twitter: https://twitter.com/glasnt/status/1250597839735943168
-          slides: https://glasnt.com/talks/2020_04_PyCon_Talk.podium
+          slides: 2020_04_PyCon_Talk.podium
 
 
 - conference:
