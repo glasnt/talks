@@ -1,98 +1,54 @@
 ---
-title: Talks by Katie McLaughlin
+title: talks
+description: in which glasnt says words
 layout: page 
+header-img: "../img/talking_header.jpg"
 ---
-
-<div class="section">
-    <div class="container">
-      {% if site.data.upcoming.size > 0 %}
-      <h3>Upcoming talks</h3>
-
-      {% for c in site.data.upcoming %} 
-      <div class="row">&nbsp;</div>
-      <div class="row">
-        <div class="eight columns">
-            {% if c.conference.link %}
-            <a href="{{c.conference.link}}">{{c.conference.name}}</a>,
-            {% else %}
-                {{c.conference.name}},
-            {% endif %}
-                {% if c.conference.location %}{{c.conference.location}}, {%endif%}
-                {{c.conference.date | date: "%b %Y"}}
-        </div>
-        <div class="four columns">
-          {%if c.conference.tickets%}<a href="{{c.conference.tickets}}">Tickets</a>{%endif%}
-        </div>
-      </div>
-      {% for talk in c.conference.talks %} 
-      <div class="row">
-        <div class="eight columns">
-        {% if talk.link%}<a href="{{talk.link}}">{{talk.name}}</a>{%else%}{{talk.name}}{%endif%}
-        </div>
-      </div>
-      {% endfor%}
-      {% endfor%}
-      {% endif %}
-
-      <br><BR>
-
-      <h2>Talk history</h2>
-
-      <h4>🇦🇺 🇳🇿 🇭🇺 🇺🇸 🇬🇧 🇩🇪 🇹🇼 🇹🇭 🇮🇪</h4>
-      {% assign talk_total = 0 %}
-      {% for c in site.data.talks %}
-      {% for t in c.conference.talks %}
-      {% if t.type != "Podcast" %}
+{% assign talk_total = 0 %}
+{% for c in site.data.talks %}
+  {% for t in c.conference.talks %}
+    {% if t.type != "Podcast" %}
       {% assign talk_total = talk_total | plus: 1 %}
+    {% endif %}
+  {% endfor %}
+{% endfor %}
+
+{% assign talk_num = talk_total %}
+
+{% for c in site.data.talks %} 
+<div class="row">&nbsp;</div>
+<div class="row">
+      {% if c.conference.link %}
+      <a href="{{c.conference.link}}">{{c.conference.name}}</a>,
+      {% else %}
+          {{c.conference.name}}
       {% endif %}
-      {% endfor %}
-      {% endfor %}
 
-      {% assign talk_num = talk_total %}
+      {% if c.conference.location %}{{c.conference.location}}, {%endif%}
+      {{c.conference.date | date: "%b %Y"}}
+</div>
+  {% for talk in c.conference.talks %} 
+  <div class="row">
+      {% if talk.type != "Podcast" %}#{{ talk_num }}{%else%}&nbsp;<i class="far fa-podcast">&nbsp;</i>{% endif %}
+      {{talk.type | default: "Talk"}}  
+      {% if talk.link%}<a href="{{talk.link}}">{{talk.name}}</a>{%else%}"{{talk.name}}"{%endif%}
+      &nbsp;
+      {% if talk.slides %} <a href="{{talk.slides}}"><i class="far fa-presentation"></i></a>{% endif %}
+      {% if talk.video %} <a href="{{talk.video}}"><i class="fab fa-youtube"></i></a>{% endif %}
+      {% if talk.twitter %} <a href="{{talk.twitter}}"><i class="fab fa-twitter"></i></a>{% endif %}
+      {% if talk.transcript %} <a href="{{talk.transcript}}"><i class="far fa-file-alt"></i></a>{% endif %}
+      {% if talk.resources %} <a href="{{talk.resources}}"><i class="far fa-list-alt"></i></a>{% endif %}
+      {% if talk.feedback %} <a href="{{talk.feedback}}"><i class="far fa-comments"></i></a>{% endif %}
+      {% if talk.article %} <a href="{{talk.article}}"><i class="fas fa-newspaper"></i></a>{% endif %}
+      {% if talk.photo %} <a href="{{talk.photo}}"><i class="fas fa-camera"></i></a>{% endif %}
 
-      {% for c in site.data.talks %} 
-        <div class="row">&nbsp;</div>
-        <div class="row">
-          <div class="eight columns">
-              {% if c.conference.link %}
-              <a href="{{c.conference.link}}">{{c.conference.name}}</a>,
-              {% else %}
-                  {{c.conference.name}},
-              {% endif %}
-                  {% if c.conference.location %}{{c.conference.location}}, {%endif%}
-                  {{c.conference.date | date: "%b %Y"}}</div>
-        </div>
-        {% for talk in c.conference.talks %} 
-        <div class="row">
-          <div class="one column">{% if talk.type != "Podcast" %}{{ talk_num }}{%else%}&nbsp;{% endif %}</div>
-          <div class="one column">{{talk.type | default: "Talk"}}</div>
-          <div class="one columns" style="width: 55%">
-              {% if talk.link%}<a href="{{talk.link}}">{{talk.name}}</a>{%else%}{{talk.name}}{%endif%}</div>
-          <div class="three columns">
-                {% if talk.slides %} <a href="{{talk.slides}}">Slides</a>{% endif %}
-                {% if talk.video %} <a href="{{talk.video}}">Video</a>{% endif %}
-                {% if talk.twitter %} <a href="{{talk.twitter}}">Twitter</a>{% endif %}
-                {% if talk.transcript %} <a href="{{talk.transcript}}">Transcript</a>{% endif %}
-                {% if talk.resources %} <a href="{{talk.resources}}">Resources</a>{% endif %}
-                {% if talk.feedback %} <a href="{{talk.feedback}}">Feedback</a>{% endif %}
-                {% if talk.article %} <a href="{{talk.article}}">Article</a>{% endif %}
-                {% if talk.photo %} <a href="{{talk.photo}}">Photo</a>{% endif %}
-          </div>
-        </div>
-        {% if talk.type != "Podcast" %}
-        {% assign talk_num = talk_num | minus: 1 %}
-        {% endif %}
-      {% endfor %}
-      {% endfor %}
-      <div class="row">&nbsp;</div>
-        <div class="row">
-        <p>
-Source hosted on <a href="https://github.com/glasnt/talks">GitHub</a>. See also: <a href="http://pyvideo.org/speaker/katie-mclaughlin.html">pyvideo profile</a>, <a href="https://noti.st/glasnt">notist</a>.
-<br>
-        <a href="https://www.flickr.com/photos/140681500@N07/27775305387/in/album-72157669873315198/">Header</a> and <a href="https://www.flickr.com/photos/140681500@N07/25783265643/in/dateposted/">footer</a> images by <a href="https://www.flickr.com/photos/140681500@N07/">Bartek Pawlik</a>, used under <a href="https://creativecommons.org/licenses/by-nc/2.0/">CC BY-NC 2.0</a>
-   
-    </div>
+    {% if talk.type != "Podcast" %}
+      {% assign talk_num = talk_num | minus: 1 %}
+    {% endif %}
   </div>
-    <div class="section intro-header" style="margin-bottom: 0; background-image: url('img/footer_image.jpg')">
-    <div class="container">&nbsp; </div>
-  </div>
+  {% endfor %}
+{% endfor %}
+<div class="row">&nbsp;</div>
+<div class="row">
+<p>Source hosted on <a href="https://github.com/glasnt/talks">GitHub</a>. See also: <a href="http://pyvideo.org/speaker/katie-mclaughlin.html">pyvideo profile</a>, <a href="https://noti.st/glasnt">notist</a>.
+</div>
