@@ -1,1 +1,1 @@
-gem 'myrtle', git: "https://github.com/glasnt/myrtle'
+gem 'myrtle', git: "https://github.com/glasnt/myrtle"
