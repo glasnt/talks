@@ -14,6 +14,8 @@ For talks not in a `.podium`, they use [reveal.js](http://lab.hakim.se/reveal-js
 
 In all circumstances, they should all be visible by clicking on the **Slides** link on [glasnt.com/talks](https://glasnt.com/talks)
 
+The talk listing itself is [jekyll](https://jekyllrb.com/), [myrtle](https://github.com/glasnt/myrtle) theme.
+
 ### Running locally
 
 For reveal.js and projection.js: 
