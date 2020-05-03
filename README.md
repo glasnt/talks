@@ -33,5 +33,5 @@ Speaker notes can be viewed by pressing `[s]`. I use the notes mostly for remind
 
 ## Talk writeups
 
-If you want to get a TLDR on any of my talks, if there is an associated write-up, it'll be linked on the main [talks](http://glasnt.com/talks) page. 
+If you want to get a TLDR on any of my talks, if there is an associated write-up, it'll be linked on the main [talks](http://glasnt.com/talks) page as "Resource".  
 
