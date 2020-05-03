@@ -1,2 +1,2 @@
-theme: myrtle
+remote_theme: glasnt/myrtle
 exclude: ["20*"]
