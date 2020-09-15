@@ -1,5 +1,4 @@
 ---
-title: talks
 description: in which glasnt says words
 layout: page 
 header-img: "../img/talking_header.jpg"
@@ -33,14 +32,14 @@ header-img: "../img/talking_header.jpg"
       {{talk.type | default: "Talk"}}  
       {% if talk.link%}<a href="{{talk.link}}">{{talk.name}}</a>{%else%}"{{talk.name}}"{%endif%}
       &nbsp;
-      {% if talk.slides %} <a href="{{talk.slides}}"><i class="far fa-presentation"></i></a>{% endif %}
-      {% if talk.video %} <a href="{{talk.video}}"><i class="fab fa-youtube"></i></a>{% endif %}
-      {% if talk.twitter %} <a href="{{talk.twitter}}"><i class="fab fa-twitter"></i></a>{% endif %}
-      {% if talk.transcript %} <a href="{{talk.transcript}}"><i class="far fa-file-alt"></i></a>{% endif %}
-      {% if talk.resources %} <a href="{{talk.resources}}"><i class="far fa-list-alt"></i></a>{% endif %}
-      {% if talk.feedback %} <a href="{{talk.feedback}}"><i class="far fa-comments"></i></a>{% endif %}
-      {% if talk.article %} <a href="{{talk.article}}"><i class="fas fa-newspaper"></i></a>{% endif %}
-      {% if talk.photo %} <a href="{{talk.photo}}"><i class="fas fa-camera"></i></a>{% endif %}
+      {% if talk.slides %} <a href="{{talk.slides}}" title="Slides">(slides)</a>{% endif %}
+      {% if talk.video %} <a href="{{talk.video}}" title="Video">📼</a>{% endif %}
+      {% if talk.twitter %} <a href="{{talk.twitter}}" title="Twitter">🐦</a>{% endif %}
+      {% if talk.transcript %} <a href="{{talk.transcript}}" title="Transcript">📄</a>{% endif %}
+      {% if talk.resources %} <a href="{{talk.resources}}" title="Resources">📚</a>{% endif %}
+      {% if talk.feedback %} <a href="{{talk.feedback}}" title="Feedback">💬</a>{% endif %}
+      {% if talk.article %} <a href="{{talk.article}}" title="Article">📖</a>{% endif %}
+      {% if talk.photo %} <a href="{{talk.photo}}" title="Photo">📷</a>{% endif %}
 
     {% if talk.type != "Podcast" %}
       {% assign talk_num = talk_num | minus: 1 %}
