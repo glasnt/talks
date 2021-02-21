@@ -1,20 +1,29 @@
-- conference: 
+- conference:
+    name: The Router
+    date: 2020-12-06
+    link: https://twitter.com/UQComputing
+    talks:
+      - link: https://www.youtube.com/watch?v=WN90iIscATY
+        type: Podcast
+        name: Open Source Programming with Katie McLaughlin
+        twitter: https://twitter.com/UQComputing/status/1335408071208681472
+
+- conference:
     name: PyCon 2020 Online
     date: 2020-04-17
     link: https://us.pycon.org/2020/online/
-    talks: 
-        - link: https://us.pycon.org/2020/schedule/presentation/62/
-          type: Tutorial
-          name: Deploying Django on Serverless Infrastructure
-          resources: https://glasnt.com/pycon2020-tutorial
-          video: https://www.youtube.com/watch?v=oYy9_4fm56o
-          slides: https://glasnt.com/pycon2020-tutorial/slides.podium/
-        - link: https://us.pycon.org/2020/schedule/presentation/95/
-          name: What is deployment, anyway?
-          video: https://www.youtube.com/watch?v=8vstov3Y7uE
-          twitter: https://twitter.com/glasnt/status/1250597839735943168
-          slides: 2020_04_PyCon_Talk.podium
-
+    talks:
+      - link: https://us.pycon.org/2020/schedule/presentation/62/
+        type: Tutorial
+        name: Deploying Django on Serverless Infrastructure
+        resources: https://glasnt.com/pycon2020-tutorial
+        video: https://www.youtube.com/watch?v=oYy9_4fm56o
+        slides: https://glasnt.com/pycon2020-tutorial/slides.podium/
+      - link: https://us.pycon.org/2020/schedule/presentation/95/
+        name: What is deployment, anyway?
+        video: https://www.youtube.com/watch?v=8vstov3Y7uE
+        twitter: https://twitter.com/glasnt/status/1250597839735943168
+        slides: 2020_04_PyCon_Talk.podium
 
 - conference:
     name: Django Chat
@@ -26,16 +35,26 @@
         name: Advanced Deployment
         twitter: https://twitter.com/ChatDjango/status/1253015132428435457
 
-- conference: 
+- conference:
     name: PyCascades 2020
     link: https://2020.pycascades.com/
     date: 2020-02-08
-    talks: 
-        - name: Django translations for the next generation
-          link: https://2020.pycascades.com/lightning-talks/
-          type: Lightning Talk
-          slides: https://docs.google.com/presentation/d/1yG8Cr1GcVcWUroPcIGHr4eqZblk5qQWIR1j0iGCuY6k/edit?usp=sharing
-          twitter: https://twitter.com/di_codes/status/1226263772613885952
+    talks:
+      - name: Django translations for the next generation
+        link: https://2020.pycascades.com/lightning-talks/
+        type: Lightning Talk
+        slides: https://docs.google.com/presentation/d/1yG8Cr1GcVcWUroPcIGHr4eqZblk5qQWIR1j0iGCuY6k/edit?usp=sharing
+        twitter: https://twitter.com/di_codes/status/1226263772613885952
+
+- conference:
+    name: GCP Podcast
+    date: 2020-02-19
+    link: https://twitter.com/GCPPodcast
+    talks:
+      - link: https://www.gcppodcast.com/post/episode-208-python-with-katie-mclaughlin/
+        type: Podcast
+        name: Python with Katie McLaughlin
+        twitter: https://twitter.com/GCPPodcast/status/1230239397855027202
 
 - conference:
     name: "Cloud Next UK '19"
@@ -43,19 +62,19 @@
     date: 2019-11-20
     link: https://cloud.withgoogle.com/next/uk
     talks:
-        - name: "Corralling a Serverless Django Deployment on GCP"
-          link: https://cloud.withgoogle.com/next/uk/speakers?session=DZ225
-          twitter: https://twitter.com/kwazrunner/status/1197135404253745152
-        - name: "Panel Discussion: Application Development on Google Cloud"
-          link: https://cloud.withgoogle.com/next/uk/speakers?session=DZ212
-          twitter: https://twitter.com/GabeWeiss_/status/1197516014302437378
+      - name: "Corralling a Serverless Django Deployment on GCP"
+        link: https://cloud.withgoogle.com/next/uk/speakers?session=DZ225
+        twitter: https://twitter.com/kwazrunner/status/1197135404253745152
+      - name: "Panel Discussion: Application Development on Google Cloud"
+        link: https://cloud.withgoogle.com/next/uk/speakers?session=DZ212
+        twitter: https://twitter.com/GabeWeiss_/status/1197516014302437378
 
 - conference:
     name: DevFest Dublin 2019
     location: Dublin, Ireland
     date: 2019-11-16
     link: https://devfest-dublin.gdgcloud.dev/
-    talks: 
+    talks:
       - slides: https://noti.st/glasnt/KYrUGY/slides
         link: https://devfest-dublin.gdgcloud.dev/schedule/2019-11-16?sessionId=103
         name: "Where should I run my code?"
@@ -67,44 +86,44 @@
     date: 2019-10-22
     link: https://devopsdays.org/events/2019-auckland/welcome/
     talks:
-        - link: https://devopsdays.org/events/2019-auckland/program/katie-mclaughlin
-          slides: 2019_10_DevOpsDaysAKL.podium/
-          name: "Being kind to 3am you"
-          twitter: https://twitter.com/toolmantim/status/1186388042753265664
-          resources: https://blog.darkmere.gen.nz/2019/10/devopsdays-nz-2019-day-2-session-1/
+      - link: https://devopsdays.org/events/2019-auckland/program/katie-mclaughlin
+        slides: 2019_10_DevOpsDaysAKL.podium/
+        name: "Being kind to 3am you"
+        twitter: https://twitter.com/toolmantim/status/1186388042753265664
+        resources: https://blog.darkmere.gen.nz/2019/10/devopsdays-nz-2019-day-2-session-1/
 
-- conference: 
+- conference:
     name: PubConf Sydney 2019
     location: Sydney, NSW
     date: 2019-10-18
     link: https://pubconf.io/events/2019/sydney/
-    talks: 
-        - link: https://pubconf.io/speakers/katie_mclaughlin/
-          name: "A profane guide to containers"
-          twitter: https://twitter.com/robdcrowley/status/1185414741503512577
+    talks:
+      - link: https://pubconf.io/speakers/katie_mclaughlin/
+        name: "A profane guide to containers"
+        twitter: https://twitter.com/robdcrowley/status/1185414741503512577
 
 - conference:
     name: Sydney Serverless
     location: Sydney, NSW
     date: 2019-10-16
     link: https://www.meetup.com/Sydney-Serverless-Meetup-Group/
-    talks: 
-        - link: https://www.meetup.com/Sydney-Serverless-Meetup-Group/events/265107528/
-          name: "Complexity in Deployments: Django on GCP"
-          slides: 2019_10_SydServ
-          twitter: https://twitter.com/SydServerless/status/1184372482515460096
+    talks:
+      - link: https://www.meetup.com/Sydney-Serverless-Meetup-Group/events/265107528/
+        name: "Complexity in Deployments: Django on GCP"
+        slides: 2019_10_SydServ
+        twitter: https://twitter.com/SydServerless/status/1184372482515460096
 - conference:
     name: PyGotham 2019
     location: New York, USA
     date: 2019-10-04
     link: https://pygotham.org/
     talks:
-        - name: "What is deployment, anyway?"
-          link: https://2019.pygotham.org/talks/what-is-deployment-anyway/
-          video: https://www.youtube.com/watch?v=S7dOCEBoX1w
-          slides: 2019_10_PyGotham.podium
-          resources: https://github.com/glasnt/talks/tree/gh-pages/2019_10_PyGotham.podium#resources
-          twitter: https://twitter.com/jessicagarson/status/1180531644354191360
+      - name: "What is deployment, anyway?"
+        link: https://2019.pygotham.org/talks/what-is-deployment-anyway/
+        video: https://www.youtube.com/watch?v=S7dOCEBoX1w
+        slides: 2019_10_PyGotham.podium
+        resources: https://github.com/glasnt/talks/tree/gh-pages/2019_10_PyGotham.podium#resources
+        twitter: https://twitter.com/jessicagarson/status/1180531644354191360
 
 - conference:
     name: Perth Django and Python Developers
@@ -112,10 +131,10 @@
     date: 2019-09-05
     link: https://www.meetup.com/Perth-Django-Users-Group/
     talks:
-       - name: Turning 'wat' into 'why'
-         link: https://www.meetup.com/Perth-Django-Users-Group/events/263850032/
-         twitter: https://twitter.com/slevins_/status/1169580358666354688
-         slides: 2019_09_PDPD.podium
+      - name: Turning 'wat' into 'why'
+        link: https://www.meetup.com/Perth-Django-Users-Group/events/263850032/
+        twitter: https://twitter.com/slevins_/status/1169580358666354688
+        slides: 2019_09_PDPD.podium
 
 - conference:
     name: YOW! Perth
@@ -123,11 +142,11 @@
     date: 2019-09-04
     link: https://yowconference.com/perth
     talks:
-       - name: Turning 'wat' into 'why'
-         link: https://yowconference.com/talks/katie-mclaughlin/yow-perth-2019/turning-wat-into-why-10456
-         resources: https://glasnt.com/wat
-         slides: 2019_09_YOWPerth.podium
-         twitter: https://twitter.com/MichelePlayfair/status/1169110899296104448
+      - name: Turning 'wat' into 'why'
+        link: https://yowconference.com/talks/katie-mclaughlin/yow-perth-2019/turning-wat-into-why-10456
+        resources: https://glasnt.com/wat
+        slides: 2019_09_YOWPerth.podium
+        twitter: https://twitter.com/MichelePlayfair/status/1169110899296104448
 
 - conference:
     name: Kiwi PyCon X
@@ -135,11 +154,10 @@
     location: Wellington, NZ
     link: https://python.nz/
     talks:
-        - name: Turning 'wat' into 'why'
-          video: https://www.youtube.com/watch?v=AxJB2sWMS-k
-          slides: 2019_08_KiwiPyCon.podium
-          resources: https://glasnt.com/wat
-
+      - name: Turning 'wat' into 'why'
+        video: https://www.youtube.com/watch?v=AxJB2sWMS-k
+        slides: 2019_08_KiwiPyCon.podium
+        resources: https://glasnt.com/wat
 
 - conference:
     name: Django Chat
@@ -151,101 +169,101 @@
         name: Katie McLaughlin
         twitter: https://twitter.com/glasnt/status/1146558903997460481
 
-- conference: 
+- conference:
     name: PyCon Thailand
     date: 2019-06-16
     link: https://twitter.com/shaysler/status/1136680378398171136
     location: Bangkok, Thailand
-    talks: 
-       - name: "How Python Can Excel"
-         link: https://th.pycon.org/en/#keynotes
-         slides: 2019_06_PyConTH.podium
-         resources: https://github.com/glasnt/talks/blob/gh-pages/2019_06_PyConTH.podium/resources.md
-         video: https://www.youtube.com/watch?v=RpVtXCaeT_Q
+    talks:
+      - name: "How Python Can Excel"
+        link: https://th.pycon.org/en/#keynotes
+        slides: 2019_06_PyConTH.podium
+        resources: https://github.com/glasnt/talks/blob/gh-pages/2019_06_PyConTH.podium/resources.md
+        video: https://www.youtube.com/watch?v=RpVtXCaeT_Q
 
-- conference: 
+- conference:
     name: PyCon
     date: 2019-05-01
     link: https://us.pycon.org/2019/
     location: Cleveland, OH
-    talks: 
-       - name: "A Right Stitch-up: Creating embroidery patterns with Pillow"
-         link: https://us.pycon.org/2019/schedule/presentation/229/
-         slides: 2019_05_PyConUS.podium
-         twitter: https://twitter.com/treyhunner/status/1124331430081957889 
-         video: https://www.youtube.com/watch?v=Fllch-WwzWM
-       - name: Wrangling Enthusiastic Hordes (Maintainer's Summit)
-         link: https://us.pycon.org/2019/hatchery/maintainers/
-         type: Lightning Talk
-         slides: 2019_05_MaintainersSummit
-       - name: I am the very model of a PyCon AU CFP
-         video: https://youtu.be/bnxxoTx9Sko?t=1856
-         twitter: https://twitter.com/glasnt/status/1125027351996313600
-         type: Spruik
+    talks:
+      - name: "A Right Stitch-up: Creating embroidery patterns with Pillow"
+        link: https://us.pycon.org/2019/schedule/presentation/229/
+        slides: 2019_05_PyConUS.podium
+        twitter: https://twitter.com/treyhunner/status/1124331430081957889
+        video: https://www.youtube.com/watch?v=Fllch-WwzWM
+      - name: Wrangling Enthusiastic Hordes (Maintainer's Summit)
+        link: https://us.pycon.org/2019/hatchery/maintainers/
+        type: Lightning Talk
+        slides: 2019_05_MaintainersSummit
+      - name: I am the very model of a PyCon AU CFP
+        video: https://youtu.be/bnxxoTx9Sko?t=1856
+        twitter: https://twitter.com/glasnt/status/1125027351996313600
+        type: Spruik
 
 - conference:
     name: PyCascades
     date: 2019-02-23
     link: https://2019.pycascades.com
     location: Seattle, WA
-    talks: 
-        - name: Turning 'wat' into 'why'
-          link: https://2019.pycascades.com/talks/turning-wat-into-why/
-          slides: 2019_02_PyCascades.podium
-          twitter: https://twitter.com/cfactoid/status/1099374287708860416
-          video: https://www.youtube.com/watch?v=1lVBSDcYhw0
-          resources: https://glasnt.com/wat
+    talks:
+      - name: Turning 'wat' into 'why'
+        link: https://2019.pycascades.com/talks/turning-wat-into-why/
+        slides: 2019_02_PyCascades.podium
+        twitter: https://twitter.com/cfactoid/status/1099374287708860416
+        video: https://www.youtube.com/watch?v=1lVBSDcYhw0
+        resources: https://glasnt.com/wat
 
 - conference:
     name: FFS Conf Down Under
     date: 2019-02-02
     link: https://ffsconfdownunder.com/
     location: Melbourne
-    talks: 
-        - name: FFS You are a programmer, no matter the language
-          link: https://ffsconfdownunder.com/rants/
-          slides: https://github.com/glasnt/talks/tree/gh-pages/2019_02_FFSConf
+    talks:
+      - name: FFS You are a programmer, no matter the language
+        link: https://ffsconfdownunder.com/rants/
+        slides: https://github.com/glasnt/talks/tree/gh-pages/2019_02_FFSConf
 
-- conference: 
+- conference:
     name: Docs Down Under, linux.conf.au
     date: 2019-01-22
     link: https://linux.conf.au/programme/miniconfs/docs/
     location: Christchurch, NZ
-    talks: 
-        - name: Being kind to 3am you
-          link: https://linux.conf.au/schedule/presentation/230/
-          slides: 2019_01_DocsDownUnder.podium/
-          video:  https://www.youtube.com/watch?v=MpU56csfNmM
-          twitter: https://twitter.com/betsybookworm/status/1087470635826073600
-        
+    talks:
+      - name: Being kind to 3am you
+        link: https://linux.conf.au/schedule/presentation/230/
+        slides: 2019_01_DocsDownUnder.podium/
+        video: https://www.youtube.com/watch?v=MpU56csfNmM
+        twitter: https://twitter.com/betsybookworm/status/1087470635826073600
+
 - conference:
     name: All Things Open
     date: 2018-10-22
     link: https://2018.allthingsopen.org
     location: Raleigh, NC
     talks:
-        - name: Turning wat into why
-          resources: https://glasnt.com/wat
-          link: https://2018.allthingsopen.org/talk/turning-wat-into-why/
-          slides: 2018_10_AllThingsOpen.podium/index.html
-          twitter: https://twitter.com/FunnelFiasco/status/1054379253289177088
+      - name: Turning wat into why
+        resources: https://glasnt.com/wat
+        link: https://2018.allthingsopen.org/talk/turning-wat-into-why/
+        slides: 2018_10_AllThingsOpen.podium/index.html
+        twitter: https://twitter.com/FunnelFiasco/status/1054379253289177088
 
-- conference: 
+- conference:
     name: DjangoCon US 2018
     date: 2018-10-15
     link: https://2018.djangocon.us/
     location: San Diego, CA
     talks:
-        - type: Lightning Talk
-          name: Emoji Story Time with Katie
-          slides: 2018_10_DjangoConUS_Emoji/index.html
-          twitter: https://twitter.com/ChloeCondon/status/1052256899557613568
-          photo: https://www.flickr.com/photos/144080672@N05/44722894455/in/datetaken-public/
-          video: https://www.youtube.com/watch?v=3iFG9nTSyeo&t=830s
-        - name: "ORM: The Sequel"
-          slides: 2018_10_DjangoConUS.podium
-          twitter: https://twitter.com/treyhunner/status/1052688137250516992
-          video: https://www.youtube.com/watch?v=p9Bgr5VOISo
+      - type: Lightning Talk
+        name: Emoji Story Time with Katie
+        slides: 2018_10_DjangoConUS_Emoji/index.html
+        twitter: https://twitter.com/ChloeCondon/status/1052256899557613568
+        photo: https://www.flickr.com/photos/144080672@N05/44722894455/in/datetaken-public/
+        video: https://www.youtube.com/watch?v=3iFG9nTSyeo&t=830s
+      - name: "ORM: The Sequel"
+        slides: 2018_10_DjangoConUS.podium
+        twitter: https://twitter.com/treyhunner/status/1052688137250516992
+        video: https://www.youtube.com/watch?v=p9Bgr5VOISo
 
 - conference:
     name: Pursuit Podcast
@@ -255,22 +273,22 @@
       - link: https://www.youtube.com/watch?v=kgzzusCmEg8
         type: Podcast
         name: Celebrating Contributions
-        twitter: https://twitter.com/PursuitPod/status/1025328294399565824 
+        twitter: https://twitter.com/PursuitPod/status/1025328294399565824
 
-- conference: 
+- conference:
     name: PyCon TW
     link: https://tw.pycon.org/2018/en-us/
     date: 2018-06-02
     location: Taipei, Taiwan
     talks:
-      - name: Communication strategies beyond the Basic Multilingual Plane 
+      - name: Communication strategies beyond the Basic Multilingual Plane
         link: https://tw.pycon.org/2018/en-us/events/keynotes/
         type: Keynote
         video: https://www.youtube.com/watch?v=EfzsffnHnCM
         slides: https://glasnt.com/talks/2018_06_PyConTW
         twitter: https://twitter.com/adrianliaw2000/status/1002746425526980608
 
-- conference: 
+- conference:
     name: DjangoCon Europe
     link: https://2018.djangocon.eu/
     date: 2018-05-24
@@ -285,7 +303,7 @@
         twitter: https://twitter.com/DjangoTricks/status/999392282422988800
         slides: https://glasnt.com/talks/2018_05_Serialization/
         video: https://www.youtube.com/watch?time_continue=775&v=eEZYDDaDeCs
-        
+
 - conference:
     name: SyPy
     link: https://www.meetup.com/sydneypython/events/qxgdlpyxgbjc/
@@ -302,16 +320,16 @@
     date: 2018-04-05
     location: Sydney
     talks:
-     - name: A Right Stitch Up
-       slides: 2018_04_SydCSS
-       twitter: https://twitter.com/SydCSS/status/981821965773168640
+      - name: A Right Stitch Up
+        slides: 2018_04_SydCSS
+        twitter: https://twitter.com/SydCSS/status/981821965773168640
 
 - conference:
     name: RubyConf AU
     link: http://www.rubyconf.org.au/2018
     date: 2018-03-08
     location: Sydney
-    talks: 
+    talks:
       - name: JavaScript is Awe-ful
         slides: https://github.com/glasnt/talks/tree/gh-pages/2018_03_RubyConfAU
         twitter: https://twitter.com/JessRudder/status/971552800495697920
@@ -322,46 +340,42 @@
     name: Hacker Public Radio
     link: http://hackerpublicradio.org/
     date: 2018-02-01
-    talks: 
-        - name: "hpr2482 :: lca2018: Katie McLaughlin"
-          type: Podcast
-          link: https://hackerpublicradio.org/eps.php?id=2482
+    talks:
+      - name: "hpr2482 :: lca2018: Katie McLaughlin"
+        type: Podcast
+        link: https://hackerpublicradio.org/eps.php?id=2482
 
-
-
-- conference: 
+- conference:
     name: linux.conf.au
     link: https://linux.conf.au/
     date: 23-JAN-2018
     location: Sydney, Australia
-    talks: 
-        - name: A Right Stitchup
-          link: https://rego.linux.conf.au/schedule/presentation/141/
-          slides: 2018_01_LCAArtTech/
-          twitter: https://twitter.com/adambrenecki/status/955687634092810240
-          video: https://www.youtube.com/watch?v=vwzMniTNK2Q
-        - name: Meltdown, Spectre, and the free-software community
-          type: Panel
-          link: https://rego.linux.conf.au/schedule/presentation/223/
-          twitter: https://twitter.com/glasnt/status/956309684872347648
-          video: https://www.youtube.com/watch?v=nlcXQWJALqQ
-
+    talks:
+      - name: A Right Stitchup
+        link: https://rego.linux.conf.au/schedule/presentation/141/
+        slides: 2018_01_LCAArtTech/
+        twitter: https://twitter.com/adambrenecki/status/955687634092810240
+        video: https://www.youtube.com/watch?v=vwzMniTNK2Q
+      - name: Meltdown, Spectre, and the free-software community
+        type: Panel
+        link: https://rego.linux.conf.au/schedule/presentation/223/
+        twitter: https://twitter.com/glasnt/status/956309684872347648
+        video: https://www.youtube.com/watch?v=nlcXQWJALqQ
 
 - conference:
     name: NDC London
     link: https://ndc-london.com/
     date: 17-JAN-2018
     location: London, UK
-    talks: 
-        - name: The Power and Responsibility of Unicode Adoption
-          slides: 2018_01_NDCLondon
-          link: https://ndc-london.com/talk/the-power-and-responsibility-of-unicode-adoption/
-          twitter: https://twitter.com/azadehkhojandi/status/953642171051200513
-          video: https://www.youtube.com/watch?v=HO0UKfx1LLA
-        - name: A soliloquy of wat
-          slides: https://github.com/glasnt/talks/tree/gh-pages/2018_01_NDCLondon_Lightning
-          twitter: https://twitter.com/OhMyCrabcakes/status/954117024132816897
-
+    talks:
+      - name: The Power and Responsibility of Unicode Adoption
+        slides: 2018_01_NDCLondon
+        link: https://ndc-london.com/talk/the-power-and-responsibility-of-unicode-adoption/
+        twitter: https://twitter.com/azadehkhojandi/status/953642171051200513
+        video: https://www.youtube.com/watch?v=HO0UKfx1LLA
+      - name: A soliloquy of wat
+        slides: https://github.com/glasnt/talks/tree/gh-pages/2018_01_NDCLondon_Lightning
+        twitter: https://twitter.com/OhMyCrabcakes/status/954117024132816897
 
 - conference:
     name: BSides Wellington
@@ -369,121 +383,121 @@
     date: 24-NOV-2017
     location: Wellington, New Zealand
     talks:
-        - name: Protect yourself against the bees 🐝
-          link: https://bsideswellington2017.sched.com/event/CR3O/protect-yourself-against-the-bees
-          slides: 2017_11_BSidesWLG
-          twitter: https://twitter.com/Blackwall_sec/status/933867420208345088
+      - name: Protect yourself against the bees 🐝
+        link: https://bsideswellington2017.sched.com/event/CR3O/protect-yourself-against-the-bees
+        slides: 2017_11_BSidesWLG
+        twitter: https://twitter.com/Blackwall_sec/status/933867420208345088
 
 - conference:
     name: GitHub Constellation
     link: http://githubconstellation.com/sydney/
     date: 25-OCT-2017
     location: Sydney
-    talks: 
-        - name: ...Bees?
-          link: http://githubconstellation.com/sydney/#bees
-          slides: 2017_10_Constellation/Bees.podium
-          twitter: https://twitter.com/developerjack/status/923120201985437696
+    talks:
+      - name: ...Bees?
+        link: http://githubconstellation.com/sydney/#bees
+        slides: 2017_10_Constellation/Bees.podium
+        twitter: https://twitter.com/developerjack/status/923120201985437696
 
 - conference:
     name: DjangoCon US
     link: https://2017.djangocon.us/
     date: 10-AUG-2017
     location: Spokane, WA
-    talks: 
-        - name: Django Translations for the next generation
-          link: https://github.com/glasnt/millennial
-          type: Lightning Talk
-          twitter: https://twitter.com/limedaring/status/897190563685978112
-          video: https://youtu.be/r_YIOg_NRkk?t=556
-        - name: The Power ⚡️ and Responsibility 😓 of Unicode Adoption ✨
-          slides: 2017_08_DjangoConUS
-          twitter: https://twitter.com/willyhakim/status/897588082089705472
-          video: https://www.youtube.com/watch?v=BSQ_VmQfBZE
+    talks:
+      - name: Django Translations for the next generation
+        link: https://github.com/glasnt/millennial
+        type: Lightning Talk
+        twitter: https://twitter.com/limedaring/status/897190563685978112
+        video: https://youtu.be/r_YIOg_NRkk?t=556
+      - name: The Power ⚡️ and Responsibility 😓 of Unicode Adoption ✨
+        slides: 2017_08_DjangoConUS
+        twitter: https://twitter.com/willyhakim/status/897588082089705472
+        video: https://www.youtube.com/watch?v=BSQ_VmQfBZE
 
 - conference:
     name: PyCon AU
     link: https://2017.pycon-au.org
     date: 06-AUG-2017
     location: Melbourne
-    talks: 
-        - name: How to Handle Abandoned Projects, Take Two
-          slides: 2017_08_PyConAU
-          type: Keynote
-          link: https://2017.pycon-au.org/news/announcing-keynote-speaker-katie-mclaughlin/
-          twitter: https://twitter.com/developerjack/status/893983048919728128
-          video: https://www.youtube.com/watch?v=prFaJugC95Y
+    talks:
+      - name: How to Handle Abandoned Projects, Take Two
+        slides: 2017_08_PyConAU
+        type: Keynote
+        link: https://2017.pycon-au.org/news/announcing-keynote-speaker-katie-mclaughlin/
+        twitter: https://twitter.com/developerjack/status/893983048919728128
+        video: https://www.youtube.com/watch?v=prFaJugC95Y
 
 - conference:
     name: SydJS
     link: http://sydjs.com/
     date: 19-JUL-2017
     location: Sydney
-    talks: 
-        - name: JavaScript is Awe-ful
-          slides: 2017_07_SydJS
-          twitter: https://twitter.com/mobywhale/status/887621375342518273
+    talks:
+      - name: JavaScript is Awe-ful
+        slides: 2017_07_SydJS
+        twitter: https://twitter.com/mobywhale/status/887621375342518273
 
 - conference:
     name: DDD Sydney
     link: http://2017.dddsydney.com.au/
     date: 16-JUL-2017
     location: Sydney
-    talks: 
-        - name: JavaScript is Awe-ful
-          slides: 2017_07_DDDSydney
-          type: Keynote
-          twitter: https://twitter.com/moniyum/status/886190285595607040
-          video: https://www.youtube.com/watch?v=Yo37Wnkyzt4 
+    talks:
+      - name: JavaScript is Awe-ful
+        slides: 2017_07_DDDSydney
+        type: Keynote
+        twitter: https://twitter.com/moniyum/status/886190285595607040
+        video: https://www.youtube.com/watch?v=Yo37Wnkyzt4
 
 - conference:
     name: PyCon US
     link: https://us.pycon.org/2017/
     date: 2017-05-19
     location: Portland, OR
-    talks: 
-        - name: Snek in the Browser
-          link: https://us.pycon.org/2017/schedule/presentation/51/
-          slides: 2017_05_PyConUS_Snek
-          twitter: https://twitter.com/divio/status/865684109615673344
-          video: https://www.youtube.com/watch?v=1YmbZQjty3Y
-          transcript: https://twitter.com/skimbrel/status/865682411446718464
-        - name: Emoji Archeology 101 (Cover Version)
-          type: Lightning Talk
-          slides: 2017_05_PyConUS_EmojiArch
-          twitter: https://twitter.com/phildini/status/865731765876383744
-          transcript: http://draft.sx/2e9e2c261943fce1e1b24eaee4e776a5
-          video: https://youtu.be/tK6ZIf0yYhs?t=39
+    talks:
+      - name: Snek in the Browser
+        link: https://us.pycon.org/2017/schedule/presentation/51/
+        slides: 2017_05_PyConUS_Snek
+        twitter: https://twitter.com/divio/status/865684109615673344
+        video: https://www.youtube.com/watch?v=1YmbZQjty3Y
+        transcript: https://twitter.com/skimbrel/status/865682411446718464
+      - name: Emoji Archeology 101 (Cover Version)
+        type: Lightning Talk
+        slides: 2017_05_PyConUS_EmojiArch
+        twitter: https://twitter.com/phildini/status/865731765876383744
+        transcript: http://draft.sx/2e9e2c261943fce1e1b24eaee4e776a5
+        video: https://youtu.be/tK6ZIf0yYhs?t=39
 
 - conference:
     name: OSCON
     link: https://conferences.oreilly.com/oscon/oscon-tx
     date: 2017-05-11
     location: Austin, TX
-    talks: 
-     - name: The Power and Responsibility of Unicode Adoption
-       link: https://conferences.oreilly.com/oscon/oscon-tx/public/schedule/detail/56370
-       slides: 2017_05_OSCON
-       article: https://opensource.com/article/17/4/cross-platform-emoji
-       twitter: https://twitter.com/bradfitz/status/862746287174803458
+    talks:
+      - name: The Power and Responsibility of Unicode Adoption
+        link: https://conferences.oreilly.com/oscon/oscon-tx/public/schedule/detail/56370
+        slides: 2017_05_OSCON
+        article: https://opensource.com/article/17/4/cross-platform-emoji
+        twitter: https://twitter.com/bradfitz/status/862746287174803458
 
 - conference:
     name: Community Leadership Summit
     link: http://web.archive.org/web/20170509012748/http://www.communityleadershipsummit.com/
     date: 2017-05-7
     location: Austin, TX
-    talks: 
-        - name: All Contributions Welcome
-          slides: 2017_05_CLS
-          type: Keynote
-          twitter: https://twitter.com/iantien/status/861248220428738560
+    talks:
+      - name: All Contributions Welcome
+        slides: 2017_05_CLS
+        type: Keynote
+        twitter: https://twitter.com/iantien/status/861248220428738560
 
 - conference:
     name: YOW! West
     link: http://west.yowconference.com.au/
     date: 2017-05-03
     location: Perth
-    talks: 
+    talks:
       - name: The Power ⚡️ and Responsibility 😓 of Unicode Adoption ✨
         link: http://west.yowconference.com.au/speakers/katie-mclaughlin/
         video: https://www.youtube.com/watch?v=RUApj8z0UGE
@@ -495,21 +509,20 @@
     link: https://www.meetup.com/sydneypython
     date: 2017-04-27
     location: Sydney
-    talks: 
-        - name: Snek in the Browser
-          link: https://www.meetup.com/sydneypython/events/239100863/
-          slides: 2017_04_SyPy
+    talks:
+      - name: Snek in the Browser
+        link: https://www.meetup.com/sydneypython/events/239100863/
+        slides: 2017_04_SyPy
 
 - conference:
     name: Python Chat
     link: https://twitter.com/PythonChat
     date: 2017-03-03
     talks:
-        - name: Emoji Chat - Emoji Boogalo
-          type: Crowdcast
-          link: https://www.crowdcast.io/e/emoji2
-          twitter: 
-    
+      - name: Emoji Chat - Emoji Boogalo
+        type: Crowdcast
+        link: https://www.crowdcast.io/e/emoji2
+        twitter:
 
 - conference:
     name: CrikeyCon
@@ -517,26 +530,26 @@
     date: 2017-02-25
     location: Brisbane
     talks:
-        - name: 🔐 + 😈 => 💥
-          slides: 2017_02_CrikeyCon
-          twitter: https://twitter.com/attacus_au/status/835362125967044609
-        
+      - name: 🔐 + 😈 => 💥
+        slides: 2017_02_CrikeyCon
+        twitter: https://twitter.com/attacus_au/status/835362125967044609
+
 - conference:
     name: Sydney DevOps
     link: https://www.meetup.com/devops-sydney/
     date: 2017-02-16
     location: Sydney
-    talks: 
-        - name: 🔐 + 😈 => 💥
-          link: https://www.meetup.com/devops-sydney/events/235494979/
-          slides: 2017_02_SydDevOps
+    talks:
+      - name: 🔐 + 😈 => 💥
+        link: https://www.meetup.com/devops-sydney/events/235494979/
+        slides: 2017_02_SydDevOps
 
 - conference:
     name: RubyConf AU
     link: http://www.rubyconf.org.au/2017
-    date: 2017-02-09 
+    date: 2017-02-09
     location: Melbourne
-    talks: 
+    talks:
       - name: The Power ⚡️ and Responsibility 😓 of Unicode Adoption ✨
         slides: 2017_02_RubyConfAU
         type: Invited Speaker
@@ -549,12 +562,12 @@
     date: 2017-01-18
     location: Hobart
     talks:
-    - name: JavaScript is Awe-ful
-      type: Talk
-      slides: 2017_01_LCA_JavaScript
-      video: https://www.youtube.com/watch?v=k3brfCZSFiQ
-      twitter: https://twitter.com/callahad/status/821549245354287104
-      article: https://recompilermag.com/issues/issue-4/why-i-love-legacy-devops/
+      - name: JavaScript is Awe-ful
+        type: Talk
+        slides: 2017_01_LCA_JavaScript
+        video: https://www.youtube.com/watch?v=k3brfCZSFiQ
+        twitter: https://twitter.com/callahad/status/821549245354287104
+        article: https://recompilermag.com/issues/issue-4/why-i-love-legacy-devops/
 
 - conference:
     name: Ruby on Rails Oceania
@@ -572,9 +585,8 @@
     date: 2016-12-02
     link: https://www.arresteddevops.com/devopsdays-sydney-2016/
     talks:
-        - name: Devopsdays Sydney 2016 (ADO78)
-          link: https://www.arresteddevops.com/devopsdays-sydney-2016/
-
+      - name: Devopsdays Sydney 2016 (ADO78)
+        link: https://www.arresteddevops.com/devopsdays-sydney-2016/
 
 - conference:
     name: SydPHP
@@ -582,61 +594,58 @@
     link: https://sydphp.org/
     location: Sydney
     talks:
-    - name: The state of web and online communities
-      type: Panel
-      link: https://www.meetup.com/SydPHP/events/235076382/
-      twitter: https://twitter.com/DarrenNolan_/status/801704215156428800
-
+      - name: The state of web and online communities
+        type: Panel
+        link: https://www.meetup.com/SydPHP/events/235076382/
+        twitter: https://twitter.com/DarrenNolan_/status/801704215156428800
 
 - conference:
     name: SydPHP
     date: 2016-10-27
     location: Sydney
     link: https://www.meetup.com/SydPHP/
-    talks: 
+    talks:
       - name: The Power ⚡️ and Responsibility 😓 of Unicode Adoption ✨
         link: https://www.meetup.com/SydPHP/events/235076361/
         slides: 2016_10_SydPHP
         twitter: https://twitter.com/__debo/status/791561677200166912
 
 - conference:
-      name: Kiwi PyCon
-      link: https://nzpug.org
-      location: Dunedin, NZ
-      date: 2016-09-10
-      talks:
-        - name: The Power ⚡️ and Responsibility 😓 of Unicode Adoption ✨
-          type: Talk
-          link: https://nzpug.org/schedule/presentation/107/
-          slides: 2016_09_KiwiPyCon/
-          video: https://www.youtube.com/watch?v=3afcBEz6CzA
-        - name: Serialization Formats are Not Toys (Cover Version)
-          type: Lightning Talk
-          slides: 2016_09_Serialization
-          twitter: https://twitter.com/tveastman/status/774102693149233153
-          video: https://youtu.be/fOrYeUaOez4?t=611
+    name: Kiwi PyCon
+    link: https://nzpug.org
+    location: Dunedin, NZ
+    date: 2016-09-10
+    talks:
+      - name: The Power ⚡️ and Responsibility 😓 of Unicode Adoption ✨
+        type: Talk
+        link: https://nzpug.org/schedule/presentation/107/
+        slides: 2016_09_KiwiPyCon/
+        video: https://www.youtube.com/watch?v=3afcBEz6CzA
+      - name: Serialization Formats are Not Toys (Cover Version)
+        type: Lightning Talk
+        slides: 2016_09_Serialization
+        twitter: https://twitter.com/tveastman/status/774102693149233153
+        video: https://youtu.be/fOrYeUaOez4?t=611
 
 - conference:
     name: Python Chat
     link: https://twitter.com/PythonChat
     date: 2016-08-10
     talks:
-        - name: Getting started contributing to open source
-          type: Crowdcast
-          link: https://www.crowdcast.io/e/contribute
-
+      - name: Getting started contributing to open source
+        type: Crowdcast
+        link: https://www.crowdcast.io/e/contribute
 
 - conference:
-      link: http://2016.devworld.com.au/
-      name: /dev/world 2016
-      date: 2016-08-01
-      location: Melbourne
-      talks:
-        - name: The Power ⚡️ and Responsibility 😓 of Unicode Adoption ✨
-          type: Talk
-          video: https://www.youtube.com/watch?v=MtHk71z-piQ
-          slides: 2016_08_DevWorld
-
+    link: http://2016.devworld.com.au/
+    name: /dev/world 2016
+    date: 2016-08-01
+    location: Melbourne
+    talks:
+      - name: The Power ⚡️ and Responsibility 😓 of Unicode Adoption ✨
+        type: Talk
+        video: https://www.youtube.com/watch?v=MtHk71z-piQ
+        slides: 2016_08_DevWorld
 
 - conference:
     link: https://2016.pycon-au.org
@@ -653,47 +662,46 @@
         video: https://youtu.be/xJ1-QdatS9Q?t=1688
         slides: 2016_08_KatieConf
 
+- conference:
+    link: http://www.webdirections.org/code16/
+    name: Web Directions Code
+    date: 2016-07-29
+    location: Sydney &amp; Melbourne
+    talks:
+      - name: The Power ⚡️ and Responsibility 😓 of Unicode Adoption ✨
+        link: http://www.webdirections.org/code16/speakers/katie-mclaughin.html
+        slides: 2016_07_WD_Code
+        video: https://www.webdirections.org/blog/video-ristretto-katie-mclaughlin-power-responsibility-unicode-adoption/
 
 - conference:
-      link: http://www.webdirections.org/code16/
-      name: Web Directions Code
-      date: 2016-07-29
-      location: Sydney &amp; Melbourne
-      talks:
-        - name: The Power ⚡️ and Responsibility 😓 of Unicode Adoption ✨
-          link: http://www.webdirections.org/code16/speakers/katie-mclaughin.html
-          slides: 2016_07_WD_Code
-          video: https://www.webdirections.org/blog/video-ristretto-katie-mclaughlin-power-responsibility-unicode-adoption/
-
-- conference:
-      name: Ignite Sydney
-      link: http://ignitesydney.com
-      date: 2016-06-22
-      location: Sydney
-      talks:
+    name: Ignite Sydney
+    link: http://ignitesydney.com
+    date: 2016-06-22
+    location: Sydney
+    talks:
       - name: Emoji are broken 😭
         link: http://web.archive.org/web/20160622232400/http://www.ignitesydney.com/speakers/
         type: Short Talk
         slides: 2016_06_IgniteSydney
         video: http://www.ignitetalks.io/videos/emoji-are-broken
 
--   conference:
-      name: PyCon US
-      location: Portland, OR, USA
-      link: https://us.pycon.org/2016/
-      date: 2016-05-30
-      talks:
+- conference:
+    name: PyCon US
+    location: Portland, OR, USA
+    link: https://us.pycon.org/2016/
+    date: 2016-05-30
+    talks:
       - name: Build a Better Hat Rack - All Contributions Welcome
         link: https://us.pycon.org/2016/schedule/presentation/1584/
         video: https://www.youtube.com/watch?v=iAu7Xw9lFt0
         slides: 2016_05_PyCon_US
 
 - conference:
-      name: php[tek]
-      link: https://tek.phparch.com
-      date: 2016-05-20
-      location: St Louis, MO, USA
-      talks:
+    name: php[tek]
+    link: https://tek.phparch.com
+    date: 2016-05-20
+    location: St Louis, MO, USA
+    talks:
       - name: Build a Better Hat Rack - All Contributions Welcome
         link: https://tek.phparch.com/speakers/#70644
         slides: 2016_05_PHPTek_Hats
@@ -702,22 +710,22 @@
         slides: 2016_05_PHPTek_JavaScript
         feedback: https://joind.in/event/phptek-2016/javascript-is-awe-ful
 
--   conference:
-      name: SydPHP
-      link: https://sydphp.org/
-      location: Sydney
-      date: 2016-04-01
-      talks:
+- conference:
+    name: SydPHP
+    link: https://sydphp.org/
+    location: Sydney
+    date: 2016-04-01
+    talks:
       - name: A short story of emoji
         type: Short Talk
         slides: 2016_04_SydPHP
 
 - conference:
-      name: DjangoCon EU
-      link: https://2016.djangocon.eu/
-      location: Budapest, Hungary
-      date: 2016-03-01
-      talks:
+    name: DjangoCon EU
+    link: https://2016.djangocon.eu/
+    location: Budapest, Hungary
+    date: 2016-03-01
+    talks:
       - name: Hat Rack
         type: Lightning Talk
         slides: HatRackExtra
@@ -726,23 +734,22 @@
         link: https://2016.djangocon.eu/speakers/11
         slides: 2016_03_DjangoConEU
 
-
 - conference:
-      name: DevOps Sydney
-      location: Sydney
-      date: 2016-03-01
-      link: http://www.meetup.com/devops-sydney/
-      talks:
+    name: DevOps Sydney
+    location: Sydney
+    date: 2016-03-01
+    link: http://www.meetup.com/devops-sydney/
+    talks:
       - name: The Power ⚡️ and Responsibility 😓 of Unicode Adoption ✨
         slides: 2016_03_SydDevOps
         link: http://www.meetup.com/devops-sydney/events/221906379/
 
 - conference:
-      name: linux.conf.au 2016
-      location: Geelong
-      date: 2016-02-01
-      link: https://linux.conf.au
-      talks:
+    name: linux.conf.au 2016
+    location: Geelong
+    date: 2016-02-01
+    link: https://linux.conf.au
+    talks:
       - name: Hat Rack
         video: https://youtu.be/KERsn72QESE?t=503
         slides: HatRack/HatRack.pdf
@@ -753,23 +760,23 @@
     date: 2015-10-01
     link: http://2015.osdc.com.au/
     talks:
-    - name: Hack the Planet - A practical guide to web application vulnerabilities
-      link: https://2015.osdc.com.au/schedule/presentation/8/
-      type: Workshop
-      slides: 2015_10_OSDC_Workshop
-    - name: JavaScript is Awe-ful
-      video: https://www.youtube.com/watch?v=kK5kp5tjJyc
-      slides: 2015_10_OSDC_JavaScript
-      link: https://2015.osdc.com.au/schedule/presentation/53/
-    - name: Hat Rack
-      type: Lightning Talk
-      slides: HatRack
-      video: https://youtu.be/1xWQ_eUuGmk?t=2211
-      article: https://opensource.com/life/15/10/octohat-github-non-code-contribution-tracker
-    - name: Serialization Formats are Not Toys (Cover Version)
-      type: Lightning Talk
-      slides: http://s3.eastman.net.nz/serialization/
-      video: https://youtu.be/BXv9KpYrW0w?t=1761
+      - name: Hack the Planet - A practical guide to web application vulnerabilities
+        link: https://2015.osdc.com.au/schedule/presentation/8/
+        type: Workshop
+        slides: 2015_10_OSDC_Workshop
+      - name: JavaScript is Awe-ful
+        video: https://www.youtube.com/watch?v=kK5kp5tjJyc
+        slides: 2015_10_OSDC_JavaScript
+        link: https://2015.osdc.com.au/schedule/presentation/53/
+      - name: Hat Rack
+        type: Lightning Talk
+        slides: HatRack
+        video: https://youtu.be/1xWQ_eUuGmk?t=2211
+        article: https://opensource.com/life/15/10/octohat-github-non-code-contribution-tracker
+      - name: Serialization Formats are Not Toys (Cover Version)
+        type: Lightning Talk
+        slides: http://s3.eastman.net.nz/serialization/
+        video: https://youtu.be/BXv9KpYrW0w?t=1761
 
 - conference:
     name: JoomlaDay Australia
@@ -777,14 +784,13 @@
     link: http://joomladay.org.au
     date: 2015-10-10
     talks:
-    - name: Build a Better Hat Rack - All Contributions Welcome
-      link: http://joomladay.org.au/program/schedule
-      slides: 2015_10_JoomlaDay_Keynote
-      type: Keynote
-    - name: Hack the Planet - A practical guide to web application vulnerabilities
-      slides: 2015_10_JoomlaDay_Workshop
-      type: Tutorial
-
+      - name: Build a Better Hat Rack - All Contributions Welcome
+        link: http://joomladay.org.au/program/schedule
+        slides: 2015_10_JoomlaDay_Keynote
+        type: Keynote
+      - name: Hack the Planet - A practical guide to web application vulnerabilities
+        slides: 2015_10_JoomlaDay_Workshop
+        type: Tutorial
 
 - conference:
     name: Kiwi PyCon
@@ -806,10 +812,9 @@
     date: 2015-09-01
     link: http://2015.phpconference.org.nz/conference-warm-up/
     talks:
-        - name: Hat Rack
-          slides: 2015_09_PHPWellington
-          type: Lightning Talk
-
+      - name: Hat Rack
+        slides: 2015_09_PHPWellington
+        type: Lightning Talk
 
 - conference:
     name: /dev/world
@@ -817,10 +822,9 @@
     link: http://2015.devworld.com.au
     location: Melbourne
     talks:
-    - name: Build a Better Hat - Rack All Contributions Welcome
-      video: https://www.youtube.com/watch?v=yQGrLrLgT-M
-      slides: 2015_08_DevWorld
-
+      - name: Build a Better Hat - Rack All Contributions Welcome
+        video: https://www.youtube.com/watch?v=yQGrLrLgT-M
+        slides: 2015_08_DevWorld
 
 - conference:
     name: SydPHP
@@ -831,7 +835,6 @@
       - name: Life After Death - How to handle abandoned projects
         slides: 2015_08_SydPHP
         link: https://www.meetup.com/SydPHP/events/223175230/
-
 
 - conference:
     name: PyCon AU
@@ -854,7 +857,6 @@
         type: Lightning(?) Talk
         twitter: https://twitter.com/glasnt/status/627020535646412800
         slides: https://twitter.com/glasnt/status/626897751335309312
-
 
 - conference:
     name: SyPy
@@ -884,10 +886,10 @@
     date: 2015-06-01
     link: http://www.meetup.com/devops-sydney/
     talks:
-    - name: JavaScript Rant
-      link: http://www.meetup.com/devops-sydney/events/219798291/
-      video: https://www.youtube.com/watch?v=nx0yt0YsDnA
-      slides: 2015_06_DevOps
+      - name: JavaScript Rant
+        link: http://www.meetup.com/devops-sydney/events/219798291/
+        video: https://www.youtube.com/watch?v=nx0yt0YsDnA
+        slides: 2015_06_DevOps
 
 - conference:
     name: Port80
@@ -899,7 +901,6 @@
         link: https://www.meetup.com/Port80-Sydney/photos/26186075/#438540149
         type: Tutorial
         slides: 2015_06_Port80/Workshop.pdf
-        
 
 - conference:
     name: Ruby on Rails Oceania
@@ -909,7 +910,6 @@
       - name: Disentangle a new fangled image mangler
         link: https://www.meetup.com/Ruby-On-Rails-Oceania-Sydney/events/219319589/
         slides: 2015_04_RoroSyd
-
 
 - conference:
     name: DevOps Sydney
@@ -921,7 +921,6 @@
         slides: 2015_03_DevOps/HatRack.pdf
         link: http://www.meetup.com/devops-sydney/events/219798291/
 
-
 - conference:
     name: PHP Australia Warm-Up
     date: 2015-03-01
@@ -932,7 +931,6 @@
         type: Short Talk
         slides: 2015_03_SydPHP/HatRack.pdf
 
-
 - conference:
     name: PhunConf 5
     location: Sydney
@@ -942,7 +940,6 @@
       - name: In ur s3rvs h4k1ng ur c0dez, a Security Tutorial
         type: Workshop
         slides: 2015_02_PhunConf/SecurityTutorial.pdf
-
 
 - conference:
     name: linux.conf.au
@@ -966,10 +963,9 @@
     date: 2014-12-01
     link: https://www.meetup.com/Women-Who-Code-Sydney
     talks:
-        - name: Hack and Tell - Machiavelli
-          slides: 2014_12_WomenWhoCode
-          link: https://www.meetup.com/Women-Who-Code-Sydney/events/218747426/
-
+      - name: Hack and Tell - Machiavelli
+        slides: 2014_12_WomenWhoCode
+        link: https://www.meetup.com/Women-Who-Code-Sydney/events/218747426/
 
 - conference:
     name: DevOps Sydney
@@ -981,10 +977,9 @@
         slides: 2014_11_DevOps
         link: http://www.meetup.com/devops-sydney/events/153704752/
 
-
 - conference:
     name: Open Source Developers Conference
-    location: Gold Coast 
+    location: Gold Coast
     date: 2014-10-01
     link: http://2014.osdc.com.au/
     talks:
