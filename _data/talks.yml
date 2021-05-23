@@ -1,4 +1,28 @@
 - conference:
+    name: FOSS && Crafts
+    date: 2021-05-23
+    link: https://fossandcrafts.org/
+    talks:
+      - type: Podcast
+        link: https://fossandcrafts.org/episodes/28-foss-stitch-with-ehashman-glasnt.html
+        name: "28: FOSS Stitch w/ Elana Hashman and Katie McLaughlin"
+        twitter: https://twitter.com/dustyweb/status/1396564377675907072
+- conference: 
+    name: "Google I/O '21"
+    date: 2021-05-18
+    link: https://events.google.com/io/?lng=en
+    talks:
+      - name: Serverless Demo Derby
+        link: https://www.youtube.com/watch?v=g4ES7wXn8oQ
+        
+- conference:
+    name: The Power of Serverless
+    date: 2021-05-13
+    link: https://cloudonair.withgoogle.com/events/serverless-may2021
+    talks: 
+      - name: Lifecycle of an Application
+      
+- conference:
     name: The Router
     date: 2020-12-06
     link: https://twitter.com/UQComputing
