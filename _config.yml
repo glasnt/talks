@@ -1,3 +1,35 @@
-remote_theme: glasnt/myrtle@latest
-base_url: talks/
-title: talks by glasnt
+remote_theme: glasnt/myrtle@thinkspace
+repository: glasnt/talks
+
+description       : "in which glasnt says the words"     
+baseurl           : "/talks"
+
+title_left         : "glasnt.com"
+url                : "https://glasnt.com"
+google_analytics   : G-265B4NHGG0
+twitter_username   : "glasnt"     
+postshare_enabled  : true
+
+permalink          : /:title/
+markdown           : kramdown
+highlighter        : rouge
+
+
+navbar:
+  - slug : /
+    title: home
+  - slug : /blog/about/
+    title: about
+  - slug: /talks/
+    title: talks
+  - slug: /writing/
+    title: writing
+  - slug: /blog/
+    title: blog
+  - slug: /blog/now/
+    title: now
+  - slug: /blog/archive/
+    title: archive
+
+# devmode
+# exclude: 20*

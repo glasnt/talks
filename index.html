@@ -1,54 +1,83 @@
 ---
+title: talks
 description: in which glasnt says words
-layout: page 
-header-img: "../img/talking_header.jpg"
+layout: default
 ---
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
 {% assign talk_total = 0 %}
 {% for c in site.data.talks %}
-  {% for t in c.conference.talks %}
-    {% if t.type != "Podcast" %}
-      {% assign talk_total = talk_total | plus: 1 %}
-    {% endif %}
-  {% endfor %}
+{% for t in c.conference.talks %}
+{% if t.type != "Podcast" %}
+{% assign talk_total = talk_total | plus: 1 %}
+{% endif %}
+{% endfor %}
 {% endfor %}
 
-{% assign talk_num = talk_total %}
+<style>
+.row div {display: inline-block}
+</style>
 
-{% for c in site.data.talks %} 
-<div class="row">&nbsp;</div>
-<div class="row">
+
+<article class="page container">
+  <!-- <header class="page-header">
+    <h1 class="page-title">Popular Talks</h1>
+  </header>
+  -->
+
+  <div class="page-content">
+
+    <header class="page-header">
+      <h1 class="page-title">Full list of talks</h1>
+    </header>
+  
+{% assign talk_num = talk_total %}
+  {% for c in site.data.talks %}
+  <div class="row">
       {% if c.conference.link %}
       <a href="{{c.conference.link}}">{{c.conference.name}}</a>,
       {% else %}
-          {{c.conference.name}}
+      {{c.conference.name}}
       {% endif %}
 
       {% if c.conference.location %}{{c.conference.location}}, {%endif%}
       {{c.conference.date | date: "%b %Y"}}
-</div>
-  {% for talk in c.conference.talks %} 
+
+  </div>
+  {% for talk in c.conference.talks %}
   <div class="row">
-      {% if talk.type != "Podcast" %}#{{ talk_num }}{%else%}&nbsp;<i class="far fa-podcast">&nbsp;</i>{% endif %}
-      {{talk.type | default: "Talk"}}  
-      {% if talk.link%}<a href="{{talk.link}}">{{talk.name}}</a>{%else%}"{{talk.name}}"{%endif%}
-      &nbsp;
-      {% if talk.slides %} <a href="{{talk.slides}}" title="Slides">(slides)</a>{% endif %}
-      {% if talk.video %} <a href="{{talk.video}}" title="Video">📼</a>{% endif %}
-      {% if talk.twitter %} <a href="{{talk.twitter}}" title="Twitter">🐦</a>{% endif %}
-      {% if talk.transcript %} <a href="{{talk.transcript}}" title="Transcript">📄</a>{% endif %}
-      {% if talk.resources %} <a href="{{talk.resources}}" title="Resources">📚</a>{% endif %}
-      {% if talk.feedback %} <a href="{{talk.feedback}}" title="Feedback">💬</a>{% endif %}
-      {% if talk.article %} <a href="{{talk.article}}" title="Article">📖</a>{% endif %}
-      {% if talk.photo %} <a href="{{talk.photo}}" title="Photo">📷</a>{% endif %}
+    <div style="width: 5%">{% if talk.type != "Podcast" %}#{{ talk_num }}{% endif %}</div>
+    <div style="width: 15%">{{talk.type | default: "Talk"}}</div>
+    <div style="width: 60%">{% if talk.link %}<a href="{{talk.link}}">{{talk.name}}</a>{%else%}"{{talk.name}}"{%endif%}</div>
+    <div style="width: 15%; text-align: right;">{% if talk.slides %} <a href="{{talk.slides}}"><i class="far fa-presentation"></i></a>{% endif
+      %}
+      {% if talk.video %} <a href="{{talk.video}}"><span class="material-icons">smart_display</span></i></a>{% endif %}
+      {% if talk.twitter %} <a href="{{talk.twitter}}"><span class="material-icons">post_add</span></a>{% endif %}
+      {% if talk.transcript %} <a href="{{talk.transcript}}"><span class="material-icons">record_voice_over</span></a>{% endif %}
+      {% if talk.resources %} <a href="{{talk.resources}}"><span class="material-icons">assignment</span></a>{% endif %}
+      {% if talk.feedback %} <a href="{{talk.feedback}}"><span class="material-icons">forum</span></a>{% endif %}
+      {% if talk.article %} <a href="{{talk.article}}"><span class="material-icons">article</span></a>{% endif %}
+      {% if talk.photo %} <a href="{{talk.photo}}"><span class="material-icons">photo_library</span></a>{% endif %}
+      {% if talk.type == "Podcast" %} <a href="{{talk.link}}"><span class="material-icons">podcasts</span></a>{% endif %}
+    </div>
 
     {% if talk.type != "Podcast" %}
-      {% assign talk_num = talk_num | minus: 1 %}
+    {% assign talk_num = talk_num | minus: 1 %}
     {% endif %}
   </div>
   {% endfor %}
-{% endfor %}
-<div class="row">&nbsp;</div>
-<div class="row">
-<p>Source hosted on <a href="https://github.com/glasnt/talks">GitHub</a>. See also: <a href="http://pyvideo.org/speaker/katie-mclaughlin.html">pyvideo profile</a>, <a href="https://noti.st/glasnt">notist</a>. <a href="https://www.flickr.com/photos/140681500@N07/27775305387/in/album-72157669873315198/">Header</a> image by <a href="https://www.flickr.com/photos/140681500@N07/">Bartek Pawlik</a>, used under <a href="https://creativecommons.org/licenses/by-nc/2.0/">CC BY-NC 2.0</a>
+  <br>
+  {% endfor %}
+</div>
+
+  <p>Source hosted on <a href="https://github.com/glasnt/talks">GitHub</a>.<br>
+    See also: <a href="http://pyvideo.org/speaker/katie-mclaughlin.html">pyvideo profile</a>, <a
+      href="https://noti.st/glasnt">notist</a>. <a
+      href="https://www.flickr.com/photos/140681500@N07/27775305387/in/album-72157669873315198/">Header</a> image by <a
+      href="https://www.flickr.com/photos/140681500@N07/">Bartek Pawlik</a>, used under <a
+      href="https://creativecommons.org/licenses/by-nc/2.0/">CC BY-NC 2.0</a>
 
 </div>
+
+  </div>
+</article>
