@@ -49,9 +49,9 @@ layout: default
     <div style="width: 5%">{% if talk.type != "Podcast" %}#{{ talk_num }}{% endif %}</div>
     <div style="width: 15%">{{talk.type | default: "Talk"}}</div>
     <div style="width: 60%">{% if talk.link %}<a href="{{talk.link}}">{{talk.name}}</a>{%else%}"{{talk.name}}"{%endif%}</div>
-    <div style="width: 15%; text-align: right;">{% if talk.slides %} <a href="{{talk.slides}}"><i class="far fa-presentation"></i></a>{% endif
-      %}
-      {% if talk.video %} <a href="{{talk.video}}"><span class="material-icons">smart_display</span></i></a>{% endif %}
+    <div style="width: 15%; text-align: right;">
+      {% if talk.slides %} <a href="{{talk.slides}}"><span class="material-icons">slideshow</span></a>{% endif %}
+      {% if talk.video %} <a href="{{talk.video}}"><span class="material-icons">smart_display</span></a>{% endif %}
       {% if talk.twitter %} <a href="{{talk.twitter}}"><span class="material-icons">post_add</span></a>{% endif %}
       {% if talk.transcript %} <a href="{{talk.transcript}}"><span class="material-icons">record_voice_over</span></a>{% endif %}
       {% if talk.resources %} <a href="{{talk.resources}}"><span class="material-icons">assignment</span></a>{% endif %}
