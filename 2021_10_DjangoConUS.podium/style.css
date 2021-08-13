@@ -462,7 +462,7 @@ table th { line-height: 100%; padding: 0 0.5em;}
   letter-spacing: -0.4px !important;
   font-size: 17pt !important;
   color: rgb(199,199,199);
-  font-family: "SFMono-Regular",Consolas,"Liberation Mono",Menlo,Courier,monospace !important;
+  font-family: Monaco !important;
   line-height: 1.4em !important;
   word-wrap: break-word !important;
   overflow-wrap: break-word !important;
