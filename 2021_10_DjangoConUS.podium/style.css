@@ -4,18 +4,34 @@
 @import url("highlightjs.css");
 @import url("fonts/pt-sans.css");
 @import url("fonts/pt-serif.css");
-@import url("fonts/roboto.css");
 
 /* Remark.js overrides */
 .remark-slide-scaler { 
   -webkit-box-shadow: none !important;
 }
+
+/* make background black */
 .remark-container { 
   background: black !important;
 }
 
+/* remove slide number */
 .remark-slide-number { 
   display:none !important;
+}
+
+/* hide next slide notes preview */
+.remark-notes-preview-area { 
+  display: none
+}
+
+.remark-notes p { 
+  font-size: inherit;
+}
+
+/* make notes sans-serif */
+.remark-notes {
+  font-family: sans-serif; 
 }
 
 
