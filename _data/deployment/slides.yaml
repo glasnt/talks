@@ -1,34 +1,34 @@
 - image: images/slide_0.png
-  text: "Hi! I'm Katie, and this is \"what is deployment, anyway?\" This isn't the\
-    \ talk you're <br>expecting."
+  text: "Hi! I'm Katie, and this is \"What is deployment, anyway?\".<br><br>This isn't the\
+    \ talk you're expecting."
 - image: images/slide_1.png
-  text: "This isn't a talk about the One Way to do deployments. <br>No talk can do that.\
-    \ <br>This also isn't a talk about how to take your proof-of-concept VC-funded startup\
-    \ site <br>and turning it into the next big dot com.  If you want to talk about\
+  text: "This isn't a talk about the \"One Way\" to do deployments. <br><br>No talk can do that.\
+    \ <br><br>This also isn't a talk about how to take your proof-of-concept VC-funded startup\
+    \ site and turning it into the next big dot com.  If you want to talk about\
     \ that "
 - image: images/slide_2.png
-  text: "Here's my work email. Let's chat.<br>But for today, the scope of my discussions\
-    \ are going to be talking about the minimum <br>number of things you need to consider\
-    \ in order to host your django website.<br>This talk is more about taking your little\
-    \ cool, Django blog application that you've <br>made on your local machine and putting\
-    \ it on the internet so you can share it with <br>your friends. <br>This talk is going\
+  text: "Here's my work email. Let's chat.<br><br>But for today, the scope of my discussions\
+    \ are going to be talking about the minimum number of things you need to consider\
+    \ in order to host your django website. This talk is more about taking your little\
+    \ cool, Django blog application that you've made on your local machine and putting\
+    \ it on the internet so you can share it with your friends. <br><br>This talk is going\
     \ to answer the question posed in the title:"
 - image: images/slide_3.png
-  text: "what is deployment, anyway? more specifically what is Django deployment,\
-    \ anyway?  (because you know, this is a djangocon!)<br>and we're going to focus\
+  text: "What is deployment, anyway?<BR><BR>More specifically, what is django deployment,\
+    \ anyway? <br>(because you know, this is a djangocon!)<br><br>and we're going to focus\
     \ on the \"what\" here.  We're going to briefly mention some of the \"\
-    where\" and the \"how\", but this is going to <br>focus on the \"what\""
+    where\" and the \"how\", but this is going to focus on the \"what\""
 - image: images/slide_4.png
   text: "This talk and the code examples in this talk are specifically django 3.2\
     \ and Python 3.9, as these are the most current minor versions at time of\
     \ recording.<br>If you're joining me on YouTube from the year 2032 I'm sorry? <br>\
     This talk might be a little bit out of date.<br>But hopefully you still learn something."
 - image: images/slide_5.png
-  text: "So, let's start by looking at django, as it comes, out of the box. just as\
+  text: "So, let's start by looking at django, as it comes, out of the box. Just as\
     \ is. <br>If you haven't create a new django project in a while, it's nice to be\
-    \ reminded about <br>how it all starts."
+    \ reminded about how it all starts."
 - image: images/slide_6.png
-  text: "so in my terminal, I want to install django so I type \"pip install\
+  text: "So in my terminal, I want to install django so I type \"pip install\
     \ django\"  and pip goes and collects django and it's main dependencies.\
     \ <br>I then want to start a new project  So for that I'll use the django-admin\
     \ CLI that was just installed, and use it's <br>startproject template function.\
