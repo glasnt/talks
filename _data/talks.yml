@@ -1,4 +1,12 @@
 - conference:
+    name: DjangoCon 2021
+    date: 2021-10-22
+    link: https://2021.djangocon.us/
+    talks: 
+      - name: "What is deployment, anyway?"
+        link: "https://2021.djangocon.us/talks/what-is-deployment-anyway/"
+        slides: "what-is-deployment-anyway"
+- conference:
     name: FOSS && Crafts
     date: 2021-05-23
     link: https://fossandcrafts.org/

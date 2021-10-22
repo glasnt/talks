@@ -1,0 +1,50 @@
+---
+layout: page
+title: What is deployment, anyway?
+slides:
+---
+
+This talk has been previously presented at:
+
+{% for conf in site.data.talks %}
+{% for talk in conf.conference.talks %}
+{% if talk.name == "What is deployment, anyway?" %}
+<li><a href="{{talk.link}}">{{conf.conference.name}}</a></li>
+{% endif %}
+{% endfor %}
+{% endfor %}
+
+The slides below are from the DjangoCon 2021 iteration.
+
+<hr>
+
+<style>
+    .slide img {
+        width: 400px;
+    }
+
+    .notes {
+        padding: 20px;
+    }
+
+    .footnote a { 
+        color: gray; text-decoration: underline;
+        font-size: 75%;
+    }
+</style>
+
+<table>
+    {% assign image_fn = "deployment" %}
+    {% for slide in site.data.deployment.slides %}
+    <tr>
+        <td class="slide"><img src="/talks/img/{{image_fn}}/{{slide.image}}" />
+            {% if slide.footnote %}<br><span class="footnote"><a href="{{slide.footnote.link }}">{% if
+                    slide.footnote.text
+                    %}{{slide.footnote.text}}{%else%}{{slide.footnote.link}}{%endif%}</a>{%endif%}</span>
+        </td>
+        <td class="notes">{{slide.text}}
+
+        </td>
+    </tr>
+    {% endfor %}
+</table>
