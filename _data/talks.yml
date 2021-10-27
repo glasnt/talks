@@ -1,4 +1,13 @@
 - conference:
+    name: SeaGL 2021
+    date: 2021-11-04
+    link: https://seagl.org/
+    talks: 
+      - name: "Expressive Security: Vulnerabilities with Emoji"
+        link: "https://osem.seagl.org/conferences/seagl2021/program/proposals/826"
+        slides: "expressive-security"
+
+- conference:
     name: DjangoCon 2021
     date: 2021-10-22
     link: https://2021.djangocon.us/
@@ -6,6 +15,7 @@
       - name: "What is deployment, anyway?"
         link: "https://2021.djangocon.us/talks/what-is-deployment-anyway/"
         slides: "what-is-deployment-anyway"
+        twitter: https://twitter.com/xahteiwi/status/1452541745561063424
 - conference:
     name: FOSS && Crafts
     date: 2021-05-23

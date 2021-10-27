@@ -1,0 +1,504 @@
+slides:
+- alt: '@glasnt
+
+    Expressive Security
+
+    Vulnerabilities with Emoji
+
+    SeaGL 2021
+
+    katie@glasnt.com'
+  image: images/slide_0.png
+  text: 'Hi! I''m Katie. I do a great number of things, but when
+    I''m not <br>changing the world, I enjoy making tapestries, cooking, and seeing
+    just how well <br>various application stacks handle emoji because gosh it''s a
+    lot. <br>This is "Expressive Security: Vulnerabilities with Emoji".<br>Except
+    it''s not.'
+- alt: "@glasnt\nExpressive Security\nVulnerabilities with Emoji \U0001F510\nSeaGL\
+    \ 2021\nkatie@glasnt.com"
+  image: images/slide_1.png
+  text: '"Expressive Security: Vulnerabilities with Emoji (closed lock with key) "<br>But
+    the SeaGL CFP system, sort of, exploded when I tried to do that.'
+- alt: '@glasnt
+
+    The time I broke this conference''s software.'
+  image: images/slide_2.png
+  text: The fork of OSEM (Open Source Event Manager) that SeaGL uses gave me a <br>LOVELY
+    500 error trying to submit this talk. <br>But it's okay, it's not just y'all.
+    This problem happens everywhere. <br>But first, let me go back a bit.
+- alt: '@glasnt
+
+    TL;DR:
+
+    increment.com/internationalization/the-wonderful-world-of-emoji/'
+  image: images/slide_3.png
+  text: TL;DR Because computers, we have this thing called Unicode.<br>And Unicode
+    gives us a huge address space to encode over a million characters to <br>allow
+    every character of near every written human language to be encoded.<br>But as
+    this standard grew, more than just alphabets were added.
+- alt: "@glasnt\n\U000F03E6\U0001F61F\u2753"
+  image: images/slide_4.png
+  text: The very early versions of Unicode had all three of the main writing systems
+    used in <br>Japan, that is hiragana, katakana and kanji, but not their unofficial
+    "fourth" set.
+- alt: "@glasnt\n\U000F03E6\U0001F970\U0001F4F1"
+  image: images/slide_5.png
+  text: Originally implemented in different ways by different telcos in the 90's,
+    the space left <br>in the character encoding systems for japanese mobile phones
+    were used to store <br>some cute little pictures
+- alt: '@glasnt
+
+    Japan 1999'
+  image: images/slide_6.png
+  text: And these symbols were very popular, but often implemented differently between
+    <br>different phone vendors.
+- alt: '@glasnt
+
+    Unicode 6 2007'
+  image: images/slide_7.png
+  text: These symbols were standardized in 2007 by putting them into unicode. <br>And
+    nothing happened.
+- alt: '@glasnt
+
+    Apple 2010'
+  image: images/slide_8.png
+  text: '2010 saw the first iPhones enter japan, which to be able to compete the iPhone
+    had <br>to support emoji, and so Apple implemented it specifically for that region.
+    <br>And, eventually, the feature flag for this feature appeared on iPhones in
+    the US.<br>Story goes, one day, someone found this feature, hidden in a custom
+    setting in a <br>third-party app, and went: huh.. I can send a pile of poop to
+    my friends.'
+- alt: "@glasnt\nUnicode 7 2014\n\U0001F43F \U0001F596 \U0001F6F0 \U0001F574"
+  image: images/slide_9.png
+  text: And thus the precambrian explosion of emoji started.
+- alt: "@glasnt\nUnicode 8 2015\n\U0001F981 \U0001F643 \U0001F984 \U000F06C1"
+  image: images/slide_10.png
+  text: Every year we get more and more emoji, addressing memes and frequently <br>requested
+    emoji.
+- alt: "@glasnt\nUnicode 9 2016\n\U0001F920 \U0001F95A \U000F0908 \U0001F986"
+  image: images/slide_11.png
+  text: We start getting backwards compatibility, like the cowboy emoji. This emoji
+    was added <br>to Unicode because it was an emoticon in Yahoo! Messenger.
+- alt: "@glasnt\nUnicode 10 2017\n\U0001F929 \U0001F995 \U0001F960 \U0001F994"
+  image: images/slide_12.png
+  text: We start getting communities putting together proposals and designs, like
+    the fortune <br>cookie.
+- alt: "@glasnt\nUnicode 11 2018\n\U0001F970 \U0001F96E \U0001F973 \U0001F99C"
+  image: images/slide_13.png
+  text: Every year, even more emoji are added, as they are approved by the Emoji <br>Subcommittee.
+    The submission process is open to the public, which means <br>anywhoever can suggest
+    emoji, and if the submission is strong enough, they might <br>get accepted. <br>Like
+    me. The parrot was me. Sorry.
+- alt: "@glasnt\nUnicode 12 2019\n\U0001F971 \U0001F9A6 \U0001F9BE \U0001F9BA"
+  image: images/slide_14.png
+  text: Then we start getting more inclusive, like representation of bionics.
+- alt: "@glasnt\nUnicode 13 2020\n\U0001F978 \U0001F9AD \U0001F9CB \U0001FA99"
+  image: images/slide_15.png
+  text: And more diverse food and animals. <br>And the set still isn't 'complete',
+    as we are getting things that we've been missing the <br>entire time, like a single
+    coin emoji. (Also, me. Sorry)
+- alt: "@glasnt\nUnicode 14 2021\n\U0001F51C\nSample implementations from emojipedia.org"
+  image: images/slide_16.png
+  text: The list for 2021 has been announced, but the images won't be available on
+    your <br>devices until probably next year. <br>These images here are *sample*
+    implementations, but vendors -- Apple for iOS, <br>Google for Android, Microsoft
+    for Windows, etc -- are completely free to choose <br>whatever implementation
+    they want. <br>Which becomes an issue when the implementations don't match.<br>Let
+    me show you an example. Sadly, seagull isn't an emoji, but the parrot is.
+- alt: '@glasnt
+
+    Parrot \u1F99C
+
+    Various platforms L2/17-280'
+  image: images/slide_17.png
+  text: "These are all codepoint 1F99C Parrot, but depending on your platform you're\
+    \ either <br>seeing:<br>\u25CF a scarlet macaw, or anything from<br>\u25CF a carolina\
+    \ parakeet to <br>\u25CF possibly a Black-winged lovebird<br>\u25CF to an eclectus\
+    \ parrot, or <br>\u25CF even a sun parakeet. <br>While these are all parrots,\
+    \ they're all the wrong parrot."
+- alt: "@glasnt\nSirocco the k\u0101k\u0101p\u014D\ndoc.govt.nz/nature/native-animals/birds/birds-a-z/kakapo/sirocco/\
+    \ CC BY 4.0"
+  image: images/slide_18.png
+  text: "None of them look like Sirocco the k\u0101k\u0101p\u014D, for which my original\
+    \ parrot emoji <br>submission was based. <br>You might recognise him as the Party\
+    \ Parrot."
+- alt: '@glasnt
+
+    Party Parrot!!'
+  image: images/slide_19.png
+  text: Party all the time!<br><br>Emoji implementers are under
+    no obligation to use the suggested design in the <br>submission docs, so you end
+    up with these variations. <br>But it's not just issues with between platforms.
+    The issues can be on the same platform between different codepoints.
+- alt: '@glasnt
+
+    Beaming Face with  Grimacing Face
+
+    Smiling Eyes
+
+    \u1F601 \u1F62C
+
+    up to 2015
+
+    from 2016
+
+    grouplens.org/blog/investigating-the-potential-for-miscommunication-using-emoji'
+  image: images/slide_20.png
+  text: "The landmark case is of the these two emoji, subject of the 2016 paper \"\
+    \u201CBlissfully <br>happy\u201D or \u201Cready to fight\u201D: Varying Interpretations\
+    \ of Emoji\" from the University of <br>Minnesota.<br>Before 2015 on iPhones,\
+    \ the only difference between these two emoji where the eyes. <br>In the west\
+    \ we might look to the mouth to work out the emotion, but particularly in <br>Manga,\
+    \ the eyes are used. <br>In 2016 the Beaming Face with Smiling Eyes emoji was\
+    \ updated to have also a <br>smiling mouth."
+- alt: "@glasnt\nApple 2010\n\U0001F424 \U0001F427 \U0001F40E \U0001F437\nApple 2021"
+  image: images/slide_21.png
+  text: As the years go on, the emoji representations that vendors service can be
+    updated. <br>The apple emoji from 10 years ago look similar to the emoji today,
+    but are now much <br>more detailed.
+- alt: "@glasnt\n\U0001F913"
+  image: images/slide_22.png
+  text: Suffice to say... I'm an enormous emoji nerd. <br>I've got *multiple* emoji
+    into the standard. I've got published articles about emoji.<br>This is all because
+    5 years ago I started giving talks on it.
+- alt: '@glasnt
+
+    The Power and Responsibility
+
+    of Unicode Adoption'
+  image: images/slide_23.png
+  text: 'Since 2016, I''ve given this talk: <br>The Power and Responsibility of Unicode
+    Adoption<br>Except, that''s not the title of the talk.'
+- alt: "@glasnt\nThe Power \u26A1 and Responsibility \U0001F613\nof Unicode Adoption\
+    \ \u2728"
+  image: images/slide_24.png
+  text: The actual title is<br>The Power (lightning bolt)<br>And responsibility (face
+    with cold sweat)<br>of Unicode Adoption (sparkles)<br>And the very first time
+    I gave this talk, I had problems.
+- alt: "@glasnt\nThe \uFB01rst time I broke conference software."
+  image: images/slide_25.png
+  text: 'My first acceptance email for this presentation had the title of the talk
+    just, truncated. <br>"Congratulations! Your talk has been selected! Selected talk:
+    The Power Lightning <br>Bolt and Responsibility". <br>... huh.'
+- alt: '@glasnt
+
+    Another time I broke conference software.'
+  image: images/slide_26.png
+  text: Some systems wouldn't let me enter the talk title in the first place, and
+    tell me that the <br>problem will be 'solved soon'. <br>I should hope it was solved,
+    as EasyChair was the CFP system for the 4th  <br>International Workshop on Emoji
+    Understanding and Applications in Social Media, <br>held earlier this year.
+- alt: '@glasnt
+
+    The time I didn''t break the conference website.'
+  image: images/slide_27.png
+  text: Some conferences get it right in some places, but wrong in others.<br>For
+    example for this conference, the title displays correctly on the website schedule..
+- alt: '@glasnt
+
+    The time I broke the conference schedule.'
+  image: images/slide_28.png
+  text: .. but on the printed schedule, there's just a void.
+- alt: '@glasnt
+
+    The time I broke the conference AV checklist.'
+  image: images/slide_29.png
+  text: An the AV runsheet, it was giant black boxes everywhere. <br>You'll note the
+    "Check Title" note; <br>The Session chair for this talk had yet another printout
+    which she, with consent, <br>repeated verbatim, so I was introduced as speaking
+    about...
+- alt: "@glasnt\n\"The Power \u26A1 and Responsibility \u25FC\nof Unicode Adoption\
+    \ \u25FC\"\n...twice"
+  image: images/slide_30.png
+  text: '"The Power (lightning bolt) and responsibility (square) of unicode adoption
+    (square)"<br>But even better was the digital display the conference center had
+    outside my talk.'
+- alt: '@glasnt
+
+    The time I didn''t break conference display boards.'
+  image: images/slide_31.png
+  text: It worked.. mostly. <br>You can see the emoji are there, but this is the segue
+    into the security part of this talk. <br>I can tell you, by looking at this picture
+    alone, that this conference center was running <br>Windows 8.0. <br>And I can
+    tell because of the second emoji.
+- alt: '@glasnt'
+  image: images/slide_32.png
+  text: This is the "Face with Cold Sweat" emoji, as represented on Windows 8.0.
+- alt: "@glasnt\nWindows 8.0 Windows 8.1 Windows 10  Windows 10 \nAnniversary May\
+    \ 2019 \nUpdate\nemojipedia.org/downcast-face-with-sweat/"
+  image: images/slide_33.png
+  text: For particular codepoints that get updated often, using the knowledge about
+    vendor <br>updates we learnt earlier, you can pin down to the minor version the
+    operating <br>system.
+- alt: "@glasnt\nPreviewed \nWindows \nFluent\nWindows \nInsider Fluent\nWindows 8.0\
+    \ Windows 8.1 Windows 10  Windows 10 \nAnniversary May 2019 \nUpdate\nblog.emojipedia.org/\uFB02\
+    uent-emojis-look-different-to-how-you-last-saw-them/"
+  image: images/slide_34.png
+  text: The next version of this emoji may or may not be flat or 3d shaded. Depending
+    on <br>which one comes out on the retail version of Windows, you might be able
+    to tell who's <br>running a preview. <br>This presumes that you're running the
+    base operating system with no customisations. <br>Especially if you are running
+    linux you may have already experienced the issue in the <br>lack of richness of
+    your emoji, and there are various ways that you can install custom <br>fonts to
+    adjust this. <br>But it's not just humans that misunderstand emoji. <br>Computers
+    are especially terrible with certain Unicode.
+- alt: "@glasnt\n\U000F0772"
+  image: images/slide_35.png
+  text: This is the Pride Emoji.<br>It's technically not it's own emoji, it's a combination
+    of emoji.
+- alt: "@glasnt\n\U0001F3F3 0 \U0001F308"
+  image: images/slide_36.png
+  text: It's the combination of the blank flag emoji, a rainbow emoji, and between
+    the two, a <br>special character called a "zero width joiner", allegedly pronounced
+    "zwidge"(?)<br>The Zwidge also the hidden emoji that allows you to have skin tone
+    modifiers on <br>various hand and face emoji. <br>When this functionality was
+    added to emoji back in 2016, it caused some FUN. <br>For instance! If instead
+    of this sequence you sent...
+- alt: "@glasnt\n\U0001F3F3 0 \U0001F308"
+  image: images/slide_37.png
+  text: 'you sent this literally sequence: flag, digit zero, rainbow<br>to your mate
+    with an iPhone,'
+- alt: '@glasnt
+
+    thehackernews.com/2017/01/crash-iphone-emoji.html'
+  image: images/slide_38.png
+  text: it'd do this. <br>This isn't the first and won't be the last time that unique
+    sequences of characters <br>crash mobile devices.
+- alt: '@glasnt
+
+    2015 2018 2020
+
+    theverge.com/2020/4/24/21234191/apple-iphone-crash-text-bug-ios-13-problem'
+  image: images/slide_39.png
+  text: You can hide a lot of non-display characters in a message that a copy-paste
+    allows it <br>to be shared by mobile users that the phone will just nope out of<br>But
+    it's not just emoji, combinatorics of scripts like arabic and telugu (teh-luh-goo)
+    <br>have been reported to cause issues. <br>These are just some examples of combinations
+    that have rebooted enough phones to <br>get news coverage.
+- alt: "@glasnt\n\U0001F30E\U0001F525\npoststatus.com/the-trojan-emoji/ CVE-2015-3438"
+  image: images/slide_40.png
+  text: The biggest example of these issues coming together happened a few years ago
+    <br>now, but it's still a super interesting story. <br>The link on the screen
+    goes to a great full write up of the issue, including a link to the <br>loopconf
+    recording from the lead dev of wordpress, and a post from the original <br>vulnerability
+    identifier.  <br>This is all about CVE 2015 3438. <br>This isn't a problem specific
+    to wordpress, but given it did happen to wordpress and <br>wordpress powers a
+    significant percentage of websites, it's not too outlandish to be <br>able to
+    say have in my abstract "we'll cover how one WordPress fix saved a quarter of
+    <br>the internet from XSS through emoji"
+- alt: "@glasnt\nWordPress 4.2 \u201CPowell\u201D\nPosted April 23, 2015\n...\nExtended\
+    \ character support\nWriting in WordPress, whatever your language, just got better.\
+    \ WordPress 4.2 supports a host of new characters \nout-of-the-box, including\
+    \ native Chinese, Japanese, and Korean characters, musical and mathematical symbols,\
+    \ and \nhieroglyphs.\nDon\u2019t use any of those characters? You can still have\
+    \ fun \u2014 emoji are now available in WordPress! Get creative and \ndecorate\
+    \ your content with \U0001F499, \U0001F438, \U0001F412, \U0001F355, and all the\
+    \ many other emoji.\nwordpress.org/news/2015/04/powell/"
+  image: images/slide_41.png
+  text: The Wordpress 4.2 blog post noted that this release features "extended character
+    <br>support", noting "Emoji are now available in WordPress!" (highlighting mine)<br>Back
+    in 2015 this was a huge deal. You could use emoji in wordpress if you just <br>update
+    your installation? Our users will really like that! let's do it!<br>"Install updates
+    and get new emoji" is actually a really engaging model for making <br>people do
+    updates. "Update and get the new emoji! You'll also get many important <br>security
+    updates, but also, new emoji!"<br>Versions prior to this, though, with particular
+    database setups were susceptible to <br>cross-site-scripting using emoji as the
+    vector. <br>I'm going to show you how this works, with a smile.
+- alt: "@glasnt\n\U0001F642\n\\u1F642\nSLIGHTLY SMILING FACE"
+  image: images/slide_42.png
+  text: Specifically this smile. <br>This smile is not your average smile. <br><br>This
+    is codepoint 1F642 and is the slightly smiling face. <br>It was introduced in
+    Unicode 7.0 back in 2014, and it will work for our purposes. <br>What won't work
+    is other smiling faces.
+- alt: "@glasnt\n\u263A\n\\u263A\\uFE0F\nWHITE SMILING FACE\n(emoji style)"
+  image: images/slide_43.png
+  text: 'This face won''t work.  It looks far to good of heart to participate in such
+    a mad hacks. <br><br>It''s the "white" smiling face, emoji style. <br>That FE0F
+    at the end is the variant selector 16 character which when appended to a <br>codepoint
+    that predates emoji askes the system to render it as emoji. <br>If you don''t
+    specify this:'
+- alt: "@glasnt\n\u263A\n\\u263A\nWHITE SMILING FACE"
+  image: images/slide_44.png
+  text: 'You get the text version of the emoji. <br>Another fun fact: If you''ve ever
+    received an email with a random capital J at the end of <br>a sentence; that''s
+    from someone sending you email in Microsoft Office using the <br>Wingdings font,
+    which has a smiley face for the Capital J codepoint. <br>I will also note that
+    this is the "white" smiling face because'
+- alt: "@glasnt\n\u263B\n\\u263B\nBLACK SMILING FACE"
+  image: images/slide_45.png
+  text: The next codepoint up is the Black smiling face. <br>They're called white
+    and black in the unicode standard, where it's more "unfilled" and <br>"filled".
+- alt: "@glasnt\n\U0001F642\n\\u1F642\nSLIGHTLY SMILING FACE"
+  image: images/slide_46.png
+  text: Back to this smiling face. <br>This codepoint starts with a 1F and has 5 characters
+    in it's codepoint, as opposed to <br>our other smilies which have 4 characters.
+    <br>The encoding we're using here makes it seem as though it's one character,
+    but if we <br>expand it out
+- alt: "@glasnt\n\U0001F642\n\\ud83d \\ude42 \nSLIGHTLY SMILING FACE"
+  image: images/slide_47.png
+  text: It's actually a multibyte character<br>Which is the critical part of getting
+    this hack to work. <br>Let me show you.
+- alt: '@glasnt
+
+    No comments.
+
+    Post Cancel'
+  image: images/slide_48.png
+  text: Say you're on a blog and you're going to post a comment. Like a nice person.
+- alt: "@glasnt\nNo comments.\nThis is such a great post!\n<q cite='\U0001F642'>I\
+    \ like seagulls.</q> \nMe too!\nPost Cancel"
+  image: images/slide_49.png
+  text: 'And so you type your comment. It''s such a happy comment; you''re engaging
+    with the <br>author, providing positive feedback on their work, all good. <br>But
+    if the setup allows, you end up getting this posted:'
+- alt: '@glasnt
+
+    Leet Haxor
+
+    This is such a great post!
+
+    Post Cancel'
+  image: images/slide_50.png
+  text: This is such a great post!<br>but where is the rest of the comment that I
+    entered?<br>Gosh, I should make sure that's added.
+- alt: "@glasnt\nLeet Haxor\nThis is such a great post!\nsmile' onmouseover='alert(\"\
+    ohno\")'>I like seagulls.</q> \nMe too!\nPost Cancel"
+  image: images/slide_51.png
+  text: Here we go, let's make sure we get that quote in there.
+- alt: '@glasnt
+
+    Leet Haxor
+
+    This is such a great post!
+
+    Leet Haxor
+
+    "I like seagulls."
+
+    Me too!
+
+    Post Cancel'
+  image: images/slide_52.png
+  text: And posted. Great :)<br>But if we mouse over the page
+- alt: '@glasnt
+
+    Leet Haxor
+
+    This is such a grTehaits p poasgte!  says
+
+    ohno
+
+    Leet Haxor
+
+    "I like seagulls."
+
+    OK
+
+    Me too!
+
+    Post Cancel'
+  image: images/slide_53.png
+  text: 'We''ve injected javascript into the application. <br>Let''s look at what went wrong.'
+- alt: "@glasnt\nLeet Haxor\n<!--- Post Comments -->\nThis is such a great post!\n\
+    <div class=\"comment\">\n    <p>This is such a great post!\n        <q cite='\n\
+    Leet Haxor\n    </p>\n\"I like seagulls.\"\n</div>\nMe too! <div class=\"comment\"\
+    >\n    <p>\n        smile' onmouseover='alert(\"ohno\")'>I \nlike seagulls.</q>\n\
+    \        Me too!\n    </p>\n</div>\n<!--- more code -->\nPost Cancel"
+  image: images/slide_54.png
+  text: 'This is what a section of the rendered page would look
+    like. <br><br>You''ll note the copious amounts of green that aren''t highlighted.
+    <br><br>And you''ll also note the lack of the smiling face we originally entered.
+    <br>A lot of websites will have data validation that will disallow script tags
+    and other <br>things, <br>But we can get through some of this by submitting our
+    data in multiple comments. <br>In this example we''re also taking advantage of
+    the use of different quotations marks to <br>effectively escape a bunch of HTML<br>But
+    the biggest part of this is the truncation of our content. That''s where the emoji
+    <br>comes in.'
+- alt: "@glasnt\nLeet Haxor\nINSERT INTO wp_comments\nThis is such a great post!\n\
+    (comment_content,\n..)\nLeet Haxor\n\"I like seagulls.\" VALUES\nMe too! (\"This\
+    \ is such a great post!<br><q cite='\U0001F642'>I \nlike seagulls.</q> <br>Me\
+    \ too!\",\n...)\n# IDEAL\nPost Cancel"
+  image: images/slide_55.png
+  text: What should have been an INSERT into table with our entire comment
+- alt: '@glasnt
+
+    Leet Haxor
+
+    INSERT INTO wp_comments
+
+    This is such a great post!
+
+    (comment_content,
+
+    ..)
+
+    Leet Haxor
+
+    "I like seagulls." VALUES
+
+    Me too! ("This is such a great post!<br><q cite='',
+
+    ...)
+
+    # ACTUAL
+
+    Post Cancel'
+  image: images/slide_56.png
+  text: but what's actually happening it that just truncates the rest of the inserted
+    value at the <br>first multibyte character. <br>This is a behaviour of mysql if
+    you don't have strict mode enabled and are using an <br>encoding that didn't support
+    multibyte characters, mysql would just.. stop when it got <br>to the strange codepoint.<br>So
+    as this cascades back you can insert multiple comments that insert script tags
+    and <br>other nonsense that would bypass conventional filters for the literal
+    "script" tag.
+- alt: '@glasnt
+
+    MySQL? Use:
+
+    utf8mb4
+
+    STRICT_ALL_TABLES'
+  image: images/slide_57.png
+  text: If you're using MySQL, make sure you're using utf8mb4 character set, which
+    supports <br>4-byte utf-8 encoding to avoid this issue. <br>Also set strict_all_tables
+    to make mysql error if it gets any of these sort of bad values, <br>where the
+    data requested to be inserted doesn't match the actual data inserted.
+- alt: '@glasnt
+
+    OSEM Bugs
+
+    github.com/SeaGL/osem/issues/19
+
+    github.com/openSUSE/osem/issues/2686'
+  image: images/slide_58.png
+  text: There already several bugs both in the SeaGL fork and the original OSEM software
+    <br>from other speakers reporting issues submitting emoji in their talks<br>If
+    you're a Rails dev, maybe give this bug a go? There's advise in those bugs about
+    <br>how such migration works in Rails 5, specifically with changing the encoding
+    of the <br>specific fields where emoji would be useful.
+- alt: '@glasnt
+
+    gem install uniscribe
+
+    github.com/janlelis/uniscribe'
+  image: images/slide_59.png
+  text: Also, a useful lil app to help you with your emoji poking is this.
+- alt: "@glasnt\n\u2728\U0001F4BB\u2728"
+  image: images/slide_60.png
+  text: Regardless of which system you're using, try adding the odd emoji in it. <br>Adding
+    a single emoji and confirming it's correctly written and displayed back can <br>confirm
+    an entire pipeline of unicode conformance, that in theory, also means your <br>system
+    will support all the other parts of unicode, like your users who use character
+    <br>sets outside of the basic latin alphabet.
+- alt: '@glasnt
+
+    Thanks!
+
+    glasnt.com/talks
+
+    katie@glasnt.com'
+  image: images/slide_61.png
+  text: Thank you so much for watching!<br>All the resources for today's presentation,
+    including the slides, are available at <br>glasnt.com/talks<br>Have a great rest
+    of your day
+title: glasnt - talks - expressive security
