@@ -10,22 +10,22 @@ slides:
     katie@glasnt.com'
   image: images/slide_0.png
   text: 'Hi! I''m Katie. I do a great number of things, but when
-    I''m not <br>changing the world, I enjoy making tapestries, cooking, and seeing
-    just how well <br>various application stacks handle emoji because gosh it''s a
-    lot. <br>This is "Expressive Security: Vulnerabilities with Emoji".<br>Except
+    I''m not changing the world, I enjoy making tapestries, cooking, and seeing
+    just how well various application stacks handle emoji because gosh it''s a
+    lot. This is "Expressive Security: Vulnerabilities with Emoji".<br><br>Except
     it''s not.'
 - alt: "@glasnt\nExpressive Security\nVulnerabilities with Emoji \U0001F510\nSeaGL\
     \ 2021\nkatie@glasnt.com"
   image: images/slide_1.png
-  text: '"Expressive Security: Vulnerabilities with Emoji (closed lock with key) "<br>But
+  text: 'It''s suppost to be "Expressive Security: Vulnerabilities with Emoji (closed lock with key)"<br><br>But
     the SeaGL CFP system, sort of, exploded when I tried to do that.'
 - alt: '@glasnt
 
     The time I broke this conference''s software.'
   image: images/slide_2.png
-  text: The fork of OSEM (Open Source Event Manager) that SeaGL uses gave me a <br>LOVELY
-    500 error trying to submit this talk. <br>But it's okay, it's not just y'all.
-    This problem happens everywhere. <br>But first, let me go back a bit.
+  text: The fork of OSEM (Open Source Event Manager) that SeaGL uses gave me a LOVELY
+    500 error trying to submit this talk. But it's okay, it's not just y'all.
+    This problem happens everywhere. <br><br>But first, let me go back a bit.
 - alt: '@glasnt
 
     TL;DR:
@@ -33,13 +33,13 @@ slides:
     increment.com/internationalization/the-wonderful-world-of-emoji/'
   image: images/slide_3.png
   text: TL;DR Because computers, we have this thing called Unicode.<br>And Unicode
-    gives us a huge address space to encode over a million characters to <br>allow
-    every character of near every written human language to be encoded.<br>But as
+    gives us a huge address space to encode over a million characters to allow
+    every character of near every written human language to be encoded. But as
     this standard grew, more than just alphabets were added.
 - alt: "@glasnt\n\U000F03E6\U0001F61F\u2753"
   image: images/slide_4.png
   text: The very early versions of Unicode had all three of the main writing systems
-    used in <br>Japan, that is hiragana, katakana and kanji, but not their unofficial
+    used in Japan, that is hiragana, katakana and kanji, but not their unofficial
     "fourth" set.
 - alt: "@glasnt\n\U000F03E6\U0001F970\U0001F4F1"
   image: images/slide_5.png
