@@ -1,0 +1,44 @@
+---
+layout: page
+title: "Emoji Archeology 101"
+---
+
+
+<style>
+    .slide img {
+        width: 400px;
+    }
+
+    .notes {
+        padding: 20px;
+    }
+
+    .footnote a { 
+        color: gray; text-decoration: underline;
+        font-size: 75%;
+    }
+</style>
+
+Originally written by Dr Russell-Keith Magee, with technical content support by Katie McLaughlin.
+<br><BR>
+
+Presented at:
+<li>Linux.conf.au 2017 (by Dr Keith-Magee)</li>
+<li><a href="https://youtu.be/tK6ZIf0yYhs?t=39">PyCon US 2017</a></li>
+
+<hr>
+<table>
+    {% assign image_fn = "emoji-archeology-101" %}
+    {% for slide in site.data.emoji-archeology-101.slides.slides %}
+    <tr>
+        <td class="slide"><img src="/talks/img/{{image_fn}}/{{slide.image}}" />
+            {% if slide.footnote %}<br><span class="footnote"><a href="{{slide.footnote.link}}">{% if
+                    slide.footnote.text
+                    %}{{slide.footnote.text}}{%else%}{{slide.footnote.link}}{%endif%}</a>{%endif%}</span>
+        </td>
+        <td class="notes">{{slide.text}}
+
+        </td>
+    </tr>
+    {% endfor %}
+</table>

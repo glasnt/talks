@@ -1,0 +1,184 @@
+slides:
+- alt: 'Emoji Archaeology 101
+
+    Katie McLaughlin
+
+    @glasnt'
+  image: images/slide_0.png
+  text: Good afternoon, class.<br/><br/>This is Emoji Archaeology 101. We have a lot
+    of material to get through, so let's get started.
+- alt: null
+  image: images/slide_1.png
+  text: In 1963, the human emotion of happiness was created.<br/><br/>It was created by
+    the American Harvey Ross Ball, who was employed to create an image of a happy
+    face to raise the morale of the employees at an insurance company.<br/><br/>But once
+    people realized that it was possible to express emotions, they wanted to express
+    emotions of their own.
+- alt: null
+  image: images/slide_2.png
+  text: "In a New York Times interview in April 1969, Vladimir Nabokov said:\"\
+    I often think there should exist a special typographical sign for a smile \u2013\
+    \ some sort of concave mark, a supine round bracket.\""
+- alt: '0x3A
+
+    0x2D
+
+    0x29'
+  image: images/slide_3.png
+  text: In 1982 Scott Fahlman had a breakthrough, when he proposed the composition
+    of three ASCII characters as a trigraph to express an emotion - happiness.
+- alt: ':
+
+    -
+
+    )'
+  image: images/slide_4.png
+  text: Although these code points don't, in themselves, represent any emotional context,
+    if composed horizontally
+- alt: :-)
+  image: images/slide_5.png
+  text: they combine to produce a powerful expression which the user can comprehend
+    by simply turning ones head 90 degress to the left.
+- alt: '0x3A :
+
+    0x2D -
+
+    0x29 )'
+  image: images/slide_6.png
+  text: While happiness does have significant utility as an emotion, users felt it
+    was not meeting all their needs.
+- alt: '0x3A :
+
+    0x2D -
+
+    0x28 ('
+  image: images/slide_7.png
+  text: However, by replacing the third codepoint
+- alt: :-(
+  image: images/slide_8.png
+  text: the much more functional emotion of "unhappiness" could be expressed.<br/><br/>This,
+    ironically, led to much higher levels of happiness, because users were now able
+    to voice displeasure at everyone who disagreed with them.<br/><br/>Thus began a
+    precambrian explosion in the expression of emotion, as users realized the
+    hidden potential of the ASCII codepoint set.<br/><br/>The first changes were simple
+    issues of ergonomics.
+- alt: '(-:'
+  image: images/slide_9.png
+  text: By reversing the codepoint order, it was possible to evenly spread the physical
+    exertion required to observe emotion.<br/><br/>More sophisticated extensions were
+    then added
+- alt: B-)
+  image: images/slide_10.png
+  text: such as adornment - wearing glasses
+- alt: '%-)'
+  image: images/slide_11.png
+  text: or an optical tiredness from staring deep into the ASCII code chart looking
+    for emotional inspiration.
+- alt: :-D
+  image: images/slide_12.png
+  text: There was also a move to represent more extreme emotions - such as extreme
+    happiness.
+- alt: '>:-('
+  image: images/slide_13.png
+  text: Some expressions of extremis couldn't be embedded into three glyphs - they
+    required the introduction of a fourth glyph, to demonstrate scorn,
+- alt: :'-(
+  image: images/slide_14.png
+  text: or to embody a single tear, rolling down the face.
+- alt: :'(
+  image: images/slide_15.png
+  text: Some purists felt that the three codepoint limit should be retained; and so
+    they compressed complex emotions by losing the fidelity of nasal expression.
+- alt: ' ~(_8^(I)'
+  image: images/slide_16.png
+  text: Others freed themselves of n-ary constraints, allowing for the rendition of,
+    say, the absurdist philosopher Homer Simpson
+- alt: " *<|:\u2011)"
+  image: images/slide_17.png
+  text: or beneficent midwinter courier, Santa Claus.
+- alt: o_o
+  image: images/slide_18.png
+  text: Others revisited the premise that emotions had to be expressed horizontally,
+    and looked to the perpendicular as a presentation style.
+- alt: '@_@
+
+    *_*
+
+    (=_=)'
+  image: images/slide_19.png
+  text: However, the ASCII code set was reaching it's limit at this point.
+- alt: "^\u03C9^"
+  image: images/slide_20.png
+  text: This led to the introduction of Unicode, providing vastly more alternatives
+    with which to construct even deeper expressions of emotion.
+- alt: "(\u25E0\u203F\u25E0*)\n\u30FD(`\u0414\xB4)\uFF89\n(\uFF61\u25D5 \u203F \u25D5\
+    \uFF61)"
+  image: images/slide_21.png
+  text: It is not clear from the literature that *any* of these glyphs are actually
+    used in their languages of origin.
+- alt: "(\u30CE\xB0\u25A1\xB0)\u30CE\u5F61\u253B\u2501\u253B"
+  image: images/slide_22.png
+  text: The schism between minimalists and maximalists in the expression of emotion
+    reached it's zenith in this pair of expressions:the 11 character "table
+    flip" as an ultimate expression of anger, and
+- alt: " \u30C4"
+  image: images/slide_23.png
+  text: this single character, as an expression of simple happiness.<br/><br/>Unfortunately,
+    pressure was placed upon the Unicode consortium to allow more literal expressions
+    of emotion.
+- alt: "\u263B"
+  image: images/slide_24.png
+  text: This started with simple renditions, but over time,
+- alt: null
+  image: images/slide_25.png
+  text: these expressions became more and more literal,
+- alt: null
+  image: images/slide_26.png
+  text: removing all subtlety
+- alt: null
+  image: images/slide_27.png
+  text: and nuance
+- alt: null
+  image: images/slide_28.png
+  text: and indeed beauty, from the process of emotional expression...
+- alt: null
+  image: images/slide_29.png
+  text: '... perhaps best demonstrated by the introduction of the "pile of poo" symbol,
+    allowing scatological references without the need to understand what scatalogical
+    actually means.'
+- alt: Agency
+  image: images/slide_30.png
+  text: This has been accompanied by a loss of agency.<br/><br/>In the past, users could
+    disruptively innovate and develop their own emotions.<br/><br/>But like some sort of
+    Big Brother, only those emotions approved by the Unicode Consortium may be
+    expressed.<br/><br/>It doesn't matter if you like gophers - the Consortium, the savage
+    arbiter of the Sapir-Whorf hypothesis, has determined that you shall not express
+    that idea.<br/><br/>And no longer may we compose symbols to create rich new emotions.
+    Only those compositions approved by The Consortium are permitted.
+- alt: )
+  image: images/slide_31.png
+  text: The modern emoji represents a significant loss to our collective culture.
+    The ability to embody happiness in the 8 bits of storage needed to display
+    a right bracket - this... THIS is the essence of the human condition.<br/><br/>This
+    is who we are. We are not stardust. We are not the champions. We are not a number.
+    We are emotions, trapped in a brittle corporeal manifestation.
+- alt: What to do?
+  image: images/slide_32.png
+  text: So what are we to do? Some might call for emoji to be eliminated. To be struck
+    from our collective history.<br/><br/>But what would be defeat. We should fight
+    for our emotions.
+- alt: Rise up!
+  image: images/slide_33.png
+  text: So Rise up, my children!<br><br> Smash the control emoji!<br><br>Smash the control
+    machine!<br><br>We have nothing to lose but our chains! <br><br>Don't be constrained by
+    the limits placed on you by the Consortium. Compose new emotions, and express
+    them - express them deeply, and longingly, and outwardly.
+- alt: Class dismissed.
+  image: images/slide_34.png
+  text: And before someone asks -
+- alt: 'This WILL be
+
+    on the exam.'
+  image: images/slide_35.png
+  text: yes, this *will* be on the exam.
+title: Emoji Archeology 101
