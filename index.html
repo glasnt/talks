@@ -23,8 +23,9 @@ layout: default
   <header class="page-header">
     <h1 class="page-title">Talk writeups</h1>
   </header>
-  <li><a href="what-is-deployment-anyway">What is deployment, anyway?</a></li>
-  <li><a href="expressive-security">Expressive Security: Vulnerabilities with Emoji</a></li>
+  {% for item in site.writeups %}
+  <li><a href="{{site.baseurl}}{{item.url}}">{{item.title}}</a></li>
+  {% endfor %}
 
   <div class="page-content">
 
