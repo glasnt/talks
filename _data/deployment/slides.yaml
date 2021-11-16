@@ -1,552 +1,554 @@
-- image: images/slide_0.png
-  text: "Hi! I'm Katie, and this is \"What is deployment, anyway?\".<br><br>This isn't the\
-    \ talk you're expecting."
-- image: images/slide_1.png
-  text: "This isn't a talk about the \"One Way\" to do deployments. <br><br>No talk can do that.\
-    \ <br><br>This also isn't a talk about how to take your proof-of-concept VC-funded startup\
-    \ site and turning it into the next big dot com.  If you want to talk about\
-    \ that "
-- image: images/slide_2.png
-  text: "Here's my work email. Let's chat.<br><br>But for today, the scope of my discussions\
-    \ are going to be talking about the minimum number of things you need to consider\
-    \ in order to host your django website. This talk is more about taking your little\
-    \ cool, Django blog application that you've made on your local machine and putting\
-    \ it on the internet so you can share it with your friends. <br><br>This talk is going\
-    \ to answer the question posed in the title:"
-- image: images/slide_3.png
-  text: "What is deployment, anyway?<BR><BR>More specifically, what is django deployment,\
-    \ anyway? <br>(because you know, this is a djangocon!)<br><br>and we're going to focus\
-    \ on the \"what\" here.  We're going to briefly mention some of the \"\
-    where\" and the \"how\", but this is going to focus on the \"what\""
-- image: images/slide_4.png
-  text: "This talk and the code examples in this talk are specifically django 3.2\
-    \ and Python 3.9, as these are the most current minor versions at time of\
-    \ recording.<br>If you're joining me on YouTube from the year 2032 I'm sorry? <br>\
-    This talk might be a little bit out of date.<br>But hopefully you still learn something."
-- image: images/slide_5.png
-  text: "So, let's start by looking at django, as it comes, out of the box. Just as\
-    \ is. <br>If you haven't create a new django project in a while, it's nice to be\
-    \ reminded about how it all starts."
-- image: images/slide_6.png
-  text: "So in my terminal, I want to install django so I type \"pip install\
-    \ django\"  and pip goes and collects django and it's main dependencies.\
-    \ <br>I then want to start a new project  So for that I'll use the django-admin\
-    \ CLI that was just installed, and use it's <br>startproject template function.\
-    \ and i'll call it myproject, and create it in the current <br>folder.  <br>\
-    now I have no output from this command  but if I check what files I now\
-    \ have in this folder  I can see I have a manage.py file, and then a\
-    \ myproject folder with some different files <br>in there. <br>I can see an \
-    \ asgi.py, a settings.py, a urls.py, and a wsgi.py.  .. Huh."
-- image: images/slide_7.png
-  text: "so, clearing my terminal, I want to now start up django so I run\
-    \ python manage.py runserver which then runs, but I get a big red error\
-    \ message, I have unapplied by migrations <br>but django has helpfully\
-    \ suggested that I run \"python manage.py migrate\" to apply <br>them. Great! \
-    let's quit that process"
-- image: images/slide_8.png
-  text: 'and  
+title: What is deployment, anyway?
+slides: 
+  - image: images/slide_0.png
+    text: "Hi! I'm Katie, and this is \"What is deployment, anyway?\".<br><br>This isn't the\
+      \ talk you're expecting."
+  - image: images/slide_1.png
+    text: "This isn't a talk about the \"One Way\" to do deployments. <br><br>No talk can do that.\
+      \ <br><br>This also isn't a talk about how to take your proof-of-concept VC-funded startup\
+      \ site and turning it into the next big dot com.  If you want to talk about\
+      \ that "
+  - image: images/slide_2.png
+    text: "Here's my work email. Let's chat.<br><br>But for today, the scope of my discussions\
+      \ are going to be talking about the minimum number of things you need to consider\
+      \ in order to host your django website. This talk is more about taking your little\
+      \ cool, Django blog application that you've made on your local machine and putting\
+      \ it on the internet so you can share it with your friends. <br><br>This talk is going\
+      \ to answer the question posed in the title:"
+  - image: images/slide_3.png
+    text: "What is deployment, anyway?<BR><BR>More specifically, what is django deployment,\
+      \ anyway? <br>(because you know, this is a djangocon!)<br><br>and we're going to focus\
+      \ on the \"what\" here.  We're going to briefly mention some of the \"\
+      where\" and the \"how\", but this is going to focus on the \"what\""
+  - image: images/slide_4.png
+    text: "This talk and the code examples in this talk are specifically django 3.2\
+      \ and Python 3.9, as these are the most current minor versions at time of\
+      \ recording.<br>If you're joining me on YouTube from the year 2032 I'm sorry? <br>\
+      This talk might be a little bit out of date.<br>But hopefully you still learn something."
+  - image: images/slide_5.png
+    text: "So, let's start by looking at django, as it comes, out of the box. Just as\
+      \ is. <br>If you haven't create a new django project in a while, it's nice to be\
+      \ reminded about how it all starts."
+  - image: images/slide_6.png
+    text: "So in my terminal, I want to install django so I type \"pip install\
+      \ django\"  and pip goes and collects django and it's main dependencies.\
+      \ <br>I then want to start a new project  So for that I'll use the django-admin\
+      \ CLI that was just installed, and use it's <br>startproject template function.\
+      \ and i'll call it myproject, and create it in the current <br>folder.  <br>\
+      now I have no output from this command  but if I check what files I now\
+      \ have in this folder  I can see I have a manage.py file, and then a\
+      \ myproject folder with some different files <br>in there. <br>I can see an \
+      \ asgi.py, a settings.py, a urls.py, and a wsgi.py.  .. Huh."
+  - image: images/slide_7.png
+    text: "so, clearing my terminal, I want to now start up django so I run\
+      \ python manage.py runserver which then runs, but I get a big red error\
+      \ message, I have unapplied by migrations <br>but django has helpfully\
+      \ suggested that I run \"python manage.py migrate\" to apply <br>them. Great! \
+      let's quit that process"
+  - image: images/slide_8.png
+    text: 'and  
 
-    run that migrate command.  
+      run that migrate command.  
 
-    All the migrations are applied, and they all report OK
+      All the migrations are applied, and they all report OK
 
-    great!'
-- image: images/slide_9.png
-  text: 'so then 
+      great!'
+  - image: images/slide_9.png
+    text: 'so then 
 
-    let''s see what''s in my folder now  
+      let''s see what''s in my folder now  
 
-    Ah, I see there''s a new file 
+      Ah, I see there''s a new file 
 
-    Looks like i have a dee-bee dot ess-qu-lite-three file. That''s interesting. 
+      Looks like i have a dee-bee dot ess-qu-lite-three file. That''s interesting. 
 
-    since I''ve applied my migrations, I should be able to run my application'
-- image: images/slide_10.png
-  text: 'so 
+      since I''ve applied my migrations, I should be able to run my application'
+  - image: images/slide_10.png
+    text: 'so 
 
-    if I runserver again 
+      if I runserver again 
 
-    I get no red warnings,  
+      I get no red warnings,  
 
-    and I''m told the development server is available so let''s go there'
-- image: images/slide_11.png
-  text: 'Oh hey, the installation worked successfully! Go me!
+      and I''m told the development server is available so let''s go there'
+  - image: images/slide_11.png
+    text: 'Oh hey, the installation worked successfully! Go me!
 
-    I also know I should now have a django admin'
-- image: images/slide_12.png
-  text: "Buttt I can't login. I don't have an account yet. <br>so let's go back to the\
-    \ terminal and do that"
-- image: images/slide_13.png
-  text: 'Let''s stop that process 
+      I also know I should now have a django admin'
+  - image: images/slide_12.png
+    text: "Buttt I can't login. I don't have an account yet. <br>so let's go back to the\
+      \ terminal and do that"
+  - image: images/slide_13.png
+    text: 'Let''s stop that process 
 
-    Clear our terminal '
-- image: images/slide_14.png
-  text: "And then run the createsuperuser command This command,\
-    \ will create a superuser for me, that will have access to the admin, <br>I'll use\
-    \ my name For this I don't need an email I'll give it a super\
-    \ secure long password twice and now I have a superuser. \
-    I can then restart the process "
-- image: images/slide_15.png
-  text: Then back in my login screen
-- image: images/slide_16.png
-  text: I can enter my username and passwrd
-- image: images/slide_17.png
-  text: 'And I have access to the admin!
+      Clear our terminal '
+  - image: images/slide_14.png
+    text: "And then run the createsuperuser command This command,\
+      \ will create a superuser for me, that will have access to the admin, <br>I'll use\
+      \ my name For this I don't need an email I'll give it a super\
+      \ secure long password twice and now I have a superuser. \
+      I can then restart the process "
+  - image: images/slide_15.png
+    text: Then back in my login screen
+  - image: images/slide_16.png
+    text: I can enter my username and passwrd
+  - image: images/slide_17.png
+    text: 'And I have access to the admin!
 
-    Hooray!'
-- image: images/slide_18.png
-  text: 'Django has a great local development story
+      Hooray!'
+  - image: images/slide_18.png
+    text: 'Django has a great local development story
 
-    we can get our app running locally really easily. and a lot of this boils down
-    to'
-- image: images/slide_19.png
-  text: "runserver<br>This command runs our application for us, and also does nice things\
-    \ like <br>automatically restart itself when made an edit to our code. <br>The django\
-    \ documentation describes what runserver does. <br>Seriously, the django docs are\
-    \ great, and they are very good at explaining what <br>django does. If you're newer\
-    \ to django, or any tech, some docs can be hard to parse <br>and understand, but\
-    \ that's okay, I'm here. <br>Let's look at the docs."
-- image: images/slide_20.png
-  text: "from the docs, the runserver command Starts a lightweight development\
-    \ web server on the local machine. <br>But if you look down a few paragraphs, in\
-    \ all caps do \U0001F44F not \U0001F44F use \U0001F44F this \U0001F44F\
-    \ server \U0001F44F in \U0001F44F a production setting<br>Why? it continues. <br>\
-    \ It has not gone through security audits or performance tests \
-    and that's now it's gonna stay we're in the business of making web frameworks,\
-    \ not web servers. <br>let me pull that last part out into it's own slide"
-  footnote:
-    link: "https://docs.djangoproject.com/en/3.2/ref/django-admin/#runserver"
+      we can get our app running locally really easily. and a lot of this boils down
+      to'
+  - image: images/slide_19.png
+    text: "runserver<br>This command runs our application for us, and also does nice things\
+      \ like <br>automatically restart itself when made an edit to our code. <br>The django\
+      \ documentation describes what runserver does. <br>Seriously, the django docs are\
+      \ great, and they are very good at explaining what <br>django does. If you're newer\
+      \ to django, or any tech, some docs can be hard to parse <br>and understand, but\
+      \ that's okay, I'm here. <br>Let's look at the docs."
+  - image: images/slide_20.png
+    text: "from the docs, the runserver command Starts a lightweight development\
+      \ web server on the local machine. <br>But if you look down a few paragraphs, in\
+      \ all caps do \U0001F44F not \U0001F44F use \U0001F44F this \U0001F44F\
+      \ server \U0001F44F in \U0001F44F a production setting<br>Why? it continues. <br>\
+      \ It has not gone through security audits or performance tests \
+      and that's now it's gonna stay we're in the business of making web frameworks,\
+      \ not web servers. <br>let me pull that last part out into it's own slide"
+    footnote:
+      link: "https://docs.djangoproject.com/en/3.2/ref/django-admin/#runserver"
 
-- image: images/slide_21.png
-  text: "Django is an extremely stable, production ready, web framework. <br>Django\
-    \ is very good at being a web framework. <br>The fact that it provides a local web\
-    \ server is amazing for getting started<br>but the fact that it calls out it's limitations\
-    \ is also very very good. <br>So we're going to need to find another webserver.\
-    \ <br>This part of the documentation also brings up some ..  terms."
-- image: images/slide_22.png
-  text: 'what is "production" anyway?
+  - image: images/slide_21.png
+    text: "Django is an extremely stable, production ready, web framework. <br>Django\
+      \ is very good at being a web framework. <br>The fact that it provides a local web\
+      \ server is amazing for getting started<br>but the fact that it calls out it's limitations\
+      \ is also very very good. <br>So we're going to need to find another webserver.\
+      \ <br>This part of the documentation also brings up some ..  terms."
+  - image: images/slide_22.png
+    text: 'what is "production" anyway?
 
-    and also'
-- image: images/slide_23.png
-  text: "why is it called \"production\"?<br><br>Historically, when computers were\
-    \ fed punch cards, you could say it was a <br>\"production\" to process data. You\
-    \ had to physically move different things around. <br>Much like a production line\
-    \ in manufacturing. <br>You could also think of it nowdays as a stage production.\
-    \ It's the thing that paterons, <br>attendees, or users see. <br>Your production environment\
-    \ is the one you want people to go to. It's your \"live\" <br>environment. It needs\
-    \ to be able to support a crowd.<br>The size of your crowd is going to influence\
-    \ when you start thinking about things like <br>load balancing and caching, but\
-    \ right now, it's just us, and our mate on the other side <br>of the country who\
-    \ we want to show this website to."
-- image: images/slide_24.png
-  text: "not only is runserver a development web server, <br>runserver also serves the\
-    \ pretty, that being the images, css, javascript, etc that comes <br>with our application."
-- image: images/slide_25.png
-  text: "To be able to see the nice centrally formatted blue-on-grey login window,\
-    \ there needs <br>to be css to make that happen. <br>these comes with django itself.\
-    \ If you don't have this setup correctly "
-- image: images/slide_26.png
-  text: "your login screen looks very 1997<br>I mean, it's still usable -- web accessibility\
-    \ FTW -- but you can tell that something isn't <br>setup correctly. <br>Collectively,\
-    \ all these styling files are known as \"static\""
-- image: images/slide_27.png
-  text: "But why is it called static?<br>They're called \"static\" because they are\
-    \ unchanging. <br>They came with Django itself, and they don't change. But they\
-    \ have to be 'served' so <br>that the browser can make use of them. <br>For instance\
-    \ "
-- image: images/slide_28.png
-  text: 'if we take a look at the source of the login screen, 
+      and also'
+  - image: images/slide_23.png
+    text: "why is it called \"production\"?<br><br>Historically, when computers were\
+      \ fed punch cards, you could say it was a <br>\"production\" to process data. You\
+      \ had to physically move different things around. <br>Much like a production line\
+      \ in manufacturing. <br>You could also think of it nowdays as a stage production.\
+      \ It's the thing that paterons, <br>attendees, or users see. <br>Your production environment\
+      \ is the one you want people to go to. It's your \"live\" <br>environment. It needs\
+      \ to be able to support a crowd.<br>The size of your crowd is going to influence\
+      \ when you start thinking about things like <br>load balancing and caching, but\
+      \ right now, it's just us, and our mate on the other side <br>of the country who\
+      \ we want to show this website to."
+  - image: images/slide_24.png
+    text: "not only is runserver a development web server, <br>runserver also serves the\
+      \ pretty, that being the images, css, javascript, etc that comes <br>with our application."
+  - image: images/slide_25.png
+    text: "To be able to see the nice centrally formatted blue-on-grey login window,\
+      \ there needs <br>to be css to make that happen. <br>these comes with django itself.\
+      \ If you don't have this setup correctly "
+  - image: images/slide_26.png
+    text: "your login screen looks very 1997<br>I mean, it's still usable -- web accessibility\
+      \ FTW -- but you can tell that something isn't <br>setup correctly. <br>Collectively,\
+      \ all these styling files are known as \"static\""
+  - image: images/slide_27.png
+    text: "But why is it called static?<br>They're called \"static\" because they are\
+      \ unchanging. <br>They came with Django itself, and they don't change. But they\
+      \ have to be 'served' so <br>that the browser can make use of them. <br>For instance\
+      \ "
+  - image: images/slide_28.png
+    text: 'if we take a look at the source of the login screen, 
 
-    we can see that we have some css and javascript being served from /static/ path
+      we can see that we have some css and javascript being served from /static/ path
 
-    --
+      --
 
-    The django documentation describes how runserver achieves this.'
-- image: images/slide_29.png
-  text: "In the documentation for serving static files during development, there's\
-    \ another bit in <br>here This is not suitable for production use!<br>Also\
-    \ noted that runserver will only serve static files when you have DEBUG\
-    \ set to True.<br>Well, we can see these files are being served, so we should have\
-    \ DEBUG as true, <br>right? How can we check?<br>This is where we start looking at\
-    \ some of the code that was automatically created <br>when we run startproject"
-  footnote: 
-    link: "https://docs.djangoproject.com/en/3.2/howto/static-files/#serving-static-files-during-development"
+      The django documentation describes how runserver achieves this.'
+  - image: images/slide_29.png
+    text: "In the documentation for serving static files during development, there's\
+      \ another bit in <br>here This is not suitable for production use!<br>Also\
+      \ noted that runserver will only serve static files when you have DEBUG\
+      \ set to True.<br>Well, we can see these files are being served, so we should have\
+      \ DEBUG as true, <br>right? How can we check?<br>This is where we start looking at\
+      \ some of the code that was automatically created <br>when we run startproject"
+    footnote: 
+      link: "https://docs.djangoproject.com/en/3.2/howto/static-files/#serving-static-files-during-development"
 
-- image: images/slide_30.png
-  text: 'if we remember from our 
+  - image: images/slide_30.png
+    text: 'if we remember from our 
 
-    file listing 
+      file listing 
 
-    we have a 
+      we have a 
 
-    settings.py sitting under our myproject folder. 
+      settings.py sitting under our myproject folder. 
 
-    so 
+      so 
 
-    let''s check what''s in that file.'
-- image: images/slide_31.png
-  text: "this file is quite long, and was automatically created for us. <br>but one\
-    \ of the first things we see is quickstart development settings. unsuitable\
-    \ for production and these warnings just keep going"
-- image: images/slide_32.png
-  text: "going down the page, see security warning after security\
-    \ warning these settings all work for a local development environment,\
-    \ but it's completely <br>understandable that all these warnings and stuff make\
-    \ it seem just so... inaccessible <br>to a beginning developer who just wants to\
-    \ share their cool blog with their friends. <br>this lack of knowledge is because\
-    \ they are a beginner developer, not a server <br>operations person, or a system\
-    \ administrator. it's a completely different engineering <br>specialisation. <br>\
-    this is the entire reason for this talk<br>to demystify deployment. <br>oh look, \
-    there's that debug setting. it is true by default. this makes sense. \
-    while we're here, we also saw that db.sqlite3 file appear after running our migrations."
-- image: images/slide_33.png
-  text: "If we scroll down the settings file we can see that that string\
-    \ is defined here as part of our DATABASES definition. <br>so what is this\
-    \ sqlite thing? To the Docs!  o/"
-- image: images/slide_34.png
-  text: "SQLite provides an excellent development alternative... for applications\
-    \ that are predominantly read-only or require <br>a smaller installation footprint.<br>\
-    --<br>Again, that word development."
-  footnote:
-    link: "https://docs.djangoproject.com/en/3.2/ref/databases/#sqlite-notes"
-- image: images/slide_35.png
-  text: 'django has a great local development story
+      let''s check what''s in that file.'
+  - image: images/slide_31.png
+    text: "this file is quite long, and was automatically created for us. <br>but one\
+      \ of the first things we see is quickstart development settings. unsuitable\
+      \ for production and these warnings just keep going"
+  - image: images/slide_32.png
+    text: "going down the page, see security warning after security\
+      \ warning these settings all work for a local development environment,\
+      \ but it's completely <br>understandable that all these warnings and stuff make\
+      \ it seem just so... inaccessible <br>to a beginning developer who just wants to\
+      \ share their cool blog with their friends. <br>this lack of knowledge is because\
+      \ they are a beginner developer, not a server <br>operations person, or a system\
+      \ administrator. it's a completely different engineering <br>specialisation. <br>\
+      this is the entire reason for this talk<br>to demystify deployment. <br>oh look, \
+      there's that debug setting. it is true by default. this makes sense. \
+      while we're here, we also saw that db.sqlite3 file appear after running our migrations."
+  - image: images/slide_33.png
+    text: "If we scroll down the settings file we can see that that string\
+      \ is defined here as part of our DATABASES definition. <br>so what is this\
+      \ sqlite thing? To the Docs!  o/"
+  - image: images/slide_34.png
+    text: "SQLite provides an excellent development alternative... for applications\
+      \ that are predominantly read-only or require <br>a smaller installation footprint.<br>\
+      --<br>Again, that word development."
+    footnote:
+      link: "https://docs.djangoproject.com/en/3.2/ref/databases/#sqlite-notes"
+  - image: images/slide_35.png
+    text: 'django has a great local development story
 
-    you saw just how quickly we could get a django site working on our local machine.'
-- image: images/slide_36.png
-  text: "but to get our site to production is complex<br>as we've discovered together,\
-    \ you need to provide you own production ready <br>webserver, database, and static\
-    \ host. <br>And if you aren't familiar with the production grade offerings out there,\
-    \ you'll end up <br>confused<br>or worse, using runserver in production<br>which...\
-    \ you should not do. Good work!<br>Oh dear, I enabled audience participation. Yes?\
-    \ What's that I hear from the back of <br>the room, Do you have a question? ...\
-    \ Flask isn't this hard. <br>... not exactly a question, but let's talk about that."
-- image: images/slide_37.png
-  text: "flask is simpler in production. <br>a lot of deployment tutorials you'll see\
-    \ that say \"How to Deploy Python in Production!\" <br>often use Flask as the target.\
-    \ <br>\"Just copy your code and run! Easy!\"<br>Well yes, that's true. You can get\
-    \ a out-the-box Hello World application running quite <br>easily on many different\
-    \ platforms using flask. <br>the issue that django has is one of "
-- image: images/slide_38.png
-  text: "state. <br>django is a stateful application. Full of state. That is, it contains\
-    \ information and data <br>that we really want to keep a hold of. <br>the absolute\
-    \ bare bones django app we just ran comes with the django admin. the <br>django\
-    \ admin requires a database. therefore, django requires a database. therefore\
-    \ <br>django requires state. <br>a Flask app that prints helloworld doesn't need a\
-    \ database. <br>Yes you can absolutely deploy flask with a database, and django\
-    \ without a database, <br>but any application that has state is going to be complex\
-    \ to deploy. <br>Let me share another gem from the Django documentation."
-- image: images/slide_39.png
-  text: "Earlier I shared this section on serving static files. <br> This Deploying\
-    \ static files link goes to "
-  footnote: 
-    link: "https://docs.djangoproject.com/en/3.2/howto/static-files/#serving-static-files-during-development"
-- image: images/slide_40.png
-  text: "a page full of strategies for how to deploy static files. <br>But it also has\
-    \ this line As with all deployment tasks, the devil\u2019s in the details.\
-    \ Every production setup will be <br>a bit different."
-  footnote: 
-    link: "https://docs.djangoproject.com/en/3.2/howto/static-files/deployment/"
-- image: images/slide_41.png
-  text: "_EVERY_ production setup will be a bit different. <br>This line has been in\
-    \ the docs for over a decade now, but it still holds true. <br>Every production\
-    \ setup will be a bit different."
-- image: images/slide_42.png
-  text: "Most every deployment talk you'll see will include a line like \"It depends\"\
-    \ when telling <br>you the \"\"one true way\"\" to do deployments<br>Sidenote, there\
-    \ is a talk called \"The one true way to do django deployments\". It's quite <br>\
-    good. <br>But that's because it's true.  It does depend. <br>But I want to use a different\
-    \ line.  "
-- image: images/slide_43.png
-  text: "I'm a sysadmin. I'm not your sysadmin. <br>I'm not the one who will be making\
-    \ sure your django site stays online. <br>So any recommendations I make in this\
-    \ talk are just that. Recommendations based <br>on my experience. <br>It's up to you\
-    \ and your team to understand what you're doing, because you're the <br>ones that'll\
-    \ have to maintain it, and fix it when it's broken.. <br>That being said:"
-- image: images/slide_44.png
-  text: "to be able to deploy to production, we need to upgrade the components we\
-    \ are using <br>on our local machine to something more production ready<br>we need\
-    \ a production grade webserver<br>a production grade database<br>and production grade\
-    \ static<br>Django has support for a number of the most common of these, which will\
-    \ *really* <br>help us here. That means we can move out of the scope of Django specific\
-    \ things, <br>and find solutions that work for the generic use case, as that has\
-    \ more options, and <br>more support. <br>For instance, Flask"
-- image: images/slide_45.png
-  text: "I've said before that Flask is simpler in production. <br>This is because while\
-    \ you may not need a database or static for a flask app, you will <br>need a webserver.\
-    \ and the reason you can get flask up and running super easily is that\
-    \ hosting a site on <br>a webserver is simpler than it's ever been <br>Let's take\
-    \ a look at the Flask docs!"
-- image: images/slide_46.png
-  text: "Yes, I'm showing you the Flask _docs_ at a DjangoCon. Fight me in the hallway.\
-    \ <br>The Flask documentation don't need me to do the highlighting here, because\
-    \ it's <br>already in bold: Flask's built-in server is not suitable for production.\
-    \ <br>They also offer a list of hosting options. <br>All these links go out to the\
-    \ hosting vendor's documentation, and show step by step <br>ways to \"just copy\
-    \ your code and host it\". This isn't a complete list, of course."
-  footnote: 
+      you saw just how quickly we could get a django site working on our local machine.'
+  - image: images/slide_36.png
+    text: "but to get our site to production is complex<br>as we've discovered together,\
+      \ you need to provide you own production ready <br>webserver, database, and static\
+      \ host. <br>And if you aren't familiar with the production grade offerings out there,\
+      \ you'll end up <br>confused<br>or worse, using runserver in production<br>which...\
+      \ you should not do. Good work!<br>Oh dear, I enabled audience participation. Yes?\
+      \ What's that I hear from the back of <br>the room, Do you have a question? ...\
+      \ Flask isn't this hard. <br>... not exactly a question, but let's talk about that."
+  - image: images/slide_37.png
+    text: "flask is simpler in production. <br>a lot of deployment tutorials you'll see\
+      \ that say \"How to Deploy Python in Production!\" <br>often use Flask as the target.\
+      \ <br>\"Just copy your code and run! Easy!\"<br>Well yes, that's true. You can get\
+      \ a out-the-box Hello World application running quite <br>easily on many different\
+      \ platforms using flask. <br>the issue that django has is one of "
+  - image: images/slide_38.png
+    text: "state. <br>django is a stateful application. Full of state. That is, it contains\
+      \ information and data <br>that we really want to keep a hold of. <br>the absolute\
+      \ bare bones django app we just ran comes with the django admin. the <br>django\
+      \ admin requires a database. therefore, django requires a database. therefore\
+      \ <br>django requires state. <br>a Flask app that prints helloworld doesn't need a\
+      \ database. <br>Yes you can absolutely deploy flask with a database, and django\
+      \ without a database, <br>but any application that has state is going to be complex\
+      \ to deploy. <br>Let me share another gem from the Django documentation."
+  - image: images/slide_39.png
+    text: "Earlier I shared this section on serving static files. <br> This Deploying\
+      \ static files link goes to "
+    footnote: 
+      link: "https://docs.djangoproject.com/en/3.2/howto/static-files/#serving-static-files-during-development"
+  - image: images/slide_40.png
+    text: "a page full of strategies for how to deploy static files. <br>But it also has\
+      \ this line As with all deployment tasks, the devil\u2019s in the details.\
+      \ Every production setup will be <br>a bit different."
+    footnote: 
+      link: "https://docs.djangoproject.com/en/3.2/howto/static-files/deployment/"
+  - image: images/slide_41.png
+    text: "_EVERY_ production setup will be a bit different. <br>This line has been in\
+      \ the docs for over a decade now, but it still holds true. <br>Every production\
+      \ setup will be a bit different."
+  - image: images/slide_42.png
+    text: "Most every deployment talk you'll see will include a line like \"It depends\"\
+      \ when telling <br>you the \"\"one true way\"\" to do deployments<br>Sidenote, there\
+      \ is a talk called \"The one true way to do django deployments\". It's quite <br>\
+      good. <br>But that's because it's true.  It does depend. <br>But I want to use a different\
+      \ line.  "
+  - image: images/slide_43.png
+    text: "I'm a sysadmin. I'm not your sysadmin. <br>I'm not the one who will be making\
+      \ sure your django site stays online. <br>So any recommendations I make in this\
+      \ talk are just that. Recommendations based <br>on my experience. <br>It's up to you\
+      \ and your team to understand what you're doing, because you're the <br>ones that'll\
+      \ have to maintain it, and fix it when it's broken.. <br>That being said:"
+  - image: images/slide_44.png
+    text: "to be able to deploy to production, we need to upgrade the components we\
+      \ are using <br>on our local machine to something more production ready<br>we need\
+      \ a production grade webserver<br>a production grade database<br>and production grade\
+      \ static<br>Django has support for a number of the most common of these, which will\
+      \ *really* <br>help us here. That means we can move out of the scope of Django specific\
+      \ things, <br>and find solutions that work for the generic use case, as that has\
+      \ more options, and <br>more support. <br>For instance, Flask"
+  - image: images/slide_45.png
+    text: "I've said before that Flask is simpler in production. <br>This is because while\
+      \ you may not need a database or static for a flask app, you will <br>need a webserver.\
+      \ and the reason you can get flask up and running super easily is that\
+      \ hosting a site on <br>a webserver is simpler than it's ever been <br>Let's take\
+      \ a look at the Flask docs!"
+  - image: images/slide_46.png
+    text: "Yes, I'm showing you the Flask _docs_ at a DjangoCon. Fight me in the hallway.\
+      \ <br>The Flask documentation don't need me to do the highlighting here, because\
+      \ it's <br>already in bold: Flask's built-in server is not suitable for production.\
+      \ <br>They also offer a list of hosting options. <br>All these links go out to the\
+      \ hosting vendor's documentation, and show step by step <br>ways to \"just copy\
+      \ your code and host it\". This isn't a complete list, of course."
+    footnote: 
+      link: "https://flask.palletsprojects.com/en/2.0.x/deploying/index.html"
+  - image: images/slide_47.png
+    text: "The host you use is going to be based on a few factors: what platform you\
+      \ already <br>know, what platform your team already knows how to support, or just\
+      \ what platform <br>you're interested in learning. It's your choice. <br>There are\
+      \ also going to be different options for the same platform. <br>Some of them provide\
+      \ a complete and ready to go python environment for you, and <br>you just have to\
+      \ supply your code, others you have to configure and supply more. <br>A lot of them\
+      \ cover basic load balancing for you, by \"autoscaling\"<br>They'll provide HTTPS\
+      \ by default by handling SSL certification for you<br>You can of course do this\
+      \ yourself, but if it's just you, your friend, and your blog, you <br>don't have\
+      \ to. <br>Hosting options are always evolving, and the best practice changes over\
+      \ time. Django <br>doesn't list them because they are so in flux. This is why you\
+      \ need to understand <br>where django let's go of your hand and says \"Off you go,\
+      \ have fun storming the <br>castle\". <br>Many hosting providers will have Django\
+      \ tutorials much like they do for Flask. I should <br>know, I wrote a few of them.\
+      \ That'll get you to the how, as of now.We'll continue here with the \"what\"\
+      \ though. "
+  - image: images/slide_48.png
+    text: "These Flask docs go onto mention this WSGI thing. <br><br> \
+      \ Wait, we saw that earlier... waaay back in the beginning in the Django runserver docs"
+    footnote:
     link: "https://flask.palletsprojects.com/en/2.0.x/deploying/index.html"
-- image: images/slide_47.png
-  text: "The host you use is going to be based on a few factors: what platform you\
-    \ already <br>know, what platform your team already knows how to support, or just\
-    \ what platform <br>you're interested in learning. It's your choice. <br>There are\
-    \ also going to be different options for the same platform. <br>Some of them provide\
-    \ a complete and ready to go python environment for you, and <br>you just have to\
-    \ supply your code, others you have to configure and supply more. <br>A lot of them\
-    \ cover basic load balancing for you, by \"autoscaling\"<br>They'll provide HTTPS\
-    \ by default by handling SSL certification for you<br>You can of course do this\
-    \ yourself, but if it's just you, your friend, and your blog, you <br>don't have\
-    \ to. <br>Hosting options are always evolving, and the best practice changes over\
-    \ time. Django <br>doesn't list them because they are so in flux. This is why you\
-    \ need to understand <br>where django let's go of your hand and says \"Off you go,\
-    \ have fun storming the <br>castle\". <br>Many hosting providers will have Django\
-    \ tutorials much like they do for Flask. I should <br>know, I wrote a few of them.\
-    \ That'll get you to the how, as of now.We'll continue here with the \"what\"\
-    \ though. "
-- image: images/slide_48.png
-  text: "These Flask docs go onto mention this WSGI thing. <br><br> \
-    \ Wait, we saw that earlier... waaay back in the beginning in the Django runserver docs"
-  footnote:
-   link: "https://flask.palletsprojects.com/en/2.0.x/deploying/index.html"
-- image: images/slide_49.png
-  text: "Sitting in there, there was the line \"This server uses the WSGI application\
-    \ object specified by the WSGI_APPLICATION setting.\"<br><br>Wait, that was in our settings\
-    \ file!"
-  footnote: 
-    link: "https://docs.djangoproject.com/en/3.2/ref/django-admin/#runserver"
-- image: images/slide_50.png
-  text: 'Just above databases, we saw 
+  - image: images/slide_49.png
+    text: "Sitting in there, there was the line \"This server uses the WSGI application\
+      \ object specified by the WSGI_APPLICATION setting.\"<br><br>Wait, that was in our settings\
+      \ file!"
+    footnote: 
+      link: "https://docs.djangoproject.com/en/3.2/ref/django-admin/#runserver"
+  - image: images/slide_50.png
+    text: 'Just above databases, we saw 
 
-    WSGI_APPLICATION = ''myproject.wsgi.application''
+      WSGI_APPLICATION = ''myproject.wsgi.application''
 
-    wait, we saw a myproject.wsgi earlier!'
-- image: images/slide_51.png
-  text: 'In our file listing 
+      wait, we saw a myproject.wsgi earlier!'
+  - image: images/slide_51.png
+    text: 'In our file listing 
 
-    we have a myproject/wsgi.py file. 
+      we have a myproject/wsgi.py file. 
 
-    so 
+      so 
 
-    let''s open that up.'
-- image: images/slide_52.png
-  text: "This is the entire file. <br>most of it is comments, but we can see that \
-    It exposes the WSGI callable as a module-level variable named ``application``.\
-    \ <br>Ooh, a docs link! Let's check that"
-- image: images/slide_53.png
-  text: "These docs say that Django\u2019s primary deployment platform is\
-    \ WSGI, the Python standard for web servers <br>and applications.<br>Well what's what\
-    \ then? <br>TO THE PYTHON DOCS"
-  footnote:
-    link: "https://docs.djangoproject.com/en/3.2/howto/deployment/wsgi/"
-- image: images/slide_54.png
-  text: "This is Python Enhancement Proposal 333 (or PEP 3333) for the Python Web\
-    \ Server <br>Gateway Interface<br>The abstract is pretty self explanatory: \
-    \"This document specifies a proposed standard interface between web servers and\
-    \ <br>Python web applications or frameworks, to promote web application portability\
-    \ across <br>a variety of web servers.\"<br>it's this portability that we're taking\
-    \ advantage of.  All those potential hosting options from earlier,  they\
-    \ either directly provide, or allow <br>you to easily provide, a WSGI server to\
-    \ host your web application. This is why hosting <br>is so easy now days<br>You could\
-    \ create a virtual machine and do this all manually, continuing your firewall\
-    \ <br>and routing, but there are places that'll say \"Give us your code, here's\
-    \ the URL for <br>your site have fun\". They may things so much easier, because\
-    \ this is a problem all <br>web developers have. They wanna host a web. And so,\
-    \ they provide. <br>But it's not just WSGI now."
-  footnote: 
-    link: "https://www.python.org/dev/peps/pep-0333/"
-- image: images/slide_55.png
-  text: "There is also ASGI\
-    \ an Asynchronous server gateway interface<br>You may have noticed an ASGI.py file\
-    \ in the project template from earlier. <br>For right now, unless your blog does\
-    \ something fancy with ASGI, you don't have to <br>worry about this. Support for\
-    \ ASGI is still increasing, but unless you're doing async <br>stuff, just stay with\
-    \ WSGI."
-  footnote:
-    link: "https://asgi.readthedocs.io"
-- image: images/slide_56.png
-  text: "So we've established you to have a WSGI server on your platform host of choice.<br>\
-    There are many, but the one I use is gunicorn. It's been listed on the Flask and\
-    \ <br>Django pages we've seen so far."
-- image: images/slide_57.png
-  text: " I use guniron<br>It is functionally very similar to runserver's main function --\
-    \ it serves websites -- but <br>importantly, it is a webserver that has been security\
-    \ reviewed and is suitable for <br>production.<br>You install it as a python package,\
-    \ then you can run the gunicorn command, <br>specifying your WSGI app<br>So we can\
-    \ do just that"
-  footnote:
-    link: "https://docs.gunicorn.org/en/latest/run.html"
-- image: images/slide_58.png
-  text: "so in the terminal pip install gunicorn which pip does<br>\
-    then we run gunicorn myproject.wsgi:application <br>and run our web server<br>\
-    and look, it's running just at the same place it was before for runserver"
-- image: images/slide_59.png
-  text: 'Rocketship!
+      let''s open that up.'
+  - image: images/slide_52.png
+    text: "This is the entire file. <br>most of it is comments, but we can see that \
+      It exposes the WSGI callable as a module-level variable named ``application``.\
+      \ <br>Ooh, a docs link! Let's check that"
+  - image: images/slide_53.png
+    text: "These docs say that Django\u2019s primary deployment platform is\
+      \ WSGI, the Python standard for web servers <br>and applications.<br>Well what's what\
+      \ then? <br>TO THE PYTHON DOCS"
+    footnote:
+      link: "https://docs.djangoproject.com/en/3.2/howto/deployment/wsgi/"
+  - image: images/slide_54.png
+    text: "This is Python Enhancement Proposal 333 (or PEP 3333) for the Python Web\
+      \ Server <br>Gateway Interface<br>The abstract is pretty self explanatory: \
+      \"This document specifies a proposed standard interface between web servers and\
+      \ <br>Python web applications or frameworks, to promote web application portability\
+      \ across <br>a variety of web servers.\"<br>it's this portability that we're taking\
+      \ advantage of.  All those potential hosting options from earlier,  they\
+      \ either directly provide, or allow <br>you to easily provide, a WSGI server to\
+      \ host your web application. This is why hosting <br>is so easy now days<br>You could\
+      \ create a virtual machine and do this all manually, continuing your firewall\
+      \ <br>and routing, but there are places that'll say \"Give us your code, here's\
+      \ the URL for <br>your site have fun\". They may things so much easier, because\
+      \ this is a problem all <br>web developers have. They wanna host a web. And so,\
+      \ they provide. <br>But it's not just WSGI now."
+    footnote: 
+      link: "https://www.python.org/dev/peps/pep-0333/"
+  - image: images/slide_55.png
+    text: "There is also ASGI\
+      \ an Asynchronous server gateway interface<br>You may have noticed an ASGI.py file\
+      \ in the project template from earlier. <br>For right now, unless your blog does\
+      \ something fancy with ASGI, you don't have to <br>worry about this. Support for\
+      \ ASGI is still increasing, but unless you're doing async <br>stuff, just stay with\
+      \ WSGI."
+    footnote:
+      link: "https://asgi.readthedocs.io"
+  - image: images/slide_56.png
+    text: "So we've established you to have a WSGI server on your platform host of choice.<br>\
+      There are many, but the one I use is gunicorn. It's been listed on the Flask and\
+      \ <br>Django pages we've seen so far."
+  - image: images/slide_57.png
+    text: " I use guniron<br>It is functionally very similar to runserver's main function --\
+      \ it serves websites -- but <br>importantly, it is a webserver that has been security\
+      \ reviewed and is suitable for <br>production.<br>You install it as a python package,\
+      \ then you can run the gunicorn command, <br>specifying your WSGI app<br>So we can\
+      \ do just that"
+    footnote:
+      link: "https://docs.gunicorn.org/en/latest/run.html"
+  - image: images/slide_58.png
+    text: "so in the terminal pip install gunicorn which pip does<br>\
+      then we run gunicorn myproject.wsgi:application <br>and run our web server<br>\
+      and look, it's running just at the same place it was before for runserver"
+  - image: images/slide_59.png
+    text: 'Rocketship!
 
-    But...'
-- image: images/slide_60.png
-  text: "our admin is 90's. <br>And we know from our preivous pokering that's because\
-    \ of static issues."
-- image: images/slide_61.png
-  text: "Indeed, looking back at our terminal, all our assets aren't found. <br>this\
-    \ is because runserver handled static for us, which gunicorn doesn't do."
-- image: images/slide_62.png
-  text: "so we can use gunicorn for our webserver, but it doesn'thandle the static,\
-    \ that's still <br>another component. <br>that's okay. We want to choose the best\
-    \ available options out there.<br>as for hosting gunicorn,  *How* you deploy is\
-    \ going to depend on your host of choice, <br>check their documenation. <br>This is\
-    \ a \"what\" talk, not a \"how\" talk. \"How\" changes over time. \"what\" is\
-    \ pretty <br>consistent. <br>But since you've now got our webserver, we now need to\
-    \ create and connect our <br>stateful services. Our database, and our static. <br>\
-    Your host will probably have these offerings. Starting with the database."
-- image: images/slide_63.png
-  text: "Unless you have experience in another database that django supports, or a\
-    \ team that <br>knows how to use another database I suggest using postgres.<br>Django\
-    \ supports many databases, but PostgreSQL has the most support. <br>So says me and\
-    \ the docs"
-- image: images/slide_64.png
-  text: "From the reference for the postgres contrib module, in a high level note\
-    \ right at the <br>top of the page. \"Django is, and will continue to be,\
-    \ a database-agnostic web framework. We would <br>encourage those writing reusable\
-    \ applications for the Django community to write <br>database-agnostic code where\
-    \ practical. However, we recognize that real world <br>projects written using Django\
-    \ need not be database-agnostic.\"<br>\"Django provides support for a number\
-    \ of data types which will only work with <br>PostgreSQL. <br>There is no fundamental\
-    \ reason why (for example) a contrib.mysql module does not <br>exist,<br> except that\
-    \ PostgreSQL has the richest feature set of the supported databases so its <br>\
-    users have the most to gain.\"<br>A lot of people put a lot of work into\
-    \ django, and supporting postgres in particular. If <br>you'd like to get more support\
-    \ for your preferred database, go for it! We'd love to have <br>more support for\
-    \ these things.But if you want an answer right now, use Postgres. "
-  footnote:
-    link: "https://docs.djangoproject.com/en/3.2/ref/contrib/postgres/"
-- image: images/slide_65.png
-  text: But if you want an answer right now, use Postgres.
-- image: images/slide_66.png
-  text: "Our original settings.py file, it's engine is the sqlite3 version. So what\
-    \ we need to do is <br>replace that with postgres "
-- image: images/slide_67.png
-  text: "When we setup our postgres server on our host of choice, we'll be provided\
-    \ with <br>information about to connect to it. "
-- image: images/slide_68.png
-  text: "This will include our host and port that the server can be accessed from,\
-    \ and there will <br>be a database on that server that is ours. <br>But we probably\
-    \ want to make sure that this data is secure, so we'll need to specify a <br>username\
-    \ and password "
-- image: images/slide_69.png
-  text: "but i really don't ever want see these appear in plain text in your settings.py.<br>\
-    what you should be doing is having these values stored securely else. There are\
-    \ <br>choices for this."
-- image: images/slide_70.png
-  text: "your host may allow you to set encrypted environment variables, you can then\
-    \ <br>configure your database settings to pull these values from your environment.\
-    \ <br>these are a lot of values to set. <br>one thing I like to do is instead define\
-    \ an environment file."
-- image: images/slide_71.png
-  text: "I use a package called Django-environ<br>\
-    It's a package that allows you to use the Twleve Factor Methodoloy to configure\
-    \ our <br>application with environment variables. <br>What this code snippet does,\
-    \ it that it'll load your environment, then read in the file. <br>So instead of\
-    \ using os.environ.get everywhere, we can just use \"env\". <br>But Katie, what\
-    \ is this \"twelve factor methodology\"?"
-  footnote:
-    link: "https://django-environ.readthedocs.io"
-- image: images/slide_72.png
-  text: "the twelve factors are a methodology to building web apps that make them\
-    \ easier to <br>deploy, scale, and maintain. <br>it was developed by people who made\
-    \ Heroku, and talks about the lessons they <br>learnt there. <br>This isn't a talk\
-    \ about 12 factor apps, but I will say that the method we're using to <br>deploy\
-    \ our application is already covering a bunch of them, or we easily can. <br>\
-    Dependencies: well, we if we throw our dependencies into a requirements file,\
-    \ then <br>we're good there. <br>Config: literally what we're doing now. <br>Backing\
-    \ services: this is what our databases and static are. They're attaching to our\
-    \ <br>process. <br>And portbinding, that's our 8000 port right there. <br>\
-    If you're using a hosted service, you're going to get processes, concurrency,\
-    \ <br>disposability and logging for free. <br>These are the concepts those providers\
-    \ work on. <br>Instead of giving you an entire machine, they'll give you the ability\
-    \ to use part of one.These factors are what help them scale. <br>Of the ones we\
-    \ haven't covered, <br>you can think about using github to store your codebase,\
-    \ <br>using your hosts build process to automatically update when you push code\
-    \ there,<br>and replicate that setup if you want a testing environment. <br>And then\
-    \ your admin process, that's your migrate command. <br>There are other great talks\
-    \ that step into this methodology more, both in general and <br>for django. <br>But\
-    \ should get back to implementing django-envoron"
-  footnote:
-    link: "https://www.12factor.net/"
-- image: images/slide_73.png
-  text: "These factors are what help them scale. <br>Of the ones we haven't covered,\
-    \ <br>you can think about using github to store your codebase, <br>using your hosts\
-    \ build process to automatically update when you push code there,<br>and replicate\
-    \ that setup if you want a testing environment. <br>And then your admin process,\
-    \ that's your migrate command. <br>There are other great talks that step into this\
-    \ methodology more, both in general and <br>for django. <br>But should get back to\
-    \ implementing django-envoron"
-- image: images/slide_74.png
-  text: Adding a little bit of code to the top of my file I can import and setup django-environ,
-- image: images/slide_75.png
-  text: "then set all my configs in either my environment variables or environment\
-    \ file and my <br>settings.py will pick them up. <br>checkout the django-environ documentation\
-    \ for some more ways you can use <br>package. the database url feature is quite\
-    \ neat."
-- image: images/slide_76.png
-  text: "so, we need postgres for feature coverage, and django-environ for configuration\
-    \ <br>portability."
-- image: images/slide_77.png
-  text: "Now we have a database, we need to ensure we're actually applying the migrations\
-    \ to <br>it.<br>That's the admin process we mentioned serlier. Running manage.py\
-    \ migrate <br>Later you're going to have to consider when you'll run these migrations,\
-    \ and if you'll <br>automatically make them, or do any customisations. <br><a href=\"https://markusholtermann.eu/\">Markus\
-    \ Holtermann</a> is a subject matter expert on this, check out some of his talks and\
-    \ <br>blog posts. <br>Back to the \"what\"."
-- image: images/slide_78.png
-  text: "so for our database, we've now postgres with a side of django-environ <br>\
-    now for static. <br>again, your host of choice is going to have a backing service\
-    \ solution for this. It'll be <br>an \"object store\" of some sort. These are some\
-    \ of the oldest parts of cloud computing, <br>and are exceptionally robust now.\
-    \ <br>There's also a helper package for django for integrating these options into\
-    \ your <br>application"
-- image: images/slide_79.png
-  text: "Django-storages is a collection of custom storage backends for django. <br>These\
-    \ hook in pretty deep into django, and allow you to do all sorts of things with\
-    \ <br>whatever static host you want to use. <br>The documentation will guide you through\
-    \ the config you need for each type."
-  footnote:
-    link: "https://django-storages.readthedocs.io/en/latest/"
-- image: images/slide_80.png
-  text: "And you'll be adding a few things to the end of settings.py. Somewhere around \
-    \ here where your STATIC_URL setting is."
-- image: images/slide_81.png
-  text: "Now we have a place to put ourstatic, how do we put in in there? How do we\
-    \ collect <br>out static? We know we're missing that step as our admin looked web\
-    \ 1.0. <br>But you see, that's another of those \"HOW\" words.  The command\
-    \ you need is called... collectstatic. <br>But the HOW for this is a completely\
-    \ separate talk in and of itself.<br>A good example of this talk is Jacob\
-    \ Kaplan-Moss' talk <a href=\"https://www.youtube.com/watch?v=E613X3RBegI\">\"Assets in Django\"</a>. He goes <br>through different strategies\
-    \ for static, including a deeper dive into what collectstatic <br>does."
-- image: images/slide_82.png
-  text: "so here we have it. <br>you use gunicorn\
-    \ as a webserver on your host of choice<br>you use a hosted postgresql database\
-    \ and django-environ for settings management, <br>applying said migrations with\
-    \ migrate<br>and hosted static with django-storages, and applying with collectstatic.\
-    \ <br>This is my recommendation of what deployment is in 2021<br>people in 2032, that\
-    \ disclaimer is also for you!<br>Things may have changed! Giving this kind of talk\
-    \ is going to be an artefact of it's <br>time! <br>Please check the current django\
-    \ documentation for up to date recommendations! Try <br>creating a django project\
-    \ from the template and see what comments are in the <br>settings file! I've shown\
-    \ you how to do this!"
-- image: images/slide_83.png
-  text: "There are a lot of \"how\"\
-    \ and \"when\" things that I just didn't cover today<br>There's a LOT to\
-    \ this space, and it's absolutely ok if you don't understand or even <br>know about\
-    \ all of them. <br>I don't. <br>Each one of these are it's own talk, or at worst,\
-    \ it's own **conference**."
-- image: images/slide_84.png
-  text: "The specialisation of operations engineering is complex and opinionated and\
-    \ ever <br>evolving<br>But what we're done in the last little bit is step through\
-    \ django gives you, <br>helped you parse some of it's base documentation, understood\
-    \ some the concepts <br>and made some suggestions, <br>and given you helpers to get\
-    \ you deploying."
-- image: images/slide_85.png
-  text: "Thank you so much for watching!<br>I'm on glasnt on all the platforms, whatever\
-    \ those are in 2032, and if you want to chat, <br>here's my email too. <br>\
-    If you or your CTO wants to talk about serverless scalability and django hosting,\
-    \ <br>Here's my work email. <br>Have a brilliant rest of your day!"
+      But...'
+  - image: images/slide_60.png
+    text: "our admin is 90's. <br>And we know from our preivous pokering that's because\
+      \ of static issues."
+  - image: images/slide_61.png
+    text: "Indeed, looking back at our terminal, all our assets aren't found. <br>this\
+      \ is because runserver handled static for us, which gunicorn doesn't do."
+  - image: images/slide_62.png
+    text: "so we can use gunicorn for our webserver, but it doesn'thandle the static,\
+      \ that's still <br>another component. <br>that's okay. We want to choose the best\
+      \ available options out there.<br>as for hosting gunicorn,  *How* you deploy is\
+      \ going to depend on your host of choice, <br>check their documenation. <br>This is\
+      \ a \"what\" talk, not a \"how\" talk. \"How\" changes over time. \"what\" is\
+      \ pretty <br>consistent. <br>But since you've now got our webserver, we now need to\
+      \ create and connect our <br>stateful services. Our database, and our static. <br>\
+      Your host will probably have these offerings. Starting with the database."
+  - image: images/slide_63.png
+    text: "Unless you have experience in another database that django supports, or a\
+      \ team that <br>knows how to use another database I suggest using postgres.<br>Django\
+      \ supports many databases, but PostgreSQL has the most support. <br>So says me and\
+      \ the docs"
+  - image: images/slide_64.png
+    text: "From the reference for the postgres contrib module, in a high level note\
+      \ right at the <br>top of the page. \"Django is, and will continue to be,\
+      \ a database-agnostic web framework. We would <br>encourage those writing reusable\
+      \ applications for the Django community to write <br>database-agnostic code where\
+      \ practical. However, we recognize that real world <br>projects written using Django\
+      \ need not be database-agnostic.\"<br>\"Django provides support for a number\
+      \ of data types which will only work with <br>PostgreSQL. <br>There is no fundamental\
+      \ reason why (for example) a contrib.mysql module does not <br>exist,<br> except that\
+      \ PostgreSQL has the richest feature set of the supported databases so its <br>\
+      users have the most to gain.\"<br>A lot of people put a lot of work into\
+      \ django, and supporting postgres in particular. If <br>you'd like to get more support\
+      \ for your preferred database, go for it! We'd love to have <br>more support for\
+      \ these things.But if you want an answer right now, use Postgres. "
+    footnote:
+      link: "https://docs.djangoproject.com/en/3.2/ref/contrib/postgres/"
+  - image: images/slide_65.png
+    text: But if you want an answer right now, use Postgres.
+  - image: images/slide_66.png
+    text: "Our original settings.py file, it's engine is the sqlite3 version. So what\
+      \ we need to do is <br>replace that with postgres "
+  - image: images/slide_67.png
+    text: "When we setup our postgres server on our host of choice, we'll be provided\
+      \ with <br>information about to connect to it. "
+  - image: images/slide_68.png
+    text: "This will include our host and port that the server can be accessed from,\
+      \ and there will <br>be a database on that server that is ours. <br>But we probably\
+      \ want to make sure that this data is secure, so we'll need to specify a <br>username\
+      \ and password "
+  - image: images/slide_69.png
+    text: "but i really don't ever want see these appear in plain text in your settings.py.<br>\
+      what you should be doing is having these values stored securely else. There are\
+      \ <br>choices for this."
+  - image: images/slide_70.png
+    text: "your host may allow you to set encrypted environment variables, you can then\
+      \ <br>configure your database settings to pull these values from your environment.\
+      \ <br>these are a lot of values to set. <br>one thing I like to do is instead define\
+      \ an environment file."
+  - image: images/slide_71.png
+    text: "I use a package called Django-environ<br>\
+      It's a package that allows you to use the Twleve Factor Methodoloy to configure\
+      \ our <br>application with environment variables. <br>What this code snippet does,\
+      \ it that it'll load your environment, then read in the file. <br>So instead of\
+      \ using os.environ.get everywhere, we can just use \"env\". <br>But Katie, what\
+      \ is this \"twelve factor methodology\"?"
+    footnote:
+      link: "https://django-environ.readthedocs.io"
+  - image: images/slide_72.png
+    text: "the twelve factors are a methodology to building web apps that make them\
+      \ easier to <br>deploy, scale, and maintain. <br>it was developed by people who made\
+      \ Heroku, and talks about the lessons they <br>learnt there. <br>This isn't a talk\
+      \ about 12 factor apps, but I will say that the method we're using to <br>deploy\
+      \ our application is already covering a bunch of them, or we easily can. <br>\
+      Dependencies: well, we if we throw our dependencies into a requirements file,\
+      \ then <br>we're good there. <br>Config: literally what we're doing now. <br>Backing\
+      \ services: this is what our databases and static are. They're attaching to our\
+      \ <br>process. <br>And portbinding, that's our 8000 port right there. <br>\
+      If you're using a hosted service, you're going to get processes, concurrency,\
+      \ <br>disposability and logging for free. <br>These are the concepts those providers\
+      \ work on. <br>Instead of giving you an entire machine, they'll give you the ability\
+      \ to use part of one.These factors are what help them scale. <br>Of the ones we\
+      \ haven't covered, <br>you can think about using github to store your codebase,\
+      \ <br>using your hosts build process to automatically update when you push code\
+      \ there,<br>and replicate that setup if you want a testing environment. <br>And then\
+      \ your admin process, that's your migrate command. <br>There are other great talks\
+      \ that step into this methodology more, both in general and <br>for django. <br>But\
+      \ should get back to implementing django-envoron"
+    footnote:
+      link: "https://www.12factor.net/"
+  - image: images/slide_73.png
+    text: "These factors are what help them scale. <br>Of the ones we haven't covered,\
+      \ <br>you can think about using github to store your codebase, <br>using your hosts\
+      \ build process to automatically update when you push code there,<br>and replicate\
+      \ that setup if you want a testing environment. <br>And then your admin process,\
+      \ that's your migrate command. <br>There are other great talks that step into this\
+      \ methodology more, both in general and <br>for django. <br>But should get back to\
+      \ implementing django-envoron"
+  - image: images/slide_74.png
+    text: Adding a little bit of code to the top of my file I can import and setup django-environ,
+  - image: images/slide_75.png
+    text: "then set all my configs in either my environment variables or environment\
+      \ file and my <br>settings.py will pick them up. <br>checkout the django-environ documentation\
+      \ for some more ways you can use <br>package. the database url feature is quite\
+      \ neat."
+  - image: images/slide_76.png
+    text: "so, we need postgres for feature coverage, and django-environ for configuration\
+      \ <br>portability."
+  - image: images/slide_77.png
+    text: "Now we have a database, we need to ensure we're actually applying the migrations\
+      \ to <br>it.<br>That's the admin process we mentioned serlier. Running manage.py\
+      \ migrate <br>Later you're going to have to consider when you'll run these migrations,\
+      \ and if you'll <br>automatically make them, or do any customisations. <br><a href=\"https://markusholtermann.eu/\">Markus\
+      \ Holtermann</a> is a subject matter expert on this, check out some of his talks and\
+      \ <br>blog posts. <br>Back to the \"what\"."
+  - image: images/slide_78.png
+    text: "so for our database, we've now postgres with a side of django-environ <br>\
+      now for static. <br>again, your host of choice is going to have a backing service\
+      \ solution for this. It'll be <br>an \"object store\" of some sort. These are some\
+      \ of the oldest parts of cloud computing, <br>and are exceptionally robust now.\
+      \ <br>There's also a helper package for django for integrating these options into\
+      \ your <br>application"
+  - image: images/slide_79.png
+    text: "Django-storages is a collection of custom storage backends for django. <br>These\
+      \ hook in pretty deep into django, and allow you to do all sorts of things with\
+      \ <br>whatever static host you want to use. <br>The documentation will guide you through\
+      \ the config you need for each type."
+    footnote:
+      link: "https://django-storages.readthedocs.io/en/latest/"
+  - image: images/slide_80.png
+    text: "And you'll be adding a few things to the end of settings.py. Somewhere around \
+      \ here where your STATIC_URL setting is."
+  - image: images/slide_81.png
+    text: "Now we have a place to put ourstatic, how do we put in in there? How do we\
+      \ collect <br>out static? We know we're missing that step as our admin looked web\
+      \ 1.0. <br>But you see, that's another of those \"HOW\" words.  The command\
+      \ you need is called... collectstatic. <br>But the HOW for this is a completely\
+      \ separate talk in and of itself.<br>A good example of this talk is Jacob\
+      \ Kaplan-Moss' talk <a href=\"https://www.youtube.com/watch?v=E613X3RBegI\">\"Assets in Django\"</a>. He goes <br>through different strategies\
+      \ for static, including a deeper dive into what collectstatic <br>does."
+  - image: images/slide_82.png
+    text: "so here we have it. <br>you use gunicorn\
+      \ as a webserver on your host of choice<br>you use a hosted postgresql database\
+      \ and django-environ for settings management, <br>applying said migrations with\
+      \ migrate<br>and hosted static with django-storages, and applying with collectstatic.\
+      \ <br>This is my recommendation of what deployment is in 2021<br>people in 2032, that\
+      \ disclaimer is also for you!<br>Things may have changed! Giving this kind of talk\
+      \ is going to be an artefact of it's <br>time! <br>Please check the current django\
+      \ documentation for up to date recommendations! Try <br>creating a django project\
+      \ from the template and see what comments are in the <br>settings file! I've shown\
+      \ you how to do this!"
+  - image: images/slide_83.png
+    text: "There are a lot of \"how\"\
+      \ and \"when\" things that I just didn't cover today<br>There's a LOT to\
+      \ this space, and it's absolutely ok if you don't understand or even <br>know about\
+      \ all of them. <br>I don't. <br>Each one of these are it's own talk, or at worst,\
+      \ it's own **conference**."
+  - image: images/slide_84.png
+    text: "The specialisation of operations engineering is complex and opinionated and\
+      \ ever <br>evolving<br>But what we're done in the last little bit is step through\
+      \ django gives you, <br>helped you parse some of it's base documentation, understood\
+      \ some the concepts <br>and made some suggestions, <br>and given you helpers to get\
+      \ you deploying."
+  - image: images/slide_85.png
+    text: "Thank you so much for watching!<br>I'm on glasnt on all the platforms, whatever\
+      \ those are in 2032, and if you want to chat, <br>here's my email too. <br>\
+      If you or your CTO wants to talk about serverless scalability and django hosting,\
+      \ <br>Here's my work email. <br>Have a brilliant rest of your day!"

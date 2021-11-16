@@ -1,0 +1,2 @@
+# in dev mode, don't render all the talks, for page speed. 
+exclude: [20*]

@@ -31,5 +31,7 @@ navbar:
   - slug: /blog/archive/
     title: archive
 
-# devmode
-exclude: 20*
+collections: 
+  writeups: 
+     output: true
+     permalink: /:name

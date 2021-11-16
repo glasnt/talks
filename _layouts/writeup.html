@@ -1,0 +1,47 @@
+---
+layout: page
+---
+
+{% if page.content %}
+<hr>
+<p>{{page.content}}</p>
+{% endif %}
+ 
+{% if page.notes %}
+<hr>
+<p>{{page.notes}}</p>
+{% endif %}
+<hr>
+</p>
+
+<table>
+    {% assign image_fn = page.slides %}
+    {% for slide in site.data[page.slides].slides.slides %}
+    <tr>
+        <td class="slide"><img src="/talks/img/{{image_fn}}/{{slide.image}}" />
+            {% if slide.footnote %}<br><span class="footnote"><a href="{{slide.footnote.link}}">{% if
+                    slide.footnote.text
+                    %}{{slide.footnote.text}}{%else%}{{slide.footnote.link}}{%endif%}</a>{%endif%}</span>
+        </td>
+        <td class="notes">{{slide.text}}
+
+        </td>
+    </tr>
+    {% endfor %}
+</table>
+
+
+<style>
+    .slide img {
+        width: 400px;
+    }
+
+    .notes {
+        padding: 20px;
+    }
+
+    .footnote a { 
+        color: gray; text-decoration: underline;
+        font-size: 75%;
+    }
+</style>
