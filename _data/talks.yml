@@ -1,4 +1,16 @@
 - conference:
+    name: PyCon APAC
+    date: 2021-11-20
+    link: https://th.pycon.org/
+    talks: 
+      - name: "Turning 'wat' into 'why'"
+        link: https://th.pycon.org/pages/speakers
+        resources: https://glasnt.com/wat
+      - name: "Python's Place in the World"
+        type: Panel
+        link: https://th.pycon.org/pages/schedule
+
+- conference:
     name: SeaGL 2021
     date: 2021-11-04
     link: https://seagl.org/
@@ -107,7 +119,8 @@
       - name: "Corralling a Serverless Django Deployment on GCP"
         link: https://cloud.withgoogle.com/next/uk/speakers?session=DZ225
         twitter: https://twitter.com/kwazrunner/status/1197135404253745152
-      - name: "Panel Discussion: Application Development on Google Cloud"
+      - name: "Application Development on Google Cloud"
+        type: Panel
         link: https://cloud.withgoogle.com/next/uk/speakers?session=DZ212
         twitter: https://twitter.com/GabeWeiss_/status/1197516014302437378
 
