@@ -16,23 +16,13 @@ layout: default
 
 <style>
 .row div {display: inline-block}
-/*
-.item.counter { width: 5% }
-.item.podcastcounter { width: 5% }
-.item.type { width: 15% }
-.item.link { width: 60% }
-*/
 .item.icons { float: right }
 
-/* for mobile, do this */
-@media (max-width: 700px) {
-  /*
-  .item.counter { width: 10%; }
-  .item.podcastcounter { display: none}
-  .item.link { display: block; width: 100%} */
+@media (max-width: 700px) { /* for mobile, do this */
   .item.icons { float: none; }
- 
 }
+.conf { padding-top: 30px; font-size: 115%; }
+.talk { margin-top: 10px; }
 </style>
 
 
@@ -52,7 +42,7 @@ layout: default
   
 {% assign talk_num = talk_total %}
   {% for c in site.data.talks %}
-  <div class="row">
+  <div class="row conf">
       {% if c.conference.link %}
       <a href="{{c.conference.link}}">{{c.conference.name}}</a>,
       {% else %}
@@ -64,11 +54,9 @@ layout: default
 
   </div>
   {% for talk in c.conference.talks %}
-  <div class="row">
+  <div class="row talk">
     {% if talk.type != "Podcast" %}
     <div class="item counter">[#{{ talk_num }}]</div>
-    {% else %}
-    <div class="item podcastcounter"></div>
     {% endif %}
     <div class="item type">{{talk.type | default: "Talk"}} - </div>
     {{talk.name}}
@@ -78,12 +66,12 @@ layout: default
     </div>
     <div class="item icons">
       {% if talk.video %} <a href="{{talk.video}}"><span title="video" class="material-icons">smart_display</span></a>{% endif %}
-      {% if talk.twitter %} <a href="{{talk.twitter}}"><span title="twitter" class="material-icons">post_add</span></a>{% endif %}
-      {% if talk.transcript %} <a href="{{talk.transcript}}"><span title="transcript" class="material-icons">record_voice_over</span></a>{% endif %}
-      {% if talk.resources %} <a href="{{talk.resources}}"><span title="resources" class="material-icons">assignment</span></a>{% endif %}
-      {% if talk.feedback %} <a href="{{talk.feedback}}"><span title="feedback" class="material-icons">forum</span></a>{% endif %}
-      {% if talk.article %} <a href="{{talk.article}}"><span title="article" class="material-icons">article</span></a>{% endif %}
-      {% if talk.photo %} <a href="{{talk.photo}}"><span title="photo" class="material-icons">photo_library</span></a>{% endif %}
+      {% if talk.twitter %}<a href="{{talk.twitter}}"><span title="twitter" class="material-icons">post_add</span></a>{% endif %}
+      {% if talk.transcript %}<a href="{{talk.transcript}}"><span title="transcript" class="material-icons">record_voice_over</span></a>{% endif %}
+      {% if talk.resources %}<a href="{{talk.resources}}"><span title="resources" class="material-icons">assignment</span></a>{% endif %}
+      {% if talk.feedback %}<a href="{{talk.feedback}}"><span title="feedback" class="material-icons">forum</span></a>{% endif %}
+      {% if talk.article %}<a href="{{talk.article}}"><span title="article" class="material-icons">article</span></a>{% endif %}
+      {% if talk.photo %}<a href="{{talk.photo}}"><span title="photo" class="material-icons">photo_library</span></a>{% endif %}
       {% if talk.type == "Podcast" %} <a href="{{talk.link}}"><span title="podcast" class="material-icons">podcasts</span></a>{% endif %}
     </div>
 
@@ -92,7 +80,6 @@ layout: default
     {% endif %}
   </div>
   {% endfor %}
-  <br>
   {% endfor %}
 </div>
 
