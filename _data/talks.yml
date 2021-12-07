@@ -18,6 +18,7 @@
       - name: "Expressive Security: Vulnerabilities with Emoji"
         link: "https://osem.seagl.org/conferences/seagl2021/program/proposals/826"
         slides: "expressive-security"
+        video: https://seagl.org/archive/2021/expressive-security
 
 - conference:
     name: DjangoCon 2021
