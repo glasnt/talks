@@ -19,6 +19,7 @@
         link: "https://osem.seagl.org/conferences/seagl2021/program/proposals/826"
         slides: "expressive-security"
         video: https://seagl.org/archive/2021/expressive-security
+        article: "/talks/img/expressivesecurity/mindseye-sketchnotes.jpg"
 
 - conference:
     name: DjangoCon 2021
@@ -589,6 +590,7 @@
     talks:
       - name: 🔐 + 😈 => 💥
         slides: 2017_02_CrikeyCon
+        link: https://www.crikeycon.com/archive/2017/
         twitter: https://twitter.com/attacus_au/status/835362125967044609
 
 - conference:
