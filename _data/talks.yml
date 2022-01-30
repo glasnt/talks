@@ -1,4 +1,14 @@
 - conference:
+    name: CHAOSScast
+    date: 2022-01-14
+    link: https://podcast.chaoss.community/
+    talks:
+      - type: Podcast
+        link: https://podcast.chaoss.community/50
+        name: "Recognizing all Kinds of Labor in Open Source Ecosystems with Amanda, Katie, and John"
+        twitter: https://twitter.com/CHAOSSproj/status/1481928219548864515
+
+- conference:
     name: PyCon APAC
     date: 2021-11-20
     link: https://th.pycon.org/

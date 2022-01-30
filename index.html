@@ -61,7 +61,7 @@ layout: default
     <div class="item type">{{talk.type | default: "Talk"}} - </div>
     {{talk.name}}
     <div class="item links">
-      {% if talk.link %}<a href="{{talk.link}}">(talk info)</a>{%endif%}
+      {% if talk.link %}<a href="{{talk.link}}">({% if talk.type != "Podcast" %}talk {%endif%}info)</a>{%endif%}
       {% if talk.slides %} <a href="{{talk.slides}}">(slides)</a>{% endif %}
     </div>
     <div class="item icons">
