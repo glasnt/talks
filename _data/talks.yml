@@ -1,4 +1,23 @@
 - conference:
+    name: Sydney Identity and Security Meetup
+    date: 2022-05-05
+    link: https://www.meetup.com/Sydney-Identity-and-Security-Meetup/
+    talks: 
+      - name: "Expressive Security: Vulnerabilities with Emoji"
+        slides: "expressive-security"
+        link: https://www.meetup.com/Sydney-Identity-and-Security-Meetup/events/284530159/
+
+- conference:
+    name: Melbourne Identity and Security Meetup
+    date: 2022-04-26
+    link: https://www.meetup.com/Melbourne-Identity-and-Security-Meetup
+    talks: 
+      - name: "Expressive Security: Vulnerabilities with Emoji"
+        twitter: https://twitter.com/glasnt/status/1518865511018565632
+        link: https://www.meetup.com/Melbourne-Identity-and-Security-Meetup/events/284671619/
+        slides: "expressive-security"
+
+- conference:
     name: CHAOSScast
     date: 2022-01-14
     link: https://podcast.chaoss.community/

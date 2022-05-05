@@ -14,8 +14,14 @@ notes: |
 <p>
 This talk has been previously presented at: 
 
-<ul><li><a href="https://seagl.org/archive/2021/expressive-security">SeaGL 2021</a></li></ul>
-
+  {% for conf in site.data.talks %}
+  {% for talk in conf.conference.talks %}
+  {% if talk.name == page.title %}
+  <li><a href="{{talk.link}}">{{conf.conference.name}}</a></li>
+  {% endif %}
+  {% endfor %}
+  {% endfor %}
+</p><p>
 Other Emoji Security Talks:
 <ul>
 {% for conf in site.data.talks %}
