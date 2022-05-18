@@ -264,7 +264,7 @@
     talks:
       - name: "How Python Can Excel"
         type: Keynote
-        link: https://th.pycon.org/en/#keynotes
+        link: https://2019.th.pycon.org/en/#keynotes
         slides: 2019_06_PyConTH.podium
         resources: https://github.com/glasnt/talks/blob/gh-pages/2019_06_PyConTH.podium/resources.md
         video: https://www.youtube.com/watch?v=RpVtXCaeT_Q
