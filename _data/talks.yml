@@ -1,3 +1,13 @@
+- confernece: 
+    name: DjangoCon Europe 2022
+    date: 2022-09-22
+    link: https://2022.djangocon.eu/
+    talks: 
+      - name: What should you have to worry about
+        type: Keynote
+        link: https://pretalx.evolutio.pt/djangocon-europe-2022/talk/EE3XCD/
+        twitter: https://twitter.com/judy2k/status/1572869339929317376
+
 - conference: 
     name: KiwiPyCon
     date: 2022-08-20
