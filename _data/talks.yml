@@ -1,5 +1,28 @@
+- conference: 
+    name: DjangoCon US
+    location: San Diego, CA, USA
+    date: 2022-10-18
+    link: https://2022.djangocon.us
+    talks: 
+      - name: "Scheming with CSRF: When platforms manage to break things."
+        link: https://2022.djangocon.us/talks/scheming-with-csrf-when-platforms-manage/
+        twitter: https://twitter.com/pauloxnet/status/1582450764265320448
+
+
+- conference: 
+    name: Innovators Hive
+    location: Tokyo, Japan
+    date: 2022-10-15
+    link: https://g.co/cloudnext
+    talks: 
+      - name: "基調講演 (Keynote Speach)"
+        link: http://web.archive.org/web/20221105211320/https://cloud.withgoogle.com/next?session=HIVE100-JP
+        twitter: https://twitter.com/Yuryu/status/1580734911090393088
+
+
 - confernece: 
     name: DjangoCon Europe 2022
+    location: Porto, Portugal
     date: 2022-09-22
     link: https://2022.djangocon.eu/
     talks: 
@@ -10,6 +33,7 @@
 
 - conference: 
     name: KiwiPyCon
+    location: Christchurch, NZ
     date: 2022-08-20
     link: https://kiwipycon.nz/
     talks: 
@@ -19,6 +43,7 @@
 
 - conference: 
     name: Flutter Melbourne
+    location: Melbourne, Australia
     date: 2022-06-16
     link: https://www.meetup.com/Flutter-Melbourne
     talks: 
@@ -28,6 +53,7 @@
 
 - conference:
     name: Sydney Identity and Security Meetup
+    location: Melbourne, Australia
     date: 2022-05-05
     link: https://www.meetup.com/Sydney-Identity-and-Security-Meetup/
     talks: 
@@ -37,6 +63,7 @@
 
 - conference:
     name: Melbourne Identity and Security Meetup
+    location: Sydney, Australia
     date: 2022-04-26
     link: https://www.meetup.com/Melbourne-Identity-and-Security-Meetup
     talks: 
@@ -87,6 +114,7 @@
         link: "https://2021.djangocon.us/talks/what-is-deployment-anyway/"
         slides: "what-is-deployment-anyway"
         twitter: https://twitter.com/xahteiwi/status/1452541745561063424
+
 - conference:
     name: FOSS && Crafts
     date: 2021-05-23
@@ -96,6 +124,7 @@
         link: https://fossandcrafts.org/episodes/28-foss-stitch-with-ehashman-glasnt.html
         name: "28: FOSS Stitch w/ Elana Hashman and Katie McLaughlin"
         twitter: https://twitter.com/dustyweb/status/1396564377675907072
+
 - conference: 
     name: "Google I/O '21"
     date: 2021-05-18
@@ -151,6 +180,7 @@
 
 - conference:
     name: PyCascades 2020
+    location: Portland, OR, USA
     link: https://2020.pycascades.com/
     date: 2020-02-08
     talks:
