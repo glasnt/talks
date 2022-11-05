@@ -10,15 +10,25 @@ notes: |
 ---
 
 <p>
-Other Emoji Security Talks:
+This talk has been previously presented at: 
 
+  {% for conf in site.data.talks %}
+  {% for talk in conf.conference.talks %}
+  {% if talk.name == page.title %}
+  <li><a href="{{talk.link}}">{{conf.conference.name}}</a></li>
+  {% endif %}
+  {% endfor %}
+  {% endfor %}
+</p><p>
+Other Emoji Security Talks:
+<ul>
 {% for conf in site.data.talks %}
 {% for talk in conf.conference.talks %}
 {% if talk.name == "Protect yourself against the bees 🐝" %}<li><a href="{{talk.link}}">{{talk.name}}, {{conf.conference.name}}</a></li>{% endif %}
 {% if talk.name == "🔐 + 😈 => 💥" %}<li><a href="{{talk.link}}">{{talk.name}}, {{conf.conference.name}}</a></li>{% endif %}
 {% endfor %}
 {% endfor %}
-</p><p>
+</ul></p><p>
 See also "The Power ⚡️ and Responsibility 😓 of Unicode Adoption ✨", previously presented at:
 {% for conf in site.data.talks %}
 {% for talk in conf.conference.talks %}

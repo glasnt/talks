@@ -1,3 +1,72 @@
+- confernece: 
+    name: DjangoCon Europe 2022
+    date: 2022-09-22
+    link: https://2022.djangocon.eu/
+    talks: 
+      - name: What should you have to worry about
+        type: Keynote
+        link: https://pretalx.evolutio.pt/djangocon-europe-2022/talk/EE3XCD/
+        twitter: https://twitter.com/judy2k/status/1572869339929317376
+
+- conference: 
+    name: KiwiPyCon
+    date: 2022-08-20
+    link: https://kiwipycon.nz/
+    talks: 
+      - name: What is deployment, anyway?
+        link: https://pretalx.com/kiwipycon-2021/talk/JTMKJF/
+        slides: "what-is-deployment-anyway"
+
+- conference: 
+    name: Flutter Melbourne
+    date: 2022-06-16
+    link: https://www.meetup.com/Flutter-Melbourne
+    talks: 
+      - name: "Minimum Viable Potato: Developing a salad-ordering mobile app on Cloud Run and Flutter"
+        link: https://www.meetup.com/Flutter-Melbourne/events/286198822/
+        photo: https://www.meetup.com/flutter-melbourne/photos/32431164/504876838/#504877673
+
+- conference:
+    name: Sydney Identity and Security Meetup
+    date: 2022-05-05
+    link: https://www.meetup.com/Sydney-Identity-and-Security-Meetup/
+    talks: 
+      - name: "Expressive Security: Vulnerabilities with Emoji"
+        slides: "expressive-security"
+        link: https://www.meetup.com/Sydney-Identity-and-Security-Meetup/events/284530159/
+
+- conference:
+    name: Melbourne Identity and Security Meetup
+    date: 2022-04-26
+    link: https://www.meetup.com/Melbourne-Identity-and-Security-Meetup
+    talks: 
+      - name: "Expressive Security: Vulnerabilities with Emoji"
+        twitter: https://twitter.com/glasnt/status/1518865511018565632
+        link: https://www.meetup.com/Melbourne-Identity-and-Security-Meetup/events/284671619/
+        slides: "expressive-security"
+
+- conference:
+    name: CHAOSScast
+    date: 2022-01-14
+    link: https://podcast.chaoss.community/
+    talks:
+      - type: Podcast
+        link: https://podcast.chaoss.community/50
+        name: "Recognizing all Kinds of Labor in Open Source Ecosystems with Amanda, Katie, and John"
+        twitter: https://twitter.com/CHAOSSproj/status/1481928219548864515
+
+- conference:
+    name: PyCon APAC
+    date: 2021-11-20
+    link: https://th.pycon.org/
+    talks: 
+      - name: "Turning 'wat' into 'why'"
+        link: https://th.pycon.org/pages/speakers
+        resources: https://glasnt.com/wat
+      - name: "Python's Place in the World"
+        type: Panel
+        link: https://th.pycon.org/pages/schedule
+
 - conference:
     name: SeaGL 2021
     date: 2021-11-04
@@ -6,6 +75,8 @@
       - name: "Expressive Security: Vulnerabilities with Emoji"
         link: "https://osem.seagl.org/conferences/seagl2021/program/proposals/826"
         slides: "expressive-security"
+        video: https://seagl.org/archive/2021/expressive-security
+        article: "/talks/img/expressivesecurity/mindseye-sketchnotes.jpg"
 
 - conference:
     name: DjangoCon 2021
@@ -31,7 +102,8 @@
     link: https://events.google.com/io/?lng=en
     talks:
       - name: Serverless Demo Derby
-        link: https://www.youtube.com/watch?v=g4ES7wXn8oQ
+        video: https://www.youtube.com/watch?v=g4ES7wXn8oQ
+        link: https://io.google/2021/session/a521df15-1fe2-4011-8e92-5779566e2116?lng=en
         
 - conference:
     name: The Power of Serverless
@@ -72,7 +144,7 @@
     date: 2020-04-23
     link: https://twitter.com/ChatDjango
     talks:
-      - link: https://djangochat.com/#ep60
+      - link: https://djangochat.com/episodes/advanced-deployment-katie-mclaughlin
         type: Podcast
         name: Advanced Deployment
         twitter: https://twitter.com/ChatDjango/status/1253015132428435457
@@ -107,7 +179,8 @@
       - name: "Corralling a Serverless Django Deployment on GCP"
         link: https://cloud.withgoogle.com/next/uk/speakers?session=DZ225
         twitter: https://twitter.com/kwazrunner/status/1197135404253745152
-      - name: "Panel Discussion: Application Development on Google Cloud"
+      - name: "Application Development on Google Cloud"
+        type: Panel
         link: https://cloud.withgoogle.com/next/uk/speakers?session=DZ212
         twitter: https://twitter.com/GabeWeiss_/status/1197516014302437378
 
@@ -206,7 +279,7 @@
     date: 2019-07-04
     link: https://twitter.com/ChatDjango
     talks:
-      - link: https://djangochat.com/#ep19
+      - link: https://djangochat.com/episodes/katie-mclaughlin
         type: Podcast
         name: Katie McLaughlin
         twitter: https://twitter.com/glasnt/status/1146558903997460481
@@ -218,7 +291,8 @@
     location: Bangkok, Thailand
     talks:
       - name: "How Python Can Excel"
-        link: https://th.pycon.org/en/#keynotes
+        type: Keynote
+        link: https://2019.th.pycon.org/en/#keynotes
         slides: 2019_06_PyConTH.podium
         resources: https://github.com/glasnt/talks/blob/gh-pages/2019_06_PyConTH.podium/resources.md
         video: https://www.youtube.com/watch?v=RpVtXCaeT_Q
@@ -574,6 +648,7 @@
     talks:
       - name: 🔐 + 😈 => 💥
         slides: 2017_02_CrikeyCon
+        link: https://www.crikeycon.com/archive/2017/
         twitter: https://twitter.com/attacus_au/status/835362125967044609
 
 - conference:
