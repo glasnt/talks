@@ -1,4 +1,12 @@
 - conference: 
+    name: DevOpsTalks Auckland
+    location: Auckland, New Zealand
+    date: 2022-11-10
+    link: https://devops.talksplus.com/
+    talks: 
+      - name: State of DevOps Report Story Time
+
+- conference: 
     name: DjangoCon US
     location: San Diego, CA, USA
     date: 2022-10-18
@@ -7,6 +15,7 @@
       - name: "Scheming with CSRF: When platforms manage to break things."
         link: https://2022.djangocon.us/talks/scheming-with-csrf-when-platforms-manage/
         twitter: https://twitter.com/pauloxnet/status/1582450764265320448
+        video: https://www.youtube.com/watch?v=xpkNvpF_tXA
 
 
 - conference: 
@@ -15,7 +24,7 @@
     date: 2022-10-15
     link: https://g.co/cloudnext
     talks: 
-      - name: "基調講演 (Keynote Speach)"
+      - name: "基調講演 (Keynote Speech)"
         link: http://web.archive.org/web/20221105211320/https://cloud.withgoogle.com/next?session=HIVE100-JP
         twitter: https://twitter.com/Yuryu/status/1580734911090393088
 
