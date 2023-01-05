@@ -5,6 +5,7 @@
     link: https://devops.talksplus.com/
     talks: 
       - name: State of DevOps Report Story Time
+        type: Keynote
 
 - conference: 
     name: DjangoCon US
@@ -25,6 +26,7 @@
     link: https://g.co/cloudnext
     talks: 
       - name: "基調講演 (Keynote Speech)"
+        type: Keynote
         link: http://web.archive.org/web/20221105211320/https://cloud.withgoogle.com/next?session=HIVE100-JP
         twitter: https://twitter.com/Yuryu/status/1580734911090393088
 
