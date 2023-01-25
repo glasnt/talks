@@ -1,4 +1,14 @@
 - conference: 
+    name: RORO Melbourne
+    location: Melbourne, Australia
+    link: https://www.meetup.com/ruby-on-rails-oceania-melbourne/
+    date: 2023-01-25
+    talks: 
+      - name: Present like a pro
+        link: https://www.meetup.com/ruby-on-rails-oceania-melbourne/events/prpwzsyfccbhc/
+        resources: present-like-a-pro
+
+- conference: 
     name: DevOpsTalks Auckland
     location: Auckland, New Zealand
     date: 2022-11-10
