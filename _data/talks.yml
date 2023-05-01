@@ -1,4 +1,21 @@
 - conference: 
+    name: MelbDjango
+    date: 2023-05-03
+    location: Melbourne, Australia
+    link: https://www.meetup.com/melbdjango
+    talks: 
+      - name: CFP Writing Workshop
+        link: https://www.meetup.com/melbdjango/events/292966230/
+
+- conference: 
+    name: DevOpsTalks
+    date: 2023-04-05
+    location: Melbourne, Australia
+    link: https://devops.talksplus.com/
+    talks: 
+      - name: State of DevOps Report Story Time
+ 
+- conference: 
     name: RORO Melbourne
     location: Melbourne, Australia
     link: https://www.meetup.com/ruby-on-rails-oceania-melbourne/
@@ -9,7 +26,7 @@
         resources: present-like-a-pro
 
 - conference: 
-    name: DevOpsTalks Auckland
+    name: DevOpsTalks
     location: Auckland, New Zealand
     date: 2022-11-10
     link: https://devops.talksplus.com/
