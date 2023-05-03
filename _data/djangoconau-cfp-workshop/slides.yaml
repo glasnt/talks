@@ -1,0 +1,318 @@
+slides:
+- alt: 'CFP Abstract Writing
+
+    Workshop
+
+    Katie McLaughlin
+
+    Liz Holliday
+
+    2023.djangocon.com.au'
+  image: images/slide_0.png
+  text: ''
+- alt: "Agenda\n\u25CF Introductions\n\u25CF PyCon AU and DjangoCon AU\n\u25CF Conference\
+    \ Proposal Nomenclature\n\u25CF Titles, Abstracts\n\u25CF Biographies\n\u25CF\
+    \ Advanced Tips"
+  image: images/slide_1.png
+  text: ''
+- alt: 'Introductions
+
+    Who are we? Who are you?'
+  image: images/slide_2.png
+  text: ''
+- alt: 'DjangoCon AU Specialist Track Organisers
+
+    Katie McLaughlin Liz Holliday
+
+    (they/she) (she/her)
+
+    Google Cloud, Django Software Foundation Common Code, MelbDjango
+
+    Talks a bunch Organises events a bunch
+
+    Ran PyCon AU a bit'
+  image: images/slide_3.png
+  text: ''
+- alt: 'PyCon AU
+
+    and DjangoCon AU
+
+    The Pony and the Snek'
+  image: images/slide_4.png
+  text: ''
+- alt: "PyCon AU: 18 - 22 August, 2023\nLocation: Adelaide Convention Centre\nEvent:\n\
+    \u25CF Friday 18th: Specialist Tracks\n\u25CF Saturday 19th, Sunday 20th: General\
+    \ conference\n\u25CF Monday 21st: DjangoGirls*, Sprints\n\u25CF Tuesday 22nd:\
+    \ Sprints\n* TBC"
+  image: images/slide_5.png
+  text: "Important in person. Not Online.<br><br>From 
+    \ https://2023.pycon.org.au/program/#presenting-your-talk-online<br><BR>Remote presentations:<br>However, if\
+    \ you need to avoid face to face events, for example due to being<br>immunocompromised\
+    \ or unwell, please let us know as part of the submission<br>process. We can provide\
+    \ facilities for delivering your talk via a live video stream or as<br>a pre-recorded\
+    \ video.<br>Please note that because of the labour involved in ensuring the high\
+    \ A/V quality our<br>attendees expect, our ability to offer remote presentation\
+    \ slots is limited. Because of<br>this, we may prioritise online presenters who\
+    \ live in or near Australia and can\u2019t attend<br>for health or disability\
+    \ reasons, over presenters that live far overseas and are near a<br>more suitable\
+    \ regional PyCon."
+- alt: "2023.pycon.org.au/program\nProgram Content\nSpecialist Tracks (Friday):\n\u25CF\
+    \ All Things Data!\n\u25CF DjangoCon AU (that's us!)\n\u25CF Education\n\u25CF\
+    \ Our Connected Universe\nMain conference (Saturday and Sunday):\n\u25CF General\
+    \ content"
+  image: images/slide_6.png
+  text: ''
+- alt: "2023.pycon.org.au/program\nTalk formats\nTalks:\n\u25CF 30 minutes\n\u25CB\
+    \ includes Q&A (optional)\nDeep Dives:\n\u25CF 70 minutes\n\u25CB includes Q&A\
+    \ (optional)\n\u25CB use this added time wisely"
+  image: images/slide_7.png
+  text: ''
+- alt: 'Conference Proposal
+
+    Nomenclature
+
+    What the CFP form looks like'
+  image: images/slide_8.png
+  text: ''
+- alt: 'T
+
+    N
+
+    A
+
+    T
+
+    R
+
+    O
+
+    P
+
+    M
+
+    I
+
+    Every conference uses a different system.
+
+    PyCon AU & DjangoCon AU use .
+
+    pretalx
+
+    So, that''s what we''ll cover.'
+  image: images/slide_9.png
+  text: ''
+- alt: "Section 1: General Questions\nProposal Title\nSession type\n30 min, 70 min\n\
+    Abstract\nA quick summary of your talk. It\u2019s your \u2018elevator pitch\u2019\
+    .\nDescription\nThis is the detailed description that sells your talk to both\
+    \ reviewers and attendees.\nNotes\nThese will not be published, and are helpful\
+    \ for you to outline your talk for reviewers."
+  image: images/slide_10.png
+  text: "Section 1: General Questions<br>Proposal Title<br>Session type 30 min, 70\
+    \ min<br>Abstract A quick summary of your talk. It\u2019s your \u2018elevator\
+    \ pitch\u2019.<br>Description This is the detailed description that sells your\
+    \ talk to both reviewers and attendees.<br>Notes These will not be published,\
+    \ and are helpful for you to outline your talk for reviewers."
+- alt: 'Section 2: CFP Questions
+
+    Which Track?
+
+    Main, DjangoCon AU, etc
+
+    Permissions
+
+    Legal right to present, Permission to Livestream, Permission to Publish*
+
+    Content Warnings
+
+    leave blank if none apply
+
+    Questions about you
+
+    Pronouns, social media handles, self-identification (not published)'
+  image: images/slide_11.png
+  text: 'Section 2: CFP Questions<br>Which Track? Main, DjangoCon AU, etc<br>Permissions
+    Legal right to present, Permission to Livestream, Permission to Publish*<br>Content
+    Warnings leave blank if none apply<br>Questions about youPronouns, social media
+    handles, self-identification (not published)<br>Permission to publish is optional.
+    There are talks you can present in public but don''t<br>want uploaded, (e.g. copyright
+    issues. But you have to be legally able to present the<br>content)<br>Self-identification:
+    This data is not shown to the public or to reviewers, and will not<br>influence
+    your submission; we''ll only use it in aggregate form to generate statistics.<br>Includes:
+    ability, age, ethnicity, gender, gender identity, face, religion, secual<br>orientation,
+    socio-economic status/class, learning differences, family composition,<br>none,
+    prefer not to answer.<br>List of categories taken from the Drupal Project'
+- alt: 'Section 3: Profile Questions
+
+    Profile Picture
+
+    Name
+
+    Single field
+
+    Biography
+
+    About you!
+
+    Availability
+
+    Note: best effort.'
+  image: images/slide_12.png
+  text: 'Section 3: Profile Questions<br>Profile Picture<br>Name Single field<br>Biography
+    About you!<br>Availability Note: best effort.'
+- alt: 'Titles and Abstracts
+
+    What and Why'
+  image: images/slide_13.png
+  text: Out of all the questions<br>The hardest ones are the title abstract and bios
+- alt: "Proposal Titles should have:\n\u25CF Context\n\u25CF Focus, outcome driven\n\
+    \u25CF Intended Audience\n\u25CF Active Verbs\nAvoid:\n\u25CF Tropes and memes\n\
+    \u25CF Common/overused titles\n\u25CF Clickbait titles"
+  image: images/slide_14.png
+  text: ''
+- alt: "Overused, problematic, and generally poor talk titles\n\u25CF X considered\
+    \ harmful\n\u25CF Make X Great Again\n\u25CF X for Fun and Profit\n\u25CF Stop\
+    \ X with this one weird trick!\n... what other overused titles have you seen?\n\
+    https://2023.pycon.org.au/culture/"
+  image: images/slide_15.png
+  text: ""
+- alt: "Proposal Abstracts should have:\n\u25CF Problem Statement\n\u25CF Solution\n\
+    \u25CF Learning outcomes\nNotes should have:\n\u25CF Outline\n\u25CF Spoilers*"
+  image: images/slide_16.png
+  text: 'Outline: useful to show you''ve thought about this, but making it private
+    means your<br>audience doesn''t see it and you''re not beholden to it. If you
+    say you''ll have a 7 minute<br>demo and you go for 5, you won''t be yanked off
+    stage.<br>---<br>Spoilers: it''s okay to entice people to your talk. You don''t
+    have to have everything out<br>on display. It''s good not to bait and switch though,
+    so make sure the reviews know<br>what you''re going to talk about.<br>For example,
+    say you have a talk on testing. You''ll want to mention you''re using pytest<br>and
+    whatever new extension package you''re exploring that makes tests, but you can<br>tell
+    the reviewer something like "I''ll show the project used X on that took our tests
+    from<br>30 minutes to 7 minutes (this number may improve before the conference!)<br>Also
+    of note: you have to submit your talk this month. The conference is months<br>away.
+    Active works in progress might change. Don''t write yourself into a corner, but<br>don''t
+    use conference driven development <br>---<br>5: scope, problem,
+    solution, new problems, take aways.'
+- alt: 'Topic Ideas
+
+    Give me something to speak about'
+  image: images/slide_17.png
+  text: Hands up, discussion
+- alt: "Topic Writing Time\n\u270F"
+  image: images/slide_18.png
+  text: ''
+- alt: 'Show and Tell!
+
+    Let''s see what we came up with!'
+  image: images/slide_19.png
+  text: ''
+- alt: 'Biographies
+
+    The Who'
+  image: images/slide_20.png
+  text: ''
+- alt: "Speaker biographies should have:\n\u25CF Relevent context\n\u25CF Personality\n\
+    Avoid:\n\u25CF Overly long\n\u25CF Self deprecation"
+  image: images/slide_21.png
+  text: ''
+- alt: "Example biography: Katie\nAdd social media inline if no\ncustom field in CFP\n\
+    Katie (@glasnt) has worn many different hats\nover the years. Append current/relevant\
+    \ job title,\nrelation to community.\nThey have been a software developer for\
+    \ many\nlanguages, systems administrator for multiple\nPython/Django event?\n\
+    operating systems, and speaker on many different Change to Python related experience\n\
+    topics.\nImplicit pronouns!\nWhen they\u2019re not changing the world, they enjoy\n\
+    Always keep this.\ncooking, making tapestries, and seeing just how well\nIt's\
+    \ fun!\nvarious application stacks handle emoji \u2728"
+  image: images/slide_22.png
+  text: "Example biography: Katie<br>Add social media inline if no<br>custom field\
+    \ in CFP<br>Katie (@glasnt) has worn many different hats<br>over the years. Append\
+    \ current/relevant job title,<br>relation to community.<br>They have been a software\
+    \ developer for many<br>languages, systems administrator for multiple<br>Python/Django\
+    \ event?<br>operating systems, and speaker on many different Change to Python\
+    \ related experience<br>topics.<br>Implicit pronouns!<br>When they\u2019re not\
+    \ changing the world, they enjoy<br>cooking, making tapestries, and seeing just\
+    \ how well Always keep this.<br>It's fun!<br>various application stacks handle\
+    \ emoji \u2728"
+- alt: "Bio writing time\n\U0001F4DD"
+  image: images/slide_23.png
+  text: ''
+- alt: 'Show and Tell!
+
+    Let''s see what we came up with!'
+  image: images/slide_24.png
+  text: ''
+- alt: 'Advanced Tips
+
+    Bonus round!'
+  image: images/slide_25.png
+  text: ''
+- alt: 'submit more
+
+    than once!
+
+    - maia sauren
+
+    Submit multiple talks
+
+    Program Chair'
+  image: images/slide_26.png
+  text: Give the organisers options<br>They will accept what they want<br> special
+    message from our program chair!
+- alt: 'Submit the same talk
+
+    to multiple events'
+  image: images/slide_27.png
+  text: You're allowed to do this!<br>Try this proposal at a different event!<br>Just
+    make sure you check the dates and locations for the events and make sure they<br>don't
+    overlap in case you're accepted to both.<br>If you are accepted to an event, you
+    don't have to confirm. Pretalx calls these states<br>"Accepted" and "Confirmed".
+    You can decline an invite. Conferences should always<br>check in with you about
+    this before putting you on the schedule
+- alt: 'Your talk doesn''t have to exist
+
+    before you submit it'
+  image: images/slide_28.png
+  text: you need to think about it a bit, but your fill slides and everything prepared
+    doesn't<br>have to happen before you put it in for consideration.<br>you can spec
+    it out, of course, this is useful!<br>but also avoid conference driven development.
+- alt: Be unique
+  image: images/slide_29.png
+  text: Make your take on a topic unique
+- alt: Handling rejection
+  image: images/slide_30.png
+  text: ''
+- alt: 'Even if you''re unsuccessful,
+
+    come to PyCon AU!'
+  image: images/slide_31.png
+  text: Vollie opportunities, student tickets etc
+- alt: 'How to trick your boss into advancing your
+
+    professional development by getting them
+
+    to send you to a conference'
+  image: images/slide_32.png
+  text: ''
+- alt: 'Thanks for attending!
+
+    CFP Closes May 15 2023
+
+    (yes you get an extra day!)'
+  image: images/slide_33.png
+  text: ''
+- alt: 'Expression of Interest for more Workshop
+
+    Would folks be interested in a workshop for building talks and slides?
+
+    Perhaps some time in July?
+
+    Let us know!
+
+    "Present like a Pro", presented at RORO Melb, other work events.'
+  image: images/slide_34.png
+  text: ''
+- alt: "Want to practice your talk?\nMelbDjango is always looking for presenters!\n\
+    Speaking at meetups is great to practice!\nGet in touch:\n\u25CF eliza.holliday@commoncode.io\n\
+    \u25CF MelbDjango Slack\n\u25CF www.meetup.com/melbdjango"
+  image: images/slide_35.png
+  text: ''
+title: '[MelbDjango] CFP Abstract Writing Workshop'

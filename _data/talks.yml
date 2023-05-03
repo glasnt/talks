@@ -7,6 +7,8 @@
       - name: CFP Writing Workshop
         link: https://www.meetup.com/melbdjango/events/292966230/
 
+        slides: "djangoconau-cfp-workshop"
+
 - conference: 
     name: DevOpsTalks
     date: 2023-04-05
