@@ -4,7 +4,7 @@
     location: Melbourne, Australia
     link: https://www.meetup.com/melbdjango
     talks: 
-      - name: CFP Writing Workshop
+      - name: DjangoCon AU CFP Writing Workshop
         link: https://www.meetup.com/melbdjango/events/292966230/
 
         slides: "djangoconau-cfp-workshop"
