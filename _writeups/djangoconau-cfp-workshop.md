@@ -103,6 +103,7 @@ The title of your talk is going to be the first thing an audience member in a ha
     * What is the context of the talk? What's the topic?
 * Focus, outcome driven
     * What will people get out of it? 
+    * It may be subtle, but there's a big differences between "In this talk, I will show you" and "In this talk, you will learn". 
 * Intended Audience
     * Is it for beginners? Advanced?
 * Active Verbs
@@ -110,7 +111,6 @@ The title of your talk is going to be the first thing an audience member in a ha
 
 
 <br>Proposal titles should avoid: 
-
 
 
 * Tropes and memes
