@@ -1,4 +1,20 @@
 - conference: 
+    name: PyCon AU
+    location: Adealide, South Australia
+    date: 2023-08-18
+    link: https://2023.pycon.org.au/
+    talks: 
+      - type: Lightning Talk
+        name: Present like a pro (quick version)
+        link: https://2023.pycon.org.au/program/UAR3GC/
+        video: https://youtu.be/_K_iOttL1ro?t=3227
+        resources: present-like-a-pro
+      - name: Present like a pro!
+        link: https://2023.pycon.org.au/program/ABGMQH/
+        video: https://www.youtube.com/watch?v=YMcx35RGzYM
+        resources: present-like-a-pro
+
+- conference: 
     name: DevOpsDays Chicago
     location: Chicago, Illinois
     date: 2023-08-09

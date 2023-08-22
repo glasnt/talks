@@ -25,3 +25,5 @@ title: "Present like a pro"
 * Zach Holman [speaking.io](https://speaking.io) 
 * PyCon AU 2021 [Speaking Guide](https://2021.pycon.org.au/speak/)
 
+
+PyCon AU specific: [Guide to PyCon AU 2023 CFP from DjangoCon AU CFP Workshop](../2023-05-djangoconau-cfp-workshop/)
