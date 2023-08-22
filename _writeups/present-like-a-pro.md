@@ -1,6 +1,8 @@
 ---
 layout: writeup
 title: "Present like a pro"
+
+slides: present-like-a-pro
 ---
 
 <p>

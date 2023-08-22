@@ -1,0 +1,497 @@
+slides:
+  - alt:
+      "They gave me another 25 minutes. Yay\nPresent like a Pro\nKatie McLaughlin\
+      \ (they/she)\n\U0001F418\n@glasnt@cloudisland.nz"
+    image: images/slide_0.png
+    text: Hi!
+
+      I'm Katie, and I'm on the internet as "glasnt".
+      I work in
+      Developer Relations -- which is a fancy name for engineers that go out into the
+      real world and talk to humans. Weird right?  In my role I have to do a lot of
+      presentations, so I thought it would be a great idea to share some things that
+      I hope will help you. And maybe get you interested in this whole speaking thing. This
+      is collected wisdom from many sages, not just my own advice. Full sources will
+      be shared at the end of this presentation, and there should be plenty of time
+      for questions at the end. I'm more than happy to answer questions in the hallway
+      and during sprints
+
+  - alt: "So, you have/want to give
+
+      a presentation..."
+    image: images/slide_2.png
+    text:
+      The very first thing I have to say about giving a presentation is that you
+      might freak out. Are you worried about the idea of having to stand up in
+      front of a crowd and speaking?
+  - alt: ""
+    image: images/slide_3.png
+    text:
+      "Here's a little secret: everyone freaks out! Even the most experienced
+      presenters get butterflies before an event."
+  - alt: ""
+    image: images/slide_4.png
+    text:
+      Giving a presentation in front of a crowd is intimidating. You are literally
+      the center of attention, facing an audience of any size feels extremely vulnerable. But,
+      once you get going, you get through the first 10 seconds, you start being the
+      star of the show, and you can deliver your amazing message.
+  - alt: ""
+    image: images/slide_5.png
+    text:
+      '"But what if they hate my talk", you might think? Here''s one thing to
+      remember: people came to your talk for a reason. Not to see you crash and burn,
+      but to learn something from you.   It''s easy to let the panic of
+      potential disappointment get the better of you, to mess up your demo, to misspeak
+      or lose your place. But your audience won''t care about that. They will see
+      your talk as successful if they leave having learnt something.'
+  - alt: 20% 80%
+    image: images/slide_6.png
+    text:
+      People are going to remember your talk for you, not your slides. Slides are
+      a mechanism to help you tell your story and reinforce your points and guide
+      your content. ---- You could have a presentation about the most important
+      topic in the world, but if you <i>deliver it with a monotone voice and
+      being uninterested</i> then people will reflect that enthusiasm back at
+      you. Slides are just a mechanism to help structure your content and re-inforce
+      points. You can give a talk without slides, but you can't give a talk without
+      talking!
+  - alt: ""
+    image: images/slide_7.png
+    text:
+      "\"But I'm not a lecturer! I'm not teaching!\" In a way, you are though.\
+      \ Your audience is here to learn from you. There's two things they could learn: \u25CF\
+      \ Something they didn't already know, or \u25CF Reinforcing something they\
+      \ already knew. By hearing you present it, it validates their perception on\
+      \ the same topic."
+  - alt: "!"
+    image: images/slide_8.png
+    text: "And now, the most important thing about presenting to an audience:"
+  - alt: They don't care what you did.
+    image: images/slide_9.png
+    text: Your audience doesn't care what you did.
+  - alt: ""
+    image: images/slide_10.png
+    text: You wrote one million lines of code in a month -- pfffttt
+  - alt: ""
+    image: images/slide_11.png
+    text: "You create widgets that help synergise
+      the fiscal purdencies at foobar corp, buh."
+  - alt: Why, though?
+    image: images/slide_12.png
+    text: What they care about it "why". Why you did the thing. --- "We were
+      never going to be able to solve our rapidly scaling problem, so we created a code
+      generator that spat out millions of lines of code that solved our problem and
+      kept our users happy." "Our users were having issues with the reliability
+      of our platform, so we introduced a new type of testing strategy to help validate
+      deployments" They "why" is what gets you out of bed in the morning. You don't
+      go to work to 'code', you work to solve problems. Don't you? What you made
+      isn't important. It's how you made it that matters.
+  - alt: ""
+    image: images/slide_13.png
+    text:
+      There's a long tradition of storytelling in human society. From ghost stories
+      to fairy tales, morality plays, and TED talks, there's entertainment in a story,
+      but there's lessons too. It's great to listen to an amazing auritor, but even
+      better, especially for technical conferences, it's essential to have a take
+      away.
+  - alt: How, btw?
+    image: images/slide_14.png
+    text: 'How did you do the thing? What can you share that people can try when
+      they go back to their desk One of my pet peeves is going to a technical presentation,
+      and not knowing how they solved their problem. Not being able to try it out
+      for myself. Your talk needs to have a "call to action": "try this thing", "consider
+      using x thing". You can condense this into a toot or a blog post, but there''s
+      power in a story, and the journey. And to give a presentation, you need a stage.'
+  - alt: ""
+    image: images/slide_15.png
+    text:
+      There's entire separate talks I could give about how to market yourself as
+      a public speaker, how to write that proposal to an event, what events are out
+      there, all that. This event might be one that you might consider speaking at.
+      I highly recommend it!. But once you have your idea, and a potential event,
+      you now have to bring the content.
+  - alt: "1. Build deck
+
+      2. ???
+
+      3. Applause"
+    image: images/slide_16.png
+    text:
+      Which probably means slides. You don't have to have them. I like to have
+      them. So let's talk about that. One time, my audience didn't notice my slides
+      weren't progressing because my talk kept going like it was intentional. Fun
+      times! --- Now we get to the part of the presentation where I'll start
+      making suggestions at you.
+  - alt: Opinions
+    image: images/slide_17.png
+    text:
+      'Real talk: These suggestions are opinions, based on my experience, but also
+      some pretty "well, duh" guidelines. Once you start doing public speaking,
+      you''re going to have your own preferences, your own style. If you already
+      have opinions that work for you, that''s great. Do that. But if you''re just
+      starting out, here are some common best practices. This is also generally suited
+      towards technical presentations at meetups or other community events. Outside
+      of these venues, your mileage may vary. [I only have a short time with y''all,
+      so sadly I can''t teach you my *entire* vocation, but hopefully at least enough
+      to help you out] Also, as a kind reminder: if you notice anyone at this event
+      do does things differently or in oppoisition to these tips, please don''t call
+      them out on it. Additionally, if you''re in the room and are speaking later
+      today, please don''t frantically change your slides based on these tips. Come
+      back to them _after_ your talk.'
+  - alt: Things to do.
+    image: images/slide_18.png
+    text: So. Things to do.
+  - alt: Use one slide per minute*
+    image: images/slide_19.png
+    text:
+      Aim for, on average, a slide per minute. Maybe up to 3 if you're feeling cheeky,
+      but you don't want them to be distracting. Your audience wants to hear you
+      speak, not a repeated mouse click as you advance your slides. Your slides
+      are your signposts for your story. Depending on the story you want to tell, you
+      want to give yourself a bit of room to breath or expand depending on the audience,
+      so think of your slides as guardrails.
+  - alt: One point.
+    image: images/slide_20.png
+    text:
+      Pick the one thing you want people to remember after the talk. For your
+      presentations, it might be "I did the thing!" or "Learn about this one weird trick!". You
+      will be presenting for some time, and people won't remember your entire presentation
+      word for word, so they will only take away a subset of your talk. Make the
+      point memorable. Is it a link to a package or tool? Make sure the name of the
+      thing is one a slide. And if it's something you want them to go to, a URL or
+      QR code on the last slide is super useful! Also, post it on social media! "I
+      did a talk! Learn more about X here".
+  - alt: Don't assume.
+    image: images/slide_21.png
+    text:
+      Don't assume the technical or prior knowledge level of your audience. Try
+      and avoid the 'curse of knowledge'. Let's say you want to give a presentation
+      at work about what you're building. You know everything about it. Your manager
+      knows probably a lot about it, people outside your team a bit less, but other
+      coworkers, not as much. So you're going to have to fill them in a bit.
+  - alt: Fit your audience.
+    image: images/slide_22.png
+    text:
+      Fit your audience. If you're presenting at a meetup, you can be a bit more
+      casual than, say, an industry conference. But also think about the people
+      in the room. A room of programmers are going to, probably, have a of prior
+      knowledge that you can leverage. You *probably* don't have to explain what
+      programming languages are. That being said, if you know the general scope of
+      the audience, but not their proficiency, take a moment to bring some of the
+      newer audience members up to speed the base concepts that you'll build on later. You
+      may present the same content at different events, but it should be made to fit
+      the people in each room. (Also, yes you're allowed to present the same content
+      multiple times! You don't have to create a new presentation for each talk. If
+      you were at the lightning talks yesterday, this is the exact same slides as that! These
+      slides have been adapted from an internal work presentation I have given to help
+      people give presentations. Only the speaker notes have been changed.
+  - alt: "Use \U0001F5BC."
+    image: images/slide_23.png
+    text: "Use images to help people visualise what you''re saying, where appropriate. You can overdo this, you have the entire frame, so use it! Eearlier I had more visual aids in my opening, here I'm words, but I'm also giving a professional skills talk, rather than an engineering talk that might need code samples and such. Speaking of engineering..."
+  - alt: Do the demo.
+    image: images/slide_24.png
+    text: Do the actual demo. If you have something to show that is. It's always
+      a good idea to show, not tell. It's a good idea to have a backup recording,
+      and making these can help you practice.
+  - alt: Terse.
+    image: images/slide_25.png
+    text:
+      If you're putting the words on the screen, adjust your text to use as few
+      words as possible. People are going to read whatever you show on the slide.
+  - alt: Use speaker notes.
+    image: images/slide_26.png
+    text:
+      One thing that people won't be seeing when you present is your speaker notes. Notes
+      are super helpful for you to remember what you wanted to say at the particular part
+      of the presentation. You can do full transcripts*, or just bullet points, whatever
+      will help you remember what you wanted to say. If you look up my slides
+      later, there's a message hidden in the speaker notes on this slide :D
+      
+
+      <br><br><br><br>
+      Hi! I am part of a full transcript! I tend to write out my script, even if I end
+      up not utilising all of it on the day. It also helps for people using the slides
+      afterwards as reference material!
+  - alt: Practice.
+    image: images/slide_27.png
+    text: Practice your talk. You gotta practice. I know it sucks, but you gotta.
+  - alt: Time it.
+    image: images/slide_28.png
+    text: You also need to time your talk. If you're speaking for 15 minutes and
+      have 30 slides, is that one slide exactly every 30 seconds? or do you have
+      some faster sections? You won't know til you've timed.
+  - alt: "Practice.
+
+      (again)"
+    image: images/slide_29.png
+    text:
+      And then you gotta practice again. Practice helps you work out what works
+      for you want what doesn't. It helps you make sure you don't have any accidental
+      tongue twisters, that your flow works, and that you have at least tried the
+      words out before you speak them.
+  - alt: Pause.
+    image: images/slide_30.png
+    text:
+      But you don't have to be speaking the entire time. Use pauses after important
+      points to let them sink in. [light pause] This is difference between breathing
+      and taking breaks between content. Did you know it's useful to continue to
+      breathe throughout your presentation? it's true! I like to make sure I give
+      myself drink breaks between major sections. [DRINK TEA] Speaking of section
+      breaks...
+  - alt: Things to avoid.
+    image: images/slide_31.png
+    text: Here's some specific things to avoid.
+  - alt:
+      "(far too many words, on purpose)"
+    image: images/slide_32.png
+    text: Avoid walls of text on a slide. Here's a perfect example.   See,
+      you're not even listening to me, you're reading the text!
+  - alt:
+      "'too many words aaaa'"
+    image: images/slide_33.png
+    text: | 
+    
+      Walls of text like this are distracting, but they're going to be read faster by the audience than you could speak them. 
+      If I could add a feature to all slide software, it'd be a little popup saying "Hi! It looks like you accidentally added your speaker notes to your slide deck. Let me help you move that off the slide."
+       progressive bullet points to slowly add more things to the list.
+      If you have a block of code you're going to walk though, have lines highlighted as you go. Draw attention to parts of the whole. 
+
+      Earlier when I said use small amounts of text? This also helps you make sure the text you do have is legible. 
+
+      The old adage would be: "Can you read this from the back of the room?" Now, it would be something like: "Can you read this over a 3G connection?"
+
+      For reference, apart from this slide, no text in this deck is smaller than 20pt. 
+
+
+  - alt: ""
+    image: images/slide_34.png
+    text: |
+      If you have a demo, don't fake it. 
+
+      It's really easy to spot a fake. And *if* your demo crashes, it proves you're really demoing it, and your audience will empathise with you. 
+
+      One of the best talks I've ever seen had the demo go sideways after the speaker had already gone through hours of AV problems and was presenting on the *second* available borrowed laptop, but the live debugging with the audience, the interaction, made it all the better when the live coding worked. 
+
+      I've even given a talk where my code sample intentionally works on my machine, but fails when I deploy it. It's a talk about debugging, where the narrative is around following the error messages, but it's still important to have practiced to know about the ways it *should* fail. 
+
+      Again, this is all based on if it's possible to, based on your topic, show a demo. 
+
+
+  - alt: ""
+    image: images/slide_35.png
+    text:
+      "Don't use memes. They distract people from your content. Cat pictures only
+      count if they're part of your demo. Another thing to avoid: memes. Don't
+      put memes in your decks. This also goes back to the assumption thing. Memes
+      make sense to people who know memes, but if people aren't up to date with
+      the latest memes, or they don't get memes, or they don't get the underlying
+      reference of the meme, then you have things on your slide that are going to
+      be actively confusing your audience. Same goes with GIFs. Anything you have
+      on the slide is going to draw attention, so what do you want your audience
+      to focus on? You? Or the animation? Even if it's not a meme, having things
+      like a cute cat in your deck may help 'brighten' the content, but won't
+      provide any substance. Unless you want to go meta with the last point and have
+      a cat picture as input in your demo, in which case, good work around!."
+  - alt: ""
+    image: images/slide_36.png
+    text:
+      Don't just read your slides out. That's what blog posts are for. You're on
+      stage! Perform, darhling! If you read from a script, you can end up [monotone]
+      words you have prepared earlier, but you don't adapt to your audience, you
+      can be monotone and you can be perceived as nothing more than a text to speech
+      program beep boop. But there is such thing as overdoing it
+  - alt: ""
+    image: images/slide_37.png
+    text:
+      'If you are co-presenting, don''t try and fake banter between yourselves.
+      It''s hard to pull off. If you''re presenting with someone else, there''s
+      better ways to hand between each other. It can be a single word: their name,
+      with an inflection. Or it can be nothing, because you''ve practiced and you
+      know when handover is. I have one workshop I give where I share different ways
+      to respond to problems, and I specifically call it out as "pantomime", but
+      it''s also 40 minutes into an hour workshop so it''s a good time to get a little
+      bit silly in an otherwise important customer-facing presentation, to bring
+      up the energy before the final stretch. But it''s also always well rehearsed.
+      Well... it''s always rehearsed. Speaking of things that are awkward'
+  - alt: ""
+    image: images/slide_38.png
+    text:
+      'You do not have to take questions. Set your expectations with the audience
+      about how you want to interact. Answering potentially complex questions on
+      the fly in front a crowd is a completely different skill to giving a presentation
+      based on prepared content. Some speakers invite raising of hands throughout,
+      but they are also capable of handling that. If you want to make sure you can
+      do your entire talk without having to suddenly break the flow, then just go
+      do your talk. You don''t have to call it out specifically, but, if you do get
+      a hand raised, a simple "I''ll answer questions later, thanks" should suffice. Depending
+      on the event you''re speaking at, you may also get asked before you get on
+      stage if you want to do a live Q&A. It''s okay to say no! It''s real skill to
+      be able to reply to potentially complicated questions about your content that
+      you didn''t cover. It''s very much thinking on your feet, but it''s also okay
+      to say "I don''t know", and to follow up later. One thing I don''t miss
+      from in person events are those people who try and think of trick questions,
+      trying to prove they know more than the speaker. Or the people who go "I have
+      a question, actually it''s more of a comment." Don''t be that person. As an
+      attendee it''s good to, if the speaker wants to answer questions, have somethingready
+      in case there''s no questions, but make it an easy one that can highlight their
+      work.'
+  - alt: ""
+    image: images/slide_39.png
+    text: |
+
+      Don't use TLAs. They can be extremely distracting when used without context.
+
+      Oh, what are TLAs? Three Letter Acronyms. 
+
+      They suck at the best of times. It's, again, harks back to audience assumptions. A Python audience *might* probably know what GIL means in context, but *won't* know acronyms from the specific project you're presenting on. 
+
+      If you need to use acronyms, introduce term at the start of your presentation, and perhaps use the full term the first few times, then go to the acronym. Teach your audience something, starting with how to understand your acronym in a sentence. 
+
+      
+  - alt: But, Kaaaaaaatie!
+    image: images/slide_40.png
+    text: But Kaaaaaatie! I hear you lament
+  - alt: ""
+    image: images/slide_41.png
+    text: It's just too hard! There's so much to have to do! Yes. There's a lot
+      to do. You can't make a 15 minute presentation in 15 minutes. More like, 15
+      hours.
+  - alt: ""
+    image: images/slide_42.png
+    text: You have to set aside time to prepare your talk. You have to set aside
+      time to practice your talk. This all takes time. There's a really bad trope
+      of speakers "finishing their talk the night before", or "writing it on the
+      plane". I used to try and make sure my slides were locked before I got on the
+      plane to the event. For complex topics, there's always going to be things you
+      want to add, but it's better to make sure you don't change things last minute. *Some*
+      speakers can pull this off, but when you're getting started, set yourself up for success
+      and don't give yourself unintended hurdles.
+  - alt: ""
+    image: images/slide_43.png
+    text: But Katie, what if my presentation is boring!!
+  - alt: ""
+    image: images/slide_44.png
+    text:
+      People have chosen to attend your talk to listen to what you have to say. But
+      you're never going to enrapture 100% of the audience. You can only speak to
+      the people who are engaged. If, say, on a video call, you notice someone doesn't
+      seem to be paying attention, then there's probably a reason. They might be
+      taking notes. They might be responding to something outside of view. They may
+      have forgotten to go camera off. In an in person audience, that person on the phone
+      might be trying to sort out something important, writing notes, or playing the latest
+      mobile game. There's going to be people who aren't going to give you the energy
+      back, but you can focus on those who are. When in person, there's definitely
+      those people who I spot in the audience who are agreeing with my points, being
+      engaged, and so I'll get energy from them.
+  - alt: ""
+    image: images/slide_45.png
+    text:
+      But Katie, I don't know what to say! You always have something to say. How
+      many people do you know in this room? Do you work with anyone else here? No?
+      In that case, you literally work on different things. None of you work on things
+      the same way. Your experience is unique, and you have a different "why"
+      you need to share. The "how" might be the same, though, and that's okay! That's
+      just that reinforcing bit coming back in. Two people had different problems
+      that were solved with a type of unit test? YAY! Validation! Oh, you do work
+      together? Do you work on the same things? No? Then there's something different.
+      That new module you tried out that worked for you. An interesting trick you
+      picked up the other day. But, if you meant "I don't know how to form the words",
+      let me help...
+  - alt: Easy 8 Step Plan.
+    image: images/slide_46.png
+    text: With an easy 8 step plan, for how to write your presentation.
+  - alt: 1. Main point.
+    image: images/slide_47.png
+    text: 'Number one: Pick your main point. What''s the main point that you''re
+      trying to get across? "Sorting my socks was wasting time, so I fixed it by
+      buying all the same time." "Memory leaks made our product unusable so we did
+      something about it".'
+  - alt: 2. Rough outline.
+    image: images/slide_48.png
+    text:
+      "Step 2: make a rough outline. For example: \u25CF intro yourself, and\
+      \ frame the thing you're going to talk about \u25CF share your motivation,\
+      \ the \"why\" \u25CF How you solved the thing \u25CF have a demo (optional) \u25CF\
+      \ extra things you did \u25CF what you learnt by working on this problem \u25CF\
+      \ things you found that could be useful for your audience \u25CF call to action,\
+      \ a learn more link, etc It's just a starting point, but it helps you start\
+      \ to give a structure around the content you want to present."
+  - alt: 3. Write script.
+    image: images/slide_49.png
+    text:
+      "Part Three, write a script. Put your thoughts down. Make the words, then
+      form sentences, then put those together into a script. This gives you something
+      to read from as you practice, and it also helps you formulate what works and
+      what doesn't. But just like your rough outline may not be used, you may not
+      use your full written script in your final presentation. This is all preparation.
+      Because next:"
+  - alt: 4. Slice script.
+    image: images/slide_50.png
+    text:
+      Chop up the script into parts. Work out what fits together. Each bit might
+      be a slide of two, which are workable, tangible parts of the whole of your
+      narrative.
+  - alt: 5. Make visuals.
+    image: images/slide_51.png
+    text:
+      Then, make your slides to match your script. Start with what you want to
+      say, and the flow of the words in the presentation.
+  - alt: "6. Read it.
+
+      (out loud.)"
+    image: images/slide_52.png
+    text:
+      Read it, and read it out loud. To someone else if possible, but a plushie
+      also counts. You really gotta practice. You have get those tongue-twisters
+      out! You'll also start to get the cadence happening, work out what you like
+      and what you don't like, and start to perform the content instead of just reciting
+      it.
+  - alt: 7. Time it.
+    image: images/slide_53.png
+    text:
+      Time it! Use a stopwatch, either one on your phone, or the nice lil timer
+      in Google Slides, or whatever. Try going through the talk at a normal pace.
+      If you have a co-presenter, go through it together. I find that when I present
+      a new talk, I will end up presenting faster than rehearsals because I tend
+      to get nervous and start to speak faster. But that's okay, because if you finish
+      early there's time for questions, or people can get to morning tea earlier! But
+      the worst is having a talk run long. People in the room committed half an hour
+      of time for you, and they have things to get to. If you start late, or have
+      technical problems, then still try and finish on time.
+  - alt: 8. Practice.
+    image: images/slide_54.png
+    text: And again, practice. <br><br><br><br>If you were telling a story at a party, you
+      wouldn't need to practice, but you aren't also expected to make a polished
+      half hour monologue at a party. With presentations you're giving focused technical
+      content within a fixed time, with accompanying visuals. Practice to ensure
+      you finish within the time allowed to respect your audience Practice the
+      talk yourself, and if possible, for someone else. I've found success by recording
+      by rehearsal, with the intention of someone else seeing it. I might send that
+      recording on, I might not, but it helps me get into the zone.
+  - alt: ""
+    image: images/slide_55.png
+    text: And that's pretty much it. Thank you! .... [fake out]
+  - alt: ""
+    image: images/slide_56.png
+    text: Oh wait, one more thing.
+  - alt: ""
+    image: images/slide_57.png
+    text:
+      You're not Steve Jobs, and neither am I, so there's no "One More Thing." This
+      is a call back to the time Steve Jobs finished an Apple Keynote, then in the encore
+      **INTRODUCED THE IPHONE**. You might be tempted to copy this or other 'signature
+      moves' by other popular auritors. They have hundreds of presentations under
+      their belt, they have practiced and workshopped and have their style down. If
+      you try and copy this, chances are you'll come across as 'lame'. You can give
+      a good presentation without a gimmick, without prizes, just being you.
+  - alt: ""
+    image: images/slide_58.png
+    text: Your audience wants you to succeed. They want to learn from you. They
+      are your allies in this, and they're probably really happy that it's you and not them
+      on stage right now. Just be you, and all else will follow. You got this.
+  - alt: glasnt.com/talks
+    image: images/slide_59.png
+    text: Now that's actually the end of my slides. Resources and references can
+      be found at glasnt.com/talks Now is the time for questions!
+title: "\u2728 Present like a Pro"
