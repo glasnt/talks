@@ -134,7 +134,7 @@
     talks: 
       - name: "Minimum Viable Potato: Developing a salad-ordering mobile app on Cloud Run and Flutter"
         link: https://www.meetup.com/Flutter-Melbourne/events/286198822/
-        photo: https://www.meetup.com/flutter-melbourne/photos/32431164/504876838/#504877673
+        photo: https://www.meetup.com/flutter-melbourne/photos/32431164/504877673/
 
 - conference:
     name: Sydney Identity and Security Meetup
