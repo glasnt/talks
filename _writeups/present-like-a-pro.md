@@ -17,6 +17,10 @@ slides: present-like-a-pro
   {% endfor %}
 </p>
 
+## Recording
+
+[Watch this talk from PyCon AU 2023](https://www.youtube.com/watch?v=YMcx35RGzYM)
+
 ## Resources
 
 
