@@ -1,7 +1,7 @@
 ---
 layout: writeup
 title: "Present like a pro"
-
+recording: https://www.youtube.com/watch?v=YMcx35RGzYM
 slides: present-like-a-pro
 ---
 
