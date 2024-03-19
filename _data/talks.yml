@@ -1,4 +1,13 @@
 - conference: 
+    name: Programmable
+    location: Melbourne, Australia
+    link: https://www.programmable.tech
+    talks: 
+      - name: "Turning 'wat' into 'why'"
+        link: https://web.archive.org/web/20240319205245/https://www.programmable.tech/melbourne-agenda
+        twitter: https://www.linkedin.com/feed/update/urn:li:activity:7175647427746541568/
+
+- conference: 
     name: PyCon AU
     location: Adelaide, South Australia
     date: 2023-08-18
