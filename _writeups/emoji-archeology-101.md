@@ -4,7 +4,7 @@ title: "Emoji Archeology 101"
 slides: emoji-archeology-101
 
 notes: | 
-    Originally written by Dr Russell-Keith Magee, with technical content support by Katie McLaughlin.
+    Originally written by Dr Russell Keith-Magee, with technical content support by Katie McLaughlin.
 ---
 
 
