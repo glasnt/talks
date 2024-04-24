@@ -11,17 +11,17 @@
     name: Programmable
     location: Melbourne, Australia
     link: https://www.programmable.tech
-    talks: 
+    talks:
       - name: "Turning 'wat' into 'why'"
         link: https://web.archive.org/web/20240319205245/https://www.programmable.tech/melbourne-agenda
         twitter: https://www.linkedin.com/feed/update/urn:li:activity:7175647427746541568/
 
-- conference: 
+- conference:
     name: PyCon AU
     location: Adelaide, South Australia
     date: 2023-08-18
     link: https://2023.pycon.org.au/
-    talks: 
+    talks:
       - type: Lightning Talk
         name: Present like a pro (quick version)
         link: https://2023.pycon.org.au/program/UAR3GC/
@@ -32,7 +32,7 @@
         video: https://www.youtube.com/watch?v=YMcx35RGzYM
         resources: present-like-a-pro
 
-- conference: 
+- conference:
     name: DevOpsDays Chicago
     location: Chicago, Illinois
     date: 2023-08-09
@@ -42,114 +42,114 @@
         name: The State of DevOps - Capabilities for Building High-performing Technology Teams
         link: https://devopsdays.org/events/2023-chicago/program/katie-amanda
 
-- conference: 
-    name: DevOpsDays Global Organiser Summit 
+- conference:
+    name: DevOpsDays Global Organiser Summit
     location: Chicago, Illinois
     date: 2023-08-08
     link: https://devopsdays.org/events/2023-organizer-summit/welcome/
-    talks: 
+    talks:
       - type: Keynote
         name: Who Is Core and How They Help You
         link: https://devopsdays.org/events/2023-organizer-summit/program/katie-yvo-dan
 
-- conference: 
+- conference:
     name: MelbDjango
     date: 2023-07-23
     location: Melbourne, Australia
     link: https://www.meetup.com/melbdjango
-    talks: 
+    talks:
       - name: Present like a pro
         link: https://www.meetup.com/melbdjango/events/294611140
         resources: present-like-a-pro
 
-- conference: 
+- conference:
     name: MelbDjango
     date: 2023-05-03
     location: Melbourne, Australia
     link: https://www.meetup.com/melbdjango
-    talks: 
+    talks:
       - name: DjangoCon AU CFP Writing Workshop
         link: https://www.meetup.com/melbdjango/events/292966230/
         slides: "2023-05-djangoconau-cfp-workshop"
 
-- conference: 
+- conference:
     name: DevOpsTalks
     date: 2023-04-05
     location: Melbourne, Australia
     link: https://devops.talksplus.com/
-    talks: 
+    talks:
       - name: State of DevOps Report Story Time
- 
-- conference: 
+
+- conference:
     name: RORO Melbourne
     location: Melbourne, Australia
     link: https://www.meetup.com/ruby-on-rails-oceania-melbourne/
     date: 2023-01-25
-    talks: 
+    talks:
       - name: Present like a pro
         link: https://www.meetup.com/ruby-on-rails-oceania-melbourne/events/prpwzsyfccbhc/
         resources: present-like-a-pro
 
-- conference: 
+- conference:
     name: DevOpsTalks
     location: Auckland, New Zealand
     date: 2022-11-10
     link: https://devops.talksplus.com/
-    talks: 
+    talks:
       - name: State of DevOps Report Story Time
         type: Keynote
 
-- conference: 
+- conference:
     name: DjangoCon US
     location: San Diego, CA, USA
     date: 2022-10-18
     link: https://2022.djangocon.us
-    talks: 
+    talks:
       - name: "Scheming with CSRF: When platforms manage to break things."
         link: https://2022.djangocon.us/talks/scheming-with-csrf-when-platforms-manage/
         twitter: https://twitter.com/pauloxnet/status/1582450764265320448
         video: https://www.youtube.com/watch?v=xpkNvpF_tXA
 
 
-- conference: 
+- conference:
     name: Innovators Hive
     location: Tokyo, Japan
     date: 2022-10-15
     link: https://g.co/cloudnext
-    talks: 
+    talks:
       - name: "基調講演 (Keynote Speech)"
         type: Keynote
         link: http://web.archive.org/web/20221105211320/https://cloud.withgoogle.com/next?session=HIVE100-JP
         twitter: https://twitter.com/Yuryu/status/1580734911090393088
 
 
-- confernece: 
+- confernece:
     name: DjangoCon Europe 2022
     location: Porto, Portugal
     date: 2022-09-22
     link: https://2022.djangocon.eu/
-    talks: 
+    talks:
       - name: What should you have to worry about
         type: Keynote
         link: https://pretalx.evolutio.pt/djangocon-europe-2022/talk/EE3XCD/
         twitter: https://twitter.com/judy2k/status/1572869339929317376
 
-- conference: 
+- conference:
     name: KiwiPyCon
     location: Christchurch, NZ
     date: 2022-08-20
     link: https://kiwipycon.nz/
-    talks: 
+    talks:
       - name: What is deployment, anyway?
         link: https://pretalx.com/kiwipycon-2021/talk/JTMKJF/
         slides: "what-is-deployment-anyway"
 
-- conference: 
+- conference:
     name: Flutter Melbourne
     location: Melbourne, Australia
     date: 2022-06-16
     link: https://www.meetup.com/Flutter-Melbourne
-    talks: 
+    talks:
       - name: "Minimum Viable Potato: Developing a salad-ordering mobile app on Cloud Run and Flutter"
         link: https://www.meetup.com/Flutter-Melbourne/events/286198822/
         photo: https://www.meetup.com/flutter-melbourne/photos/32431164/504877673/
@@ -159,7 +159,7 @@
     location: Melbourne, Australia
     date: 2022-05-05
     link: https://www.meetup.com/Sydney-Identity-and-Security-Meetup/
-    talks: 
+    talks:
       - name: "Expressive Security: Vulnerabilities with Emoji"
         slides: "expressive-security"
         link: https://www.meetup.com/Sydney-Identity-and-Security-Meetup/events/284530159/
@@ -169,7 +169,7 @@
     location: Sydney, Australia
     date: 2022-04-26
     link: https://www.meetup.com/Melbourne-Identity-and-Security-Meetup
-    talks: 
+    talks:
       - name: "Expressive Security: Vulnerabilities with Emoji"
         twitter: https://twitter.com/glasnt/status/1518865511018565632
         link: https://www.meetup.com/Melbourne-Identity-and-Security-Meetup/events/284671619/
@@ -189,7 +189,7 @@
     name: PyCon APAC
     date: 2021-11-20
     link: https://th.pycon.org/
-    talks: 
+    talks:
       - name: "Turning 'wat' into 'why'"
         link: https://th.pycon.org/pages/speakers
         resources: https://glasnt.com/wat
@@ -201,7 +201,7 @@
     name: SeaGL 2021
     date: 2021-11-04
     link: https://seagl.org/
-    talks: 
+    talks:
       - name: "Expressive Security: Vulnerabilities with Emoji"
         link: "https://osem.seagl.org/conferences/seagl2021/program/proposals/826"
         slides: "expressive-security"
@@ -212,7 +212,7 @@
     name: DjangoCon 2021
     date: 2021-10-22
     link: https://2021.djangocon.us/
-    talks: 
+    talks:
       - name: "What is deployment, anyway?"
         link: "https://2021.djangocon.us/talks/what-is-deployment-anyway/"
         slides: "what-is-deployment-anyway"
@@ -228,7 +228,7 @@
         name: "28: FOSS Stitch w/ Elana Hashman and Katie McLaughlin"
         twitter: https://twitter.com/dustyweb/status/1396564377675907072
 
-- conference: 
+- conference:
     name: "Google I/O '21"
     date: 2021-05-18
     link: https://events.google.com/io/?lng=en
@@ -236,14 +236,14 @@
       - name: Serverless Demo Derby
         video: https://www.youtube.com/watch?v=g4ES7wXn8oQ
         link: https://io.google/2021/session/a521df15-1fe2-4011-8e92-5779566e2116?lng=en
-        
+
 - conference:
     name: The Power of Serverless
     date: 2021-05-13
     link: https://cloudonair.withgoogle.com/events/serverless-may2021
-    talks: 
+    talks:
       - name: Lifecycle of an Application
-      
+
 - conference:
     name: The Router
     date: 2020-12-06
