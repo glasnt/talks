@@ -1,4 +1,13 @@
-- conference: 
+- conference:
+    name: Google Cloud Next
+    location: Las Vegas, Nevada
+    link: https://cloud.withgoogle.com/next/
+    talks:
+      - name: "Live-code an app with Cloud Run and Flutter"
+        link: https://cloud.withgoogle.com/next/session-library?session=DEV222
+
+
+- conference:
     name: Programmable
     location: Melbourne, Australia
     link: https://www.programmable.tech
