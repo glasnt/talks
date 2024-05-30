@@ -1,6 +1,7 @@
 - conference:
     name: Google Cloud Next
     location: Las Vegas, Nevada
+    date: 2024-04-10
     link: https://cloud.withgoogle.com/next/
     talks:
       - name: "Live-code an app with Cloud Run and Flutter"
@@ -10,6 +11,7 @@
 - conference:
     name: Programmable
     location: Melbourne, Australia
+    date: 2024-03-19
     link: https://www.programmable.tech
     talks:
       - name: "Turning 'wat' into 'why'"
