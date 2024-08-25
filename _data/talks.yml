@@ -1,4 +1,13 @@
 - conference:
+    name: Kiwi PyCon
+    location: Wellington, New Zealand
+    date: 2024-08-22
+    link: https://kiwipycon.nz/
+    talks:
+      - name: "Present like a pro"
+        resources: present-like-a-pro
+
+- conference:
     name: Google Cloud Next
     location: Las Vegas, Nevada
     date: 2024-04-10
@@ -6,7 +15,6 @@
     talks:
       - name: "Live-code an app with Cloud Run and Flutter"
         link: https://cloud.withgoogle.com/next/session-library?session=DEV222
-
 
 - conference:
     name: Programmable
@@ -112,7 +120,6 @@
         twitter: https://twitter.com/pauloxnet/status/1582450764265320448
         video: https://www.youtube.com/watch?v=xpkNvpF_tXA
 
-
 - conference:
     name: Innovators Hive
     location: Tokyo, Japan
@@ -123,7 +130,6 @@
         type: Keynote
         link: http://web.archive.org/web/20221105211320/https://cloud.withgoogle.com/next?session=HIVE100-JP
         twitter: https://twitter.com/Yuryu/status/1580734911090393088
-
 
 - confernece:
     name: DjangoCon Europe 2022
