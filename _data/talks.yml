@@ -6,6 +6,7 @@
     talks:
       - name: "Present like a pro"
         resources: present-like-a-pro
+        video: https://www.youtube.com/watch?v=gPT23TUhYSQ
 
 - conference:
     name: Google Cloud Next
