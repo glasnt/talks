@@ -895,7 +895,7 @@
 - conference:
     link: http://2016.devworld.com.au/
     name: /dev/world 2016
-    date: 2016-08-01
+    date: 2016-08-28
     location: Melbourne
     talks:
       - name: The Power ⚡️ and Responsibility 😓 of Unicode Adoption ✨
@@ -970,17 +970,18 @@
     name: SydPHP
     link: https://sydphp.org/
     location: Sydney
-    date: 2016-04-01
+    date: 2016-04-13
     talks:
       - name: A short story of emoji
         type: Short Talk
         slides: 2016_04_SydPHP
+        link: https://www.meetup.com/sydphp/events/229032717/
 
 - conference:
     name: DjangoCon EU
     link: https://2016.djangocon.eu/
     location: Budapest, Hungary
-    date: 2016-03-01
+    date: 2016-03-31
     talks:
       - name: Hat Rack
         type: Lightning Talk
@@ -993,7 +994,7 @@
 - conference:
     name: DevOps Sydney
     location: Sydney
-    date: 2016-03-01
+    date: 2016-03-17
     link: http://www.meetup.com/devops-sydney/
     talks:
       - name: The Power ⚡️ and Responsibility 😓 of Unicode Adoption ✨
@@ -1003,7 +1004,7 @@
 - conference:
     name: linux.conf.au 2016
     location: Geelong
-    date: 2016-02-01
+    date: 2016-02-02
     link: https://linux.conf.au
     talks:
       - name: Hat Rack
@@ -1013,7 +1014,7 @@
 - conference:
     name: Open Source Developer's Conference
     location: Hobart
-    date: 2015-10-01
+    date: 2015-10-28
     link: http://2015.osdc.com.au/
     talks:
       - name: Hack the Planet - A practical guide to web application vulnerabilities
@@ -1052,7 +1053,7 @@
     name: Kiwi PyCon
     location: Christchurch, NZ
     link: https://nzpug.org
-    date: 2015-09-01
+    date: 2015-09-05
     talks:
       - name: Build a Better Hat Rack - All Contributions Welcome
         video: https://www.youtube.com/watch?v=wQxFKxbWcFM
@@ -1065,8 +1066,8 @@
 - conference:
     name: PHP Wellington User Group
     location: Wellington, NZ
-    date: 2015-09-01
-    link: http://2015.phpconference.org.nz/conference-warm-up/
+    date: 2015-09-02
+    link: https://www.meetup.com/php-usergroup-wellington/events/222426040/
     talks:
       - name: Hat Rack
         slides: 2015_09_PHPWellington
@@ -1117,17 +1118,18 @@
 - conference:
     name: SyPy
     location: Sydney
-    date: 2015-07-01
+    date: 2015-07-02
     link: http://sypy.org
     talks:
       - name: Hat Rack
-        slidse: 2015_07_SyPy
+        slides: 2015_07_SyPy
+        link: https://www.meetup.com/sydneypython/events/221908406
 
 - conference:
     name: DevOpsDays Melbourne
     location: Melbourne
     link: http://www.devopsdays.org/events/2015-melbourne/
-    date: 2015-07-01
+    date: 2015-07-16
     talks:
       - name: The platform or the road map?
         type: Panel
@@ -1139,7 +1141,7 @@
 - conference:
     name: DevOps Sydney
     location: Sydney
-    date: 2015-06-01
+    date: 2015-06-18
     link: http://www.meetup.com/devops-sydney/
     talks:
       - name: JavaScript Rant
@@ -1151,7 +1153,7 @@
     name: Port80
     location: Sydney
     link: https://www.meetup.com/Port80-Sydney/
-    date: 2015-06-01
+    date: 2015-06-10
     talks:
       - name: Introduction to hacking OWASP
         link: https://www.meetup.com/Port80-Sydney/photos/26186075/#438540149
@@ -1161,7 +1163,7 @@
 - conference:
     name: Ruby on Rails Oceania
     location: Sydney
-    date: 2015-04-01
+    date: 2015-04-14
     talks:
       - name: Disentangle a new fangled image mangler
         link: https://www.meetup.com/Ruby-On-Rails-Oceania-Sydney/events/219319589/
@@ -1170,16 +1172,16 @@
 - conference:
     name: DevOps Sydney
     location: Sydney
-    date: 2015-03-01
+    date: 2015-03-19
     link: http://www.meetup.com/devops-sydney/
     talks:
       - name: Hat Rack
         slides: 2015_03_DevOps/HatRack.pdf
-        link: http://www.meetup.com/devops-sydney/events/219798291/
+        link: https://www.meetup.com/devops-sydney/events/219153444/
 
 - conference:
     name: PHP Australia Warm-Up
-    date: 2015-03-01
+    date: 2015-03-11
     location: Sydney
     link: https://www.meetup.com/SydPHP/events/220312809/
     talks:
@@ -1201,10 +1203,10 @@
     name: linux.conf.au
     link: https://lca2015.linux.org.au/
     location: Auckland, NZ
-    date: 2015-01-01
+    date: 2015-01-14
     talks:
       - name: Before All Else, Be Graphed
-        slides: 2015_01_LCA_Machiavelli"
+        slides: 2015_01_LCA_Machiavelli
         link: http://web.archive.org/web/20150310190512/http://linux.conf.au/schedule/30042/view_talk?day=wednesday
         video: https://www.youtube.com/watch?v=My65wJ-sBVc
 
@@ -1226,7 +1228,7 @@
 - conference:
     name: DevOps Sydney
     location: Sydney
-    date: 2014-11-01
+    date: 2014-11-20
     talks:
       - name: Integrating Machiavelli and Nagios
         type: Short Talk
@@ -1236,7 +1238,7 @@
 - conference:
     name: Open Source Developers Conference
     location: Gold Coast
-    date: 2014-10-01
+    date: 2014-11-05
     link: http://2014.osdc.com.au/
     talks:
       - name: Disentangle a new fangled image mangler
