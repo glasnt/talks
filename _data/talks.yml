@@ -1242,13 +1242,15 @@
     link: http://2014.osdc.com.au/
     talks:
       - name: Disentangle a new fangled image mangler
-        link: http://2014.osdc.com.au/presentation/12-disentangle-new-fangled-image-mangler
+        link: https://web.archive.org/web/20150228125411/http://2014.osdc.com.au/presentation/12-disentangle-new-fangled-image-mangler
         video: https://www.youtube.com/watch?v=bQfkXh__vnc
         slides: 2014_10_OSDC_Gyprock
-      - name: Before All Else, Be Graphed
-        link: http://2014.osdc.com.au/presentation/481-all-else-be-graphed
-        video: https://www.youtube.com/watch?v=6i0kMCOOIaY
-        slides: 2014_10_OSDC_Machiavelli
+
       - name: Tapestries and Hardware
         video: https://youtu.be/8BV2u7Zxh78?t=1712
         type: Lightning Talk
+
+      - name: Before All Else, Be Graphed
+        link: https://web.archive.org/web/20150228125411/http://2014.osdc.com.au/presentation/481-all-else-be-graphed
+        video: https://www.youtube.com/watch?v=6i0kMCOOIaY
+        slides: 2014_10_OSDC_Machiavelli
