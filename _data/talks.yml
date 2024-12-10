@@ -1,4 +1,16 @@
 - conference:
+    name: PyLadiesCon
+    location: Online
+    date: 2024-12-07
+    link: https://conference.pyladies.com
+    talks:
+      - name: "Turning 'wat' into 'why'"
+        type: keynote
+        resources: https://glasnt.com/wat
+        link: https://pretalx.com/pyladiescon-2024/talk/VKBBDW/
+        video: https://www.youtube.com/watch?v=DRR3AdvU4ac
+
+- conference:
     name: Kiwi PyCon
     location: Wellington, New Zealand
     date: 2024-08-22
