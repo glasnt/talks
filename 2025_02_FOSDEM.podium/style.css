@@ -29,7 +29,7 @@ h1, h2, h3, .title h1, .title h2, .title h3 {
 }
 
 h1, .title h1 { font-size: 5em; }
-h2, .title h2 { font-size: 3em; } 
+h2, .title h2 { font-size: 3em; }
 h3, .title h3 { font-size: 2em; }
 
 p {
@@ -90,13 +90,12 @@ li cite {
 }
 
 .center { vertical-align: middle }
-.wat { font-family: 'American Typewriter'; color: #F8BA00; font-weight: bold;}
-.new { font-family: 'American Typewriter'; color: #CB297B; font-weight: bold;}
-.why { font-family: 'American Typewriter'; color: #45E768; font-weight: bold;}
+.wat { color: #F8BA00;  bottom: 3em;  font-family: 'American Typewriter'; font-weight: bold; font-size: 120pt; position:absolute; left: 1em;}
+.new { color: #CB297B;  bottom: 3em;  font-family: 'American Typewriter'; font-weight: bold; font-size: 120pt; position:absolute; left: 1em;}
+.why { color: #45E768;  bottom: 2em;  font-family: 'American Typewriter'; font-weight: bold; font-size: 120pt; position:absolute; left: 1em;}
+.how { color: #df45e7;  bottom: 1em;  font-family: 'American Typewriter'; font-weight: bold; font-size: 120pt; position:absolute; left: 1em;}
 .strike { text-decoration: line-through;}
 
-.wat-pos { font-size: 120pt; position:absolute; bottom: 3em; left: 1em;}
-.why-pos { font-size: 180pt; position:absolute; bottom: 0.5em; right: 0.5em;}
 .psg { font-weight: normal !important; color: rgb(0,136,0) }
 .cc { color: rgb(140,140,140)}
 
@@ -117,10 +116,10 @@ li cite {
 .ecma { font-family: Cambria, Palatino Linotype, Palatino, Liberation Serif,  serif }
 .ecma-header { color: #f60}
 
-.pydocs { font-family: "Trebuchet MS", sans-serif; color: #1f435c; font-weight: 400; } 
+.pydocs { font-family: "Trebuchet MS", sans-serif; color: #1f435c; font-weight: 400; }
 
 
-.tinytext { 
+.tinytext {
     margin: 0;
 	padding: 0;
 	font-size: 50%;
@@ -129,14 +128,14 @@ li cite {
  }
 .ps-error { color: red !important; font-weight: bold; }
 
-.fix-notilt {  /* for shooting star only */ 
+.fix-notilt {  /* for shooting star only */
     position: absolute;
     max-width: 400px;
     right: 0em;
     bottom: 1.1em;
     text-align: center;
 }
-.fix-tilt-long { 
+.fix-tilt-long {
     position: absolute;
     font-size: 64pt;
     max-width: 400px;
@@ -145,7 +144,7 @@ li cite {
     bottom: 1em;
     z-index: 111;
     color: grey;
-    font-family: monospace; 
+    font-family: monospace;
     font-weight: bold;
     width: 100%;
     text-align: center;
@@ -156,7 +155,7 @@ li cite {
     filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
 
  }
-.fix-tilt { 
+.fix-tilt {
     position: absolute;
     font-size: 64pt;
     max-width: 400px;
@@ -164,7 +163,7 @@ li cite {
     line-height: 1;
     bottom: 1.1em;
     color: grey;
-    font-family: monospace; 
+    font-family: monospace;
     font-weight: bold;
     width: 100%;
     text-align: center;
@@ -173,8 +172,8 @@ li cite {
     -ms-transform: rotate(-30deg);
     -o-transform: rotate(-30deg);
     filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
-}   
-.pyeol { 
+}
+.pyeol {
     white-space: nowrap;
     position: absolute;
     font-size: 64pt;
@@ -183,8 +182,8 @@ li cite {
     line-height: 1;
     bottom: 4em;
     z-index: 111;
-    color: RED; 
-    font-family: monospace; 
+    color: RED;
+    font-family: monospace;
     font-weight: bold;
     width: 100%;
     text-align: center;
@@ -196,7 +195,7 @@ li cite {
 
  }
 
-.righthead { 
+.righthead {
     font-size: 34pt;
     float: right;
     top: 1em;
@@ -205,7 +204,7 @@ li cite {
     right: 1em;
     width: 100%;
     text-align: right;
-}   
+}
 
 .footnotes {
     font-size: 18pt;
@@ -214,6 +213,20 @@ li cite {
     right: 4em;
     width: 80%;
     text-align: right;
+    color: black;
+    background-color: white;
+    padding: 15px
+}
+
+.wfootnotes { font-size: 18pt;
+  position: absolute;
+  bottom: 2em;
+  right: 4em;
+  width: 80%;
+  text-align: right;
+  padding: 15px;
+  color: white;
+  background-color: black;
 }
 
 .footnotes a { color: grey }
@@ -329,29 +342,29 @@ dr { color: rgb(201,135,135) }
 
 /* Flux font */ fl { font-family: "DTLProkyonST", regular}
 
-/* redacted font */ 
+/* redacted font */
 @font-face { font-family: "RedactedB"; src: url("redacted-script-bold.ttf") format('truetype'); font-style:bold; }
 @font-face { font-family: "RedactedR"; src: url("redacted-script-regular.ttf") format('truetype'); font-style:normal; }
 rb { font-family: "RedactedB", regular;  }
 rr { font-family: "RedactedR", regular;  }
 
-.code { 
+.code {
    font-family: "SFMono-Regular",Consolas,"Liberation Mono",Menlo,Courier,monospace !important;
    margin: 0;
    padding: -10px;
-   font-size: 24pt !important; 
-   line-height: 32pt !important; 
- 
-} 
+   font-size: 24pt !important;
+   line-height: 32pt !important;
+
+}
 .inline-code { display: inline-block; }
 
-pre code, .hljs-default code, .remark-code { 
+pre code, .hljs-default code, .remark-code {
    font-family: "SFMono-Regular",Consolas,"Liberation Mono",Menlo,Courier,monospace !important;
-   font-size: 24pt !important; 
-   line-height: 32pt !important; 
-    
+   font-size: 24pt !important;
+   line-height: 32pt !important;
+
    /*margin-left: -50pt !important;*/
-} 
+}
 
 span.foot { position:absolute; top: 670px; right: 1em; font-size: 50%; color: grey}
 span.foot a { color: grey !important}
@@ -359,7 +372,7 @@ span.foot a { color: grey !important}
 
 /*** Vector CSS Terminal Window
 Adapted from https://guides.codechewing.com/mac-terminal-shell-css-html
-Added: Zenburn, mostly. 
+Added: Zenburn, mostly.
 ***/
 table { margin-left: -80px }
 table th { font-family: "SFMono-Regular",Consolas,"Liberation Mono",Menlo,Courier,monospace !important; }
@@ -383,7 +396,7 @@ table th { line-height: 100%; padding: 0 0.5em;}
   margin-bottom: 20px;
   text-shadow: 1px 1px 0 rgba(255,255,255,0.5);
   font-size: 1em !important;
-  font-family: 'BlinkMacSystemFont', -apple-system, sans-serif !important; 
+  font-family: 'BlinkMacSystemFont', -apple-system, sans-serif !important;
   border: 1px solid #CCCCCC;
   border-bottom: none;
 
@@ -415,7 +428,7 @@ table th { line-height: 100%; padding: 0 0.5em;}
   word-wrap: break-word !important;
   overflow-wrap: break-word !important;
 
-  padding: 0px 10px 10px 10px !important; 
+  padding: 0px 10px 10px 10px !important;
   margin-top: -15px !important;
 
   -webkit-border-bottom-right-radius: 3px;
@@ -444,11 +457,11 @@ table th { line-height: 100%; padding: 0 0.5em;}
 
 .remark-slides-area .remark-slide-content::after {
     font-weight: normal;
-    font-family: "PT Sans" !important; 
+    font-family: "PT Sans" !important;
     background-color: white;
     color: grey;
     content: "@glasnt";
-    padding: 10px; 
+    padding: 10px;
     font-size: 18pt;
     position: absolute;
     top: 16px;
@@ -472,7 +485,7 @@ table th { line-height: 100%; padding: 0 0.5em;}
 .gg { background-color: lightgrey }
 
 .paddown { padding-top: 20px }
-.right-image { float: right; max-width: 400px; padding: 20px;} 
+.right-image { float: right; max-width: 400px; padding: 20px;}
 .white a { color: white }
 .b { font-weight: bold; }
 .smol { font-size: 80%; }

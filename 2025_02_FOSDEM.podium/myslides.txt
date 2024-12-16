@@ -1,6 +1,6 @@
 #= <br>Turning wat into why
-## YOW! Perth 2019
-@ footer.svg
+## FOSDEM 2025
+## 🐘 glasnt@cloudisland.nz
 ---
 #= JavaScript
 Note: Let's talk about javascript
@@ -17,12 +17,15 @@ js "42"
 
 ---
 $$# JavaScript
+.footnotes[wait, what? JavaScript?]
 js- > 1 == "1"
 js- true
 js- > 1 === "1"
-js false 
+js false
 ---
 $$# JavaScript
+
+.footnotes[... thi..this is the Python track, right?]
 js- > [] + []
 js- ""
 js- > [] + {}
@@ -33,11 +36,38 @@ js- > {} + {}
 js NaN
 ---
 ~@ wat.png
-.wat[.wat-pos[wat]]
+.wat[wat]
+.wfootnotes[Florentijn Hofman, *Rubber Duck*. Photographer unknown.]
+
+Note: Some of you might recognise the last example from Gary Bernhardt's "wat" talk.
+
+That talk, now 12 years old, is part of the original inspiration for this talk.
+
+In his talk, he focuses on the "wat", without explaining much more.
+
+Instead I want to focus on the ...
 ---
-~@ wat.png
-.wat[.wat-pos[.strike[wat]]]
-.why[.why-pos[why]]
+~@ wat-river.png
+.wat[.strike[wat]]
+.why[why]
+
+.wfootnotes[Florentijn Hofman, *Rubber Duck, Paramatta River, Sydney*. Photo: 564dude (CC BY-SA 3.0)]
+
+Note: ...why. We're going to focus this talk on learning why these examples work they way they do, and more specifically:
+
+---
+
+~@ wat-cobra.png
+
+.wat[.strike[wat]]
+.why[why]
+.how[how]
+.footnotes[Wild Republic Toys, *Rubber Duck - Cobra*. Product photograph.]
+
+Note: How you can learn from these examples as a Python developer. Specifically, if Python has the same issues, and how to avoid them.
+
+So let's cover the examples already shown.
+
 ---
 #= JavaScript
 Note: Let's talk about javascript
@@ -61,7 +91,7 @@ js > 4 - 2
 js 2
 js > 4 .blue[-] "2" // implicit coercion
 js 2
-js > 4 + "2" 
+js > 4 + "2"
 js "42"
 
 
@@ -88,7 +118,7 @@ $$# JavaScript
 js > 1 == "1"
 js true
 js > 1 === "1"
-js  false 
+js  false
 Note: This next example is to do with the difference in the equality operators
 
 ---
@@ -96,13 +126,13 @@ $$# JavaScript
 js > 1 .blue[==] "1" &nbsp;// with type coercion
 js true
 js > 1 === "1"
-js  false 
+js  false
 ---
 $$# JavaScript
 js > 1 .blue[==] "1" &nbsp;// with type coercion
 js true
 js > 1 .blue[===] "1"  // without type coercion
-js  false 
+js  false
 ---
 $$# JavaScript
 js > [] + []
@@ -114,7 +144,7 @@ js 0
 js > {} + {}
 js NaN
 
-Note: but as for this example... 
+Note: but as for this example...
 
 ---
 
@@ -127,16 +157,16 @@ js > {} + []
 js 0 .white[...............] // ???
 js > {} + {}
 js NaN .white[.............] // ???
-Note: This one is a bit more complicated. 
+Note: This one is a bit more complicated.
 ---
 
 #= +
 
 Note: Remember that overloaded operator I mentioned earlier?
 
-I sort of handwaved that. 
+I sort of handwaved that.
 
-Let's dive into exactly what this does. 
+Let's dive into exactly what this does.
 
 ---
 class: center
@@ -145,6 +175,8 @@ class: center
 ### .ecma[12.8.3 The Addition Operator ( `+` )]
 #### &nbsp;
 
+
+Note: TODO(glasnt): update to 2024 deck version.
 ---
 
 class: center
@@ -169,7 +201,7 @@ In order to do that
 .ecma[.bc[Convert .bluef[`a`] and .greenf[`b`] to primatives]]
 
 Note:  we need to first reduce both sides of the operator to their primative forms
- 
+
 --
 
  * .ecma[.bc[that is, `typeof()` in `undefined`, `null`, `boolean`, `number`, `string`]]
@@ -179,7 +211,7 @@ Note: That is, the type of the variable is undefined, null, bool, number, or str
 To do that, we have two options
 
 --
- 
+
  * .ecma[First try, .bc[`.valueOf()`], otherwise .bc[`.toString()`]]
 
 Note: We have `valueOf`, or `toString`
@@ -189,7 +221,7 @@ After both operands are in their primative forms, we then have a choice
 
 .ecma[Are either .bc[.bluef[`a`]] or .bc[.greenf[`b`]] a string?]
 
-Note: If either of the sides are a string, 
+Note: If either of the sides are a string,
 --
 
 .ecma[Yes → .bc[Concatenate `String(`.bluef[`a`]`)` and `String(`.greenf[`b`]`)`]]
@@ -200,7 +232,7 @@ Note: then we perform a concatenation
 
 .ecma[No → .bc[Add `Number(`.bluef[`a`]`)` and `Number(`.greenf[`b`]`)`]]
 
-Note: otherwise, we convert both sides to a number, and add them. 
+Note: otherwise, we convert both sides to a number, and add them.
 ---
 $$# ECMAScript
 ## .bluef[`[]`] `+` .greenf[`{}`]
@@ -208,7 +240,7 @@ $$# ECMAScript
 
 .ecma[.bc[Convert .bluef[`[]`] to primative]]
 
--- 
+--
 
  * .ecma[.bc[that is, `typeof()` in `undefined`, `null`, `boolean`, `number`, `string`]]
  * .ecma[First try, .bc[`.valueOf()`]]
@@ -240,7 +272,7 @@ $$# ECMAScript
 
 .ecma[.bc[Convert .greenf[`{}`] to primative]]
 
--- 
+--
 
  * .ecma[.bc[that is, `typeof()` in `undefined`, `null`, `boolean`, `number`, `string`]]
  * .ecma[First try, .bc[`.valueOf()`]]
@@ -270,7 +302,7 @@ $$# ECMAScript
 js > String({"a": "b"})
 js "[object Object]"
 
-Note: 
+Note:
 
 As an aside: the default string representation of a object is the string object object
 
@@ -287,7 +319,7 @@ js "[object Object]"
 js > JSON.stringify({"a": "b"})
 js '{"a":"b"}'
 
-Note: 
+Note:
 
 If you do want to get the string representation without altering the functionality of Obejcts, you can use JSON.stringify to natively check
 
@@ -431,13 +463,13 @@ js NaN
 
 Note: but, technically, this isn't completely right
 
-I mean, everything I've just said is accurate, but the problem is that we were using flawed logic. 
+I mean, everything I've just said is accurate, but the problem is that we were using flawed logic.
 
 That code block is only intepreted as a codeblock if it's leading the statement
 
-In these examples, we can't rely on the console interpreting things for us. 
+In these examples, we can't rely on the console interpreting things for us.
 
-We should be using actual IO operations, variables, etc, to replicate what we would get in production code. 
+We should be using actual IO operations, variables, etc, to replicate what we would get in production code.
 
 ---
 $$# ECMAScript
@@ -482,106 +514,68 @@ Note: Commutative - same forwards as is backwards
 
 Pron.: Com-ut-a-tive
 ---
-#= JavaScript isn't awful
-
-Note: JS isn't awful
+#= TODO(glasnt): Python Angle
 ---
-#= JavaScript is awe-ful
 
-Note: 
+#= Java
 
-It's awe-ful, full of awe. 
-
-(
-If you're interseted I have an entire full talk where I dive deeper in to JS, called Javascript is Awe-ful. But to summarise
-)
-
-It's a 22 year old language that is 100% backwards compatible. JavaScript written in 1995 will work today. 
-
-That ye olde space jam website? It still works on modern browsers. 
-
-JavaScript also won the browser-langauge wars, defeating such foes as Flash, Visual basic, JScript and ActiveScript.
-
-However. 
-
-If you don't understand the design constraints and considerations, you might think of these wats as weird little edge cases.
-
-
+Note: TODO(glasnt): Java Intro
 ---
-#= So don't use it.
-Note: 
-
-There are so many different languages that you can use in the browser!
-
-You can use... JavaScript
-
-Or
+$$# Java
+java- java> Integer a = 128
+java- java> Integer b = 128
+java- java> a <= b
+java- true
+java- java> a >= b
+java- true
+java- java> a == b
+java false
 ---
-## Languages that compile to JavaScript
+$$# Java
+java java> Integer a = 128
+java java> Integer b = 128
+java java> a <= b
+java true
+java java> a >= b
+java true
+java java> a .blue[==] b .grey[/.w[✱] identity .w[✱]/]
+java false
+--
+$$# IntegerCache
+sh .white[.............................][-127][-126][...][126][127]
 
+Note:
 ---
-## Languages that compile to JavaScript
-
-.tinytext[8ball, acorn, ActionScript, ADsafe, Agda, Alasql, Amber, APL, asm.js, AST, Astring, Babel, Batavia, Bck2Brwsr, bdParse, Bennu, BicaJVM, bison-lalr1.js, BiwaScheme, Bizubee, BlackCoffee, Blade, Block, Blockly, Bonsai-C, Bridge.NET, browserl, Brozula, Brython, Bucklescript, Builder, Bulbul, burrito, Caffeine, Caja, Canopy, Ceylon, Cheerp, Chlorinejs, CilJs, CirruScript, Clamato, ClojureJS, ClojureScript, Clue, CobolScript, Coco, CoffeeScript, CokeScript, ColaScript, ColdRuby, Compiler, ContextJS, Continuation.js, Contracts.coffee, Cor, Cruiser.Parse, Daonode, Dart, defrac, DoctorJS, Doppio, DotNetWebToolkit, DuoCode, E, ecma-ast, EdgeLisp, ElixirScript, Elm, EmberScript, Emscripten, ErlyJS, esast, escodegen, eslisp, esmangle, Esprima, estraverse, Fable, falafel, Fantom, Fargo, fay, Flapjax, Flow, forml, Fun, FunScript, FutureScript, ghcjs, Gnusto, Go2js, GopherJS, GorillaScript, Grey, GrooScript, GWT, Ham, haste, Haxe, heap.coffee, Hodor, HotRuby, IcedCoffeeScript, Idris, Illumination, Limba, Interpreter, Iode, j2js, Jacaranda, jangaroo, Jasy, Java2Script, JavaScript++, JavaScripthon, JEnglish, jison, jisp, jLang, jmacro, Js_of_ocaml, js--, js-scala, js.js, JS/CC, jsc, JScala, JSCL, JScriptSuite, jsForth, JSGLR, jshaskell, JSIL, JsMaker, jsparse, JSPipe, JSweet, JSX, jwacs, Kaffeine, Kal, Kernel, Khan, Khepri, ki, Kotlin, L2, lambdascript, languagejs, Lisp, LispyScript, LiteScript, LiveScript, LLJS, lua.js, LuvvieScript, maja, Mandreel, Mascara, Meemoo, MetaCoffee, mfjs, mobl, Mochiscript, Mode, Moescript, Monkey, MoonScript, Narcissus, NarrativeJS, nconc, nearley, NemerleWeb, Netjs, Nim, node-jvm, NodeScript, NoFlo, O’Browser, Objective-J, Ocamljs, Oia, oj, oK, OMeta/JS, Opa, Opal, Oppo, Outlet, p2js, p4js, Parenscript, parse-js, PearScript, PEG.js, Perlito, PharoJS, php.js, phype, Pit, Plaid, pogoscript, Prefix, Processing.js, Prolog, prolog.js, promiseLand, pseudo-python, PureScript, PyCow, Pygmy, Pyjaco, Pyjamas, Pyjs, PyNarcissus, PyPyJS, PythonScript, pythonscript, PyvaScript, PYXC-PJ, qb.js, Quby, Quixe, QWT, RacketScript, Ralph, RamdaScript, RapydScript, rb2js, rbnarcissus, Reb2Static, Red, RedScript, reflect.js, ReParse, rocambole, Roy, RoyalScript, RPN, ruby-parser.js, Ruby2JS, RubyJS, Rusthon, Saltarelle, Scala.js, scalagwt, Scheje, Scheme, scheme2js, Script#, ScriptBlocks, Scriptjure, SDK, Secure, Shaper, SharpKit, Shen, Sibilant, Six, Skew, Skulpt, Smallscript, Smalltalk, SMLtoJs, smpl.js, Snap, SourceMap, Specification, Specification, Spider, Spiderbasic, Spock, sql-parser, sql.js, sqld3, SqueakJS, STIP.js, Storm, StratifiedJS, Streamline.js, Studio, Studio, Sugar, sweet.js, Swym, Taijilang, TameJS, TARDISgo, TeaVM, TeJaS, TIScript, TLC, ToffeeScript, Topaz, Traceur, Transcrypt, treehugger, Typecast.js, types, TypeScript, Uberscript, UglifyJS, UHC, uilang, uniter, Ur, Waterbear, WebAssembly, WebSharper, wForth, Whalesong, Wind.js, WootzJs, Wortel, XLCC, YHC, YoptaScript, Zeon, ZeParser. So yeah, you have a few different options. Just a few, though.]
- 
-Note: You could use another language and compile that down to JavaScript
-
-One of those in there is one I helped write, Batavia. Come see me after, I have stickers!
-
-In all seriousness, you can take literally *ANY* another language and convert it to javascript
-
-That'll solve all your problems right?
----
-##= Using another language won't save you.
-
-Note: Well no. 
-
-Using another language won't save you. 
----
-#= Ruby
-
-
-Note: let's talk about Ruby
-
-As a note: all the examples are completely reproducable on a macbook, I've included the brew commands and repl invocation, or how to run the example script. The link at the bottom of every slide has all this, don't worry. 
-
-So!
-
-Ruby
----
-$$# Ruby
-rb- > not true && false
-rb- => true
-rb- > not true and false
-rb => false
----
-$$# Ruby
-rb > not true && false
-rb => true
-rb > not true and false
-rb => false
-
-<br>
-rb # Order of precedence
-rb # && , ||
-rb # not
-rb # and , or
+$$# Java
+java java> Integer a = 128
+java java> Integer b = 128
+java java> a <= b
+java true
+java java> a >= b
+java true
+java java> a .green[.equals] (b)
+java true
+.fix-tilt[fix #1]
 
 ---
-$$# Ruby
-rb > not .blue[true && false]
-rb => true
-rb > .red[not true] and false
-rb => false 
+$$# Java
+java java> .green[int] a = 128
+java java> .green[int] b = 128
+java java> a <= b
+java true
+java java> a >= b
+java true
+java java> a == b
+java true
+.fix-tilt[fix #2]
 
-<br>
-rb # Order of precedence
-
-rb # .blue[&&] , ||
-rb # not
-rb # .red[and] , or
+---
+#= TODO(glasnt): How does *integer caching* affect Python?
+##- Yes.
 ---
 #= Python
+
+Note: TODO(glasnt): Python Intro
 ---
 $$# Python
 py- >>> a = 256
@@ -602,7 +596,7 @@ py True
 $$# Terminal
 `~ $ python`
 
-Note: In Python, when you load the interpreter, you're probably loading CPython. 
+Note: In Python, when you load the interpreter, you're probably loading CPython.
 --
 $$# CPython
 py >>> .white[a=b]
@@ -613,7 +607,7 @@ $$# CPython Cache
 sh &nbsp;
 
 sh [ -5 ][ -4 ][...][ 254 ][ 255 ][ 256 ]
-Note: 
+Note:
 An optimisation of CPython is to create a list of integers from -5 to 256 for you.
 ---
 $$# Terminal
@@ -656,8 +650,8 @@ sh &nbsp;
 sh [ -5 ][ -4 ][...][ 254 ][ 255 ][ 256 ]
 sh .white[.................................]a b
 
-Note: 
-So `is` when we talk about "is" here, we're doing an identity check. 
+Note:
+So `is` when we talk about "is" here, we're doing an identity check.
 
 Identity is a check to see if two objects are the same
 ---
@@ -703,7 +697,7 @@ $$# CPython Cache
 sh &nbsp;
 
 sh [ -5 ][ -4 ][...][ 254 ][ 255 ][ 256 ]
-Note: 
+Note:
 But when we use integers outside of our cache, things change
 
 ---
@@ -719,7 +713,7 @@ sh &nbsp;
 
 sh [ -5 ][ -4 ][...][ 254 ][ 255 ][ 256 ][~][ 257 ]
 sh .white[............................................]a
-Note: 
+Note:
 When we exceed the predeclared array, the value is assigned somewhere else in memory
 
 
@@ -736,7 +730,7 @@ sh &nbsp;
 
 sh [ -5 ][ -4 ][...][ 254 ][ 255 ][ 256 ][~][ 257 ][ 257 ]
 sh .white[............................................]a.white[......]b
-Note: 
+Note:
 And when we declare B we also store that as it's own value
 
 ---
@@ -752,7 +746,7 @@ sh &nbsp;
 
 sh [ -5 ][ -4 ][...][ 254 ][ 255 ][ 256 ][~][ 257 ][ 257 ]
 sh .white[............................................]a.white[......]b
-Note: 
+Note:
 
 So when we run the check
 ---
@@ -768,7 +762,7 @@ sh &nbsp;
 
 sh [ -5 ][ -4 ][...][ 254 ][ 255 ][ 256 ][~][ .red[257] ][ .red[257] ]
 sh .white[............................................]a.white[......]b
-Note: 
+Note:
 
 The objects aren't the same
 
@@ -785,10 +779,10 @@ sh &nbsp;
 
 sh [ -5 ][ -4 ][...][ 254 ][ 255 ][ 256 ][~][ .red[257] ][ .red[257] ]
 sh .white[............................................]a.white[......]b
-Note: 
+Note:
 
 So the check is false
-Even thought he variables have the same value, they aren't the same value, so the identity check fails. 
+Even thought he variables have the same value, they aren't the same value, so the identity check fails.
 ---
 $$# Terminal
 `~ $ python`
@@ -820,7 +814,7 @@ sh &nbsp;
 sh [ -5 ][ -4 ][...][ 254 ][ 255 ][ 256 ][~][ 257 ]
 sh .white[...........................................]a b
 Note: so it's allowed to optimise
-and so it only creates one constant 
+and so it only creates one constant
 ---
 $$# Terminal
 `~ $ python`
@@ -834,7 +828,7 @@ sh &nbsp;
 
 sh [ -5 ][ -4 ][...][ 254 ][ 255 ][ 256 ][~][ 257 ]
 sh .white[...........................................]a b
-Note: 
+Note:
 
 So when we do our identity check again
 ---
@@ -850,7 +844,7 @@ sh &nbsp;
 
 sh [ -5 ][ -4 ][...][ 254 ][ 255 ][ 256 ][~][ .green[257] ]
 sh .white[...........................................]a b
-Note: 
+Note:
 
 The objects are the same
 ---
@@ -866,7 +860,7 @@ sh &nbsp;
 
 sh [ -5 ][ -4 ][...][ 254 ][ 255 ][ 256 ][~][ .green[257] ]
 sh .white[...........................................]a b
-Note: 
+Note:
 So our check succeeds
 
 ---
@@ -875,9 +869,9 @@ py >>> a = 257
 py >>> b = 257
 py >>> a is b
 py False
-Note: 
+Note:
 
-if what we wanted to do here was an equality check, checking if the values were equal, 
+if what we wanted to do here was an equality check, checking if the values were equal,
 ---
 $$# CPython
 py >>> a = 257
@@ -886,10 +880,11 @@ py >>> a .green[==] b
 py True
 
 .fix-tilt[fix]
-Note: 
-we need to use double equals here instead. 
+Note:
+we need to use double equals here instead.
 ---
 #= Python 2
+Note: TODO(glasnt): Python 2 Intro
 ---
 $$# Python 2
 py >>> 4 < 2
@@ -898,25 +893,25 @@ Note: is four less than two. Well, no.
 py False
 --
 py >>> 4 > 2
-Note: so 4 is greater than two, right? 
+Note: so 4 is greater than two, right?
 --
 py True
 
-Note: Yes. 
+Note: Yes.
 
-There are no trick questions here. 
+There are no trick questions here.
 --
 py >>> 4 > '2'
 Note: but is four greater than the string 2?
 --
 py False
-Note: no. 
+Note: no.
 --
 py >>> '4' > [2]
 Note: but what about the string four, is it greater than an array of only 2?
 --
 py True
-Note: yes. 
+Note: yes.
 
 So let's try something here...
 
@@ -929,8 +924,8 @@ py- >>> [4] < '4'
 py- True
 py- >>> 4 < '4'
 py- True
-py- >>> 4 < [4] 
-py- True 
+py- >>> 4 < [4]
+py- True
 py- >>> 4 < [4] < '4'
 py True
 
@@ -955,7 +950,7 @@ Note: Okay, this makes sense. In JS we saw that there was implicit casting of ty
 
 Such objects are ordered consistently but arbitrarily<br>(so that sorting a heterogeneous array yields a consistent result).
 
-Note: This also makes sense. Having consistant results is sort of important. But, it doesn't say how they should be ordered. But the docs go on. 
+Note: This also makes sense. Having consistant results is sort of important. But, it doesn't say how they should be ordered. But the docs go on.
 --
 <br>
 <br>
@@ -976,7 +971,7 @@ Such objects are ordered consistently but arbitrarily<br>(so that sorting a hete
 <br>
 **CPython implementation detail**: <br>Objects of different types except numbers .red[are ordered by their type names]; [..]
 
-Note: this is specific to cpython, which you're *probably* using. 
+Note: this is specific to cpython, which you're *probably* using.
 
 ---
 $$# Python 2
@@ -991,11 +986,11 @@ py ＜type 'int'＞
 py ＜type 'list'＞
 py ＜type 'str'＞
 
-Note: 
+Note:
 
-int comes before list comes before str, which is the only reason why this works. 
+int comes before list comes before str, which is the only reason why this works.
 
-.. h **i** j k **l** m n o p q r **S** 
+.. h **i** j k **l** m n o p q r **S**
 --
 $$# Python 3
 py >>> 4 < [4] < '4'
@@ -1003,66 +998,14 @@ Note: compare this to the result you get when you try this in python three
 --
 co TypeError: '＜' not supported between instances of 'int' and 'list'
 
-Note: 
-Which is very clearly and error, and it tells you why. 
+Note:
+Which is very clearly and error, and it tells you why.
 --
-.pyeol[EOL in 119 days]
+.pyeol[EOL in -265 weeks]
 
-Note: just another reason why you reeeeeallly shouldn't be using Python2 
+Note: just another reason why you reeeeeallly shouldn't be using Python2
 
-Author note - EOL based on original presentation date. 
----
-#= Java
----
-$$# Java
-java- java> Integer a = 128
-java- java> Integer b = 128
-java- java> a <= b
-java- true
-java- java> a >= b
-java- true
-java- java> a == b
-java false
-
----
-$$# Java
-java java> Integer a = 128
-java java> Integer b = 128
-java java> a <= b
-java true
-java java> a >= b
-java true
-java java> a .blue[==] b .grey[/.w[✱] identity .w[✱]/]
-java false
---
-$$# IntegerCache
-sh .white[.............................][-127][-126][...][126][127]
-
-Note: 
----
-$$# Java
-java java> Integer a = 128
-java java> Integer b = 128
-java java> a <= b
-java true
-java java> a >= b
-java true
-java java> a .green[.equals] (b)
-java true
-.fix-tilt[fix #1]
-
----
-$$# Java
-java java> .green[int] a = 128
-java java> .green[int] b = 128
-java java> a <= b
-java true
-java java> a >= b
-java true
-java java> a == b
-java true
-.fix-tilt[fix #2]
-
+Author note - EOL based on original presentation date.
 ---
 #= All languages have quirks
 
@@ -1079,248 +1022,40 @@ it's how the language works
 ---
 
 #= Perl
+Note: TODO(glasnt): Perl Intro
 ---
 $$# Perl
-pl > if ("a" == "b") { 
-pl &nbsp; &nbsp; print "true" 
-pl } else { 
+pl > if ("a" == "b") {
+pl &nbsp; &nbsp; print "true"
+pl } else {
 pl &nbsp; &nbsp; print "false" }
-pl- &nbsp; 
+pl- &nbsp;
 pl true
 
 ---
 $$# Perl
-pl > if ("a" .blue[==] "b") { # numeric equality 
-pl &nbsp; &nbsp; print "true" 
-pl } else { 
+pl > if ("a" .blue[==] "b") { # numeric equality
+pl &nbsp; &nbsp; print "true"
+pl } else {
 pl &nbsp; &nbsp; print "false" }
-pl &nbsp; 
+pl &nbsp;
 pl true
 
 ---
 $$# Perl
-pl > if ("a" .green[eq] "b") { # string equality 
-pl &nbsp; &nbsp; print "true" 
-pl } else { 
+pl > if ("a" .green[eq] "b") { # string equality
+pl &nbsp; &nbsp; print "true"
+pl } else {
 pl &nbsp; &nbsp; print "false" }
-pl &nbsp; 
+pl &nbsp;
 pl false
-Note: note - no perl 6 here, on purpose. outside of scope. 
+Note: note - no perl 6 here, on purpose. outside of scope.
 ---
-#= Bash
----
-$$# Bash
-sh- ~ $ 4 + 2
-sh- bash: 4: command not found
-sh- ~ $ $(4 + 2)
-sh- bash: 4: command not found
-sh- ~ $ $((4 + 2))
-sh- bash: 6: command not found
-sh- ~ $ echo $((4 + 2))
-sh 6
-
-Note: 
-
-Bash isn't designed to do raw arithmetic
-Bash is a shell
-
-2: But it can if we give it the correct syntax
-Ah
-
-3: we need to echo out the result
-
----
-$$# Bash
-sh ~ $ 4 + 2
-sh bash: 4: command not found
-sh ~ $ $(4 + 2)
-sh bash: 4: command not found
-sh ~ $ $((4 + 2))
-sh bash: 6: command not found
-sh ~ $ echo $((4 + 2))
-sh 6
-
-.fix-tilt[By Design]
-
-Note: Because bash is designed for execution, not returning a string representation of the value of some mathematical equation, like every other example so far
----
-<br><br><br><br>
-# Haskell
----
-$$# Haskell
-hs- λ> let a = 2 + 2
-hs- λ> a
-hs- 4
-hs &nbsp;
-hs- λ> let b = 2 + 2
-hs- &nbsp;&nbsp; &nbsp; &nbsp; where 2 + 2 = 5
-hs- λ> b
-hs 5
-
----
-
-$$# Haskell
-hs λ> let a = 2 + 2
-hs λ> a
-hs 4
-hs &nbsp;
-hs λ> let b = 2 + 2
-hs &nbsp;&nbsp; &nbsp; &nbsp; where 2 + 2 = 5 # pattern matching
-hs λ> b
-hs 5
-
-.fix-tilt[By Design]
----
-$$# Haskell
-hs fib :: Int -> Int
-hs fib 0 = 0
-hs fib 1 = 1
-hs fib n = fib (n - 1) + fib (n - 2)
----
-$$# Haskell
-hs fib :: Int -> Int
-hs .green[fib 0 = 0]
-hs .green[fib 1 = 1]
-hs fib n = fib (n - 1) + fib (n - 2)
----
-$$# Haskell
-hs fib :: Int -> Int
-hs .green[fib 0 = 0]
-hs .green[fib 1 = 1]
-hs fib n = fib (n - 1) + fib (n - 2)
-<br>
-$$# Python
-py def fib(n):
-py &nbsp; &nbsp; .green[if n = 0: return 0]
-py &nbsp; &nbsp; .green[if n = 1: return 1]
-py &nbsp; &nbsp; return fib(n - 1) + fib(n - 2)
-
-Note: this has the same sort of effect as in Python
----
-<br><br><br><br>
-# Pascal
----
-$$# cat example.pas
-pas Program example(output);
-pas VAR x: INTEGER;
-pas begin
-pas &nbsp; x := 41;
-pas  &nbsp; x += 1;
-pas &nbsp; writeln(x = 42);
-pas end.
---
-$$# Terminal
-.code[`$ fpc example.pas && ./example`]
--- 
-pas  TRUE
-
----
-$$# cat example.pas
-pas Program example(output);
-pas VAR x: INTEGER;
-pas begin
-pas &nbsp; x .blue[:=] 41; // assignment
-pas  &nbsp; x += 1;
-pas &nbsp; writeln(x .blue[=] 42); // equality
-pas end.
-$$# Terminal
-.code[`$ fpc example.pas && ./example`]
-pas  TRUE
-
-
-Note: that's all I wanted to point out
-
-an assignment operator that doesn't look like equality; bliss
-
-
-<br><br><BR><BR>
-# Go
-### ☞ &nbsp;`brew install go`<br> &nbsp;`cd examples`<br>`go run example.go`
----
-$$# example.go
-
-go package main
-go func main() {
-go &nbsp;  a := 4
-go &nbsp;  b := 2
-go &nbsp;  print(a == b)
-go }
-
-Note: So here we have some go
-
-and we can see those lovely colon equals operators
-
-They look like the pascal operators, so they should be assignment, right?
---
-$$# Terminal
-.code[`$ go run example.go`]
-
-Note: so if we run this code, we expect a to not equal b
---
-<br>
-.code[`false`]
-Note: and it doesn't. 
-
-But. 
----
-$$# example.go
-
-go package main
-go func main() {
-go &nbsp;  a .blue[:=] 4 // assignment
-go &nbsp;  b .blue[:=] 2 // ... right?
-go &nbsp;  print(a == b)
-go }
-$$# Terminal
-.code[`$ go run example.go`]
-<br>
-.code[`false`]
-
-Note: These.. they're assignment operators, right? 
-
-No. They're not. 
-
-They're just shortcuts.
-
----
-$$# example.go
-
-go package main
-go func main() {
-go &nbsp;  .green[var a = 4] // standard assignment
-go &nbsp;  b .blue[:=] 2 .white[..] // short variable declaration
-go &nbsp;  print(a == b)
-go }
-$$# Terminal
-.code[`$ go run example.go`]
-<br>
-.code[`false`]
-
-
-Note: I can use the full declaration on the variable a, and it's the equivelent of the colon equals I"m performing on B
-
----
-$$# bad_example.go
-
-go package main
-go func main() {
-go &nbsp;  .red[a = 4]
-go &nbsp;  b := 2
-go &nbsp;  print(a == b)
-go }
-$$# Terminal
-.code[`$ go run bad_example.go`]
-<br>
-Note: So if we forget this fact, and we declare a like we would in any other language
---
-<br>
-.code[`./bad_example.go:4:3: undefined: a`<br>`./bad_example.go:6:9: undefined: a`]
-
-Note: the program fails to compile
-
+#= TODO(glasnt): Python affect.
 ---
 
 #= Elixir
+Note: TODO(glasnt): Elixir Intro
 ---
 $$# Elixir
 ```elixir
@@ -1342,7 +1077,7 @@ iex 64
 iex 81
 iex 100
 
-Note: 
+Note:
 If we were to assign our list as a variable
 then iterate over each element to print it
 
@@ -1367,7 +1102,7 @@ iex 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
 
 Note:
 
-We get a recognisable string. 
+We get a recognisable string.
 
 This is because in ASCII, Capital A starts at sequence 65
 ---
@@ -1379,264 +1114,28 @@ iex 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
 .fix-tilt[By design]
 
 
-Note: The reason for this: 
+Note: The reason for this:
 
 Elixir was built on top of Erlang, which was created in the 80's, and strings in Erlang are represented as a lists of integers. So, without telling our interpreter any different, it's going to assume that we want to print a string, not a list of numbers
 
 There are flags in erlang to change this, but it's only going to effect our interactive interpreter, not the actual data manipulation
 ---
-#= C++
----
-$$# examples/example.cpp
-cpp #include ＜cstdio>
-cpp int main() {
-cpp .white[...] printf("wat??!\n");
-cpp }
---
-$$# Terminal
-sh- $ gcc example.cpp -o example && ./example
-sh wat|
-
-Note: okay, so I cheated a bit, because this one has been implicitly mitigated.
----
-$$# examples/example.cpp
-cpp #include ＜cstdio>
-cpp int main() {
-cpp .white[...] printf("wat??!\n");
-cpp }
-$$# Terminal
-sh- $ gcc example.cpp -o example .red[-trigraphs] && ./example
-sh .smol[warning: trigraph converted to '|' character [-Wtrigraphs]]
-sh .smol[.white[....] printf("wat??!\n");]
-sh .smol[.white[...............] ^]
-sh wat|
-Note:
-What I actually ran
-
-I came across this one when trying to do some printline debugging, and searching my logs for {wat??!" wasn't returning anything, because it was implicitly changing my output
-
-In some environments this functionality is disabled by default, but in mine it wasn't
-
-The problem here, from what I understand, is that C++ doesn't understand millenial speak
-
----
-class: table
-<br>
-sh # Character encodings
-
-| .smol[ &nbsp; ]  &nbsp;|&nbsp;  .smol[121 ]  &nbsp;|&nbsp; .smol[ 122 ]  &nbsp;|&nbsp; .smol[ 123 ]  &nbsp;|&nbsp; .smol[ 124 ]  &nbsp;|&nbsp; .smol[ 125 ]  &nbsp;|&nbsp; .smol[ 126 ]  &nbsp;|&nbsp; .smol[ 126 ]  &nbsp;|&nbsp; .smol[ 127 ]  &nbsp; |
-|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
-| ISO646 | w | x | y | z | .gg[&nbsp;]  | .gg[&nbsp;] |.gg[&nbsp;] | DEL|
-| ASCII | w | x | y | z | { | ┃ | }| DEL |
-
-Note: C supports ISO 646, which doesn't have braces or the pipe character, while ascii does
-
-Back in the day keyboards and punch cards didn't have some of these punctuation characters that a lot of keyboards today have
-
-Although not all keyboards have these symbols even now, and if they do, they are in different places. Forget qwerty vs dvorak (d-vor-jack), try using a US-keybord layout then swapping to a UK layout. The differences are subtle, but for programers they are glaringly obvious.
-
-.clear[]
-
----
-$$# C++
-.code[.grey[# Trigraph replacements]<br><br>??! → |<br>??< → {<br>??> → }<br>...]
-
-sh # -Wtrigraphs
-
----
-#= CSS
----
-$$# examples/example.css
-
-css .black { color: black; }
-css .gold &nbsp;{ color: gold; }
-
-$$# examples/example.html
-xml .nopad[`<link rel="stylesheet" href="example.css" />`]
-xml `<div class="black gold"> Black Gold </div>`
-xml `<div class="gold black"> Gold Black </div>`
-
-Note: if I have two files, a css file that defines a black and a gold style, and then a HTML div that uses both, but in different orders
-
-How will the divs appear
-
-black and gold
-
-or
-
-.gold and black
-
---
-
-$$# open examples/example.html
-<div class="css-demo">
-<div class="black gold">Black Gold</div>
-<div class="gold black">Gold Black</div>
-</div>
-Note: These two classes have the same specificity, so CSS falls back to source order.
----
-$$# examples/example.css
-css .black { color: black; }
-css .red[.gold &nbsp;{ color: gold; }] .inline-code[`/* specificity */`]
-
-$$# examples/example.html
-xml .nopad[`<link rel="stylesheet" href="example.css" />`]
-xml `<div class="black gold"> Black Gold </div>`
-xml `<div class="gold black"> Gold Black </div>`
-
-$$# open examples/example.html
-<div class="css-demo">
-<div class="black gold">Black Gold</div>
-<div class="gold black">Gold Black</div>
-</div>
-
-Note: The class order on the element does not matter. These two classes have the same specificity, so CSS falls back to source order.
-
-But ah! I hear you cry. What about `!important`
----
-$$# examples/example.css
-css .black { color: black !important; }
-css .gold &nbsp;{ color: gold; }
-
-$$# examples/example.html
-xml .nopad[`<link rel="stylesheet" href="example.css" />`]
-xml `<div class="black gold"> Black Gold </div>`
-xml `<div class="gold black"> Gold Black </div>`
-
-Note: Let's just add that here, that'll make sure black actually works!
---
-
-$$# open examples/example.html
-<div class="css-demo">
-<div class="blacki gold">Black Gold</div>
-<div class="gold blacki">Gold Black</div>
-</div>
-
-Note: well yes, but it'll also override Gold
----
-$$# CSS Specificity
-<br><br>
-Type selector  .bc[.row2[`h1, h2, p`]] .row3[`# lowest`]
-
-Class selector  .bc[.row2[`.black, .gold`]]
-
-ID selector    .bc[.row2[`#specific, #example`]] .row3[`# highest`]
-
-Note: the specificity of the CSS selector in lowest to highest
-
-types, classes, then specific identifers
-
-
-
---
-<br><br>
-<br><br>
-**Bad Practice** .bc[.row2[.red[`!important`]]]
-
-Note: Important will override, but you should avoid using it where possible. There are some situations were it's the only way to get things working, such as overriding inline CSS, but using inline css is VERY bad practice.
-
-CSS is literally cascading style sheets. It should naturally cascade
-
-
-
----
-#= No language is 'better'
-
-Note: No language is better than any other
-
-The mere fact a programming language exists means years of work by many many people building and developing a common dialect to describe and manipulate the realm in which it lives
-
-Each have their own strengths
-
+#= TODO(glasnt): Python affect.
 ---
 
-#= PHP
-
----
-$$# PHP
-php- php> echo (TRUE ? "True" : "False");
-php- True
-<br>
-php- php> echo (FALSE ? "True" : "False");
-php False
-
-Note: Ternary operators
-
-
-but
-
----
-$$# PHP
-php php> echo (FALSE ? "one" :
-php &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;FALSE ? "two" : 
-php- &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;  "three");
-php three
-
----
-$$# PHP
-php php> echo (FALSE ? "one" :
-php &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;TRUE &nbsp;? "two" : 
-php- &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;  "three");
-php two
-
----
-$$# PHP
-php php> echo (TRUE &nbsp;? "one" :
-php &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;TRUE &nbsp;? "two" : 
-php- &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;  "three");
-php two
-
-Note: This is because ternary expressions in PHP are left associative
-
-Like we saw earlier in the ruby example, the assumption of the order of operations is that we'd short cut to "one" here
-
-
-
----
-$$# PHP
-php php> echo (&nbsp;TRUE 
-php .white[.........] ? "one" 
-php .white[.........] : (TRUE&nbsp;? "two" : "three")); # assumed
-php one
-Note: we assume that the order of operations will be that the truthy side of the first ternary statement would execute, so the result would be one
-
-Which is what would happen if we manually place the brackets to force the order of operations. 
-
-But
---
-php &nbsp;
-php php> echo ((TRUE ? "one" : TRUE) # actual 
-php .white[.........] ? "two" 
-php .white[.........] : "three");
-php two
-
-Note:
-What actually happens is this. 
-
-The chaining of the ternary statement is left assosiative, so the weighting of the order of operations forces this behaviour which doesn't match what happens in other langues, where we assume the first truthy statement will fall out. 
-
-The solution to this: 
---
-.fix-tilt[AVOID]
-
-Note: 
-
-Avoid chaining ternary operators
-
----
-<br><br><br><br>
 # PowerShell
+Note: TODO(glasnt): Powershell Intro
 ---
 $$# PowerShell
 <br>
-ps- PS> if (36 > 42) { "true" } else { "false" } 
+ps- PS> if (36 > 42) { "true" } else { "false" }
 ps false
 --
 <br>
 ps- PS> if (36 < 42) { "true" } else { "false" }
 ps .ps-error[The '<' operator is reserved for future use.]
 
-Note: the problem here is that powershell is a compiler, and an interpreter. 
+Note: the problem here is that powershell is a compiler, and an interpreter.
 
 It's a combination compiler and interpreter
 
@@ -1645,11 +1144,11 @@ $$# PowerShell
 <br>
 ps PS> if (36 .red[>] 42) { "true" } else { "false" }
 co .psg[false] &nbsp;&nbsp; &nbsp; .cc[# file redirection]
-<br> 
-ps PS> if (36 < 42) { "true" } else { "false" } 
+<br>
+ps PS> if (36 < 42) { "true" } else { "false" }
 ps .ps-error[The '<' operator is reserved for future use.]
 
-Note: So when you use greater than, it's being interpreted as a file redirection. 
+Note: So when you use greater than, it's being interpreted as a file redirection.
 --
 <br>
 ps PS> cat 42
@@ -1661,8 +1160,8 @@ $$# PowerShell
 <br>
 ps PS> if (36 .red[>] 42) { "true" } else { "false" }
 co .psg[false] &nbsp;&nbsp; &nbsp; .cc[# file redirection]
-<br> 
-ps PS> if (36 .red[<] 42) { "true" } else { "false" } 
+<br>
+ps PS> if (36 .red[<] 42) { "true" } else { "false" }
 ps .ps-error[The '<' operator is reserved for future use.]
 .fix-tilt[AVOID]
 Note: You should avoid using greater than, since the complementary less than doesn't exist.
@@ -1671,18 +1170,18 @@ $$# PowerShell
 <br>
 ps PS> if (36 .green[-gt] 42) { "true" } else { "false" }
 ps true
-<br> 
+<br>
 ps PS> if (36 .green[-lt] 42) { "true" } else { "false" }
 ps false
 .fix-tilt[FIX]
 
-Note: 
+Note:
 It also means you don't hvae to remember which way the crocodile goes
 
 ---
-&nbsp; 
+&nbsp;
 
-Note: 
+Note:
 INTENTIONALLY BLANK
 
 I've gone through a dozen different programming languages
@@ -1696,7 +1195,7 @@ it's how the language works
 
 #= Turn .wat[wat] into .why[why]
 
-Note: 
+Note:
 
 When ever you find yourself thinking WAT
 turn it into a why
@@ -1711,7 +1210,7 @@ It will help you get a deeper mastery of the language, and you might just learn 
 
 #= .inline-img[Learn something ![](images/sparkles.png).new[new]![](images/sparkles.png)]
 
-Note: 
+Note:
 
 Because these are all examples that I have personally come across. I have been a polyglot developer for *mumble* years now, in every one of these languages, and I use to think
 
