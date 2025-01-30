@@ -1,4 +1,13 @@
 - conference:
+    name: CHAOSScon
+    location: Brussels, Belgium
+    date: 2025-01-30
+    link: https://chaoss.community/chaosscon-2025-eu/
+    talks:
+      - name: "Who does the dev?"
+        slides: https://bit.ly/across-slides-chaossconeu2025
+
+- conference:
     name: PyLadiesCon
     location: Online
     date: 2024-12-07
