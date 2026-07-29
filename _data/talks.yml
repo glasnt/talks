@@ -1,4 +1,22 @@
 - conference:
+  name: Melbourne Python
+  location: Melbourne, Australia
+  date: 2026-03-19
+  link: https://www.meetup.com/melbourne-python-user-group
+  talks:
+    - name: Talk Writing Workshop with PyConAU
+      link: https://www.meetup.com/melbourne-python-user-group/events/313646012
+
+- conference:
+  name: DevFest Melbourne
+  location: Melbourne, Australia
+  date: 2026-10-04
+  link: https://gdg.community.dev/events/details/google-gdg-melbourne-presents-gdg-melbourne-devfest-2025/
+  talks:
+    - name: From AI Prototype to a Multi-Component Production App
+      link: https://gdg-melbourne-devfest-2025.sessionize.com/session/1018062
+
+- conference:
     name: FOSDEM
     location: Brussels, Belgium
     date: 2025-02-02
@@ -8,8 +26,6 @@
         link: https://fosdem.org/2025/schedule/event/fosdem-2025-4764-understanding-programming-peculiarities/
         resources: https://glasnt.com/wat
         slides: https://fosdem.org/2025/events/attachments/fosdem-2025-4764-understanding-programming-peculiarities/slides/236294/glasnt_-_CTRcCs9.pdf
-
-
 
 - conference:
     name: CHAOSScon EU
