@@ -1,4 +1,13 @@
 - conference:
+    name: PyCon AU 2026
+    location: Brisbane, Australia
+    date: 2026-08-29
+    link: https://2026.pycon.org.au/
+    talks:
+      - name: The importance of stochasticity
+        link: https://youtu.be/c_uTx1fHf4w?t=1577
+
+- conference:
     name: Melbourne Python
     location: Melbourne, Australia
     date: 2026-03-19
