@@ -10,7 +10,7 @@
 - conference:
     name: DevFest Melbourne
     location: Melbourne, Australia
-    date: 2026-10-04
+    date: 2025-10-04
     link: https://gdg.community.dev/events/details/google-gdg-melbourne-presents-gdg-melbourne-devfest-2025/
     talks:
       - name: From AI Prototype to a Multi-Component Production App
