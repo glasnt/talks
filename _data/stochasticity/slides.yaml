@@ -1,0 +1,196 @@
+slides:
+- alt: 'The importance
+
+    of stochasticity
+
+    Katie .
+
+    they/them'
+  image: images/slide_0.png
+  text: Kia ora
+- alt: ''
+  image: images/slide_1.png
+  text: "The Paper \"On the Dangers of Sto-chas-tic Parrots: Can Language Models Be\
+    \ Too<br>Big? \U0001F99C\"<br>By Bender, Gebru, (et all)<br>Is arguably one of\
+    \ the most impactful scientific articles published in the this decade.<br>It has\
+    \ brought about a reconsideration of some of the fundamental elements in our<br>industry,\
+    \ and has caused much friction amongst vendors and platforms.<br>Oh, and also\
+    \ the llm stuff, guess.<br>Because I'm interested in just part of the title."
+- alt: ''
+  image: images/slide_2.png
+  text: Not the colon, a perfectly cromulent part of any paper or presentation title,
+    thank you<br>very much
+- alt: ''
+  image: images/slide_3.png
+  text: I'm interested in the end of this title.
+- alt: ''
+  image: images/slide_4.png
+  text: I'm interested in the end of this title.<br>This bit
+- alt: ''
+  image: images/slide_5.png
+  text: This parrot.<br>Now, this might be an unfamiliar parrot to you
+- alt: Parrot on Android 9 (2018)
+  image: images/slide_6.png
+  text: Because it is a version of the Parrot emoji available on Android 9 in 2018.<br>Depending
+    on what platform you're viewing the original emoji on, the parrot will look<br>very
+    different
+- alt: 'Eclectus
+
+    roratus
+
+    Aratinga
+
+    solstitialis
+
+    Amazona
+
+    oratrix
+
+    Ara
+
+    macao Agapornis
+
+    roseicollis
+
+    Lophochroa
+
+    Ornithologist approved
+
+    leadbeateri'
+  image: images/slide_7.png
+  text: A cursory avian identification of some of the options available results birds
+    from most<br>all tropical climates of every continent.<br>However, none of these renderings are accurate based on the original
+    subject.
+- alt: Parrot on Telegram Telemoji (November 2023)
+  image: images/slide_8.png
+  text: The closest rendering is the Telegram Telelmoji, seen to act much like the
+    original<br>parrot that the emoji is based on.<br>
+- alt: Parrot on Telegram Telemoji (November 2023)
+  image: images/slide_9.png
+  text: We know this because we can read the submission to the unicode consortium,
+    and<br>see the justification for addition
+- alt: UTC Document Registry L2/17-280
+  image: images/slide_10.png
+  text: "From the original submission,<br>\"The inclusion of TROPICAL BIRD in the\
+    \ Unicode Standard<br>would assist with platform compatibility with the popular\
+    \ emoticon \u201CParty Parrot\u201D"
+- alt: Party Parrot
+  image: images/slide_11.png
+  text: This is party parrot.<br>This parrot is based on a very specific parrot, based on Sirocco, the kakapo,
+    a<br>native parrot of aotearoa
+- alt: 'Eclectus
+
+    roratus
+
+    Aratinga
+
+    solstitialis
+
+    Amazona
+
+    oratrix
+
+    Ara
+
+    macao Agapornis
+
+    roseicollis
+
+    Lophochroa
+
+    leadbeateri'
+  image: images/slide_13.png
+  text: This bird belongs here, on an island that is missing from the graph
+- alt: ''
+  image: images/slide_14.png
+  text: Because it's missing on the Silhouette vector graphic of political world map
+    from<br>freesvg.org.
+- alt: 'Eclectus
+
+    roratus
+
+    Aratinga
+
+    solstitialis
+
+    Amazona
+
+    oratrix
+
+    Ara
+
+    macao Agapornis
+
+    roseicollis
+
+    Lophochroa
+
+    leadbeateri'
+  image: images/slide_15.png
+  text: So who is to blame for all this?<br>Why is there a parrot emoji in Unicode,
+    anyway?
+- alt: Arrow
+  image: images/slide_16.png
+  text: '<br>It me. Hi.'
+- alt: The problem
+  image: images/slide_17.png
+  text: I am the author of the proposal for the parrot emoji.<br>Well, the proposal
+    for "tropical bird". ... even though kakapo are decidedly not tropical.
+- alt: Official "Well, Actually" from Unicode
+  image: images/slide_18.png
+  text: A further submission to the consortium corrected me on this.<br>However
+- alt: "Arrow"
+  image: images/slide_19.png
+  text: Even with the screen duplication in the room right now, the arrow is correct.
+    Pyconau<br>is partly to blame for this too.
+- alt: PyCon AU 2015, Brisbane
+  image: images/slide_20.png
+  text: It was a hallway conversation at the last time Pycon au was in Brisbane, and
+    my first<br>pycon, that led to me giving a talk on emoji.<br>It was a hallway
+    conversation after the first time I gave that talk that the idea to submit<br>the
+    parrot was first made,<br>So, in a way, pyconau has had not insignificant indirect
+    impact on the AI industry, just<br>by this one example.<br>And the impact. Well.
+- alt: Google Scholar listing
+  image: images/slide_21.png
+  text: Bender et al's paper has been cited more than 16 THOUSAND times.<br>This has
+    such a wide range in a lot of esoteric scientific systems.
+- alt: ''
+  image: images/slide_22.png
+  text: There are so many examples of where paper has been cited INCORRECTLY,<br>because
+    systems still, in the year of our lord 202-whatever, still don't handle unicode.<br>I
+    also was able to personally speak with Dr Bender about this when she was in<br>Melbourne
+    last year.
+- alt: ''
+  image: images/slide_23.png
+  text: She spoke about the issues her submission had caused in many ACM paper systems,<br>and
+    when typesetting her book The AI Con, which cited the paper.<br>The printed copy
+    here does include a rendering of the parrot emoji, correctly citing the<br>paper.<br>But
+    that's not the only impact
+- alt: sarahmaylittle, instagram
+  image: images/slide_24.png
+  text: The kakapo recovery program has been running for 30 years, working to protect
+    the<br>critically endangered kakapo
+- alt: "K\u0101k\u0101p\u014D population 1977 - 2022"
+  image: images/slide_25.png
+  text: 'As of 2022, there were 174 kakapo. Total.<br>But '
+- alt: "K\u0101k\u0101p\u014D population 1977 - 2022, 2025"
+  image: images/slide_26.png
+  text: 'There were a whopping 95 chicks born in this current breeding season, 2025.<br><br>[<b>POST
+    PRESENTATION CORRECTION</b>: This data is for the 2025 breeding season. 2<br>days
+    after this presentation, the 2026 breeding season results were published, with<br>another
+    90 chicks born<br><a href="https://www.doc.govt.nz/news/media-releases/2026-media-releases/kakapo-population-reaches-new-milestone/">https://www.doc.govt.nz/news/media-releases/2026-media-releases/kakapo-population-reaches-new-milestone/</a>]'
+- alt: "K\u0101k\u0101p\u014D population 1977 - 2022, 2025"
+  image: images/slide_27.png
+  text: The number of kakapo have nearly doubled since the emoji was created.<br>You
+    all helped with that.<br>It's been 10 years since the emoji, and 5 years since
+    this paper, and this much has<br>happened.<br>How much more can we do, together,
+    as a community?<br>And how many of those things will have started outside, in
+    this hallway, at this event.
+- alt: 'Thank you!
+
+    Support
+
+    doc.govt.nz/our-work/kakapo-recovery'
+  image: images/slide_28.png
+  text: ''
+title: The importance of stochasticity
