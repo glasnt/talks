@@ -66,6 +66,9 @@
       - name: "Present like a pro"
         resources: present-like-a-pro
         video: https://www.youtube.com/watch?v=gPT23TUhYSQ
+      - name: Foundational Skills
+        type: Panel moderator
+        video: https://www.youtube.com/watch?v=oHn7RP80Ei4
 
 - conference:
     name: Google Cloud Next
