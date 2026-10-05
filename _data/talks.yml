@@ -1,3 +1,12 @@
+- conference: 
+    name: DevFest Melbourne
+    location: Melbourne, Australia
+    date: 2026-10-03
+    link: https://gdg.community.dev/events/details/google-gdg-melbourne-presents-gdg-melbourne-devfest-2026/
+    talks: 
+      - name: Evaluating the AI-Assisted Developer Experience
+        link: https://gdg-melbourne-devfest-2026.sessionize.com/session/1302092
+
 - conference:
     name: PyCon AU 2026
     location: Brisbane, Australia
