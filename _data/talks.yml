@@ -1,3 +1,14 @@
+
+- conference: 
+    name: DevFest Sydney
+    location: Sydney, Australia
+    date: 2026-10-10
+    link: https://events.humanitix.com/devfest-sydney
+    talks: 
+      - name: Elevating the AI-Assisted Developer Experience
+        link: https://devfest.gdgsydney.com/speakers/katie-mclaughlin
+        resources: https://gist.github.com/glasnt/4b5a46a99d0d6ae127a24ee64f2d9cd4
+
 - conference: 
     name: DevFest Melbourne
     location: Melbourne, Australia
