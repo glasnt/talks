@@ -17,6 +17,8 @@
     talks: 
       - name: Evaluating the AI-Assisted Developer Experience
         link: https://gdg-melbourne-devfest-2026.sessionize.com/session/1302092
+        resources: https://g.dev/ai/eval-aide
+        slides: https://dev.to/glasnt/evaluating-the-ai-assisted-developer-experience-21jc
 
 - conference:
     name: PyCon AU 2026
