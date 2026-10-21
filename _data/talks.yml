@@ -1,9 +1,18 @@
+- conference: 
+    name: DevFest Brisbane
+    location: Brisbane, Australia
+    date: 2026-10-17
+    link: https://devfest.gdgbrisbane.com/
+    talks: 
+      - name: Elevating the AI-Assisted Developer Experience
+        link: https://devfest.gdgbrisbane.com/speakers/katie-mclaughlin
+        resources: https://gist.github.com/glasnt/4b5a46a99d0d6ae127a24ee64f2d9cd4
 
 - conference: 
     name: DevFest Sydney
     location: Sydney, Australia
     date: 2026-10-10
-    link: https://events.humanitix.com/devfest-sydney
+    link: https://devfest.gdgsydney.com/
     talks: 
       - name: Elevating the AI-Assisted Developer Experience
         link: https://devfest.gdgsydney.com/speakers/katie-mclaughlin
