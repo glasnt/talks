@@ -5,6 +5,7 @@
     link: https://devfest.gdgbrisbane.com/
     talks: 
       - name: Elevating the AI-Assisted Developer Experience
+        type: Keynote
         link: https://devfest.gdgbrisbane.com/speakers/katie-mclaughlin
         resources: https://gist.github.com/glasnt/4b5a46a99d0d6ae127a24ee64f2d9cd4
 
@@ -83,7 +84,7 @@
     link: https://conference.pyladies.com
     talks:
       - name: "Turning 'wat' into 'why'"
-        type: keynote
+        type: Keynote
         resources: https://glasnt.com/wat
         link: https://pretalx.com/pyladiescon-2024/talk/VKBBDW/
         video: https://www.youtube.com/watch?v=DRR3AdvU4ac
